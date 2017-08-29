@@ -68,6 +68,13 @@
 .widget_pages .page_item,
 .widget_nav_menu .menu-item {
   position: relative;
+
+  @include _hover() {
+    .children-expander {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
 }
 
 .children-expander {
@@ -92,14 +99,6 @@
   &[data-is-expanded="true"] {
     &::before {
       content: '-';
-    }
-  }
-}
-.menu-item-has-children {
-  @include _hover() {
-    .children-expander {
-      opacity: 1;
-      visibility: visible;
     }
   }
 }
