@@ -27,7 +27,7 @@ $customizer->control( 'select', 'basic-layout', [
 
 $customizer->control( 'select', 'header-layout', [
 	'label'   => __( 'Header layout', 'snow-monkey' ),
-	'default' => '2row',
+	'default' => 'center',
 	'choices' => [
 		'simple' => __( 'Simple', 'snow-monkey' ),
 		'1row'   => __( 'One row', 'snow-monkey' ),
@@ -38,7 +38,7 @@ $customizer->control( 'select', 'header-layout', [
 
 $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'label'   => __( 'Number of columns in the footer widget aera', 'snow-monkey' ),
-	'default' => '1-3',
+	'default' => '1-4',
 	'choices' => [
 		'1-1' => __( '1 column', 'snow-monkey' ),
 		'1-2' => __( '2 columns', 'snow-monkey' ),
