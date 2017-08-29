@@ -101,9 +101,9 @@
    * One column (slim)
    */
   .#{$_prefix}l-body--one-column-slim & {
-    &__inner {
+    &__main {
       margin: 0 auto;
-      max-width: 900px;
+      max-width: map-get($_sizes, 'lg');
     }
 
     &__sidebar {
