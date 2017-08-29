@@ -1,0 +1,93 @@
+.#{$_prefix}c-comment {
+  @include _media();
+
+  &__figure {
+    @include _margin(0, .5, 0, 0);
+
+    @include _media-min(lg) {
+      @include _margin(0, 1, 0, 0);
+    }
+
+    img {
+      margin-top: 0;
+    }
+  }
+
+  &__body {
+    border: 1px solid _light($_color-gray);
+    border-radius: $_border-radius;
+    @include _padding(.5);
+    overflow: hidden;
+
+    @include _media-min(lg) {
+      @include _padding(1);
+    }
+  }
+
+  &__meta {
+    @include _margin(0, 0, .5);
+    @include _font-size-line-height($_base-font-size-px - 4);
+    color: #999;
+
+    cite {
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    a {
+      color: #999;
+      text-decoration: none;
+
+      @include _hover() {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    @include _font-size-line-height($_base-font-size-px - 2);
+    @include _content(.5);
+
+    > h2 {
+      @include _font-size-line-height($_base-font-size * $_h2-font-size-scale / 1.5);
+    }
+
+    > h3 {
+      @include _font-size-line-height($_base-font-size * $_h3-font-size-scale / 1.5);
+    }
+
+    > h4 {
+      @include _font-size-line-height($_base-font-size * $_h4-font-size-scale / 1.5);
+    }
+
+    > h5 {
+      @include _font-size-line-height($_base-font-size * $_h5-font-size-scale / 1.5);
+    }
+
+    > h6 {
+      @include _font-size-line-height($_base-font-size * $_h6-font-size-scale / 1.5);
+    }
+
+    > h1 {
+      @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.5);
+    }
+  }
+
+  &__reply {
+    text-align: right;
+  }
+
+  .comment-reply-link {
+    @include _btn();
+    @include _margin(.5, 0, 0);
+    background-color: $color-accent;
+    border-radius: $_border-radius;
+    color: #fff;
+    @include _font-size-line-height($_base-font-size-px - 2);
+    @include _padding(.25rem, 1rem);
+
+    @include _hover() {
+      background-color: darken($color-accent, 5%);
+    }
+  }
+}

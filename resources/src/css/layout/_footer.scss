@@ -1,0 +1,12 @@
+.#{$_prefix}l-footer {
+  .#{$_prefix}l-body--right-sidebar &,
+  .#{$_prefix}l-body--left-sidebar &,
+  .#{$_prefix}l-body--one-column &,
+  .#{$_prefix}l-body--one-column-slim & {
+    @include _margin-top(1);
+
+    @include _media-min(lg) {
+      @include _margin-top(2);
+    }
+  }
+}

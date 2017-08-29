@@ -1,0 +1,21 @@
+.#{$_prefix}c-drawer {
+  z-index: 100000;
+  background-color: $color-accent;
+  @include _font-size-line-height($_base-font-size-px - 2);
+
+  &, a {
+    color: #fff;
+  }
+
+  &__body {
+    z-index: 100000;
+  }
+
+  &__toggle {
+    @include _transition(transform);
+
+    &[aria-expanded="true"] {
+      transform: rotate(90deg);
+    }
+  }
+}

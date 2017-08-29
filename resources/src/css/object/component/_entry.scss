@@ -1,0 +1,71 @@
+.#{$_prefix}c-entry {
+  &__header {
+    @include _margin(0, 0, 1);
+    border-bottom: 1px solid _lighter($_color-gray);
+    @include _padding(0, 0, .5);
+
+    .wp-share-buttons {
+      @include _margin(.5, 0, 0);
+    }
+  }
+
+  &__title {
+    @include _margin(0, 0, .25);
+  }
+
+  &__meta {
+    @include _font-size-line-height(12px);
+    font-weight: bold;
+
+    a {
+      color: $_color-text;
+      text-decoration: none;
+
+      @include _hover() {
+        opacity: .7;
+      }
+    }
+  }
+
+  &__content {
+    @include _content();
+
+    > h2 {
+      position: relative;
+      @include _padding(0, 0, 1);
+      @include _margin-bottom(1.5);
+
+      &::after {
+        @include _position(absolute, null, null, 0, 0);
+        content: '';
+        display: block;
+        height: 1px;
+        background-color: $color-accent;
+        width: 40px;
+      }
+    }
+
+    > table {
+      border-collapse: collapse;
+      width: 100%;
+
+      th, td {
+        border: 1px solid _lighter($_color-gray);
+        @include _padding(.25, .5);
+      }
+
+      th {
+        font-weight: bold;
+      }
+
+      thead {
+        th {
+          background-color: $color-accent;
+          border-right: 1px solid _light($color-accent);
+          border-left: 1px solid _light($color-accent);
+          color: #fff;
+        }
+      }
+    }
+  }
+}

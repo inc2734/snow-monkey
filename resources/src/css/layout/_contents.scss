@@ -1,0 +1,117 @@
+.#{$_prefix}l-contents {
+  &__sidebar {
+    @include _font-size-line-height($_base-font-size-px - 2);
+
+    a {
+      color: $_color-text;
+      text-decoration: none;
+
+      @include _hover() {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /**
+   * Right sidebar
+   */
+  .#{$_prefix}l-body--right-sidebar & {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      @include _media-min(lg) {
+        flex-direction: row;
+      }
+    }
+
+    &__main {
+      flex: 1;
+
+      @include _media-min(lg) {
+        @include _margin(0, 2, 0, 0);
+        flex: none;
+        width: calc(100% - 336px - #{_space(2)});
+      }
+    }
+
+    &__sidebar {
+      @include _margin(1, 0, 0);
+      flex: 1;
+
+      @include _media-min(lg) {
+        margin: 0;
+        flex: none;
+        width: 336px;
+      }
+    }
+  }
+
+  /**
+   * Left sidebar
+   */
+  .#{$_prefix}l-body--left-sidebar & {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+
+      @include _media-min(lg) {
+        flex-direction: row-reverse;
+      }
+    }
+
+    &__main {
+      flex: 1;
+
+      @include _media-min(lg) {
+        @include _margin(0, 0, 0, 2);
+        flex: none;
+        width: calc(100% - 336px - #{_space(2)});
+      }
+    }
+
+    &__sidebar {
+      @include _margin(1, 0, 0);
+      flex: 1;
+
+      @include _media-min(lg) {
+        margin: 0;
+        flex: none;
+        width: 336px;
+      }
+    }
+  }
+
+  /**
+   * One column
+   */
+  .#{$_prefix}l-body--one-column & {
+    &__sidebar {
+      @include _margin(1, 0, 0);
+
+      @include _media-min(lg) {
+        @include _margin(2, 0, 0);
+      }
+    }
+  }
+
+  /**
+   * One column (slim)
+   */
+  .#{$_prefix}l-body--one-column-slim & {
+    &__inner {
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    &__sidebar {
+      @include _margin(1, 0, 0);
+
+      @include _media-min(lg) {
+        @include _margin(2, 0, 0);
+      }
+    }
+  }
+}

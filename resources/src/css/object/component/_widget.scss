@@ -1,0 +1,368 @@
+.#{$_prefix}c-widget {
+  .#{$_prefix}l-sidebar-widget-area & {
+    &__title {
+      position: relative;
+      @include _margin(0, 0, .5);
+      @include _font-size-line-height($_base-font-size-px);
+      font-weight: bold;
+      text-align: center;
+
+      &::before {
+        position: absolute;
+        top: calc(50% - 1.5px);
+        right: 0;
+        left: 0;
+        display: block;
+        content: '';
+        height: 3px;
+        background-color: $_color-black;
+      }
+
+      span {
+        position: relative;
+        display: inline-block;
+        background-color: #fff;
+        padding: 0 .5em;
+      }
+    }
+  }
+
+  .#{$_prefix}l-footer-widget-area & {
+    @include _font-size-line-height($_base-font-size-px - 2);
+
+    &__title {
+      @include _margin(0, 0, .25);
+      @include _font-size-line-height($_base-font-size-px);
+      font-weight: bold;
+    }
+  }
+}
+
+.widget_meta,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_archive,
+.widget_categories,
+.widget_meta,
+.widget_pages,
+.widget_nav_menu,
+.widget_inc2734_wp_awesome_widgets_recent_posts {
+  ul {
+    @include _list-unstyled();
+
+    > li + li {
+      @include _margin(.25, 0, 0);
+    }
+  }
+}
+
+.widget_recent_entries {
+  .post-date {
+    display: block;
+    color: _lighter($_color-text);
+    @include _font-size-line-height(11px);
+  }
+}
+
+.widget_categories .cat-item,
+.widget_pages .page_item,
+.widget_nav_menu .menu-item {
+  position: relative;
+}
+
+.children-expander {
+  $root: &;
+
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+
+  &::before {
+    content: '+';
+  }
+
+  &[data-is-expanded="true"] {
+    &::before {
+      content: '-';
+    }
+  }
+}
+.menu-item-has-children {
+  @include _hover() {
+    .children-expander {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes widget_children_show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.widget_categories .children,
+.widget_pages .children,
+.widget_nav_menu .sub-menu {
+  display: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  @include _margin(.25, 0, 0);
+  @include _padding(.25, 0);
+
+  &[data-is-hidden="false"] {
+    display: block;
+    animation: widget_children_show .5s;
+  }
+}
+
+.widget_calendar {
+  table {
+    border: none;
+    table-layout: fixed;
+    width: 100%;
+
+    caption {
+      font-weight: bold;
+      letter-spacing: .2em;
+      text-align: center;
+    }
+
+    th, td {
+      background-color: transparent;
+      border: none;
+      line-height: 1;
+      padding: 6px 0;
+    }
+
+    thead th, tbody td {
+      text-align: center;
+
+      > a {
+        display: inline-block;
+        background-color: #eee;
+        border-radius: 2px;
+        color: $_color-text;
+        margin: -6px 0;
+        padding: 6px 10px;
+        text-decoration: none;
+      }
+    }
+
+    tfoot {
+      @include _font-size-line-height($_base-font-size-px - 2);
+
+      #prev, #next {
+        padding-top: 1em;
+      }
+
+      #prev {
+        text-align: left;
+      }
+
+      #next {
+        text-align: right;
+      }
+    }
+  }
+
+  #next {
+    text-align: right;
+  }
+}
+
+.widget_archive {
+  li {
+    margin: 0 !important;
+    display: inline-block;
+    line-height: 1;
+    font-size: 0;
+    vertical-align: top;
+  }
+}
+
+.widget_archive,
+.widget_tag_cloud {
+  a {
+    margin: 0 4px 8px 0;
+    display: inline-block;
+    background-color: _lightest($_color-gray);
+    border: 1px solid _lighter($_color-gray);
+    border-radius: $_border-radius;
+    color: _dark($_color-gray);
+    font-size: ($_base-font-size-px - 4) !important;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 4px 8px;
+    vertical-align: top;
+
+    @include _hover() {
+      background-color: _lighter($_color-gray);
+      text-decoration: none;
+    }
+  }
+}
+
+.widget_tag_cloud a {
+  &::before {
+    margin-right: 3px;
+    content: '#';
+    color: $color-accent;
+    font-weight: bold;
+  }
+}
+
+.wpaw-recent-posts {
+  &__item:not(:first-child) {
+    @include _margin(.5, 0, 0);
+  }
+
+  &__taxonomy {
+    margin: 0 0 3px;
+    line-height: 1;
+  }
+
+  &__date {
+    @include _font-size-line-height(11px);
+  }
+}
+
+.widget_inc2734_wp_awesome_widgets_slider {
+  padding: 0;
+
+  .wpaw-slider {
+    .slick-dotted.slick-slider {
+      margin: 0;
+    }
+
+    .slick-slide {
+      max-height: 75vh;
+    }
+
+    .slick-dots {
+      bottom: 10px;
+    }
+  }
+}
+
+.widget_inc2734_wp_awesome_widgets_pr_box {
+  padding: 0;
+
+  .wpaw-pr-box {
+    @include _padding(1, 0);
+
+    @include _media-min(lg) {
+      @include _padding(2, 0);
+    }
+
+    .#{$_prefix}c-section {
+      &__title {
+        margin: 0;
+      }
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__lead {
+      @include _margin(.75, 0, 0);
+      @include _font-size-line-height($_base-font-size-px - 2);
+      color: _light($_color-text);
+    }
+
+    &__row {
+      @include _margin(1, 0, 0);
+    }
+
+    &__item-figure {
+      @include _margin-bottom(.25);
+
+      @include _media-min(lg) {
+        @include _margin-bottom(.75);
+      }
+    }
+
+    &__item-summary {
+      @include _font-size-line-height($_base-font-size-px - 2);
+
+      @include _media-min(lg) {
+        @include _margin-top(.25);
+      }
+    }
+  }
+}
+
+.widget_inc2734_wp_awesome_widgets_showcase {
+  padding: 0;
+
+  .wpaw-showcase {
+    @include _padding(1.5, 0);
+
+    @include _media-min(lg) {
+      @include _padding(2, 0);
+    }
+
+    &__inner {
+      @include _media-min(lg) {
+        @include _margin(0, -1);
+      }
+    }
+
+    &__body {
+      @include _content(.5);
+
+      @include _media-min(lg) {
+        @include _content(1);
+        @include _padding(0, 1);
+      }
+    }
+
+    &__figure {
+      @include _margin(1, 0, 0);
+
+      @include _media-min(lg) {
+        margin: 0;
+        @include _padding(0, 1);
+      }
+    }
+
+    &__more {
+      @include _padding(.5, 1);
+
+      @include _media-min(lg) {
+        @include _padding(.5, 2);
+      }
+    }
+  }
+}
+
+.wpaw-site-branding {
+  &__logo {
+    text-align: center;
+
+    a {
+      color: $_color-text;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    @include _margin(.75, 0, 0);
+    @include _content(.5);
+  }
+}

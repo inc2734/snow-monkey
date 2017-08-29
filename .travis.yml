@@ -1,0 +1,58 @@
+language: php
+php:
+- 5.6
+- 7
+sudo: false
+branches:
+  only:
+  - master
+  - develop
+  - "/v\\d+\\.\\d+\\.\\d+?.*/"
+env:
+  global:
+  - GIT_COMMITTER_NAME=travis-ci
+  - GIT_COMMITTER_EMAIL=inc@2inc.org
+  - GIT_AUTHOR_NAME=travis-ci
+  - GIT_AUTHOR_EMAIL=inc@2inc.org
+  - WP_VERSION=latest WP_MULTISITE=0
+cache:
+  directories:
+  - node_modules
+  - vendor
+  - "$HOME/.composer/cache"
+before_install:
+- openssl aes-256-cbc -K $encrypted_067cdd0e0083_key -iv $encrypted_067cdd0e0083_iv -in .travis/github_deploy_key.enc -out .travis/github_deploy_key -d
+- mv .travis/github_deploy_key ~/.ssh/id_rsa
+- chmod 600 ~/.ssh/id_rsa
+install:
+- nvm install 6
+- npm install -g yarn
+- yarn install
+- npm rebuild node-sass
+- composer install
+before_script:
+- bash bin/install-wp-tests.sh wordpress_test root '' localhost $WP_VERSION
+script:
+- ls -la resources/style.css resources/index.php vendor/autoload.php
+- composer test
+- bash bin/create-release-branch.sh
+after_success:
+- pwd
+- ls -al
+before_deploy:
+- git clone -b release --quiet git@github.com:inc2734/snow-monkey.git release
+- cp package.json gulpfile.js yarn.lock release
+- cd release
+- yarn install
+- yarn run gulp zip
+- ls -la snow-monkey.zip
+- export RELEASE_FILE=$(ls snow-monkey.zip)
+deploy:
+  provider: releases
+  api_key:
+    secure: fPtyWaySgcFHuOEg6nQB8dAxCTMN1Jy0iFzWfZYHl1/3CxzyejLMG41ctjq52CVVX9Zh/d/FtGdww9SRXJZIR6ExetHRH1nN1A5/rMeIYonzWRML03ZYayMIS74aoKLoLOpA+6jvdiCfZefcaeoAWje9uWHyqtPgsd/eetYNOI2ZAtDYhdRMVJfYXm4HQ9j7CWn22qvur9HJAzQcPrQ0lGkr/hqMa5rYFiVDEQBhYa8HqJyO9QddRKi+TOAom21R84hWV5xuzdB88mG2w/Nm+O5OG3EAgKsSSKSKsQrmu/gNPmP7finGLTD1BLgrD3RgRJJ6zEWPHyJ1naVleZ+NcRiCKtk02VTkZYNqrDoTm//cFkl1IK04Tvi6EZdshxzKBqYy2KtrM7FUh0Kdp+XsSrESdJOmq8lHzgUY0k6oK75kl4XQFOg/yNyp8Y1UghMAUcWIGlzckgD85AeSlmwhoXleBtOfi7i2B3xXL/+u3mzd1FLDEM2PxkyznHjTUzuGHQY3dyoIrIkhmXRe+qkIuhf0L4asIp6TqHl3oMEt/3ZfSdBs7LYHl0x/VD7OJkMv9PCcpIUzxivYZRKYkDXfrmLLj9xO7AQL/+zm0xsK2zbWzmO+kLgjopsoVTocaeguPO5909zx7dsYF1SBgtBGQxZDzM8YrDq7rDgvsNdMLkw=
+  file: "${RELEASE_FILE}"
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: inc2734/snow-monkey

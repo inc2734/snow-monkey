@@ -1,0 +1,61 @@
+.#{$_prefix}p-comments {
+  &__list {
+    @include _list-unstyled();
+    @include _margin(0, 0, 1);
+  }
+
+  .children {
+    @include _list-unstyled();
+    @include _margin(1, 0, 0);
+    @include _padding(0, 0, 0, 1);
+  }
+
+  &__item {
+    @include _margin(1, 0, 0);
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__respond {
+    @include _margin(1, 0, 0);
+  }
+
+  &__form {
+    .required {
+      color: $_color-red;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .comment-reply-title {
+      @include _margin(0, 0, .5);
+    }
+
+    .comment-form {
+      .logged-in-as {
+        display: none;
+      }
+    }
+
+    .comment-form-comment {
+      > label {
+        display: none;
+      }
+    }
+
+    .#{$_prefix}c-form-control {
+      display: block;
+      width: 100%;
+      max-height: 100px;
+    }
+
+    .form-submit {
+      @include _margin(.5, 0, 0);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.#{$_prefix}c-entry-aside {
+  @include _margin(1, 0, 0);
+
+  @include _media-min(lg) {
+    @include _margin(2, 0, 0);
+  }
+
+  &__title {
+    position: relative;
+    @include _margin(0, 0, .5);
+    @include _font-size-line-height($_base-font-size-px * 1.25);
+    font-weight: bold;
+    text-align: center;
+
+    @include _media-min(lg) {
+      @include _margin(0, 0, 1);
+      @include _font-size-line-height($_base-font-size-px * 1.5);
+    }
+
+    &::before {
+      position: absolute;
+      top: calc(50% - 1.5px);
+      right: 0;
+      left: 0;
+      display: block;
+      content: '';
+      height: 3px;
+      background-color: $_color-black;
+    }
+
+    span {
+      position: relative;
+      display: inline-block;
+      background-color: #fff;
+      padding: 0 .5em;
+    }
+  }
+}

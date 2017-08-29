@@ -1,0 +1,41 @@
+.#{$_prefix}c-pagination {
+  @include _margin(1, 0, 0);
+  text-align: center;
+  font-size: 0;
+
+  @include _media-min(lg) {
+    @include _margin(2, 0, 0);
+  }
+
+  &__item,
+  &__item-link,
+  &__item-ellipsis {
+    margin: 0 2px;
+    display: inline-flex;
+    font-size: 14px;
+    line-height: 1;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  &__item {
+    background-color: $color-accent;
+    color: #fff;
+  }
+
+  &__item-link,
+  &__item-ellipsis {
+    background-color: _lighter($_color-gray);
+    color: #999;
+  }
+
+  &__item-link {
+    @include _hover {
+      background-color: _light($_color-gray);
+      color: #fff;
+    }
+  }
+}

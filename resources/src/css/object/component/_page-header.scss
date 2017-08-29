@@ -1,0 +1,12 @@
+.#{$_prefix}c-page-header {
+  position: relative;
+  @include _background-image-cover();
+  background-attachment: fixed;
+  height: 60vh;
+
+  &::after {
+    content: '';
+    display: block;
+    @include _position(absolute, 0, 0, 0, 0);
+  }
+}

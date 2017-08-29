@@ -1,0 +1,12 @@
+.#{$_prefix}p-front-page-content {
+  position: relative;
+  @include _margin(-1, auto, 0);
+  @include _padding(1.5, 1);
+  width: 94vw;
+  background-color: #fff;
+
+  @include _media-min(lg) {
+    @include _padding(3);
+    max-width: 70rem;
+  }
+}

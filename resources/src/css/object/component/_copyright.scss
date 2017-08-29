@@ -1,0 +1,16 @@
+.#{$_prefix}c-copyright {
+  border-top: 1px solid _lighter($_color-gray);
+  background-color: $_color-black;
+  color: #ccc;
+  @include _font-size-line-height($_base-font-size-px - 2);
+  @include _padding(.5, 0);
+
+  a {
+    color: _lighter($_color-text);
+    text-decoration: none;
+
+    @include _hover() {
+    text-decoration: underline;
+    }
+  }
+}

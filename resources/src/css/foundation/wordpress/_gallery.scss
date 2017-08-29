@@ -1,0 +1,35 @@
+.gallery {
+  @include _clearfix();
+  margin-right: _space(-.5);
+  margin-bottom: _space(-1);
+  margin-left: _space(-.5);
+
+  &-item {
+    margin-bottom: _space(1);
+    float: left;
+    display: block;
+    padding-right: _space(.5);
+    padding-left: _space(.5);
+
+    @for $i from 2 through 9 {
+      .gallery-columns-#{$i} & {
+        width: percentage(1 / $i);
+
+        &:nth-child(#{$i}n + 1) {
+          clear: both;
+        }
+      }
+    }
+  }
+
+  &-caption {
+    display: block;
+
+    .gallery-columns-6 &,
+    .gallery-columns-7 &,
+    .gallery-columns-8 &,
+    .gallery-columns-9 & {
+      display: none;
+    }
+  }
+}

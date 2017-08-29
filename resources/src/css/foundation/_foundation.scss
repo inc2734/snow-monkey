@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: normal;
+  src: local("YuGothic-Medium"),
+       local("Yu Gothic Medium"),
+       local("YuGothic-Regular");
+}
+
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: bold;
+  src: local("YuGothic-Bold"),
+       local("Yu Gothic");
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Meiryo, MyYuGothicM, YuGothic, "Helvetica Neue", sans-serif;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+input, textarea, keygen, select, button {
+  font-size: 100%;
+}
+
+a {
+  color: $color-accent;
+}
+
+h1 {
+  @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h1-font-size-scale);
+  }
+}
+
+h2 {
+  @include _font-size-line-height($_base-font-size * $_h2-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h2-font-size-scale);
+  }
+}
+
+h3 {
+  @include _font-size-line-height($_base-font-size * $_h3-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h3-font-size-scale);
+  }
+}
+
+h4 {
+  @include _font-size-line-height($_base-font-size * $_h4-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h4-font-size-scale);
+  }
+}

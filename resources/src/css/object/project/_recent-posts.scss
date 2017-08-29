@@ -1,0 +1,12 @@
+.#{$_prefix}p-recent-posts {
+  &__more-btn {
+    @include _margin(1, 0, 0);
+    font-weight: bold;
+    width: 100%;
+    max-width: 10em;
+
+    @include _media-min(lg) {
+      @include _margin(1.5, 0, 0);
+    }
+  }
+}

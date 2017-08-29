@@ -1,0 +1,60 @@
+.#{$_prefix}p-global-nav {
+  .#{$_prefix}c-navbar {
+    &__submenu {
+      background-color: rgba($_color-black, .9);
+    }
+
+    &__item {
+      > a {
+        color: $_color-text;
+        @include _font-size-line-height($_base-font-size-px - 2);
+        font-weight: bold;
+        @include _padding(1, .75);
+      }
+
+      &[class*="current_"],
+      &[class*="current-"] {
+        > a {
+          color: $color-accent;
+        }
+      }
+
+      @include _hover() {
+        > a {
+          color: $color-accent;
+        }
+      }
+
+      > .#{$_prefix}c-navbar__submenu {
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          content: '';
+          display: block;
+          @include _triangle-top(16px, 10px, $color-accent);
+          position: absolute;
+          top: -10px;
+          left: calc(50% - 8px);
+        }
+      }
+    }
+
+    &__submenu {
+      background-color: $color-accent;
+      z-index: 1;
+    }
+
+    &__subitem {
+      @include _font-size-line-height($_base-font-size-px - 2);
+
+      @include _hover() {
+        background-color: rgba(#fff, .05);
+      }
+
+      > a {
+        color: #fff;
+        @include _padding(.5rem, 1rem);
+      }
+    }
+  }
+}

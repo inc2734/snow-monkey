@@ -1,0 +1,52 @@
+{
+  "type": "wordpress-theme",
+  "license": "GPL-2.0+",
+  "version": "0.1.0",
+  "authors": [
+    {
+      "name": "Takashi Kitajima",
+      "email": "inc@2inc.org",
+      "homepage": "https://2inc.org"
+    }
+  ],
+  "require-dev": {
+    "squizlabs/php_codesniffer": "*",
+    "wp-coding-standards/wpcs": "*",
+    "phpmd/phpmd": "2.*",
+    "phpunit/phpunit": "^5.7",
+    "doctrine/instantiator": "1.0.4",
+    "phpunit/php-token-stream": "1.4.11"
+  },
+  "require": {
+    "php": ">=5.6",
+    "inc2734/mimizuku-core": ">=0.1.5"
+  },
+  "config": {
+    "process-timeout": 0
+  },
+  "scripts" :{
+    "test": [
+      "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
+      "vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
+      "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
+      "bash bin/phpunit.sh"
+    ],
+    "server": "bash bin/server.sh",
+    "scaffold-tests": "bash bin/scaffold-tests.sh",
+    "theme-unit-test": "bash bin/theme-unit-test.sh",
+    "theme-unit-test-ja": "bash bin/theme-unit-test-ja.sh",
+    "wpphpunit": "bash bin/wpphpunit.sh",
+    "phpunit": "bash bin/phpunit.sh",
+    "post-install-cmd": [
+      "cd vendor/inc2734/wp-basis && yarn install && yarn upgrade && cd ../../../ && yarn run gulp build"
+    ],
+    "post-update-cmd": [
+      "composer run post-install-cmd"
+    ]
+  },
+  "autoload": {
+    "psr-4": {
+      "Mimizuku\\": ""
+    }
+  }
+}

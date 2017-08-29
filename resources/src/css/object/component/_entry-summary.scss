@@ -1,0 +1,103 @@
+.#{$_prefix}c-entry-summary {
+  $root: &;
+
+  @include _hover() {
+    #{$root}__figure {
+      > span:first-child {
+        transform: scale(1.05);
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    #{$root}__title,
+    #{$root}__content,
+    #{$root}__meta {
+      color: $_color-gray;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    @include _margin(0, 0, .25);
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-top: 75%;
+    }
+
+    > span:first-child {
+      @include _position(absolute, 0, 0, 0, 0);
+      @include _background-image-cover();
+      background-color: _lighter($_color-gray);
+      @include _transition(transform);
+      backface-visibility: hidden;
+    }
+
+    &::after {
+      @include _position(absolute, 8px, 8px, 8px, 8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba($color-accent, .4);
+      background-image: radial-gradient(rgba($color-accent, .9) 33%, transparent 33%);
+      background-size: 3px 3px;
+      content: 'READ MORE';
+      color: #fff;
+      font-weight: bold;
+      opacity: 0;
+      visibility: hidden;
+      @include _transition(opacity);
+    }
+
+    #{$root}__term {
+      @include _position(absolute, 0, 0, null, null, 1);
+    }
+  }
+
+  &__term {
+    display: inline-block;
+    background-color: $color-accent;
+    color: #fff;
+    font-weight: bold;
+    @include _font-size($_base-font-size-px - 4);
+    line-height: 1;
+    @include _padding(.25, .5);
+  }
+
+  &__title {
+    @include _margin(0, 0, .2);
+    @include _font-size($_base-font-size);
+    @include _line-height($_base-font-size * 1.5);
+    @include _transition(color);
+
+    @include _media-min(lg) {
+      @include _margin(0, 0, .5);
+      @include _font-size-line-height($_base-font-size * 1.5);
+    }
+  }
+
+  &__content {
+    @include _margin(0, 0, .2);
+    @include _font-size($_base-font-size-px - 4);
+    @include _line-height($_base-font-size * 1.25);
+    color: _light($_color-text);
+    @include _transition(color);
+
+    @include _media-min(lg) {
+      @include _margin(0, 0, .5);
+    }
+  }
+
+  &__meta {
+    @include _font-size-line-height(10px);
+    @include _transition(color);
+    font-weight: bold;
+    text-align: center;
+  }
+}

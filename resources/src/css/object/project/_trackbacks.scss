@@ -1,0 +1,17 @@
+.#{$_prefix}p-trackbacks {
+  &__trackback-url {
+    @include _margin(1, 0, 0);
+
+    dl {
+      margin: 0;
+
+      > dt {
+        margin-bottom: 4px;
+      }
+
+      .#{$_prefix}c-form-control {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.alignleft {
+  @include _margin-right(1);
+  float: left;
+
+  @at-root {
+    img#{&}, & > img {
+      margin-top: $_between-lines;
+    }
+  }
+}
+
+.alignright {
+  @include _margin-left(1);
+  float: right;
+
+  @at-root {
+    img#{&}, & > img {
+      margin-top: $_between-lines;
+    }
+  }
+}
+
+.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}

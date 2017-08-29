@@ -1,0 +1,11 @@
+.DS_Store
+.sass-cache/
+npm-debug.log
+/node_modules/
+/resources/assets/
+/vendor/
+packages/
+*.sql
+/bin/*.xml
+release/
+snow-monkey.zip

@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<ruleset name="WordPress Theme Coding Standards">
+  <!-- See https://github.com/squizlabs/PHP_CodeSniffer/wiki/Annotated-ruleset.xml -->
+  <!-- See https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/blob/develop/WordPress-Core/ruleset.xml -->
+
+  <!-- Set a description for this ruleset. -->
+  <description>A custom set of code standard rules to check for WordPress themes.</description>
+
+  <!-- Include the WordPress ruleset, with exclusions. -->
+  <rule ref="WordPress">
+    <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact" />
+    <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect" />
+    <exclude name="Squiz.Commenting.ClassComment" />
+    <exclude name="Squiz.Commenting.FunctionComment" />
+    <exclude name="Squiz.Commenting.FileComment.SpacingAfterComment" />
+    <exclude name="Generic.Commenting.DocComment" />
+    <exclude name="WordPress.VIP" />
+    <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+    <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
+  </rule>
+
+  <file>./resources</file>
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/tests/*</exclude-pattern>
+  <exclude-pattern>*/release/*</exclude-pattern>
+</ruleset>
