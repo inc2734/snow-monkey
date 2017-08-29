@@ -1,4 +1,4 @@
-# Mimizuku
+# Snow Monkey
 
 [![Build Status](https://travis-ci.org/inc2734/snow-monkey.svg?branch=master)](https://travis-ci.org/inc2734/snow-monkey)
 [![Latest Stable Version](https://poser.pugx.org/inc2734/snow-monkey/v/stable)](https://packagist.org/packages/inc2734/snow-monkey)

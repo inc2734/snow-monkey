@@ -1,7 +1,7 @@
 {
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "authors": [
     {
       "name": "Takashi Kitajima",
@@ -46,7 +46,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Mimizuku\\": ""
+      "Snow_Monkey\\": ""
     }
   }
 }
