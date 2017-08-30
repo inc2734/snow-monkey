@@ -12,7 +12,7 @@ if [[ "master" != "$TRAVIS_BRANCH" ]]; then
   exit
 fi
 
-if [[ "7" != "$TRAVIS_PHP_VERSION" ]]; then
+if [[ "7.1" != "$TRAVIS_PHP_VERSION" ]]; then
 	echo "deploy only PHP 7"
 	exit
 fi
