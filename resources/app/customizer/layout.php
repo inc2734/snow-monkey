@@ -13,12 +13,16 @@ $customizer->section( 'layout', [
 	'title' => __( 'Layout', 'snow-monkey' ),
 ] );
 
-$post_types = get_post_types( [ 'public' => true ] );
+$post_types = get_post_types( [
+	'public' => true,
+] );
 unset( $post_types['attachment'] );
 foreach ( $post_types as $post_type ) {
 	$post_type_object = get_post_type_object( $post_type );
 	$customizer->control( 'select', $post_type_object->name . '-layout', [
+		// @codingStandardsIgnoreStart
 		'label'   => sprintf( __( '%1$s layout', 'snow-monkey' ), __( $post_type_object->label ) ),
+		// @codingStandardsIgnoreEnd
 		'default' => 'right-sidebar',
 		'choices' => [
 			'left-sidebar'     => __( 'Left sidebar', 'snow-monkey' ),
@@ -53,7 +57,9 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 ] );
 
 $section = $customizer->get_section( 'layout' );
-$post_types = get_post_types( [ 'public' => true ] );
+$post_types = get_post_types( [
+	'public' => true,
+] );
 unset( $post_types['attachment'] );
 foreach ( $post_types as $post_type ) {
 	$post_type_object = get_post_type_object( $post_type );

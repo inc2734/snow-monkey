@@ -30,6 +30,9 @@ yarn install
 composer install --no-dev
 rm -rf composer.json composer.lock package.json yarn.lock gulpfile.js node_modules .editorconfig .gitignore .travis.yml .travis
 rm -rf vendor/inc2734/wp-basis/.gitignore
+sed '/^node_modules/d' vendor/inc2734/wp-basis/.gitignore
+echo node_modules/* >> vendor/inc2734/wp-basis/.gitignore
+echo !node_modules/sass-basis >> vendor/inc2734/wp-basis/.gitignore
 
 git add -A
 git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
