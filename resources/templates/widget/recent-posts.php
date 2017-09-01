@@ -32,9 +32,11 @@ $recent_posts = get_posts( [
 				<li class="wpaw-recent-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
-						<div class="wpaw-recent-posts__figure"
-							style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
-						></div>
+						<?php if ( $instance['show-thumbnail'] ) : ?>
+							<div class="wpaw-recent-posts__figure"
+								style="background-image: url(<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ); ?> )"
+							></div>
+						<?php endif; ?>
 
 						<div class="wpaw-recent-posts__body">
 							<?php $terms = get_the_terms( get_the_ID(), 'category' ); ?>
