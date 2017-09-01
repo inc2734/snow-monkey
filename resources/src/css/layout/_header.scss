@@ -9,6 +9,10 @@
     @include _padding(1, 0, 0);
   }
 
+  &--simple {
+    @include _padding(.25, 0);
+  }
+
   &__drop-nav {
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
@@ -48,6 +52,26 @@
         max-height: none;
       }
     }
+  }
+}
+
+/**
+ * simple header
+ */
+.#{$_prefix}l-simple-header {
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  &__branding {
+    flex: 1 0 auto;
+  }
+
+  &__nav {
+    flex: 0 1 0%;
   }
 }
 

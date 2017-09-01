@@ -17,26 +17,8 @@ new SnowMonkeyMainVisual();
 import SnowMonkeyWidgetItemExpander from './widget-item-expander.js';
 new SnowMonkeyWidgetItemExpander();
 
+import SnowMonkeyHeader from './header.js';
+new SnowMonkeyHeader();
+
 import SnowMonkeyDropNav from './drop-nav.js';
 new SnowMonkeyDropNav();
-
-jQuery(function($) {
-  var init = function() {
-    if (1023 < $(window).width()) {
-      $('.l-header').attr('data-l-header-type', '');
-      $('.l-contents').css('margin-top', '');
-    } else {
-      $('.l-header').attr('data-l-header-type', 'sticky');
-      if ('fixed' === $('.l-header').css('position') || 'absolute' === $('.l-header').css('position')) {
-        const headerHeight = $('.l-header').outerHeight();
-        $('.l-contents').css('marginTop', `${headerHeight}px`);
-      }
-    }
-  }
-
-  init();
-
-  $(window).resize(function() {
-    init();
-  });
-});
