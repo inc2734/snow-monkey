@@ -34,7 +34,7 @@ $recent_posts = get_posts( [
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
 							<div class="wpaw-recent-posts__figure"
-								style="background-image: url(<?php echo wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ); ?> )"
+								style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
 							></div>
 						<?php endif; ?>
 
