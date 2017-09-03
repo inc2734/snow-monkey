@@ -11,7 +11,7 @@ export default class SnowMonkeyHeader {
 
       this.init();
 
-      $(window).resize(function() {
+      $(window).resize(() => {
         this.init();
       });
     });

@@ -2120,6 +2120,10 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
+jquery.smoothscroll@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/jquery.smoothscroll/-/jquery.smoothscroll-1.0.2.tgz#d8b04fd9ead85c499db782cc0880ca8777ad33c0"
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"

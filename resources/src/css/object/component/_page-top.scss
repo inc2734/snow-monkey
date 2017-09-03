@@ -1,0 +1,36 @@
+.#{$_prefix}c-page-top {
+  @include _position(fixed, null, 0, 0, null);
+  background-color: $color-accent;
+  @include _square(40px);
+  @include _transition(all);
+  visibility: hidden;
+  opacity: 0;
+
+  &[aria-hidden="false"] {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include _media-min(md) {
+    @include _square(50px);
+  }
+
+  @include _hover() {
+    background-color: darken($color-accent, 5%);
+  }
+
+  a {
+    @include _position(absolute, 0, 0, 0, 0);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fa {
+    font-size: 20px;
+  }
+}

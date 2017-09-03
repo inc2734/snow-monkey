@@ -37,6 +37,14 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
+	wp_enqueue_script(
+		'jquery.easing',
+		'//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
+		[ 'jquery' ],
+		false,
+		true
+	);
+
 	$src  = get_theme_file_uri( '/assets/js/app.min.js' );
 	$path = get_theme_file_path( '/assets/js/app.min.js' );
 

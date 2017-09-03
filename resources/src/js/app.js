@@ -22,3 +22,6 @@ new SnowMonkeyHeader();
 
 import SnowMonkeyDropNav from './drop-nav.js';
 new SnowMonkeyDropNav();
+
+import SnowMonkeyPageTopScroll from './page-top-scroll.js';
+new SnowMonkeyPageTopScroll();
