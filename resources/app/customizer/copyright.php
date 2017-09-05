@@ -27,12 +27,12 @@ $customizer->section( 'copyright', [
 	'title' => __( 'Copyright', 'snow-monkey' ),
 ] );
 
-$customizer->control( 'text', 'inc2734-theme-option-copyright', [
+$customizer->control( 'text', 'mwt-copyright', [
 	'label'       => __( 'Copyright', 'snow-monkey' ),
 	'description' => __( 'HTML usable', 'snow-monkey' ),
 	'default'     => $copyright,
 ] );
 
 $section = $customizer->get_section( 'copyright' );
-$control = $customizer->get_control( 'inc2734-theme-option-copyright' );
+$control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );

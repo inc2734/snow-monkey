@@ -14,8 +14,8 @@ add_filter( 'inc2734_wp_like_me_box_thumbnail', function( $thumbnail ) {
 		return get_site_icon_url();
 	}
 
-	if ( get_option( 'inc2734-theme-option-default-og-image' ) ) {
-		return get_option( 'inc2734-theme-option-default-og-image' );
+	if ( get_option( 'mwt-default-og-image' ) ) {
+		return get_option( 'mwt-default-og-image' );
 	}
 
 	return $thumbnail;

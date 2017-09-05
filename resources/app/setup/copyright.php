@@ -6,5 +6,5 @@
  */
 
 add_filter( 'snow_monkey_copyright', function( $copyright ) {
-	return get_option( 'inc2734-theme-option-copyright' );
+	return get_option( 'mwt-copyright' );
 } );

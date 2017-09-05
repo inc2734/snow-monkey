@@ -33,13 +33,13 @@ $customizer->section( 'twitter-cards', array(
 	),
 ) );
 
-$customizer->control( 'text', 'inc2734-theme-option-google-analytics-tracking-id', array(
+$customizer->control( 'text', 'mwt-google-analytics-tracking-id', array(
 	'label'       => __( 'Tracking ID', 'snow-monkey' ),
 	'description' => __( 'e.g. UA-1111111-11', 'snow-monkey' ),
 	'type'        => 'option',
 ) );
 
-$customizer->control( 'text', 'inc2734-theme-option-google-site-verification', array(
+$customizer->control( 'text', 'mwt-google-site-verification', array(
 	'label'       => __( 'Google site verification', 'snow-monkey' ),
 	'description' => sprintf(
 		__( 'Please enter part %1$s of %2$s', 'snow-monkey' ),
@@ -49,13 +49,13 @@ $customizer->control( 'text', 'inc2734-theme-option-google-site-verification', a
 	'type' => 'option',
 ) );
 
-$customizer->control( 'image', 'inc2734-theme-option-default-og-image', array(
+$customizer->control( 'image', 'mwt-default-og-image', array(
 	'label'       => __( 'Default OGP image', 'snow-monkey' ),
 	'description' => __( 'If a featured image is set in an article, that the featured image is used, if not set, this image will be used.', 'snow-monkey' ),
 	'type'        => 'option',
 ) );
 
-$customizer->control( 'select', 'inc2734-theme-option-twitter-card', array(
+$customizer->control( 'select', 'mwt-twitter-card', array(
 	'label'       => __( 'twitter:card', 'snow-monkey' ),
 	'description' => __( 'Twitter Cards format', 'snow-monkey' ),
 	'default'     => 'summary',
@@ -66,7 +66,7 @@ $customizer->control( 'select', 'inc2734-theme-option-twitter-card', array(
 	),
 ) );
 
-$customizer->control( 'text', 'inc2734-theme-option-twitter-site', array(
+$customizer->control( 'text', 'mwt-twitter-site', array(
 	'label'       => __( 'twitter:site', 'snow-monkey' ),
 	'description' => sprintf(
 		__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
@@ -78,19 +78,19 @@ $customizer->control( 'text', 'inc2734-theme-option-twitter-site', array(
 
 $panel   = $customizer->get_panel( 'seo' );
 $section = $customizer->get_section( 'google-analytics' );
-$control = $customizer->get_control( 'inc2734-theme-option-google-analytics-tracking-id' );
+$control = $customizer->get_control( 'mwt-google-analytics-tracking-id' );
 $control->join( $section )->join( $panel );
 
 $section = $customizer->get_section( 'google-search-console' );
-$control = $customizer->get_control( 'inc2734-theme-option-google-site-verification' );
+$control = $customizer->get_control( 'mwt-google-site-verification' );
 $control->join( $section )->join( $panel );
 
 $section = $customizer->get_section( 'ogp' );
-$control = $customizer->get_control( 'inc2734-theme-option-default-og-image' );
+$control = $customizer->get_control( 'mwt-default-og-image' );
 $control->join( $section )->join( $panel );
 
 $section = $customizer->get_section( 'twitter-cards' );
-$control = $customizer->get_control( 'inc2734-theme-option-twitter-card' );
+$control = $customizer->get_control( 'mwt-twitter-card' );
 $control->join( $section )->join( $panel );
-$control = $customizer->get_control( 'inc2734-theme-option-twitter-site' );
+$control = $customizer->get_control( 'mwt-twitter-site' );
 $control->join( $section )->join( $panel );

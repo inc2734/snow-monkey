@@ -17,7 +17,7 @@ $customizer->section( 'share-buttons', [
 	),
 ] );
 
-$customizer->control( 'multiple-checkbox', 'inc2734-theme-option-share-buttons-buttons', [
+$customizer->control( 'multiple-checkbox', 'mwt-share-buttons-buttons', [
 	'label'   => __( 'Display buttons', 'snow-monkey' ),
 	'default' => '',
 	'choices' => [
@@ -32,7 +32,7 @@ $customizer->control( 'multiple-checkbox', 'inc2734-theme-option-share-buttons-b
 	'type' => 'option',
 ] );
 
-$customizer->control( 'select', 'inc2734-theme-option-share-buttons-type', [
+$customizer->control( 'select', 'mwt-share-buttons-type', [
 	'label'   => __( 'Type', 'snow-monkey' ),
 	'default' => 'balloon',
 	'choices' => [
@@ -45,7 +45,7 @@ $customizer->control( 'select', 'inc2734-theme-option-share-buttons-type', [
 	'type' => 'option',
 ] );
 
-$customizer->control( 'select', 'inc2734-theme-option-share-buttons-display-position', [
+$customizer->control( 'select', 'mwt-share-buttons-display-position', [
 	'label'   => __( 'Display position', 'snow-monkey' ),
 	'default' => 'top',
 	'choices' => [
@@ -56,18 +56,18 @@ $customizer->control( 'select', 'inc2734-theme-option-share-buttons-display-posi
 	'type' => 'option',
 ] );
 
-$customizer->control( 'text', 'inc2734-theme-option-share-buttons-cache-seconds', [
+$customizer->control( 'text', 'mwt-share-buttons-cache-seconds', [
 	'label'   => __( 'Share counts cache time (seconds)', 'snow-monkey' ),
 	'default' => 300,
 	'type'    => 'option',
 ] );
 
 $section = $customizer->get_section( 'share-buttons' );
-$control = $customizer->get_control( 'inc2734-theme-option-share-buttons-buttons' );
+$control = $customizer->get_control( 'mwt-share-buttons-buttons' );
 $control->join( $section );
-$control = $customizer->get_control( 'inc2734-theme-option-share-buttons-type' );
+$control = $customizer->get_control( 'mwt-share-buttons-type' );
 $control->join( $section );
-$control = $customizer->get_control( 'inc2734-theme-option-share-buttons-display-position' );
+$control = $customizer->get_control( 'mwt-share-buttons-display-position' );
 $control->join( $section );
-$control = $customizer->get_control( 'inc2734-theme-option-share-buttons-cache-seconds' );
+$control = $customizer->get_control( 'mwt-share-buttons-cache-seconds' );
 $control->join( $section );

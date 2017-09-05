@@ -13,7 +13,7 @@ $customizer->section( 'like-me-box', [
 	'title' => __( 'Like me box', 'snow-monkey' ),
 ] );
 
-$customizer->control( 'text', 'inc2734-theme-option-facebook-page-name', [
+$customizer->control( 'text', 'mwt-facebook-page-name', [
 	'label'       => __( 'Facebook page name', 'snow-monkey' ),
 	'description' => sprintf(
 		_x( 'Please enter %1$s of %2$s', 'facebook-page-name', 'snow-monkey' ),
@@ -24,5 +24,5 @@ $customizer->control( 'text', 'inc2734-theme-option-facebook-page-name', [
 ] );
 
 $section = $customizer->get_section( 'like-me-box' );
-$control = $customizer->get_control( 'inc2734-theme-option-facebook-page-name' );
+$control = $customizer->get_control( 'mwt-facebook-page-name' );
 $control->join( $section );

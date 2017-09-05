@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$google_adsense = get_option( 'inc2734-theme-option-google-adsense' );
+$google_adsense = get_option( 'mwt-google-adsense' );
 
 if ( ! $google_adsense ) {
 	return;

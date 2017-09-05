@@ -16,7 +16,7 @@ new Share_Buttons();
  * @return {int}
  */
 add_filter( 'inc2734_wp_share_buttons_count_cache_seconds', function( $seconds ) {
-	$new_seconds = get_option( 'inc2734-theme-option-share-buttons-cache-seconds' );
+	$new_seconds = get_option( 'mwt-share-buttons-cache-seconds' );
 	if ( preg_match( '/^\d+$/', $new_seconds ) ) {
 		return $new_seconds;
 	}
