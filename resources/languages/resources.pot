@@ -2,9 +2,9 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Snow Monkey 0.1.2\n"
+"Project-Id-Version: Snow Monkey 0.1.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-08-30 00:17:57+00:00\n"
+"POT-Creation-Date: 2017-09-05 14:17:27+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -54,77 +54,77 @@ msgstr ""
 msgid "Layout"
 msgstr ""
 
-#: app/customizer/layout.php:21
+#: app/customizer/layout.php:24
 msgid "%1$s layout"
 msgstr ""
 
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.2)  #-#-#-#-#
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:24
+#: app/customizer/layout.php:28
 msgid "Left sidebar"
 msgstr ""
 
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.2)  #-#-#-#-#
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:25
+#: app/customizer/layout.php:29
 msgid "Right sidebar"
 msgstr ""
 
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.2)  #-#-#-#-#
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:26
+#: app/customizer/layout.php:30
 msgid "One column"
 msgstr ""
 
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.2)  #-#-#-#-#
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:27
+#: app/customizer/layout.php:31
 msgid "One column (fluid)"
 msgstr ""
 
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.2)  #-#-#-#-#
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:28
+#: app/customizer/layout.php:32
 msgid "One column (slim)"
 msgstr ""
 
-#: app/customizer/layout.php:34
+#: app/customizer/layout.php:38
 msgid "Header layout"
 msgstr ""
 
-#: app/customizer/layout.php:37
+#: app/customizer/layout.php:41
 msgid "Simple"
 msgstr ""
 
-#: app/customizer/layout.php:38
+#: app/customizer/layout.php:42
 msgid "One row"
 msgstr ""
 
-#: app/customizer/layout.php:39
+#: app/customizer/layout.php:43
 msgid "Two rows"
 msgstr ""
 
-#: app/customizer/layout.php:40
+#: app/customizer/layout.php:44
 msgid "Center logo"
 msgstr ""
 
-#: app/customizer/layout.php:45
+#: app/customizer/layout.php:49
 msgid "Number of columns in the footer widget aera"
 msgstr ""
 
-#: app/customizer/layout.php:48
+#: app/customizer/layout.php:52
 msgid "1 column"
 msgstr ""
 
-#: app/customizer/layout.php:49
+#: app/customizer/layout.php:53
 msgid "2 columns"
 msgstr ""
 
-#: app/customizer/layout.php:50
+#: app/customizer/layout.php:54
 msgid "3 columns"
 msgstr ""
 
-#: app/customizer/layout.php:51
+#: app/customizer/layout.php:55
 msgid "4 columns"
 msgstr ""
 
@@ -303,39 +303,47 @@ msgstr ""
 msgid "Social Navigation"
 msgstr ""
 
-#: app/setup/widget-area.php:15
-msgid "Sidebar"
+#: app/setup/widget-area.php:23
+msgid "%1$s sidebar"
 msgstr ""
 
-#: app/setup/widget-area.php:17
-msgid "This widgets are displayed in the sidebar of singular pages."
+#: app/setup/widget-area.php:24
+msgid "This widgets are displayed in the %1$s page sidebar."
 msgstr ""
 
-#: app/setup/widget-area.php:32
+#: app/setup/widget-area.php:35
+msgid "%1$s bottom of contents"
+msgstr ""
+
+#: app/setup/widget-area.php:36
+msgid "This widgets are displayed in the bottom of %1$s contents."
+msgstr ""
+
+#: app/setup/widget-area.php:54
 msgid "Archive sidebar"
 msgstr ""
 
-#: app/setup/widget-area.php:34
-msgid "This widgets are displayed in the sidebar of archive pages."
+#: app/setup/widget-area.php:56
+msgid "This widgets are displayed in the archive page sidebar."
 msgstr ""
 
-#: app/setup/widget-area.php:49
+#: app/setup/widget-area.php:71
 msgid "Footer"
 msgstr ""
 
-#: app/setup/widget-area.php:51
-msgid "This widgets are displayed in the footer of all pages."
+#: app/setup/widget-area.php:73
+msgid "This widgets are displayed in the footer."
 msgstr ""
 
-#: app/setup/widget-area.php:66
+#: app/setup/widget-area.php:88
 msgid "Front page (Top of page)"
 msgstr ""
 
-#: app/setup/widget-area.php:68 app/setup/widget-area.php:85
+#: app/setup/widget-area.php:90 app/setup/widget-area.php:107
 msgid "This widgets are displayed in the static front page."
 msgstr ""
 
-#: app/setup/widget-area.php:83
+#: app/setup/widget-area.php:105
 msgid "Front page (Bottom of page)"
 msgstr ""
 
@@ -401,6 +409,10 @@ msgstr ""
 
 #: template-parts/related-posts.php:64
 msgid "Related posts"
+msgstr ""
+
+#: templates/layout/footer/footer.php:16
+msgid "Scroll up"
 msgstr ""
 
 #. Theme Name of the plugin/theme

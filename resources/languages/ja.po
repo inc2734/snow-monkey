@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-08-30 09:18+0900\n"
-"PO-Revision-Date: 2017-08-30 09:18+0900\n"
+"POT-Creation-Date: 2017-09-05 23:18+0900\n"
+"PO-Revision-Date: 2017-09-05 23:20+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -59,72 +59,72 @@ msgstr ""
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/customizer/layout.php:21
+#: app/customizer/layout.php:24
 msgid "%1$s layout"
 msgstr "%1$sレイアウト"
 
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:24
+#: app/customizer/layout.php:28
 msgid "Left sidebar"
 msgstr "左サイドバー"
 
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:25
+#: app/customizer/layout.php:29
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:26
+#: app/customizer/layout.php:30
 msgid "One column"
 msgstr "1カラム"
 
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:27
+#: app/customizer/layout.php:31
 msgid "One column (fluid)"
 msgstr "1カラム（fluid）"
 
 #. Template Name of the plugin/theme
-#: app/customizer/layout.php:28
+#: app/customizer/layout.php:32
 msgid "One column (slim)"
 msgstr "1カラム（slim）"
 
-#: app/customizer/layout.php:34
+#: app/customizer/layout.php:38
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/layout.php:37
+#: app/customizer/layout.php:41
 msgid "Simple"
 msgstr "シンプル"
 
-#: app/customizer/layout.php:38
+#: app/customizer/layout.php:42
 msgid "One row"
 msgstr "1行"
 
-#: app/customizer/layout.php:39
+#: app/customizer/layout.php:43
 msgid "Two rows"
 msgstr "2行"
 
-#: app/customizer/layout.php:40
+#: app/customizer/layout.php:44
 msgid "Center logo"
 msgstr "中央ロゴ"
 
-#: app/customizer/layout.php:45
+#: app/customizer/layout.php:49
 msgid "Number of columns in the footer widget aera"
 msgstr "フッターウィジェットエリアのカラム数"
 
-#: app/customizer/layout.php:48
+#: app/customizer/layout.php:52
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/layout.php:49
+#: app/customizer/layout.php:53
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/layout.php:50
+#: app/customizer/layout.php:54
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/layout.php:51
+#: app/customizer/layout.php:55
 msgid "4 columns"
 msgstr "4カラム"
 
@@ -305,39 +305,47 @@ msgstr "ドロワーナビゲーション（モバイル用）"
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
-#: app/setup/widget-area.php:15
-msgid "Sidebar"
-msgstr "サイドバー"
+#: app/setup/widget-area.php:23
+msgid "%1$s sidebar"
+msgstr "%1$s サイドバー"
 
-#: app/setup/widget-area.php:17
-msgid "This widgets are displayed in the sidebar of singular pages."
-msgstr "このウィジェットは単一ページのサイドバーに表示されます。"
+#: app/setup/widget-area.php:24
+msgid "This widgets are displayed in the %1$s page sidebar."
+msgstr "このウィジェットは%1$sページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:32
+#: app/setup/widget-area.php:35
+msgid "%1$s bottom of contents"
+msgstr "%1$s コンテンツの下"
+
+#: app/setup/widget-area.php:36
+msgid "This widgets are displayed in the bottom of %1$s contents."
+msgstr "このウィジェットは%1$sの記事下に表示されます。"
+
+#: app/setup/widget-area.php:54
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:34
-msgid "This widgets are displayed in the sidebar of archive pages."
+#: app/setup/widget-area.php:56
+msgid "This widgets are displayed in the archive page sidebar."
 msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:49
+#: app/setup/widget-area.php:71
 msgid "Footer"
 msgstr "フッター"
 
-#: app/setup/widget-area.php:51
-msgid "This widgets are displayed in the footer of all pages."
-msgstr "このウィジェットは各ページのフッターに表示されます。"
+#: app/setup/widget-area.php:73
+msgid "This widgets are displayed in the footer."
+msgstr "このウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:66
+#: app/setup/widget-area.php:88
 msgid "Front page (Top of page)"
 msgstr "フロントページ（ページ上部）"
 
-#: app/setup/widget-area.php:68 app/setup/widget-area.php:85
+#: app/setup/widget-area.php:90 app/setup/widget-area.php:107
 msgid "This widgets are displayed in the static front page."
 msgstr "このウィジェットは固定フロントページに表示されます。"
 
-#: app/setup/widget-area.php:83
+#: app/setup/widget-area.php:105
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
 
@@ -405,6 +413,10 @@ msgstr "最近の投稿"
 msgid "Related posts"
 msgstr "関連記事"
 
+#: templates/layout/footer/footer.php:16
+msgid "Scroll up"
+msgstr "上にスクロール"
+
 #. Theme Name of the plugin/theme
 msgid "Snow Monkey"
 msgstr "Snow Monkey"
@@ -416,6 +428,12 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Sidebar"
+#~ msgstr "サイドバー"
+
+#~ msgid "This widgets are displayed in the sidebar of singular pages."
+#~ msgstr "このウィジェットは単一ページのサイドバーに表示されます。"
 
 #~ msgid "Woops! Page not found."
 #~ msgstr "ページが見つかりませんでした。"
