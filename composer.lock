@@ -4,24 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e07a4680853c88b3fee7d76a482350a9",
-    "content-hash": "815d27dd97844cdf557ccd94c44f534a",
+    "hash": "89de5a9b964765c024312b7a5fa379ef",
+    "content-hash": "7b57e4e1775a4a3a1f0de3be45b5c0c0",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "0.2.2",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "12a1c4d96241b7c23cd195d5f787fc536e94971d"
+                "reference": "f74989a56049ecd18e9807c24b5bea70b8f6a9a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/12a1c4d96241b7c23cd195d5f787fc536e94971d",
-                "reference": "12a1c4d96241b7c23cd195d5f787fc536e94971d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/f74989a56049ecd18e9807c24b5bea70b8f6a9a4",
+                "reference": "f74989a56049ecd18e9807c24b5bea70b8f6a9a4",
                 "shasum": ""
             },
             "require": {
+                "inc2734/wp-awesome-components": ">=0.1.0",
                 "inc2734/wp-awesome-widgets": ">=0.4.1",
                 "inc2734/wp-basis": ">=0.4.1",
                 "inc2734/wp-breadcrumbs": ">=0.3.1",
@@ -55,7 +56,47 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-09-01 06:53:48"
+            "time": "2017-09-05 13:15:02"
+        },
+        {
+            "name": "inc2734/wp-awesome-components",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-awesome-components.git",
+                "reference": "72c99f1eb13ea79e5f0a482eac028ba1e96a1864"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/72c99f1eb13ea79e5f0a482eac028ba1e96a1864",
+                "reference": "72c99f1eb13ea79e5f0a482eac028ba1e96a1864",
+                "shasum": ""
+            },
+            "require": {
+                "inc2734/wp-view-controller": "^2.1",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Awesome_Components\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library to add some awesome components for WordPress.",
+            "time": "2017-09-05 13:04:32"
         },
         {
             "name": "inc2734/wp-awesome-widgets",
@@ -880,22 +921,22 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.7.0",
+            "version": "v1.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "93d39f1f7f9326d746203c7c056f300f7f126073"
+                "reference": "c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/93d39f1f7f9326d746203c7c056f300f7f126073",
-                "reference": "93d39f1f7f9326d746203c7c056f300f7f126073",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6",
+                "reference": "c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
-                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2",
+                "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
                 "sebastian/comparator": "^1.1|^2.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
@@ -906,7 +947,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -939,7 +980,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-03-02 20:05:34"
+            "time": "2017-09-04 11:05:03"
         },
         {
             "name": "phpunit/php-code-coverage",

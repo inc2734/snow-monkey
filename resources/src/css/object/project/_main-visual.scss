@@ -1,6 +1,4 @@
 .p-main-visual {
-  $root: &;
-
   overflow: hidden;
   visibility: hidden;
 
@@ -85,7 +83,7 @@
   }
 
   .slick-current {
-    #{$root}__item-body {
+    .p-main-visual__item-body {
       opacity: 1;
       visibility: visible;
     }
@@ -107,13 +105,13 @@
       flex: 1 1 auto;
     }
 
-    #{$root}__figure {
+    .p-main-visual__figure {
       @include _position(absolute, 0, -2em, 0, -2em);
     }
 
     &.slick-current,
     &.pan {
-      #{$root}__figure {
+      .p-main-visual__figure {
         @keyframes main_visual_figure_move {
           from {
             transform: translate3d(0, 0, 0);

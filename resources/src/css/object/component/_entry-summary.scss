@@ -1,8 +1,6 @@
 .#{$_prefix}c-entry-summary {
-  $root: &;
-
   @include _hover() {
-    #{$root}__figure {
+    .#{$_prefix}c-entry-summary__figure {
       > span:first-child {
         transform: scale(1.05);
       }
@@ -13,9 +11,9 @@
       }
     }
 
-    #{$root}__title,
-    #{$root}__content,
-    #{$root}__meta {
+    .#{$_prefix}c-entry-summary__title,
+    .#{$_prefix}c-entry-summary__content,
+    .#{$_prefix}c-entry-summary__meta {
       color: $_color-gray;
     }
   }
@@ -55,7 +53,7 @@
       @include _transition(opacity);
     }
 
-    #{$root}__term {
+    .#{$_prefix}c-entry-summary__term {
       @include _position(absolute, 0, 0, null, null, 1);
     }
   }

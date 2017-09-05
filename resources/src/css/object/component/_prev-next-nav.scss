@@ -1,6 +1,4 @@
 .#{$_prefix}c-prev-next-nav {
-  $root: &;
-
   @include _margin(1, 0, 0);
   position: relative;
   display: flex;
@@ -69,7 +67,7 @@
         }
       }
 
-      #{$root}__item-figure {
+      .#{$_prefix}c-prev-next-nav__item-figure {
         transform: scale(1.05);
       }
     }

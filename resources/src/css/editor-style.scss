@@ -1,10 +1,50 @@
 @charset 'utf-8';
 
-@import 'style';
+@import 'setting';
 
-/**
- * TinyMCE
- */
-body#tinymce {
-	margin: 10px;
+@import 'foundation/foundation';
+@import 'object/component/entry';
+
+#tinymce {
+  margin: 10px;
+
+  @import 'foundation/wordpress/align';
+  @import 'foundation/wordpress/bypostauthor';
+  @import 'foundation/wordpress/gallery';
+  @import 'foundation/wordpress/screen-reader-text';
+  @import 'foundation/wordpress/single-attachment';
+  @import 'foundation/wordpress/sticky';
+  @import 'foundation/wordpress/wp-caption';
+
+  @import 'object/component/drawer';
+  @import 'object/component/entries';
+  @import 'object/component/entry-summary';
+  @import 'object/component/hamburger-btn';
+  @import 'object/component/meta';
+  @import 'object/component/site-branding';
+  @import 'object/component/responsive-container';
+  @import 'object/component/section';
+  @import 'object/component/widget';
+  @import 'object/component/breadcrumbs';
+  @import 'object/component/input-group';
+  @import 'object/component/page-header';
+  @import 'object/component/pagination';
+  @import 'object/component/comment';
+  @import 'object/component/copyright';
+  @import 'object/component/btn';
+  @import 'object/component/entry-aside';
+  @import 'object/component/prev-next-nav';
+  @import 'object/component/google-adsense';
+  @import 'object/component/page-top';
+  @import 'object/component/wpac';
+
+  @import 'object/project/comments';
+  @import 'object/project/global-nav';
+  @import 'object/project/search-form';
+  @import 'object/project/trackbacks';
+  @import 'object/project/main-visual';
+  @import 'object/project/related-posts';
+  @import 'object/project/response';
+  @import 'object/project/social-nav';
+  @import 'object/project/recent-posts';
 }
