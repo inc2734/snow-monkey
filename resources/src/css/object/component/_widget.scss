@@ -1,5 +1,6 @@
 .#{$_prefix}c-widget {
-  .#{$_prefix}l-sidebar-widget-area & {
+  .#{$_prefix}l-sidebar-widget-area &,
+  .#{$_prefix}l-contents-bottom-widget-area & {
     &__title {
       position: relative;
       @include _margin(0, 0, .5);

@@ -29,6 +29,18 @@ add_action( 'widgets_init', function() {
 			'before_title'  => '<h2 class="c-widget__title"><span>',
 			'after_title'   => '</span></h2>',
 		] );
+
+		register_sidebar( [
+			// @codingStandardsIgnoreStart
+			'name'          => sprintf( __( '%1$s bottom of contents', 'snow-monkey' ), __( $post_type_object->label ) ),
+			'description'   => sprintf( __( 'This widgets are displayed in the bottom of %1$s contents.', 'snow-monkey' ), __( $post_type_object->label ) ),
+			// @codingStandardsIgnoreEnd
+			'id'            => $post_type_object->name . '-post-type-contents-bottom-widget-area',
+			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="c-widget__title"><span>',
+			'after_title'   => '</span></h2>',
+		] );
 	}
 } );
 
@@ -74,7 +86,7 @@ add_action( 'widgets_init', function() {
 add_action( 'widgets_init', function() {
 	register_sidebar( [
 		'name'          => __( 'Front page (Top of page)', 'snow-monkey' ),
-		'id'            => 'front-page-widget-area-top',
+		'id'            => 'front-page-top-widget-area',
 		'description'   => __( 'This widgets are displayed in the static front page.', 'snow-monkey' ),
 		'before_widget' => '<div class="l-front-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
 		'after_widget'  => '</div></div>',
@@ -91,7 +103,7 @@ add_action( 'widgets_init', function() {
 add_action( 'widgets_init', function() {
 	register_sidebar( [
 		'name'          => __( 'Front page (Bottom of page)', 'snow-monkey' ),
-		'id'            => 'front-page-widget-area-bottom',
+		'id'            => 'front-page-bottom-widget-area',
 		'description'   => __( 'This widgets are displayed in the static front page.', 'snow-monkey' ),
 		'before_widget' => '<div class="l-front-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
 		'after_widget'  => '</div></div>',

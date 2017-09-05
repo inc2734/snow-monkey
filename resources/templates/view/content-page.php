@@ -16,6 +16,8 @@
 	</div>
 </article>
 
+<?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
+
 <?php
 if ( comments_open() || pings_open() || get_comments_number() ) {
 	comments_template( '', true );

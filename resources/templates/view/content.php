@@ -37,6 +37,8 @@
 	</div>
 </article>
 
+<?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
+
 <?php get_template_part( 'template-parts/prev-next-nav' ); ?>
 
 <?php get_template_part( 'template-parts/related-posts' ); ?>

@@ -8,9 +8,9 @@
 <article <?php post_class(); ?>>
 	<?php get_template_part( 'template-parts/main-visual' ); ?>
 
-	<?php get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
+	<?php get_template_part( 'template-parts/front-page-top-widget-area' ); ?>
 
 	<?php get_template_part( 'template-parts/recent-posts' ); ?>
 
-	<?php get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>
+	<?php get_template_part( 'template-parts/front-page-bottom-widget-area' ); ?>
 </article>
