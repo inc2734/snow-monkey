@@ -11,25 +11,9 @@ Premium WordPress theme by Monkey Wrench
 ## Requirements
 * WordPress 4.7
 * PHP 5.6+
-* WP-CLI
-* Composer
-* Node.js
-* Yarn
 
 ## Browser support
 * IE10 + Modern browser
-
-## Get Started
-### Using as starter theme
-```
-$ cd /PATH/TO/wp-content/themes
-$ git clone https://github.com/inc2734/snow-monkey.git your-theme-name
-$ cd your-theme-name
-$ yarn install
-$ composer install
-$ yarn run gulp build
-$ wp theme activate your-theme-name
-```
 
 ## Directory structure
 ```
