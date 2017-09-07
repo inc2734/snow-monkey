@@ -68,7 +68,11 @@ gulp.task('img',['remove-images'], function() {
  * Build CSS
  */
 gulp.task('css', function() {
-  return sassCompile(dir.src.css + '/*.scss', dir.dist.css);
+  return sassCompile(dir.src.css + '/*.scss', dir.dist.css)
+    .on('end', function() {
+      return gulp.src(dir.src.css + '/**/*.php')
+        .pipe(gulp.dest(dir.dist.css));
+    });
 });
 
 function sassCompile(src, dest) {

@@ -5,61 +5,61 @@
 /**
  * Foundation
  */
-@import 'foundation/foundation';
-@import 'foundation/wordpress/align';
-@import 'foundation/wordpress/bypostauthor';
-@import 'foundation/wordpress/gallery';
-@import 'foundation/wordpress/screen-reader-text';
-@import 'foundation/wordpress/single-attachment';
-@import 'foundation/wordpress/sticky';
-@import 'foundation/wordpress/wp-caption';
+@import 'foundation/_foundation/foundation';
+@import 'foundation/wordpress/_align/align';
+@import 'foundation/wordpress/_bypostauthor/bypostauthor';
+@import 'foundation/wordpress/_gallery/gallery';
+@import 'foundation/wordpress/_screen-reader-text/screen-reader-text';
+@import 'foundation/wordpress/_single-attachment/single-attachment';
+@import 'foundation/wordpress/_sticky/sticky';
+@import 'foundation/wordpress/_wp-caption/wp-caption';
 
 /**
  * Layout
  */
-@import 'layout/container';
-@import 'layout/contents';
-@import 'layout/footer';
-@import 'layout/header';
-@import 'layout/sidebar-widget-area';
-@import 'layout/footer-widget-area';
-@import 'layout/contents-bottom-widget-area';
+@import 'layout/_container/container';
+@import 'layout/_contents/contents';
+@import 'layout/_footer/footer';
+@import 'layout/_header/header';
+@import 'layout/_sidebar-widget-area/sidebar-widget-area';
+@import 'layout/_footer-widget-area/footer-widget-area';
+@import 'layout/_contents-bottom-widget-area/contents-bottom-widget-area';
 
 /**
  * Object - Component
  */
-@import 'object/component/drawer';
-@import 'object/component/entries';
-@import 'object/component/entry';
-@import 'object/component/entry-summary';
-@import 'object/component/hamburger-btn';
-@import 'object/component/meta';
-@import 'object/component/site-branding';
-@import 'object/component/responsive-container';
-@import 'object/component/section';
-@import 'object/component/widget';
-@import 'object/component/breadcrumbs';
-@import 'object/component/input-group';
-@import 'object/component/page-header';
-@import 'object/component/pagination';
-@import 'object/component/comment';
-@import 'object/component/copyright';
-@import 'object/component/btn';
-@import 'object/component/entry-aside';
-@import 'object/component/prev-next-nav';
-@import 'object/component/google-adsense';
-@import 'object/component/page-top';
-@import 'object/component/wpac';
+@import 'object/component/_drawer/drawer';
+@import 'object/component/_entries/entries';
+@import 'object/component/_entry/entry';
+@import 'object/component/_entry-summary/entry-summary';
+@import 'object/component/_hamburger-btn/hamburger-btn';
+@import 'object/component/_meta/meta';
+@import 'object/component/_site-branding/site-branding';
+@import 'object/component/_responsive-container/responsive-container';
+@import 'object/component/_section/section';
+@import 'object/component/_widget/widget';
+@import 'object/component/_breadcrumbs/breadcrumbs';
+@import 'object/component/_input-group/input-group';
+@import 'object/component/_page-header/page-header';
+@import 'object/component/_pagination/pagination';
+@import 'object/component/_comment/comment';
+@import 'object/component/_copyright/copyright';
+@import 'object/component/_btn/btn';
+@import 'object/component/_entry-aside/entry-aside';
+@import 'object/component/_prev-next-nav/prev-next-nav';
+@import 'object/component/_google-adsense/google-adsense';
+@import 'object/component/_page-top/page-top';
+@import 'object/component/_wpac/wpac';
 
 /**
  * Object - Project
  */
-@import 'object/project/comments';
-@import 'object/project/global-nav';
-@import 'object/project/search-form';
-@import 'object/project/trackbacks';
-@import 'object/project/main-visual';
-@import 'object/project/related-posts';
-@import 'object/project/response';
-@import 'object/project/social-nav';
-@import 'object/project/recent-posts';
+@import 'object/project/_comments/comments';
+@import 'object/project/_global-nav/global-nav';
+@import 'object/project/_search-form/search-form';
+@import 'object/project/_trackbacks/trackbacks';
+@import 'object/project/_main-visual/main-visual';
+@import 'object/project/_related-posts/related-posts';
+@import 'object/project/_response/response';
+@import 'object/project/_social-nav/social-nav';
+@import 'object/project/_recent-posts/recent-posts';
