@@ -397,6 +397,7 @@
     }
 
     &__more {
+      @extend .#{$_prefix}c-btn;
       @include _padding(.5, 1);
 
       @include _media-min(lg) {

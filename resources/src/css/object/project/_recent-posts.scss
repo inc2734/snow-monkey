@@ -1,5 +1,6 @@
 .#{$_prefix}p-recent-posts {
   &__more-btn {
+    @extend .#{$_prefix}c-btn;
     @include _margin(1, 0, 0);
     font-weight: bold;
     width: 100%;

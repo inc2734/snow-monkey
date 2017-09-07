@@ -37,7 +37,7 @@ if ( ! $pickup_posts ) {
 					<li class="c-meta__item"><?php echo esc_html( the_time( get_option( 'date_format' ) ) ); ?></li>
 				</ul>
 
-				<a class="p-main-visual__item-more c-btn" href="<?php the_permalink(); ?>">READ MORE</a>
+				<a class="p-main-visual__item-more" href="<?php the_permalink(); ?>">READ MORE</a>
 			</div>
 		</div>
 	<?php endforeach; ?>

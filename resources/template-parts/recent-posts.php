@@ -36,7 +36,7 @@ if ( ! $recent_posts_query->found_posts ) {
 					$paged_link = get_permalink( get_option( 'page_for_posts' ) ) . '&paged=2';
 				}
 				?>
-				<a class="p-recent-posts__more-btn c-btn" href="<?php echo esc_url( $paged_link ); ?>">MORE</a>
+				<a class="p-recent-posts__more-btn" href="<?php echo esc_url( $paged_link ); ?>">MORE</a>
 			</div>
 		<?php endif; ?>
 	</div>

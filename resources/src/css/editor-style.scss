@@ -2,12 +2,14 @@
 
 @import 'setting';
 
+#tinymce {
+  margin: 10px;
+}
+
 @import 'foundation/foundation';
 @import 'object/component/entry';
 
-#tinymce {
-  margin: 10px;
-
+body.#{$_prefix}c-entry__content {
   @import 'foundation/wordpress/align';
   @import 'foundation/wordpress/bypostauthor';
   @import 'foundation/wordpress/gallery';

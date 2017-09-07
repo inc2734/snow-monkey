@@ -35,7 +35,7 @@
 
 					<?php if ( ! empty( $instance['link-url'] ) && ! empty( $instance['link-text'] ) ) : ?>
 						<div class="wpaw-showcase__action">
-							<a class="wpaw-showcase__more c-btn" href="<?php echo esc_url( $instance['link-url'] ); ?>"><?php echo esc_html( $instance['link-text'] ); ?></a>
+							<a class="wpaw-showcase__more" href="<?php echo esc_url( $instance['link-url'] ); ?>"><?php echo esc_html( $instance['link-text'] ); ?></a>
 						</div>
 					<?php endif; ?>
 				</div>

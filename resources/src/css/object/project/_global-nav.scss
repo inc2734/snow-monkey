@@ -1,9 +1,5 @@
 .#{$_prefix}p-global-nav {
   .#{$_prefix}c-navbar {
-    &__submenu {
-      background-color: rgba($_color-black, .9);
-    }
-
     &__item {
       > a {
         color: $_color-text;
