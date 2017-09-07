@@ -13,7 +13,7 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	'.c-page-top',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );
 
 $cfs->register(
@@ -22,5 +22,5 @@ $cfs->register(
 		'.c-page-top:active',
 		'.c-page-top:focus',
 	],
-	"background-color: " . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
 );

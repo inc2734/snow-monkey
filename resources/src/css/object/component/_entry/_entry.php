@@ -13,14 +13,14 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	'.c-entry__content > h2::after',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );
 
 $cfs->register(
 	'.c-entry__content > table thead th',
 	[
-		"background-color: " . $accent_color,
-		"border-right-color: " . $cfs->light( $accent_color ),
-		"border-left-color: " . $cfs->light( $accent_color ),
+		'background-color: ' . $accent_color,
+		'border-right-color: ' . $cfs->light( $accent_color ),
+		'border-left-color: ' . $cfs->light( $accent_color ),
 	]
 );

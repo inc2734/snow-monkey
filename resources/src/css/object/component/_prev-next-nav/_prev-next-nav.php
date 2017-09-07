@@ -14,7 +14,7 @@ $accent_color = get_theme_mod( 'accent-color' );
 $cfs->register(
 	'.c-prev-next-nav__item > a::before',
 	[
-		"background-color: " . $cfs->rgba( $accent_color, 0.4 ),
-		"background-image: radial-gradient(" . $cfs->rgba( $accent_color, 0.9 ) . " 33%, transparent 33%)"
+		'background-color: ' . $cfs->rgba( $accent_color, 0.4 ),
+		'background-image: radial-gradient(' . $cfs->rgba( $accent_color, 0.9 ) . ' 33%, transparent 33%)',
 	]
 );

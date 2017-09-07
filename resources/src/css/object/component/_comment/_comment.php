@@ -13,7 +13,7 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	'.c-comment .comment-reply-link',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );
 
 $cfs->register(
@@ -22,5 +22,5 @@ $cfs->register(
 		'.c-comment .comment-reply-link:active',
 		'.c-comment .comment-reply-link:focus',
 	],
-	"background-color: " . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
 );

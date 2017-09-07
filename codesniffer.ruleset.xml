@@ -17,9 +17,11 @@
     <exclude name="WordPress.VIP" />
     <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
     <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
+    <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
   </rule>
 
   <file>./resources</file>
+  <exclude-pattern>*/resources/assets/*</exclude-pattern>
   <exclude-pattern>*/vendor/*</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
   <exclude-pattern>*/release/*</exclude-pattern>

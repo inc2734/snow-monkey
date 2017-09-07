@@ -14,12 +14,12 @@ $accent_color = get_theme_mod( 'accent-color' );
 $cfs->register(
 	'.c-entry-summary__figure::after',
 	[
-		"background-color: " . $cfs->rgba( $accent_color, .4 ),
-		"background-image: radial-gradient(" . $cfs->rgba( $accent_color, .9) . " 33%, transparent 33%)",
+		'background-color: ' . $cfs->rgba( $accent_color, .4 ),
+		'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
 	]
 );
 
 $cfs->register(
 	'.c-entry-summary__term',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );

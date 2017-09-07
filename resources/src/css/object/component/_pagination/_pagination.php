@@ -13,5 +13,5 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	'.c-pagination__item',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );

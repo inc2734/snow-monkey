@@ -16,7 +16,7 @@ $cfs->register(
 		'.p-global-nav .c-navbar__item[class*="current_"] > a',
 		'.p-global-nav .c-navbar__item[class*="current-"] > a',
 	],
-	"color: " . $accent_color
+	'color: ' . $accent_color
 );
 
 $cfs->register(
@@ -25,15 +25,15 @@ $cfs->register(
 		'.p-global-nav .c-navbar__item:active > a',
 		'.p-global-nav .c-navbar__item:focus > a',
 	],
-	"color: " . $accent_color
+	'color: ' . $accent_color
 );
 
 $cfs->register(
 	'.p-global-nav .c-navbar__item > .c-navbar__submenu::before',
-	"border-bottom-color: " . $accent_color
+	'border-bottom-color: ' . $accent_color
 );
 
 $cfs->register(
 	'.p-global-nav .c-navbar__submenu',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );

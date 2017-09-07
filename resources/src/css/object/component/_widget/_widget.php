@@ -13,5 +13,5 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	'.widget_tag_cloud a::before',
-	"color: " . $accent_color
+	'color: ' . $accent_color
 );

@@ -16,12 +16,12 @@ $cfs->register(
 		'.wpaw-recent-posts__term',
 		'.wpaw-ranking__term',
 	],
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );
 
 $cfs->register(
 	'.wpac-btn',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );
 
 $cfs->register(
@@ -30,5 +30,5 @@ $cfs->register(
 		'.wpac-btn:active',
 		'.wpac-btn:focus',
 	],
-	"background-color: " . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
 );

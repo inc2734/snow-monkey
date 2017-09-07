@@ -18,14 +18,14 @@ $cfs->register(
 		'.p-main-visual__item-more:focus',
 	],
 	[
-		"background-color: " . $accent_color,
-		"border-color: " . $accent_color,
+		'background-color: ' . $accent_color,
+		'border-color: ' . $accent_color,
 	]
 );
 
 $cfs->register(
 	'.p-main-visual .slick-arrow',
-	"background-color: " . $accent_color
+	'background-color: ' . $accent_color
 );
 
 $cfs->register(
@@ -34,5 +34,5 @@ $cfs->register(
 		'.p-main-visual .slick-arrow:active',
 		'.p-main-visual .slick-arrow:focus',
 	],
-	"background-color: " . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
 );

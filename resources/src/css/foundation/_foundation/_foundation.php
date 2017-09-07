@@ -11,5 +11,5 @@ $cfs = Customizer_Framework::styles();
 
 $cfs->register(
 	'a',
-	"color: " . get_theme_mod( 'accent-color' )
+	'color: ' . get_theme_mod( 'accent-color' )
 );
