@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-09-05 23:18+0900\n"
-"PO-Revision-Date: 2017-09-05 23:20+0900\n"
+"POT-Creation-Date: 2017-09-11 09:34+0900\n"
+"PO-Revision-Date: 2017-09-11 09:35+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -14,6 +14,14 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.8.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: app/customizer/contents-outline.php:13
+msgid "Contents outline of posts"
+msgstr "記事の目次"
+
+#: app/customizer/contents-outline.php:17
+msgid "Display contents outline"
+msgstr "目次を表示する"
 
 #: app/customizer/copyright.php:12 template-parts/copyright.php:10
 msgid "Monkey Wrench"
@@ -38,6 +46,14 @@ msgstr "コピーライト"
 #: app/customizer/copyright.php:32
 msgid "HTML usable"
 msgstr "HTML 使用可"
+
+#: app/customizer/design.php:13
+msgid "Design"
+msgstr "デザイン"
+
+#: app/customizer/design.php:17
+msgid "Accent color"
+msgstr "アクセントカラー"
 
 #: app/customizer/google-adsense.php:13
 msgid "Advertisement"

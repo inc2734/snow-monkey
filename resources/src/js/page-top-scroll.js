@@ -21,6 +21,19 @@ export default class SnowMonkeyPageTopScroll {
         duration: 1000,
         easing  : 'easeOutQuint'
       });
+
+      $(window).on('load', () => {
+        $('.wpco a[href^="#"]').SmoothScroll({
+          duration: 1000,
+          easing  : 'easeOutQuint',
+          offset  : (() => {
+            if ('sticky' === $('.l-header').attr('data-l-header-type')) {
+              return $('.l-header').outerHeight();
+            }
+            return $('.l-header__drop-nav').outerHeight();
+          })()
+        });
+      });
     });
   }
 }

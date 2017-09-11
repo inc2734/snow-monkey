@@ -18,7 +18,7 @@ export default class SnowMonkeyHeader {
   }
 
   init() {
-    if (this.min < $(window).width() && ! this.header.attr('data-l-header-type')) {
+    if (this.min < $(window).width()) {
       this.header.attr('data-l-header-type', '');
       this.contents.css('margin-top', '');
     } else {

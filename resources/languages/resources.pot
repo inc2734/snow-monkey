@@ -4,13 +4,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey 0.1.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-09-05 14:17:27+00:00\n"
+"POT-Creation-Date: 2017-09-11 00:34:01+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: app/customizer/contents-outline.php:13
+msgid "Contents outline of posts"
+msgstr ""
+
+#: app/customizer/contents-outline.php:17
+msgid "Display contents outline"
+msgstr ""
 
 #: app/customizer/copyright.php:12 template-parts/copyright.php:10
 msgid "Monkey Wrench"
@@ -34,6 +42,14 @@ msgstr ""
 
 #: app/customizer/copyright.php:32
 msgid "HTML usable"
+msgstr ""
+
+#: app/customizer/design.php:13
+msgid "Design"
+msgstr ""
+
+#: app/customizer/design.php:17
+msgid "Accent color"
 msgstr ""
 
 #: app/customizer/google-adsense.php:13
