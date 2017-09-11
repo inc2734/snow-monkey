@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey 0.1.7\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-09-11 00:34:01+00:00\n"
+"POT-Creation-Date: 2017-09-11 11:10:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -12,44 +12,90 @@ msgstr ""
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
-#: app/customizer/contents-outline.php:13
-msgid "Contents outline of posts"
-msgstr ""
-
-#: app/customizer/contents-outline.php:17
-msgid "Display contents outline"
-msgstr ""
-
-#: app/customizer/copyright.php:12 template-parts/copyright.php:10
-msgid "Monkey Wrench"
-msgstr ""
-
-#: app/customizer/copyright.php:17 template-parts/copyright.php:15
-msgid "WordPress"
-msgstr ""
-
-#: app/customizer/copyright.php:20 template-parts/copyright.php:18
-msgid "Snow Monkey theme by %s"
-msgstr ""
-
-#: app/customizer/copyright.php:21 template-parts/copyright.php:19
-msgid "Powered by %s"
-msgstr ""
-
-#: app/customizer/copyright.php:27 app/customizer/copyright.php:31
-msgid "Copyright"
-msgstr ""
-
-#: app/customizer/copyright.php:32
-msgid "HTML usable"
-msgstr ""
-
 #: app/customizer/design.php:13
 msgid "Design"
 msgstr ""
 
-#: app/customizer/design.php:17
+#: app/customizer/design.php:22
 msgid "Accent color"
+msgstr ""
+
+#: app/customizer/design.php:40
+msgid "%1$s layout"
+msgstr ""
+
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: app/customizer/design.php:44
+msgid "Left sidebar"
+msgstr ""
+
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: app/customizer/design.php:45
+msgid "Right sidebar"
+msgstr ""
+
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: app/customizer/design.php:46
+msgid "One column"
+msgstr ""
+
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: app/customizer/design.php:47
+msgid "One column (fluid)"
+msgstr ""
+
+#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
+#. Template Name of the plugin/theme
+#: app/customizer/design.php:48
+msgid "One column (slim)"
+msgstr ""
+
+#: app/customizer/design.php:60
+msgid "Header layout"
+msgstr ""
+
+#: app/customizer/design.php:63
+msgid "Simple"
+msgstr ""
+
+#: app/customizer/design.php:64
+msgid "One row"
+msgstr ""
+
+#: app/customizer/design.php:65
+msgid "Two rows"
+msgstr ""
+
+#: app/customizer/design.php:66
+msgid "Center logo"
+msgstr ""
+
+#: app/customizer/design.php:77
+msgid "Number of columns in the footer widget aera"
+msgstr ""
+
+#: app/customizer/design.php:80
+msgid "1 column"
+msgstr ""
+
+#: app/customizer/design.php:81
+msgid "2 columns"
+msgstr ""
+
+#: app/customizer/design.php:82
+msgid "3 columns"
+msgstr ""
+
+#: app/customizer/design.php:83
+msgid "4 columns"
+msgstr ""
+
+#: app/customizer/design.php:94
+msgid "Display contents outline in posts"
 msgstr ""
 
 #: app/customizer/google-adsense.php:13
@@ -66,245 +112,199 @@ msgid ""
 "displayed in the prescribed part of the theme."
 msgstr ""
 
-#: app/customizer/layout.php:13
-msgid "Layout"
+#: app/customizer/seo-sns.php:13
+msgid "SEO/SNS"
 msgstr ""
 
-#: app/customizer/layout.php:24
-msgid "%1$s layout"
-msgstr ""
-
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
-#. Template Name of the plugin/theme
-#: app/customizer/layout.php:28
-msgid "Left sidebar"
-msgstr ""
-
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
-#. Template Name of the plugin/theme
-#: app/customizer/layout.php:29
-msgid "Right sidebar"
-msgstr ""
-
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
-#. Template Name of the plugin/theme
-#: app/customizer/layout.php:30
-msgid "One column"
-msgstr ""
-
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
-#. Template Name of the plugin/theme
-#: app/customizer/layout.php:31
-msgid "One column (fluid)"
-msgstr ""
-
-#. #-#-#-#-#  resources.pot (Snow Monkey 0.1.7)  #-#-#-#-#
-#. Template Name of the plugin/theme
-#: app/customizer/layout.php:32
-msgid "One column (slim)"
-msgstr ""
-
-#: app/customizer/layout.php:38
-msgid "Header layout"
-msgstr ""
-
-#: app/customizer/layout.php:41
-msgid "Simple"
-msgstr ""
-
-#: app/customizer/layout.php:42
-msgid "One row"
-msgstr ""
-
-#: app/customizer/layout.php:43
-msgid "Two rows"
-msgstr ""
-
-#: app/customizer/layout.php:44
-msgid "Center logo"
-msgstr ""
-
-#: app/customizer/layout.php:49
-msgid "Number of columns in the footer widget aera"
-msgstr ""
-
-#: app/customizer/layout.php:52
-msgid "1 column"
-msgstr ""
-
-#: app/customizer/layout.php:53
-msgid "2 columns"
-msgstr ""
-
-#: app/customizer/layout.php:54
-msgid "3 columns"
-msgstr ""
-
-#: app/customizer/layout.php:55
-msgid "4 columns"
-msgstr ""
-
-#: app/customizer/like-me-box.php:13
-msgid "Like me box"
-msgstr ""
-
-#: app/customizer/like-me-box.php:17
-msgid "Facebook page name"
-msgstr ""
-
-#: app/customizer/like-me-box.php:19
-msgctxt "facebook-page-name"
-msgid "Please enter %1$s of %2$s"
-msgstr ""
-
-#: app/customizer/seo.php:13
-msgid "SEO"
-msgstr ""
-
-#: app/customizer/seo.php:17
+#: app/customizer/seo-sns.php:22
 msgid "Google Analytics"
 msgstr ""
 
-#: app/customizer/seo.php:21
-msgid "Google Search Console"
-msgstr ""
-
-#: app/customizer/seo.php:25
-msgid "OGP"
-msgstr ""
-
-#: app/customizer/seo.php:29
-msgid "Twitter Cards"
-msgstr ""
-
-#: app/customizer/seo.php:31
-msgid "Application of URL is necessary for using Twitter Cards. %1$s"
-msgstr ""
-
-#: app/customizer/seo.php:37
+#: app/customizer/seo-sns.php:26
 msgid "Tracking ID"
 msgstr ""
 
-#: app/customizer/seo.php:38
+#: app/customizer/seo-sns.php:27
 msgid "e.g. UA-1111111-11"
 msgstr ""
 
-#: app/customizer/seo.php:43
+#: app/customizer/seo-sns.php:39
+msgid "Google Search Console"
+msgstr ""
+
+#: app/customizer/seo-sns.php:43
 msgid "Google site verification"
 msgstr ""
 
-#: app/customizer/seo.php:45
+#: app/customizer/seo-sns.php:45
 msgid "Please enter part %1$s of %2$s"
 msgstr ""
 
-#: app/customizer/seo.php:53
+#: app/customizer/seo-sns.php:60
+msgid "OGP"
+msgstr ""
+
+#: app/customizer/seo-sns.php:64
+msgid "Output OGP meta tag"
+msgstr ""
+
+#: app/customizer/seo-sns.php:70
 msgid "Default OGP image"
 msgstr ""
 
-#: app/customizer/seo.php:54
+#: app/customizer/seo-sns.php:71
 msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
 msgstr ""
 
-#: app/customizer/seo.php:59
+#: app/customizer/seo-sns.php:85
+msgid "Twitter Cards"
+msgstr ""
+
+#: app/customizer/seo-sns.php:87
+msgid "Application of URL is necessary for using Twitter Cards. %1$s"
+msgstr ""
+
+#: app/customizer/seo-sns.php:93
 msgid "twitter:card"
 msgstr ""
 
-#: app/customizer/seo.php:60
+#: app/customizer/seo-sns.php:94
 msgid "Twitter Cards format"
 msgstr ""
 
-#: app/customizer/seo.php:70
+#: app/customizer/seo-sns.php:98
+msgid "Not use"
+msgstr ""
+
+#: app/customizer/seo-sns.php:105
 msgid "twitter:site"
 msgstr ""
 
-#: app/customizer/seo.php:72
+#: app/customizer/seo-sns.php:107
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr ""
 
-#: app/customizer/share-buttons.php:13
+#: app/customizer/seo-sns.php:124
+msgid "Like me box"
+msgstr ""
+
+#: app/customizer/seo-sns.php:128
+msgid "Facebook page name"
+msgstr ""
+
+#: app/customizer/seo-sns.php:130
+msgctxt "facebook-page-name"
+msgid "Please enter %1$s of %2$s"
+msgstr ""
+
+#: app/customizer/seo-sns.php:145
 msgid "Share buttons"
 msgstr ""
 
-#: app/customizer/share-buttons.php:15
+#: app/customizer/seo-sns.php:147
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr ""
 
-#: app/customizer/share-buttons.php:21
+#: app/customizer/seo-sns.php:153
 msgid "Display buttons"
 msgstr ""
 
-#: app/customizer/share-buttons.php:24
+#: app/customizer/seo-sns.php:156
 msgid "Facebook"
 msgstr ""
 
-#: app/customizer/share-buttons.php:25
+#: app/customizer/seo-sns.php:157
 msgid "Twitter"
 msgstr ""
 
-#: app/customizer/share-buttons.php:26
+#: app/customizer/seo-sns.php:158
 msgid "Hatena Bookmark"
 msgstr ""
 
-#: app/customizer/share-buttons.php:27
+#: app/customizer/seo-sns.php:159
 msgid "Feedly"
 msgstr ""
 
-#: app/customizer/share-buttons.php:28
+#: app/customizer/seo-sns.php:160
 msgid "LINE"
 msgstr ""
 
-#: app/customizer/share-buttons.php:29
+#: app/customizer/seo-sns.php:161
 msgid "Pocket"
 msgstr ""
 
-#: app/customizer/share-buttons.php:30
+#: app/customizer/seo-sns.php:162
 msgid "Feed"
 msgstr ""
 
-#: app/customizer/share-buttons.php:36
+#: app/customizer/seo-sns.php:168
 msgid "Type"
 msgstr ""
 
-#: app/customizer/share-buttons.php:39
+#: app/customizer/seo-sns.php:171
 msgid "Balloon"
 msgstr ""
 
-#: app/customizer/share-buttons.php:40
+#: app/customizer/seo-sns.php:172
 msgid "Horizontal"
 msgstr ""
 
-#: app/customizer/share-buttons.php:41
+#: app/customizer/seo-sns.php:173
 msgid "Icon"
 msgstr ""
 
-#: app/customizer/share-buttons.php:42
+#: app/customizer/seo-sns.php:174
 msgid "Block"
 msgstr ""
 
-#: app/customizer/share-buttons.php:43
+#: app/customizer/seo-sns.php:175
 msgid "Official"
 msgstr ""
 
-#: app/customizer/share-buttons.php:49
+#: app/customizer/seo-sns.php:181
 msgid "Display position"
 msgstr ""
 
-#: app/customizer/share-buttons.php:52
+#: app/customizer/seo-sns.php:184
 msgid "Top of contents"
 msgstr ""
 
-#: app/customizer/share-buttons.php:53
+#: app/customizer/seo-sns.php:185
 msgid "Bottom of contents"
 msgstr ""
 
-#: app/customizer/share-buttons.php:54
+#: app/customizer/seo-sns.php:186
 msgid "Both"
 msgstr ""
 
-#: app/customizer/share-buttons.php:60
+#: app/customizer/seo-sns.php:192
 msgid "Share counts cache time (seconds)"
+msgstr ""
+
+#: app/customizer/title-tagline.php:12 template-parts/copyright.php:10
+msgid "Monkey Wrench"
+msgstr ""
+
+#: app/customizer/title-tagline.php:17 template-parts/copyright.php:15
+msgid "WordPress"
+msgstr ""
+
+#: app/customizer/title-tagline.php:20 template-parts/copyright.php:18
+msgid "Snow Monkey theme by %s"
+msgstr ""
+
+#: app/customizer/title-tagline.php:21 template-parts/copyright.php:19
+msgid "Powered by %s"
+msgstr ""
+
+#: app/customizer/title-tagline.php:29
+msgid "Copyright"
+msgstr ""
+
+#: app/customizer/title-tagline.php:30
+msgid "HTML usable"
 msgstr ""
 
 #: app/setup/nav-menus.php:19

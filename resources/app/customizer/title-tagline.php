@@ -23,9 +23,7 @@ $copyright  = $theme_by . ' ' . $powered_by;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'copyright', [
-	'title' => __( 'Copyright', 'snow-monkey' ),
-] );
+$customizer->section( 'title_tagline', [] );
 
 $customizer->control( 'text', 'mwt-copyright', [
 	'label'       => __( 'Copyright', 'snow-monkey' ),
@@ -33,6 +31,6 @@ $customizer->control( 'text', 'mwt-copyright', [
 	'default'     => $copyright,
 ] );
 
-$section = $customizer->get_section( 'copyright' );
+$section = $customizer->get_section( 'title_tagline' );
 $control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );

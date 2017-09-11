@@ -45,7 +45,9 @@ add_filter( 'inc2734_wp_seo_defult_ogp_image_url', function( $default_ogp_image_
  * @param bool false
  * @return bool
  */
-add_filter( 'inc2734_wp_seo_ogp', '__return_true' );
+add_filter( 'inc2734_wp_seo_ogp', function( $bool ) {
+	return get_option( 'mwt-ogp' );
+} );
 
 /**
  * twitter:card
