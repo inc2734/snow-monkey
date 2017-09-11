@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cfc0ac41fe44e91d06ebf30fec690e36",
-    "content-hash": "716ef6edda227583aa68240f9154e2e9",
+    "hash": "dae49eec3168553945a3bd755ccfa73d",
+    "content-hash": "ef6e761ca6111c18a16a4d76c51c6636",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "cbaf241e8eaf0e6e7603ee9118bb631a6fffc898"
+                "reference": "73737c1c6d8c4094c503fa493b84c855b17c3588"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/cbaf241e8eaf0e6e7603ee9118bb631a6fffc898",
-                "reference": "cbaf241e8eaf0e6e7603ee9118bb631a6fffc898",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/73737c1c6d8c4094c503fa493b84c855b17c3588",
+                "reference": "73737c1c6d8c4094c503fa493b84c855b17c3588",
                 "shasum": ""
             },
             "require": {
@@ -27,12 +27,12 @@
                 "inc2734/wp-basis": ">=0.4.1",
                 "inc2734/wp-breadcrumbs": ">=0.3.1",
                 "inc2734/wp-contents-outline": ">=0.1.1",
-                "inc2734/wp-customizer-framework": ">=2.1.0",
+                "inc2734/wp-customizer-framework": ">=2.1.1",
                 "inc2734/wp-github-theme-updater": ">=0.2.0",
                 "inc2734/wp-like-me-box": ">=0.1.1",
                 "inc2734/wp-oembed-blog-card": ">=0.2.4",
                 "inc2734/wp-pure-css-gallery": ">=0.1.2",
-                "inc2734/wp-seo": ">=0.3.2",
+                "inc2734/wp-seo": ">=0.4.0",
                 "inc2734/wp-share-buttons": ">=0.5.1",
                 "inc2734/wp-view-controller": ">=2.1.3",
                 "php": ">=5.6"
@@ -57,7 +57,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-09-11 03:57:23"
+            "time": "2017-09-11 06:42:04"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -104,12 +104,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "81aa733ccb062c0f2bbd70bbb33e079748cd4ef1"
+                "reference": "4f2e010cd4fbaff6045df3e78ce14ffbe3f92374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/81aa733ccb062c0f2bbd70bbb33e079748cd4ef1",
-                "reference": "81aa733ccb062c0f2bbd70bbb33e079748cd4ef1",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/4f2e010cd4fbaff6045df3e78ce14ffbe3f92374",
+                "reference": "4f2e010cd4fbaff6045df3e78ce14ffbe3f92374",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +136,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2017-09-01 06:52:54"
+            "time": "2017-09-11 05:54:11"
         },
         {
             "name": "inc2734/wp-basis",
@@ -257,16 +257,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "be915d3404c4ee04f424074846c5517fe73a7d62"
+                "reference": "379ae5dfdc8d87e1886190bc1edf3427e2b583bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/be915d3404c4ee04f424074846c5517fe73a7d62",
-                "reference": "be915d3404c4ee04f424074846c5517fe73a7d62",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/379ae5dfdc8d87e1886190bc1edf3427e2b583bb",
+                "reference": "379ae5dfdc8d87e1886190bc1edf3427e2b583bb",
                 "shasum": ""
             },
             "require": {
@@ -292,7 +292,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2017-09-07 06:08:37"
+            "time": "2017-09-11 06:39:12"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -491,20 +491,20 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "0.3.2",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "3c00f4596343168f026e58d57fddbf510235911d"
+                "reference": "c08c3caf054a85b064c005174b71bc7a53ea66c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/3c00f4596343168f026e58d57fddbf510235911d",
-                "reference": "3c00f4596343168f026e58d57fddbf510235911d",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/c08c3caf054a85b064c005174b71bc7a53ea66c7",
+                "reference": "c08c3caf054a85b064c005174b71bc7a53ea66c7",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-ogp": "~0.3.0",
+                "inc2734/wp-ogp": ">=0.3.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -527,7 +527,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2017-08-27 11:54:48"
+            "time": "2017-09-11 06:36:22"
         },
         {
             "name": "inc2734/wp-share-buttons",
