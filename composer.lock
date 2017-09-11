@@ -9,7 +9,7 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
@@ -23,7 +23,7 @@
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.1.1",
-                "inc2734/wp-awesome-widgets": ">=0.4.1",
+                "inc2734/wp-awesome-widgets": ">=0.4.2",
                 "inc2734/wp-basis": ">=0.4.1",
                 "inc2734/wp-breadcrumbs": ">=0.3.1",
                 "inc2734/wp-contents-outline": ">=0.1.1",
@@ -100,7 +100,7 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "0.4.1",
+            "version": "0.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",

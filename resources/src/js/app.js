@@ -2,6 +2,7 @@
 
 import $ from 'jquery';
 
+import 'slick-carousel';
 import '../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/js/basis.js';
 
 import BasisStickyHeader from '../../../vendor/inc2734/wp-basis/node_modules/sass-basis-layout/src/js/sticky-header.js';

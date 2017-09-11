@@ -41,3 +41,11 @@ $fa-font-path: '../../assets/packages/font-awesome/fonts' !default;
  */
 $_font-path: '../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
 @import '../../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/css/basis';
+
+/**
+ * Import Slick
+ */
+$slick-font-path: "../../../node_modules/slick-carousel/slick/fonts/" !default;
+$slick-loader-path: "../../../node_modules/slick/slick-carousel/" !default;
+@import '../../../node_modules/slick-carousel/slick/slick.scss';
+@import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
