@@ -38,8 +38,15 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s ease-in 1s;
-    max-width: map-get($_sizes, lg);
     @include _padding(0, 1);
+
+    @include _media-min(md) {
+      max-width: map-get($_sizes, md);
+    }
+
+    @include _media-min(lg) {
+      max-width: map-get($_sizes, lg);
+    }
 
     > * {
       flex: 1 1 auto;
@@ -51,6 +58,10 @@
     @include _font-size-line-height($_base-font-size * 1.5);
     @include _padding(0, 0, .25);
     text-shadow: rgba($_color-text, .3) 1px 1px 3px;
+
+    @include _media-min(md) {
+      @include _font-size-line-height($_base-font-size * 2);
+    }
 
     @include _media-min(lg) {
       @include _font-size-line-height($_base-font-size * 3);
