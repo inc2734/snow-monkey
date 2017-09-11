@@ -27,3 +27,9 @@ new SnowMonkeyDropNav();
 
 import SnowMonkeyPageTopScroll from './page-top-scroll.js';
 new SnowMonkeyPageTopScroll();
+
+import './background-parallax-scroll.js';
+$(function() {
+  $('.c-page-header').SnowMonkeyBackgroundParallaxScroll();
+  $('.wpaw-showcase').SnowMonkeyBackgroundParallaxScroll();
+});

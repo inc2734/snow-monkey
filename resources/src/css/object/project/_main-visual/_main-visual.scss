@@ -39,6 +39,7 @@
     visibility: hidden;
     transition: opacity .5s ease-in 1s;
     max-width: map-get($_sizes, lg);
+    @include _padding(0, 1);
 
     > * {
       flex: 1 1 auto;

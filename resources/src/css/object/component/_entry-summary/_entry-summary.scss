@@ -75,7 +75,7 @@
     @include _transition(color);
 
     @include _media-min(lg) {
-      @include _margin(0, 0, .5);
+      @include _margin(0, 0, .25);
       @include _font-size-line-height($_base-font-size * 1.5);
     }
   }
