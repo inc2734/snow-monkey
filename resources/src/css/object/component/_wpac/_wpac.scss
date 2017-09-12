@@ -113,3 +113,41 @@
     @include _padding(.5);
   }
 }
+
+/**
+ * Columns
+ */
+.wpac-columns {
+  &__row {
+    @include _row();
+    @include _row--margin(1);
+  }
+
+  &__col {
+    @include _row__col();
+    @include _row__col--margin(1);
+    display: flex;
+
+    @each $size, $screen-min in $_sizes {
+      @include _media-min($screen-min) {
+        $prefix: _size-prefix($size);
+
+        &#{$prefix}-1-1 {
+          @include _row__col(1, 1);
+        }
+
+        &#{$prefix}-1-2 {
+          @include _row__col(1, 2);
+        }
+
+        &#{$prefix}-1-3 {
+          @include _row__col(1, 3);
+        }
+      }
+    }
+  }
+
+  &__col-inner {
+    flex: 1;
+  }
+}
