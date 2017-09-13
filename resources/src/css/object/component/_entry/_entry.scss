@@ -7,6 +7,17 @@
     .wp-share-buttons {
       @include _margin(.5, 0, 0);
     }
+
+    .#{$_prefix}l-body--one-column-fluid & {
+      border-bottom: none;
+      @include _container();
+      @include _padding-top(2);
+      @include _padding-bottom(2);
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__title {

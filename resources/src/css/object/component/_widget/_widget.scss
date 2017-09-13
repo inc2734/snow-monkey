@@ -58,6 +58,9 @@
   }
 }
 
+/**
+ * Recent entries
+ */
 .widget_recent_entries {
   .post-date {
     display: block;
@@ -66,6 +69,9 @@
   }
 }
 
+/**
+ * Categories, pages, nav menus
+ */
 .widget_categories .cat-item,
 .widget_pages .page_item,
 .widget_nav_menu .menu-item {
@@ -127,6 +133,9 @@
   }
 }
 
+/**
+ * Calendar
+ */
 .widget_calendar {
   table {
     border: none;
@@ -182,6 +191,9 @@
   }
 }
 
+/**
+ * Archive
+ */
 .widget_archive {
   li {
     margin: 0 !important;
@@ -192,6 +204,9 @@
   }
 }
 
+/**
+ * Archive, Tag cloud
+ */
 .widget_archive,
 .widget_tag_cloud {
   a {
@@ -215,6 +230,9 @@
   }
 }
 
+/**
+ * Tag cloud
+ */
 .widget_tag_cloud a {
   &::before {
     margin-right: 3px;
@@ -224,6 +242,9 @@
   }
 }
 
+/**
+ * Recent posts, Ranking
+ */
 .wpaw-recent-posts,
 .wpaw-ranking {
   &__item {
@@ -261,6 +282,9 @@
   }
 }
 
+/**
+ * Ranking
+ */
 .wpaw-ranking {
   counter-reset: wpaw_ranking;
 
@@ -296,6 +320,9 @@
   }
 }
 
+/**
+ * Slider
+ */
 .widget_inc2734_wp_awesome_widgets_slider {
   padding: 0;
 
@@ -314,99 +341,106 @@
   }
 }
 
+/**
+ * PR Box
+ */
 .widget_inc2734_wp_awesome_widgets_pr_box {
   padding: 0;
+}
+.wpaw-pr-box {
+  @include _padding(1, 0);
 
-  .wpaw-pr-box {
-    @include _padding(1, 0);
+  @include _media-min(lg) {
+    @include _padding(2, 0);
+  }
 
-    @include _media-min(lg) {
-      @include _padding(2, 0);
-    }
-
-    .#{$_prefix}c-section {
-      &__title {
-        margin: 0;
-      }
-    }
-
+  .#{$_prefix}c-section {
     &__title {
       margin: 0;
     }
-
-    &__lead {
-      @include _margin(.75, 0, 0);
-      @include _font-size-line-height($_base-font-size-px - 2);
-      color: _light($_color-text);
-    }
-
-    &__row {
-      @include _margin(1, 0, 0);
-    }
-
-    &__item-figure {
-      @include _margin-bottom(.25);
-
-      @include _media-min(lg) {
-        @include _margin-bottom(.75);
-      }
-    }
-
-    &__item-summary {
-      @include _font-size-line-height($_base-font-size-px - 2);
-
-      @include _media-min(lg) {
-        @include _margin-top(.25);
-      }
-    }
   }
-}
 
-.widget_inc2734_wp_awesome_widgets_showcase {
-  padding: 0;
+  &__title {
+    margin: 0;
+  }
 
-  .wpaw-showcase {
-    @include _padding(1.5, 0);
+  &__lead {
+    @include _margin(.75, 0, 0);
+    @include _font-size-line-height($_base-font-size-px - 2);
+    color: _light($_color-text);
+  }
+
+  &__row {
+    @include _margin(1, 0, 0);
+  }
+
+  &__item-figure {
+    @include _margin-bottom(.25);
 
     @include _media-min(lg) {
-      @include _padding(2, 0);
+      @include _margin-bottom(.75);
     }
+  }
 
-    &__inner {
-      @include _media-min(lg) {
-        @include _margin(0, -1);
-      }
-    }
+  &__item-summary {
+    @include _font-size-line-height($_base-font-size-px - 2);
 
-    &__body {
-      @include _content(.5);
-
-      @include _media-min(lg) {
-        @include _content(1);
-        @include _padding(0, 1);
-      }
-    }
-
-    &__figure {
-      @include _margin(1, 0, 0);
-
-      @include _media-min(lg) {
-        margin: 0;
-        @include _padding(0, 1);
-      }
-    }
-
-    &__more {
-      @extend .#{$_prefix}c-btn;
-      @include _padding(.5, 1);
-
-      @include _media-min(lg) {
-        @include _padding(.5, 2);
-      }
+    @include _media-min(lg) {
+      @include _margin-top(.25);
     }
   }
 }
 
+/**
+ * Showcase
+ */
+.widget_inc2734_wp_awesome_widgets_showcase {
+  padding: 0;
+}
+.wpaw-showcase {
+  @include _padding(1.5, 0);
+
+  @include _media-min(lg) {
+    @include _padding(2, 0);
+  }
+
+  &__inner {
+    @include _media-min(lg) {
+      @include _margin(0, -1);
+    }
+  }
+
+  &__body {
+    @include _content(.5);
+
+    @include _media-min(lg) {
+      @include _content(1);
+      @include _padding(0, 1);
+    }
+  }
+
+  &__figure {
+    @include _margin(1, 0, 0);
+
+    @include _media-min(lg) {
+      margin: 0;
+      @include _padding(0, 1);
+    }
+  }
+
+  &__more {
+    @extend .#{$_prefix}c-btn;
+    @include _padding(.5, 1);
+
+    @include _media-min(lg) {
+      @include _padding(.5, 2);
+    }
+  }
+}
+
+/**
+ * Site branding
+ */
 .wpaw-site-branding {
   &__logo {
     text-align: center;

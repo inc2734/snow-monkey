@@ -2,17 +2,7 @@
  * Button
  */
 .wpac-btn {
-  @include _btn();
-  background-color: $color-accent;
-  border: none;
-  border-radius: $_border-radius;
-  color: #fff;
-  @include _padding(.5, 1.5);
-  @include _transition(background-color);
-
-  @include _hover() {
-    background-color: darken($color-accent, 5%);
-  }
+  @include btn();
 
   &--full {
     width: 100%;
@@ -153,5 +143,24 @@
 
   &__col-inner {
     flex: 1;
+  }
+}
+
+/**
+ * Section
+ */
+.wpac-section {
+  @include section();
+
+  &--inverse {
+    background-color: _lightest($_color-gray);
+  }
+
+  &__container {
+    @include _container();
+  }
+
+  & + & {
+    margin-top: 0 !important;
   }
 }
