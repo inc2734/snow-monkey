@@ -1,0 +1,138 @@
+.wp-profile-box {
+  border: 1px solid _lighter($_color-gray);
+
+  &__title {
+    border-bottom: 1px solid _lighter($_color-gray);
+    @include _font-size($_base-font-size-px + 2);
+    line-height: 1;
+    @include _padding(.5);
+
+    @include _media-min(md) {
+      @include _padding(.5, 1);
+    }
+  }
+
+  &__container {
+    overflow: hidden;
+    @include _padding(.5);
+
+    @include _media-min(md) {
+      @include _padding(.5, 1);
+    }
+  }
+
+  &__figure {
+    @include _margin($_between-lines, 1, 0, 0);
+    float: left;
+
+    img {
+      border-radius: 100%;
+      height: auto;
+      width: 48px;
+
+      @include _media-min(md) {
+        width: 96px;
+      }
+    }
+  }
+
+  &__body {
+    overflow: hidden;
+  }
+
+  &__name {
+    @include _margin(0, 0, .25);
+    @include _font-size-line-height($_base-font-size-px);
+  }
+
+  &__content {
+    @include _font-size-line-height($_base-font-size-px - 2);
+  }
+
+  &__social-accounts {
+    @include _margin(.25, 0, 0);
+    @include _list-unstyled();
+    overflow: hidden;
+  }
+
+  &__social-accounts-item {
+    margin-right: .5em;
+    display: inline-block;
+    @include _font-size-line-height($_base-font-size-px - 4);
+    font-weight: bold;
+
+    a {
+      color: $_color-text;
+      text-decoration: none;
+      @include _transition(color);
+
+      @include _hover() {
+        color: _light($_color-text);
+      }
+
+      &:before {
+        @include fa-icon();
+        content: "\f0ac";
+        margin-right: 3px;
+      }
+    }
+
+    a[href*="twitter.com"]::before {
+      content: $fa-var-twitter;
+    }
+
+    a[href*="facebook.com"]::before {
+      content: $fa-var-facebook;
+    }
+
+    a[href*="instagram.com"]::before {
+      content: $fa-var-instagram;
+    }
+
+    a[href*="youtube.com"]::before {
+      content: $fa-var-youtube;
+    }
+
+    a[href*="linkedin.com"]::before {
+      content: $fa-var-linkedin;
+    }
+
+    a[href*="wordpress.org"]::before,
+    a[href*="wordpress.com"]::before {
+      content: $fa-var-wordpress;
+    }
+
+    a[href*="tumblr.com"]::before {
+      content: $fa-var-tumblr;
+    }
+  }
+
+  &__buttons {
+    @include _margin(.5, 0, 0);
+  }
+
+  &__detail-btn, &__archives-btn {
+    @include _btn();
+    border-radius: $_border-radius;
+    @include _font-size($_base-font-size-px - 2);
+    @include _padding(.25, .5);
+    @include _transition(opacity);
+
+    @include _hover() {
+      opacity: .9;
+    }
+  }
+
+  &__detail-btn {
+    margin-right: .5em;
+    background-color: $color-accent;
+    border: 1px solid $color-accent;
+    color: #fff;
+  }
+
+  &__archives-btn {
+    background-color: #fff;
+    border: 1px solid $color-accent;
+    color: $color-accent;
+  }
+}

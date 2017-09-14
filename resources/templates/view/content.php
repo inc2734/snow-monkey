@@ -22,6 +22,8 @@
 	<div class="c-entry__content">
 		<?php get_template_part( 'template-parts/google-adsense' ); ?>
 
+		<?php get_template_part( 'template-parts/contents-outline' ); ?>
+
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
 
@@ -30,6 +32,8 @@
 			'_position' => 'bottom',
 		] );
 		?>
+
+		<?php get_template_part( 'template-parts/profile-box' ); ?>
 
 		<?php get_template_part( 'template-parts/google-adsense' ); ?>
 

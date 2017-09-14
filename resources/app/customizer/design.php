@@ -91,10 +91,24 @@ $control->join( $section );
  * Contents outline
  */
 $customizer->control( 'checkbox', 'mwt-display-contents-outline', [
-	'label' => __( 'Display contents outline in posts', 'snow-monkey' ),
-	'type'  => 'option',
+	'label'   => __( 'Display contents outline in posts', 'snow-monkey' ),
+	'type'    => 'option',
+	'default' => true,
 ] );
 
 $section = $customizer->get_section( 'design' );
 $control = $customizer->get_control( 'mwt-display-contents-outline' );
+$control->join( $section );
+
+/**
+ * Profile Box
+ */
+$customizer->control( 'checkbox', 'mwt-display-profile-box', [
+	'label'   => __( 'Display profile box in posts', 'snow-monkey' ),
+	'type'    => 'option',
+	'default' => true,
+] );
+
+$section = $customizer->get_section( 'design' );
+$control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section );

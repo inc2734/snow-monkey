@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Contents_Outline\Contents_Outline;
+use Inc2734\WP_Profile_Box\Profile_Box;
 
-new Contents_Outline();
+new Profile_Box();

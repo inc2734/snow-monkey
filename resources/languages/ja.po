@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey 0.1.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-09-11 20:10+0900\n"
-"PO-Revision-Date: 2017-09-11 20:10+0900\n"
+"POT-Creation-Date: 2017-09-14 12:00+0900\n"
+"PO-Revision-Date: 2017-09-14 12:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -95,6 +95,10 @@ msgstr "4カラム"
 #: app/customizer/design.php:94
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
+
+#: app/customizer/design.php:107
+msgid "Display profile box in posts"
+msgstr "記事にプロフィールボックスを表示する"
 
 #: app/customizer/google-adsense.php:13
 msgid "Advertisement"

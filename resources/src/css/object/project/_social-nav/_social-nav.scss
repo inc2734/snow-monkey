@@ -146,6 +146,7 @@
     content: $fa-var-weibo;
   }
 
+  a[href*="wordpress.org"]::before,
   a[href*="wordpress.com"]::before {
     content: $fa-var-wordpress;
   }
