@@ -1,7 +1,7 @@
 {
   "type": "wordpress-theme",
   "license": "GPL-2.0+",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "authors": [
     {
       "name": "Takashi Kitajima",
@@ -20,7 +20,7 @@
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": ">=0.5.2"
+    "inc2734/mimizuku-core": ">=0.6.0"
   },
   "config": {
     "process-timeout": 0,
