@@ -1,10 +1,9 @@
 .DS_Store
 .sass-cache/
 npm-debug.log
-/node_modules/
+node_modules/
 /resources/assets/
-/vendor/
-packages/
+vendor/
 *.sql
 /bin/*.xml
 release/

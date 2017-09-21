@@ -157,35 +157,6 @@ gulp.task('browsersync', function() {
 });
 
 /**
- * Creates directory for release branch.
- * Copy needed source files and build on Travis CI.
- */
-gulp.task('release', function(){
-  return gulp.src(
-      [
-        '**',
-        '!README.md',
-        '!tests',
-        '!tests/**',
-        '!node_modules',
-        '!node_modules/**',
-        '!vendor',
-        '!vendor/**',
-        '!bin',
-        '!bin/**',
-        '!release',
-        '!release/**',
-        '!codesniffer.ruleset.xml',
-        '!phpmd.ruleset.xml',
-        '!phpunit.xml',
-        '!snow-monkey.zip'
-      ],
-      {base: './'}
-    )
-    .pipe(gulp.dest('release'));
-});
-
-/**
  * Creates the zip file
  * This command must be build beforehand on Travis CI !!
  */

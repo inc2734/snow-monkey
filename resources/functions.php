@@ -10,7 +10,7 @@ use Inc2734\Mimizuku_Core\Core;
 /**
 * Uses composer autoloader
 */
-require_once( get_theme_file_path( '/../vendor/autoload.php' ) );
+require_once( get_theme_file_path( '/vendor/autoload.php' ) );
 
 /**
  * Make theme available for translation

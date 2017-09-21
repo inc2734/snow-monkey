@@ -23,7 +23,7 @@ if [ -e ${themedir}/bin/install-wp-tests.sh ]; then
   fi
 
   bash "${themedir}/bin/install-wp-tests.sh" wordpress_test root '' localhost latest;
-  vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
+  resources/vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
 else
   echo "${themedir}/bin/install-wp-tests.sh not found."
 fi;

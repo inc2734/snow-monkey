@@ -10,7 +10,6 @@
 @import 'object/component/_entry/entry';
 
 body.#{$_prefix}c-entry__content {
-  @import 'foundation/_foundation/foundation';
   @import 'foundation/wordpress/_align/align';
   @import 'foundation/wordpress/_bypostauthor/bypostauthor';
   @import 'foundation/wordpress/_gallery/gallery';
@@ -26,13 +25,13 @@ body.#{$_prefix}c-entry__content {
   @import 'object/component/_meta/meta';
   @import 'object/component/_site-branding/site-branding';
   @import 'object/component/_responsive-container/responsive-container';
+  @import 'object/component/_comment/comment';
   @import 'object/component/_section/section';
   @import 'object/component/_widget/widget';
   @import 'object/component/_breadcrumbs/breadcrumbs';
   @import 'object/component/_input-group/input-group';
   @import 'object/component/_page-header/page-header';
   @import 'object/component/_pagination/pagination';
-  @import 'object/component/_comment/comment';
   @import 'object/component/_copyright/copyright';
   @import 'object/component/_btn/btn';
   @import 'object/component/_entry-aside/entry-aside';
@@ -46,9 +45,9 @@ body.#{$_prefix}c-entry__content {
   @import 'object/project/_global-nav/global-nav';
   @import 'object/project/_search-form/search-form';
   @import 'object/project/_trackbacks/trackbacks';
+  @import 'object/project/_social-nav/social-nav';
   @import 'object/project/_main-visual/main-visual';
   @import 'object/project/_related-posts/related-posts';
   @import 'object/project/_response/response';
-  @import 'object/project/_social-nav/social-nav';
   @import 'object/project/_recent-posts/recent-posts';
 }

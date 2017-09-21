@@ -22,7 +22,7 @@
 
   <file>./resources</file>
   <exclude-pattern>*/resources/assets/*</exclude-pattern>
-  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/resources/vendor/*</exclude-pattern>
   <exclude-pattern>*/tests/*</exclude-pattern>
   <exclude-pattern>*/release/*</exclude-pattern>
 </ruleset>

@@ -10,7 +10,7 @@ if [ -e /tmp/wordpress-tests-lib ]; then
   fi
 
   cd ${themedir};
-  vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
+  resources/vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
   exit 0
 fi
 
