@@ -1,4 +1,5 @@
 .wp-profile-box {
+  background-color: _lightest($_color-gray);
   border: 1px solid _lighter($_color-gray);
 
   &__title {

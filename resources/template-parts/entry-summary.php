@@ -8,7 +8,14 @@
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary">
 		<div class="c-entry-summary__figure">
-			<span style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'medium' ) ); ?>)"></span>
+			<?php
+			$background_image_size = 'medium';
+			if ( ! wp_is_mobile() ) {
+				$background_image_size = 'large';
+			}
+			$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
+			?>
+			<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
 			<?php
 			$terms = get_the_terms( get_the_ID(), 'category' );
 			if ( is_array( $terms ) ) {
