@@ -19,7 +19,10 @@ export default class SnowMonkeyPageTopScroll {
 
       this.pageTop.find('a[href^="#"]').SmoothScroll({
         duration: 1000,
-        easing  : 'easeOutQuint'
+        easing  : 'easeOutQuint',
+        offset  : (() => {
+          return parseInt($('html').css('margin-top'));
+        })()
       });
 
       $(window).on('load', () => {
@@ -28,9 +31,9 @@ export default class SnowMonkeyPageTopScroll {
           easing  : 'easeOutQuint',
           offset  : (() => {
             if ('sticky' === $('.l-header').attr('data-l-header-type')) {
-              return $('.l-header').outerHeight();
+              return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
             }
-            return $('.l-header__drop-nav').outerHeight();
+            return $('.l-header__drop-nav').outerHeight() + parseInt($('html').css('margin-top'));
           })()
         });
       });

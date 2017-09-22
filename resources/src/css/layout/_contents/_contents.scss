@@ -1,5 +1,6 @@
 .#{$_prefix}l-contents {
   &__sidebar {
+    @include _content();
     @include _font-size-line-height($_base-font-size-px - 2);
 
     a {

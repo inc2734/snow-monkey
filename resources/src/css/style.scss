@@ -24,6 +24,7 @@
 @import 'layout/_sidebar-widget-area/sidebar-widget-area';
 @import 'layout/_footer-widget-area/footer-widget-area';
 @import 'layout/_contents-bottom-widget-area/contents-bottom-widget-area';
+@import 'layout/_sidebar-sticky-widget-area/sidebar-sticky-widget-area';
 
 /**
  * Object - Component
@@ -52,6 +53,7 @@
 @import 'object/component/_wpac/wpac';
 @import 'object/component/_wpco/wpco';
 @import 'object/component/_wp-profile-box/wp-profile-box';
+@import '../../node_modules/jquery.sticky/src/sticky';
 
 /**
  * Object - Project
