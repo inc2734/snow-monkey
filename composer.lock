@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "dc5b0ff518e66fe8a928be002031d50e",
-    "content-hash": "7a4b202b9e2adeae271531b9e9f02f06",
+    "hash": "4aef67f7429c790efcc0bb1707c7c17c",
+    "content-hash": "43be8b44c5e67b50d15138ccf397f14c",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "0.6.0",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "c0c6f6a056d21fec0e156f52412aa5cf99864dcb"
+                "reference": "0135605efa174575d97df18d90611535baf6dbed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c0c6f6a056d21fec0e156f52412aa5cf99864dcb",
-                "reference": "c0c6f6a056d21fec0e156f52412aa5cf99864dcb",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/0135605efa174575d97df18d90611535baf6dbed",
+                "reference": "0135605efa174575d97df18d90611535baf6dbed",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.3.0",
-                "inc2734/wp-awesome-widgets": ">=0.4.2",
+                "inc2734/wp-awesome-widgets": ">=0.4.3",
                 "inc2734/wp-basis": ">=0.4.1",
                 "inc2734/wp-breadcrumbs": ">=0.3.1",
                 "inc2734/wp-contents-outline": ">=0.1.2",
@@ -33,7 +33,7 @@
                 "inc2734/wp-oembed-blog-card": ">=0.2.4",
                 "inc2734/wp-profile-box": ">=0.1.0",
                 "inc2734/wp-pure-css-gallery": ">=0.1.3",
-                "inc2734/wp-seo": ">=0.4.0",
+                "inc2734/wp-seo": ">=0.4.1",
                 "inc2734/wp-share-buttons": ">=0.5.1",
                 "inc2734/wp-view-controller": ">=2.1.3",
                 "php": ">=5.6"
@@ -58,7 +58,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-09-21 14:00:12"
+            "time": "2017-09-26 03:18:41"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -101,16 +101,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "4f2e010cd4fbaff6045df3e78ce14ffbe3f92374"
+                "reference": "b15880d770327ab4ff08327a13080c33b2c9a08e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/4f2e010cd4fbaff6045df3e78ce14ffbe3f92374",
-                "reference": "4f2e010cd4fbaff6045df3e78ce14ffbe3f92374",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/b15880d770327ab4ff08327a13080c33b2c9a08e",
+                "reference": "b15880d770327ab4ff08327a13080c33b2c9a08e",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2017-09-11 05:54:11"
+            "time": "2017-09-22 02:34:02"
         },
         {
             "name": "inc2734/wp-basis",
@@ -414,16 +414,16 @@
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "964b36054e0a38cb8c8afe7e0d87066de9b0823e"
+                "reference": "f71f4686c748c413f6cac2978fb6815e8f7df42d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/964b36054e0a38cb8c8afe7e0d87066de9b0823e",
-                "reference": "964b36054e0a38cb8c8afe7e0d87066de9b0823e",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/f71f4686c748c413f6cac2978fb6815e8f7df42d",
+                "reference": "f71f4686c748c413f6cac2978fb6815e8f7df42d",
                 "shasum": ""
             },
             "require": {
@@ -449,7 +449,7 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2017-07-23 11:24:59"
+            "time": "2017-09-26 03:14:21"
         },
         {
             "name": "inc2734/wp-profile-box",
@@ -531,20 +531,20 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "0.4.0",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "c08c3caf054a85b064c005174b71bc7a53ea66c7"
+                "reference": "3db28cbc46050fb5663809920bd4dea8769e8e95"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/c08c3caf054a85b064c005174b71bc7a53ea66c7",
-                "reference": "c08c3caf054a85b064c005174b71bc7a53ea66c7",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/3db28cbc46050fb5663809920bd4dea8769e8e95",
+                "reference": "3db28cbc46050fb5663809920bd4dea8769e8e95",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-ogp": ">=0.3.0",
+                "inc2734/wp-ogp": ">=0.3.2",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -567,7 +567,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2017-09-11 06:36:22"
+            "time": "2017-09-26 03:17:04"
         },
         {
             "name": "inc2734/wp-share-buttons",
@@ -1312,16 +1312,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.21",
+            "version": "5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
+                "reference": "10df877596c9906d4110b5b905313829043f2ada"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
-                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/10df877596c9906d4110b5b905313829043f2ada",
+                "reference": "10df877596c9906d4110b5b905313829043f2ada",
                 "shasum": ""
             },
             "require": {
@@ -1390,7 +1390,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-06-21 08:11:54"
+            "time": "2017-09-24 07:23:38"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
