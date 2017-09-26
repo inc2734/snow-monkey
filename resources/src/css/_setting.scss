@@ -12,7 +12,7 @@ $_transition-duration: .2s;
 /**
  * Import WP Share Buttons
  */
-$wp-share-buttons-font-path: '../../..' !default;
+$wp-share-buttons-font-path: '../../' !default;
 @import '../../vendor/inc2734/wp-share-buttons/src/assets/scss/wp-share-buttons';
 
 /**
