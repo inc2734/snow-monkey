@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
 "POT-Creation-Date: 2017-09-22 22:09+0900\n"
-"PO-Revision-Date: 2017-09-22 22:09+0900\n"
+"PO-Revision-Date: 2017-09-26 11:45+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -345,7 +345,7 @@ msgstr "このウィジェットは%1$sページのサイドバーに表示さ�
 #: app/setup/widget-area.php:35
 #, php-format
 msgid "%1$s sticky sidebar"
-msgstr "%1$s 固定サイドバー"
+msgstr "%1$s 追尾サイドバー"
 
 #: app/setup/widget-area.php:47
 #, php-format
