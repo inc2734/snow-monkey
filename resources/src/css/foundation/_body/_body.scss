@@ -1,0 +1,123 @@
+$_base-font-size-px: 16px !default;
+$_between-lines: (1rem / 2.5) !default;
+$_container-max-width: 1280px !default;
+$_transition-duration: .2s !default;
+$_font-path: '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
+$color-accent: #bd3c4f;
+
+@import '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/css/basis';
+
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: normal;
+  src: local("YuGothic-Medium"),
+       local("Yu Gothic Medium"),
+       local("YuGothic-Regular");
+}
+
+@font-face {
+  font-family: "MyYuGothicM";
+  font-weight: bold;
+  src: local("YuGothic-Bold"),
+       local("Yu Gothic");
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Meiryo, MyYuGothicM, YuGothic, "Helvetica Neue", sans-serif;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+/**
+ * Button
+ */
+@mixin btn() {
+  @include _btn();
+  background-color: $color-accent;
+  border: none;
+  border-radius: $_border-radius;
+  color: #fff;
+  @include _padding(.5, 1.5);
+  @include _transition(background-color);
+
+  @include _hover() {
+    background-color: darken($color-accent, 5%);
+  }
+}
+
+/**
+ * Section
+ */
+@mixin section() {
+  @include _section();
+  @include _padding(1.5, 0);
+
+  @include _media-min(lg) {
+    @include _padding(2, 0);
+  }
+
+  &__title {
+    @include _margin(0, 0, 1);
+    @include _font-size-line-height($_base-font-size * 1.5);
+    text-align: center;
+
+    @include _media-min(lg) {
+      @include _margin(0, 0, 1.5);
+      @include _font-size-line-height($_base-font-size * 2);
+    }
+
+    &::after {
+      @include _margin(.25, auto, 0);
+      content: '';
+      display: block;
+      width: 60px;
+      height: 1px;
+      background-color: $color-accent;
+    }
+  }
+}
+
+/**
+ * Entry content
+ */
+@mixin entry-content() {
+  @include _content();
+
+  > h2 {
+    position: relative;
+    @include _padding(0, 0, 1);
+    @include _margin-bottom(1.5);
+
+    &::after {
+      @include _position(absolute, null, null, 0, 0);
+      content: '';
+      display: block;
+      height: 1px;
+      background-color: $color-accent;
+      width: 40px;
+    }
+  }
+
+  > table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+      border: 1px solid _lighter($_color-gray);
+      @include _padding(.25, .5);
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    thead {
+      th {
+        background-color: $color-accent;
+        border-right: 1px solid _light($color-accent);
+        border-left: 1px solid _light($color-accent);
+        color: #fff;
+      }
+    }
+  }
+}

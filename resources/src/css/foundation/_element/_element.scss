@@ -1,24 +1,3 @@
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: normal;
-  src: local("YuGothic-Medium"),
-       local("Yu Gothic Medium"),
-       local("YuGothic-Regular");
-}
-
-@font-face {
-  font-family: "MyYuGothicM";
-  font-weight: bold;
-  src: local("YuGothic-Bold"),
-       local("Yu Gothic");
-}
-
-body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Meiryo, MyYuGothicM, YuGothic, "Helvetica Neue", sans-serif;
-  word-wrap: break-word;
-  background-color: #fff;
-}
-
 input, textarea, keygen, select, button {
   font-size: 100%;
 }

@@ -1,9 +1,3 @@
-$_base-font-size-px: 16px;
-$_between-lines: (1rem / 2.5);
-$_container-max-width: 1280px;
-$color-accent: #bd3c4f;
-$_transition-duration: .2s;
-
 /**
  * Import WP oEmbed Blog Card
  */
@@ -37,64 +31,9 @@ $fa-font-path: '../../assets/packages/font-awesome/fonts' !default;
 @import '../../assets/packages/font-awesome/scss/font-awesome';
 
 /**
- * Import Basis
- */
-$_font-path: '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
-@import '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/css/basis';
-
-/**
  * Import Slick
  */
 $slick-font-path: "../../../node_modules/slick-carousel/slick/fonts/" !default;
 $slick-loader-path: "../../../node_modules/slick/slick-carousel/" !default;
 @import '../../../node_modules/slick-carousel/slick/slick.scss';
 @import '../../../node_modules/slick-carousel/slick/slick-theme.scss';
-
-/**
- * Button
- */
-@mixin btn() {
-  @include _btn();
-  background-color: $color-accent;
-  border: none;
-  border-radius: $_border-radius;
-  color: #fff;
-  @include _padding(.5, 1.5);
-  @include _transition(background-color);
-
-  @include _hover() {
-    background-color: darken($color-accent, 5%);
-  }
-}
-
-/**
- * Section
- */
-@mixin section() {
-  @include _section();
-  @include _padding(1.5, 0);
-
-  @include _media-min(lg) {
-    @include _padding(2, 0);
-  }
-
-  &__title {
-    @include _margin(0, 0, 1);
-    @include _font-size-line-height($_base-font-size * 1.5);
-    text-align: center;
-
-    @include _media-min(lg) {
-      @include _margin(0, 0, 1.5);
-      @include _font-size-line-height($_base-font-size * 2);
-    }
-
-    &::after {
-      @include _margin(.25, auto, 0);
-      content: '';
-      display: block;
-      width: 60px;
-      height: 1px;
-      background-color: $color-accent;
-    }
-  }
-}
