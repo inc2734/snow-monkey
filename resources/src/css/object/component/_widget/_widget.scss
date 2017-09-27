@@ -390,6 +390,19 @@
       @include _margin-top(.25);
     }
   }
+
+  &__action {
+    @include _margin(.5, 0, 0);
+  }
+
+  &__more {
+    @include btn();
+    @include _padding(.5, 1);
+
+    @include _media-min(lg) {
+      @include _padding(.5, 2);
+    }
+  }
 }
 
 /**
@@ -430,7 +443,7 @@
   }
 
   &__more {
-    @extend .#{$_prefix}c-btn;
+    @include btn();
     @include _padding(.5, 1);
 
     @include _media-min(lg) {

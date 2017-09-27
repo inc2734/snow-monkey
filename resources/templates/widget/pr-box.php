@@ -47,9 +47,7 @@
 
 			<?php if ( ! empty( $instance['link-url'] ) && ! empty( $instance['link-text'] ) ) : ?>
 				<div class="wpaw-pr-box__action">
-					<div class="wpaw-pr-box__more">
-						<a href="<?php echo esc_url( $instance['link-url'] ); ?>"><?php echo esc_html( $instance['link-text'] ); ?></a>
-					</div>
+					<a class="wpaw-pr-box__more" href="<?php echo esc_url( $instance['link-url'] ); ?>"><?php echo esc_html( $instance['link-text'] ); ?></a>
 				</div>
 			<?php endif; ?>
 
