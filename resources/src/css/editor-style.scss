@@ -10,13 +10,14 @@
 @import 'object/component/_entry/entry';
 
 body.#{$_prefix}c-entry__content {
-  @import 'foundation/wordpress/_align/align';
-  @import 'foundation/wordpress/_bypostauthor/bypostauthor';
-  @import 'foundation/wordpress/_gallery/gallery';
-  @import 'foundation/wordpress/_screen-reader-text/screen-reader-text';
-  @import 'foundation/wordpress/_single-attachment/single-attachment';
-  @import 'foundation/wordpress/_sticky/sticky';
-  @import 'foundation/wordpress/_wp-caption/wp-caption';
+  @import 'foundation/_wordpress/_align/align';
+  @import 'foundation/_wordpress/_bypostauthor/bypostauthor';
+  @import 'foundation/_wordpress/_gallery/gallery';
+  @import 'foundation/_wordpress/_screen-reader-text/screen-reader-text';
+  @import 'foundation/_wordpress/_single-attachment/single-attachment';
+  @import 'foundation/_wordpress/_sticky/sticky';
+  @import 'foundation/_wordpress/_wp-caption/wp-caption';
+  @import 'foundation/_wordpress/_wp-image/wp-image';
 
   @import 'object/component/_drawer/drawer';
   @import 'object/component/_entries/entries';

@@ -1,9 +1,0 @@
-.wp-caption {
-  max-width: 100%;
-
-  &-text {
-    @include _margin(2px, 0, 0);
-    color: $_color-gray;
-    @include _font-size-line-height($_base-font-size-px - 2);
-  }
-}
