@@ -1,13 +1,4 @@
 .#{$_prefix}l-contents-bottom-widget-area {
   @include _margin(1, 0);
   @include _content();
-
-  a {
-    color: $_color-text;
-    text-decoration: none;
-
-    @include _hover() {
-      text-decoration: underline;
-    }
-  }
 }

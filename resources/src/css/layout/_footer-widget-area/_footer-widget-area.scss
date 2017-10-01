@@ -5,13 +5,4 @@
   @include _media-min(lg) {
     @include _padding(1.5, 0);
   }
-
-  a {
-    color: $_color-text;
-    text-decoration: none;
-
-    @include _hover() {
-      text-decoration: underline;
-    }
-  }
 }
