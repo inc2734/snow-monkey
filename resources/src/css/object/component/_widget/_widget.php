@@ -20,6 +20,23 @@ $cfs->register(
 );
 
 /**
+ * PR Box
+ */
+$cfs->register(
+	'.wpaw-pr-box__more',
+	'background-color: ' . $accent_color
+);
+
+$cfs->register(
+	[
+		'.wpaw-pr-box__more:hover',
+		'.wpaw-pr-box__more:active',
+		'.wpaw-pr-box__more:focus',
+	],
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
+);
+
+/**
  * Showcase
  */
 $cfs->register(
@@ -37,11 +54,12 @@ $cfs->register(
 );
 
 /**
- * Recent posts, Ranking
+ * Recent posts, Ranking, Any posts
  */
 $cfs->register(
 	[
 		'.wpaw-recent-posts__term',
+		'.wpaw-any-posts__term',
 		'.wpaw-ranking__term',
 	],
 	'background-color: ' . $accent_color

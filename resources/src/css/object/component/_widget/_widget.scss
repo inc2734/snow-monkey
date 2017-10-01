@@ -1,31 +1,27 @@
 .#{$_prefix}c-widget {
-  .#{$_prefix}l-sidebar-widget-area &,
-  .#{$_prefix}l-sidebar-sticky-widget-area &,
-  .#{$_prefix}l-contents-bottom-widget-area & {
-    &__title {
+  &__title {
+    position: relative;
+    @include _margin(0, 0, .5);
+    @include _font-size-line-height($_base-font-size-px);
+    font-weight: bold;
+    text-align: center;
+
+    &::before {
+      position: absolute;
+      top: calc(50% - 1.5px);
+      right: 0;
+      left: 0;
+      display: block;
+      content: '';
+      height: 3px;
+      background-color: $_color-black;
+    }
+
+    span {
       position: relative;
-      @include _margin(0, 0, .5);
-      @include _font-size-line-height($_base-font-size-px);
-      font-weight: bold;
-      text-align: center;
-
-      &::before {
-        position: absolute;
-        top: calc(50% - 1.5px);
-        right: 0;
-        left: 0;
-        display: block;
-        content: '';
-        height: 3px;
-        background-color: $_color-black;
-      }
-
-      span {
-        position: relative;
-        display: inline-block;
-        background-color: #fff;
-        padding: 0 .5em;
-      }
+      display: inline-block;
+      background-color: #fff;
+      padding: 0 .5em;
     }
   }
 
@@ -49,12 +45,31 @@
 .widget_pages,
 .widget_nav_menu,
 .widget_inc2734_wp_awesome_widgets_recent_posts,
+.widget_inc2734_wp_awesome_widgets_any_posts,
 .widget_inc2734_wp_awesome_widgets_ranking {
   ul {
     @include _list-unstyled();
 
     > li + li {
       @include _margin(.25, 0, 0);
+    }
+  }
+}
+
+.widget_meta,
+.widget_recent_entries,
+.widget_recent_comments,
+.widget_archive,
+.widget_categories,
+.widget_meta,
+.widget_pages,
+.widget_nav_menu {
+  a {
+    color: $_color-text;
+    text-decoration: none;
+
+    @include _hover() {
+      text-decoration: underline;
     }
   }
 }
@@ -184,6 +199,10 @@
       #next {
         text-align: right;
       }
+
+      a {
+        color: $_color-text;
+      }
     }
   }
 
@@ -193,22 +212,8 @@
 }
 
 /**
- * Archive
+ * Tag cloud
  */
-.widget_archive {
-  li {
-    margin: 0 !important;
-    display: inline-block;
-    line-height: 1;
-    font-size: 0;
-    vertical-align: top;
-  }
-}
-
-/**
- * Archive, Tag cloud
- */
-.widget_archive,
 .widget_tag_cloud {
   a {
     margin: 0 4px 8px 0;
@@ -228,37 +233,45 @@
       background-color: _lighter($_color-gray);
       text-decoration: none;
     }
+
+    &::before {
+      margin-right: 3px;
+      content: '#';
+      color: $color-accent;
+      font-weight: bold;
+    }
   }
 }
 
 /**
- * Tag cloud
+ * PR Box, Showcase, Slider
  */
-.widget_tag_cloud a {
-  &::before {
-    margin-right: 3px;
-    content: '#';
-    color: $color-accent;
-    font-weight: bold;
+.wpaw-pr-box,
+.wpaw-showcase,
+.wpaw-slider {
+  .c-section & {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
   }
 }
 
 /**
- * Recent posts, Ranking
+ * Recent posts, Ranking, Any posts
  */
 .wpaw-recent-posts,
-.wpaw-ranking {
+.wpaw-ranking,
+.wpaw-any-posts {
   &__item {
     &:not(:first-child) {
       @include _margin(.5, 0, 0);
     }
 
     > a {
+      color: $_color-text;
       @include _transition(color);
 
       @include _hover() {
         color: $_color-gray;
-        text-decoration: none;
       }
     }
   }
@@ -349,15 +362,29 @@
   padding: 0;
 }
 .wpaw-pr-box {
-  @include _padding(1, 0);
+  // font page widget area
+  .#{$_prefix}c-section & {
+    @include _padding(1, 0);
 
-  @include _media-min(lg) {
-    @include _padding(2, 0);
-  }
+    @include _media-min(lg) {
+      @include _padding(2, 0);
+    }
 
-  .#{$_prefix}c-section {
+    &__inner {
+      @include _container();
+    }
+
     &__title {
       margin: 0;
+    }
+  }
+
+  // not front page widget area
+  .#{$_prefix}c-widget & {
+    @include _padding(.5);
+
+    @include _media-min(lg) {
+      @include _padding(1);
     }
   }
 
@@ -372,7 +399,7 @@
   }
 
   &__row {
-    @include _margin(1, 0, 0);
+    @include _margin-top(1);
   }
 
   &__item-figure {
@@ -392,7 +419,7 @@
   }
 
   &__action {
-    @include _margin(.5, 0, 0);
+    @include _margin(1, 0, 0);
   }
 
   &__more {
@@ -448,6 +475,14 @@
 
     @include _media-min(lg) {
       @include _padding(.5, 2);
+    }
+  }
+
+  &--format-3 {
+    .wpaw-showcase {
+      &__body {
+        @include _margin-bottom(1);
+      }
     }
   }
 }

@@ -2,10 +2,10 @@
 
 import $ from 'jquery';
 
-import 'slick-carousel';
+import '../../assets/packages/slick-carousel';
 import '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/js/basis.js';
-import 'jquery.sticky';
-import 'jquery.background-parallax-scroll';
+import '../../assets/packages/jquery.sticky';
+import '../../assets/packages/jquery.background-parallax-scroll';
 
 import BasisStickyHeader from '../../vendor/inc2734/wp-basis/node_modules/sass-basis-layout/src/js/sticky-header.js';
 new BasisStickyHeader();

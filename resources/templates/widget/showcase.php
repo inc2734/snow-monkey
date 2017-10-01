@@ -1,6 +1,6 @@
 <?php
 /**
- * @package inc2734/snow-monkey
+ * @package inc2734/wp-awesome-widgets
  * @author inc2734
  * @license GPL-2.0+
  */
@@ -9,7 +9,7 @@
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
 	<div
-		class="wpaw-showcase"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?>"
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg-image'], 'large' ) ); ?> );"
 		>
@@ -19,8 +19,7 @@
 		></div>
 
 		<div class="c-container">
-
-			<div class="wpaw-showcase__inner wpaw-showcase__inner--align-<?php echo esc_attr( $instance['text-align'] ); ?> wpaw-showcase__inner--thumbnail-align-<?php echo esc_attr( $instance['thumbnail-align'] ); ?>">
+			<div class="wpaw-showcase__inner">
 
 				<div class="wpaw-showcase__body">
 					<?php if ( ! empty( $instance['title'] ) ) : ?>
@@ -47,7 +46,6 @@
 				<?php endif; ?>
 
 			</div>
-
 		</div>
 
 	</div>

@@ -10,6 +10,6 @@ if ( ! is_active_sidebar( 'front-page-top-widget-area' ) ) {
 }
 ?>
 
-<div class="l-front-page-top-widget-area">
+<div class="l-front-page-widget-area l-front-page-widget-area--top">
 	<?php dynamic_sidebar( 'front-page-top-widget-area' ); ?>
 </div>

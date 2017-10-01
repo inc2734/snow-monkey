@@ -7,9 +7,21 @@
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
+	<style>
+	.wpaw-pr-box__title span {
+		background-color: <?php echo esc_attr( $instance['bg-color'] ); ?> !important;
+	}
+
+	<?php if ( '#fff' === $instance['bg-color'] || '#ffffff' === $instance['bg-color'] ) : ?>
+		.c-widget .wpaw-pr-box,
+		.c-widget .wpaw-pr-box__inner {
+			padding: 0;
+		}
+	<?php endif; ?>
+	</style>
 
 	<div class="wpaw-pr-box" id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>" style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>">
-		<div class="c-container">
+		<div class="wpaw-pr-box__inner">
 
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
 				<div class="wpaw-pr-box__title">

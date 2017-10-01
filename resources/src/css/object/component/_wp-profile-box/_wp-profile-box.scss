@@ -50,13 +50,13 @@
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 
-  &__social-accounts {
+  &__sns-accounts {
     @include _margin(.25, 0, 0);
     @include _list-unstyled();
     overflow: hidden;
   }
 
-  &__social-accounts-item {
+  &__sns-accounts-item {
     margin-right: .5em;
     display: inline-block;
     @include _font-size-line-height($_base-font-size-px - 4);

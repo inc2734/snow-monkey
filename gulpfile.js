@@ -44,7 +44,9 @@ gulp.task('remove-packages-dir', function(cb) {
 gulp.task('packages', ['remove-packages-dir'], function(cb) {
   var packages = [
     dir.src.packages + '/font-awesome/**',
-    dir.src.packages + '/slick-carousel/**'
+    dir.src.packages + '/slick-carousel/**',
+    dir.src.packages + '/jquery.sticky/**',
+    dir.src.packages + '/jquery.background-parallax-scroll/**'
   ];
   return gulp.src(packages, {base: 'node_modules'})
     .pipe(gulp.dest(dir.dist.packages));

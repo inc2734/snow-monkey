@@ -2,15 +2,6 @@
   &__sidebar {
     @include _content();
     @include _font-size-line-height($_base-font-size-px - 2);
-
-    a {
-      color: $_color-text;
-      text-decoration: none;
-
-      @include _hover() {
-        text-decoration: underline;
-      }
-    }
   }
 
   /**
