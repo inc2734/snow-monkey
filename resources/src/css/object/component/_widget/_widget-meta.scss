@@ -1,0 +1,9 @@
+.widget_meta {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+}

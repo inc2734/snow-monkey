@@ -1,0 +1,57 @@
+.widget_inc2734_wp_awesome_widgets_showcase {
+  padding: 0;
+}
+
+.wpaw-showcase {
+  // front page widget area
+  .#{$_prefix}c-section & {
+    @include widget-full-width();
+  }
+
+  @include _padding(1.5, 0);
+
+  @include _media-min(lg) {
+    @include _padding(2, 0);
+  }
+
+  &__inner {
+    @include _media-min(lg) {
+      @include _margin(0, -1);
+    }
+  }
+
+  &__body {
+    @include _content(.5);
+
+    @include _media-min(lg) {
+      @include _content(1);
+      @include _padding(0, 1);
+    }
+  }
+
+  &__figure {
+    @include _margin(1, 0, 0);
+
+    @include _media-min(lg) {
+      margin: 0;
+      @include _padding(0, 1);
+    }
+  }
+
+  &__more {
+    @include btn();
+    @include _padding(.5, 1);
+
+    @include _media-min(lg) {
+      @include _padding(.5, 2);
+    }
+  }
+
+  &--format-3 {
+    .wpaw-showcase {
+      &__body {
+        @include _margin-bottom(1);
+      }
+    }
+  }
+}

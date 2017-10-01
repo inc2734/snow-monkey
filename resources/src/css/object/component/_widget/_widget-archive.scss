@@ -1,0 +1,9 @@
+.widget_archive {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+}

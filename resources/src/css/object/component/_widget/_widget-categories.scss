@@ -1,0 +1,17 @@
+.widget_categories {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+
+  .cat-item {
+    @include widget-has-children-expander();
+  }
+
+  .children {
+    @include widget-children();
+  }
+}

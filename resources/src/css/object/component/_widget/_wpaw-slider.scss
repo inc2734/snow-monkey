@@ -1,0 +1,22 @@
+.widget_inc2734_wp_awesome_widgets_slider {
+  padding: 0;
+}
+
+.wpaw-slider {
+  // front page widget area
+  .#{$_prefix}c-section & {
+    @include widget-full-width();
+  }
+
+  .slick-dotted.slick-slider {
+    margin: 0;
+  }
+
+  .slick-slide {
+    max-height: 75vh;
+  }
+
+  .slick-dots {
+    bottom: 10px;
+  }
+}

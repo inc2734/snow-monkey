@@ -1,0 +1,28 @@
+.widget_tag_cloud {
+  a {
+    margin: 0 4px 8px 0;
+    display: inline-block;
+    background-color: _lightest($_color-gray);
+    border: 1px solid _lighter($_color-gray);
+    border-radius: $_border-radius;
+    color: _dark($_color-gray);
+    font-size: ($_base-font-size-px - 4) !important;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 4px 8px;
+    vertical-align: top;
+
+    @include _hover() {
+      background-color: _lighter($_color-gray);
+      text-decoration: none;
+    }
+
+    &::before {
+      margin-right: 3px;
+      content: '#';
+      color: $color-accent;
+      font-weight: bold;
+    }
+  }
+}

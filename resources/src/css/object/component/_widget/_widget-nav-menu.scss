@@ -1,0 +1,17 @@
+.widget_nav_menu {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+
+  .menu-item {
+    @include widget-has-children-expander();
+  }
+
+  .sub-menu {
+    @include widget-children();
+  }
+}

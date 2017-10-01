@@ -1,0 +1,43 @@
+.widget_inc2734_wp_awesome_widgets_ranking {
+}
+
+.wpaw-ranking {
+  ul {
+    @include widget-list-base();
+  }
+
+  @include wpaw-posts-list-base();
+
+  counter-reset: wpaw_ranking;
+
+  &__item {
+    position: relative;
+
+    &::before {
+      counter-increment: wpaw_ranking;
+      content: counter(wpaw_ranking);
+      @include _position(absolute, 0, null, null, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include _square(20px);
+      color: #fff;
+      line-height: 1;
+      background-color: $_color-black;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    &:nth-child(1)::before {
+      background-color: #e6b324;
+    }
+
+    &:nth-child(2)::before {
+      background-color: #c7c6c6;
+    }
+
+    &:nth-child(3)::before {
+      background-color: #976b2f;
+    }
+  }
+}

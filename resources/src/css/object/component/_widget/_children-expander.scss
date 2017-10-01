@@ -1,0 +1,23 @@
+.children-expander {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  line-height: 1;
+  opacity: 0;
+  visibility: hidden;
+
+  &::before {
+    content: '+';
+  }
+
+  &[data-is-expanded="true"] {
+    &::before {
+      content: '-';
+    }
+  }
+}

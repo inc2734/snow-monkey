@@ -1,0 +1,10 @@
+.widget_inc2734_wp_awesome_widgets_recent_posts {
+}
+
+.wpaw-recent-posts {
+  ul {
+    @include widget-list-base();
+  }
+
+  @include wpaw-posts-list-base();
+}

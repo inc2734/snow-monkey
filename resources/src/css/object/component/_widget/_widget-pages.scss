@@ -1,0 +1,17 @@
+.widget_pages {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+
+  .page_item {
+    @include widget-has-children-expander();
+  }
+
+  .children {
+    @include widget-children();
+  }
+}

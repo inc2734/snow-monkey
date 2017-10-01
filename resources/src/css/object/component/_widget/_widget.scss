@@ -36,61 +36,33 @@
   }
 }
 
-.widget_meta,
-.widget_recent_entries,
-.widget_recent_comments,
-.widget_archive,
-.widget_categories,
-.widget_meta,
-.widget_pages,
-.widget_nav_menu,
-.widget_inc2734_wp_awesome_widgets_recent_posts,
-.widget_inc2734_wp_awesome_widgets_any_posts,
-.widget_inc2734_wp_awesome_widgets_ranking {
-  ul {
-    @include _list-unstyled();
+/**
+ * Unstyled list base style
+ */
+@mixin widget-list-base() {
+  @include _list-unstyled();
 
-    > li + li {
-      @include _margin(.25, 0, 0);
-    }
-  }
-}
-
-.widget_meta,
-.widget_recent_entries,
-.widget_recent_comments,
-.widget_archive,
-.widget_categories,
-.widget_meta,
-.widget_pages,
-.widget_nav_menu {
-  a {
-    color: $_color-text;
-    text-decoration: none;
-
-    @include _hover() {
-      text-decoration: underline;
-    }
+  > li + li {
+    @include _margin(.25, 0, 0);
   }
 }
 
 /**
- * Recent entries
+ * Text link base style
  */
-.widget_recent_entries {
-  .post-date {
-    display: block;
-    color: _lighter($_color-text);
-    @include _font-size-line-height(11px);
+@mixin widget-link-base() {
+  color: $_color-text;
+  text-decoration: none;
+
+  @include _hover() {
+    text-decoration: underline;
   }
 }
 
 /**
- * Categories, pages, nav menus
+ * Item has children expander
  */
-.widget_categories .cat-item,
-.widget_pages .page_item,
-.widget_nav_menu .menu-item {
+@mixin widget-has-children-expander() {
   position: relative;
 
   @include _hover() {
@@ -101,42 +73,19 @@
   }
 }
 
-.children-expander {
-  position: absolute;
-  top: 3px;
-  right: 0;
-  display: inline-block;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  line-height: 1;
-  opacity: 0;
-  visibility: hidden;
-
-  &::before {
-    content: '+';
-  }
-
-  &[data-is-expanded="true"] {
-    &::before {
-      content: '-';
+/**
+ * Children
+ */
+@mixin widget-children() {
+  @keyframes widget_children_show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
-}
 
-@keyframes widget_children_show {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.widget_categories .children,
-.widget_pages .children,
-.widget_nav_menu .sub-menu {
   display: none;
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -150,117 +99,9 @@
 }
 
 /**
- * Calendar
+ * wpaw posts list base
  */
-.widget_calendar {
-  table {
-    border: none;
-    table-layout: fixed;
-    width: 100%;
-
-    caption {
-      font-weight: bold;
-      letter-spacing: .2em;
-      text-align: center;
-    }
-
-    th, td {
-      background-color: transparent;
-      border: none;
-      line-height: 1;
-      padding: 6px 0;
-    }
-
-    thead th, tbody td {
-      text-align: center;
-
-      > a {
-        display: inline-block;
-        background-color: #eee;
-        border-radius: 2px;
-        color: $_color-text;
-        margin: -6px 0;
-        padding: 6px 10px;
-        text-decoration: none;
-      }
-    }
-
-    tfoot {
-      @include _font-size-line-height($_base-font-size-px - 2);
-
-      #prev, #next {
-        padding-top: 1em;
-      }
-
-      #prev {
-        text-align: left;
-      }
-
-      #next {
-        text-align: right;
-      }
-
-      a {
-        color: $_color-text;
-      }
-    }
-  }
-
-  #next {
-    text-align: right;
-  }
-}
-
-/**
- * Tag cloud
- */
-.widget_tag_cloud {
-  a {
-    margin: 0 4px 8px 0;
-    display: inline-block;
-    background-color: _lightest($_color-gray);
-    border: 1px solid _lighter($_color-gray);
-    border-radius: $_border-radius;
-    color: _dark($_color-gray);
-    font-size: ($_base-font-size-px - 4) !important;
-    line-height: 1;
-    white-space: nowrap;
-    text-decoration: none;
-    padding: 4px 8px;
-    vertical-align: top;
-
-    @include _hover() {
-      background-color: _lighter($_color-gray);
-      text-decoration: none;
-    }
-
-    &::before {
-      margin-right: 3px;
-      content: '#';
-      color: $color-accent;
-      font-weight: bold;
-    }
-  }
-}
-
-/**
- * PR Box, Showcase, Slider
- */
-.wpaw-pr-box,
-.wpaw-showcase,
-.wpaw-slider {
-  .c-section & {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-  }
-}
-
-/**
- * Recent posts, Ranking, Any posts
- */
-.wpaw-recent-posts,
-.wpaw-ranking,
-.wpaw-any-posts {
+@mixin wpaw-posts-list-base() {
   &__item {
     &:not(:first-child) {
       @include _margin(.5, 0, 0);
@@ -297,212 +138,27 @@
 }
 
 /**
- * Ranking
+ * Full width
  */
-.wpaw-ranking {
-  counter-reset: wpaw_ranking;
-
-  &__item {
-    position: relative;
-
-    &::before {
-      counter-increment: wpaw_ranking;
-      content: counter(wpaw_ranking);
-      @include _position(absolute, 0, null, null, 0);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      @include _square(20px);
-      color: #fff;
-      line-height: 1;
-      background-color: $_color-black;
-      font-size: 12px;
-      font-weight: bold;
-    }
-
-    &:nth-child(1)::before {
-      background-color: #e6b324;
-    }
-
-    &:nth-child(2)::before {
-      background-color: #c7c6c6;
-    }
-
-    &:nth-child(3)::before {
-      background-color: #976b2f;
-    }
-  }
+@mixin widget-full-width() {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
 }
 
-/**
- * Slider
- */
-.widget_inc2734_wp_awesome_widgets_slider {
-  padding: 0;
-
-  .wpaw-slider {
-    .slick-dotted.slick-slider {
-      margin: 0;
-    }
-
-    .slick-slide {
-      max-height: 75vh;
-    }
-
-    .slick-dots {
-      bottom: 10px;
-    }
-  }
-}
-
-/**
- * PR Box
- */
-.widget_inc2734_wp_awesome_widgets_pr_box {
-  padding: 0;
-}
-.wpaw-pr-box {
-  // font page widget area
-  .#{$_prefix}c-section & {
-    @include _padding(1, 0);
-
-    @include _media-min(lg) {
-      @include _padding(2, 0);
-    }
-
-    &__inner {
-      @include _container();
-    }
-
-    &__title {
-      margin: 0;
-    }
-  }
-
-  // not front page widget area
-  .#{$_prefix}c-widget & {
-    @include _padding(.5);
-
-    @include _media-min(lg) {
-      @include _padding(1);
-    }
-  }
-
-  &__title {
-    margin: 0;
-  }
-
-  &__lead {
-    @include _margin(.75, 0, 0);
-    @include _font-size-line-height($_base-font-size-px - 2);
-    color: _light($_color-text);
-  }
-
-  &__row {
-    @include _margin-top(1);
-  }
-
-  &__item-figure {
-    @include _margin-bottom(.25);
-
-    @include _media-min(lg) {
-      @include _margin-bottom(.75);
-    }
-  }
-
-  &__item-summary {
-    @include _font-size-line-height($_base-font-size-px - 2);
-
-    @include _media-min(lg) {
-      @include _margin-top(.25);
-    }
-  }
-
-  &__action {
-    @include _margin(1, 0, 0);
-  }
-
-  &__more {
-    @include btn();
-    @include _padding(.5, 1);
-
-    @include _media-min(lg) {
-      @include _padding(.5, 2);
-    }
-  }
-}
-
-/**
- * Showcase
- */
-.widget_inc2734_wp_awesome_widgets_showcase {
-  padding: 0;
-}
-.wpaw-showcase {
-  @include _padding(1.5, 0);
-
-  @include _media-min(lg) {
-    @include _padding(2, 0);
-  }
-
-  &__inner {
-    @include _media-min(lg) {
-      @include _margin(0, -1);
-    }
-  }
-
-  &__body {
-    @include _content(.5);
-
-    @include _media-min(lg) {
-      @include _content(1);
-      @include _padding(0, 1);
-    }
-  }
-
-  &__figure {
-    @include _margin(1, 0, 0);
-
-    @include _media-min(lg) {
-      margin: 0;
-      @include _padding(0, 1);
-    }
-  }
-
-  &__more {
-    @include btn();
-    @include _padding(.5, 1);
-
-    @include _media-min(lg) {
-      @include _padding(.5, 2);
-    }
-  }
-
-  &--format-3 {
-    .wpaw-showcase {
-      &__body {
-        @include _margin-bottom(1);
-      }
-    }
-  }
-}
-
-/**
- * Site branding
- */
-.wpaw-site-branding {
-  &__logo {
-    text-align: center;
-
-    a {
-      color: $_color-text;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  }
-
-  &__description {
-    @include _margin(.75, 0, 0);
-    @include _content(.5);
-  }
-}
+@import 'children-expander';
+@import 'widget-meta';
+@import 'widget-recent-entries';
+@import 'widget-recent-comments';
+@import 'widget-archive';
+@import 'widget-categories';
+@import 'widget-pages';
+@import 'widget-nav-menu';
+@import 'widget-calendar';
+@import 'widget-tag-cloud';
+@import 'wpaw-recent-posts';
+@import 'wpaw-any-posts';
+@import 'wpaw-ranking';
+@import 'wpaw-pr-box';
+@import 'wpaw-showcase';
+@import 'wpaw-slider';
+@import 'wpaw-site-branding';

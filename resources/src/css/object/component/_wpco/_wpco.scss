@@ -50,15 +50,15 @@
         color: #fff;
         font-size: 10px;
         line-height: 1;
-        padding: .25em .5em .35em .5em;
+        padding: .25em .55em .35em .55em;
         counter-increment: wpco;
-        content: counters(wpco, "-") " ";
+        content: counter(wpco);
       }
     }
 
-    li li > a { padding-left: 1em; }
-    li li li > a { padding-left: 2em; }
-    li li li li > a { padding-left: 3em; }
-    li li li li li > a { padding-left: 4em; }
+    li li > a { padding-left: 1.5em; }
+    li li li > a { padding-left: 3em; }
+    li li li li > a { padding-left: 4.5em; }
+    li li li li li > a { padding-left: 6em; }
   }
 }

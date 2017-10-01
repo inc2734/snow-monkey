@@ -1,0 +1,9 @@
+.widget_recent_comments {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+}

@@ -1,0 +1,16 @@
+.wpaw-site-branding {
+  &__logo {
+    text-align: center;
+
+    a {
+      color: $_color-text;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+
+  &__description {
+    @include _margin(.75, 0, 0);
+    @include _content(.5);
+  }
+}
