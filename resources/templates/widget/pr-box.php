@@ -40,9 +40,11 @@
 			<div class="wpaw-pr-box__row wpaw-pr-box__row--<?php echo esc_attr( $instance['sm-columns'] ); ?> wpaw-pr-box__row--md-<?php echo esc_attr( $instance['md-columns'] ); ?>  wpaw-pr-box__row--lg-<?php echo esc_attr( $instance['lg-columns'] ); ?>">
 				<?php foreach ( $instance['items'] as $item ) : ?>
 					<div class="wpaw-pr-box__item">
-						<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $instance['thumbnail-aspect-ratio'] ); ?>"
-							style="background-image: url( <?php echo esc_url( wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] ) ); ?> );"
-						></div>
+						<?php if ( ! empty( $item['src'] ) ) : ?>
+							<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $instance['thumbnail-aspect-ratio'] ); ?>"
+								style="background-image: url( <?php echo esc_url( wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] ) ); ?> );"
+							></div>
+						<?php endif; ?>
 
 						<?php if ( ! empty( $item['title'] ) ) : ?>
 							<div class="wpaw-pr-box__item-title"><?php echo esc_html( $item['title'] ); ?></div>
