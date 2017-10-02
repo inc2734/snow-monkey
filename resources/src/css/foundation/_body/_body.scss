@@ -85,17 +85,9 @@ body {
 
   > h2 {
     position: relative;
-    @include _padding(0, 0, 1);
+    border-bottom: 1px solid _lighter($_color-gray);
+    @include _padding(0, 0, .25);
     @include _margin-bottom(1.5);
-
-    &::after {
-      @include _position(absolute, null, null, 0, 0);
-      content: '';
-      display: block;
-      height: 1px;
-      background-color: $color-accent;
-      width: 40px;
-    }
   }
 
   > table {
