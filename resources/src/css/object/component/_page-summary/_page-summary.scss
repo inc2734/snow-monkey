@@ -1,7 +1,7 @@
 .#{$_prefix}c-page-summary {
   &__figure {
     position: relative;
-    @include _margin(0, 0, .25);
+    @include _margin(0, 0, .5);
     overflow: hidden;
 
     &::before {
@@ -48,13 +48,13 @@
 
   &__title {
     @include _margin(0, 0, .2);
-    @include _font-size($_base-font-size);
-    @include _line-height($_base-font-size * 1.5);
+    @include _font-size-line-height($_base-font-size);
     @include _transition(color);
 
     @include _media-min(lg) {
       @include _margin(0, 0, .25);
-      @include _font-size-line-height($_base-font-size * 1.5);
+      @include _font-size($_base-font-size * 1.25);
+      @include _line-height($_base-font-size * 1.5);
     }
   }
 
