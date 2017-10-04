@@ -3,8 +3,11 @@ $_between-lines: (1rem / 2.5) !default;
 $_container-max-width: 1280px !default;
 $_transition-duration: .2s !default;
 $_font-path: '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
-$_h2-margin-top: 3 !default;
-$_h3-margin-top: 2 !default;
+$_base-margin-bottom: 1 !default;
+$_h2-margin-top: $_base-margin-bottom * 3 !default;
+$_h3-margin-top: $_base-margin-bottom * 2 !default;
+$_h3-margin-bottom: $_base-margin-bottom * .75 !default;
+$_h4-margin-bottom: $_base-margin-bottom * .75 !default;
 $color-accent: #bd3c4f;
 
 @import '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/css/basis';
