@@ -4,8 +4,9 @@ $_container-max-width: 1280px !default;
 $_transition-duration: .2s !default;
 $_font-path: '../../vendor/inc2734/wp-basis/node_modules/sass-basis/src/font' !default;
 $_base-margin-bottom: 1 !default;
-$_h2-margin-top: $_base-margin-bottom * 3 !default;
-$_h3-margin-top: $_base-margin-bottom * 2 !default;
+$_h2-font-size-scale: 1.5;
+$_h2-margin-top: $_base-margin-bottom * 2 !default;
+$_h3-margin-top: $_base-margin-bottom * 1.5 !default;
 $_h3-margin-bottom: $_base-margin-bottom * .75 !default;
 $_h4-margin-bottom: $_base-margin-bottom * .75 !default;
 $color-accent: #bd3c4f;
@@ -95,7 +96,12 @@ body {
   }
 
   > h2 {
-    position: relative;
+    border-left: 3px solid $color-accent;
+    background-color: _lightest($_color-gray);
+    @include _padding(.25, .25, .25, .5);
+  }
+
+  > h3 {
     border-bottom: 1px solid _lighter($_color-gray);
     @include _padding(0, 0, .25);
   }

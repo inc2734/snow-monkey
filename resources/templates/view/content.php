@@ -26,7 +26,9 @@
 
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
+	</div>
 
+	<footer class="c-entry__footer">
 		<?php
 		wpvc_get_template_part( 'template-parts/share-buttons', [
 			'_position' => 'bottom',
@@ -38,7 +40,7 @@
 		<?php get_template_part( 'template-parts/google-adsense' ); ?>
 
 		<?php get_template_part( 'template-parts/like-me-box' ); ?>
-	</div>
+	</footer>
 </article>
 
 <?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
