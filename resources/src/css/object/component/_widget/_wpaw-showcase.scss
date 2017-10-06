@@ -38,6 +38,10 @@
     }
   }
 
+  &__lead {
+    @include _content();
+  }
+
   &__more {
     @include btn();
     @include _padding(.5, 1);

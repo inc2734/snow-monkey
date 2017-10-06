@@ -28,7 +28,7 @@
 
 					<?php if ( ! empty( $instance['lead'] ) ) : ?>
 						<div class="wpaw-showcase__lead">
-							<?php echo esc_html( $instance['lead'] ); ?>
+							<?php echo wp_kses_post( wpautop( $instance['lead'] ) ); ?>
 						</div>
 					<?php endif; ?>
 
