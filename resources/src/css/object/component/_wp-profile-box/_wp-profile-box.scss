@@ -110,6 +110,7 @@
 
   &__buttons {
     @include _margin(.5, 0, 0);
+    padding-bottom: 1px;
   }
 
   &__detail-btn, &__archives-btn {
@@ -118,6 +119,7 @@
     @include _font-size($_base-font-size-px - 2);
     @include _padding(.25, .5);
     @include _transition(opacity);
+    backface-visibility: hidden;
 
     @include _hover() {
       opacity: .9;
