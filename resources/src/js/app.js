@@ -33,6 +33,7 @@ new SnowMonkeyPageTopScroll();
 
 $(function() {
   $('.l-sidebar-sticky-widget-area').sticky({
+    breakpoint: 1024,
     offset  : (() => {
       if ('sticky' === $('.l-header').attr('data-l-header-type')) {
         return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
