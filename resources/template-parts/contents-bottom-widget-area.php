@@ -5,11 +5,16 @@
  * @license GPL-2.0+
  */
 
-if ( ! is_active_sidebar( get_post_type() . '-post-type-contents-bottom-widget-area' ) ) {
+$post_type = get_post_type();
+if ( ! $post_type ) {
+	$post_type = 'page';
+}
+
+if ( ! is_active_sidebar( $post_type . '-post-type-contents-bottom-widget-area' ) ) {
 	return;
 }
 ?>
 
 <div class="l-contents-bottom-widget-area">
-	<?php dynamic_sidebar( get_post_type() . '-post-type-contents-bottom-widget-area' ); ?>
+	<?php dynamic_sidebar( $post_type . '-post-type-contents-bottom-widget-area' ); ?>
 </div>

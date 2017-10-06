@@ -19,5 +19,10 @@ add_filter( 'mimizuku_layout', function( $layout ) {
 		return 'one-column-fluid';
 	}
 
-	return get_theme_mod( get_post_type() . '-layout' );
+	$post_type = get_post_type();
+	if ( ! $post_type ) {
+		$post_type = 'page';
+	}
+
+	return get_theme_mod( $post_type . '-layout' );
 } );
