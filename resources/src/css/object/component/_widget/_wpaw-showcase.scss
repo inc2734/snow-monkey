@@ -8,9 +8,11 @@
     @include widget-full-width();
   }
 
+  background-attachment: scroll;
   @include _padding(1.5, 0);
 
   @include _media-min(lg) {
+    background-attachment: fixed;
     @include _padding(2, 0);
   }
 
