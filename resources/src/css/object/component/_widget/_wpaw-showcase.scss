@@ -46,10 +46,22 @@
 
   &__more {
     @include btn();
-    @include _padding(.5, 1);
+    white-space: normal;
+    @include _font-size-line-height($_base-font-size-px);
+    @include _padding(.25, 1);
 
     @include _media-min(lg) {
-      @include _padding(.5, 2);
+      @include _padding(.25, 2);
+    }
+  }
+
+  &--format-1,
+  &--format-2 {
+    .wpaw-showcase {
+      &__figure {
+        flex: 1 0 auto;
+        max-width: 50%;
+      }
     }
   }
 
