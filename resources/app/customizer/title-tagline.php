@@ -29,6 +29,7 @@ $customizer->control( 'text', 'mwt-copyright', [
 	'label'       => __( 'Copyright', 'snow-monkey' ),
 	'description' => __( 'HTML usable', 'snow-monkey' ),
 	'default'     => $copyright,
+	'type'        => 'option',
 ] );
 
 $section = $customizer->get_section( 'title_tagline' );
