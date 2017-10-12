@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "52d00feb8c4171f07c5f8c1d8a8f38a7",
-    "content-hash": "173490939a22b3722ad69dfd8aae514f",
+    "hash": "a9177fa8a42fbdb334cba951cb811501",
+    "content-hash": "dc20cb18e47a55b11e3eb8793a4638db",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.0.14",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "e38330cd6176a6e5b760aae6d9bee0b181d7ae2f"
+                "reference": "34864fe12db452593b89ff05bb5edb0be03494ca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/e38330cd6176a6e5b760aae6d9bee0b181d7ae2f",
-                "reference": "e38330cd6176a6e5b760aae6d9bee0b181d7ae2f",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/34864fe12db452593b89ff05bb5edb0be03494ca",
+                "reference": "34864fe12db452593b89ff05bb5edb0be03494ca",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-10-12 13:35:15"
+            "time": "2017-10-12 14:50:30"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -656,16 +656,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "2.1.4",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "a88afa7c72332160e873e160f383aa6b5146767c"
+                "reference": "e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/a88afa7c72332160e873e160f383aa6b5146767c",
-                "reference": "a88afa7c72332160e873e160f383aa6b5146767c",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3",
+                "reference": "e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-09-30 07:41:55"
+            "time": "2017-10-12 14:46:25"
         }
     ],
     "packages-dev": [
