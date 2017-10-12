@@ -5,8 +5,9 @@
  * @license GPL-2.0+
  */
 ?>
-<div id="hamburger-btn" class="c-hamburger-btn" aria-expanded="false" aria-controls="drawer-nav">
+<button id="hamburger-btn" class="c-hamburger-btn" aria-expanded="false" aria-controls="drawer-nav">
 	<div class="c-hamburger-btn__bar"></div>
 	<div class="c-hamburger-btn__bar"></div>
 	<div class="c-hamburger-btn__bar"></div>
-</div>
+	<div class="screen-reader-text"><?php esc_html_e( 'Menu', 'snow-monkey' ); ?></div>
+</button>
