@@ -74,7 +74,7 @@ $control->join( $section );
  * Footer laytou
  */
 $customizer->control( 'select', 'footer-widget-area-column-size', [
-	'label'   => __( 'Number of columns in the footer widget aera', 'snow-monkey' ),
+	'label'   => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
 	'default' => '1-4',
 	'choices' => [
 		'1-1' => __( '1 column', 'snow-monkey' ),
