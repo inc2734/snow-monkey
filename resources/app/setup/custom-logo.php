@@ -34,7 +34,7 @@ add_action( 'wp_head', function() {
 	$width = $reg[1];
 	?>
 	<style>
-	.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo esc_html( $height / 2 ); ?>px; width: <?php echo esc_html( $width / 2 ); ?>px; }
+	.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height / 2 ); ?>px; width: <?php echo absint( $width / 2 ); ?>px; }
 	</style>
 	<?php
 } );

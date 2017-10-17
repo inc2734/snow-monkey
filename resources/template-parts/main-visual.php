@@ -34,7 +34,7 @@ if ( ! $pickup_posts ) {
 				</div>
 				<ul class="p-main-visual__item-meta c-meta">
 					<li class="c-meta__item c-meta__item--author"><?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?></li>
-					<li class="c-meta__item"><?php echo esc_html( the_time( get_option( 'date_format' ) ) ); ?></li>
+					<li class="c-meta__item"><?php echo esc_html( get_the_time( get_option( 'date_format' ) ) ); ?></li>
 				</ul>
 
 				<a class="p-main-visual__item-more" href="<?php the_permalink(); ?>">READ MORE</a>
