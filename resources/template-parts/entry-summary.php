@@ -29,24 +29,26 @@
 			}
 			?>
 		</div>
-		<header class="c-entry-summary__header">
-			<h2 class="c-entry-summary__title">
-				<?php
-				ob_start();
-				the_title();
-				$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 40 : 80 );
-				echo esc_html( $title );
-				?>
-			</h2>
-		</header>
-		<div class="c-entry-summary__content">
-			<?php the_excerpt(); ?>
-		</div>
-		<div class="c-entry-summary__meta">
-			<ul class="c-meta">
-				<li class="c-meta__item c-meta__item--author"><?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?></li>
-				<li class="c-meta__item"><?php the_time( get_option( 'date_format' ) ); ?></li>
-			</ul>
+		<div class="c-entry-summary__body">
+			<header class="c-entry-summary__header">
+				<h2 class="c-entry-summary__title">
+					<?php
+					ob_start();
+					the_title();
+					$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 40 : 80 );
+					echo esc_html( $title );
+					?>
+				</h2>
+			</header>
+			<div class="c-entry-summary__content">
+				<?php the_excerpt(); ?>
+			</div>
+			<div class="c-entry-summary__meta">
+				<ul class="c-meta">
+					<li class="c-meta__item c-meta__item--author"><?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?></li>
+					<li class="c-meta__item"><?php the_time( get_option( 'date_format' ) ); ?></li>
+				</ul>
+			</div>
 		</div>
 	</section>
 </a>
