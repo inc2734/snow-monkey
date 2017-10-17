@@ -74,7 +74,7 @@ msgid "Center logo"
 msgstr "中央ロゴ"
 
 #: app/customizer/design.php:77
-msgid "Number of columns in the footer widget aera"
+msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
 #: app/customizer/design.php:80
@@ -184,7 +184,7 @@ msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
 #: app/customizer/seo-sns.php:98
-msgid "Not use"
+msgid "Do not use"
 msgstr "使用しない"
 
 #: app/customizer/seo-sns.php:105

@@ -5,14 +5,14 @@ msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
 "POT-Creation-Date: 2017-10-06 13:12+0900\n"
-"PO-Revision-Date: 2017-10-06 13:12+0900\n"
+"PO-Revision-Date: 2017-10-16 19:11+1300\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 2.0.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_attr_x;esc_html__;"
 "esc_html_e;esc_html_x\n"
@@ -74,7 +74,7 @@ msgid "Center logo"
 msgstr "中央ロゴ"
 
 #: app/customizer/design.php:77
-msgid "Number of columns in the footer widget aera"
+msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
 #: app/customizer/design.php:80
@@ -184,7 +184,7 @@ msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
 #: app/customizer/seo-sns.php:98
-msgid "Not use"
+msgid "Do not use"
 msgstr "使用しない"
 
 #: app/customizer/seo-sns.php:105

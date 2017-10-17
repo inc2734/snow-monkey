@@ -95,7 +95,7 @@ $customizer->control( 'select', 'mwt-twitter-card', array(
 	'default'     => 'summary',
 	'type'        => 'option',
 	'choices'     => array(
-		''                    => __( 'Not use', 'snow-monkey' ),
+		''                    => __( 'Do not use', 'snow-monkey' ),
 		'summary'             => 'Summary Card',
 		'summary_large_image' => 'Summary Card with Large Image',
 	),
