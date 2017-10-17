@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a9177fa8a42fbdb334cba951cb811501",
-    "content-hash": "dc20cb18e47a55b11e3eb8793a4638db",
+    "hash": "b2e5f9244d990c7b960dd00f4d2eff90",
+    "content-hash": "bc20f168c1e0fffe29da32decdaea8f7",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "34864fe12db452593b89ff05bb5edb0be03494ca"
+                "reference": "9399dc14dd1cc48c24fb0295cedcd1baa391198a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/34864fe12db452593b89ff05bb5edb0be03494ca",
-                "reference": "34864fe12db452593b89ff05bb5edb0be03494ca",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/9399dc14dd1cc48c24fb0295cedcd1baa391198a",
+                "reference": "9399dc14dd1cc48c24fb0295cedcd1baa391198a",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.1",
-                "inc2734/wp-awesome-widgets": ">=1.0.5",
+                "inc2734/wp-awesome-widgets": ">=1.1.0",
                 "inc2734/wp-basis": ">=0.4.4",
                 "inc2734/wp-breadcrumbs": ">=0.3.2",
                 "inc2734/wp-contents-outline": ">=0.1.4",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-10-12 14:50:30"
+            "time": "2017-10-17 14:14:01"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,16 +107,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "1dd3f455ff101caab104691e32f60d22ed27141e"
+                "reference": "67e635f14c9ef5536643fc1d4184cdad1ac49225"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/1dd3f455ff101caab104691e32f60d22ed27141e",
-                "reference": "1dd3f455ff101caab104691e32f60d22ed27141e",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/67e635f14c9ef5536643fc1d4184cdad1ac49225",
+                "reference": "67e635f14c9ef5536643fc1d4184cdad1ac49225",
                 "shasum": ""
             },
             "require": {
@@ -146,7 +146,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2017-10-12 13:32:50"
+            "time": "2017-10-17 14:10:22"
         },
         {
             "name": "inc2734/wp-basis",
@@ -1360,16 +1360,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.22",
+            "version": "5.7.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "10df877596c9906d4110b5b905313829043f2ada"
+                "reference": "78532d5269d984660080d8e0f4c99c5c2ea65ffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/10df877596c9906d4110b5b905313829043f2ada",
-                "reference": "10df877596c9906d4110b5b905313829043f2ada",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/78532d5269d984660080d8e0f4c99c5c2ea65ffe",
+                "reference": "78532d5269d984660080d8e0f4c99c5c2ea65ffe",
                 "shasum": ""
             },
             "require": {
@@ -1438,7 +1438,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-09-24 07:23:38"
+            "time": "2017-10-15 06:13:55"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2063,16 +2063,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "3c2d0a0fe39684ba0c1eb842a6a775d0b938d699"
+                "reference": "d667e245d5dcd4d7bf80f26f2c947d476b66213e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/3c2d0a0fe39684ba0c1eb842a6a775d0b938d699",
-                "reference": "3c2d0a0fe39684ba0c1eb842a6a775d0b938d699",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d667e245d5dcd4d7bf80f26f2c947d476b66213e",
+                "reference": "d667e245d5dcd4d7bf80f26f2c947d476b66213e",
                 "shasum": ""
             },
             "require": {
@@ -2110,7 +2110,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-09-19 22:47:14"
+            "time": "2017-10-16 22:40:25"
         },
         {
             "name": "symfony/config",
