@@ -42,8 +42,21 @@ themes/snow-monkey
 * License: MIT License
 * Source: https://sass-basis.github.io/
 
+### slick
+* License: MIT License
+* Source: http://kenwheeler.github.io/slick/
+
 ### FLOCSS
 * Source: https://github.com/hiloki/flocss
+
+### jquery.background-parallax-scroll
+* Source: https://github.com/inc2734/jquery.background-parallax-scroll
+
+### jquery.smoothscroll
+* Source: https://github.com/inc2734/jquery.smoothscroll
+
+### jquery.sticky
+* Source: https://github.com/inc2734/jquery.sticky
 
 ### inc2734/wp-breadcrumbs
 * Source: https://github.com/inc2734/wp-breadcrumbs
