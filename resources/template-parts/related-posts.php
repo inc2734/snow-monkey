@@ -62,7 +62,7 @@ if ( ! $related_posts ) {
 ?>
 <aside class="p-related-posts c-entry-aside">
 	<h2 class="p-related-posts__title c-entry-aside__title"><span><?php esc_html_e( 'Related posts', 'snow-monkey' ); ?></span></h2>
-	<ul class="c-entries">
+	<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
 		<?php foreach ( $related_posts as $post ) : ?>
 			<?php setup_postdata( $post ); ?>
 			<li class="c-entries__item">

@@ -33,10 +33,14 @@
 			<header class="c-entry-summary__header">
 				<h2 class="c-entry-summary__title">
 					<?php
-					ob_start();
-					the_title();
-					$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 40 : 80 );
-					echo esc_html( $title );
+					if ( 'rich-media' === get_theme_mod( 'archive-layout' ) ) {
+						ob_start();
+						the_title();
+						$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 40 : 80 );
+						echo esc_html( $title );
+					} else {
+						the_title();
+					}
 					?>
 				</h2>
 			</header>

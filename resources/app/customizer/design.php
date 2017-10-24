@@ -88,6 +88,21 @@ $control = $customizer->get_control( 'footer-widget-area-column-size' );
 $control->join( $section );
 
 /**
+ * Archive layout
+ */
+$customizer->control( 'select', 'archive-layout', [
+	'label'   => __( 'Archive layout', 'snow-monkey' ),
+	'default' => 'rich-media',
+	'choices' => [
+		'rich-media' => __( 'Rich media', 'snow-monkey' ),
+		'simple'     => __( 'Simple', 'snow-monkey' ),
+	],
+] );
+
+$control = $customizer->get_control( 'archive-layout' );
+$control->join( $section );
+
+/**
  * Contents outline
  */
 $customizer->control( 'checkbox', 'mwt-display-contents-outline', [

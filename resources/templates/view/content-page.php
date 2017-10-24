@@ -23,7 +23,7 @@
 		] );
 		?>
 		<?php if ( $pages ) : ?>
-			<ul class="c-entries">
+			<ul class="c-entries c-entries--rich-media">
 				<?php foreach ( $pages as $post ) : ?>
 					<?php setup_postdata( $post ); ?>
 					<li class="c-entries__item">

@@ -18,7 +18,7 @@ if ( ! $recent_posts_query->found_posts ) {
 <section class="p-recent-posts c-section">
 	<div class="c-container">
 		<h2 class="p-recent-posts__title c-section__title"><?php esc_html_e( 'Recent Posts', 'snow-monkey' ); ?></h2>
-		<ul class="p-recent-posts__list c-entries">
+		<ul class="p-recent-posts__list c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
 			<?php while ( $recent_posts_query->have_posts() ) : ?>
 				<?php $recent_posts_query->the_post(); ?>
 				<li class="c-entries__item">

@@ -4,15 +4,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-10-06 13:12+0900\n"
-"PO-Revision-Date: 2017-10-16 19:11+1300\n"
+"POT-Creation-Date: 2017-10-25 02:58+0900\n"
+"PO-Revision-Date: 2017-10-25 02:59+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 1.8.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-KeywordsList: __;_e;_x;esc_attr__;esc_attr_e;esc_attr_x;esc_html__;"
 "esc_html_e;esc_html_x\n"
@@ -57,7 +57,7 @@ msgstr "1カラム（slim）"
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design.php:63
+#: app/customizer/design.php:63 app/customizer/design.php:98
 msgid "Simple"
 msgstr "シンプル"
 
@@ -94,10 +94,18 @@ msgid "4 columns"
 msgstr "4カラム"
 
 #: app/customizer/design.php:94
+msgid "Archive layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/design.php:97
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/design.php:109
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/design.php:107
+#: app/customizer/design.php:122
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
@@ -421,6 +429,10 @@ msgstr "カテゴリー"
 #: template-parts/entry-meta.php:59
 msgid "Tags"
 msgstr "タグ"
+
+#: template-parts/hamburger-btn.php:12
+msgid "Menu"
+msgstr "メニュー"
 
 #: template-parts/page-summary.php:33
 msgid "More"

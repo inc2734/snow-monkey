@@ -30,4 +30,20 @@
       text-decoration: none;
     }
   }
+
+  &--simple {
+    margin: 0;
+    display: block;
+
+    .#{$_prefix}c-entries__item {
+      margin: 0;
+      max-width: none;
+      border-bottom: 1px solid _lighter($_color-gray);
+      padding: 0;
+
+      > a {
+        @include _padding(1, 0);
+      }
+    }
+  }
 }

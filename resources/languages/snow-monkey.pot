@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-09-22 22:09+0900\n"
-"PO-Revision-Date: 2017-09-26 11:45+0900\n"
+"POT-Creation-Date: 2017-10-25 02:58+0900\n"
+"PO-Revision-Date: 2017-10-25 02:59+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -57,7 +57,7 @@ msgstr "1カラム（slim）"
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design.php:63
+#: app/customizer/design.php:63 app/customizer/design.php:98
 msgid "Simple"
 msgstr "シンプル"
 
@@ -94,10 +94,18 @@ msgid "4 columns"
 msgstr "4カラム"
 
 #: app/customizer/design.php:94
+msgid "Archive layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/design.php:97
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/design.php:109
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/design.php:107
+#: app/customizer/design.php:122
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
@@ -422,6 +430,14 @@ msgstr "カテゴリー"
 msgid "Tags"
 msgstr "タグ"
 
+#: template-parts/hamburger-btn.php:12
+msgid "Menu"
+msgstr "メニュー"
+
+#: template-parts/page-summary.php:33
+msgid "More"
+msgstr "More"
+
 #: template-parts/pings.php:10
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
@@ -454,6 +470,18 @@ msgstr "関連記事"
 msgid "Scroll up"
 msgstr "上にスクロール"
 
+#: templates/view/404.php:11
+msgid "Woops! Page not found."
+msgstr "ページが見つかりませんでした。"
+
+#: templates/view/404.php:12
+msgid "The page you are looking for may be moved or deleted."
+msgstr "お探しのページは移動したか削除されています。"
+
+#: templates/view/404.php:13
+msgid "Please search this search box."
+msgstr "この検索ボックスから検索してください。"
+
 #~ msgid "Snow Monkey"
 #~ msgstr "Snow Monkey"
 
@@ -477,15 +505,6 @@ msgstr "上にスクロール"
 
 #~ msgid "This widgets are displayed in the sidebar of singular pages."
 #~ msgstr "このウィジェットは単一ページのサイドバーに表示されます。"
-
-#~ msgid "Woops! Page not found."
-#~ msgstr "ページが見つかりませんでした。"
-
-#~ msgid "The page you are looking for may be moved or deleted."
-#~ msgstr "お探しのページは移動したか削除されています。"
-
-#~ msgid "Please search this search box."
-#~ msgstr "この検索ボックスから検索してください。"
 
 #~ msgid ""
 #~ "Sorry, but nothing matched your search terms. Please try again with some "

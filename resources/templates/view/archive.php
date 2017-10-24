@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<ul class="c-entries">
+<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
 		<li class="c-entries__item">
