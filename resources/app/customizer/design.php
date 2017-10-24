@@ -71,7 +71,7 @@ $control = $customizer->get_control( 'header-layout' );
 $control->join( $section );
 
 /**
- * Footer laytou
+ * Footer layout
  */
 $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'label'   => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
