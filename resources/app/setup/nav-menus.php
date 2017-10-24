@@ -16,12 +16,14 @@ use Inc2734\WP_Basis\App\Model\Drawer_Nav;
  */
 add_action( 'after_setup_theme', function() {
 	register_nav_menus( [
-		'global-nav' => esc_html__( 'Global Navigation (For PC)', 'snow-monkey' ),
-		'drawer-nav' => esc_html__( 'Drawer Navigation (For Mobile)', 'snow-monkey' ),
-		'social-nav' => esc_html__( 'Social Navigation', 'snow-monkey' ),
+		'global-nav'        => esc_html__( 'Global Navigation (For PC)', 'snow-monkey' ),
+		'drawer-nav'        => esc_html__( 'Drawer Navigation (For Mobile)', 'snow-monkey' ),
+		'social-nav'        => esc_html__( 'Social Navigation', 'snow-monkey' ),
+		'footer-sticky-nav' => esc_html__( 'Footer Sticky Navigation (For Mobile)', 'snow-monkey' ),
 	] );
 } );
 
 new Global_Nav( 'global-nav' );
 new Drawer_Nav( 'drawer-nav' );
 new Global_Nav( 'social-nav' );
+new Global_Nav( 'footer-sticky-nav' );

@@ -1,0 +1,31 @@
+.#{$_prefix}p-footer-sticky-nav {
+  @include _position(fixed, null, 0, 0, 0, 10);
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 rgba(#000, .25);
+
+  @include _media-min(lg) {
+    display: none;
+  }
+
+  a {
+    display: block;
+    color: $_color-gray;
+    @include _font-size(10px);
+    line-height: 1.2;
+    padding: .5em 0;
+    text-decoration: none;
+
+    .fa {
+      margin-bottom: 2px;
+      display: block;
+      @include _font-size(24px);
+      line-height: 1;
+    }
+  }
+
+  .#{$_prefix}c-navbar {
+    &__item {
+      flex: 1 1 0%;
+    }
+  }
+}

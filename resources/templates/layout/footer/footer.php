@@ -11,8 +11,10 @@
 	<?php get_template_part( 'template-parts/copyright' ); ?>
 </footer>
 
-<div class="c-page-top" aria-hidden="true">
-	<a href="#body">
-		<span class="fa fa-chevron-up" aria-hidden="true" title="<?php esc_html_e( 'Scroll up', 'snow-monkey' ); ?>"></span>
-	</a>
+<div class="u-hidden u-visible-lg-up">
+	<?php get_template_part( 'template-parts/page-top' ); ?>
+</div>
+
+<div class="u-hidden-lg-up">
+	<?php get_template_part( 'template-parts/footer-sticky-nav' ); ?>
 </div>

@@ -31,7 +31,10 @@ new SnowMonkeyDropNav();
 import SnowMonkeyPageTopScroll from './page-top-scroll.js';
 new SnowMonkeyPageTopScroll();
 
-$(function() {
+import SnowMonkeyFooterStickyNav from './footer-sticky-nav.js';
+new SnowMonkeyFooterStickyNav();
+
+$(() => {
   $('.l-sidebar-sticky-widget-area').sticky({
     breakpoint: 1024,
     offset  : (() => {
@@ -43,7 +46,7 @@ $(function() {
   });
 });
 
-$(function() {
+$(() => {
   $('.c-page-header').backgroundParallaxScroll();
   $('.wpaw-showcase').backgroundParallaxScroll();
 });
