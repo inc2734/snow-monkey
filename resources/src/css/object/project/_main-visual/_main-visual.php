@@ -20,7 +20,8 @@ $cfs->register(
 	[
 		'background-color: ' . $accent_color,
 		'border-color: ' . $accent_color,
-	]
+	],
+	'@media (min-width: 64em)'
 );
 
 $cfs->register(
@@ -34,5 +35,6 @@ $cfs->register(
 		'.p-main-visual .slick-arrow:active',
 		'.p-main-visual .slick-arrow:focus',
 	],
-	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 ),
+	'@media (min-width: 64em)'
 );

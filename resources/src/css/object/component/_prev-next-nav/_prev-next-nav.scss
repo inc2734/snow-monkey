@@ -59,7 +59,7 @@
       }
     }
 
-    @include _hover() {
+    @include _hover(lg) {
       > a {
         &::before {
           opacity: 1;

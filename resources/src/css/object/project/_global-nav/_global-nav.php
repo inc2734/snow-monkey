@@ -25,7 +25,8 @@ $cfs->register(
 		'.p-global-nav .c-navbar__item:active > a',
 		'.p-global-nav .c-navbar__item:focus > a',
 	],
-	'color: ' . $accent_color
+	'color: ' . $accent_color,
+	'@media (min-width: 64em)'
 );
 
 $cfs->register(

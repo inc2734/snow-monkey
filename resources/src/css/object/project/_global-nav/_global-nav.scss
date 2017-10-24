@@ -15,7 +15,7 @@
         }
       }
 
-      @include _hover() {
+      @include _hover(lg) {
         > a {
           color: $color-accent;
         }
@@ -43,7 +43,7 @@
     &__subitem {
       @include _font-size-line-height($_base-font-size-px - 2);
 
-      @include _hover() {
+      @include _hover(lg) {
         background-color: rgba(#fff, .05);
       }
 

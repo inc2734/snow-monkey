@@ -25,5 +25,6 @@ $cfs->register(
 		'.c-page-summary__more:active',
 		'.c-page-summary__more:focus',
 	],
-	'background-color: ' . $accent_color
+	'background-color: ' . $accent_color,
+	'@media (min-width: 64em)'
 );

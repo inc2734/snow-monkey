@@ -11,7 +11,7 @@
     color: #999;
     text-decoration: none;
 
-    @include _hover() {
+    @include _hover(lg) {
       text-decoration: underline;
     }
   }

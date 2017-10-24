@@ -67,7 +67,7 @@
       text-decoration: none;
       @include _transition(color);
 
-      @include _hover() {
+      @include _hover(lg) {
         color: _light($_color-text);
       }
 
@@ -121,7 +121,7 @@
     @include _transition(opacity);
     backface-visibility: hidden;
 
-    @include _hover() {
+    @include _hover(lg) {
       opacity: .9;
     }
   }

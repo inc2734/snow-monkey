@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b003578b5ec381febe3f68aa94c2e40",
-    "content-hash": "7aadc88386e294e2c9d757f22d96ce37",
+    "hash": "ba5ae23366d87dcccff734d09635a842",
+    "content-hash": "cd743192b91b966e0b5e67f42f043563",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.1.2",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "fe43e48d15a08b6679c70131455437dd09c96d9b"
+                "reference": "268f4a20702506953b7867c8e6215017c2683cf6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/fe43e48d15a08b6679c70131455437dd09c96d9b",
-                "reference": "fe43e48d15a08b6679c70131455437dd09c96d9b",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/268f4a20702506953b7867c8e6215017c2683cf6",
+                "reference": "268f4a20702506953b7867c8e6215017c2683cf6",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.1",
                 "inc2734/wp-awesome-widgets": ">=1.1.0",
-                "inc2734/wp-basis": ">=0.4.4",
+                "inc2734/wp-basis": ">=0.5.0",
                 "inc2734/wp-breadcrumbs": ">=0.3.2",
                 "inc2734/wp-contents-outline": ">=0.1.4",
                 "inc2734/wp-customizer-framework": ">=2.1.3",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-10-17 15:05:11"
+            "time": "2017-10-24 07:00:41"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -150,16 +150,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "0.4.4",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "0c838e8945b1e98e707c5cde2622d412842c3558"
+                "reference": "93fc96dc238808ce74484b97166227191c601e20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/0c838e8945b1e98e707c5cde2622d412842c3558",
-                "reference": "0c838e8945b1e98e707c5cde2622d412842c3558",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/93fc96dc238808ce74484b97166227191c601e20",
+                "reference": "93fc96dc238808ce74484b97166227191c601e20",
                 "shasum": ""
             },
             "require": {
@@ -188,7 +188,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2017-10-07 13:42:24"
+            "time": "2017-10-24 06:59:17"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -754,37 +754,40 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.1",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102"
+                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
-                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4.0"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
-                "doctrine/collections": "1.*",
-                "phpunit/phpunit": "~4.1"
+                "doctrine/collections": "^1.0",
+                "doctrine/common": "^2.6",
+                "phpunit/phpunit": "^4.1"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "DeepCopy\\": "src/DeepCopy/"
-                }
+                },
+                "files": [
+                    "src/DeepCopy/deep_copy.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Create deep copies (clones) of your objects",
-            "homepage": "https://github.com/myclabs/DeepCopy",
             "keywords": [
                 "clone",
                 "copy",
@@ -792,7 +795,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-04-12 18:52:22"
+            "time": "2017-10-19 19:58:43"
         },
         {
             "name": "pdepend/pdepend",

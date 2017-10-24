@@ -32,7 +32,7 @@
       color: $_color-text;
       text-decoration: none;
 
-      @include _hover() {
+      @include _hover(lg) {
         opacity: .7;
       }
     }

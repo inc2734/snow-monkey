@@ -6,7 +6,7 @@
     visibility: visible;
   }
 
-  @include _hover() {
+  @include _hover(lg) {
     .slick-arrow {
       transform: translateX(0);
     }
@@ -87,7 +87,7 @@
     border: 1px solid #fff;
     @include _transition(all);
 
-    @include _hover() {
+    @include _hover(lg) {
       background-color: $color-accent;
       border-color: $color-accent;
     }
@@ -153,7 +153,7 @@
       @include _square(50px);
     }
 
-    @include _hover() {
+    @include _hover(lg) {
       background-color: darken($color-accent, 5%);
     }
 

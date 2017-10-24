@@ -22,5 +22,6 @@ $cfs->register(
 		'.c-btn:active',
 		'.c-btn:focus',
 	],
-	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . $cfs->darken( $accent_color, 0.05 ),
+	'@media (min-width: 64em)'
 );

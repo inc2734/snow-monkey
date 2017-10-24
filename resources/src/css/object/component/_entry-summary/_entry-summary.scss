@@ -1,5 +1,5 @@
 .#{$_prefix}c-entry-summary {
-  @include _hover() {
+  @include _hover(lg) {
     .#{$_prefix}c-entry-summary__figure {
       > span:first-child {
         transform: scale(1.05);
