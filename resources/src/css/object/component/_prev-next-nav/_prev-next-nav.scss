@@ -1,34 +1,51 @@
 .#{$_prefix}c-prev-next-nav {
   @include _margin(1, 0, 0);
   position: relative;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+
+  @include _media-min(md) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
   &::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: calc(50% - 1.5px);
-    content: '';
-    display: block;
-    width: 3px;
-    background-color: $_color-black;
+    @include _media-min(md) {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: calc(50% - 1.5px);
+      content: '';
+      display: block;
+      width: 3px;
+      background-color: $_color-black;
+    }
   }
 
   &__item {
     position: relative;
-    flex: 1 1 0%;
-    width: calc(50% - #{_space(.5)});
     display: flex;
+    background-color: #000;
     overflow: hidden;
 
+    @include _media-min(md) {
+      flex: 1 1 0%;
+      width: calc(50% - #{_space(.5)});
+    }
+
+    &:not(:first-child) {
+      @include _margin-top(.5);
+    }
+
     &--prev {
-      @include _margin(0, 0, 0, .5);
+      @include _media-min(md) {
+        @include _margin(0, 0, 0, .5);
+      }
     }
 
     &--next {
-      @include _margin(0, .5, 0, 0);
+      @include _media-min(md) {
+        @include _margin(0, .5, 0, 0);
+      }
     }
 
     > a {
@@ -40,7 +57,11 @@
       color: #fff;
       font-weight: bold;
       text-decoration: none;
-      @include _padding(1);
+      @include _padding(.5);
+
+      @include _media-min(md) {
+        @include _padding(1);
+      }
 
       &::before {
         @include _position(absolute, 8px, 8px, 8px, 8px);
@@ -79,6 +100,7 @@
     background-color: _lighter($_color-gray);
     @include _transition(transform);
     backface-visibility: hidden;
+    opacity: .6;
   }
 
   &__item-label {
