@@ -44,6 +44,18 @@ add_action( 'widgets_init', function() {
 
 		register_sidebar( [
 			// @codingStandardsIgnoreStart
+			'name'          => sprintf( __( '%1$s top of title', 'snow-monkey' ), __( $post_type_object->label ) ),
+			'description'   => sprintf( __( 'This widgets are displayed in the top of %1$s title.', 'snow-monkey' ), __( $post_type_object->label ) ),
+			// @codingStandardsIgnoreEnd
+			'id'            => $post_type_object->name . '-post-type-title-top-widget-area',
+			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h2 class="c-widget__title"><span>',
+			'after_title'   => '</span></h2>',
+		] );
+
+		register_sidebar( [
+			// @codingStandardsIgnoreStart
 			'name'          => sprintf( __( '%1$s bottom of contents', 'snow-monkey' ), __( $post_type_object->label ) ),
 			'description'   => sprintf( __( 'This widgets are displayed in the bottom of %1$s contents.', 'snow-monkey' ), __( $post_type_object->label ) ),
 			// @codingStandardsIgnoreEnd

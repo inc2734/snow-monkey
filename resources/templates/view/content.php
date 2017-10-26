@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 ?>
+<?php get_template_part( 'template-parts/title-top-widget-area' ); ?>
+
 <article <?php post_class(); ?>>
 	<header class="c-entry__header">
 		<h1 class="c-entry__title"><?php the_title(); ?></h1>
