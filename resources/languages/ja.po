@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-10-25 02:58+0900\n"
-"PO-Revision-Date: 2017-10-25 02:59+0900\n"
+"POT-Creation-Date: 2017-10-27 02:57+0900\n"
+"PO-Revision-Date: 2017-10-27 02:57+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -340,6 +340,10 @@ msgstr "ドロワーナビゲーション（モバイル用）"
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
+#: app/setup/nav-menus.php:22
+msgid "Footer Sticky Navigation (For Mobile)"
+msgstr "フッター固定ナビゲーション（モバイル用）"
+
 #: app/setup/widget-area.php:23
 #, php-format
 msgid "%1$s sidebar"
@@ -357,39 +361,49 @@ msgstr "%1$s 追尾サイドバー"
 
 #: app/setup/widget-area.php:47
 #, php-format
+msgid "%1$s top of title"
+msgstr "%1$s タイトルの上"
+
+#: app/setup/widget-area.php:48
+#, php-format
+msgid "This widgets are displayed in the top of %1$s title."
+msgstr "このウィジェットは%1$sのタイトル上に表示されます。"
+
+#: app/setup/widget-area.php:59
+#, php-format
 msgid "%1$s bottom of contents"
 msgstr "%1$s コンテンツの下"
 
-#: app/setup/widget-area.php:48
+#: app/setup/widget-area.php:60
 #, php-format
 msgid "This widgets are displayed in the bottom of %1$s contents."
 msgstr "このウィジェットは%1$sの記事下に表示されます。"
 
-#: app/setup/widget-area.php:66
+#: app/setup/widget-area.php:78
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:68
+#: app/setup/widget-area.php:80
 msgid "This widgets are displayed in the archive page sidebar."
 msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:83
+#: app/setup/widget-area.php:95
 msgid "Footer"
 msgstr "フッター"
 
-#: app/setup/widget-area.php:85
+#: app/setup/widget-area.php:97
 msgid "This widgets are displayed in the footer."
 msgstr "このウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:100
+#: app/setup/widget-area.php:112
 msgid "Front page (Top of page)"
 msgstr "フロントページ（ページ上部）"
 
-#: app/setup/widget-area.php:102 app/setup/widget-area.php:119
+#: app/setup/widget-area.php:114 app/setup/widget-area.php:131
 msgid "This widgets are displayed in the static front page."
 msgstr "このウィジェットは固定フロントページに表示されます。"
 
-#: app/setup/widget-area.php:117
+#: app/setup/widget-area.php:129
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
 
@@ -438,6 +452,10 @@ msgstr "メニュー"
 msgid "More"
 msgstr "More"
 
+#: template-parts/page-top.php:11
+msgid "Scroll up"
+msgstr "上にスクロール"
+
 #: template-parts/pings.php:10
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
@@ -465,10 +483,6 @@ msgstr "最近の投稿"
 #: template-parts/related-posts.php:64
 msgid "Related posts"
 msgstr "関連記事"
-
-#: templates/layout/footer/footer.php:16
-msgid "Scroll up"
-msgstr "上にスクロール"
 
 #: templates/view/404.php:11
 msgid "Woops! Page not found."
