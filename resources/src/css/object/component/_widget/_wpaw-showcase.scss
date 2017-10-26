@@ -60,7 +60,15 @@
     .wpaw-showcase {
       &__figure {
         flex: 1 0 auto;
-        max-width: 50%;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 100%;
+
+        @include _media-min(md) {
+          margin-right: 0;
+          margin-left: 0;
+          max-width: 50%;
+        }
       }
     }
   }
