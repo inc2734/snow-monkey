@@ -16,6 +16,23 @@ $customizer->panel( 'seo-sns', array(
 $panel = $customizer->get_panel( 'seo-sns' );
 
 /**
+ * Google Tag Manager
+ */
+$customizer->section( 'google-tag-manager', array(
+	'title' => __( 'Google Tag Manager', 'snow-monkey' ),
+) );
+
+$customizer->control( 'text', 'mwt-google-tag-manager-id', array(
+	'label'       => __( 'Tag Manager ID', 'snow-monkey' ),
+	'description' => __( 'e.g. GTM-X11X1XX', 'snow-monkey' ),
+	'type'        => 'option',
+) );
+
+$section = $customizer->get_section( 'google-tag-manager' );
+$control = $customizer->get_control( 'mwt-google-tag-manager-id' );
+$control->join( $section )->join( $panel );
+
+/**
  * Google Analytics
  */
 $customizer->section( 'google-analytics', array(

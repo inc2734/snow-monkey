@@ -10,6 +10,16 @@ use Inc2734\WP_SEO\SEO;
 new SEO();
 
 /**
+ * Google Tag Manager ID
+ *
+ * @param string $tag_manager_id
+ * @return string
+ */
+add_filter( 'inc2734_wp_seo_google_tag_manager_id', function( $tag_manager_id ) {
+	return get_option( 'mwt-google-tag-manager-id' );
+} );
+
+/**
  * Google Analytics Tracking ID
  *
  * @param string $tracking_id

@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ba5ae23366d87dcccff734d09635a842",
-    "content-hash": "cd743192b91b966e0b5e67f42f043563",
+    "hash": "e10e9684ef4f564fc921e558b96f8302",
+    "content-hash": "db3d2ca65872bdaf612f76de4a02e80f",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "268f4a20702506953b7867c8e6215017c2683cf6"
+                "reference": "3e0425d9ac6195f2bdd0d6b55af3c92db3585117"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/268f4a20702506953b7867c8e6215017c2683cf6",
-                "reference": "268f4a20702506953b7867c8e6215017c2683cf6",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/3e0425d9ac6195f2bdd0d6b55af3c92db3585117",
+                "reference": "3e0425d9ac6195f2bdd0d6b55af3c92db3585117",
                 "shasum": ""
             },
             "require": {
@@ -33,7 +33,7 @@
                 "inc2734/wp-oembed-blog-card": ">=1.0.3",
                 "inc2734/wp-profile-box": ">=0.1.1",
                 "inc2734/wp-pure-css-gallery": ">=0.1.4",
-                "inc2734/wp-seo": ">=0.5.1",
+                "inc2734/wp-seo": ">=0.6.0",
                 "inc2734/wp-share-buttons": ">=0.5.3",
                 "inc2734/wp-view-controller": ">=2.1.4",
                 "php": ">=5.6"
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-10-24 07:00:41"
+            "time": "2017-10-27 06:52:19"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -570,16 +570,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "0.5.1",
+            "version": "0.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "1b379b451967b2bfc2c41ee282102e1c23c34ac0"
+                "reference": "7a2b2ccb98aa88e18473bf4b3e2a483f3980a29c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/1b379b451967b2bfc2c41ee282102e1c23c34ac0",
-                "reference": "1b379b451967b2bfc2c41ee282102e1c23c34ac0",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/7a2b2ccb98aa88e18473bf4b3e2a483f3980a29c",
+                "reference": "7a2b2ccb98aa88e18473bf4b3e2a483f3980a29c",
                 "shasum": ""
             },
             "require": {
@@ -609,7 +609,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2017-10-17 15:03:09"
+            "time": "2017-10-27 06:51:26"
         },
         {
             "name": "inc2734/wp-share-buttons",
