@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-10-25 02:58+0900\n"
-"PO-Revision-Date: 2017-10-25 02:59+0900\n"
+"POT-Creation-Date: 2017-10-27 16:00+0900\n"
+"PO-Revision-Date: 2017-10-27 16:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -130,43 +130,55 @@ msgid "SEO/SNS"
 msgstr "SEO/SNS"
 
 #: app/customizer/seo-sns.php:22
+msgid "Google Tag Manager"
+msgstr "Google タグマネージャ"
+
+#: app/customizer/seo-sns.php:26
+msgid "Tag Manager ID"
+msgstr "タグマネージャ ID"
+
+#: app/customizer/seo-sns.php:27
+msgid "e.g. GTM-X11X1XX"
+msgstr "例: GTM-X11X1XX"
+
+#: app/customizer/seo-sns.php:39
 msgid "Google Analytics"
 msgstr "Google Analytics"
 
-#: app/customizer/seo-sns.php:26
+#: app/customizer/seo-sns.php:43
 msgid "Tracking ID"
 msgstr "トラッキング ID"
 
-#: app/customizer/seo-sns.php:27
+#: app/customizer/seo-sns.php:44
 msgid "e.g. UA-1111111-11"
 msgstr "例: UA-1111111-11"
 
-#: app/customizer/seo-sns.php:39
+#: app/customizer/seo-sns.php:56
 msgid "Google Search Console"
 msgstr "Google Search Console"
 
-#: app/customizer/seo-sns.php:43
+#: app/customizer/seo-sns.php:60
 msgid "Google site verification"
 msgstr "Google site verification"
 
-#: app/customizer/seo-sns.php:45
+#: app/customizer/seo-sns.php:62
 #, php-format
 msgid "Please enter part %1$s of %2$s"
 msgstr "%2$sの%1$sの部分を入力してください"
 
-#: app/customizer/seo-sns.php:60
+#: app/customizer/seo-sns.php:77
 msgid "OGP"
 msgstr "OGP"
 
-#: app/customizer/seo-sns.php:64
+#: app/customizer/seo-sns.php:81
 msgid "Output OGP meta tag"
 msgstr "OGP メタタグを出力する"
 
-#: app/customizer/seo-sns.php:70
+#: app/customizer/seo-sns.php:87
 msgid "Default OGP image"
 msgstr "デフォルト OGP 画像"
 
-#: app/customizer/seo-sns.php:71
+#: app/customizer/seo-sns.php:88
 msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
@@ -174,131 +186,131 @@ msgstr ""
 "アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設定"
 "されていない場合はこの画像が使用されます。"
 
-#: app/customizer/seo-sns.php:85
+#: app/customizer/seo-sns.php:102
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
-#: app/customizer/seo-sns.php:87
+#: app/customizer/seo-sns.php:104
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
-#: app/customizer/seo-sns.php:93
+#: app/customizer/seo-sns.php:110
 msgid "twitter:card"
 msgstr "twitter:card"
 
-#: app/customizer/seo-sns.php:94
+#: app/customizer/seo-sns.php:111
 msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
-#: app/customizer/seo-sns.php:98
+#: app/customizer/seo-sns.php:115
 msgid "Do not use"
 msgstr "使用しない"
 
-#: app/customizer/seo-sns.php:105
+#: app/customizer/seo-sns.php:122
 msgid "twitter:site"
 msgstr "twitter:site"
 
-#: app/customizer/seo-sns.php:107
+#: app/customizer/seo-sns.php:124
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
-#: app/customizer/seo-sns.php:124
+#: app/customizer/seo-sns.php:141
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
-#: app/customizer/seo-sns.php:128
+#: app/customizer/seo-sns.php:145
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
-#: app/customizer/seo-sns.php:130
+#: app/customizer/seo-sns.php:147
 #, php-format
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
-#: app/customizer/seo-sns.php:145
+#: app/customizer/seo-sns.php:162
 msgid "Share buttons"
 msgstr "シェアボタン"
 
-#: app/customizer/seo-sns.php:147
+#: app/customizer/seo-sns.php:164
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
-#: app/customizer/seo-sns.php:153
+#: app/customizer/seo-sns.php:170
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
-#: app/customizer/seo-sns.php:156
+#: app/customizer/seo-sns.php:173
 msgid "Facebook"
 msgstr "Facebook"
 
-#: app/customizer/seo-sns.php:157
+#: app/customizer/seo-sns.php:174
 msgid "Twitter"
 msgstr "Twitter"
 
-#: app/customizer/seo-sns.php:158
+#: app/customizer/seo-sns.php:175
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/seo-sns.php:159
+#: app/customizer/seo-sns.php:176
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/seo-sns.php:160
+#: app/customizer/seo-sns.php:177
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/seo-sns.php:161
+#: app/customizer/seo-sns.php:178
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/seo-sns.php:162
+#: app/customizer/seo-sns.php:179
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/seo-sns.php:168
+#: app/customizer/seo-sns.php:185
 msgid "Type"
 msgstr "種類"
 
-#: app/customizer/seo-sns.php:171
+#: app/customizer/seo-sns.php:188
 msgid "Balloon"
 msgstr "バルーン"
 
-#: app/customizer/seo-sns.php:172
+#: app/customizer/seo-sns.php:189
 msgid "Horizontal"
 msgstr "水平"
 
-#: app/customizer/seo-sns.php:173
+#: app/customizer/seo-sns.php:190
 msgid "Icon"
 msgstr "アイコン"
 
-#: app/customizer/seo-sns.php:174
+#: app/customizer/seo-sns.php:191
 msgid "Block"
 msgstr "ブロック"
 
-#: app/customizer/seo-sns.php:175
+#: app/customizer/seo-sns.php:192
 msgid "Official"
 msgstr "公式"
 
-#: app/customizer/seo-sns.php:181
+#: app/customizer/seo-sns.php:198
 msgid "Display position"
 msgstr "表示する場所"
 
-#: app/customizer/seo-sns.php:184
+#: app/customizer/seo-sns.php:201
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:185
+#: app/customizer/seo-sns.php:202
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
-#: app/customizer/seo-sns.php:186
+#: app/customizer/seo-sns.php:203
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns.php:192
+#: app/customizer/seo-sns.php:209
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 
@@ -340,6 +352,10 @@ msgstr "ドロワーナビゲーション（モバイル用）"
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
+#: app/setup/nav-menus.php:22
+msgid "Footer Sticky Navigation (For Mobile)"
+msgstr "フッター固定ナビゲーション（モバイル用）"
+
 #: app/setup/widget-area.php:23
 #, php-format
 msgid "%1$s sidebar"
@@ -357,39 +373,49 @@ msgstr "%1$s 追尾サイドバー"
 
 #: app/setup/widget-area.php:47
 #, php-format
+msgid "%1$s top of title"
+msgstr "%1$s タイトルの上"
+
+#: app/setup/widget-area.php:48
+#, php-format
+msgid "This widgets are displayed in the top of %1$s title."
+msgstr "このウィジェットは%1$sのタイトル上に表示されます。"
+
+#: app/setup/widget-area.php:59
+#, php-format
 msgid "%1$s bottom of contents"
 msgstr "%1$s コンテンツの下"
 
-#: app/setup/widget-area.php:48
+#: app/setup/widget-area.php:60
 #, php-format
 msgid "This widgets are displayed in the bottom of %1$s contents."
 msgstr "このウィジェットは%1$sの記事下に表示されます。"
 
-#: app/setup/widget-area.php:66
+#: app/setup/widget-area.php:78
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:68
+#: app/setup/widget-area.php:80
 msgid "This widgets are displayed in the archive page sidebar."
 msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:83
+#: app/setup/widget-area.php:95
 msgid "Footer"
 msgstr "フッター"
 
-#: app/setup/widget-area.php:85
+#: app/setup/widget-area.php:97
 msgid "This widgets are displayed in the footer."
 msgstr "このウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:100
+#: app/setup/widget-area.php:112
 msgid "Front page (Top of page)"
 msgstr "フロントページ（ページ上部）"
 
-#: app/setup/widget-area.php:102 app/setup/widget-area.php:119
+#: app/setup/widget-area.php:114 app/setup/widget-area.php:131
 msgid "This widgets are displayed in the static front page."
 msgstr "このウィジェットは固定フロントページに表示されます。"
 
-#: app/setup/widget-area.php:117
+#: app/setup/widget-area.php:129
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
 
@@ -438,6 +464,10 @@ msgstr "メニュー"
 msgid "More"
 msgstr "More"
 
+#: template-parts/page-top.php:11
+msgid "Scroll up"
+msgstr "上にスクロール"
+
 #: template-parts/pings.php:10
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
@@ -465,10 +495,6 @@ msgstr "最近の投稿"
 #: template-parts/related-posts.php:64
 msgid "Related posts"
 msgstr "関連記事"
-
-#: templates/layout/footer/footer.php:16
-msgid "Scroll up"
-msgstr "上にスクロール"
 
 #: templates/view/404.php:11
 msgid "Woops! Page not found."
