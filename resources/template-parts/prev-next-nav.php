@@ -31,10 +31,10 @@ $prev_next_posts = [
 				}
 				$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
 				?>
-				<div class="c-prev-next-nav__item-figure"
-					style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"
-				></div>
 				<a href="<?php the_permalink(); ?>">
+					<div class="c-prev-next-nav__item-figure"
+						style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"
+					></div>
 					<div class="c-prev-next-nav__item-label">
 						<?php if ( 'next' === $key ) : ?>
 							<i class="fa fa-angle-left" aria-hidden="true"></i>
