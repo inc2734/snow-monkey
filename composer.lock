@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "22c3951cda8f06962ad901531a2c33ae",
-    "content-hash": "34ada8342ebd6a6a0369d3f124f73e58",
+    "hash": "8b19ba4636fac8e4e50d471265e6e769",
+    "content-hash": "6d545689bfd876af7a6f86de77896bf4",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "7f450e9fc9fde2e4c023746ac2da5aab00651b1d"
+                "reference": "b8893c90335d8a11c7050a14a42fc4a1abf06b78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/7f450e9fc9fde2e4c023746ac2da5aab00651b1d",
-                "reference": "7f450e9fc9fde2e4c023746ac2da5aab00651b1d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/b8893c90335d8a11c7050a14a42fc4a1abf06b78",
+                "reference": "b8893c90335d8a11c7050a14a42fc4a1abf06b78",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "inc2734/wp-profile-box": ">=0.1.1",
                 "inc2734/wp-pure-css-gallery": ">=0.1.4",
                 "inc2734/wp-seo": ">=0.6.0",
-                "inc2734/wp-share-buttons": ">=0.5.3",
+                "inc2734/wp-share-buttons": ">=0.5.4",
                 "inc2734/wp-view-controller": ">=2.1.4",
                 "php": ">=5.6"
             },
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-10-29 07:33:41"
+            "time": "2017-11-06 02:10:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -613,16 +613,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "0.5.3",
+            "version": "0.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "b54473fb39ab7e2b0da3c649996ccba614619c20"
+                "reference": "91651f57cd3e6134d865a79c3885df0c8606fe44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/b54473fb39ab7e2b0da3c649996ccba614619c20",
-                "reference": "b54473fb39ab7e2b0da3c649996ccba614619c20",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/91651f57cd3e6134d865a79c3885df0c8606fe44",
+                "reference": "91651f57cd3e6134d865a79c3885df0c8606fe44",
                 "shasum": ""
             },
             "require": {
@@ -652,7 +652,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2017-09-30 08:28:56"
+            "time": "2017-11-06 02:08:43"
         },
         {
             "name": "inc2734/wp-view-controller",
@@ -2403,16 +2403,16 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "0.13.1",
+            "version": "0.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "1f64b1a0b5b789822d0303436ee4e30e0135e4dc"
+                "reference": "8cadf48fa1c70b2381988e0a79e029e011a8f41c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/1f64b1a0b5b789822d0303436ee4e30e0135e4dc",
-                "reference": "1f64b1a0b5b789822d0303436ee4e30e0135e4dc",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/8cadf48fa1c70b2381988e0a79e029e011a8f41c",
+                "reference": "8cadf48fa1c70b2381988e0a79e029e011a8f41c",
                 "shasum": ""
             },
             "require": {
@@ -2420,7 +2420,7 @@
                 "squizlabs/php_codesniffer": "^2.9.0 || ^3.0.2"
             },
             "suggest": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.1"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
             },
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
@@ -2439,7 +2439,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2017-08-05 16:08:58"
+            "time": "2017-11-01 15:10:46"
         }
     ],
     "aliases": [],
