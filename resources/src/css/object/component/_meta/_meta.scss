@@ -1,5 +1,7 @@
 .#{$_prefix}c-meta {
   &__item {
+    display: inline-block;
+
     & + & {
       padding-left: .75em;
     }
