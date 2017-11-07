@@ -32,9 +32,13 @@ add_action( 'wp_head', function() {
 		return;
 	}
 	$width = $reg[1];
+
+	$sm_logo_scale = get_theme_mod( 'sm-logo-scale', 33 );
+	$sm_logo_scale = ( $sm_logo_scale / 100 );
 	?>
-	<style>
-	.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height / 2 ); ?>px; width: <?php echo absint( $width / 2 ); ?>px; }
-	</style>
+<style>
+.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height * $sm_logo_scale ); ?>px; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
+@media (min-width: 40em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height / 2 ); ?>px; width: <?php echo absint( $width / 2 ); ?>px; } }
+</style>
 	<?php
 } );

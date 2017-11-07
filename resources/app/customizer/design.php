@@ -127,3 +127,28 @@ $customizer->control( 'checkbox', 'mwt-display-profile-box', [
 $section = $customizer->get_section( 'design' );
 $control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section );
+
+/**
+ * Custom logo scale
+ */
+$custom_logo = get_custom_logo();
+if ( $custom_logo ) {
+	preg_match( '/height="(\d+?)"/', $custom_logo, $reg );
+	if ( ! isset( $reg[1] ) ) {
+		return;
+	}
+	$height = $reg[1];
+
+	$customizer->control( 'number', 'sm-logo-scale', [
+		'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
+		'default'     => 33,
+		'input_attrs' => [
+			'min' => 33,
+			'max' => 50,
+		],
+	] );
+
+	$section = $customizer->get_section( 'design' );
+	$control = $customizer->get_control( 'sm-logo-scale' );
+	$control->join( $section );
+}

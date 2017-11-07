@@ -45,12 +45,7 @@
 
   .#{$_prefix}c-site-branding {
     img {
-      max-height: 5vh;
       width: auto;
-
-      @include _media-min(md) {
-        max-height: none;
-      }
     }
   }
 }
