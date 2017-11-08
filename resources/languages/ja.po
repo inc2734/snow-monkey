@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-11-08 11:03+0900\n"
-"PO-Revision-Date: 2017-11-08 11:04+0900\n"
+"POT-Creation-Date: 2017-11-08 11:36+0900\n"
+"PO-Revision-Date: 2017-11-08 11:37+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -28,92 +28,97 @@ msgstr "デザイン"
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: app/customizer/design.php:40
+#: app/customizer/design.php:43
+msgid "Left sidebar"
+msgstr "左サイドバー"
+
+#: app/customizer/design.php:44
+msgid "Right sidebar"
+msgstr "右サイドバー"
+
+#: app/customizer/design.php:45
+msgid "One column"
+msgstr "1カラム"
+
+#: app/customizer/design.php:46
+msgid "One column (fluid)"
+msgstr "1カラム（fluid）"
+
+#: app/customizer/design.php:47
+msgid "One column (slim)"
+msgstr "1カラム（slim）"
+
+#: app/customizer/design.php:54
 #, php-format
 msgid "%1$s layout"
 msgstr "%1$sレイアウト"
 
-#: app/customizer/design.php:44
-msgid "Left sidebar"
-msgstr "左サイドバー"
+#: app/customizer/design.php:67
+#, php-format
+msgid "%1$s archive layout"
+msgstr "%1$sアーカイブレイアウト"
 
-#: app/customizer/design.php:45
-msgid "Right sidebar"
-msgstr "右サイドバー"
-
-#: app/customizer/design.php:46
-msgid "One column"
-msgstr "1カラム"
-
-#: app/customizer/design.php:47
-msgid "One column (fluid)"
-msgstr "1カラム（fluid）"
-
-#: app/customizer/design.php:48
-msgid "One column (slim)"
-msgstr "1カラム（slim）"
-
-#: app/customizer/design.php:60
+#: app/customizer/design.php:82
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design.php:63 app/customizer/design.php:98
+#: app/customizer/design.php:85 app/customizer/design.php:120
 msgid "Simple"
 msgstr "シンプル"
 
-#: app/customizer/design.php:64
+#: app/customizer/design.php:86
 msgid "One row"
 msgstr "1行"
 
-#: app/customizer/design.php:65
+#: app/customizer/design.php:87
 msgid "Two rows"
 msgstr "2行"
 
-#: app/customizer/design.php:66
+#: app/customizer/design.php:88
 msgid "Center logo"
 msgstr "中央ロゴ"
 
-#: app/customizer/design.php:77
+#: app/customizer/design.php:99
 msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
-#: app/customizer/design.php:80
+#: app/customizer/design.php:102
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/design.php:81
+#: app/customizer/design.php:103
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/design.php:82
+#: app/customizer/design.php:104
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/design.php:83
+#: app/customizer/design.php:105
 msgid "4 columns"
 msgstr "4カラム"
 
-#: app/customizer/design.php:94
+#: app/customizer/design.php:116
 msgid "Archive layout"
 msgstr "記事一覧レイアウト"
 
-#: app/customizer/design.php:97
+#: app/customizer/design.php:119
 msgid "Rich media"
 msgstr "リッチメディア"
 
-#: app/customizer/design.php:109
+#: app/customizer/design.php:131
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/design.php:122
+#: app/customizer/design.php:144
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
-#: app/customizer/design.php:143
+#: app/customizer/design.php:165
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 
-#: app/customizer/design.php:160
+#: app/customizer/design.php:182
 msgid "Display recent posts when using static front page"
 msgstr "固定フロントページ使用時に最近の投稿を表示する"
 

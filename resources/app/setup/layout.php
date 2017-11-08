@@ -7,12 +7,7 @@
 
 add_filter( 'mimizuku_layout', function( $layout ) {
 	if ( is_home() || is_archive() || is_search() ) {
-		return 'one-column';
-	}
-
-	$_wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-	if ( $_wp_page_template && 'default' !== $_wp_page_template ) {
-		return $layout;
+		return get_theme_mod( 'post-archive-layout' );
 	}
 
 	if ( is_front_page() ) {
@@ -24,5 +19,22 @@ add_filter( 'mimizuku_layout', function( $layout ) {
 		$post_type = 'page';
 	}
 
-	return get_theme_mod( $post_type . '-layout' );
+	if ( is_singular() || is_404() ) {
+		$_wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+		if ( $_wp_page_template && 'default' !== $_wp_page_template ) {
+			return $layout;
+		}
+
+		$post_type_layout = get_theme_mod( $post_type . '-layout' );
+		if ( $post_type_layout ) {
+			return $post_type_layout;
+		}
+	} else {
+		$post_type_archive_layout = get_theme_mod( $post_type . '-archive-layout' );
+		if ( $post_type_archive_layout ) {
+			return $post_type_archive_layout;
+		}
+	}
+
+	return $layout;
 } );
