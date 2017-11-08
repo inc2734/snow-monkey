@@ -152,3 +152,24 @@ if ( $custom_logo ) {
 	$control = $customizer->get_control( 'sm-logo-scale' );
 	$control->join( $section );
 }
+
+/**
+ * Display recent posts when using static front page
+ */
+$customizer->control( 'checkbox', 'display-static-front-page-recent-posts', [
+	'label'   => __( 'Display recent posts when using static front page', 'snow-monkey' ),
+	'default' => true,
+	'active_callback' => function() {
+		if ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' ) ) {
+			return true;
+		}
+		return false;
+	},
+] );
+
+$section = $customizer->get_section( 'design' );
+$control = $customizer->get_control( 'display-static-front-page-recent-posts' );
+$control->join( $section );
+$control->partial( [
+	'selector' => '.home.page-template-default .p-recent-posts__title',
+] );
