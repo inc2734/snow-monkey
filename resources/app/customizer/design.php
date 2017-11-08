@@ -48,7 +48,9 @@ $choices = [
 ];
 
 foreach ( $post_types as $post_type => $post_type_object ) {
-	// singular page
+	/**
+	 * singular page
+	 */
 	$customizer->control( 'select', $post_type_object->name . '-layout', [
 		// @codingStandardsIgnoreStart
 		'label'   => sprintf( __( '%1$s layout', 'snow-monkey' ), __( $post_type_object->label ) ),
@@ -60,7 +62,9 @@ foreach ( $post_types as $post_type => $post_type_object ) {
 	$control = $customizer->get_control( $post_type_object->name . '-layout' );
 	$control->join( $section );
 
-	// archive page
+	/**
+	 * archive page
+	 */
 	if ( 'post' === $post_type_object->name || ! empty( $post_type_object->has_archive ) ) {
 		$customizer->control( 'select', $post_type_object->name . '-archive-layout', [
 			// @codingStandardsIgnoreStart
