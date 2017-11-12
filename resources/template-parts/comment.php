@@ -25,7 +25,7 @@
 				wp_kses_post( $date ),
 				wp_kses_post( $time )
 			);
-			edit_comment_link( 'edit', '  ', '' );
+			edit_comment_link( esc_html__( 'Edit this comment', 'snow-monkey' ), ' / ', '' );
 			?>
 		</div>
 
