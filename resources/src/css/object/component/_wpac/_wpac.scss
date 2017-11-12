@@ -157,4 +157,18 @@
   & + & {
     margin-top: 0 !important;
   }
+
+  .#{$_prefix}l-body--one-column &,
+  .#{$_prefix}l-body--one-column-fluid &,
+  .#{$_prefix}l-body--one-column-slim & {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+  }
+
+  .#{$_prefix}l-body--one-column-slim & {
+    &__body {
+      margin: 0 auto;
+      max-width: map-get($_sizes, 'lg');
+    }
+  }
 }

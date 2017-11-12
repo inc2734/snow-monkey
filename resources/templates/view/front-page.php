@@ -11,6 +11,19 @@
 	<?php get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
 
 	<?php
+	ob_start();
+	the_content();
+	$content = ob_get_clean();
+	?>
+	<?php if ( $content ) : ?>
+		<div class="c-section">
+			<div class="c-container">
+				<?php the_content(); ?>
+			</div>
+		</div>
+	<?php endif; ?>
+
+	<?php
 	if ( get_theme_mod( 'display-static-front-page-recent-posts' ) ) {
 		get_template_part( 'template-parts/recent-posts' );
 	}
