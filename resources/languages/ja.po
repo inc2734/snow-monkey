@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/resources\n"
-"POT-Creation-Date: 2017-11-13 02:46+0900\n"
-"PO-Revision-Date: 2017-11-13 02:46+0900\n"
+"POT-Creation-Date: 2017-11-14 15:57+0900\n"
+"PO-Revision-Date: 2017-11-14 15:57+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: \n"
 "Language: ja_JP\n"
@@ -457,19 +457,23 @@ msgstr "コメントは閉じられています。"
 msgid "No comments."
 msgstr "コメントはありません。"
 
-#: template-parts/entry-meta.php:19
+#: template-parts/entry-meta.php:20
 msgid "Published"
 msgstr "投稿日"
 
-#: template-parts/entry-meta.php:30
+#: template-parts/entry-meta.php:35
+msgid "Modified"
+msgstr "更新日"
+
+#: template-parts/entry-meta.php:47
 msgid "Author"
 msgstr "著者"
 
-#: template-parts/entry-meta.php:44
+#: template-parts/entry-meta.php:61
 msgid "Categories"
 msgstr "カテゴリー"
 
-#: template-parts/entry-meta.php:59
+#: template-parts/entry-meta.php:76
 msgid "Tags"
 msgstr "タグ"
 
