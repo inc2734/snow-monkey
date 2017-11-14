@@ -49,8 +49,12 @@
 			</div>
 			<div class="c-entry-summary__meta">
 				<ul class="c-meta">
-					<li class="c-meta__item c-meta__item--author"><?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?></li>
-					<li class="c-meta__item"><?php the_time( get_option( 'date_format' ) ); ?></li>
+					<li class="c-meta__item c-meta__item--author">
+						<?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?>
+					</li>
+					<li class="c-meta__item">
+						<?php the_time( get_option( 'date_format' ) ); ?>
+					</li>
 				</ul>
 			</div>
 		</div>

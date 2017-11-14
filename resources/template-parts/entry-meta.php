@@ -12,13 +12,30 @@ $entry_meta = [];
  */
 $entry_meta['published'] = sprintf(
 	'<time datetime="%s">
+		<i class="fa fa-clock-o" aria-hidden="true"></i>
 		<span class="screen-reader-text">%s</span>
 		%s
 	</time>',
-	esc_attr( get_the_date( 'c' ) ),
+	esc_attr( get_the_time( 'c' ) ),
 	esc_html__( 'Published', 'snow-monkey' ),
-	esc_html( get_the_date() )
+	esc_html( get_the_time( get_option( 'date_format' ) ) )
 );
+
+/**
+ * Modified
+ */
+if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) {
+	$entry_meta['modified'] = sprintf(
+		'<time datetime="%s">
+			<i class="fa fa-refresh" aria-hidden="true"></i>
+			<span class="screen-reader-text">%s</span>
+			%s
+		</time>',
+		esc_attr( get_the_modified_time( 'c' ) ),
+		esc_html__( 'Modified', 'snow-monkey' ),
+		esc_html( get_the_modified_time( get_option( 'date_format' ) ) )
+	);
+}
 
 /**
  * Author
@@ -67,7 +84,15 @@ $entry_meta = apply_filters( 'snow_monkey_entry_meta_items', $entry_meta );
 <ul class="c-meta">
 	<?php foreach ( $entry_meta as $key => $item ) : ?>
 		<li class="c-meta__item c-meta__item--<?php echo esc_attr( $key ); ?>">
-			<?php echo wp_kses_post( $item ); ?>
+			<?php
+			$allowed_html = wp_kses_allowed_html( 'post' );
+			if ( ! isset( $allowed_html['time'] ) ) {
+				$allowed_html['time'] = [
+					'datetime' => [],
+				];
+			}
+			echo wp_kses( $item, $allowed_html );
+			?>
 		</li>
 	<?php endforeach; ?>
 </ul>
