@@ -34,17 +34,18 @@
     }
 
     a {
-      display: inline-block;
+      display: inline-flex;
       color: $_color-text;
       text-decoration: none;
 
       @include _hover(lg) {
-        text-decoration: underline;
+        color: _lighter($_color-text);
       }
 
       &::before {
-        @include _position(relative, -2px);
-        @include _margin(0, .25, 0, 0);
+        flex: 0 0 auto;
+        align-self: flex-start;
+        @include _margin(calc(#{$_between-lines} - 1px), .25, 0, 0);
         display: inline-block;
         background-color: $color-accent;
         color: #fff;
