@@ -11,7 +11,7 @@ $entry_meta = [];
  * Published
  */
 $entry_meta['published'] = sprintf(
-	'<time datetime="%s">
+	'<time itemprop="datePublished" datetime="%s">
 		<i class="fa fa-clock-o" aria-hidden="true"></i>
 		<span class="screen-reader-text">%s</span>
 		%s
@@ -26,7 +26,7 @@ $entry_meta['published'] = sprintf(
  */
 if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) {
 	$entry_meta['modified'] = sprintf(
-		'<time datetime="%s">
+		'<time itemprop="dateModified" datetime="%s">
 			<i class="fa fa-refresh" aria-hidden="true"></i>
 			<span class="screen-reader-text">%s</span>
 			%s

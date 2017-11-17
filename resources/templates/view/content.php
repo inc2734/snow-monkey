@@ -7,9 +7,9 @@
 ?>
 <?php get_template_part( 'template-parts/title-top-widget-area' ); ?>
 
-<article <?php post_class(); ?>>
+<article <?php post_class(); ?> itemscope itemtype="http://schema.org/Article">
 	<header class="c-entry__header">
-		<h1 class="c-entry__title"><?php the_title(); ?></h1>
+		<h1 class="c-entry__title" itemprop="name"><?php the_title(); ?></h1>
 		<div class="c-entry__meta">
 			<?php get_template_part( 'template-parts/entry-meta' ); ?>
 		</div>
@@ -21,7 +21,7 @@
 		?>
 	</header>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content" itemprop="articleBody">
 		<?php get_template_part( 'template-parts/google-adsense' ); ?>
 
 		<?php get_template_part( 'template-parts/contents-outline' ); ?>
