@@ -23,19 +23,26 @@ if ( ! $google_adsense ) {
 
 	add_filter( 'safe_style_css', 'snow_monkey_safe_style_css_display' );
 
-	echo wp_kses( $google_adsense, [
-		'script' => [
-			'async' => [],
-			'src'   => [],
-		],
-		'ins' => [
-			'class'          => [],
-			'style'          => [],
-			'data-ad-client' => [],
-			'data-ad-slot'   => [],
-			'data-ad-format' => [],
-		],
-	] );
+	if ( class_exists( 'Jetpack' ) ) {
+		// @todo
+		// @codingStandardsIgnoreStart
+		echo $google_adsense;
+		// @codingStandardsIgnoreEnd
+	} else {
+		echo wp_kses( $google_adsense, [
+			'script' => [
+				'async' => [],
+				'src'   => [],
+			],
+			'ins' => [
+				'class'          => [],
+				'style'          => [],
+				'data-ad-client' => [],
+				'data-ad-slot'   => [],
+				'data-ad-format' => [],
+			],
+		] );
+	}
 
 	remove_filter( 'safe_style_css', 'snow_monkey_safe_style_css_display' );
 	?>
