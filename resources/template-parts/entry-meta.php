@@ -89,6 +89,7 @@ $entry_meta = apply_filters( 'snow_monkey_entry_meta_items', $entry_meta );
 			if ( ! isset( $allowed_html['time'] ) ) {
 				$allowed_html['time'] = [
 					'datetime' => [],
+					'itemprop' => [],
 				];
 			}
 			echo wp_kses( $item, $allowed_html );
