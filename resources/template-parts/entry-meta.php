@@ -5,95 +5,74 @@
  * @license GPL-2.0+
  */
 
-$entry_meta = [];
-
 /**
  * Published
  */
-$entry_meta['published'] = sprintf(
-	'<time itemprop="datePublished" datetime="%s">
-		<i class="fa fa-clock-o" aria-hidden="true"></i>
-		<span class="screen-reader-text">%s</span>
-		%s
-	</time>',
-	esc_attr( get_the_time( 'c' ) ),
-	esc_html__( 'Published', 'snow-monkey' ),
-	esc_html( get_the_time( get_option( 'date_format' ) ) )
-);
+function snow_monkey_entry_meta_items_published() {
+	?>
+	<li class="c-meta__item c-meta__item--published">
+		<time itemprop="datePublished" datetime="<?php the_time( 'c' ); ?>">
+			<i class="fa fa-clock-o" aria-hidden="true"></i>
+			<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
+			<?php the_time( get_option( 'date_format' ) ); ?>
+		</time>
+	</li>
+	<?php
+}
+add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_published', 10 );
 
 /**
  * Modified
  */
-if ( get_the_time( 'Ymd' ) !== get_the_modified_time( 'Ymd' ) ) {
-	$entry_meta['modified'] = sprintf(
-		'<time itemprop="dateModified" datetime="%s">
+function snow_monkey_entry_meta_items_modified() {
+	if ( get_the_time( 'Ymd' ) === get_the_modified_time( 'Ymd' ) ) {
+		return;
+	}
+	?>
+	<li class="c-meta__item c-meta__item--modified">
+		<time itemprop="dateModified" datetime="<?php the_modified_time( 'c' ); ?>">
 			<i class="fa fa-refresh" aria-hidden="true"></i>
-			<span class="screen-reader-text">%s</span>
-			%s
-		</time>',
-		esc_attr( get_the_modified_time( 'c' ) ),
-		esc_html__( 'Modified', 'snow-monkey' ),
-		esc_html( get_the_modified_time( get_option( 'date_format' ) ) )
-	);
+			<span class="screen-reader-text"><?php esc_html_e( 'Modified', 'snow-monkey' ); ?></span>
+			<?php the_modified_time( get_option( 'date_format' ) ); ?>
+		</time>
+	</li>
+	<?php
 }
+add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_modified', 20 );
 
 /**
  * Author
  */
-$entry_meta['author'] = sprintf(
-	'<span class="screen-reader-text">%s</span>
-	<i class="fa fa-user" aria-hidden="true"></i>
-	<a href="%s">%s</a>',
-	esc_html__( 'Author', 'snow-monkey' ),
-	esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-	esc_html( get_the_author() )
-);
+function snow_monkey_entry_meta_items_author() {
+	?>
+	<li class="c-meta__item c-meta__item--author">
+		<span class="screen-reader-text"><?php esc_html_e( 'Author', 'snow-monkey' ); ?></span>
+		<?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
+		<?php the_author(); ?>
+	</li>
+	<?php
+}
+add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_author', 30 );
 
 /**
  * Categories
  */
-$categories = get_the_terms( get_the_ID(), 'category' );
-if ( $categories ) {
-	$entry_meta['categories'] = sprintf(
-		'<span class="screen-reader-text">%s</span>
+function snow_monkey_entry_meta_items_categories() {
+	$categories = get_the_terms( get_the_ID(), 'category' );
+	if ( ! $categories ) {
+		return;
+	}
+	?>
+	<li class="c-meta__item c-meta__item--categories">
+		<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'snow-monkey' ); ?></span>
 		<i class="fa fa-folder" aria-hidden="true"></i>
-		<a href="%s">%s</a>',
-		esc_html__( 'Categories', 'snow-monkey' ),
-		esc_url( get_term_link( $categories[0] ) ),
-		esc_html( $categories[0]->name )
-	);
+		<a href="<?php echo esc_url( get_term_link( $categories[0] ) ); ?>"><?php echo esc_html( $categories[0]->name ); ?></a>
+	</li>
+	<?php
 }
-
-/**
- * Tags
- */
-$tags = get_the_tag_list( '', ', ' );
-if ( $tags ) {
-	$entry_meta['tags'] = sprintf(
-		'<span class="screen-reader-text">%s</span>
-		<i class="fa fa-tags" aria-hidden="true"></i>
-		%s',
-		esc_html__( 'Tags', 'snow-monkey' ),
-		get_the_tag_list( '', ', ' )
-	);
-}
-
-$entry_meta = apply_filters( 'snow_monkey_entry_meta_items', $entry_meta );
+add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_categories', 40 );
 ?>
 
 <ul class="c-meta">
-	<?php foreach ( $entry_meta as $key => $item ) : ?>
-		<li class="c-meta__item c-meta__item--<?php echo esc_attr( $key ); ?>">
-			<?php
-			$allowed_html = wp_kses_allowed_html( 'post' );
-			if ( ! isset( $allowed_html['time'] ) ) {
-				$allowed_html['time'] = [
-					'datetime' => [],
-					'itemprop' => [],
-				];
-			}
-			echo wp_kses( $item, $allowed_html );
-			?>
-		</li>
-	<?php endforeach; ?>
+	<?php do_action( 'snow_monkey_entry_meta_items' ); ?>
 </ul>
