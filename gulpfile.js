@@ -114,7 +114,7 @@ function jsCompile(distFileName) {
   return gulp.src(dir.src.js + '/**/*.js')
     .pipe(rollup({
       allowRealFiles: true,
-      entry: dir.src.js + '/' + distFileName,
+      input: dir.src.js + '/' + distFileName,
       format: 'iife',
       external: ['jquery', '_', 'Backbone'],
       globals: {
@@ -124,7 +124,17 @@ function jsCompile(distFileName) {
         nodeResolve({ jsnext: true }),
         commonjs(),
         babel({
-          presets: ['es2015-rollup'],
+          presets: [
+            [
+              "env", {
+                "modules": false,
+                "targets": {
+                  "browsers": ['last 2 versions']
+                }
+              }
+            ]
+          ],
+          plugins: ["external-helpers"],
           babelrc: false
         })
       ]
@@ -133,6 +143,9 @@ function jsCompile(distFileName) {
     .on('end', function() {
       gulp.src([dir.dist.js + '/' + distFileName])
         .pipe(uglify())
+    .on('error', function(e){
+      console.log(e);
+    })
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(dir.dist.js));
     });

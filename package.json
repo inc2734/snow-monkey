@@ -7,27 +7,27 @@
     "jquery.smoothscroll": "^1.0.2",
     "jquery.sticky": "^0.2.0",
     "node-normalize-scss": "^3.0.0",
-    "slick-carousel": "^1.7.1"
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
     "@alrra/travis-scripts": "^3.0.1",
-    "autoprefixer": "^7.1.2",
-    "babel-core": "^6.25.0",
-    "babel-preset-es2015-rollup": "^3.0.0",
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
     "cssnano": "^3.10.0",
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-rollup": "^2.14.0",
+    "gulp-rollup": "^2.15.0",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-zip": "^4.0.0",
-    "rimraf": "^2.6.1",
-    "rollup-plugin-babel": "^3.0.1",
-    "rollup-plugin-commonjs": "^8.1.0",
+    "rimraf": "^2.6.2",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.6",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "run-sequence": "^2.1.0"
+    "run-sequence": "^2.2.0"
   },
   "scripts": {
     "gulp": "gulp",
