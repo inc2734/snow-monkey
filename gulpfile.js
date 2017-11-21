@@ -134,7 +134,7 @@ function jsCompile(distFileName) {
               }
             ]
           ],
-          plugins: ["external-helpers"],
+          plugins: ['external-helpers'],
           babelrc: false
         })
       ]
@@ -143,9 +143,6 @@ function jsCompile(distFileName) {
     .on('end', function() {
       gulp.src([dir.dist.js + '/' + distFileName])
         .pipe(uglify())
-    .on('error', function(e){
-      console.log(e);
-    })
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(dir.dist.js));
     });
