@@ -27,6 +27,24 @@ $control = $customizer->get_control( 'accent-color' );
 $control->join( $section );
 
 /**
+ * Term accent color
+ */
+$terms = get_terms( [ 'category' ] );
+foreach ( $terms as $term ) {
+	$customizer->control( 'color', $term->taxonomy . '-' . $term->term_id . '-accent-color', [
+		// @codingStandardsIgnoreStart
+		'label' => sprintf( __( 'Accent color of %1$s %2$s', 'snow-monkey' ), __( get_taxonomy( $term->taxonomy )->label ), $term->name ),
+		// @codingStandardsIgnoreEnd
+		'active_callback' => function() use ( $term ) {
+			return is_category( $term->term_id );
+		},
+	] );
+
+	$control = $customizer->get_control( $term->taxonomy . '-' . $term->term_id . '-accent-color' );
+	$control->join( $section );
+}
+
+/**
  * Layout
  */
 $_post_types = get_post_types( [

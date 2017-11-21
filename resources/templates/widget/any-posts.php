@@ -1,6 +1,6 @@
 <?php
 /**
- * @package inc2734/snow-monkey
+ * @package inc2734/wp-awesome-widgets
  * @author inc2734
  * @license GPL-2.0+
  */
@@ -29,14 +29,14 @@ $recent_posts = get_posts( [
 	<?php endif; ?>
 
 	<div
-		class="wpaw-ranking"
-		id="wpaw-ranking-<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-any-posts"
+		id="wpaw-any-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
-		<ul class="wpaw-ranking__list">
+		<ul class="wpaw-any-posts__list">
 			<?php foreach ( $recent_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
-				<li class="wpaw-ranking__item">
+				<li class="wpaw-any-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
@@ -45,26 +45,19 @@ $recent_posts = get_posts( [
 							></div>
 						<?php endif; ?>
 
-						<div class="wpaw-ranking__body">
+						<div class="wpaw-any-posts__body">
 							<?php $terms = get_the_terms( get_the_ID(), 'category' ); ?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
-								<div class="wpaw-ranking__taxonomy">
+								<div class="wpaw-any-posts__taxonomy">
 									<?php foreach ( $terms as $term ) : ?>
-										<span class="wpaw-ranking__term wpaw-ranking__term--category-<?php echo esc_attr( $term->term_id ); ?>"><?php echo esc_html( $term->name ); ?></span>
+										<span class="wpaw-any-posts__term wpaw-any-posts__term--category-<?php echo esc_attr( $term->term_id ); ?>"><?php echo esc_html( $term->name ); ?></span>
 										<?php break; ?>
 									<?php endforeach; ?>
 								</div>
 							<?php endif; ?>
 
-							<div class="wpaw-ranking__title">
-								<?php
-								ob_start();
-								the_title();
-								$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 30 : 60 );
-								echo esc_html( $title );
-								?>
-							</div>
-							<div class="wpaw-ranking__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
+							<div class="wpaw-any-posts__title"><?php the_title(); ?></div>
+							<div class="wpaw-any-posts__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
 						</div>
 
 					</a>

@@ -43,7 +43,7 @@ $recent_posts = get_posts( [
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-recent-posts__taxonomy">
 									<?php foreach ( $terms as $term ) : ?>
-										<span class="wpaw-recent-posts__term"><?php echo esc_html( $term->name ); ?></span>
+										<span class="wpaw-recent-posts__term wpaw-recent-posts__term--category-<?php echo esc_attr( $term->term_id ); ?>"><?php echo esc_html( $term->name ); ?></span>
 									<?php break; ?>
 									<?php endforeach; ?>
 								</div>

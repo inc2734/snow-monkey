@@ -4,9 +4,12 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$terms = get_the_terms( get_the_ID(), 'category' );
+$term  = $terms[0];
 ?>
 <a href="<?php the_permalink(); ?>">
-	<section class="c-entry-summary">
+	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term->term_id ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php
 			$background_image_size = 'medium';
@@ -16,18 +19,7 @@
 			$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
 			?>
 			<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
-			<?php
-			$terms = get_the_terms( get_the_ID(), 'category' );
-			if ( is_array( $terms ) ) {
-				foreach ( $terms as $term ) {
-					printf(
-						'<span class="c-entry-summary__term">%1$s</span>',
-						esc_html( $term->name )
-					);
-					break;
-				}
-			}
-			?>
+			<span class="c-entry-summary__term"><?php echo esc_html( $term->name ); ?></span>
 		</div>
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">
