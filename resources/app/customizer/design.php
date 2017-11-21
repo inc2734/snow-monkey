@@ -57,6 +57,9 @@ foreach ( $post_types as $post_type => $post_type_object ) {
 		// @codingStandardsIgnoreEnd
 		'default' => 'right-sidebar',
 		'choices' => $choices,
+		'active_callback' => function() use ( $post_type_object ) {
+			return ( get_post_type() === $post_type_object->name && is_singular() && ! is_front_page() );
+		},
 	] );
 
 	$control = $customizer->get_control( $post_type_object->name . '-layout' );
@@ -72,6 +75,9 @@ foreach ( $post_types as $post_type => $post_type_object ) {
 			// @codingStandardsIgnoreEnd
 			'default' => 'one-column',
 			'choices' => $choices,
+			'active_callback' => function() use ( $post_type_object ) {
+				return ( get_post_type() === $post_type_object->name && ! is_singular() );
+			},
 		] );
 
 		$control = $customizer->get_control( $post_type_object->name . '-archive-layout' );
@@ -135,11 +141,17 @@ $customizer->control( 'checkbox', 'mwt-display-contents-outline', [
 	'label'   => __( 'Display contents outline in posts', 'snow-monkey' ),
 	'type'    => 'option',
 	'default' => true,
+	'active_callback' => function() {
+		return ( 'post' === get_post_type() && is_singular() );
+	},
 ] );
 
 $section = $customizer->get_section( 'design' );
 $control = $customizer->get_control( 'mwt-display-contents-outline' );
 $control->join( $section );
+$control->partial( [
+	'selector' => '.wp-like-me-box',
+] );
 
 /**
  * Profile Box
@@ -148,11 +160,17 @@ $customizer->control( 'checkbox', 'mwt-display-profile-box', [
 	'label'   => __( 'Display profile box in posts', 'snow-monkey' ),
 	'type'    => 'option',
 	'default' => true,
+	'active_callback' => function() {
+		return ( 'post' === get_post_type() && is_singular() );
+	},
 ] );
 
 $section = $customizer->get_section( 'design' );
 $control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section );
+$control->partial( [
+	'selector' => '.wp-profile-box',
+] );
 
 /**
  * Custom logo scale
@@ -186,10 +204,7 @@ $customizer->control( 'checkbox', 'display-static-front-page-recent-posts', [
 	'label'   => __( 'Display recent posts when using static front page', 'snow-monkey' ),
 	'default' => true,
 	'active_callback' => function() {
-		if ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' ) ) {
-			return true;
-		}
-		return false;
+		return ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' ) && is_front_page() );
 	},
 ] );
 
