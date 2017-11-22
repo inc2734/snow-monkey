@@ -37,7 +37,8 @@
         flex: 0 1 auto;
 
         > a {
-          @include _padding(.5, 1);
+          @include _padding-top(.5);
+          @include _padding-bottom(.5);
         }
       }
     }
