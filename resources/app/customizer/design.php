@@ -11,6 +11,7 @@ $customizer = Customizer_Framework::init();
 
 $customizer->section( 'design', [
 	'title' => __( 'Design', 'snow-monkey' ),
+	'priority' => 1100,
 ] );
 
 $section = $customizer->get_section( 'design' );
@@ -25,83 +26,6 @@ $customizer->control( 'color', 'accent-color', [
 
 $control = $customizer->get_control( 'accent-color' );
 $control->join( $section );
-
-/**
- * Term accent color
- */
-$terms = get_terms( [ 'category' ] );
-foreach ( $terms as $term ) {
-	$customizer->control( 'color', $term->taxonomy . '-' . $term->term_id . '-accent-color', [
-		// @codingStandardsIgnoreStart
-		'label' => sprintf( __( 'Accent color of %1$s %2$s', 'snow-monkey' ), __( get_taxonomy( $term->taxonomy )->label ), $term->name ),
-		// @codingStandardsIgnoreEnd
-		'active_callback' => function() use ( $term ) {
-			return is_category( $term->term_id );
-		},
-	] );
-
-	$control = $customizer->get_control( $term->taxonomy . '-' . $term->term_id . '-accent-color' );
-	$control->join( $section );
-}
-
-/**
- * Layout
- */
-$_post_types = get_post_types( [
-	'public' => true,
-] );
-unset( $_post_types['attachment'] );
-
-$post_types = [];
-foreach ( $_post_types as $post_type ) {
-	$post_types[ $post_type ] = get_post_type_object( $post_type );
-}
-
-$choices = [
-	'left-sidebar'     => __( 'Left sidebar', 'snow-monkey' ),
-	'right-sidebar'    => __( 'Right sidebar', 'snow-monkey' ),
-	'one-column'       => __( 'One column', 'snow-monkey' ),
-	'one-column-fluid' => __( 'One column (fluid)', 'snow-monkey' ),
-	'one-column-slim'  => __( 'One column (slim)', 'snow-monkey' ),
-];
-
-foreach ( $post_types as $post_type => $post_type_object ) {
-	/**
-	 * singular page
-	 */
-	$customizer->control( 'select', $post_type_object->name . '-layout', [
-		// @codingStandardsIgnoreStart
-		'label'   => sprintf( __( '%1$s layout', 'snow-monkey' ), __( $post_type_object->label ) ),
-		// @codingStandardsIgnoreEnd
-		'default' => 'right-sidebar',
-		'choices' => $choices,
-		'active_callback' => function() use ( $post_type_object ) {
-			return ( get_post_type() === $post_type_object->name && is_singular() && ! is_front_page() );
-		},
-	] );
-
-	$control = $customizer->get_control( $post_type_object->name . '-layout' );
-	$control->join( $section );
-
-	/**
-	 * archive page
-	 */
-	if ( 'post' === $post_type_object->name || ! empty( $post_type_object->has_archive ) ) {
-		$customizer->control( 'select', $post_type_object->name . '-archive-layout', [
-			// @codingStandardsIgnoreStart
-			'label'   => sprintf( __( '%1$s archive layout', 'snow-monkey' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'default' => 'one-column',
-			'choices' => $choices,
-			'active_callback' => function() use ( $post_type_object ) {
-				return ( get_post_type() === $post_type_object->name && ! is_singular() );
-			},
-		] );
-
-		$control = $customizer->get_control( $post_type_object->name . '-archive-layout' );
-		$control->join( $section );
-	}
-}
 
 /**
  * Header layout
@@ -153,44 +77,6 @@ $control = $customizer->get_control( 'archive-layout' );
 $control->join( $section );
 
 /**
- * Contents outline
- */
-$customizer->control( 'checkbox', 'mwt-display-contents-outline', [
-	'label'   => __( 'Display contents outline in posts', 'snow-monkey' ),
-	'type'    => 'option',
-	'default' => true,
-	'active_callback' => function() {
-		return ( 'post' === get_post_type() && is_singular() );
-	},
-] );
-
-$section = $customizer->get_section( 'design' );
-$control = $customizer->get_control( 'mwt-display-contents-outline' );
-$control->join( $section );
-$control->partial( [
-	'selector' => '.wp-like-me-box',
-] );
-
-/**
- * Profile Box
- */
-$customizer->control( 'checkbox', 'mwt-display-profile-box', [
-	'label'   => __( 'Display profile box in posts', 'snow-monkey' ),
-	'type'    => 'option',
-	'default' => true,
-	'active_callback' => function() {
-		return ( 'post' === get_post_type() && is_singular() );
-	},
-] );
-
-$section = $customizer->get_section( 'design' );
-$control = $customizer->get_control( 'mwt-display-profile-box' );
-$control->join( $section );
-$control->partial( [
-	'selector' => '.wp-profile-box',
-] );
-
-/**
  * Custom logo scale
  */
 $custom_logo = get_custom_logo();
@@ -214,21 +100,3 @@ if ( $custom_logo ) {
 	$control = $customizer->get_control( 'sm-logo-scale' );
 	$control->join( $section );
 }
-
-/**
- * Display recent posts when using static front page
- */
-$customizer->control( 'checkbox', 'display-static-front-page-recent-posts', [
-	'label'   => __( 'Display recent posts when using static front page', 'snow-monkey' ),
-	'default' => true,
-	'active_callback' => function() {
-		return ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' ) && is_front_page() );
-	},
-] );
-
-$section = $customizer->get_section( 'design' );
-$control = $customizer->get_control( 'display-static-front-page-recent-posts' );
-$control->join( $section );
-$control->partial( [
-	'selector' => '.home.page-template-default .p-recent-posts__title',
-] );

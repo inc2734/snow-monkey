@@ -11,13 +11,8 @@
  * @return void
  */
 add_action( 'widgets_init', function() {
-	$post_types = get_post_types( [
-		'public' => true,
-	] );
-	unset( $post_types['attachment'] );
-	foreach ( $post_types as $post_type ) {
-		$post_type_object = get_post_type_object( $post_type );
-
+	$post_types = snow_monkey_get_public_post_types();
+	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
 			// @codingStandardsIgnoreStart
 			'name'          => sprintf( __( '%1$s sidebar', 'snow-monkey' ), __( $post_type_object->label ) ),
