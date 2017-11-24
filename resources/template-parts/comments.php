@@ -32,7 +32,7 @@
 		</ol>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-			<div class="p-pagination">
+			<div class="c-pagination">
 				<?php the_comments_pagination(); ?>
 			</div>
 		<?php endif; ?>

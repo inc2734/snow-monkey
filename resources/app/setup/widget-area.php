@@ -36,7 +36,17 @@ add_action( 'widgets_init', function() {
 			'before_title'  => '<h2 class="c-widget__title"><span>',
 			'after_title'   => '</span></h2>',
 		] );
+	}
+} );
 
+/**
+* Add top of title widget area
+*
+* @return void
+*/
+add_action( 'widgets_init', function() {
+	$post_types = snow_monkey_get_public_post_types();
+	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
 			// @codingStandardsIgnoreStart
 			'name'          => sprintf( __( '%1$s top of title', 'snow-monkey' ), __( $post_type_object->label ) ),
@@ -48,7 +58,17 @@ add_action( 'widgets_init', function() {
 			'before_title'  => '<h2 class="c-widget__title"><span>',
 			'after_title'   => '</span></h2>',
 		] );
+	}
+} );
 
+/**
+* Add bottom of contents widget area
+*
+* @return void
+*/
+add_action( 'widgets_init', function() {
+	$post_types = snow_monkey_get_public_post_types();
+	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
 			// @codingStandardsIgnoreStart
 			'name'          => sprintf( __( '%1$s bottom of contents', 'snow-monkey' ), __( $post_type_object->label ) ),
