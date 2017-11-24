@@ -53,4 +53,15 @@
       }
     }
   }
+
+  .#{$_prefix}l-2row-header & {
+    .#{$_prefix}c-navbar {
+      &__item {
+        > a {
+          @include _padding-top(.5);
+          @include _padding-bottom(.5);
+        }
+      }
+    }
+  }
 }

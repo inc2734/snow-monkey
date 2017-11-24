@@ -2,15 +2,28 @@
   z-index: 2;
 	background-color: #fff;
   border-bottom: 1px solid _lighter($_color-gray);
-	@include _padding(.25, 0);
+  @include _padding(.25, 0);
 
   @include _media-min(lg) {
     border-bottom: none;
-    @include _padding(1, 0, 0);
   }
 
-  &--simple {
-    @include _padding(.25, 0);
+  &--center {
+    @include _media-min(lg) {
+      @include _padding(1, 0, 0);
+    }
+  }
+
+  &--1row {
+    @include _media-min(lg) {
+      padding: 0;
+    }
+  }
+
+  &--2row {
+    @include _media-min(lg) {
+      padding: 0;
+    }
   }
 
   &__drop-nav {
@@ -43,12 +56,6 @@
       }
     }
   }
-
-  .#{$_prefix}c-site-branding {
-    img {
-      width: auto;
-    }
-  }
 }
 
 /**
@@ -63,11 +70,13 @@
   }
 
   &__branding {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
+    @include _margin-right(1);
   }
 
   &__nav {
-    flex: 0 1 0%;
+    flex: 0 0 auto;
+    margin-left: auto;
   }
 }
 
@@ -81,20 +90,23 @@
   align-items: center;
 
   &__branding {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
+    @include _margin-right(1);
   }
 
   &__for-wide {
     flex: 0 1 auto;
-
+    margin-left: auto;
     @include _hidden();
+
     @include _media-min(lg) {
       @include _visible();
     }
   }
 
   &__for-narrow {
-    flex: 0 1 0%;
+    flex: 0 0 auto;
+    margin-left: auto;
 
     @include _media-min(lg) {
       @include _hidden();
@@ -119,21 +131,27 @@
   }
 
   &__branding {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
+    @include _margin-right(1);
+
+    @include _media-min(lg) {
+      @include _padding(.5, 0, .25);
+    }
   }
 
   &__for-wide {
     flex: none;
     width: 100%;
-
     @include _hidden();
+
     @include _media-min(lg) {
       @include _visible();
     }
   }
 
   &__for-narrow {
-    flex: 0 1 0%;
+    flex: 0 0 auto;
+    margin-left: auto;
 
     @include _media-min(lg) {
       @include _hidden();
@@ -161,12 +179,16 @@
   &__branding {
     flex: 1 1 auto;
     text-align: center;
+
+    @include _media-min(lg) {
+      @include _margin-bottom(.25);
+    }
   }
 
   &__for-wide {
     flex: 0 1 auto;
-
     @include _hidden();
+
     @include _media-min(lg) {
       @include _visible();
     }
