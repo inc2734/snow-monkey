@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	$relative_path = '/assets/js/app.js';
+	$relative_path = '/assets/js/app.min.js';
 	$src  = get_theme_file_uri( $relative_path );
 	$path = get_theme_file_path( $relative_path );
 
