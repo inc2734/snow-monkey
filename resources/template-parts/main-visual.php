@@ -26,7 +26,7 @@ if ( ! $pickup_posts ) {
 	<?php foreach ( $pickup_posts as $post ) : ?>
 		<?php setup_postdata( $post ); ?>
 		<?php $thumbnail_size = wp_is_mobile() ? 'large' : 'full'; ?>
-		<div class="slick-slide">
+		<div class="p-main-visual__item">
 			<div class="p-main-visual__figure" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), $thumbnail_size ) ); ?>);"></div>
 			<div class="p-main-visual__item-body">
 				<div class="p-main-visual__item-title">

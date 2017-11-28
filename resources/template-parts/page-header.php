@@ -22,9 +22,6 @@ if ( empty( $thumbnail_id ) ) {
 }
 ?>
 
-<div class="c-page-header"
-	style="
-		background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $thumbnail_id, 'large' ) ); ?>);
-		<?php echo ( wp_is_mobile() ) ? 'background-attachment: scroll' : ''; ?>
-	"
-></div>
+<div class="c-page-header js-bg-parallax">
+	<img class="js-bg-parallax__bg" src="<?php echo esc_url( wp_get_attachment_image_url( $thumbnail_id, 'large' ) ); ?>" alt="">
+</div>
