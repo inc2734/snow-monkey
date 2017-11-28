@@ -1,12 +1,6 @@
 .#{$_prefix}c-page-header {
   position: relative;
-  @include _background-image-cover();
-  background-attachment: scroll;
   height: 60vh;
-
-  @include _media-min(lg) {
-    background-attachment: fixed;
-  }
 
   &::after {
     content: '';
@@ -14,40 +8,3 @@
     @include _position(absolute, 0, 0, 0, 0);
   }
 }
-
-
-.js-bg-parallax {
-  position: relative;
-  overflow: hidden !important;
-}
-.js-bg-parallax__bg {
-  max-width: none !important;
-  max-height: none !important;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity .1s;
-  object-fit: cover;
-  object-position: 50% 50%;
-
-  &--loaded {
-    height: auto;
-    width: auto;
-    opacity: 1;
-  }
-}
-.js-bg-parallax__content {
-  position: relative;
-}
-/*
-.jquery-background-parallax-scroll__bg {
-  max-width: none !important;
-  max-height: none !important;
-  position: absolute;
-  z-index: 0;
-  opacity: 0;
-  transition: opacity .1s;
-}
-*/

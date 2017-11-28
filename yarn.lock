@@ -2312,11 +2312,9 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/isstream/-/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
-jquery.background-parallax-scroll@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/jquery.background-parallax-scroll/-/jquery.background-parallax-scroll-0.1.1.tgz#5654e4af00608603e7070682e70cf3d4bc0af763"
-  dependencies:
-    gulp "^3.9.1"
+jquery.background-parallax-scroll@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jquery.background-parallax-scroll/-/jquery.background-parallax-scroll-1.0.1.tgz#a0d8f948a21c316a02ec17f00c845faa3cf70852"
 
 jquery.smoothscroll@^1.0.2:
   version "1.0.2"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2017-11-22 15:54+0900\n"
-"PO-Revision-Date: 2017-11-22 15:54+0900\n"
+"POT-Creation-Date: 2017-11-28 20:58+0900\n"
+"PO-Revision-Date: 2017-11-28 20:58+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -322,8 +322,8 @@ msgstr "シェアカウントのキャッシュ時間（秒）"
 
 #: app/customizer/singular.php:16
 #, php-format
-msgid "Settings of %1$s page"
-msgstr "%1$sページの設定"
+msgid "Settings of %1$s"
+msgstr "%1$sの設定"
 
 #: app/customizer/singular.php:17
 #, php-format
@@ -368,6 +368,22 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
+#: app/setup/entry-meta.php:16
+msgid "Published"
+msgstr "投稿日"
+
+#: app/setup/entry-meta.php:35
+msgid "Modified"
+msgstr "更新日"
+
+#: app/setup/entry-meta.php:49
+msgid "Author"
+msgstr "著者"
+
+#: app/setup/entry-meta.php:67
+msgid "Categories"
+msgstr "カテゴリー"
+
 #: app/setup/nav-menus.php:19
 msgid "Global Navigation (For PC)"
 msgstr "グローバルナビゲーション（PC用）"
@@ -399,51 +415,51 @@ msgstr "このウィジェットは%1$sページのサイドバーに表示さ�
 msgid "%1$s sticky sidebar"
 msgstr "%1$s 追尾サイドバー"
 
-#: app/setup/widget-area.php:42
+#: app/setup/widget-area.php:52
 #, php-format
 msgid "%1$s top of title"
 msgstr "%1$s タイトルの上"
 
-#: app/setup/widget-area.php:43
+#: app/setup/widget-area.php:53
 #, php-format
 msgid "This widgets are displayed in the top of %1$s title."
 msgstr "このウィジェットは%1$sのタイトル上に表示されます。"
 
-#: app/setup/widget-area.php:54
+#: app/setup/widget-area.php:74
 #, php-format
 msgid "%1$s bottom of contents"
 msgstr "%1$s コンテンツの下"
 
-#: app/setup/widget-area.php:55
+#: app/setup/widget-area.php:75
 #, php-format
 msgid "This widgets are displayed in the bottom of %1$s contents."
 msgstr "このウィジェットは%1$sの記事下に表示されます。"
 
-#: app/setup/widget-area.php:73
+#: app/setup/widget-area.php:93
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:75
+#: app/setup/widget-area.php:95
 msgid "This widgets are displayed in the archive page sidebar."
 msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:90
+#: app/setup/widget-area.php:110
 msgid "Footer"
 msgstr "フッター"
 
-#: app/setup/widget-area.php:92
+#: app/setup/widget-area.php:112
 msgid "This widgets are displayed in the footer."
 msgstr "このウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:107
+#: app/setup/widget-area.php:127
 msgid "Front page (Top of page)"
 msgstr "フロントページ（ページ上部）"
 
-#: app/setup/widget-area.php:109 app/setup/widget-area.php:126
+#: app/setup/widget-area.php:129 app/setup/widget-area.php:146
 msgid "This widgets are displayed in the static front page."
 msgstr "このウィジェットは固定フロントページに表示されます。"
 
-#: app/setup/widget-area.php:124
+#: app/setup/widget-area.php:144
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
 
@@ -471,22 +487,6 @@ msgstr "コメントは閉じられています。"
 #: template-parts/comments.php:47
 msgid "No comments."
 msgstr "コメントはありません。"
-
-#: template-parts/entry-meta.php:16
-msgid "Published"
-msgstr "投稿日"
-
-#: template-parts/entry-meta.php:35
-msgid "Modified"
-msgstr "更新日"
-
-#: template-parts/entry-meta.php:49
-msgid "Author"
-msgstr "著者"
-
-#: template-parts/entry-meta.php:67
-msgid "Categories"
-msgstr "カテゴリー"
 
 #: template-parts/hamburger-btn.php:12
 msgid "Menu"

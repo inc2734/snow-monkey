@@ -37,3 +37,8 @@ $slick-font-path: "../../assets/packages/slick-carousel/slick/fonts/" !default;
 $slick-loader-path: "../../assets/packages/slick-carousel/slick/" !default;
 @import '../../assets/packages/slick-carousel/slick/slick.scss';
 @import '../../assets/packages/slick-carousel/slick/slick-theme.scss';
+
+/**
+ * Import jquery.background-parallax-scroll
+ */
+@import '../../assets/packages/jquery.background-parallax-scroll/src/jquery.background-parallax-scroll';

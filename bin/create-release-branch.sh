@@ -29,9 +29,6 @@ composer install --no-dev
 cp -r resources/. release/
 cd release
 ls -la
-sed -i.org -e '/^node_modules/d' vendor/inc2734/wp-basis/.gitignore
-echo node_modules/* >> vendor/inc2734/wp-basis/.gitignore
-echo !node_modules/sass-basis >> vendor/inc2734/wp-basis/.gitignore
 
 git add -A
 git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"

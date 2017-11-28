@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1b500232c2a8e5ce973a00d3463b0802",
-    "content-hash": "b38d54d6507836d790ee2e63b2033562",
+    "hash": "d4c5711cb325eb7a8a696fe7ec6099b9",
+    "content-hash": "a1fc391ebe0b5b4e1f916c5626c968e8",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.2.7",
+            "version": "1.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "0e7eeee305710afd07067e699df75edcee952b67"
+                "reference": "c714278dc049a433bc1fd317cabe3a5eb9097c4f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/0e7eeee305710afd07067e699df75edcee952b67",
-                "reference": "0e7eeee305710afd07067e699df75edcee952b67",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c714278dc049a433bc1fd317cabe3a5eb9097c4f",
+                "reference": "c714278dc049a433bc1fd317cabe3a5eb9097c4f",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.2",
-                "inc2734/wp-awesome-widgets": ">=1.3.0",
-                "inc2734/wp-basis": ">=0.5.2",
+                "inc2734/wp-awesome-widgets": ">=1.3.2",
+                "inc2734/wp-basis": ">=0.5.3",
                 "inc2734/wp-breadcrumbs": ">=0.3.2",
-                "inc2734/wp-contents-outline": ">=0.2.3",
+                "inc2734/wp-contents-outline": ">=0.3.2",
                 "inc2734/wp-customizer-framework": ">=2.2.0",
                 "inc2734/wp-github-theme-updater": ">=0.2.4",
                 "inc2734/wp-like-me-box": ">=0.1.2",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-11-24 01:00:29"
+            "time": "2017-11-28 07:16:28"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,20 +107,20 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.3.0",
+            "version": "1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "fd48f578ce7bdad550fd7203e9857916251d4400"
+                "reference": "fb86889a0822fbc9ed9f47b5c02a4b7b5e6f11c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/fd48f578ce7bdad550fd7203e9857916251d4400",
-                "reference": "fd48f578ce7bdad550fd7203e9857916251d4400",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/fb86889a0822fbc9ed9f47b5c02a4b7b5e6f11c0",
+                "reference": "fb86889a0822fbc9ed9f47b5c02a4b7b5e6f11c0",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-contents-outline": "^0.2.3",
+                "inc2734/wp-contents-outline": "^0.3.2",
                 "inc2734/wp-view-controller": "^2.1",
                 "php": ">=5.6"
             },
@@ -147,20 +147,20 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2017-11-22 05:53:22"
+            "time": "2017-11-28 07:11:39"
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "0.5.2",
+            "version": "0.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "dcbae8f61e13086b2945bf084286ead43285ab2a"
+                "reference": "1cf415bc8718318360795aacc4aec32c33f79eb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/dcbae8f61e13086b2945bf084286ead43285ab2a",
-                "reference": "dcbae8f61e13086b2945bf084286ead43285ab2a",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/1cf415bc8718318360795aacc4aec32c33f79eb8",
+                "reference": "1cf415bc8718318360795aacc4aec32c33f79eb8",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +189,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2017-11-24 00:57:30"
+            "time": "2017-11-28 07:10:24"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -235,16 +235,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "0.2.3",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "32dd1f25aed9aad20da7c6fefb281e4ab597197c"
+                "reference": "db3a1c4876b40c22b825c1e6aff3d3f83ea4b94d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/32dd1f25aed9aad20da7c6fefb281e4ab597197c",
-                "reference": "32dd1f25aed9aad20da7c6fefb281e4ab597197c",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/db3a1c4876b40c22b825c1e6aff3d3f83ea4b94d",
+                "reference": "db3a1c4876b40c22b825c1e6aff3d3f83ea4b94d",
                 "shasum": ""
             },
             "require": {
@@ -273,7 +273,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2017-11-17 07:11:44"
+            "time": "2017-11-28 07:10:47"
         },
         {
             "name": "inc2734/wp-customizer-framework",
@@ -1052,16 +1052,16 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "v1.7.2",
+            "version": "1.7.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6"
+                "reference": "e4ed002c67da8eceb0eb8ddb8b3847bb53c5c2bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6",
-                "reference": "c9b8c6088acd19d769d4cc0ffa60a9fe34344bd6",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/e4ed002c67da8eceb0eb8ddb8b3847bb53c5c2bf",
+                "reference": "e4ed002c67da8eceb0eb8ddb8b3847bb53c5c2bf",
                 "shasum": ""
             },
             "require": {
@@ -1073,7 +1073,7 @@
             },
             "require-dev": {
                 "phpspec/phpspec": "^2.5|^3.2",
-                "phpunit/phpunit": "^4.8 || ^5.6.5"
+                "phpunit/phpunit": "^4.8.35 || ^5.7"
             },
             "type": "library",
             "extra": {
@@ -1111,7 +1111,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2017-09-04 11:05:03"
+            "time": "2017-11-24 13:59:53"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -1178,16 +1178,16 @@
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.2",
+            "version": "1.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5"
+                "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
-                "reference": "3cc8f69b3028d0f96a9078e6295d86e9bf019be5",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/730b01bc3e867237eaac355e06a36b85dd93a8b4",
+                "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4",
                 "shasum": ""
             },
             "require": {
@@ -1221,7 +1221,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2016-10-03 07:40:28"
+            "time": "2017-11-27 13:52:08"
         },
         {
             "name": "phpunit/php-text-template",

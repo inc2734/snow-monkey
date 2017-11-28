@@ -13,7 +13,7 @@ $post_types = snow_monkey_get_public_post_types();
 foreach ( $post_types as $post_type => $post_type_object ) {
 	$customizer->section( $post_type_object->name . '-page', [
 		// @codingStandardsIgnoreStart
-		'title'           => sprintf( __( 'Settings of %1$s page', 'snow-monkey' ), __( $post_type_object->label ) ),
+		'title'           => sprintf( __( 'Settings of %1$s', 'snow-monkey' ), __( $post_type_object->label ) ),
 		'description'     => sprintf( __( 'Applies to singular page of %1$s.', 'snow-monkey' ), __( $post_type_object->label ) ),
 			// @codingStandardsIgnoreEnd
 		'priority'        => 1110,

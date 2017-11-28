@@ -17,7 +17,7 @@
     @include _font-size-line-height($_base-font-size-px);
   }
 
-  &__body {
+  .contents-outline {
     ol {
       @include _list-unstyled();
       @include _margin-top(.25);

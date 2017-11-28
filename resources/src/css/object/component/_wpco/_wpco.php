@@ -12,6 +12,6 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
-	'.wpco__body ol li a::before',
+	'.wpco .contents-outline ol li a::before',
 	'background-color: ' . $accent_color
 );
