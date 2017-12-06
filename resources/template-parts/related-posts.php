@@ -17,9 +17,9 @@ if ( is_array( $categories ) ) {
 if ( $category_ids ) {
 	$tax_query[] = array(
 		'taxonomy' => 'category',
-		'field'    => 'id',
+		'field'    => 'term_id',
 		'terms'    => $category_ids,
-		'operator' => 'OR',
+		'operator' => 'IN',
 	);
 }
 
@@ -33,9 +33,9 @@ if ( is_array( $tags ) ) {
 if ( $tag_ids ) {
 	$tax_query[] = array(
 		'taxonomy' => 'post_tag',
-		'field'    => 'id',
+		'field'    => 'term_id',
 		'terms'    => $tag_ids,
-		'operator' => 'OR',
+		'operator' => 'IN',
 	);
 }
 if ( ! $tax_query ) {
