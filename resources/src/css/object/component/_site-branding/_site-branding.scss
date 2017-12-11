@@ -6,12 +6,6 @@
     }
   }
 
-  .#{$_prefix}l-header & {
-    img {
-      width: auto;
-    }
-  }
-
   .#{$_prefix}l-1row-header & {
     @include _media-min(lg) {
       @include _padding(10px, 0);
