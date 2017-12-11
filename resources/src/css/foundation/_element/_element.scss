@@ -37,3 +37,7 @@ h4 {
     @include _font-size-line-height($_base-font-size * $_h4-font-size-scale);
   }
 }
+
+iframe {
+  max-width: 100%;
+}
