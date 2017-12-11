@@ -6,7 +6,7 @@
 
 @import 'foundation/_body/body';
 
-body.mce-content-body {
+.mce-content-body.mceContentBody {
   @import 'style';
   @include entry-content();
 }

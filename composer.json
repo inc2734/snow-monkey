@@ -16,11 +16,12 @@
     "doctrine/instantiator": "1.0.4",
     "phpunit/php-token-stream": "1.4.11",
     "phpdocumentor/reflection-docblock": "3.2.2",
-    "symfony/yaml": "3.4.1"
+    "symfony/yaml": "3.4.1",
+    "pdepend/pdepend": "2.5.0"
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": ">=1.2.13"
+    "inc2734/mimizuku-core": ">=1.2.14"
   },
   "config": {
     "process-timeout": 0,
