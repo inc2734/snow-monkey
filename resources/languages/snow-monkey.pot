@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2017-11-28 20:58+0900\n"
-"PO-Revision-Date: 2017-11-28 20:58+0900\n"
+"POT-Creation-Date: 2017-12-11 11:29+0900\n"
+"PO-Revision-Date: 2017-12-11 11:30+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -129,6 +129,18 @@ msgstr "%1$sアーカイブの設定"
 #: app/customizer/post-type-archive.php:42 app/customizer/singular.php:31
 msgid "Page layout"
 msgstr "ページレイアウト"
+
+#: app/customizer/protected.php:13
+msgid "Settings of password protected"
+msgstr "パスワード保護の設定"
+
+#: app/customizer/protected.php:18
+msgid ""
+"If the post using more tag and password protect at the same time, display "
+"contents before more tag"
+msgstr ""
+"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテ"
+"ンツを表示する"
 
 #: app/customizer/seo-sns.php:13
 msgid "SEO/SNS"
