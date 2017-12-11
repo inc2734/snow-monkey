@@ -4,12 +4,16 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$comments_by_type = $wp_query->comments_by_type;
+if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
+	return;
+}
 ?>
 
 <aside class="p-trackbacks c-entry-aside">
 	<h2 class="p-trackbacks__title c-entry-aside__title"><span><?php esc_html_e( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ); ?></span></h2>
 
-	<?php $comments_by_type = $wp_query->comments_by_type; ?>
 	<?php if ( ! empty( $comments_by_type['pings'] ) ) : ?>
 		<ol class="p-trackbacks__list">
 			<?php

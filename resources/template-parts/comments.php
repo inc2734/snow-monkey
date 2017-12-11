@@ -4,12 +4,16 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+$comments_by_type = $wp_query->comments_by_type;
+if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
+	return;
+}
 ?>
 
 <aside class="p-comments c-entry-aside">
 	<h2 class="p-comments__title c-entry-aside__title"><span><?php esc_html_e( 'Comments on this post', 'snow-monkey' ); ?></span></h2>
 
-	<?php $comments_by_type = $wp_query->comments_by_type; ?>
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
 		<ol class="p-comments__list">
 			<?php
@@ -31,17 +35,8 @@
 			?>
 		</ol>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-			<div class="c-pagination">
-				<?php the_comments_pagination(); ?>
-			</div>
-		<?php endif; ?>
+		<?php get_template_part( 'template-parts/comments-pagination' ); ?>
 
-		<?php if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-			<p class="p-comments__nocomments">
-				<?php esc_html_e( 'Comments are closed.', 'snow-monkey' ); ?>
-			</p>
-		<?php endif; ?>
 	<?php else : ?>
 		<p class="p-comments__nocomments">
 			<?php esc_html_e( 'No comments.', 'snow-monkey' ); ?>
