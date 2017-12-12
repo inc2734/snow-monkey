@@ -1,0 +1,49 @@
+/**
+ * Import WP oEmbed Blog Card
+ */
+@import '../../../../vendor/inc2734/wp-oembed-blog-card/src/assets/scss/wp-oembed-blog-card';
+
+/**
+ * Import WP Share Buttons
+ */
+$wp-share-buttons-font-path: '../../' !default;
+@import '../../../../vendor/inc2734/wp-share-buttons/src/assets/scss/wp-share-buttons';
+
+/**
+ * Import WP Like Me Box
+ */
+@import '../../../../vendor/inc2734/wp-like-me-box/src/assets/scss/wp-like-me-box';
+
+/**
+ * Import WP Pure CSS Gallery
+ */
+@import '../../../../vendor/inc2734/wp-pure-css-gallery/src/assets/scss/wp-pure-css-gallery';
+
+/**
+ * Import WP Awesome Widgets
+ */
+@import '../../../../vendor/inc2734/wp-awesome-widgets/src/assets/scss/wp-awesome-widgets';
+
+/**
+ * Import FontAwesome
+ */
+$fa-font-path: '../../assets/packages/font-awesome/fonts' !default;
+@import '../../../../assets/packages/font-awesome/scss/font-awesome';
+
+/**
+ * Import Slick
+ */
+$slick-font-path: "../../assets/packages/slick-carousel/slick/fonts/" !default;
+$slick-loader-path: "../../assets/packages/slick-carousel/slick/" !default;
+@import '../../../../assets/packages/slick-carousel/slick/slick.scss';
+@import '../../../../assets/packages/slick-carousel/slick/slick-theme.scss';
+
+/**
+ * Import jquery.background-parallax-scroll
+ */
+@import '../../../../assets/packages/jquery.background-parallax-scroll/src/jquery.background-parallax-scroll';
+
+/**
+ * Import jquery.sticky
+ */
+@import '../../../../assets/packages/jquery.sticky/src/sticky';

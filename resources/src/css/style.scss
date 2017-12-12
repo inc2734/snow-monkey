@@ -1,75 +1,21 @@
 @charset 'utf-8';
 
-@import 'setting';
-
 /**
  * Foundation
  */
-@import 'foundation/_body/body';
-@import 'foundation/_element/element';
-@import 'foundation/_wordpress/_align/align';
-@import 'foundation/_wordpress/_bypostauthor/bypostauthor';
-@import 'foundation/_wordpress/_gallery/gallery';
-@import 'foundation/_wordpress/_screen-reader-text/screen-reader-text';
-@import 'foundation/_wordpress/_single-attachment/single-attachment';
-@import 'foundation/_wordpress/_sticky/sticky';
-@import 'foundation/_wordpress/_wp-caption/wp-caption';
-@import 'foundation/_wordpress/_wp-image/wp-image';
+@import 'foundation/foundation';
 
 /**
  * Layout
  */
-@import 'layout/_container/container';
-@import 'layout/_contents/contents';
-@import 'layout/_footer/footer';
-@import 'layout/_header/header';
-@import 'layout/_sidebar-widget-area/sidebar-widget-area';
-@import 'layout/_footer-widget-area/footer-widget-area';
-@import 'layout/_title-top-widget-area/title-top-widget-area';
-@import 'layout/_contents-bottom-widget-area/contents-bottom-widget-area';
-@import 'layout/_sidebar-sticky-widget-area/sidebar-sticky-widget-area';
+@import 'layout/layout';
 
 /**
  * Object - Component
  */
-@import 'object/component/_drawer/drawer';
-@import 'object/component/_entries/entries';
-@import 'object/component/_entry/entry';
-@import 'object/component/_entry-summary/entry-summary';
-@import 'object/component/_hamburger-btn/hamburger-btn';
-@import 'object/component/_meta/meta';
-@import 'object/component/_site-branding/site-branding';
-@import 'object/component/_responsive-container/responsive-container';
-@import 'object/component/_section/section';
-@import 'object/component/_widget/widget';
-@import 'object/component/_breadcrumbs/breadcrumbs';
-@import 'object/component/_input-group/input-group';
-@import 'object/component/_page-header/page-header';
-@import 'object/component/_pagination/pagination';
-@import 'object/component/_comment/comment';
-@import 'object/component/_copyright/copyright';
-@import 'object/component/_btn/btn';
-@import 'object/component/_entry-aside/entry-aside';
-@import 'object/component/_prev-next-nav/prev-next-nav';
-@import 'object/component/_google-adsense/google-adsense';
-@import 'object/component/_page-top/page-top';
-@import 'object/component/_wpac/wpac';
-@import 'object/component/_wpco/wpco';
-@import 'object/component/_wpcf7/wpcf7';
-@import 'object/component/_wp-profile-box/wp-profile-box';
-@import 'object/component/_page-summary/page-summary';
-@import '../../assets/packages/jquery.sticky/src/sticky';
+@import 'object/component/component';
 
 /**
  * Object - Project
  */
-@import 'object/project/_comments/comments';
-@import 'object/project/_global-nav/global-nav';
-@import 'object/project/_search-form/search-form';
-@import 'object/project/_trackbacks/trackbacks';
-@import 'object/project/_main-visual/main-visual';
-@import 'object/project/_related-posts/related-posts';
-@import 'object/project/_response/response';
-@import 'object/project/_social-nav/social-nav';
-@import 'object/project/_recent-posts/recent-posts';
-@import 'object/project/_footer-sticky-nav/footer-sticky-nav';
+@import 'object/project/project';
