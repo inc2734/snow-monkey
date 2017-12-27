@@ -9,6 +9,9 @@ export default class SnowMonkeyDropNav {
       this.nav    = $('.l-header__drop-nav');
       this.min    = 1023;
       this.defaultWindowWidth = $(window).width();
+      this.gNavClass = '.p-global-nav';
+
+      this._showGnav();
 
       this.onScroll();
       this.onResize();
@@ -19,12 +22,12 @@ export default class SnowMonkeyDropNav {
     $(window).scroll(() => {
       if (this.min < $(window).width()) {
         if (this.header.outerHeight() < $(window).scrollTop()) {
-          this.nav.attr('aria-hidden', 'false');
+          this._showDropNav();
           return;
         }
       }
 
-      this.nav.attr('aria-hidden', 'true');
+      this._showGnav();
     });
   }
 
@@ -34,7 +37,19 @@ export default class SnowMonkeyDropNav {
         return;
       }
 
-      this.nav.attr('aria-hidden', 'true');
+      this._showGnav();
     });
+  }
+
+  _showGnav() {
+    $(this.gNavClass).attr('aria-hidden', 'false');
+    this.nav.attr('aria-hidden', 'true');
+    this.nav.find(this.gNavClass).attr('aria-hidden', 'true');
+  }
+
+  _showDropNav() {
+    $(this.gNavClass).attr('aria-hidden', 'true');
+    this.nav.attr('aria-hidden', 'false');
+    this.nav.find(this.gNavClass).attr('aria-hidden', 'false');
   }
 }
