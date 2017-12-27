@@ -22,7 +22,7 @@ add_filter( 'mimizuku_layout', function( $layout ) {
 	}
 
 	if ( is_singular() || is_404() ) {
-		if ( $_wp_page_template && 'default' !== $_wp_page_template ) {
+		if ( $_wp_page_template && 'default' !== $_wp_page_template && file_exists( get_theme_file_path( $_wp_page_template ) ) ) {
 			return $layout;
 		}
 

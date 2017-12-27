@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fa52442542a5174f2524f83ec09069a5",
-    "content-hash": "26ab159858fc896d1a517a1d63af5d50",
+    "hash": "36a69432dc1430280cc012494bf69b8a",
+    "content-hash": "d02e730d2efb76dbea6515dd2b56c501",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "2ddab1d62d052d3dd7c79f230e513418097504e2"
+                "reference": "15bbe9130ce1ba3f4bfed1ebe06018cfc08d47de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/2ddab1d62d052d3dd7c79f230e513418097504e2",
-                "reference": "2ddab1d62d052d3dd7c79f230e513418097504e2",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/15bbe9130ce1ba3f4bfed1ebe06018cfc08d47de",
+                "reference": "15bbe9130ce1ba3f4bfed1ebe06018cfc08d47de",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.3",
-                "inc2734/wp-awesome-widgets": ">=1.3.3",
+                "inc2734/wp-awesome-widgets": ">=1.3.4",
                 "inc2734/wp-basis": ">=0.7.0",
                 "inc2734/wp-breadcrumbs": ">=0.3.2",
                 "inc2734/wp-contents-outline": ">=0.3.2",
@@ -35,7 +35,7 @@
                 "inc2734/wp-pure-css-gallery": ">=0.1.4",
                 "inc2734/wp-seo": ">=0.6.0",
                 "inc2734/wp-share-buttons": ">=0.5.9",
-                "inc2734/wp-view-controller": ">=2.1.4",
+                "inc2734/wp-view-controller": ">=3.0.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-12-12 07:22:57"
+            "time": "2017-12-27 02:18:57"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,21 +107,21 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.3.3",
+            "version": "1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "9cb205dabf8d10fd6e1c5b943eef07726aa60856"
+                "reference": "1a7d20a57a32459a60fa603289265541d48a9866"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/9cb205dabf8d10fd6e1c5b943eef07726aa60856",
-                "reference": "9cb205dabf8d10fd6e1c5b943eef07726aa60856",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/1a7d20a57a32459a60fa603289265541d48a9866",
+                "reference": "1a7d20a57a32459a60fa603289265541d48a9866",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-contents-outline": "^0.3.2",
-                "inc2734/wp-view-controller": "^2.1",
+                "inc2734/wp-contents-outline": ">=0.3.2",
+                "inc2734/wp-view-controller": ">=3.0.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -147,7 +147,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2017-12-11 06:38:37"
+            "time": "2017-12-27 02:18:28"
         },
         {
             "name": "inc2734/wp-basis",
@@ -657,16 +657,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "2.2.0",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3"
+                "reference": "b5fb09e2f649f061393bb1b94211675335a2057a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3",
-                "reference": "e9673a3dc2ab7de6fd3c94e7fdac2012f2e398f3",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/b5fb09e2f649f061393bb1b94211675335a2057a",
+                "reference": "b5fb09e2f649f061393bb1b94211675335a2057a",
                 "shasum": ""
             },
             "require": {
@@ -695,7 +695,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2017-10-12 14:46:25"
+            "time": "2017-12-27 02:09:22"
         }
     ],
     "packages-dev": [
@@ -1364,16 +1364,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.25",
+            "version": "5.7.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "4b1c822a68ae6577df38a59eb49b046712ec0f6a"
+                "reference": "7fbc25c13309de0c4c9bb48b7361f1eca34c7fbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4b1c822a68ae6577df38a59eb49b046712ec0f6a",
-                "reference": "4b1c822a68ae6577df38a59eb49b046712ec0f6a",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/7fbc25c13309de0c4c9bb48b7361f1eca34c7fbd",
+                "reference": "7fbc25c13309de0c4c9bb48b7361f1eca34c7fbd",
                 "shasum": ""
             },
             "require": {
@@ -1442,7 +1442,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-11-14 14:50:51"
+            "time": "2017-12-17 06:14:38"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -2067,16 +2067,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.1.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "d667e245d5dcd4d7bf80f26f2c947d476b66213e"
+                "reference": "d7c00c3000ac0ce79c96fcbfef86b49a71158cd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d667e245d5dcd4d7bf80f26f2c947d476b66213e",
-                "reference": "d667e245d5dcd4d7bf80f26f2c947d476b66213e",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d7c00c3000ac0ce79c96fcbfef86b49a71158cd1",
+                "reference": "d7c00c3000ac0ce79c96fcbfef86b49a71158cd1",
                 "shasum": ""
             },
             "require": {
@@ -2114,20 +2114,20 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2017-10-16 22:40:25"
+            "time": "2017-12-19 21:44:46"
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "1de51a6c76359897ab32c309934b93d036bccb60"
+                "reference": "e57211b88aa889fefac1cb36866db04100b0f21c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/1de51a6c76359897ab32c309934b93d036bccb60",
-                "reference": "1de51a6c76359897ab32c309934b93d036bccb60",
+                "url": "https://api.github.com/repos/symfony/config/zipball/e57211b88aa889fefac1cb36866db04100b0f21c",
+                "reference": "e57211b88aa889fefac1cb36866db04100b0f21c",
                 "shasum": ""
             },
             "require": {
@@ -2176,20 +2176,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-19 20:09:36"
+            "time": "2017-12-14 19:40:10"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "27810742895ad89e706ba5028e4f8fe425792b50"
+                "reference": "5f81907ea43bfa971ac2c7fbac593ebe7cd7d333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/27810742895ad89e706ba5028e4f8fe425792b50",
-                "reference": "27810742895ad89e706ba5028e4f8fe425792b50",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5f81907ea43bfa971ac2c7fbac593ebe7cd7d333",
+                "reference": "5f81907ea43bfa971ac2c7fbac593ebe7cd7d333",
                 "shasum": ""
             },
             "require": {
@@ -2197,7 +2197,7 @@
                 "psr/container": "^1.0"
             },
             "conflict": {
-                "symfony/config": "<3.3.1",
+                "symfony/config": "<3.3.7",
                 "symfony/finder": "<3.3",
                 "symfony/proxy-manager-bridge": "<3.4",
                 "symfony/yaml": "<3.4"
@@ -2247,20 +2247,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-12-04 19:20:32"
+            "time": "2017-12-14 19:40:10"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.1",
+            "version": "v3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "de56eee71e0a128d8c54ccc1909cdefd574bad0f"
+                "reference": "25b135bea251829e3db6a77d773643408b575ed4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/de56eee71e0a128d8c54ccc1909cdefd574bad0f",
-                "reference": "de56eee71e0a128d8c54ccc1909cdefd574bad0f",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/25b135bea251829e3db6a77d773643408b575ed4",
+                "reference": "25b135bea251829e3db6a77d773643408b575ed4",
                 "shasum": ""
             },
             "require": {
@@ -2296,7 +2296,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-11-19 18:59:05"
+            "time": "2017-12-14 19:40:10"
         },
         {
             "name": "symfony/yaml",
