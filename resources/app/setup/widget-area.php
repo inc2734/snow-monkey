@@ -10,7 +10,7 @@
  *
  * @return void
  */
-add_action( 'widgets_init', function() {
+add_action( 'init', function() {
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -37,14 +37,14 @@ add_action( 'widgets_init', function() {
 			'after_title'   => '</span></h2>',
 		] );
 	}
-} );
+}, 11 );
 
 /**
 * Add top of title widget area
 *
 * @return void
 */
-add_action( 'widgets_init', function() {
+add_action( 'init', function() {
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -59,14 +59,14 @@ add_action( 'widgets_init', function() {
 			'after_title'   => '</span></h2>',
 		] );
 	}
-} );
+}, 11 );
 
 /**
 * Add bottom of contents widget area
 *
 * @return void
 */
-add_action( 'widgets_init', function() {
+add_action( 'init', function() {
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -81,7 +81,7 @@ add_action( 'widgets_init', function() {
 			'after_title'   => '</span></h2>',
 		] );
 	}
-} );
+}, 11 );
 
 /**
 * Add sidebar widget area
