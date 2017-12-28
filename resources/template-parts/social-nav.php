@@ -18,6 +18,8 @@ if ( ! has_nav_menu( 'social-nav' ) ) {
 		'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 		'menu_class'     => 'c-navbar',
 		'depth'          => 0,
+		'link_before'    => '<span>',
+		'link_after'     => '</span>',
 	] );
 	?>
 </nav>

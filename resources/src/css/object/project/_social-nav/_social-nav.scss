@@ -17,11 +17,13 @@
     flex: none;
     color: #999;
     display: block;
-    @include _square(14px);
     line-height: 1;
     overflow: hidden;
     text-decoration: none;
 
+    > span {
+      display: none;
+    }
 
     &:before {
       @include fa-icon();
