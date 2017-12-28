@@ -120,6 +120,7 @@
     @include _padding(.25, .5);
     @include _transition(opacity);
     backface-visibility: hidden;
+    vertical-align: top;
 
     @include _hover(lg) {
       opacity: .9;
