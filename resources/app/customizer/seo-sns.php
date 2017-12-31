@@ -97,6 +97,23 @@ $control = $customizer->get_control( 'mwt-default-og-image' );
 $control->join( $section )->join( $panel );
 
 /**
+ * Structured data
+ */
+$customizer->section( 'json-ld', array(
+	'title' => __( 'Structured data', 'snow-monkey' ),
+) );
+
+$customizer->control( 'checkbox', 'mwt-json-ld', array(
+	'label'   => __( 'Output structred data (JSON+LD)', 'snow-monkey' ),
+	'type'    => 'option',
+	'default' => true,
+) );
+
+$section = $customizer->get_section( 'json-ld' );
+$control = $customizer->get_control( 'mwt-json-ld' );
+$control->join( $section )->join( $panel );
+
+/**
  * Twitter Cards
  */
 $customizer->section( 'twitter-cards', array(

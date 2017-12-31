@@ -78,3 +78,13 @@ add_filter( 'inc2734_wp_seo_twitter_card', function( $twitter_card ) {
 add_filter( 'inc2734_wp_seo_twitter_site', function( $twitter_site ) {
 	return get_option( 'mwt-twitter-site' );
 } );
+
+/**
+ * When you want to print JSON+LD, return true
+ *
+ * @param bool false
+ * @return bool
+ */
+add_filter( 'inc2734_wp_seo_use_json_ld', function( $bool ) {
+	return get_option( 'mwt-json-ld' );
+} );

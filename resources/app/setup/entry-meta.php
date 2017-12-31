@@ -11,7 +11,7 @@
 function snow_monkey_entry_meta_items_published() {
 	?>
 	<li class="c-meta__item c-meta__item--published">
-		<time itemprop="datePublished" datetime="<?php the_time( 'c' ); ?>">
+		<time datetime="<?php the_time( 'c' ); ?>">
 			<i class="fa fa-clock-o" aria-hidden="true"></i>
 			<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
 			<?php the_time( get_option( 'date_format' ) ); ?>
@@ -30,7 +30,7 @@ function snow_monkey_entry_meta_items_modified() {
 	}
 	?>
 	<li class="c-meta__item c-meta__item--modified">
-		<time itemprop="dateModified" datetime="<?php the_modified_time( 'c' ); ?>">
+		<time datetime="<?php the_modified_time( 'c' ); ?>">
 			<i class="fa fa-refresh" aria-hidden="true"></i>
 			<span class="screen-reader-text"><?php esc_html_e( 'Modified', 'snow-monkey' ); ?></span>
 			<?php the_modified_time( get_option( 'date_format' ) ); ?>
