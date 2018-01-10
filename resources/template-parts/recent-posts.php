@@ -27,7 +27,7 @@ if ( ! $recent_posts_query->found_posts ) {
 			<?php endwhile; ?>
 		</ul>
 
-		<?php if ( 0 < $recent_posts_query->found_posts - $recent_posts_query->get( 'posts_per_page' ) ) : ?>
+		<?php if ( 0 < $recent_posts_query->found_posts - $recent_posts_query->get( 'posts_per_page' ) && get_option( 'page_for_posts' ) ) : ?>
 			<div class="u-text-center">
 				<?php
 				if ( get_option( 'permalink_structure' ) ) {

@@ -4,28 +4,28 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5f466b6b545ba2eb5ffde76bb867215c",
-    "content-hash": "4dedfe2df54620579469356fcc3894b1",
+    "hash": "f2c0442b2e9ae5415b97b263ba3f4287",
+    "content-hash": "c29078723bcb993607ec02924c7b61fd",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.5.4",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "2da6244168a4ea56a8570bf13ae2f05c6a1f08da"
+                "reference": "6066210883cf84c68e62da128c4a631498c93c03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/2da6244168a4ea56a8570bf13ae2f05c6a1f08da",
-                "reference": "2da6244168a4ea56a8570bf13ae2f05c6a1f08da",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6066210883cf84c68e62da128c4a631498c93c03",
+                "reference": "6066210883cf84c68e62da128c4a631498c93c03",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.3",
                 "inc2734/wp-awesome-widgets": ">=1.3.4",
                 "inc2734/wp-basis": ">=0.7.2",
-                "inc2734/wp-breadcrumbs": ">=0.3.2",
+                "inc2734/wp-breadcrumbs": ">=1.0.0",
                 "inc2734/wp-contents-outline": ">=0.3.2",
                 "inc2734/wp-customizer-framework": ">=2.3.0",
                 "inc2734/wp-github-theme-updater": ">=0.2.5",
@@ -34,7 +34,7 @@
                 "inc2734/wp-profile-box": ">=0.1.1",
                 "inc2734/wp-pure-css-gallery": ">=0.1.4",
                 "inc2734/wp-seo": ">=0.7.1",
-                "inc2734/wp-share-buttons": ">=0.6.0",
+                "inc2734/wp-share-buttons": ">=1.0.0",
                 "inc2734/wp-view-controller": ">=3.0.0",
                 "php": ">=5.6"
             },
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2017-12-31 01:50:23"
+            "time": "2018-01-10 00:46:29"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -193,16 +193,16 @@
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "0.3.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "b031005001a45b24cdc4110d492cd54c051544d1"
+                "reference": "3acc2f1fba3918f15d61e1a310487caefa14e0c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/b031005001a45b24cdc4110d492cd54c051544d1",
-                "reference": "b031005001a45b24cdc4110d492cd54c051544d1",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/3acc2f1fba3918f15d61e1a310487caefa14e0c1",
+                "reference": "3acc2f1fba3918f15d61e1a310487caefa14e0c1",
                 "shasum": ""
             },
             "require": {
@@ -231,7 +231,7 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2017-09-29 02:11:13"
+            "time": "2018-01-09 07:23:57"
         },
         {
             "name": "inc2734/wp-contents-outline",
@@ -614,16 +614,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "0.6.0",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "6fcaf74e633a7ce9af94332eda38550ecee79fce"
+                "reference": "22d4175313f63cfefb33ee157295dc0f359441fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/6fcaf74e633a7ce9af94332eda38550ecee79fce",
-                "reference": "6fcaf74e633a7ce9af94332eda38550ecee79fce",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/22d4175313f63cfefb33ee157295dc0f359441fb",
+                "reference": "22d4175313f63cfefb33ee157295dc0f359441fb",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +653,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2017-12-28 05:30:53"
+            "time": "2018-01-10 00:32:12"
         },
         {
             "name": "inc2734/wp-view-controller",
@@ -2118,16 +2118,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "e57211b88aa889fefac1cb36866db04100b0f21c"
+                "reference": "cfd5c972f7b4992a5df41673d25d980ab077aa5b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/e57211b88aa889fefac1cb36866db04100b0f21c",
-                "reference": "e57211b88aa889fefac1cb36866db04100b0f21c",
+                "url": "https://api.github.com/repos/symfony/config/zipball/cfd5c972f7b4992a5df41673d25d980ab077aa5b",
+                "reference": "cfd5c972f7b4992a5df41673d25d980ab077aa5b",
                 "shasum": ""
             },
             "require": {
@@ -2176,20 +2176,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2017-12-14 19:40:10"
+            "time": "2018-01-03 07:37:34"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "5f81907ea43bfa971ac2c7fbac593ebe7cd7d333"
+                "reference": "35f957ca171a431710966bec6e2f8636d3b019c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5f81907ea43bfa971ac2c7fbac593ebe7cd7d333",
-                "reference": "5f81907ea43bfa971ac2c7fbac593ebe7cd7d333",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/35f957ca171a431710966bec6e2f8636d3b019c4",
+                "reference": "35f957ca171a431710966bec6e2f8636d3b019c4",
                 "shasum": ""
             },
             "require": {
@@ -2247,20 +2247,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2017-12-14 19:40:10"
+            "time": "2018-01-04 15:56:45"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "25b135bea251829e3db6a77d773643408b575ed4"
+                "reference": "e078773ad6354af38169faf31c21df0f18ace03d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/25b135bea251829e3db6a77d773643408b575ed4",
-                "reference": "25b135bea251829e3db6a77d773643408b575ed4",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/e078773ad6354af38169faf31c21df0f18ace03d",
+                "reference": "e078773ad6354af38169faf31c21df0f18ace03d",
                 "shasum": ""
             },
             "require": {
@@ -2296,7 +2296,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2017-12-14 19:40:10"
+            "time": "2018-01-03 07:37:34"
         },
         {
             "name": "symfony/yaml",
