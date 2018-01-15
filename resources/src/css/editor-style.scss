@@ -23,3 +23,7 @@
 
   @include entry-content();
 }
+
+.mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
+  height: 100%;
+}
