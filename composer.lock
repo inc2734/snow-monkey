@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7a884276463bb641679599d3265097c3",
-    "content-hash": "be246c49d32cdfba3ea81d227d8cf073",
+    "hash": "370bba6c66bd800fcd5378048f95238e",
+    "content-hash": "44ca8603b3e466e1f5eca4d2268697be",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.5.7",
+            "version": "1.5.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "e7fd0f6025dc33abbfcb3a525642ee1e2e31b731"
+                "reference": "4b5efce0fb4a59bafb4a4cc6aa32da07965bb3d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/e7fd0f6025dc33abbfcb3a525642ee1e2e31b731",
-                "reference": "e7fd0f6025dc33abbfcb3a525642ee1e2e31b731",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4b5efce0fb4a59bafb4a4cc6aa32da07965bb3d7",
+                "reference": "4b5efce0fb4a59bafb4a4cc6aa32da07965bb3d7",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-awesome-components": ">=0.4.3",
+                "inc2734/wp-awesome-components": ">=0.4.4",
                 "inc2734/wp-awesome-widgets": ">=1.3.4",
                 "inc2734/wp-basis": ">=0.7.2",
                 "inc2734/wp-breadcrumbs": ">=1.0.0",
@@ -61,20 +61,20 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-01-10 02:29:42"
+            "time": "2018-01-15 15:16:26"
         },
         {
             "name": "inc2734/wp-awesome-components",
-            "version": "0.4.3",
+            "version": "0.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-components.git",
-                "reference": "e31563423a8e55abc5371a540af44eacd985ffb0"
+                "reference": "4f748641ca81f2af4b4d9831c9c75d3ad374ab9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/e31563423a8e55abc5371a540af44eacd985ffb0",
-                "reference": "e31563423a8e55abc5371a540af44eacd985ffb0",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/4f748641ca81f2af4b4d9831c9c75d3ad374ab9d",
+                "reference": "4f748641ca81f2af4b4d9831c9c75d3ad374ab9d",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +103,7 @@
                 }
             ],
             "description": "A library to add some awesome components for WordPress.",
-            "time": "2017-12-11 06:11:07"
+            "time": "2018-01-15 15:09:06"
         },
         {
             "name": "inc2734/wp-awesome-widgets",
