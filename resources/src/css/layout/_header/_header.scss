@@ -8,18 +8,8 @@
     border-bottom: none;
   }
 
-  &--center {
-    @include _media-min(lg) {
-      @include _padding(1, 0, 0);
-    }
-  }
-
-  &--1row {
-    @include _media-min(lg) {
-      padding: 0;
-    }
-  }
-
+  &--center,
+  &--1row,
   &--2row {
     @include _media-min(lg) {
       padding: 0;
@@ -92,6 +82,14 @@
   &__branding {
     flex: 0 0 auto;
     @include _margin-right(1);
+
+    @include _media-min(lg) {
+      @include _padding(.25, 0);
+
+      .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
+        @include _padding(10px, 0);
+      }
+    }
   }
 
   &__for-wide {
@@ -135,17 +133,28 @@
     @include _margin-right(1);
 
     @include _media-min(lg) {
-      @include _padding(.5, 0, .25);
+      @include _padding(.25, 0);
+
+      .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
+        @include _padding(.5, 0, .25);
+      }
     }
   }
 
   &__for-wide {
     flex: none;
-    width: 100%;
     @include _hidden();
 
     @include _media-min(lg) {
       @include _visible();
+
+      margin-right: calc(50% - 50vw);
+      margin-left: calc(50% - 50vw);
+      width: 100vw;
+
+      > .#{$_prefix}p-global-nav {
+        @include _container();
+      }
     }
   }
 
@@ -181,7 +190,12 @@
     text-align: center;
 
     @include _media-min(lg) {
-      @include _margin-bottom(.25);
+      @include _padding(.5, 0);
+
+      .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
+        @include _margin(1, 0, .25);
+        padding: 0;
+      }
     }
   }
 
