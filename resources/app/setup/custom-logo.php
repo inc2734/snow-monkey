@@ -38,7 +38,7 @@ add_action( 'wp_head', function() {
 	?>
 <style>
 .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
-@media (min-width: 40em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width / 2 ); ?>px; } }
+@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width / 2 ); ?>px; } }
 </style>
 	<?php
 } );

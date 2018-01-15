@@ -6,7 +6,7 @@
  */
 ?>
 <header class="l-header l-header--<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>" role="banner">
-	<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header">
+	<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header" data-has-global-nav="<?php echo esc_attr( has_nav_menu( 'global-nav' ) ? 'true' : 'false' ); ?>">
 		<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header__row">
 			<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
 				<div class="l-<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>-header__for-narrow"></div>

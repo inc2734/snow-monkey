@@ -1,14 +1,20 @@
 .#{$_prefix}c-site-branding {
   &__title {
+    @include _font-size($_base-font-size);
+    @include _line-height($_base-font-size * 1.5);
+
+    @include _media-min(md) {
+      @include _font-size($_base-font-size * 1.5);
+      @include _line-height($_base-font-size * 2);
+    }
+
+    @include _media-min(lg) {
+      @include _font-size-line-height($_base-font-size * 2);
+    }
+
     > a {
       color: $_color-text;
       text-decoration: none;
-    }
-  }
-
-  .#{$_prefix}l-1row-header & {
-    @include _media-min(lg) {
-      @include _padding(10px, 0);
     }
   }
 }
