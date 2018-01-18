@@ -13,7 +13,7 @@ add_filter( 'mimizuku_layout', function( $layout ) {
 	$_wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
 
 	if ( is_front_page() && 'default' === $_wp_page_template ) {
-		return 'one-column-fluid';
+		return $layout;
 	}
 
 	$post_type = get_post_type();
