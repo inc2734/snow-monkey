@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-01-26 05:04+0900\n"
-"PO-Revision-Date: 2018-01-26 05:05+0900\n"
+"POT-Creation-Date: 2018-01-26 05:22+0900\n"
+"PO-Revision-Date: 2018-01-26 05:23+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -29,8 +29,8 @@ msgstr "アーカイブページの設定"
 #: app/customizer/archive-page.php:14
 msgid "Applies to archive page and search page."
 msgstr ""
-"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適用"
-"されます。"
+"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適"
+"用されます。"
 
 #: app/customizer/archive-page.php:27 app/customizer/singular-post.php:27
 msgid "Page layout"
@@ -119,8 +119,8 @@ msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
 "displayed in the prescribed part of the theme."
 msgstr ""
-"レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告が"
-"表示されます。"
+"レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
+"が表示されます。"
 
 #: app/customizer/homepage.php:18
 msgid "Display recent posts when using homepage"
@@ -135,8 +135,8 @@ msgid ""
 "If the post using more tag and password protect at the same time, display "
 "contents before more tag"
 msgstr ""
-"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテン"
-"ツを表示する"
+"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテ"
+"ンツを表示する"
 
 #: app/customizer/seo-sns.php:13
 msgid "SEO/SNS"
@@ -196,8 +196,8 @@ msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
 msgstr ""
-"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設定"
-"されていない場合はこの画像が使用されます。"
+"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設"
+"定されていない場合はこの画像が使用されます。"
 
 #: app/customizer/seo-sns.php:103
 msgid "Structured data"
@@ -472,6 +472,10 @@ msgstr "このウィジェットは固定フロントページに表示されま
 #: app/setup/widget-area.php:144
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
+
+#: template-parts/children-pages.php:20
+msgid "Children pages"
+msgstr "このページの子ページ"
 
 #: template-parts/comment.php:14
 msgid "Your comment is awaiting moderation."
