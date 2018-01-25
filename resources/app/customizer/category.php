@@ -12,7 +12,7 @@ $customizer = Customizer_Framework::init();
 $terms = get_terms( [ 'category' ] );
 foreach ( $terms as $term ) {
 	$customizer->section( 'category-' . $term->term_id, [
-		'title'           => sprintf( __( 'Settings of [ %1$s ] category', 'snow-monkey' ), $term->name ),
+		'title'           => sprintf( __( '[ %1$s ] category settings', 'snow-monkey' ), $term->name ),
 		'priority'        => 1110,
 		'active_callback' => function() use ( $term ) {
 			return is_category( $term->term_id );

@@ -6,7 +6,9 @@
  */
 
 $terms = get_the_terms( get_the_ID(), 'category' );
-$term  = $terms[0];
+if ( ! is_wp_error( $terms ) ) {
+	$term  = $terms[0];
+}
 ?>
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term->term_id ); ?>">
@@ -19,7 +21,9 @@ $term  = $terms[0];
 			$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
 			?>
 			<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
-			<span class="c-entry-summary__term"><?php echo esc_html( $term->name ); ?></span>
+			<?php if ( ! empty( $term ) ) : ?>
+				<span class="c-entry-summary__term"><?php echo esc_html( $term->name ); ?></span>
+			<?php endif; ?>
 		</div>
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2017-12-11 11:29+0900\n"
-"PO-Revision-Date: 2017-12-11 11:30+0900\n"
+"POT-Creation-Date: 2018-01-26 05:04+0900\n"
+"PO-Revision-Date: 2018-01-26 05:05+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,16 +16,30 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
+#: app/customizer/archive-page.php:13
+msgid "Archive page settings"
+msgstr "アーカイブページの設定"
+
+#: app/customizer/archive-page.php:14
+msgid "Applies to archive page and search page."
+msgstr ""
+"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適用"
+"されます。"
+
+#: app/customizer/archive-page.php:27 app/customizer/singular-post.php:27
+msgid "Page layout"
+msgstr "ページレイアウト"
+
 #: app/customizer/category.php:15
 #, php-format
-msgid "Settings of [ %1$s ] category"
-msgstr "カテゴリー [ %1$s ] の設定"
+msgid "[ %1$s ] category settings"
+msgstr "[ %1$s ] カテゴリーの設定"
 
 #: app/customizer/category.php:28
 #, php-format
@@ -105,33 +119,15 @@ msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
 "displayed in the prescribed part of the theme."
 msgstr ""
-"レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
-"が表示されます。"
+"レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告が"
+"表示されます。"
 
-#: app/customizer/post-type-archive.php:16
-#, php-format
-msgid ""
-"Applies to archive of %1$s, category archice, tag archive and search page."
-msgstr ""
-"%1$sのアーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ペー"
-"ジに適用されます。"
-
-#: app/customizer/post-type-archive.php:20
-#, php-format
-msgid "Applies to archive of %1$s and taxonomy archive of %1$s."
-msgstr "%1$sのアーカイブページ、%1$sのタクソノミーアーカイブに適用されます。"
-
-#: app/customizer/post-type-archive.php:26
-#, php-format
-msgid "Settings of %1$s archive"
-msgstr "%1$sアーカイブの設定"
-
-#: app/customizer/post-type-archive.php:42 app/customizer/singular.php:31
-msgid "Page layout"
-msgstr "ページレイアウト"
+#: app/customizer/homepage.php:18
+msgid "Display recent posts when using homepage"
+msgstr "ホームページ使用時に最近の投稿を表示する"
 
 #: app/customizer/protected.php:13
-msgid "Settings of password protected"
+msgid "Password protected settings"
 msgstr "パスワード保護の設定"
 
 #: app/customizer/protected.php:18
@@ -139,8 +135,8 @@ msgid ""
 "If the post using more tag and password protect at the same time, display "
 "contents before more tag"
 msgstr ""
-"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテ"
-"ンツを表示する"
+"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテン"
+"ツを表示する"
 
 #: app/customizer/seo-sns.php:13
 msgid "SEO/SNS"
@@ -200,159 +196,161 @@ msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
 msgstr ""
-"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設"
-"定されていない場合はこの画像が使用されます。"
+"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設定"
+"されていない場合はこの画像が使用されます。"
 
 #: app/customizer/seo-sns.php:103
+msgid "Structured data"
+msgstr "構造化データ"
+
+#: app/customizer/seo-sns.php:107
+msgid "Output structred data (JSON+LD)"
+msgstr "構造化データ（JSON+LD）を出力する"
+
+#: app/customizer/seo-sns.php:120
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
-#: app/customizer/seo-sns.php:105
+#: app/customizer/seo-sns.php:122
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
-#: app/customizer/seo-sns.php:111
+#: app/customizer/seo-sns.php:128
 msgid "twitter:card"
 msgstr "twitter:card"
 
-#: app/customizer/seo-sns.php:112
+#: app/customizer/seo-sns.php:129
 msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
-#: app/customizer/seo-sns.php:116
+#: app/customizer/seo-sns.php:133
 msgid "Do not use"
 msgstr "使用しない"
 
-#: app/customizer/seo-sns.php:123
+#: app/customizer/seo-sns.php:140
 msgid "twitter:site"
 msgstr "twitter:site"
 
-#: app/customizer/seo-sns.php:125
+#: app/customizer/seo-sns.php:142
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
-#: app/customizer/seo-sns.php:142
+#: app/customizer/seo-sns.php:159
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
-#: app/customizer/seo-sns.php:146
+#: app/customizer/seo-sns.php:163
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
-#: app/customizer/seo-sns.php:148
+#: app/customizer/seo-sns.php:165
 #, php-format
 msgctxt "facebook-page-name"
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
-#: app/customizer/seo-sns.php:163
+#: app/customizer/seo-sns.php:180
 msgid "Share buttons"
 msgstr "シェアボタン"
 
-#: app/customizer/seo-sns.php:165
+#: app/customizer/seo-sns.php:182
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
-#: app/customizer/seo-sns.php:171
+#: app/customizer/seo-sns.php:188
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
-#: app/customizer/seo-sns.php:174
+#: app/customizer/seo-sns.php:191
 msgid "Facebook"
 msgstr "Facebook"
 
-#: app/customizer/seo-sns.php:175
+#: app/customizer/seo-sns.php:192
 msgid "Twitter"
 msgstr "Twitter"
 
-#: app/customizer/seo-sns.php:176
+#: app/customizer/seo-sns.php:193
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/seo-sns.php:177
+#: app/customizer/seo-sns.php:194
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/seo-sns.php:178
+#: app/customizer/seo-sns.php:195
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/seo-sns.php:179
+#: app/customizer/seo-sns.php:196
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/seo-sns.php:180
+#: app/customizer/seo-sns.php:197
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/seo-sns.php:186
+#: app/customizer/seo-sns.php:203
 msgid "Type"
 msgstr "種類"
 
-#: app/customizer/seo-sns.php:189
+#: app/customizer/seo-sns.php:206
 msgid "Balloon"
 msgstr "バルーン"
 
-#: app/customizer/seo-sns.php:190
+#: app/customizer/seo-sns.php:207
 msgid "Horizontal"
 msgstr "水平"
 
-#: app/customizer/seo-sns.php:191
+#: app/customizer/seo-sns.php:208
 msgid "Icon"
 msgstr "アイコン"
 
-#: app/customizer/seo-sns.php:192
+#: app/customizer/seo-sns.php:209
 msgid "Block"
 msgstr "ブロック"
 
-#: app/customizer/seo-sns.php:193
+#: app/customizer/seo-sns.php:210
 msgid "Official"
 msgstr "公式"
 
-#: app/customizer/seo-sns.php:199
+#: app/customizer/seo-sns.php:216
 msgid "Display position"
 msgstr "表示する場所"
 
-#: app/customizer/seo-sns.php:202
+#: app/customizer/seo-sns.php:219
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:203
+#: app/customizer/seo-sns.php:220
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
-#: app/customizer/seo-sns.php:204
+#: app/customizer/seo-sns.php:221
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns.php:210
+#: app/customizer/seo-sns.php:227
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 
-#: app/customizer/singular.php:16
-#, php-format
-msgid "Settings of %1$s"
-msgstr "%1$sの設定"
+#: app/customizer/singular-post.php:13
+msgid "Singular post settings"
+msgstr "個別投稿の設定"
 
-#: app/customizer/singular.php:17
-#, php-format
-msgid "Applies to singular page of %1$s."
-msgstr "%1$sのページに適用されます。"
+#: app/customizer/singular-post.php:14
+msgid "Applies to singular post."
+msgstr "個別投稿に適用されます。"
 
-#: app/customizer/singular.php:47
+#: app/customizer/singular-post.php:39
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/singular.php:65
+#: app/customizer/singular-post.php:57
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
-
-#: app/customizer/static-front-page.php:18
-msgid "Display recent posts when using static front page"
-msgstr "固定フロントページ使用時に最近の投稿を表示する"
 
 #: app/customizer/title-tagline.php:12 template-parts/copyright.php:10
 msgid "Monkey Wrench"
@@ -488,15 +486,11 @@ msgstr "%1$s said on %2$s at %3$s"
 msgid "Edit this comment"
 msgstr "コメントを編集"
 
-#: template-parts/comments.php:10
+#: template-parts/comments.php:15
 msgid "Comments on this post"
 msgstr "この投稿へのコメント"
 
 #: template-parts/comments.php:42
-msgid "Comments are closed."
-msgstr "コメントは閉じられています。"
-
-#: template-parts/comments.php:47
 msgid "No comments."
 msgstr "コメントはありません。"
 
@@ -512,15 +506,15 @@ msgstr "More"
 msgid "Scroll up"
 msgstr "上にスクロール"
 
-#: template-parts/pings.php:10
+#: template-parts/pings.php:15
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
 
-#: template-parts/pings.php:29
+#: template-parts/pings.php:33
 msgid "No trackbacks."
 msgstr "トラックバックはありません。"
 
-#: template-parts/pings.php:36
+#: template-parts/pings.php:40
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
@@ -587,6 +581,22 @@ msgstr "1カラム"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "Applies to archive of %1$s and taxonomy archive of %1$s."
+#~ msgstr ""
+#~ "%1$sのアーカイブページ、%1$sのタクソノミーアーカイブに適用されます。"
+
+#~ msgid "Settings of %1$s archive"
+#~ msgstr "%1$sアーカイブの設定"
+
+#~ msgid "Settings of password protected"
+#~ msgstr "パスワード保護の設定"
+
+#~ msgid "Settings of %1$s"
+#~ msgstr "%1$sの設定"
+
+#~ msgid "Comments are closed."
+#~ msgstr "コメントは閉じられています。"
 
 #~ msgid "Applies to [ %1$s ] category."
 #~ msgstr "カテゴリー [ %1$s ] に適用されます。"

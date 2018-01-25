@@ -12,10 +12,10 @@ $customizer = Customizer_Framework::init();
 $customizer->section( 'static_front_page', [] );
 
 /**
- * Display recent posts when using static front page
+ * Display recent posts when using homepage
  */
 $customizer->control( 'checkbox', 'display-static-front-page-recent-posts', [
-	'label'   => __( 'Display recent posts when using static front page', 'snow-monkey' ),
+	'label'   => __( 'Display recent posts when using homepage', 'snow-monkey' ),
 	'default' => true,
 	'active_callback' => function() {
 		return ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' ) && is_front_page() );
