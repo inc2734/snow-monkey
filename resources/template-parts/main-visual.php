@@ -6,7 +6,7 @@
  */
 
 $pickup_posts = get_posts( [
-	'post_type'      => 'post',
+	'post_type'      => 'any',
 	'posts_per_page' => -1,
 	'tax_query'      => [
 		[
