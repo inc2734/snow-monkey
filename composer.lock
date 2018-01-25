@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "370bba6c66bd800fcd5378048f95238e",
-    "content-hash": "44ca8603b3e466e1f5eca4d2268697be",
+    "hash": "7c098a5c0355054a3463906ee94e749e",
+    "content-hash": "4c1b94829fac5562fc3fd47bf980298f",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.5.8",
+            "version": "1.5.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "4b5efce0fb4a59bafb4a4cc6aa32da07965bb3d7"
+                "reference": "cae9faa2e3611823400ca48f543ae49ca826170c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4b5efce0fb4a59bafb4a4cc6aa32da07965bb3d7",
-                "reference": "4b5efce0fb4a59bafb4a4cc6aa32da07965bb3d7",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/cae9faa2e3611823400ca48f543ae49ca826170c",
+                "reference": "cae9faa2e3611823400ca48f543ae49ca826170c",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "inc2734/wp-profile-box": ">=0.1.1",
                 "inc2734/wp-pure-css-gallery": ">=0.1.4",
                 "inc2734/wp-seo": ">=0.7.1",
-                "inc2734/wp-share-buttons": ">=1.0.2",
+                "inc2734/wp-share-buttons": ">=1.0.3",
                 "inc2734/wp-view-controller": ">=3.0.0",
                 "php": ">=5.6"
             },
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-01-15 15:16:26"
+            "time": "2018-01-25 20:31:07"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -614,16 +614,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "ffcd171533840abe7e22c635807b412710dc04f5"
+                "reference": "ae7308ab174b4c2b3abe7e4959dbcf8a04f0a30e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/ffcd171533840abe7e22c635807b412710dc04f5",
-                "reference": "ffcd171533840abe7e22c635807b412710dc04f5",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/ae7308ab174b4c2b3abe7e4959dbcf8a04f0a30e",
+                "reference": "ae7308ab174b4c2b3abe7e4959dbcf8a04f0a30e",
                 "shasum": ""
             },
             "require": {
@@ -653,7 +653,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2018-01-10 02:27:57"
+            "time": "2018-01-25 20:28:01"
         },
         {
             "name": "inc2734/wp-view-controller",
