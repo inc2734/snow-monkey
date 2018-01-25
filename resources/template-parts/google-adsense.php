@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$google_adsense = get_option( 'mwt-google-adsense' );
+$google_adsense = apply_filters( 'snow_monkey_google_adsense', get_option( 'mwt-google-adsense' ) );
 
 if ( ! $google_adsense ) {
 	return;
