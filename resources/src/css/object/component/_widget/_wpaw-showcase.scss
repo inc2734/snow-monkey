@@ -58,6 +58,10 @@
     @include _padding(1, 0);
   }
 
+  @include _media-min(lg) {
+    background-attachment: fixed;
+  }
+
   .wpaw-showcase__inner {
     @include _margin(0, -.5);
 
