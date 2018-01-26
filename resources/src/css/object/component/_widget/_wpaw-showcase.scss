@@ -123,7 +123,7 @@
   }
 
   // front page widget areas
-  .#{$_prefix}c-section & {
+  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area & {
     @include widget-full-width();
   }
 

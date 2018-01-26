@@ -9,4 +9,8 @@
 
 $controller = new Mimizuku_Controller();
 $controller->layout( 'left-sidebar' );
-$controller->render( 'content', get_post_type() );
+if ( is_front_page() ) {
+	$controller->render( 'front-page' );
+} else {
+	$controller->render( 'content', get_post_type() );
+}
