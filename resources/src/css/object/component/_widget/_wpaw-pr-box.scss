@@ -3,36 +3,10 @@
 }
 
 .wpaw-pr-box {
-  // font page widget area
-  .#{$_prefix}c-section & {
-    @include widget-full-width();
+  @include _padding(1, .5);
 
-    @include _padding(1, 0);
-
-    @include _media-min(lg) {
-      @include _padding(2, 0);
-    }
-
-    &__inner {
-      @include _container();
-    }
-
-    &__title {
-      margin: 0;
-    }
-  }
-
-  // not front page widget area
-  .#{$_prefix}c-widget & {
-    @include _padding(.5);
-
-    @include _media-min(lg) {
-      @include _padding(1);
-    }
-  }
-
-  &__title {
-    margin: 0;
+  @include _media-min(md) {
+    @include _padding(1);
   }
 
   &__lead {
@@ -43,7 +17,39 @@
   }
 
   &__row {
+    @include _row();
+    @include _row--margin(1);
     @include _margin-top(1);
+  }
+
+  &__row {
+    @for $i from 1 through 5 {
+      &--#{$i} {
+        .wpaw-pr-box__item {
+          @include _row__col(1, $i);
+        }
+      }
+
+      &--md-#{$i} {
+        @include _media-min(md) {
+          .wpaw-pr-box__item {
+            @include _row__col(1, $i);
+          }
+        }
+      }
+
+      &--lg-#{$i} {
+        @include _media-min(lg) {
+          .wpaw-pr-box__item {
+            @include _row__col(1, $i);
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include _row__col--margin(1);
   }
 
   &__item-figure {
@@ -64,15 +70,41 @@
   }
 
   &__action {
-    @include _margin(1.5, 0, 0);
+    @include _margin(.5, 0, 0);
+
+    @include _media-min(md) {
+      @include _margin(1, 0, 0);
+    }
   }
 
   &__more {
     @include btn();
     @include _padding(.5, 1);
+    width: 100%;
 
     @include _media-min(lg) {
       @include _padding(.5, 2);
+      width: auto;
+    }
+  }
+
+  // font page widget area
+  .#{$_prefix}c-section & {
+    @include widget-full-width();
+    @include _padding(1.5, 0);
+
+    @include _media-min(lg) {
+      @include _padding(2, 0);
+    }
+
+    &__inner {
+      @include _container();
+    }
+
+    &__action {
+      @include _media-min(lg) {
+        @include _margin(1.5, 0, 0);
+      }
     }
   }
 }
