@@ -7,6 +7,12 @@
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
+	<style>
+	#wpaw-showcase-<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__lead,
+	#wpaw-showcase-<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__title {
+		color: <?php echo esc_attr( $instance['color'] ); ?>;
+	}
+	</style>
 
 	<div
 		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> js-bg-parallax"
