@@ -26,12 +26,6 @@
 					<main class="l-contents__main" role="main">
 						<?php $_view_controller->view(); ?>
 					</main>
-
-					<?php if ( ! is_home() && ! is_archive() && ! is_search() ) : ?>
-						<aside class="l-contents__sidebar" role="complementary">
-							<?php wpvc_get_sidebar(); ?>
-						</aside>
-					<?php endif; ?>
 				</div>
 			</div>
 		</div>

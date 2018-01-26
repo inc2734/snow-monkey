@@ -26,10 +26,6 @@
 					<main class="l-contents__main" role="main">
 						<?php $_view_controller->view(); ?>
 					</main>
-
-					<aside class="l-contents__sidebar" role="complementary">
-						<?php wpvc_get_sidebar(); ?>
-					</aside>
 				</div>
 			</div>
 		</div>
