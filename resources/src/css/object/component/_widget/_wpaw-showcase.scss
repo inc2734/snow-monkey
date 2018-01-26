@@ -110,10 +110,10 @@
 
   &--format-3 {
     .wpaw-showcase__figure {
-      @include _margin-bottom(-.75);
+      @include _margin-bottom(-.75); // equal .wpaw-showcase bottom padding
 
       @include _media-min(md) {
-        @include _margin-bottom(-1);
+        @include _margin-bottom(-1); // equal .wpaw-showcase bottom padding
       }
     }
   }
@@ -137,9 +137,11 @@
       @include _padding(2, 0);
     }
 
-    &__figure {
-      @include _media-min(lg) {
-        @include _margin-bottom(-2);
+    &--format-3 {
+      .wpaw-showcase__figure {
+        @include _media-min(lg) {
+          @include _margin-bottom(-2);
+        }
       }
     }
   }
