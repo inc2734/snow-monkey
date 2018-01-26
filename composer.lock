@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7fbb097908d83c19f828a2c7eb414641",
-    "content-hash": "5d86c3ed8db250018f3d242b085bae1c",
+    "hash": "10f3887e3779a8095efa1cb60a8d5f37",
+    "content-hash": "3b9a4c1d06a790d21096c1d8c0050066",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.5.12",
+            "version": "1.5.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "c5774e8aace04e2e0afa0438df87c8a24fd4f4e3"
+                "reference": "b581efda85a5e41562e6066dd4d84b9875d8c9da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c5774e8aace04e2e0afa0438df87c8a24fd4f4e3",
-                "reference": "c5774e8aace04e2e0afa0438df87c8a24fd4f4e3",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/b581efda85a5e41562e6066dd4d84b9875d8c9da",
+                "reference": "b581efda85a5e41562e6066dd4d84b9875d8c9da",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
                 "inc2734/wp-basis": ">=0.7.2",
                 "inc2734/wp-breadcrumbs": ">=1.0.0",
                 "inc2734/wp-contents-outline": ">=0.3.2",
-                "inc2734/wp-customizer-framework": ">=3.0.0",
+                "inc2734/wp-customizer-framework": ">=3.0.2",
                 "inc2734/wp-github-theme-updater": ">=0.2.5",
                 "inc2734/wp-like-me-box": ">=0.1.2",
                 "inc2734/wp-oembed-blog-card": ">=1.0.4",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-01-26 07:57:27"
+            "time": "2018-01-26 09:09:05"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -277,16 +277,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "3.0.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "ed844feaa700077efd680245002f9b33889b2be6"
+                "reference": "067f86e2eb66be9f7c4ae7c448fa1fbcfd1b6045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/ed844feaa700077efd680245002f9b33889b2be6",
-                "reference": "ed844feaa700077efd680245002f9b33889b2be6",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/067f86e2eb66be9f7c4ae7c448fa1fbcfd1b6045",
+                "reference": "067f86e2eb66be9f7c4ae7c448fa1fbcfd1b6045",
                 "shasum": ""
             },
             "require": {
@@ -315,7 +315,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2018-01-26 07:25:26"
+            "time": "2018-01-26 08:59:36"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
