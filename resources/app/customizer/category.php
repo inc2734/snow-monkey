@@ -30,4 +30,14 @@ foreach ( $terms as $term ) {
 
 	$control = $customizer->get_control( 'category-' . $term->term_id . '-accent-color' );
 	$control->join( $section );
+
+	/**
+	 * Category header image
+	 */
+	$customizer->control( 'image', $term->taxonomy . '-' . $term->term_id . '-header-image', [
+		'label' => __( 'Header image', 'snow-monkey' ),
+	] );
+
+	$control = $customizer->get_control( $term->taxonomy . '-' . $term->term_id . '-header-image' );
+	$control->join( $section );
 }

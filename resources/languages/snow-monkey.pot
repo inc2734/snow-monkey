@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-01-26 05:22+0900\n"
-"PO-Revision-Date: 2018-01-26 05:23+0900\n"
+"POT-Creation-Date: 2018-01-28 16:05+0900\n"
+"PO-Revision-Date: 2018-01-28 16:06+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -45,6 +45,10 @@ msgstr "[ %1$s ] カテゴリーの設定"
 #, php-format
 msgid "Accent color of [ %1$s ] category"
 msgstr "カテゴリー [ %1$s ] のアクセントカラー"
+
+#: app/customizer/category.php:38
+msgid "Header image"
+msgstr "ヘッダー画像"
 
 #: app/customizer/design.php:13
 msgid "Design"

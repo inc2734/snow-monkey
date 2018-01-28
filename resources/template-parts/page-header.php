@@ -19,11 +19,23 @@ if ( is_singular() ) {
 	}
 	$thumbnail_id = get_post_thumbnail_id( get_option( 'page_for_posts' ) );
 
+	if ( is_category() ) {
+		$term = get_queried_object();
+		$header_image = get_theme_mod( 'category-' . $term->term_id . '-header-image' );
+	}
 }
 
-if ( empty( $thumbnail_id ) ) {
+if ( empty( $header_image ) ) {
+	if ( empty( $thumbnail_id ) ) {
+		return;
+	}
+
+	$header_image = wp_get_attachment_image_url( $thumbnail_id, 'large' );
+}
+
+if ( empty( $header_image ) ) {
 	return;
 }
 ?>
 
-<div class="c-page-header js-bg-parallax" style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $thumbnail_id, 'large' ) ); ?>);"></div>
+<div class="c-page-header js-bg-parallax" style="background-image: url(<?php echo esc_url( $header_image ); ?>);"></div>
