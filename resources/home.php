@@ -10,5 +10,5 @@ $post_type = get_post_type();
 $controller = new Mimizuku_Controller();
 $controller->layout( get_theme_mod( 'archive-page-layout' ) );
 if ( have_posts() ) {
-	$controller->render( 'archive', $post_type );
+	$controller->render( 'home' );
 }
