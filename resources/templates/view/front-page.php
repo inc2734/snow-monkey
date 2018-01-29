@@ -6,8 +6,6 @@
  */
 ?>
 <article <?php post_class(); ?>>
-	<?php get_template_part( 'template-parts/main-visual' ); ?>
-
 	<?php get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
 
 	<?php

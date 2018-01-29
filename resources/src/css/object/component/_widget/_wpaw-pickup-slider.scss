@@ -1,20 +1,19 @@
-.p-main-visual {
-  overflow: hidden;
-  visibility: hidden;
+.widget_inc2734_wp_awesome_widgets_pickup_slider {
+  padding: 0;
+}
 
-  &.slick-initialized {
-    visibility: visible;
-  }
+.wpaw-pickup-slider {
+  &__canvas {
+    overflow: hidden;
 
-  @include _hover(lg) {
-    .slick-arrow {
-      transform: translateX(0);
+    @include _hover(lg) {
+      .slick-arrow {
+        transform: translateX(0);
+      }
     }
   }
 
   &__figure {
-    display: block;
-    @include _background-image-cover();
     transform: translate3d(1em, 0, 0);
 
     &::before {
@@ -29,7 +28,6 @@
   }
 
   &__item-body {
-    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,12 +78,14 @@
   }
 
   &__item-more {
-    @extend .#{$_prefix}c-btn;
+    @include _btn;
     @include _margin(1.5, 0, 0);
     @include _padding(.5, 3);
     max-width: 100%;
     background-color: transparent;
     border: 1px solid #fff;
+    border-radius: $_border-radius;
+    color: #fff;
     @include _transition(all);
 
     @include _hover(lg) {
@@ -95,14 +95,13 @@
   }
 
   .slick-current {
-    .p-main-visual__item-body {
+    .wpaw-pickup-slider__item-body {
       opacity: 1;
       visibility: visible;
     }
   }
 
   &__item {
-    position: relative;
     display: flex !important;
     flex-direction: row;
     align-items: center;
@@ -117,7 +116,7 @@
       flex: 1 1 auto;
     }
 
-    .p-main-visual__figure {
+    .wpaw-pickup-slider__figure {
       @include _position(absolute, 0, -2em, 0, -2em);
     }
   }
@@ -125,7 +124,7 @@
   .slick-slide {
     &.slick-current,
     &.pan {
-      .p-main-visual__figure {
+      .wpaw-pickup-slider__figure {
         @keyframes main_visual_figure_move {
           from {
             transform: translate3d(0, 0, 0);
@@ -151,7 +150,7 @@
     border-radius: 0;
     color: #fff;
     @include _square(40px);
-    @include _transition(transform);
+    @include _transition(all);
 
     @include _media-min(md) {
       @include _square(50px);
@@ -186,5 +185,10 @@
       content: "\f054";
       right: -2px;
     }
+  }
+
+  // front page widget area
+  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area & {
+    @include widget-full-width();
   }
 }

@@ -16,8 +16,8 @@ new Inc2734_WP_Share_Buttons();
 import FixAdminBar from './fix-adminbar.js';
 new FixAdminBar();
 
-import SnowMonkeyMainVisual from './main-visual.js';
-new SnowMonkeyMainVisual();
+import SnowMonkeyWpawPickupSlider from './wpaw-pickup-slider.js';
+new SnowMonkeyWpawPickupSlider();
 
 import SnowMonkeyWidgetItemExpander from './widget-item-expander.js';
 new SnowMonkeyWidgetItemExpander();
