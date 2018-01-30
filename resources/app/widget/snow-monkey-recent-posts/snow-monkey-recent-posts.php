@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
+/**
+ * Snow_Monkey_Recent_Posts_Widget
+ */
 class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
 
 	/**
