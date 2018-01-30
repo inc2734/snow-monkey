@@ -5,6 +5,9 @@
   .#{$_prefix}l-body--one-column-slim &,
   .#{$_prefix}l-body--right-sidebar &,
   .#{$_prefix}l-body--left-sidebar & {
+    padding-top: 0;
+    padding-bottom: 0;
+
     > .#{$_prefix}c-container {
       padding-right: 0;
       padding-left: 0;

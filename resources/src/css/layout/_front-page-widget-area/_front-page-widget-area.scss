@@ -1,2 +1,14 @@
 .#{$_prefix}l-front-page-widget-area {
+  .home.#{$_prefix}l-body--one-column &,
+  .home.#{$_prefix}l-body--one-column-slim &,
+  .home.#{$_prefix}l-body--right-sidebar &,
+  .home.#{$_prefix}l-body--left-sidebar & {
+    > * + * {
+      @include _margin-top(1.5);
+
+      @include _media-min(md) {
+        @include _margin-top(2);
+      }
+    }
+  }
 }

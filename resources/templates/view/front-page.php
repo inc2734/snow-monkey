@@ -16,7 +16,9 @@
 	<?php if ( $content ) : ?>
 		<div class="c-section">
 			<div class="c-container">
-				<?php the_content(); ?>
+				<div class="c-entry__content">
+					<?php the_content(); ?>
+				</div>
 			</div>
 		</div>
 	<?php endif; ?>
