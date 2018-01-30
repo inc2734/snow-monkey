@@ -42,7 +42,11 @@
       padding: 0;
 
       > a {
-        @include _padding(1, 0);
+        @include _padding(.5, 0);
+
+        @include _media-min(md) {
+          @include _padding(1, 0);
+        }
       }
     }
   }
@@ -51,7 +55,7 @@
 .#{$_prefix}l-body--right-sidebar,
 .#{$_prefix}l-body--left-sidebar {
   .#{$_prefix}l-contents__main {
-    > .#{$_prefix}c-entries--rich-media {
+    .#{$_prefix}c-entries--rich-media {
       .#{$_prefix}c-entries__item {
         @include _media-min(lg) {
           @include _row__col--width(50%);

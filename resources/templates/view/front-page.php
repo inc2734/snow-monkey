@@ -21,11 +21,5 @@
 		</div>
 	<?php endif; ?>
 
-	<?php
-	if ( get_theme_mod( 'display-static-front-page-recent-posts' ) ) {
-		get_template_part( 'template-parts/recent-posts' );
-	}
-	?>
-
 	<?php get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>
 </article>

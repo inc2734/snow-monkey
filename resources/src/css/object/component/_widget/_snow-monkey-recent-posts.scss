@@ -1,0 +1,120 @@
+.snow-monkey-recent-posts {
+  .#{$_prefix}c-entries {
+    &--rich-media {
+      .#{$_prefix}c-entries {
+        @include _media-min(lg) {
+          @include _row--margin(1);
+        }
+      }
+
+      .#{$_prefix}c-entries__item {
+        @include _row__col(1, 2);
+
+        @include _media-min(lg) {
+          @include _row__col(1, 1);
+          @include _row__col--margin(1);
+        }
+      }
+    }
+
+    &--simple {
+      .#{$_prefix}c-entries__item {
+        &:first-child {
+          > a {
+            padding-top: 0;
+          }
+        }
+      }
+
+      .#{$_prefix}c-entry-summary__term {
+        @include _media-min(lg) {
+          display: none;
+        }
+      }
+
+      .#{$_prefix}c-entry-summary__figure {
+        @include _media-min(lg) {
+          @include _margin-right(.5);
+        }
+      }
+    }
+
+    .#{$_prefix}c-entry-summary {
+      &__title {
+        @include _font-size-line-height($_base-font-size);
+      }
+    }
+  }
+
+  // main area widget areas
+  .#{$_prefix}l-contents__main & {
+    .#{$_prefix}c-entries {
+      &--rich-media {
+        .#{$_prefix}c-entries {
+          @include _media-min(lg) {
+            @include _row--margin(2);
+          }
+        }
+
+        .#{$_prefix}c-entries__item {
+          @include _media-min(lg) {
+            @include _row__col(1, 3);
+            @include _row__col--margin(2);
+          }
+        }
+      }
+
+      &--simple {
+        .#{$_prefix}c-entry-summary__term {
+          @include _media-min(lg) {
+            display: block;
+          }
+        }
+
+        .#{$_prefix}c-entry-summary__figure {
+          @include _media-min(lg) {
+            @include _margin-right(1);
+          }
+        }
+      }
+
+      .#{$_prefix}c-entry-summary {
+        &__title {
+          @include _media-min(lg) {
+            @include _font-size-line-height($_base-font-size * 1.5);
+          }
+        }
+      }
+    }
+  }
+
+  &__action {
+    @include _margin(1, 0, 0);
+    text-align: center;
+
+    @include _media-min(lg) {
+      @include _margin(1.5, 0, 0);
+    }
+  }
+
+  &__more {
+    @extend .#{$_prefix}c-btn;
+    font-weight: bold;
+    width: auto;
+  }
+}
+
+.#{$_prefix}l-body--right-sidebar,
+.#{$_prefix}l-body--left-sidebar {
+  .#{$_prefix}l-contents__main {
+    .snow-monkey-recent-posts {
+      .#{$_prefix}c-entries--rich-media {
+        .#{$_prefix}c-entries__item {
+          @include _media-min(lg) {
+            @include _row__col--width(50%);
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-01-28 16:05+0900\n"
-"PO-Revision-Date: 2018-01-28 16:06+0900\n"
+"POT-Creation-Date: 2018-01-30 20:48+0900\n"
+"PO-Revision-Date: 2018-01-30 20:48+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -63,6 +63,7 @@ msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
 #: app/customizer/design.php:37 app/customizer/design.php:72
+#: app/widget/snow-monkey-recent-posts/_form.php:41
 msgid "Simple"
 msgstr "シンプル"
 
@@ -103,6 +104,7 @@ msgid "Archive layout"
 msgstr "記事一覧レイアウト"
 
 #: app/customizer/design.php:71
+#: app/widget/snow-monkey-recent-posts/_form.php:40
 msgid "Rich media"
 msgstr "リッチメディア"
 
@@ -125,10 +127,6 @@ msgid ""
 msgstr ""
 "レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
 "が表示されます。"
-
-#: app/customizer/homepage.php:18
-msgid "Display recent posts when using homepage"
-msgstr "ホームページ使用時に最近の投稿を表示する"
 
 #: app/customizer/protected.php:13
 msgid "Password protected settings"
@@ -477,6 +475,34 @@ msgstr "このウィジェットは固定フロントページに表示されま
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
 
+#: app/widget/snow-monkey-recent-posts/_form.php:11
+msgid "Title"
+msgstr "タイトル"
+
+#: app/widget/snow-monkey-recent-posts/_form.php:21
+msgid "Number of posts"
+msgstr "表示する投稿数"
+
+#: app/widget/snow-monkey-recent-posts/_form.php:33
+msgid "Layout"
+msgstr "レイアウト"
+
+#: app/widget/snow-monkey-recent-posts/_form.php:51
+msgid "Link URL"
+msgstr "リンク URL"
+
+#: app/widget/snow-monkey-recent-posts/_form.php:61
+msgid "Link text"
+msgstr "リンクテキスト"
+
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:22
+msgid "Snow Monkey: Recent posts"
+msgstr "Snow Monkey: 最近の投稿"
+
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:25
+msgid "Recent posts"
+msgstr "最近の投稿"
+
 #: template-parts/children-pages.php:20
 msgid "Children pages"
 msgstr "このページの子ページ"
@@ -534,10 +560,6 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/recent-posts.php:20
-msgid "Recent Posts"
-msgstr "最近の投稿"
-
 #: template-parts/related-posts.php:64
 msgid "Related posts"
 msgstr "関連記事"
@@ -589,6 +611,9 @@ msgstr "1カラム"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "Display recent posts when using homepage"
+#~ msgstr "ホームページ使用時に最近の投稿を表示する"
 
 #~ msgid "Applies to archive of %1$s and taxonomy archive of %1$s."
 #~ msgstr ""

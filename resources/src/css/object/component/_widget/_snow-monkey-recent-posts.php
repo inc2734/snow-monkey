@@ -12,15 +12,15 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
-	'.p-recent-posts__more-btn',
+	'.snow-monkey-recent-posts__more',
 	'background-color: ' . $accent_color
 );
 
 $cfs->register(
 	[
-		'.p-recent-posts__more-btn:hover',
-		'.p-recent-posts__more-btn:active',
-		'.p-recent-posts__more-btn:focus',
+		'.snow-monkey-recent-posts__more:hover',
+		'.snow-monkey-recent-posts__more:active',
+		'.snow-monkey-recent-posts__more:focus',
 	],
 	'background-color: ' . $cfs->darken( $accent_color, 0.05 ),
 	'@media (min-width: 64em)'

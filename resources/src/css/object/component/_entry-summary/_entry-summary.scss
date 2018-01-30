@@ -112,8 +112,12 @@
 
     &__figure {
       float: left;
-      @include _margin($_between-lines, 1, 0, 0);
+      @include _margin($_between-lines, .5, 0, 0);
       width: 20%;
+
+      @include _media-min(md) {
+        @include _margin-right(1);
+      }
     }
 
     &__term {
