@@ -1,10 +1,8 @@
 .snow-monkey-recent-posts {
   .#{$_prefix}c-entries {
     &--rich-media {
-      .#{$_prefix}c-entries {
-        @include _media-min(lg) {
-          @include _row--margin(1);
-        }
+      @include _media-min(lg) {
+        @include _row--margin(1);
       }
 
       .#{$_prefix}c-entries__item {

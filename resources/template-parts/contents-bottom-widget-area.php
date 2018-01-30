@@ -10,11 +10,13 @@ if ( ! $post_type ) {
 	$post_type = 'page';
 }
 
+// @deprecated {$post_type}-post-type-contents-bottom-widget-area
 if ( ! is_active_sidebar( $post_type . '-post-type-contents-bottom-widget-area' ) ) {
 	return;
 }
 ?>
 
 <div class="l-contents-bottom-widget-area">
+	<?php dynamic_sidebar( 'contents-bottom-widget-area' ); ?>
 	<?php dynamic_sidebar( $post_type . '-post-type-contents-bottom-widget-area' ); ?>
 </div>

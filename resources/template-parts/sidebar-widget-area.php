@@ -10,11 +10,13 @@ if ( ! $post_type ) {
 	$post_type = 'page';
 }
 
-if ( ! is_active_sidebar( $post_type . '-post-type-sidebar-widget-area' ) ) {
+// @deprecated {$post_type}-post-type-sidebar-widget-area
+if ( ! is_active_sidebar( $post_type . '-post-type-sidebar-widget-area' ) && ! is_active_sidebar( 'sidebar-widget-area' ) ) {
 	return;
 }
 ?>
 
 <div class="l-sidebar-widget-area">
+	<?php dynamic_sidebar( 'sidebar-widget-area' ); ?>
 	<?php dynamic_sidebar( $post_type . '-post-type-sidebar-widget-area' ); ?>
 </div>

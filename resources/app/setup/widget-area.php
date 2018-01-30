@@ -8,9 +8,14 @@
 /**
  * Add sidebar widget area
  *
+ * @deprecated
  * @return void
  */
 add_action( 'init', function() {
+	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
+		return;
+	}
+
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -40,11 +45,43 @@ add_action( 'init', function() {
 }, 11 );
 
 /**
+ * Add sidebar widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Sidebar', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the singular post sidebar.', 'snow-monkey' ),
+		'id'            => 'sidebar-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+
+	register_sidebar( [
+		'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the singular post sidebar.', 'snow-monkey' ),
+		'id'            => 'sidebar-sticky-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
+
+/**
 * Add top of title widget area
 *
+* @deprecated
 * @return void
 */
 add_action( 'init', function() {
+	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
+		return;
+	}
+
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -62,11 +99,33 @@ add_action( 'init', function() {
 }, 11 );
 
 /**
+* Add top of title widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Top of page title', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the top of page title.', 'snow-monkey' ),
+		'id'            => 'title-top-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
+
+/**
 * Add bottom of contents widget area
 *
+* @deprecated
 * @return void
 */
 add_action( 'init', function() {
+	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
+		return;
+	}
+
 	$post_types = snow_monkey_get_public_post_types();
 	foreach ( $post_types as $post_type => $post_type_object ) {
 		register_sidebar( [
@@ -82,6 +141,24 @@ add_action( 'init', function() {
 		] );
 	}
 }, 11 );
+
+/**
+* Add bottom of contents widget area
+*
+* @deprecated
+* @return void
+*/
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Bottom of contents', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the bottom of singular post contents.', 'snow-monkey' ),
+		'id'            => 'contents-bottom-widget-area',
+		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="c-widget__title"><span>',
+		'after_title'   => '</span></h2>',
+	] );
+} );
 
 /**
 * Add sidebar widget area

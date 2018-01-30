@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-01-30 20:48+0900\n"
-"PO-Revision-Date: 2018-01-30 20:48+0900\n"
+"POT-Creation-Date: 2018-01-30 23:00+0900\n"
+"PO-Revision-Date: 2018-01-30 23:01+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -326,7 +326,7 @@ msgstr "表示する場所"
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:220
+#: app/customizer/seo-sns.php:220 app/setup/widget-area.php:153
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
@@ -412,66 +412,90 @@ msgstr "ソーシャルナビゲーション"
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/widget-area.php:18
+#: app/setup/widget-area.php:23
 #, php-format
 msgid "%1$s sidebar"
 msgstr "%1$s サイドバー"
 
-#: app/setup/widget-area.php:19 app/setup/widget-area.php:31
+#: app/setup/widget-area.php:24 app/setup/widget-area.php:36
 #, php-format
 msgid "This widgets are displayed in the %1$s page sidebar."
 msgstr "このウィジェットは%1$sページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:30
+#: app/setup/widget-area.php:35
 #, php-format
 msgid "%1$s sticky sidebar"
 msgstr "%1$s 追尾サイドバー"
 
-#: app/setup/widget-area.php:52
+#: app/setup/widget-area.php:54
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: app/setup/widget-area.php:55 app/setup/widget-area.php:65
+msgid "This widgets are displayed in the singular post sidebar."
+msgstr "このウィジェットは個別投稿のサイドバーに表示されます。"
+
+#: app/setup/widget-area.php:64
+msgid "Sticky sidebar"
+msgstr "追尾サイドバー"
+
+#: app/setup/widget-area.php:89
 #, php-format
 msgid "%1$s top of title"
 msgstr "%1$s タイトルの上"
 
-#: app/setup/widget-area.php:53
+#: app/setup/widget-area.php:90
 #, php-format
 msgid "This widgets are displayed in the top of %1$s title."
 msgstr "このウィジェットは%1$sのタイトル上に表示されます。"
 
-#: app/setup/widget-area.php:74
+#: app/setup/widget-area.php:108
+msgid "Top of page title"
+msgstr "ページタイトルの上"
+
+#: app/setup/widget-area.php:109
+msgid "This widgets are displayed in the top of page title."
+msgstr "このウィジェットはページタイトルの上に表示されます。"
+
+#: app/setup/widget-area.php:133
 #, php-format
 msgid "%1$s bottom of contents"
 msgstr "%1$s コンテンツの下"
 
-#: app/setup/widget-area.php:75
+#: app/setup/widget-area.php:134
 #, php-format
 msgid "This widgets are displayed in the bottom of %1$s contents."
 msgstr "このウィジェットは%1$sの記事下に表示されます。"
 
-#: app/setup/widget-area.php:93
+#: app/setup/widget-area.php:154
+msgid "This widgets are displayed in the bottom of singular post contents."
+msgstr "このウィジェットは個別投稿のコンテンツ下に表示されます。"
+
+#: app/setup/widget-area.php:170
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:95
+#: app/setup/widget-area.php:172
 msgid "This widgets are displayed in the archive page sidebar."
 msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:110
+#: app/setup/widget-area.php:187
 msgid "Footer"
 msgstr "フッター"
 
-#: app/setup/widget-area.php:112
+#: app/setup/widget-area.php:189
 msgid "This widgets are displayed in the footer."
 msgstr "このウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:127
+#: app/setup/widget-area.php:204
 msgid "Front page (Top of page)"
 msgstr "フロントページ（ページ上部）"
 
-#: app/setup/widget-area.php:129 app/setup/widget-area.php:146
+#: app/setup/widget-area.php:206 app/setup/widget-area.php:223
 msgid "This widgets are displayed in the static front page."
 msgstr "このウィジェットは固定フロントページに表示されます。"
 
-#: app/setup/widget-area.php:144
+#: app/setup/widget-area.php:221
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
 
@@ -495,11 +519,11 @@ msgstr "リンク URL"
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:22
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:25
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:25
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:28
 msgid "Recent posts"
 msgstr "最近の投稿"
 
