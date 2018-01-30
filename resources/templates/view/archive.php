@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 ?>
+<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
+
 <ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
 	<?php while ( have_posts() ) : ?>
 		<?php the_post(); ?>
