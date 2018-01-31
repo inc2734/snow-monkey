@@ -1,0 +1,19 @@
+$_base-font-size-px: 16px !default;
+$_between-lines: (1rem / 2.3) !default;
+$_container-max-width: 1280px !default;
+$_transition-duration: .2s !default;
+$_font-path: '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/font' !default;
+$_base-margin-bottom: 1 !default;
+$_h2-font-size-scale: 1.5 !default;
+$_h2-margin-top: $_base-margin-bottom * 2 !default;
+$_h3-margin-top: $_base-margin-bottom * 1.5 !default;
+$_h3-margin-bottom: $_base-margin-bottom * .75 !default;
+$_h4-margin-bottom: $_base-margin-bottom * .75 !default;
+$color-accent: #bd3c4f;
+
+@import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
+
+@import 'mixin/btn';
+@import 'mixin/section';
+@import 'mixin/entry-content';
+@import 'mixin/responsive-container';

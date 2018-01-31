@@ -1,0 +1,14 @@
+@mixin _responsive-container() {
+  position: relative;
+  height: 0;
+
+  iframe,
+  embed,
+  object {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}

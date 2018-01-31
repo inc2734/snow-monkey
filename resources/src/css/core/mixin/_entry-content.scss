@@ -1,0 +1,52 @@
+@mixin entry-content() {
+  @include _content(1.1);
+
+  > h2, > h3, > h4, > h5, > h6 {
+    & + h2, & + h3, & + h4, & + h5, & + h6 {
+      margin-top: 0;
+    }
+  }
+
+  > h2 {
+    border-left: 3px solid $color-accent;
+    background-color: _lightest($_color-gray);
+    @include _padding(.25, .25, .25, .5);
+  }
+
+  > h3 {
+    border-bottom: 1px solid _lighter($_color-gray);
+    @include _padding(0, 0, .25);
+  }
+
+  > table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+      border: 1px solid _lighter($_color-gray);
+      @include _padding(.25, .5);
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    thead {
+      th {
+        background-color: $color-accent;
+        border-right: 1px solid _light($color-accent);
+        border-left: 1px solid _light($color-accent);
+        color: #fff;
+      }
+    }
+  }
+
+  > ul,
+  > ol, {
+    > li {
+      & + li {
+        @include _margin-top(.25);
+      }
+    }
+  }
+}
