@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-01-31 13:24+0900\n"
-"PO-Revision-Date: 2018-01-31 13:25+0900\n"
+"POT-Creation-Date: 2018-01-31 23:36+0900\n"
+"PO-Revision-Date: 2018-01-31 23:37+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -62,7 +62,7 @@ msgstr "アクセントカラー"
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design.php:37 app/customizer/design.php:72
+#: app/customizer/design.php:37 app/customizer/design.php:83
 #: app/widget/snow-monkey-recent-posts/_form.php:41
 msgid "Simple"
 msgstr "シンプル"
@@ -80,35 +80,43 @@ msgid "Center logo"
 msgstr "中央ロゴ"
 
 #: app/customizer/design.php:51
+msgid "Header contents"
+msgstr "ヘッダーコンテンツ"
+
+#: app/customizer/design.php:52
+msgid "Displayed at only PC size."
+msgstr "PC サイズでのみ表示されます。"
+
+#: app/customizer/design.php:62
 msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
-#: app/customizer/design.php:54
+#: app/customizer/design.php:65
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/design.php:55
+#: app/customizer/design.php:66
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/design.php:56
+#: app/customizer/design.php:67
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/design.php:57
+#: app/customizer/design.php:68
 msgid "4 columns"
 msgstr "4カラム"
 
-#: app/customizer/design.php:68
+#: app/customizer/design.php:79
 msgid "Archive layout"
 msgstr "記事一覧レイアウト"
 
-#: app/customizer/design.php:71
+#: app/customizer/design.php:82
 #: app/widget/snow-monkey-recent-posts/_form.php:40
 msgid "Rich media"
 msgstr "リッチメディア"
 
-#: app/customizer/design.php:91
+#: app/customizer/design.php:102
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 

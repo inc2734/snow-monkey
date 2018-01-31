@@ -45,6 +45,17 @@ $control = $customizer->get_control( 'header-layout' );
 $control->join( $section );
 
 /**
+ * Header contents
+ */
+$customizer->control( 'textarea', 'header-content', [
+	'label'       => __( 'Header contents', 'snow-monkey' ),
+	'description' => __( 'Displayed at only PC size.', 'snow-monkey' ),
+] );
+
+$control = $customizer->get_control( 'header-content' );
+$control->join( $section );
+
+/**
  * Footer layout
  */
 $customizer->control( 'select', 'footer-widget-area-column-size', [

@@ -48,10 +48,8 @@
   .#{$_prefix}l-contents__main & {
     .#{$_prefix}c-entries {
       &--rich-media {
-        .#{$_prefix}c-entries {
-          @include _media-min(lg) {
-            @include _row--margin(2);
-          }
+        @include _media-min(lg) {
+          @include _row--margin(2);
         }
 
         .#{$_prefix}c-entries__item {

@@ -10,7 +10,8 @@
 
   &--center,
   &--1row,
-  &--2row {
+  &--2row,
+  &--simple {
     @include _media-min(lg) {
       padding: 0;
     }
@@ -53,20 +54,9 @@
  */
 .#{$_prefix}l-simple-header {
   &__row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-  }
-
-  &__branding {
-    flex: 0 0 auto;
-    @include _margin-right(1);
-  }
-
-  &__nav {
-    flex: 0 0 auto;
-    margin-left: auto;
+    @include _media-min(lg) {
+      @include _padding(.5, 0);
+    }
   }
 }
 
@@ -74,40 +64,16 @@
  * 1row header
  */
 .#{$_prefix}l-1row-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-
-  &__branding {
-    flex: 0 0 auto;
-    @include _margin-right(1);
-
+  &__branding,
+  &__content {
     @include _media-min(lg) {
-      @include _padding(.25, 0);
-
-      .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
-        @include _padding(10px, 0);
-      }
+      @include _padding(.5, 0);
     }
   }
 
-  &__for-wide {
-    flex: 0 1 auto;
-    margin-left: auto;
-    @include _hidden();
-
-    @include _media-min(lg) {
-      @include _visible();
-    }
-  }
-
-  &__for-narrow {
-    flex: 0 0 auto;
-    margin-left: auto;
-
-    @include _media-min(lg) {
-      @include _hidden();
+  .#{$_prefix}p-global-nav .#{$_prefix}c-navbar {
+    &__item {
+      flex: 0 1 auto;
     }
   }
 }
@@ -117,53 +83,19 @@
  */
 .#{$_prefix}l-2row-header {
   &__row {
-    @include _container();
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    @include _media-min(lg) {
-      flex-wrap: wrap;
-    }
-  }
-
-  &__branding {
-    flex: 0 0 auto;
-    @include _margin-right(1);
-
-    @include _media-min(lg) {
-      @include _padding(.25, 0);
-
-      .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
-        @include _padding(.5, 0, .25);
+    &:nth-child(1) {
+      @include _media-min(lg) {
+        @include _padding(.5, 0);
       }
     }
   }
 
-  &__for-wide {
-    flex: none;
-    @include _hidden();
-
-    @include _media-min(lg) {
-      @include _visible();
-
-      margin-right: calc(50% - 50vw);
-      margin-left: calc(50% - 50vw);
-      width: 100vw;
-
-      > .#{$_prefix}p-global-nav {
-        @include _container();
+  .#{$_prefix}p-global-nav .#{$_prefix}c-navbar {
+    &__item {
+      > a {
+        @include _padding-top(.5);
+        @include _padding-bottom(.5);
       }
-    }
-  }
-
-  &__for-narrow {
-    flex: 0 0 auto;
-    margin-left: auto;
-
-    @include _media-min(lg) {
-      @include _hidden();
     }
   }
 }
@@ -173,48 +105,17 @@
  */
 .#{$_prefix}l-center-header {
   &__row {
-    @include _container();
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-
-    @include _media-min(lg) {
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  }
-
-  &__branding {
-    flex: 1 1 auto;
-    text-align: center;
-
-    @include _media-min(lg) {
-      @include _padding(.5, 0);
+    &:nth-child(1) {
+      @include _media-min(lg) {
+        @include _padding(.5, 0);
+      }
 
       .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
-        @include _margin(1, 0, .25);
-        padding: 0;
+        @include _media-min(lg) {
+          @include _margin(1, 0, .25);
+          padding: 0;
+        }
       }
-    }
-  }
-
-  &__for-wide {
-    flex: 0 1 auto;
-    @include _hidden();
-
-    @include _media-min(lg) {
-      @include _visible();
-    }
-  }
-
-  &__for-narrow {
-    flex: 0 0 50px;
-    max-width: 100%;
-    text-align: right;
-
-    @include _media-min(lg) {
-      @include _hidden();
     }
   }
 }
