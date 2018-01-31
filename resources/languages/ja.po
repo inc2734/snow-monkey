@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-01-30 23:51+0900\n"
-"PO-Revision-Date: 2018-01-30 23:53+0900\n"
+"POT-Creation-Date: 2018-01-31 13:24+0900\n"
+"PO-Revision-Date: 2018-01-31 13:25+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -209,132 +209,156 @@ msgstr "構造化データ"
 msgid "Output structred data (JSON+LD)"
 msgstr "構造化データ（JSON+LD）を出力する"
 
-#: app/customizer/seo-sns.php:120
+#: app/customizer/seo-sns.php:113
+msgid "Date for the search engine"
+msgstr "検索エンジンに伝える日付"
+
+#: app/customizer/seo-sns.php:114
+msgid "This feature is a beta version."
+msgstr "この機能はベータ版です。"
+
+#: app/customizer/seo-sns.php:117
+msgid "Published date"
+msgstr "公開日"
+
+#: app/customizer/seo-sns.php:117
+msgid "(Display published date and modifiled date)"
+msgstr "（公開日と更新日を表示）"
+
+#: app/customizer/seo-sns.php:118
+msgid "Modified date"
+msgstr "更新日"
+
+#: app/customizer/seo-sns.php:118
+msgid "(Only modified date displayed when updating post)"
+msgstr "（記事を更新したときは更新日だけを表示）"
+
+#: app/customizer/seo-sns.php:132
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
-#: app/customizer/seo-sns.php:122
+#: app/customizer/seo-sns.php:134
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
-#: app/customizer/seo-sns.php:128
+#: app/customizer/seo-sns.php:140
 msgid "twitter:card"
 msgstr "twitter:card"
 
-#: app/customizer/seo-sns.php:129
+#: app/customizer/seo-sns.php:141
 msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
-#: app/customizer/seo-sns.php:133
+#: app/customizer/seo-sns.php:145
 msgid "Do not use"
 msgstr "使用しない"
 
-#: app/customizer/seo-sns.php:140
+#: app/customizer/seo-sns.php:152
 msgid "twitter:site"
 msgstr "twitter:site"
 
-#: app/customizer/seo-sns.php:142
+#: app/customizer/seo-sns.php:154
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
-#: app/customizer/seo-sns.php:159
+#: app/customizer/seo-sns.php:171
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
-#: app/customizer/seo-sns.php:163
+#: app/customizer/seo-sns.php:175
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
-#: app/customizer/seo-sns.php:165
+#: app/customizer/seo-sns.php:177
 #, php-format
 msgctxt "facebook-page-name"
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
-#: app/customizer/seo-sns.php:180
+#: app/customizer/seo-sns.php:192
 msgid "Share buttons"
 msgstr "シェアボタン"
 
-#: app/customizer/seo-sns.php:182
+#: app/customizer/seo-sns.php:194
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
-#: app/customizer/seo-sns.php:188
+#: app/customizer/seo-sns.php:200
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
-#: app/customizer/seo-sns.php:191
+#: app/customizer/seo-sns.php:203
 msgid "Facebook"
 msgstr "Facebook"
 
-#: app/customizer/seo-sns.php:192
+#: app/customizer/seo-sns.php:204
 msgid "Twitter"
 msgstr "Twitter"
 
-#: app/customizer/seo-sns.php:193
+#: app/customizer/seo-sns.php:205
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/seo-sns.php:194
+#: app/customizer/seo-sns.php:206
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/seo-sns.php:195
+#: app/customizer/seo-sns.php:207
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/seo-sns.php:196
+#: app/customizer/seo-sns.php:208
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/seo-sns.php:197
+#: app/customizer/seo-sns.php:209
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/seo-sns.php:203
+#: app/customizer/seo-sns.php:215
 msgid "Type"
 msgstr "種類"
 
-#: app/customizer/seo-sns.php:206
+#: app/customizer/seo-sns.php:218
 msgid "Balloon"
 msgstr "バルーン"
 
-#: app/customizer/seo-sns.php:207
+#: app/customizer/seo-sns.php:219
 msgid "Horizontal"
 msgstr "水平"
 
-#: app/customizer/seo-sns.php:208
+#: app/customizer/seo-sns.php:220
 msgid "Icon"
 msgstr "アイコン"
 
-#: app/customizer/seo-sns.php:209
+#: app/customizer/seo-sns.php:221
 msgid "Block"
 msgstr "ブロック"
 
-#: app/customizer/seo-sns.php:210
+#: app/customizer/seo-sns.php:222
 msgid "Official"
 msgstr "公式"
 
-#: app/customizer/seo-sns.php:216
+#: app/customizer/seo-sns.php:228
 msgid "Display position"
 msgstr "表示する場所"
 
-#: app/customizer/seo-sns.php:219
+#: app/customizer/seo-sns.php:231
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:220 app/setup/widget-area.php:170
+#: app/customizer/seo-sns.php:232 app/setup/widget-area.php:170
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
-#: app/customizer/seo-sns.php:221
+#: app/customizer/seo-sns.php:233
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns.php:227
+#: app/customizer/seo-sns.php:239
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 

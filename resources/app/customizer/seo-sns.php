@@ -109,8 +109,20 @@ $customizer->control( 'checkbox', 'mwt-json-ld', array(
 	'default' => true,
 ) );
 
+$customizer->control( 'radio', 'post-date', [
+	'label'       => __( 'Date for the search engine', 'snow-monkey' ),
+	'description' => __( 'This feature is a beta version.', 'snow-monkey' ),
+	'default'     => 'published-date',
+	'choices'     => [
+		'published-date' => __( 'Published date', 'snow-monkey' ) . __( '(Display published date and modifiled date)', 'snow-monkey' ),
+		'modified-date'  => __( 'Modified date', 'snow-monkey' ) . __( '(Only modified date displayed when updating post)', 'snow-monkey' ),
+	],
+] );
+
 $section = $customizer->get_section( 'json-ld' );
 $control = $customizer->get_control( 'mwt-json-ld' );
+$control->join( $section )->join( $panel );
+$control = $customizer->get_control( 'post-date' );
 $control->join( $section )->join( $panel );
 
 /**
