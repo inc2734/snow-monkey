@@ -18,10 +18,13 @@ $wordpress_link = sprintf(
 $theme_by   = sprintf( __( 'Snow Monkey theme by %s', 'snow-monkey' ), $theme_link );
 $powered_by = sprintf( __( 'Powered by %s', 'snow-monkey' ), $wordpress_link );
 $copyright  = $theme_by . ' ' . $powered_by;
+$copyright  = apply_filters( 'snow_monkey_copyright', $copyright )
 ?>
 
-<div class="c-copyright">
-	<div class="c-container">
-		<?php echo wp_kses_post( apply_filters( 'snow_monkey_copyright', $copyright ) ); ?>
+<div id="js-selective-refresh-copyright">
+	<div class="c-copyright">
+		<div class="c-container">
+			<?php echo wp_kses_post( $copyright ); ?>
+		</div>
 	</div>
 </div>

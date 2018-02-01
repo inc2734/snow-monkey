@@ -42,9 +42,10 @@ $control->join( $section );
  * Header layout
  */
 $customizer->control( 'select', 'header-layout', [
-	'label'   => __( 'Header layout', 'snow-monkey' ),
-	'default' => 'center',
-	'choices' => [
+	'transport' => 'postMessage',
+	'label'     => __( 'Header layout', 'snow-monkey' ),
+	'default'   => 'center',
+	'choices'   => [
 		'simple' => __( 'Simple', 'snow-monkey' ),
 		'1row'   => __( 'One row', 'snow-monkey' ),
 		'2row'   => __( 'Two rows', 'snow-monkey' ),
@@ -54,24 +55,37 @@ $customizer->control( 'select', 'header-layout', [
 
 $control = $customizer->get_control( 'header-layout' );
 $control->join( $section );
+$control->partial( [
+	'selector'        => '.l-header',
+	'render_callback' => function() {
+		get_template_part( 'template-parts/' . get_theme_mod( 'header-layout' ) . '-header' );
+	},
+] );
 
 /**
  * Header contents
  */
 $customizer->control( 'textarea', 'header-content', [
+	'transport'   => 'postMessage',
 	'label'       => __( 'Header contents', 'snow-monkey' ),
 	'description' => __( 'Displayed at only PC size.', 'snow-monkey' ),
 ] );
 
 $control = $customizer->get_control( 'header-content' );
 $control->join( $section );
+$control->partial( [
+	'selector'        => '#js-selective-refresh-header-content',
+	'render_callback' => function() {
+		get_template_part( 'template-parts/header-content' );
+	},
+] );
 
 /**
  * Footer layout
  */
 $customizer->control( 'select', 'footer-widget-area-column-size', [
-	'label'   => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
-	'default' => '1-4',
+	'label'     => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
+	'default'   => '1-4',
 	'choices' => [
 		'1-1' => __( '1 column', 'snow-monkey' ),
 		'1-2' => __( '2 columns', 'snow-monkey' ),
@@ -118,7 +132,6 @@ if ( $custom_logo ) {
 		],
 	] );
 
-	$section = $customizer->get_section( 'design' );
 	$control = $customizer->get_control( 'sm-logo-scale' );
 	$control->join( $section );
 }

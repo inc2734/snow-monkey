@@ -24,14 +24,21 @@ $copyright  = $theme_by . ' ' . $powered_by;
 $customizer = Customizer_Framework::init();
 
 $customizer->section( 'title_tagline', [] );
+$section = $customizer->get_section( 'title_tagline' );
 
 $customizer->control( 'text', 'mwt-copyright', [
+	'transport'   => 'postMessage',
 	'label'       => __( 'Copyright', 'snow-monkey' ),
 	'description' => __( 'HTML usable', 'snow-monkey' ),
 	'default'     => $copyright,
 	'type'        => 'option',
 ] );
 
-$section = $customizer->get_section( 'title_tagline' );
 $control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );
+$control->partial( [
+	'selector'        => '#js-selective-refresh-copyright',
+	'render_callback' => function() {
+		get_template_part( 'template-parts/copyright' );
+	},
+] );

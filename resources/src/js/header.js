@@ -5,9 +5,10 @@ import $ from 'jquery';
 export default class SnowMonkeyHeader {
   constructor() {
     $(() => {
-      this.min     = 1023;
-      this.header  = $('.l-header');
-      this.contents = $('.l-contents');
+      this.min         = 1023;
+      this.header      = $('.l-header');
+      this.contents    = $('.l-contents');
+      this.defaultType = this.header.attr('data-l-header-type');
 
       this.init();
 
@@ -18,6 +19,10 @@ export default class SnowMonkeyHeader {
   }
 
   init() {
+    if ('sticky' === this.defaultType) {
+      return;
+    }
+
     if (this.min < $(window).width()) {
       this.header.attr('data-l-header-type', '');
       this.contents.css('margin-top', '');
