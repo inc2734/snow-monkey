@@ -1,6 +1,15 @@
 .#{$_prefix}c-page-header {
   position: relative;
   height: 60vh;
+  max-height: 300px;
+
+  @include _media-min(md) {
+    max-height: 400px;
+  }
+
+  @include _media-min(lg) {
+    max-height: 500px;
+  }
 
   &::after {
     content: '';
