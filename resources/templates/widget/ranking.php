@@ -56,14 +56,7 @@ $recent_posts = get_posts( [
 								</div>
 							<?php endif; ?>
 
-							<div class="wpaw-ranking__title">
-								<?php
-								ob_start();
-								the_title();
-								$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 30 : 60 );
-								echo esc_html( $title );
-								?>
-							</div>
+							<div class="wpaw-ranking__title"><?php the_title(); ?></div>
 							<div class="wpaw-ranking__date"><?php the_time( get_option( 'date_format' ) ); ?></div>
 						</div>
 

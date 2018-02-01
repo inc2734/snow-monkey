@@ -54,12 +54,10 @@
 
 .#{$_prefix}l-body--right-sidebar,
 .#{$_prefix}l-body--left-sidebar {
-  .#{$_prefix}l-contents__main {
-    .#{$_prefix}c-entries--rich-media {
-      .#{$_prefix}c-entries__item {
-        @include _media-min(lg) {
-          @include _row__col--width(50%);
-        }
+  .#{$_prefix}c-entries--rich-media {
+    .#{$_prefix}c-entries__item {
+      @include _media-min(lg) {
+        @include _row__col--width(50%);
       }
     }
   }

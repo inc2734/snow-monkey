@@ -17,6 +17,17 @@ $customizer->section( 'design', [
 $section = $customizer->get_section( 'design' );
 
 /**
+ * Base font size
+ */
+$customizer->control( 'number', 'base-font-size', [
+	'label'   => __( 'Base font size(px)', 'snow-monkey' ),
+	'default' => 16,
+] );
+
+$control = $customizer->get_control( 'base-font-size' );
+$control->join( $section );
+
+/**
  * Accent color
  */
 $customizer->control( 'color', 'accent-color', [

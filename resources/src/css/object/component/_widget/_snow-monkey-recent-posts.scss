@@ -40,7 +40,7 @@
     .#{$_prefix}c-entry-summary {
       &__title {
         @include _font-size($_base-font-size);
-        @include _line-height($_base-font-size * 1.4);
+        @include _line-height($_base-font-size * 1.5);
       }
     }
   }
@@ -78,7 +78,8 @@
       .#{$_prefix}c-entry-summary {
         &__title {
           @include _media-min(lg) {
-            @include _font-size-line-height($_base-font-size * 1.5);
+            @include _font-size($_base-font-size * 1.5);
+            @include _line-height($_base-font-size * 1.8);
           }
         }
       }
