@@ -41,7 +41,11 @@ if ( ! $recent_posts ) {
 			<?php foreach ( $recent_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
 				<li class="c-entries__item">
-					<?php get_template_part( 'template-parts/entry-summary' ); ?>
+					<?php
+					wpvc_get_template_part( 'template-parts/entry-summary', [
+						'widget_layout' => $instance['layout'],
+					] );
+					?>
 				</li>
 			<?php endforeach; ?>
 			<?php wp_reset_postdata(); ?>

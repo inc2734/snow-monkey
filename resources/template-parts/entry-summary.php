@@ -9,6 +9,13 @@ $terms = get_the_terms( get_the_ID(), 'category' );
 if ( ! is_wp_error( $terms ) ) {
 	$term  = $terms[0];
 }
+
+// When loaded by widget, $widget_layout is exist.
+if ( isset( $widget_layout ) ) {
+	$layout = $widget_layout;
+} else {
+	$layout = get_theme_mod( 'archive-layout' );
+}
 ?>
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term->term_id ); ?>">
@@ -29,7 +36,7 @@ if ( ! is_wp_error( $terms ) ) {
 			<header class="c-entry-summary__header">
 				<h2 class="c-entry-summary__title">
 					<?php
-					if ( 'rich-media' === get_theme_mod( 'archive-layout' ) ) {
+					if ( 'rich-media' === $layout ) {
 						ob_start();
 						the_title();
 						$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 40 : 80 );
