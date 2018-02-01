@@ -12,6 +12,6 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
-	'.widget_tag_cloud a::before',
+	'.tag-cloud-link::before',
 	'color: ' . $accent_color
 );
