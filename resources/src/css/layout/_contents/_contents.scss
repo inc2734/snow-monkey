@@ -95,7 +95,7 @@
   .#{$_prefix}l-body--one-column-slim & {
     &__main {
       margin: 0 auto;
-      max-width: map-get($_sizes, 'lg');
+      max-width: _strip-unit(map-get($_sizes, 'lg')) * $_base-font-size-px;
     }
 
     &__sidebar {
