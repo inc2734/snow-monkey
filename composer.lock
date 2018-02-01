@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "43ebaa998b69a9f6ba606a003033a147",
-    "content-hash": "cb4490ac1d54f72a1245e04dddc97f49",
+    "hash": "63eabffe42664dc8b9443a67479cde14",
+    "content-hash": "e2623b3fb13f32eacabc6bbf39697f5d",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.6.1",
+            "version": "1.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "770a264c9a832880e96ece9d9531c229ada97ee5"
+                "reference": "ef469be25d0cdd5a5f80110d8421f2a4e61253e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/770a264c9a832880e96ece9d9531c229ada97ee5",
-                "reference": "770a264c9a832880e96ece9d9531c229ada97ee5",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/ef469be25d0cdd5a5f80110d8421f2a4e61253e9",
+                "reference": "ef469be25d0cdd5a5f80110d8421f2a4e61253e9",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.4",
-                "inc2734/wp-awesome-widgets": ">=1.6.0",
+                "inc2734/wp-awesome-widgets": ">=1.6.1",
                 "inc2734/wp-basis": ">=0.7.2",
                 "inc2734/wp-breadcrumbs": ">=1.0.0",
                 "inc2734/wp-contents-outline": ">=0.3.2",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-01-29 14:41:14"
+            "time": "2018-02-01 01:16:10"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,16 +107,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "42f257a13f43dccb5eb86d9668f2a99030ae1081"
+                "reference": "2b46b3069a7a0fe1f93d96d914ac616c5da758d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/42f257a13f43dccb5eb86d9668f2a99030ae1081",
-                "reference": "42f257a13f43dccb5eb86d9668f2a99030ae1081",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2b46b3069a7a0fe1f93d96d914ac616c5da758d9",
+                "reference": "2b46b3069a7a0fe1f93d96d914ac616c5da758d9",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-01-29 14:39:58"
+            "time": "2018-02-01 01:15:03"
         },
         {
             "name": "inc2734/wp-basis",
@@ -2358,16 +2358,16 @@
         },
         {
             "name": "webmozart/assert",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f"
+                "reference": "0df1908962e7a3071564e857d86874dad1ef204a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/2db61e59ff05fe5126d152bd0655c9ea113e550f",
-                "reference": "2db61e59ff05fe5126d152bd0655c9ea113e550f",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/0df1908962e7a3071564e857d86874dad1ef204a",
+                "reference": "0df1908962e7a3071564e857d86874dad1ef204a",
                 "shasum": ""
             },
             "require": {
@@ -2404,7 +2404,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23 20:04:58"
+            "time": "2018-01-29 19:49:41"
         },
         {
             "name": "wp-coding-standards/wpcs",

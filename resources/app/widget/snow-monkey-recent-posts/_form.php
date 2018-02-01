@@ -13,6 +13,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['title'] ); ?>"
 		>
 	</p>
@@ -30,10 +31,11 @@
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>"><?php esc_html_e( 'Layout', 'snow-monkey' ); ?></label>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>"><?php esc_html_e( 'Layout', 'snow-monkey' ); ?></label><br>
 		<select
 			name="<?php echo esc_attr( $this->get_field_name( 'layout' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'layout' ) ); ?>"
+			class="widefat"
 		>
 			<?php
 			$layouts = [
@@ -53,6 +55,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'link-url' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'link-url' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['link-url'] ); ?>"
 		>
 	</p>
@@ -63,6 +66,7 @@
 			type="text"
 			name="<?php echo esc_attr( $this->get_field_name( 'link-text' ) ); ?>"
 			id="<?php echo esc_attr( $this->get_field_id( 'link-text' ) ); ?>"
+			class="widefat"
 			value="<?php echo esc_attr( $instance['link-text'] ); ?>"
 		>
 	</p>
