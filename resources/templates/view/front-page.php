@@ -12,14 +12,21 @@
 	ob_start();
 	the_content();
 	$content = ob_get_clean();
+	$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
 	?>
 	<?php if ( $content ) : ?>
 		<div class="c-section">
-			<div class="c-container">
+			<?php if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) : ?>
+				<div class="c-container">
+					<div class="c-entry__content">
+						<?php the_content(); ?>
+					</div>
+				</div>
+			<?php else : ?>
 				<div class="c-entry__content">
 					<?php the_content(); ?>
 				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
