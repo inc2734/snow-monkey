@@ -71,3 +71,25 @@ $control->partial( [
 		get_template_part( 'template-parts/profile-box' );
 	},
 ] );
+
+/**
+ * Related posts - Only post
+ */
+$customizer->control( 'checkbox', 'mwt-display-related-posts', [
+	'transport' => 'postMessage',
+	'label'     => __( 'Display related posts in posts', 'snow-monkey' ),
+	'type'      => 'option',
+	'default'   => true,
+	'active_callback' => function() {
+		return is_single();
+	},
+] );
+
+$control = $customizer->get_control( 'mwt-display-related-posts' );
+$control->join( $section );
+$control->partial( [
+	'selector'        => '#js-selective-refresh-related-posts',
+	'render_callback' => function() {
+		get_template_part( 'template-parts/related-posts' );
+	},
+] );

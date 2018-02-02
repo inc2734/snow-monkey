@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-02-01 20:51+0900\n"
-"PO-Revision-Date: 2018-02-01 20:51+0900\n"
+"POT-Creation-Date: 2018-02-02 14:24+0900\n"
+"PO-Revision-Date: 2018-02-02 14:25+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -62,65 +62,65 @@ msgstr "基本の文字サイズ（px）"
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: app/customizer/design.php:45
+#: app/customizer/design.php:46
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design.php:48 app/customizer/design.php:94
+#: app/customizer/design.php:49 app/customizer/design.php:108
 #: app/widget/snow-monkey-recent-posts/_form.php:43
 msgid "Simple"
 msgstr "シンプル"
 
-#: app/customizer/design.php:49
+#: app/customizer/design.php:50
 msgid "One row"
 msgstr "1行"
 
-#: app/customizer/design.php:50
+#: app/customizer/design.php:51
 msgid "Two rows"
 msgstr "2行"
 
-#: app/customizer/design.php:51
+#: app/customizer/design.php:52
 msgid "Center logo"
 msgstr "中央ロゴ"
 
-#: app/customizer/design.php:62
+#: app/customizer/design.php:70
 msgid "Header contents"
 msgstr "ヘッダーコンテンツ"
 
-#: app/customizer/design.php:63
+#: app/customizer/design.php:71
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
-#: app/customizer/design.php:73
+#: app/customizer/design.php:87
 msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
-#: app/customizer/design.php:76
+#: app/customizer/design.php:90
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/design.php:77
+#: app/customizer/design.php:91
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/design.php:78
+#: app/customizer/design.php:92
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/design.php:79
+#: app/customizer/design.php:93
 msgid "4 columns"
 msgstr "4カラム"
 
-#: app/customizer/design.php:90
+#: app/customizer/design.php:104
 msgid "Archive layout"
 msgstr "記事一覧レイアウト"
 
-#: app/customizer/design.php:93
+#: app/customizer/design.php:107
 #: app/widget/snow-monkey-recent-posts/_form.php:42
 msgid "Rich media"
 msgstr "リッチメディア"
 
-#: app/customizer/design.php:113
+#: app/customizer/design.php:127
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 
@@ -128,11 +128,11 @@ msgstr "スマホ時のカスタムロゴの拡大率（%）"
 msgid "Advertisement"
 msgstr "広告"
 
-#: app/customizer/google-adsense.php:18
+#: app/customizer/google-adsense.php:23
 msgid "Google Adsense"
 msgstr "Google アドセンス"
 
-#: app/customizer/google-adsense.php:19
+#: app/customizer/google-adsense.php:24
 msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
 "displayed in the prescribed part of the theme."
@@ -144,7 +144,7 @@ msgstr ""
 msgid "Password protected settings"
 msgstr "パスワード保護の設定"
 
-#: app/customizer/protected.php:18
+#: app/customizer/protected.php:23
 msgid ""
 "If the post using more tag and password protect at the same time, display "
 "contents before more tag"
@@ -160,52 +160,52 @@ msgstr "SEO/SNS"
 msgid "Google Tag Manager"
 msgstr "Google タグマネージャ"
 
-#: app/customizer/seo-sns.php:27
+#: app/customizer/seo-sns.php:29
 msgid "Tag Manager ID"
 msgstr "タグマネージャ ID"
 
-#: app/customizer/seo-sns.php:28
+#: app/customizer/seo-sns.php:30
 msgid "e.g. GTM-X11X1XX"
 msgstr "例: GTM-X11X1XX"
 
-#: app/customizer/seo-sns.php:40
+#: app/customizer/seo-sns.php:41
 msgid "Google Analytics"
 msgstr "Google Analytics"
 
-#: app/customizer/seo-sns.php:44
+#: app/customizer/seo-sns.php:47
 msgid "Tracking ID"
 msgstr "トラッキング ID"
 
-#: app/customizer/seo-sns.php:45
+#: app/customizer/seo-sns.php:48
 msgid "e.g. UA-1111111-11"
 msgstr "例: UA-1111111-11"
 
-#: app/customizer/seo-sns.php:57
+#: app/customizer/seo-sns.php:59
 msgid "Google Search Console"
 msgstr "Google Search Console"
 
-#: app/customizer/seo-sns.php:61
+#: app/customizer/seo-sns.php:65
 msgid "Google site verification"
 msgstr "Google site verification"
 
-#: app/customizer/seo-sns.php:63
+#: app/customizer/seo-sns.php:67
 #, php-format
 msgid "Please enter part %1$s of %2$s"
 msgstr "%2$sの%1$sの部分を入力してください"
 
-#: app/customizer/seo-sns.php:78
+#: app/customizer/seo-sns.php:81
 msgid "OGP"
 msgstr "OGP"
 
-#: app/customizer/seo-sns.php:82
+#: app/customizer/seo-sns.php:87
 msgid "Output OGP meta tag"
 msgstr "OGP メタタグを出力する"
 
-#: app/customizer/seo-sns.php:88
+#: app/customizer/seo-sns.php:96
 msgid "Default OGP image"
 msgstr "デフォルト OGP 画像"
 
-#: app/customizer/seo-sns.php:89
+#: app/customizer/seo-sns.php:97
 msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
@@ -213,164 +213,164 @@ msgstr ""
 "アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設"
 "定されていない場合はこの画像が使用されます。"
 
-#: app/customizer/seo-sns.php:103
+#: app/customizer/seo-sns.php:108
 msgid "Structured data"
 msgstr "構造化データ"
 
-#: app/customizer/seo-sns.php:107
+#: app/customizer/seo-sns.php:114
 msgid "Output structred data (JSON+LD)"
 msgstr "構造化データ（JSON+LD）を出力する"
 
-#: app/customizer/seo-sns.php:113
+#: app/customizer/seo-sns.php:123
 msgid "Date for the search engine"
 msgstr "検索エンジンに伝える日付"
 
-#: app/customizer/seo-sns.php:114
+#: app/customizer/seo-sns.php:124
 msgid "This feature is a beta version."
 msgstr "この機能はベータ版です。"
 
-#: app/customizer/seo-sns.php:117
+#: app/customizer/seo-sns.php:127
 msgid "Published date"
 msgstr "公開日"
 
-#: app/customizer/seo-sns.php:117
+#: app/customizer/seo-sns.php:127
 msgid "(Display published date and modifiled date)"
 msgstr "（公開日と更新日を表示）"
 
-#: app/customizer/seo-sns.php:118
+#: app/customizer/seo-sns.php:128
 msgid "Modified date"
 msgstr "更新日"
 
-#: app/customizer/seo-sns.php:118
+#: app/customizer/seo-sns.php:128
 msgid "(Only modified date displayed when updating post)"
 msgstr "（記事を更新したときは更新日だけを表示）"
 
-#: app/customizer/seo-sns.php:132
+#: app/customizer/seo-sns.php:139
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
-#: app/customizer/seo-sns.php:134
+#: app/customizer/seo-sns.php:141
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
-#: app/customizer/seo-sns.php:140
+#: app/customizer/seo-sns.php:149
 msgid "twitter:card"
 msgstr "twitter:card"
 
-#: app/customizer/seo-sns.php:141
+#: app/customizer/seo-sns.php:150
 msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
-#: app/customizer/seo-sns.php:145
+#: app/customizer/seo-sns.php:154
 msgid "Do not use"
 msgstr "使用しない"
 
-#: app/customizer/seo-sns.php:152
+#: app/customizer/seo-sns.php:164
 msgid "twitter:site"
 msgstr "twitter:site"
 
-#: app/customizer/seo-sns.php:154
+#: app/customizer/seo-sns.php:166
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
-#: app/customizer/seo-sns.php:171
+#: app/customizer/seo-sns.php:180
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
-#: app/customizer/seo-sns.php:175
+#: app/customizer/seo-sns.php:187
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
-#: app/customizer/seo-sns.php:177
+#: app/customizer/seo-sns.php:189
 #, php-format
 msgctxt "facebook-page-name"
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
-#: app/customizer/seo-sns.php:192
+#: app/customizer/seo-sns.php:209
 msgid "Share buttons"
 msgstr "シェアボタン"
 
-#: app/customizer/seo-sns.php:194
+#: app/customizer/seo-sns.php:211
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
-#: app/customizer/seo-sns.php:200
+#: app/customizer/seo-sns.php:219
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
-#: app/customizer/seo-sns.php:203
+#: app/customizer/seo-sns.php:222
 msgid "Facebook"
 msgstr "Facebook"
 
-#: app/customizer/seo-sns.php:204
+#: app/customizer/seo-sns.php:223
 msgid "Twitter"
 msgstr "Twitter"
 
-#: app/customizer/seo-sns.php:205
+#: app/customizer/seo-sns.php:224
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/seo-sns.php:206
+#: app/customizer/seo-sns.php:225
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/seo-sns.php:207
+#: app/customizer/seo-sns.php:226
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/seo-sns.php:208
+#: app/customizer/seo-sns.php:227
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/seo-sns.php:209
+#: app/customizer/seo-sns.php:228
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/seo-sns.php:215
+#: app/customizer/seo-sns.php:237
 msgid "Type"
 msgstr "種類"
 
-#: app/customizer/seo-sns.php:218
+#: app/customizer/seo-sns.php:240
 msgid "Balloon"
 msgstr "バルーン"
 
-#: app/customizer/seo-sns.php:219
+#: app/customizer/seo-sns.php:241
 msgid "Horizontal"
 msgstr "水平"
 
-#: app/customizer/seo-sns.php:220
+#: app/customizer/seo-sns.php:242
 msgid "Icon"
 msgstr "アイコン"
 
-#: app/customizer/seo-sns.php:221
+#: app/customizer/seo-sns.php:243
 msgid "Block"
 msgstr "ブロック"
 
-#: app/customizer/seo-sns.php:222
+#: app/customizer/seo-sns.php:244
 msgid "Official"
 msgstr "公式"
 
-#: app/customizer/seo-sns.php:228
+#: app/customizer/seo-sns.php:253
 msgid "Display position"
 msgstr "表示する場所"
 
-#: app/customizer/seo-sns.php:231
+#: app/customizer/seo-sns.php:256
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:232 app/setup/widget-area.php:170
+#: app/customizer/seo-sns.php:257 app/setup/widget-area.php:170
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
-#: app/customizer/seo-sns.php:233
+#: app/customizer/seo-sns.php:258
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns.php:239
+#: app/customizer/seo-sns.php:267
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 
@@ -386,9 +386,13 @@ msgstr "個別投稿に適用されます。"
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/singular-post.php:57
+#: app/customizer/singular-post.php:58
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
+
+#: app/customizer/singular-post.php:80
+msgid "Display related posts in posts"
+msgstr "記事に関連記事を表示する"
 
 #: app/customizer/title-tagline.php:12 template-parts/copyright.php:10
 msgid "Monkey Wrench"
@@ -408,11 +412,11 @@ msgstr "Snow Monkey theme by %s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: app/customizer/title-tagline.php:29
+#: app/customizer/title-tagline.php:31
 msgid "Copyright"
 msgstr "コピーライト"
 
-#: app/customizer/title-tagline.php:30
+#: app/customizer/title-tagline.php:32
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
@@ -628,7 +632,7 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:64
+#: template-parts/related-posts.php:71
 msgid "Related posts"
 msgstr "関連記事"
 
