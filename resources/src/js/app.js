@@ -48,5 +48,4 @@ $(() => {
 
 $(() => {
   $('.c-page-header').backgroundParallaxScroll();
-  $('.wpaw-showcase').backgroundParallaxScroll();
 });

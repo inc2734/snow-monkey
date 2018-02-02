@@ -13,6 +13,11 @@
 		color: <?php echo esc_attr( $instance['color'] ); ?>;
 	}
 	</style>
+	<script>
+	jQuery(function($) {
+		$('#wpaw-showcase-<?php echo esc_js( $args['widget_id'] ); ?>').backgroundParallaxScroll();
+	});
+	</script>
 
 	<div
 		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> js-bg-parallax"

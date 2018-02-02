@@ -1,6 +1,6 @@
 .#{$_prefix}p-global-nav {
   &[aria-hidden="true"] {
-    display: none;
+    visibility: hidden;
   }
 
   .#{$_prefix}c-navbar {
