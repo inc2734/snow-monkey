@@ -66,8 +66,9 @@ $customizer->control( 'checkbox', 'mwt-display-profile-box', [
 $control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section );
 $control->partial( [
-	'selector'        => '#js-selective-refresh-profile-box',
-	'render_callback' => function() {
+	'selector'            => '.wp-profile-box',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
 		get_template_part( 'template-parts/profile-box' );
 	},
 ] );
@@ -88,8 +89,9 @@ $customizer->control( 'checkbox', 'mwt-display-related-posts', [
 $control = $customizer->get_control( 'mwt-display-related-posts' );
 $control->join( $section );
 $control->partial( [
-	'selector'        => '#js-selective-refresh-related-posts',
-	'render_callback' => function() {
+	'selector'            => '.p-related-posts',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
 		get_template_part( 'template-parts/related-posts' );
 	},
 ] );

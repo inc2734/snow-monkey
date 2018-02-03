@@ -196,8 +196,9 @@ $customizer->control( 'text', 'mwt-facebook-page-name', [
 $control = $customizer->get_control( 'mwt-facebook-page-name' );
 $control->join( $section )->join( $panel );
 $control->partial( [
-	'selector'        => '#js-selective-refresh-like-me-box',
-	'render_callback' => function() {
+	'selector'            => '.wp-like-me-box',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
 		get_template_part( 'template-parts/like-me-box' );
 	},
 ] );

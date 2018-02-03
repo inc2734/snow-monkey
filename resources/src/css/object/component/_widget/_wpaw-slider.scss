@@ -86,15 +86,17 @@
     bottom: 10px;
   }
 
-  .slick-slide {
-    height: 70vh;
+  @include _media-max(sm) {
+    .slick-slide {
+      height: 70vh;
 
-    @include _media-min(lg) {
-      min-height: 650px;
-    }
+      @include _media-min(lg) {
+        min-height: 650px;
+      }
 
-    &::before {
-      display: none;
+      &::before {
+        display: none;
+      }
     }
   }
 

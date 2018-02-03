@@ -74,8 +74,9 @@ $customizer->control( 'textarea', 'header-content', [
 $control = $customizer->get_control( 'header-content' );
 $control->join( $section );
 $control->partial( [
-	'selector'        => '#js-selective-refresh-header-content',
-	'render_callback' => function() {
+	'selector'            => '#js-selective-refresh-header-content',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
 		get_template_part( 'template-parts/header-content' );
 	},
 ] );

@@ -21,10 +21,8 @@ $copyright  = $theme_by . ' ' . $powered_by;
 $copyright  = apply_filters( 'snow_monkey_copyright', $copyright )
 ?>
 
-<div id="js-selective-refresh-copyright">
-	<div class="c-copyright">
-		<div class="c-container">
-			<?php echo wp_kses_post( $copyright ); ?>
-		</div>
+<div class="c-copyright">
+	<div class="c-container">
+		<?php echo wp_kses_post( $copyright ); ?>
 	</div>
 </div>

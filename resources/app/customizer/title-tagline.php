@@ -37,8 +37,9 @@ $customizer->control( 'text', 'mwt-copyright', [
 $control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );
 $control->partial( [
-	'selector'        => '#js-selective-refresh-copyright',
-	'render_callback' => function() {
+	'selector'            => '.c-copyright',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
 		get_template_part( 'template-parts/copyright' );
 	},
 ] );
