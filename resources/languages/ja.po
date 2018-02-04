@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-02-02 14:24+0900\n"
-"PO-Revision-Date: 2018-02-02 14:25+0900\n"
+"POT-Creation-Date: 2018-02-04 21:47+0900\n"
+"PO-Revision-Date: 2018-02-04 21:48+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -66,7 +66,7 @@ msgstr "アクセントカラー"
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design.php:49 app/customizer/design.php:108
+#: app/customizer/design.php:49 app/customizer/design.php:117
 #: app/widget/snow-monkey-recent-posts/_form.php:43
 msgid "Simple"
 msgstr "シンプル"
@@ -91,36 +91,36 @@ msgstr "ヘッダーコンテンツ"
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
-#: app/customizer/design.php:87
+#: app/customizer/design.php:89
 msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
-#: app/customizer/design.php:90
+#: app/customizer/design.php:92
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/design.php:91
+#: app/customizer/design.php:93
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/design.php:92
+#: app/customizer/design.php:94
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/design.php:93
+#: app/customizer/design.php:95
 msgid "4 columns"
 msgstr "4カラム"
 
-#: app/customizer/design.php:104
+#: app/customizer/design.php:113
 msgid "Archive layout"
 msgstr "記事一覧レイアウト"
 
-#: app/customizer/design.php:107
+#: app/customizer/design.php:116
 #: app/widget/snow-monkey-recent-posts/_form.php:42
 msgid "Rich media"
 msgstr "リッチメディア"
 
-#: app/customizer/design.php:127
+#: app/customizer/design.php:136
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 
@@ -139,6 +139,18 @@ msgid ""
 msgstr ""
 "レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
 "が表示されます。"
+
+#: app/customizer/page.php:13
+msgid "Page settings"
+msgstr "固定ページの設定"
+
+#: app/customizer/page.php:14
+msgid "Applies to page."
+msgstr "固定ページに適用されます。"
+
+#: app/customizer/page.php:28
+msgid "Display child pages in page"
+msgstr "固定ページにそのページの子ページ一覧を表示する"
 
 #: app/customizer/protected.php:13
 msgid "Password protected settings"
@@ -184,11 +196,11 @@ msgstr "例: UA-1111111-11"
 msgid "Google Search Console"
 msgstr "Google Search Console"
 
-#: app/customizer/seo-sns.php:65
+#: app/customizer/seo-sns.php:66
 msgid "Google site verification"
 msgstr "Google site verification"
 
-#: app/customizer/seo-sns.php:67
+#: app/customizer/seo-sns.php:68
 #, php-format
 msgid "Please enter part %1$s of %2$s"
 msgstr "%2$sの%1$sの部分を入力してください"
@@ -279,98 +291,98 @@ msgstr "サイトの Twitter アカウント名。%1$s の形式で入力して�
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
-#: app/customizer/seo-sns.php:187
+#: app/customizer/seo-sns.php:188
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
-#: app/customizer/seo-sns.php:189
+#: app/customizer/seo-sns.php:190
 #, php-format
 msgctxt "facebook-page-name"
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
-#: app/customizer/seo-sns.php:209
+#: app/customizer/seo-sns.php:210
 msgid "Share buttons"
 msgstr "シェアボタン"
 
-#: app/customizer/seo-sns.php:211
+#: app/customizer/seo-sns.php:212
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
-#: app/customizer/seo-sns.php:219
+#: app/customizer/seo-sns.php:221
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
-#: app/customizer/seo-sns.php:222
+#: app/customizer/seo-sns.php:224
 msgid "Facebook"
 msgstr "Facebook"
 
-#: app/customizer/seo-sns.php:223
+#: app/customizer/seo-sns.php:225
 msgid "Twitter"
 msgstr "Twitter"
 
-#: app/customizer/seo-sns.php:224
+#: app/customizer/seo-sns.php:226
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/seo-sns.php:225
+#: app/customizer/seo-sns.php:227
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/seo-sns.php:226
+#: app/customizer/seo-sns.php:228
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/seo-sns.php:227
+#: app/customizer/seo-sns.php:229
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/seo-sns.php:228
+#: app/customizer/seo-sns.php:230
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/seo-sns.php:237
+#: app/customizer/seo-sns.php:240
 msgid "Type"
 msgstr "種類"
 
-#: app/customizer/seo-sns.php:240
+#: app/customizer/seo-sns.php:243
 msgid "Balloon"
 msgstr "バルーン"
 
-#: app/customizer/seo-sns.php:241
+#: app/customizer/seo-sns.php:244
 msgid "Horizontal"
 msgstr "水平"
 
-#: app/customizer/seo-sns.php:242
+#: app/customizer/seo-sns.php:245
 msgid "Icon"
 msgstr "アイコン"
 
-#: app/customizer/seo-sns.php:243
+#: app/customizer/seo-sns.php:246
 msgid "Block"
 msgstr "ブロック"
 
-#: app/customizer/seo-sns.php:244
+#: app/customizer/seo-sns.php:247
 msgid "Official"
 msgstr "公式"
 
-#: app/customizer/seo-sns.php:253
+#: app/customizer/seo-sns.php:262
 msgid "Display position"
 msgstr "表示する場所"
 
-#: app/customizer/seo-sns.php:256
+#: app/customizer/seo-sns.php:265
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:257 app/setup/widget-area.php:170
+#: app/customizer/seo-sns.php:266 app/setup/widget-area.php:170
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
-#: app/customizer/seo-sns.php:258
+#: app/customizer/seo-sns.php:267
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns.php:267
+#: app/customizer/seo-sns.php:275
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 
@@ -390,7 +402,7 @@ msgstr "記事に目次を表示する"
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
-#: app/customizer/singular-post.php:80
+#: app/customizer/singular-post.php:81
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
 
@@ -571,12 +583,12 @@ msgstr "リンクテキスト"
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:28
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:31
 msgid "Recent posts"
 msgstr "最近の投稿"
 
-#: template-parts/children-pages.php:20
-msgid "Children pages"
+#: template-parts/child-pages.php:27
+msgid "Child pages"
 msgstr "このページの子ページ"
 
 #: template-parts/comment.php:14
@@ -632,7 +644,7 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:71
+#: template-parts/related-posts.php:70
 msgid "Related posts"
 msgstr "関連記事"
 

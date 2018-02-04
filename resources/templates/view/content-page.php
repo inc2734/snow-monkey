@@ -15,9 +15,9 @@
 	<div class="c-entry__content">
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
-
-		<?php get_template_part( 'template-parts/children-pages' ); ?>
 	</div>
+
+	<?php get_template_part( 'template-parts/child-pages' ); ?>
 </article>
 
 <?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
