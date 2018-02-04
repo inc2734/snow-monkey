@@ -22,7 +22,11 @@
 	</header>
 
 	<div class="c-entry__content">
-		<?php get_template_part( 'template-parts/google-adsense' ); ?>
+		<?php
+		wpvc_get_template_part( 'template-parts/google-adsense', [
+			'position' => 'content-top',
+		] );
+		?>
 
 		<?php get_template_part( 'template-parts/contents-outline' ); ?>
 
@@ -39,7 +43,11 @@
 
 		<?php get_template_part( 'template-parts/profile-box' ); ?>
 
-		<?php get_template_part( 'template-parts/google-adsense' ); ?>
+		<?php
+		wpvc_get_template_part( 'template-parts/google-adsense', [
+			'position' => 'content-bottom',
+		] );
+		?>
 
 		<?php get_template_part( 'template-parts/like-me-box' ); ?>
 	</footer>
