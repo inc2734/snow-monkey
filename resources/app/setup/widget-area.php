@@ -204,7 +204,7 @@ add_action( 'widgets_init', function() {
 		'name'          => __( 'Footer', 'snow-monkey' ),
 		'id'            => 'footer-widget-area',
 		'description'   => __( 'This widgets are displayed in the footer.', 'snow-monkey' ),
-		'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--lg-' . esc_attr( get_theme_mod( 'footer-widget-area-column-size' ) ) . '"><div id="%1$s" class="c-widget %2$s">',
+		'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--lg-1-1"><div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="c-widget__title"><span>',
 		'after_title'   => '</span></h2>',

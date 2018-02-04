@@ -85,6 +85,7 @@ $control->partial( [
  * Footer layout
  */
 $customizer->control( 'select', 'footer-widget-area-column-size', [
+	'transport' => 'postMessage',
 	'label'     => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
 	'default'   => '1-4',
 	'choices' => [
@@ -97,6 +98,13 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 
 $control = $customizer->get_control( 'footer-widget-area-column-size' );
 $control->join( $section );
+$control->partial( [
+	'selector'            => '.l-footer-widget-area',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
+		get_template_part( 'template-parts/footer-widget-area' );
+	},
+] );
 
 /**
  * Archive layout
