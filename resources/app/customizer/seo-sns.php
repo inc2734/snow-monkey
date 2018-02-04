@@ -62,13 +62,13 @@ $customizer->section( 'google-search-console', array(
 $section = $customizer->get_section( 'google-search-console' );
 
 $customizer->control( 'text', 'mwt-google-site-verification', array(
+	'type'        => 'option',
 	'label'       => __( 'Google site verification', 'snow-monkey' ),
 	'description' => sprintf(
 		__( 'Please enter part %1$s of %2$s', 'snow-monkey' ),
 		'<code>xxxx</code>',
 		'<code>&lt;meta name="google-site-verification" content="xxxxx" /&gt;</code>'
 	),
-	'type' => 'option',
 ) );
 
 $control = $customizer->get_control( 'mwt-google-site-verification' );
@@ -184,13 +184,13 @@ $section = $customizer->get_section( 'like-me-box' );
 
 $customizer->control( 'text', 'mwt-facebook-page-name', [
 	'transport'   => 'postMessage',
+	'type'        => 'option',
 	'label'       => __( 'Facebook page name', 'snow-monkey' ),
 	'description' => sprintf(
 		_x( 'Please enter %1$s of %2$s', 'facebook-page-name', 'snow-monkey' ),
 		'<code>xxxxx</code>',
 		'<code>https://www.facebook.com/xxxxx</code>'
 	),
-	'type' => 'option',
 ] );
 
 $control = $customizer->get_control( 'mwt-facebook-page-name' );
@@ -217,6 +217,7 @@ $customizer->section( 'share-buttons', [
 $section = $customizer->get_section( 'share-buttons' );
 
 $customizer->control( 'multiple-checkbox', 'mwt-share-buttons-buttons', [
+	'type'    => 'option',
 	'label'   => __( 'Display buttons', 'snow-monkey' ),
 	'default' => '',
 	'choices' => [
@@ -228,29 +229,36 @@ $customizer->control( 'multiple-checkbox', 'mwt-share-buttons-buttons', [
 		'pocket'   => __( 'Pocket', 'snow-monkey' ),
 		'feed'     => __( 'Feed', 'snow-monkey' ),
 	],
-	'type' => 'option',
 ] );
 
 $control = $customizer->get_control( 'mwt-share-buttons-buttons' );
 $control->join( $section )->join( $panel );
 
 $customizer->control( 'select', 'mwt-share-buttons-type', [
-	'label'   => __( 'Type', 'snow-monkey' ),
-	'default' => 'balloon',
-	'choices' => [
+	'transport' => 'postMessage',
+	'type'      => 'option',
+	'label'     => __( 'Type', 'snow-monkey' ),
+	'default'   => 'balloon',
+	'choices'   => [
 		'balloon'    => __( 'Balloon', 'snow-monkey' ),
 		'horizontal' => __( 'Horizontal', 'snow-monkey' ),
 		'icon'       => __( 'Icon', 'snow-monkey' ),
 		'block'      => __( 'Block', 'snow-monkey' ),
 		'official'   => __( 'Official', 'snow-monkey' ),
 	],
-	'type' => 'option',
 ] );
 
 $control = $customizer->get_control( 'mwt-share-buttons-type' );
 $control->join( $section )->join( $panel );
+$control->partial( [
+	'selector' => '.wp-share-buttons',
+	'render_callback'     => function() {
+		get_template_part( 'template-parts/share-buttons' );
+	},
+] );
 
 $customizer->control( 'select', 'mwt-share-buttons-display-position', [
+	'type'    => 'option',
 	'label'   => __( 'Display position', 'snow-monkey' ),
 	'default' => 'top',
 	'choices' => [
@@ -258,7 +266,6 @@ $customizer->control( 'select', 'mwt-share-buttons-display-position', [
 		'bottom' => __( 'Bottom of contents', 'snow-monkey' ),
 		'both'   => __( 'Both', 'snow-monkey' ),
 	],
-	'type' => 'option',
 ] );
 
 $control = $customizer->get_control( 'mwt-share-buttons-display-position' );
