@@ -95,3 +95,34 @@ $control->partial( [
 		get_template_part( 'template-parts/related-posts' );
 	},
 ] );
+
+/**
+ * Child pages - Only page
+ */
+$customizer->control( 'checkbox', 'mwt-display-child-pages', [
+	'transport' => 'postMessage',
+	'label'     => __( 'Display child pages in page', 'snow-monkey' ),
+	'type'      => 'option',
+	'default'   => true,
+	'active_callback' => function() {
+		$pages = get_children( [
+			'post_parent'    => get_the_ID(),
+			'post_type'      => get_post_type(),
+			'posts_per_page' => -1,
+			'post_status'    => 'publish',
+			'orderby'        => 'menu_order',
+		] );
+
+		return ( $pages ) ? true : false;
+	},
+] );
+
+$control = $customizer->get_control( 'mwt-display-child-pages' );
+$control->join( $section );
+$control->partial( [
+	'selector'            => '.p-child-pages',
+	'container_inclusive' => true,
+	'render_callback'     => function() {
+		get_template_part( 'template-parts/child-pages' );
+	},
+] );
