@@ -17,7 +17,7 @@ $customizer->control( 'checkbox', 'mwt-display-profile-box', [
 	'type'      => 'option',
 	'default'   => true,
 	'active_callback' => function() {
-		return is_single();
+		return is_singular( 'post' );
 	},
 ] );
 
