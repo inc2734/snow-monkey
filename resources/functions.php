@@ -36,7 +36,6 @@ if ( ! isset( $content_width ) ) {
  */
 $includes = [
 	'/app/setup',
-	'/app/customizer',
 	'/app/widget/*',
 ];
 foreach ( $includes as $include ) {
@@ -45,6 +44,22 @@ foreach ( $includes as $include ) {
 			continue;
 		}
 
+		$template_name = str_replace( array( trailingslashit( __DIR__ ), '.php' ), '', $file );
+		get_template_part( $template_name );
+	}
+}
+
+/**
+ * Loads customizer
+ */
+$includes = [
+	'/app/customizer/*',
+	'/app/customizer/*/sections/*',
+	'/app/customizer/*/sections/*/controls',
+	'/app/customizer/*/controls',
+];
+foreach ( $includes as $include ) {
+	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
 		$template_name = str_replace( array( trailingslashit( __DIR__ ), '.php' ), '', $file );
 		get_template_part( $template_name );
 	}

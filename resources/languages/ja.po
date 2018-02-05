@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-02-04 21:47+0900\n"
-"PO-Revision-Date: 2018-02-04 21:48+0900\n"
+"POT-Creation-Date: 2018-02-05 20:59+0900\n"
+"PO-Revision-Date: 2018-02-05 20:59+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,117 +22,11 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: app/customizer/archive-page.php:13
-msgid "Archive page settings"
-msgstr "アーカイブページの設定"
-
-#: app/customizer/archive-page.php:14
-msgid "Applies to archive page and search page."
-msgstr ""
-"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適"
-"用されます。"
-
-#: app/customizer/archive-page.php:27 app/customizer/singular-post.php:27
-msgid "Page layout"
-msgstr "ページレイアウト"
-
-#: app/customizer/category.php:15
-#, php-format
-msgid "[ %1$s ] category settings"
-msgstr "[ %1$s ] カテゴリーの設定"
-
-#: app/customizer/category.php:28
-#, php-format
-msgid "Accent color of [ %1$s ] category"
-msgstr "カテゴリー [ %1$s ] のアクセントカラー"
-
-#: app/customizer/category.php:38
-msgid "Header image"
-msgstr "ヘッダー画像"
-
-#: app/customizer/design.php:13
-msgid "Design"
-msgstr "デザイン"
-
-#: app/customizer/design.php:23
-msgid "Base font size(px)"
-msgstr "基本の文字サイズ（px）"
-
-#: app/customizer/design.php:34
-msgid "Accent color"
-msgstr "アクセントカラー"
-
-#: app/customizer/design.php:46
-msgid "Header layout"
-msgstr "ヘッダーレイアウト"
-
-#: app/customizer/design.php:49 app/customizer/design.php:117
-#: app/widget/snow-monkey-recent-posts/_form.php:43
-msgid "Simple"
-msgstr "シンプル"
-
-#: app/customizer/design.php:50
-msgid "One row"
-msgstr "1行"
-
-#: app/customizer/design.php:51
-msgid "Two rows"
-msgstr "2行"
-
-#: app/customizer/design.php:52
-msgid "Center logo"
-msgstr "中央ロゴ"
-
-#: app/customizer/design.php:70
-msgid "Header contents"
-msgstr "ヘッダーコンテンツ"
-
-#: app/customizer/design.php:71
-msgid "Displayed at only PC size."
-msgstr "PC サイズでのみ表示されます。"
-
-#: app/customizer/design.php:89
-msgid "Number of columns in the footer widget area"
-msgstr "フッターウィジェットエリアのカラム数"
-
-#: app/customizer/design.php:92
-msgid "1 column"
-msgstr "1カラム"
-
-#: app/customizer/design.php:93
-msgid "2 columns"
-msgstr "2カラム"
-
-#: app/customizer/design.php:94
-msgid "3 columns"
-msgstr "3カラム"
-
-#: app/customizer/design.php:95
-msgid "4 columns"
-msgstr "4カラム"
-
-#: app/customizer/design.php:113
-msgid "Archive layout"
-msgstr "記事一覧レイアウト"
-
-#: app/customizer/design.php:116
-#: app/widget/snow-monkey-recent-posts/_form.php:42
-msgid "Rich media"
-msgstr "リッチメディア"
-
-#: app/customizer/design.php:136
-msgid "Custom logo scale (%) on smartphone"
-msgstr "スマホ時のカスタムロゴの拡大率（%）"
-
-#: app/customizer/google-adsense.php:13
-msgid "Advertisement"
-msgstr "広告"
-
-#: app/customizer/google-adsense.php:23
+#: app/customizer/advertisement/controls/google-adsense.php:14
 msgid "Google Adsense"
 msgstr "Google アドセンス"
 
-#: app/customizer/google-adsense.php:24
+#: app/customizer/advertisement/controls/google-adsense.php:15
 msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
 "displayed in the prescribed part of the theme."
@@ -140,23 +34,115 @@ msgstr ""
 "レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
 "が表示されます。"
 
-#: app/customizer/page.php:13
-msgid "Page settings"
-msgstr "固定ページの設定"
+#: app/customizer/advertisement/section.php:13
+msgid "Advertisement"
+msgstr "広告"
 
-#: app/customizer/page.php:14
-msgid "Applies to page."
-msgstr "固定ページに適用されます。"
+#: app/customizer/archive-page/controls/layout.php:14
+#: app/customizer/singular-post/controls/layout.php:14
+msgid "Page layout"
+msgstr "ページレイアウト"
 
-#: app/customizer/page.php:28
-msgid "Display child pages in page"
-msgstr "固定ページにそのページの子ページ一覧を表示する"
+#: app/customizer/archive-page/section.php:13
+msgid "Archive page settings"
+msgstr "アーカイブページの設定"
 
-#: app/customizer/protected.php:13
-msgid "Password protected settings"
-msgstr "パスワード保護の設定"
+#: app/customizer/archive-page/section.php:14
+msgid "Applies to archive page and search page."
+msgstr ""
+"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適"
+"用されます。"
 
-#: app/customizer/protected.php:23
+#: app/customizer/category/controls/accent-color.php:17
+#, php-format
+msgid "Accent color of [ %1$s ] category"
+msgstr "カテゴリー [ %1$s ] のアクセントカラー"
+
+#: app/customizer/category/controls/header-image.php:17
+msgid "Header image"
+msgstr "ヘッダー画像"
+
+#: app/customizer/category/section.php:15
+#, php-format
+msgid "[ %1$s ] category settings"
+msgstr "[ %1$s ] カテゴリーの設定"
+
+#: app/customizer/design/controls/accent-color.php:14
+msgid "Accent color"
+msgstr "アクセントカラー"
+
+#: app/customizer/design/controls/archive-layout.php:14
+msgid "Archive layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/design/controls/archive-layout.php:18
+#: app/widget/snow-monkey-recent-posts/_form.php:42
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/design/controls/archive-layout.php:19
+#: app/customizer/design/controls/header-layout.php:19
+#: app/widget/snow-monkey-recent-posts/_form.php:43
+msgid "Simple"
+msgstr "シンプル"
+
+#: app/customizer/design/controls/base-font-size.php:14
+msgid "Base font size(px)"
+msgstr "基本の文字サイズ（px）"
+
+#: app/customizer/design/controls/custom-logo-scale.php:26
+msgid "Custom logo scale (%) on smartphone"
+msgstr "スマホ時のカスタムロゴの拡大率（%）"
+
+#: app/customizer/design/controls/footer-layout.php:15
+msgid "Number of columns in the footer widget area"
+msgstr "フッターウィジェットエリアのカラム数"
+
+#: app/customizer/design/controls/footer-layout.php:19
+msgid "1 column"
+msgstr "1カラム"
+
+#: app/customizer/design/controls/footer-layout.php:20
+msgid "2 columns"
+msgstr "2カラム"
+
+#: app/customizer/design/controls/footer-layout.php:21
+msgid "3 columns"
+msgstr "3カラム"
+
+#: app/customizer/design/controls/footer-layout.php:22
+msgid "4 columns"
+msgstr "4カラム"
+
+#: app/customizer/design/controls/header-content.php:15
+msgid "Header contents"
+msgstr "ヘッダーコンテンツ"
+
+#: app/customizer/design/controls/header-content.php:16
+msgid "Displayed at only PC size."
+msgstr "PC サイズでのみ表示されます。"
+
+#: app/customizer/design/controls/header-layout.php:15
+msgid "Header layout"
+msgstr "ヘッダーレイアウト"
+
+#: app/customizer/design/controls/header-layout.php:20
+msgid "One row"
+msgstr "1行"
+
+#: app/customizer/design/controls/header-layout.php:21
+msgid "Two rows"
+msgstr "2行"
+
+#: app/customizer/design/controls/header-layout.php:22
+msgid "Center logo"
+msgstr "中央ロゴ"
+
+#: app/customizer/design/section.php:13
+msgid "Design"
+msgstr "デザイン"
+
+#: app/customizer/protected/controls/protected-more.php:14
 msgid ""
 "If the post using more tag and password protect at the same time, display "
 "contents before more tag"
@@ -164,60 +150,70 @@ msgstr ""
 "more タグとパスワード保護を同時に使用している場合、more タグより前のコンテ"
 "ンツを表示する"
 
-#: app/customizer/seo-sns.php:13
+#: app/customizer/protected/section.php:13
+msgid "Password protected settings"
+msgstr "パスワード保護の設定"
+
+#: app/customizer/seo-sns/panel.php:13
 msgid "SEO/SNS"
 msgstr "SEO/SNS"
 
-#: app/customizer/seo-sns.php:23
-msgid "Google Tag Manager"
-msgstr "Google タグマネージャ"
-
-#: app/customizer/seo-sns.php:29
-msgid "Tag Manager ID"
-msgstr "タグマネージャ ID"
-
-#: app/customizer/seo-sns.php:30
-msgid "e.g. GTM-X11X1XX"
-msgstr "例: GTM-X11X1XX"
-
-#: app/customizer/seo-sns.php:41
-msgid "Google Analytics"
-msgstr "Google Analytics"
-
-#: app/customizer/seo-sns.php:47
+#: app/customizer/seo-sns/sections/google-analytics/controls/tracking-id.php:15
 msgid "Tracking ID"
 msgstr "トラッキング ID"
 
-#: app/customizer/seo-sns.php:48
+#: app/customizer/seo-sns/sections/google-analytics/controls/tracking-id.php:16
 msgid "e.g. UA-1111111-11"
 msgstr "例: UA-1111111-11"
 
-#: app/customizer/seo-sns.php:59
-msgid "Google Search Console"
-msgstr "Google Search Console"
+#: app/customizer/seo-sns/sections/google-analytics/section.php:14
+msgid "Google Analytics"
+msgstr "Google アナリティクス"
 
-#: app/customizer/seo-sns.php:66
+#: app/customizer/seo-sns/sections/google-search-console/controls/google-site-verification.php:16
 msgid "Google site verification"
 msgstr "Google site verification"
 
-#: app/customizer/seo-sns.php:68
+#: app/customizer/seo-sns/sections/google-search-console/controls/google-site-verification.php:18
 #, php-format
 msgid "Please enter part %1$s of %2$s"
 msgstr "%2$sの%1$sの部分を入力してください"
 
-#: app/customizer/seo-sns.php:81
-msgid "OGP"
-msgstr "OGP"
+#: app/customizer/seo-sns/sections/google-search-console/section.php:14
+msgid "Google Search Console"
+msgstr "Google サーチコンソール"
 
-#: app/customizer/seo-sns.php:87
-msgid "Output OGP meta tag"
-msgstr "OGP メタタグを出力する"
+#: app/customizer/seo-sns/sections/google-tag-manager/controls/tag-manager-id.php:15
+msgid "Tag Manager ID"
+msgstr "タグマネージャ ID"
 
-#: app/customizer/seo-sns.php:96
+#: app/customizer/seo-sns/sections/google-tag-manager/controls/tag-manager-id.php:16
+msgid "e.g. GTM-X11X1XX"
+msgstr "例: GTM-X11X1XX"
+
+#: app/customizer/seo-sns/sections/google-tag-manager/section.php:14
+msgid "Google Tag Manager"
+msgstr "Google タグマネージャ"
+
+#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:17
+msgid "Facebook page name"
+msgstr "Facebook ページ名"
+
+#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:19
+#, php-format
+msgctxt "facebook-page-name"
+msgid "Please enter %1$s of %2$s"
+msgstr "%2$sの%1$sを入力してください"
+
+#: app/customizer/seo-sns/sections/like-me-box/section.php:14
+msgid "Like me box"
+msgstr "いいね！ボックス"
+
+#: app/customizer/seo-sns/sections/ogp/controls/og-image.php:15
 msgid "Default OGP image"
 msgstr "デフォルト OGP 画像"
 
-#: app/customizer/seo-sns.php:97
+#: app/customizer/seo-sns/sections/ogp/controls/og-image.php:16
 msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
@@ -225,210 +221,213 @@ msgstr ""
 "アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設"
 "定されていない場合はこの画像が使用されます。"
 
-#: app/customizer/seo-sns.php:108
-msgid "Structured data"
-msgstr "構造化データ"
+#: app/customizer/seo-sns/sections/ogp/controls/ogp.php:15
+msgid "Output OGP meta tag"
+msgstr "OGP メタタグを出力する"
 
-#: app/customizer/seo-sns.php:114
-msgid "Output structred data (JSON+LD)"
-msgstr "構造化データ（JSON+LD）を出力する"
+#: app/customizer/seo-sns/sections/ogp/section.php:14
+msgid "OGP"
+msgstr "OGP"
 
-#: app/customizer/seo-sns.php:123
-msgid "Date for the search engine"
-msgstr "検索エンジンに伝える日付"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:16
+msgid "Display buttons"
+msgstr "ボタンを表示"
 
-#: app/customizer/seo-sns.php:124
-msgid "This feature is a beta version."
-msgstr "この機能はベータ版です。"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:20
+msgid "Facebook"
+msgstr "Facebook"
 
-#: app/customizer/seo-sns.php:127
-msgid "Published date"
-msgstr "公開日"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:21
+msgid "Twitter"
+msgstr "Twitter"
 
-#: app/customizer/seo-sns.php:127
-msgid "(Display published date and modifiled date)"
-msgstr "（公開日と更新日を表示）"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:22
+msgid "Hatena Bookmark"
+msgstr "はてなブックマーク"
 
-#: app/customizer/seo-sns.php:128
-msgid "Modified date"
-msgstr "更新日"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:23
+msgid "Feedly"
+msgstr "Feedly"
 
-#: app/customizer/seo-sns.php:128
-msgid "(Only modified date displayed when updating post)"
-msgstr "（記事を更新したときは更新日だけを表示）"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:24
+msgid "LINE"
+msgstr "LINE"
 
-#: app/customizer/seo-sns.php:139
-msgid "Twitter Cards"
-msgstr "Twitter Cards"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:25
+msgid "Pocket"
+msgstr "Pocket"
 
-#: app/customizer/seo-sns.php:141
-#, php-format
-msgid "Application of URL is necessary for using Twitter Cards. %1$s"
-msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:26
+msgid "Feed"
+msgstr "フィード"
 
-#: app/customizer/seo-sns.php:149
-msgid "twitter:card"
-msgstr "twitter:card"
+#: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php:15
+msgid "Share counts cache time (seconds)"
+msgstr "シェアカウントのキャッシュ時間（秒）"
 
-#: app/customizer/seo-sns.php:150
-msgid "Twitter Cards format"
-msgstr "Twitter Cards のフォーマット"
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:16
+msgid "Display position"
+msgstr "表示する場所"
 
-#: app/customizer/seo-sns.php:154
-msgid "Do not use"
-msgstr "使用しない"
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
+msgid "Top of contents"
+msgstr "コンテンツの上"
 
-#: app/customizer/seo-sns.php:164
-msgid "twitter:site"
-msgstr "twitter:site"
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
+#: app/setup/widget-area.php:170
+msgid "Bottom of contents"
+msgstr "コンテンツの下"
 
-#: app/customizer/seo-sns.php:166
-#, php-format
-msgid "The Twitter account name of the site. Please enter in the form %1$s."
-msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:22
+msgid "Both"
+msgstr "両方"
 
-#: app/customizer/seo-sns.php:180
-msgid "Like me box"
-msgstr "いいね！ボックス"
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:17
+msgid "Type"
+msgstr "種類"
 
-#: app/customizer/seo-sns.php:188
-msgid "Facebook page name"
-msgstr "Facebook ページ名"
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:21
+msgid "Balloon"
+msgstr "バルーン"
 
-#: app/customizer/seo-sns.php:190
-#, php-format
-msgctxt "facebook-page-name"
-msgid "Please enter %1$s of %2$s"
-msgstr "%2$sの%1$sを入力してください"
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:22
+msgid "Horizontal"
+msgstr "水平"
 
-#: app/customizer/seo-sns.php:210
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:23
+msgid "Icon"
+msgstr "アイコン"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:24
+msgid "Block"
+msgstr "ブロック"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:25
+msgid "Official"
+msgstr "公式"
+
+#: app/customizer/seo-sns/sections/share-buttons/section.php:14
 msgid "Share buttons"
 msgstr "シェアボタン"
 
-#: app/customizer/seo-sns.php:212
+#: app/customizer/seo-sns/sections/share-buttons/section.php:17
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
-#: app/customizer/seo-sns.php:221
-msgid "Display buttons"
-msgstr "ボタンを表示"
+#: app/customizer/seo-sns/sections/structured-data/controls/json-ld.php:15
+msgid "Output structred data (JSON+LD)"
+msgstr "構造化データ（JSON+LD）を出力する"
 
-#: app/customizer/seo-sns.php:224
-msgid "Facebook"
-msgstr "Facebook"
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:15
+msgid "Date for the search engine"
+msgstr "検索エンジンに伝える日付"
 
-#: app/customizer/seo-sns.php:225
-msgid "Twitter"
-msgstr "Twitter"
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:16
+msgid "This feature is a beta version."
+msgstr "この機能はベータ版です。"
 
-#: app/customizer/seo-sns.php:226
-msgid "Hatena Bookmark"
-msgstr "はてなブックマーク"
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:20
+msgid "Published date"
+msgstr "公開日"
 
-#: app/customizer/seo-sns.php:227
-msgid "Feedly"
-msgstr "Feedly"
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:20
+msgid "(Display published date and modifiled date)"
+msgstr "（公開日と更新日を表示）"
 
-#: app/customizer/seo-sns.php:228
-msgid "LINE"
-msgstr "LINE"
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
+msgid "Modified date"
+msgstr "更新日"
 
-#: app/customizer/seo-sns.php:229
-msgid "Pocket"
-msgstr "Pocket"
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
+msgid "(Only modified date displayed when updating post)"
+msgstr "（記事を更新したときは更新日だけを表示）"
 
-#: app/customizer/seo-sns.php:230
-msgid "Feed"
-msgstr "フィード"
+#: app/customizer/seo-sns/sections/structured-data/section.php:14
+msgid "Structured data"
+msgstr "構造化データ"
 
-#: app/customizer/seo-sns.php:240
-msgid "Type"
-msgstr "種類"
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php:15
+msgid "twitter:card"
+msgstr "twitter:card"
 
-#: app/customizer/seo-sns.php:243
-msgid "Balloon"
-msgstr "バルーン"
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php:16
+msgid "Twitter Cards format"
+msgstr "Twitter Cards のフォーマット"
 
-#: app/customizer/seo-sns.php:244
-msgid "Horizontal"
-msgstr "水平"
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php:21
+msgid "Do not use"
+msgstr "使用しない"
 
-#: app/customizer/seo-sns.php:245
-msgid "Icon"
-msgstr "アイコン"
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-site.php:15
+msgid "twitter:site"
+msgstr "twitter:site"
 
-#: app/customizer/seo-sns.php:246
-msgid "Block"
-msgstr "ブロック"
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-site.php:18
+#, php-format
+msgid "The Twitter account name of the site. Please enter in the form %1$s."
+msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
-#: app/customizer/seo-sns.php:247
-msgid "Official"
-msgstr "公式"
+#: app/customizer/seo-sns/sections/twitter-cards/section.php:14
+msgid "Twitter Cards"
+msgstr "Twitter Cards"
 
-#: app/customizer/seo-sns.php:262
-msgid "Display position"
-msgstr "表示する場所"
+#: app/customizer/seo-sns/sections/twitter-cards/section.php:17
+#, php-format
+msgid "Application of URL is necessary for using Twitter Cards. %1$s"
+msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
-#: app/customizer/seo-sns.php:265
-msgid "Top of contents"
-msgstr "コンテンツの上"
+#: app/customizer/singular-post/controls/child-pages.php:15
+msgid "Display child pages in page"
+msgstr "固定ページにそのページの子ページ一覧を表示する"
 
-#: app/customizer/seo-sns.php:266 app/setup/widget-area.php:170
-msgid "Bottom of contents"
-msgstr "コンテンツの下"
-
-#: app/customizer/seo-sns.php:267
-msgid "Both"
-msgstr "両方"
-
-#: app/customizer/seo-sns.php:275
-msgid "Share counts cache time (seconds)"
-msgstr "シェアカウントのキャッシュ時間（秒）"
-
-#: app/customizer/singular-post.php:13
-msgid "Singular post settings"
-msgstr "個別投稿の設定"
-
-#: app/customizer/singular-post.php:14
-msgid "Applies to singular post."
-msgstr "個別投稿に適用されます。"
-
-#: app/customizer/singular-post.php:39
+#: app/customizer/singular-post/controls/content-outline.php:14
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/singular-post.php:58
+#: app/customizer/singular-post/controls/profile-box.php:15
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
-#: app/customizer/singular-post.php:81
+#: app/customizer/singular-post/controls/related-posts.php:15
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
 
-#: app/customizer/title-tagline.php:12 template-parts/copyright.php:10
+#: app/customizer/singular-post/section.php:13
+msgid "Singular post settings"
+msgstr "個別投稿の設定"
+
+#: app/customizer/singular-post/section.php:14
+msgid "Applies to singular post."
+msgstr "個別投稿に適用されます。"
+
+#: app/customizer/title-tagline/controls/copyright.php:15
+#: template-parts/copyright.php:10
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: app/customizer/title-tagline.php:17 template-parts/copyright.php:15
+#: app/customizer/title-tagline/controls/copyright.php:20
+#: template-parts/copyright.php:15
 msgid "WordPress"
 msgstr "WordPress"
 
-#: app/customizer/title-tagline.php:20 template-parts/copyright.php:18
+#: app/customizer/title-tagline/controls/copyright.php:23
+#: template-parts/copyright.php:18
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: app/customizer/title-tagline.php:21 template-parts/copyright.php:19
+#: app/customizer/title-tagline/controls/copyright.php:24
+#: template-parts/copyright.php:19
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: app/customizer/title-tagline.php:31
+#: app/customizer/title-tagline/controls/copyright.php:29
 msgid "Copyright"
 msgstr "コピーライト"
 
-#: app/customizer/title-tagline.php:32
+#: app/customizer/title-tagline/controls/copyright.php:30
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
@@ -695,6 +694,12 @@ msgstr "1カラム"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "Page settings"
+#~ msgstr "固定ページの設定"
+
+#~ msgid "Applies to page."
+#~ msgstr "固定ページに適用されます。"
 
 #~ msgid "This widgets are displayed in the sidebar singular post."
 #~ msgstr "このウィジェットは個別投稿のサイドバーに表示されます。"
