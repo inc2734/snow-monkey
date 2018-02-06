@@ -9,6 +9,13 @@
     padding: 0;
   }
 
+  .#{$_prefix}c-row {
+    &,
+    &__col {
+      margin-bottom: 0;
+    }
+  }
+
   &__drop-nav {
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
