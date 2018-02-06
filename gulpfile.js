@@ -34,14 +34,14 @@ var dir = {
 /**
  * Remove directory for copied node modules
  */
-gulp.task('remove-packages-dir', function(cb) {
+gulp.task('remove-packages', function(cb) {
   rimraf(dir.dist.packages, cb);
 });
 
 /**
  * Copy dependencies node modules to src directory
  */
-gulp.task('packages', ['remove-packages-dir'], function(cb) {
+gulp.task('packages', ['remove-packages'], function(cb) {
   var packages = [
     dir.src.packages + '/font-awesome/**',
     dir.src.packages + '/slick-carousel/**',
@@ -63,7 +63,7 @@ gulp.task('remove-images', function(cb) {
 /**
  * Copy images to assets directory
  */
-gulp.task('img',['remove-images'], function() {
+gulp.task('img', ['remove-images'], function() {
   return gulp.src(dir.src.img + '/**/*')
     .pipe(gulp.dest(dir.dist.img));
 });
@@ -71,12 +71,19 @@ gulp.task('img',['remove-images'], function() {
 /**
  * Build CSS
  */
-gulp.task('css', function() {
+gulp.task('css', ['remove-css'], function() {
   return sassCompile(dir.src.css + '/*.scss', dir.dist.css)
     .on('end', function() {
       return gulp.src(dir.src.css + '/**/*.php')
         .pipe(gulp.dest(dir.dist.css));
     });
+});
+
+/**
+ * Remove directory for copied node modules
+ */
+gulp.task('remove-css', function(cb) {
+  rimraf(dir.dist.css, cb);
 });
 
 function sassCompile(src, dest) {
