@@ -110,4 +110,14 @@
       }
     }
   }
+
+  .#{$_prefix}p-global-nav {
+    .#{$_prefix}c-navbar {
+      justify-content: center;
+
+      &__item {
+        flex: 0 1 auto;
+      }
+    }
+  }
 }
