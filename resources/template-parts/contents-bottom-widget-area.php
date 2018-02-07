@@ -11,7 +11,7 @@ if ( ! $post_type ) {
 }
 
 // @deprecated {$post_type}-post-type-contents-bottom-widget-area
-if ( ! is_active_sidebar( $post_type . '-post-type-contents-bottom-widget-area' ) ) {
+if ( ! is_active_sidebar( $post_type . '-post-type-contents-bottom-widget-area' ) && ! is_active_sidebar( 'contents-bottom-widget-area' ) ) {
 	return;
 }
 ?>
