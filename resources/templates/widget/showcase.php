@@ -8,8 +8,8 @@
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 	<style>
-	#wpaw-showcase-<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__lead,
-	#wpaw-showcase-<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__title {
+	.wpaw-showcase--<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__lead,
+	.wpaw-showcase--<?php echo esc_html( $args['widget_id'] ); ?> .wpaw-showcase__title {
 		color: <?php echo esc_attr( $instance['color'] ); ?>;
 	}
 	</style>
@@ -20,7 +20,7 @@
 	</script>
 
 	<div
-		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> js-bg-parallax"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?> js-bg-parallax"
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg-image'], 'large' ) ); ?>)"
 		>

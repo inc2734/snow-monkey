@@ -22,7 +22,7 @@ $recent_posts = get_posts( [
 	<?php endif; ?>
 
 	<div
-		class="wpaw-recent-posts"
+		class="wpaw-recent-posts wpaw-recent-posts--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-recent-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
