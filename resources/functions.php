@@ -66,6 +66,32 @@ foreach ( $includes as $include ) {
 }
 
 /**
+ * Output comment for get_template_part()
+ */
+if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+	$slugs = [];
+	$files = snow_monkey_glob_recursive( get_template_directory() );
+	if ( is_child_theme() ) {
+		$files = array_merge( $files, snow_monkey_glob_recursive( get_stylesheet_directory() ) );
+	}
+
+	foreach ( $files as $file ) {
+		$slug = str_replace( [ get_template_directory() . '/', get_stylesheet_directory() . '/', '.php' ], '', $file );
+		$slugs[ $slug ] = $slug;
+	}
+
+	foreach ( $slugs as $slug ) {
+		add_action( 'get_template_part_' . $slug, function( $slug, $name ) {
+			if ( $name ) {
+				$slug = $slug . '-' . $name;
+			}
+
+			printf( "\n" . '<!-- Start : %1$s -->' . "\n", esc_html( $slug ) );
+		}, 10, 2 );
+	}
+}
+
+/**
  * Returns array of page templates for layout selector in customizer
  *
  * @return array
@@ -123,4 +149,27 @@ function snow_monkey_get_public_post_types() {
 	}
 
 	return $post_types;
+}
+
+/**
+ * Returns PHP file list
+ *
+ * @param string Directory path
+ * @return array PHP file list
+ */
+function snow_monkey_glob_recursive( $path ) {
+	$files = [];
+	if ( preg_match( '/\\' . DIRECTORY_SEPARATOR . 'vendor$/', $path ) ) {
+		return $files;
+	}
+
+	foreach ( glob( $path . '/*' ) as $file ) {
+		if ( is_dir( $file ) ) {
+			$files = array_merge( $files, snow_monkey_glob_recursive( $file ) );
+		} elseif ( preg_match( '/\.php$/', $file ) ) {
+			$files[] = $file;
+		}
+	}
+
+	return $files;
 }
