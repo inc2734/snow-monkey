@@ -68,7 +68,7 @@ foreach ( $includes as $include ) {
 /**
  * Output comment for get_template_part()
  */
-if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+if ( defined( 'WP_DEBUG' ) && WP_DEBUG && ! is_customize_preview() ) {
 	$slugs = [];
 	$files = snow_monkey_glob_recursive( get_template_directory() );
 	if ( is_child_theme() ) {
