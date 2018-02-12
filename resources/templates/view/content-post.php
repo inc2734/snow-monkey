@@ -8,24 +8,32 @@
 <?php get_template_part( 'template-parts/title-top-widget-area' ); ?>
 
 <article <?php post_class(); ?>>
-	<header class="c-entry__header">
-		<h1 class="c-entry__title"><?php the_title(); ?></h1>
-		<div class="c-entry__meta">
-			<?php get_template_part( 'template-parts/entry-meta' ); ?>
-		</div>
+	<?php if ( 'title-on-page-header' !== get_theme_mod( 'post-eyecatch' ) ) : ?>
+		<header class="c-entry__header">
+			<h1 class="c-entry__title"><?php the_title(); ?></h1>
+			<div class="c-entry__meta">
+				<?php get_template_part( 'template-parts/entry-meta' ); ?>
+			</div>
+		</header>
+	<?php endif; ?>
 
+	<div class="c-entry__content">
 		<?php
 		wpvc_get_template_part( 'template-parts/share-buttons', [
 			'_position' => 'top',
 		] );
 		?>
-	</header>
 
-	<div class="c-entry__content">
 		<?php
 		wpvc_get_template_part( 'template-parts/google-adsense', [
 			'position' => 'content-top',
 		] );
+		?>
+
+		<?php
+		if ( 'content-top' === get_theme_mod( 'post-eyecatch' ) ) {
+			get_template_part( 'template-parts/eyecatch' );
+		}
 		?>
 
 		<?php get_template_part( 'template-parts/contents-outline' ); ?>

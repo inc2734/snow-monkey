@@ -17,7 +17,11 @@
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents">
-			<?php get_template_part( 'template-parts/page-header' ); ?>
+			<?php
+			if ( snow_monkey_is_output_page_header() ) {
+				get_template_part( 'template-parts/page-header' );
+			}
+			?>
 
 			<div class="c-container">
 				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>

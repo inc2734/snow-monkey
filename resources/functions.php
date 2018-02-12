@@ -173,3 +173,51 @@ function snow_monkey_glob_recursive( $path ) {
 
 	return $files;
 }
+
+/**
+ * Return output positions of eyecatch
+ *
+ * @return array
+ */
+function snow_monkey_eyecatch_position_choices() {
+	return [
+		'page-header'          => __( 'Page header', 'snow-monkey' ),
+		'title-on-page-header' => __( 'Title on page header', 'snow-monkey' ),
+		'content-top'          => __( 'Top of content', 'snow-monkey' ),
+		'none'                 => __( 'None', 'snow-monkey' ),
+	];
+}
+
+/**
+ * Return whether to display the page header
+ *
+ * @return boolean
+ */
+function snow_monkey_is_output_page_header() {
+	if ( is_page() && 'page-header' === get_theme_mod( 'page-eyecatch' ) ) {
+		return true;
+	} elseif ( is_singular( 'post' ) && 'page-header' === get_theme_mod( 'post-eyecatch' ) ) {
+		return true;
+	} elseif ( snow_monkey_is_output_page_header_title() ) {
+		return true;
+	} elseif ( ! is_singular() ) {
+		return true;
+	}
+
+	return false;
+}
+
+/**
+ * Return whether to display the page header title
+ *
+ * @return boolean
+ */
+function snow_monkey_is_output_page_header_title() {
+	if ( is_page() && 'title-on-page-header' === get_theme_mod( 'page-eyecatch' ) ) {
+		return true;
+	} elseif ( is_singular( 'post' ) && 'title-on-page-header' === get_theme_mod( 'post-eyecatch' ) ) {
+		return true;
+	}
+
+	return false;
+}
