@@ -17,5 +17,3 @@ $customizer->section( 'post', [
 		return is_singular( 'post' );
 	},
 ] );
-
-$section = $customizer->get_section( 'post' );

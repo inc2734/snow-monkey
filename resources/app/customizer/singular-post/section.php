@@ -17,5 +17,3 @@ $customizer->section( 'singular-post', [
 		return ( ! is_front_page() && ( is_singular() || is_404() ) );
 	},
 ] );
-
-$section = $customizer->get_section( 'singular-post' );

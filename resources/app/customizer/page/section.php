@@ -17,5 +17,3 @@ $customizer->section( 'page', [
 		return ( is_page() && ! is_front_page() );
 	},
 ] );
-
-$section = $customizer->get_section( 'page' );
