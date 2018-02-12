@@ -28,6 +28,6 @@ $control->partial( [
 	'selector'            => '.wp-like-me-box',
 	'container_inclusive' => true,
 	'render_callback'     => function() {
-		get_template_part( 'template-parts/like-me-box' );
+		return get_option( 'mwt-facebook-page-name' );
 	},
 ] );

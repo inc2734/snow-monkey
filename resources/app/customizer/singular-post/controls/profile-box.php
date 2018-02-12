@@ -27,6 +27,6 @@ $control->partial( [
 	'selector'            => '.wp-profile-box',
 	'container_inclusive' => true,
 	'render_callback'     => function() {
-		get_template_part( 'template-parts/profile-box' );
+		return get_option( 'mwt-display-profile-box' );
 	},
 ] );

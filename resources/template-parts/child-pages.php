@@ -5,11 +5,6 @@
  * @license GPL-2.0+
  */
 
-$display_child_pages = get_option( 'mwt-display-child-pages' );
-if ( ! $display_child_pages ) {
-	return;
-}
-
 $pages = get_children( [
 	'post_parent'    => get_the_ID(),
 	'post_type'      => 'page',

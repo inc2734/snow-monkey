@@ -8,12 +8,6 @@
 if ( ! get_option( 'mwt-share-buttons-buttons' ) ) {
 	return;
 }
-
-$share_buttons_display_position = get_option( 'mwt-share-buttons-display-position' );
-
-if ( $_position !== $share_buttons_display_position && 'both' !== $share_buttons_display_position ) {
-	return;
-}
 ?>
 
 <div class="wp-share-buttons wp-share-buttons--<?php echo esc_attr( get_option( 'mwt-share-buttons-type' ) ); ?>">

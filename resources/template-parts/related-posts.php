@@ -5,11 +5,6 @@
  * @license GPL-2.0+
  */
 
-$display_related_posts = get_option( 'mwt-display-related-posts' );
-if ( ! $display_related_posts ) {
-	return;
-}
-
 $tax_query = [];
 
 $category_ids = [];

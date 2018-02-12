@@ -35,6 +35,6 @@ $control->partial( [
 	'selector'            => '.p-child-pages',
 	'container_inclusive' => true,
 	'render_callback'     => function() {
-		get_template_part( 'template-parts/child-pages' );
+		return get_option( 'mwt-display-child-pages' );
 	},
 ] );

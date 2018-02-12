@@ -19,9 +19,9 @@
 
 	<div class="c-entry__content">
 		<?php
-		wpvc_get_template_part( 'template-parts/share-buttons', [
-			'_position' => 'top',
-		] );
+		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) ) {
+			get_template_part( 'template-parts/share-buttons' );
+		}
 		?>
 
 		<?php
@@ -36,7 +36,11 @@
 		}
 		?>
 
-		<?php get_template_part( 'template-parts/contents-outline' ); ?>
+		<?php
+		if ( get_option( 'mwt-display-contents-outline' ) ) {
+			get_template_part( 'template-parts/contents-outline' );
+		}
+		?>
 
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
@@ -44,12 +48,16 @@
 
 	<footer class="c-entry__footer">
 		<?php
-		wpvc_get_template_part( 'template-parts/share-buttons', [
-			'_position' => 'bottom',
-		] );
+		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'bottom', 'both' ] ) ) {
+			get_template_part( 'template-parts/share-buttons' );
+		}
 		?>
 
-		<?php get_template_part( 'template-parts/profile-box' ); ?>
+		<?php
+		if ( get_option( 'mwt-display-profile-box' ) ) {
+			get_template_part( 'template-parts/profile-box' );
+		}
+		?>
 
 		<?php
 		wpvc_get_template_part( 'template-parts/google-adsense', [
@@ -65,7 +73,11 @@
 
 <?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
 
-<?php get_template_part( 'template-parts/related-posts' ); ?>
+<?php
+if ( get_option( 'mwt-display-related-posts' ) ) {
+	get_template_part( 'template-parts/related-posts' );
+}
+?>
 
 <?php
 if ( comments_open() || pings_open() || get_comments_number() ) {

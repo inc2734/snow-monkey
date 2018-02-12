@@ -27,6 +27,6 @@ $control->partial( [
 	'selector'            => '.p-related-posts',
 	'container_inclusive' => true,
 	'render_callback'     => function() {
-		get_template_part( 'template-parts/related-posts' );
+		return get_option( 'mwt-display-related-posts' );
 	},
 ] );

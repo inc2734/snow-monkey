@@ -24,7 +24,11 @@
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>
 
-	<?php get_template_part( 'template-parts/child-pages' ); ?>
+	<?php
+	if ( get_option( 'mwt-display-child-pages' ) ) {
+		get_template_part( 'template-parts/child-pages' );
+	}
+	?>
 </article>
 
 <?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
