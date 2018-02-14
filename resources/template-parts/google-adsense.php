@@ -13,37 +13,5 @@ if ( ! $google_adsense ) {
 ?>
 
 <div class="c-google-adsense">
-	<?php
-	if ( ! function_exists( 'snow_monkey_safe_style_css_display' ) ) {
-		function snow_monkey_safe_style_css_display( $styles ) {
-			$styles[] = 'display';
-			return $styles;
-		}
-	}
-
-	add_filter( 'safe_style_css', 'snow_monkey_safe_style_css_display' );
-
-	if ( class_exists( 'Jetpack' ) ) {
-		// @todo
-		// @codingStandardsIgnoreStart
-		echo $google_adsense;
-		// @codingStandardsIgnoreEnd
-	} else {
-		echo wp_kses( $google_adsense, [
-			'script' => [
-				'async' => [],
-				'src'   => [],
-			],
-			'ins' => [
-				'class'          => [],
-				'style'          => [],
-				'data-ad-client' => [],
-				'data-ad-slot'   => [],
-				'data-ad-format' => [],
-			],
-		] );
-	}
-
-	remove_filter( 'safe_style_css', 'snow_monkey_safe_style_css_display' );
-	?>
+	<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $google_adsense ); ?>
 </div>
