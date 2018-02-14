@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cedc94bef4892dc1012115879c9e81b6",
-    "content-hash": "47363f45e88b08ba3a385565dbbc3eb1",
+    "hash": "98b814da826a89806c65894f827fba4e",
+    "content-hash": "880df58ea52781eddcc2654184ec072f",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.8.2",
+            "version": "1.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "b35a42d1ed954446be762fc84f5d072ffd3c55c6"
+                "reference": "4685dcbe601e91e826be8308d687b7112453899a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/b35a42d1ed954446be762fc84f5d072ffd3c55c6",
-                "reference": "b35a42d1ed954446be762fc84f5d072ffd3c55c6",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4685dcbe601e91e826be8308d687b7112453899a",
+                "reference": "4685dcbe601e91e826be8308d687b7112453899a",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.4",
-                "inc2734/wp-awesome-widgets": ">=1.9.2",
+                "inc2734/wp-awesome-widgets": ">=1.9.3",
                 "inc2734/wp-basis": ">=0.7.4",
                 "inc2734/wp-breadcrumbs": ">=1.0.0",
                 "inc2734/wp-contents-outline": ">=0.3.2",
@@ -35,7 +35,7 @@
                 "inc2734/wp-pure-css-gallery": ">=0.1.4",
                 "inc2734/wp-seo": ">=0.7.1",
                 "inc2734/wp-share-buttons": ">=1.0.3",
-                "inc2734/wp-view-controller": ">=4.0.2",
+                "inc2734/wp-view-controller": ">=4.0.3",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-02-14 14:12:51"
+            "time": "2018-02-14 15:00:15"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,21 +107,21 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.9.2",
+            "version": "1.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "25f8ff2b8f84df65c3dad9bf5048c488793e76dc"
+                "reference": "c226218d3e740ff2b901bb75b3fc3cd9156b23a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/25f8ff2b8f84df65c3dad9bf5048c488793e76dc",
-                "reference": "25f8ff2b8f84df65c3dad9bf5048c488793e76dc",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/c226218d3e740ff2b901bb75b3fc3cd9156b23a2",
+                "reference": "c226218d3e740ff2b901bb75b3fc3cd9156b23a2",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-contents-outline": ">=0.3.2",
-                "inc2734/wp-view-controller": ">=4.0.2",
+                "inc2734/wp-view-controller": ">=4.0.3",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -147,7 +147,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-02-14 14:10:36"
+            "time": "2018-02-14 14:53:40"
         },
         {
             "name": "inc2734/wp-basis",
@@ -657,16 +657,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "48922265a5ce005c88593a9a395392db1350ad9c"
+                "reference": "2ec9fbfee5c0e824cea36d1dcacf3fdebbd6baa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/48922265a5ce005c88593a9a395392db1350ad9c",
-                "reference": "48922265a5ce005c88593a9a395392db1350ad9c",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/2ec9fbfee5c0e824cea36d1dcacf3fdebbd6baa8",
+                "reference": "2ec9fbfee5c0e824cea36d1dcacf3fdebbd6baa8",
                 "shasum": ""
             },
             "require": {
@@ -695,7 +695,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2018-02-14 14:04:50"
+            "time": "2018-02-14 14:49:45"
         }
     ],
     "packages-dev": [
