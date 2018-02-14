@@ -17,8 +17,9 @@ $customizer->control( 'radio', 'post-date', [
 	'priority'    => 110,
 	'default'     => 'published-date',
 	'choices'     => [
-		'published-date' => __( 'Published date', 'snow-monkey' ) . __( '(Display published date and modifiled date)', 'snow-monkey' ),
-		'modified-date'  => __( 'Modified date', 'snow-monkey' ) . __( '(Only modified date displayed when updating post)', 'snow-monkey' ),
+		'published-date'     => __( 'Published date', 'snow-monkey' ) . __( '(Display published date and modifiled date)', 'snow-monkey' ),
+		'modified-date'      => __( 'Only modified date', 'snow-monkey' ) . __( '(Only modified date displayed when updating post)', 'snow-monkey' ),
+		'modified-date-high' => __( 'Prioritize display of modified date', 'snow-monkey' ) . __( '(Display modifiled date and published date)', 'snow-monkey' ),
 	],
 ] );
 

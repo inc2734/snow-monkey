@@ -22,6 +22,19 @@ function snow_monkey_entry_meta_items_published() {
 add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_published', 10 );
 
 /**
+ * Published - No time tag
+ */
+function snow_monkey_entry_meta_items_published_no_time() {
+	?>
+	<li class="c-meta__item c-meta__item--published">
+		<i class="fa fa-clock-o" aria-hidden="true"></i>
+		<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
+		<?php the_time( get_option( 'date_format' ) ); ?>
+	</li>
+	<?php
+}
+
+/**
  * Modified
  */
 function snow_monkey_entry_meta_items_modified() {
