@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-02-05 20:59+0900\n"
-"PO-Revision-Date: 2018-02-05 20:59+0900\n"
+"POT-Creation-Date: 2018-02-14 15:31+0900\n"
+"PO-Revision-Date: 2018-02-14 15:32+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -29,10 +29,12 @@ msgstr "Google アドセンス"
 #: app/customizer/advertisement/controls/google-adsense.php:15
 msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
-"displayed in the prescribed part of the theme."
+"displayed in the prescribed part of the theme. If you want to display at "
+"arbitrary position, please use widgets etc."
 msgstr ""
 "レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
-"が表示されます。"
+"が表示されます。もし任意の位置に広告を表示したい場合は、ウィジェット等を使"
+"用してください。"
 
 #: app/customizer/advertisement/section.php:13
 msgid "Advertisement"
@@ -141,6 +143,35 @@ msgstr "中央ロゴ"
 #: app/customizer/design/section.php:13
 msgid "Design"
 msgstr "デザイン"
+
+#: app/customizer/page/controls/eyecatch.php:14
+#: app/customizer/post/controls/eyecatch.php:14
+msgid "Eyecatch image"
+msgstr "アイキャッチ画像"
+
+#: app/customizer/page/controls/eyecatch.php:15
+msgid "Select how to display the eyecatch image in page."
+msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/page/section.php:13
+msgid "Page settings"
+msgstr "固定ページの設定"
+
+#: app/customizer/page/section.php:14
+msgid "Applies to page."
+msgstr "固定ページに適用されます。"
+
+#: app/customizer/post/controls/eyecatch.php:15
+msgid "Select how to display the eyecatch image in post."
+msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/post/section.php:13
+msgid "Post settings"
+msgstr "投稿ページの設定"
+
+#: app/customizer/post/section.php:14
+msgid "Applies to post."
+msgstr "投稿ページに適用されます。"
 
 #: app/customizer/protected/controls/protected-more.php:14
 msgid ""
@@ -336,12 +367,20 @@ msgid "(Display published date and modifiled date)"
 msgstr "（公開日と更新日を表示）"
 
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
-msgid "Modified date"
-msgstr "更新日"
+msgid "Only modified date"
+msgstr "更新日のみ"
 
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
 msgid "(Only modified date displayed when updating post)"
 msgstr "（記事を更新したときは更新日だけを表示）"
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:22
+msgid "Prioritize display of modified date"
+msgstr "更新日の表示を優先する"
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:22
+msgid "(Display modifiled date and published date)"
+msgstr "（更新日と公開日を表示）"
 
 #: app/customizer/seo-sns/sections/structured-data/section.php:14
 msgid "Structured data"
@@ -398,8 +437,8 @@ msgid "Singular post settings"
 msgstr "個別投稿の設定"
 
 #: app/customizer/singular-post/section.php:14
-msgid "Applies to singular post."
-msgstr "個別投稿に適用されます。"
+msgid "Applies to post, page and custom post."
+msgstr "投稿ページ、固定ページ、カスタム投稿ページに適用されます。"
 
 #: app/customizer/title-tagline/controls/copyright.php:15
 #: template-parts/copyright.php:10
@@ -431,19 +470,19 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/setup/entry-meta.php:16
+#: app/setup/entry-meta.php:16 app/setup/entry-meta.php:31
 msgid "Published"
 msgstr "投稿日"
 
-#: app/setup/entry-meta.php:35
+#: app/setup/entry-meta.php:48
 msgid "Modified"
 msgstr "更新日"
 
-#: app/setup/entry-meta.php:49
+#: app/setup/entry-meta.php:62
 msgid "Author"
 msgstr "著者"
 
-#: app/setup/entry-meta.php:67
+#: app/setup/entry-meta.php:80
 msgid "Categories"
 msgstr "カテゴリー"
 
@@ -539,24 +578,24 @@ msgid "This widgets are displayed in the sidebar of archive page ."
 msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
 
 #: app/setup/widget-area.php:204
-msgid "Footer"
-msgstr "フッター"
-
-#: app/setup/widget-area.php:206
-msgid "This widgets are displayed in the footer."
-msgstr "このウィジェットはフッターに表示されます。"
-
-#: app/setup/widget-area.php:221
 msgid "Front page (Top of page)"
 msgstr "フロントページ（ページ上部）"
 
-#: app/setup/widget-area.php:223 app/setup/widget-area.php:254
+#: app/setup/widget-area.php:206 app/setup/widget-area.php:237
 msgid "This widgets are displayed in the static front page."
 msgstr "このウィジェットは固定フロントページに表示されます。"
 
-#: app/setup/widget-area.php:252
+#: app/setup/widget-area.php:235
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ（ページ下部）"
+
+#: app/setup/widget-area.php:266
+msgid "Footer"
+msgstr "フッター"
+
+#: app/setup/widget-area.php:268
+msgid "This widgets are displayed in the footer."
+msgstr "このウィジェットはフッターに表示されます。"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:11
 msgid "Title"
@@ -586,7 +625,23 @@ msgstr "Snow Monkey: 最近の投稿"
 msgid "Recent posts"
 msgstr "最近の投稿"
 
-#: template-parts/child-pages.php:27
+#: functions.php:184
+msgid "Page header"
+msgstr "ページヘッダー"
+
+#: functions.php:185
+msgid "Title on page header"
+msgstr "ページヘッダーの上にタイトルを表示"
+
+#: functions.php:186
+msgid "Top of content"
+msgstr "コンテンツの上"
+
+#: functions.php:187
+msgid "None"
+msgstr "なし"
+
+#: template-parts/child-pages.php:22
 msgid "Child pages"
 msgstr "このページの子ページ"
 
@@ -643,7 +698,7 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:70
+#: template-parts/related-posts.php:65
 msgid "Related posts"
 msgstr "関連記事"
 
@@ -695,11 +750,8 @@ msgstr "1カラム"
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
-#~ msgid "Page settings"
-#~ msgstr "固定ページの設定"
-
-#~ msgid "Applies to page."
-#~ msgstr "固定ページに適用されます。"
+#~ msgid "Applies to singular post."
+#~ msgstr "個別投稿に適用されます。"
 
 #~ msgid "This widgets are displayed in the sidebar singular post."
 #~ msgstr "このウィジェットは個別投稿のサイドバーに表示されます。"

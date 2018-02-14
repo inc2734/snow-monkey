@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-02-12 09:54+0900\n"
-"PO-Revision-Date: 2018-02-12 09:56+0900\n"
+"POT-Creation-Date: 2018-02-14 15:31+0900\n"
+"PO-Revision-Date: 2018-02-14 15:32+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -29,10 +29,12 @@ msgstr "Google アドセンス"
 #: app/customizer/advertisement/controls/google-adsense.php:15
 msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
-"displayed in the prescribed part of the theme."
+"displayed in the prescribed part of the theme. If you want to display at "
+"arbitrary position, please use widgets etc."
 msgstr ""
 "レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
-"が表示されます。"
+"が表示されます。もし任意の位置に広告を表示したい場合は、ウィジェット等を使"
+"用してください。"
 
 #: app/customizer/advertisement/section.php:13
 msgid "Advertisement"
@@ -365,12 +367,20 @@ msgid "(Display published date and modifiled date)"
 msgstr "（公開日と更新日を表示）"
 
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
-msgid "Modified date"
-msgstr "更新日"
+msgid "Only modified date"
+msgstr "更新日のみ"
 
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
 msgid "(Only modified date displayed when updating post)"
 msgstr "（記事を更新したときは更新日だけを表示）"
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:22
+msgid "Prioritize display of modified date"
+msgstr "更新日の表示を優先する"
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:22
+msgid "(Display modifiled date and published date)"
+msgstr "（更新日と公開日を表示）"
 
 #: app/customizer/seo-sns/sections/structured-data/section.php:14
 msgid "Structured data"
@@ -460,19 +470,19 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/setup/entry-meta.php:16
+#: app/setup/entry-meta.php:16 app/setup/entry-meta.php:31
 msgid "Published"
 msgstr "投稿日"
 
-#: app/setup/entry-meta.php:35
+#: app/setup/entry-meta.php:48
 msgid "Modified"
 msgstr "更新日"
 
-#: app/setup/entry-meta.php:49
+#: app/setup/entry-meta.php:62
 msgid "Author"
 msgstr "著者"
 
-#: app/setup/entry-meta.php:67
+#: app/setup/entry-meta.php:80
 msgid "Categories"
 msgstr "カテゴリー"
 
@@ -615,23 +625,23 @@ msgstr "Snow Monkey: 最近の投稿"
 msgid "Recent posts"
 msgstr "最近の投稿"
 
-#: functions.php:181
+#: functions.php:184
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: functions.php:182
+#: functions.php:185
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: functions.php:183
+#: functions.php:186
 msgid "Top of content"
 msgstr "コンテンツの上"
 
-#: functions.php:184
+#: functions.php:187
 msgid "None"
 msgstr "なし"
 
-#: template-parts/child-pages.php:27
+#: template-parts/child-pages.php:22
 msgid "Child pages"
 msgstr "このページの子ページ"
 
@@ -688,7 +698,7 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:70
+#: template-parts/related-posts.php:65
 msgid "Related posts"
 msgstr "関連記事"
 
