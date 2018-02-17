@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "98b814da826a89806c65894f827fba4e",
-    "content-hash": "880df58ea52781eddcc2654184ec072f",
+    "hash": "f7c9a4977a6b732ef3865dba13e8ab19",
+    "content-hash": "55f2051eed1804b2c409cde9afd45128",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.8.3",
+            "version": "1.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "4685dcbe601e91e826be8308d687b7112453899a"
+                "reference": "8eea5d1c05dfebced66fbac7ece039e9c2437369"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4685dcbe601e91e826be8308d687b7112453899a",
-                "reference": "4685dcbe601e91e826be8308d687b7112453899a",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8eea5d1c05dfebced66fbac7ece039e9c2437369",
+                "reference": "8eea5d1c05dfebced66fbac7ece039e9c2437369",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.4.4",
-                "inc2734/wp-awesome-widgets": ">=1.9.3",
+                "inc2734/wp-awesome-widgets": ">=1.9.4",
                 "inc2734/wp-basis": ">=0.7.4",
                 "inc2734/wp-breadcrumbs": ">=1.0.0",
                 "inc2734/wp-contents-outline": ">=0.3.2",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-02-14 15:00:15"
+            "time": "2018-02-17 00:14:31"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,16 +107,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.9.3",
+            "version": "1.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "c226218d3e740ff2b901bb75b3fc3cd9156b23a2"
+                "reference": "dfa6fd344048f43b1802e2adb88f3be68b6b7a8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/c226218d3e740ff2b901bb75b3fc3cd9156b23a2",
-                "reference": "c226218d3e740ff2b901bb75b3fc3cd9156b23a2",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/dfa6fd344048f43b1802e2adb88f3be68b6b7a8c",
+                "reference": "dfa6fd344048f43b1802e2adb88f3be68b6b7a8c",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-02-14 14:53:40"
+            "time": "2018-02-17 00:10:46"
         },
         {
             "name": "inc2734/wp-basis",
@@ -2408,16 +2408,16 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "0.14.0",
+            "version": "0.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "8cadf48fa1c70b2381988e0a79e029e011a8f41c"
+                "reference": "cf6b310caad735816caef7573295f8a534374706"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/8cadf48fa1c70b2381988e0a79e029e011a8f41c",
-                "reference": "8cadf48fa1c70b2381988e0a79e029e011a8f41c",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/cf6b310caad735816caef7573295f8a534374706",
+                "reference": "cf6b310caad735816caef7573295f8a534374706",
                 "shasum": ""
             },
             "require": {
@@ -2444,7 +2444,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2017-11-01 15:10:46"
+            "time": "2018-02-16 01:57:48"
         }
     ],
     "aliases": [],
