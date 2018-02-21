@@ -13,7 +13,7 @@ $section    = $customizer->get_section( 'post' );
 $customizer->control( 'select', 'post-eyecatch', [
 	'label'       => __( 'Eyecatch image', 'snow-monkey' ),
 	'description' => __( 'Select how to display the eyecatch image in post.', 'snow-monkey' ),
-	'priority'    => 150,
+	'priority'    => 100,
 	'default'     => 'page-header',
 	'choices'     => snow_monkey_eyecatch_position_choices(),
 ] );

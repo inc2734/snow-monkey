@@ -15,7 +15,7 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'label'     => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
 	'priority'  => 140,
 	'default'   => '1-4',
-	'choices' => [
+	'choices'   => [
 		'1-1' => __( '1 column', 'snow-monkey' ),
 		'1-2' => __( '2 columns', 'snow-monkey' ),
 		'1-3' => __( '3 columns', 'snow-monkey' ),

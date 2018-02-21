@@ -5,14 +5,7 @@
  * @license GPL-2.0+
  */
 
-$pages = get_children( [
-	'post_parent'    => get_the_ID(),
-	'post_type'      => 'page',
-	'posts_per_page' => -1,
-	'post_status'    => 'publish',
-	'orderby'        => 'menu_order',
-] );
-
+$pages = snow_monkey_get_child_pages( get_the_ID() );
 if ( ! $pages ) {
 	return;
 }

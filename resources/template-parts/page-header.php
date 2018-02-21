@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+$header_image = '';
+
 if ( is_singular() ) {
 	if ( has_post_thumbnail() ) {
 		$thumbnail_id = get_post_thumbnail_id();

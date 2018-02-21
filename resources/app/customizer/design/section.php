@@ -10,6 +10,6 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 $customizer = Customizer_Framework::init();
 
 $customizer->section( 'design', [
-	'title' => __( 'Design', 'snow-monkey' ),
+	'title'    => __( 'Design', 'snow-monkey' ),
 	'priority' => 1100,
 ] );

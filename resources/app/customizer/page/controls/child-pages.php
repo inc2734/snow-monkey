@@ -8,24 +8,16 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'singular-post' );
+$section    = $customizer->get_section( 'page' );
 
 $customizer->control( 'checkbox', 'mwt-display-child-pages', [
 	'transport' => 'postMessage',
 	'label'     => __( 'Display child pages in page', 'snow-monkey' ),
-	'priority'  => 140,
+	'priority'  => 110,
 	'type'      => 'option',
 	'default'   => true,
 	'active_callback' => function() {
-		$pages = get_children( [
-			'post_parent'    => get_the_ID(),
-			'post_type'      => get_post_type(),
-			'posts_per_page' => -1,
-			'post_status'    => 'publish',
-			'orderby'        => 'menu_order',
-		] );
-
-		return ( $pages ) ? true : false;
+		return ( snow_monkey_get_child_pages( get_the_ID() ) ) ? true : false;
 	},
 ] );
 
@@ -35,6 +27,8 @@ $control->partial( [
 	'selector'            => '.p-child-pages',
 	'container_inclusive' => true,
 	'render_callback'     => function() {
-		return get_option( 'mwt-display-child-pages' );
+		if ( get_option( 'mwt-display-child-pages' ) ) {
+			get_template_part( 'template-parts/child-pages' );
+		}
 	},
 ] );
