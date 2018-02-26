@@ -12,7 +12,15 @@ if ( ! $pages ) {
 ?>
 
 <div class="p-child-pages c-entry-aside">
-	<h2 class="p-child-pages__title c-entry-aside__title"><span><?php esc_html_e( 'Child pages', 'snow-monkey' ); ?></span></h2>
+	<h2 class="p-child-pages__title c-entry-aside__title">
+		<span>
+			<?php
+			$child_pages_title = __( 'Child pages', 'snow-monkey' );
+			$child_pages_title = apply_filters( 'snow_monkey_child_pages_title', $child_pages_title );
+			echo esc_html( $child_pages_title );
+			?>
+		</span>
+	</h2>
 	<ul class="c-entries c-entries--rich-media">
 		<?php foreach ( $pages as $post ) : ?>
 			<?php setup_postdata( $post ); ?>
