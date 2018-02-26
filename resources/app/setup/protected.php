@@ -12,7 +12,7 @@ add_filter( 'the_password_form', function( $output ) {
 		return $output;
 	}
 
-	if ( false === strpos( $post->post_content, '<!--more-->' ) ) {
+	if ( ! strpos( $post->post_content, '<!--more-->' ) ) {
 		return $output;
 	}
 
@@ -20,4 +20,18 @@ add_filter( 'the_password_form', function( $output ) {
 	$before_content = $content[0];
 
 	return $before_content . $output;
+} );
+
+add_filter( 'protected_title_format', function( $title ) {
+	global $post;
+
+	if ( ! get_option( 'mwt-protected-more' ) ) {
+		return $title;
+	}
+
+	if ( ! strpos( $post->post_content, '<!--more-->' ) ) {
+		return $title;
+	}
+
+	return '%s';
 } );
