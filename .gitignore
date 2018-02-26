@@ -5,6 +5,6 @@ node_modules/
 /resources/assets/
 vendor/
 *.sql
-/bin/*.xml
+.travis/github_deploy_key
 release/
 snow-monkey.zip
