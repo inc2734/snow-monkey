@@ -13,7 +13,7 @@ if ( ! $items ) {
 }
 
 $recent_posts = get_posts( [
-	'post_type'      => 'post',
+	'post_type'      => 'any',
 	'posts_per_page' => -1,
 	'post__in'       => $items,
 	'orderby'        => 'post__in',

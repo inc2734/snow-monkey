@@ -8,7 +8,7 @@
 global $post;
 
 $recent_posts = get_posts( [
-	'post_type'      => 'post',
+	'post_type'      => $instance['post-type'],
 	'posts_per_page' => $instance['posts-per-page'],
 ] );
 ?>
