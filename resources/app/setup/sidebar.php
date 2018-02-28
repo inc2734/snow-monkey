@@ -23,7 +23,7 @@ add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_google_adsense', 10 
  * @return void
  */
 function snow_monkey_sidebar_add_sidebar_widget_area() {
-	if ( ( ! is_front_page() && is_home() ) || is_archive() || is_search() ) {
+	if ( is_home() || is_archive() || is_search() ) {
 		get_template_part( 'template-parts/archive-sidebar-widget-area' );
 	} else {
 		get_template_part( 'template-parts/sidebar-widget-area' );
