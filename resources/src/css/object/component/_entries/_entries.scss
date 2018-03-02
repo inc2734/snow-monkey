@@ -12,10 +12,11 @@
   }
 
   &__item {
-    @include _row__col(1, 2);
+    @include _row__col(1, 1);
     @include _row__col--margin(.5);
 
     @include _media-min(md) {
+      @include _row__col(1, 2);
       @include _row__col--margin(1);
     }
 

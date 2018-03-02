@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-03-03 00:58+0900\n"
-"PO-Revision-Date: 2018-03-03 00:58+0900\n"
+"POT-Creation-Date: 2018-03-03 01:58+0900\n"
+"PO-Revision-Date: 2018-03-03 01:59+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -35,6 +35,17 @@ msgstr ""
 "レスポンシブ広告ユニットもしくは自動広告のコードをペーストすると、テーマの所"
 "定の位置に広告が表示されます。もし任意の位置に広告を表示したい場合は、ウィ"
 "ジェット等を使用してください。"
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:14
+msgid "Google Infeed Ads"
+msgstr "Google インフィード広告"
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:15
+msgid ""
+"When pasting the code of the infeed ads, the advertisement is displayed in "
+"posts list."
+msgstr ""
+"インフィード広告のコードをペーストすると、記事一覧に広告が表示されます。"
 
 #: app/customizer/advertisement/section.php:13
 msgid "Advertisement"
