@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-03-03 01:58+0900\n"
-"PO-Revision-Date: 2018-03-03 01:59+0900\n"
+"POT-Creation-Date: 2018-03-03 02:50+0900\n"
+"PO-Revision-Date: 2018-03-03 02:50+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -46,6 +46,17 @@ msgid ""
 "posts list."
 msgstr ""
 "インフィード広告のコードをペーストすると、記事一覧に広告が表示されます。"
+
+#: app/customizer/advertisement/controls/google-matched-content.php:14
+msgid "Google Matched Content"
+msgstr "Google 関連コンテンツ"
+
+#: app/customizer/advertisement/controls/google-matched-content.php:15
+msgid ""
+"When pasting the code of the matched content, related posts are replaced "
+"with advertisements."
+msgstr ""
+"関連コンテンツのコードをペーストすると、関連記事が広告に差し替えられます。"
 
 #: app/customizer/advertisement/section.php:13
 msgid "Advertisement"
@@ -709,7 +720,7 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:65
+#: template-parts/related-posts.php:10
 msgid "Related posts"
 msgstr "関連記事"
 
