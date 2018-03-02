@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-02-14 15:31+0900\n"
-"PO-Revision-Date: 2018-02-14 15:32+0900\n"
+"POT-Creation-Date: 2018-03-03 00:58+0900\n"
+"PO-Revision-Date: 2018-03-03 00:58+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -28,13 +28,13 @@ msgstr "Google アドセンス"
 
 #: app/customizer/advertisement/controls/google-adsense.php:15
 msgid ""
-"When pasting the code of the responsive ad unit, the advertisement is "
-"displayed in the prescribed part of the theme. If you want to display at "
-"arbitrary position, please use widgets etc."
+"When pasting the code of the responsive ad unit or auto ads code, the "
+"advertisement is displayed in the prescribed part of the theme. If you want "
+"to display at arbitrary position, please use widgets etc."
 msgstr ""
-"レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告"
-"が表示されます。もし任意の位置に広告を表示したい場合は、ウィジェット等を使"
-"用してください。"
+"レスポンシブ広告ユニットもしくは自動広告のコードをペーストすると、テーマの所"
+"定の位置に広告が表示されます。もし任意の位置に広告を表示したい場合は、ウィ"
+"ジェット等を使用してください。"
 
 #: app/customizer/advertisement/section.php:13
 msgid "Advertisement"
@@ -52,8 +52,8 @@ msgstr "アーカイブページの設定"
 #: app/customizer/archive-page/section.php:14
 msgid "Applies to archive page and search page."
 msgstr ""
-"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適"
-"用されます。"
+"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適用"
+"されます。"
 
 #: app/customizer/category/controls/accent-color.php:17
 #, php-format
@@ -144,6 +144,10 @@ msgstr "中央ロゴ"
 msgid "Design"
 msgstr "デザイン"
 
+#: app/customizer/page/controls/child-pages.php:15
+msgid "Display child pages in page"
+msgstr "固定ページにそのページの子ページ一覧を表示する"
+
 #: app/customizer/page/controls/eyecatch.php:14
 #: app/customizer/post/controls/eyecatch.php:14
 msgid "Eyecatch image"
@@ -161,9 +165,21 @@ msgstr "固定ページの設定"
 msgid "Applies to page."
 msgstr "固定ページに適用されます。"
 
+#: app/customizer/post/controls/content-outline.php:14
+msgid "Display contents outline in posts"
+msgstr "記事に目次を表示する"
+
 #: app/customizer/post/controls/eyecatch.php:15
 msgid "Select how to display the eyecatch image in post."
 msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/post/controls/profile-box.php:15
+msgid "Display profile box in posts"
+msgstr "記事にプロフィールボックスを表示する"
+
+#: app/customizer/post/controls/related-posts.php:15
+msgid "Display related posts in posts"
+msgstr "記事に関連記事を表示する"
 
 #: app/customizer/post/section.php:13
 msgid "Post settings"
@@ -178,8 +194,8 @@ msgid ""
 "If the post using more tag and password protect at the same time, display "
 "contents before more tag"
 msgstr ""
-"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテ"
-"ンツを表示する"
+"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテン"
+"ツを表示する"
 
 #: app/customizer/protected/section.php:13
 msgid "Password protected settings"
@@ -249,8 +265,8 @@ msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
 msgstr ""
-"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設"
-"定されていない場合はこの画像が使用されます。"
+"アイキャッチ画像が記事に設定されている場合はアイキャッチ画像が使用され、設定"
+"されていない場合はこの画像が使用されます。"
 
 #: app/customizer/seo-sns/sections/ogp/controls/ogp.php:15
 msgid "Output OGP meta tag"
@@ -415,22 +431,6 @@ msgstr "Twitter Cards"
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
-
-#: app/customizer/singular-post/controls/child-pages.php:15
-msgid "Display child pages in page"
-msgstr "固定ページにそのページの子ページ一覧を表示する"
-
-#: app/customizer/singular-post/controls/content-outline.php:14
-msgid "Display contents outline in posts"
-msgstr "記事に目次を表示する"
-
-#: app/customizer/singular-post/controls/profile-box.php:15
-msgid "Display profile box in posts"
-msgstr "記事にプロフィールボックスを表示する"
-
-#: app/customizer/singular-post/controls/related-posts.php:15
-msgid "Display related posts in posts"
-msgstr "記事に関連記事を表示する"
 
 #: app/customizer/singular-post/section.php:13
 msgid "Singular post settings"
@@ -641,7 +641,7 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: template-parts/child-pages.php:22
+#: template-parts/child-pages.php:18
 msgid "Child pages"
 msgstr "このページの子ページ"
 
@@ -731,24 +731,24 @@ msgid "Blank"
 msgstr "空"
 
 #. Template Name of the plugin/theme
-msgid "Left sidebar"
-msgstr "左サイドバー"
+msgid "One column"
+msgstr "1カラム"
 
 #. Template Name of the plugin/theme
-msgid "One column (fluid)"
-msgstr "1カラム（fluid）"
+msgid "Left sidebar"
+msgstr "左サイドバー"
 
 #. Template Name of the plugin/theme
 msgid "One column (slim)"
 msgstr "1カラム（slim）"
 
 #. Template Name of the plugin/theme
-msgid "One column"
-msgstr "1カラム"
-
-#. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#. Template Name of the plugin/theme
+msgid "One column (fluid)"
+msgstr "1カラム（fluid）"
 
 #~ msgid "Applies to singular post."
 #~ msgstr "個別投稿に適用されます。"

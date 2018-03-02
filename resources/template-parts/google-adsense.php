@@ -10,6 +10,10 @@ $google_adsense = apply_filters( 'snow_monkey_google_adsense', get_option( 'mwt-
 if ( ! $google_adsense ) {
 	return;
 }
+
+if ( ! preg_match( '/<ins /s', $google_adsense ) ) {
+	return;
+}
 ?>
 
 <div class="c-google-adsense">
