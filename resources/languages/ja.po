@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-03-03 02:50+0900\n"
-"PO-Revision-Date: 2018-03-03 02:50+0900\n"
+"POT-Creation-Date: 2018-03-06 13:19+0900\n"
+"PO-Revision-Date: 2018-03-06 13:19+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -720,9 +720,13 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:10
+#: template-parts/related-posts.php:15
 msgid "Related posts"
 msgstr "関連記事"
+
+#: template-parts/related-posts.php:17
+msgid "(Including some ads)"
+msgstr "（一部広告含む）"
 
 #: templates/view/404.php:11
 msgid "Woops! Page not found."
