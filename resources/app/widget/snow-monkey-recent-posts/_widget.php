@@ -37,7 +37,13 @@ if ( ! $recent_posts ) {
 		id="snow-monkey-recent-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
-		<ul class="c-entries c-entries--<?php echo esc_attr( $instance['layout'] ); ?>">
+		<?php
+		$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
+		$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
+		$archive_layout  = $instance['layout'];
+		?>
+
+		<ul class="c-entries c-entries--<?php echo esc_attr( $archive_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
 			<?php foreach ( $recent_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
 				<li class="c-entries__item">
