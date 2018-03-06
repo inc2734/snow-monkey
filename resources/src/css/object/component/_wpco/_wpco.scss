@@ -2,14 +2,9 @@
   background-color: #fcfcfc;
   border: 1px solid _lighter($_color-gray);
   @include _padding(.5, .5, .25);
-  display: none;
 
   @include _media-min(md) {
     @include _padding(.5, 1, .25);
-  }
-
-  &[aria-hidden="false"] {
-    display: block;
   }
 
   &__title {
@@ -61,5 +56,13 @@
     li li li > a { padding-left: 3em; }
     li li li li > a { padding-left: 4.5em; }
     li li li li li > a { padding-left: 6em; }
+  }
+}
+
+.wpco-wrapper {
+  display: none;
+
+  &[aria-hidden="false"] {
+    display: block;
   }
 }
