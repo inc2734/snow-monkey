@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "POT-Creation-Date: 2018-03-09 02:16+0900\n"
-"PO-Revision-Date: 2018-03-09 02:16+0900\n"
+"PO-Revision-Date: 2018-03-09 02:18+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -617,7 +617,7 @@ msgstr "このウィジェットはアーカイブページのサイドバーに
 
 #: app/setup/widget-area.php:204
 msgid "Front page (Top of page)"
-msgstr "フロントページ（ページ上部）"
+msgstr "フロントページ上部"
 
 #: app/setup/widget-area.php:206 app/setup/widget-area.php:237
 msgid "This widgets are displayed in the static front page."
@@ -625,7 +625,7 @@ msgstr "このウィジェットは固定フロントページに表示されま
 
 #: app/setup/widget-area.php:235
 msgid "Front page (Bottom of page)"
-msgstr "フロントページ（ページ下部）"
+msgstr "フロントページ下部"
 
 #: app/setup/widget-area.php:266
 msgid "Footer"
