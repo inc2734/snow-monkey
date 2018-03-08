@@ -24,12 +24,20 @@
 			?>
 
 			<div class="c-container">
-				<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+				<?php if ( 'default' === get_theme_mod( 'breadcrumbs-position' ) ) : ?>
+					<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+				<?php endif; ?>
 
-				<div class="l-contents__inner">
-					<main class="l-contents__main" role="main">
-						<?php $_view_controller->view(); ?>
-					</main>
+				<div class="u-slim-width">
+					<?php if ( 'content-width' === get_theme_mod( 'breadcrumbs-position' ) ) : ?>
+						<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+					<?php endif; ?>
+
+					<div class="l-contents__inner">
+						<main class="l-contents__main" role="main">
+							<?php $_view_controller->view(); ?>
+						</main>
+					</div>
 				</div>
 			</div>
 		</div>

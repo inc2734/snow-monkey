@@ -17,9 +17,23 @@
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
-			<main class="l-contents__main" role="main">
-				<?php $_view_controller->view(); ?>
-			</main>
+			<?php
+			if ( snow_monkey_is_output_page_header() ) {
+				get_template_part( 'template-parts/page-header' );
+			}
+			?>
+
+			<div class="c-fluid-container">
+				<?php if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) : ?>
+					<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
+				<?php endif; ?>
+
+				<div class="l-contents__inner">
+					<main class="l-contents__main" role="main">
+						<?php $_view_controller->view(); ?>
+					</main>
+				</div>
+			</div>
 		</div>
 
 		<?php wpvc_get_footer(); ?>

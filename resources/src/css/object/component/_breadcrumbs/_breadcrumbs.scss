@@ -1,11 +1,6 @@
 .#{$_prefix}c-breadcrumbs {
-  @include _margin(.25, 0, 1);
   @include _font-size-line-height(11px);
   color: #999;
-
-  @include _media-min(lg) {
-    @include _margin(.25, 0, 2);
-  }
 
   a {
     color: #999;
@@ -14,5 +9,9 @@
     @include _hover(lg) {
       text-decoration: underline;
     }
+  }
+
+  .#{$_prefix}l-contents & {
+    @include _margin-top(.25);
   }
 }

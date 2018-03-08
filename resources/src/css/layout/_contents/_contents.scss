@@ -1,4 +1,12 @@
 .#{$_prefix}l-contents {
+  &__inner {
+    @include _margin-top(1);
+
+    @include _media-min(lg) {
+      @include _margin-top(2);
+    }
+  }
+
   &__sidebar {
     @include _content();
     @include _font-size-line-height($_base-font-size-px - 2);
@@ -80,40 +88,20 @@
    * One column
    */
   .#{$_prefix}l-body--one-column & {
-    &__sidebar {
-      @include _margin(1, 0, 0);
-
-      @include _media-min(lg) {
-        @include _margin(2, 0, 0);
-      }
-    }
   }
 
   /**
    * One column (slim)
    */
   .#{$_prefix}l-body--one-column-slim & {
-    &__main {
-      margin: 0 auto;
-      max-width: _strip-unit(map-get($_sizes, 'lg')) * $_base-font-size-px;
-    }
-
-    &__sidebar {
-      @include _margin(1, 0, 0);
-
-      @include _media-min(lg) {
-        @include _margin(2, 0, 0);
-      }
-    }
   }
 
   /**
    * front page
    */
-  .home & {
-    @include _padding-top(1.5);
-  }
-  .home.#{$_prefix}l-body--one-column-fluid & {
-    padding-top: 0;
+  .home.page.#{$_prefix}l-body--one-column-fluid & {
+    &__inner {
+      margin-top: 0;
+    }
   }
 }
