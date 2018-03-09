@@ -10,4 +10,8 @@
       @include _margin-top(2);
     }
   }
+
+  .home.page.#{$_prefix}l-body--one-column-fluid & {
+    margin-top: 0;
+  }
 }
