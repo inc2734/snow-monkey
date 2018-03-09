@@ -194,7 +194,9 @@ function snow_monkey_eyecatch_position_choices() {
  * @return boolean
  */
 function snow_monkey_is_output_page_header() {
-	if ( is_page() && 'page-header' === get_theme_mod( 'page-eyecatch' ) ) {
+	if ( is_front_page() ) {
+		return false;
+	} elseif ( is_page() && 'page-header' === get_theme_mod( 'page-eyecatch' ) ) {
 		return true;
 	} elseif ( is_singular( 'post' ) && 'page-header' === get_theme_mod( 'post-eyecatch' ) ) {
 		return true;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-03-06 13:19+0900\n"
-"PO-Revision-Date: 2018-03-06 13:19+0900\n"
+"POT-Creation-Date: 2018-03-09 02:16+0900\n"
+"PO-Revision-Date: 2018-03-09 02:18+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -113,6 +113,22 @@ msgstr "シンプル"
 #: app/customizer/design/controls/base-font-size.php:14
 msgid "Base font size(px)"
 msgstr "基本の文字サイズ（px）"
+
+#: app/customizer/design/controls/breadcrumbs-position.php:14
+msgid "Breadcrumbs display position"
+msgstr "パンくずリストの表示位置"
+
+#: app/customizer/design/controls/breadcrumbs-position.php:18
+msgid "Default"
+msgstr "デフォルト"
+
+#: app/customizer/design/controls/breadcrumbs-position.php:19
+msgid "Fit to content width"
+msgstr "コンテンツ幅に合わせる"
+
+#: app/customizer/design/controls/breadcrumbs-position.php:20 functions.php:187
+msgid "None"
+msgstr "なし"
 
 #: app/customizer/design/controls/custom-logo-scale.php:26
 msgid "Custom logo scale (%) on smartphone"
@@ -601,7 +617,7 @@ msgstr "このウィジェットはアーカイブページのサイドバーに
 
 #: app/setup/widget-area.php:204
 msgid "Front page (Top of page)"
-msgstr "フロントページ（ページ上部）"
+msgstr "フロントページ上部"
 
 #: app/setup/widget-area.php:206 app/setup/widget-area.php:237
 msgid "This widgets are displayed in the static front page."
@@ -609,7 +625,7 @@ msgstr "このウィジェットは固定フロントページに表示されま
 
 #: app/setup/widget-area.php:235
 msgid "Front page (Bottom of page)"
-msgstr "フロントページ（ページ下部）"
+msgstr "フロントページ下部"
 
 #: app/setup/widget-area.php:266
 msgid "Footer"
@@ -658,10 +674,6 @@ msgstr "ページヘッダーの上にタイトルを表示"
 #: functions.php:186
 msgid "Top of content"
 msgstr "コンテンツの上"
-
-#: functions.php:187
-msgid "None"
-msgstr "なし"
 
 #: template-parts/child-pages.php:18
 msgid "Child pages"

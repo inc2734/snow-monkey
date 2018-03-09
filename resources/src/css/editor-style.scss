@@ -22,6 +22,11 @@
    */
   @import 'object/project/project';
 
+  /**
+   * Object - utility
+   */
+  @import 'object/utility/utility';
+
   @include entry-content();
 }
 
