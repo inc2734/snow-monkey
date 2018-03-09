@@ -26,8 +26,6 @@ class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstrac
 			'customize_selective_refresh' => true,
 		] );
 
-		$this->_path = __DIR__;
-
 		$this->_defaults['title'] = __( 'Recent posts', 'snow-monkey' );
 	}
 
