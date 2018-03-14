@@ -19,13 +19,13 @@ $use_matched_content = (bool) $matched_content;
 		</span>
 	</h2>
 
-	<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
-		<?php if ( $use_matched_content ) : ?>
+	<?php if ( $use_matched_content ) : ?>
 
-			<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $matched_content ); ?>
+		<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $matched_content ); ?>
 
-		<?php else : ?>
+	<?php else : ?>
 
+		<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
 			<?php $related_posts = snow_monkey_get_related_posts( get_the_ID() ); ?>
 			<?php foreach ( $related_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
@@ -34,7 +34,7 @@ $use_matched_content = (bool) $matched_content;
 				</li>
 			<?php endforeach; ?>
 			<?php wp_reset_postdata( $post ); ?>
+		</ul>
 
-		<?php endif; ?>
-	</ul>
+	<?php endif; ?>
 </aside>
