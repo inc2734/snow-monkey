@@ -10,13 +10,18 @@ if ( ! $post_type ) {
 	$post_type = 'page';
 }
 
+$post_type_sidebar_id = $post_type . '-post-type-sidebar-sticky-widget-area';
+$sidebar_id = 'sidebar-sticky-widget-area';
+
 // @deprecated {$post_type}-post-type-sidebar-sticky-widget-area
-if ( ! is_active_sidebar( $post_type . '-post-type-sidebar-sticky-widget-area' ) && ! is_active_sidebar( 'sidebar-sticky-widget-area' ) ) {
-	return;
+if ( ! is_active_sidebar( $post_type_sidebar_id ) || ! is_registered_sidebar( $post_type_sidebar_id ) ) {
+	if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id ) ) {
+		return;
+	}
 }
 ?>
 
 <div class="l-sidebar-sticky-widget-area">
-	<?php dynamic_sidebar( 'sidebar-sticky-widget-area' ); ?>
-	<?php dynamic_sidebar( $post_type . '-post-type-sidebar-sticky-widget-area' ); ?>
+	<?php dynamic_sidebar( $sidebar_id ); ?>
+	<?php dynamic_sidebar( $post_type_sidebar_id ); ?>
 </div>

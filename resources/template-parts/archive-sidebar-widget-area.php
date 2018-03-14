@@ -5,11 +5,13 @@
  * @license GPL-2.0+
  */
 
-if ( ! is_active_sidebar( 'archive-sidebar-widget-area' ) ) {
+$sidebar_id = 'archive-sidebar-widget-area';
+
+if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id ) ) {
 	return;
 }
 ?>
 
 <div class="l-sidebar-widget-area">
-	<?php dynamic_sidebar( 'archive-sidebar-widget-area' ); ?>
+	<?php dynamic_sidebar( $sidebar_id ); ?>
 </div>

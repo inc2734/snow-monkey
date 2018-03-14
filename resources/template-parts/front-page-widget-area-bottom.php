@@ -5,11 +5,13 @@
  * @license GPL-2.0+
  */
 
-if ( ! is_active_sidebar( 'front-page-bottom-widget-area' ) ) {
+$sidebar_id = 'front-page-bottom-widget-area';
+
+if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id ) ) {
 	return;
 }
 ?>
 
 <div class="l-front-page-widget-area l-front-page-widget-area--bottom">
-	<?php dynamic_sidebar( 'front-page-bottom-widget-area' ); ?>
+	<?php dynamic_sidebar( $sidebar_id ); ?>
 </div>
