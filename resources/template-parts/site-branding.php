@@ -6,11 +6,17 @@
  */
 ?>
 <div class="c-site-branding">
-	<h1 class="c-site-branding__title">
-		<?php if ( has_custom_logo() ) : ?>
-			<?php the_custom_logo(); ?>
-		<?php else : ?>
-			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-		<?php endif; ?>
-	</h1>
+	<?php if ( is_front_page() || is_home() ) : ?>
+
+		<h1 class="c-site-branding__title">
+			<?php snow_monkey_the_site_branding_title(); ?>
+		</h1>
+
+	<?php else : ?>
+
+		<div class="c-site-branding__title">
+			<?php snow_monkey_the_site_branding_title(); ?>
+		</div>
+
+	<?php endif; ?>
 </div>
