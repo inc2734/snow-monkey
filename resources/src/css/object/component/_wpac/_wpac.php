@@ -12,6 +12,11 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 /**
+ * Columns
+ */
+snow_monkey_entry_content_styles( '.wpac-columns__col-inner' );
+
+/**
  * Button
  */
 $cfs->register(
@@ -36,3 +41,5 @@ $cfs->register(
 	'.wpac-section__title::after',
 	'background-color: ' . $accent_color
 );
+
+snow_monkey_entry_content_styles( '.wpac-section__body' );

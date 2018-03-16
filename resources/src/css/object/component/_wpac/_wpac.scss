@@ -137,6 +137,7 @@
 
   &__col-inner {
     flex: 1;
+    @include entry-content();
   }
 }
 
@@ -152,6 +153,10 @@
 
   &__container {
     @include _container();
+  }
+
+  &__body {
+    @include entry-content();
   }
 
   & + & {
