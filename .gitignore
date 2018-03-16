@@ -8,3 +8,4 @@ vendor/
 .travis/github_deploy_key
 release/
 snow-monkey.zip
+yarn-error.log
