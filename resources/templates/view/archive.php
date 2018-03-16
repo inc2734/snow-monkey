@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 ?>
+<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
+
 <div class="c-entry">
 	<header class="c-entry__header">
 		<?php
@@ -17,7 +19,11 @@
 	</header>
 
 	<div class="c-entry__content">
-		<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
+		<?php if ( term_description() ) : ?>
+			<div class="p-term-description">
+				<?php echo wp_kses_post( term_description() ); ?>
+			</div>
+		<?php endif; ?>
 
 		<?php
 		$infeed_ads      = get_option( 'mwt-google-infeed-ads' );

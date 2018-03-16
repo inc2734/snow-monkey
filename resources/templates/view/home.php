@@ -5,9 +5,10 @@
  * @license GPL-2.0+
  */
 ?>
+<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
+
 <div class="c-entry">
 	<div class="c-entry__content">
-		<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
 
 		<?php
 		$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
