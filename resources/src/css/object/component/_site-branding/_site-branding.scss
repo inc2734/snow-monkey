@@ -2,6 +2,7 @@
   &__title {
     @include _font-size($_base-font-size);
     @include _line-height($_base-font-size * 1.5);
+    font-weight: bold;
 
     @include _media-min(md) {
       @include _font-size($_base-font-size * 1.5);
