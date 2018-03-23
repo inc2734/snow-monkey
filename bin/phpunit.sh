@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -e /tmp/wordpress-tests-lib ]; then
+if [ -e /tmp/wordpress-tests-lib -a -e /tmp/wordpress-tests-lib/includes/functions.php ]; then
 
   themedir=$(pwd)
   if [ ! -e resources/style.css ]; then
