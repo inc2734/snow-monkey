@@ -88,3 +88,11 @@ add_filter( 'inc2734_wp_seo_twitter_site', function( $twitter_site ) {
 add_filter( 'inc2734_wp_seo_use_json_ld', function( $bool ) {
 	return get_option( 'mwt-json-ld' );
 } );
+
+/**
+ * Print Google Tag Manager script in body
+ *
+ * @return void
+ */
+remove_action( 'wp_footer', 'inc2734_wp_seo_googletagmanager_noscript_tag_install' );
+add_action( 'snow_monkey_prepend_body', 'inc2734_wp_seo_googletagmanager_noscript_tag_install' );
