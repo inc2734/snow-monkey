@@ -20,22 +20,24 @@
   .contents-outline {
     ol {
       @include _list-unstyled();
-      @include _margin-top(.25);
       counter-reset: wpco;
+      border-top: 1px dotted _lighter($_color-gray);
     }
 
     li {
-      border-top: 1px dotted _lighter($_color-gray);
-      @include _padding(.25, 0);
+      &:not(:first-child) {
+        border-top: 1px dotted _lighter($_color-gray);
+      }
 
       ol {
-        @include _margin-bottom(-.25);
+        margin-top: -1px;
       }
     }
 
     a {
       display: inline-flex;
       color: $_color-text;
+      @include _padding(.25, 0);
       text-decoration: none;
 
       @include _hover(lg) {

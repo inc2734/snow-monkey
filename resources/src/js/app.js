@@ -52,3 +52,5 @@ $(() => {
 $(() => {
   $('.c-page-header').backgroundParallaxScroll();
 });
+
+import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
