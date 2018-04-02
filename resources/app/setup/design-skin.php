@@ -23,7 +23,7 @@ foreach ( $active_plugins as $plugin ) {
 		'path'  => $plugin,
 	] );
 
-	add_filter( 'snow_monkey_design_skin_choices', function( $choices ) use( $plugin_data ) {
+	add_filter( 'snow_monkey_design_skin_choices', function( $choices ) use ( $plugin_data ) {
 		$choices[ dirname( $plugin_data['path'] ) ] = $plugin_data['label'];
 		return $choices;
 	} );
