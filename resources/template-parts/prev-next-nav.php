@@ -37,11 +37,11 @@ $prev_next_posts = [
 					></div>
 					<div class="c-prev-next-nav__item-label">
 						<?php if ( 'next' === $key ) : ?>
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
+							<i class="fas fa-angle-left" aria-hidden="true"></i>
 							<?php esc_html_e( 'New post', 'snow-monkey' ); ?>
 						<?php else : ?>
 							<?php esc_html_e( 'Old post', 'snow-monkey' ); ?>
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
+							<i class="fas fa-angle-right" aria-hidden="true"></i>
 						<?php endif; ?>
 					</div>
 					<div class="c-prev-next-nav__item-title">

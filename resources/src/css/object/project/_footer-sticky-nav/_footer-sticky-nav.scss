@@ -15,7 +15,10 @@
     padding: .5em 0;
     text-decoration: none;
 
-    .fa {
+    .fas,
+    .far,
+    .fal,
+    .fab {
       margin-bottom: 2px;
       display: block;
       @include _font-size(24px);
