@@ -135,7 +135,6 @@
     z-index: 1;
     background-color: $color-accent;
     border-radius: 0;
-    color: #fff;
     @include _square(40px);
     @include _transition(all);
 
@@ -147,31 +146,24 @@
       background-color: darken($color-accent, 5%);
     }
 
+    span {
+      color: #fff;
+      font-size: 20px;
+    }
+
     &::before {
-      position: relative;
-      font-family: FontAwesome;
-      opacity: 1;
+      display: none;
     }
   }
 
   .slick-prev {
     left: 0;
     transform: translate(-100%, -50%);
-
-    &::before {
-      content: "\f053";
-      left: -2px;
-    }
   }
 
   .slick-next {
     right: 0;
     transform: translate(100%, -50%);
-
-    &::before {
-      content: "\f054";
-      right: -2px;
-    }
   }
 
   @mixin wpaw-pickup-slider-height() {

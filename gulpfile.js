@@ -43,7 +43,6 @@ gulp.task('remove-packages', function(cb) {
  */
 gulp.task('packages', ['remove-packages'], function(cb) {
   var packages = [
-    dir.src.packages + '/font-awesome/**',
     dir.src.packages + '/slick-carousel/**',
     dir.src.packages + '/jquery.sticky/**',
     dir.src.packages + '/jquery.background-parallax-scroll/**',
