@@ -67,7 +67,7 @@ add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script(
 		'fontawesome5-v4-shims',
 		'https://use.fontawesome.com/releases/v5.0.9/js/v4-shims.js',
-		['fontawesome5'],
+		[ 'fontawesome5' ],
 		false,
 		true
 	);
