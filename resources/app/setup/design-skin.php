@@ -34,6 +34,6 @@ add_action( 'wp_enqueue_scripts', function() {
 	$skin_path = trailingslashit( WP_PLUGIN_DIR ) . $design_skin . '/skin.css';
 	$skin_url  = plugins_url( 'skin.css', $skin_path );
 	if ( file_exists( $skin_path ) ) {
-		wp_enqueue_style( $design_skin, $skin_url, [ get_template() ], filemtime( $skin_path ) );
+		wp_enqueue_style( $design_skin, $skin_url, [ snow_monkey_get_main_style_handle() ], filemtime( $skin_path ) );
 	}
 } );
