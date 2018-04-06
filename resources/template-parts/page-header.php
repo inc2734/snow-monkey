@@ -5,28 +5,7 @@
  * @license GPL-2.0+
  */
 
-$header_image = '';
-
-if ( is_singular() ) {
-	if ( has_post_thumbnail() ) {
-		$thumbnail_id = get_post_thumbnail_id();
-	}
-} elseif ( is_home() || ( is_archive() && ! is_post_type_archive() ) ) {
-	if ( 'page' === get_option( 'show_on_front' ) ) {
-		$thumbnail_id = get_post_thumbnail_id( get_option( 'page_for_posts' ) );
-	}
-
-	if ( is_category() ) {
-		$term = get_queried_object();
-		$header_image = get_theme_mod( 'category-' . $term->term_id . '-header-image' );
-	}
-}
-
-if ( empty( $header_image ) ) {
-	if ( ! empty( $thumbnail_id ) ) {
-		$header_image = wp_get_attachment_image_url( $thumbnail_id, 'large' );
-	}
-}
+$header_image = snow_monkey_get_page_header_image_url();
 
 if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
 	return;
