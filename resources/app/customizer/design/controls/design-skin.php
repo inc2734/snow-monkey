@@ -15,10 +15,11 @@ $customizer = Customizer_Framework::init();
 $section    = $customizer->get_section( 'design' );
 
 $customizer->control( 'select', 'design-skin', [
-	'label'    => __( 'Design skin', 'snow-monkey' ),
-	'priority' => 180,
-	'default'  => 'none',
-	'choices'  => $choices,
+	'label'       => __( 'Design skin', 'snow-monkey' ),
+	'description' => __( 'If set this, please save and reload.', 'snow-monkey' ),
+	'priority'    => 180,
+	'default'     => 'none',
+	'choices'     => $choices,
 ] );
 
 $control = $customizer->get_control( 'design-skin' );
