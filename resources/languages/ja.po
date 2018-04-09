@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-03-09 02:16+0900\n"
-"PO-Revision-Date: 2018-03-09 02:18+0900\n"
+"POT-Creation-Date: 2018-04-06 14:48+0900\n"
+"PO-Revision-Date: 2018-04-06 14:50+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -126,13 +126,23 @@ msgstr "デフォルト"
 msgid "Fit to content width"
 msgstr "コンテンツ幅に合わせる"
 
-#: app/customizer/design/controls/breadcrumbs-position.php:20 functions.php:187
+#: app/customizer/design/controls/breadcrumbs-position.php:20
+#: app/customizer/design/controls/design-skin.php:11
+#: app/template-tags/eyecatch-position-choices.php:18
 msgid "None"
 msgstr "なし"
 
 #: app/customizer/design/controls/custom-logo-scale.php:26
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
+
+#: app/customizer/design/controls/design-skin.php:18
+msgid "Design skin"
+msgstr "デザインスキン"
+
+#: app/customizer/design/controls/design-skin.php:19
+msgid "If set this, please save and reload."
+msgstr "設定したら、保存してリロードしてください。"
 
 #: app/customizer/design/controls/footer-layout.php:15
 msgid "Number of columns in the footer widget area"
@@ -177,6 +187,26 @@ msgstr "2行"
 #: app/customizer/design/controls/header-layout.php:22
 msgid "Center logo"
 msgstr "中央ロゴ"
+
+#: app/customizer/design/controls/header-position-only-mobile.php:14
+msgid "Use header position setting for mobile only"
+msgstr "ヘッダー位置設定をモバイルのみに適用"
+
+#: app/customizer/design/controls/header-position.php:14
+msgid "Header position"
+msgstr "ヘッダー位置"
+
+#: app/customizer/design/controls/header-position.php:18
+msgid "Sticky"
+msgstr "固定"
+
+#: app/customizer/design/controls/header-position.php:19
+msgid "Overlay"
+msgstr "オーバレイ"
+
+#: app/customizer/design/controls/header-position.php:20
+msgid "Normal"
+msgstr "ノーマル"
 
 #: app/customizer/design/section.php:13
 msgid "Design"
@@ -635,6 +665,18 @@ msgstr "フッター"
 msgid "This widgets are displayed in the footer."
 msgstr "このウィジェットはフッターに表示されます。"
 
+#: app/template-tags/eyecatch-position-choices.php:15
+msgid "Page header"
+msgstr "ページヘッダー"
+
+#: app/template-tags/eyecatch-position-choices.php:16
+msgid "Title on page header"
+msgstr "ページヘッダーの上にタイトルを表示"
+
+#: app/template-tags/eyecatch-position-choices.php:17
+msgid "Top of content"
+msgstr "コンテンツの上"
+
 #: app/widget/snow-monkey-recent-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
@@ -659,21 +701,9 @@ msgstr "リンクテキスト"
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:31
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:29
 msgid "Recent posts"
 msgstr "最近の投稿"
-
-#: functions.php:184
-msgid "Page header"
-msgstr "ページヘッダー"
-
-#: functions.php:185
-msgid "Title on page header"
-msgstr "ページヘッダーの上にタイトルを表示"
-
-#: functions.php:186
-msgid "Top of content"
-msgstr "コンテンツの上"
 
 #: template-parts/child-pages.php:18
 msgid "Child pages"

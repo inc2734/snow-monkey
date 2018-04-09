@@ -8,7 +8,7 @@ export default class SnowMonkeyHeader {
       this.min         = 1023;
       this.header      = $('.l-header');
       this.contents    = $('.l-contents');
-      this.defaultType = this.header.attr('data-l-header-type');
+      this.defaultType = this.header.attr('data-snow-monkey-default-header-position');
 
       this.init();
 
@@ -19,18 +19,22 @@ export default class SnowMonkeyHeader {
   }
 
   init() {
-    if ('sticky' === this.defaultType) {
+    if ('sticky' !== this.defaultType && 'overlay' !== this.defaultType) {
       return;
     }
 
     if (this.min < $(window).width()) {
-      this.header.attr('data-l-header-type', '');
-      this.contents.css('margin-top', '');
+      if ('sticky' === this.defaultType || 'overlay' === this.defaultType) {
+        this.header.attr('data-l-header-type', '');
+        this.contents.css('margin-top', '');
+      }
     } else {
-      this.header.attr('data-l-header-type', 'sticky');
+      this.header.attr('data-l-header-type', this.defaultType);
       if ('fixed' === this.header.css('position') || 'absolute' === this.header.css('position')) {
-        const headerHeight = this.header.outerHeight();
-        this.contents.css('marginTop', `${headerHeight}px`);
+        if ('sticky' === this.defaultType) {
+          const headerHeight = this.header.outerHeight();
+          this.contents.css('margin-top', `${headerHeight}px`);
+        }
       }
     }
   }

@@ -23,6 +23,8 @@ function snow_monkey_is_output_page_header() {
 		$return = true;
 	} elseif ( ! is_singular() ) {
 		$return = true;
+	} elseif ( \Snow_Monkey\app\model\Page_Header_Image_Url::get() ) {
+		$return = true;
 	}
 
 	return apply_filters( 'snow_monkey_is_output_page_header', $return );

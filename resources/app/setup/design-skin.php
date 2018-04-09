@@ -5,43 +5,6 @@
  * @license GPL-2.0+
  */
 
-$active_plugins = get_option( 'active_plugins' );
-foreach ( $active_plugins as $plugin ) {
-	if ( 0 !== strpos( $plugin, 'snow-monkey-design-skin-' ) ) {
-		continue;
-	}
+use Snow_Monkey\app\model\Design_Skin;
 
-	$plugin_data = get_file_data(
-		trailingslashit( WP_PLUGIN_DIR ) . $plugin,
-		[
-			'label' => 'Plugin Name',
-		],
-		'plugin'
-	);
-
-	$plugin_data = array_merge( $plugin_data, [
-		'path'  => $plugin,
-	] );
-
-	add_filter( 'snow_monkey_design_skin_choices', function( $choices ) use ( $plugin_data ) {
-		$choices[ dirname( $plugin_data['path'] ) ] = $plugin_data['label'];
-		return $choices;
-	} );
-}
-
-add_action( 'after_setup_theme', function() {
-	$design_skin    = get_theme_mod( 'design-skin' );
-	$bootstrap_path = trailingslashit( WP_PLUGIN_DIR ) . $design_skin . '/bootstrap.php';
-	if ( file_exists( $bootstrap_path ) ) {
-		include( $bootstrap_path );
-	}
-} );
-
-add_action( 'wp_enqueue_scripts', function() {
-	$design_skin = get_theme_mod( 'design-skin' );
-	$skin_path   = trailingslashit( WP_PLUGIN_DIR ) . $design_skin . '/skin.css';
-	$skin_url    = plugins_url( 'skin.css', $skin_path );
-	if ( file_exists( $skin_path ) ) {
-		wp_enqueue_style( $design_skin, $skin_url, [ snow_monkey_get_main_style_handle() ], filemtime( $skin_path ) );
-	}
-} );
+new Design_Skin();

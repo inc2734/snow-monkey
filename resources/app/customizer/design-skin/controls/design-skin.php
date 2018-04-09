@@ -12,12 +12,11 @@ $choices = apply_filters( 'snow_monkey_design_skin_choices', [
 ] );
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'design' );
+$section    = $customizer->get_section( 'design-skin' );
 
 $customizer->control( 'select', 'design-skin', [
 	'label'       => __( 'Design skin', 'snow-monkey' ),
 	'description' => __( 'If set this, please save and reload.', 'snow-monkey' ),
-	'priority'    => 180,
 	'default'     => 'none',
 	'choices'     => $choices,
 ] );

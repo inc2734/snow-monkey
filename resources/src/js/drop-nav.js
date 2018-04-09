@@ -42,12 +42,20 @@ export default class SnowMonkeyDropNav {
   }
 
   _showGnav() {
+    if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
+      return;
+    }
+
     $(this.gNavClass).attr('aria-hidden', 'false');
     this.nav.attr('aria-hidden', 'true');
     this.nav.find(this.gNavClass).attr('aria-hidden', 'true');
   }
 
   _showDropNav() {
+    if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
+      return;
+    }
+
     $(this.gNavClass).attr('aria-hidden', 'true');
     this.nav.attr('aria-hidden', 'false');
     this.nav.find(this.gNavClass).attr('aria-hidden', 'false');

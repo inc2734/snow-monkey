@@ -46,6 +46,9 @@ export default class FixAdminBar {
           if ('sticky' === this.header.attr('data-l-header-type')) {
             this.header.css('position', 'relative');
             this.header.css('top', '');
+          } else if ('overlay' === this.header.attr('data-l-header-type')) {
+            this.header.css('position', '');
+            this.header.css('top', adminbar_height + scroll * -1);
           } else {
             this.header.css('top', adminbar_height + scroll * -1);
           }

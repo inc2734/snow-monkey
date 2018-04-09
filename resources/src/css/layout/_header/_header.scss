@@ -1,11 +1,12 @@
 .#{$_prefix}l-header {
   z-index: 2;
-	background-color: #fff;
-  border-bottom: 1px solid _lighter($_color-gray);
+  background-color: #fff;
   @include _padding(.25, 0);
+  @include _transition(all);
+  box-shadow: 0 1px 2px 1px rgba(#000, .05);
 
   @include _media-min(lg) {
-    border-bottom: none;
+    box-shadow: none;
     padding: 0;
   }
 
@@ -20,7 +21,7 @@
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
     background-color: #fff;
-    border-bottom: 1px solid _lighter($_color-gray);
+    box-shadow: 0 1px 2px 1px rgba(#000, .05);
     @include _transition(transform);
 
     &[aria-hidden="false"] {
@@ -44,6 +45,34 @@
           @include _padding-bottom(.5);
         }
       }
+    }
+  }
+
+  /**
+   * Overlay header
+   */
+  @mixin snow-monkey-overlay-header {
+    background-color: transparent;
+    box-shadow: none;
+
+    .#{$_prefix}c-site-branding__title > a,
+    [data-has-global-nav] .#{$_prefix}p-global-nav .#{$_prefix}c-navbar__item > a {
+      color: #fff;
+    }
+
+    .#{$_prefix}c-hamburger-btn__bar {
+      background-color: #fff;
+    }
+  }
+
+  &[data-l-header-type="overlay"] {
+    [data-scrolled="false"] & {
+      @include snow-monkey-overlay-header();
+    }
+
+    @include _media-min(lg) {
+      position: absolute;
+      @include snow-monkey-overlay-header();
     }
   }
 }
