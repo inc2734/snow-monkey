@@ -10,55 +10,46 @@ namespace Snow_Monkey\app\model;
 class Design_Skin {
 
 	/**
-	 * Prefix of design skin slug
+	 * Design skin main file path
 	 *
 	 * @var string
 	 */
-	protected $design_skin_prefix = 'snow-monkey-design-skin-';
+	protected $file;
 
-	public function __construct() {
-		$this->_set_design_skin_selector_choices();
+	/**
+	 * Options
+	 *
+	 * @var array
+	 *   string style
+	 *   string editor-style
+	 *   string customize-control-script
+	 */
+	protected $options;
 
-		add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_control_script' ] );
+	/**
+	 * Plugin data
+	 *
+	 * @var array
+	 *   string label
+	 *   string slug
+	 */
+	protected $plugin;
+
+	public function __construct( $file, $options = [] ) {
+		$this->file = $file;
+
+		$this->options = shortcode_atts( [
+			'style'                    => 'design-skin.css',
+			'editor-style'             => 'editor-style.css',
+			'customize-control-script' => 'customize-control.js',
+		], $options );
+
+		$this->plugin = $this->_get_plugin_data();
+
 		add_action( 'wp_loaded', [ $this, '_load_bootstrap' ] );
-	}
-
-	/**
-	 * Set design skin selector choices in customizer
-	 *
-	 * @return void
-	 */
-	protected function _set_design_skin_selector_choices() {
-		$active_plugins = get_option( 'active_plugins' );
-		foreach ( $active_plugins as $plugin ) {
-			if ( 0 !== strpos( $plugin, $this->design_skin_prefix ) ) {
-				continue;
-			}
-
-			$plugin_data = $this->_get_plugin_data( $plugin );
-
-			add_filter( 'snow_monkey_design_skin_choices', function( $choices ) use ( $plugin_data ) {
-				$choices[ dirname( $plugin_data['path'] ) ] = $plugin_data['label'];
-				return $choices;
-			} );
-		}
-	}
-
-	/**
-	 * Load script for customizer
-	 *
-	 * @return void
-	 */
-	public function _load_customize_control_script() {
-		$relative_path = '/assets/js/customize-control.min.js';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
-
-		if ( ! file_exists( $path ) ) {
-			return;
-		}
-
-		wp_enqueue_script( get_template() . '-customize-preview', $src, [], filemtime( $path ), true );
+		add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ] );
+		add_filter( 'mce_css', [ $this, '_load_editor_style' ] );
+		add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_script' ] );
 	}
 
 	/**
@@ -67,10 +58,64 @@ class Design_Skin {
 	 * @return void
 	 */
 	public function _load_bootstrap() {
-		$design_skin    = get_theme_mod( 'design-skin' );
-		$bootstrap_path = trailingslashit( WP_PLUGIN_DIR ) . $design_skin . '/bootstrap.php';
-		if ( file_exists( $bootstrap_path ) ) {
-			include( $bootstrap_path );
+		if ( $this->_is_active() ) {
+			$bootstrap_path = dirname( $this->file ) . '/bootstrap.php';
+			if ( file_exists( $bootstrap_path ) ) {
+				include( $bootstrap_path );
+			}
+		}
+	}
+
+	/**
+	 * Load design skin style
+	 *
+	 * @return void
+	 */
+	public function _load_style() {
+		if ( $this->_is_active() ) {
+			$relative_path = $this->options['style'];
+			$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
+			$file_url      = plugins_url( $relative_path, $this->file );
+			if ( file_exists( $file_path ) ) {
+				wp_enqueue_style( $this->plugin['slug'], $file_url, [ snow_monkey_get_main_style_handle() ], filemtime( $file_path ) );
+			}
+		}
+	}
+
+	/**
+	 * Load editor style
+	 *
+	 * @param string $mce_css
+	 * @return string
+	 */
+	public function _load_editor_style( $mce_css ) {
+		if ( $this->_is_active() ) {
+			$relative_path = $this->options['editor-style'];
+			$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
+			$file_url      = plugins_url( $relative_path, $this->file );
+			if ( file_exists( $file_path ) ) {
+				if ( ! empty( $mce_css ) ) {
+					$mce_css .= ',';
+				}
+				$mce_css .= $file_url;
+			}
+		}
+		return $mce_css;
+	}
+
+	/**
+	 * Load customize script
+	 *
+	 * @return void
+	 */
+	public function _load_customize_script() {
+		if ( $this->_is_active() ) {
+			$relative_path = $this->options['customize-control-script'];
+			$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
+			$file_url      = plugins_url( $relative_path, $this->file );
+			if ( file_exists( $file_path ) ) {
+				wp_enqueue_script( $this->plugin['slug'] . '-customize-preview', $file_url, [ 'jquery' ], filemtime( $file_path ), true );
+			}
 		}
 	}
 
@@ -80,19 +125,27 @@ class Design_Skin {
 	 * @param  string $plugin plugin slug
 	 * @return array
 	 */
-	protected function _get_plugin_data( $plugin ) {
-		$plugin_data = get_file_data(
-			trailingslashit( WP_PLUGIN_DIR ) . $plugin,
-			[
-				'label' => 'Plugin Name',
-			],
-			'plugin'
-		);
+	protected function _get_plugin_data() {
+		$plugin_data = get_file_data( dirname( $this->file ), [
+			'label' => 'Plugin Name',
+		], 'plugin' );
 
 		$plugin_data = array_merge( $plugin_data, [
-			'path'  => $plugin,
+			'slug' => basename( $this->file, '.php' ),
 		] );
 
 		return $plugin_data;
+	}
+
+	/**
+	 * Return true when the design skin is active
+	 *
+	 * @return boolean
+	 */
+	protected function _is_active() {
+		if ( get_theme_mod( 'design-skin' ) === $this->plugin['slug'] ) {
+			return true;
+		}
+		return false;
 	}
 }

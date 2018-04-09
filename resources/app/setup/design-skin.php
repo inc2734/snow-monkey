@@ -5,6 +5,14 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\model\Design_Skin;
+add_action( 'customize_controls_enqueue_scripts', function() {
+	$relative_path = '/assets/js/customize-control.min.js';
+	$src  = get_theme_file_uri( $relative_path );
+	$path = get_theme_file_path( $relative_path );
 
-new Design_Skin();
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
+
+	wp_enqueue_script( get_template() . '-customize-preview', $src, [], filemtime( $path ), true );
+} );
