@@ -23,13 +23,13 @@
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>
-
-	<?php
-	if ( get_option( 'mwt-display-child-pages' ) ) {
-		get_template_part( 'template-parts/child-pages' );
-	}
-	?>
 </article>
+
+<?php
+if ( get_option( 'mwt-display-child-pages' ) ) {
+	get_template_part( 'template-parts/child-pages' );
+}
+?>
 
 <?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
 

@@ -8,6 +8,6 @@
 
 <div class="c-page-top" aria-hidden="true">
 	<a href="#body">
-		<span class="fa fa-chevron-up" aria-hidden="true" title="<?php esc_html_e( 'Scroll up', 'snow-monkey' ); ?>"></span>
+		<span class="fas fa-chevron-up" aria-hidden="true" title="<?php esc_html_e( 'Scroll up', 'snow-monkey' ); ?>"></span>
 	</a>
 </div>

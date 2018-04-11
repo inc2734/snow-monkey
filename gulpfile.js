@@ -43,7 +43,6 @@ gulp.task('remove-packages', function(cb) {
  */
 gulp.task('packages', ['remove-packages'], function(cb) {
   var packages = [
-    dir.src.packages + '/font-awesome/**',
     dir.src.packages + '/slick-carousel/**',
     dir.src.packages + '/jquery.sticky/**',
     dir.src.packages + '/jquery.background-parallax-scroll/**',
@@ -111,10 +110,13 @@ function sassCompile(src, dest) {
  * Build javascript
  */
 gulp.task('js', function() {
-  runSequence('js:app');
+  runSequence('js:app', 'js:customize-control');
 });
 gulp.task('js:app', function() {
   return jsCompile('app.js');
+});
+gulp.task('js:customize-control', function() {
+  return jsCompile('customize-control.js');
 });
 
 function jsCompile(distFileName) {

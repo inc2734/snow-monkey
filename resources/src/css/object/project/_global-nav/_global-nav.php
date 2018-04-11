@@ -15,6 +15,8 @@ $cfs->register(
 	[
 		'.p-global-nav .c-navbar__item[class*="current_"] > a',
 		'.p-global-nav .c-navbar__item[class*="current-"] > a',
+		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item[class*="current_"] > a',
+		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item[class*="current-"] > a',
 	],
 	'color: ' . $accent_color
 );
@@ -24,6 +26,9 @@ $cfs->register(
 		'.p-global-nav .c-navbar__item:hover > a',
 		'.p-global-nav .c-navbar__item:active > a',
 		'.p-global-nav .c-navbar__item:focus > a',
+		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item:hover > a',
+		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item:active > a',
+		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item:focus > a',
 	],
 	'color: ' . $accent_color,
 	'@media (min-width: 64em)'

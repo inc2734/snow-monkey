@@ -6,6 +6,8 @@
  */
 
 /**
+ * Enqueue main style
+ *
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
@@ -17,14 +19,8 @@ add_action( 'wp_enqueue_scripts', function() {
 		return;
 	}
 
-	$handle = get_template();
-
-	if ( is_child_theme() && file_exists( get_stylesheet_directory() . $relative_path ) ) {
-		$handle = get_stylesheet();
-	}
-
 	wp_enqueue_style(
-		$handle,
+		snow_monkey_get_main_style_handle(),
 		$src,
 		[],
 		filemtime( $path )
@@ -32,6 +28,8 @@ add_action( 'wp_enqueue_scripts', function() {
 } );
 
 /**
+ * Enqueue main script
+ *
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
@@ -43,17 +41,47 @@ add_action( 'wp_enqueue_scripts', function() {
 		return;
 	}
 
-	$handle = get_template();
-
-	if ( is_child_theme() && file_exists( get_stylesheet_directory() . $relative_path ) ) {
-		$handle = get_stylesheet();
-	}
-
 	wp_enqueue_script(
-		$handle,
+		snow_monkey_get_main_script_handle(),
 		$src,
 		[ 'jquery' ],
 		filemtime( $path ),
+		true
+	);
+} );
+
+/**
+ * Enqueue script for header position
+ *
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+	global $wp_scripts;
+	$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
+	$header_position_only_mobile = ( $header_position_only_mobile ) ? 'true' : 'false';
+	$data = 'var snow_monkey_header_position_only_mobile = ' . $header_position_only_mobile;
+	wp_add_inline_script( snow_monkey_get_main_script_handle(), $data, 'before' );
+} );
+
+/**
+ * Enqueue FontAwesome
+ *
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+	wp_enqueue_script(
+		'fontawesome5',
+		'https://use.fontawesome.com/releases/v5.0.9/js/all.js',
+		[ snow_monkey_get_main_script_handle() ],
+		false,
+		true
+	);
+
+	wp_enqueue_script(
+		'fontawesome5-v4-shims',
+		'https://use.fontawesome.com/releases/v5.0.9/js/v4-shims.js',
+		[ 'fontawesome5' ],
+		false,
 		true
 	);
 } );
@@ -79,3 +107,26 @@ add_action( 'wp_enqueue_scripts', function() {
 		true
 	);
 } );
+
+/**
+ * Add defer
+ *
+ * @param string $tag
+ * @param string handle
+ * @param string src
+ * @return string
+ */
+add_filter('script_loader_tag', function( $tag, $handle, $src ) {
+	$defer_handles = [
+		get_template(),
+		get_stylesheet(),
+		'fontawesome5',
+		'fontawesome5-v4-shims',
+	];
+
+	if ( ! in_array( $handle, $defer_handles ) ) {
+		return $tag;
+	}
+
+	return str_replace( ' src', ' defer="defer" src', $tag );
+}, 10, 3 );

@@ -26,7 +26,9 @@ import SnowMonkeyWidgetItemExpander from './widget-item-expander.js';
 new SnowMonkeyWidgetItemExpander();
 
 import SnowMonkeyHeader from './header.js';
-new SnowMonkeyHeader();
+if (snow_monkey_header_position_only_mobile) {
+  new SnowMonkeyHeader();
+}
 
 import SnowMonkeyDropNav from './drop-nav.js';
 new SnowMonkeyDropNav();
@@ -36,6 +38,15 @@ new SnowMonkeyPageTopScroll();
 
 import SnowMonkeyFooterStickyNav from './footer-sticky-nav.js';
 new SnowMonkeyFooterStickyNav();
+
+import SnowMonkeyProfileBox from './profile-box.js';
+new SnowMonkeyProfileBox();
+
+import SnowMonkeySocialNav from './social-nav.js';
+new SnowMonkeySocialNav();
+
+import SnowMonkeySlick from './slick.js';
+new SnowMonkeySlick();
 
 $(() => {
   $('.l-sidebar-sticky-widget-area').sticky({

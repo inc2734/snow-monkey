@@ -16,7 +16,7 @@
 	<div class="l-container">
 		<?php wpvc_get_header(); ?>
 
-		<div class="l-contents">
+		<div class="l-contents" role="document">
 			<?php
 			if ( snow_monkey_is_output_page_header() ) {
 				get_template_part( 'template-parts/page-header' );

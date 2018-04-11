@@ -2,7 +2,6 @@
   "author": "inc2734",
   "license": "GPL-2.0+",
   "dependencies": {
-    "font-awesome": "^4.7.0",
     "jquery.background-parallax-scroll": "^2.0.0",
     "jquery.smoothscroll": "^1.0.2",
     "jquery.sticky": "^0.2.0",

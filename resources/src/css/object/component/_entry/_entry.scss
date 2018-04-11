@@ -41,6 +41,7 @@
   }
 
   &__content {
+    @include _clearfix();
     @include entry-content();
   }
 

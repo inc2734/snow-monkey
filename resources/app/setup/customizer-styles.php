@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-add_action( 'wp_loaded', function() {
+add_action( 'wp', function() {
 	$includes = array(
 		'/../../assets/css/foundation/*',
 		'/../../assets/css/layout/*',

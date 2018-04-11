@@ -12,7 +12,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 ?>
 
 <aside class="p-comments c-entry-aside">
-	<h2 class="p-comments__title c-entry-aside__title"><span><?php esc_html_e( 'Comments on this post', 'snow-monkey' ); ?></span></h2>
+	<h2 class="p-comments__title c-entry-aside__title"><?php esc_html_e( 'Comments on this post', 'snow-monkey' ); ?></h2>
 
 	<?php if ( ! empty( $comments_by_type['comment'] ) ) : ?>
 		<ol class="p-comments__list">

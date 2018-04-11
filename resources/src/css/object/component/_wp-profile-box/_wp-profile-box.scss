@@ -71,40 +71,9 @@
         color: _light($_color-text);
       }
 
-      &:before {
-        @include fa-icon();
-        content: "\f0ac";
+      svg {
         margin-right: 3px;
       }
-    }
-
-    a[href*="twitter.com"]::before {
-      content: $fa-var-twitter;
-    }
-
-    a[href*="facebook.com"]::before {
-      content: $fa-var-facebook;
-    }
-
-    a[href*="instagram.com"]::before {
-      content: $fa-var-instagram;
-    }
-
-    a[href*="youtube.com"]::before {
-      content: $fa-var-youtube;
-    }
-
-    a[href*="linkedin.com"]::before {
-      content: $fa-var-linkedin;
-    }
-
-    a[href*="wordpress.org"]::before,
-    a[href*="wordpress.com"]::before {
-      content: $fa-var-wordpress;
-    }
-
-    a[href*="tumblr.com"]::before {
-      content: $fa-var-tumblr;
     }
   }
 
