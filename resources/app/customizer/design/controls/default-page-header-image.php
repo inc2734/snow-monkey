@@ -11,8 +11,8 @@ $customizer = Customizer_Framework::init();
 $section    = $customizer->get_section( 'design' );
 
 $customizer->control( 'image', 'default-page-header-image', [
-	'label'       => __( 'Display page header image', 'snow-monkey' ),
-	'description' => __( 'When set, the page header is displayed on all pages (except the homepage).', 'snow-monkey' ),
+	'label'       => __( 'Default page header image', 'snow-monkey' ),
+	'description' => __( 'If set, the page header is displayed on all pages (except the homepage).', 'snow-monkey' ),
 	'priority'    => 123,
 ] );
 

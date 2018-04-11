@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-04-06 14:48+0900\n"
-"PO-Revision-Date: 2018-04-06 14:50+0900\n"
+"POT-Creation-Date: 2018-04-11 16:32+0900\n"
+"PO-Revision-Date: 2018-04-11 16:32+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -91,6 +91,21 @@ msgstr "ヘッダー画像"
 msgid "[ %1$s ] category settings"
 msgstr "[ %1$s ] カテゴリーの設定"
 
+#: app/customizer/design-skin/controls/design-skin.php:11
+#: app/customizer/design/controls/breadcrumbs-position.php:20
+#: app/template-tags/eyecatch-position-choices.php:18
+msgid "None"
+msgstr "なし"
+
+#: app/customizer/design-skin/controls/design-skin.php:18
+#: app/customizer/design-skin/section.php:13
+msgid "Design skin"
+msgstr "デザインスキン"
+
+#: app/customizer/design-skin/controls/design-skin.php:19
+msgid "If set this, please save and reload."
+msgstr "設定したら、保存してリロードしてください。"
+
 #: app/customizer/design/controls/accent-color.php:14
 msgid "Accent color"
 msgstr "アクセントカラー"
@@ -126,23 +141,19 @@ msgstr "デフォルト"
 msgid "Fit to content width"
 msgstr "コンテンツ幅に合わせる"
 
-#: app/customizer/design/controls/breadcrumbs-position.php:20
-#: app/customizer/design/controls/design-skin.php:11
-#: app/template-tags/eyecatch-position-choices.php:18
-msgid "None"
-msgstr "なし"
-
 #: app/customizer/design/controls/custom-logo-scale.php:26
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 
-#: app/customizer/design/controls/design-skin.php:18
-msgid "Design skin"
-msgstr "デザインスキン"
+#: app/customizer/design/controls/default-page-header-image.php:14
+msgid "Default page header image"
+msgstr "デフォルトページヘッダー画像"
 
-#: app/customizer/design/controls/design-skin.php:19
-msgid "If set this, please save and reload."
-msgstr "設定したら、保存してリロードしてください。"
+#: app/customizer/design/controls/default-page-header-image.php:15
+msgid ""
+"If set, the page header is displayed on all pages (except the homepage)."
+msgstr ""
+"設定したら、ページヘッダーが全てのページに表示されます（ホームページは除く）"
 
 #: app/customizer/design/controls/footer-layout.php:15
 msgid "Number of columns in the footer widget area"
