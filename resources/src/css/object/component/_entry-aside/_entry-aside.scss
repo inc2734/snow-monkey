@@ -6,33 +6,35 @@
   }
 
   &__title {
-    position: relative;
     @include _margin(0, 0, .5);
     @include _font-size-line-height($_base-font-size-px * 1.25);
     font-weight: bold;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
     @include _media-min(lg) {
       @include _margin(0, 0, 1);
       @include _font-size-line-height($_base-font-size-px * 1.5);
     }
 
-    &::before {
-      position: absolute;
-      top: calc(50% - 1.5px);
-      right: 0;
-      left: 0;
+    &::before,
+    &::after {
       display: block;
       content: '';
       height: 3px;
       background-color: $_color-black;
+      flex: 1 0 0%;
+      min-width: 20px;
     }
 
-    span {
-      position: relative;
-      display: inline-block;
-      background-color: #fff;
-      padding: 0 .5em;
+    &::before {
+      margin-right: .5em;
+    }
+
+    &::after {
+      margin-left: .5em;
     }
   }
 }

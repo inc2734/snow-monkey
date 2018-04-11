@@ -26,8 +26,8 @@ add_action( 'init', function() {
 			'id'            => $post_type_object->name . '-post-type-sidebar-widget-area',
 			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title"><span>',
-			'after_title'   => '</span></h2>',
+			'before_title'  => '<h2 class="c-widget__title">',
+			'after_title'   => '</h2>',
 		] );
 
 		register_sidebar( [
@@ -38,8 +38,8 @@ add_action( 'init', function() {
 			'id'            => $post_type_object->name . '-post-type-sidebar-sticky-widget-area',
 			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title"><span>',
-			'after_title'   => '</span></h2>',
+			'before_title'  => '<h2 class="c-widget__title">',
+			'after_title'   => '</h2>',
 		] );
 	}
 }, 11 );
@@ -56,8 +56,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'sidebar-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 
 	register_sidebar( [
@@ -66,8 +66,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'sidebar-sticky-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 
@@ -92,8 +92,8 @@ add_action( 'init', function() {
 			'id'            => $post_type_object->name . '-post-type-title-top-widget-area',
 			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title"><span>',
-			'after_title'   => '</span></h2>',
+			'before_title'  => '<h2 class="c-widget__title">',
+			'after_title'   => '</h2>',
 		] );
 	}
 }, 11 );
@@ -110,8 +110,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'title-top-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 
@@ -127,8 +127,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'archive-top-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 
@@ -153,8 +153,8 @@ add_action( 'init', function() {
 			'id'            => $post_type_object->name . '-post-type-contents-bottom-widget-area',
 			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title"><span>',
-			'after_title'   => '</span></h2>',
+			'before_title'  => '<h2 class="c-widget__title">',
+			'after_title'   => '</h2>',
 		] );
 	}
 }, 11 );
@@ -172,8 +172,8 @@ add_action( 'widgets_init', function() {
 		'id'            => 'contents-bottom-widget-area',
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 
@@ -189,8 +189,8 @@ add_action( 'widgets_init', function() {
 		'description'   => __( 'This widgets are displayed in the sidebar of archive page .', 'snow-monkey' ),
 		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );
 
@@ -268,7 +268,7 @@ add_action( 'widgets_init', function() {
 		'description'   => __( 'This widgets are displayed in the footer.', 'snow-monkey' ),
 		'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--lg-1-1"><div id="%1$s" class="c-widget %2$s">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<h2 class="c-widget__title"><span>',
-		'after_title'   => '</span></h2>',
+		'before_title'  => '<h2 class="c-widget__title">',
+		'after_title'   => '</h2>',
 	] );
 } );

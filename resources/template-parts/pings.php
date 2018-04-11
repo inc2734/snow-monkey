@@ -12,7 +12,7 @@ if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
 ?>
 
 <aside class="p-trackbacks c-entry-aside">
-	<h2 class="p-trackbacks__title c-entry-aside__title"><span><?php esc_html_e( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ); ?></span></h2>
+	<h2 class="p-trackbacks__title c-entry-aside__title"><?php esc_html_e( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ); ?></h2>
 
 	<?php if ( ! empty( $comments_by_type['pings'] ) ) : ?>
 		<ol class="p-trackbacks__list">
