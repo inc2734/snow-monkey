@@ -17,14 +17,16 @@ function snow_monkey_is_output_page_header() {
 
 	if ( is_front_page() ) {
 		$return = false;
-	} elseif ( is_singular( 'post' ) && in_array( get_theme_mod( 'post-eyecatch' ), $valid_choices ) && $image_url ) {
-		$return = true;
-	} elseif ( is_page() && in_array( get_theme_mod( 'page-eyecatch' ), $valid_choices ) && $image_url ) {
-		$return = true;
-	} elseif ( ! is_singular() && $image_url ) {
-		$return = true;
 	} elseif ( snow_monkey_is_output_page_header_title() ) {
 		$return = true;
+	} elseif ( $image_url ) {
+		if ( is_singular( 'post' ) && in_array( get_theme_mod( 'post-eyecatch' ), $valid_choices ) ) {
+			$return = true;
+		} elseif ( is_page() && in_array( get_theme_mod( 'page-eyecatch' ), $valid_choices ) ) {
+			$return = true;
+		} elseif ( ! is_singular() ) {
+			$return = true;
+		}
 	}
 
 	return apply_filters( 'snow_monkey_is_output_page_header', $return );
