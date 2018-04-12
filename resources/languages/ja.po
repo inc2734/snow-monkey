@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-04-11 16:32+0900\n"
-"PO-Revision-Date: 2018-04-11 16:32+0900\n"
+"POT-Creation-Date: 2018-04-12 16:28+0900\n"
+"PO-Revision-Date: 2018-04-12 16:28+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -148,12 +148,6 @@ msgstr "スマホ時のカスタムロゴの拡大率（%）"
 #: app/customizer/design/controls/default-page-header-image.php:14
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
-
-#: app/customizer/design/controls/default-page-header-image.php:15
-msgid ""
-"If set, the page header is displayed on all pages (except the homepage)."
-msgstr ""
-"設定したら、ページヘッダーが全てのページに表示されます（ホームページは除く）"
 
 #: app/customizer/design/controls/footer-layout.php:15
 msgid "Number of columns in the footer widget area"
@@ -828,6 +822,12 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "One column (fluid)"
 msgstr "1カラム（fluid）"
+
+#~ msgid ""
+#~ "If set, the page header is displayed on all pages (except the homepage)."
+#~ msgstr ""
+#~ "設定したら、ページヘッダーが全てのページに表示されます（ホームページは除"
+#~ "く）"
 
 #~ msgid "Applies to singular post."
 #~ msgstr "個別投稿に適用されます。"

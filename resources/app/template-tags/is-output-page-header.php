@@ -11,19 +11,19 @@
  * @return boolean
  */
 function snow_monkey_is_output_page_header() {
-	$return = false;
+	$return    = false;
+	$image_url = \Snow_Monkey\app\model\Page_Header_Image_Url::get();
+	$valid_choices = [ 'page-header', 'title-on-page-header' ];
 
 	if ( is_front_page() ) {
 		$return = false;
-	} elseif ( is_page() && 'page-header' === get_theme_mod( 'page-eyecatch' ) ) {
+	} elseif ( is_singular( 'post' ) && in_array( get_theme_mod( 'post-eyecatch' ), $valid_choices ) && $image_url ) {
 		$return = true;
-	} elseif ( is_singular( 'post' ) && 'page-header' === get_theme_mod( 'post-eyecatch' ) ) {
+	} elseif ( is_page() && in_array( get_theme_mod( 'page-eyecatch' ), $valid_choices ) && $image_url ) {
+		$return = true;
+	} elseif ( ! is_singular() && $image_url ) {
 		$return = true;
 	} elseif ( snow_monkey_is_output_page_header_title() ) {
-		$return = true;
-	} elseif ( ! is_singular() ) {
-		$return = true;
-	} elseif ( \Snow_Monkey\app\model\Page_Header_Image_Url::get() ) {
 		$return = true;
 	}
 
