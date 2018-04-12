@@ -1,10 +1,13 @@
 .#{$_prefix}c-pagination {
-  @include _margin(1, 0, 0);
   text-align: center;
   font-size: 0;
 
-  @include _media-min(lg) {
-    @include _margin(2, 0, 0);
+  .#{$_prefix}p-archive + & {
+    @include _margin(1, 0, 0);
+
+    @include _media-min(lg) {
+      @include _margin(2, 0, 0);
+    }
   }
 
   &__item,
@@ -19,6 +22,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
+    vertical-align: top;
   }
 
   &__item {
