@@ -9,6 +9,7 @@
 
   &[data-has-image="true"] {
     min-height: 300px;
+    height: 1px; // For IE11
     @include _padding(1, 0);
 
     @include _media-min(md) {
@@ -27,6 +28,10 @@
         text-decoration: none;
       }
     }
+  }
+
+  > .#{$_prefix}c-container {
+    margin: 0; // For IE11
   }
 
   &__content {

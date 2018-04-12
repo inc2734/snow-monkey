@@ -3,36 +3,34 @@
 }
 
 .wpaw-slider {
-  &__item-body {
-    @include _position(absolute, 0, 0, 0, 0);
+  &__item {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: row;
+    align-items: center;
+  }
 
-    > * {
-      flex: 0 1 auto;
+  &__item-body {
+    position: relative;
+    max-width: 100%;
+
+    @include _media-min(md) {
+      width: _strip-unit(map-get($_sizes, md)) * 1rem;
+    }
+
+    @include _media-min(lg) {
+      width: _strip-unit(map-get($_sizes, lg)) * 1rem;
     }
   }
 
   &__item-content {
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
-    max-width: 100%;
     @include _padding(0, 1);
 
     > * {
       flex: 0 1 auto;
-
-      @include _media-min(md) {
-        max-width: _strip-unit(map-get($_sizes, md)) * 1rem;
-      }
-
-      @include _media-min(lg) {
-        max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
-      }
+      max-width: 100%;
     }
   }
 

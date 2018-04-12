@@ -17,17 +17,15 @@
    */
   .#{$_prefix}l-body--right-sidebar & {
     &__inner {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-
       @include _media-min(lg) {
+        display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
       }
     }
 
     &__main {
-      flex: 1;
+      flex: 1 1 0%;
 
       @include _media-min(lg) {
         @include _margin(0, 2, 0, 0);
@@ -38,7 +36,7 @@
 
     &__sidebar {
       @include _margin(1, 0, 0);
-      flex: 1;
+      flex: 1 1 0%;
 
       @include _media-min(lg) {
         margin: 0;
@@ -53,17 +51,15 @@
    */
   .#{$_prefix}l-body--left-sidebar & {
     &__inner {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-
       @include _media-min(lg) {
-        flex-direction: row-reverse;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
       }
     }
 
     &__main {
-      flex: 1;
+      flex: 1 1 0%;
 
       @include _media-min(lg) {
         @include _margin(0, 0, 0, 2);
@@ -74,7 +70,7 @@
 
     &__sidebar {
       @include _margin(1, 0, 0);
-      flex: 1;
+      flex: 1 1 0%;
 
       @include _media-min(lg) {
         margin: 0;
