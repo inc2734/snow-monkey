@@ -14,13 +14,11 @@
     line-height: 1.2;
     padding: .5em 0;
     text-decoration: none;
-  }
 
-  &__icon {
-    margin-bottom: 2px;
-    display: block;
-    @include _font-size(24px);
-    line-height: 1;
+    > svg {
+      margin: 0 auto 2px;
+      display: block;
+    }
   }
 
   .#{$_prefix}c-navbar {

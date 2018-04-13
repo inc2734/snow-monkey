@@ -39,12 +39,6 @@ new SnowMonkeyPageTopScroll();
 import SnowMonkeyFooterStickyNav from './footer-sticky-nav.js';
 new SnowMonkeyFooterStickyNav();
 
-import SnowMonkeyProfileBox from './profile-box.js';
-new SnowMonkeyProfileBox();
-
-import SnowMonkeySocialNav from './social-nav.js';
-new SnowMonkeySocialNav();
-
 import SnowMonkeySlick from './slick.js';
 new SnowMonkeySlick();
 
