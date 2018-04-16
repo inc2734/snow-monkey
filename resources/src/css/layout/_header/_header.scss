@@ -3,11 +3,38 @@
   background-color: #fff;
   @include _padding(.25, 0);
   @include _transition(all);
-  box-shadow: 0 1px 2px 1px rgba(#000, .05);
 
   @include _media-min(lg) {
-    box-shadow: none;
     padding: 0;
+  }
+
+  /**
+   * Sticky header
+   */
+  &[data-l-header-type="sticky"] {
+    box-shadow: 0 1px 2px 1px rgba(#000, .05);
+  }
+
+  /**
+   * Overlay header
+   */
+  &[data-l-header-type="overlay"] {
+    [data-scrolled="false"] & {
+      background-color: transparent;
+
+      .#{$_prefix}c-site-branding__title > a,
+      [data-has-global-nav] .#{$_prefix}p-global-nav .#{$_prefix}c-navbar__item > a {
+        color: #fff;
+      }
+
+      .#{$_prefix}c-hamburger-btn__bar {
+        background-color: #fff;
+      }
+    }
+
+    [data-scrolled="true"] & {
+      box-shadow: 0 1px 2px 1px rgba(#000, .05);
+    }
   }
 
   .#{$_prefix}c-row {
@@ -47,34 +74,6 @@
       }
     }
   }
-
-  /**
-   * Overlay header
-   */
-  @mixin snow-monkey-overlay-header {
-    background-color: transparent;
-    box-shadow: none;
-
-    .#{$_prefix}c-site-branding__title > a,
-    [data-has-global-nav] .#{$_prefix}p-global-nav .#{$_prefix}c-navbar__item > a {
-      color: #fff;
-    }
-
-    .#{$_prefix}c-hamburger-btn__bar {
-      background-color: #fff;
-    }
-  }
-
-  &[data-l-header-type="overlay"] {
-    [data-scrolled="false"] & {
-      @include snow-monkey-overlay-header();
-    }
-
-    @include _media-min(lg) {
-      position: absolute;
-      @include snow-monkey-overlay-header();
-    }
-  }
 }
 
 /**
@@ -95,7 +94,7 @@
   &__branding,
   &__content {
     @include _media-min(lg) {
-      @include _padding(.5, 0);
+      @include _padding(.25, 0);
     }
   }
 
@@ -113,7 +112,7 @@
   &__row {
     &:nth-child(1) {
       @include _media-min(lg) {
-        @include _padding(.5, 0);
+        @include _padding(.25, 0);
       }
     }
   }
@@ -147,12 +146,15 @@
     }
   }
 
-  .#{$_prefix}p-global-nav {
-    .#{$_prefix}c-navbar {
-      justify-content: center;
+  .#{$_prefix}p-global-nav .#{$_prefix}c-navbar {
+    justify-content: center;
 
-      &__item {
-        flex: 0 1 auto;
+    &__item {
+      flex: 0 1 auto;
+
+      > a {
+        @include _padding-top(1);
+        @include _padding-bottom(1);
       }
     }
   }

@@ -42,8 +42,10 @@ export default class SnowMonkeyDropNav {
   }
 
   _showGnav() {
-    if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
-      return;
+    if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
+      if (false === snow_monkey_header_position_only_mobile) {
+        return;
+      }
     }
 
     $(this.gNavClass).attr('aria-hidden', 'false');
@@ -52,8 +54,10 @@ export default class SnowMonkeyDropNav {
   }
 
   _showDropNav() {
-    if ('sticky' === this.header.attr('data-l-header-type') && false === snow_monkey_header_position_only_mobile) {
-      return;
+    if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
+      if (false === snow_monkey_header_position_only_mobile) {
+        return;
+      }
     }
 
     $(this.gNavClass).attr('aria-hidden', 'true');

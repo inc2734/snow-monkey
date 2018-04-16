@@ -9,7 +9,7 @@
         color: $_color-text;
         @include _font-size-line-height($_base-font-size-px - 2);
         font-weight: bold;
-        @include _padding(1, .75);
+        @include _padding(.75);
       }
 
       &[class*="current_"],
