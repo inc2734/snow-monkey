@@ -20,27 +20,23 @@ function snow_monkey_get_related_posts( $post_id ) {
 
 	$tax_query = [];
 
-	$category_ids = snow_monkey_get_the_category_ids( $post_id );
-	if ( $category_ids ) {
-		$tax_query[] = [
-			'taxonomy' => 'category',
-			'field'    => 'term_id',
-			'terms'    => $category_ids,
-			'operator' => 'IN',
-		];
-	}
+	$taxonomies = get_object_taxonomies( get_post_type( $post_id ), 'object' );
+	foreach ( $taxonomies as $taxonomy ) {
+		if ( false === $taxonomy->public || false === $taxonomy->show_ui ) {
+			continue;
+		}
 
-	$tag_ids = snow_monkey_get_the_tag_ids( $post_id );
-	if ( $tag_ids ) {
+		$term_ids = wp_get_object_terms( $post_id, $taxonomy->name, [ 'fields' => 'ids' ] );
+		if ( ! $term_ids ) {
+			continue;
+		}
+
 		$tax_query[] = [
-			'taxonomy' => 'post_tag',
+			'taxonomy' => $taxonomy->name,
 			'field'    => 'term_id',
-			'terms'    => $tag_ids,
+			'terms'    => $term_ids,
 			'operator' => 'IN',
 		];
-	}
-	if ( ! $tax_query ) {
-		return [];
 	}
 
 	$related_posts_args = [
@@ -50,11 +46,13 @@ function snow_monkey_get_related_posts( $post_id ) {
 		'post__not_in'   => [ $post_id ],
 		'tax_query'      => array_merge(
 			[
-				'relation' => 'OR',
+				'relation' => 'AND',
 			],
 			$tax_query
 		),
 	];
+
+	$related_posts_args = apply_filters( 'snow_monkey_related_posts_args', $related_posts_args );
 	$related_posts = get_posts( $related_posts_args );
 
 	if ( ! $related_posts ) {
