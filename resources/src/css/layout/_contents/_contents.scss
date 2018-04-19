@@ -53,7 +53,7 @@
     &__inner {
       @include _media-min(lg) {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         flex-wrap: nowrap;
       }
     }
