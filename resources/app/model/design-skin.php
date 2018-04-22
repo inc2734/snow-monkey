@@ -46,12 +46,10 @@ class Design_Skin {
 
 		$this->plugin = $this->_get_plugin_data();
 
-		if ( $this->_is_active() ) {
-			add_action( 'wp_loaded', [ $this, '_load_bootstrap' ] );
-			add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ] );
-			add_filter( 'mce_css', [ $this, '_load_editor_style' ] );
-			add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_script' ] );
-		}
+		add_action( 'wp_loaded', [ $this, '_load_bootstrap' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ] );
+		add_filter( 'mce_css', [ $this, '_load_editor_style' ] );
+		add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_script' ] );
 	}
 
 	/**
@@ -60,6 +58,10 @@ class Design_Skin {
 	 * @return void
 	 */
 	public function _load_bootstrap() {
+		if ( ! $this->_is_active() ) {
+			return;
+		}
+
 		$bootstrap_path = dirname( $this->file ) . '/bootstrap.php';
 		if ( file_exists( $bootstrap_path ) ) {
 			include( $bootstrap_path );
@@ -72,6 +74,10 @@ class Design_Skin {
 	 * @return void
 	 */
 	public function _load_style() {
+		if ( ! $this->_is_active() ) {
+			return;
+		}
+
 		$relative_path = $this->options['style'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
 		$file_url      = plugins_url( $relative_path, $this->file );
@@ -87,6 +93,10 @@ class Design_Skin {
 	 * @return string
 	 */
 	public function _load_editor_style( $mce_css ) {
+		if ( ! $this->_is_active() ) {
+			return;
+		}
+
 		$relative_path = $this->options['editor-style'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
 		$file_url      = plugins_url( $relative_path, $this->file );
@@ -105,6 +115,10 @@ class Design_Skin {
 	 * @return void
 	 */
 	public function _load_customize_script() {
+		if ( ! $this->_is_active() ) {
+			return;
+		}
+
 		$relative_path = $this->options['customize-control-script'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
 		$file_url      = plugins_url( $relative_path, $this->file );
