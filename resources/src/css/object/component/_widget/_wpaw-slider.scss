@@ -4,6 +4,7 @@
 
 .wpaw-slider {
   &__item {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,6 +13,7 @@
   &__item-body {
     position: relative;
     max-width: 100%;
+    @include _padding(1);
 
     @include _media-min(md) {
       width: _strip-unit(map-get($_sizes, md)) * 1rem;
@@ -73,17 +75,9 @@
     bottom: 10px;
   }
 
-  @include _media-max(sm) {
-    .slick-slide {
-      height: 70vh;
-
-      @include _media-min(lg) {
-        min-height: 650px;
-      }
-
-      &::before {
-        display: none;
-      }
+  .slick-slide {
+    &::before {
+      display: none;
     }
   }
 
@@ -93,6 +87,45 @@
   }
 
   .#{$_prefix}l-front-page-widget-area & {
+    &__item {
+      height: 70vh;
+
+      @include _media-min(lg) {
+        min-height: 650px;
+      }
+    }
+
+    &[data-wpaw-slide-slides-to-show] {
+      @include _media-min(lg) {
+        .slick-slide::before {
+          content: '';
+          display: block;
+          padding: 56.25% 0 0;
+        }
+
+        .wpaw-slider__item {
+          position: absolute;
+          height: auto;
+          min-height: 1px;
+        }
+      }
+    }
+
+    &[data-wpaw-slide-slides-to-show="1"] {
+      .slick-slide::before {
+        display: none;
+      }
+
+      .wpaw-slider__item {
+        position: relative;
+        height: 70vh;
+
+        @include _media-min(lg) {
+          min-height: 650px;
+        }
+      }
+    }
+
     &__item-title {
       @include _media-min(md) {
         @include _font-size-line-height($_base-font-size * 2);

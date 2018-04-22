@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f2712bdc30c7d45ee5251709705afaf4",
-    "content-hash": "7bc4dc6ac5c17ec74c19bdc9a35818cf",
+    "hash": "6b4cdf218011ba40c021ade9352f1b17",
+    "content-hash": "d4838a454df92de7f003eac9b99e516e",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.10.7",
+            "version": "1.10.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "c5d96e2ff5af13f0830a31c395dc040430e345e9"
+                "reference": "dc8e597029bd5c1489d9c57193852f77c098a686"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c5d96e2ff5af13f0830a31c395dc040430e345e9",
-                "reference": "c5d96e2ff5af13f0830a31c395dc040430e345e9",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/dc8e597029bd5c1489d9c57193852f77c098a686",
+                "reference": "dc8e597029bd5c1489d9c57193852f77c098a686",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.5.0",
-                "inc2734/wp-awesome-widgets": ">=1.10.1",
+                "inc2734/wp-awesome-widgets": ">=1.10.2",
                 "inc2734/wp-basis": ">=0.7.7",
                 "inc2734/wp-breadcrumbs": ">=1.0.2",
                 "inc2734/wp-contents-outline": ">=0.5.0",
@@ -61,7 +61,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-04-13 05:42:24"
+            "time": "2018-04-22 14:55:42"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -107,16 +107,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "1.10.1",
+            "version": "1.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "a9d4cb0ec15ef9898596d7354320c4dd0ab35727"
+                "reference": "1e27403ef0ca877b7f8e2dc994f4f3dd32691e62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/a9d4cb0ec15ef9898596d7354320c4dd0ab35727",
-                "reference": "a9d4cb0ec15ef9898596d7354320c4dd0ab35727",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/1e27403ef0ca877b7f8e2dc994f4f3dd32691e62",
+                "reference": "1e27403ef0ca877b7f8e2dc994f4f3dd32691e62",
                 "shasum": ""
             },
             "require": {
@@ -147,7 +147,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-03-09 01:08:05"
+            "time": "2018-04-22 14:54:47"
         },
         {
             "name": "inc2734/wp-basis",
@@ -1052,23 +1052,23 @@
         },
         {
             "name": "phpspec/prophecy",
-            "version": "1.7.5",
+            "version": "1.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpspec/prophecy.git",
-                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401"
+                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/dfd6be44111a7c41c2e884a336cc4f461b3b2401",
-                "reference": "dfd6be44111a7c41c2e884a336cc4f461b3b2401",
+                "url": "https://api.github.com/repos/phpspec/prophecy/zipball/33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
+                "reference": "33a7e3c4fda54e912ff6338c48823bd5c0f0b712",
                 "shasum": ""
             },
             "require": {
                 "doctrine/instantiator": "^1.0.2",
                 "php": "^5.3|^7.0",
                 "phpdocumentor/reflection-docblock": "^2.0|^3.0.2|^4.0",
-                "sebastian/comparator": "^1.1|^2.0",
+                "sebastian/comparator": "^1.1|^2.0|^3.0",
                 "sebastian/recursion-context": "^1.0|^2.0|^3.0"
             },
             "require-dev": {
@@ -1111,7 +1111,7 @@
                 "spy",
                 "stub"
             ],
-            "time": "2018-02-19 10:16:54"
+            "time": "2018-04-18 13:57:24"
         },
         {
             "name": "phpunit/php-code-coverage",

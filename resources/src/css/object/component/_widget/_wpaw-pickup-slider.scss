@@ -166,20 +166,6 @@
     transform: translate(100%, -50%);
   }
 
-  @mixin wpaw-pickup-slider-height() {
-    height: 70vh;
-
-    @include _media-min(lg) {
-      min-height: 650px;
-    }
-  }
-
-  @include _media-max(sm) {
-    &__item {
-      @include wpaw-pickup-slider-height();
-    }
-  }
-
   // front page widget area
   .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area & {
     @include widget-full-width();
@@ -187,7 +173,11 @@
 
   .#{$_prefix}l-front-page-widget-area & {
     &__item {
-      @include wpaw-pickup-slider-height();
+      height: 70vh;
+
+      @include _media-min(lg) {
+        min-height: 650px;
+      }
     }
 
     &__item-title {
