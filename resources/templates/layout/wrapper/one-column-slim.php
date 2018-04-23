@@ -24,21 +24,37 @@
 			?>
 
 			<div class="c-container">
-				<?php if ( 'default' === get_theme_mod( 'breadcrumbs-position' ) ) : ?>
-					<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
-				<?php endif; ?>
+				<?php
+				if ( 'default' === get_theme_mod( 'breadcrumbs-position' ) ) {
+					get_template_part( 'template-parts/breadcrumbs' );
+				}
+				?>
 
 				<div class="u-slim-width">
-					<?php if ( 'content-width' === get_theme_mod( 'breadcrumbs-position' ) ) : ?>
-						<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
-					<?php endif; ?>
+					<?php
+					if ( 'content-width' === get_theme_mod( 'breadcrumbs-position' ) ) {
+						get_template_part( 'template-parts/breadcrumbs' );
+					}
+					?>
 
 					<div class="l-contents__inner">
 						<main class="l-contents__main" role="main">
 							<?php $_view_controller->view(); ?>
 						</main>
 					</div>
+
+					<?php
+					if ( 'bottom-content-width' === get_theme_mod( 'breadcrumbs-position' ) ) {
+						get_template_part( 'template-parts/breadcrumbs' );
+					}
+					?>
 				</div>
+
+				<?php
+				if ( 'bottom' === get_theme_mod( 'breadcrumbs-position' ) ) {
+					get_template_part( 'template-parts/breadcrumbs' );
+				}
+				?>
 			</div>
 		</div>
 

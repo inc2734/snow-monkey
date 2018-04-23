@@ -53,6 +53,8 @@
 		}
 		?>
 
+		<?php get_template_part( 'template-parts/entry-tags' ); ?>
+
 		<?php
 		if ( get_option( 'mwt-display-profile-box' ) ) {
 			get_template_part( 'template-parts/profile-box' );

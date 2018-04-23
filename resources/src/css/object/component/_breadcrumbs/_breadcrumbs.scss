@@ -12,6 +12,12 @@
   }
 
   .#{$_prefix}l-contents & {
-    @include _margin-top(.25);
+    &:first-child {
+      @include _margin-top(.25);
+    }
+
+    &:last-child {
+      @include _margin-bottom(.25);
+    }
   }
 }

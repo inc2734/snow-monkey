@@ -24,9 +24,11 @@
 			?>
 
 			<div class="c-container">
-				<?php if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) : ?>
-					<?php get_template_part( 'template-parts/breadcrumbs' ); ?>
-				<?php endif; ?>
+				<?php
+				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
+					get_template_part( 'template-parts/breadcrumbs' );
+				}
+				?>
 
 				<div class="l-contents__inner">
 					<main class="l-contents__main" role="main">
@@ -37,6 +39,12 @@
 						<?php wpvc_get_sidebar(); ?>
 					</aside>
 				</div>
+
+				<?php
+				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
+					get_template_part( 'template-parts/breadcrumbs' );
+				}
+				?>
 			</div>
 		</div>
 

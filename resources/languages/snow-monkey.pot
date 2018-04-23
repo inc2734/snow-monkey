@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-04-12 16:28+0900\n"
-"PO-Revision-Date: 2018-04-12 16:28+0900\n"
+"POT-Creation-Date: 2018-04-23 14:40+0900\n"
+"PO-Revision-Date: 2018-04-23 14:40+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -92,7 +92,7 @@ msgid "[ %1$s ] category settings"
 msgstr "[ %1$s ] カテゴリーの設定"
 
 #: app/customizer/design-skin/controls/design-skin.php:11
-#: app/customizer/design/controls/breadcrumbs-position.php:20
+#: app/customizer/design/controls/breadcrumbs-position.php:22
 #: app/template-tags/eyecatch-position-choices.php:18
 msgid "None"
 msgstr "なし"
@@ -134,12 +134,24 @@ msgid "Breadcrumbs display position"
 msgstr "パンくずリストの表示位置"
 
 #: app/customizer/design/controls/breadcrumbs-position.php:18
-msgid "Default"
-msgstr "デフォルト"
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
+#: app/template-tags/eyecatch-position-choices.php:17
+msgid "Top of contents"
+msgstr "コンテンツの上"
 
 #: app/customizer/design/controls/breadcrumbs-position.php:19
-msgid "Fit to content width"
-msgstr "コンテンツ幅に合わせる"
+msgid "Top of contents ( Fit to content width )"
+msgstr "コンテンツの上（コンテンツ幅に合わせる）"
+
+#: app/customizer/design/controls/breadcrumbs-position.php:20
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
+#: app/setup/widget-area.php:170
+msgid "Bottom of contents"
+msgstr "コンテンツの下"
+
+#: app/customizer/design/controls/breadcrumbs-position.php:21
+msgid "Bottom of contents ( Fit to content width )"
+msgstr "コンテンツの下（コンテンツ幅に合わせる）"
 
 #: app/customizer/design/controls/custom-logo-scale.php:26
 msgid "Custom logo scale (%) on smartphone"
@@ -388,15 +400,6 @@ msgstr "シェアカウントのキャッシュ時間（秒）"
 #: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:16
 msgid "Display position"
 msgstr "表示する場所"
-
-#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
-msgid "Top of contents"
-msgstr "コンテンツの上"
-
-#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
-#: app/setup/widget-area.php:170
-msgid "Bottom of contents"
-msgstr "コンテンツの下"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:22
 msgid "Both"
@@ -678,10 +681,6 @@ msgstr "ページヘッダー"
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: app/template-tags/eyecatch-position-choices.php:17
-msgid "Top of content"
-msgstr "コンテンツの上"
-
 #: app/widget/snow-monkey-recent-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
@@ -822,6 +821,12 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "One column (fluid)"
 msgstr "1カラム（fluid）"
+
+#~ msgid "Top of content"
+#~ msgstr "コンテンツの上"
+
+#~ msgid "Default"
+#~ msgstr "デフォルト"
 
 #~ msgid ""
 #~ "If set, the page header is displayed on all pages (except the homepage)."

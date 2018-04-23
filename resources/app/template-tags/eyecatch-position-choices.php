@@ -14,7 +14,7 @@ function snow_monkey_eyecatch_position_choices() {
 	return [
 		'page-header'          => __( 'Page header', 'snow-monkey' ),
 		'title-on-page-header' => __( 'Title on page header', 'snow-monkey' ),
-		'content-top'          => __( 'Top of content', 'snow-monkey' ),
+		'content-top'          => __( 'Top of contents', 'snow-monkey' ),
 		'none'                 => __( 'None', 'snow-monkey' ),
 	];
 }
