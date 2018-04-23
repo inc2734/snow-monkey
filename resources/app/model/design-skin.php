@@ -94,7 +94,7 @@ class Design_Skin {
 	 */
 	public function _load_editor_style( $mce_css ) {
 		if ( ! $this->_is_active() ) {
-			return;
+			return $mce_css;
 		}
 
 		$relative_path = $this->options['editor-style'];
