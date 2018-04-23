@@ -15,9 +15,11 @@ $customizer->control( 'select', 'breadcrumbs-position', [
 	'default'  => 'default',
 	'priority' => 170,
 	'choices'  => [
-		'default'       => __( 'Default', 'snow-monkey' ),
-		'content-width' => __( 'Fit to content width', 'snow-monkey' ),
-		'none'          => __( 'None', 'snow-monkey' ),
+		'default'              => __( 'Top of contents', 'snow-monkey' ),
+		'content-width'        => __( 'Top of contents ( Fit to content width )', 'snow-monkey' ),
+		'bottom'               => __( 'Bottom of contents', 'snow-monkey' ),
+		'bottom-content-width' => __( 'Bottom of contents ( Fit to content width )', 'snow-monkey' ),
+		'none'                 => __( 'None', 'snow-monkey' ),
 	],
 ] );
 
