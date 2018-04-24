@@ -1,6 +1,7 @@
 <?php
 /**
  * Template Name: Right sidebar
+ * Template Post Type: post, page
  *
  * @package snow-monkey
  * @author inc2734
