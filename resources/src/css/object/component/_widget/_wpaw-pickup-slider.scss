@@ -171,15 +171,8 @@
     @include widget-full-width();
   }
 
-  .#{$_prefix}l-front-page-widget-area & {
-    &__item {
-      height: 70vh;
-
-      @include _media-min(lg) {
-        min-height: 650px;
-      }
-    }
-
+  // main area widget areas
+  .#{$_prefix}l-contents__main & {
     &__item-title {
       @include _media-min(md) {
         @include _font-size-line-height($_base-font-size * 2);
