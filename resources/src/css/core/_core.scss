@@ -13,7 +13,7 @@ $_h4-margin-bottom: $_base-margin-bottom * .75 !default;
 @import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
 
 $color-accent: #bd3c4f !default;
-$one-column-slim-max-width: _strip-unit(map-get($_sizes, 'lg')) * $_base-font-size-px !default;
+$one-column-slim-max-width: 46rem !default;
 
 @import 'mixin/btn';
 @import 'mixin/section';
