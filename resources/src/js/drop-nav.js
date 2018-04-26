@@ -11,7 +11,10 @@ export default class SnowMonkeyDropNav {
       this.defaultWindowWidth = $(window).width();
       this.gNavClass = '.p-global-nav';
 
-      this._showGnav();
+      if (this._isUpdateVisibility()) {
+        this._showGnav();
+        this._hideDropNav();
+      }
 
       this.onScroll();
       this.onResize();
@@ -22,12 +25,18 @@ export default class SnowMonkeyDropNav {
     $(window).scroll(() => {
       if (this.min < $(window).width()) {
         if (this.header.outerHeight() < $(window).scrollTop()) {
-          this._showDropNav();
-          return;
+          if (this._isUpdateVisibility()) {
+            this._hideGnav();
+            this._showDropNav();
+            return;
+          }
         }
       }
 
-      this._showGnav();
+      if (this._isUpdateVisibility()) {
+        this._showGnav();
+        this._hideDropNav();
+      }
     });
   }
 
@@ -37,31 +46,46 @@ export default class SnowMonkeyDropNav {
         return;
       }
 
-      this._showGnav();
+      if (this._isUpdateVisibility()) {
+        this._showGnav();
+        this._hideDropNav();
+      }
     });
   }
 
-  _showGnav() {
-    if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
+  _isUpdateVisibility() {
+    //if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
       if (false === snow_monkey_header_position_only_mobile) {
-        return;
+        return false;
       }
-    }
+    //}
 
-    $(this.gNavClass).attr('aria-hidden', 'false');
-    this.nav.attr('aria-hidden', 'true');
-    this.nav.find(this.gNavClass).attr('aria-hidden', 'true');
+    return true;
+  }
+
+  _showGnav() {
+    this._show($(this.gNavClass));
+  }
+
+  _hideGnav() {
+    this._hide($(this.gNavClass));
   }
 
   _showDropNav() {
-    if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
-      if (false === snow_monkey_header_position_only_mobile) {
-        return;
-      }
-    }
+    this._show(this.nav);
+    this._show(this.nav.find(this.gNavClass));
+  }
 
-    $(this.gNavClass).attr('aria-hidden', 'true');
-    this.nav.attr('aria-hidden', 'false');
-    this.nav.find(this.gNavClass).attr('aria-hidden', 'false');
+  _hideDropNav() {
+    this._hide(this.nav);
+    this._hide(this.nav.find(this.gNavClass));
+  }
+
+  _show(target) {
+    target.attr('aria-hidden', 'false');
+  }
+
+  _hide(target) {
+    target.attr('aria-hidden', 'true');
   }
 }
