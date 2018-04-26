@@ -76,6 +76,8 @@ add_filter( 'walker_nav_menu_start_el', function( $item_output, $item, $depth, $
 		return str_replace( $args->link_before, '<i class="fab fa-wordpress"></i>' . $args->link_before, $item_output );
 	} elseif ( false !== strpos( $item->url, 'youtube.com' ) ) {
 		return str_replace( $args->link_before, '<i class="fab fa-youtube"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'behance.net' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-behance"></i>' . $args->link_before, $item_output );
 	}
 
 	return str_replace( $args->link_before, '<i class="fas fa-globe"></i>' . $args->link_before, $item_output );
