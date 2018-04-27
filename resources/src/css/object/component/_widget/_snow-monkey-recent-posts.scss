@@ -18,7 +18,7 @@
 .#{$_prefix}l-body--right-sidebar,
 .#{$_prefix}l-body--left-sidebar {
   .#{$_prefix}l-contents__sidebar,
-  .#{$_prefix}l-contents__footer {
+  .#{$_prefix}l-footer-widget-area {
     .snow-monkey-recent-posts {
       @include _media-min(lg) {
         .#{$_prefix}c-entries--rich-media {
