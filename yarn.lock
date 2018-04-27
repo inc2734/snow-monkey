@@ -2312,9 +2312,9 @@ jquery.background-parallax-scroll@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/jquery.background-parallax-scroll/-/jquery.background-parallax-scroll-2.0.0.tgz#81eea08b23bf9294cc85cfb1bda736eb3f6ddade"
 
-jquery.smoothscroll@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/jquery.smoothscroll/-/jquery.smoothscroll-1.0.2.tgz#d8b04fd9ead85c499db782cc0880ca8777ad33c0"
+jquery.smoothscroll@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/jquery.smoothscroll/-/jquery.smoothscroll-1.0.3.tgz#60cafeb27d2f4276c1c497ae786541e0d2d2bcbc"
 
 jquery.sticky@^0.2.0:
   version "0.2.0"

@@ -11,10 +11,5 @@
 	<?php get_template_part( 'template-parts/copyright' ); ?>
 </footer>
 
-<div class="u-hidden u-visible-lg-up">
-	<?php get_template_part( 'template-parts/page-top' ); ?>
-</div>
-
-<div class="u-hidden-lg-up">
-	<?php get_template_part( 'template-parts/footer-sticky-nav' ); ?>
-</div>
+<?php get_template_part( 'template-parts/page-top' ); ?>
+<?php get_template_part( 'template-parts/footer-sticky-nav' ); ?>
