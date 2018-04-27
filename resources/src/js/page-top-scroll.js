@@ -29,7 +29,9 @@ export default class SnowMonkeyPageTopScroll {
   }
 
   _updatePageTopBtnPosition() {
-    this.pageTop.css('bottom', $('.p-footer-sticky-nav')[0].offsetHeight);
+    if ($('.p-footer-sticky-nav').length) {
+      this.pageTop.css('bottom', $('.p-footer-sticky-nav')[0].offsetHeight);
+    }
   }
 
   _setSmoothScrollEvent() {
