@@ -73,30 +73,3 @@ add_action( 'wp_enqueue_scripts', function() {
 	snow_monkey_http2_server_push_enqueues( wp_styles(), 'style' );
 	snow_monkey_http2_server_push_enqueues( wp_scripts(), 'script' );
 }, 99999 );
-
-/**
- * Add preload in header
- *
- * @param string $tag
- * @param string handle
- * @param string src
- * @return string
- */
-add_filter( 'style_loader_tag', function( $tag, $handle, $src ) {
-	return str_replace( '\'stylesheet\'', '\'preload\' as="style"', $tag );
-}, 10, 3 );
-
-add_action( 'wp_head', function() {
-	?>
-<script>
-(function() {
-var links = document.getElementsByTagName('link');
-for (var i = 0; i < links.length; i++) {
-	if ('preload' === links[i].rel) {
-		links[i].rel = 'stylesheet';
-	}
-}
-})();
-</script>
-	<?php
-}, 99999 );
