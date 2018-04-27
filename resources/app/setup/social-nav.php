@@ -78,6 +78,20 @@ add_filter( 'walker_nav_menu_start_el', function( $item_output, $item, $depth, $
 		return str_replace( $args->link_before, '<i class="fab fa-youtube"></i>' . $args->link_before, $item_output );
 	} elseif ( false !== strpos( $item->url, 'behance.net' ) ) {
 		return str_replace( $args->link_before, '<i class="fab fa-behance"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, '500px.com' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-500px"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'blogger.com' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-blogger"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'blogspot.jp' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-blogger"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'blogspot.com' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-blogger"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'soundcloud.com' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-soundcloud"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'spotify.com' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-spotify"></i>' . $args->link_before, $item_output );
+	} elseif ( false !== strpos( $item->url, 'foursquare.com' ) ) {
+		return str_replace( $args->link_before, '<i class="fab fa-foursquare"></i>' . $args->link_before, $item_output );
 	}
 
 	return str_replace( $args->link_before, '<i class="fas fa-globe"></i>' . $args->link_before, $item_output );
