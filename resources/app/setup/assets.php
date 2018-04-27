@@ -101,32 +101,9 @@ add_action( 'wp_enqueue_scripts', function() {
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_script(
 		'jquery.easing',
-		'//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
+		'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
 		[ 'jquery' ],
 		false,
 		true
 	);
 } );
-
-/**
- * Add defer
- *
- * @param string $tag
- * @param string handle
- * @param string src
- * @return string
- */
-add_filter('script_loader_tag', function( $tag, $handle, $src ) {
-	$defer_handles = [
-		get_template(),
-		get_stylesheet(),
-		'fontawesome5',
-		'fontawesome5-v4-shims',
-	];
-
-	if ( ! in_array( $handle, $defer_handles ) ) {
-		return $tag;
-	}
-
-	return str_replace( ' src', ' defer="defer" src', $tag );
-}, 10, 3 );
