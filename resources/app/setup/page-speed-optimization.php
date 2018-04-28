@@ -50,6 +50,7 @@ if ( get_theme_mod( 'async-css' ) ) {
 		if ( is_admin() ) {
 			return;
 		}
+		// @codingStandardsIgnoreStart
 		?>
 <script>
 jQuery(function($) {
@@ -59,5 +60,6 @@ jQuery(function($) {
 })();
 </script>
 		<?php
+		// @codingStandardsIgnoreEnd
 	}, 99999 );
 }
