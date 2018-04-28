@@ -52,9 +52,10 @@ if ( get_theme_mod( 'async-css' ) ) {
 		}
 		?>
 <script>
-(function() {
-  var l = document.getElementsByTagName('link');
-  for (var i = 0; i < l.length; i++) { if ('preload' === l[i].rel && 'style' === l[i].as) { l[i].rel = 'stylesheet'; } }
+jQuery(function($) {
+  $('link[as="style"]').each(function(i, e) {
+    $('<link rel="stylesheet" />').attr('href', $(e).attr('href')).appendTo('head');
+  });
 })();
 </script>
 		<?php
