@@ -15,54 +15,52 @@
   }
 }
 
-.#{$_prefix}l-body--right-sidebar,
-.#{$_prefix}l-body--left-sidebar {
-  .#{$_prefix}l-contents__sidebar,
-  .#{$_prefix}l-footer-widget-area {
-    .snow-monkey-recent-posts {
-      @include _media-min(lg) {
-        .#{$_prefix}c-entries--rich-media {
+.#{$_prefix}l-body--right-sidebar .#{$_prefix}l-contents__sidebar,
+.#{$_prefix}l-body--left-sidebar .#{$_prefix}l-contents__sidebar,
+.#{$_prefix}l-footer-widget-area {
+  .snow-monkey-recent-posts {
+    @include _media-min(lg) {
+      .#{$_prefix}c-entries--rich-media {
+        @include _media-min(lg) {
+          @include _row--margin(1);
+        }
+
+        .#{$_prefix}c-entries__item {
+          @include _row__col(1, 2);
+
           @include _media-min(lg) {
-            @include _row--margin(1);
+            @include _row__col(1, 1);
+            @include _row__col--margin(1);
           }
+        }
+      }
 
-          .#{$_prefix}c-entries__item {
-            @include _row__col(1, 2);
-
-            @include _media-min(lg) {
-              @include _row__col(1, 1);
-              @include _row__col--margin(1);
+      .#{$_prefix}c-entries--simple {
+        .#{$_prefix}c-entries__item {
+          &:first-child {
+            > a {
+              padding-top: 0;
             }
           }
         }
 
-        .#{$_prefix}c-entries--simple {
-          .#{$_prefix}c-entries__item {
-            &:first-child {
-              > a {
-                padding-top: 0;
-              }
-            }
-          }
-
-          .#{$_prefix}c-entry-summary__term {
-            @include _media-min(lg) {
-              display: none;
-            }
-          }
-
-          .#{$_prefix}c-entry-summary__figure {
-            @include _media-min(lg) {
-              @include _margin-right(.5);
-            }
+        .#{$_prefix}c-entry-summary__term {
+          @include _media-min(lg) {
+            display: none;
           }
         }
 
-        .#{$_prefix}c-entry-summary {
-          &__title {
-            @include _font-size($_base-font-size);
-            @include _line-height($_base-font-size * 1.5);
+        .#{$_prefix}c-entry-summary__figure {
+          @include _media-min(lg) {
+            @include _margin-right(.5);
           }
+        }
+      }
+
+      .#{$_prefix}c-entry-summary {
+        &__title {
+          @include _font-size($_base-font-size);
+          @include _line-height($_base-font-size * 1.5);
         }
       }
     }
