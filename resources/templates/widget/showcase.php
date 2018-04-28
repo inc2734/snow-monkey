@@ -4,6 +4,16 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+add_action( 'wp_footer', function() use ( $args, $instance ) {
+	?>
+<script defer>
+jQuery(function($) {
+	$('#wpaw-showcase-<?php echo esc_js( $args['widget_id'] ); ?>').backgroundParallaxScroll();
+});
+</script>
+	<?php
+}, 9999 );
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -13,11 +23,6 @@
 		color: <?php echo esc_attr( $instance['color'] ); ?>;
 	}
 	</style>
-	<script defer>
-	jQuery(function($) {
-		$('#wpaw-showcase-<?php echo esc_js( $args['widget_id'] ); ?>').backgroundParallaxScroll();
-	});
-	</script>
 
 	<div
 		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?> js-bg-parallax"
