@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-04-23 14:40+0900\n"
-"PO-Revision-Date: 2018-04-23 14:40+0900\n"
+"POT-Creation-Date: 2018-04-28 22:58+0900\n"
+"PO-Revision-Date: 2018-04-28 22:58+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -229,6 +229,19 @@ msgstr "ノーマル"
 msgid "Design"
 msgstr "デザイン"
 
+#: app/customizer/page-speed-optimization/controls/async-css.php:14
+msgid "Loads CSS asynchronously"
+msgstr "CSS を非同期読み込みする"
+
+#: app/customizer/page-speed-optimization/section.php:13
+msgid "Page speed optimization"
+msgstr "ページ速度最適化"
+
+#: app/customizer/page-speed-optimization/section.php:14
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:16
+msgid "This feature is a beta version."
+msgstr "この機能はベータ版です。"
+
 #: app/customizer/page/controls/child-pages.php:15
 msgid "Display child pages in page"
 msgstr "固定ページにそのページの子ページ一覧を表示する"
@@ -405,27 +418,27 @@ msgstr "表示する場所"
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:17
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:16
 msgid "Type"
 msgstr "種類"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:21
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:20
 msgid "Balloon"
 msgstr "バルーン"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:22
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:21
 msgid "Horizontal"
 msgstr "水平"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:23
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:22
 msgid "Icon"
 msgstr "アイコン"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:24
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:23
 msgid "Block"
 msgstr "ブロック"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:25
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:24
 msgid "Official"
 msgstr "公式"
 
@@ -445,10 +458,6 @@ msgstr "構造化データ（JSON+LD）を出力する"
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:15
 msgid "Date for the search engine"
 msgstr "検索エンジンに伝える日付"
-
-#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:16
-msgid "This feature is a beta version."
-msgstr "この機能はベータ版です。"
 
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:20
 msgid "Published date"
