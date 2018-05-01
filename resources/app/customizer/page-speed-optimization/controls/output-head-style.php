@@ -10,11 +10,11 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 $customizer = Customizer_Framework::init();
 $section    = $customizer->get_section( 'page-speed-optimization' );
 
-$customizer->control( 'checkbox', 'async-css', [
-	'label'    => __( 'Loads CSS asynchronously', 'snow-monkey' ),
-	'priority' => 120,
+$customizer->control( 'checkbox', 'output-head-style', [
+	'label'    => __( 'Output CSS in head', 'snow-monkey' ),
+	'priority' => 130,
 	'default'  => false,
 ] );
 
-$control = $customizer->get_control( 'async-css' );
+$control = $customizer->get_control( 'output-head-style' );
 $control->join( $section );
