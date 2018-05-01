@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6db41609ffa1209b353747ff5e65e67f",
-    "content-hash": "b033d6dd8d215e431e56578b0fd65895",
+    "hash": "7bb2e8e5f457d96d28876b7e49a95986",
+    "content-hash": "bc093a6ca001da114bd0285987ec2119",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "1.11.4",
+            "version": "1.11.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "0b0469faede5717ced21de2c65b37ae0f30665ab"
+                "reference": "7b6cb9f3908a16f7e65a0fa66e28b8852c1299c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/0b0469faede5717ced21de2c65b37ae0f30665ab",
-                "reference": "0b0469faede5717ced21de2c65b37ae0f30665ab",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/7b6cb9f3908a16f7e65a0fa66e28b8852c1299c6",
+                "reference": "7b6cb9f3908a16f7e65a0fa66e28b8852c1299c6",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=0.5.0",
-                "inc2734/wp-awesome-widgets": ">=1.11.4",
+                "inc2734/wp-awesome-widgets": ">=1.11.5",
                 "inc2734/wp-basis": ">=0.7.7",
                 "inc2734/wp-breadcrumbs": ">=1.0.2",
                 "inc2734/wp-contents-outline": ">=0.5.2",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-05-01 16:21:47"
+            "time": "2018-05-01 16:30:01"
         },
         {
             "name": "inc2734/wp-awesome-components",
