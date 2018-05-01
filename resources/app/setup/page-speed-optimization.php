@@ -11,23 +11,35 @@ use Inc2734\WP_Page_Speed_Optimization\Page_Speed_Optimization;
 
 new Page_Speed_Optimization();
 
-add_filter( 'inc2734_wp_page_speed_optimization_defer_scripts', function( $handles ) {
-	return array_merge( $handles, [
-		get_template(),
-		get_stylesheet(),
-	] );
-} );
+/**
+ * Optimize the Snow Monkey JavaScript loading
+ */
+if ( get_theme_mod( 'js-loading-optimization' ) ) {
+	add_filter( 'inc2734_wp_page_speed_optimization_defer_scripts', function( $handles ) {
+		return array_merge( $handles, [
+			get_template(),
+			get_stylesheet(),
+		] );
+	} );
 
-add_filter( 'inc2734_wp_page_speed_optimization_async_scripts', function( $handles ) {
-	return array_merge( $handles, [
-		'inc2734-wp-seo-google-analytics',
-		'fontawesome5',
-		'fontawesome5-v4-shims',
-		'comment-reply',
-		'wp-embed',
-		'jquery.easing',
-	] );
-} );
+	add_filter( 'inc2734_wp_page_speed_optimization_async_scripts', function( $handles ) {
+		return array_merge( $handles, [
+			'inc2734-wp-seo-google-analytics',
+			'fontawesome5',
+			'fontawesome5-v4-shims',
+			'comment-reply',
+			'wp-embed',
+			'jquery.easing',
+		] );
+	} );
+}
+
+/**
+ * Use HTTP2 Server Push
+ */
+if ( get_theme_mod( 'http2-server-push' ) ) {
+	add_filter( 'inc2734_wp_page_speed_optimization_do_http2_server_push', '__return_true' );
+}
 
 /**
  * Loads CSS asynchronously
@@ -35,7 +47,7 @@ add_filter( 'inc2734_wp_page_speed_optimization_async_scripts', function( $handl
 if ( get_theme_mod( 'async-css' ) ) {
 	add_action( 'wp_head', function() {
 		?>
-<style>body{visibility:hidden;}.js-bg-parallax{transition: none;}</style>
+<style>body{visibility:hidden;}.js-bg-parallax{transition: none !important;}</style>
 		<?php
 	} );
 
@@ -57,7 +69,7 @@ jQuery(function($) {
   $('link[as="style"]').each(function(i, e) {
     $('<link rel="stylesheet" />').attr('href', $(e).attr('href')).appendTo('head');
   });
-})();
+});
 </script>
 		<?php
 		// @codingStandardsIgnoreEnd

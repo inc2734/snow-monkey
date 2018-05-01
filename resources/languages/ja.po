@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-04-28 22:58+0900\n"
-"PO-Revision-Date: 2018-04-28 22:58+0900\n"
+"POT-Creation-Date: 2018-05-01 09:28+0900\n"
+"PO-Revision-Date: 2018-05-01 09:29+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -232,6 +232,14 @@ msgstr "デザイン"
 #: app/customizer/page-speed-optimization/controls/async-css.php:14
 msgid "Loads CSS asynchronously"
 msgstr "CSS を非同期読み込みする"
+
+#: app/customizer/page-speed-optimization/controls/http2-server-push.php:14
+msgid "Use HTTP2 Server Push"
+msgstr "HTTP2 Server Push を使用する"
+
+#: app/customizer/page-speed-optimization/controls/js-loading-optimization.php:14
+msgid "Optimize the Snow Monkey JavaScript loading"
+msgstr "Snow Monkey の JavaScript 読み込みを最適化する"
 
 #: app/customizer/page-speed-optimization/section.php:13
 msgid "Page speed optimization"
