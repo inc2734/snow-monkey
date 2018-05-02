@@ -4,17 +4,15 @@ import $ from 'jquery';
 
 export default class SnowMonkeyHeader {
   constructor() {
-    $(() => {
-      this.min         = 1023;
-      this.header      = $('.l-header');
-      this.contents    = $('.l-contents');
-      this.defaultType = this.header.attr('data-snow-monkey-default-header-position');
+    this.min         = 1023;
+    this.header      = $('.l-header');
+    this.contents    = $('.l-contents');
+    this.defaultType = this.header.attr('data-snow-monkey-default-header-position');
 
+    this.init();
+
+    $(window).resize(() => {
       this.init();
-
-      $(window).resize(() => {
-        this.init();
-      });
     });
   }
 

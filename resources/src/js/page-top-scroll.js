@@ -6,25 +6,23 @@ import '../../assets/packages/jquery.smoothscroll/src/jquery.smoothscroll.js';
 export default class SnowMonkeyPageTopScroll {
 
   constructor() {
-    $(() => {
-      this.pageTop = $('.c-page-top');
+    this.pageTop = $('.c-page-top');
 
-      $(window).load(() => {
-        this._updatePageTopBtnPosition();
-        this._setSmoothScrollEvent();
-      });
+    $(window).load(() => {
+      this._updatePageTopBtnPosition();
+      this._setSmoothScrollEvent();
+    });
 
-      $(window).resize(() => {
-        this._updatePageTopBtnPosition();
-      });
+    $(window).resize(() => {
+      this._updatePageTopBtnPosition();
+    });
 
-      $(window).scroll(() => {
-        if (500 > $(window).scrollTop()) {
-          this.pageTop.attr('aria-hidden', 'true');
-        } else {
-          this.pageTop.attr('aria-hidden', 'false');
-        }
-      });
+    $(window).scroll(() => {
+      if (500 > $(window).scrollTop()) {
+        this.pageTop.attr('aria-hidden', 'true');
+      } else {
+        this.pageTop.attr('aria-hidden', 'false');
+      }
     });
   }
 

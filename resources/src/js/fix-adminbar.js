@@ -9,16 +9,14 @@ export default class FixAdminBar {
     this.header    = $('.l-header');
     this.contents  = $('.l-contents');
 
-    $(() => {
-      this.adminBar  = $('#wpadminbar');
+    this.adminBar  = $('#wpadminbar');
 
-      if (this.adminBar.length) {
-        this.fixHeaderPosition();
-        this.fixStickyFooter();
-        this.fixDisableWindowScroll();
-        this.setListener();
-      }
-    });
+    if (this.adminBar.length) {
+      this.fixHeaderPosition();
+      this.fixStickyFooter();
+      this.fixDisableWindowScroll();
+      this.setListener();
+    }
   }
 
   setListener() {

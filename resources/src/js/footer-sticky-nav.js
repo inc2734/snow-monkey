@@ -4,14 +4,12 @@ import $ from 'jquery';
 
 export default class SnowMonkeyFooterStickyNav {
   constructor() {
-    $(() => {
-      this.nav = $('.p-footer-sticky-nav');
+    this.nav = $('.p-footer-sticky-nav');
 
+    this._init();
+
+    $(window).on('load resize', () => {
       this._init();
-
-      $(window).on('load resize', () => {
-        this._init();
-      });
     });
   }
 

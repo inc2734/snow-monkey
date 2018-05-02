@@ -39,9 +39,6 @@ new SnowMonkeyPageTopScroll();
 import SnowMonkeyFooterStickyNav from './footer-sticky-nav.js';
 new SnowMonkeyFooterStickyNav();
 
-import SnowMonkeySlick from './slick.js';
-new SnowMonkeySlick();
-
 $('.l-sidebar-sticky-widget-area').sticky({
   breakpoint: 1024,
   offset  : (() => {

@@ -4,21 +4,19 @@ import $ from 'jquery';
 
 export default class SnowMonkeyDropNav {
   constructor() {
-    $(() => {
-      this.header = $('.l-header');
-      this.nav    = $('.l-header__drop-nav');
-      this.min    = 1023;
-      this.defaultWindowWidth = $(window).width();
-      this.gNavClass = '.p-global-nav';
+    this.header = $('.l-header');
+    this.nav    = $('.l-header__drop-nav');
+    this.min    = 1023;
+    this.defaultWindowWidth = $(window).width();
+    this.gNavClass = '.p-global-nav';
 
-      if (this._isUpdateVisibility()) {
-        this._showGnav();
-        this._hideDropNav();
-      }
+    if (this._isUpdateVisibility()) {
+      this._showGnav();
+      this._hideDropNav();
+    }
 
-      this.onScroll();
-      this.onResize();
-    });
+    this.onScroll();
+    this.onResize();
   }
 
   onScroll() {
