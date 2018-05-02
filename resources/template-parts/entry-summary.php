@@ -37,10 +37,15 @@ if ( isset( $widget_layout ) ) {
 				<h2 class="c-entry-summary__title">
 					<?php
 					if ( 'rich-media' === $layout ) {
-						ob_start();
-						the_title();
-						$title = wp_trim_words( ob_get_clean(), class_exists( 'multibyte_patch' ) ? 40 : 80 );
-						echo esc_html( $title );
+						$num_words = apply_filters( 'snow_monkey_entry_summary_title_num_words', class_exists( 'multibyte_patch' ) ? 40 : 80 );
+						if ( $num_words ) {
+							ob_start();
+							the_title();
+							$title = wp_trim_words( ob_get_clean(), $num_words );
+							echo esc_html( $title );
+						} else {
+							the_title();
+						}
 					} else {
 						the_title();
 					}
