@@ -42,21 +42,18 @@ new SnowMonkeyFooterStickyNav();
 import SnowMonkeySlick from './slick.js';
 new SnowMonkeySlick();
 
-$(() => {
-  $('.l-sidebar-sticky-widget-area').sticky({
-    breakpoint: 1024,
-    offset  : (() => {
-      if ('sticky' === $('.l-header').attr('data-l-header-type')) {
-        return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
-      }
-      return $('.l-header__drop-nav .p-global-nav').outerHeight() + parseInt($('html').css('margin-top'));
-    })()
-  });
+$('.l-sidebar-sticky-widget-area').sticky({
+  breakpoint: 1024,
+  offset  : (() => {
+    if ('sticky' === $('.l-header').attr('data-l-header-type')) {
+      return $('.l-header').outerHeight() + parseInt($('html').css('margin-top'));
+    }
+    return $('.l-header__drop-nav .p-global-nav').outerHeight() + parseInt($('html').css('margin-top'));
+  })()
 });
 
-$(() => {
-  $('.c-page-header').backgroundParallaxScroll();
-});
+$('.c-page-header').backgroundParallaxScroll();
+$('.wpaw-showcase').backgroundParallaxScroll();
 
 import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
 import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
