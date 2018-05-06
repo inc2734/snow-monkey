@@ -61,13 +61,11 @@ add_action( 'after_setup_theme', function() {
 		return;
 	}
 
-	if ( ! get_theme_mod( 'output-head-style' ) ) {
-		add_action( 'wp_head', function() {
-			?>
-			<style>body{visibility:hidden;}.js-bg-parallax{transition: none !important;}</style>
-			<?php
-		} );
-	}
+	add_action( 'wp_head', function() {
+		?>
+		<style>body{visibility:hidden;}.js-bg-parallax{transition: none !important;}</style>
+		<?php
+	} );
 
 	add_filter( 'inc2734_wp_page_speed_optimization_preload_stylesheets', function( $handles ) {
 		$wp_styles = wp_styles();
