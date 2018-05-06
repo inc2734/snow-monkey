@@ -42,38 +42,24 @@
  */
 .wpac-balloon {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 
-  &--reverse {
-    flex-direction: row-reverse;
-
-    .wpac-balloon__person {
-      margin: 0 0 0 20px;
-    }
-
-    .wpac-balloon__body {
-      &::before, &::after {
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-      }
-
-      @include _right-balloon((
-        background-color: #fff,
-        border-color: _light($_color-gray),
-        border-size: 1px,
-      ));
-    }
+  @include _media-min(md) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
   }
 
   &__person {
-    margin: 0 20px 0 0;
-    display: flex;
+    margin: 0 0 20px;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
+
+    @include _media-min(md) {
+      margin: 0 20px 0 0;
+    }
   }
 
   &__figure {
@@ -96,14 +82,55 @@
   }
 
   &__body {
-    @include _left-balloon((
+    flex: 1 1 auto;
+    border-radius: $_border-radius;
+    word-break: break-all;
+    @include _padding(.5);
+    max-width: 100%;
+    width: 100%;
+
+    @include _top-balloon((
       background-color: #fff,
       border-color: _light($_color-gray),
       border-size: 1px,
     ));
-    flex: 1;
-    border-radius: $_border-radius;
-    @include _padding(.5);
+
+    &::before,
+    &::after {
+      margin-left: 0;
+      left: 24px;
+    }
+
+    @include _media-min(md) {
+      @include _balloon-triangle(left, 10px, #fff, 1px, _light($_color-gray));
+    }
+  }
+
+  &--reverse {
+    align-items: flex-end;
+
+    @include _media-min(md) {
+      flex-direction: row-reverse;
+      align-items: center;
+    }
+
+    .wpac-balloon__person {
+      @include _media-min(md) {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    .wpac-balloon__body {
+      &::before,
+      &::after {
+        left: auto;
+        right: 24px;
+      }
+
+      @include _media-min(md) {
+        @include _balloon-triangle(right, 10px, #fff, 1px, _light($_color-gray));
+      }
+    }
   }
 }
 
