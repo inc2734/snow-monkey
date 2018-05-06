@@ -14,4 +14,8 @@ if ( class_exists( 'Jetpack' ) ) {
 	}
 }
 
+if ( has_filter( 'post_gallery' ) ) {
+	return;
+}
+
 new Pure_CSS_Gallery();
