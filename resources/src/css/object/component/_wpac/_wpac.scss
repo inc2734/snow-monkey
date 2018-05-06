@@ -200,7 +200,7 @@
   .#{$_prefix}l-body--one-column-slim & {
     &__body {
       margin: 0 auto;
-      max-width: map-get($_sizes, 'lg');
+      max-width: $one-column-slim-max-width;
     }
   }
 }
