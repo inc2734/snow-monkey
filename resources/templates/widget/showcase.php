@@ -15,7 +15,7 @@
 	</style>
 
 	<div
-		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?> <?php ( is_customize_preview() ) ? '' : 'js-bg-parallax'; ?>"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?> js-bg-parallax"
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg-image'], 'large' ) ); ?>)"
 		>

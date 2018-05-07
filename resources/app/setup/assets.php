@@ -107,3 +107,26 @@ add_action( 'wp_enqueue_scripts', function() {
 		true
 	);
 } );
+
+/**
+ * Enqueue script for customize preview
+ *
+ * @return void
+ */
+add_action( 'customize_preview_init', function() {
+	$relative_path = '/assets/js/customize-preview.js';
+	$src  = get_theme_file_uri( $relative_path );
+	$path = get_theme_file_path( $relative_path );
+
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
+
+	wp_enqueue_script(
+		snow_monkey_get_main_script_handle() . '-customize-preview',
+		$src,
+		[ 'jquery','customize-preview', snow_monkey_get_main_script_handle() ],
+		filemtime( $path ),
+		true
+	);
+} );

@@ -6,6 +6,10 @@ import '../../assets/packages/slick-carousel';
 import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis.js';
 import '../../assets/packages/jquery.sticky';
 import '../../assets/packages/jquery.background-parallax-scroll';
+import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
+import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
+import '../../vendor/inc2734/wp-contents-outline/src/assets/js/wp-contents-outline.js';
+import './_wpaw-pickup-slider.js';
 
 import BasisStickyHeader from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/js/sticky-header.js';
 new BasisStickyHeader();
@@ -16,27 +20,24 @@ new Inc2734_WP_Share_Buttons();
 import Inc2734_WP_Pure_CSS_Gallery from '../../vendor/inc2734/wp-pure-css-gallery/src/assets/js/wp-pure-css-gallery.js';
 new Inc2734_WP_Pure_CSS_Gallery();
 
-import FixAdminBar from './fix-adminbar.js';
+import FixAdminBar from './_fix-adminbar.js';
 new FixAdminBar();
 
-import SnowMonkeyWpawPickupSlider from './wpaw-pickup-slider.js';
-new SnowMonkeyWpawPickupSlider();
-
-import SnowMonkeyWidgetItemExpander from './widget-item-expander.js';
+import SnowMonkeyWidgetItemExpander from './_widget-item-expander.js';
 new SnowMonkeyWidgetItemExpander();
 
-import SnowMonkeyHeader from './header.js';
+import SnowMonkeyHeader from './_header.js';
 if (snow_monkey_header_position_only_mobile) {
   new SnowMonkeyHeader();
 }
 
-import SnowMonkeyDropNav from './drop-nav.js';
+import SnowMonkeyDropNav from './_drop-nav.js';
 new SnowMonkeyDropNav();
 
-import SnowMonkeyPageTopScroll from './page-top-scroll.js';
+import SnowMonkeyPageTopScroll from './_page-top-scroll.js';
 new SnowMonkeyPageTopScroll();
 
-import SnowMonkeyFooterStickyNav from './footer-sticky-nav.js';
+import SnowMonkeyFooterStickyNav from './_footer-sticky-nav.js';
 new SnowMonkeyFooterStickyNav();
 
 $('.l-sidebar-sticky-widget-area').sticky({
@@ -52,5 +53,7 @@ $('.l-sidebar-sticky-widget-area').sticky({
 $('.c-page-header').backgroundParallaxScroll();
 $('.wpaw-showcase').backgroundParallaxScroll();
 
-import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
-import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
+$('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
+$('.wpaw-slider__canvas').WpawSlider();
+
+$('.wpco-wrapper').wpContentsOutline();

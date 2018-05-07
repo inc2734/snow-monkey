@@ -110,13 +110,16 @@ function sassCompile(src, dest) {
  * Build javascript
  */
 gulp.task('js', function() {
-  runSequence('js:app', 'js:customize-control');
+  runSequence('js:app', 'js:customize-control', 'js:customize-preview');
 });
 gulp.task('js:app', function() {
   return jsCompile('app.js');
 });
 gulp.task('js:customize-control', function() {
   return jsCompile('customize-control.js');
+});
+gulp.task('js:customize-preview', function() {
+  return jsCompile('customize-preview.js');
 });
 
 function jsCompile(distFileName) {

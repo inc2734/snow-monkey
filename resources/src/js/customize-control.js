@@ -1,8 +1,8 @@
-(function() {
-  var api = wp.customize;
+(() => {
+  const api = wp.customize;
 
   api.bind('ready', () => {
-    wp.customize('design-skin', (setting) => {
+    api('design-skin', (setting) => {
       setting.bind(function(value) {
         api.panel.each((panel) => {
 				  panel.container.remove();
