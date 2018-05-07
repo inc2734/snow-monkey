@@ -7,6 +7,14 @@
 
 $matched_content     = get_option( 'mwt-google-matched-content' );
 $use_matched_content = (bool) $matched_content;
+$related_posts       = [];
+
+if ( ! $use_matched_content ) {
+	$related_posts = snow_monkey_get_related_posts( get_the_ID() );
+	if ( ! $related_posts ) {
+		return;
+	}
+}
 ?>
 
 <aside class="p-related-posts c-entry-aside">
@@ -26,7 +34,6 @@ $use_matched_content = (bool) $matched_content;
 	<?php else : ?>
 
 		<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
-			<?php $related_posts = snow_monkey_get_related_posts( get_the_ID() ); ?>
 			<?php foreach ( $related_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
 				<li class="c-entries__item">
