@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-02 01:20+0900\n"
-"PO-Revision-Date: 2018-05-02 01:20+0900\n"
+"POT-Creation-Date: 2018-05-08 08:28+0900\n"
+"PO-Revision-Date: 2018-05-08 08:29+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -236,6 +236,16 @@ msgstr "CSS を非同期読み込みする"
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:14
 msgid "Use HTTP2 Server Push"
 msgstr "HTTP2 Server Push を使用する"
+
+#: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:14
+msgid "Optimize the jQuery loading"
+msgstr "jQuery の 読み込みを最適化する"
+
+#: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:15
+msgid "Depending on your plugins and child theme, JavaScript error may occur."
+msgstr ""
+"使用しているプラグインおよび子テーマによっては JavaScript エラーが発生するこ"
+"とがあります。"
 
 #: app/customizer/page-speed-optimization/controls/js-loading-optimization.php:14
 msgid "Optimize the Snow Monkey JavaScript loading"
@@ -787,11 +797,11 @@ msgstr "新しい投稿"
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/related-posts.php:15
+#: template-parts/related-posts.php:23
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/related-posts.php:17
+#: template-parts/related-posts.php:25
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 

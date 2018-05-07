@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "def496857db94047331e5ac84ad7f22d",
-    "content-hash": "3091fa0fc07a9c368f7acc8c2184329b",
+    "hash": "7e927b57d2b61f6c36b74c437fd85a43",
+    "content-hash": "95fdd213c4a115e7225516677ad9a38b",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "1ede002d4007287d8890eba99ba360aee8bf1d68"
+                "reference": "eb2d121f1842328ab5565db81ca1634c84f6f7b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/1ede002d4007287d8890eba99ba360aee8bf1d68",
-                "reference": "1ede002d4007287d8890eba99ba360aee8bf1d68",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/eb2d121f1842328ab5565db81ca1634c84f6f7b9",
+                "reference": "eb2d121f1842328ab5565db81ca1634c84f6f7b9",
                 "shasum": ""
             },
             "require": {
@@ -31,7 +31,7 @@
                 "inc2734/wp-github-theme-updater": ">=0.2.7",
                 "inc2734/wp-like-me-box": ">=0.1.5",
                 "inc2734/wp-oembed-blog-card": ">=3.0.0",
-                "inc2734/wp-page-speed-optimization": ">=0.4.0",
+                "inc2734/wp-page-speed-optimization": ">=0.5.0",
                 "inc2734/wp-profile-box": ">=1.1.0",
                 "inc2734/wp-pure-css-gallery": ">=1.1.0",
                 "inc2734/wp-seo": ">=1.0.3",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-05-07 22:52:41"
+            "time": "2018-05-07 23:42:05"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -488,16 +488,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "1f88b194c97940d6dc9ea5d2afe116ade509bbff"
+                "reference": "d627e24ebf41f55bb3fa03c0cfff790ad0e40394"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/1f88b194c97940d6dc9ea5d2afe116ade509bbff",
-                "reference": "1f88b194c97940d6dc9ea5d2afe116ade509bbff",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/d627e24ebf41f55bb3fa03c0cfff790ad0e40394",
+                "reference": "d627e24ebf41f55bb3fa03c0cfff790ad0e40394",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +526,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2018-05-02 15:15:43"
+            "time": "2018-05-07 23:33:53"
         },
         {
             "name": "inc2734/wp-profile-box",

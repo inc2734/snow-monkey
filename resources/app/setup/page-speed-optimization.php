@@ -43,6 +43,17 @@ add_action( 'after_setup_theme', function() {
 } );
 
 /**
+ * Optimize the Snow Monkey JavaScript loading
+ */
+add_action( 'after_setup_theme', function() {
+	if ( ! get_theme_mod( 'jquery-loading-optimization' ) ) {
+		return;
+	}
+
+	add_filter( 'inc2734_wp_page_speed_optimization_optimize_jquery_loading', '__return_true' );
+} );
+
+/**
  * Use HTTP2 Server Push
  */
 add_action( 'after_setup_theme', function() {
