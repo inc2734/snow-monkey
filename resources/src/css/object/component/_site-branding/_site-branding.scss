@@ -9,8 +9,10 @@
       @include _line-height($_base-font-size * 2);
     }
 
-    @include _media-min(lg) {
-      @include _font-size-line-height($_base-font-size * 2);
+    .l-center-header & {
+      @include _media-min(lg) {
+        @include _font-size-line-height($_base-font-size * 2);
+      }
     }
 
     > a {
