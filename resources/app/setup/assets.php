@@ -125,7 +125,7 @@ add_action( 'customize_preview_init', function() {
 	wp_enqueue_script(
 		snow_monkey_get_main_script_handle() . '-customize-preview',
 		$src,
-		[ 'jquery','customize-preview', snow_monkey_get_main_script_handle() ],
+		[ 'jquery', 'customize-preview', snow_monkey_get_main_script_handle() ],
 		filemtime( $path ),
 		true
 	);
