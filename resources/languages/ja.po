@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-08 08:28+0900\n"
-"PO-Revision-Date: 2018-05-08 08:29+0900\n"
+"POT-Creation-Date: 2018-05-09 13:15+0900\n"
+"PO-Revision-Date: 2018-05-09 13:15+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -224,6 +224,10 @@ msgstr "オーバレイ"
 #: app/customizer/design/controls/header-position.php:20
 msgid "Normal"
 msgstr "ノーマル"
+
+#: app/customizer/design/controls/pure-css-gallery.php:14
+msgid "Use Pure CSS Gallery"
+msgstr "Pure CSS ギャラリーを使用する"
 
 #: app/customizer/design/section.php:13
 msgid "Design"
