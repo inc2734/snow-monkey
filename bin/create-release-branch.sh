@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
+set -ex;
 
 if [[ "false" != "$TRAVIS_PULL_REQUEST" ]]; then
   echo "Not deploying pull requests."
