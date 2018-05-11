@@ -14,10 +14,14 @@
 	}
 	</style>
 
+	<?php
+	$bg_image_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_backgroud_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
+	?>
+
 	<div
-		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?> js-bg-parallax"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?>"
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
-		style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg-image'], 'large' ) ); ?>)"
+		style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( $instance['bg-image'], $bg_image_size ) ); ?> );"
 		>
 
 		<div class="wpaw-showcase__mask"
@@ -47,6 +51,9 @@
 
 				<?php if ( ! empty( $instance['thumbnail'] ) ) : ?>
 					<div class="wpaw-showcase__figure">
+						<?php
+						$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
+						?>
 						<img src="<?php echo esc_url( wp_get_attachment_image_url( $instance['thumbnail'], 'large' ) ); ?>" alt="">
 					</div>
 				<?php endif; ?>

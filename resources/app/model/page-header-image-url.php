@@ -83,6 +83,6 @@ class Page_Header_Image_Url {
 	 * @return string
 	 */
 	protected static function _get_thumbnail_size() {
-		return apply_filters( 'snow_monkey_page_header_thumbnail_size', 'large' );
+		return apply_filters( 'snow_monkey_page_header_thumbnail_size', 'xlarge' );
 	}
 }
