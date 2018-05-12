@@ -54,7 +54,7 @@
 						<?php
 						$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
 						?>
-						<img src="<?php echo esc_url( wp_get_attachment_image_url( $instance['thumbnail'], 'large' ) ); ?>" alt="">
+						<img src="<?php echo esc_url( wp_get_attachment_image_url( $instance['thumbnail'], $thumbnail_size ) ); ?>" alt="">
 					</div>
 				<?php endif; ?>
 
