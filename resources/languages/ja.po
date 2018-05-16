@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-09 15:36+0900\n"
-"PO-Revision-Date: 2018-05-09 15:36+0900\n"
+"POT-Creation-Date: 2018-05-16 11:24+0900\n"
+"PO-Revision-Date: 2018-05-16 11:24+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -852,6 +852,10 @@ msgstr "左サイドバー"
 #. Template Name of the plugin/theme
 msgid "One column (slim)"
 msgstr "1カラム（slim）"
+
+#. Template Name of the plugin/theme
+msgid "One column (full)"
+msgstr "1カラム（full）"
 
 #. Template Name of the plugin/theme
 msgid "Right sidebar"

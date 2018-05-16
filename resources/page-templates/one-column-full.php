@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blank
+ * Template Name: One column (full)
  * Template Post Type: post, page
  *
  * @package snow-monkey
@@ -9,5 +9,5 @@
  */
 
 $controller = new Mimizuku_Controller();
-$controller->layout( 'blank' );
+$controller->layout( 'one-column-full' );
 $controller->render( 'content-full', get_post_type() );
