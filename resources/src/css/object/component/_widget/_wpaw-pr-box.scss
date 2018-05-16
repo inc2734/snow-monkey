@@ -89,7 +89,8 @@
   }
 
   // font page widget area
-  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area & {
+  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area &,
+  .#{$_prefix}l-body--one-column-full .#{$_prefix}l-front-page-widget-area & {
     @include widget-full-width();
     @include _padding(1.5, 0);
 

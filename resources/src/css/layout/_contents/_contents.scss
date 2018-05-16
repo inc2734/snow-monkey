@@ -9,8 +9,8 @@
     .#{$_prefix}l-body--right-sidebar &,
     .#{$_prefix}l-body--left-sidebar &,
     .#{$_prefix}l-body--one-column &,
-    .#{$_prefix}l-body--one-column-slim &,
-    .#{$_prefix}l-body--one-column-fluid & {
+    .#{$_prefix}l-body--one-column-fluid &,
+    .#{$_prefix}l-body--one-column-slim & {
       @include _margin-bottom(1);
 
       @include _media-min(lg) {
@@ -18,11 +18,7 @@
       }
     }
 
-    .home.page.#{$_prefix}l-body--one-column-fluid & {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-
+    .#{$_prefix}l-body--one-column-fluid &,
     .#{$_prefix}l-body--one-column-full & {
       margin-top: 0;
       margin-bottom: 0;
@@ -112,15 +108,5 @@
    * One column (slim)
    */
   .#{$_prefix}l-body--one-column-slim & {
-  }
-
-  /**
-   * front page
-   */
-  .home.page.#{$_prefix}l-body--one-column-fluid & {
-    > .#{$_prefix}c-fluid-container {
-      padding-right: 0;
-      padding-left: 0;
-    }
   }
 }

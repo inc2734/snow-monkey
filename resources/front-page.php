@@ -6,5 +6,5 @@
  */
 
 $controller = new Mimizuku_Controller();
-$controller->layout( 'one-column-fluid' );
+$controller->layout( 'one-column-full' );
 $controller->render( 'front-page' );
