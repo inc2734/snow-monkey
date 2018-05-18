@@ -139,12 +139,12 @@
  */
 .wpac-columns {
   &__row {
-    @extend .#{$_prefix}c-row;
+    @include _row();
     @include _row--margin(1);
   }
 
   &__col {
-    @extend .#{$_prefix}c-row__col;
+    @include _row__col(null, null);
     @include _row__col--margin(1);
 
     @each $size, $screen-min in $_sizes {
@@ -154,7 +154,8 @@
         @for $max_columns from 1 through 5 {
           @for $i from 1 through $max_columns {
             &#{$prefix}-#{$i}-#{$max_columns} {
-              @extend .#{$_prefix}c-row__col#{$prefix}-#{$i}-#{$max_columns};
+              $width: $i / $max_columns * 100%;
+              @include _row__col--width($width);
             }
           }
         }
