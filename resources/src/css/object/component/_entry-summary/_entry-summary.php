@@ -30,7 +30,16 @@ $cfs->register(
 $terms = get_terms( [ 'category' ] );
 foreach ( $terms as $term ) {
 	$accent_color = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-accent-color' );
+
 	if ( ! $accent_color ) {
+		$ancestors = get_ancestors( $term->term_id, 'category' );
+		foreach ( $ancestors as $ancestor ) {
+			$accent_color = get_theme_mod( $term->taxonomy . '-' . $ancestor . '-accent-color' );
+			if ( ! $accent_color ) {
+				continue;
+			}
+		}
+
 		continue;
 	}
 

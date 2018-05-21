@@ -71,9 +71,18 @@ class Page_Header_Image_Url {
 	 */
 	protected static function _get_category_page_header_image_url() {
 		$term = get_queried_object();
-		$_header_image = get_theme_mod( 'category-' . $term->term_id . '-header-image' );
-		if ( $_header_image ) {
-			return $_header_image;
+		$header_image = get_theme_mod( 'category-' . $term->term_id . '-header-image' );
+
+		if ( $header_image ) {
+			return $header_image;
+		}
+
+		$ancestors = get_ancestors( $term->term_id, 'category' );
+		foreach ( $ancestors as $ancestor ) {
+			$header_image = get_theme_mod( 'category-' . $ancestor . '-header-image' );
+			if ( $header_image ) {
+				return $header_image;
+			}
 		}
 	}
 
