@@ -10,7 +10,7 @@ use Inc2734\Mimizuku_Core\Core;
 /**
 * Uses composer autoloader
 */
-require_once( get_theme_file_path( '/vendor/autoload.php' ) );
+require_once( get_template_directory() . '/vendor/autoload.php' );
 
 spl_autoload_register( function( $class ) {
 	if ( 0 !== strpos( $class, 'Snow_Monkey' ) ) {
