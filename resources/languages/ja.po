@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-16 11:24+0900\n"
-"PO-Revision-Date: 2018-05-16 11:24+0900\n"
+"POT-Creation-Date: 2018-05-23 16:33+0900\n"
+"PO-Revision-Date: 2018-05-23 16:34+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -236,6 +236,14 @@ msgstr "デザイン"
 #: app/customizer/page-speed-optimization/controls/async-css.php:14
 msgid "Loads CSS asynchronously"
 msgstr "CSS を非同期読み込みする"
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:14
+msgid "Use browser cache"
+msgstr "ブラウザキャッシュを使用する"
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:15
+msgid "The server must support htaccess."
+msgstr "サーバーが .htaccess に対応している必要があります。"
 
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:14
 msgid "Use HTTP2 Server Push"
