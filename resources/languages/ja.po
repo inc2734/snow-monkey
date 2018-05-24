@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-23 16:33+0900\n"
-"PO-Revision-Date: 2018-05-23 16:34+0900\n"
+"POT-Creation-Date: 2018-05-25 00:50+0900\n"
+"PO-Revision-Date: 2018-05-25 00:51+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -36,6 +36,14 @@ msgstr ""
 "定の位置に広告が表示されます。もし任意の位置に広告を表示したい場合は、ウィ"
 "ジェット等を使用してください。"
 
+#: app/customizer/advertisement/controls/google-adsense.php:15
+msgid ""
+"Paste only the ins tag for ad units, only the contents of script tag for "
+"auto ads."
+msgstr ""
+"広告ユニットの場合は ins タグだけを、自動広告の場合は script タグの中身だけ"
+"を貼り付けてください。"
+
 #: app/customizer/advertisement/controls/google-infeed-ads.php:14
 msgid "Google Infeed Ads"
 msgstr "Google インフィード広告"
@@ -46,6 +54,11 @@ msgid ""
 "posts list."
 msgstr ""
 "インフィード広告のコードをペーストすると、記事一覧に広告が表示されます。"
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:15
+#: app/customizer/advertisement/controls/google-matched-content.php:15
+msgid "Paste only the ins tag."
+msgstr "ins タグだけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-matched-content.php:14
 msgid "Google Matched Content"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-09 15:36+0900\n"
-"PO-Revision-Date: 2018-05-09 15:36+0900\n"
+"POT-Creation-Date: 2018-05-25 00:50+0900\n"
+"PO-Revision-Date: 2018-05-25 00:51+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -36,6 +36,14 @@ msgstr ""
 "定の位置に広告が表示されます。もし任意の位置に広告を表示したい場合は、ウィ"
 "ジェット等を使用してください。"
 
+#: app/customizer/advertisement/controls/google-adsense.php:15
+msgid ""
+"Paste only the ins tag for ad units, only the contents of script tag for "
+"auto ads."
+msgstr ""
+"広告ユニットの場合は ins タグだけを、自動広告の場合は script タグの中身だけ"
+"を貼り付けてください。"
+
 #: app/customizer/advertisement/controls/google-infeed-ads.php:14
 msgid "Google Infeed Ads"
 msgstr "Google インフィード広告"
@@ -46,6 +54,11 @@ msgid ""
 "posts list."
 msgstr ""
 "インフィード広告のコードをペーストすると、記事一覧に広告が表示されます。"
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:15
+#: app/customizer/advertisement/controls/google-matched-content.php:15
+msgid "Paste only the ins tag."
+msgstr "ins タグだけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-matched-content.php:14
 msgid "Google Matched Content"
@@ -236,6 +249,14 @@ msgstr "デザイン"
 #: app/customizer/page-speed-optimization/controls/async-css.php:14
 msgid "Loads CSS asynchronously"
 msgstr "CSS を非同期読み込みする"
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:14
+msgid "Use browser cache"
+msgstr "ブラウザキャッシュを使用する"
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:15
+msgid "The server must support htaccess."
+msgstr "サーバーが .htaccess に対応している必要があります。"
 
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:14
 msgid "Use HTTP2 Server Push"
@@ -852,6 +873,10 @@ msgstr "左サイドバー"
 #. Template Name of the plugin/theme
 msgid "One column (slim)"
 msgstr "1カラム（slim）"
+
+#. Template Name of the plugin/theme
+msgid "One column (full)"
+msgstr "1カラム（full）"
 
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
