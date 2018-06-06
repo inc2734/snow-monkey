@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8c2d6720a6038e02bab09b74c4eb02d5",
-    "content-hash": "cf6e09d1ed2e002f41b21990667d8725",
+    "hash": "869e108fd0ba77c9e397095aac60e8f5",
+    "content-hash": "a1edbffd4553f7db22a8caba312cfa0d",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.3.1",
+            "version": "2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "934805c148f5d009f6badab4e7c087669c32f72e"
+                "reference": "93fcb48a0c3c6f8805ae5387e6105f4bbab159a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/934805c148f5d009f6badab4e7c087669c32f72e",
-                "reference": "934805c148f5d009f6badab4e7c087669c32f72e",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/93fcb48a0c3c6f8805ae5387e6105f4bbab159a6",
+                "reference": "93fcb48a0c3c6f8805ae5387e6105f4bbab159a6",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-awesome-components": ">=1.0.2",
+                "inc2734/wp-awesome-components": ">=1.0.3",
                 "inc2734/wp-awesome-widgets": ">=2.2.1",
                 "inc2734/wp-basis": ">=0.7.7",
                 "inc2734/wp-breadcrumbs": ">=1.0.2",
@@ -62,20 +62,20 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-05-24 16:10:35"
+            "time": "2018-06-06 02:38:46"
         },
         {
             "name": "inc2734/wp-awesome-components",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-components.git",
-                "reference": "f1c5858cd44ee3329533ad50b2faa3e102851a76"
+                "reference": "5a768f40c6b8c4a0a37d8053c852cf8aefbdbf51"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/f1c5858cd44ee3329533ad50b2faa3e102851a76",
-                "reference": "f1c5858cd44ee3329533ad50b2faa3e102851a76",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/5a768f40c6b8c4a0a37d8053c852cf8aefbdbf51",
+                "reference": "5a768f40c6b8c4a0a37d8053c852cf8aefbdbf51",
                 "shasum": ""
             },
             "require": {
@@ -104,7 +104,7 @@
                 }
             ],
             "description": "A library to add some awesome components for WordPress.",
-            "time": "2018-05-21 22:47:44"
+            "time": "2018-06-06 02:27:33"
         },
         {
             "name": "inc2734/wp-awesome-widgets",
@@ -798,25 +798,28 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
+                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
-                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
+            },
+            "replace": {
+                "myclabs/deep-copy": "self.version"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
                 "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^4.1"
+                "phpunit/phpunit": "^7.1"
             },
             "type": "library",
             "autoload": {
@@ -839,7 +842,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-10-19 19:58:43"
+            "time": "2018-05-29 17:25:09"
         },
         {
             "name": "pdepend/pdepend",
@@ -2161,7 +2164,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2225,16 +2228,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "c2741b26377804e3d70775a3ef29335685ee9b71"
+                "reference": "8a4672aca8db6d807905d695799ea7d83c8e5bba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/c2741b26377804e3d70775a3ef29335685ee9b71",
-                "reference": "c2741b26377804e3d70775a3ef29335685ee9b71",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/8a4672aca8db6d807905d695799ea7d83c8e5bba",
+                "reference": "8a4672aca8db6d807905d695799ea7d83c8e5bba",
                 "shasum": ""
             },
             "require": {
@@ -2292,11 +2295,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-18 01:58:36"
+            "time": "2018-05-25 11:57:15"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.10",
+            "version": "v3.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",

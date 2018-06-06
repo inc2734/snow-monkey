@@ -16,6 +16,7 @@
 .wpac-alert {
   $color: #bdb53c;
   @include _alert();
+  @include _content(.75);
   background-color: _lighter($color);
   border: 1px solid $color;
   border-radius: $_border-radius;
@@ -34,6 +35,10 @@
     background-color: _lighter($color);
     border-color: $color;
     color: _dark($color);
+  }
+
+  > .mceEditable {
+    @include _content(.75);
   }
 }
 
@@ -83,6 +88,7 @@
   }
 
   &__body {
+    @include _content(.75);
     flex: 1 1 auto;
     border-radius: $_border-radius;
     word-break: break-all;
