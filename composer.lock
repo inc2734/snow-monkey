@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "869e108fd0ba77c9e397095aac60e8f5",
-    "content-hash": "a1edbffd4553f7db22a8caba312cfa0d",
+    "hash": "26c870517cae8c2a78580b74537127bd",
+    "content-hash": "90f15b3a009c59649ced47f93ecf71f0",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "93fcb48a0c3c6f8805ae5387e6105f4bbab159a6"
+                "reference": "6cf2b93a4873255c5b208fdd9c5d1596844b69e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/93fcb48a0c3c6f8805ae5387e6105f4bbab159a6",
-                "reference": "93fcb48a0c3c6f8805ae5387e6105f4bbab159a6",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6cf2b93a4873255c5b208fdd9c5d1596844b69e9",
+                "reference": "6cf2b93a4873255c5b208fdd9c5d1596844b69e9",
                 "shasum": ""
             },
             "require": {
@@ -31,7 +31,7 @@
                 "inc2734/wp-github-theme-updater": ">=0.2.7",
                 "inc2734/wp-like-me-box": ">=0.1.5",
                 "inc2734/wp-oembed-blog-card": ">=3.0.0",
-                "inc2734/wp-page-speed-optimization": ">=0.6.0",
+                "inc2734/wp-page-speed-optimization": ">=0.6.1",
                 "inc2734/wp-profile-box": ">=1.1.0",
                 "inc2734/wp-pure-css-gallery": ">=1.1.0",
                 "inc2734/wp-seo": ">=1.0.3",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-06-06 02:38:46"
+            "time": "2018-06-06 03:59:02"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -488,16 +488,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "0.6.0",
+            "version": "0.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "c84069d5b147e741b7f817fcd5e6c10cf2c5339b"
+                "reference": "af8f7593a2934ebbe9b3aa2cd875b9f65480abca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/c84069d5b147e741b7f817fcd5e6c10cf2c5339b",
-                "reference": "c84069d5b147e741b7f817fcd5e6c10cf2c5339b",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/af8f7593a2934ebbe9b3aa2cd875b9f65480abca",
+                "reference": "af8f7593a2934ebbe9b3aa2cd875b9f65480abca",
                 "shasum": ""
             },
             "require": {
@@ -526,7 +526,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2018-05-23 06:39:23"
+            "time": "2018-06-06 03:56:26"
         },
         {
             "name": "inc2734/wp-profile-box",
@@ -798,28 +798,25 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.8.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6"
+                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/478465659fd987669df0bd8a9bf22a8710e5f1b6",
-                "reference": "478465659fd987669df0bd8a9bf22a8710e5f1b6",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
+                "reference": "3b8a3a99ba1f6a3952ac2747d989303cbd6b7a3e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
-            },
-            "replace": {
-                "myclabs/deep-copy": "self.version"
+                "php": "^5.6 || ^7.0"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0",
                 "doctrine/common": "^2.6",
-                "phpunit/phpunit": "^7.1"
+                "phpunit/phpunit": "^4.1"
             },
             "type": "library",
             "autoload": {
@@ -842,7 +839,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2018-05-29 17:25:09"
+            "time": "2017-10-19 19:58:43"
         },
         {
             "name": "pdepend/pdepend",

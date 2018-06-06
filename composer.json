@@ -17,11 +17,12 @@
     "phpunit/php-token-stream": "1.4.11",
     "phpdocumentor/reflection-docblock": "3.2.2",
     "symfony/yaml": "3.4.1",
-    "pdepend/pdepend": "2.5.0"
+    "pdepend/pdepend": "2.5.0",
+    "myclabs/deep-copy": "1.7.0"
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": ">=2.3.2"
+    "inc2734/mimizuku-core": ">=2.3.3"
   },
   "config": {
     "process-timeout": 0,
