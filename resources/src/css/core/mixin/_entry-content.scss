@@ -18,7 +18,8 @@
     @include _padding(0, 0, .25);
   }
 
-  > table {
+  > table,
+  > .#{$_prefix}c-responsive-table > table {
     border-collapse: collapse;
     width: 100%;
 
@@ -37,6 +38,13 @@
         border-right: 1px solid _light($color-accent);
         border-left: 1px solid _light($color-accent);
         color: #fff;
+      }
+    }
+
+    tbody {
+      th {
+        background-color: _lightest($_color-gray);
+        text-align: left;
       }
     }
   }

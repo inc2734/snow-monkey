@@ -1,0 +1,13 @@
+.woocommerce-input-wrapper,
+.quantity,
+.woocommerce-EditAccountForm {
+  .input-text {
+    @include _form-control();
+  }
+}
+
+.woocommerce-EditAccountForm {
+  fieldset {
+    border: none;
+  }
+}

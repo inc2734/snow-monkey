@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d448950da2b56383d111d7abd55953b1",
-    "content-hash": "155a5dc97bb871c45b062ed14c5d9729",
+    "hash": "a58c82bbeb0880a00f694e227f385306",
+    "content-hash": "5ad7528d5a730e190024987780a24bbb",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.3.4",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "364b9a18b8c55e018731a6fb3d4bc646b77c9815"
+                "reference": "bb15ea0ece194735a54d03155480f52e67b631d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/364b9a18b8c55e018731a6fb3d4bc646b77c9815",
-                "reference": "364b9a18b8c55e018731a6fb3d4bc646b77c9815",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/bb15ea0ece194735a54d03155480f52e67b631d6",
+                "reference": "bb15ea0ece194735a54d03155480f52e67b631d6",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=1.0.3",
                 "inc2734/wp-awesome-widgets": ">=2.2.1",
-                "inc2734/wp-basis": ">=0.7.7",
+                "inc2734/wp-basis": ">=1.0.0",
                 "inc2734/wp-breadcrumbs": ">=1.0.2",
                 "inc2734/wp-contents-outline": ">=1.0.2",
                 "inc2734/wp-customizer-framework": ">=3.1.1",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-06-06 04:22:25"
+            "time": "2018-06-14 06:05:07"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -152,16 +152,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "0.7.7",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "69b69cd3902fbe24c30b96e1f4a3e04796605a27"
+                "reference": "2f2fe1e6778f13cc1a64d04acd93724e66766afc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/69b69cd3902fbe24c30b96e1f4a3e04796605a27",
-                "reference": "69b69cd3902fbe24c30b96e1f4a3e04796605a27",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/2f2fe1e6778f13cc1a64d04acd93724e66766afc",
+                "reference": "2f2fe1e6778f13cc1a64d04acd93724e66766afc",
                 "shasum": ""
             },
             "require": {
@@ -190,7 +190,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-03-04 06:34:06"
+            "time": "2018-06-14 06:02:23"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -2110,16 +2110,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.2.3",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27"
+                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/4842476c434e375f9d3182ff7b89059583aa8b27",
-                "reference": "4842476c434e375f9d3182ff7b89059583aa8b27",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
+                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
                 "shasum": ""
             },
             "require": {
@@ -2157,7 +2157,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-02-20 21:35:23"
+            "time": "2018-06-06 23:58:19"
         },
         {
             "name": "symfony/config",

@@ -3,4 +3,9 @@
   border: none;
   padding: 0;
   vertical-align: middle;
+
+  &__bars {
+    display: block;
+    margin: 3px auto;
+  }
 }
