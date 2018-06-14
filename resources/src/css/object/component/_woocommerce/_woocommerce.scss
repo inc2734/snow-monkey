@@ -21,3 +21,38 @@
 .woocommerce-checkout {
   @include _content();
 }
+
+.woocommerce-MyAccount-navigation {
+  @include _margin-bottom(1);
+
+  ul {
+    @include _list-unstyled();
+    border-top: 1px solid _lighter($_color-gray);
+  }
+
+  li {
+    border-bottom: 1px solid _lighter($_color-gray);
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    @include _padding(.25, 0);
+
+    @include _hover(lg) {
+      text-decoration: underline;
+    }
+  }
+}
+
+.#{$_prefix}c-entry__content {
+  .woocommerce .shop_table {
+    border-collapse: collapse;
+
+    thead {
+      th {
+        background-color: _lightest($_color-gray);
+      }
+    }
+  }
+}
