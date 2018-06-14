@@ -1,13 +1,23 @@
 .woocommerce-input-wrapper,
 .quantity,
-.woocommerce-EditAccountForm {
+.woocommerce-EditAccountForm,
+.woocommerce-form {
   .input-text {
     @include _form-control();
   }
 }
 
 .woocommerce-EditAccountForm {
+  @include _content();
+
   fieldset {
     border: none;
   }
+}
+
+.woocommerce-MyAccount-content,
+.woocommerce-MyAccount-content > [class^="woocommerce-"],
+.woocommerce-MyAccount-content > header,
+.woocommerce-checkout {
+  @include _content();
 }
