@@ -6,6 +6,8 @@
  */
 ?>
 <div class="c-entry">
+	<?php do_action( 'snow_monkey_before_entry_content' ); ?>
+
 	<div class="c-entry__content">
 		<p>
 			<?php esc_html_e( 'Woops! Page not found.', 'snow-monkey' ); ?><br>
@@ -15,4 +17,6 @@
 
 		<?php get_search_form(); ?>
 	</div>
+
+	<?php do_action( 'snow_monkey_after_entry_content' ); ?>
 </div>

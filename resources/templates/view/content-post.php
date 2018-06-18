@@ -17,6 +17,8 @@
 		</header>
 	<?php endif; ?>
 
+	<?php do_action( 'snow_monkey_before_entry_content' ); ?>
+
 	<div class="c-entry__content">
 		<?php
 		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) ) {
@@ -45,6 +47,8 @@
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>
+
+	<?php do_action( 'snow_monkey_after_entry_content' ); ?>
 
 	<footer class="c-entry__footer">
 		<?php
