@@ -1,7 +1,8 @@
 .woocommerce-input-wrapper,
 .quantity,
 .woocommerce-EditAccountForm,
-.woocommerce-form {
+.woocommerce-form,
+.woocommerce-ResetPassword {
   .input-text {
     @include _form-control();
   }
@@ -55,4 +56,12 @@
       }
     }
   }
+}
+
+.woocommerce .quantity .qty {
+  max-height: 37px;
+}
+
+.woocommerce-Tabs-panel {
+  @include entry-content();
 }
