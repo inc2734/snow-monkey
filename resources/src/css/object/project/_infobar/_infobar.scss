@@ -1,0 +1,36 @@
+.#{$_prefix}p-infobar {
+  $infobar-background-color: #ffca00;
+
+  &__container {
+    @include _container();
+  }
+
+  &__content {
+    display: flex;
+    flex: 0 1 auto;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: $infobar-background-color;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px;
+  }
+
+  a.#{$_prefix}p-infobar__inner {
+    @include _transition(background-color);
+    @include _hover(lg) {
+      background-color: desaturate($infobar-background-color, 5%);
+    }
+  }
+}
+
+[data-l-header-type=""] + .#{$_prefix}l-contents > .#{$_prefix}p-infobar {
+  .#{$_prefix}p-infobar__inner {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05) inset;
+  }
+}

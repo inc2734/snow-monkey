@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-05-25 00:50+0900\n"
-"PO-Revision-Date: 2018-05-25 00:51+0900\n"
+"POT-Creation-Date: 2018-06-20 12:54+0900\n"
+"PO-Revision-Date: 2018-06-20 12:55+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -245,6 +245,18 @@ msgstr "Pure CSS ギャラリーを使用する"
 #: app/customizer/design/section.php:13
 msgid "Design"
 msgstr "デザイン"
+
+#: app/customizer/infobar/controls/content.php:14
+msgid "Infobar content"
+msgstr "お知らせバーコンテンツ"
+
+#: app/customizer/infobar/controls/url.php:14
+msgid "Infobar link URL"
+msgstr "お知らせバーリンク URL"
+
+#: app/customizer/infobar/section.php:13
+msgid "Infobar"
+msgstr "お知らせバー"
 
 #: app/customizer/page-speed-optimization/controls/async-css.php:14
 msgid "Loads CSS asynchronously"
@@ -794,9 +806,9 @@ msgstr "この投稿へのコメント"
 msgid "No comments."
 msgstr "コメントはありません。"
 
-#: template-parts/hamburger-btn.php:12
-msgid "Menu"
-msgstr "メニュー"
+#: template-parts/hamburger-btn.php:15
+msgid "MENU"
+msgstr "MENU"
 
 #: template-parts/page-summary.php:33
 msgid "More"
@@ -834,15 +846,15 @@ msgstr "関連記事"
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
-#: templates/view/404.php:11
+#: templates/view/404.php:13
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: templates/view/404.php:12
+#: templates/view/404.php:14
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: templates/view/404.php:13
+#: templates/view/404.php:15
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
@@ -885,6 +897,9 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "One column (fluid)"
 msgstr "1カラム（fluid）"
+
+#~ msgid "Menu"
+#~ msgstr "メニュー"
 
 #~ msgid "Top of content"
 #~ msgstr "コンテンツの上"

@@ -17,6 +17,8 @@
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
+			<?php get_template_part( 'template-parts/infobar' ); ?>
+
 			<div class="l-contents__inner">
 				<main class="l-contents__main" role="main">
 					<?php $_view_controller->view(); ?>
