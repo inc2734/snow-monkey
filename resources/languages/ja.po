@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-06-20 12:54+0900\n"
-"PO-Revision-Date: 2018-06-20 12:55+0900\n"
+"POT-Creation-Date: 2018-06-20 21:05+0900\n"
+"PO-Revision-Date: 2018-06-20 21:05+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -173,6 +173,10 @@ msgstr "スマホ時のカスタムロゴの拡大率（%）"
 #: app/customizer/design/controls/default-page-header-image.php:14
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
+
+#: app/customizer/design/controls/display-site-branding-description.php:15
+msgid "Display site description under the site logo"
+msgstr "サイトの概要をサイトロゴの下に表示する"
 
 #: app/customizer/design/controls/footer-layout.php:15
 msgid "Number of columns in the footer widget area"

@@ -14,7 +14,7 @@ $customizer->control( 'textarea', 'header-content', [
 	'transport'   => 'postMessage',
 	'label'       => __( 'Header contents', 'snow-monkey' ),
 	'description' => __( 'Displayed at only PC size.', 'snow-monkey' ),
-	'priority'    => 130,
+	'priority'    => 160,
 ] );
 
 $control = $customizer->get_control( 'header-content' );

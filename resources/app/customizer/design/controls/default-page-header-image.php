@@ -12,7 +12,7 @@ $section    = $customizer->get_section( 'design' );
 
 $customizer->control( 'image', 'default-page-header-image', [
 	'label'    => __( 'Default page header image', 'snow-monkey' ),
-	'priority' => 123,
+	'priority' => 150,
 ] );
 
 $control = $customizer->get_control( 'default-page-header-image' );

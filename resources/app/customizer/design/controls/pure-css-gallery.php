@@ -12,7 +12,7 @@ $section    = $customizer->get_section( 'design' );
 
 $customizer->control( 'checkbox', 'pure-css-gallery', [
 	'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
-	'priority' => 180,
+	'priority' => 200,
 	'default'  => true,
 ] );
 

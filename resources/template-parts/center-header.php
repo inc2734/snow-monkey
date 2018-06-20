@@ -9,7 +9,7 @@ $header_content = get_theme_mod( 'header-content' );
 $header_type    = get_theme_mod( 'header-layout' ) . '-header';
 $has_global_nav = has_nav_menu( 'global-nav' ) ? 'true' : 'false';
 
-$class_for_site_branding_col[] = ( has_nav_menu( 'drawer-nav' ) ) ? 'c-row__col--2-4' : 'c-row__col--1-1';
+$class_for_site_branding_col[] = ( has_nav_menu( 'drawer-nav' ) ) ? 'c-row__col--4-6' : 'c-row__col--1-1';
 $class_for_site_branding_col[] = ( $header_content ) ? 'c-row__col--lg-2-4' : 'c-row__col--lg-1-1';
 $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 ?>
@@ -19,7 +19,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
 			<div class="c-row c-row--margin-s c-row--middle c-row--between c-row--nowrap">
 				<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
-					<div class="c-row__col c-row__col--1-4 u-hidden-lg-up"></div>
+					<div class="c-row__col c-row__col--1-6 u-hidden-lg-up"></div>
 				<?php endif; ?>
 
 				<?php if ( $header_content ) : ?>
@@ -31,7 +31,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				</div>
 
 				<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
-					<div class="c-row__col c-row__col--1-4 u-hidden-lg-up">
+					<div class="c-row__col c-row__col--1-6 u-hidden-lg-up">
 						<div class="u-pull-right">
 							<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
 						</div>

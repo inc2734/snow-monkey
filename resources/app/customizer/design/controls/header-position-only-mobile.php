@@ -12,7 +12,7 @@ $section    = $customizer->get_section( 'design' );
 
 $customizer->control( 'checkbox', 'header-position-only-mobile', [
 	'label'    => __( 'Use header position setting for mobile only', 'snow-monkey' ),
-	'priority' => 122,
+	'priority' => 130,
 	'default'  => true,
 ] );
 

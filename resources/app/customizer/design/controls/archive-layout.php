@@ -12,7 +12,7 @@ $section    = $customizer->get_section( 'design' );
 
 $customizer->control( 'select', 'archive-layout', [
 	'label'    => __( 'Archive layout', 'snow-monkey' ),
-	'priority' => 150,
+	'priority' => 180,
 	'default'  => 'rich-media',
 	'choices'  => [
 		'rich-media' => __( 'Rich media', 'snow-monkey' ),

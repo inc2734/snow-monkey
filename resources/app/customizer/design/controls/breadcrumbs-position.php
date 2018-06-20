@@ -13,7 +13,7 @@ $section    = $customizer->get_section( 'design' );
 $customizer->control( 'select', 'breadcrumbs-position', [
 	'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
 	'default'  => 'default',
-	'priority' => 170,
+	'priority' => 190,
 	'choices'  => [
 		'default'              => __( 'Top of contents', 'snow-monkey' ),
 		'content-width'        => __( 'Top of contents ( Fit to content width )', 'snow-monkey' ),

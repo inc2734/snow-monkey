@@ -13,7 +13,7 @@ $section    = $customizer->get_section( 'design' );
 $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'transport' => 'postMessage',
 	'label'     => __( 'Number of columns in the footer widget area', 'snow-monkey' ),
-	'priority'  => 140,
+	'priority'  => 170,
 	'default'   => '1-4',
 	'choices'   => [
 		'1-1' => __( '1 column', 'snow-monkey' ),
