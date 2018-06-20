@@ -14,27 +14,25 @@
  * Alert
  */
 .wpac-alert {
-  $color: #bdb53c;
+  $color: #fff9e6;
   @include _alert();
   @include _content(.75);
-  background-color: _lighter($color);
-  border: 1px solid $color;
+  background-color: $color;
+  border: 1px solid darken(desaturate($color, 10%), 10%);
   border-radius: $_border-radius;
-  color: _dark($color);
+  color: darken(desaturate($color, 60%), 60%);
   @include _padding(.5);
 
   &--warning {
-    $color: #bd543c;
-    background-color: _lighter($color);
-    border-color: $color;
-    color: _dark($color);
+    background-color: adjust-hue($color, -30deg);
+    border-color: adjust-hue(darken(desaturate($color, 10%), 10%), -30deg);
+    color: adjust-hue(darken(desaturate($color, 60%), 60%), -30deg);
   }
 
   &--success {
-    $color: #90bd3c;
-    background-color: _lighter($color);
-    border-color: $color;
-    color: _dark($color);
+    background-color: adjust-hue($color, 40deg);
+    border-color: adjust-hue(darken(desaturate($color, 15%), 15%), 40deg);
+    color: adjust-hue(darken(desaturate($color, 70%), 70%), 40deg);
   }
 
   > .mceEditable {
