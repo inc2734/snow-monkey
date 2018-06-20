@@ -24,6 +24,7 @@
 
   &__title {
     @include _margin(0, 0, .25);
+    letter-spacing: 0;
   }
 
   &__meta {
