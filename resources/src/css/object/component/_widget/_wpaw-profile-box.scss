@@ -1,0 +1,18 @@
+.#{$_prefix}l-body--right-sidebar,
+.#{$_prefix}l-body--left-sidebar {
+  .wpaw-profile-box {
+    .wp-profile-box {
+      &__figure {
+        @include _media-min(lg) {
+          float: none;
+        }
+
+        img {
+          @include _media-min(lg) {
+            width: 48px;
+          }
+        }
+      }
+    }
+  }
+}
