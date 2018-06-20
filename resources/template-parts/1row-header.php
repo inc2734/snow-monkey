@@ -45,5 +45,13 @@ $has_global_nav = has_nav_menu( 'global-nav' ) ? 'true' : 'false';
 				</div>
 			<?php endif; ?>
 		</div>
+
+        <?php if ( get_bloginfo('description') ) : ?>
+            <div class="l-<?php echo esc_attr( $header_type ); ?>__row" >
+                <div class="c-page-header__description-left">
+                    <?php  bloginfo('description'); ?>
+                </div>
+            </div>
+        <?php endif; ?>
 	</div>
 </div>
