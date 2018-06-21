@@ -18,6 +18,14 @@ $has_global_nav = has_nav_menu( 'global-nav' ) ? 'true' : 'false';
 					<?php get_template_part( 'template-parts/site-branding' ); ?>
 				</div>
 
+                <?php if ( get_bloginfo('description') ) : ?>
+                    <div class="l-<?php echo esc_attr( $header_type ); ?>__row" >
+                        <div class="c-page-header__description-center">
+                            <?php  bloginfo('description'); ?>
+                        </div>
+                    </div>
+                <?php endif; ?>
+
 				<?php if ( $header_content ) : ?>
 					<div class="c-row__col c-row__col--fit u-hidden u-visible-lg-up">
 						<?php get_template_part( 'template-parts/header-content' ); ?>
@@ -30,6 +38,8 @@ $has_global_nav = has_nav_menu( 'global-nav' ) ? 'true' : 'false';
 					</div>
 				<?php endif; ?>
 			</div>
+
+
 		</div>
 
 		<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
