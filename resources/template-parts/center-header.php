@@ -48,14 +48,6 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 			</div>
 		</div>
 
-        <?php if ( get_bloginfo('description') ) : ?>
-            <div class="l-<?php echo esc_attr( $header_type ); ?>__row" >
-                <div class="c-page-header__description-center">
-                    <?php  bloginfo('description'); ?>
-                </div>
-            </div>
-        <?php endif; ?>
-
 		<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-hidden u-visible-lg-up">
 				<?php get_template_part( 'template-parts/global-nav' ); ?>
