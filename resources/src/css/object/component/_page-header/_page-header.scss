@@ -40,6 +40,18 @@
     flex-direction: column;
     align-items: center;
   }
+  &__description-center,&__description-left{
+    @include _font-size-line-height(13px);
+  }
+  &__description-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  &__description-left{
+    @include _font-size-line-height(13px);
+    margin-top: -8px;
+  }
 
   &__meta {
     @include _margin-top(.25);
