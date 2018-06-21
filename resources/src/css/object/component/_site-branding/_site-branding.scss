@@ -23,7 +23,7 @@
 
   &__description {
     margin-top: 2px;
-    @include _font-size-line-height(13px);
+    @include _font-size(13px);
     line-height: 1;
   }
 }
