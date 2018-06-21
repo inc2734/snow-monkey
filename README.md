@@ -5,6 +5,7 @@
 Premium WordPress theme by Monkey Wrench
 
 * GitHub: https://github.com/inc2734/snow-monkey/
+* Contributer: https://github.com/inc2734/snow-monkey/graphs/contributors
 
 ## Requirements
 * WordPress 4.7
