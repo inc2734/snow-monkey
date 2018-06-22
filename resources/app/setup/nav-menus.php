@@ -27,3 +27,23 @@ new Global_Nav( 'global-nav' );
 new Drawer_Nav( 'drawer-nav' );
 new Global_Nav( 'social-nav' );
 new Global_Nav( 'footer-sticky-nav' );
+
+/**
+ * Display description of nav item under it.
+ *
+ * @param string $output HTML
+ * @param object $item
+ * @param int $depth
+ * @param object $args
+ * @return string
+ */
+add_filter( 'walker_nav_menu_start_el', function( $output, $item, $depth, $args ) {
+	if ( 0 != $depth || 'global-nav' !== $args->theme_location || empty( $item->description ) ) {
+		return $output;
+	}
+
+	$pattern     = '/(<a.*?>)([^<]*?)(<\/a>)/';
+	$replacement = '$1$2<small>' . esc_html( $item->description ) . '</small>$3';
+
+	return preg_replace( $pattern, $replacement, $output );
+}, 10, 4 );
