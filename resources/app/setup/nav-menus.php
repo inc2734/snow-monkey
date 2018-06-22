@@ -31,19 +31,22 @@ new Global_Nav( 'footer-sticky-nav' );
 /**
  * Display description of nav item under it.
  *
- * @param string $output HTML
+ * @param string $title HTML
  * @param object $item
- * @param int $depth
  * @param object $args
+ * @param int $depth
  * @return string
  */
-add_filter( 'walker_nav_menu_start_el', function( $output, $item, $depth, $args ) {
-	if ( 0 != $depth || 'global-nav' !== $args->theme_location || empty( $item->description ) ) {
-		return $output;
+add_filter( 'nav_menu_item_title', function( $title, $item, $args, $depth ) {
+	if ( 0 != $depth || 'global-nav' !== $args->theme_location ) {
+		return $title;
 	}
 
-	$pattern     = '/(<a.*?>)([^<]*?)(<\/a>)/';
-	$replacement = '$1$2<small>' . esc_html( $item->description ) . '</small>$3';
+	$title = sprintf( '<span>%1$s</span>', $title );
 
-	return preg_replace( $pattern, $replacement, $output );
+	if ( $item->description ) {
+		$title = $title . sprintf( '<small>%1$s</small>', esc_html( $item->description ) );
+	}
+
+	return $title;
 }, 10, 4 );

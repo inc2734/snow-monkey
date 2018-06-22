@@ -6,15 +6,20 @@
   .#{$_prefix}c-navbar {
     &__item {
       > a {
-        flex-wrap: wrap;
+        flex-direction: column;
         color: $_color-text;
         @include _font-size($_base-font-size-px - 2);
         @include _line-height($_base-font-size-px + 4);
         font-weight: bold;
         @include _padding(.75);
 
+        > span {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
         > small {
-          flex: 1 1 100%;
           display: block;
           @include _font-size($_base-font-size-px - 6);
           @include _line-height($_base-font-size-px + 10);
