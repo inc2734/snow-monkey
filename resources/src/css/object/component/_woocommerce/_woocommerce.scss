@@ -17,10 +17,16 @@
 }
 
 .woocommerce-MyAccount-content,
-.woocommerce-MyAccount-content > [class^="woocommerce-"],
+.woocommerce-MyAccount-content > section[class^="woocommerce-"],
 .woocommerce-MyAccount-content > header,
-.woocommerce-checkout {
+.woocommerce-checkout,
+.woocommerce-order,
+.woocommerce-order > section[class^="woocommerce-"] {
   @include _content();
+
+  h2[class^="woocommerce-"] {
+    @include _margin-bottom(.5);
+  }
 }
 
 .woocommerce-MyAccount-navigation {
