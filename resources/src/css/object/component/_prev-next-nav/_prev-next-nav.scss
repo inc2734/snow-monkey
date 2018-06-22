@@ -16,7 +16,7 @@
       left: calc(50% - 1.5px);
       content: '';
       display: block;
-      width: 3px;
+      width: $border-bottom-width;
       background-color: $_color-black;
     }
   }

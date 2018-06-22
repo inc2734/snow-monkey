@@ -1,5 +1,5 @@
-@mixin entry-content() {
-  @include _content(1);
+@mixin entry-content($coefficient: 1) {
+  @include _content($coefficient);
 
   > h2, > h3, > h4, > h5, > h6 {
     & + h2, & + h3, & + h4, & + h5, & + h6 {
@@ -8,7 +8,7 @@
   }
 
   > h2 {
-    border-left: 3px solid $color-accent;
+    border-left: $border-bottom-width solid $color-accent;
     background-color: _lightest($_color-gray);
     @include _padding(.25, .25, .25, .5);
   }

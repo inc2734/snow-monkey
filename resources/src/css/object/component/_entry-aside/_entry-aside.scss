@@ -23,7 +23,7 @@
     &::after {
       display: block;
       content: '';
-      height: 3px;
+      height: $border-bottom-width;
       background-color: $_color-black;
       flex: 1 0 0%;
       min-width: 20px;

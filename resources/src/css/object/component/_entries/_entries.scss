@@ -61,7 +61,8 @@
 }
 
 .#{$_prefix}l-body--right-sidebar,
-.#{$_prefix}l-body--left-sidebar {
+.#{$_prefix}l-body--left-sidebar,
+.#{$_prefix}l-body--one-column-slim {
   .#{$_prefix}c-entries--rich-media {
     .#{$_prefix}c-entries__item {
       @include _media-min(lg) {

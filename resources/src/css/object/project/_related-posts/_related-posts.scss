@@ -22,7 +22,8 @@
   }
 
   .#{$_prefix}l-body--right-sidebar &,
-  .#{$_prefix}l-body--left-sidebar & {
+  .#{$_prefix}l-body--left-sidebar &,
+  .#{$_prefix}l-body--one-column-slim & {
     @include _media-min(lg) {
       .#{$_prefix}c-entries--rich-media {
         @include _row--margin(1);

@@ -14,7 +14,7 @@
 
   &__header {
     @include _margin(0, 0, 1);
-    border-bottom: 3px solid $_color-black;
+    border-bottom: $border-bottom-width solid $_color-black;
     @include _padding(0, 0, .25);
 
     .wp-share-buttons {
