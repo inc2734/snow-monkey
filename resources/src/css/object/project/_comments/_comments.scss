@@ -37,6 +37,8 @@
     }
 
     .comment-form {
+      @include _content(.5);
+
       .logged-in-as {
         display: none;
       }
@@ -45,6 +47,20 @@
     .comment-form-comment {
       > label {
         display: none;
+      }
+    }
+
+    .comment-form-cookies-consent {
+      overflow: hidden;
+
+      [id="wp-comment-cookies-consent"] {
+        margin: .35em .5em 0 0;
+        float: left;
+      }
+
+      [for="wp-comment-cookies-consent"] {
+        margin-bottom: 0;
+        overflow: hidden;
       }
     }
 
