@@ -11,8 +11,9 @@
   &__figure {
     margin: 0 0 20px;
     position: relative;
-    flex: none;
+    flex: 0 0 60px;
     @include _circle(60px);
+    max-width: 60px;
     border: 2px solid _lighter($_color-gray);
 
     @include _media-min(md) {
@@ -49,6 +50,7 @@
 
     @include _media-min(md) {
       @include _padding(.75);
+      max-width: calc(100% - 80px);
       @include _balloon-triangle(left, 10px, #fff, 1px, _light($_color-gray));
 
       &::before,
@@ -79,7 +81,7 @@
   }
 
   &__content {
-    @include _font-size-line-height($_base-font-size-px - 2);
+    @include _font-size-line-height($_base-font-size-px - 1);
     @include _content(.5);
 
     > h2 {

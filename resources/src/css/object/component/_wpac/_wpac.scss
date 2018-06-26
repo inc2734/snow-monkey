@@ -67,8 +67,9 @@
 
   &__figure {
     position: relative;
-    flex: none;
+    flex: 0 0 60px;
     @include _circle(60px);
+    max-width: 60px;
     border: 2px solid _lighter($_color-gray);
 
     > img {
@@ -107,6 +108,7 @@
     }
 
     @include _media-min(md) {
+      max-width: calc(100% - 80px);
       @include _balloon-triangle(left, 10px, #fff, 1px, _light($_color-gray));
     }
   }
