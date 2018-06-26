@@ -7,7 +7,7 @@
 ?>
 <div class="c-comment" id="comment-<?php comment_ID(); ?>">
 	<div class="c-comment__figure">
-		<?php echo get_avatar( $_comment, '48' ); ?>
+		<?php echo get_avatar( $_comment, '96' ); ?>
 	</div>
 	<div class="c-comment__body">
 		<?php if ( 0 === $_comment->comment_approved ) : ?>

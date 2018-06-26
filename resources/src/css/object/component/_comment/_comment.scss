@@ -1,26 +1,60 @@
 .#{$_prefix}c-comment {
-  @include _media();
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include _media-min(md) {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
 
   &__figure {
-    @include _margin(0, .5, 0, 0);
+    margin: 0 0 20px;
+    position: relative;
+    flex: none;
+    @include _circle(60px);
+    border: 2px solid _lighter($_color-gray);
 
-    @include _media-min(lg) {
-      @include _margin(0, 1, 0, 0);
+    @include _media-min(md) {
+      margin: 0 20px 0 0;
     }
 
-    img {
-      margin-top: 0;
+    > img {
+      max-width: none;
+      height: 56px;
+      width: 56px;
+      padding: 0;
     }
   }
 
   &__body {
-    border: 1px solid _light($_color-gray);
+    flex: 1 1 auto;
     border-radius: $_border-radius;
+    word-break: break-all;
     @include _padding(.5);
-    overflow: hidden;
+    max-width: 100%;
+    width: 100%;
 
-    @include _media-min(lg) {
-      @include _padding(1);
+    @include _top-balloon((
+      background-color: #fff,
+      border-color: _light($_color-gray),
+      border-size: 1px,
+    ));
+
+    &::before,
+    &::after {
+      margin-left: 0;
+      left: 24px;
+    }
+
+    @include _media-min(md) {
+      @include _padding(.75);
+      @include _balloon-triangle(left, 10px, #fff, 1px, _light($_color-gray));
+
+      &::before,
+      &::after {
+        top: 28px;
+      }
     }
   }
 
