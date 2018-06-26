@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "241343fc07afd6045140864be1b2bf8a",
-    "content-hash": "bd5461bec14f12d364f1e13241a426e7",
+    "hash": "d5c481fd0aaecfb61075c951f45e4e50",
+    "content-hash": "4ea4624ea1bd4367a54e34aecb5dbb45",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.4.2",
+            "version": "2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "12e9a9dab3dc561deddbab449f664aef5f64f627"
+                "reference": "6efe23199540fbfbeeefcc8d8e96d9126ae60c0c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/12e9a9dab3dc561deddbab449f664aef5f64f627",
-                "reference": "12e9a9dab3dc561deddbab449f664aef5f64f627",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6efe23199540fbfbeeefcc8d8e96d9126ae60c0c",
+                "reference": "6efe23199540fbfbeeefcc8d8e96d9126ae60c0c",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=1.0.3",
                 "inc2734/wp-awesome-widgets": ">=2.3.0",
-                "inc2734/wp-basis": ">=1.0.0",
+                "inc2734/wp-basis": ">=1.0.1",
                 "inc2734/wp-breadcrumbs": ">=1.0.2",
                 "inc2734/wp-contents-outline": ">=1.0.2",
                 "inc2734/wp-customizer-framework": ">=3.1.1",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-06-20 02:05:43"
+            "time": "2018-06-26 04:47:42"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -153,16 +153,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "2f2fe1e6778f13cc1a64d04acd93724e66766afc"
+                "reference": "85d6ec7d7abaa5729667c94d1ecc14203775b333"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/2f2fe1e6778f13cc1a64d04acd93724e66766afc",
-                "reference": "2f2fe1e6778f13cc1a64d04acd93724e66766afc",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/85d6ec7d7abaa5729667c94d1ecc14203775b333",
+                "reference": "85d6ec7d7abaa5729667c94d1ecc14203775b333",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-06-14 06:02:23"
+            "time": "2018-06-26 04:42:30"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -2162,16 +2162,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.11",
+            "version": "v3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "73e055cf2e6467715f187724a0347ea32079967c"
+                "reference": "1fffdeb349ff36a25184e5564c25289b1dbfc402"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/73e055cf2e6467715f187724a0347ea32079967c",
-                "reference": "73e055cf2e6467715f187724a0347ea32079967c",
+                "url": "https://api.github.com/repos/symfony/config/zipball/1fffdeb349ff36a25184e5564c25289b1dbfc402",
+                "reference": "1fffdeb349ff36a25184e5564c25289b1dbfc402",
                 "shasum": ""
             },
             "require": {
@@ -2222,20 +2222,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-14 16:49:53"
+            "time": "2018-06-19 14:02:58"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.11",
+            "version": "v3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "8a4672aca8db6d807905d695799ea7d83c8e5bba"
+                "reference": "a0be80e3f8c11aca506e250c00bb100c04c35d10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/8a4672aca8db6d807905d695799ea7d83c8e5bba",
-                "reference": "8a4672aca8db6d807905d695799ea7d83c8e5bba",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/a0be80e3f8c11aca506e250c00bb100c04c35d10",
+                "reference": "a0be80e3f8c11aca506e250c00bb100c04c35d10",
                 "shasum": ""
             },
             "require": {
@@ -2293,20 +2293,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-25 11:57:15"
+            "time": "2018-06-25 08:36:56"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.11",
+            "version": "v3.4.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "8e03ca3fa52a0f56b87506f38cf7bd3f9442b3a0"
+                "reference": "8a721a5f2553c6c3482b1c5b22ed60fe94dd63ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/8e03ca3fa52a0f56b87506f38cf7bd3f9442b3a0",
-                "reference": "8e03ca3fa52a0f56b87506f38cf7bd3f9442b3a0",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/8a721a5f2553c6c3482b1c5b22ed60fe94dd63ed",
+                "reference": "8a721a5f2553c6c3482b1c5b22ed60fe94dd63ed",
                 "shasum": ""
             },
             "require": {
@@ -2343,7 +2343,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-05-16 08:49:21"
+            "time": "2018-06-21 11:10:19"
         },
         {
             "name": "symfony/polyfill-ctype",
