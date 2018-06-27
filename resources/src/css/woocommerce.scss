@@ -22,14 +22,18 @@
 
 .woocommerce-MyAccount-content,
 .woocommerce-MyAccount-content > section[class^="woocommerce-"],
-.woocommerce-MyAccount-content > header,
 .woocommerce-checkout,
 .woocommerce-order,
 .woocommerce-order > section[class^="woocommerce-"] {
   @include _content();
 
-  h2[class^="woocommerce-"] {
+  > h2,
+  > header > h2 {
     @include _margin-bottom(.5);
+  }
+
+  > header + .shop_table {
+    @include _margin-top(.5);
   }
 }
 
