@@ -6,12 +6,13 @@
  */
 
 add_action( 'wp_loaded', function() {
-	$includes = array(
+	$includes = [
+		'/../../assets/css',
 		'/../../assets/css/foundation/*',
 		'/../../assets/css/layout/*',
 		'/../../assets/css/object/component/*',
 		'/../../assets/css/object/project/*',
-	);
+	];
 	foreach ( $includes as $include ) {
 		foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
 			include_once( $file );

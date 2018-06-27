@@ -130,3 +130,29 @@ add_action( 'customize_preview_init', function() {
 		true
 	);
 } );
+
+/**
+ * Enqueue Woocommerce style
+ *
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+	if ( ! class_exists( 'woocommerce' ) ) {
+		return;
+	}
+
+	$relative_path = '/assets/css/woocommerce.min.css';
+	$src  = get_theme_file_uri( $relative_path );
+	$path = get_theme_file_path( $relative_path );
+
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
+
+	wp_enqueue_style(
+		snow_monkey_get_main_style_handle() . '-woocommerce',
+		$src,
+		[ snow_monkey_get_main_style_handle() ],
+		filemtime( $path )
+	);
+} );

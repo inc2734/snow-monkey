@@ -1,3 +1,7 @@
+@charset 'utf-8';
+
+@import 'core/core';
+
 .woocommerce-input-wrapper,
 .quantity,
 .woocommerce-EditAccountForm,
@@ -68,6 +72,11 @@
   max-height: 37px;
 }
 
-.woocommerce-Tabs-panel {
+.woocommerce-Tabs-panel,
+.related.products {
   @include entry-content();
+}
+
+.related.products {
+  @include _margin-top(2);
 }
