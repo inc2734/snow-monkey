@@ -47,7 +47,7 @@ new Core();
  * Sets the content width in pixels, based on the theme's design and stylesheet.
  */
 if ( ! isset( $content_width ) ) {
-	$content_width = apply_filters( 'snow_monkey_content_width', 1152 );
+	$content_width = apply_filters( 'snow_monkey_content_width', 1220 );
 }
 
 /**
