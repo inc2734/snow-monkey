@@ -126,4 +126,36 @@
       background-color: darken($color-accent, 5%);
     }
   }
+
+  .bypostauthor & {
+    align-items: flex-end;
+
+    @include _media-min(md) {
+      align-items: flex-start;
+      flex-direction: row-reverse;
+    }
+
+    &__figure {
+      @include _media-min(md) {
+        margin: 0 0 0 20px;
+      }
+    }
+
+    &__body {
+      &::before,
+      &::after {
+        left: auto;
+        right: 24px;
+      }
+
+      @include _media-min(md) {
+        @include _balloon-triangle(right, 10px, #fff, 1px, _light($_color-gray));
+
+        &::before,
+        &::after {
+          top: 28px;
+        }
+      }
+    }
+  }
 }
