@@ -1,6 +1,5 @@
 .#{$_prefix}l-front-page-widget-area {
-  .#{$_prefix}l-body--right-sidebar &,
-  .#{$_prefix}l-body--left-sidebar & {
+  [data-has-sidebar="true"] & {
     &__item:not(:first-child) {
       @include _margin-top(1.5);
 

@@ -58,15 +58,13 @@
       }
     }
   }
-}
 
-.#{$_prefix}l-body--right-sidebar,
-.#{$_prefix}l-body--left-sidebar,
-.#{$_prefix}l-body--one-column-slim {
-  .#{$_prefix}c-entries--rich-media {
-    .#{$_prefix}c-entries__item {
-      @include _media-min(lg) {
-        @include _row__col--width(50%);
+  [data-is-slim-width="true"] & {
+    &--rich-media {
+      .#{$_prefix}c-entries__item {
+        @include _media-min(lg) {
+          @include _row__col--width(50%);
+        }
       }
     }
   }

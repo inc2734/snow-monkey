@@ -11,9 +11,13 @@
  * @return string
  */
 function snow_monkey_get_contents_inner_modifier() {
-	if ( ! in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
-		if ( is_archive() || is_home() || is_search() ) {
-			return 'l-contents__inner--no-top-margin';
+	if ( is_archive() || is_home() || is_search() ) {
+		if ( ! in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
+			$archive_page_layout = get_theme_mod( 'archive-page-layout' );
+
+			if ( false !== strpos( $archive_page_layout, 'one-column' ) ) {
+				return 'l-contents__inner--no-top-margin';
+			}
 		}
 	}
 

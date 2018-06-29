@@ -14,10 +14,7 @@
       margin-bottom: 0 !important;
     }
 
-    .#{$_prefix}l-body--right-sidebar &,
-    .#{$_prefix}l-body--left-sidebar &,
-    .#{$_prefix}l-body--one-column &,
-    .#{$_prefix}l-body--one-column-slim & {
+    [data-is-fluid-template="false"] & {
       @include _margin-bottom(1);
 
       @include _media-min(lg) {
@@ -31,14 +28,10 @@
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 
-  /**
-   * Right sidebar
-   */
-  .#{$_prefix}l-body--right-sidebar & {
+  [data-has-sidebar="true"] & {
     &__inner {
       @include _media-min(lg) {
         display: flex;
-        flex-direction: row;
         flex-wrap: nowrap;
       }
     }
@@ -47,15 +40,14 @@
       flex: 1 1 0%;
 
       @include _media-min(lg) {
-        @include _margin(0, 2, 0, 0);
         flex: none;
         width: calc(100% - 336px - #{_space(2)});
       }
     }
 
     &__sidebar {
-      @include _margin(1, 0, 0);
       flex: 1 1 0%;
+      @include _margin(1, 0, 0);
 
       @include _media-min(lg) {
         margin: 0;
@@ -66,35 +58,35 @@
   }
 
   /**
+   * Right sidebar
+   */
+  .#{$_prefix}l-body--right-sidebar & {
+    &__inner {
+      @include _media-min(lg) {
+        flex-direction: row;
+      }
+    }
+
+    &__main {
+      @include _media-min(lg) {
+        @include _margin(0, 2, 0, 0);
+      }
+    }
+  }
+
+  /**
    * Left sidebar
    */
   .#{$_prefix}l-body--left-sidebar & {
     &__inner {
       @include _media-min(lg) {
-        display: flex;
         flex-direction: row-reverse;
-        flex-wrap: nowrap;
       }
     }
 
     &__main {
-      flex: 1 1 0%;
-
       @include _media-min(lg) {
         @include _margin(0, 0, 0, 2);
-        flex: none;
-        width: calc(100% - 336px - #{_space(2)});
-      }
-    }
-
-    &__sidebar {
-      @include _margin(1, 0, 0);
-      flex: 1 1 0%;
-
-      @include _media-min(lg) {
-        margin: 0;
-        flex: none;
-        width: 336px;
       }
     }
   }

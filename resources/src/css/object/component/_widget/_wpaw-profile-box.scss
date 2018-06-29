@@ -1,5 +1,4 @@
-.#{$_prefix}l-body--right-sidebar,
-.#{$_prefix}l-body--left-sidebar {
+[data-has-sidebar="true"] {
   .wpaw-profile-box {
     .wp-profile-box {
       &__figure {

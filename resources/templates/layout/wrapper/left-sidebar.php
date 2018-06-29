@@ -9,7 +9,12 @@
 <html <?php language_attributes(); ?> data-sticky-footer="true">
 <?php get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
-<body <?php body_class( [ 'l-body--left-sidebar' ] ); ?> id="body">
+<body <?php body_class( [ 'l-body--left-sidebar' ] ); ?> id="body"
+	data-has-sidebar="true"
+	data-is-fluid-template="false"
+	data-is-slim-width="true"
+	>
+
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
