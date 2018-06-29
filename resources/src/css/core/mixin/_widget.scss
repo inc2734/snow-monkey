@@ -1,0 +1,139 @@
+/**
+ * Widget title
+ */
+@mixin widget-title() {
+  @include _margin(0, 0, .5);
+  @include _font-size-line-height($_base-font-size-px);
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  &::before,
+  &::after {
+    display: block;
+    content: '';
+    height: $border-bottom-width;
+    background-color: $_color-black;
+    flex: 1 0 0%;
+    min-width: 20px;
+  }
+
+  &::before {
+    margin-right: .5em;
+  }
+
+  &::after {
+    margin-left: .5em;
+  }
+}
+
+/**
+ * Unstyled list base style
+ */
+@mixin widget-list-base() {
+  @include _list-unstyled();
+
+  > li + li {
+    @include _margin(.25, 0, 0);
+  }
+}
+
+/**
+ * Text link base style
+ */
+@mixin widget-link-base() {
+  color: $_color-text;
+  text-decoration: none;
+
+  @include _hover(lg) {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Item has children expander
+ */
+@mixin widget-has-children-expander() {
+  position: relative;
+
+  @include _hover(lg) {
+    .children-expander {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+/**
+ * Children
+ */
+@mixin widget-children() {
+  @keyframes widget_children_show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  display: none;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  @include _margin(.25, 0, 0);
+  @include _padding(.25, 0);
+
+  &[data-is-hidden="false"] {
+    display: block;
+    animation: widget_children_show .5s;
+  }
+}
+
+/**
+ * wpaw posts list base
+ */
+@mixin wpaw-posts-list-base() {
+  &__item {
+    &:not(:first-child) {
+      @include _margin(.5, 0, 0);
+    }
+
+    > a {
+      color: $_color-text;
+      @include _transition(color);
+
+      @include _hover(lg) {
+        color: $_color-gray;
+      }
+    }
+  }
+
+  &__title {
+    @include _margin(0, 0, .25);
+    @include _font-size($_base-font-size-px - 2);
+    @include _line-height($_base-font-size-px + 4);
+  }
+
+  &__taxonomy {
+    margin: 0 0 3px;
+    line-height: 1;
+  }
+
+  &__term {
+    background-color: $color-accent;
+  }
+
+  &__date {
+    @include _font-size-line-height(11px);
+  }
+}
+
+/**
+ * Full width
+ */
+@mixin widget-full-width() {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+}

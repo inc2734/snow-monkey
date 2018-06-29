@@ -25,3 +25,8 @@ $cfs->register(
 	'background-color: ' . $cfs->darken( $accent_color, 0.05 ),
 	'@media (min-width: 64em)'
 );
+
+$cfs->register(
+	'.wpaw-pr-box__title::after',
+	'background-color: ' . $accent_color
+);

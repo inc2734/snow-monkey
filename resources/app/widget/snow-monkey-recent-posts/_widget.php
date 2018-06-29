@@ -26,12 +26,6 @@ if ( ! $recent_posts ) {
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
 
-	<?php if ( $instance['title'] ) : ?>
-		<?php echo wp_kses_post( $args['before_title'] ); ?>
-			<?php echo esc_html( $instance['title'] ); ?>
-		<?php echo wp_kses_post( $args['after_title'] ); ?>
-	<?php endif; ?>
-
 	<div
 		class="snow-monkey-recent-posts"
 		id="snow-monkey-recent-posts-<?php echo esc_attr( $args['widget_id'] ); ?>"
@@ -42,6 +36,18 @@ if ( ! $recent_posts ) {
 		$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 		$archive_layout  = $instance['layout'];
 		?>
+
+		<?php if ( $instance['title'] ) : ?>
+			<?php
+			$title_class = 'c-widget__title';
+			if ( in_array( $args['id'], [ 'front-page-top-widget-area', 'front-page-bottom-widget-area', 'archive-top-widget-area' ] ) ) {
+				$title_class = 'snow-monkey-recent-posts__title';
+			}
+			?>
+			<h2 class="<?php echo esc_attr( $title_class ); ?>">
+				<?php echo esc_html( $instance['title'] ); ?>
+			</h2>
+		<?php endif; ?>
 
 		<ul class="c-entries c-entries--<?php echo esc_attr( $archive_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
 			<?php foreach ( $recent_posts as $post ) : ?>

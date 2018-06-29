@@ -2,54 +2,6 @@
   padding: 0;
 }
 
-@mixin showcase-md-width() {
-  &--format-1,
-  &--format-2 {
-    .wpaw-showcase__inner {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .wpaw-showcase__figure {
-      flex: 0 0 auto;
-      margin-top: 0;
-      margin-right: 0;
-      margin-left: 0;
-      max-width: 50%;
-      flex-wrap: nowrap;
-    }
-
-    .wpaw-showcase__body {
-      flex: 1 1 0;
-    }
-
-    .wpaw-showcase__action {
-      text-align: left;
-    }
-  }
-
-  &--format-1 {
-    .wpaw-showcase__inner {
-      flex-direction: row;
-    }
-  }
-
-  &--format-2 {
-    .wpaw-showcase__inner {
-      flex-direction: row-reverse;
-    }
-  }
-
-  &--format-3 {
-    .wpaw-showcase__body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-}
-
 .wpaw-showcase {
   background-attachment: scroll;
   @include _padding(.75, 0);
@@ -62,7 +14,7 @@
     background-attachment: fixed;
   }
 
-  .wpaw-showcase__inner {
+  &__inner {
     @include _margin(0, -.5);
 
     @include _media-min(md) {
@@ -71,11 +23,9 @@
   }
 
   &__body {
-    @include _content(.5);
     @include _padding(0, .5);
 
     @include _media-min(md) {
-      @include _content(1);
       @include _padding(0, 1);
     }
   }
@@ -89,11 +39,27 @@
     }
   }
 
+  &__title {
+    @include _margin-bottom(.5);
+
+    @include _media-min(md) {
+      @include _margin-bottom(1);
+    }
+  }
+
   &__lead {
     @include _content(.5);
 
     @include _media-min(md) {
       @include _content(1);
+    }
+  }
+
+  &__action {
+    @include _margin-top(.5);
+
+    @include _media-min(md) {
+      @include _margin-top(1);
     }
   }
 
@@ -108,6 +74,50 @@
     }
   }
 
+  &--format-1,
+  &--format-2 {
+    @include _media-min(md) {
+      .wpaw-showcase__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .wpaw-showcase__figure {
+        flex: 0 0 auto;
+        margin-top: 0;
+        margin-right: 0;
+        margin-left: 0;
+        max-width: 50%;
+        flex-wrap: nowrap;
+      }
+
+      .wpaw-showcase__body {
+        flex: 1 1 0;
+      }
+
+      .wpaw-showcase__action {
+        text-align: left;
+      }
+    }
+  }
+
+  &--format-1 {
+    @include _media-min(md) {
+      .wpaw-showcase__inner {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &--format-2 {
+    @include _media-min(md) {
+      .wpaw-showcase__inner {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
   &--format-3 {
     .wpaw-showcase__figure {
       @include _margin-bottom(-.75); // equal .wpaw-showcase bottom padding
@@ -116,25 +126,54 @@
         @include _margin-bottom(-1); // equal .wpaw-showcase bottom padding
       }
     }
+
+    .wpaw-showcase__body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
-  @include _media-only(md) {
-    @include showcase-md-width();
+  .#{$_prefix}l-contents__sidebar &,
+  .#{$_prefix}l-footer-widget-area & {
+    @include _media-min(lg) {
+      .wpaw-showcase__inner {
+        display: block;
+      }
+
+      .wpaw-showcase__figure {
+        @include _margin(1, 0, 0);
+        max-width: none;
+      }
+
+      .wpaw-showcase__title {
+        @include _margin-bottom(.5);
+      }
+
+      .wpaw-showcase_lead {
+        @include _content(.5);
+      }
+
+      .wpaw-showcase_action {
+        @include _margin-top(.5);
+      }
+    }
   }
 
-  // front page widget areas
+  // Main area widget areas of 1column templates
+  .#{$_prefix}l-body--one-column .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column .#{$_prefix}l-front-page-widget-area &,
+  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area &,
+  .#{$_prefix}l-body--one-column-full .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column-full .#{$_prefix}l-front-page-widget-area & {
     @include widget-full-width();
   }
 
-  // main area widget areas
-  .#{$_prefix}l-contents__main & {
-    @include _media-min(md) {
-      @include showcase-md-width();
-    }
-
+  .#{$_prefix}l-body--one-column .#{$_prefix}l-contents__main &,
+  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-contents__main &,
+  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-contents__main &,
+  .#{$_prefix}l-body--one-column-full .#{$_prefix}l-contents__main & {
     @include _media-min(lg) {
       @include _padding(2, 0);
     }

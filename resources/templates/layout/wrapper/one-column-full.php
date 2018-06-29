@@ -19,6 +19,12 @@
 		<div class="l-contents" role="document">
 			<?php get_template_part( 'template-parts/infobar' ); ?>
 
+			<?php
+			if ( is_home() || is_archive() || is_search() ) {
+				get_template_part( 'template-parts/archive-top-widget-area' );
+			}
+			?>
+
 			<div class="l-contents__inner">
 				<main class="l-contents__main" role="main">
 					<?php $_view_controller->view(); ?>

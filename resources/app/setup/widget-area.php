@@ -125,9 +125,9 @@ add_action( 'widgets_init', function() {
 		'name'          => __( 'Top of the archive page', 'snow-monkey' ),
 		'description'   => __( 'This widgets are displayed top of the archive page.', 'snow-monkey' ),
 		'id'            => 'archive-top-widget-area',
-		'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h2 class="c-widget__title">',
+		'before_widget' => '<div class="l-archive-top-widget-area__item"><div id="%1$s" class="c-section %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h2 class="c-section__title">',
 		'after_title'   => '</h2>',
 	] );
 } );

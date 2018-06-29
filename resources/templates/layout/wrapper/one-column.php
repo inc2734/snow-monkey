@@ -27,6 +27,10 @@
 
 			<div class="c-container">
 				<?php
+				if ( is_home() || is_archive() || is_search() ) {
+					get_template_part( 'template-parts/archive-top-widget-area' );
+				}
+
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
 					get_template_part( 'template-parts/breadcrumbs' );
 				}

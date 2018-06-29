@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 ?>
-<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
-
 <div class="c-entry">
 	<div class="c-entry__content">
 

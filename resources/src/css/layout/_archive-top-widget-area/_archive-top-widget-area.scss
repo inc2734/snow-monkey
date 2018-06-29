@@ -1,4 +1,13 @@
 .#{$_prefix}l-archive-top-widget-area {
-  @include _content();
-  @include _margin(0, 0, 1.5);
+  .#{$_prefix}l-body--one-column-slim &,
+  .#{$_prefix}l-body--right-sidebar &,
+  .#{$_prefix}l-body--left-sidebar & {
+    &__item:not(:first-child) {
+      @include _margin-top(1.5);
+
+      @include _media-min(md) {
+        @include _margin-top(2);
+      }
+    }
+  }
 }

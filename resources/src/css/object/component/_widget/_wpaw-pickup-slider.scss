@@ -166,15 +166,15 @@
     transform: translate(100%, -50%);
   }
 
-  // front page widget area
+  // Main area widget areas of 1column templates
+  .#{$_prefix}l-body--one-column .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column .#{$_prefix}l-front-page-widget-area &,
+  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area &,
+  .#{$_prefix}l-body--one-column-full .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column-full .#{$_prefix}l-front-page-widget-area & {
     @include widget-full-width();
-  }
 
-  // main area widget areas
-  .#{$_prefix}l-contents__main & {
     &__item-title {
       @include _media-min(md) {
         @include _font-size-line-height($_base-font-size * 2);

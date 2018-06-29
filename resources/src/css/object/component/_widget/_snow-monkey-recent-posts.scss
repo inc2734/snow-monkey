@@ -1,4 +1,8 @@
 .snow-monkey-recent-posts {
+  &__title {
+    @include section-title();
+  }
+
   &__action {
     @include _margin(1, 0, 0);
     text-align: center;
@@ -13,12 +17,9 @@
     font-weight: bold;
     width: auto;
   }
-}
 
-.#{$_prefix}l-body--right-sidebar .#{$_prefix}l-contents__sidebar,
-.#{$_prefix}l-body--left-sidebar .#{$_prefix}l-contents__sidebar,
-.#{$_prefix}l-footer-widget-area {
-  .snow-monkey-recent-posts {
+  .#{$_prefix}l-contents__sidebar &,
+  .#{$_prefix}l-footer-widget-area & {
     @include _media-min(lg) {
       .#{$_prefix}c-entries--rich-media {
         @include _media-min(lg) {

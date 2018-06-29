@@ -7,22 +7,26 @@
   }
 
   &__title {
-    @include _margin(0, 0, 1);
-    @include _font-size-line-height($_base-font-size * 1.5);
-    text-align: center;
+    @include widget-title();
+  }
+}
 
-    @include _media-min(lg) {
-      @include _margin(0, 0, 1.5);
-      @include _font-size-line-height($_base-font-size * 2);
-    }
+@mixin section-title() {
+  @include _margin(0, 0, 1);
+  @include _font-size-line-height($_base-font-size * 1.5);
+  text-align: center;
 
-    &::after {
-      @include _margin(.25, auto, 0);
-      content: '';
-      display: block;
-      width: 60px;
-      height: 1px;
-      background-color: $color-accent;
-    }
+  @include _media-min(lg) {
+    @include _margin(0, 0, 1.5);
+    @include _font-size-line-height($_base-font-size * 2);
+  }
+
+  &::after {
+    @include _margin(.25, auto, 0);
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: $color-accent;
   }
 }

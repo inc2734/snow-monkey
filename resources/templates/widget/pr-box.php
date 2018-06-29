@@ -29,11 +29,15 @@
 		<div class="wpaw-pr-box__inner">
 
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
-				<div class="wpaw-pr-box__title">
-					<?php echo wp_kses_post( $args['before_title'] ); ?>
-						<?php echo esc_html( $instance['title'] ); ?>
-					<?php echo wp_kses_post( $args['after_title'] ); ?>
-				</div>
+				<?php
+				$title_class = 'c-widget__title';
+				if ( in_array( $args['id'], [ 'front-page-top-widget-area', 'front-page-bottom-widget-area', 'archive-top-widget-area' ] ) ) {
+					$title_class = 'wpaw-pr-box__title';
+				}
+				?>
+				<h2 class="<?php echo esc_attr( $title_class ); ?>">
+					<?php echo esc_html( $instance['title'] ); ?>
+				</h2>
 			<?php endif; ?>
 
 			<?php if ( ! empty( $instance['lead'] ) ) : ?>
@@ -42,9 +46,9 @@
 				</div>
 			<?php endif; ?>
 
-			<div class="wpaw-pr-box__row wpaw-pr-box__row--<?php echo esc_attr( $instance['sm-columns'] ); ?> wpaw-pr-box__row--md-<?php echo esc_attr( $instance['md-columns'] ); ?> wpaw-pr-box__row--lg-<?php echo esc_attr( $instance['lg-columns'] ); ?>">
+			<div class="wpaw-pr-box__row c-row c-row--margin">
 				<?php foreach ( $instance['items'] as $item ) : ?>
-					<div class="wpaw-pr-box__item">
+					<div class="wpaw-pr-box__item c-row__col c-row__col--1-<?php echo esc_attr( $instance['sm-columns'] ); ?> c-row__col--md-1-<?php echo esc_attr( $instance['md-columns'] ); ?> c-row__col--lg-1-<?php echo esc_attr( $instance['lg-columns'] ); ?>">
 						<?php if ( ! empty( $item['src'] ) ) : ?>
 							<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $instance['thumbnail-aspect-ratio'] ); ?>"
 								style="background-image: url( <?php echo esc_url( wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] ) ); ?> );"
