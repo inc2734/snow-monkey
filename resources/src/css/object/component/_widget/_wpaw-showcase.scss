@@ -163,17 +163,14 @@
   // Main area widget areas of 1column templates
   .#{$_prefix}l-body--one-column .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column .#{$_prefix}l-front-page-widget-area &,
+  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-archive-top-widget-area &,
+  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-front-page-widget-area &,
   .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-front-page-widget-area &,
   .#{$_prefix}l-body--one-column-full .#{$_prefix}l-archive-top-widget-area &,
   .#{$_prefix}l-body--one-column-full .#{$_prefix}l-front-page-widget-area & {
     @include widget-full-width();
-  }
 
-  .#{$_prefix}l-body--one-column .#{$_prefix}l-contents__main &,
-  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-contents__main &,
-  .#{$_prefix}l-body--one-column-fluid .#{$_prefix}l-contents__main &,
-  .#{$_prefix}l-body--one-column-full .#{$_prefix}l-contents__main & {
     @include _media-min(lg) {
       @include _padding(2, 0);
     }
@@ -183,6 +180,17 @@
         @include _media-min(lg) {
           @include _margin-bottom(-2);
         }
+      }
+    }
+  }
+
+  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-archive-top-widget-area &,
+  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-front-page-widget-area & {
+    &__inner {
+      @include _media-min(lg) {
+        margin-right: auto;
+        margin-left: auto;
+        max-width: calc(#{$one-column-slim-max-width} + #{_space(1)} * 2);
       }
     }
   }

@@ -17,20 +17,12 @@
 	</header>
 
 	<div class="c-entry__content">
-		<?php if ( term_description() ) : ?>
-			<div class="p-term-description">
-				<?php echo wp_kses_post( term_description() ); ?>
-			</div>
-		<?php endif; ?>
-
 		<div class="p-archive">
 			<?php
-			$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
-			$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 			$archive_layout  = get_theme_mod( 'archive-layout' );
 			?>
 
-			<ul class="c-entries c-entries--<?php echo esc_attr( $archive_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
+			<ul class="c-entries c-entries--<?php echo esc_attr( $archive_layout ); ?>">
 				<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
 					<li class="c-entries__item">

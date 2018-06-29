@@ -19,13 +19,7 @@
 		<div class="l-contents" role="document">
 			<?php get_template_part( 'template-parts/infobar' ); ?>
 
-			<?php
-			if ( is_home() || is_archive() || is_search() ) {
-				get_template_part( 'template-parts/archive-top-widget-area' );
-			}
-			?>
-
-			<div class="l-contents__inner">
+			<div class="l-contents__inner <?php echo esc_attr( snow_monkey_get_contents_inner_modifier() ); ?>">
 				<main class="l-contents__main" role="main">
 					<?php $_view_controller->view(); ?>
 				</main>

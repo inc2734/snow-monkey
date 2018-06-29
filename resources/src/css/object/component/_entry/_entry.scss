@@ -1,16 +1,4 @@
 .#{$_prefix}c-entry {
-  .home.#{$_prefix}l-body--one-column-slim &,
-  .home.#{$_prefix}l-body--right-sidebar &,
-  .home.#{$_prefix}l-body--left-sidebar & {
-    > * + * {
-      @include _margin-top(1.5);
-
-      @include _media-min(md) {
-        @include _margin-top(2);
-      }
-    }
-  }
-
   &__header {
     @include _margin(0, 0, 1);
     border-bottom: $border-bottom-width solid $_color-black;
@@ -48,5 +36,13 @@
   &__footer {
     @include _content();
     @include _margin(2, 0, 0);
+  }
+
+  * + & {
+    @include _margin-top(1.5);
+
+    @include _media-min(md) {
+      @include _margin-top(2);
+    }
   }
 }

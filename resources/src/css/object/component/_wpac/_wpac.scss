@@ -199,8 +199,8 @@
   }
 
   .#{$_prefix}l-body--one-column &,
-  .#{$_prefix}l-body--one-column-fluid &,
   .#{$_prefix}l-body--one-column-slim &,
+  .#{$_prefix}l-body--one-column-fluid &,
   .#{$_prefix}l-body--one-column-full & {
     margin-right: calc(50% - 50vw);
     margin-left: calc(50% - 50vw);

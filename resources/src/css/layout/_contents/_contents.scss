@@ -6,6 +6,14 @@
       @include _margin-top(2);
     }
 
+    &--no-top-margin {
+      margin-top: 0 !important;
+    }
+
+    &--no-bottom-margin {
+      margin-bottom: 0 !important;
+    }
+
     .#{$_prefix}l-body--right-sidebar &,
     .#{$_prefix}l-body--left-sidebar &,
     .#{$_prefix}l-body--one-column &,
@@ -15,13 +23,6 @@
       @include _media-min(lg) {
         @include _margin-bottom(2);
       }
-    }
-
-    .home.#{$_prefix}l-body--one-column &,
-    .#{$_prefix}l-body--one-column-fluid &,
-    .#{$_prefix}l-body--one-column-full & {
-      margin-top: 0;
-      margin-bottom: 0;
     }
   }
 
