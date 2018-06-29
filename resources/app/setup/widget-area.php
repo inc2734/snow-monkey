@@ -216,7 +216,7 @@ add_action( 'widgets_init', function() {
 		}
 
 		$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-		if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
+		if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
 			$params[0]['before_widget'] .= '<div class="c-container">';
 			$params[0]['after_widget']  .= '</div">';
 		}
@@ -247,7 +247,7 @@ add_action( 'widgets_init', function() {
 		}
 
 		$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-		if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
+		if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
 			$params[0]['before_widget'] .= '<div class="c-container">';
 			$params[0]['after_widget']  .= '</div">';
 		}

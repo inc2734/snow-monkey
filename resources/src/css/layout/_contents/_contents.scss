@@ -9,7 +9,6 @@
     .#{$_prefix}l-body--right-sidebar &,
     .#{$_prefix}l-body--left-sidebar &,
     .#{$_prefix}l-body--one-column &,
-    .#{$_prefix}l-body--one-column-fluid &,
     .#{$_prefix}l-body--one-column-slim & {
       @include _margin-bottom(1);
 
@@ -18,6 +17,7 @@
       }
     }
 
+    .home.#{$_prefix}l-body--one-column &,
     .#{$_prefix}l-body--one-column-fluid &,
     .#{$_prefix}l-body--one-column-full & {
       margin-top: 0;
@@ -96,17 +96,5 @@
         width: 336px;
       }
     }
-  }
-
-  /**
-   * One column
-   */
-  .#{$_prefix}l-body--one-column & {
-  }
-
-  /**
-   * One column (slim)
-   */
-  .#{$_prefix}l-body--one-column-slim & {
   }
 }
