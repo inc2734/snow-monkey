@@ -182,6 +182,10 @@
 .wpac-section {
   @include section();
 
+  &__title {
+    @include section-title();
+  }
+
   &--inverse {
     background-color: _lightest($_color-gray);
   }

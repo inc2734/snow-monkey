@@ -5,10 +5,6 @@
   @include _media-min(lg) {
     @include _padding(2, 0);
   }
-
-  &__title {
-    @include widget-title();
-  }
 }
 
 @mixin section-title() {
