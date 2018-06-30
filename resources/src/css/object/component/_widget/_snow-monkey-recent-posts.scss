@@ -18,8 +18,7 @@
     width: auto;
   }
 
-  .#{$_prefix}l-contents__sidebar &,
-  .#{$_prefix}l-footer-widget-area & {
+  [data-is-slim-widget-area="true"] & {
     @include _media-min(lg) {
       .#{$_prefix}c-entries--rich-media {
         @include _media-min(lg) {

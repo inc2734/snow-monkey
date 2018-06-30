@@ -34,7 +34,7 @@
   }
 
   &__footer {
-    @include _content();
+    @include items-gutter();
     @include _margin(2, 0, 0);
   }
 

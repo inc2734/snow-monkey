@@ -1,0 +1,5 @@
+@mixin items-gutter($coefficient: 1) {
+  > * + * {
+    @include _margin-top($_base-margin-bottom * $coefficient);
+  }
+}

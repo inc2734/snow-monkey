@@ -166,8 +166,7 @@
     transform: translate(100%, -50%);
   }
 
-  [data-has-sidebar="false"] .#{$_prefix}l-archive-top-widget-area &,
-  [data-has-sidebar="false"] .#{$_prefix}l-front-page-widget-area & {
+  [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
     @include widget-full-width();
 
     &__item-title {

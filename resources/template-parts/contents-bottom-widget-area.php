@@ -21,7 +21,11 @@ if ( ! is_active_sidebar( $post_type_sidebar_id ) || ! is_registered_sidebar( $p
 }
 ?>
 
-<div class="l-contents-bottom-widget-area">
+<div class="l-contents-bottom-widget-area"
+	data-is-slim-widget-area="false"
+	data-is-content-widget-area="false"
+	>
+
 	<?php dynamic_sidebar( $sidebar_id ); ?>
 	<?php dynamic_sidebar( $post_type_sidebar_id ); ?>
 </div>

@@ -27,13 +27,11 @@
     }
   }
 
-  .#{$_prefix}l-footer-widget-area & {
+  [data-is-slim-widget-area="true"] & {
     @include _font-size-line-height($_base-font-size-px - 2);
 
     &__title {
-      @include _margin(0, 0, .25);
       @include _font-size-line-height($_base-font-size-px);
-      font-weight: bold;
     }
   }
 }

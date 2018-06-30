@@ -5,8 +5,7 @@
     @include widget-title();
   }
 
-  [data-has-sidebar="true"] .#{$_prefix}l-front-page-widget-area &,
-  [data-has-sidebar="true"] .#{$_prefix}l-archive-top-widget-area & {
+  [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
     padding-top: 0;
     padding-bottom: 0;
   }

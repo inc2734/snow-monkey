@@ -24,8 +24,7 @@
   }
 
   &__sidebar {
-    @include _content();
-    @include _font-size-line-height($_base-font-size-px - 2);
+    @include items-gutter();
   }
 
   [data-has-sidebar="true"] & {

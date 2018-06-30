@@ -12,6 +12,10 @@ if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id 
 }
 ?>
 
-<div class="l-sidebar-widget-area">
+<div class="l-sidebar-widget-area"
+	data-is-slim-widget-area="true"
+	data-is-content-widget-area="false"
+	>
+
 	<?php dynamic_sidebar( $sidebar_id ); ?>
 </div>

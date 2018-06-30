@@ -15,10 +15,10 @@
   }
 
   &__inner {
-    @include _margin(0, -.5);
+    @include _margin(0, -.5); // equal .wpaw-showcase body padding
 
     @include _media-min(md) {
-      @include _margin(0, -1);
+      @include _margin(0, -1); // equal .wpaw-showcase body padding
     }
   }
 
@@ -134,8 +134,7 @@
     }
   }
 
-  .#{$_prefix}l-contents__sidebar &,
-  .#{$_prefix}l-footer-widget-area & {
+  [data-is-slim-widget-area="true"] & {
     @include _media-min(lg) {
       .wpaw-showcase__inner {
         display: block;
@@ -160,8 +159,7 @@
     }
   }
 
-  [data-has-sidebar="false"] .#{$_prefix}l-archive-top-widget-area &,
-  [data-has-sidebar="false"] .#{$_prefix}l-front-page-widget-area & {
+  [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
     @include widget-full-width();
 
     @include _media-min(lg) {
@@ -177,8 +175,7 @@
     }
   }
 
-  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-archive-top-widget-area &,
-  .#{$_prefix}l-body--one-column-slim .#{$_prefix}l-front-page-widget-area & {
+  .#{$_prefix}l-body--one-column-slim [data-is-content-widget-area="true"] & {
     &__inner {
       @include _media-min(lg) {
         margin-right: auto;
