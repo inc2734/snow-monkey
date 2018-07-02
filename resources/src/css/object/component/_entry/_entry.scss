@@ -30,6 +30,7 @@
 
   &__content {
     @include _clearfix();
+    @include _margin(1, 0, 0);
     @include entry-content();
   }
 

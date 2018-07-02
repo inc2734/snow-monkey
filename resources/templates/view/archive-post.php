@@ -18,13 +18,13 @@
 		<h1 class="c-entry__title"><?php echo esc_html( $title ); ?></h1>
 	</header>
 
-	<div class="c-entry__content">
-		<?php if ( term_description() ) : ?>
-			<div class="p-term-description">
-				<?php echo wp_kses_post( term_description() ); ?>
-			</div>
-		<?php endif; ?>
+	<?php if ( term_description() ) : ?>
+		<div class="p-term-description c-entry__content">
+			<?php echo wp_kses_post( term_description() ); ?>
+		</div>
+	<?php endif; ?>
 
+	<div class="c-entry__content">
 		<div class="p-archive">
 			<?php
 			$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
