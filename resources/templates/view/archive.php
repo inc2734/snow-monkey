@@ -7,13 +7,7 @@
 ?>
 <div class="c-entry">
 	<header class="c-entry__header">
-		<?php
-		$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Breadcrumbs();
-		$breadcrumbs = $breadcrumbs->get();
-		$title_item  = end( $breadcrumbs );
-		$title       = array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
-		?>
-		<h1 class="c-entry__title"><?php echo esc_html( $title ); ?></h1>
+		<h1 class="c-entry__title"><?php echo esc_html( snow_monkey_get_page_title_from_breadcrumbs() ); ?></h1>
 	</header>
 
 	<div class="c-entry__content">
