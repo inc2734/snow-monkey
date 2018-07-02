@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-06-20 21:05+0900\n"
-"PO-Revision-Date: 2018-06-20 21:05+0900\n"
+"POT-Creation-Date: 2018-07-02 11:21+0900\n"
+"PO-Revision-Date: 2018-07-02 11:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -861,6 +861,14 @@ msgstr "お探しのページは移動したか削除されています。"
 #: templates/view/404.php:15
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
+
+#: templates/view/no-match.php:11
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
+"てみてください。"
 
 #. Theme Name of the plugin/theme
 msgid "Snow Monkey"

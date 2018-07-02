@@ -11,13 +11,19 @@
  * @return string
  */
 function snow_monkey_get_contents_inner_modifier() {
-	if ( is_archive() || is_home() || is_search() ) {
-		if ( ! in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
-			$archive_page_layout = get_theme_mod( 'archive-page-layout' );
+	if ( is_archive() || is_home() ) {
+		if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
+			return;
+		}
 
-			if ( false !== strpos( $archive_page_layout, 'one-column' ) ) {
-				return 'l-contents__inner--no-top-margin';
-			}
+		if ( ! is_active_sidebar( 'archive-top-widget-area' ) || ! is_registered_sidebar( 'archive-top-widget-area' ) ) {
+			return;
+		}
+
+		$archive_page_layout = get_theme_mod( 'archive-page-layout' );
+
+		if ( false !== strpos( $archive_page_layout, 'one-column' ) ) {
+			return 'l-contents__inner--no-top-margin';
 		}
 	}
 
