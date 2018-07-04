@@ -10,4 +10,8 @@
 
 $controller = new Mimizuku_Controller();
 $controller->layout( 'one-column-full' );
-$controller->render( 'content-full', get_post_type() );
+if ( is_front_page() ) {
+	$controller->render( 'front-page' );
+} else {
+	$controller->render( 'content-full', get_post_type() );
+}

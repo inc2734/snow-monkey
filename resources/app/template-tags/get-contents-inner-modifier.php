@@ -15,7 +15,7 @@ function snow_monkey_get_contents_inner_modifier() {
 	if ( is_front_page() && ! is_home() ) {
 		$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
 
-		if ( false !== strpos( $wp_page_template, 'one-column' ) ) {
+		if ( false !== strpos( $wp_page_template, 'one-column' ) || 'default' === $wp_page_template ) {
 			return 'l-contents__inner--no-top-margin l-contents__inner--no-bottom-margin';
 		}
 	} elseif ( is_home() ) {
