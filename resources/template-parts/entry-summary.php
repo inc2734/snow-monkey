@@ -21,8 +21,9 @@ if ( isset( $widget_layout ) ) {
 	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term->term_id ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php
+			$infeed_ads = get_option( 'mwt-google-infeed-ads' );
 			$background_image_size = 'medium';
-			if ( ! wp_is_mobile() ) {
+			if ( ! wp_is_mobile() || $infeed_ads ) {
 				$background_image_size = 'large';
 			}
 			$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
