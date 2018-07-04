@@ -201,9 +201,9 @@ add_action( 'widgets_init', function() {
  */
 add_action( 'widgets_init', function() {
 	register_sidebar( [
-		'name'          => __( 'Front page (Top of page)', 'snow-monkey' ),
+		'name'          => __( 'Homepage (Top of page)', 'snow-monkey' ),
 		'id'            => 'front-page-top-widget-area',
-		'description'   => __( 'This widgets are displayed in the static front page.', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the homepage.', 'snow-monkey' ),
 		'before_widget' => '<div class="l-front-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="c-section__title">',
@@ -232,9 +232,9 @@ add_action( 'widgets_init', function() {
  */
 add_action( 'widgets_init', function() {
 	register_sidebar( [
-		'name'          => __( 'Front page (Bottom of page)', 'snow-monkey' ),
+		'name'          => __( 'Homepage (Bottom of page)', 'snow-monkey' ),
 		'id'            => 'front-page-bottom-widget-area',
-		'description'   => __( 'This widgets are displayed in the static front page.', 'snow-monkey' ),
+		'description'   => __( 'This widgets are displayed in the homepage.', 'snow-monkey' ),
 		'before_widget' => '<div class="l-front-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
 		'after_widget'  => '</div></div>',
 		'before_title'  => '<h2 class="c-section__title">',
@@ -243,6 +243,68 @@ add_action( 'widgets_init', function() {
 
 	add_filter( 'dynamic_sidebar_params', function( $params ) {
 		if ( 'front-page-bottom-widget-area' !== $params[0]['id'] ) {
+			return $params;
+		}
+
+		$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+		if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
+			$params[0]['before_widget'] .= '<div class="c-container">';
+			$params[0]['after_widget']  .= '</div">';
+		}
+
+		return $params;
+	} );
+} );
+
+/**
+ * Add home page widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Posts page (Top of page)', 'snow-monkey' ),
+		'id'            => 'posts-page-top-widget-area',
+		'description'   => __( 'This widgets are displayed in the posts page.', 'snow-monkey' ),
+		'before_widget' => '<div class="l-posts-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h2 class="c-section__title">',
+		'after_title'   => '</h2>',
+	] );
+
+	add_filter( 'dynamic_sidebar_params', function( $params ) {
+		if ( 'posts-page-top-widget-area' !== $params[0]['id'] ) {
+			return $params;
+		}
+
+		$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+		if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
+			$params[0]['before_widget'] .= '<div class="c-container">';
+			$params[0]['after_widget']  .= '</div">';
+		}
+
+		return $params;
+	} );
+} );
+
+/**
+ * Add home page widget area
+ *
+ * @return void
+ */
+add_action( 'widgets_init', function() {
+	register_sidebar( [
+		'name'          => __( 'Posts page (Bottom of page)', 'snow-monkey' ),
+		'id'            => 'posts-page-bottom-widget-area',
+		'description'   => __( 'This widgets are displayed in the posts page.', 'snow-monkey' ),
+		'before_widget' => '<div class="l-posts-page-widget-area__item"><div id="%1$s" class="c-section %2$s">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<h2 class="c-section__title">',
+		'after_title'   => '</h2>',
+	] );
+
+	add_filter( 'dynamic_sidebar_params', function( $params ) {
+		if ( 'posts-page-bottom-widget-area' !== $params[0]['id'] ) {
 			return $params;
 		}
 

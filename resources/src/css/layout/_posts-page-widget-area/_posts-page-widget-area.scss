@@ -1,0 +1,27 @@
+.#{$_prefix}l-posts-page-widget-area {
+  [data-has-sidebar="true"] & {
+    &__item:not(:first-child) {
+      @include _margin-top(1.5);
+
+      @include _media-min(md) {
+        @include _margin-top(2);
+      }
+    }
+  }
+
+  &--top {
+    @include _margin-bottom(1.5);
+
+    @include _media-min(lg) {
+      @include _margin-bottom(2);
+    }
+  }
+
+  &--bottom {
+    @include _margin-top(1.5);
+
+    @include _media-min(lg) {
+      @include _margin-top(2);
+    }
+  }
+}

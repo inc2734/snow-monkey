@@ -1,4 +1,10 @@
 .#{$_prefix}l-archive-top-widget-area {
+  @include _margin-bottom(1.5);
+
+  @include _media-min(lg) {
+    @include _margin-bottom(2);
+  }
+
   [data-has-sidebar="true"] & {
     &__item:not(:first-child) {
       @include _margin-top(1.5);

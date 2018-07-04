@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 ?>
-<?php get_template_part( 'template-parts/archive-top-widget-area' ); ?>
-
 <div class="c-entry">
+	<?php get_template_part( 'template-parts/posts-page-widget-area-top' ); ?>
+
 	<div class="c-entry__content">
 
 		<div class="p-archive">
@@ -29,4 +29,6 @@
 
 		<?php get_template_part( 'template-parts/pagination' ); ?>
 	</div>
+
+	<?php get_template_part( 'template-parts/posts-page-widget-area-bottom' ); ?>
 </div>

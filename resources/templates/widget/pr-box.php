@@ -31,7 +31,14 @@
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
 				<?php
 				$title_class = 'c-widget__title';
-				if ( in_array( $args['id'], [ 'front-page-top-widget-area', 'front-page-bottom-widget-area', 'archive-top-widget-area' ] ) ) {
+				$content_widget_areas = [
+					'front-page-top-widget-area',
+					'front-page-bottom-widget-area',
+					'posts-page-top-widget-area',
+					'posts-page-bottom-widget-area',
+					'archive-top-widget-area',
+				];
+				if ( in_array( $args['id'], $content_widget_areas ) ) {
 					$title_class = 'wpaw-pr-box__title';
 				}
 				?>
