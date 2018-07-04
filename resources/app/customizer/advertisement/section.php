@@ -11,5 +11,5 @@ $customizer = Customizer_Framework::init();
 
 $customizer->section( 'advertisement', [
 	'title'    => __( 'Advertisement', 'snow-monkey' ),
-	'priority' => 1010,
+	'priority' => 1060,
 ] );

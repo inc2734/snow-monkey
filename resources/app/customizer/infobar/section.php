@@ -11,5 +11,5 @@ $customizer = Customizer_Framework::init();
 
 $customizer->section( 'infobar', [
 	'title'    => __( 'Infobar', 'snow-monkey' ),
-	'priority' => 940,
+	'priority' => 1020,
 ] );

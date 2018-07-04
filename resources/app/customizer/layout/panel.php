@@ -9,7 +9,7 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->panel( 'seo-sns', array(
-	'title'    => __( 'SEO/SNS', 'snow-monkey' ),
-	'priority' => 1040,
-) );
+$customizer->panel( 'layout', [
+	'title'    => __( 'Layout', 'snow-monkey' ),
+	'priority' => 1010,
+] );

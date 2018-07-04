@@ -8,8 +8,9 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
+$panel      = $customizer->get_panel( 'layout' );
 
-$customizer->panel( 'seo-sns', array(
-	'title'    => __( 'SEO/SNS', 'snow-monkey' ),
-	'priority' => 1040,
-) );
+$customizer->section( 'footer', [
+	'title'    => __( 'Footer', 'snow-monkey' ),
+	'priority' => 110,
+] );

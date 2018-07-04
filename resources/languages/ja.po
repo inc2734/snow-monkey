@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-07-02 11:21+0900\n"
-"PO-Revision-Date: 2018-07-02 11:21+0900\n"
+"POT-Creation-Date: 2018-07-04 12:54+0900\n"
+"PO-Revision-Date: 2018-07-04 12:56+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -75,37 +75,8 @@ msgstr ""
 msgid "Advertisement"
 msgstr "広告"
 
-#: app/customizer/archive-page/controls/layout.php:14
-#: app/customizer/singular-post/controls/layout.php:14
-msgid "Page layout"
-msgstr "ページレイアウト"
-
-#: app/customizer/archive-page/section.php:13
-msgid "Archive page settings"
-msgstr "アーカイブページの設定"
-
-#: app/customizer/archive-page/section.php:14
-msgid "Applies to archive page and search page."
-msgstr ""
-"アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適用"
-"されます。"
-
-#: app/customizer/category/controls/accent-color.php:17
-#, php-format
-msgid "Accent color of [ %1$s ] category"
-msgstr "カテゴリー [ %1$s ] のアクセントカラー"
-
-#: app/customizer/category/controls/header-image.php:17
-msgid "Header image"
-msgstr "ヘッダー画像"
-
-#: app/customizer/category/section.php:15
-#, php-format
-msgid "[ %1$s ] category settings"
-msgstr "[ %1$s ] カテゴリーの設定"
-
 #: app/customizer/design-skin/controls/design-skin.php:11
-#: app/customizer/design/controls/breadcrumbs-position.php:22
+#: app/customizer/layout/sections/breadcrumbs/controls/breadcrumbs-position.php:22
 #: app/template-tags/eyecatch-position-choices.php:18
 msgid "None"
 msgstr "なし"
@@ -119,136 +90,106 @@ msgstr "デザインスキン"
 msgid "If set this, please save and reload."
 msgstr "設定したら、保存してリロードしてください。"
 
-#: app/customizer/design/controls/accent-color.php:14
+#: app/customizer/design/panel.php:13
+msgid "Design"
+msgstr "デザイン"
+
+#: app/customizer/design/sections/base-design/controls/accent-color.php:15
+#: app/customizer/design/sections/category/controls/accent-color.php:18
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: app/customizer/design/controls/archive-layout.php:14
-msgid "Archive layout"
-msgstr "記事一覧レイアウト"
-
-#: app/customizer/design/controls/archive-layout.php:18
-#: app/widget/snow-monkey-recent-posts/_form.php:42
-msgid "Rich media"
-msgstr "リッチメディア"
-
-#: app/customizer/design/controls/archive-layout.php:19
-#: app/customizer/design/controls/header-layout.php:19
-#: app/widget/snow-monkey-recent-posts/_form.php:43
-msgid "Simple"
-msgstr "シンプル"
-
-#: app/customizer/design/controls/base-font-size.php:14
+#: app/customizer/design/sections/base-design/controls/base-font-size.php:15
 msgid "Base font size(px)"
 msgstr "基本の文字サイズ（px）"
 
-#: app/customizer/design/controls/breadcrumbs-position.php:14
-msgid "Breadcrumbs display position"
-msgstr "パンくずリストの表示位置"
-
-#: app/customizer/design/controls/breadcrumbs-position.php:18
-#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
-#: app/template-tags/eyecatch-position-choices.php:17
-msgid "Top of contents"
-msgstr "コンテンツの上"
-
-#: app/customizer/design/controls/breadcrumbs-position.php:19
-msgid "Top of contents ( Fit to content width )"
-msgstr "コンテンツの上（コンテンツ幅に合わせる）"
-
-#: app/customizer/design/controls/breadcrumbs-position.php:20
-#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
-#: app/setup/widget-area.php:170
-msgid "Bottom of contents"
-msgstr "コンテンツの下"
-
-#: app/customizer/design/controls/breadcrumbs-position.php:21
-msgid "Bottom of contents ( Fit to content width )"
-msgstr "コンテンツの下（コンテンツ幅に合わせる）"
-
-#: app/customizer/design/controls/custom-logo-scale.php:26
+#: app/customizer/design/sections/base-design/controls/custom-logo-scale.php:27
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 
-#: app/customizer/design/controls/default-page-header-image.php:14
+#: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
 
-#: app/customizer/design/controls/display-site-branding-description.php:15
+#: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:16
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
-#: app/customizer/design/controls/footer-layout.php:15
-msgid "Number of columns in the footer widget area"
-msgstr "フッターウィジェットエリアのカラム数"
+#: app/customizer/design/sections/base-design/controls/protected-more.php:15
+msgid ""
+"If the post using more tag and password protect at the same time, display "
+"contents before more tag"
+msgstr ""
+"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテン"
+"ツを表示する"
 
-#: app/customizer/design/controls/footer-layout.php:19
-msgid "1 column"
-msgstr "1カラム"
-
-#: app/customizer/design/controls/footer-layout.php:20
-msgid "2 columns"
-msgstr "2カラム"
-
-#: app/customizer/design/controls/footer-layout.php:21
-msgid "3 columns"
-msgstr "3カラム"
-
-#: app/customizer/design/controls/footer-layout.php:22
-msgid "4 columns"
-msgstr "4カラム"
-
-#: app/customizer/design/controls/header-content.php:15
-msgid "Header contents"
-msgstr "ヘッダーコンテンツ"
-
-#: app/customizer/design/controls/header-content.php:16
-msgid "Displayed at only PC size."
-msgstr "PC サイズでのみ表示されます。"
-
-#: app/customizer/design/controls/header-layout.php:15
-msgid "Header layout"
-msgstr "ヘッダーレイアウト"
-
-#: app/customizer/design/controls/header-layout.php:20
-msgid "One row"
-msgstr "1行"
-
-#: app/customizer/design/controls/header-layout.php:21
-msgid "Two rows"
-msgstr "2行"
-
-#: app/customizer/design/controls/header-layout.php:22
-msgid "Center logo"
-msgstr "中央ロゴ"
-
-#: app/customizer/design/controls/header-position-only-mobile.php:14
-msgid "Use header position setting for mobile only"
-msgstr "ヘッダー位置設定をモバイルのみに適用"
-
-#: app/customizer/design/controls/header-position.php:14
-msgid "Header position"
-msgstr "ヘッダー位置"
-
-#: app/customizer/design/controls/header-position.php:18
-msgid "Sticky"
-msgstr "固定"
-
-#: app/customizer/design/controls/header-position.php:19
-msgid "Overlay"
-msgstr "オーバレイ"
-
-#: app/customizer/design/controls/header-position.php:20
-msgid "Normal"
-msgstr "ノーマル"
-
-#: app/customizer/design/controls/pure-css-gallery.php:14
+#: app/customizer/design/sections/base-design/controls/pure-css-gallery.php:15
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
 
-#: app/customizer/design/section.php:13
-msgid "Design"
-msgstr "デザイン"
+#: app/customizer/design/sections/base-design/section.php:14
+msgid "Base design settings"
+msgstr "基本デザイン設定"
+
+#: app/customizer/design/sections/category/controls/header-image.php:18
+msgid "Header image"
+msgstr "ヘッダー画像"
+
+#: app/customizer/design/sections/category/section.php:16
+#: app/customizer/design/sections/page/section.php:14
+#: app/customizer/design/sections/post/section.php:14
+msgid "Page settings"
+msgstr "ページ設定"
+
+#: app/customizer/design/sections/category/section.php:17
+#: app/customizer/design/sections/page/section.php:15
+#: app/customizer/design/sections/post/section.php:15
+#: app/customizer/layout/sections/archive-page/section.php:15
+#: app/customizer/layout/sections/singular-post/section.php:15
+msgid "The setting items displayed by the page being displayed are switched."
+msgstr "表示中のページにより、表示される設定項目が切り替わります。"
+
+#: app/customizer/design/sections/category/section.php:17
+#, php-format
+msgid "Currently [ %1$s ] category settings is displayed."
+msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
+
+#: app/customizer/design/sections/page/controls/child-pages.php:16
+msgid "Display child pages in page"
+msgstr "固定ページにそのページの子ページ一覧を表示する"
+
+#: app/customizer/design/sections/page/controls/eyecatch.php:15
+#: app/customizer/design/sections/post/controls/eyecatch.php:15
+msgid "Eyecatch image"
+msgstr "アイキャッチ画像"
+
+#: app/customizer/design/sections/page/controls/eyecatch.php:16
+msgid "Select how to display the eyecatch image in page."
+msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/design/sections/page/section.php:15
+msgid "Currently page settings is displayed."
+msgstr "現在、固定ページの設定を表示しています。"
+
+#: app/customizer/design/sections/post/controls/content-outline.php:15
+msgid "Display contents outline in posts"
+msgstr "記事に目次を表示する"
+
+#: app/customizer/design/sections/post/controls/eyecatch.php:16
+msgid "Select how to display the eyecatch image in post."
+msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/design/sections/post/controls/profile-box.php:16
+msgid "Display profile box in posts"
+msgstr "記事にプロフィールボックスを表示する"
+
+#: app/customizer/design/sections/post/controls/related-posts.php:16
+msgid "Display related posts in posts"
+msgstr "記事に関連記事を表示する"
+
+#: app/customizer/design/sections/post/section.php:15
+msgid "Currently post settings is displayed."
+msgstr "現在、投稿の設定を表示しています。"
 
 #: app/customizer/infobar/controls/content.php:14
 msgid "Infobar content"
@@ -261,6 +202,143 @@ msgstr "お知らせバーリンク URL"
 #: app/customizer/infobar/section.php:13
 msgid "Infobar"
 msgstr "お知らせバー"
+
+#: app/customizer/layout/panel.php:13
+#: app/widget/snow-monkey-recent-posts/_form.php:34
+msgid "Layout"
+msgstr "レイアウト"
+
+#: app/customizer/layout/sections/archive-layout/controls/archive-layout.php:15
+#: app/customizer/layout/sections/archive-layout/section.php:14
+msgid "Archive layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/layout/sections/archive-layout/controls/archive-layout.php:18
+#: app/widget/snow-monkey-recent-posts/_form.php:42
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/layout/sections/archive-layout/controls/archive-layout.php:19
+#: app/customizer/layout/sections/header/controls/header-layout.php:20
+#: app/widget/snow-monkey-recent-posts/_form.php:43
+msgid "Simple"
+msgstr "シンプル"
+
+#: app/customizer/layout/sections/archive-page/controls/layout.php:15
+#: app/customizer/layout/sections/archive-page/section.php:14
+#: app/customizer/layout/sections/singular-post/controls/layout.php:15
+#: app/customizer/layout/sections/singular-post/section.php:14
+msgid "Page layout"
+msgstr "ページレイアウト"
+
+#: app/customizer/layout/sections/archive-page/section.php:15
+msgid "Currently archive page settings is displayed."
+msgstr "現在、アーカイブページの設定を表示しています。"
+
+#: app/customizer/layout/sections/breadcrumbs/controls/breadcrumbs-position.php:15
+msgid "Breadcrumbs display position"
+msgstr "パンくずリストの表示位置"
+
+#: app/customizer/layout/sections/breadcrumbs/controls/breadcrumbs-position.php:18
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
+#: app/template-tags/eyecatch-position-choices.php:17
+msgid "Top of contents"
+msgstr "コンテンツの上"
+
+#: app/customizer/layout/sections/breadcrumbs/controls/breadcrumbs-position.php:19
+msgid "Top of contents ( Fit to content width )"
+msgstr "コンテンツの上（コンテンツ幅に合わせる）"
+
+#: app/customizer/layout/sections/breadcrumbs/controls/breadcrumbs-position.php:20
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
+#: app/setup/widget-area.php:170
+msgid "Bottom of contents"
+msgstr "コンテンツの下"
+
+#: app/customizer/layout/sections/breadcrumbs/controls/breadcrumbs-position.php:21
+msgid "Bottom of contents ( Fit to content width )"
+msgstr "コンテンツの下（コンテンツ幅に合わせる）"
+
+#: app/customizer/layout/sections/breadcrumbs/section.php:14
+msgid "Breadcrumbs"
+msgstr "パンくずリスト"
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:16
+msgid "Number of columns in the footer widget area"
+msgstr "フッターウィジェットエリアのカラム数"
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:20
+msgid "1 column"
+msgstr "1カラム"
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:21
+msgid "2 columns"
+msgstr "2カラム"
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:22
+msgid "3 columns"
+msgstr "3カラム"
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:23
+msgid "4 columns"
+msgstr "4カラム"
+
+#: app/customizer/layout/sections/footer/section.php:14
+#: app/setup/widget-area.php:266
+msgid "Footer"
+msgstr "フッター"
+
+#: app/customizer/layout/sections/header/controls/header-content.php:16
+msgid "Header contents"
+msgstr "ヘッダーコンテンツ"
+
+#: app/customizer/layout/sections/header/controls/header-content.php:17
+msgid "Displayed at only PC size."
+msgstr "PC サイズでのみ表示されます。"
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:16
+msgid "Header layout"
+msgstr "ヘッダーレイアウト"
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:21
+msgid "One row"
+msgstr "1行"
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:22
+msgid "Two rows"
+msgstr "2行"
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:23
+msgid "Center logo"
+msgstr "中央ロゴ"
+
+#: app/customizer/layout/sections/header/controls/header-position-only-mobile.php:15
+msgid "Use header position setting for mobile only"
+msgstr "ヘッダー位置設定をモバイルのみに適用"
+
+#: app/customizer/layout/sections/header/controls/header-position.php:15
+msgid "Header position"
+msgstr "ヘッダー位置"
+
+#: app/customizer/layout/sections/header/controls/header-position.php:19
+msgid "Sticky"
+msgstr "固定"
+
+#: app/customizer/layout/sections/header/controls/header-position.php:20
+msgid "Overlay"
+msgstr "オーバレイ"
+
+#: app/customizer/layout/sections/header/controls/header-position.php:21
+msgid "Normal"
+msgstr "ノーマル"
+
+#: app/customizer/layout/sections/header/section.php:14
+msgid "Header"
+msgstr "ヘッダー"
+
+#: app/customizer/layout/sections/singular-post/section.php:15
+msgid "Currently singular post settings is displayed."
+msgstr "現在、個別投稿の設定を表示しています。"
 
 #: app/customizer/page-speed-optimization/controls/async-css.php:14
 msgid "Loads CSS asynchronously"
@@ -304,63 +382,6 @@ msgstr "ページ速度最適化"
 #: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:16
 msgid "This feature is a beta version."
 msgstr "この機能はベータ版です。"
-
-#: app/customizer/page/controls/child-pages.php:15
-msgid "Display child pages in page"
-msgstr "固定ページにそのページの子ページ一覧を表示する"
-
-#: app/customizer/page/controls/eyecatch.php:14
-#: app/customizer/post/controls/eyecatch.php:14
-msgid "Eyecatch image"
-msgstr "アイキャッチ画像"
-
-#: app/customizer/page/controls/eyecatch.php:15
-msgid "Select how to display the eyecatch image in page."
-msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
-
-#: app/customizer/page/section.php:13
-msgid "Page settings"
-msgstr "固定ページの設定"
-
-#: app/customizer/page/section.php:14
-msgid "Applies to page."
-msgstr "固定ページに適用されます。"
-
-#: app/customizer/post/controls/content-outline.php:14
-msgid "Display contents outline in posts"
-msgstr "記事に目次を表示する"
-
-#: app/customizer/post/controls/eyecatch.php:15
-msgid "Select how to display the eyecatch image in post."
-msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
-
-#: app/customizer/post/controls/profile-box.php:15
-msgid "Display profile box in posts"
-msgstr "記事にプロフィールボックスを表示する"
-
-#: app/customizer/post/controls/related-posts.php:15
-msgid "Display related posts in posts"
-msgstr "記事に関連記事を表示する"
-
-#: app/customizer/post/section.php:13
-msgid "Post settings"
-msgstr "投稿ページの設定"
-
-#: app/customizer/post/section.php:14
-msgid "Applies to post."
-msgstr "投稿ページに適用されます。"
-
-#: app/customizer/protected/controls/protected-more.php:14
-msgid ""
-"If the post using more tag and password protect at the same time, display "
-"contents before more tag"
-msgstr ""
-"more タグとパスワード保護を同時に使用している場合、more タグより前のコンテン"
-"ツを表示する"
-
-#: app/customizer/protected/section.php:13
-msgid "Password protected settings"
-msgstr "パスワード保護の設定"
 
 #: app/customizer/seo-sns/panel.php:13
 msgid "SEO/SNS"
@@ -580,14 +601,6 @@ msgstr "Twitter Cards"
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
-#: app/customizer/singular-post/section.php:13
-msgid "Singular post settings"
-msgstr "個別投稿の設定"
-
-#: app/customizer/singular-post/section.php:14
-msgid "Applies to post, page and custom post."
-msgstr "投稿ページ、固定ページ、カスタム投稿ページに適用されます。"
-
 #: app/customizer/title-tagline/controls/copyright.php:15
 #: template-parts/copyright.php:10
 msgid "Monkey Wrench"
@@ -741,10 +754,6 @@ msgstr "このウィジェットは固定フロントページに表示されま
 msgid "Front page (Bottom of page)"
 msgstr "フロントページ下部"
 
-#: app/setup/widget-area.php:266
-msgid "Footer"
-msgstr "フッター"
-
 #: app/setup/widget-area.php:268
 msgid "This widgets are displayed in the footer."
 msgstr "このウィジェットはフッターに表示されます。"
@@ -764,10 +773,6 @@ msgstr "タイトル"
 #: app/widget/snow-monkey-recent-posts/_form.php:22
 msgid "Number of posts"
 msgstr "表示する投稿数"
-
-#: app/widget/snow-monkey-recent-posts/_form.php:34
-msgid "Layout"
-msgstr "レイアウト"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:53
 msgid "Link URL"
@@ -909,6 +914,29 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "One column (fluid)"
 msgstr "1カラム（fluid）"
+
+#~ msgid "Applies to archive page and search page."
+#~ msgstr ""
+#~ "アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに"
+#~ "適用されます。"
+
+#~ msgid "Accent color of [ %1$s ] category"
+#~ msgstr "カテゴリー [ %1$s ] のアクセントカラー"
+
+#~ msgid "Applies to page."
+#~ msgstr "固定ページに適用されます。"
+
+#~ msgid "Post settings"
+#~ msgstr "投稿ページの設定"
+
+#~ msgid "Applies to post."
+#~ msgstr "投稿ページに適用されます。"
+
+#~ msgid "Password protected settings"
+#~ msgstr "パスワード保護の設定"
+
+#~ msgid "Applies to post, page and custom post."
+#~ msgstr "投稿ページ、固定ページ、カスタム投稿ページに適用されます。"
 
 #~ msgid "Menu"
 #~ msgstr "メニュー"

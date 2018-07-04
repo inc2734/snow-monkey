@@ -11,5 +11,5 @@ $customizer = Customizer_Framework::init();
 
 $customizer->section( 'design-skin', [
 	'title'    => __( 'Design skin', 'snow-monkey' ),
-	'priority' => 910,
+	'priority' => 1030,
 ] );
