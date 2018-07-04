@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-add_filter( 'excerpt_length', function ( $length ) {
+add_filter( 'excerpt_length', function( $length ) {
 	if ( 'rich-media' !== get_theme_mod( 'archive-layout' ) ) {
 		return $length;
 	}
