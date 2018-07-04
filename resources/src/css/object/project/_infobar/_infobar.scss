@@ -3,6 +3,8 @@
 
   &__container {
     @include _container();
+    margin-right: 0; // For IE11
+    margin-left: 0; // For IE11
   }
 
   &__content {
