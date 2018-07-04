@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-07-04 15:15+0900\n"
-"PO-Revision-Date: 2018-07-04 15:16+0900\n"
+"POT-Creation-Date: 2018-07-04 21:33+0900\n"
+"PO-Revision-Date: 2018-07-04 21:33+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -386,6 +386,11 @@ msgstr "この機能はベータ版です。"
 #: app/customizer/seo-sns/panel.php:13
 msgid "SEO/SNS"
 msgstr "SEO/SNS"
+
+#: app/customizer/seo-sns/sections/google-analytics/controls/for-logged-in.php:15
+#: app/customizer/seo-sns/sections/google-tag-manager/controls/for-logged-in.php:15
+msgid "Don't output tags to logged-in users"
+msgstr "ログイン中のユーザーにはタグを出力しない"
 
 #: app/customizer/seo-sns/sections/google-analytics/controls/tracking-id.php:15
 msgid "Tracking ID"

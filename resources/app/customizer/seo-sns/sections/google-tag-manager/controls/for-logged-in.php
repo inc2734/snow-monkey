@@ -11,12 +11,12 @@ $customizer = Customizer_Framework::init();
 $panel      = $customizer->get_panel( 'seo-sns' );
 $section    = $customizer->get_section( 'google-tag-manager' );
 
-$customizer->control( 'text', 'mwt-google-tag-manager-id', array(
-	'label'       => __( 'Tag Manager ID', 'snow-monkey' ),
-	'description' => __( 'e.g. GTM-X11X1XX', 'snow-monkey' ),
-	'type'        => 'option',
-	'priority'    => 100,
+$customizer->control( 'checkbox', 'mwt-google-tag-manager-for-loggedin', array(
+	'label'    => __( 'Don\'t output tags to logged-in users', 'snow-monkey' ),
+	'default'  => true,
+	'type'     => 'option',
+	'priority' => 110,
 ) );
 
-$control = $customizer->get_control( 'mwt-google-tag-manager-id' );
+$control = $customizer->get_control( 'mwt-google-tag-manager-for-loggedin' );
 $control->join( $section )->join( $panel );

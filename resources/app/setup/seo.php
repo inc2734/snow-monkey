@@ -16,6 +16,13 @@ new SEO();
  * @return string
  */
 add_filter( 'inc2734_wp_seo_google_tag_manager_id', function( $tag_manager_id ) {
+	$for_loggedin = get_option( 'mwt-google-tag-manager-for-loggedin' );
+	if ( $for_loggedin ) {
+		$output = apply_filters( 'snow_monkey_output_google_tag_manager', ! current_user_can( 'manage_options' ) );
+		if ( ! $output ) {
+			return;
+		}
+	}
 	return get_option( 'mwt-google-tag-manager-id' );
 } );
 
@@ -26,6 +33,13 @@ add_filter( 'inc2734_wp_seo_google_tag_manager_id', function( $tag_manager_id ) 
  * @return string
  */
 add_filter( 'inc2734_wp_seo_google_analytics_tracking_id', function( $tracking_id ) {
+	$for_loggedin = get_option( 'mwt-google-analytics-for-loggedin' );
+	if ( $for_loggedin ) {
+		$output = apply_filters( 'snow_monkey_output_google_analytics', ! current_user_can( 'manage_options' ) );
+		if ( ! $output ) {
+			return;
+		}
+	}
 	return get_option( 'mwt-google-analytics-tracking-id' );
 } );
 

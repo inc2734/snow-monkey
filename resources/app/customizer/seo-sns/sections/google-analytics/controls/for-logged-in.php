@@ -11,12 +11,12 @@ $customizer = Customizer_Framework::init();
 $panel      = $customizer->get_panel( 'seo-sns' );
 $section    = $customizer->get_section( 'google-analytics' );
 
-$customizer->control( 'text', 'mwt-google-analytics-tracking-id', array(
-	'label'       => __( 'Tracking ID', 'snow-monkey' ),
-	'description' => __( 'e.g. UA-1111111-11', 'snow-monkey' ),
-	'type'        => 'option',
-	'priority'    => 100,
+$customizer->control( 'checkbox', 'mwt-google-analytics-for-loggedin', array(
+	'label'    => __( 'Don\'t output tags to logged-in users', 'snow-monkey' ),
+	'default'  => true,
+	'type'     => 'option',
+	'priority' => 110,
 ) );
 
-$control = $customizer->get_control( 'mwt-google-analytics-tracking-id' );
+$control = $customizer->get_control( 'mwt-google-analytics-for-loggedin' );
 $control->join( $section )->join( $panel );
