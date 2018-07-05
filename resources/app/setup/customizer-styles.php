@@ -7,7 +7,7 @@
 
 add_action( 'wp_loaded', function() {
 	$includes = [
-		'/../../assets/css',
+		'/../../assets/css/dependency/*',
 		'/../../assets/css/foundation/*',
 		'/../../assets/css/layout/*',
 		'/../../assets/css/object/component/*',

@@ -15,7 +15,7 @@ $color-accent: #bd3c4f !default;
 $one-column-slim-max-width: 46rem !default;
 $border-bottom-width: 2px !default;
 
-@import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis-core';
+@import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis-core';
 
 @import 'mixin/btn';
 @import 'mixin/section';

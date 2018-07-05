@@ -71,7 +71,17 @@ gulp.task('img', ['remove-images'], function() {
  * Build CSS
  */
 gulp.task('css', ['remove-css'], function() {
+  runSequence('css:theme', 'css:dependency');
+});
+gulp.task('css:theme', function() {
   return sassCompile(dir.src.css + '/*.scss', dir.dist.css)
+    .on('end', function() {
+      return gulp.src(dir.src.css + '/**/*.php')
+        .pipe(gulp.dest(dir.dist.css));
+    });
+});
+gulp.task('css:dependency', function() {
+  return sassCompile(dir.src.css + '/dependency/**/*.scss', dir.dist.css + '/dependency/')
     .on('end', function() {
       return gulp.src(dir.src.css + '/**/*.php')
         .pipe(gulp.dest(dir.dist.css));
