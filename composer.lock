@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8cd126d25ff2582c4f67382c25fcbf6e",
-    "content-hash": "6e784d4be68df72a21817ae8c4d061e5",
+    "hash": "edfc000dfa03d2ebf0a38bc609635106",
+    "content-hash": "6496ebd9f0b9db701e9d4e15c88f59cd",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
