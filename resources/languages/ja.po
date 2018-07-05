@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-07-05 11:41+0900\n"
-"PO-Revision-Date: 2018-07-05 11:41+0900\n"
+"POT-Creation-Date: 2018-07-05 11:47+0900\n"
+"PO-Revision-Date: 2018-07-05 11:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -16,8 +16,8 @@ msgstr ""
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -41,8 +41,8 @@ msgid ""
 "Paste only the ins tag for ad units, only the contents of script tag for "
 "auto ads."
 msgstr ""
-"広告ユニットの場合は ins タグだけを、自動広告の場合は script タグの中身だけ"
-"を貼り付けてください。"
+"広告ユニットの場合は ins タグだけを、自動広告の場合は script タグの中身だけを"
+"貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-infeed-ads.php:14
 msgid "Google Infeed Ads"
@@ -150,8 +150,12 @@ msgstr "ページ設定"
 #: app/customizer/design/sections/post/section.php:15
 #: app/customizer/layout/sections/archive-page/section.php:15
 #: app/customizer/layout/sections/singular-post/section.php:15
-msgid "The setting items displayed by the page being displayed are switched."
-msgstr "表示中のページにより、表示される設定項目が切り替わります。"
+msgid ""
+"By the type of page displayed on the preview screen on the right side of the "
+"screen, the display setting items switched."
+msgstr ""
+"画面右側のプレビュー画面に表示されているページの種類によって、表示される設定"
+"項目が切り替わります。"
 
 #: app/customizer/design/sections/category/section.php:17
 #, php-format
@@ -936,13 +940,17 @@ msgstr "右サイドバー"
 msgid "One column (fluid)"
 msgstr "1カラム（fluid）"
 
+#~ msgid ""
+#~ "The setting items displayed by the page being displayed are switched."
+#~ msgstr "表示中のページにより、表示される設定項目が切り替わります。"
+
 #~ msgid "This widgets are displayed in the static front page."
 #~ msgstr "このウィジェットは固定フロントページに表示されます。"
 
 #~ msgid "Applies to archive page and search page."
 #~ msgstr ""
-#~ "アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに"
-#~ "適用されます。"
+#~ "アーカイブページ、カテゴリーアーカイブ、タグアーカイブ、検索結果ページに適"
+#~ "用されます。"
 
 #~ msgid "Accent color of [ %1$s ] category"
 #~ msgstr "カテゴリー [ %1$s ] のアクセントカラー"
