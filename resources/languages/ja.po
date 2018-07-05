@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-07-04 21:33+0900\n"
-"PO-Revision-Date: 2018-07-04 21:33+0900\n"
+"POT-Creation-Date: 2018-07-05 11:41+0900\n"
+"PO-Revision-Date: 2018-07-05 11:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -110,6 +110,10 @@ msgstr "スマホ時のカスタムロゴの拡大率（%）"
 #: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
+
+#: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php:16
+msgid "Display the search box in drawer navigation"
+msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
 
 #: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:16
 msgid "Display site description under the site logo"
