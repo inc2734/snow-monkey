@@ -120,10 +120,13 @@ function sassCompile(src, dest) {
  * Build javascript
  */
 gulp.task('js', function() {
-  runSequence('js:app', 'js:customize-control', 'js:customize-preview');
+  runSequence('js:app', 'js:wp-pure-css-gallery', 'js:customize-control', 'js:customize-preview');
 });
 gulp.task('js:app', function() {
   return jsCompile('app.js');
+});
+gulp.task('js:wp-pure-css-gallery', function() {
+  return jsCompile('wp-pure-css-gallery.js');
 });
 gulp.task('js:customize-control', function() {
   return jsCompile('customize-control.js');

@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5acda58d62223bd60c989113f246a097",
-    "content-hash": "0cca1921a52ac1684f36bfb63fe844b9",
+    "hash": "de0406a8bac50ead81c864c77c77e98b",
+    "content-hash": "cfc13184baca283fb62e7938fb2dc426",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.4.6",
+            "version": "2.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "d5449d05000d76d903fb38d888aef1a5bd6fcb72"
+                "reference": "245577a316f075d3e39bfa2f686314851a890135"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/d5449d05000d76d903fb38d888aef1a5bd6fcb72",
-                "reference": "d5449d05000d76d903fb38d888aef1a5bd6fcb72",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/245577a316f075d3e39bfa2f686314851a890135",
+                "reference": "245577a316f075d3e39bfa2f686314851a890135",
                 "shasum": ""
             },
             "require": {
@@ -33,7 +33,7 @@
                 "inc2734/wp-oembed-blog-card": ">=3.0.2",
                 "inc2734/wp-page-speed-optimization": ">=0.6.1",
                 "inc2734/wp-profile-box": ">=1.1.0",
-                "inc2734/wp-pure-css-gallery": ">=1.1.1",
+                "inc2734/wp-pure-css-gallery": ">=1.1.2",
                 "inc2734/wp-seo": ">=1.0.3",
                 "inc2734/wp-share-buttons": ">=1.0.6",
                 "inc2734/wp-view-controller": ">=4.0.6",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-07-04 13:07:40"
+            "time": "2018-07-05 06:11:14"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -573,16 +573,16 @@
         },
         {
             "name": "inc2734/wp-pure-css-gallery",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-pure-css-gallery.git",
-                "reference": "33c4ee4fd407d8651a97f57a937f9b442baaea6a"
+                "reference": "b3eb0764b7d8bcdc6767168838eec8ea9b1f3bef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/33c4ee4fd407d8651a97f57a937f9b442baaea6a",
-                "reference": "33c4ee4fd407d8651a97f57a937f9b442baaea6a",
+                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/b3eb0764b7d8bcdc6767168838eec8ea9b1f3bef",
+                "reference": "b3eb0764b7d8bcdc6767168838eec8ea9b1f3bef",
                 "shasum": ""
             },
             "require": {
@@ -611,7 +611,7 @@
                 }
             ],
             "description": "A library to change WordPress gallery to pure css gallery.",
-            "time": "2018-07-02 00:31:01"
+            "time": "2018-07-05 05:53:07"
         },
         {
             "name": "inc2734/wp-seo",
