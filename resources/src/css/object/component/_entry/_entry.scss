@@ -37,12 +37,4 @@
     @include items-gutter();
     @include _margin(2, 0, 0);
   }
-
-  * + & {
-    @include _margin-top(1.5);
-
-    @include _media-min(md) {
-      @include _margin-top(2);
-    }
-  }
 }
