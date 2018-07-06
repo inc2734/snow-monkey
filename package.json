@@ -29,8 +29,9 @@
     "rimraf": "^2.6.2",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.6",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "run-sequence": "^2.2.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "run-sequence": "^2.2.0",
+    "uglify-js": "^3.4.3"
   },
   "scripts": {
     "gulp": "gulp",
@@ -39,9 +40,16 @@
     "test": "composer test",
     "css:sass": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css -o resources/assets/css",
     "css:postcss": "postcss resources/assets/css/**/*.css --replace --no-map -c=postcss.config.js",
-    "css:dev": "npm run css:sass && npm run css:postcss",
-    "css:nano": "find resources/assets/css -name '*.css' | xargs -I{} cssnano {} {}.min --no-zindex && find resources/assets/css -name '*.css.min' | sed 'p;s/.css.min/.min.css/' | xargs -n2 mv",
+    "css:dev": "npm-run-all -s css:sass css:postcss",
+    "css:minify": "find resources/assets/css -name '*.css' | xargs -I{} cssnano {} {}.min --no-zindex && find resources/assets/css -name '*.css.min' | sed 'p;s/.css.min/.min.css/' | xargs -n2 mv",
     "css:php": "cpy '**/*.php' '../../assets/css' --cwd=resources/src/css --parents",
-    "css": "rimraf resources/assets/css && mkdir resources/assets/css && npm run css:dev && npm run css:nano && npm run css:php"
+    "css": "rimraf resources/assets/css && mkdir resources/assets/css && npm-run-all -s css:dev css:minify css:php",
+    "js:app": "rollup resources/src/js/app.js -f=iife -c=rollup.config.js -o resources/assets/js/app.js",
+    "js:customize-control": "rollup resources/src/js/customize-control.js -f=iife -c=rollup.config.js -o resources/assets/js/customize-control.js",
+    "js:customize-preview": "rollup resources/src/js/customize-preview.js -f=iife -c=rollup.config.js -o resources/assets/js/customize-preview.js",
+    "js:wp-pure-css-gallery": "rollup resources/src/js/wp-pure-css-gallery.js -f=iife -c=rollup.config.js -o resources/assets/js/wp-pure-css-gallery.js",
+    "js:dev": "npm-run-all -p js:app js:customize-control js:customize-preview js:wp-pure-css-gallery",
+    "js:minify": "find resources/assets/js -name '*.js' | xargs -I{} uglifyjs {} -o {}.min -mc && find resources/assets/js -name '*.js.min' | sed 'p;s/.js.min/.min.js/' | xargs -n2 mv",
+    "js": "rimraf resources/assets/js && mkdir resources/assets/js && npm-run-all -s js:dev js:minify"
   }
 }
