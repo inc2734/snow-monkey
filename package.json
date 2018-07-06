@@ -15,7 +15,9 @@
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
     "browser-sync": "^2.18.13",
+    "cpy-cli": "^2.0.0",
     "cssnano": "^3.10.0",
+    "cssnano-cli": "^1.0.5",
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.0",
     "gulp-rename": "^1.2.2",
@@ -23,6 +25,7 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-zip": "^4.0.0",
+    "postcss-cli": "^5.0.1",
     "rimraf": "^2.6.2",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.6",
@@ -33,6 +36,12 @@
     "gulp": "gulp",
     "start": "gulp",
     "build": "gulp build",
-    "test": "composer test"
+    "test": "composer test",
+    "css:sass": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css -o resources/assets/css",
+    "css:postcss": "postcss resources/assets/css/**/*.css --replace --no-map -c=postcss.config.js",
+    "css:dev": "npm run css:sass && npm run css:postcss",
+    "css:nano": "find resources/assets/css -name '*.css' | xargs -I{} cssnano {} {}.min --no-zindex && find resources/assets/css -name '*.css.min' | sed 'p;s/.css.min/.min.css/' | xargs -n2 mv",
+    "css:php": "cpy '**/*.php' '../../assets/css' --cwd=resources/src/css --parents",
+    "css": "rimraf resources/assets/css && mkdir resources/assets/css && npm run css:dev && npm run css:nano && npm run css:php"
   }
 }
