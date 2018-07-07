@@ -42,7 +42,7 @@
     "wpphpunit": "bash bin/wpphpunit.sh",
     "phpunit": "bash bin/phpunit.sh",
     "post-install-cmd": [
-      "yarn run gulp build"
+      "npm run build"
     ],
     "post-update-cmd": [
       "composer run post-install-cmd"

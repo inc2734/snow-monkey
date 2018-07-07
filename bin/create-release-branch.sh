@@ -23,7 +23,7 @@ ls | xargs rm -rf
 ls -la
 cd ../
 rm -rf node_modules
-yarn install
+npm install
 rm -rf vendor
 composer install --no-dev
 cp -r resources/. release/
