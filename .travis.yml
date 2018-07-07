@@ -39,10 +39,8 @@ after_success:
 - pwd
 - ls -al
 before_deploy:
-- git clone -b release --quiet git@github.com:inc2734/snow-monkey.git release
-- cp package.json yarn.lock release
-- cd release
-- npm install
+- rm -rf resources/vendor
+- composer install --no-dev
 - npm run zip
 - ls -la snow-monkey.zip
 - export RELEASE_FILE=$(ls snow-monkey.zip)
