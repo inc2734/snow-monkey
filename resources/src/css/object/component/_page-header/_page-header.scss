@@ -30,6 +30,9 @@
     }
   }
 
+  &__bgimage {
+  }
+
   > .#{$_prefix}c-container {
     margin: 0; // For IE11
   }

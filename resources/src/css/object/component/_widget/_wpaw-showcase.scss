@@ -3,15 +3,10 @@
 }
 
 .wpaw-showcase {
-  background-attachment: scroll;
   @include _padding(.75, 0);
 
   @include _media-min(md) {
     @include _padding(1, 0);
-  }
-
-  @include _media-min(lg) {
-    background-attachment: fixed;
   }
 
   &__inner {

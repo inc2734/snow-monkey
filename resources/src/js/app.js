@@ -47,8 +47,7 @@ $('.l-sidebar-sticky-widget-area').sticky({
   })()
 });
 
-$('.c-page-header').backgroundParallaxScroll();
-$('.wpaw-showcase').backgroundParallaxScroll();
+$('.js-bg-parallax').backgroundParallaxScroll();
 
 $('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
 $('.wpaw-slider__canvas').WpawSlider();
