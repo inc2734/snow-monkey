@@ -6,7 +6,8 @@
  */
 
 $terms = get_the_terms( get_the_ID(), 'category' );
-if ( ! is_wp_error( $terms ) ) {
+$term  = null;
+if ( $terms && ! is_wp_error( $terms ) ) {
 	$term  = $terms[0];
 }
 
@@ -18,7 +19,7 @@ if ( isset( $widget_layout ) ) {
 }
 ?>
 <a href="<?php the_permalink(); ?>">
-	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term->term_id ); ?>">
+	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term ? $term->term_id : 0 ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php
 			$background_image_size = ! wp_is_mobile() || get_option( 'mwt-google-infeed-ads' ) ? 'large' : 'medium';
