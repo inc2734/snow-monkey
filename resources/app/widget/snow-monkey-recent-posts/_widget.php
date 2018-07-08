@@ -16,6 +16,7 @@ $query_args = [
 ];
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_id, $query_args );
+$post_type  = empty( $query_args['post_type'] ) ? '' : $query_args['post_type'];
 
 $recent_posts = get_posts( $query_args );
 
@@ -61,7 +62,7 @@ if ( ! $recent_posts ) {
 				<?php setup_postdata( $post ); ?>
 				<li class="c-entries__item">
 					<?php
-					wpvc_get_template_part( 'template-parts/entry-summary', [
+					wpvc_get_template_part( 'template-parts/loop/entry-summary', $post_type, [
 						'widget_layout' => $instance['layout'],
 					] );
 					?>

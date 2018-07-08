@@ -37,7 +37,7 @@ if ( ! $use_matched_content ) {
 			<?php foreach ( $related_posts as $post ) : ?>
 				<?php setup_postdata( $post ); ?>
 				<li class="c-entries__item">
-					<?php get_template_part( 'template-parts/entry-summary' ); ?>
+					<?php get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 				</li>
 			<?php endforeach; ?>
 			<?php wp_reset_postdata( $post ); ?>

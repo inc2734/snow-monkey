@@ -27,7 +27,7 @@
 		?>
 
 		<?php
-		wpvc_get_template_part( 'template-parts/google-adsense', [
+		wpvc_get_template_part( 'template-parts/google-adsense', null, [
 			'position' => 'content-top',
 		] );
 		?>
@@ -66,7 +66,7 @@
 		?>
 
 		<?php
-		wpvc_get_template_part( 'template-parts/google-adsense', [
+		wpvc_get_template_part( 'template-parts/google-adsense', null, [
 			'position' => 'content-bottom',
 		] );
 		?>

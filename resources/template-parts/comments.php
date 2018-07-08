@@ -23,7 +23,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 					?>
 					<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 						<?php
-						wpvc_get_template_part( 'template-parts/comment', [
+						wpvc_get_template_part( 'template-parts/comment', null, [
 							'_comment' => $comment,
 							'_args'    => $args,
 							'_depth'   => $depth,

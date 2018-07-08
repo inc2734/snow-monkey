@@ -22,7 +22,7 @@ if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
 				'callback' => function() {
 					?>
 					<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
-						<?php wpvc_get_template_part( 'template-parts/trackback' ); ?>
+						<?php get_template_part( 'template-parts/trackback' ); ?>
 					<?php
 				},
 			] );

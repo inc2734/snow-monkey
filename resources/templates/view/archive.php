@@ -20,7 +20,7 @@
 				<?php while ( have_posts() ) : ?>
 					<?php the_post(); ?>
 					<li class="c-entries__item">
-						<?php get_template_part( 'template-parts/entry-summary' ); ?>
+						<?php get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 					</li>
 				<?php endwhile; ?>
 			</ul>

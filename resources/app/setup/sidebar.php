@@ -11,7 +11,7 @@
  * @return void
  */
 function snow_monkey_sidebar_add_google_adsense() {
-	wpvc_get_template_part( 'template-parts/google-adsense', [
+	wpvc_get_template_part( 'template-parts/google-adsense', null, [
 		'position' => 'sidebar-top',
 	] );
 }

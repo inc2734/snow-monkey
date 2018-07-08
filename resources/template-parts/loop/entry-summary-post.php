@@ -21,12 +21,8 @@ if ( isset( $widget_layout ) ) {
 	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term->term_id ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php
-			$infeed_ads = get_option( 'mwt-google-infeed-ads' );
-			$background_image_size = 'medium';
-			if ( ! wp_is_mobile() || $infeed_ads ) {
-				$background_image_size = 'large';
-			}
-			$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
+			$background_image_size = ! wp_is_mobile() || get_option( 'mwt-google-infeed-ads' ) ? 'large' : 'medium';
+			$background_image_url  = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
 			?>
 			<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
 			<?php if ( ! empty( $term ) ) : ?>
@@ -38,15 +34,7 @@ if ( isset( $widget_layout ) ) {
 				<h2 class="c-entry-summary__title">
 					<?php
 					if ( 'rich-media' === $layout ) {
-						$num_words = apply_filters( 'snow_monkey_entry_summary_title_num_words', class_exists( 'multibyte_patch' ) ? 40 : 80 );
-						if ( $num_words ) {
-							ob_start();
-							the_title();
-							$title = wp_trim_words( ob_get_clean(), $num_words );
-							echo esc_html( $title );
-						} else {
-							the_title();
-						}
+						snow_monkey_the_title_trimed();
 					} else {
 						the_title();
 					}
