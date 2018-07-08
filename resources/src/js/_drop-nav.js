@@ -20,21 +20,27 @@ export default class SnowMonkeyDropNav {
   }
 
   onScroll() {
+    let timer = null;
+
     $(window).scroll(() => {
-      if (this.min < $(window).width()) {
-        if (this.header.outerHeight() < $(window).scrollTop()) {
-          if (this._isUpdateVisibility()) {
-            this._hideGnav();
-            this._showDropNav();
-            return;
+      clearTimeout(timer);
+
+      setTimeout(() => {
+        if (this.min < $(window).width()) {
+          if (this.header.outerHeight() < $(window).scrollTop()) {
+            if (this._isUpdateVisibility()) {
+              this._hideGnav();
+              this._showDropNav();
+              return;
+            }
           }
         }
-      }
 
-      if (this._isUpdateVisibility()) {
-        this._showGnav();
-        this._hideDropNav();
-      }
+        if (this._isUpdateVisibility()) {
+          this._showGnav();
+          this._hideDropNav();
+        }
+      }, 500);
     });
   }
 

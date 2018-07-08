@@ -17,12 +17,18 @@ export default class SnowMonkeyPageTopScroll {
       this._updatePageTopBtnPosition();
     });
 
+    let timer = null;
+
     $(window).scroll(() => {
-      if (500 > $(window).scrollTop()) {
-        this.pageTop.attr('aria-hidden', 'true');
-      } else {
-        this.pageTop.attr('aria-hidden', 'false');
-      }
+      clearTimeout(timer);
+
+      setTimeout(() => {
+        if (500 > $(window).scrollTop()) {
+          this.pageTop.attr('aria-hidden', 'true');
+        } else {
+          this.pageTop.attr('aria-hidden', 'false');
+        }
+      }, 500);
     });
   }
 
