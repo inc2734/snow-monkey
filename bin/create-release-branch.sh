@@ -30,6 +30,10 @@ cp -r resources/. release/
 cd release
 ls -la
 
-git add -A
-git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
-git push origin release
+if [ -z "$(git status --porcelain)" ]; then
+  exit 0;
+else
+  git add -A
+  git commit -m "[ci skip] release branch update from travis $TRAVIS_COMMIT"
+  git push origin release
+fi
