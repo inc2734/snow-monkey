@@ -50,6 +50,6 @@
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=resources/src/img --parents",
     "build": "npm-run-all -p img packages && npm-run-all -p js css",
     "browsersync": "browser-sync start -p '127.0.0.1:8080' -f '**/*' 'resources/assets/**'",
-    "zip": "rimraf snow-monkey.zip && cp -R resources snow-monkey && zip -mr snow-monkey.zip snow-monkey -x '.*'"
+    "zip": "rimraf snow-monkey.zip && cp -R resources snow-monkey && zip -9 -qmr snow-monkey.zip snow-monkey -x '.*'"
   }
 }
