@@ -106,6 +106,18 @@
     .wpaw-pickup-slider__figure {
       @include _position(absolute, 0, -2em, 0, -2em);
     }
+
+    @at-root {
+      a#{&} {
+        @include _hover(lg) {
+          color: #000;
+          .wpaw-pickup-slider__item-more {
+            background-color: $color-accent;
+            border-color: $color-accent;
+          }
+        }
+      }
+    }
   }
 
   .slick-slide {

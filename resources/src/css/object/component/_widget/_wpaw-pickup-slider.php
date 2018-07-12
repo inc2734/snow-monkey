@@ -25,6 +25,19 @@ $cfs->register(
 );
 
 $cfs->register(
+	[
+		'a.wpaw-pickup-slider__item:hover .wpaw-pickup-slider__item-more',
+		'a.wpaw-pickup-slider__item:active .wpaw-pickup-slider__item-more',
+		'a.wpaw-pickup-slider__item:focus .wpaw-pickup-slider__item-more',
+	],
+	[
+		'background-color: ' . $accent_color,
+		'border-color: ' . $accent_color,
+	],
+	'@media (min-width: 64em)'
+);
+
+$cfs->register(
 	'.wpaw-pickup-slider .slick-arrow',
 	'background-color: ' . $accent_color
 );
