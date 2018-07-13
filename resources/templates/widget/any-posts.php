@@ -46,7 +46,11 @@ $recent_posts = get_posts( [
 						<?php endif; ?>
 
 						<div class="wpaw-any-posts__body">
-							<?php $terms = get_the_terms( get_the_ID(), 'category' ); ?>
+							<?php
+							$taxonomies = get_post_taxonomies( $post );
+							$taxonomy   = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
+							$terms      = ( $taxonomy ) ? get_the_terms( get_the_ID(), $taxonomy ) : [];
+							?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-any-posts__taxonomy">
 									<?php foreach ( $terms as $term ) : ?>
