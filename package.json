@@ -2,7 +2,7 @@
   "author": "inc2734",
   "license": "GPL-2.0+",
   "dependencies": {
-    "jquery.background-parallax-scroll": "^3.0.4",
+    "jquery.background-parallax-scroll": "^3.0.5",
     "jquery.smoothscroll": "^1.0.3",
     "jquery.sticky": "^0.2.1",
     "node-normalize-scss": "^8.0.0",
