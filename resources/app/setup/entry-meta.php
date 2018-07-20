@@ -76,11 +76,13 @@ function snow_monkey_entry_meta_items_categories() {
 		return;
 	}
 	?>
-	<li class="c-meta__item c-meta__item--categories">
-		<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'snow-monkey' ); ?></span>
-		<i class="fas fa-folder" aria-hidden="true"></i>
-		<a href="<?php echo esc_url( get_term_link( $categories[0] ) ); ?>"><?php echo esc_html( $categories[0]->name ); ?></a>
-	</li>
+	<?php foreach ( $categories as $category ) : ?>
+		<li class="c-meta__item c-meta__item--categories">
+			<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'snow-monkey' ); ?></span>
+			<i class="fas fa-folder" aria-hidden="true"></i>
+			<a href="<?php echo esc_url( get_term_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
+		</li>
+	<?php endforeach; ?>
 	<?php
 }
 add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_categories', 40 );
