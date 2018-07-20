@@ -89,6 +89,18 @@
     }
   }
 
+  [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
+    @include _media-max(md) {
+      @include widget-full-width();
+    }
+
+    &__item-title {
+      @include _media-only(md) {
+        @include _font-size-line-height($_base-font-size * 2);
+      }
+    }
+  }
+
   [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
     @include widget-full-width();
 

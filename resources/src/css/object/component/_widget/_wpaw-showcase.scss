@@ -154,6 +154,12 @@
     }
   }
 
+  [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
+    @include _media-max(md) {
+      @include widget-full-width();
+    }
+  }
+
   [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
     @include widget-full-width();
 

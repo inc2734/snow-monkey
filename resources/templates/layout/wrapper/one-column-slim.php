@@ -44,7 +44,7 @@
 					}
 					?>
 
-					<div class="l-contents__inner <?php echo esc_attr( snow_monkey_get_contents_inner_modifier() ); ?>">
+					<div class="l-contents__inner">
 						<main class="l-contents__main" role="main">
 							<?php $_view_controller->view(); ?>
 						</main>

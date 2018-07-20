@@ -60,6 +60,33 @@
     }
   }
 
+  [data-is-content-widget-area="false"] & {
+    &--chameleon {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
+    @include _media-max(md) {
+      @include widget-full-width();
+      @include _padding(1.5, 0);
+    }
+
+    &__inner {
+      @include _media-max(md) {
+        @include _container();
+      }
+    }
+
+    &--chameleon {
+      @include _media-min(lg) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
   [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
     @include widget-full-width();
     @include _padding(1.5, 0);
