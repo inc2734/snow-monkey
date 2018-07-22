@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-07-05 11:47+0900\n"
-"PO-Revision-Date: 2018-07-05 11:47+0900\n"
+"POT-Creation-Date: 2018-07-22 14:00+0900\n"
+"PO-Revision-Date: 2018-07-22 14:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -488,24 +488,38 @@ msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:23
+msgid "Google+"
+msgstr "Google+"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:24
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:24
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:25
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:25
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:26
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:26
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:27
 msgid "Feed"
 msgstr "フィード"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php:15
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/count-both.php:16
+msgid "Count both http and https"
+msgstr "http と httpsの両方をカウントする"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/count-both.php:17
+msgid ""
+"In the case of the http site, only http will be counted regardless of the "
+"setting."
+msgstr "httpサイトの場合、設定に関係なくhttpのみがカウントされます。"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:16
 msgid "Display position"
@@ -656,7 +670,7 @@ msgstr "更新日"
 msgid "Author"
 msgstr "著者"
 
-#: app/setup/entry-meta.php:80
+#: app/setup/entry-meta.php:81
 msgid "Categories"
 msgstr "カテゴリー"
 
