@@ -11,7 +11,7 @@ $customizer = Customizer_Framework::init();
 $panel      = $customizer->get_panel( 'seo-sns' );
 $section    = $customizer->get_section( 'share-buttons' );
 
-$customizer->control( 'select', 'mwt-share-buttons-count-both', [
+$customizer->control( 'checkbox', 'mwt-share-buttons-count-both', [
 	'type'     => 'option',
 	'label'    => __( 'Count both http and https', 'snow-monkey' ),
 	'description' => __( 'In the case of the http site, only http will be counted regardless of the setting.', 'snow-monkey' ),
