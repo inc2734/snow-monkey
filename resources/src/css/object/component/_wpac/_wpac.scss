@@ -208,7 +208,9 @@
   }
 
   .#{$_prefix}l-body--one-column-slim & {
-    &__container {
+    &__container > * {
+      margin-right: auto;
+      margin-left: auto;
       max-width: $one-column-slim-max-width;
     }
   }
