@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'layout' );
-$section    = $customizer->get_section( 'archive-layout' );
 
 $customizer->control( 'select', 'archive-layout', [
 	'label'    => __( 'Archive layout', 'snow-monkey' ),
@@ -20,5 +18,11 @@ $customizer->control( 'select', 'archive-layout', [
 	],
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'layout' );
+$section = $customizer->get_section( 'archive-layout' );
 $control = $customizer->get_control( 'archive-layout' );
 $control->join( $section )->join( $panel );

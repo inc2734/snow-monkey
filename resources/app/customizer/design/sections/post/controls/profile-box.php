@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'design' );
-$section    = $customizer->get_section( 'post' );
 
 $customizer->control( 'checkbox', 'mwt-display-profile-box', [
 	'transport' => 'postMessage',
@@ -19,6 +17,12 @@ $customizer->control( 'checkbox', 'mwt-display-profile-box', [
 	'default'   => true,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'design' );
+$section = $customizer->get_section( 'post' );
 $control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section )->join( $panel );
 $control->partial( [

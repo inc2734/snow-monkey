@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'twitter-cards' );
 
 $customizer->control( 'select', 'mwt-twitter-card', array(
 	'label'       => __( 'twitter:card', 'snow-monkey' ),
@@ -24,5 +22,11 @@ $customizer->control( 'select', 'mwt-twitter-card', array(
 	),
 ) );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'twitter-cards' );
 $control = $customizer->get_control( 'mwt-twitter-card' );
 $control->join( $section )->join( $panel );

@@ -8,13 +8,17 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'infobar' );
 
 $customizer->control( 'text', 'infobar-content', [
 	'label'     => __( 'Infobar content', 'snow-monkey' ),
 	'transport' => 'postMessage',
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$section = $customizer->get_section( 'infobar' );
 $control = $customizer->get_control( 'infobar-content' );
 $control->join( $section );
 $control->partial( [

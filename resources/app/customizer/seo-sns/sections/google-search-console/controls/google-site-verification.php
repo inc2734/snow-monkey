@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'google-search-console' );
 
 $customizer->control( 'text', 'mwt-google-site-verification', array(
 	'type'        => 'option',
@@ -21,5 +19,11 @@ $customizer->control( 'text', 'mwt-google-site-verification', array(
 	),
 ) );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'google-search-console' );
 $control = $customizer->get_control( 'mwt-google-site-verification' );
 $control->join( $section )->join( $panel );

@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'like-me-box' );
 
 $customizer->control( 'text', 'mwt-facebook-page-name', [
 	'transport'   => 'postMessage',
@@ -22,6 +20,12 @@ $customizer->control( 'text', 'mwt-facebook-page-name', [
 	),
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'like-me-box' );
 $control = $customizer->get_control( 'mwt-facebook-page-name' );
 $control->join( $section )->join( $panel );
 $control->partial( [

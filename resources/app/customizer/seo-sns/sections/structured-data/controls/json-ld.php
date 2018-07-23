@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'json-ld' );
 
 $customizer->control( 'checkbox', 'mwt-json-ld', array(
 	'label'    => __( 'Output structred data (JSON+LD)', 'snow-monkey' ),
@@ -18,5 +16,11 @@ $customizer->control( 'checkbox', 'mwt-json-ld', array(
 	'default'  => true,
 ) );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'json-ld' );
 $control = $customizer->get_control( 'mwt-json-ld' );
 $control->join( $section )->join( $panel );

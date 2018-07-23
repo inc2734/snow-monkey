@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'design' );
-$section    = $customizer->get_section( 'base-design' );
 
 $custom_logo = get_custom_logo();
 if ( ! $custom_logo ) {
@@ -21,8 +19,6 @@ if ( ! isset( $reg[1] ) ) {
 	return;
 }
 
-$height = $reg[1];
-
 $customizer->control( 'number', 'sm-logo-scale', [
 	'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
 	'priority'    => 160,
@@ -33,5 +29,11 @@ $customizer->control( 'number', 'sm-logo-scale', [
 	],
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'design' );
+$section = $customizer->get_section( 'base-design' );
 $control = $customizer->get_control( 'sm-logo-scale' );
 $control->join( $section )->join( $panel );

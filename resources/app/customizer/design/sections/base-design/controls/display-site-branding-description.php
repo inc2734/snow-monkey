@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'design' );
-$section    = $customizer->get_section( 'base-design' );
 
 $customizer->control( 'checkbox', 'display-site-branding-description', [
 	'transport' => 'postMessage',
@@ -18,6 +16,12 @@ $customizer->control( 'checkbox', 'display-site-branding-description', [
 	'default'   => false,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'design' );
+$section = $customizer->get_section( 'base-design' );
 $control = $customizer->get_control( 'display-site-branding-description' );
 $control->join( $section )->join( $panel );
 $control->partial( [

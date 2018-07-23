@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'layout' );
-$section    = $customizer->get_section( 'header' );
 
 $customizer->control( 'checkbox', 'header-position-only-mobile', [
 	'label'    => __( 'Use header position setting for mobile only', 'snow-monkey' ),
@@ -17,5 +15,11 @@ $customizer->control( 'checkbox', 'header-position-only-mobile', [
 	'default'  => true,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'layout' );
+$section = $customizer->get_section( 'header' );
 $control = $customizer->get_control( 'header-position-only-mobile' );
 $control->join( $section )->join( $panel );

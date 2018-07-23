@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'json-ld' );
 
 $customizer->control( 'radio', 'post-date', [
 	'label'       => __( 'Date for the search engine', 'snow-monkey' ),
@@ -23,5 +21,11 @@ $customizer->control( 'radio', 'post-date', [
 	],
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'json-ld' );
 $control = $customizer->get_control( 'post-date' );
 $control->join( $section )->join( $panel );

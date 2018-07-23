@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'ogp' );
 
 $customizer->control( 'image', 'mwt-default-og-image', array(
 	'label'       => __( 'Default OGP image', 'snow-monkey' ),
@@ -18,5 +16,11 @@ $customizer->control( 'image', 'mwt-default-og-image', array(
 	'type'        => 'option',
 ) );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'ogp' );
 $control = $customizer->get_control( 'mwt-default-og-image' );
 $control->join( $section )->join( $panel );

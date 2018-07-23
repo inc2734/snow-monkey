@@ -8,7 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'page-speed-optimization' );
 
 $customizer->control( 'checkbox', 'set-browser-cache', [
 	'label'       => __( 'Use browser cache', 'snow-monkey' ),
@@ -18,6 +17,11 @@ $customizer->control( 'checkbox', 'set-browser-cache', [
 	'default'     => false,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$section = $customizer->get_section( 'page-speed-optimization' );
 $control = $customizer->get_control( 'set-browser-cache' );
 $control->join( $section );
 

@@ -8,7 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'advertisement' );
 
 $customizer->control( 'textarea', 'mwt-google-adsense', [
 	'label'             => __( 'Google Adsense', 'snow-monkey' ),
@@ -29,5 +28,10 @@ $customizer->control( 'textarea', 'mwt-google-adsense', [
 	},
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$section = $customizer->get_section( 'advertisement' );
 $control = $customizer->get_control( 'mwt-google-adsense' );
 $control->join( $section );

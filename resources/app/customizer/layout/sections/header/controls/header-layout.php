@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'layout' );
-$section    = $customizer->get_section( 'header' );
 
 $customizer->control( 'select', 'header-layout', [
 	'transport' => 'postMessage',
@@ -24,6 +22,12 @@ $customizer->control( 'select', 'header-layout', [
 	],
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'layout' );
+$section = $customizer->get_section( 'header' );
 $control = $customizer->get_control( 'header-layout' );
 $control->join( $section )->join( $panel );
 $control->partial( [

@@ -8,7 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'title_tagline' );
 
 $theme_link = sprintf(
 	'<a href="https://2inc.org" target="_blank">%s</a>',
@@ -32,6 +31,11 @@ $customizer->control( 'text', 'mwt-copyright', [
 	'type'        => 'option',
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$section = $customizer->get_section( 'title_tagline' );
 $control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );
 $control->partial( [

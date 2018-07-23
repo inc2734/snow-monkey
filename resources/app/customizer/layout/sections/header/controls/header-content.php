@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'layout' );
-$section    = $customizer->get_section( 'header' );
 
 $customizer->control( 'textarea', 'header-content', [
 	'transport'   => 'postMessage',
@@ -18,6 +16,12 @@ $customizer->control( 'textarea', 'header-content', [
 	'priority'    => 130,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'layout' );
+$section = $customizer->get_section( 'header' );
 $control = $customizer->get_control( 'header-content' );
 $control->join( $section )->join( $panel );
 $control->partial( [

@@ -8,7 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'advertisement' );
 
 $customizer->control( 'textarea', 'mwt-google-matched-content', [
 	'label'             => __( 'Google Matched Content', 'snow-monkey' ),
@@ -22,5 +21,10 @@ $customizer->control( 'textarea', 'mwt-google-matched-content', [
 	},
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$section = $customizer->get_section( 'advertisement' );
 $control = $customizer->get_control( 'mwt-google-matched-content' );
 $control->join( $section );

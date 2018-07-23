@@ -7,8 +7,11 @@
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
 
 $customizer->section( 'twitter-cards', array(
 	'title'       => __( 'Twitter Cards', 'snow-monkey' ),

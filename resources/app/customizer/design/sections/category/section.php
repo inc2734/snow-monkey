@@ -7,10 +7,15 @@
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
-$customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'design' );
-
 $terms = get_terms( [ 'category' ] );
+wp_cache_set( 'all-categories', $terms );
+
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$customizer = Customizer_Framework::init();
+
 foreach ( $terms as $term ) {
 	$customizer->section( 'category-' . $term->term_id, [
 		'title'           => __( 'Page settings', 'snow-monkey' ),

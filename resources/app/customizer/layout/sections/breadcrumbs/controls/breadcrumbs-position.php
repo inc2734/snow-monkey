@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'layout' );
-$section    = $customizer->get_section( 'breadcrumbs' );
 
 $customizer->control( 'select', 'breadcrumbs-position', [
 	'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
@@ -23,6 +21,12 @@ $customizer->control( 'select', 'breadcrumbs-position', [
 	],
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'layout' );
+$section = $customizer->get_section( 'breadcrumbs' );
 $control = $customizer->get_control( 'breadcrumbs-position' );
 $control->join( $section )->join( $panel );
 $control->partial( [

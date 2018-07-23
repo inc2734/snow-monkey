@@ -8,7 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$section    = $customizer->get_section( 'page-speed-optimization' );
 
 $customizer->control( 'checkbox', 'async-css', [
 	'label'    => __( 'Loads CSS asynchronously', 'snow-monkey' ),
@@ -16,5 +15,10 @@ $customizer->control( 'checkbox', 'async-css', [
 	'default'  => false,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$section = $customizer->get_section( 'page-speed-optimization' );
 $control = $customizer->get_control( 'async-css' );
 $control->join( $section );

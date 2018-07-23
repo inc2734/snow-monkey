@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'design' );
-$section    = $customizer->get_section( 'page' );
 
 $customizer->control( 'select', 'page-eyecatch', [
 	'label'       => __( 'Eyecatch image', 'snow-monkey' ),
@@ -19,5 +17,11 @@ $customizer->control( 'select', 'page-eyecatch', [
 	'choices'     => snow_monkey_eyecatch_position_choices(),
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'design' );
+$section = $customizer->get_section( 'page' );
 $control = $customizer->get_control( 'page-eyecatch' );
 $control->join( $section )->join( $panel );

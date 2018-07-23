@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'seo-sns' );
-$section    = $customizer->get_section( 'share-buttons' );
 
 $customizer->control( 'checkbox', 'mwt-share-buttons-count-both', [
 	'type'     => 'option',
@@ -19,5 +17,11 @@ $customizer->control( 'checkbox', 'mwt-share-buttons-count-both', [
 	'default'  => true,
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'seo-sns' );
+$section = $customizer->get_section( 'share-buttons' );
 $control = $customizer->get_control( 'mwt-share-buttons-count-both' );
 $control->join( $section );

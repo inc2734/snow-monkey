@@ -8,8 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
-$panel      = $customizer->get_panel( 'layout' );
-$section    = $customizer->get_section( 'footer' );
 
 $customizer->control( 'select', 'footer-widget-area-column-size', [
 	'transport' => 'postMessage',
@@ -24,6 +22,12 @@ $customizer->control( 'select', 'footer-widget-area-column-size', [
 	],
 ] );
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
+$panel   = $customizer->get_panel( 'layout' );
+$section = $customizer->get_section( 'footer' );
 $control = $customizer->get_control( 'footer-widget-area-column-size' );
 $control->join( $section )->join( $panel );
 $control->partial( [
