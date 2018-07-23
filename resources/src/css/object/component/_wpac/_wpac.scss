@@ -208,8 +208,7 @@
   }
 
   .#{$_prefix}l-body--one-column-slim & {
-    &__body {
-      margin: 0 auto;
+    &__container {
       max-width: $one-column-slim-max-width;
     }
   }
