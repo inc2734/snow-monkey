@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 
-global $post;
-
 $widget_id = explode( '-', $args['widget_id'] );
 $widget_id = end( $widget_id );
 
@@ -18,9 +16,13 @@ $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_id, $query_args );
 $post_type  = empty( $query_args['post_type'] ) ? '' : $query_args['post_type'];
 
-$recent_posts = get_posts( $query_args );
+$recent_posts_query = new WP_Query( array_merge( $query_args, [
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+	'suppress_filters'    => true,
+] ) );
 
-if ( ! $recent_posts ) {
+if ( ! $recent_posts_query->have_posts() ) {
 	return;
 }
 ?>
@@ -58,8 +60,8 @@ if ( ! $recent_posts ) {
 		<?php endif; ?>
 
 		<ul class="c-entries c-entries--<?php echo esc_attr( $archive_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
-			<?php foreach ( $recent_posts as $post ) : ?>
-				<?php setup_postdata( $post ); ?>
+			<?php while ( $recent_posts_query->have_posts() ) : ?>
+				<?php $recent_posts_query->the_post(); ?>
 				<li class="c-entries__item">
 					<?php
 					wpvc_get_template_part( 'template-parts/loop/entry-summary', $post_type, [
@@ -67,7 +69,7 @@ if ( ! $recent_posts ) {
 					] );
 					?>
 				</li>
-			<?php endforeach; ?>
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 

@@ -73,7 +73,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'fontawesome5',
 		'https://use.fontawesome.com/releases/v5.0.9/js/all.js',
 		[ snow_monkey_get_main_script_handle() ],
-		false,
+		'5.0.9',
 		true
 	);
 
@@ -81,7 +81,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'fontawesome5-v4-shims',
 		'https://use.fontawesome.com/releases/v5.0.9/js/v4-shims.js',
 		[ 'fontawesome5' ],
-		false,
+		'5.0.9',
 		true
 	);
 } );
@@ -103,7 +103,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'jquery.easing',
 		'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
 		[ 'jquery' ],
-		false,
+		1.3,
 		true
 	);
 } );

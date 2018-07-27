@@ -10,8 +10,8 @@ $use_matched_content = (bool) $matched_content;
 $related_posts       = [];
 
 if ( ! $use_matched_content ) {
-	$related_posts = snow_monkey_get_related_posts( get_the_ID() );
-	if ( ! $related_posts ) {
+	$related_posts_query = snow_monkey_get_related_posts_query( get_the_ID() );
+	if ( ! $related_posts_query->have_posts() ) {
 		return;
 	}
 }
@@ -34,13 +34,13 @@ if ( ! $use_matched_content ) {
 	<?php else : ?>
 
 		<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
-			<?php foreach ( $related_posts as $post ) : ?>
-				<?php setup_postdata( $post ); ?>
+			<?php while ( $related_posts_query->have_posts() ) : ?>
+				<?php $related_posts_query->the_post(); ?>
 				<li class="c-entries__item">
 					<?php get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 				</li>
-			<?php endforeach; ?>
-			<?php wp_reset_postdata( $post ); ?>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
 		</ul>
 
 	<?php endif; ?>

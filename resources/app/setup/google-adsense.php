@@ -17,7 +17,7 @@ add_action( 'wp_enqueue_scripts', function() {
 		'google-adsense',
 		'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
 		[],
-		false,
+		1,
 		true
 	);
 }, 1 );

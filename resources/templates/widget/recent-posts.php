@@ -5,12 +5,17 @@
  * @license GPL-2.0+
  */
 
-global $post;
-
-$recent_posts = get_posts( [
-	'post_type'      => $instance['post-type'],
-	'posts_per_page' => $instance['posts-per-page'],
+$recent_posts_query = new WP_Query( [
+	'post_type'           => $instance['post-type'],
+	'posts_per_page'      => $instance['posts-per-page'],
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+	'suppress_filters'    => true,
 ] );
+
+if ( ! $recent_posts_query->have_posts() ) {
+	return;
+}
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -27,8 +32,8 @@ $recent_posts = get_posts( [
 		>
 
 		<ul class="wpaw-recent-posts__list">
-			<?php foreach ( $recent_posts as $post ) : ?>
-				<?php setup_postdata( $post ); ?>
+			<?php while ( $recent_posts_query->have_posts() ) : ?>
+				<?php $recent_posts_query->the_post(); ?>
 				<li class="wpaw-recent-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
@@ -40,7 +45,7 @@ $recent_posts = get_posts( [
 
 						<div class="wpaw-recent-posts__body">
 							<?php
-							$taxonomies = get_post_taxonomies( $post );
+							$taxonomies = get_post_taxonomies( get_the_ID() );
 							$taxonomy   = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
 							$terms      = ( $taxonomy ) ? get_the_terms( get_the_ID(), $taxonomy ) : [];
 							?>
@@ -59,7 +64,7 @@ $recent_posts = get_posts( [
 
 					</a>
 				</li>
-			<?php endforeach; ?>
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 	</div>

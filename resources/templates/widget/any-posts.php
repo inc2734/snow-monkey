@@ -5,18 +5,19 @@
  * @license GPL-2.0+
  */
 
-global $post;
-
 $items = explode( ',', $instance['items'] );
 if ( ! $items ) {
 	return;
 }
 
-$recent_posts = get_posts( [
-	'post_type'      => 'any',
-	'posts_per_page' => -1,
-	'post__in'       => $items,
-	'orderby'        => 'post__in',
+$any_posts_query = new WP_Query( [
+	'post_type'           => 'any',
+	'posts_per_page'      => count( $items ),
+	'post__in'            => $items,
+	'orderby'             => 'post__in',
+	'ignore_sticky_posts' => true,
+	'no_found_rows'       => true,
+	'suppress_filters'    => true,
 ] );
 ?>
 
@@ -34,20 +35,20 @@ $recent_posts = get_posts( [
 		>
 
 		<ul class="wpaw-any-posts__list">
-			<?php foreach ( $recent_posts as $post ) : ?>
-				<?php setup_postdata( $post ); ?>
+			<?php while ( $any_posts_query->have_posts() ) : ?>
+				<?php $any_posts_query->the_post(); ?>
 				<li class="wpaw-any-posts__item">
 					<a href="<?php the_permalink(); ?>">
 
 						<?php if ( $instance['show-thumbnail'] ) : ?>
-							<div class="wpaw-recent-posts__figure"
+							<div class="wpaw-any-posts__figure"
 								style="background-image: url(<?php echo esc_url( wp_get_attachment_image_url( get_post_thumbnail_id(), 'thumbnail' ) ); ?> )"
 							></div>
 						<?php endif; ?>
 
 						<div class="wpaw-any-posts__body">
 							<?php
-							$taxonomies = get_post_taxonomies( $post );
+							$taxonomies = get_post_taxonomies( get_the_ID() );
 							$taxonomy   = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
 							$terms      = ( $taxonomy ) ? get_the_terms( get_the_ID(), $taxonomy ) : [];
 							?>
@@ -66,7 +67,7 @@ $recent_posts = get_posts( [
 
 					</a>
 				</li>
-			<?php endforeach; ?>
+			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</ul>
 	</div>

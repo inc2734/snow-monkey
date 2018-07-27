@@ -11,7 +11,7 @@
  * @param int $post_id
  * @return array
  */
-function snow_monkey_get_related_posts( $post_id ) {
+function snow_monkey_get_related_posts_query( $post_id ) {
 	$_post = get_post( $post_id );
 
 	if ( ! isset( $_post->ID ) ) {
@@ -53,11 +53,10 @@ function snow_monkey_get_related_posts( $post_id ) {
 	];
 
 	$related_posts_args = apply_filters( 'snow_monkey_related_posts_args', $related_posts_args );
-	$related_posts = get_posts( $related_posts_args );
 
-	if ( ! $related_posts ) {
-		return [];
-	}
-
-	return $related_posts;
+	return new WP_Query( array_merge( $related_posts_args, [
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => true,
+		'suppress_filters'    => true,
+	] ) );
 }

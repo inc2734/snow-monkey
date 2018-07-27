@@ -153,7 +153,7 @@ class Design_Skin {
 	protected function _is_active() {
 		if ( is_user_logged_in() && current_user_can( 'manage_options' ) && ! is_admin() ) {
 			if ( ! empty( $_GET['snow-monkey-design-skin'] ) && $this->plugin['slug'] === $_GET['snow-monkey-design-skin'] ) {
-				$design_skin = $_GET['snow-monkey-design-skin'];
+				$design_skin = sanitize_text_field( wp_unslash( $_GET['snow-monkey-design-skin'] ) );
 
 				add_filter( 'theme_mod_design-skin', function() use ( $design_skin ) {
 					return $design_skin;
