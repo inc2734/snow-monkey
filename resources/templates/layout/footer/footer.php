@@ -8,6 +8,7 @@
 <footer class="l-footer" role="content-info">
 	<?php get_template_part( 'template-parts/social-nav' ); ?>
 	<?php get_template_part( 'template-parts/footer-widget-area' ); ?>
+	<?php get_template_part( 'template-parts/footer-sub-nav' ); ?>
 	<?php get_template_part( 'template-parts/copyright' ); ?>
 </footer>
 

@@ -5,7 +5,11 @@
  * @license GPL-2.0+
  */
 
-if ( ! has_nav_menu( 'drawer-nav' ) ) {
+$has_drawer_nav     = has_nav_menu( 'drawer-nav' );
+$has_header_sub_nav = has_nav_menu( 'header-sub-nav' );
+$has_footer_sub_nav = has_nav_menu( 'footer-sub-nav' );
+
+if ( ! $has_drawer_nav && ! $has_header_sub_nav && ! $has_footer_sub_nav ) {
 	return;
 }
 ?>
@@ -22,13 +26,44 @@ if ( ! has_nav_menu( 'drawer-nav' ) ) {
 	<?php endif; ?>
 
 	<?php
-	wp_nav_menu( [
-		'theme_location' => 'drawer-nav',
-		'container'      => false,
-		'menu_class'     => 'c-drawer__menu',
-		'depth'          => 0,
-	] );
+	if ( $has_drawer_nav ) {
+		wp_nav_menu( [
+			'theme_location' => 'drawer-nav',
+			'container'      => false,
+			'menu_class'     => 'c-drawer__menu',
+			'depth'          => 0,
+			'walker'         => new \Inc2734\WP_Basis\App\Walker\Drawer(),
+		] );
+	}
 	?>
+
+	<?php if ( $has_header_sub_nav ) : ?>
+		<div class="c-drawer__sub-nav">
+			<?php
+			wp_nav_menu( [
+				'theme_location' => 'header-sub-nav',
+				'container'      => false,
+				'menu_class'     => 'c-drawer__menu',
+				'depth'          => 1,
+				'walker'         => new \Inc2734\WP_Basis\App\Walker\Drawer(),
+			] );
+			?>
+		</div>
+	<?php endif; ?>
+
+	<?php if ( $has_footer_sub_nav ) : ?>
+		<div class="c-drawer__sub-nav">
+			<?php
+			wp_nav_menu( [
+				'theme_location' => 'footer-sub-nav',
+				'container'      => false,
+				'menu_class'     => 'c-drawer__menu',
+				'depth'          => 1,
+				'walker'         => new \Inc2734\WP_Basis\App\Walker\Drawer(),
+			] );
+			?>
+		</div>
+	<?php endif; ?>
 
 	<?php do_action( 'snow_monkey_append_drawer_nav' ); ?>
 </nav>

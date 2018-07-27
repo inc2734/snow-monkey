@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "118902bcaf2f546b99745e9fb35661ba",
-    "content-hash": "621b28e77001392699d3253e3f168c44",
+    "hash": "c283ff47b95f74cb2a44a13a03b897ce",
+    "content-hash": "651618498ecc045d1bb4c06c5d67cf46",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.6.4",
+            "version": "2.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "33697c26db038444545be8898dc5291baf6b2f6c"
+                "reference": "6ec7478013183db0bfc4deee4e670bfbb1e9be0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/33697c26db038444545be8898dc5291baf6b2f6c",
-                "reference": "33697c26db038444545be8898dc5291baf6b2f6c",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6ec7478013183db0bfc4deee4e670bfbb1e9be0b",
+                "reference": "6ec7478013183db0bfc4deee4e670bfbb1e9be0b",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": ">=1.0.4",
                 "inc2734/wp-awesome-widgets": ">=2.5.1",
-                "inc2734/wp-basis": ">=1.0.1",
+                "inc2734/wp-basis": ">=2.0.0",
                 "inc2734/wp-breadcrumbs": ">=1.0.2",
                 "inc2734/wp-contents-outline": ">=1.0.3",
                 "inc2734/wp-customizer-framework": ">=3.1.3",
@@ -62,7 +62,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-07-25 02:36:54"
+            "time": "2018-07-27 07:05:59"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -153,16 +153,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "1.0.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "85d6ec7d7abaa5729667c94d1ecc14203775b333"
+                "reference": "73782705a28f20b0dbb32d62fc8c8f1f42b25fbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/85d6ec7d7abaa5729667c94d1ecc14203775b333",
-                "reference": "85d6ec7d7abaa5729667c94d1ecc14203775b333",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/73782705a28f20b0dbb32d62fc8c8f1f42b25fbc",
+                "reference": "73782705a28f20b0dbb32d62fc8c8f1f42b25fbc",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-06-26 04:42:30"
+            "time": "2018-07-27 07:04:07"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -2111,16 +2111,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.3.0",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266"
+                "reference": "628a481780561150481a9ec74709092b9759b3ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
-                "reference": "d86873af43b4aa9d1f39a3601cc0cfcf02b25266",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/628a481780561150481a9ec74709092b9759b3ec",
+                "reference": "628a481780561150481a9ec74709092b9759b3ec",
                 "shasum": ""
             },
             "require": {
@@ -2158,7 +2158,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-06-06 23:58:19"
+            "time": "2018-07-26 23:47:18"
         },
         {
             "name": "symfony/config",
@@ -2510,24 +2510,27 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "0.14.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "cf6b310caad735816caef7573295f8a534374706"
+                "reference": "539c6d74e6207daa22b7ea754d6f103e9abb2755"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/cf6b310caad735816caef7573295f8a534374706",
-                "reference": "cf6b310caad735816caef7573295f8a534374706",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/539c6d74e6207daa22b7ea754d6f103e9abb2755",
+                "reference": "539c6d74e6207daa22b7ea754d6f103e9abb2755",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3",
                 "squizlabs/php_codesniffer": "^2.9.0 || ^3.0.2"
             },
+            "require-dev": {
+                "phpcompatibility/php-compatibility": "*"
+            },
             "suggest": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
             },
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
@@ -2546,7 +2549,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2018-02-16 01:57:48"
+            "time": "2018-07-25 18:10:35"
         }
     ],
     "aliases": [],

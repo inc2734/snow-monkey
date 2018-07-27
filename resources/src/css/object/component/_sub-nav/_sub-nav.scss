@@ -1,0 +1,19 @@
+.#{$_prefix}c-sub-nav {
+  @include _font-size-line-height($_base-font-size-px - 4);
+  @include _padding(.25, 0);
+
+  .#{$_prefix}c-navbar {
+    &__item {
+      @include _margin(0, .25);
+
+      a {
+        color: $_color-gray;
+        text-decoration: none;
+
+        @include _hover() {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

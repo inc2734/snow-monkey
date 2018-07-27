@@ -131,17 +131,15 @@
  * centered header
  */
 .#{$_prefix}l-center-header {
-  &__row {
-    &:nth-child(1) {
-      @include _media-min(lg) {
-        @include _padding(.5, 0);
-      }
+  &__row:nth-child(1) {
+    @include _media-min(lg) {
+      @include _padding(.5, 0);
+    }
 
-      .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
-        @include _media-min(lg) {
-          @include _margin(1, 0, .25);
-          padding: 0;
-        }
+    .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
+      @include _media-min(lg) {
+        @include _margin(1, 0, .25);
+        padding: 0;
       }
     }
   }

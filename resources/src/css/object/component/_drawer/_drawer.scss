@@ -26,4 +26,22 @@
   &__submenu {
     @include _margin-right(-.5);
   }
+
+  &__sub-nav {
+    @include _font-size-line-height($_base-font-size-px - 4);
+
+    * + & {
+      @include _margin-top(.5);
+      @include _padding-top(.25);
+      border-top: 1px solid rgba(#fff, .4);
+    }
+
+    .#{$_prefix}c-drawer__item {
+      @include _padding-top(.25);
+    }
+
+    .#{$_prefix}c-drawer__submenu {
+      @include _margin-right(-.25);
+    }
+  }
 }

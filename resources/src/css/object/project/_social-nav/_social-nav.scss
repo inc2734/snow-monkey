@@ -5,10 +5,7 @@
   text-align: center;
 
   .#{$_prefix}c-navbar {
-    justify-content: center;
-
     &__item {
-      flex: none;
       margin: 0 .5em;
     }
   }

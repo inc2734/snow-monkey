@@ -7,6 +7,7 @@
 
 $header_content = get_theme_mod( 'header-content' );
 $header_type    = get_theme_mod( 'header-layout' ) . '-header';
+$has_drawer_nav = has_nav_menu( 'drawer-nav' );
 ?>
 
 <div class="l-<?php echo esc_attr( $header_type ); ?>">
@@ -17,7 +18,7 @@ $header_type    = get_theme_mod( 'header-layout' ) . '-header';
 					<?php get_template_part( 'template-parts/site-branding' ); ?>
 				</div>
 
-				<?php if ( $header_content || has_nav_menu( 'drawer-nav' ) ) : ?>
+				<?php if ( $header_content || $has_drawer_nav ) : ?>
 					<div class="c-row__col c-row__col--fit">
 						<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 							<?php if ( $header_content ) : ?>
@@ -26,7 +27,7 @@ $header_type    = get_theme_mod( 'header-layout' ) . '-header';
 								</div>
 							<?php endif; ?>
 
-							<?php if ( has_nav_menu( 'drawer-nav' ) ) : ?>
+							<?php if ( $has_drawer_nav ) : ?>
 								<div class="c-row__col c-row__col--fit">
 									<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
 								</div>
