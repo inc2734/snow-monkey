@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-07-25 10:10+0900\n"
-"PO-Revision-Date: 2018-07-25 10:11+0900\n"
+"POT-Creation-Date: 2018-07-28 00:12+0900\n"
+"PO-Revision-Date: 2018-07-28 00:12+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -695,6 +695,14 @@ msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
 #: app/setup/nav-menus.php:22
+msgid "Header Sub Navigation"
+msgstr "ヘッダーサブナビゲーション"
+
+#: app/setup/nav-menus.php:23
+msgid "Footer Sub Navigation"
+msgstr "フッターサブナビゲーション"
+
+#: app/setup/nav-menus.php:24
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
