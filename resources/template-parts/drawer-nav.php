@@ -51,7 +51,11 @@ if ( ! $has_drawer_nav && ! $has_header_sub_nav && ! $has_footer_sub_nav ) {
 		</div>
 	<?php endif; ?>
 
-	<?php if ( $has_footer_sub_nav ) : ?>
+	<?php
+	$menu_locations = get_nav_menu_locations();
+	$same_sub_menu  = isset( $menu_locations['header-sub-nav'], $menu_locations['footer-sub-nav'] ) && $menu_locations['header-sub-nav'] === $menu_locations['footer-sub-nav'];
+	?>
+	<?php if ( $has_footer_sub_nav && ! $same_sub_menu ) : ?>
 		<div class="c-drawer__sub-nav">
 			<?php
 			wp_nav_menu( [
