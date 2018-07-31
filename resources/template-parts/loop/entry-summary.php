@@ -34,7 +34,11 @@ if ( isset( $widget_layout ) ) {
 				</h2>
 			</header>
 			<div class="c-entry-summary__content">
-				<?php the_excerpt(); ?>
+				<?php
+				ob_start();
+				the_excerpt();
+				echo esc_html( wp_strip_all_tags( ob_get_clean() ) );
+				?>
 			</div>
 			<div class="c-entry-summary__meta">
 				<ul class="c-meta">
