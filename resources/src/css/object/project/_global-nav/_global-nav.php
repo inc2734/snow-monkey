@@ -13,10 +13,8 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	[
-		'.p-global-nav .c-navbar__item[class*="current_"] > a',
-		'.p-global-nav .c-navbar__item[class*="current-"] > a',
-		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item[class*="current_"] > a',
-		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item[class*="current-"] > a',
+		'.p-global-nav .c-navbar__item[data-active-menu="true"] > a',
+		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item[data-active-menu="true"] > a',
 	],
 	'color: ' . $accent_color
 );

@@ -27,8 +27,7 @@
         }
       }
 
-      &[class*="current_"],
-      &[class*="current-"] {
+      &[data-active-menu] {
         > a {
           color: $color-accent;
         }
