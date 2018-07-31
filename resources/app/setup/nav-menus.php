@@ -21,6 +21,7 @@ add_action( 'after_setup_theme', function() {
 		'social-nav'        => esc_html__( 'Social Navigation', 'snow-monkey' ),
 		'header-sub-nav'    => esc_html__( 'Header Sub Navigation', 'snow-monkey' ),
 		'footer-sub-nav'    => esc_html__( 'Footer Sub Navigation', 'snow-monkey' ),
+		'drawer-sub-nav'    => esc_html__( 'Drawer Sub Navigation (For Mobile)', 'snow-monkey' ),
 		'footer-sticky-nav' => esc_html__( 'Footer Sticky Navigation (For Mobile)', 'snow-monkey' ),
 	] );
 } );

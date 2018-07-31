@@ -6,10 +6,9 @@
  */
 
 $has_drawer_nav     = has_nav_menu( 'drawer-nav' );
-$has_header_sub_nav = has_nav_menu( 'header-sub-nav' );
-$has_footer_sub_nav = has_nav_menu( 'footer-sub-nav' );
+$has_drawer_sub_nav = has_nav_menu( 'drawer-sub-nav' );
 
-if ( ! $has_drawer_nav && ! $has_header_sub_nav && ! $has_footer_sub_nav ) {
+if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 	return;
 }
 ?>
@@ -37,29 +36,11 @@ if ( ! $has_drawer_nav && ! $has_header_sub_nav && ! $has_footer_sub_nav ) {
 	}
 	?>
 
-	<?php if ( $has_header_sub_nav ) : ?>
-		<div class="c-drawer__sub-nav">
+	<?php if ( $has_drawer_sub_nav ) : ?>
+		<div class="p-drawer-sub-nav c-drawer__sub-nav">
 			<?php
 			wp_nav_menu( [
-				'theme_location' => 'header-sub-nav',
-				'container'      => false,
-				'menu_class'     => 'c-drawer__menu',
-				'depth'          => 1,
-				'walker'         => new \Inc2734\WP_Basis\App\Walker\Drawer(),
-			] );
-			?>
-		</div>
-	<?php endif; ?>
-
-	<?php
-	$menu_locations = get_nav_menu_locations();
-	$same_sub_menu  = isset( $menu_locations['header-sub-nav'], $menu_locations['footer-sub-nav'] ) && $menu_locations['header-sub-nav'] === $menu_locations['footer-sub-nav'];
-	?>
-	<?php if ( $has_footer_sub_nav && ! $same_sub_menu ) : ?>
-		<div class="c-drawer__sub-nav">
-			<?php
-			wp_nav_menu( [
-				'theme_location' => 'footer-sub-nav',
+				'theme_location' => 'drawer-sub-nav',
 				'container'      => false,
 				'menu_class'     => 'c-drawer__menu',
 				'depth'          => 1,
