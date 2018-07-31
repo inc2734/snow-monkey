@@ -57,10 +57,7 @@ $includes = [
 	'/app/template-tags',
 ];
 foreach ( $includes as $include ) {
-	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-		$template_name = str_replace( [ trailingslashit( __DIR__ ), '.php' ], '', $file );
-		get_template_part( $template_name );
-	}
+	Core::get_template_parts( __DIR__ . $include );
 }
 
 /**
@@ -68,33 +65,20 @@ foreach ( $includes as $include ) {
  */
 $includes = [
 	'/app/setup',
-	'/app/widget/*',
+	'/app/widget',
 ];
 foreach ( $includes as $include ) {
-	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-		if ( 0 === strpos( basename( $file ), '_' ) ) {
-			continue;
-		}
-
-		$template_name = str_replace( [ trailingslashit( __DIR__ ), '.php' ], '', $file );
-		get_template_part( $template_name );
-	}
+	Core::get_template_parts( __DIR__ . $include, true );
 }
 
 /**
  * Loads customizer
  */
 $includes = [
-	'/app/customizer/*',
-	'/app/customizer/*/sections/*',
-	'/app/customizer/*/sections/*/controls',
-	'/app/customizer/*/controls',
+	'/app/customizer',
 ];
 foreach ( $includes as $include ) {
-	foreach ( glob( __DIR__ . $include . '/*.php' ) as $file ) {
-		$template_name = str_replace( [ trailingslashit( __DIR__ ), '.php' ], '', $file );
-		get_template_part( $template_name );
-	}
+	Core::get_template_parts( __DIR__ . $include );
 }
 
 /**
