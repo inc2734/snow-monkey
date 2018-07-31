@@ -120,17 +120,6 @@ add_action( 'after_setup_theme', function() {
 } );
 
 /**
- * Caching widget areas
- */
-add_action( 'after_setup_theme', function() {
-	if ( ! get_theme_mod( 'cache-sidebars' ) ) {
-		return;
-	}
-
-	add_filter( 'inc2734_wp_page_speed_optimization_caching_sidebars', '__return_true' );
-} );
-
-/**
  * Emoji assets move to footer
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
