@@ -58,17 +58,6 @@
     }
   }
 
-  &__more {
-    @include btn();
-    white-space: normal;
-    @include _font-size-line-height($_base-font-size-px);
-    @include _padding(.25, 1);
-
-    @include _media-min(md) {
-      @include _padding(.25, 2);
-    }
-  }
-
   &--format-1,
   &--format-2 {
     @include _media-min(md) {
