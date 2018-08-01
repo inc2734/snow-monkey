@@ -40,7 +40,7 @@ export default class SnowMonkeyDropNav {
           this._showGnav();
           this._hideDropNav();
         }
-      }, 500);
+      }, 250);
     });
   }
 
