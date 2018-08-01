@@ -4,7 +4,7 @@
   border: none;
   border-radius: $_border-radius;
   color: #fff;
-  @include _padding(.5, 1.5);
+  @include _padding(.5, 1.25);
   @include _transition(background-color);
 
   @include _hover(lg) {

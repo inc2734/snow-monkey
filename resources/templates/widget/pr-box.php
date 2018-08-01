@@ -50,9 +50,21 @@
 				<?php foreach ( $instance['items'] as $item ) : ?>
 					<div class="wpaw-pr-box__item c-row__col c-row__col--1-<?php echo esc_attr( $instance['sm-columns'] ); ?> c-row__col--md-1-<?php echo esc_attr( $instance['md-columns'] ); ?> c-row__col--lg-1-<?php echo esc_attr( $instance['lg-columns'] ); ?>">
 						<?php if ( ! empty( $item['src'] ) ) : ?>
-							<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $instance['thumbnail-aspect-ratio'] ); ?>"
-								style="background-image: url( <?php echo esc_url( wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] ) ); ?> );"
-							></div>
+							<?php
+							$thumbnail    = wp_get_attachment_image_url( $item['src'], $instance['thumbnail-size'] );
+							$aspect_ratio = $instance['thumbnail-aspect-ratio'];
+							?>
+							<?php if ( ! empty( $item['link-url'] ) ) : ?>
+								<a href="<?php echo esc_html( $item['link-url'] ); ?>">
+									<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $aspect_ratio ); ?>"
+										style="background-image: url( <?php echo esc_url( $thumbnail ); ?> );"
+									></div>
+								</a>
+							<?php else : ?>
+								<div class="wpaw-pr-box__item-figure wpaw-pr-box__item-figure--<?php echo esc_attr( $aspect_ratio ); ?>"
+									style="background-image: url( <?php echo esc_url( $thumbnail ); ?> );"
+								></div>
+							<?php endif; ?>
 						<?php endif; ?>
 
 						<?php if ( ! empty( $item['title'] ) ) : ?>
@@ -64,13 +76,23 @@
 								<?php echo wp_kses_post( wpautop( $item['summary'] ) ); ?>
 							</div>
 						<?php endif; ?>
-						</div>
+
+						<?php if ( ! empty( $item['link-url'] ) && ! empty( $item['link-text'] ) ) : ?>
+							<div class="wpaw-pr-box__item-action">
+								<a class="c-btn" href="<?php echo esc_url( $item['link-url'] ); ?>">
+									<?php echo esc_html( $item['link-text'] ); ?>
+								</a>
+							</div>
+						<?php endif; ?>
+					</div>
 				<?php endforeach; ?>
 			</div>
 
 			<?php if ( ! empty( $instance['link-url'] ) && ! empty( $instance['link-text'] ) ) : ?>
 				<div class="wpaw-pr-box__action">
-					<a class="wpaw-pr-box__more" href="<?php echo esc_url( $instance['link-url'] ); ?>"><?php echo esc_html( $instance['link-text'] ); ?></a>
+					<a class="c-btn" href="<?php echo esc_url( $instance['link-url'] ); ?>">
+						<?php echo esc_html( $instance['link-text'] ); ?>
+					</a>
 				</div>
 			<?php endif; ?>
 

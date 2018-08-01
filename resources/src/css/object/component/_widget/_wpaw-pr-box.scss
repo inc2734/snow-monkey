@@ -11,6 +11,11 @@
 
   &__title {
     @include section-title();
+    margin-bottom: 0;
+
+    @include _media-min(lg) {
+      margin-bottom: 0;
+    }
   }
 
   &__lead {
@@ -41,22 +46,19 @@
     }
   }
 
+  &__item-action {
+    @include _margin-top(.25);
+
+    @include _media-min(lg) {
+      @include _margin-top(.75);
+    }
+  }
+
   &__action {
     @include _margin(.5, 0, 0);
 
     @include _media-min(md) {
       @include _margin(1, 0, 0);
-    }
-  }
-
-  &__more {
-    @include btn();
-    @include _padding(.5, 1);
-    width: 100%;
-
-    @include _media-min(lg) {
-      @include _padding(.5, 2);
-      width: auto;
     }
   }
 
