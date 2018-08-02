@@ -5,8 +5,6 @@
  * @license GPL-2.0+
  */
 ?>
-<?php get_template_part( 'template-parts/title-top-widget-area' ); ?>
-
 <article <?php post_class(); ?>>
 	<header class="c-entry__header">
 		<h1 class="c-entry__title"><?php the_title(); ?></h1>
@@ -21,8 +19,6 @@
 
 	<?php do_action( 'snow_monkey_after_entry_content' ); ?>
 </article>
-
-<?php get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
 
 <?php
 if ( comments_open() || pings_open() || get_comments_number() ) {

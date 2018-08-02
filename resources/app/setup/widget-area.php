@@ -8,45 +8,6 @@
 /**
  * Add sidebar widget area
  *
- * @deprecated
- * @return void
- */
-add_action( 'init', function() {
-	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
-		return;
-	}
-
-	$post_types = snow_monkey_get_public_post_types();
-	foreach ( $post_types as $post_type => $post_type_object ) {
-		register_sidebar( [
-			// @codingStandardsIgnoreStart
-			'name'          => sprintf( __( '%1$s sidebar', 'snow-monkey' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed in the %1$s page sidebar.', 'snow-monkey' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'id'            => $post_type_object->name . '-post-type-sidebar-widget-area',
-			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title">',
-			'after_title'   => '</h2>',
-		] );
-
-		register_sidebar( [
-			// @codingStandardsIgnoreStart
-			'name'          => sprintf( __( '%1$s sticky sidebar', 'snow-monkey' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed in the %1$s page sidebar.', 'snow-monkey' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'id'            => $post_type_object->name . '-post-type-sidebar-sticky-widget-area',
-			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title">',
-			'after_title'   => '</h2>',
-		] );
-	}
-}, 11 );
-
-/**
- * Add sidebar widget area
- *
  * @return void
  */
 add_action( 'widgets_init', function() {
@@ -70,33 +31,6 @@ add_action( 'widgets_init', function() {
 		'after_title'   => '</h2>',
 	] );
 } );
-
-/**
-* Add top of title widget area
-*
-* @deprecated
-* @return void
-*/
-add_action( 'init', function() {
-	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
-		return;
-	}
-
-	$post_types = snow_monkey_get_public_post_types();
-	foreach ( $post_types as $post_type => $post_type_object ) {
-		register_sidebar( [
-			// @codingStandardsIgnoreStart
-			'name'          => sprintf( __( '%1$s top of title', 'snow-monkey' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed on the title of %1$s.', 'snow-monkey' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'id'            => $post_type_object->name . '-post-type-title-top-widget-area',
-			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title">',
-			'after_title'   => '</h2>',
-		] );
-	}
-}, 11 );
 
 /**
 * Add top of page title widget area
@@ -135,34 +69,6 @@ add_action( 'widgets_init', function() {
 /**
 * Add bottom of contents widget area
 *
-* @deprecated
-* @return void
-*/
-add_action( 'init', function() {
-	if ( ! apply_filters( 'snow_monkey_use_post_type_widget_area', false ) ) {
-		return;
-	}
-
-	$post_types = snow_monkey_get_public_post_types();
-	foreach ( $post_types as $post_type => $post_type_object ) {
-		register_sidebar( [
-			// @codingStandardsIgnoreStart
-			'name'          => sprintf( __( '%1$s bottom of contents', 'snow-monkey' ), __( $post_type_object->label ) ),
-			'description'   => sprintf( __( 'This widgets are displayed under the contents of %1$s.', 'snow-monkey' ), __( $post_type_object->label ) ),
-			// @codingStandardsIgnoreEnd
-			'id'            => $post_type_object->name . '-post-type-contents-bottom-widget-area',
-			'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h2 class="c-widget__title">',
-			'after_title'   => '</h2>',
-		] );
-	}
-}, 11 );
-
-/**
-* Add bottom of contents widget area
-*
-* @deprecated
 * @return void
 */
 add_action( 'widgets_init', function() {
