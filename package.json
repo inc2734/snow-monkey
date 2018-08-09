@@ -34,6 +34,7 @@
     "cleanup:js": "rimraf resources/assets/js && mkdir -p resources/assets/js",
     "cleanup:packages": "rimraf resources/assets/packages && mkdir -p resources/assets/packages",
     "cleanup:img": "rimraf resources/assets/img && mkdir -p resources/assets/img",
+    "cleanup:zip": "rimraf snow-monkey.zip",
     "minify:css": "find resources/assets/css -name '*.css' | xargs -I{} cssnano {} {}.min --no-zindex && find resources/assets/css -name '*.css.min' | sed 'p;s/.css.min/.min.css/' | xargs -n2 mv",
     "minify:js": "find resources/assets/js -name '*.js' | xargs -I{} uglifyjs {} -o {}.min -mc && find resources/assets/js -name '*.js.min' | sed 'p;s/.js.min/.min.js/' | xargs -n2 mv",
     "css:sass": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css -o resources/assets/css",
@@ -50,6 +51,8 @@
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=resources/src/img --parents",
     "build": "npm-run-all -p img packages && npm-run-all -p js css",
     "browsersync": "browser-sync start -p '127.0.0.1:8080' -f '**/*' 'resources/assets/**'",
-    "zip": "rimraf snow-monkey.zip && cp -R resources snow-monkey && zip -9 -qmr snow-monkey.zip snow-monkey -x '*/.*'"
+    "zip:pack": "composer install --no-dev && rsync -a --exclude='.*' resources/ snow-monkey",
+    "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
+    "zip": "npm run cleanup:zip && npm run zip:pack && npm run zip:archive"
   }
 }

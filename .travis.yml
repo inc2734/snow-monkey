@@ -20,11 +20,6 @@ cache:
   - node_modules
   - resources/vendor
   - "$HOME/.composer/cache"
-before_install:
-- openssl aes-256-cbc -K $encrypted_067cdd0e0083_key -iv $encrypted_067cdd0e0083_iv
-  -in .travis/github_deploy_key.enc -out .travis/github_deploy_key -d
-- mv .travis/github_deploy_key ~/.ssh/id_rsa
-- chmod 600 ~/.ssh/id_rsa
 install:
 - nvm install 8
 - npm install
@@ -34,13 +29,7 @@ before_script:
 script:
 - ls -la resources/style.css resources/index.php resources/vendor/autoload.php
 - composer test
-- bash bin/create-release-branch.sh
-after_success:
-- pwd
-- ls -al
 before_deploy:
-- rm -rf resources/vendor
-- composer install --no-dev
 - npm run zip
 - ls -la snow-monkey.zip
 - export RELEASE_FILE=$(ls snow-monkey.zip)
