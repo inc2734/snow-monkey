@@ -14,7 +14,7 @@ $accent_color = get_theme_mod( 'accent-color' );
 /**
  * Columns
  */
-snow_monkey_entry_content_styles( '.wpac-columns__col-inner' );
+snow_monkey_entry_content_styles( [ '.wpac-columns__col-inner' ] );
 
 /**
  * Button
@@ -42,4 +42,4 @@ $cfs->register(
 	'background-color: ' . $accent_color
 );
 
-snow_monkey_entry_content_styles( '.wpac-section__body' );
+snow_monkey_entry_content_styles( [ '.wpac-section__body' ] );

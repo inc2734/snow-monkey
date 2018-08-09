@@ -1,0 +1,49 @@
+@charset 'utf-8';
+
+@import 'core/core';
+
+.edit-post-visual-editor .editor-writing-flow {
+  @import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
+  @import 'foundation/_element/element';
+  @import 'foundation/_packages/packages';
+
+  @include body();
+
+  @import 'foundation/_wordpress/wordpress';
+
+  /**
+   * Object - Component
+   */
+  @import 'object/component/component';
+
+  /**
+   * Object - Project
+   */
+  @import 'object/project/project';
+
+  /**
+   * Object - utility
+   */
+  @import 'object/utility/utility';
+
+  color: $_color-text;
+  font-family: $_font-family;
+  @include _font-size-line-height($_base-font-size-px);
+
+  p {
+    color: $_color-text;
+    font-family: $_font-family;
+    @include _font-size-line-height($_base-font-size-px);
+  }
+
+  > div > div > .editor-block-list__layout > [data-type^="core/"] .components-autocomplete,
+  .wp-block-freeform {
+    @include entry-content();
+  }
+
+  .components-autocomplete {
+    > [role="presentation"]:last-child {
+      margin-top: 0 !important;
+    }
+  }
+}

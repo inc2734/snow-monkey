@@ -14,9 +14,5 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Meiryo, MyYuGothicM, YuGothic, "Helvetica Neue", sans-serif;
-  word-wrap: break-word;
-  background-color: #fff;
-  font-variant-ligatures: none;
-  letter-spacing: .05em;
+  @include body();
 }

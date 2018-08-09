@@ -4,30 +4,31 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76816d2d002e6da65a2b49b9d5216387",
-    "content-hash": "75b5d26a9f2bc711339e19941e0b8a1f",
+    "hash": "ae89eb0c4c6d1c056d65681b00bc4c06",
+    "content-hash": "c5b77018c5db231818017f21725e962c",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.6.13",
+            "version": "2.7.0-beta",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "8e5e6d2d04b332c526d81234a60321ce51bc0e32"
+                "reference": "68dbfb759aee2b3fec824490f8ce377c56d89af3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8e5e6d2d04b332c526d81234a60321ce51bc0e32",
-                "reference": "8e5e6d2d04b332c526d81234a60321ce51bc0e32",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/68dbfb759aee2b3fec824490f8ce377c56d89af3",
+                "reference": "68dbfb759aee2b3fec824490f8ce377c56d89af3",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-awesome-components": ">=1.0.5",
+                "inc2734/wp-awesome-components": ">=1.0.6",
+                "inc2734/wp-awesome-custom-blocks": ">=1.0.0",
                 "inc2734/wp-awesome-widgets": ">=2.6.1",
                 "inc2734/wp-basis": ">=2.0.2",
                 "inc2734/wp-breadcrumbs": ">=1.0.3",
                 "inc2734/wp-contents-outline": ">=1.0.4",
-                "inc2734/wp-customizer-framework": ">=3.1.5",
+                "inc2734/wp-customizer-framework": ">=3.2.0",
                 "inc2734/wp-github-theme-updater": ">=0.2.8",
                 "inc2734/wp-like-me-box": ">=0.1.6",
                 "inc2734/wp-oembed-blog-card": ">=4.0.4",
@@ -68,20 +69,20 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-08-01 03:08:33"
+            "time": "2018-08-04 07:56:16"
         },
         {
             "name": "inc2734/wp-awesome-components",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-components.git",
-                "reference": "27e74ac8d2a9e2134cf4c789f06a927c37b98a5a"
+                "reference": "28990e175fa6e6a03a9e3dbc168a1f96b2bee063"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/27e74ac8d2a9e2134cf4c789f06a927c37b98a5a",
-                "reference": "27e74ac8d2a9e2134cf4c789f06a927c37b98a5a",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/28990e175fa6e6a03a9e3dbc168a1f96b2bee063",
+                "reference": "28990e175fa6e6a03a9e3dbc168a1f96b2bee063",
                 "shasum": ""
             },
             "require": {
@@ -116,7 +117,55 @@
                 }
             ],
             "description": "A library to add some awesome components for WordPress.",
-            "time": "2018-07-27 14:02:06"
+            "time": "2018-08-04 06:28:02"
+        },
+        {
+            "name": "inc2734/wp-awesome-custom-blocks",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-awesome-custom-blocks.git",
+                "reference": "5888194df6a5d9036599ec09a44af7d20a48f9da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-custom-blocks/zipball/5888194df6a5d9036599ec09a44af7d20a48f9da",
+                "reference": "5888194df6a5d9036599ec09a44af7d20a48f9da",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "doctrine/instantiator": "1.0.4",
+                "myclabs/deep-copy": "1.7.0",
+                "pdepend/pdepend": "2.5.0",
+                "phpdocumentor/reflection-docblock": "3.2.2",
+                "phpmd/phpmd": "2.*",
+                "phpunit/php-token-stream": "1.4.11",
+                "phpunit/phpunit": "^5.7",
+                "squizlabs/php_codesniffer": "*",
+                "symfony/yaml": "3.4.1",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Awesome_Custom_Blocks\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "description": "A library to add some awesome custom blocks for WordPress.",
+            "time": "2018-08-04 07:21:37"
         },
         {
             "name": "inc2734/wp-awesome-widgets",
@@ -315,16 +364,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "3.1.5",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "e41c4f0869a94b56ce1a1e0cee3e27f1da9d1e14"
+                "reference": "52cfde49f9d35139a3971629895e636bd284c0d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/e41c4f0869a94b56ce1a1e0cee3e27f1da9d1e14",
-                "reference": "e41c4f0869a94b56ce1a1e0cee3e27f1da9d1e14",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/52cfde49f9d35139a3971629895e636bd284c0d7",
+                "reference": "52cfde49f9d35139a3971629895e636bd284c0d7",
                 "shasum": ""
             },
             "require": {
@@ -359,7 +408,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2018-07-31 11:48:15"
+            "time": "2018-08-04 06:13:13"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -2264,16 +2313,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.13",
+            "version": "v3.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "1fffdeb349ff36a25184e5564c25289b1dbfc402"
+                "reference": "7b08223b7f6abd859651c56bcabf900d1627d085"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/1fffdeb349ff36a25184e5564c25289b1dbfc402",
-                "reference": "1fffdeb349ff36a25184e5564c25289b1dbfc402",
+                "url": "https://api.github.com/repos/symfony/config/zipball/7b08223b7f6abd859651c56bcabf900d1627d085",
+                "reference": "7b08223b7f6abd859651c56bcabf900d1627d085",
                 "shasum": ""
             },
             "require": {
@@ -2324,20 +2373,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2018-06-19 14:02:58"
+            "time": "2018-07-26 11:19:56"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.13",
+            "version": "v3.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "3f115cc3aae4d320b26db05e9531f4e32da29b89"
+                "reference": "1c0e679e522591fd744fdf242fec41a43d62b2b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/3f115cc3aae4d320b26db05e9531f4e32da29b89",
-                "reference": "3f115cc3aae4d320b26db05e9531f4e32da29b89",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/1c0e679e522591fd744fdf242fec41a43d62b2b1",
+                "reference": "1c0e679e522591fd744fdf242fec41a43d62b2b1",
                 "shasum": ""
             },
             "require": {
@@ -2395,20 +2444,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-16 13:57:19"
+            "time": "2018-07-29 15:19:31"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.13",
+            "version": "v3.4.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "8dab220fec8fc904821485326b29a6c670286124"
+                "reference": "a59f917e3c5d82332514cb4538387638f5bde2d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/8dab220fec8fc904821485326b29a6c670286124",
-                "reference": "8dab220fec8fc904821485326b29a6c670286124",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a59f917e3c5d82332514cb4538387638f5bde2d6",
+                "reference": "a59f917e3c5d82332514cb4538387638f5bde2d6",
                 "shasum": ""
             },
             "require": {
@@ -2445,7 +2494,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-09 13:25:43"
+            "time": "2018-07-26 11:19:56"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2656,7 +2705,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "inc2734/mimizuku-core": 10
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

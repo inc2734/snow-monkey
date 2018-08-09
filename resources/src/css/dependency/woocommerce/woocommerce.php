@@ -9,5 +9,5 @@ if ( ! class_exists( 'woocommerce' ) ) {
 	return;
 }
 
-snow_monkey_entry_content_styles( '.woocommerce-Tabs-panel' );
-snow_monkey_entry_content_styles( '.related.products' );
+snow_monkey_entry_content_styles( [ '.woocommerce-Tabs-panel' ] );
+snow_monkey_entry_content_styles( [ '.related.products' ] );

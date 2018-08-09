@@ -35,7 +35,8 @@
     color: adjust-hue(darken(desaturate($color, 70%), 70%), 40deg);
   }
 
-  > .mceEditable {
+  > .mceEditable,
+  &__body {
     @include _content(.75);
   }
 }

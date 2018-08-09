@@ -14,9 +14,11 @@ $_border-radius: 6px !default;
 $color-accent: #bd3c4f !default;
 $one-column-slim-max-width: 46rem !default;
 $border-bottom-width: 2px !default;
+$_font-family: -apple-system, BlinkMacSystemFont, Helvetica, Meiryo, MyYuGothicM, YuGothic, "Helvetica Neue", sans-serif !default;
 
 @import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis-core';
 
+@import 'mixin/body';
 @import 'mixin/btn';
 @import 'mixin/section';
 @import 'mixin/entry-content';
