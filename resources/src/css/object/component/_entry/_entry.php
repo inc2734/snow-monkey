@@ -9,7 +9,8 @@ if ( is_admin() ) {
 	if ( function_exists( 'is_gutenberg_page' ) ) {
 		snow_monkey_entry_content_styles( [
 			'',
-			'> div > div > .editor-block-list__layout > [data-type^="core/"] .components-autocomplete',
+			'[data-type="core/paragraph"] .components-autocomplete',
+			'[data-type="core/heading"] .components-autocomplete',
 			'.wp-block-freeform',
 		] );
 	} else {

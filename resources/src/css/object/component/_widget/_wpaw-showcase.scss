@@ -3,11 +3,7 @@
 }
 
 .wpaw-showcase {
-  @include _padding(.75, 0);
-
-  @include _media-min(md) {
-    @include _padding(1, 0);
-  }
+  @include _padding(1.5, 0);
 
   &__inner {
     @include _margin(0, -.5); // equal .wpaw-showcase body padding
@@ -104,11 +100,7 @@
 
   &--format-3 {
     .wpaw-showcase__figure {
-      @include _margin-bottom(-.75); // equal .wpaw-showcase bottom padding
-
-      @include _media-min(md) {
-        @include _margin-bottom(-1); // equal .wpaw-showcase bottom padding
-      }
+      @include _margin-bottom(-1.5); // equal .wpaw-showcase bottom padding
     }
 
     .wpaw-showcase__body {
@@ -153,13 +145,13 @@
     @include widget-full-width();
 
     @include _media-min(lg) {
-      @include _padding(2, 0);
+      @include _padding(3, 0);
     }
 
     &--format-3 {
       .wpaw-showcase__figure {
         @include _media-min(lg) {
-          @include _margin-bottom(-2);
+          @include _margin-bottom(-3); // equal .wpaw-showcase bottom padding
         }
       }
     }
