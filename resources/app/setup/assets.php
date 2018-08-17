@@ -56,11 +56,25 @@ add_action( 'wp_enqueue_scripts', function() {
  * @return void
  */
 add_action( 'wp_enqueue_scripts', function() {
-	global $wp_scripts;
 	$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
 	$header_position_only_mobile = ( $header_position_only_mobile ) ? 'true' : 'false';
 	$data = 'var snow_monkey_header_position_only_mobile = ' . $header_position_only_mobile;
 	wp_add_inline_script( snow_monkey_get_main_script_handle(), $data, 'before' );
+} );
+
+/**
+ * Enqueue script for global navigation
+ *
+ * @return void
+ */
+add_action( 'wp_enqueue_scripts', function() {
+	wp_localize_script(
+		snow_monkey_get_main_script_handle(),
+		'snow_monkey',
+		[
+			'home_url' => home_url(),
+		]
+	);
 } );
 
 /**
