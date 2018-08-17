@@ -37,7 +37,7 @@
 				}
 				?>
 
-				<?php add_action( 'snow_monkey_before_contents_inner' ); ?>
+				<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
 
 				<div class="l-contents__inner">
 					<main class="l-contents__main" role="main">
@@ -49,7 +49,7 @@
 					</aside>
 				</div>
 
-				<?php add_action( 'snow_monkey_after_contents_inner' ); ?>
+				<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
