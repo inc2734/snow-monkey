@@ -25,11 +25,15 @@
 			<?php get_template_part( 'template-parts/infobar' ); ?>
 
 			<div class="c-full-container">
+				<?php add_action( 'snow_monkey_before_contents_inner' ); ?>
+
 				<div class="l-contents__inner">
 					<main class="l-contents__main" role="main">
 						<?php $_view_controller->view(); ?>
 					</main>
 				</div>
+
+				<?php add_action( 'snow_monkey_after_contents_inner' ); ?>
 			</div>
 		</div>
 
