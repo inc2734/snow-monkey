@@ -12,7 +12,7 @@
 		<h1 class="c-entry__title"><?php echo esc_html( snow_monkey_get_page_title_from_breadcrumbs() ); ?></h1>
 	</header>
 
-	<?php if ( term_description() ) : ?>
+	<?php if ( ! is_paged() && term_description() ) : ?>
 		<div class="p-term-description c-entry__content">
 			<?php echo wp_kses_post( term_description() ); ?>
 		</div>
