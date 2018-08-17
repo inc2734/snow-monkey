@@ -5,8 +5,12 @@
  * @license GPL-2.0+
  */
 
-add_action( 'get_template_part_template-parts/entry-summary', function( $slug, $name ) {
+add_action( 'get_template_part_template-parts/loop/entry-summary', function( $slug, $name ) {
 	if ( is_singular() && ! is_front_page() ) {
+		return;
+	}
+
+	if ( 'post' !== $name ) {
 		return;
 	}
 
