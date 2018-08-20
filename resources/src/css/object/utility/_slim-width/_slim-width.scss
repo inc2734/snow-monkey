@@ -2,4 +2,14 @@
   margin-right: auto;
   margin-left: auto;
   max-width: $one-column-slim-max-width;
+
+  .#{$_prefix}c-container {
+    @include _media-min(lg) {
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 0;
+      padding-left: 0;
+      max-width: $one-column-slim-max-width;
+    }
+  }
 }

@@ -26,3 +26,19 @@
   display: block;
   clear: both;
 }
+
+.alignfull {
+  @include _media-max(md) {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    width: auto;
+  }
+
+  [data-has-sidebar="false"] & {
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    width: auto;
+  }
+}
+
+.alignwide {}
