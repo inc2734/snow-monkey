@@ -18,12 +18,16 @@ $.fn.SnowMonkeyActiveMenu = function(params = {}) {
 				return true;
       }
 
-      const vaPathname = atag.pathname.replace(new RegExp(`^${vlocation.pathname}`), '/');
+      const atagPathname     = atag.pathname.replace(/\/$/, '');
+      const atagHref         = atag.href.replace(/\/$/, '');
+      const locationHref     = location.href.replace(/\/$/, '');
+      const locationPathname = location.pathname.replace(/\/$/, '');
+      const vaPathname       = atagPathname.replace(new RegExp(`^${vlocation.pathname}`), '');
 
-      const sameUrl  = location.href === atag.href;
-      const childUrl = 0 === location.href.indexOf(atag.href)
-                    && 1 < location.pathname.length
-                    && 1 < atag.pathname.length
+      const sameUrl  = locationHref === atagHref;
+      const childUrl = 0 === locationHref.indexOf(atagHref)
+                    && 1 < locationPathname.length
+                    && 1 < atagPathname.length
                     && 1 < vaPathname.length;
       if (sameUrl || childUrl) {
         return _active(e);
