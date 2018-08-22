@@ -57,6 +57,8 @@
   }
 
   // @todo 要検討
+  .editor-post-title__block,
+  .editor-default-block-appender,
   .editor-block-list__block {
     max-width: 1220px; // = $content_width
   }
