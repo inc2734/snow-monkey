@@ -82,11 +82,11 @@ add_action( 'wp_enqueue_scripts', function() {
  *
  * @return void
  */
-add_action( 'wp_enqueue_scripts', function() {
+function snow_monkey_enqueue_awesome_components() {
 	wp_enqueue_script(
 		'fontawesome5',
 		'https://use.fontawesome.com/releases/v5.0.9/js/all.js',
-		[ snow_monkey_get_main_script_handle() ],
+		[],
 		'5.0.9',
 		true
 	);
@@ -98,7 +98,9 @@ add_action( 'wp_enqueue_scripts', function() {
 		'5.0.9',
 		true
 	);
-} );
+}
+add_action( 'wp_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
+add_action( 'admin_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
 
 /**
  * @return void
