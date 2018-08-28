@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: One column (slim)
+ * Template Name: One column ( slim width )
  * Template Post Type: post, page
  *
  * @package snow-monkey
