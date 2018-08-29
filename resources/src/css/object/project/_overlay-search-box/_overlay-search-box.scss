@@ -1,0 +1,60 @@
+.#{$_prefix}p-overlay-search-box {
+  @include _position(fixed, 0, 0, 0, 0, 100000);
+  opacity: 0;
+  visibility: hidden;
+  @include _transition(opacity);
+  background-color: rgba(#000, .7);
+
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__bg {
+    @include _position(absolute, 0, 0, 0, 0);
+    display: block;
+  }
+
+  &__close-btn {
+    @include _position(absolute, 0, 0);
+    @include _square(60px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .#{$_prefix}c-input-group {
+    width: 80vw;
+    max-width: 480px;
+
+    &__field {
+      > input {
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(#fff, .7);
+        color: #fff;
+
+        &:focus {
+          border-bottom-color: #fff;
+        }
+      }
+    }
+
+    &__btn {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+    }
+  }
+}
