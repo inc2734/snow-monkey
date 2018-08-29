@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-08-28 13:45+0900\n"
-"PO-Revision-Date: 2018-08-28 13:46+0900\n"
+"POT-Creation-Date: 2018-08-29 14:54+0900\n"
+"PO-Revision-Date: 2018-08-29 14:56+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -398,6 +398,38 @@ msgstr "この機能はベータ版です。"
 #: app/customizer/seo-sns/panel.php:17
 msgid "SEO/SNS"
 msgstr "SEO/SNS"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:14
+msgid "noindex settings"
+msgstr "noindex の設定"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:18
+msgid "Set category pages to noindex"
+msgstr "カテゴリーページを noindex に設定"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:19
+msgid "Set tag pages to noindex"
+msgstr "タグページを noindex に設定"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:20
+msgid "Set author pages to noindex"
+msgstr "著者ページを noindex に設定"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:21
+msgid "Set year pages to noindex"
+msgstr "年ページを noindex に設定"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:22
+msgid "Set month pages to noindex"
+msgstr "月ページを noindex に設定"
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:23
+msgid "Set day pages to noindex"
+msgstr "日ページを noindex に設定"
+
+#: app/customizer/seo-sns/sections/crawler/section.php:17
+msgid "Crawler"
+msgstr "クローラー"
 
 #: app/customizer/seo-sns/sections/google-analytics/controls/for-logged-in.php:13
 #: app/customizer/seo-sns/sections/google-tag-manager/controls/for-logged-in.php:13
@@ -842,6 +874,15 @@ msgstr "コメントはありません。"
 #: template-parts/hamburger-btn.php:15
 msgid "MENU"
 msgstr "MENU"
+
+#: template-parts/overlay-search-box.php:12
+msgid "Close"
+msgstr "閉じる"
+
+#: template-parts/overlay-search-box.php:19
+#: template-parts/overlay-search-box.php:20
+msgid "Search"
+msgstr ""
 
 #: template-parts/page-summary.php:33
 msgid "More"

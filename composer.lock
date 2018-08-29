@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ff7808dc10aff658f04f376ee7380d1a",
-    "content-hash": "0489acc20a06dad244bb656d89cab04f",
+    "hash": "7930ef348b4b546998dd3fb88a01a90e",
+    "content-hash": "99d05d3d04de1098c6b3d9ad741af873",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.7.4",
+            "version": "2.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "bcc465559def583f3ef9110aa0e3e03a31676786"
+                "reference": "6163b531c87beccfcfd179755eb82e4f2d273c24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/bcc465559def583f3ef9110aa0e3e03a31676786",
-                "reference": "bcc465559def583f3ef9110aa0e3e03a31676786",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6163b531c87beccfcfd179755eb82e4f2d273c24",
+                "reference": "6163b531c87beccfcfd179755eb82e4f2d273c24",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "inc2734/wp-page-speed-optimization": ">=0.7.3",
                 "inc2734/wp-profile-box": ">=1.1.2",
                 "inc2734/wp-pure-css-gallery": ">=1.1.4",
-                "inc2734/wp-seo": ">=1.0.6",
+                "inc2734/wp-seo": ">=1.1.0",
                 "inc2734/wp-share-buttons": ">=2.0.2",
                 "inc2734/wp-view-controller": ">=5.0.1",
                 "php": ">=5.6"
@@ -68,7 +68,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-08-20 10:49:42"
+            "time": "2018-08-29 05:49:02"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -699,16 +699,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "1.0.6",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "afe49098a0b9d64c71ad17283ce8542272af473e"
+                "reference": "51e5cebaf79d52deb9e371cc7431fd36db13169e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/afe49098a0b9d64c71ad17283ce8542272af473e",
-                "reference": "afe49098a0b9d64c71ad17283ce8542272af473e",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/51e5cebaf79d52deb9e371cc7431fd36db13169e",
+                "reference": "51e5cebaf79d52deb9e371cc7431fd36db13169e",
                 "shasum": ""
             },
             "require": {
@@ -744,7 +744,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2018-07-30 05:28:45"
+            "time": "2018-08-29 05:45:51"
         },
         {
             "name": "inc2734/wp-share-buttons",
@@ -2264,7 +2264,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2328,16 +2328,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "1c0e679e522591fd744fdf242fec41a43d62b2b1"
+                "reference": "09d7df7bf06c1393b6afc85875993cbdbdf897a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/1c0e679e522591fd744fdf242fec41a43d62b2b1",
-                "reference": "1c0e679e522591fd744fdf242fec41a43d62b2b1",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/09d7df7bf06c1393b6afc85875993cbdbdf897a0",
+                "reference": "09d7df7bf06c1393b6afc85875993cbdbdf897a0",
                 "shasum": ""
             },
             "require": {
@@ -2395,20 +2395,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-29 15:19:31"
+            "time": "2018-08-08 11:42:34"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.14",
+            "version": "v3.4.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "a59f917e3c5d82332514cb4538387638f5bde2d6"
+                "reference": "285ce5005cb01a0aeaa5b0cf590bd0cc40bb631c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/a59f917e3c5d82332514cb4538387638f5bde2d6",
-                "reference": "a59f917e3c5d82332514cb4538387638f5bde2d6",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/285ce5005cb01a0aeaa5b0cf590bd0cc40bb631c",
+                "reference": "285ce5005cb01a0aeaa5b0cf590bd0cc40bb631c",
                 "shasum": ""
             },
             "require": {
@@ -2445,7 +2445,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26 11:19:56"
+            "time": "2018-08-10 07:29:05"
         },
         {
             "name": "symfony/polyfill-ctype",
