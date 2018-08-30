@@ -62,4 +62,16 @@
   .editor-block-list__block {
     max-width: 1220px; // = $content_width
   }
+
+  .editor-post-title__block > div {
+    padding-right: 14px;
+    padding-left: 14px;
+
+    @include _media-min(600px) {
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }
