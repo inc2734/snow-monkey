@@ -16,7 +16,7 @@ export default {
     babel({
       presets: [
         [
-          "env", {
+          "@babel/preset-env", {
             "modules": false,
             "targets": {
               "browsers": ['last 2 versions']
@@ -24,7 +24,6 @@ export default {
           }
         ]
       ],
-      plugins: ['external-helpers'],
       babelrc: false
     })
   ]
