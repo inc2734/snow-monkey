@@ -74,4 +74,21 @@
       padding-left: 0;
     }
   }
+
+  .wp-block-image {
+    > div {
+      > div {
+        max-width: none !important;
+      }
+    }
+  }
+
+  .editor-block-list__block {
+    &[data-align="right"],
+    &[data-align="left"] {
+      > .editor-block-list__block-edit {
+        margin-top: 0;
+      }
+    }
+  }
 }
