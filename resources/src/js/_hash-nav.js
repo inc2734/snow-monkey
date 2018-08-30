@@ -2,6 +2,10 @@
 
 export default class SnowMonkeyHashNav {
   constructor() {
+    window.addEventListener('DOMContentLoaded', () => this._init(), false);
+  }
+
+  _init() {
     this.target = document.querySelectorAll('a[href="#sm-drawer"]');
     if (1 > this.target) {
       return;
@@ -17,10 +21,6 @@ export default class SnowMonkeyHashNav {
       return;
     }
 
-    window.addEventListener('DOMContentLoaded', () => this._init(), false);
-  }
-
-  _init() {
     [].forEach.call(this.target, (element) => {
       element.addEventListener('click', (event) => {
         event.stopPropagation();
