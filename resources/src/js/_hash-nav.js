@@ -1,32 +1,42 @@
 'use strict';
 
-import $ from 'jquery';
-
 export default class SnowMonkeyHashNav {
   constructor() {
-    $(() => {
-      this._drawer();
+    this.target = document.querySelectorAll('a[href="#sm-drawer"]');
+    if (1 > this.target) {
+      return;
+    }
+
+    this.drawer = document.getElementById('drawer-nav');
+    if (! this.drawer) {
+      return;
+    }
+
+    this.hamburgerBtn = document.getElementById(this.drawer.getAttribute('aria-labelledby'));
+    if (! this.hamburgerBtn) {
+      return;
+    }
+
+    window.addEventListener('DOMContentLoaded', () => this._init(), false);
+  }
+
+  _init() {
+    [].forEach.call(this.target, (element) => {
+      element.addEventListener('click', (event) => {
+        event.stopPropagation();
+        this._drawer();
+        return false
+      }, false);
     });
   }
 
-  /**
-   * Opening and closing the drawer
-   * #sm-drawer
-   */
   _drawer() {
-    $('a[href="#sm-drawer"]').on('click', () => {
-      const drawer = $('#drawer-nav');
-      const hamburgerBtn = $(`#${drawer.attr('aria-labelledby')}`);
-
-      if ('false' === drawer.attr('aria-hidden')) {
-        drawer.attr('aria-hidden', 'true');
-        hamburgerBtn.attr('aria-expanded', 'false');
-      } else {
-        drawer.attr('aria-hidden', 'false');
-        hamburgerBtn.attr('aria-expanded', 'true');
-      }
-
-      return false;
-    });
+    if ('false' === this.drawer.getAttribute('aria-hidden')) {
+      this.drawer.setAttribute('aria-hidden', 'true');
+      this.hamburgerBtn.setAttribute('aria-expanded', 'false');
+    } else {
+      this.drawer.setAttribute('aria-hidden', 'false');
+      this.hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
   }
 }
