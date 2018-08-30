@@ -20,6 +20,11 @@
 			'<button class="c-input-group__btn"><i class="fas fa-search" aria-label="' . esc_html__( 'Search', 'inc2734-wp-basis' ) . '"></i></button>',
 			$form
 		);
+		$form = str_replace(
+			'method="get"',
+			'method="get" autocomplete="off"',
+			$form
+		);
 
 		// @codingStandardsIgnoreStart
 		echo $form;
