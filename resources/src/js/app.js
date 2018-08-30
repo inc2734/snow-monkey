@@ -73,3 +73,4 @@ $(window).on('elementor/frontend/init', () => {
 });
 
 $('.p-global-nav').SnowMonkeyActiveMenu({home_url: snow_monkey.home_url});
+$('.p-footer-sticky-nav').SnowMonkeyActiveMenu({home_url: snow_monkey.home_url});

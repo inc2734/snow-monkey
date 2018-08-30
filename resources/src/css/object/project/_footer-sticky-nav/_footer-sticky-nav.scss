@@ -25,6 +25,12 @@
   .#{$_prefix}c-navbar {
     &__item {
       flex: 1 1 0%;
+
+      &[data-active-menu] {
+        > a {
+          color: $color-accent;
+        }
+      }
     }
   }
 }
