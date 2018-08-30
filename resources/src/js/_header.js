@@ -1,37 +1,43 @@
 'use strict';
 
-import $ from 'jquery';
-
 export default class SnowMonkeyHeader {
   constructor() {
-    this.min         = 1023;
-    this.header      = $('.l-header');
-    this.contents    = $('.l-contents');
-    this.defaultType = this.header.attr('data-snow-monkey-default-header-position');
-
-    this.init();
-
-    $(window).resize(() => {
-      this.init();
-    });
+    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
   }
 
-  init() {
+  _DOMContentLoaded() {
+    this.header = document.getElementsByClassName('l-header');
+    if (1 > this.header.length) {
+      return;
+    }
+
+    this.contents = document.getElementsByClassName('l-contents');
+    if (1 > this.contents.length) {
+      return;
+    }
+
+    this.header      = this.header[0];
+    this.contents    = this.contents[0];
+    this.defaultType = this.header.getAttribute('data-snow-monkey-default-header-position');
+
+    this._init();
+    window.addEventListener('resize', () => this._init(), false);
+  }
+
+  _init() {
     if ('sticky' !== this.defaultType && 'overlay' !== this.defaultType) {
       return;
     }
 
-    if (this.min < $(window).width()) {
-      if ('sticky' === this.defaultType || 'overlay' === this.defaultType) {
-        this.header.attr('data-l-header-type', '');
-        this.contents.css('margin-top', '');
-      }
+    if (window.matchMedia('(min-width: 1023px)').matches) {
+      this.header.setAttribute('data-l-header-type', '');
+      this.contents.style.marginTop = '';
     } else {
-      this.header.attr('data-l-header-type', this.defaultType);
-      if ('fixed' === this.header.css('position') || 'absolute' === this.header.css('position')) {
+      this.header.setAttribute('data-l-header-type', this.defaultType);
+      const position = window.getComputedStyle(this.header).getPropertyValue('position');
+      if ('fixed' === position || 'absolute' === position) {
         if ('sticky' === this.defaultType) {
-          const headerHeight = this.header.outerHeight();
-          this.contents.css('margin-top', `${headerHeight}px`);
+          this.contents.style.marginTop = `${this.header.offsetHeight}px`;
         }
       }
     }

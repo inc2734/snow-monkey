@@ -2,10 +2,10 @@
 
 export default class SnowMonkeyHashNav {
   constructor() {
-    window.addEventListener('DOMContentLoaded', () => this._init(), false);
+    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
   }
 
-  _init() {
+  _DOMContentLoaded() {
     this.target = document.querySelectorAll('a[href="#sm-drawer"]');
     if (1 > this.target) {
       return;

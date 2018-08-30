@@ -2,20 +2,20 @@
 
 export default class SnowMonkeyFooterStickyNav {
   constructor() {
-    window.addEventListener('DOMContentLoaded', () => this._init(), false);
+    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
   }
 
-  _init() {
+  _DOMContentLoaded() {
     this.nav = document.getElementById('footer-sticky-nav');
     if (1 > this.nav.length) {
       return;
     }
 
-    window.addEventListener('load', () => this._setPosition(), false);
-    window.addEventListener('resize', () => this._setPosition(), false);
+    window.addEventListener('load', () => this._init(), false);
+    window.addEventListener('resize', () => this._init(), false);
   }
 
-  _setPosition() {
+  _init() {
     const display = window.getComputedStyle(this.nav).getPropertyValue('display');
     const body    = document.getElementById('body');
 
