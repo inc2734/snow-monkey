@@ -10,7 +10,7 @@ if ( ! has_nav_menu( 'footer-sticky-nav' ) ) {
 }
 ?>
 
-<nav class="p-footer-sticky-nav" role="navigation">
+<nav class="p-footer-sticky-nav" id="footer-sticky-nav" role="navigation">
 	<?php
 	wp_nav_menu( [
 		'theme_location' => 'footer-sticky-nav',

@@ -1,23 +1,21 @@
 'use strict';
 
-import $ from 'jquery';
-
 export default class SnowMonkeyFooterStickyNav {
   constructor() {
-    this.nav = $('.p-footer-sticky-nav');
+    this.nav = document.getElementById('footer-sticky-nav');
+    if (1 > this.nav.length) {
+      return;
+    }
 
-    this._init();
-
-    $(window).on('load resize', () => {
-      this._init();
-    });
+    window.addEventListener('DOMContentLoaded', () => this._init(), false);
+    window.addEventListener('load', () => this._init(), false);
+    window.addEventListener('resize', () => this._init(), false);
   }
 
   _init() {
-    if ('none' !== this.nav.css('display')) {
-      $('body').css('margin-bottom', this.nav.outerHeight());
-    } else {
-      $('body').css('margin-bottom', '');
-    }
+    const display = window.getComputedStyle(this.nav).getPropertyValue('display');
+    const body    = document.getElementById('body');
+
+    body.style.marginBottom = 'none' !== display ? `${this.nav.offsetHeight}px` : '';
   }
 }
