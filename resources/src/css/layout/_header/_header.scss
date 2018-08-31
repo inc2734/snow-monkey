@@ -23,6 +23,8 @@
       background-color: transparent;
 
       .#{$_prefix}c-site-branding__title > a,
+      .#{$_prefix}c-site-branding__description,
+      .#{$_prefix}c-hamburger-btn__label,
       [data-has-global-nav] .#{$_prefix}p-global-nav .#{$_prefix}c-navbar__item > a {
         color: #fff;
       }

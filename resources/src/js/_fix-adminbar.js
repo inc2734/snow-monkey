@@ -1,78 +1,104 @@
 'use strict';
 
-import $ from 'jquery';
-
 export default class FixAdminBar {
   constructor() {
-    $(() => {
-      this.min       = 599;
-      this.container = $('.l-container');
-      this.header    = $('.l-header');
-      this.contents  = $('.l-contents');
-
-      this.adminBar  = $('#wpadminbar');
-
-      if (this.adminBar.length) {
-        this.fixHeaderPosition();
-        this.fixStickyFooter();
-        this.fixDisableWindowScroll();
-        this.setListener();
-      }
-    });
+    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
   }
 
-  setListener() {
-    $(window).resize(() => {
-      this.fixHeaderPosition();
-      this.fixStickyFooter();
-      this.fixDisableWindowScroll();
-    });
+  _DOMContentLoaded() {
+    this.container = document.getElementsByClassName('l-container');
+    this.header    = document.getElementsByClassName('l-header');
+    this.contents  = document.getElementsByClassName('l-contents');
+    this.html      = document.getElementsByTagName('html').item(0)
 
-    $(window).scroll(() => {
-      this.fixHeaderPosition();
-    });
+    if (1 > this.container.length || 1 > this.header.length || 1 > this.contents.length) {
+      return;
+    }
+
+    this.container = this.container[0];
+    this.header    = this.header[0];
+    this.contents  = this.contents[0];
+    this.adminBar  = document.getElementById('wpadminbar');
+
+    if (!! this.adminBar) {
+      this._init()
+
+      window.addEventListener('resize', () => this._init(), false);
+      window.addEventListener('scroll', () => this._fixHeaderPosition(), false);
+    }
   }
 
-  fixHeaderPosition() {
-    if (-1 !== $.inArray(this.header.attr('data-l-header-type'), ['sticky', 'overlay'])) {
-      const scroll = $(window).scrollTop();
-      const adminbar_height = parseInt(this.adminBar.outerHeight());
+  _init() {
+    this._fixHeaderPosition();
+    this._fixStickyFooter();
+    this._fixDisableWindowScroll();
+  }
 
-      if (this.min > $(window).outerWidth()) {
-        if (scroll >= this.adminBar.outerHeight()) {
-          this.header.css('top', 0);
-          this.header.css('position', '');
-        } else {
-          if ('sticky' === this.header.attr('data-l-header-type')) {
-            this.header.css('position', 'relative');
-            this.header.css('top', '');
-          } else if ('overlay' === this.header.attr('data-l-header-type')) {
-            this.header.css('position', '');
-            this.header.css('top', adminbar_height + scroll * -1);
-          } else {
-            this.header.css('top', adminbar_height + scroll * -1);
-          }
-          $('html').attr('data-scrolled', false);
-          this.contents.css('margin-top', 0);
-        }
+  _scroll() {
+    this._fixHeaderPosition();
+  }
+
+  _fixHeaderPosition() {
+    const headerType = this.header.getAttribute('data-l-header-type');
+
+    if ( 'sticky' !== headerType && 'overlay' !== headerType) {
+      return;
+    }
+
+    const scroll = this._scrollTop();
+    const adminbarHeight = this.adminBar.offsetHeight;
+
+    if (window.matchMedia('(min-width: 601px)').matches) {
+      this._setHeaderPosition(null);
+      this._setHeaderTop(null);
+    } else {
+      if (scroll >= adminbarHeight) {
+        this._setHeaderPosition(null);
+        this._setHeaderTop(0);
       } else {
-        this.header.css('top', '');
-        this.header.css('position', '');
+        if ('sticky' === headerType) {
+          this._setHeaderPosition('relative');
+          this._setHeaderTop(null);
+        } else if ('overlay' === headerType) {
+          this._setHeaderPosition('absolute');
+          this._setHeaderTop(null);
+        }
+
+        this.html.setAttribute('data-scrolled', false);
+        this._setContentsMarginTop(0);
       }
     }
   }
 
-  fixStickyFooter() {
-    if ('true' == $('html').attr('data-sticky-footer')) {
-      const adminbar_height = parseInt(this.adminBar.outerHeight());
-      this.container.css('min-height', `calc(100vh - ${adminbar_height}px)`);
+  _setHeaderPosition(position) {
+    this.header.style.position = position;
+  }
+
+  _setHeaderTop(top) {
+    top = null !== top ? `${parseInt(top)}px` : top;
+    this.header.style.top = top;
+  }
+
+  _setContentsMarginTop(marginTop) {
+    marginTop = null !== marginTop ? `${parseInt(marginTop)}px` : marginTop;
+    this.contents.style.marginTop = marginTop;
+  }
+
+  _fixStickyFooter() {
+    if ('true' == this.html.getAttribute('data-sticky-footer')) {
+      const adminbarHeight = this.adminBar.offsetHeight;
+      this.container.style.minHeight = `calc(100vh - ${adminbarHeight}px)`;
     }
   }
 
-  fixDisableWindowScroll() {
-    if ('false' == $('html').attr('data-window-scroll')) {
-      const adminbar_height = parseInt(this.adminBar.outerHeight());
-      this.container.css('max-height', `calc(100vh - ${adminbar_height}px)`);
+  _fixDisableWindowScroll() {
+    if ('false' == this.html.getAttribute('data-window-scroll')) {
+      const adminbarHeight = this.adminBar.offsetHeight;
+      this.container.style.maxHeight = `calc(100vh - ${adminbarHeight}px)`;
     }
+  }
+
+  _scrollTop() {
+    return document.documentElement.scrollTop || document.body.scrollTop;
   }
 }
