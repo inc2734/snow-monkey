@@ -4,92 +4,113 @@ import $ from 'jquery';
 
 export default class SnowMonkeyDropNav {
   constructor() {
-    this.header = $('.l-header');
-    this.nav    = $('.l-header__drop-nav');
-    this.min    = 1023;
-    this.defaultWindowWidth = $(window).width();
-    this.gNavClass = '.p-global-nav';
+    this.defaultWindowWidth = window.innerWidth;
 
-    if (this._isUpdateVisibility()) {
-      this._showGnav();
-      this._hideDropNav();
+    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
+  }
+
+  _DOMContentLoaded() {
+    this.header = document.getElementsByClassName('l-header');
+    if (1 > this.header.length) {
+      return;
+    }
+    this.header = this.header[0];
+
+    this.dropNavWrapper = document.getElementsByClassName('l-header__drop-nav');
+    if (1 > this.dropNavWrapper.length) {
+      return;
+    }
+    this.dropNavWrapper = this.dropNavWrapper[0];
+
+    this.dropNav = this.dropNavWrapper.querySelector('.p-global-nav');
+    if (! this.dropNav) {
+      return;
     }
 
-    this.onScroll();
-    this.onResize();
+    this.gnav = document.querySelector('[data-has-global-nav="true"] .p-global-nav');
+    if (! this.gnav) {
+      return;
+    }
+
+    if (this._isUpdateVisibility()) {
+      this._gnav();
+    }
+
+    (() => {
+      this.timer = null;
+      window.addEventListener('scroll', () => this._scroll(), false);
+    })();
+
+    window.addEventListener('resize', () => this._resize(), false);
   }
 
-  onScroll() {
-    let timer = null;
-
-    $(window).scroll(() => {
-      clearTimeout(timer);
-
-      setTimeout(() => {
-        if (this.min < $(window).width()) {
-          if (this.header.outerHeight() < $(window).scrollTop()) {
-            if (this._isUpdateVisibility()) {
-              this._hideGnav();
-              this._showDropNav();
-              return;
-            }
+  _scroll() {
+    clearTimeout(this.timer);
+    this.timer = setTimeout(() => {
+      if (window.matchMedia('(min-width: 1023px)').matches) {
+        if (this.header.offsetHeight < this._scrollTop()) {
+          if (this._isUpdateVisibility()) {
+            this._dropNav();
+            return;
           }
         }
-
-        if (this._isUpdateVisibility()) {
-          this._showGnav();
-          this._hideDropNav();
-        }
-      }, 250);
-    });
-  }
-
-  onResize() {
-    $(window).resize(() => {
-      if ($(window).width() === this.defaultWindowWidth) {
-        return;
       }
 
       if (this._isUpdateVisibility()) {
-        this._showGnav();
-        this._hideDropNav();
+        this._gnav();
       }
-    });
+    }, 100);
+  }
+
+  _resize() {
+    if (window.innerWidth !== this.defaultWindowWidth) {
+      if (this._isUpdateVisibility()) {
+        this._gnav();
+      }
+    }
   }
 
   _isUpdateVisibility() {
-    //if ('sticky' === this.header.attr('data-l-header-type') || 'overlay' === this.header.attr('data-l-header-type')) {
-      if (false === snow_monkey_header_position_only_mobile) {
-        return false;
-      }
-    //}
+    return false === snow_monkey_header_position_only_mobile ? false : true;
+  }
 
-    return true;
+  _scrollTop() {
+    return document.documentElement.scrollTop || document.body.scrollTop;
+  }
+
+  _gnav() {
+    this._showGnav();
+    this._hideDropNav();
+  }
+
+  _dropNav() {
+    this._hideGnav();
+    this._showDropNav();
   }
 
   _showGnav() {
-    this._show($(this.gNavClass));
+    this._show(this.gnav);
   }
 
   _hideGnav() {
-    this._hide($(this.gNavClass));
+    this._hide(this.gnav);
   }
 
   _showDropNav() {
-    this._show(this.nav);
-    this._show(this.nav.find(this.gNavClass));
+    this._show(this.dropNavWrapper);
+    this._show(this.dropNav);
   }
 
   _hideDropNav() {
-    this._hide(this.nav);
-    this._hide(this.nav.find(this.gNavClass));
+    this._hide(this.dropNavWrapper);
+    this._hide(this.dropNav);
   }
 
   _show(target) {
-    target.attr('aria-hidden', 'false');
+    target.setAttribute('aria-hidden', 'false');
   }
 
   _hide(target) {
-    target.attr('aria-hidden', 'true');
+    target.setAttribute('aria-hidden', 'true');
   }
 }
