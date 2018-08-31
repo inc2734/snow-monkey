@@ -6,11 +6,6 @@ export default class SnowMonkeyHashNav {
   }
 
   _DOMContentLoaded() {
-    this.target = document.querySelectorAll('a[href="#sm-drawer"]');
-    if (1 > this.target) {
-      return;
-    }
-
     this.drawer = document.getElementById('drawer-nav');
     if (! this.drawer) {
       return;
@@ -21,7 +16,7 @@ export default class SnowMonkeyHashNav {
       return;
     }
 
-    [].forEach.call(this.target, (element) => {
+    this._forEachHtmlNodes(document.querySelectorAll('a[href="#sm-drawer"]'), (element) => {
       element.addEventListener('click', (event) => {
         event.stopPropagation();
         this._drawer();
@@ -34,9 +29,23 @@ export default class SnowMonkeyHashNav {
     if ('false' === this.drawer.getAttribute('aria-hidden')) {
       this.drawer.setAttribute('aria-hidden', 'true');
       this.hamburgerBtn.setAttribute('aria-expanded', 'false');
+
+      this._forEachHtmlNodes(this.drawer.getElementsByClassName('c-drawer__toggle'), (element) => {
+        element.setAttribute('aria-expanded', 'false');
+      });
+
+      this._forEachHtmlNodes(this.drawer.getElementsByClassName('c-drawer__submenu'), (element) => {
+        element.setAttribute('aria-hidden', 'true');
+      });
     } else {
       this.drawer.setAttribute('aria-hidden', 'false');
       this.hamburgerBtn.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  _forEachHtmlNodes(htmlNodes, callback) {
+    if (0 < htmlNodes.length) {
+      [].forEach.call(htmlNodes, (htmlNode) => callback(htmlNode));
     }
   }
 }
