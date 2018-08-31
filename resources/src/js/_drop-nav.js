@@ -1,7 +1,5 @@
 'use strict';
 
-import $ from 'jquery';
-
 export default class SnowMonkeyDropNav {
   constructor() {
     this.defaultWindowWidth = window.innerWidth;
