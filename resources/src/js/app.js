@@ -72,5 +72,12 @@ $(window).on('elementor/frontend/init', () => {
   });
 });
 
-$('.p-global-nav').SnowMonkeyActiveMenu({home_url: snow_monkey.home_url});
-$('.p-footer-sticky-nav').SnowMonkeyActiveMenu({home_url: snow_monkey.home_url});
+import SnowMonkeyActiveMenu from './_active-menu.js';
+
+new SnowMonkeyActiveMenu('.p-global-nav', {
+  home_url: snow_monkey.home_url,
+});
+
+new SnowMonkeyActiveMenu('.p-footer-sticky-nav', {
+  home_url: snow_monkey.home_url,
+});
