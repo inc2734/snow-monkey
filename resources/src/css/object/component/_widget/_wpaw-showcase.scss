@@ -86,6 +86,7 @@
     @include _media-min(md) {
       .wpaw-showcase__inner {
         flex-direction: row;
+        flex-wrap: nowrap;
       }
     }
   }
@@ -94,6 +95,7 @@
     @include _media-min(md) {
       .wpaw-showcase__inner {
         flex-direction: row-reverse;
+        flex-wrap: nowrap;
       }
     }
   }
