@@ -3,9 +3,9 @@
 import $ from 'jquery';
 
 import '../../assets/packages/slick-carousel';
-import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis.js';
 import '../../assets/packages/jquery.sticky';
 import '../../assets/packages/jquery.background-parallax-scroll';
+import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis.js';
 import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
 import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
 import '../../vendor/inc2734/wp-contents-outline/src/assets/js/wp-contents-outline.js';
