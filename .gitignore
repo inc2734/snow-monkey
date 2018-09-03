@@ -10,3 +10,6 @@ release/
 snow-monkey.zip
 yarn-error.log
 snow-monkey
+composer-dev.json
+composer-dev.lock
+composer.lock

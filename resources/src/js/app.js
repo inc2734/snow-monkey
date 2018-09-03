@@ -6,9 +6,7 @@ import '../../assets/packages/slick-carousel';
 import '../../assets/packages/jquery.sticky';
 import '../../assets/packages/jquery.background-parallax-scroll';
 import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis.js';
-import '../../vendor/inc2734/wp-contents-outline/src/assets/packages/jquery.contents-outline/src/jquery.contents-outline.js';
 import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
-import '../../vendor/inc2734/wp-contents-outline/src/assets/js/wp-contents-outline.js';
 import './_wpaw-pickup-slider.js';
 import './_wpaw-pr-box.js';
 
@@ -66,8 +64,6 @@ $('.js-bg-parallax').backgroundParallaxScroll();
 $('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
 $('.wpaw-slider__canvas').WpawSlider();
 $('.wpaw-pr-box').SnowMonkeyWpawPrBox();
-
-$('.wpco-wrapper').wpContentsOutline();
 
 $(window).on('elementor/frontend/init', () => {
   elementorFrontend.hooks.addAction('frontend/element_ready/widget', (scope) => {
