@@ -1,0 +1,10 @@
+.#{$_prefix}p-section-front-page-content {
+  [data-has-sidebar="true"] & {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  & + * {
+    @include _margin-top(2);
+  }
+}

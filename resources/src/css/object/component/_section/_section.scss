@@ -6,9 +6,7 @@
   }
 
   [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
-    @include _media-min(lg) {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

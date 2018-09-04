@@ -15,8 +15,8 @@
 	$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
 	?>
 	<?php if ( $content ) : ?>
-		<div class="c-section">
-			<?php if ( 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) : ?>
+		<div class="c-section p-section-front-page-content">
+			<?php if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) : ?>
 				<div class="c-container">
 					<div class="c-entry">
 						<div class="c-entry__content">
