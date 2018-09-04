@@ -7,7 +7,7 @@ export default class SnowMonkeyFooterStickyNav {
 
   _DOMContentLoaded() {
     this.nav = document.getElementById('footer-sticky-nav');
-    if (1 > this.nav.length) {
+    if (! this.nav.length) {
       return;
     }
 
