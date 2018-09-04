@@ -1,4 +1,13 @@
-img[class*="wp-image-"] {
+img[class*="wp-image-"],
+.wp-block-image img {
   box-shadow: 0 0px 3px 0 rgba(0, 0, 0, .1),
               0 1px 3px 0 rgba(0, 0, 0, .1);
+}
+
+.wp-block-image figcaption {
+  @include _margin(6px, 0, 0);
+  color: $_color-gray;
+  @include _font-size($_base-font-size-px - 2);
+  @include _line-height($_base-font-size-px + 4);
+  text-align: left;
 }
