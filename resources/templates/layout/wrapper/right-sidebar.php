@@ -11,7 +11,7 @@
 
 <body <?php body_class( [ 'l-body--right-sidebar' ] ); ?> id="body"
 	data-has-sidebar="true"
-	data-is-fluid-template="false"
+	data-is-fluid-template="true"
 	data-is-slim-width="true"
 	>
 

@@ -11,7 +11,7 @@
 
 <body <?php body_class( [ 'l-body--one-column-full' ] ); ?> id="body"
 	data-has-sidebar="false"
-	data-is-fluid-template="true"
+	data-is-fluid-template="false"
 	data-is-slim-width="false"
 	>
 
