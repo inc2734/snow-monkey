@@ -2,7 +2,7 @@
 
 export default class SnowMonkeyActiveMenu {
   constructor(selector, params = {}) {
-    this.navs     = document.querySelectorAll(selector);
+    this.selector = selector;
     this.location = window.location;
     this.params   = params;
     this.params.home_url = !! this.params.home_url ? this.params.home_url : `${this.location.protocol}//${this.location.host}`;
@@ -11,7 +11,9 @@ export default class SnowMonkeyActiveMenu {
   }
 
   _DOMContentLoaded() {
-    this._forEachHtmlNodes(this.navs, (nav) => {
+    const navs = document.querySelectorAll(this.selector);
+
+    this._forEachHtmlNodes(navs, (nav) => {
       const links     = nav.getElementsByTagName('a');
       const vlocation = this._createVlocation();
 
@@ -40,7 +42,7 @@ export default class SnowMonkeyActiveMenu {
 
   _createVlocation() {
     const element = document.createElement('a');
-    element.setAttribute('href', this.home_url);
+    element.setAttribute('href', this.params.home_url);
     return element;
   }
 
