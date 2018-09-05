@@ -22,7 +22,7 @@ add_action( 'after_setup_theme', function() {
 	add_filter( 'inc2734_wp_page_speed_optimization_defer_scripts', function( $handles ) {
 		return array_merge( $handles, [
 			snow_monkey_get_main_script_handle(),
-			snow_monkey_get_main_script_handle() . '-wp-pure-css-gallery',
+			'wp-pure-css-gallery',
 			'wp-oembed-blog-card',
 		] );
 	} );
@@ -106,6 +106,8 @@ add_action( 'after_setup_theme', function() {
 	add_filter( 'inc2734_wp_page_speed_optimization_output_head_styles', function( $handles ) {
 		return array_merge( $handles, [
 			snow_monkey_get_main_style_handle(),
+			'wp-pure-css-gallery',
+			'wp-oembed-blog-card',
 		] );
 	} );
 } );

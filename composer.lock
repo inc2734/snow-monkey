@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "03faf6d93ead191f05e40e46d1c41ceb",
+    "content-hash": "fd0a34f181a84eaf45b8144bc6747fe2",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.7.10",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "149f14108a1d2c4c67af538cb086d1d9f916480b"
+                "reference": "5e31af8a69fc7aab9814940684bad3768c6d912f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/149f14108a1d2c4c67af538cb086d1d9f916480b",
-                "reference": "149f14108a1d2c4c67af538cb086d1d9f916480b",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/5e31af8a69fc7aab9814940684bad3768c6d912f",
+                "reference": "5e31af8a69fc7aab9814940684bad3768c6d912f",
                 "shasum": ""
             },
             "require": {
@@ -32,7 +32,7 @@
                 "inc2734/wp-oembed-blog-card": "^5.0",
                 "inc2734/wp-page-speed-optimization": "^0.7",
                 "inc2734/wp-profile-box": "^1.1",
-                "inc2734/wp-pure-css-gallery": "^1.1",
+                "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^1.1",
                 "inc2734/wp-share-buttons": "^2.0",
                 "inc2734/wp-view-controller": "^5.0",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-09-04T07:45:25+00:00"
+            "time": "2018-09-05T01:26:13+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -458,16 +458,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "5.0.0",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "3d2218ab1c278e466ab2c2f6f660285a66e44e5a"
+                "reference": "d43dada2e5fa432373b911a4fc47c96552526839"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/3d2218ab1c278e466ab2c2f6f660285a66e44e5a",
-                "reference": "3d2218ab1c278e466ab2c2f6f660285a66e44e5a",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/d43dada2e5fa432373b911a4fc47c96552526839",
+                "reference": "d43dada2e5fa432373b911a4fc47c96552526839",
                 "shasum": ""
             },
             "require": {
@@ -502,7 +502,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2018-09-04T07:38:28+00:00"
+            "time": "2018-09-05T01:24:31+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -650,16 +650,16 @@
         },
         {
             "name": "inc2734/wp-pure-css-gallery",
-            "version": "1.1.4",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-pure-css-gallery.git",
-                "reference": "5606003f20d76da01ea442eaf21d0cf3a03b90f0"
+                "reference": "31010deb9224ed57b6f03d35b52ee42133f1aac5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/5606003f20d76da01ea442eaf21d0cf3a03b90f0",
-                "reference": "5606003f20d76da01ea442eaf21d0cf3a03b90f0",
+                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/31010deb9224ed57b6f03d35b52ee42133f1aac5",
+                "reference": "31010deb9224ed57b6f03d35b52ee42133f1aac5",
                 "shasum": ""
             },
             "require": {
@@ -694,7 +694,7 @@
                 }
             ],
             "description": "A library to change WordPress gallery to pure css gallery.",
-            "time": "2018-07-27T13:56:18+00:00"
+            "time": "2018-09-05T01:23:21+00:00"
         },
         {
             "name": "inc2734/wp-seo",
