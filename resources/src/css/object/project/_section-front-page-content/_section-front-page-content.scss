@@ -2,9 +2,15 @@
   [data-has-sidebar="true"] & {
     padding-top: 0;
     padding-bottom: 0;
-  }
 
-  & + * {
+    & + * {
+      @include _margin-top(2);
+    }
+  }
+}
+
+[data-has-sidebar="true"] {
+  * + .#{$_prefix}p-section-front-page-content {
     @include _margin-top(2);
   }
 }
