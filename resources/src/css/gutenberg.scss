@@ -63,6 +63,11 @@
     max-width: 1220px; // = $content_width
   }
 
+  // @todo
+  .editor-block-switcher {
+    overflow: hidden;
+  }
+
   .editor-post-title__block > div {
     padding-right: 14px;
     padding-left: 14px;
