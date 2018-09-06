@@ -24,6 +24,7 @@ add_action( 'after_setup_theme', function() {
 			snow_monkey_get_main_script_handle(),
 			'wp-pure-css-gallery',
 			'wp-oembed-blog-card',
+			'wp-share-buttons',
 		] );
 	} );
 
@@ -108,6 +109,8 @@ add_action( 'after_setup_theme', function() {
 			snow_monkey_get_main_style_handle(),
 			'wp-pure-css-gallery',
 			'wp-oembed-blog-card',
+			'wp-share-buttons',
+			'wp-like-me-box',
 		] );
 	} );
 } );

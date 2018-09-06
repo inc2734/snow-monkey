@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd0a34f181a84eaf45b8144bc6747fe2",
+    "content-hash": "c0d7911e7e194042d6a5062e07bf994e",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "5e31af8a69fc7aab9814940684bad3768c6d912f"
+                "reference": "6aab77d65693d0eabb147b0cd23582a20e6bde6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/5e31af8a69fc7aab9814940684bad3768c6d912f",
-                "reference": "5e31af8a69fc7aab9814940684bad3768c6d912f",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6aab77d65693d0eabb147b0cd23582a20e6bde6a",
+                "reference": "6aab77d65693d0eabb147b0cd23582a20e6bde6a",
                 "shasum": ""
             },
             "require": {
@@ -28,13 +28,13 @@
                 "inc2734/wp-contents-outline": "^2.0",
                 "inc2734/wp-customizer-framework": "^3.2",
                 "inc2734/wp-github-theme-updater": "^0.2",
-                "inc2734/wp-like-me-box": "^0.1",
+                "inc2734/wp-like-me-box": "^1.0",
                 "inc2734/wp-oembed-blog-card": "^5.0",
                 "inc2734/wp-page-speed-optimization": "^0.7",
                 "inc2734/wp-profile-box": "^1.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^1.1",
-                "inc2734/wp-share-buttons": "^2.0",
+                "inc2734/wp-share-buttons": "^3.0",
                 "inc2734/wp-view-controller": "^5.0",
                 "php": ">=5.6"
             },
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-09-05T01:26:13+00:00"
+            "time": "2018-09-06T01:18:47+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -266,16 +266,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "b71535b89c0f16690f0ba2d9fc13c365913717d2"
+                "reference": "cb3b6c59309003b5f981eda7c60f4634ce523174"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/b71535b89c0f16690f0ba2d9fc13c365913717d2",
-                "reference": "b71535b89c0f16690f0ba2d9fc13c365913717d2",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/cb3b6c59309003b5f981eda7c60f4634ce523174",
+                "reference": "cb3b6c59309003b5f981eda7c60f4634ce523174",
                 "shasum": ""
             },
             "require": {
@@ -310,7 +310,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2018-09-02T16:02:07+00:00"
+            "time": "2018-09-06T00:44:41+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
@@ -410,16 +410,16 @@
         },
         {
             "name": "inc2734/wp-like-me-box",
-            "version": "0.1.6",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-like-me-box.git",
-                "reference": "b3c802800f3dc2c75ac333e275753aaa67a10872"
+                "reference": "f0145f5e7c859f84697d4c87b997e557e0b6a038"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/b3c802800f3dc2c75ac333e275753aaa67a10872",
-                "reference": "b3c802800f3dc2c75ac333e275753aaa67a10872",
+                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/f0145f5e7c859f84697d4c87b997e557e0b6a038",
+                "reference": "f0145f5e7c859f84697d4c87b997e557e0b6a038",
                 "shasum": ""
             },
             "require": {
@@ -454,20 +454,20 @@
                 }
             ],
             "description": "A library for WordPress that added Facebook like me box for article.",
-            "time": "2018-07-27T13:52:38+00:00"
+            "time": "2018-09-06T01:10:35+00:00"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "d43dada2e5fa432373b911a4fc47c96552526839"
+                "reference": "8c7d121e48a847ab2aa6456307fe46af3dec5d61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/d43dada2e5fa432373b911a4fc47c96552526839",
-                "reference": "d43dada2e5fa432373b911a4fc47c96552526839",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/8c7d121e48a847ab2aa6456307fe46af3dec5d61",
+                "reference": "8c7d121e48a847ab2aa6456307fe46af3dec5d61",
                 "shasum": ""
             },
             "require": {
@@ -502,7 +502,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2018-09-05T01:24:31+00:00"
+            "time": "2018-09-06T00:44:03+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -747,16 +747,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "2.0.2",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "c43fad61e0af23a3e9bb54c52b2c1b3e5dc6a464"
+                "reference": "6326cb9c6f325958d839d02bca410b6d85a6d6b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/c43fad61e0af23a3e9bb54c52b2c1b3e5dc6a464",
-                "reference": "c43fad61e0af23a3e9bb54c52b2c1b3e5dc6a464",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/6326cb9c6f325958d839d02bca410b6d85a6d6b7",
+                "reference": "6326cb9c6f325958d839d02bca410b6d85a6d6b7",
                 "shasum": ""
             },
             "require": {
@@ -792,7 +792,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2018-07-27T13:48:22+00:00"
+            "time": "2018-09-06T00:43:25+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",

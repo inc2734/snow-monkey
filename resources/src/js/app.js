@@ -11,7 +11,6 @@ import './_wpaw-pickup-slider.js';
 import './_wpaw-pr-box.js';
 
 import BasisStickyHeader from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/js/sticky-header.js';
-import Inc2734_WP_Share_Buttons from '../../vendor/inc2734/wp-share-buttons/src/assets/js/wp-share-buttons.js';
 import FixAdminBar from './_fix-adminbar.js';
 import SnowMonkeyWidgetItemExpander from './_widget-item-expander.js';
 import SnowMonkeyHeader from './_header.js';
@@ -22,8 +21,6 @@ import SnowMonkeyHashNav from './_hash-nav.js';
 import SnowMonkeyActiveMenu from './_active-menu.js';
 
 new BasisStickyHeader();
-
-new Inc2734_WP_Share_Buttons();
 
 new FixAdminBar();
 
