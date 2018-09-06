@@ -13,8 +13,8 @@ if ( ! $prev_post && ! $next_post ) {
 }
 
 $prev_next_posts = [
-	'next' => $next_post,
-	'prev' => $prev_post,
+	'next' => $prev_post,
+	'prev' => $next_post,
 ];
 ?>
 
@@ -38,9 +38,9 @@ $prev_next_posts = [
 					<div class="c-prev-next-nav__item-label">
 						<?php if ( 'next' === $key ) : ?>
 							<i class="fas fa-angle-left" aria-hidden="true"></i>
-							<?php esc_html_e( 'New post', 'snow-monkey' ); ?>
-						<?php else : ?>
 							<?php esc_html_e( 'Old post', 'snow-monkey' ); ?>
+						<?php else : ?>
+							<?php esc_html_e( 'New post', 'snow-monkey' ); ?>
 							<i class="fas fa-angle-right" aria-hidden="true"></i>
 						<?php endif; ?>
 					</div>
