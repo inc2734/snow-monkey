@@ -19,13 +19,28 @@ add_action( 'wp_enqueue_scripts', function() {
 		return;
 	}
 
+	$dependencies = [];
+	$maybe_dependencies = [
+		'wp-block-library',
+		'wp-share-buttons',
+		'wp-like-me-box',
+		'wp-oembed-blog-card',
+		'wp-pure-css-gallery',
+	];
+	foreach ( $maybe_dependencies as $dependency ) {
+		if ( ! wp_style_is( $dependency, 'enqueued' ) && ! wp_style_is( $dependency, 'registered' ) ) {
+			continue;
+		}
+		$dependencies[] = $dependency;
+	}
+
 	wp_enqueue_style(
 		snow_monkey_get_main_style_handle(),
 		$src,
-		[],
+		$dependencies,
 		filemtime( $path )
 	);
-} );
+}, 11 );
 
 /**
  * Enqueue main script

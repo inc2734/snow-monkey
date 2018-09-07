@@ -11,3 +11,7 @@ img[class*="wp-image-"],
   @include _line-height($_base-font-size-px + 4);
   text-align: left;
 }
+
+.wp-block-image.aligncenter {
+  display: table;
+}
