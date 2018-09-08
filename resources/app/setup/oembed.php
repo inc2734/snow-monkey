@@ -17,7 +17,7 @@ new OEmbed_Blog_Card();
  * @param array $attr
  * @param int $post_id
  */
-add_action( 'embed_oembed_html', function( $cache, $url, $attr, $post_id ) {
+add_filter( 'embed_oembed_html', function( $cache, $url, $attr, $post_id ) {
 	global $wp_query;
 	if ( is_object( $wp_query ) && is_null( $wp_query->query ) && ! empty( $_GET['url'] ) && function_exists( 'is_gutenberg_page' ) ) {
 		// @codingStandardsIgnoreStart
