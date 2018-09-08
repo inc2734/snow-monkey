@@ -8,16 +8,6 @@
       "homepage": "https://2inc.org"
     }
   ],
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/inc2734/mimizuku-core"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/inc2734/wp-view-controller"
-    }
-  ],
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
@@ -32,7 +22,7 @@
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": "2.9.1"
+    "inc2734/mimizuku-core": "2.10.0"
   },
   "config": {
     "process-timeout": 0,

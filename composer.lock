@@ -4,32 +4,32 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "336e940e301ab0de8e3fc7862e9701a6",
+    "content-hash": "1cd8511a3563c7706dbdd1a250db21fb",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.9.1",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "ecd922c1820c46334f39e19afdb921dcefe8cccc"
+                "reference": "4d27d644cc4b35dc679d1b57a84ca1633e267224"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/ecd922c1820c46334f39e19afdb921dcefe8cccc",
-                "reference": "ecd922c1820c46334f39e19afdb921dcefe8cccc",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4d27d644cc4b35dc679d1b57a84ca1633e267224",
+                "reference": "4d27d644cc4b35dc679d1b57a84ca1633e267224",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": "^1.0",
                 "inc2734/wp-awesome-widgets": "^2.6",
-                "inc2734/wp-basis": "^2.0",
+                "inc2734/wp-basis": "^3.0",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
                 "inc2734/wp-customizer-framework": "^3.2",
                 "inc2734/wp-github-theme-updater": "^0.2",
                 "inc2734/wp-like-me-box": "^1.0",
-                "inc2734/wp-oembed-blog-card": "^5.0",
+                "inc2734/wp-oembed-blog-card": "^5.1",
                 "inc2734/wp-page-speed-optimization": "^0.7",
                 "inc2734/wp-profile-box": "^1.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
@@ -56,14 +56,7 @@
                     "Inc2734\\Mimizuku_Core\\": "src"
                 }
             },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
-                    "vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
-                    "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
-                    "bash bin/phpunit.sh"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -74,11 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "support": {
-                "source": "https://github.com/inc2734/mimizuku-core/tree/2.9.1",
-                "issues": "https://github.com/inc2734/mimizuku-core/issues"
-            },
-            "time": "2018-09-06T13:18:34+00:00"
+            "time": "2018-09-08T03:07:59+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -181,16 +170,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "2.0.5",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "f233e230b4722f60bc22b1c54ece7afdb53ca2c4"
+                "reference": "b75bbf88abbde2b46a36f0eac6e345b04cedd525"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/f233e230b4722f60bc22b1c54ece7afdb53ca2c4",
-                "reference": "f233e230b4722f60bc22b1c54ece7afdb53ca2c4",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/b75bbf88abbde2b46a36f0eac6e345b04cedd525",
+                "reference": "b75bbf88abbde2b46a36f0eac6e345b04cedd525",
                 "shasum": ""
             },
             "require": {
@@ -225,7 +214,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-08-31T04:48:56+00:00"
+            "time": "2018-09-08T03:01:53+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -469,16 +458,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "5.0.3",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "52c95bddfa898b65afaf6efa1ba7a8b6b350a73b"
+                "reference": "c948dda521ac4e48ac1a59f36220fa25ac5db0f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/52c95bddfa898b65afaf6efa1ba7a8b6b350a73b",
-                "reference": "52c95bddfa898b65afaf6efa1ba7a8b6b350a73b",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/c948dda521ac4e48ac1a59f36220fa25ac5db0f1",
+                "reference": "c948dda521ac4e48ac1a59f36220fa25ac5db0f1",
                 "shasum": ""
             },
             "require": {
@@ -513,7 +502,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2018-09-08T01:45:47+00:00"
+            "time": "2018-09-08T03:01:16+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
