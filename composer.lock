@@ -71,16 +71,16 @@
         },
         {
             "name": "inc2734/wp-awesome-components",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-components.git",
-                "reference": "28990e175fa6e6a03a9e3dbc168a1f96b2bee063"
+                "reference": "45ce014943db141350a001d4138921b1c7bec0a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/28990e175fa6e6a03a9e3dbc168a1f96b2bee063",
-                "reference": "28990e175fa6e6a03a9e3dbc168a1f96b2bee063",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/45ce014943db141350a001d4138921b1c7bec0a2",
+                "reference": "45ce014943db141350a001d4138921b1c7bec0a2",
                 "shasum": ""
             },
             "require": {
@@ -115,20 +115,20 @@
                 }
             ],
             "description": "A library to add some awesome components for WordPress.",
-            "time": "2018-08-04T06:28:02+00:00"
+            "time": "2018-09-10T11:36:14+00:00"
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "2.6.3",
+            "version": "2.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "77f41b81cb16e34d0ecea4abb80d1006d5648c94"
+                "reference": "200ca281712dee817f368be39402dd86a94c7ce5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/77f41b81cb16e34d0ecea4abb80d1006d5648c94",
-                "reference": "77f41b81cb16e34d0ecea4abb80d1006d5648c94",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/200ca281712dee817f368be39402dd86a94c7ce5",
+                "reference": "200ca281712dee817f368be39402dd86a94c7ce5",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-09-02T16:09:55+00:00"
+            "time": "2018-09-10T11:35:18+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -266,16 +266,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "cb3b6c59309003b5f981eda7c60f4634ce523174"
+                "reference": "3db5be75666b02ecd63897e8fe063638085f3bf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/cb3b6c59309003b5f981eda7c60f4634ce523174",
-                "reference": "cb3b6c59309003b5f981eda7c60f4634ce523174",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/3db5be75666b02ecd63897e8fe063638085f3bf2",
+                "reference": "3db5be75666b02ecd63897e8fe063638085f3bf2",
                 "shasum": ""
             },
             "require": {
@@ -310,20 +310,20 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2018-09-06T00:44:41+00:00"
+            "time": "2018-09-10T11:34:17+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "3.2.3",
+            "version": "3.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "6bbc9d58d87a29e4b1b7073486ede0b044915639"
+                "reference": "4abedfa62a528c84618dd1820f29d9f6f9c7b884"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/6bbc9d58d87a29e4b1b7073486ede0b044915639",
-                "reference": "6bbc9d58d87a29e4b1b7073486ede0b044915639",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/4abedfa62a528c84618dd1820f29d9f6f9c7b884",
+                "reference": "4abedfa62a528c84618dd1820f29d9f6f9c7b884",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +358,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2018-08-20T10:47:22+00:00"
+            "time": "2018-09-10T11:32:51+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
