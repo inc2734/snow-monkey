@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1cd8511a3563c7706dbdd1a250db21fb",
+    "content-hash": "c83cb54e944caeab35af3734be2ddb4f",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.10.0",
+            "version": "2.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "4d27d644cc4b35dc679d1b57a84ca1633e267224"
+                "reference": "ea02568c69968280c43357be42fc1dd83b9180bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4d27d644cc4b35dc679d1b57a84ca1633e267224",
-                "reference": "4d27d644cc4b35dc679d1b57a84ca1633e267224",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/ea02568c69968280c43357be42fc1dd83b9180bf",
+                "reference": "ea02568c69968280c43357be42fc1dd83b9180bf",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": "^1.0",
                 "inc2734/wp-awesome-widgets": "^2.6",
-                "inc2734/wp-basis": "^3.0",
+                "inc2734/wp-basis": "^3.1",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
                 "inc2734/wp-customizer-framework": "^3.2",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-09-08T03:07:59+00:00"
+            "time": "2018-09-14T03:45:28+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -170,16 +170,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "b75bbf88abbde2b46a36f0eac6e345b04cedd525"
+                "reference": "472ced7141d22331ae549c012dda2ed7667e9075"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/b75bbf88abbde2b46a36f0eac6e345b04cedd525",
-                "reference": "b75bbf88abbde2b46a36f0eac6e345b04cedd525",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/472ced7141d22331ae549c012dda2ed7667e9075",
+                "reference": "472ced7141d22331ae549c012dda2ed7667e9075",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-09-08T03:01:53+00:00"
+            "time": "2018-09-14T02:37:48+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -2625,16 +2625,16 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "539c6d74e6207daa22b7ea754d6f103e9abb2755"
+                "reference": "46d42828ce7355d8b3776e3171f2bda892d179b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/539c6d74e6207daa22b7ea754d6f103e9abb2755",
-                "reference": "539c6d74e6207daa22b7ea754d6f103e9abb2755",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/46d42828ce7355d8b3776e3171f2bda892d179b4",
+                "reference": "46d42828ce7355d8b3776e3171f2bda892d179b4",
                 "shasum": ""
             },
             "require": {
@@ -2664,7 +2664,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2018-07-25T18:10:35+00:00"
+            "time": "2018-09-10T17:04:05+00:00"
         }
     ],
     "aliases": [],

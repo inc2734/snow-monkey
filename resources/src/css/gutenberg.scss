@@ -97,4 +97,13 @@
       }
     }
   }
+
+  .wp-block-code {
+    font-size: 0;
+
+    textarea {
+      background-color: _lightest($_color-gray);
+      @include _font-size-line-height($_base-font-size-px);
+    }
+  }
 }
