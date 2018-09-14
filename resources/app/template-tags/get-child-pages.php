@@ -12,10 +12,6 @@
  * @return array
  */
 function snow_monkey_get_child_pages( $post_id ) {
-	if ( ! $post_id ) {
-		return [];
-	}
-
 	return new WP_Query(
 		[
 			'post_parent'    => $post_id,
