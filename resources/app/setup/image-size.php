@@ -13,52 +13,78 @@ add_image_size( 'xlarge', 1920, 1920 );
  * @param array $sizes
  * @return array
  */
-add_filter( 'image_size_names_choose', function( $sizes ) {
-	return array_merge( $sizes, [
-		'xlarge' => __( 'xLarge', 'snow-monkey' ),
-	] );
-} );
+add_filter(
+	'image_size_names_choose',
+	function( $sizes ) {
+		return array_merge(
+			$sizes,
+			[
+				'xlarge' => __( 'xLarge', 'snow-monkey' ),
+			]
+		);
+	}
+);
 
 /**
  * Update pickup slider widget image size
  */
-add_filter( 'inc2734_wp_awesome_widgets_pickup_slider_image_size', function( $thumbnail_size, $is_mobile ) {
-	if ( $is_mobile ) {
-		return 'large';
-	}
+add_filter(
+	'inc2734_wp_awesome_widgets_pickup_slider_image_size',
+	function( $thumbnail_size, $is_mobile ) {
+		if ( $is_mobile ) {
+			return 'large';
+		}
 
-	return 'xlarge';
-}, 10, 2 );
+		return 'xlarge';
+	},
+	10,
+	2
+);
 
 /**
  * Update slider widget image size
  */
-add_filter( 'inc2734_wp_awesome_widgets_slider_image_size', function( $thumbnail_size, $is_mobile ) {
-	if ( $is_mobile ) {
-		return 'large';
-	}
+add_filter(
+	'inc2734_wp_awesome_widgets_slider_image_size',
+	function( $thumbnail_size, $is_mobile ) {
+		if ( $is_mobile ) {
+			return 'large';
+		}
 
-	return 'xlarge';
-}, 10, 2 );
+		return 'xlarge';
+	},
+	10,
+	2
+);
 
 /**
  * Update showcase widget background image size
  */
-add_filter( 'inc2734_wp_awesome_widgets_showcase_backgroud_image_size', function( $thumbnail_size, $is_mobile ) {
-	if ( $is_mobile ) {
-		return 'large';
-	}
+add_filter(
+	'inc2734_wp_awesome_widgets_showcase_backgroud_image_size',
+	function( $thumbnail_size, $is_mobile ) {
+		if ( $is_mobile ) {
+			return 'large';
+		}
 
-	return 'xlarge';
-}, 10, 2 );
+		return 'xlarge';
+	},
+	10,
+	2
+);
 
 /**
  * Update showcase widget thumbnail image size
  */
-add_filter( 'inc2734_wp_awesome_widgets_showcase_image_size', function( $thumbnail_size, $is_mobile ) {
-	if ( $is_mobile ) {
-		return 'large';
-	}
+add_filter(
+	'inc2734_wp_awesome_widgets_showcase_image_size',
+	function( $thumbnail_size, $is_mobile ) {
+		if ( $is_mobile ) {
+			return 'large';
+		}
 
-	return 'xlarge';
-}, 10, 2 );
+		return 'xlarge';
+	},
+	10,
+	2
+);

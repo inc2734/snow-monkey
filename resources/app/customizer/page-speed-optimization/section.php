@@ -13,8 +13,11 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'page-speed-optimization', [
-	'title'       => __( 'Page speed optimization', 'snow-monkey' ),
-	'description' => __( 'This feature is a beta version.', 'snow-monkey' ),
-	'priority'    => 1070,
-] );
+$customizer->section(
+	'page-speed-optimization',
+	[
+		'title'       => __( 'Page speed optimization', 'snow-monkey' ),
+		'description' => __( 'This feature is a beta version.', 'snow-monkey' ),
+		'priority'    => 1070,
+	]
+);

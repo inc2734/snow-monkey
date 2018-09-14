@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'async-css', [
-	'label'    => __( 'Loads CSS asynchronously', 'snow-monkey' ),
-	'priority' => 120,
-	'default'  => false,
-] );
+$customizer->control(
+	'checkbox',
+	'async-css',
+	[
+		'label'    => __( 'Loads CSS asynchronously', 'snow-monkey' ),
+		'priority' => 120,
+		'default'  => false,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

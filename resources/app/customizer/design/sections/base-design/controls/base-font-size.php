@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'number', 'base-font-size', [
-	'label'    => __( 'Base font size(px)', 'snow-monkey' ),
-	'default'  => 16,
-	'priority' => 110,
-] );
+$customizer->control(
+	'number',
+	'base-font-size',
+	[
+		'label'    => __( 'Base font size(px)', 'snow-monkey' ),
+		'default'  => 16,
+		'priority' => 110,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

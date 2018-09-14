@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'header', [
-	'title'    => __( 'Header', 'snow-monkey' ),
-	'priority' => 100,
-] );
+$customizer->section(
+	'header',
+	[
+		'title'    => __( 'Header', 'snow-monkey' ),
+		'priority' => 100,
+	]
+);

@@ -11,11 +11,15 @@ $customizer = Customizer_Framework::init();
 
 $terms = wp_cache_get( 'all-categories' );
 
-foreach ( $terms as $term ) {
-	$customizer->control( 'image', $term->taxonomy . '-' . $term->term_id . '-header-image', [
-		'label'    => __( 'Header image', 'snow-monkey' ),
-		'priority' => 110,
-	] );
+foreach ( $terms as $_term ) {
+	$customizer->control(
+		'image',
+		$_term->taxonomy . '-' . $_term->term_id . '-header-image',
+		[
+			'label'    => __( 'Header image', 'snow-monkey' ),
+			'priority' => 110,
+		]
+	);
 }
 
 if ( ! is_customize_preview() ) {
@@ -24,8 +28,8 @@ if ( ! is_customize_preview() ) {
 
 $panel = $customizer->get_panel( 'design' );
 
-foreach ( $terms as $term ) {
-	$section = $customizer->get_section( 'category-' . $term->term_id );
-	$control = $customizer->get_control( $term->taxonomy . '-' . $term->term_id . '-header-image' );
+foreach ( $terms as $_term ) {
+	$section = $customizer->get_section( 'category-' . $_term->term_id );
+	$control = $customizer->get_control( $_term->taxonomy . '-' . $_term->term_id . '-header-image' );
 	$control->join( $section )->join( $panel );
 }

@@ -17,14 +17,14 @@ $cfs->register(
 );
 
 $terms = get_terms( [ 'category' ] );
-foreach ( $terms as $term ) {
-	$accent_color = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-accent-color' );
+foreach ( $terms as $_term ) {
+	$accent_color = get_theme_mod( $_term->taxonomy . '-' . $_term->term_id . '-accent-color' );
 	if ( ! $accent_color ) {
 		continue;
 	}
 
 	$cfs->register(
-		'.wpaw-recent-posts__term--category-' . $term->term_id,
+		'.wpaw-recent-posts__term--category-' . $_term->term_id,
 		'background-color: ' . $accent_color
 	);
 }

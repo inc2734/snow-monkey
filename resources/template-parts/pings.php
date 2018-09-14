@@ -17,15 +17,17 @@ if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
 	<?php if ( ! empty( $comments_by_type['pings'] ) ) : ?>
 		<ol class="p-trackbacks__list">
 			<?php
-			wp_list_comments( [
-				'type'     => 'pings',
-				'callback' => function() {
-					?>
-					<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
-						<?php get_template_part( 'template-parts/trackback' ); ?>
-					<?php
-				},
-			] );
+			wp_list_comments(
+				[
+					'type'     => 'pings',
+					'callback' => function() {
+						?>
+						<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
+							<?php get_template_part( 'template-parts/trackback' ); ?>
+						<?php
+					},
+				]
+			);
 			?>
 		</ol>
 	<?php else : ?>

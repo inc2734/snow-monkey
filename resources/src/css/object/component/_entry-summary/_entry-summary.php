@@ -28,13 +28,13 @@ $cfs->register(
 );
 
 $terms = get_terms( [ 'category' ] );
-foreach ( $terms as $term ) {
-	$accent_color = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-accent-color' );
+foreach ( $terms as $_term ) {
+	$accent_color = get_theme_mod( $_term->taxonomy . '-' . $_term->term_id . '-accent-color' );
 
 	if ( ! $accent_color ) {
-		$ancestors = get_ancestors( $term->term_id, 'category' );
+		$ancestors = get_ancestors( $_term->term_id, 'category' );
 		foreach ( $ancestors as $ancestor ) {
-			$accent_color = get_theme_mod( $term->taxonomy . '-' . $ancestor . '-accent-color' );
+			$accent_color = get_theme_mod( $_term->taxonomy . '-' . $ancestor . '-accent-color' );
 			if ( ! $accent_color ) {
 				continue;
 			}
@@ -44,7 +44,7 @@ foreach ( $terms as $term ) {
 	}
 
 	$cfs->register(
-		'.c-entries--rich-media .c-entry-summary--' . $term->taxonomy . '-' . $term->term_id . ' .c-entry-summary__figure::after',
+		'.c-entries--rich-media .c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__figure::after',
 		[
 			'background-color: ' . $cfs->rgba( $accent_color, .4 ),
 			'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
@@ -52,7 +52,7 @@ foreach ( $terms as $term ) {
 	);
 
 	$cfs->register(
-		'.c-entry-summary--' . $term->taxonomy . '-' . $term->term_id . ' .c-entry-summary__term',
+		'.c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__term',
 		'background-color: ' . $accent_color
 	);
 }

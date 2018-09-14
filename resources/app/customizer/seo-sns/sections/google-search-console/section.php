@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'google-search-console', array(
-	'title'    => __( 'Google Search Console', 'snow-monkey' ),
-	'priority' => 110,
-) );
+$customizer->section(
+	'google-search-console',
+	array(
+		'title'    => __( 'Google Search Console', 'snow-monkey' ),
+		'priority' => 110,
+	)
+);

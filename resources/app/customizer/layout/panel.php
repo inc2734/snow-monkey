@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->panel( 'layout', [
-	'title'    => __( 'Layout', 'snow-monkey' ),
-	'priority' => 1010,
-] );
+$customizer->panel(
+	'layout',
+	[
+		'title'    => __( 'Layout', 'snow-monkey' ),
+		'priority' => 1010,
+	]
+);

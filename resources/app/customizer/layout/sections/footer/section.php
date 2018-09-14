@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'footer', [
-	'title'    => __( 'Footer', 'snow-monkey' ),
-	'priority' => 110,
-] );
+$customizer->section(
+	'footer',
+	[
+		'title'    => __( 'Footer', 'snow-monkey' ),
+		'priority' => 110,
+	]
+);

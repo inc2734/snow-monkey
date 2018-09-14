@@ -9,18 +9,22 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'select', 'mwt-twitter-card', array(
-	'label'       => __( 'twitter:card', 'snow-monkey' ),
-	'description' => __( 'Twitter Cards format', 'snow-monkey' ),
-	'priority'    => 100,
-	'default'     => 'summary',
-	'type'        => 'option',
-	'choices'     => array(
-		''                    => __( 'Do not use', 'snow-monkey' ),
-		'summary'             => 'Summary Card',
-		'summary_large_image' => 'Summary Card with Large Image',
-	),
-) );
+$customizer->control(
+	'select',
+	'mwt-twitter-card',
+	array(
+		'label'       => __( 'twitter:card', 'snow-monkey' ),
+		'description' => __( 'Twitter Cards format', 'snow-monkey' ),
+		'priority'    => 100,
+		'default'     => 'summary',
+		'type'        => 'option',
+		'choices'     => array(
+			''                    => __( 'Do not use', 'snow-monkey' ),
+			'summary'             => 'Summary Card',
+			'summary_large_image' => 'Summary Card with Large Image',
+		),
+	)
+);
 
 if ( ! is_customize_preview() ) {
 	return;

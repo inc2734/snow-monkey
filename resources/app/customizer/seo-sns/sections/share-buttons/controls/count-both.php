@@ -9,13 +9,17 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'mwt-share-buttons-count-both', [
-	'type'     => 'option',
-	'label'    => __( 'Count both http and https', 'snow-monkey' ),
-	'description' => __( 'In the case of the http site, only http will be counted regardless of the setting.', 'snow-monkey' ),
-	'priority' => 140,
-	'default'  => true,
-] );
+$customizer->control(
+	'checkbox',
+	'mwt-share-buttons-count-both',
+	[
+		'type'     => 'option',
+		'label'    => __( 'Count both http and https', 'snow-monkey' ),
+		'description' => __( 'In the case of the http site, only http will be counted regardless of the setting.', 'snow-monkey' ),
+		'priority' => 140,
+		'default'  => true,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

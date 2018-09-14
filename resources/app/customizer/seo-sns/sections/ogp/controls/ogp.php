@@ -9,12 +9,16 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'mwt-ogp', array(
-	'label'    => __( 'Output OGP meta tag', 'snow-monkey' ),
-	'type'     => 'option',
-	'priority' => 100,
-	'default'  => true,
-) );
+$customizer->control(
+	'checkbox',
+	'mwt-ogp',
+	array(
+		'label'    => __( 'Output OGP meta tag', 'snow-monkey' ),
+		'type'     => 'option',
+		'priority' => 100,
+		'default'  => true,
+	)
+);
 
 if ( ! is_customize_preview() ) {
 	return;

@@ -38,11 +38,14 @@ class Design_Skin {
 	public function __construct( $file, $options = [] ) {
 		$this->file = $file;
 
-		$this->options = shortcode_atts( [
-			'style'                    => 'design-skin.css',
-			'editor-style'             => 'editor-style.css',
-			'customize-control-script' => 'customize-control.js',
-		], $options );
+		$this->options = shortcode_atts(
+			[
+				'style'                    => 'design-skin.css',
+				'editor-style'             => 'editor-style.css',
+				'customize-control-script' => 'customize-control.js',
+			],
+			$options
+		);
 
 		$this->plugin = $this->_get_plugin_data();
 
@@ -134,13 +137,20 @@ class Design_Skin {
 	 * @return array
 	 */
 	protected function _get_plugin_data() {
-		$plugin_data = get_file_data( dirname( $this->file ), [
-			'label' => 'Plugin Name',
-		], 'plugin' );
+		$plugin_data = get_file_data(
+			dirname( $this->file ),
+			[
+				'label' => 'Plugin Name',
+			],
+			'plugin'
+		);
 
-		$plugin_data = array_merge( $plugin_data, [
-			'slug' => basename( $this->file, '.php' ),
-		] );
+		$plugin_data = array_merge(
+			$plugin_data,
+			[
+				'slug' => basename( $this->file, '.php' ),
+			]
+		);
 
 		return $plugin_data;
 	}
@@ -155,9 +165,12 @@ class Design_Skin {
 			if ( ! empty( $_GET['snow-monkey-design-skin'] ) && $this->plugin['slug'] === $_GET['snow-monkey-design-skin'] ) {
 				$design_skin = sanitize_text_field( wp_unslash( $_GET['snow-monkey-design-skin'] ) );
 
-				add_filter( 'theme_mod_design-skin', function() use ( $design_skin ) {
-					return $design_skin;
-				} );
+				add_filter(
+					'theme_mod_design-skin',
+					function() use ( $design_skin ) {
+						return $design_skin;
+					}
+				);
 
 				return true;
 			}

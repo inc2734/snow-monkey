@@ -9,13 +9,17 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'mwt-display-profile-box', [
-	'transport' => 'postMessage',
-	'label'     => __( 'Display profile box in posts', 'snow-monkey' ),
-	'priority'  => 120,
-	'type'      => 'option',
-	'default'   => true,
-] );
+$customizer->control(
+	'checkbox',
+	'mwt-display-profile-box',
+	[
+		'transport' => 'postMessage',
+		'label'     => __( 'Display profile box in posts', 'snow-monkey' ),
+		'priority'  => 120,
+		'type'      => 'option',
+		'default'   => true,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;
@@ -25,12 +29,14 @@ $panel   = $customizer->get_panel( 'design' );
 $section = $customizer->get_section( 'post' );
 $control = $customizer->get_control( 'mwt-display-profile-box' );
 $control->join( $section )->join( $panel );
-$control->partial( [
-	'selector'            => '.wp-profile-box',
-	'container_inclusive' => true,
-	'render_callback'     => function() {
-		if ( get_option( 'mwt-display-profile-box' ) ) {
-			get_template_part( 'template-parts/profile-box' );
-		}
-	},
-] );
+$control->partial(
+	[
+		'selector'            => '.wp-profile-box',
+		'container_inclusive' => true,
+		'render_callback'     => function() {
+			if ( get_option( 'mwt-display-profile-box' ) ) {
+			   get_template_part( 'template-parts/profile-box' );
+			}
+		},
+	]
+);

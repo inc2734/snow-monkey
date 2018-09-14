@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'json-ld', array(
-	'title'    => __( 'Structured data', 'snow-monkey' ),
-	'priority' => 130,
-) );
+$customizer->section(
+	'json-ld',
+	array(
+		'title'    => __( 'Structured data', 'snow-monkey' ),
+		'priority' => 130,
+	)
+);

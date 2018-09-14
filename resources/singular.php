@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 
-$post_type = get_post_type();
+$_post_type = get_post_type();
 
 $controller = new Mimizuku_Controller();
 $controller->layout( get_theme_mod( 'singular-post-layout' ) );
-$controller->render( 'content', $post_type );
+$controller->render( 'content', $_post_type );

@@ -9,16 +9,20 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'text', 'mwt-twitter-site', array(
-	'label'       => __( 'twitter:site', 'snow-monkey' ),
-	'priority'    => 110,
-	'description' => sprintf(
-		__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
-		'<code>@username</code>'
-	),
-	'default' => '@',
-	'type'    => 'option',
-) );
+$customizer->control(
+	'text',
+	'mwt-twitter-site',
+	array(
+		'label'       => __( 'twitter:site', 'snow-monkey' ),
+		'priority'    => 110,
+		'description' => sprintf(
+			__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
+			'<code>@username</code>'
+		),
+		'default' => '@',
+		'type'    => 'option',
+	)
+);
 
 if ( ! is_customize_preview() ) {
 	return;

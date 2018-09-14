@@ -22,9 +22,13 @@ class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstrac
 	];
 
 	public function __construct() {
-		parent::__construct( false, __( 'Snow Monkey: Recent posts', 'snow-monkey' ), [
-			'customize_selective_refresh' => true,
-		] );
+		parent::__construct(
+			false,
+			__( 'Snow Monkey: Recent posts', 'snow-monkey' ),
+			[
+				'customize_selective_refresh' => true,
+			]
+		);
 
 		$this->_defaults['title'] = __( 'Recent posts', 'snow-monkey' );
 	}
@@ -35,6 +39,9 @@ class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstrac
 	}
 }
 
-add_action( 'widgets_init', function() {
+add_action(
+	'widgets_init',
+	function() {
 	register_widget( 'Snow_Monkey_Recent_Posts_Widget' );
-} );
+	}
+);

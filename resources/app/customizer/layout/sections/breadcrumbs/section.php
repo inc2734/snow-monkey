@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'breadcrumbs', [
-	'title'    => __( 'Breadcrumbs', 'snow-monkey' ),
-	'priority' => 140,
-] );
+$customizer->section(
+	'breadcrumbs',
+	[
+		'title'    => __( 'Breadcrumbs', 'snow-monkey' ),
+		'priority' => 140,
+	]
+);

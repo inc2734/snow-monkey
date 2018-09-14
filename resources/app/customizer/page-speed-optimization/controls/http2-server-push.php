@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'http2-server-push', [
-	'label'    => __( 'Use HTTP2 Server Push', 'snow-monkey' ),
-	'priority' => 110,
-	'default'  => false,
-] );
+$customizer->control(
+	'checkbox',
+	'http2-server-push',
+	[
+		'label'    => __( 'Use HTTP2 Server Push', 'snow-monkey' ),
+		'priority' => 110,
+		'default'  => false,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

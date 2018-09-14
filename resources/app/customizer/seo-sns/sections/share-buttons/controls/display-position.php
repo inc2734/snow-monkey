@@ -9,17 +9,21 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'select', 'mwt-share-buttons-display-position', [
-	'type'     => 'option',
-	'label'    => __( 'Display position', 'snow-monkey' ),
-	'priority' => 120,
-	'default'  => 'top',
-	'choices'  => [
-		'top'    => __( 'Top of contents', 'snow-monkey' ),
-		'bottom' => __( 'Bottom of contents', 'snow-monkey' ),
-		'both'   => __( 'Both', 'snow-monkey' ),
-	],
-] );
+$customizer->control(
+	'select',
+	'mwt-share-buttons-display-position',
+	[
+		'type'     => 'option',
+		'label'    => __( 'Display position', 'snow-monkey' ),
+		'priority' => 120,
+		'default'  => 'top',
+		'choices'  => [
+			'top'    => __( 'Top of contents', 'snow-monkey' ),
+			'bottom' => __( 'Bottom of contents', 'snow-monkey' ),
+			'both'   => __( 'Both', 'snow-monkey' ),
+		],
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

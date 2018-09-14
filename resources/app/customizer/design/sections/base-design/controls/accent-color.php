@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'color', 'accent-color', [
-	'label'    => __( 'Accent color', 'snow-monkey' ),
-	'default'  => '#bd3c4f',
-	'priority' => 100,
-] );
+$customizer->control(
+	'color',
+	'accent-color',
+	[
+		'label'    => __( 'Accent color', 'snow-monkey' ),
+		'default'  => '#bd3c4f',
+		'priority' => 100,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

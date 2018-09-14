@@ -19,15 +19,19 @@ if ( ! isset( $reg[1] ) ) {
 	return;
 }
 
-$customizer->control( 'number', 'sm-logo-scale', [
-	'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
-	'priority'    => 160,
-	'default'     => 33,
-	'input_attrs' => [
-		'min' => 33,
-		'max' => 50,
-	],
-] );
+$customizer->control(
+	'number',
+	'sm-logo-scale',
+	[
+		'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
+		'priority'    => 160,
+		'default'     => 33,
+		'input_attrs' => [
+			'min' => 33,
+			'max' => 50,
+		],
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

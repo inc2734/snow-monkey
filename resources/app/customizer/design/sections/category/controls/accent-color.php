@@ -11,11 +11,15 @@ $customizer = Customizer_Framework::init();
 
 $terms = wp_cache_get( 'all-categories' );
 
-foreach ( $terms as $term ) {
-	$customizer->control( 'color', $term->taxonomy . '-' . $term->term_id . '-accent-color', [
-		'label'    => __( 'Accent color', 'snow-monkey' ),
-		'priority' => 100,
-	] );
+foreach ( $terms as $_term ) {
+	$customizer->control(
+		'color',
+		$_term->taxonomy . '-' . $_term->term_id . '-accent-color',
+		[
+			'label'    => __( 'Accent color', 'snow-monkey' ),
+			'priority' => 100,
+		]
+	);
 }
 
 if ( ! is_customize_preview() ) {
@@ -24,8 +28,8 @@ if ( ! is_customize_preview() ) {
 
 $panel = $customizer->get_panel( 'design' );
 
-foreach ( $terms as $term ) {
-	$section = $customizer->get_section( 'category-' . $term->term_id );
-	$control = $customizer->get_control( 'category-' . $term->term_id . '-accent-color' );
+foreach ( $terms as $_term ) {
+	$section = $customizer->get_section( 'category-' . $_term->term_id );
+	$control = $customizer->get_control( 'category-' . $_term->term_id . '-accent-color' );
 	$control->join( $section )->join( $panel );
 }

@@ -34,10 +34,13 @@
 		</div>
 
 		<?php
-		$args = array_merge( $_args, [
-			'depth'     => $_depth,
-			'max_depth' => $_args['max_depth'],
-		] );
+		$args = array_merge(
+			$_args,
+			[
+				'depth'     => $_depth,
+				'max_depth' => $_args['max_depth'],
+			]
+		);
 		?>
 
 		<?php if ( ! empty( get_comment_reply_link( $args ) ) ) : ?>

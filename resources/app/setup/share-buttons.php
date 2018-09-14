@@ -15,13 +15,16 @@ new Share_Buttons();
  * @param  {int} $seconds
  * @return {int}
  */
-add_filter( 'inc2734_wp_share_buttons_count_cache_seconds', function( $seconds ) {
-	$new_seconds = get_option( 'mwt-share-buttons-cache-seconds' );
-	if ( preg_match( '/^\d+$/', $new_seconds ) ) {
-		return $new_seconds;
+add_filter(
+	'inc2734_wp_share_buttons_count_cache_seconds',
+	function( $seconds ) {
+		$new_seconds = get_option( 'mwt-share-buttons-cache-seconds' );
+		if ( preg_match( '/^\d+$/', $new_seconds ) ) {
+			return $new_seconds;
+		}
+		return $seconds;
 	}
-	return $seconds;
-} );
+);
 
 /**
  * Count both http and https
@@ -29,6 +32,9 @@ add_filter( 'inc2734_wp_share_buttons_count_cache_seconds', function( $seconds )
  * @param {boolean} $bool
  * @return {boolean}
  */
-add_filter( 'inc2734_wp_share_buttons_apply_https_total_count', function( $bool ) {
-	return get_option( 'mwt-share-buttons-count-both' );
-} );
+add_filter(
+	'inc2734_wp_share_buttons_apply_https_total_count',
+	function( $bool ) {
+		return get_option( 'mwt-share-buttons-count-both' );
+	}
+);

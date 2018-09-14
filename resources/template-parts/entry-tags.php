@@ -12,7 +12,7 @@ if ( ! $tags ) {
 ?>
 
 <div class="c-entry-tags">
-	<?php foreach ( $tags as $tag ) : ?>
-		<a class="tag-cloud-link" href="<?php echo esc_url( get_term_link( $tag ) ); ?>"><?php echo esc_html( $tag->name ); ?></a>
+	<?php foreach ( $tags as $_tag ) : ?>
+		<a class="tag-cloud-link" href="<?php echo esc_url( get_term_link( $_tag ) ); ?>"><?php echo esc_html( $_tag->name ); ?></a>
 	<?php endforeach; ?>
 </div>

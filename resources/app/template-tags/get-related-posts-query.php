@@ -54,9 +54,14 @@ function snow_monkey_get_related_posts_query( $post_id ) {
 
 	$related_posts_args = apply_filters( 'snow_monkey_related_posts_args', $related_posts_args );
 
-	return new WP_Query( array_merge( $related_posts_args, [
-		'ignore_sticky_posts' => true,
-		'no_found_rows'       => true,
-		'suppress_filters'    => true,
-	] ) );
+	return new WP_Query(
+		array_merge(
+			$related_posts_args,
+			[
+				'ignore_sticky_posts' => true,
+				'no_found_rows'       => true,
+				'suppress_filters'    => true,
+			]
+		)
+	);
 }

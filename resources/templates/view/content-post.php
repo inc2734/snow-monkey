@@ -27,9 +27,13 @@
 		?>
 
 		<?php
-		wpvc_get_template_part( 'template-parts/google-adsense', null, [
-			'position' => 'content-top',
-		] );
+		wpvc_get_template_part(
+			'template-parts/google-adsense',
+			null,
+			[
+				'position' => 'content-top',
+			]
+		);
 		?>
 
 		<?php
@@ -66,9 +70,13 @@
 		?>
 
 		<?php
-		wpvc_get_template_part( 'template-parts/google-adsense', null, [
-			'position' => 'content-bottom',
-		] );
+		wpvc_get_template_part(
+			'template-parts/google-adsense',
+			null,
+			[
+				'position' => 'content-bottom',
+			]
+		);
 		?>
 
 		<?php get_template_part( 'template-parts/like-me-box' ); ?>

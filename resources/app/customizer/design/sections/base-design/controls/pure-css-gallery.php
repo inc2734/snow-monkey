@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'pure-css-gallery', [
-	'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
-	'priority' => 140,
-	'default'  => true,
-] );
+$customizer->control(
+	'checkbox',
+	'pure-css-gallery',
+	[
+		'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
+		'priority' => 140,
+		'default'  => true,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

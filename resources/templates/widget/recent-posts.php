@@ -5,13 +5,15 @@
  * @license GPL-2.0+
  */
 
-$recent_posts_query = new WP_Query( [
-	'post_type'           => $instance['post-type'],
-	'posts_per_page'      => $instance['posts-per-page'],
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-	'suppress_filters'    => true,
-] );
+$recent_posts_query = new WP_Query(
+	[
+		'post_type'           => $instance['post-type'],
+		'posts_per_page'      => $instance['posts-per-page'],
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => true,
+		'suppress_filters'    => true,
+	]
+);
 
 if ( ! $recent_posts_query->have_posts() ) {
 	return;
@@ -46,13 +48,13 @@ if ( ! $recent_posts_query->have_posts() ) {
 						<div class="wpaw-recent-posts__body">
 							<?php
 							$taxonomies = get_post_taxonomies( get_the_ID() );
-							$taxonomy   = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
-							$terms      = ( $taxonomy ) ? get_the_terms( get_the_ID(), $taxonomy ) : [];
+							$_taxonomy  = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
+							$terms      = ( $_taxonomy ) ? get_the_terms( get_the_ID(), $_taxonomy ) : [];
 							?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-recent-posts__taxonomy">
-									<?php foreach ( $terms as $term ) : ?>
-										<span class="wpaw-recent-posts__term wpaw-recent-posts__term--category-<?php echo esc_attr( $term->term_id ); ?>"><?php echo esc_html( $term->name ); ?></span>
+									<?php foreach ( $terms as $_term ) : ?>
+										<span class="wpaw-recent-posts__term wpaw-recent-posts__term--category-<?php echo esc_attr( $_term->term_id ); ?>"><?php echo esc_html( $_term->name ); ?></span>
 									<?php break; ?>
 									<?php endforeach; ?>
 								</div>

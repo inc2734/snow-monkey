@@ -10,30 +10,38 @@
  *
  * @return void
  */
-add_action( 'after_setup_theme', function() {
-	add_editor_style( [
-		'assets/css/editor-style.min.css',
-	] );
-} );
+add_action(
+	'after_setup_theme',
+	function() {
+		add_editor_style(
+			[
+				'assets/css/editor-style.min.css',
+			]
+		);
+	}
+);
 
 /**
  * Use main stylesheet for Gutenberg
  *
  * @return void
  */
-add_action( 'enqueue_block_editor_assets', function() {
-	$relative_path = '/assets/css/gutenberg.min.css';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
+add_action(
+	'enqueue_block_editor_assets',
+	function() {
+		$relative_path = '/assets/css/gutenberg.min.css';
+		$src  = get_theme_file_uri( $relative_path );
+		$path = get_theme_file_path( $relative_path );
 
-	if ( ! file_exists( $path ) ) {
-		return;
+		if ( ! file_exists( $path ) ) {
+			return;
+		}
+
+		wp_enqueue_style(
+			snow_monkey_get_main_style_handle(),
+			$src,
+			[],
+			filemtime( $path )
+		);
 	}
-
-	wp_enqueue_style(
-		snow_monkey_get_main_style_handle(),
-		$src,
-		[],
-		filemtime( $path )
-	);
-} );
+);

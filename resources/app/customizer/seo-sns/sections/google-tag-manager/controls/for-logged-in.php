@@ -9,12 +9,16 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'mwt-google-tag-manager-for-loggedin', array(
-	'label'    => __( 'Don\'t output tags to logged-in users', 'snow-monkey' ),
-	'default'  => true,
-	'type'     => 'option',
-	'priority' => 110,
-) );
+$customizer->control(
+	'checkbox',
+	'mwt-google-tag-manager-for-loggedin',
+	array(
+		'label'    => __( 'Don\'t output tags to logged-in users', 'snow-monkey' ),
+		'default'  => true,
+		'type'     => 'option',
+		'priority' => 110,
+	)
+);
 
 if ( ! is_customize_preview() ) {
 	return;

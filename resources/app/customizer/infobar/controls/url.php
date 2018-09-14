@@ -9,9 +9,13 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'text', 'infobar-url', [
-	'label' => __( 'Infobar link URL', 'snow-monkey' ),
-] );
+$customizer->control(
+	'text',
+	'infobar-url',
+	[
+		'label' => __( 'Infobar link URL', 'snow-monkey' ),
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

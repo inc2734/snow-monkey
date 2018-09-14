@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'ogp', array(
-	'title'    => __( 'OGP', 'snow-monkey' ),
-	'priority' => 140,
-) );
+$customizer->section(
+	'ogp',
+	array(
+		'title'    => __( 'OGP', 'snow-monkey' ),
+		'priority' => 140,
+	)
+);

@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'google-analytics', array(
-	'title'    => __( 'Google Analytics', 'snow-monkey' ),
-	'priority' => 100,
-) );
+$customizer->section(
+	'google-analytics',
+	array(
+		'title'    => __( 'Google Analytics', 'snow-monkey' ),
+		'priority' => 100,
+	)
+);

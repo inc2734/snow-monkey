@@ -9,12 +9,16 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'select', 'singular-post-layout', [
-	'label'    => __( 'Page layout', 'snow-monkey' ),
-	'priority' => 100,
-	'default'  => 'right-sidebar',
-	'choices'  => snow_monkey_get_page_templates(),
-] );
+$customizer->control(
+	'select',
+	'singular-post-layout',
+	[
+		'label'    => __( 'Page layout', 'snow-monkey' ),
+		'priority' => 100,
+		'default'  => 'right-sidebar',
+		'choices'  => snow_monkey_get_page_templates(),
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

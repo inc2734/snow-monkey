@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->panel( 'seo-sns', array(
-	'title'    => __( 'SEO/SNS', 'snow-monkey' ),
-	'priority' => 1040,
-) );
+$customizer->panel(
+	'seo-sns',
+	array(
+		'title'    => __( 'SEO/SNS', 'snow-monkey' ),
+		'priority' => 1040,
+	)
+);

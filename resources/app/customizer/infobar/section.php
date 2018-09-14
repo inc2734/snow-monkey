@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'infobar', [
-	'title'    => __( 'Infobar', 'snow-monkey' ),
-	'priority' => 1020,
-] );
+$customizer->section(
+	'infobar',
+	[
+		'title'    => __( 'Infobar', 'snow-monkey' ),
+		'priority' => 1020,
+	]
+);

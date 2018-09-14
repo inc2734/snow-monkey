@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'like-me-box', [
-	'title'    => __( 'Like me box', 'snow-monkey' ),
-	'priority' => 170,
-] );
+$customizer->section(
+	'like-me-box',
+	[
+		'title'    => __( 'Like me box', 'snow-monkey' ),
+		'priority' => 170,
+	]
+);

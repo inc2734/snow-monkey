@@ -23,13 +23,17 @@ $theme_by   = sprintf( __( 'Snow Monkey theme by %s', 'snow-monkey' ), $theme_li
 $powered_by = sprintf( __( 'Powered by %s', 'snow-monkey' ), $wordpress_link );
 $copyright  = $theme_by . ' ' . $powered_by;
 
-$customizer->control( 'text', 'mwt-copyright', [
-	'transport'   => 'postMessage',
-	'label'       => __( 'Copyright', 'snow-monkey' ),
-	'description' => __( 'HTML usable', 'snow-monkey' ),
-	'default'     => $copyright,
-	'type'        => 'option',
-] );
+$customizer->control(
+	'text',
+	'mwt-copyright',
+	[
+		'transport'   => 'postMessage',
+		'label'       => __( 'Copyright', 'snow-monkey' ),
+		'description' => __( 'HTML usable', 'snow-monkey' ),
+		'default'     => $copyright,
+		'type'        => 'option',
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;
@@ -38,9 +42,11 @@ if ( ! is_customize_preview() ) {
 $section = $customizer->get_section( 'title_tagline' );
 $control = $customizer->get_control( 'mwt-copyright' );
 $control->join( $section );
-$control->partial( [
-	'selector'        => '.c-copyright',
-	'render_callback' => function() {
-		get_template_part( 'template-parts/copyright' );
-	},
-] );
+$control->partial(
+	[
+		'selector'        => '.c-copyright',
+		'render_callback' => function() {
+			get_template_part( 'template-parts/copyright' );
+		},
+	]
+);

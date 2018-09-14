@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 
-$pages = snow_monkey_get_child_pages( get_the_ID() );
-if ( ! $pages ) {
+$pages_query = snow_monkey_get_child_pages( get_the_ID() );
+if ( ! $pages_query->have_posts() ) {
 	return;
 }
 ?>
@@ -22,12 +22,12 @@ if ( ! $pages ) {
 		</span>
 	</h2>
 	<ul class="c-entries c-entries--rich-media">
-		<?php foreach ( $pages as $post ) : ?>
-			<?php setup_postdata( $post ); ?>
+		<?php while ( $pages_query->have_posts() ) : ?>
+			<?php $pages_query->the_post(); ?>
 			<li class="c-entries__item">
 				<?php get_template_part( 'template-parts/page-summary' ); ?>
 			</li>
-		<?php endforeach; ?>
+		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 	</ul>
 </div>

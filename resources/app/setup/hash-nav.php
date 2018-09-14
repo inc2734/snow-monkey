@@ -5,6 +5,9 @@
  * @license GPL-2.0+
  */
 
-add_action( 'wp_footer', function() {
-	get_template_part( 'template-parts/overlay-search-box' );
-} );
+add_action(
+	'wp_footer',
+	function() {
+		get_template_part( 'template-parts/overlay-search-box' );
+	}
+);

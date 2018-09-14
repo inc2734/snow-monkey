@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'select', 'archive-page-layout', [
-	'label'   => __( 'Page layout', 'snow-monkey' ),
-	'default' => 'one-column',
-	'choices' => snow_monkey_get_page_templates(),
-] );
+$customizer->control(
+	'select',
+	'archive-page-layout',
+	[
+		'label'   => __( 'Page layout', 'snow-monkey' ),
+		'default' => 'one-column',
+		'choices' => snow_monkey_get_page_templates(),
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

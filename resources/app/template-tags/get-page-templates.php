@@ -27,9 +27,12 @@ function snow_monkey_get_page_templates() {
 			if ( $template_name ) {
 				$page_template_path = get_theme_file_path( $template_name . '.php' );
 
-				$page_template_data = get_file_data( $page_template_path, [
-					'template-name' => 'Template Name',
-				] );
+				$page_template_data = get_file_data(
+					$page_template_path,
+					[
+						'template-name' => 'Template Name',
+					]
+				);
 			}
 
 			$template_name = $name;

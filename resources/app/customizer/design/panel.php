@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->panel( 'design', [
-	'title'    => __( 'Design', 'snow-monkey' ),
-	'priority' => 1000,
-] );
+$customizer->panel(
+	'design',
+	[
+		'title'    => __( 'Design', 'snow-monkey' ),
+		'priority' => 1000,
+	]
+);

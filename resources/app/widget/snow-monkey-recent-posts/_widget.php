@@ -14,13 +14,18 @@ $query_args = [
 ];
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_id, $query_args );
-$post_type  = empty( $query_args['post_type'] ) ? '' : $query_args['post_type'];
+$_post_type = empty( $query_args['post_type'] ) ? '' : $query_args['post_type'];
 
-$recent_posts_query = new WP_Query( array_merge( $query_args, [
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-	'suppress_filters'    => true,
-] ) );
+$recent_posts_query = new WP_Query(
+	array_merge(
+		$query_args,
+		[
+			'ignore_sticky_posts' => true,
+			'no_found_rows'       => true,
+			'suppress_filters'    => true,
+		]
+	)
+);
 
 if ( ! $recent_posts_query->have_posts() ) {
 	return;
@@ -64,9 +69,13 @@ if ( ! $recent_posts_query->have_posts() ) {
 				<?php $recent_posts_query->the_post(); ?>
 				<li class="c-entries__item">
 					<?php
-					wpvc_get_template_part( 'template-parts/loop/entry-summary', $post_type, [
-						'widget_layout' => $instance['layout'],
-					] );
+					wpvc_get_template_part(
+						'template-parts/loop/entry-summary',
+						$_post_type,
+						[
+							'widget_layout' => $instance['layout'],
+						]
+					);
 					?>
 				</li>
 			<?php endwhile; ?>

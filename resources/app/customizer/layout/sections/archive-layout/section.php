@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'archive-layout', [
-	'title'    => __( 'Archive layout', 'snow-monkey' ),
-	'priority' => 130,
-] );
+$customizer->section(
+	'archive-layout',
+	[
+		'title'    => __( 'Archive layout', 'snow-monkey' ),
+		'priority' => 130,
+	]
+);

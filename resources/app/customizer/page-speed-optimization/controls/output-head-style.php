@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'output-head-style', [
-	'label'    => __( 'Output CSS in head', 'snow-monkey' ),
-	'priority' => 130,
-	'default'  => false,
-] );
+$customizer->control(
+	'checkbox',
+	'output-head-style',
+	[
+		'label'    => __( 'Output CSS in head', 'snow-monkey' ),
+		'priority' => 130,
+		'default'  => false,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

@@ -9,12 +9,16 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'jquery-loading-optimization', [
-	'label'       => __( 'Optimize the jQuery loading', 'snow-monkey' ),
-	'description' => __( 'Depending on your plugins and child theme, JavaScript error may occur.', 'snow-monkey' ),
-	'priority'    => 105,
-	'default'     => false,
-] );
+$customizer->control(
+	'checkbox',
+	'jquery-loading-optimization',
+	[
+		'label'       => __( 'Optimize the jQuery loading', 'snow-monkey' ),
+		'description' => __( 'Depending on your plugins and child theme, JavaScript error may occur.', 'snow-monkey' ),
+		'priority'    => 105,
+		'default'     => false,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

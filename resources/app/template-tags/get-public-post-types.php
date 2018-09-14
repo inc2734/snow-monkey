@@ -11,9 +11,11 @@
  * @return array
  */
 function snow_monkey_get_public_post_types() {
-	$_post_types = get_post_types( [
-		'public' => true,
-	] );
+	$_post_types = get_post_types(
+		[
+			'public' => true,
+		]
+	);
 	unset( $_post_types['attachment'] );
 
 	$post_types = [];

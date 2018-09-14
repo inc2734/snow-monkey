@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'design-skin', [
-	'title'    => __( 'Design skin', 'snow-monkey' ),
-	'priority' => 1030,
-] );
+$customizer->section(
+	'design-skin',
+	[
+		'title'    => __( 'Design skin', 'snow-monkey' ),
+		'priority' => 1030,
+	]
+);

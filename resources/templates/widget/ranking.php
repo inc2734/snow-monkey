@@ -10,15 +10,17 @@ if ( ! $items ) {
 	return;
 }
 
-$ranking_posts_query = new WP_Query( [
-	'post_type'           => 'any',
-	'posts_per_page'      => count( $items ),
-	'post__in'            => $items,
-	'orderby'             => 'post__in',
-	'ignore_sticky_posts' => true,
-	'no_found_rows'       => true,
-	'suppress_filters'    => true,
-] );
+$ranking_posts_query = new WP_Query(
+	[
+		'post_type'           => 'any',
+		'posts_per_page'      => count( $items ),
+		'post__in'            => $items,
+		'orderby'             => 'post__in',
+		'ignore_sticky_posts' => true,
+		'no_found_rows'       => true,
+		'suppress_filters'    => true,
+	]
+);
 ?>
 
 <?php echo wp_kses_post( $args['before_widget'] ); ?>
@@ -49,13 +51,13 @@ $ranking_posts_query = new WP_Query( [
 						<div class="wpaw-ranking__body">
 							<?php
 							$taxonomies = get_post_taxonomies( get_the_ID() );
-							$taxonomy   = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
-							$terms      = ( $taxonomy ) ? get_the_terms( get_the_ID(), $taxonomy ) : [];
+							$_taxonomy  = ! empty( $taxonomies[0] ) ? $taxonomies[0] : false;
+							$terms      = ( $_taxonomy ) ? get_the_terms( get_the_ID(), $_taxonomy ) : [];
 							?>
 							<?php if ( $instance['show-taxonomy'] && $terms ) : ?>
 								<div class="wpaw-ranking__taxonomy">
-									<?php foreach ( $terms as $term ) : ?>
-										<span class="wpaw-ranking__term wpaw-ranking__term--category-<?php echo esc_attr( $term->term_id ); ?>"><?php echo esc_html( $term->name ); ?></span>
+									<?php foreach ( $terms as $_term ) : ?>
+										<span class="wpaw-ranking__term wpaw-ranking__term--category-<?php echo esc_attr( $_term->term_id ); ?>"><?php echo esc_html( $_term->name ); ?></span>
 										<?php break; ?>
 									<?php endforeach; ?>
 								</div>

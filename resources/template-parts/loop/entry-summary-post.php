@@ -6,9 +6,9 @@
  */
 
 $terms = get_the_terms( get_the_ID(), 'category' );
-$term  = null;
+$_term = null;
 if ( $terms && ! is_wp_error( $terms ) ) {
-	$term  = $terms[0];
+	$_term  = $terms[0];
 }
 
 // When loaded by widget, $widget_layout is exist.
@@ -19,15 +19,15 @@ if ( isset( $widget_layout ) ) {
 }
 ?>
 <a href="<?php the_permalink(); ?>">
-	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $term ? $term->term_id : 0 ); ?>">
+	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $_term ? $_term->term_id : 0 ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php
 			$background_image_size = ! wp_is_mobile() || get_option( 'mwt-google-infeed-ads' ) ? 'large' : 'medium';
 			$background_image_url  = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
 			?>
 			<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
-			<?php if ( ! empty( $term ) ) : ?>
-				<span class="c-entry-summary__term"><?php echo esc_html( $term->name ); ?></span>
+			<?php if ( ! empty( $_term ) ) : ?>
+				<span class="c-entry-summary__term"><?php echo esc_html( $_term->name ); ?></span>
 			<?php endif; ?>
 		</div>
 		<div class="c-entry-summary__body">

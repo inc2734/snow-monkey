@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'google-tag-manager', array(
-	'title'    => __( 'Google Tag Manager', 'snow-monkey' ),
-	'priority' => 120,
-) );
+$customizer->section(
+	'google-tag-manager',
+	array(
+		'title'    => __( 'Google Tag Manager', 'snow-monkey' ),
+		'priority' => 120,
+	)
+);

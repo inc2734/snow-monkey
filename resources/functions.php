@@ -12,24 +12,26 @@ use Inc2734\Mimizuku_Core\Core;
 */
 require_once( get_template_directory() . '/vendor/autoload.php' );
 
-spl_autoload_register( function( $class ) {
-	if ( 0 !== strpos( $class, 'Snow_Monkey' ) ) {
-		return;
+spl_autoload_register(
+	function( $class ) {
+		if ( 0 !== strpos( $class, 'Snow_Monkey' ) ) {
+			return;
+		}
+
+		$class = str_replace( 'Snow_Monkey', '', $class );
+		$class = str_replace( '\\', '/', $class );
+		$class = str_replace( '_', '-', $class );
+		$class = strtolower( $class );
+
+		$class_path = get_theme_file_path( $class . '.php' );
+
+		if ( ! file_exists( $class_path ) ) {
+			return;
+		}
+
+		require $class_path;
 	}
-
-	$class = str_replace( 'Snow_Monkey', '', $class );
-	$class = str_replace( '\\', '/', $class );
-	$class = str_replace( '_', '-', $class );
-	$class = strtolower( $class );
-
-	$class_path = get_theme_file_path( $class . '.php' );
-
-	if ( ! file_exists( $class_path ) ) {
-		return;
-	}
-
-	require $class_path;
-} );
+);
 
 /**
  * Make theme available for translation
@@ -97,12 +99,17 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG && ! is_customize_preview() ) {
 	}
 
 	foreach ( $slugs as $slug ) {
-		add_action( 'get_template_part_' . $slug, function( $slug, $name ) {
-			if ( $name ) {
-				$slug = $slug . '-' . $name;
-			}
+		add_action(
+			'get_template_part_' . $slug,
+			function( $slug, $name ) {
+				if ( $name ) {
+					$slug = $slug . '-' . $name;
+				}
 
-			printf( "\n" . '<!-- Start : %1$s -->' . "\n", esc_html( $slug ) );
-		}, 10, 2 );
+				printf( "\n" . '<!-- Start : %1$s -->' . "\n", esc_html( $slug ) );
+			},
+			10,
+			2
+		);
 	}
 }

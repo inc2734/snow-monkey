@@ -35,7 +35,7 @@
       "resources/vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /resources/vendor/,/tests/",
       "bash bin/phpunit.sh"
     ],
-    "phpcbf": "vendor/bin/phpcbf -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
+    "phpcbf": "resources/vendor/bin/phpcbf -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
     "server": "bash bin/server.sh",
     "scaffold-tests": "bash bin/scaffold-tests.sh",
     "theme-unit-test": "bash bin/theme-unit-test.sh",

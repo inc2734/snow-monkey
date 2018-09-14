@@ -13,11 +13,14 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'twitter-cards', array(
-	'title'       => __( 'Twitter Cards', 'snow-monkey' ),
-	'priority'    => 150,
-	'description' => sprintf(
-		__( 'Application of URL is necessary for using Twitter Cards. %1$s', 'snow-monkey' ),
-		'<a href="https://cards-dev.twitter.com/validator" target="_blank">Card validator</a>'
-	),
-) );
+$customizer->section(
+	'twitter-cards',
+	array(
+		'title'       => __( 'Twitter Cards', 'snow-monkey' ),
+		'priority'    => 150,
+		'description' => sprintf(
+			__( 'Application of URL is necessary for using Twitter Cards. %1$s', 'snow-monkey' ),
+			'<a href="https://cards-dev.twitter.com/validator" target="_blank">Card validator</a>'
+		),
+	)
+);

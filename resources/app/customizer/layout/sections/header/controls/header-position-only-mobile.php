@@ -9,11 +9,15 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'checkbox', 'header-position-only-mobile', [
-	'label'    => __( 'Use header position setting for mobile only', 'snow-monkey' ),
-	'priority' => 120,
-	'default'  => true,
-] );
+$customizer->control(
+	'checkbox',
+	'header-position-only-mobile',
+	[
+		'label'    => __( 'Use header position setting for mobile only', 'snow-monkey' ),
+		'priority' => 120,
+		'default'  => true,
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

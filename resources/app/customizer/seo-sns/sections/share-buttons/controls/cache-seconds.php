@@ -9,12 +9,16 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'text', 'mwt-share-buttons-cache-seconds', [
-	'label'    => __( 'Share counts cache time (seconds)', 'snow-monkey' ),
-	'priority' => 130,
-	'default'  => 300,
-	'type'     => 'option',
-] );
+$customizer->control(
+	'text',
+	'mwt-share-buttons-cache-seconds',
+	[
+		'label'    => __( 'Share counts cache time (seconds)', 'snow-monkey' ),
+		'priority' => 130,
+		'default'  => 300,
+		'type'     => 'option',
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

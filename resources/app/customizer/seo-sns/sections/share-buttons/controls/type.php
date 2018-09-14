@@ -9,19 +9,23 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'select', 'mwt-share-buttons-type', [
-	'type'     => 'option',
-	'label'    => __( 'Type', 'snow-monkey' ),
-	'priority' => 110,
-	'default'  => 'balloon',
-	'choices'  => [
-		'balloon'    => __( 'Balloon', 'snow-monkey' ),
-		'horizontal' => __( 'Horizontal', 'snow-monkey' ),
-		'icon'       => __( 'Icon', 'snow-monkey' ),
-		'block'      => __( 'Block', 'snow-monkey' ),
-		'official'   => __( 'Official', 'snow-monkey' ),
-	],
-] );
+$customizer->control(
+	'select',
+	'mwt-share-buttons-type',
+	[
+		'type'     => 'option',
+		'label'    => __( 'Type', 'snow-monkey' ),
+		'priority' => 110,
+		'default'  => 'balloon',
+		'choices'  => [
+			'balloon'    => __( 'Balloon', 'snow-monkey' ),
+			'horizontal' => __( 'Horizontal', 'snow-monkey' ),
+			'icon'       => __( 'Icon', 'snow-monkey' ),
+			'block'      => __( 'Block', 'snow-monkey' ),
+			'official'   => __( 'Official', 'snow-monkey' ),
+		],
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

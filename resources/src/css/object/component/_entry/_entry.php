@@ -7,12 +7,14 @@
 
 if ( is_admin() ) {
 	if ( function_exists( 'is_gutenberg_page' ) && ! isset( $_GET['classic-editor'] ) ) {
-		snow_monkey_entry_content_styles( [
-			'',
-			'[data-type="core/paragraph"] .components-autocomplete',
-			'[data-type="core/heading"] .components-autocomplete',
-			'.wp-block-freeform',
-		] );
+		snow_monkey_entry_content_styles(
+			[
+				'',
+				'[data-type="core/paragraph"] .components-autocomplete',
+				'[data-type="core/heading"] .components-autocomplete',
+				'.wp-block-freeform',
+			]
+		);
 	} else {
 		snow_monkey_entry_content_styles( [ '' ] );
 	}

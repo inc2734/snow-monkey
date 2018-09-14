@@ -9,16 +9,20 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$customizer->control( 'select', 'header-position', [
-	'label'    => __( 'Header position', 'snow-monkey' ),
-	'priority' => 110,
-	'default'  => 'sticky',
-	'choices'  => [
-		'sticky'  => __( 'Sticky', 'snow-monkey' ),
-		'overlay' => __( 'Overlay', 'snow-monkey' ),
-		''        => __( 'Normal', 'snow-monkey' ),
-	],
-] );
+$customizer->control(
+	'select',
+	'header-position',
+	[
+		'label'    => __( 'Header position', 'snow-monkey' ),
+		'priority' => 110,
+		'default'  => 'sticky',
+		'choices'  => [
+			'sticky'  => __( 'Sticky', 'snow-monkey' ),
+			'overlay' => __( 'Overlay', 'snow-monkey' ),
+			''        => __( 'Normal', 'snow-monkey' ),
+		],
+	]
+);
 
 if ( ! is_customize_preview() ) {
 	return;

@@ -13,7 +13,10 @@ if ( ! is_customize_preview() ) {
 
 $customizer = Customizer_Framework::init();
 
-$customizer->section( 'base-design', [
-	'title'    => __( 'Base design settings', 'snow-monkey' ),
-	'priority' => 100,
-] );
+$customizer->section(
+	'base-design',
+	[
+		'title'    => __( 'Base design settings', 'snow-monkey' ),
+		'priority' => 100,
+	]
+);
