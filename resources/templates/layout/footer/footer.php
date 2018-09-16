@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 ?>
-<footer class="l-footer" role="content-info">
+<footer class="l-footer" role="contentinfo">
 	<?php get_template_part( 'template-parts/social-nav' ); ?>
 	<?php get_template_part( 'template-parts/footer-widget-area' ); ?>
 	<?php get_template_part( 'template-parts/footer-sub-nav' ); ?>
