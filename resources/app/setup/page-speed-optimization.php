@@ -42,22 +42,10 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						'inc2734-wp-seo-google-analytics',
-					]
-				);
-			}
-		);
-
-		add_filter(
-			'inc2734_wp_page_speed_optimization_builded_scripts',
-			function( $handles ) {
-				return array_merge(
-					$handles,
-					[
 						'fontawesome5',
-						'fontawesome5-v4-shims',
-						'comment-reply',
+						'inc2734-wp-seo-google-analytics',
 						'wp-embed',
+						'comment-reply',
 						'jquery.easing',
 					]
 				);

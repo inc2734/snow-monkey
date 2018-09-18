@@ -111,20 +111,19 @@ add_action(
  * @return void
  */
 function snow_monkey_enqueue_awesome_components() {
-	wp_enqueue_script(
-		'fontawesome5',
-		'https://use.fontawesome.com/releases/v5.0.9/js/all.js',
-		[],
-		'5.0.9',
-		true
-	);
+	$relative_path = '/assets/packages/fontawesome-free/js/all.min.js';
+	$src  = get_theme_file_uri( $relative_path );
+	$path = get_theme_file_path( $relative_path );
+
+	if ( ! file_exists( $path ) ) {
+		return;
+	}
 
 	wp_enqueue_script(
-		'fontawesome5-v4-shims',
-		'https://use.fontawesome.com/releases/v5.0.9/js/v4-shims.js',
-		[ 'fontawesome5' ],
-		'5.0.9',
-		true
+		'fontawesome5',
+		$src,
+		[],
+		filemtime( $path )
 	);
 }
 add_action( 'wp_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
