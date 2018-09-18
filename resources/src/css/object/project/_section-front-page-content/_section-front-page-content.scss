@@ -7,6 +7,11 @@
       @include _margin-top(2);
     }
   }
+
+  &--no-vpadding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 [data-has-sidebar="true"] {

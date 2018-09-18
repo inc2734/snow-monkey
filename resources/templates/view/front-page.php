@@ -13,9 +13,14 @@
 	the_content();
 	$content = ob_get_clean();
 	$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+
+	$classes = [ 'c-section', 'p-section-front-page-content' ];
+	if ( ! get_theme_mod( 'home-page-content-padding' ) ) {
+		$classes[] = 'p-section-front-page-content--no-vpadding';
+	}
 	?>
 	<?php if ( $content ) : ?>
-		<div class="c-section p-section-front-page-content">
+		<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 			<?php if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) : ?>
 				<div class="c-container">
 					<div class="c-entry">
