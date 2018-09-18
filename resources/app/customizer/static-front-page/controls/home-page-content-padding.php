@@ -13,8 +13,11 @@ $customizer->control(
 	'checkbox',
 	'home-page-content-padding',
 	[
-		'label'   => __( 'Add vertical padding to content area of homepage', 'snow-monkey' ),
-		'default' => true,
+		'label'           => __( 'Add vertical padding to content area of homepage', 'snow-monkey' ),
+		'default'         => true,
+		'active_callback' => function() {
+			return ( 'page' === get_option( 'show_on_front' ) && ! empty( get_option( 'page_on_front' ) ) );
+		},
 	]
 );
 
