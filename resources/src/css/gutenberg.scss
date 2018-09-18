@@ -26,14 +26,13 @@
    */
   @import 'object/utility/utility';
 
-  color: $_color-text;
-  font-family: $_font-family;
-  @include _font-size-line-height($_base-font-size-px);
-
-  p {
-    color: $_color-text;
-    font-family: $_font-family;
-    @include _font-size-line-height($_base-font-size-px);
+  .editor-block-list__block {
+    &,
+    p {
+      color: $_color-text;
+      font-family: $_font-family;
+      @include _font-size-line-height($_base-font-size-px);
+    }
   }
 
   // @todo 本来不要かも
