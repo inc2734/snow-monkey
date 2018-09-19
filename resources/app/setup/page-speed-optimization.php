@@ -144,6 +144,7 @@ add_action(
 				'wp-oembed-blog-card',
 				'wp-share-buttons',
 				'wp-like-me-box',
+				'wp-awesome-widgets',
 			]
 		);
 		}
