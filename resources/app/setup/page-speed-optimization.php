@@ -34,6 +34,9 @@ add_action(
 						'wp-awesome-widgets',
 						'jquery.contents-outline',
 						'wp-contents-outline',
+						'fontawesome5-brands',
+						'fontawesome5-solid',
+						'fontawesome5',
 					]
 				);
 			}
@@ -45,7 +48,6 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						'fontawesome5',
 						'inc2734-wp-seo-google-analytics',
 						'wp-embed',
 						'comment-reply',
