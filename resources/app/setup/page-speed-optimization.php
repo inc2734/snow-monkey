@@ -31,6 +31,9 @@ add_action(
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',
+						'wp-awesome-widgets',
+						'jquery.contents-outline',
+						'wp-contents-outline',
 					]
 				);
 			}

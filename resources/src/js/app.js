@@ -6,7 +6,6 @@ import '../../assets/packages/slick-carousel';
 import '../../assets/packages/jquery.sticky';
 import '../../assets/packages/jquery.background-parallax-scroll';
 import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis.js';
-import '../../vendor/inc2734/wp-awesome-widgets/src/assets/js/wp-awesome-widgets.js';
 import './_wpaw-pickup-slider.js';
 import './_wpaw-pr-box.js';
 
@@ -59,7 +58,6 @@ $('.l-sidebar-sticky-widget-area').sticky({
 $('.js-bg-parallax').backgroundParallaxScroll();
 
 $('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
-$('.wpaw-slider__canvas').WpawSlider();
 $('.wpaw-pr-box').SnowMonkeyWpawPrBox();
 
 $(window).on('elementor/frontend/init', () => {

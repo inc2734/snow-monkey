@@ -32,7 +32,5 @@ $.fn.SnowMonkeyWpawPickupSlider = function() {
         methods.init(slider);
       }, 0);
     });
-
-    slider.WpawPickupSlider();
   });
 };

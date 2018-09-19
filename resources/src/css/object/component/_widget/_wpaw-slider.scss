@@ -52,25 +52,29 @@
   }
 
   &__item-more {
+    @include btn();
     @include _margin-top(.5);
-    display: inline-block;
-    background-color: transparent;
-    border-radius: 30px;
     @include _font-size-line-height($_base-font-size-px - 2);
-    @include _padding(.25, 1);
-    text-decoration: none;
+
+    &--ghost {
+      background-color: transparent !important;
+      border-radius: 30px;
+      border-width: 1px;
+      border-style: solid;
+      @include _padding(.25, 1);
+
+      @include _media-min(lg) {
+        opacity: .8;
+        @include _transition(opacity);
+      }
+
+      @include _hover(lg) {
+        opacity: 1;
+      }
+    }
 
     @include _media-min(md) {
       @include _margin-top(1);
-    }
-
-    @include _media-min(lg) {
-      opacity: .8;
-      @include _transition(opacity);
-    }
-
-    @include _hover() {
-      opacity: 1;
     }
   }
 

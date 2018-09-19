@@ -28,6 +28,7 @@ add_action(
 			'wp-like-me-box',
 			'wp-oembed-blog-card',
 			'wp-pure-css-gallery',
+			'wp-awesome-widgets',
 		];
 		foreach ( $maybe_dependencies as $dependency ) {
 			if ( ! wp_style_is( $dependency, 'enqueued' ) && ! wp_style_is( $dependency, 'registered' ) ) {
@@ -62,10 +63,22 @@ add_action(
 			return;
 		}
 
+		$dependencies = [];
+		$maybe_dependencies = [
+			'jquery',
+			'wp-awesome-widgets',
+		];
+		foreach ( $maybe_dependencies as $dependency ) {
+			if ( ! wp_script_is( $dependency, 'enqueued' ) && ! wp_script_is( $dependency, 'registered' ) ) {
+				continue;
+			}
+			$dependencies[] = $dependency;
+		}
+
 		wp_enqueue_script(
 			snow_monkey_get_main_script_handle(),
 			$src,
-			[ 'jquery' ],
+			$dependencies,
 			filemtime( $path ),
 			true
 		);

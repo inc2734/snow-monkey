@@ -4,25 +4,25 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c83cb54e944caeab35af3734be2ddb4f",
+    "content-hash": "61cf0fe0716f221b01ab64fa05983c36",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "2.10.1",
+            "version": "2.11.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "ea02568c69968280c43357be42fc1dd83b9180bf"
+                "reference": "f5b91564637aea94e83f69a28c3f36ab82145e6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/ea02568c69968280c43357be42fc1dd83b9180bf",
-                "reference": "ea02568c69968280c43357be42fc1dd83b9180bf",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/f5b91564637aea94e83f69a28c3f36ab82145e6e",
+                "reference": "f5b91564637aea94e83f69a28c3f36ab82145e6e",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": "^1.0",
-                "inc2734/wp-awesome-widgets": "^2.6",
+                "inc2734/wp-awesome-widgets": "^3.0",
                 "inc2734/wp-basis": "^3.1",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-09-14T03:45:28+00:00"
+            "time": "2018-09-19T04:10:28+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -119,16 +119,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "2.6.4",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "200ca281712dee817f368be39402dd86a94c7ce5"
+                "reference": "babeb55ba75969f1fa9cf95b4abb6c20db79ac31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/200ca281712dee817f368be39402dd86a94c7ce5",
-                "reference": "200ca281712dee817f368be39402dd86a94c7ce5",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/babeb55ba75969f1fa9cf95b4abb6c20db79ac31",
+                "reference": "babeb55ba75969f1fa9cf95b4abb6c20db79ac31",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-09-10T11:35:18+00:00"
+            "time": "2018-09-19T03:57:44+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -458,16 +458,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "c948dda521ac4e48ac1a59f36220fa25ac5db0f1"
+                "reference": "8d147846dc03dc6b3d7480960366e6db5fc9534d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/c948dda521ac4e48ac1a59f36220fa25ac5db0f1",
-                "reference": "c948dda521ac4e48ac1a59f36220fa25ac5db0f1",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/8d147846dc03dc6b3d7480960366e6db5fc9534d",
+                "reference": "8d147846dc03dc6b3d7480960366e6db5fc9534d",
                 "shasum": ""
             },
             "require": {
@@ -502,7 +502,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2018-09-08T03:01:16+00:00"
+            "time": "2018-09-19T03:57:07+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
