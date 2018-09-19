@@ -54,7 +54,8 @@
 
   &__item-title {
     position: relative;
-    @include _font-size-line-height($_base-font-size * 1.5);
+    @include _font-size($_base-font-size * 1.25);
+    @include _line-height($_base-font-size * 2);
     @include _padding(0, 0, .25);
     text-shadow: rgba($_color-text, .3) 1px 1px 3px;
   }
@@ -71,7 +72,7 @@
 
   &__item-more {
     @include _btn;
-    @include _margin(1, 0, 0);
+    @include _margin-top(.5);
     @include _padding(.5, 2);
     max-width: 100%;
     background-color: transparent;
@@ -79,6 +80,10 @@
     border-radius: $_border-radius;
     color: #fff;
     @include _transition(all);
+
+    @include _media-min(md) {
+      @include _margin-top(1);
+    }
 
     @include _hover(lg) {
       background-color: $color-accent;

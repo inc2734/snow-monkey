@@ -14,21 +14,20 @@
     position: relative;
     max-width: 100%;
     @include _padding(1);
-
-    @include _media-min(md) {
-      width: _strip-unit(map-get($_sizes, md)) * 1rem;
-    }
-
-    @include _media-min(lg) {
-      width: _strip-unit(map-get($_sizes, lg)) * 1rem;
-    }
   }
 
   &__item-content {
     display: flex;
     align-items: center;
     flex-direction: column;
-    @include _padding(0, 1);
+
+    @include _media-min(md) {
+      max-width: _strip-unit(map-get($_sizes, md)) * 1rem;
+    }
+
+    @include _media-min(lg) {
+      max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
+    }
 
     > * {
       flex: 0 1 auto;
@@ -38,24 +37,32 @@
 
   &__item-title {
     font-weight: bold;
-    @include _font-size($_base-font-size * 1.5);
+    @include _font-size($_base-font-size * 1.25);
     @include _line-height($_base-font-size * 2);
     @include _margin(0, 0, .25);
   }
 
   &__item-summary {
-    @include _content(.5);
+    @include _content(.25);
     @include _font-size-line-height($_base-font-size-px - 2);
+
+    @include _media-min(md) {
+      @include _content(.5);
+    }
   }
 
   &__item-more {
-    @include _margin-top(1);
+    @include _margin-top(.5);
     display: inline-block;
     background-color: transparent;
     border-radius: 30px;
     @include _font-size-line-height($_base-font-size-px - 2);
     @include _padding(.25, 1);
     text-decoration: none;
+
+    @include _media-min(md) {
+      @include _margin-top(1);
+    }
 
     @include _media-min(lg) {
       opacity: .8;
