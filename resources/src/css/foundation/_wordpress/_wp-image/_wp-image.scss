@@ -15,3 +15,41 @@ img[class*="wp-image-"],
 .wp-block-image.aligncenter {
   display: table;
 }
+
+.wp-block-image.alignfull {
+  @mixin alignfull-image() {
+    width: 100vw;
+    max-width: none;
+  }
+
+  @include _media-max(md) {
+    > img {
+      @include alignfull-image();
+    }
+  }
+
+  [data-has-sidebar="false"] & {
+    > img {
+      @include alignfull-image();
+    }
+  }
+}
+
+.wp-block-image.alignwide {
+  @mixin alignwide-image() {
+    width: 100%;
+    max-width: none;
+  }
+
+  @include _media-max(md) {
+    > img {
+      @include alignwide-image();
+    }
+  }
+
+  [data-has-sidebar="false"] & {
+    > img {
+      @include alignwide-image();
+    }
+  }
+}

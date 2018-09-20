@@ -29,15 +29,11 @@
 
 .alignfull {
   @include _media-max(md) {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-    width: auto;
+    @include alignfull();
   }
 
   [data-has-sidebar="false"] & {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
-    width: auto;
+    @include alignfull();
   }
 
   [data-is-slim-width="true"][data-has-sidebar="false"] & {
@@ -50,4 +46,33 @@
   }
 }
 
-.alignwide {}
+.alignwide {
+  @include _media-max(md) {
+    @include alignfull();
+  }
+
+  [data-is-slim-width="true"][data-has-sidebar="false"] & {
+    @include _media-min(lg) {
+      @include alignwide();
+    }
+  }
+
+  [data-is-slim-width="false"][data-has-sidebar="false"] & {
+    @include _media-only(lg) {
+      @include alignfull();
+    }
+
+    @include _media-min(xl) {
+      @include alignwide();
+    }
+  }
+
+  [data-is-slim-width="true"][data-has-sidebar="false"] & {
+    .#{$_prefix}c-container {
+      @include _media-min(lg) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+  }
+}

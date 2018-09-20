@@ -95,6 +95,13 @@
         margin-top: 0;
       }
     }
+
+    &[data-align="wide"] {
+      @include _media-min(600px) {
+        margin-left: -25px;
+        margin-right: -25px;
+      }
+    }
   }
 
   .wp-block-code {

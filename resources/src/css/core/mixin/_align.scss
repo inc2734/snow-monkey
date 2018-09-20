@@ -1,0 +1,13 @@
+@mixin alignfull() {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  width: auto;
+  max-width: none;
+}
+
+@mixin alignwide() {
+  margin-right: _space(2) * -1;
+  margin-left: _space(2) * -1;
+  width: auto;
+  max-width: none;
+}
