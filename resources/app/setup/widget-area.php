@@ -16,7 +16,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Sidebar', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed in the sidebar of singular post.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the sidebar of posts and pages.', 'snow-monkey' ),
 				'id'            => 'sidebar-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -28,7 +28,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed in the sidebar of singular post.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the sidebar of posts and pages.', 'snow-monkey' ),
 				'id'            => 'sidebar-sticky-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -50,7 +50,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Top of the page title', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed on the title of the singular post.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed on the title of the posts and pages.', 'snow-monkey' ),
 				'id'            => 'title-top-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -94,7 +94,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Bottom of contents', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed under the contents of singular post.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed under the contents of posts and pages.', 'snow-monkey' ),
 				'id'            => 'contents-bottom-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',

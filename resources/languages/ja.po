@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-09-18 12:07+0900\n"
-"PO-Revision-Date: 2018-09-18 12:08+0900\n"
+"POT-Creation-Date: 2018-09-25 09:42+0900\n"
+"PO-Revision-Date: 2018-09-25 09:44+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -755,8 +755,8 @@ msgid "Sidebar"
 msgstr "サイドバー"
 
 #: app/setup/widget-area.php:19 app/setup/widget-area.php:31
-msgid "This widgets are displayed in the sidebar of singular post."
-msgstr "このウィジェットは個別投稿のサイドバーに表示されます。"
+msgid "This widgets are displayed in the sidebar of posts and pages."
+msgstr "このウィジェットは投稿と固定ページのサイドバーに表示されます。"
 
 #: app/setup/widget-area.php:30
 msgid "Sticky sidebar"
@@ -767,8 +767,8 @@ msgid "Top of the page title"
 msgstr "ページタイトルの上"
 
 #: app/setup/widget-area.php:53
-msgid "This widgets are displayed on the title of the singular post."
-msgstr "このウィジェットは個別投稿のコンテンツ下に表示されます。"
+msgid "This widgets are displayed on the title of the posts and pages."
+msgstr "このウィジェットは投稿と固定ページのタイトル上に表示されます。"
 
 #: app/setup/widget-area.php:74
 msgid "Top of the archive page"
@@ -779,8 +779,8 @@ msgid "This widgets are displayed top of the archive page."
 msgstr "このウィジェットはアーカイブページ上部に表示されます。"
 
 #: app/setup/widget-area.php:97
-msgid "This widgets are displayed under the contents of singular post."
-msgstr "このウィジェットは個別投稿のコンテンツ下に表示されます。"
+msgid "This widgets are displayed under the contents of posts and pages."
+msgstr "このウィジェットは投稿と固定ページのコンテンツ下に表示されます。"
 
 #: app/setup/widget-area.php:118
 msgid "Archive sidebar"
@@ -885,7 +885,6 @@ msgstr "閉じる"
 
 #: template-parts/overlay-search-box.php:19
 #: template-parts/overlay-search-box.php:20
-#, fuzzy
 msgid "Search"
 msgstr "検索する"
 
@@ -909,11 +908,11 @@ msgstr "トラックバックはありません。"
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
-#: template-parts/prev-next-nav.php:29
+#: template-parts/prev-next-nav.php:32
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/prev-next-nav.php:31
+#: template-parts/prev-next-nav.php:34
 msgid "New post"
 msgstr "新しい投稿"
 
@@ -988,6 +987,9 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "Full width ( has side margins )"
 msgstr "フル幅 ( 左右余白あり )"
+
+#~ msgid "This widgets are displayed in the sidebar of singular post."
+#~ msgstr "このウィジェットは個別投稿のサイドバーに表示されます。"
 
 #~ msgid "Blank"
 #~ msgstr "空"
