@@ -1,0 +1,7 @@
+.wp-block-embed {
+  &.is-provider-wp-oembed-blog-card-handler {
+    .wp-block-embed__wrapper::before {
+      display: none;
+    }
+  }
+}
