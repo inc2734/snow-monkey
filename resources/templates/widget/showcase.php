@@ -16,7 +16,7 @@
 
 	<?php
 	$bg_image_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_backgroud_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
-	$bgimage       = wp_get_attachment_image_url( $instance['bg-image'], $bg_image_size );
+	$bgimage       = ! empty( $instance['bg-image'] ) ? wp_get_attachment_image_url( $instance['bg-image'], $bg_image_size ) : null;
 	$is_block_link = ! empty( $instance['link-url'] ) && empty( $instance['link-text'] );
 	$wrapper_tag   = $is_block_link ? 'a' : 'div';
 	?>
@@ -29,9 +29,11 @@
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
-		<div class="wpaw-showcase__bgimage js-bg-parallax__bgimage">
-			<img src="<?php echo esc_url( $bgimage ); ?>" alt="">
-		</div>
+		<?php if ( $bgimage ) : ?>
+			<div class="wpaw-showcase__bgimage js-bg-parallax__bgimage">
+				<img src="<?php echo esc_url( $bgimage ); ?>" alt="">
+			</div>
+		<?php endif; ?>
 
 		<div class="wpaw-showcase__mask"
 			style="background-color: <?php echo esc_attr( sanitize_hex_color( $instance['mask-color'] ) ); ?>; opacity: <?php echo esc_attr( $instance['mask-opacity'] ); ?>"
@@ -66,11 +68,11 @@
 						$thumbnail_size = apply_filters( 'inc2734_wp_awesome_widgets_showcase_image_size', 'large', wp_is_mobile(), $args['widget_id'] );
 						$thumbnail      = wp_get_attachment_image_url( $instance['thumbnail'], $thumbnail_size );
 						?>
-						<?php if ( ! $is_block_link && ! empty( $instance['link-url'] ) ) : ?>
+						<?php if ( ! $is_block_link && $instance['link-url'] && $thumbnail ) : ?>
 							<a href="<?php echo esc_url( $instance['link-url'] ); ?>">
 								<img src="<?php echo esc_url( $thumbnail ); ?>" alt="">
 							</a>
-						<?php else : ?>
+						<?php elseif ( $thumbnail ) : ?>
 							<img src="<?php echo esc_url( $thumbnail ); ?>" alt="">
 						<?php endif; ?>
 					</div>
