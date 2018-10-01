@@ -16,7 +16,7 @@ $url     = get_theme_mod( 'infobar-url' );
 	<?php if ( $url ) : ?>
 
 		<a class="p-infobar__inner" href="<?php echo esc_url( $url ); ?>">
-			<div class="p-infobar__container">
+			<div class="c-container">
 				<div class="p-infobar__content">
 					<?php echo esc_html( $content ); ?>
 				</div>
@@ -26,7 +26,7 @@ $url     = get_theme_mod( 'infobar-url' );
 	<?php else : ?>
 
 		<span class="p-infobar__inner">
-			<div class="p-infobar__container">
+			<div class="c-container">
 				<div class="p-infobar__content">
 					<?php echo esc_html( $content ); ?>
 				</div>

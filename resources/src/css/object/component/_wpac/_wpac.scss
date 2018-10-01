@@ -191,10 +191,6 @@
     background-color: _lightest($_color-gray);
   }
 
-  &__container {
-    @include _container();
-  }
-
   &__body {
     @include entry-content();
   }

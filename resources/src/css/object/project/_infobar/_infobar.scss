@@ -1,8 +1,7 @@
 .#{$_prefix}p-infobar {
   $infobar-background-color: #ffca00;
 
-  &__container {
-    @include _container();
+  .#{$_prefix}c-container {
     margin-right: 0; // For IE11
     margin-left: 0; // For IE11
   }
