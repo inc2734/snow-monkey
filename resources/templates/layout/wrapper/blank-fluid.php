@@ -13,6 +13,7 @@
 	data-has-sidebar="false"
 	data-is-fluid-template="true"
 	data-is-slim-width="false"
+	data-is-fixed-width="false"
 	>
 
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
