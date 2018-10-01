@@ -10,12 +10,20 @@
       padding-top: 75%;
     }
 
-    > span:first-child {
-      @include _position(absolute, 0, 0, 0, 0);
-      @include _background-image-cover();
-      background-color: _lighter($_color-gray);
-      @include _transition(transform);
-      backface-visibility: hidden;
+    > img {
+      @include _position(absolute, 50%, 0, 0, 50%);
+      width: auto;
+      height: auto;
+      min-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
+
+      @supports(object-fit: cover) {
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        transform: none;
+      }
     }
 
     .#{$_prefix}c-entry-summary__term {

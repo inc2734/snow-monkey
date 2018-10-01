@@ -10,13 +10,9 @@
 			<a href="<?php the_permalink(); ?>">
 				<div class="c-page-summary__figure">
 					<?php
-					$background_image_size = 'medium';
-					if ( ! wp_is_mobile() ) {
-						$background_image_size = 'large';
-					}
-					$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
+					$background_image_size = ! wp_is_mobile() ? 'large' : 'medium';
+					the_post_thumbnail( $background_image_size );
 					?>
-					<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
 				</div>
 			</a>
 		<?php endif; ?>

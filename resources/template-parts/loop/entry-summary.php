@@ -17,9 +17,8 @@ if ( isset( $widget_layout ) ) {
 		<div class="c-entry-summary__figure">
 			<?php
 			$background_image_size = ! wp_is_mobile() || get_option( 'mwt-google-infeed-ads' ) ? 'large' : 'medium';
-			$background_image_url  = wp_get_attachment_image_url( get_post_thumbnail_id(), $background_image_size );
+			the_post_thumbnail( $background_image_size );
 			?>
-			<span style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"></span>
 		</div>
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">
