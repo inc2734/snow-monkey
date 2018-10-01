@@ -117,7 +117,7 @@ add_action(
 			[
 				'name'          => __( 'Archive sidebar', 'snow-monkey' ),
 				'id'            => 'archive-sidebar-widget-area',
-				'description'   => __( 'This widgets are displayed in the sidebar of archive page .', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the sidebar of archive page.', 'snow-monkey' ),
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
@@ -298,6 +298,28 @@ add_action(
 				'description'   => __( 'This widgets are displayed in the footer.', 'snow-monkey' ),
 				'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--lg-1-1"><div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div></div>',
+				'before_title'  => '<h2 class="c-widget__title">',
+				'after_title'   => '</h2>',
+			]
+		);
+	}
+);
+
+/**
+* Add overlay widget area
+*
+* @return void
+*/
+add_action(
+	'widgets_init',
+	function() {
+		register_sidebar(
+			[
+				'name'          => __( 'Overlay', 'snow-monkey' ),
+				'id'            => 'overlay-widget-area',
+				'description'   => __( 'This widgets are displayed in the sidebar of overlay.', 'snow-monkey' ),
+				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
 			]

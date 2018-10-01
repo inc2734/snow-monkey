@@ -1,0 +1,21 @@
+.#{$_prefix}p-overlay-widget-area {
+  overflow: auto;
+  @include _padding(.5);
+
+  @include _media-min(md) {
+    @include _padding(1);
+  }
+
+  &__inner {
+    position: static;
+    margin: auto;
+    background-color: #fff;
+    max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
+    @include _padding(.5);
+    transform: none;
+
+    @include _media-min(md) {
+      @include _padding(1);
+    }
+  }
+}
