@@ -112,4 +112,11 @@
       @include _font-size-line-height($_base-font-size-px);
     }
   }
+
+  .wp-block-html {
+    pre {
+      border-radius: 0;
+      padding: 0 1rem;
+    }
+  }
 }
