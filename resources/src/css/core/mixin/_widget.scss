@@ -121,10 +121,6 @@
     line-height: 1;
   }
 
-  &__term {
-    background-color: $color-accent;
-  }
-
   &__date {
     @include _font-size-line-height(11px);
   }

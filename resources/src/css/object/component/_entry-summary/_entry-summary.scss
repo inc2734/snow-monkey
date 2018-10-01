@@ -3,6 +3,7 @@
     position: relative;
     @include _margin(0, 0, .25);
     overflow: hidden;
+    background-color: _lighter($_color-gray);
 
     &::before {
       content: '';
@@ -21,8 +22,12 @@
       @supports(object-fit: cover) {
         top: 0;
         left: 0;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
+        object-position: 50% 50%;
         transform: none;
+        @include _transition(transform);
       }
     }
 
@@ -104,8 +109,10 @@
 
     @include _hover(lg) {
       .#{$_prefix}c-entry-summary__figure {
-        > span:first-child {
-          transform: scale(1.05);
+        > img {
+          @supports(object-fit: cover) {
+            transform: scale(1.05);
+          }
         }
 
         &::after {

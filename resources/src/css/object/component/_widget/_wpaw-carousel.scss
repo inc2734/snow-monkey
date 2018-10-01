@@ -1,0 +1,48 @@
+.wpaw-carousel {
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+
+  .slick-list {
+    @include _margin-right(-.5);
+    @include _margin-left(-.5);
+  }
+
+  .slick-slide {
+    @include _margin-right(.5);
+    @include _margin-left(.5);
+  }
+
+  .slick-dots {
+    position: static;
+    @include _margin-top(.5);
+  }
+
+  &__item {
+    color: $_color-text;
+    text-decoration: none;
+
+    @include _hover(lg) {
+      .wpaw-carousel__figure {
+        > img {
+          @supports(object-fit: cover) {
+            transform: scale(1.05);
+          }
+        }
+      }
+    }
+  }
+
+  &__figure {
+    > img {
+      @supports(object-fit: cover) {
+        @include _transition(transform);
+      }
+    }
+  }
+
+  &__item-title {
+    @include _margin-top(.25);
+    @include _padding(0, .5);
+  }
+}

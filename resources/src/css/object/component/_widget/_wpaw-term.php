@@ -12,7 +12,7 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
-	'.wpaw-any-posts__term',
+	'.wpaw-term',
 	'background-color: ' . $accent_color
 );
 
@@ -24,7 +24,7 @@ foreach ( $terms as $_term ) {
 	}
 
 	$cfs->register(
-		'.wpaw-any-posts__term--category-' . $_term->term_id,
+		'.wpaw-term--category-' . $_term->term_id,
 		'background-color: ' . $accent_color
 	);
 }

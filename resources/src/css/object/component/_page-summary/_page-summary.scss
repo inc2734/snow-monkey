@@ -21,8 +21,12 @@
       @supports(object-fit: cover) {
         top: 0;
         left: 0;
+        height: 100%;
+        width: 100%;
         object-fit: cover;
+        object-position: 50% 50%;
         transform: none;
+        @include _transition(transform);
       }
     }
 
@@ -43,8 +47,10 @@
     }
 
     @include _hover(lg) {
-      > span:first-child {
-        transform: scale(1.05);
+      > img {
+        @supports(object-fit: cover) {
+          transform: scale(1.05);
+        }
       }
 
       &::after {
