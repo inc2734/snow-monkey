@@ -205,10 +205,11 @@
   }
 
   .#{$_prefix}l-body--one-column-slim & {
-    &__container > * {
-      margin-right: auto;
-      margin-left: auto;
-      max-width: $one-column-slim-max-width;
+    > .#{$_prefix}c-container {
+      @include _media-min(lg) {
+        padding-right: 0;
+        padding-left: 0;
+      }
     }
   }
 }
