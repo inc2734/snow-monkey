@@ -1,5 +1,9 @@
 .wp-block-embed {
-  .wp-block-embed__wrapper::before {
-    display: none !important;
+  &[class*="wp-embed-aspect-"] {
+    [class*="#{$_prefix}c-responsive-container-"] {
+      position: static;
+      height: auto;
+      padding-bottom: 0;
+    }
   }
 }
