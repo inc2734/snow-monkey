@@ -7,7 +7,6 @@ import '../../assets/packages/jquery.sticky';
 import '../../assets/packages/jquery.background-parallax-scroll';
 import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis.js';
 import './_wpaw-pickup-slider.js';
-import './_wpaw-pr-box.js';
 
 import BasisStickyHeader from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/js/sticky-header.js';
 import FixAdminBar from './_fix-adminbar.js';
