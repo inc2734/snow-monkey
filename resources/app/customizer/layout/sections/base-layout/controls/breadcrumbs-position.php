@@ -14,6 +14,7 @@ $customizer->control(
 	'breadcrumbs-position',
 	[
 		'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
+		'priority' => 120,
 		'default'  => 'default',
 		'choices'  => [
 			'default'              => __( 'Top of contents', 'snow-monkey' ),
@@ -30,7 +31,7 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = $customizer->get_panel( 'layout' );
-$section = $customizer->get_section( 'breadcrumbs' );
+$section = $customizer->get_section( 'base-layout' );
 $control = $customizer->get_control( 'breadcrumbs-position' );
 $control->join( $section )->join( $panel );
 $control->partial(

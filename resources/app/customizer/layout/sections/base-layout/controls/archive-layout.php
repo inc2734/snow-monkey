@@ -14,6 +14,7 @@ $customizer->control(
 	'archive-layout',
 	[
 		'label'    => __( 'Archive layout', 'snow-monkey' ),
+		'priority' => 110,
 		'default'  => 'rich-media',
 		'choices'  => [
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),
@@ -27,6 +28,6 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = $customizer->get_panel( 'layout' );
-$section = $customizer->get_section( 'archive-layout' );
+$section = $customizer->get_section( 'base-layout' );
 $control = $customizer->get_control( 'archive-layout' );
 $control->join( $section )->join( $panel );

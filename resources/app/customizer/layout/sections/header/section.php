@@ -17,6 +17,6 @@ $customizer->section(
 	'header',
 	[
 		'title'    => __( 'Header', 'snow-monkey' ),
-		'priority' => 100,
+		'priority' => 110,
 	]
 );
