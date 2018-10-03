@@ -13,13 +13,24 @@
 	}
 	</style>
 
-	<div
-		class="wpaw-pr-box wpaw-pr-box--<?php echo esc_attr( $args['widget_id'] ); ?>"
+		<?php
+		$classes = [
+			'wpaw-pr-box',
+			'wpaw-pr-box--' . $args['widget_id'],
+		];
+
+		if ( $instance['chameleon'] ) {
+			$classes[] = 'wpaw-pr-box--chameleon';
+		}
+		?>
+
+		<div
+			class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"
 		id="wpaw-pr-box-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		style="background-color: <?php echo esc_attr( $instance['bg-color'] ); ?>"
 		>
 
-		<div class="wpaw-pr-box__inner">
+		<div class="c-container">
 
 			<?php if ( ! empty( $instance['title'] ) ) : ?>
 				<?php

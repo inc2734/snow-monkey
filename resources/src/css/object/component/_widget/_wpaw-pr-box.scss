@@ -3,10 +3,15 @@
 }
 
 .wpaw-pr-box {
-  @include _padding(1, .5);
+  @include _padding(1, 0);
 
-  @include _media-min(md) {
-    @include _padding(1);
+  &--chameleon {
+    .#{$_prefix}c-container {
+      @include _media-min(lg) {
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
   }
 
   &__title {
@@ -63,29 +68,12 @@
   }
 
   [data-is-content-widget-area="false"] & {
-    &--chameleon {
-      padding-right: 0;
-      padding-left: 0;
-    }
   }
 
   [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
     @include _media-max(md) {
       @include widget-full-width();
       @include _padding(1.5, 0);
-    }
-
-    &__inner {
-      @include _media-max(md) {
-        @include _container();
-      }
-    }
-
-    &--chameleon {
-      @include _media-min(lg) {
-        padding-right: 0;
-        padding-left: 0;
-      }
     }
   }
 
@@ -95,10 +83,6 @@
 
     @include _media-min(lg) {
       @include _padding(3, 0);
-    }
-
-    &__inner {
-      @include _container();
     }
 
     &__action {
