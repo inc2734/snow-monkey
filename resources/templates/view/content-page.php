@@ -22,8 +22,11 @@
 			get_template_part( 'template-parts/eyecatch' );
 		}
 		?>
+
+		<?php get_template_part( 'template-parts/article-top-widget-area' ); ?>
 		<?php the_content(); ?>
 		<?php get_template_part( 'template-parts/link-pages' ); ?>
+		<?php get_template_part( 'template-parts/article-bottom-widget-area' ); ?>
 	</div>
 
 	<?php do_action( 'snow_monkey_after_entry_content' ); ?>

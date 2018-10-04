@@ -1,0 +1,4 @@
+.#{$_prefix}l-article-bottom-widget-area {
+  @include _margin(1, 0, 0);
+  @include items-gutter();
+}

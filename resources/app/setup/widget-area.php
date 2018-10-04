@@ -16,7 +16,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Sidebar', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed in the sidebar of posts and pages.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the sidebar on posts and pages.', 'snow-monkey' ),
 				'id'            => 'sidebar-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -28,7 +28,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed in the sidebar of posts and pages.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the sidebar on posts and pages.', 'snow-monkey' ),
 				'id'            => 'sidebar-sticky-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -50,7 +50,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Top of the page title', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed on the title of the posts and pages.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed on the page title on the posts and pages.', 'snow-monkey' ),
 				'id'            => 'title-top-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -72,7 +72,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Top of the archive page', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed top of the archive page.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed top of the contents on archive page.', 'snow-monkey' ),
 				'id'            => 'archive-top-widget-area',
 				'before_widget' => '<div class="l-archive-top-widget-area__item"><div id="%1$s" class="c-section %2$s">',
 				'after_widget'  => '</div></div>',
@@ -94,7 +94,7 @@ add_action(
 		register_sidebar(
 			[
 				'name'          => __( 'Bottom of contents', 'snow-monkey' ),
-				'description'   => __( 'This widgets are displayed under the contents of posts and pages.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed bottom of the contents on posts and pages.', 'snow-monkey' ),
 				'id'            => 'contents-bottom-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
@@ -117,7 +117,7 @@ add_action(
 			[
 				'name'          => __( 'Archive sidebar', 'snow-monkey' ),
 				'id'            => 'archive-sidebar-widget-area',
-				'description'   => __( 'This widgets are displayed in the sidebar of archive page.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the sidebar on archive page.', 'snow-monkey' ),
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
@@ -317,7 +317,51 @@ add_action(
 			[
 				'name'          => __( 'Overlay', 'snow-monkey' ),
 				'id'            => 'overlay-widget-area',
-				'description'   => __( 'This widgets are displayed in the sidebar of overlay.', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed in the overlay that opens with clicking #sm-overlay-widget-area.', 'snow-monkey' ),
+				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="c-widget__title">',
+				'after_title'   => '</h2>',
+			]
+		);
+	}
+);
+
+/**
+* Add top of article widget area
+*
+* @return void
+*/
+add_action(
+	'widgets_init',
+	function() {
+		register_sidebar(
+			[
+				'name'          => __( 'Top of the article', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed top of the article on posts and pages.', 'snow-monkey' ),
+				'id'            => 'article-top-widget-area',
+				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h2 class="c-widget__title">',
+				'after_title'   => '</h2>',
+			]
+		);
+	}
+);
+
+/**
+* Add bottom of article widget area
+*
+* @return void
+*/
+add_action(
+	'widgets_init',
+	function() {
+		register_sidebar(
+			[
+				'name'          => __( 'Bottom of the article', 'snow-monkey' ),
+				'description'   => __( 'This widgets are displayed bottom of the article on posts and pages.', 'snow-monkey' ),
+				'id'            => 'article-bottom-widget-area',
 				'before_widget' => '<div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
