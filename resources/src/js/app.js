@@ -57,7 +57,6 @@ $('.l-sidebar-sticky-widget-area').sticky({
 $('.js-bg-parallax').backgroundParallaxScroll();
 
 $('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
-$('.wpaw-pr-box').SnowMonkeyWpawPrBox();
 
 $(window).on('elementor/frontend/init', () => {
   elementorFrontend.hooks.addAction('frontend/element_ready/widget', (scope) => {

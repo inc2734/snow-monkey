@@ -15,3 +15,10 @@ add_action(
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
 );
+
+add_filter(
+	'inc2734_wp_awesome_widgets_render_widget',
+	function( $content ) {
+		return str_replace( 'wpaw-carousel__inner', 'wpaw-carousel__inner c-container', $content );
+	}
+);

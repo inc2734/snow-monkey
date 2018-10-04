@@ -1,6 +1,6 @@
 <?php
 /**
- * @package inc2734/wp-awesome-widgets
+ * @package inc2734/snow-monkey
  * @author inc2734
  * @license GPL-2.0+
  */

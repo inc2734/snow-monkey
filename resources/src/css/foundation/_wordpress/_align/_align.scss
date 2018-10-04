@@ -38,10 +38,7 @@
 
   [data-is-slim-width="true"][data-has-sidebar="false"] & {
     .#{$_prefix}c-container {
-      @include _media-min(lg) {
-        padding-right: 0;
-        padding-left: 0;
-      }
+      @include container-slim-width();
     }
   }
 }
@@ -55,6 +52,10 @@
     @include _media-min(lg) {
       @include alignwide();
     }
+
+    .#{$_prefix}c-container {
+      @include container-slim-width();
+    }
   }
 
   [data-is-slim-width="false"][data-has-sidebar="false"] & {
@@ -64,15 +65,6 @@
 
     @include _media-min(xl) {
       @include alignwide();
-    }
-  }
-
-  [data-is-slim-width="true"][data-has-sidebar="false"] & {
-    .#{$_prefix}c-container {
-      @include _media-min(lg) {
-        padding-right: 0;
-        padding-left: 0;
-      }
     }
   }
 }

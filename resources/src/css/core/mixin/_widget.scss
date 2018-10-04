@@ -130,6 +130,5 @@
  * Full width
  */
 @mixin widget-full-width() {
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
+  @include alignfull();
 }

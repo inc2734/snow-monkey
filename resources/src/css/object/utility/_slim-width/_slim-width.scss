@@ -2,12 +2,4 @@
   margin-right: auto;
   margin-left: auto;
   max-width: $one-column-slim-max-width !important;
-
-  .#{$_prefix}c-container {
-    @include _media-min(lg) {
-      // DONT set side padding 0 because for keep gutter
-      margin-right: auto;
-      margin-left: auto;
-    }
-  }
 }

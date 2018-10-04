@@ -119,16 +119,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "812a4fd8070e58029db455dc1315a0bff3b93289"
+                "reference": "4372cfbcbe2a20f03148a1a480ceb3e0020515c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/812a4fd8070e58029db455dc1315a0bff3b93289",
-                "reference": "812a4fd8070e58029db455dc1315a0bff3b93289",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/4372cfbcbe2a20f03148a1a480ceb3e0020515c0",
+                "reference": "4372cfbcbe2a20f03148a1a480ceb3e0020515c0",
                 "shasum": ""
             },
             "require": {
@@ -166,7 +166,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2018-10-02T00:55:16+00:00"
+            "time": "2018-10-04T01:50:54+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -2274,7 +2274,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.16",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2338,16 +2338,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.16",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "edfb30a6eacd6c0f763f52c1b5a66756f5657395"
+                "reference": "aea20fef4e92396928b5db175788b90234c0270d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/edfb30a6eacd6c0f763f52c1b5a66756f5657395",
-                "reference": "edfb30a6eacd6c0f763f52c1b5a66756f5657395",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/aea20fef4e92396928b5db175788b90234c0270d",
+                "reference": "aea20fef4e92396928b5db175788b90234c0270d",
                 "shasum": ""
             },
             "require": {
@@ -2405,20 +2405,20 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-21T12:47:54+00:00"
+            "time": "2018-10-02T12:28:39+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.16",
+            "version": "v3.4.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "f89ab242d915d188fca95ee3291c72c5a094a195"
+                "reference": "d69930fc337d767607267d57c20a7403d0a822a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/f89ab242d915d188fca95ee3291c72c5a094a195",
-                "reference": "f89ab242d915d188fca95ee3291c72c5a094a195",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/d69930fc337d767607267d57c20a7403d0a822a4",
+                "reference": "d69930fc337d767607267d57c20a7403d0a822a4",
                 "shasum": ""
             },
             "require": {
@@ -2455,7 +2455,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2018-09-30T03:32:28+00:00"
+            "time": "2018-10-02T12:28:39+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",

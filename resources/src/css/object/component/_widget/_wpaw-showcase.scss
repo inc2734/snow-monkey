@@ -158,14 +158,4 @@
       }
     }
   }
-
-  .#{$_prefix}l-body--one-column-slim [data-is-content-widget-area="true"] & {
-    &__inner {
-      @include _media-min(lg) {
-        margin-right: auto;
-        margin-left: auto;
-        max-width: calc(#{$one-column-slim-max-width} + #{_space(1)} * 2);
-      }
-    }
-  }
 }

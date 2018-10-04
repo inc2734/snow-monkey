@@ -11,3 +11,13 @@
   width: auto;
   max-width: none;
 }
+
+@mixin container-slim-width() {
+  @include _media-min(lg) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $one-column-slim-max-width;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
