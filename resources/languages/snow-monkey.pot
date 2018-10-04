@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-03 16:52+0900\n"
-"PO-Revision-Date: 2018-10-03 16:53+0900\n"
+"POT-Creation-Date: 2018-10-04 21:39+0900\n"
+"PO-Revision-Date: 2018-10-04 21:42+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -763,8 +763,8 @@ msgid "Sidebar"
 msgstr "サイドバー"
 
 #: app/setup/widget-area.php:19 app/setup/widget-area.php:31
-msgid "This widgets are displayed in the sidebar of posts and pages."
-msgstr "このウィジェットは投稿と固定ページのサイドバーに表示されます。"
+msgid "These widgets are displayed in the sidebar on posts and pages."
+msgstr "これらのウィジェットは投稿と固定ページのサイドバーに表示されます。"
 
 #: app/setup/widget-area.php:30
 msgid "Sticky sidebar"
@@ -775,36 +775,37 @@ msgid "Top of the page title"
 msgstr "ページタイトルの上"
 
 #: app/setup/widget-area.php:53
-msgid "This widgets are displayed on the title of the posts and pages."
-msgstr "このウィジェットは投稿と固定ページのタイトル上に表示されます。"
+msgid "These widgets are displayed on the page title on the posts and pages."
+msgstr ""
+"これらのウィジェットは投稿と固定ページのページタイトルの上に表示されます。"
 
 #: app/setup/widget-area.php:74
 msgid "Top of the archive page"
 msgstr "アーカイブページ上部"
 
 #: app/setup/widget-area.php:75
-msgid "This widgets are displayed top of the archive page."
-msgstr "このウィジェットはアーカイブページ上部に表示されます。"
+msgid "These widgets are displayed top of the contents on archive page."
+msgstr "これらのウィジェットはアーカイブページの上部に表示されます。"
 
 #: app/setup/widget-area.php:97
-msgid "This widgets are displayed under the contents of posts and pages."
-msgstr "このウィジェットは投稿と固定ページのコンテンツ下に表示されます。"
+msgid "These widgets are displayed bottom of the contents on posts and pages."
+msgstr "これらのウィジェットは投稿と固定ページのコンテンツ下部に表示されます。"
 
 #: app/setup/widget-area.php:118
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
 #: app/setup/widget-area.php:120
-msgid "This widgets are displayed in the sidebar of archive page."
-msgstr "このウィジェットはアーカイブページのサイドバーに表示されます。"
+msgid "These widgets are displayed in the sidebar on archive page."
+msgstr "これらのウィジェットはアーカイブページのサイドバーに表示されます。"
 
 #: app/setup/widget-area.php:140
 msgid "Homepage (Top of page)"
 msgstr "ホームページ上部"
 
 #: app/setup/widget-area.php:142 app/setup/widget-area.php:181
-msgid "This widgets are displayed in the homepage."
-msgstr "このウィジェットはホームページに表示されます。"
+msgid "These widgets are displayed in the homepage."
+msgstr "これらのウィジェットはホームページに表示されます。"
 
 #: app/setup/widget-area.php:179
 msgid "Homepage (Bottom of page)"
@@ -815,20 +816,40 @@ msgid "Posts page (Top of page)"
 msgstr "投稿ページ上部"
 
 #: app/setup/widget-area.php:220 app/setup/widget-area.php:259
-msgid "This widgets are displayed in the posts page."
-msgstr "このウィジェットは投稿ページに表示されます。"
+msgid "These widgets are displayed in the posts page."
+msgstr "これらのウィジェットは投稿ページに表示されます。"
 
 #: app/setup/widget-area.php:257
 msgid "Posts page (Bottom of page)"
 msgstr "投稿ページ下部"
 
 #: app/setup/widget-area.php:298
-msgid "This widgets are displayed in the footer."
-msgstr "このウィジェットはフッターに表示されます。"
+msgid "These widgets are displayed in the footer."
+msgstr "これらのウィジェットはフッターに表示されます。"
 
 #: app/setup/widget-area.php:320
-msgid "This widgets are displayed in the sidebar of overlay."
-msgstr "このウィジェットはオーバレイに表示されます。"
+msgid ""
+"These widgets are displayed in the overlay that opens with clicking #sm-"
+"overlay-widget-area."
+msgstr ""
+"これらのウィジェットは #sm-overlay-widget-area をクリックすると開くオーバレイ"
+"に表示されます。"
+
+#: app/setup/widget-area.php:340
+msgid "Top of the article"
+msgstr "記事本文の上"
+
+#: app/setup/widget-area.php:341
+msgid "These widgets are displayed top of the article on posts and pages."
+msgstr "これらのウィジェットは投稿と固定ページの記事本文の上に表示されます。"
+
+#: app/setup/widget-area.php:362
+msgid "Bottom of the article"
+msgstr "記事本文の下"
+
+#: app/setup/widget-area.php:363
+msgid "These widgets are displayed bottom of the article on posts and pages."
+msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
 #: app/template-tags/eyecatch-position-choices.php:15
 msgid "Page header"
