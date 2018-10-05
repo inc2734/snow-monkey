@@ -13,7 +13,10 @@
  *           @var string Template name  e.g. Right Sidebar
  */
 function snow_monkey_get_page_templates() {
-	$wrappers = [];
+	static $wrappers = [];
+	if ( $wrappers ) {
+		return $wrappers;
+	}
 
 	foreach ( wpvc_config( 'layout' ) as $wrapper_dirs ) {
 		foreach ( glob( get_theme_file_path( $wrapper_dirs . '/*' ) ) as $file ) {

@@ -796,16 +796,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "16196ec6427f2e490fe367850b23d8ab403df5d1"
+                "reference": "bba074ee4bb438d80287a888360ef62433a1bb14"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/16196ec6427f2e490fe367850b23d8ab403df5d1",
-                "reference": "16196ec6427f2e490fe367850b23d8ab403df5d1",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/bba074ee4bb438d80287a888360ef62433a1bb14",
+                "reference": "bba074ee4bb438d80287a888360ef62433a1bb14",
                 "shasum": ""
             },
             "require": {
@@ -829,14 +829,7 @@
                     "Inc2734\\WP_View_Controller\\": "src"
                 }
             },
-            "scripts": {
-                "test": [
-                    "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
-                    "vendor/bin/phpcs -p -s -v -n . --standard=./codesniffer.ruleset.xml --extensions=php",
-                    "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
-                    "bash bin/phpunit.sh"
-                ]
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -847,11 +840,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "support": {
-                "source": "https://github.com/inc2734/wp-view-controller/tree/5.0.2",
-                "issues": "https://github.com/inc2734/wp-view-controller/issues"
-            },
-            "time": "2018-09-06T15:04:23+00:00"
+            "time": "2018-10-05T03:16:25+00:00"
         }
     ],
     "packages-dev": [
