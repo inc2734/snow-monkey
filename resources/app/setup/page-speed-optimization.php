@@ -8,6 +8,7 @@
  */
 
 use Inc2734\WP_Page_Speed_Optimization\Page_Speed_Optimization;
+use Inc2734\Mimizuku_Core\Helper;
 
 new Page_Speed_Optimization();
 
@@ -27,7 +28,7 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						snow_monkey_get_main_script_handle(),
+						Helper\get_main_script_handle(),
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',
@@ -113,7 +114,7 @@ add_action(
 				$preload_handles = $wp_styles->queue;
 
 				if ( get_theme_mod( 'output-head-style' ) ) {
-					$main_handle = snow_monkey_get_main_style_handle();
+					$main_handle = Helper\get_main_style_handle();
 					if ( in_array( $main_handle, $preload_handles ) ) {
 						unset( $preload_handles[ array_search( $main_handle, $preload_handles ) ] );
 					}
@@ -141,7 +142,7 @@ add_action(
 		return array_merge(
 			$handles,
 			[
-				snow_monkey_get_main_style_handle(),
+				Helper\get_main_style_handle(),
 				'wp-pure-css-gallery',
 				'wp-oembed-blog-card',
 				'wp-share-buttons',

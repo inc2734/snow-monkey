@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 /**
  * Enqueue main style
  *
@@ -38,7 +40,7 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			snow_monkey_get_main_style_handle(),
+			Helper\get_main_style_handle(),
 			$src,
 			$dependencies,
 			filemtime( $path )
@@ -76,7 +78,7 @@ add_action(
 		}
 
 		wp_enqueue_script(
-			snow_monkey_get_main_script_handle(),
+			Helper\get_main_script_handle(),
 			$src,
 			$dependencies,
 			filemtime( $path ),
@@ -96,7 +98,7 @@ add_action(
 		$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
 		$header_position_only_mobile = ( $header_position_only_mobile ) ? 'true' : 'false';
 		$data = 'var snow_monkey_header_position_only_mobile = ' . $header_position_only_mobile;
-		wp_add_inline_script( snow_monkey_get_main_script_handle(), $data, 'before' );
+		wp_add_inline_script( Helper\get_main_script_handle(), $data, 'before' );
 	}
 );
 
@@ -109,7 +111,7 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		wp_localize_script(
-			snow_monkey_get_main_script_handle(),
+			Helper\get_main_script_handle(),
 			'snow_monkey',
 			[
 				'home_url' => home_url(),
@@ -208,9 +210,9 @@ add_action(
 		}
 
 		wp_enqueue_script(
-			snow_monkey_get_main_script_handle() . '-customize-preview',
+			Helper\get_main_script_handle() . '-customize-preview',
 			$src,
-			[ 'jquery', 'customize-preview', snow_monkey_get_main_script_handle() ],
+			[ 'jquery', 'customize-preview', Helper\get_main_script_handle() ],
 			filemtime( $path ),
 			true
 		);
@@ -238,9 +240,9 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			snow_monkey_get_main_style_handle() . '-woocommerce',
+			Helper\get_main_style_handle() . '-woocommerce',
 			$src,
-			[ snow_monkey_get_main_style_handle() ],
+			[ Helper\get_main_style_handle() ],
 			filemtime( $path )
 		);
 	}
@@ -267,9 +269,9 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			snow_monkey_get_main_style_handle() . '-wpcf7',
+			Helper\get_main_style_handle() . '-wpcf7',
 			$src,
-			[ snow_monkey_get_main_style_handle() ],
+			[ Helper\get_main_style_handle() ],
 			filemtime( $path )
 		);
 	}
@@ -296,9 +298,9 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			snow_monkey_get_main_style_handle() . '-elementor',
+			Helper\get_main_style_handle() . '-elementor',
 			$src,
-			[ snow_monkey_get_main_style_handle() ],
+			[ Helper\get_main_style_handle() ],
 			filemtime( $path )
 		);
 	}

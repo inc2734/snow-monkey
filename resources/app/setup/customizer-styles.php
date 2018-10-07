@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 add_action(
 	'wp_loaded',
 	function() {
@@ -15,7 +17,7 @@ add_action(
 			'/../../assets/css/object/project',
 		];
 		foreach ( $includes as $include ) {
-			\Inc2734\Mimizuku_Core\Core::include_files( __DIR__ . $include );
+			Helper\include_files( __DIR__ . $include );
 		}
 	}
 );

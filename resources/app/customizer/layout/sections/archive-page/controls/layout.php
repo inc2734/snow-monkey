@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\Mimizuku_Core\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -15,7 +16,7 @@ $customizer->control(
 	[
 		'label'   => __( 'Page layout', 'snow-monkey' ),
 		'default' => 'one-column',
-		'choices' => snow_monkey_get_page_templates(),
+		'choices' => Helper\get_page_templates(),
 	]
 );
 

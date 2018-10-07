@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 /**
  * Use main stylesheet for visual editor
  *
@@ -38,7 +40,7 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			snow_monkey_get_main_style_handle(),
+			Helper\get_main_style_handle(),
 			$src,
 			[],
 			filemtime( $path )

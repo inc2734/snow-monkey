@@ -5,7 +5,9 @@
  * @license GPL-2.0+
  */
 
-$pages_query = snow_monkey_get_child_pages( get_the_ID() );
+use Inc2734\Mimizuku_Core\Helper;
+
+$pages_query = Helper\get_child_pages_query( get_the_ID() );
 if ( ! $pages_query->have_posts() ) {
 	return;
 }

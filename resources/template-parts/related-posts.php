@@ -5,12 +5,14 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 $matched_content     = get_option( 'mwt-google-matched-content' );
 $use_matched_content = (bool) $matched_content;
 $related_posts       = [];
 
 if ( ! $use_matched_content ) {
-	$related_posts_query = snow_monkey_get_related_posts_query( get_the_ID() );
+	$related_posts_query = Helper\get_related_posts_query( get_the_ID() );
 	if ( ! $related_posts_query->have_posts() ) {
 		return;
 	}

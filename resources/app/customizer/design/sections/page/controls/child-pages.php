@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\Mimizuku_Core\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -19,7 +20,7 @@ $customizer->control(
 		'type'            => 'option',
 		'default'         => true,
 		'active_callback' => function() {
-			return snow_monkey_get_child_pages( get_the_ID() )->have_posts();
+			return Helper\get_child_pages_query( get_the_ID() )->have_posts();
 		},
 	]
 );

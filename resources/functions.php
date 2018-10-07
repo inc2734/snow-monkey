@@ -6,6 +6,7 @@
  */
 
 use Inc2734\Mimizuku_Core\Core;
+use Inc2734\Mimizuku_Core\Helper;
 
 /**
 * Uses composer autoloader
@@ -59,7 +60,7 @@ $includes = [
 	'/app/template-tags',
 ];
 foreach ( $includes as $include ) {
-	Core::get_template_parts( __DIR__ . $include );
+	Helper\get_template_parts( __DIR__ . $include );
 }
 
 /**
@@ -70,7 +71,7 @@ $includes = [
 	'/app/widget',
 ];
 foreach ( $includes as $include ) {
-	Core::get_template_parts( __DIR__ . $include, true );
+	Helper\get_template_parts( __DIR__ . $include, true );
 }
 
 /**
@@ -80,7 +81,7 @@ $includes = [
 	'/app/customizer',
 ];
 foreach ( $includes as $include ) {
-	Core::get_template_parts( __DIR__ . $include );
+	Helper\get_template_parts( __DIR__ . $include );
 }
 
 /**
@@ -88,9 +89,9 @@ foreach ( $includes as $include ) {
  */
 if ( defined( 'WP_DEBUG' ) && WP_DEBUG && ! is_customize_preview() ) {
 	$slugs = [];
-	$files = snow_monkey_glob_recursive( get_template_directory() );
+	$files = Helper\glob_recursive( get_template_directory() );
 	if ( is_child_theme() ) {
-		$files = array_merge( $files, snow_monkey_glob_recursive( get_stylesheet_directory() ) );
+		$files = array_merge( $files, Helper\glob_recursive( get_stylesheet_directory() ) );
 	}
 
 	foreach ( $files as $file ) {

@@ -5,17 +5,15 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 /**
  * Display the site logo or the site title
+ *
+ * @deprecated
  *
  * @return void
  */
 function snow_monkey_the_site_branding_title() {
-	?>
-	<?php if ( has_custom_logo() ) : ?>
-		<?php the_custom_logo(); ?>
-	<?php else : ?>
-		<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
-	<?php endif; ?>
-	<?php
+	Helper\the_site_branding();
 }
