@@ -1,7 +1,9 @@
 .#{$_prefix}l-front-page-widget-area {
   [data-has-sidebar="true"] & {
     &__item:not(:first-child) {
-      @include _margin-top(2);
+      @include _media-min(lg) {
+        @include _margin-top(2);
+      }
     }
   }
 }

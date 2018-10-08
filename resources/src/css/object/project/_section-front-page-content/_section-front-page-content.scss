@@ -1,21 +1,24 @@
 .#{$_prefix}p-section-front-page-content {
-  [data-has-sidebar="true"] & {
-    padding-top: 0;
-    padding-bottom: 0;
-
-    & + * {
-      @include _margin-top(2);
-    }
+  &--no-vpadding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
-  &--no-vpadding {
-    padding-top: 0;
-    padding-bottom: 0;
+  [data-has-sidebar="true"] & {
+    @include _padding(1.5, 0);
+
+    & + * {
+      @include _media-min(lg) {
+        @include _margin-top(2);
+      }
+    }
   }
 }
 
 [data-has-sidebar="true"] {
   * + .#{$_prefix}p-section-front-page-content {
-    @include _margin-top(2);
+    @include _media-min(lg) {
+      @include _margin-top(2);
+    }
   }
 }
