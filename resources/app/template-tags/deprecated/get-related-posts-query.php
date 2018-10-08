@@ -16,9 +16,12 @@ use Inc2734\Mimizuku_Core\Helper;
  * @return array
  */
 function snow_monkey_get_related_posts_query( $post_id ) {
-	add_filter( 'mimizuku_related_posts_args', function( $related_posts_args ) {
-		return apply_filters( 'snow_monkey_related_posts_args', $related_posts_args );
-	} );
+	add_filter(
+		'mimizuku_related_posts_args',
+		function( $related_posts_args ) {
+			return apply_filters( 'snow_monkey_related_posts_args', $related_posts_args );
+		}
+	);
 
 	return Helper\get_related_posts_query( $post_id );
 }
