@@ -49,4 +49,11 @@
   [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
     @include widget-full-width();
   }
+
+  [data-has-sidebar="true"] & {
+    .#{$_prefix}c-container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }
