@@ -42,6 +42,6 @@ class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstrac
 add_action(
 	'widgets_init',
 	function() {
-	register_widget( 'Snow_Monkey_Recent_Posts_Widget' );
+		register_widget( 'Snow_Monkey_Recent_Posts_Widget' );
 	}
 );
