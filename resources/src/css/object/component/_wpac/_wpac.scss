@@ -91,7 +91,7 @@
     @include _content(.75);
     flex: 1 1 auto;
     border-radius: $_border-radius;
-    word-break: break-all;
+    overflow-wrap: break-word;
     @include _padding(.5);
     max-width: 100%;
     width: 100%;
