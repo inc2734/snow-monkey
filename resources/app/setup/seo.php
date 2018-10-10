@@ -89,6 +89,19 @@ add_filter(
 );
 
 /**
+ * fb:app_id
+ *
+ * @param string $app_id
+ * @return bool
+ */
+add_filter(
+	'inc2734_wp_ogp_app_id',
+	function( $app_id ) {
+		return get_option( 'mwt-fb-app-id' );
+	}
+);
+
+/**
  * twitter:card
  *
  * @param string $twitter_card

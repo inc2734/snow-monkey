@@ -506,16 +506,16 @@
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "a31473720ec9a217238fef71a2a797f175bab96f"
+                "reference": "d3fe7fd88075afe63f837fb9688f4315b84c8467"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/a31473720ec9a217238fef71a2a797f175bab96f",
-                "reference": "a31473720ec9a217238fef71a2a797f175bab96f",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/d3fe7fd88075afe63f837fb9688f4315b84c8467",
+                "reference": "d3fe7fd88075afe63f837fb9688f4315b84c8467",
                 "shasum": ""
             },
             "require": {
@@ -550,7 +550,7 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2018-07-27T14:12:45+00:00"
+            "time": "2018-10-10T03:38:08+00:00"
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
@@ -698,20 +698,20 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "51e5cebaf79d52deb9e371cc7431fd36db13169e"
+                "reference": "955bf162f34d2aa935135b014e98ecd08047fa0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/51e5cebaf79d52deb9e371cc7431fd36db13169e",
-                "reference": "51e5cebaf79d52deb9e371cc7431fd36db13169e",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/955bf162f34d2aa935135b014e98ecd08047fa0f",
+                "reference": "955bf162f34d2aa935135b014e98ecd08047fa0f",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-ogp": ">=1.0.3",
+                "inc2734/wp-ogp": "^1.1",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -743,7 +743,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2018-08-29T05:45:51+00:00"
+            "time": "2018-10-10T05:00:50+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",

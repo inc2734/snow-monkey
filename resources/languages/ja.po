@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-04 21:39+0900\n"
-"PO-Revision-Date: 2018-10-04 21:42+0900\n"
+"POT-Creation-Date: 2018-10-10 14:20+0900\n"
+"PO-Revision-Date: 2018-10-10 14:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -162,7 +162,7 @@ msgstr ""
 msgid "Currently [ %1$s ] category settings is displayed."
 msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
 
-#: app/customizer/design/sections/page/controls/child-pages.php:17
+#: app/customizer/design/sections/page/controls/child-pages.php:18
 msgid "Display child pages in page"
 msgstr "固定ページにそのページの子ページ一覧を表示する"
 
@@ -216,9 +216,9 @@ msgstr "お知らせバー"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/customizer/layout/sections/archive-page/controls/layout.php:16
+#: app/customizer/layout/sections/archive-page/controls/layout.php:17
 #: app/customizer/layout/sections/archive-page/section.php:19
-#: app/customizer/layout/sections/singular-post/controls/layout.php:16
+#: app/customizer/layout/sections/singular-post/controls/layout.php:17
 #: app/customizer/layout/sections/singular-post/section.php:19
 msgid "Page layout"
 msgstr "ページレイアウト"
@@ -494,6 +494,19 @@ msgstr "%2$sの%1$sを入力してください"
 #: app/customizer/seo-sns/sections/like-me-box/section.php:19
 msgid "Like me box"
 msgstr "いいね！ボックス"
+
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:16
+msgid "fb:app_id"
+msgstr "fb:app_id"
+
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:17
+msgid "If you want to output fb:app_id meta tag, please input."
+msgstr "fb:app_id meta タグを出力させたい場合は入力してください。"
+
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:19
+#, php-format
+msgid "fb:app_id can be obtained from %1$sfacebook for developers%2$s."
+msgstr "fb:app_id は %1$sfacebook for developers%2$s から取得できます。"
 
 #: app/customizer/seo-sns/sections/ogp/controls/og-image.php:16
 msgid "Default OGP image"
@@ -883,7 +896,7 @@ msgstr "Snow Monkey: 最近の投稿"
 msgid "Recent posts"
 msgstr "最近の投稿"
 
-#: template-parts/child-pages.php:18
+#: template-parts/child-pages.php:20
 msgid "Child pages"
 msgstr "このページの子ページ"
 
@@ -950,11 +963,11 @@ msgstr "古い投稿"
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/related-posts.php:23
+#: template-parts/related-posts.php:25
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/related-posts.php:25
+#: template-parts/related-posts.php:27
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
