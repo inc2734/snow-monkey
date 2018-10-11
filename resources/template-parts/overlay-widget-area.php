@@ -18,9 +18,9 @@ if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id 
 		<i class="fas fa-times" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
 	</a>
 
-	<div class="p-overlay-widget-area__inner c-overlay-container__inner">
+	<div class="p-overlay-widget-area__inner">
 		<div class="l-overlay-widget-area"
-			data-is-slim-widget-area="false"
+			data-is-slim-widget-area="<?php echo esc_attr( get_theme_mod( 'overlay-widget-area-max-width' ) ); ?>"
 			data-is-content-widget-area="false"
 			>
 

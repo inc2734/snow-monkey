@@ -13,10 +13,13 @@ $customizer->control(
 	'checkbox',
 	'display-drawer-nav-search-box',
 	[
-		'transport' => 'postMessage',
-		'label'     => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
-		'priority'  => 170,
-		'default'   => true,
+		'transport'       => 'postMessage',
+		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
+		'priority'        => 170,
+		'default'         => true,
+		'active_callback' => function() {
+			return has_nav_menu( 'drawer-nav' );
+		},
 	]
 );
 
@@ -28,11 +31,3 @@ $panel   = $customizer->get_panel( 'design' );
 $section = $customizer->get_section( 'base-design' );
 $control = $customizer->get_control( 'display-drawer-nav-search-box' );
 $control->join( $section )->join( $panel );
-$control->partial(
-	[
-		'selector'        => '#drawer-nav .p-search-form',
-		'active_callback' => function() {
-			return has_nav_menu( 'drawer-nav' );
-		},
-	]
-);

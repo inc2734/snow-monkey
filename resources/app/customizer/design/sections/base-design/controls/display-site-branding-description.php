@@ -34,12 +34,12 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback'     => function() {
 			?>
-		<?php if ( get_theme_mod( 'display-site-branding-description' ) && get_bloginfo( 'description' ) ) : ?>
-			<div class="c-site-branding__description">
-				<?php bloginfo( 'description' ); ?>
-			</div>
-		<?php endif; ?>
-		<?php
+			<?php if ( get_theme_mod( 'display-site-branding-description' ) && get_bloginfo( 'description' ) ) : ?>
+				<div class="c-site-branding__description">
+					<?php bloginfo( 'description' ); ?>
+				</div>
+			<?php endif; ?>
+			<?php
 		},
 	]
 );

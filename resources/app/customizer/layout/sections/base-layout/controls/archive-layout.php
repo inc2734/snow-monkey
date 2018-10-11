@@ -14,7 +14,7 @@ $customizer->control(
 	'archive-layout',
 	[
 		'label'    => __( 'Archive layout', 'snow-monkey' ),
-		'priority' => 110,
+		'priority' => 120,
 		'default'  => 'rich-media',
 		'choices'  => [
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),

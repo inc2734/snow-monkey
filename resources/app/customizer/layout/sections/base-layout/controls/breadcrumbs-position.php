@@ -14,7 +14,7 @@ $customizer->control(
 	'breadcrumbs-position',
 	[
 		'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
-		'priority' => 120,
+		'priority' => 130,
 		'default'  => 'default',
 		'choices'  => [
 			'default'              => __( 'Top of contents', 'snow-monkey' ),
