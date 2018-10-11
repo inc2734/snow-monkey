@@ -9,27 +9,30 @@ use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
 
-$custom_logo = get_custom_logo();
-if ( ! $custom_logo ) {
-	return;
-}
-
-preg_match( '/height="(\d+?)"/', $custom_logo, $reg );
-if ( ! isset( $reg[1] ) ) {
-	return;
-}
-
 $customizer->control(
 	'number',
 	'sm-logo-scale',
 	[
 		'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
 		'priority'    => 160,
-		'default'     => 33,
+		'default'     => 25,
 		'input_attrs' => [
-			'min' => 33,
+			'min' => 25,
 			'max' => 50,
 		],
+		'active_callback' => function() {
+			$custom_logo = get_custom_logo();
+			if ( ! $custom_logo ) {
+				return false;
+			}
+
+			preg_match( '/height="(\d+?)"/', $custom_logo, $reg );
+			if ( ! isset( $reg[1] ) ) {
+				return false;
+			}
+
+			return true;
+		},
 	]
 );
 
