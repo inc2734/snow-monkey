@@ -22,23 +22,35 @@ if ( 'sans-serif' === $base_font ) {
 	$font_family = [ 'serif' ];
 } elseif ( 'noto-sans-jp' === $base_font ) {
 	$font_family = [ '"Noto Sans JP"', 'sans-serif' ];
-	add_action( 'wp_enqueue_scripts', function() use ( $base_font ) {
-		wp_enqueue_style(
-			$base_font,
-			'https://fonts.googleapis.com/css?family=Noto+Sans+JP'
-		);
-	}, 9 );
+	add_action(
+		'wp_enqueue_scripts',
+		function() use ( $base_font ) {
+			wp_enqueue_style(
+				$base_font,
+				'https://fonts.googleapis.com/css?family=Noto+Sans+JP',
+				[],
+				wp_get_theme()->get( 'Version' )
+			);
+		},
+		5
+	);
 } elseif ( 'noto-serif-jp' === $base_font ) {
 	$font_family = [ '"Noto Serif JP"', 'serif' ];
-	add_action( 'wp_enqueue_scripts', function() use ( $base_font ) {
-		wp_enqueue_style(
-			$base_font,
-			'https://fonts.googleapis.com/css?family=Noto+Serif+JP'
-		);
-	}, 9 );
+	add_action(
+		'wp_enqueue_scripts',
+		function() use ( $base_font ) {
+			wp_enqueue_style(
+				$base_font,
+				'https://fonts.googleapis.com/css?family=Noto+Serif+JP',
+				[],
+				wp_get_theme()->get( 'Version' )
+			);
+		},
+		5
+	);
 }
 
 $cfs->register(
-	'body',
+	[ '.l-body', '.editor-block-list__layout' ],
 	'font-family: ' . implode( ',', $font_family )
 );
