@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-17 12:14+0900\n"
-"PO-Revision-Date: 2018-10-17 12:14+0900\n"
+"POT-Creation-Date: 2018-10-17 13:03+0900\n"
+"PO-Revision-Date: 2018-10-17 13:03+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -291,8 +291,8 @@ msgid "Contents max width"
 msgstr "コンテンツの最大幅"
 
 #: app/customizer/layout/sections/base-layout/controls/container-max-width.php:17
-msgid "You can set max width of contents area"
-msgstr "コンテンツエリアの最大幅を設定することができます"
+msgid "You can set max width of contents area (1024 - 1280)"
+msgstr "コンテンツエリアの最大幅を設定することができます（1024〜1280）"
 
 #: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:16
 msgid "Overlay widget area max width"

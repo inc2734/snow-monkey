@@ -14,10 +14,10 @@ $customizer->control(
 	'container-max-width',
 	[
 		'label'       => __( 'Contents max width', 'snow-monkey' ),
-		'description' => __( 'You can set max width of contents area', 'snow-monkey' ),
+		'description' => __( 'You can set max width of contents area (1024 - 1280)', 'snow-monkey' ),
 		'priority'    => 100,
 		'default'     => '1240',
-		'attr'        => [
+		'input_attrs' => [
 			'step' => 1,
 			'min'  => 1024,
 			'max'  => 1280,
