@@ -30,7 +30,6 @@
     &,
     p {
       color: $_color-text;
-      font-family: $_font-family;
       @include _font-size-line-height($_base-font-size-px);
     }
   }
