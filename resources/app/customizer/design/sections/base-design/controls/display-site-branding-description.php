@@ -15,7 +15,7 @@ $customizer->control(
 	[
 		'transport' => 'postMessage',
 		'label'     => __( 'Display site description under the site logo', 'snow-monkey' ),
-		'priority'  => 120,
+		'priority'  => 130,
 		'default'   => false,
 	]
 );

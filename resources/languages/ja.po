@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-11 10:45+0900\n"
-"PO-Revision-Date: 2018-10-11 10:45+0900\n"
+"POT-Creation-Date: 2018-10-17 12:14+0900\n"
+"PO-Revision-Date: 2018-10-17 12:14+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -103,7 +103,27 @@ msgstr "アクセントカラー"
 msgid "Base font size(px)"
 msgstr "基本の文字サイズ（px）"
 
-#: app/customizer/design/sections/base-design/controls/custom-logo-scale.php:26
+#: app/customizer/design/sections/base-design/controls/base-font.php:16
+msgid "Base font"
+msgstr "基本フォント"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:20
+msgid "Sans serif"
+msgstr "サンセリフ（ゴシック体）"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:21
+msgid "Serif"
+msgstr "セリフ（明朝体）"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:22
+msgid "Noto Sans JP"
+msgstr "Noto Sans JP"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:23
+msgid "Noto Serif JP"
+msgstr "Noto Serif JP"
+
+#: app/customizer/design/sections/base-design/controls/custom-logo-scale.php:16
 msgid "Custom logo scale (%) on smartphone"
 msgstr "スマホ時のカスタムロゴの拡大率（%）"
 

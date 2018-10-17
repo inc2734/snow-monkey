@@ -14,7 +14,7 @@ $customizer->control(
 	'pure-css-gallery',
 	[
 		'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
-		'priority' => 140,
+		'priority' => 150,
 		'default'  => true,
 	]
 );

@@ -14,7 +14,7 @@ $customizer->control(
 	'default-page-header-image',
 	[
 		'label'    => __( 'Default page header image', 'snow-monkey' ),
-		'priority' => 130,
+		'priority' => 140,
 	]
 );
 

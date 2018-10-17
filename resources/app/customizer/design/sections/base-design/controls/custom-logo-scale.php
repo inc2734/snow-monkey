@@ -14,7 +14,7 @@ $customizer->control(
 	'sm-logo-scale',
 	[
 		'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
-		'priority'    => 160,
+		'priority'    => 170,
 		'default'     => 25,
 		'input_attrs' => [
 			'min' => 25,

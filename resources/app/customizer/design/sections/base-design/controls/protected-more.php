@@ -14,7 +14,7 @@ $customizer->control(
 	'mwt-protected-more',
 	[
 		'label'     => __( 'If the post using more tag and password protect at the same time, display contents before more tag', 'snow-monkey' ),
-		'priority'  => 150,
+		'priority'  => 160,
 		'type'      => 'option',
 		'default'   => true,
 	]

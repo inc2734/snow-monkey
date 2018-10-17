@@ -15,7 +15,7 @@ $customizer->control(
 	[
 		'transport'       => 'postMessage',
 		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
-		'priority'        => 170,
+		'priority'        => 180,
 		'default'         => true,
 		'active_callback' => function() {
 			return has_nav_menu( 'drawer-nav' );
