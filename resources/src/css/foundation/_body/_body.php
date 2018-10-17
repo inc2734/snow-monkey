@@ -14,6 +14,24 @@ $cfs->register(
 	'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px'
 );
 
+function snow_monkey_enqueue_noto_sans_jp() {
+	wp_enqueue_style(
+		'noto-sans-jp',
+		'https://fonts.googleapis.com/css?family=Noto+Sans+JP',
+		[],
+		wp_get_theme()->get( 'Version' )
+	);
+}
+
+function snow_monkey_enqueue_noto_serif_jp() {
+	wp_enqueue_style(
+		'noto-serif-jp',
+		'https://fonts.googleapis.com/css?family=Noto+Serif+JP',
+		[],
+		wp_get_theme()->get( 'Version' )
+	);
+}
+
 $base_font   = get_theme_mod( 'base-font' );
 $font_family = [];
 if ( 'sans-serif' === $base_font ) {
@@ -22,35 +40,15 @@ if ( 'sans-serif' === $base_font ) {
 	$font_family = [ 'serif' ];
 } elseif ( 'noto-sans-jp' === $base_font ) {
 	$font_family = [ '"Noto Sans JP"', 'sans-serif' ];
-	add_action(
-		'wp_enqueue_scripts',
-		function() use ( $base_font ) {
-			wp_enqueue_style(
-				$base_font,
-				'https://fonts.googleapis.com/css?family=Noto+Sans+JP',
-				[],
-				wp_get_theme()->get( 'Version' )
-			);
-		},
-		5
-	);
+	add_action( 'wp_enqueue_scripts', 'snow_monkey_enqueue_noto_sans_jp', 5 );
+	add_action( 'enqueue_block_editor_assets', 'snow_monkey_enqueue_noto_sans_jp' );
 } elseif ( 'noto-serif-jp' === $base_font ) {
 	$font_family = [ '"Noto Serif JP"', 'serif' ];
-	add_action(
-		'wp_enqueue_scripts',
-		function() use ( $base_font ) {
-			wp_enqueue_style(
-				$base_font,
-				'https://fonts.googleapis.com/css?family=Noto+Serif+JP',
-				[],
-				wp_get_theme()->get( 'Version' )
-			);
-		},
-		5
-	);
+	add_action( 'wp_enqueue_scripts', 'snow_monkey_enqueue_noto_serif_jp', 5 );
+	add_action( 'enqueue_block_editor_assets', 'snow_monkey_enqueue_noto_sans_jp' );
 }
 
 $cfs->register(
-	[ '.l-body', '.editor-block-list__layout' ],
+	[ '.l-body', '.editor-block-list__block' ],
 	'font-family: ' . implode( ',', $font_family )
 );
