@@ -89,44 +89,6 @@ add_action(
 );
 
 /**
- * Loads CSS asynchronously
- */
-add_action(
-	'after_setup_theme',
-	function() {
-		if ( ! get_theme_mod( 'async-css' ) ) {
-			return;
-		}
-
-		add_action(
-			'wp_head',
-			function() {
-			?>
-			<style>body{visibility:hidden;}.js-bg-parallax{transition: none !important;}</style>
-			<?php
-			}
-		);
-
-		add_filter(
-			'inc2734_wp_page_speed_optimization_preload_stylesheets',
-			function( $handles ) {
-				$wp_styles = wp_styles();
-				$preload_handles = $wp_styles->queue;
-
-				if ( get_theme_mod( 'output-head-style' ) ) {
-					$main_handle = Helper\get_main_style_handle();
-					if ( in_array( $main_handle, $preload_handles ) ) {
-						unset( $preload_handles[ array_search( $main_handle, $preload_handles ) ] );
-					}
-				}
-
-				return array_merge( $handles, $preload_handles );
-			}
-		);
-	}
-);
-
-/**
  * Output CSS in head
  */
 add_action(

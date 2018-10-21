@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-17 13:03+0900\n"
-"PO-Revision-Date: 2018-10-17 13:03+0900\n"
+"POT-Creation-Date: 2018-10-21 15:52+0900\n"
+"PO-Revision-Date: 2018-10-21 15:52+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -391,10 +391,6 @@ msgstr "ヘッダー"
 #: app/customizer/layout/sections/singular-post/section.php:20
 msgid "Currently singular post settings is displayed."
 msgstr "現在、個別投稿の設定を表示しています。"
-
-#: app/customizer/page-speed-optimization/controls/async-css.php:16
-msgid "Loads CSS asynchronously"
-msgstr "CSS を非同期読み込みする"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:16
 msgid "Use browser cache"
@@ -1074,6 +1070,9 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "Full width ( has side margins )"
 msgstr "フル幅 ( 左右余白あり )"
+
+#~ msgid "Loads CSS asynchronously"
+#~ msgstr "CSS を非同期読み込みする"
 
 #~ msgid "Wide"
 #~ msgstr "広め"
