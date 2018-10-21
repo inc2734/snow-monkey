@@ -14,15 +14,14 @@ add_filter(
 			return $output;
 		}
 
-		if ( ! strpos( $post->post_content, '<!--more-->' ) ) {
+		$extended = get_extended( $post->post_content );
+		if ( empty( $extended['extended'] ) ) {
 			return $output;
 		}
 
-		$content = explode( '<!--more-->', $post->post_content );
-		$before_content = $content[0];
-
-		return $before_content . $output;
-	}
+		return $extended['main'] . $output;
+	},
+	11
 );
 
 add_filter(
