@@ -1,30 +1,6 @@
 .#{$_prefix}c-widget {
   &__title {
-    @include _margin(0, 0, .5);
-    @include _font-size-line-height($_base-font-size-px);
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    &::before,
-    &::after {
-      display: block;
-      content: '';
-      height: $border-bottom-width;
-      background-color: $_color-black;
-      flex: 1 0 0%;
-      min-width: 20px;
-    }
-
-    &::before {
-      margin-right: .5em;
-    }
-
-    &::after {
-      margin-left: .5em;
-    }
+    @include widget-title();
   }
 
   [data-is-slim-widget-area="true"] & {
@@ -58,5 +34,6 @@
 @import 'wpaw-pickup-slider';
 @import 'wpaw-profile-box';
 @import 'wpaw-carousel';
+@import 'wpaw-local-nav';
 
 @import 'snow-monkey-recent-posts';

@@ -1,0 +1,93 @@
+.wpaw-local-nav {
+  border-top: $border-bottom-width solid $_color-black;
+  @include _padding(.25, 0, 0);
+
+  &__list,
+  &__sublist {
+    @include _list-unstyled();
+  }
+
+  &__item,
+  &__subitem {
+    @include _font-size-line-height($_base-font-size-px);
+
+    > a {
+      display: inline-block;
+      color: $_color-text;
+      text-decoration: none;
+
+      @include _hover(lg) {
+        color: $color-accent;
+      }
+    }
+  }
+
+  &__item {
+    > a {
+      font-weight: bold;
+      @include _padding(.25, 0);
+
+      & + .wpaw-local-nav__sublist {
+        @include _margin-top(.25);
+        border-top: 1px solid _lighter($_color-gray);
+        @include _padding-top(.25);
+      }
+    }
+  }
+
+  &__subitem {
+    position: relative;
+    @include _padding(.25, 0);
+
+    &__icon {
+      position: absolute;
+      left: 0;
+      top: _space(.25);
+      color: $color-accent;
+    }
+
+    > a {
+      padding-left: 1.25rem;
+    }
+  }
+
+  &--vertical {
+    .wpaw-local-nav__subitem {
+      .wpaw-local-nav__sublist {
+        @include _margin-top(.5);
+        border-top: 1px solid _lighter($_color-gray);
+        @include _padding-top(.25);
+      }
+
+      .wpaw-local-nav__subitem {
+        @include _font-size-line-height($_base-font-size-px - 2);
+        padding-top: 0;
+        padding-bottom: 0;
+
+        .wpaw-local-nav__subitem__icon {
+          top: 0;
+        }
+
+        > a {
+          color: $_color-gray;
+
+          @include _hover(lg) {
+            color: $color-accent;
+          }
+        }
+
+        .wpaw-local-nav__sublist {
+          @include _margin-top(.25);
+        }
+      }
+    }
+  }
+
+  &--horizontal {
+    .wpaw-local-nav__subitem {
+      &:not(:first-child) {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
