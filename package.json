@@ -9,7 +9,6 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "@alrra/travis-scripts": "^3.0.1",
     "@babel/core": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@fortawesome/fontawesome-free": "^5.3.1",
