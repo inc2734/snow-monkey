@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-21 15:52+0900\n"
-"PO-Revision-Date: 2018-10-21 15:52+0900\n"
+"POT-Creation-Date: 2018-10-22 10:19+0900\n"
+"PO-Revision-Date: 2018-10-22 10:20+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -89,6 +89,11 @@ msgstr "設定したら、保存してリロードしてください。"
 #: app/template-tags/eyecatch-position-choices.php:18
 msgid "None"
 msgstr "なし"
+
+#: app/customizer/design-skin/section.php:22
+#, php-format
+msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
+msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダウンロードできます。"
 
 #: app/customizer/design/panel.php:19
 msgid "Design"
