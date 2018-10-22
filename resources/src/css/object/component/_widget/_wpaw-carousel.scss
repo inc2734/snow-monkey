@@ -45,15 +45,4 @@
     @include _margin-top(.25);
     @include _padding(0, .5);
   }
-
-  [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
-    @include widget-full-width();
-  }
-
-  [data-has-sidebar="true"] & {
-    .#{$_prefix}c-container {
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
 }
