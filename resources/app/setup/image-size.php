@@ -8,6 +8,18 @@
 add_image_size( 'xlarge', 1920, 1920 );
 
 /**
+ * Maximum image width to be included in a 'srcset' attribute.
+ *
+ * @return int
+ */
+add_filter(
+	'max_srcset_image_width',
+	function( $width ) {
+		return 1920;
+	}
+);
+
+/**
  * Add xlarge on media uploader and wp.media.sizes
  *
  * @param array $sizes
@@ -23,38 +35,6 @@ add_filter(
 			]
 		);
 	}
-);
-
-/**
- * Update pickup slider widget image size
- */
-add_filter(
-	'inc2734_wp_awesome_widgets_pickup_slider_image_size',
-	function( $thumbnail_size, $is_mobile ) {
-		if ( $is_mobile ) {
-			return 'large';
-		}
-
-		return 'xlarge';
-	},
-	10,
-	2
-);
-
-/**
- * Update slider widget image size
- */
-add_filter(
-	'inc2734_wp_awesome_widgets_slider_image_size',
-	function( $thumbnail_size, $is_mobile ) {
-		if ( $is_mobile ) {
-			return 'large';
-		}
-
-		return 'xlarge';
-	},
-	10,
-	2
 );
 
 /**
