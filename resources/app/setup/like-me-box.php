@@ -16,12 +16,16 @@ add_filter(
 			return $thumbnail;
 		}
 
-		if ( get_site_icon_url() ) {
-			return get_site_icon_url();
+		if ( get_theme_mod( 'default-thumbnail' ) ) {
+			return get_theme_mod( 'default-thumbnail' );
 		}
 
 		if ( get_option( 'mwt-default-og-image' ) ) {
 			return get_option( 'mwt-default-og-image' );
+		}
+
+		if ( get_site_icon_url() ) {
+			return get_site_icon_url();
 		}
 
 		return $thumbnail;

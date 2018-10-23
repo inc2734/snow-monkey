@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-22 10:19+0900\n"
-"PO-Revision-Date: 2018-10-22 10:20+0900\n"
+"POT-Creation-Date: 2018-10-23 14:40+0900\n"
+"PO-Revision-Date: 2018-10-23 14:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -135,6 +135,10 @@ msgstr "スマホ時のカスタムロゴの拡大率（%）"
 #: app/customizer/design/sections/base-design/controls/default-page-header-image.php:16
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
+
+#: app/customizer/design/sections/base-design/controls/default-thumbnail.php:16
+msgid "Default thumbnail"
+msgstr "デフォルトアイキャッチ画像"
 
 #: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php:17
 msgid "Display the search box in drawer navigation"
@@ -992,11 +996,11 @@ msgstr "トラックバックはありません。"
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
-#: template-parts/prev-next-nav.php:32
+#: template-parts/prev-next-nav.php:31
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/prev-next-nav.php:34
+#: template-parts/prev-next-nav.php:33
 msgid "New post"
 msgstr "新しい投稿"
 
