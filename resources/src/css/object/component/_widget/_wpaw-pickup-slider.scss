@@ -13,31 +13,30 @@
     }
   }
 
-  &__figure {
-    transform: translate3d(1em, 0, 0);
+  &__item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &::before {
-      @include _position(absolute, 0, 0, 0, 0);
-      content: '';
-      display: block;
-      background-color: rgba($_color-black, .4);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity .5s ease-in .5s;
+    .wpaw-pickup-slider__figure {
+      @include _position(absolute, 0, -2em, 0, -2em);
     }
   }
 
   &__item-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
     max-width: 100%;
-    color: #fff;
-    font-weight: bold;
+    @include _padding(1);
+    transition: opacity .5s ease-in 1s;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .5s ease-in 1s;
-    @include _padding(1);
+  }
+
+  &__item-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 
     @include _media-min(md) {
       max-width: _strip-unit(map-get($_sizes, md)) * 1rem;
@@ -48,12 +47,14 @@
     }
 
     > * {
-      flex: 1 1 auto;
+      flex: 0 1 auto;
+      max-width: 100%;
     }
   }
 
   &__item-title {
     position: relative;
+    font-weight: bold;
     @include _font-size($_base-font-size * 1.25);
     @include _line-height($_base-font-size * 2);
     @include _padding(0, 0, .25);
@@ -95,21 +96,6 @@
     .wpaw-pickup-slider__item-body {
       opacity: 1;
       visibility: visible;
-    }
-  }
-
-  &__item {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    > * {
-      flex: 1 1 auto;
-    }
-
-    .wpaw-pickup-slider__figure {
-      @include _position(absolute, 0, -2em, 0, -2em);
     }
   }
 

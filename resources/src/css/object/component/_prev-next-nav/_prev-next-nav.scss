@@ -94,18 +94,27 @@
       }
 
       .#{$_prefix}c-prev-next-nav__item-figure {
-        transform: scale(1.05);
+        > img {
+          @supports(object-fit: cover) {
+            transform: scale(1.05);
+          }
+        }
       }
     }
   }
 
   &__item-figure {
+    @include cover-img();
     @include _position(absolute, 0, 0, 0, 0);
-    @include _background-image-cover();
     background-color: _lighter($_color-gray);
-    @include _transition(transform);
     backface-visibility: hidden;
     opacity: .6;
+
+    > img {
+      @supports(object-fit: cover) {
+        @include _transition(transform);
+      }
+    }
   }
 
   &__item-label {

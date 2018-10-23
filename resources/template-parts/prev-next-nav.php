@@ -19,13 +19,12 @@
 			<?php if ( ! empty( $_post->ID ) ) : ?>
 				<?php
 				$background_image_size = wp_is_mobile() ? 'large' : 'medium';
-				$background_image_url = wp_get_attachment_image_url( get_post_thumbnail_id( $_post->ID ), $background_image_size );
 
 				ob_start();
 				?>
-				<div class="c-prev-next-nav__item-figure"
-					style="background-image: url(<?php echo esc_url( $background_image_url ); ?>)"
-				></div>
+				<div class="c-prev-next-nav__item-figure">
+					<?php echo get_the_post_thumbnail( $_post->ID, $background_image_size ); ?>
+				</div>
 				<div class="c-prev-next-nav__item-label">
 					<?php if ( 'next' === $key ) : ?>
 						<i class="fas fa-angle-left" aria-hidden="true"></i>
