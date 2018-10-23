@@ -16,7 +16,7 @@ $customizer->control(
 		'label'       => __( 'Contents max width', 'snow-monkey' ),
 		'description' => __( 'You can set max width of contents area (1024 - 1280)', 'snow-monkey' ),
 		'priority'    => 100,
-		'default'     => '1240',
+		'default'     => '1280',
 		'input_attrs' => [
 			'step' => 1,
 			'min'  => 1024,
