@@ -9,10 +9,7 @@
 		<?php if ( has_post_thumbnail() ) : ?>
 			<a href="<?php the_permalink(); ?>">
 				<div class="c-page-summary__figure">
-					<?php
-					$background_image_size = ! wp_is_mobile() ? 'large' : 'medium';
-					the_post_thumbnail( $background_image_size );
-					?>
+					<?php the_post_thumbnail( 'xlarge' ); ?>
 				</div>
 			</a>
 		<?php endif; ?>

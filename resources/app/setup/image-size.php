@@ -42,15 +42,9 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_showcase_backgroud_image_size',
-	function( $thumbnail_size, $is_mobile ) {
-		if ( $is_mobile ) {
-			return 'large';
-		}
-
+	function( $thumbnail_size ) {
 		return 'xlarge';
-	},
-	10,
-	2
+	}
 );
 
 /**
@@ -58,13 +52,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_showcase_image_size',
-	function( $thumbnail_size, $is_mobile ) {
-		if ( $is_mobile ) {
-			return 'large';
-		}
-
+	function( $thumbnail_size ) {
 		return 'xlarge';
-	},
-	10,
-	2
+	}
 );

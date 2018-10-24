@@ -21,10 +21,7 @@ if ( isset( $widget_layout ) ) {
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $_term ? $_term->term_id : 0 ); ?>">
 		<div class="c-entry-summary__figure">
-			<?php
-			$background_image_size = ! wp_is_mobile() || get_option( 'mwt-google-infeed-ads' ) ? 'large' : 'medium';
-			the_post_thumbnail( $background_image_size );
-			?>
+			<?php the_post_thumbnail( 'xlarge' ); ?>
 			<?php if ( ! empty( $_term ) ) : ?>
 				<span class="c-entry-summary__term"><?php echo esc_html( $_term->name ); ?></span>
 			<?php endif; ?>
