@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-24 11:55+0900\n"
-"PO-Revision-Date: 2018-10-24 11:59+0900\n"
+"POT-Creation-Date: 2018-10-24 14:47+0900\n"
+"PO-Revision-Date: 2018-10-24 14:49+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -729,6 +729,75 @@ msgstr "Twitter Cards"
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
+
+#: app/customizer/snow-monkey-community/section.php:19
+#, php-format
+msgid "%1$s Snow Monkey Community %1$s"
+msgstr "%1$s Snow Monkey コミュニティ %1$s"
+
+#: app/customizer/snow-monkey-community/section.php:28
+msgid "Official Web Site"
+msgstr "公式サイト"
+
+#: app/customizer/snow-monkey-community/section.php:29
+msgid "Informations, manuals, etc."
+msgstr "お知らせ、マニュアルなど。"
+
+#: app/customizer/snow-monkey-community/section.php:31
+#, php-format
+msgid "%1$sOfficial Web Site%2$s"
+msgstr "%1$s公式サイト%2$s"
+
+#: app/customizer/snow-monkey-community/section.php:42
+msgid "Online Community"
+msgstr "オンラインコミュニティ"
+
+#: app/customizer/snow-monkey-community/section.php:43
+msgid ""
+"This is an online community that only purchasers of the Snow Monkey can "
+"participate. It is a place to share information and discuss about future "
+"function development etc."
+msgstr ""
+"Snow Monkey の購入者のみが参加できるオンラインコミュニティです。情報を共有し"
+"たり、今後の機能開発等についてディスカッションしたりする場所です。"
+
+#: app/customizer/snow-monkey-community/section.php:45
+#, php-format
+msgid "%1$sOnline Community%2$s"
+msgstr "%1$sオンラインコミュニティ%2$s"
+
+#: app/customizer/snow-monkey-community/section.php:56
+msgid "Support Forum"
+msgstr "サポートフォーラム"
+
+#: app/customizer/snow-monkey-community/section.php:57
+msgid ""
+"This is an open forum that supports the Snow Monkey usage and customization."
+msgstr ""
+"Snow Monkeyの使用方法やカスタマイズ方法をサポートするオープンなフォーラムで"
+"す。"
+
+#: app/customizer/snow-monkey-community/section.php:59
+#, php-format
+msgid "%1$sSupport Forum%2$s"
+msgstr "%1$sサポートフォーラム%2$s"
+
+#: app/customizer/snow-monkey-community/section.php:70
+msgid "Job Board"
+msgstr "ジョブボード"
+
+#: app/customizer/snow-monkey-community/section.php:71
+msgid ""
+"This is a job board that only purchasers of the Snow Monkey can participate. "
+"People who wants to work or wants to request work can register information."
+msgstr ""
+"Snow Monkey の購入者のみが参加できるジョブボードです。仕事をしたい人、仕事を"
+"依頼したい人が情報を登録できます。"
+
+#: app/customizer/snow-monkey-community/section.php:73
+#, php-format
+msgid "%1$sJob Board%2$s"
+msgstr "%1$sジョブボード%2$s"
 
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:16
 msgid "Add vertical padding to content area of homepage"
