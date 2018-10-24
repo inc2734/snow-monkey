@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
 "POT-Creation-Date: 2018-10-24 11:55+0900\n"
-"PO-Revision-Date: 2018-10-24 11:55+0900\n"
+"PO-Revision-Date: 2018-10-24 11:59+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -350,7 +350,7 @@ msgstr "フッター"
 
 #: app/customizer/layout/sections/header/controls/display-header-content-on-mobile.php:16
 msgid "Display header content on mobile too."
-msgstr "モバイルでもヘッダーコンテンツを表示する"
+msgstr "モバイルでもヘッダーコンテンツを表示"
 
 #: app/customizer/layout/sections/header/controls/header-content.php:17
 msgid "Header contents"
