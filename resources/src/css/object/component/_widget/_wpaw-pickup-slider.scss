@@ -24,6 +24,20 @@
     }
   }
 
+  &__figure {
+    transform: translate3d(1em, 0, 0);
+
+    &::before {
+      @include _position(absolute, 0, 0, 0, 0, 1);
+      content: '';
+      display: block;
+      background-color: rgba($_color-black, .4);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .5s ease-in .5s;
+    }
+  }
+
   &__item-body {
     position: relative;
     max-width: 100%;
