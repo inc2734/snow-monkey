@@ -24,7 +24,7 @@
 		<?php if ( $is_block_link ) : ?>
 			href="<?php echo esc_url( $instance['link-url'] ); ?>"
 		<?php endif; ?>
-		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?>"
+		class="wpaw-showcase wpaw-showcase--<?php echo esc_attr( $instance['format'] ); ?> wpaw-showcase--<?php echo esc_attr( $args['widget_id'] ); ?> js-bg-parallax"
 		id="wpaw-showcase-<?php echo esc_attr( $args['widget_id'] ); ?>"
 		>
 
