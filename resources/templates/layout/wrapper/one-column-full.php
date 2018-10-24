@@ -23,6 +23,7 @@
 		<?php wpvc_get_header(); ?>
 
 		<div class="l-contents" role="document">
+			<?php get_template_part( 'template-parts/header-content', 'sm' ); ?>
 			<?php get_template_part( 'template-parts/infobar' ); ?>
 
 			<div class="c-full-container">

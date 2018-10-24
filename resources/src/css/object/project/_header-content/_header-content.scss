@@ -1,0 +1,9 @@
+.#{$_prefix}p-header-content {
+  &--sm {
+    @include _padding(.5, 0);
+
+    @include _media-min(lg) {
+      display: none;
+    }
+  }
+}

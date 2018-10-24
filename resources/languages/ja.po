@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-23 14:40+0900\n"
-"PO-Revision-Date: 2018-10-23 14:41+0900\n"
+"POT-Creation-Date: 2018-10-24 11:55+0900\n"
+"PO-Revision-Date: 2018-10-24 11:55+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -347,6 +347,10 @@ msgstr "4カラム"
 #: app/setup/widget-area.php:296
 msgid "Footer"
 msgstr "フッター"
+
+#: app/customizer/layout/sections/header/controls/display-header-content-on-mobile.php:16
+msgid "Display header content on mobile too."
+msgstr "モバイルでもヘッダーコンテンツを表示する"
 
 #: app/customizer/layout/sections/header/controls/header-content.php:17
 msgid "Header contents"
@@ -776,7 +780,7 @@ msgstr "著者"
 msgid "Categories"
 msgstr "カテゴリー"
 
-#: app/setup/image-size.php:22
+#: app/setup/image-size.php:34
 msgid "xLarge"
 msgstr "xLarge"
 
@@ -976,7 +980,7 @@ msgstr "閉じる"
 msgid "Search"
 msgstr "検索する"
 
-#: template-parts/page-summary.php:29
+#: template-parts/page-summary.php:26
 msgid "More"
 msgstr "More"
 

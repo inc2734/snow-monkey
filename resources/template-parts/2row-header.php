@@ -31,7 +31,7 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 					<div class="c-row__col c-row__col--fit u-hidden u-visible-lg-up">
 						<div class="c-row c-row--right">
 							<div class="c-row__col c-row__col--fit">
-								<?php get_template_part( 'template-parts/header-content' ); ?>
+								<?php get_template_part( 'template-parts/header-content', 'lg' ); ?>
 							</div>
 						</div>
 					</div>
