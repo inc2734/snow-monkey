@@ -135,6 +135,7 @@
     vertical-align: middle;
     line-height: 1;
 
+    .#{$_prefix}c-select > select,
     .#{$_prefix}c-select__label {
       @include _font-size-line-height($_base-font-size-px - 2);
     }
