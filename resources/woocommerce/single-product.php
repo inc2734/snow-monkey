@@ -6,5 +6,5 @@
  */
 
 $controller = new Mimizuku_Controller();
-$controller->layout( 'one-column-slim' );
+$controller->layout( get_theme_mod( 'woocommerce-single-layout' ) );
 $controller->render( 'woocommerce-content-product' );

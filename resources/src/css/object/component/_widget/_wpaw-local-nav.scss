@@ -84,8 +84,14 @@
   }
 
   &--horizontal {
-    .wpaw-local-nav__subitem {
-      &:not(:first-child) {
+    .wpaw-local-nav__item {
+      overflow: hidden;
+
+      > a + .wpaw-local-nav__sublist {
+        margin-left: -2rem;
+      }
+
+      .wpaw-local-nav__subitem {
         margin-left: 2rem;
       }
     }

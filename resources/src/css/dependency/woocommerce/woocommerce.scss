@@ -4,6 +4,7 @@
 
 .woocommerce-input-wrapper,
 .quantity,
+.coupon,
 .woocommerce-EditAccountForm,
 .woocommerce-form,
 .woocommerce-ResetPassword {
@@ -12,11 +13,25 @@
   }
 }
 
-.woocommerce-EditAccountForm {
-  @include _content();
+.woocommerce-page .cart .actions .coupon .input-text {
+  width: 200px;
+  height: 36px;
+}
+
+.woocommerce-EditAccountForm,
+.woocommerce-address-fields__field-wrapper {
+  .form-row-wide:not(:first-child) {
+    @include _margin-top(.5);
+  }
 
   fieldset {
+    @include _margin-top(1);
     border: none;
+  }
+
+  p:last-child,
+  & + p:last-child {
+    @include _margin-top(1);
   }
 }
 
@@ -60,6 +75,10 @@
 }
 
 .#{$_prefix}c-entry__content {
+  > .product {
+    margin-top: 0;
+  }
+
   .woocommerce .shop_table {
     border-collapse: collapse;
 
@@ -71,8 +90,79 @@
   }
 }
 
+// Buttons
+.#{$_prefix}l-container .#{$_prefix}l-contents #respond #submit,
+.#{$_prefix}l-container .#{$_prefix}l-contents .button {
+  @include _transition(all);
+  border-radius: $_border-radius;
+}
+
+// Product title in single
+.woocommerce .product .product_title {
+  @include _margin-bottom(.5);
+  @include _font-size-line-height($_base-font-size-px + 2);
+  font-weight: bold;
+}
+
+// Gallery in single
+.woocommerce .product .woocommerce-product-gallery .flex-control-thumbs.flex-control-nav {
+  margin: 0 -1em;
+
+  li {
+    padding: 2em 1em 0;
+
+    img {
+      @include _transition(opacity);
+    }
+  }
+}
+
+// Star rating in single
+.woocommerce .product .summary .woocommerce-product-rating {
+  @include _margin-bottom(.5);
+
+  .woocommerce-review-link {
+    color: $_color-gray;
+    @include _font-size-line-height($_base-font-size-px - 2);
+  }
+}
+
+// Description in single
+.woocommerce-product-details__short-description {
+  @include _margin-top(.5);
+}
+
+// Quantity and cart button in single
+.woocommerce .product .cart {
+  @include _margin-top(1);
+}
+
 .woocommerce .quantity .qty {
   max-height: 37px;
+}
+
+// Tab content in single
+.woocommerce .product .woocommerce-tabs {
+  @include _media-min(lg) {
+    @include _padding-top(1);
+  }
+
+  .tabs.wc-tabs {
+    &::before {
+      border-bottom-color: _lighter($_color-gray);
+    }
+
+    li {
+      background-color: _lightest($_color-gray);
+      border-color: _lighter($_color-gray);
+
+      &::before,
+      &::after {
+        border-color: _lighter($_color-gray);
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 .woocommerce-Tabs-panel,
@@ -80,6 +170,121 @@
   @include entry-content();
 }
 
-.related.products {
+// Product meta in single
+.product_meta {
+  color: $_color-gray;
+  @include _font-size-line-height($_base-font-size-px - 2);
+
+  a {
+    color: $_color-gray;
+  }
+}
+
+// Heading of review area in single
+.woocommerce-Reviews-title {
+  display: none;
+}
+
+// Heading of posted review
+.woocommerce-Reviews .comment-reply-title {
+  @include _margin(1, 0, .5);
+  display: block;
+  border-bottom: 1px solid _lighter($_color-gray);
+  @include _font-size-line-height($_base-font-size-px + 2);
+  font-weight: bold;
+  @include _padding(0, 0, .25);
+}
+
+// Posted star in review area in single
+.woocommerce .stars a {
+  color: #f2b611;
+}
+
+// Related products in single
+// Archive
+.related.products,
+.woocommerce ul.products {
   @include _margin-top(2);
+}
+
+// Orderby in archive
+.woocommerce-ordering {
+  @include _font-size-line-height($_base-font-size-px - 2);
+}
+
+// Result count in archive
+.woocommerce-result-count {
+  color: $_color-gray;
+  @include _font-size-line-height($_base-font-size-px - 2);
+}
+
+// Product title in loop
+.woocommerce-loop-product__title {
+  color: $_color-gray;
+  @include _font-size-line-height($_base-font-size-px);
+  font-weight: normal;
+}
+
+// Star rating in loop
+.woocommerce .star-rating span::before {
+  color: #f2b611;
+}
+
+// Price in loop and single
+.woocommerce .product .woocommerce-Price-amount {
+  color: $_color-text;
+  font-weight: bold;
+}
+
+// Product category widget
+.product-categories {
+  @include widget-list-base();
+
+  a {
+    @include widget-link-base();
+  }
+
+  .cat-item {
+    @include widget-has-children-expander();
+  }
+
+  .children {
+    @include widget-children();
+  }
+}
+
+// Product search widget
+.widget_product_search {
+  .#{$_prefix}c-input-group__btn {
+    position: relative;
+    z-index: 0;
+    left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+// Product list widget
+.product_list_widget {
+  a {
+    text-decoration: none;
+  }
+
+  .product-title {
+    color: $_color-text;
+
+    @include _hover(lg) {
+      color: _light($_color-text);
+    }
+  }
+
+  .reviewer {
+    color: $_color-gray;
+    @include _font-size-line-height($_base-font-size-px - 4);
+  }
+}
+
+// Range widget
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
+  background-color: _light($_color-gray);
 }

@@ -6,5 +6,5 @@
  */
 
 $controller = new Mimizuku_Controller();
-$controller->layout( 'one-column' );
+$controller->layout( get_theme_mod( 'woocommerce-archive-page-layout' ) );
 $controller->render( 'woocommerce-archive-product' );

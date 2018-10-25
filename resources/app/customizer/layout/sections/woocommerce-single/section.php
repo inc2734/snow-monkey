@@ -14,16 +14,16 @@ if ( ! is_customize_preview() ) {
 $customizer = Customizer_Framework::init();
 
 $customizer->section(
-	'archive-page',
+	'woocommerce-single',
 	[
 		'title'           => __( 'Page layout', 'snow-monkey' ),
-		'description'     => __( 'By the type of page displayed on the preview screen on the right side of the screen, the display setting items switched.', 'snow-monkey' ) . __( 'Currently archive page settings is displayed.', 'snow-monkey' ),
+		'description'     => __( 'By the type of page displayed on the preview screen on the right side of the screen, the display setting items switched.', 'snow-monkey' ) . __( 'Currently product page settings is displayed.', 'snow-monkey' ),
 		'priority'        => 130,
 		'active_callback' => function() {
-			if ( class_exists( '\woocommerce' ) && is_woocommerce() ) {
+			if ( ! class_exists( '\woocommerce' ) ) {
 				return false;
 			}
-			return ( is_home() || is_archive() || is_search() );
+			return is_product();
 		},
 	]
 );

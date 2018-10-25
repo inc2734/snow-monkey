@@ -220,35 +220,6 @@ add_action(
 );
 
 /**
- * Enqueue Woocommerce style
- *
- * @return void
- */
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		if ( ! class_exists( 'woocommerce' ) ) {
-			return;
-		}
-
-		$relative_path = '/assets/css/dependency/woocommerce/woocommerce.min.css';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
-
-		if ( ! file_exists( $path ) ) {
-			return;
-		}
-
-		wp_enqueue_style(
-			Helper\get_main_style_handle() . '-woocommerce',
-			$src,
-			[ Helper\get_main_style_handle() ],
-			filemtime( $path )
-		);
-	}
-);
-
-/**
  * Enqueue Contact Form 7 style
  *
  * @return void
