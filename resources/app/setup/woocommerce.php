@@ -47,8 +47,10 @@ add_action(
 add_filter(
 	'woocommerce_output_related_products_args',
 	function( $args ) {
+		$columns = get_option( 'woocommerce_catalog_columns' );
+		$columns = $columns ? $columns : 3;
 		$args['posts_per_page'] = 6;
-		$args['columns']        = 3;
+		$args['columns']        = $columns;
 		return $args;
 	}
 );
@@ -159,6 +161,15 @@ add_filter(
 		$html = str_replace( 'class="woocommerce-product-search"', 'class="woocommerce-product-search c-input-group"', $html );
 		$html = str_replace( '<input type="search"', '<div class="c-input-group__field"><input type="search"', $html );
 		$html = str_replace( '<button', '</div><button class="c-input-group__btn"', $html );
+		return $html;
+	}
+);
+
+add_filter(
+	'woocommerce_dropdown_variation_attribute_options_html',
+	function( $html ) {
+		$html = str_replace( '<select id=', '<span class="c-select" aria-selected="false"><select id=', $html );
+		$html = str_replace( '</select>', '</select><span class="c-select__label"></span></span>', $html );
 		return $html;
 	}
 );

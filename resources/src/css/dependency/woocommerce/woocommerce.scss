@@ -127,13 +127,35 @@
   }
 }
 
+// Variation in single
+.woocommerce .product .summary .cart .variations {
+  @include _margin-bottom(.5);
+
+  td {
+    vertical-align: middle;
+    line-height: 1;
+
+    .#{$_prefix}c-select__label {
+      @include _font-size-line-height($_base-font-size-px - 2);
+    }
+
+    .reset_variations {
+      margin-left: 5px;
+      color: $_color-gray;
+      @include _font-size($_base-font-size-px - 4);
+      line-height: 1;
+    }
+  }
+}
+
 // Description in single
 .woocommerce-product-details__short-description {
   @include _margin-top(.5);
 }
 
 // Quantity and cart button in single
-.woocommerce .product .cart {
+.woocommerce .product .cart,
+.woocommerce .woocommerce-variation-add-to-cart {
   @include _margin-top(1);
 }
 
