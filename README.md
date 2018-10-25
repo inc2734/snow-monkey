@@ -95,5 +95,5 @@ themes/snow-monkey
 ### inc2734/wp-awesome-widgets
 * Source: https://github.com/inc2734/wp-awesome-widgets
 
-### inc2734/wp-awesome-compponents
-* Source: https://github.com/inc2734/wp-awesome-compponents
+### inc2734/wp-awesome-components
+* Source: https://github.com/inc2734/wp-awesome-components
