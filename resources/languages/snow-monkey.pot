@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-24 11:55+0900\n"
-"PO-Revision-Date: 2018-10-24 11:59+0900\n"
+"POT-Creation-Date: 2018-10-25 11:20+0900\n"
+"PO-Revision-Date: 2018-10-25 11:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -179,6 +179,8 @@ msgstr "ページ設定"
 #: app/customizer/design/sections/post/section.php:20
 #: app/customizer/layout/sections/archive-page/section.php:20
 #: app/customizer/layout/sections/singular-post/section.php:20
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:20
+#: app/customizer/layout/sections/woocommerce-single/section.php:20
 msgid ""
 "By the type of page displayed on the preview screen on the right side of the "
 "screen, the display setting items switched."
@@ -249,6 +251,10 @@ msgstr "レイアウト"
 #: app/customizer/layout/sections/archive-page/section.php:19
 #: app/customizer/layout/sections/singular-post/controls/layout.php:17
 #: app/customizer/layout/sections/singular-post/section.php:19
+#: app/customizer/layout/sections/woocommerce-archive-page/controls/layout.php:17
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:19
+#: app/customizer/layout/sections/woocommerce-single/controls/layout.php:17
+#: app/customizer/layout/sections/woocommerce-single/section.php:19
 msgid "Page layout"
 msgstr "ページレイアウト"
 
@@ -402,8 +408,16 @@ msgid "Header"
 msgstr "ヘッダー"
 
 #: app/customizer/layout/sections/singular-post/section.php:20
-msgid "Currently singular post settings is displayed."
-msgstr "現在、個別投稿の設定を表示しています。"
+msgid "Currently posts and pages settings is displayed."
+msgstr "現在、投稿と固定ページの設定を表示しています。"
+
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:20
+msgid "Currently WooCommerce archive page settings is displayed."
+msgstr "現在、WooCommerce アーカイブページの設定を表示しています。"
+
+#: app/customizer/layout/sections/woocommerce-single/section.php:20
+msgid "Currently product page settings is displayed."
+msgstr "現在、商品ページの設定を表示しています。"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:16
 msgid "Use browser cache"
@@ -730,6 +744,75 @@ msgstr "Twitter Cards"
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
+#: app/customizer/snow-monkey-community/section.php:19
+#, php-format
+msgid "%1$s Snow Monkey Community %1$s"
+msgstr "%1$s Snow Monkey コミュニティ %1$s"
+
+#: app/customizer/snow-monkey-community/section.php:28
+msgid "Official Web Site"
+msgstr "公式サイト"
+
+#: app/customizer/snow-monkey-community/section.php:29
+msgid "Informations, manuals, etc."
+msgstr "お知らせ、マニュアルなど。"
+
+#: app/customizer/snow-monkey-community/section.php:31
+#, php-format
+msgid "%1$sOfficial Web Site%2$s"
+msgstr "%1$s公式サイト%2$s"
+
+#: app/customizer/snow-monkey-community/section.php:42
+msgid "Online Community"
+msgstr "オンラインコミュニティ"
+
+#: app/customizer/snow-monkey-community/section.php:43
+msgid ""
+"This is an online community that only purchasers of the Snow Monkey can "
+"participate. It is a place to share information and discuss about future "
+"function development etc."
+msgstr ""
+"Snow Monkey の購入者のみが参加できるオンラインコミュニティです。情報を共有し"
+"たり、今後の機能開発等についてディスカッションしたりする場所です。"
+
+#: app/customizer/snow-monkey-community/section.php:45
+#, php-format
+msgid "%1$sOnline Community%2$s"
+msgstr "%1$sオンラインコミュニティ%2$s"
+
+#: app/customizer/snow-monkey-community/section.php:56
+msgid "Support Forum"
+msgstr "サポートフォーラム"
+
+#: app/customizer/snow-monkey-community/section.php:57
+msgid ""
+"This is an open forum that supports the Snow Monkey usage and customization."
+msgstr ""
+"Snow Monkeyの使用方法やカスタマイズ方法をサポートするオープンなフォーラムで"
+"す。"
+
+#: app/customizer/snow-monkey-community/section.php:59
+#, php-format
+msgid "%1$sSupport Forum%2$s"
+msgstr "%1$sサポートフォーラム%2$s"
+
+#: app/customizer/snow-monkey-community/section.php:70
+msgid "Job Board"
+msgstr "ジョブボード"
+
+#: app/customizer/snow-monkey-community/section.php:71
+msgid ""
+"This is a job board that only purchasers of the Snow Monkey can participate. "
+"People who wants to work or wants to request work can register information."
+msgstr ""
+"Snow Monkey の購入者のみが参加できるジョブボードです。仕事をしたい人、仕事を"
+"依頼したい人が情報を登録できます。"
+
+#: app/customizer/snow-monkey-community/section.php:73
+#, php-format
+msgid "%1$sJob Board%2$s"
+msgstr "%1$sジョブボード%2$s"
+
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:16
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
@@ -909,6 +992,14 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
+#: app/setup/woocommerce.php:91
+msgid "WooCommerce sidebar"
+msgstr "WooCommerce サイドバー"
+
+#: app/setup/woocommerce.php:92
+msgid "These widgets are displayed in the sidebar on WooCommerce."
+msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
+
 #: app/template-tags/eyecatch-position-choices.php:15
 msgid "Page header"
 msgstr "ページヘッダー"
@@ -1083,6 +1174,9 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "Full width ( has side margins )"
 msgstr "フル幅 ( 左右余白あり )"
+
+#~ msgid "Currently singular post settings is displayed."
+#~ msgstr "現在、個別投稿の設定を表示しています。"
 
 #~ msgid "Loads CSS asynchronously"
 #~ msgstr "CSS を非同期読み込みする"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-24 14:47+0900\n"
-"PO-Revision-Date: 2018-10-24 14:49+0900\n"
+"POT-Creation-Date: 2018-10-25 11:20+0900\n"
+"PO-Revision-Date: 2018-10-25 11:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -179,6 +179,8 @@ msgstr "ページ設定"
 #: app/customizer/design/sections/post/section.php:20
 #: app/customizer/layout/sections/archive-page/section.php:20
 #: app/customizer/layout/sections/singular-post/section.php:20
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:20
+#: app/customizer/layout/sections/woocommerce-single/section.php:20
 msgid ""
 "By the type of page displayed on the preview screen on the right side of the "
 "screen, the display setting items switched."
@@ -249,6 +251,10 @@ msgstr "レイアウト"
 #: app/customizer/layout/sections/archive-page/section.php:19
 #: app/customizer/layout/sections/singular-post/controls/layout.php:17
 #: app/customizer/layout/sections/singular-post/section.php:19
+#: app/customizer/layout/sections/woocommerce-archive-page/controls/layout.php:17
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:19
+#: app/customizer/layout/sections/woocommerce-single/controls/layout.php:17
+#: app/customizer/layout/sections/woocommerce-single/section.php:19
 msgid "Page layout"
 msgstr "ページレイアウト"
 
@@ -402,8 +408,16 @@ msgid "Header"
 msgstr "ヘッダー"
 
 #: app/customizer/layout/sections/singular-post/section.php:20
-msgid "Currently singular post settings is displayed."
-msgstr "現在、個別投稿の設定を表示しています。"
+msgid "Currently posts and pages settings is displayed."
+msgstr "現在、投稿と固定ページの設定を表示しています。"
+
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:20
+msgid "Currently WooCommerce archive page settings is displayed."
+msgstr "現在、WooCommerce アーカイブページの設定を表示しています。"
+
+#: app/customizer/layout/sections/woocommerce-single/section.php:20
+msgid "Currently product page settings is displayed."
+msgstr "現在、商品ページの設定を表示しています。"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:16
 msgid "Use browser cache"
@@ -978,6 +992,14 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
+#: app/setup/woocommerce.php:91
+msgid "WooCommerce sidebar"
+msgstr "WooCommerce サイドバー"
+
+#: app/setup/woocommerce.php:92
+msgid "These widgets are displayed in the sidebar on WooCommerce."
+msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
+
 #: app/template-tags/eyecatch-position-choices.php:15
 msgid "Page header"
 msgstr "ページヘッダー"
@@ -1152,6 +1174,9 @@ msgstr "右サイドバー"
 #. Template Name of the plugin/theme
 msgid "Full width ( has side margins )"
 msgstr "フル幅 ( 左右余白あり )"
+
+#~ msgid "Currently singular post settings is displayed."
+#~ msgstr "現在、個別投稿の設定を表示しています。"
 
 #~ msgid "Loads CSS asynchronously"
 #~ msgstr "CSS を非同期読み込みする"
