@@ -37,20 +37,57 @@
     "cleanup:img": "rimraf resources/assets/img && mkdir -p resources/assets/img",
     "cleanup:zip": "rimraf snow-monkey.zip",
 
-    "css:style": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css/style.scss -o resources/assets/css && postcss resources/assets/css/style.css -r -c=postcss.config.js && cssnano resources/assets/css/style.css resources/assets/css/style.min.css --no-zindex",
-    "css:gutenberg": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css/gutenberg.scss -o resources/assets/css && postcss resources/assets/css/gutenberg.css -r -c=postcss.config.js && cssnano resources/assets/css/gutenberg.css resources/assets/css/gutenberg.min.css --no-zindex",
-    "css:editor-style": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css/editor-style.scss -o resources/assets/css && postcss resources/assets/css/editor-style.css -r -c=postcss.config.js && cssnano resources/assets/css/editor-style.css resources/assets/css/editor-style.min.css --no-zindex",
-    "css:amp": "node-sass resources/src/css/amp.scss -o resources/assets/css && postcss resources/assets/css/amp.css -r -c=postcss.config.js && cssnano resources/assets/css/amp.css resources/assets/css/amp.min.css --no-zindex",
-    "css:dependency:contact-form-7": "node-sass resources/src/css/dependency/contact-form-7/wpcf7.scss -o resources/assets/css/dependency/contact-form-7 && postcss resources/assets/css/dependency/contact-form-7/wpcf7.css -r -c=postcss.config.js && cssnano resources/assets/css/dependency/contact-form-7/wpcf7.css resources/assets/css/dependency/contact-form-7/wpcf7.min.css --no-zindex",
-    "css:dependency:elementor": "node-sass resources/src/css/dependency/elementor/elementor.scss -o resources/assets/css/dependency/elementor && postcss resources/assets/css/dependency/elementor/elementor.css -r -c=postcss.config.js && cssnano resources/assets/css/dependency/elementor/elementor.css resources/assets/css/dependency/elementor/elementor.min.css --no-zindex",
-    "css:dependency:woocommerce": "node-sass resources/src/css/dependency/woocommerce/woocommerce.scss -o resources/assets/css/dependency/woocommerce && postcss resources/assets/css/dependency/woocommerce/woocommerce.css -r -c=postcss.config.js && cssnano resources/assets/css/dependency/woocommerce/woocommerce.css resources/assets/css/dependency/woocommerce/woocommerce.min.css --no-zindex",
+    "css:style:sass": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css/style.scss -o resources/assets/css",
+    "css:style:postcss": "postcss resources/assets/css/style.css -r -c=postcss.config.js",
+    "css:style:cssnano": "cssnano resources/assets/css/style.css resources/assets/css/style.min.css --no-zindex",
+    "css:style": "npm-run-all -s css:style:*",
+
+    "css:gutenberg:sass": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css/gutenberg.scss -o resources/assets/css",
+    "css:gutenberg:postcss": "postcss resources/assets/css/gutenberg.css -r -c=postcss.config.js",
+    "css:gutenberg:cssnano": "cssnano resources/assets/css/gutenberg.css resources/assets/css/gutenberg.min.css --no-zindex",
+    "css:gutenberg": "npm-run-all -s css:gutenberg:*",
+
+    "css:editor-style:sass": "node-sass --include-path=node_modules/node-normalize-scss resources/src/css/editor-style.scss -o resources/assets/css",
+    "css:editor-style:postcss": "postcss resources/assets/css/editor-style.css -r -c=postcss.config.js",
+    "css:editor-style:cssnano": "cssnano resources/assets/css/editor-style.css resources/assets/css/editor-style.min.css --no-zindex",
+    "css:editor-style": "npm-run-all -s css:editor-style:*",
+
+    "css:amp:sass": "node-sass resources/src/css/amp.scss -o resources/assets/css",
+    "css:amp:postcss": "postcss resources/assets/css/amp.css -r -c=postcss.config.js",
+    "css:amp:cssnano": "cssnano resources/assets/css/amp.css resources/assets/css/amp.min.css --no-zindex",
+    "css:amp": "npm-run-all -s css:amp:*",
+
+    "css:dependency:contact-form-7:sass": "node-sass resources/src/css/dependency/contact-form-7/wpcf7.scss -o resources/assets/css/dependency/contact-form-7",
+    "css:dependency:contact-form-7:postcss": "postcss resources/assets/css/dependency/contact-form-7/wpcf7.css -r -c=postcss.config.js",
+    "css:dependency:contact-form-7:cssnano": "cssnano resources/assets/css/dependency/contact-form-7/wpcf7.css resources/assets/css/dependency/contact-form-7/wpcf7.min.css --no-zindex",
+    "css:dependency:contact-form-7": "npm-run-all -s css:dependency:contact-form-7:*",
+
+    "css:dependency:elementor:sass": "node-sass resources/src/css/dependency/elementor/elementor.scss -o resources/assets/css/dependency/elementor",
+    "css:dependency:elementor:postcss": "postcss resources/assets/css/dependency/elementor/elementor.css -r -c=postcss.config.js",
+    "css:dependency:elementor:cssnano": "cssnano resources/assets/css/dependency/elementor/elementor.css resources/assets/css/dependency/elementor/elementor.min.css --no-zindex",
+    "css:dependency:elementor": "npm-run-all -s css:dependency:elementor:*",
+
+    "css:dependency:woocommerce:sass": "node-sass resources/src/css/dependency/woocommerce/woocommerce.scss -o resources/assets/css/dependency/woocommerce",
+    "css:dependency:woocommerce:postcss": "postcss resources/assets/css/dependency/woocommerce/woocommerce.css -r -c=postcss.config.js",
+    "css:dependency:woocommerce:cssnano": "cssnano resources/assets/css/dependency/woocommerce/woocommerce.css resources/assets/css/dependency/woocommerce/woocommerce.min.css --no-zindex",
+    "css:dependency:woocommerce": "npm-run-all -s css:dependency:woocommerce:*",
+
     "css:dependency": "npm-run-all -p css:dependency:*",
     "css:php": "cpy '**/*.php' '../../assets/css' --cwd=resources/src/css --parents",
     "css": "npm run cleanup:css && npm-run-all -p css:*",
 
-    "js:app": "rollup resources/src/js/app.js -c=rollup.config.js && uglifyjs resources/assets/js/app.js -o resources/assets/js/app.min.js -mc",
-    "js:customize-control": "rollup resources/src/js/customize-control.js -c=rollup.config.js && uglifyjs resources/assets/js/customize-control.js -o resources/assets/js/customize-control.min.js -mc",
-    "js:customize-preview": "rollup resources/src/js/customize-preview.js -c=rollup.config.js && uglifyjs resources/assets/js/customize-preview.js -o resources/assets/js/customize-preview.min.js -mc",
+    "js:app:rollup": "rollup resources/src/js/app.js -c=rollup.config.js",
+    "js:app:uglifyjs": "uglifyjs resources/assets/js/app.js -o resources/assets/js/app.min.js -mc",
+    "js:app": "npm-run-all -s js:app:*",
+
+    "js:customize-control:rollup": "rollup resources/src/js/customize-control.js -c=rollup.config.js",
+    "js:customize-control:uglifyjs": "uglifyjs resources/assets/js/customize-control.js -o resources/assets/js/customize-control.min.js -mc",
+    "js:customize-control": "npm-run-all -s js:customize-control:*",
+
+    "js:customize-preview:rollup": "rollup resources/src/js/customize-preview.js -c=rollup.config.js",
+    "js:customize-preview:uglifyjs": "uglifyjs resources/assets/js/customize-preview.js -o resources/assets/js/customize-preview.min.js -mc",
+    "js:customize-preview": "npm-run-all -s js:customize-preview:*",
+
     "js": "npm run cleanup:js && npm-run-all -p js:*",
 
     "packages:jquery.background-parallax-scroll": "cpy 'jquery.background-parallax-scroll/**' '../resources/assets/packages' --cwd=node_modules --parents",
