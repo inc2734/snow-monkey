@@ -266,16 +266,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "3db5be75666b02ecd63897e8fe063638085f3bf2"
+                "reference": "aebe90d61d678b4335e0a1ea8165c9a6949405e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/3db5be75666b02ecd63897e8fe063638085f3bf2",
-                "reference": "3db5be75666b02ecd63897e8fe063638085f3bf2",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/aebe90d61d678b4335e0a1ea8165c9a6949405e2",
+                "reference": "aebe90d61d678b4335e0a1ea8165c9a6949405e2",
                 "shasum": ""
             },
             "require": {
@@ -310,7 +310,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2018-09-10T11:34:17+00:00"
+            "time": "2018-10-29T06:27:15+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
