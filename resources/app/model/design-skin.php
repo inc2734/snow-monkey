@@ -44,6 +44,7 @@ class Design_Skin {
 			[
 				'style'                    => 'design-skin.css',
 				'editor-style'             => 'editor-style.css',
+				'gutenberg-style'          => 'gutenberg.css',
 				'customize-control-script' => 'customize-control.js',
 			],
 			$options
@@ -54,6 +55,7 @@ class Design_Skin {
 		add_action( 'wp_loaded', [ $this, '_load_bootstrap' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ] );
 		add_filter( 'mce_css', [ $this, '_load_editor_style' ] );
+		add_action( 'enqueue_block_editor_assets', [ $this, '_load_gutenberg_style' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_script' ] );
 	}
 
@@ -112,6 +114,24 @@ class Design_Skin {
 			$mce_css .= $file_url;
 		}
 		return $mce_css;
+	}
+
+	/**
+	 * Load design skin style
+	 *
+	 * @return void
+	 */
+	public function _load_gutenberg_style() {
+		if ( ! $this->_is_active() ) {
+			return;
+		}
+
+		$relative_path = $this->options['gutenberg-style'];
+		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
+		$file_url      = plugins_url( $relative_path, $this->file );
+		if ( file_exists( $file_path ) ) {
+			wp_enqueue_style( $this->plugin['slug'], $file_url, [], filemtime( $file_path ) );
+		}
 	}
 
 	/**
