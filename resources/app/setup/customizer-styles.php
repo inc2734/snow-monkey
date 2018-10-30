@@ -19,5 +19,6 @@ add_action(
 		foreach ( $includes as $include ) {
 			Helper\include_files( __DIR__ . $include );
 		}
-	}
+	},
+	11
 );
