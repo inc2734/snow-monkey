@@ -16,19 +16,20 @@
 
 	<?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
-	<div class="c-entry__content">
-		<?php
-		if ( 'content-top' === get_theme_mod( 'page-eyecatch' ) ) {
-			get_template_part( 'template-parts/eyecatch' );
-		}
-		?>
+	<?php
+	if ( 'content-top' === get_theme_mod( 'page-eyecatch' ) ) {
+		get_template_part( 'template-parts/eyecatch' );
+	}
+	?>
 
-		<?php get_template_part( 'template-parts/article-top-widget-area' ); ?>
+	<?php get_template_part( 'template-parts/article-top-widget-area' ); ?>
+
+	<div class="c-entry__content">
 		<?php the_content(); ?>
-		<?php get_template_part( 'template-parts/link-pages' ); ?>
-		<?php get_template_part( 'template-parts/article-bottom-widget-area' ); ?>
 	</div>
 
+	<?php get_template_part( 'template-parts/link-pages' ); ?>
+	<?php get_template_part( 'template-parts/article-bottom-widget-area' ); ?>
 	<?php do_action( 'snow_monkey_after_entry_content' ); ?>
 </article>
 

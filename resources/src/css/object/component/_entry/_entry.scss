@@ -1,4 +1,6 @@
 .#{$_prefix}c-entry {
+  @include items-gutter();
+
   &__header {
     @include _margin(0, 0, 1);
     border-bottom: $border-bottom-width solid $_color-black;
