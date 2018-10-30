@@ -37,7 +37,7 @@
   }
 
   &__item-link {
-    @include _hover {
+    @include _hover(lg) {
       background-color: _light($_color-gray);
       color: #fff;
     }
