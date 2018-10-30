@@ -2,7 +2,6 @@
   "author": "inc2734",
   "license": "GPL-2.0+",
   "dependencies": {
-    "cssnano": "^4.1.7",
     "jquery.background-parallax-scroll": "^3.0.6",
     "jquery.smoothscroll": "^1.0.3",
     "jquery.sticky": "^0.2.1",
@@ -16,6 +15,7 @@
     "autoprefixer": "^9.3.1",
     "browser-sync": "^2.26.3",
     "cpy-cli": "^2.0.0",
+    "cssnano": "^4.1.7",
     "node-sass": "^4.9.4",
     "npm-run-all": "^4.1.3",
     "postcss-cli": "^6.0.1",
