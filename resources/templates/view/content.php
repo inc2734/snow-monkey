@@ -14,8 +14,9 @@
 
 	<div class="c-entry__content">
 		<?php the_content(); ?>
-		<?php get_template_part( 'template-parts/link-pages' ); ?>
 	</div>
+
+	<?php get_template_part( 'template-parts/link-pages' ); ?>
 
 	<?php do_action( 'snow_monkey_after_entry_content' ); ?>
 </article>
