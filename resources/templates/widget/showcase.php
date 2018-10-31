@@ -30,7 +30,7 @@
 
 		<?php if ( $instance['bg-image'] ) : ?>
 			<div class="wpaw-showcase__bgimage js-bg-parallax__bgimage">
-				<?php echo wp_get_attachment_image( $instance['bg-image'], $thumbnail_size ); ?>
+				<?php echo wp_get_attachment_image( $instance['bg-image'], $bg_image_size ); ?>
 			</div>
 		<?php endif; ?>
 
