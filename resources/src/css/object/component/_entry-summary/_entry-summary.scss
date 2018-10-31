@@ -10,12 +10,6 @@
       padding-top: 75%;
     }
 
-    > img {
-      @supports(object-fit: cover) {
-        @include _transition(transform);
-      }
-    }
-
     .#{$_prefix}c-entry-summary__term {
       @include _position(absolute, 0, 0, null, null, 1);
     }
@@ -31,11 +25,15 @@
     @include _padding(.25, .5);
   }
 
+  &__body {
+    @include _transition(color);
+    overflow: hidden;
+  }
+
   &__title {
     @include _margin(0, 0, .2);
     @include _font-size($_base-font-size);
     @include _line-height($_base-font-size * 1.5);
-    @include _transition(color);
 
     @include _media-min(lg) {
       @include _margin(0, 0, .25);
@@ -49,7 +47,6 @@
     @include _font-size($_base-font-size-px - 4);
     @include _line-height($_base-font-size * 1.25);
     color: _light($_color-text);
-    @include _transition(color);
 
     @include _media-min(lg) {
       @include _margin(0, 0, .5);
@@ -58,23 +55,20 @@
 
   &__meta {
     @include _font-size-line-height(10px);
-    @include _transition(color);
     font-weight: bold;
     text-align: center;
   }
 
-  .#{$_prefix}c-entries & {
+  a > & {
     @include _hover(lg) {
-      .#{$_prefix}c-entry-summary__title,
-      .#{$_prefix}c-entry-summary__content,
-      .#{$_prefix}c-entry-summary__meta {
+      .#{$_prefix}c-entry-summary__body {
         color: $_color-gray;
       }
     }
   }
 
-  .#{$_prefix}c-entries--rich-media & {
-    &__figure {
+  .#{$_prefix}c-entries--rich-media a > & {
+    .#{$_prefix}c-entry-summary__figure {
       &::after {
         @include _position(absolute, 8px, 8px, 8px, 8px);
         display: flex;
@@ -90,14 +84,16 @@
         visibility: hidden;
         @include _transition(opacity);
       }
+
+      > img {
+        @include _transition(transform);
+      }
     }
 
     @include _hover(lg) {
       .#{$_prefix}c-entry-summary__figure {
         > img {
-          @supports(object-fit: cover) {
-            transform: scale(1.05);
-          }
+          transform: scale(1.05);
         }
 
         &::after {
@@ -127,10 +123,6 @@
       @include _media-min(md) {
         display: block;
       }
-    }
-
-    &__body {
-      overflow: hidden;
     }
 
     &__meta {
