@@ -25,9 +25,7 @@
     @include _hover(lg) {
       .wpaw-carousel__figure {
         > img {
-          @supports(object-fit: cover) {
-            transform: scale(1.05);
-          }
+          transform: scale(1.05);
         }
       }
     }
@@ -35,9 +33,7 @@
 
   &__figure {
     > img {
-      @supports(object-fit: cover) {
-        @include _transition(transform);
-      }
+      @include _transition(transform);
     }
   }
 

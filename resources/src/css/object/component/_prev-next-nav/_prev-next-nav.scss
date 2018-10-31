@@ -95,9 +95,7 @@
 
       .#{$_prefix}c-prev-next-nav__item-figure {
         > img {
-          @supports(object-fit: cover) {
-            transform: scale(1.05);
-          }
+          transform: scale(1.05);
         }
       }
     }
@@ -111,9 +109,7 @@
     opacity: .6;
 
     > img {
-      @supports(object-fit: cover) {
-        @include _transition(transform);
-      }
+      @include _transition(transform);
     }
   }
 

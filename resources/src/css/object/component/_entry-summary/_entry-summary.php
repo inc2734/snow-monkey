@@ -13,8 +13,8 @@ $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
 	[
-		'.c-entries--rich-media .c-entry-summary__figure::after',
-		'.c-entries--rich-media .c-page-summary__figure::after',
+		'.c-entries--rich-media a > .c-entry-summary .c-entry-summary__figure::after',
+		'.c-entries--rich-media a > .c-entry-summary .c-page-summary__figure::after',
 	],
 	[
 		'background-color: ' . $cfs->rgba( $accent_color, .4 ),
