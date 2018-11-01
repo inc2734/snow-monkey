@@ -11,7 +11,6 @@ add_action(
 	'wp_loaded',
 	function() {
 		$includes = [
-			'/../../assets/css/dependency',
 			'/../../assets/css/foundation',
 			'/../../assets/css/object/component',
 			'/../../assets/css/object/project',

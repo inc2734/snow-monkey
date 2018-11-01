@@ -80,6 +80,14 @@ add_action(
 	}
 );
 
+add_action(
+	'wp_loaded',
+	function() {
+		Helper\include_files( get_template_directory() . '/assets/css/dependency/woocommerce' );
+	},
+	11
+);
+
 /**
  * Register sidebars for Woocommerce
  *

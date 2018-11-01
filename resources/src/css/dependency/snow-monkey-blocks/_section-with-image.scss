@@ -1,0 +1,7 @@
+.smb-section-with-image {
+  .smb-section__title {
+    &::after {
+      margin-left: 0;
+    }
+  }
+}

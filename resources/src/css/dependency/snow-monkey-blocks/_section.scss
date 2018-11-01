@@ -1,0 +1,20 @@
+.smb-section {
+  @include section();
+
+  &__title {
+    @include section-title();
+  }
+
+  &__body {
+    @include entry-content();
+
+    .#{$_prefix}c-container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  & + & {
+    margin-top: 0 !important;
+  }
+}

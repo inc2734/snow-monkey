@@ -7,21 +7,19 @@
 
 use Inc2734\Mimizuku_Core\Helper;
 
-if ( ! defined( 'SNOW_MONKEY_BLOCKS_DIR_PATH' ) ) {
+if ( ! class_exists( 'WPCF7' ) ) {
 	return;
 }
 
-add_filter( 'snow_monkey_blocks_pro', '__return_true' );
-
 /**
- * Enqueue Elementor style
+ * Enqueue Contact Form 7 style
  *
  * @return void
  */
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/css/dependency/snow-monkey-blocks/snow-monkey-blocks.min.css';
+		$relative_path = '/assets/css/dependency/contact-form-7/wpcf7.min.css';
 		$src  = get_theme_file_uri( $relative_path );
 		$path = get_theme_file_path( $relative_path );
 
@@ -30,7 +28,7 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			Helper\get_main_style_handle() . '-snow-monkey-blocks',
+			Helper\get_main_style_handle() . '-wpcf7',
 			$src,
 			[ Helper\get_main_style_handle() ],
 			filemtime( $path )
@@ -38,13 +36,10 @@ add_action(
 	}
 );
 
-/**
- * Load styles from customizer
- */
 add_action(
 	'wp_loaded',
 	function() {
-		Helper\include_files( get_template_directory() . '/assets/css/dependency/snow-monkey-blocks' );
+		Helper\include_files( get_template_directory() . '/assets/css/dependency/contact-form-7' );
 	},
 	11
 );
