@@ -8,6 +8,10 @@ img[class*="wp-image-"],
   }
 }
 
+.wp-block-image {
+  margin-bottom: 0;
+}
+
 .wp-block-image figcaption {
   @include _margin(6px, 0, 0);
   color: $_color-gray;
