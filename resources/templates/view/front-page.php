@@ -24,14 +24,14 @@
 			<?php if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) : ?>
 				<div class="c-container">
 					<div class="c-entry">
-						<div class="c-entry__content">
+						<div class="c-entry__content p-entry-content">
 							<?php the_content(); ?>
 						</div>
 					</div>
 				</div>
 			<?php else : ?>
 				<div class="c-entry">
-					<div class="c-entry__content">
+					<div class="c-entry__content p-entry-content">
 						<?php the_content(); ?>
 					</div>
 				</div>

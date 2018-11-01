@@ -19,5 +19,5 @@ if ( is_admin() ) {
 		snow_monkey_entry_content_styles( [ '' ] );
 	}
 } else {
-	snow_monkey_entry_content_styles( [ '.c-entry__content' ] );
+	snow_monkey_entry_content_styles( [ '.p-entry-content' ] );
 }

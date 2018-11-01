@@ -6,7 +6,7 @@
  */
 ?>
 <article <?php post_class(); ?>>
-	<div class="c-entry__content">
+	<div class="c-entry__content p-entry-content">
 		<?php
 		if ( woocommerce_product_loop() ) {
 			/**

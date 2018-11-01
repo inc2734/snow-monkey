@@ -24,7 +24,7 @@
 
 	<?php get_template_part( 'template-parts/article-top-widget-area' ); ?>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content p-entry-content">
 		<?php the_content(); ?>
 	</div>
 

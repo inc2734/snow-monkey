@@ -173,7 +173,6 @@
 
   &__col-inner {
     flex: 1;
-    @include entry-content();
   }
 }
 
@@ -192,7 +191,6 @@
   }
 
   &__body {
-    @include entry-content();
   }
 
   & + & {

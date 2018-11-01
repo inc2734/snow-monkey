@@ -10,7 +10,7 @@
 		<h1 class="c-entry__title"><?php echo esc_html( snow_monkey_get_page_title_from_breadcrumbs() ); ?></h1>
 	</header>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content p-entry-content">
 		<div class="p-archive">
 			<?php
 			$archive_layout  = get_theme_mod( 'archive-layout' );
@@ -25,7 +25,7 @@
 				<?php endwhile; ?>
 			</ul>
 		</div>
-
-		<?php get_template_part( 'template-parts/pagination' ); ?>
 	</div>
+
+	<?php get_template_part( 'template-parts/pagination' ); ?>
 </div>

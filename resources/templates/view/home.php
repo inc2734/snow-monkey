@@ -8,8 +8,7 @@
 <div class="c-entry">
 	<?php get_template_part( 'template-parts/posts-page-widget-area-top' ); ?>
 
-	<div class="c-entry__content">
-
+	<div class="c-entry__content p-entry-content">
 		<div class="p-archive">
 			<?php
 			$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
@@ -26,9 +25,8 @@
 				<?php endwhile; ?>
 			</ul>
 		</div>
-
-		<?php get_template_part( 'template-parts/pagination' ); ?>
 	</div>
 
+	<?php get_template_part( 'template-parts/pagination' ); ?>
 	<?php get_template_part( 'template-parts/posts-page-widget-area-bottom' ); ?>
 </div>

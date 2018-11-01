@@ -13,12 +13,12 @@
 	</header>
 
 	<?php if ( ! is_paged() && term_description() ) : ?>
-		<div class="p-term-description c-entry__content">
+		<div class="p-term-description p-entry-content">
 			<?php echo wp_kses_post( term_description() ); ?>
 		</div>
 	<?php endif; ?>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content p-entry-content">
 		<div class="p-archive">
 			<?php
 			$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
@@ -35,7 +35,7 @@
 				<?php endwhile; ?>
 			</ul>
 		</div>
-
-		<?php get_template_part( 'template-parts/pagination' ); ?>
 	</div>
+
+	<?php get_template_part( 'template-parts/pagination' ); ?>
 </div>

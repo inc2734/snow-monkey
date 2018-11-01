@@ -7,7 +7,7 @@
 ?>
 <article <?php post_class(); ?>>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content p-entry-content">
 		<?php wc_get_template_part( 'content', 'single-product' ); ?>
 	</div>
 

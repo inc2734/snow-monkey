@@ -32,7 +32,6 @@
 
   &__content {
     @include _clearfix();
-    @include entry-content();
   }
 
   &__footer {

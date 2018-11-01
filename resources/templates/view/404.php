@@ -8,7 +8,7 @@
 <div class="c-entry">
 	<?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
-	<div class="c-entry__content">
+	<div class="c-entry__content p-entry-content">
 		<p>
 			<?php esc_html_e( 'Woops! Page not found.', 'snow-monkey' ); ?><br>
 			<?php esc_html_e( 'The page you are looking for may be moved or deleted.', 'snow-monkey' ); ?><br>

@@ -797,16 +797,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "5.0.5",
+            "version": "5.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "cb8557e75798a8889af980b59c6cbb4c242e5ba7"
+                "reference": "fcc1a7dbe47efef4853c1e74b3967dbdc8cf9030"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/cb8557e75798a8889af980b59c6cbb4c242e5ba7",
-                "reference": "cb8557e75798a8889af980b59c6cbb4c242e5ba7",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/fcc1a7dbe47efef4853c1e74b3967dbdc8cf9030",
+                "reference": "fcc1a7dbe47efef4853c1e74b3967dbdc8cf9030",
                 "shasum": ""
             },
             "require": {
@@ -841,7 +841,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2018-10-08T06:57:54+00:00"
+            "time": "2018-11-01T06:56:38+00:00"
         }
     ],
     "packages-dev": [
@@ -2449,7 +2449,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
