@@ -81,11 +81,10 @@ add_action(
 );
 
 add_action(
-	'wp_loaded',
+	'snow_monkey_load_customizer_styles',
 	function() {
-		Helper\get_template_parts( get_template_directory() . '/assets/css/dependency/woocommerce' );
-	},
-	11
+		Helper\load_theme_files( get_template_directory() . '/assets/css/dependency/woocommerce' );
+	}
 );
 
 /**

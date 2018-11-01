@@ -60,7 +60,7 @@ $includes = [
 	'/app/template-tags',
 ];
 foreach ( $includes as $include ) {
-	Helper\get_template_parts( __DIR__ . $include );
+	Helper\load_theme_files( __DIR__ . $include );
 }
 
 /**
@@ -71,7 +71,7 @@ $includes = [
 	'/app/widget',
 ];
 foreach ( $includes as $include ) {
-	Helper\get_template_parts( __DIR__ . $include, true );
+	Helper\load_theme_files( __DIR__ . $include, true );
 }
 
 /**
@@ -81,7 +81,7 @@ $includes = [
 	'/app/customizer',
 ];
 foreach ( $includes as $include ) {
-	Helper\get_template_parts( __DIR__ . $include );
+	Helper\load_theme_files( __DIR__ . $include );
 }
 
 /**

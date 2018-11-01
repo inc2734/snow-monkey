@@ -42,9 +42,8 @@ add_action(
  * Load styles from customizer
  */
 add_action(
-	'wp_loaded',
+	'snow_monkey_load_customizer_styles',
 	function() {
-		Helper\get_template_parts( get_template_directory() . '/assets/css/dependency/snow-monkey-blocks' );
-	},
-	11
+		Helper\load_theme_files( get_template_directory() . '/assets/css/dependency/snow-monkey-blocks' );
+	}
 );

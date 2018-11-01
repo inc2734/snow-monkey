@@ -80,7 +80,7 @@ add_filter(
 
 		$content = str_replace(
 			'wpaw-pr-box__inner',
-			'c-container',
+			'wpaw-pr-box__inner c-container',
 			$content
 		);
 
