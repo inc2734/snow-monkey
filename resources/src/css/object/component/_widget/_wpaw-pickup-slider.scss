@@ -86,15 +86,13 @@
   }
 
   &__item-more {
-    @include _btn;
     @include _margin-top(.5);
     @include _padding(.5, 2);
-    max-width: 100%;
-    background-color: transparent;
     border: 1px solid #fff;
-    border-radius: $_border-radius;
-    color: #fff;
-    @include _transition(all);
+
+    &.#{$_prefix}c-btn {
+      background-color: transparent;
+    }
 
     @include _media-min(md) {
       @include _margin-top(1);

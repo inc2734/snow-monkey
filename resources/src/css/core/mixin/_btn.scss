@@ -5,7 +5,8 @@
   border-radius: $_border-radius;
   color: #fff;
   @include _padding(.5, 1.25);
-  @include _transition(background-color);
+  max-width: 100%;
+  @include _transition(all);
 
   @include _hover(lg) {
     background-color: darken($color-accent, 5%);

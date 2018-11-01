@@ -6,11 +6,8 @@
   @include _padding(1.5, 0);
 
   &__inner {
-    @include _margin(0, -.5); // equal .wpaw-showcase body padding
-
-    @include _media-min(md) {
-      @include _margin(0, -1); // equal .wpaw-showcase body padding
-    }
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &__body {
