@@ -1,16 +1,4 @@
 /**
- * Button
- */
-.wpac-btn {
-  @include btn();
-
-  &--full {
-    width: 100%;
-    display: block;
-  }
-}
-
-/**
  * Alert
  */
 .wpac-alert {
