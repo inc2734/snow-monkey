@@ -6,7 +6,9 @@
  */
 ?>
 <div class="c-entry">
-	<?php get_template_part( 'template-parts/posts-page-widget-area-top' ); ?>
+	<?php if ( ! is_paged() ) : ?>
+		<?php get_template_part( 'template-parts/posts-page-widget-area-top' ); ?>
+	<?php endif; ?>
 
 	<div class="c-entry__content p-entry-content">
 		<div class="p-archive">
@@ -28,5 +30,8 @@
 	</div>
 
 	<?php get_template_part( 'template-parts/pagination' ); ?>
-	<?php get_template_part( 'template-parts/posts-page-widget-area-bottom' ); ?>
+
+	<?php if ( ! is_paged() ) : ?>
+		<?php get_template_part( 'template-parts/posts-page-widget-area-bottom' ); ?>
+	<?php endif; ?>
 </div>
