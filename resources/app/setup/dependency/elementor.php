@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 	return;
 }
