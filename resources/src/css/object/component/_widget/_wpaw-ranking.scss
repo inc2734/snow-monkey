@@ -2,12 +2,6 @@
 }
 
 .wpaw-ranking {
-  ul {
-    @include widget-list-base();
-  }
-
-  @include wpaw-posts-list-base();
-
   counter-reset: wpaw_ranking;
 
   &__item {
@@ -16,7 +10,7 @@
     &::before {
       counter-increment: wpaw_ranking;
       content: counter(wpaw_ranking);
-      @include _position(absolute, 0, null, null, 0);
+      @include _position(absolute, 0, null, null, 0, 1);
       display: flex;
       align-items: center;
       justify-content: center;

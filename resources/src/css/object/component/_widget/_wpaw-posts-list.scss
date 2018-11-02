@@ -1,0 +1,33 @@
+.wpaw-posts-list {
+  @include widget-list-base();
+
+  &__item {
+    &:not(:first-child) {
+      @include _margin(.5, 0, 0);
+    }
+
+    > a {
+      color: $_color-text;
+      @include _transition(color);
+
+      @include _hover(lg) {
+        color: $_color-gray;
+      }
+    }
+  }
+
+  &__title {
+    @include _margin(0, 0, .25);
+    @include _font-size($_base-font-size-px - 2);
+    @include _line-height($_base-font-size-px + 4);
+  }
+
+  &__taxonomy {
+    margin: 0 0 3px;
+    line-height: 1;
+  }
+
+  &__date {
+    @include _font-size-line-height(11px);
+  }
+}

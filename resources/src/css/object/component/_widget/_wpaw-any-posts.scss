@@ -2,9 +2,4 @@
 }
 
 .wpaw-any-posts {
-  ul {
-    @include widget-list-base();
-  }
-
-  @include wpaw-posts-list-base();
 }

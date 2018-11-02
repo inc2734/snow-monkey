@@ -2,9 +2,4 @@
 }
 
 .wpaw-taxonomy-posts {
-  ul {
-    @include widget-list-base();
-  }
-
-  @include wpaw-posts-list-base();
 }
