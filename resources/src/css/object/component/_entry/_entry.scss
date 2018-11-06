@@ -1,6 +1,4 @@
 .#{$_prefix}c-entry {
-  @include items-gutter();
-
   &__header {
     @include _margin(0, 0, 1);
     border-bottom: $border-bottom-width solid $_color-black;
@@ -37,5 +35,17 @@
   &__footer {
     @include items-gutter();
     @include _margin(1.5, 0, 0);
+  }
+
+  /**
+   * Add top margin to children of .c-entry
+   */
+  > .#{$_prefix}l-article-top-widget-area,
+  > .#{$_prefix}l-article-bottom-widget-area,
+  > .#{$_prefix}c-eyecatch,
+  > .#{$_prefix}c-google-adsense {
+    &:not(:first-child) {
+      @include _margin-top(1);
+    }
   }
 }
