@@ -1,6 +1,6 @@
 .#{$_prefix}c-meta {
   &__item {
-    display: inline-block;
+    white-space: nowrap;
 
     & + & {
       padding-left: .75em;
