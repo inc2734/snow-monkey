@@ -14,12 +14,12 @@ if ( ! defined( 'SNOW_MONKEY_BLOCKS_DIR_PATH' ) ) {
 add_filter( 'snow_monkey_blocks_pro', '__return_true' );
 
 /**
- * Enqueue Elementor style
+ * Enqueue Snow Monkey Blocks style
  *
  * @return void
  */
 add_action(
-	'wp_enqueue_scripts',
+	'enqueue_block_assets',
 	function() {
 		$relative_path = '/assets/css/dependency/snow-monkey-blocks/snow-monkey-blocks.min.css';
 		$src  = get_theme_file_uri( $relative_path );
