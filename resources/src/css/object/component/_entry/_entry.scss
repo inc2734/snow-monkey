@@ -1,6 +1,6 @@
 .#{$_prefix}c-entry {
   &__header {
-    @include _margin(0, 0, 1);
+    @include _margin-bottom(1);
     border-bottom: $border-bottom-width solid $_color-black;
     @include _padding(0, 0, .25);
 
@@ -29,6 +29,7 @@
   }
 
   &__content {
+    @include _margin-top(1);
     @include _clearfix();
   }
 
