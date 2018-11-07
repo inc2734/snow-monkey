@@ -11,3 +11,10 @@ add_action(
 		add_theme_support( 'align-wide' );
 	}
 );
+
+add_action(
+	'enqueue_block_editor_assets',
+	function() {
+		gutenberg_override_style( 'wp-block-library-theme', null );
+	}
+);
