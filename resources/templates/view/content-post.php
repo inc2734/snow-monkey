@@ -17,45 +17,46 @@
 		</header>
 	<?php endif; ?>
 
-	<?php do_action( 'snow_monkey_before_entry_content' ); ?>
-
-	<?php
-	if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) ) {
-		get_template_part( 'template-parts/share-buttons' );
-	}
-	?>
-
-	<?php
-	wpvc_get_template_part(
-		'template-parts/google-adsense',
-		null,
-		[
-			'position' => 'content-top',
-		]
-	);
-	?>
-
-	<?php
-	if ( 'content-top' === get_theme_mod( 'post-eyecatch' ) ) {
-		get_template_part( 'template-parts/eyecatch' );
-	}
-	?>
-
-	<?php get_template_part( 'template-parts/article-top-widget-area' ); ?>
-
-	<div class="c-entry__content p-entry-content">
+	<div class="c-entry__body">
 		<?php
-		if ( get_option( 'mwt-display-contents-outline' ) ) {
-			get_template_part( 'template-parts/contents-outline' );
+		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) ) {
+			get_template_part( 'template-parts/share-buttons' );
 		}
 		?>
 
-		<?php the_content(); ?>
-	</div>
+		<?php
+		wpvc_get_template_part(
+			'template-parts/google-adsense',
+			null,
+			[
+				'position' => 'content-top',
+			]
+		);
+		?>
 
-	<?php get_template_part( 'template-parts/link-pages' ); ?>
-	<?php get_template_part( 'template-parts/article-bottom-widget-area' ); ?>
-	<?php do_action( 'snow_monkey_after_entry_content' ); ?>
+		<?php
+		if ( 'content-top' === get_theme_mod( 'post-eyecatch' ) ) {
+			get_template_part( 'template-parts/eyecatch' );
+		}
+		?>
+
+		<?php get_template_part( 'template-parts/article-top-widget-area' ); ?>
+		<?php do_action( 'snow_monkey_before_entry_content' ); ?>
+
+		<div class="c-entry__content p-entry-content">
+			<?php
+			if ( get_option( 'mwt-display-contents-outline' ) ) {
+				get_template_part( 'template-parts/contents-outline' );
+			}
+			?>
+
+			<?php the_content(); ?>
+			<?php get_template_part( 'template-parts/link-pages' ); ?>
+		</div>
+
+		<?php do_action( 'snow_monkey_after_entry_content' ); ?>
+		<?php get_template_part( 'template-parts/article-bottom-widget-area' ); ?>
+	</div>
 
 	<footer class="c-entry__footer">
 		<?php

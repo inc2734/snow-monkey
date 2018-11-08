@@ -6,11 +6,13 @@
  */
 ?>
 <div class="c-entry">
-	<div class="c-entry__content p-entry-content">
-		<p>
-			<?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'snow-monkey' ); ?>
-		</p>
+	<div class="c-entry__body">
+		<div class="c-entry__content p-entry-content">
+			<p>
+				<?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'snow-monkey' ); ?>
+			</p>
 
-		<?php get_search_form(); ?>
+			<?php get_search_form(); ?>
+		</div>
 	</div>
 </div>

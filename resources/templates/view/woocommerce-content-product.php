@@ -6,9 +6,9 @@
  */
 ?>
 <article <?php post_class(); ?>>
-
-	<div class="c-entry__content p-entry-content">
-		<?php wc_get_template_part( 'content', 'single-product' ); ?>
+	<div class="c-entry__body">
+		<div class="c-entry__content p-entry-content">
+			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+		</div>
 	</div>
-
 </article>
