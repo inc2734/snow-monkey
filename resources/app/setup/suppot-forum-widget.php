@@ -14,7 +14,7 @@ add_action(
 				$transient = get_transient( 'snow-monkey-support-forum-topics' );
 				if ( ! $transient ) {
 					$wp_api_posts = wp_remote_get( 'https://snow-monkey.2inc.org/wp-json/wp/v2/topic?per_page=5' );
-					if ( 200 !== $wp_api_posts['response']['code'] ) {
+					if ( is_wp_error( $wp_api_posts ) || 200 !== $wp_api_posts['response']['code'] ) {
 						$wp_api_posts = [];
 					} else {
 						$wp_api_posts = json_decode( $wp_api_posts['body'] );
