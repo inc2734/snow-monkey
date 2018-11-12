@@ -8,22 +8,22 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "3.0.0",
+            "version": "3.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "08a9a6a679ae80548dc2f089cb84b8eb2428e800"
+                "reference": "a6d7987c6095e358ca997c751464efabc0479cbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/08a9a6a679ae80548dc2f089cb84b8eb2428e800",
-                "reference": "08a9a6a679ae80548dc2f089cb84b8eb2428e800",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/a6d7987c6095e358ca997c751464efabc0479cbd",
+                "reference": "a6d7987c6095e358ca997c751464efabc0479cbd",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": "^1.0",
                 "inc2734/wp-awesome-widgets": "^3.3",
-                "inc2734/wp-basis": "^3.2",
+                "inc2734/wp-basis": "^4.0",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
                 "inc2734/wp-customizer-framework": "^3.3",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-11-12T01:25:03+00:00"
+            "time": "2018-11-12T02:18:40+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -170,16 +170,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "3.2.2",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "819c6bed6a19a5aa30fb51a1efe5c194ad918818"
+                "reference": "bbcc4d9298b9cb3ada7c3caa9072951cd784dda6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/819c6bed6a19a5aa30fb51a1efe5c194ad918818",
-                "reference": "819c6bed6a19a5aa30fb51a1efe5c194ad918818",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/bbcc4d9298b9cb3ada7c3caa9072951cd784dda6",
+                "reference": "bbcc4d9298b9cb3ada7c3caa9072951cd784dda6",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-10-31T04:47:07+00:00"
+            "time": "2018-11-12T02:14:31+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
