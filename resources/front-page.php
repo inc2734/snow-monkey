@@ -7,5 +7,5 @@
 
 use Inc2734\Mimizuku_Core\App\Controller\Controller;
 
-Controller::layout( 'right-sidebar' );
+Controller::layout( 'one-column-full' );
 Controller::render( 'front-page' );
