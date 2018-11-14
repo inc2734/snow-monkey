@@ -15,6 +15,6 @@ class SampleTest extends WP_UnitTestCase {
 	 */
 	function test_sample() {
 		// Replace this with some actual testing code.
-		$this->assertTrue( class_exists( 'Mimizuku_Controller' ) );
+		$this->assertTrue( class_exists( '\Inc2734\Mimizuku_Core\App\Controller\Controller' ) );
 	}
 }

@@ -8,6 +8,7 @@
  * @license GPL-2.0+
  */
 
-$controller = new Mimizuku_Controller();
-$controller->layout( 'blank' );
-$controller->render( 'content-full', get_post_type() );
+use Inc2734\Mimizuku_Core\App\Controller\Controller;
+
+Controller::layout( 'blank' );
+Controller::render( 'content-full', get_post_type() );

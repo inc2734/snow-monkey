@@ -8,10 +8,11 @@
  * @license GPL-2.0+
  */
 
-$controller = new Mimizuku_Controller();
-$controller->layout( 'one-column-full' );
+use Inc2734\Mimizuku_Core\App\Controller\Controller;
+
+Controller::layout( 'one-column-full' );
 if ( is_front_page() ) {
-	$controller->render( 'front-page' );
+	Controller::render( 'front-page' );
 } else {
-	$controller->render( 'content-full', get_post_type() );
+	Controller::render( 'content-full', get_post_type() );
 }

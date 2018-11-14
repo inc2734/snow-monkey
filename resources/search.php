@@ -5,10 +5,11 @@
  * @license GPL-2.0+
  */
 
-$controller = new Mimizuku_Controller();
-$controller->layout( get_theme_mod( 'archive-page-layout' ) );
+use Inc2734\Mimizuku_Core\App\Controller\Controller;
+
+Controller::layout( get_theme_mod( 'archive-page-layout' ) );
 if ( have_posts() ) {
-	$controller->render( 'archive', 'search' );
+	Controller::render( 'archive', 'search' );
 } else {
-	$controller->render( 'no-match' );
+	Controller::render( 'no-match' );
 }

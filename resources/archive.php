@@ -5,12 +5,11 @@
  * @license GPL-2.0+
  */
 
-$_post_type = get_post_type();
+use Inc2734\Mimizuku_Core\App\Controller\Controller;
 
-$controller = new Mimizuku_Controller();
-$controller->layout( get_theme_mod( 'archive-page-layout' ) );
+Controller::layout( get_theme_mod( 'archive-page-layout' ) );
 if ( have_posts() ) {
-	$controller->render( 'archive', $_post_type );
+	Controller::render( 'archive', get_post_type() );
 } else {
-	$controller->render( 'none' );
+	Controller::render( 'none' );
 }

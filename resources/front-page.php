@@ -5,6 +5,7 @@
  * @license GPL-2.0+
  */
 
-$controller = new Mimizuku_Controller();
-$controller->layout( 'one-column-full' );
-$controller->render( 'front-page' );
+use Inc2734\Mimizuku_Core\App\Controller\Controller;
+
+Controller::layout( 'right-sidebar' );
+Controller::render( 'front-page' );
