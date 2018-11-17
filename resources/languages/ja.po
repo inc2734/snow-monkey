@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-25 11:20+0900\n"
-"PO-Revision-Date: 2018-10-25 11:21+0900\n"
+"POT-Creation-Date: 2018-11-17 16:17+0900\n"
+"PO-Revision-Date: 2018-11-17 16:17+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -620,8 +620,16 @@ msgid "Pocket"
 msgstr "Pocket"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:28
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:29
 msgid "Feed"
 msgstr "フィード"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:30
+msgid "Copy"
+msgstr "コピー"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php:16
 msgid "Share counts cache time (seconds)"
@@ -847,6 +855,14 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
+#: app/setup/dependency/woocommerce.php:100
+msgid "WooCommerce sidebar"
+msgstr "WooCommerce サイドバー"
+
+#: app/setup/dependency/woocommerce.php:101
+msgid "These widgets are displayed in the sidebar on WooCommerce."
+msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
+
 #: app/setup/entry-meta.php:16 app/setup/entry-meta.php:31
 msgid "Published"
 msgstr "投稿日"
@@ -992,14 +1008,6 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/woocommerce.php:91
-msgid "WooCommerce sidebar"
-msgstr "WooCommerce サイドバー"
-
-#: app/setup/woocommerce.php:92
-msgid "These widgets are displayed in the sidebar on WooCommerce."
-msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
-
 #: app/template-tags/eyecatch-position-choices.php:15
 msgid "Page header"
 msgstr "ページヘッダー"
@@ -1107,19 +1115,19 @@ msgstr "関連記事"
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
-#: templates/view/404.php:13
+#: templates/view/404.php:14
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: templates/view/404.php:14
+#: templates/view/404.php:15
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: templates/view/404.php:15
+#: templates/view/404.php:16
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
-#: templates/view/no-match.php:11
+#: templates/view/no-match.php:12
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."

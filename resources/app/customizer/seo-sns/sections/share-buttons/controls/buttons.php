@@ -25,7 +25,9 @@ $customizer->control(
 			'feedly'      => __( 'Feedly', 'snow-monkey' ),
 			'line'        => __( 'LINE', 'snow-monkey' ),
 			'pocket'      => __( 'Pocket', 'snow-monkey' ),
+			'pinterest'   => __( 'Pinterest', 'snow-monkey' ),
 			'feed'        => __( 'Feed', 'snow-monkey' ),
+			'copy'        => __( 'Copy', 'snow-monkey' ),
 		],
 	]
 );
