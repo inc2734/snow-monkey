@@ -46,7 +46,7 @@ export default class SnowMonkeyDropNav {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
       if (window.matchMedia('(min-width: 1023px)').matches) {
-        if (this.header.offsetHeight < this._scrollTop()) {
+        if (this.header.offsetHeight + this.header.getBoundingClientRect().top + this._scrollTop() < this._scrollTop()) {
           if (this._isUpdateVisibility()) {
             this._dropNav();
             return;
