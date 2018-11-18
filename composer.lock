@@ -747,16 +747,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "213f20f203737536e6bc7a217db698583ad81fad"
+                "reference": "dda587ab4efedeb7b1773da96918562f6b4205e2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/213f20f203737536e6bc7a217db698583ad81fad",
-                "reference": "213f20f203737536e6bc7a217db698583ad81fad",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/dda587ab4efedeb7b1773da96918562f6b4205e2",
+                "reference": "dda587ab4efedeb7b1773da96918562f6b4205e2",
                 "shasum": ""
             },
             "require": {
@@ -793,7 +793,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2018-11-18T11:09:30+00:00"
+            "time": "2018-11-18T11:22:11+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",
