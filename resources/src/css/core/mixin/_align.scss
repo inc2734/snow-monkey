@@ -6,10 +6,12 @@
 }
 
 @mixin alignwide() {
-  margin-right: _space(2) * -1;
-  margin-left: _space(2) * -1;
-  width: auto;
-  max-width: none;
+  @include _container();
+  @include alignfull();
+  position: relative;
+  right: -50vw;
+  transform: translateX(-50%);
+  max-width: $_container-max-width;
 }
 
 @mixin container-slim-width() {
