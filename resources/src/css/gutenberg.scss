@@ -4,6 +4,10 @@
 
 @import 'style';
 
+body {
+  padding: 50px 0;
+}
+
 .editor-post-title__input {
   @include _font-size-line-height($_base-font-size-px * 1.25);
   font-weight: bold;
@@ -44,6 +48,10 @@
 .editor-default-block-appender,
 .editor-block-list__block {
   max-width: 1220px; // = $content_width
+}
+
+.editor-block-switcher {
+  overflow: hidden;
 }
 
 .editor-post-title__block > div {
