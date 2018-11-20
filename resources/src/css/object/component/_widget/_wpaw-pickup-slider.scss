@@ -169,7 +169,8 @@
     transform: translate(100%, -50%);
   }
 
-  [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
+  [data-has-sidebar="true"] [data-is-content-widget-area="true"] &,
+  [data-has-sidebar="true"] .#{$_prefix}c-entry__content & {
     @include _media-max(md) {
       @include widget-full-width();
     }
@@ -181,7 +182,8 @@
     }
   }
 
-  [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
+  [data-has-sidebar="false"] [data-is-content-widget-area="true"] &,
+  [data-has-sidebar="false"] .#{$_prefix}c-entry__content & {
     @include widget-full-width();
 
     &__item-title {

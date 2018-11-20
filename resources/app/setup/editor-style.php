@@ -15,35 +15,14 @@ use Inc2734\Mimizuku_Core\Helper;
 add_action(
 	'after_setup_theme',
 	function() {
-		add_editor_style(
-			[
-				'assets/css/editor-style.min.css',
-			]
-		);
-	}
-);
+		add_theme_support( 'editor-styles' );
 
-/**
- * Use main stylesheet for Gutenberg
- *
- * @return void
- */
-add_action(
-	'enqueue_block_editor_assets',
-	function() {
-		$relative_path = '/assets/css/gutenberg.min.css';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
-
-		if ( ! file_exists( $path ) ) {
-			return;
+		if ( function_exists( 'is_gutenberg_page' ) && ! isset( $_GET['classic-editor'] ) ) {
+			$stylesheet = [ 'assets/css/gutenberg.min.css' ];
+		} else {
+			$stylesheet = [ 'assets/css/editor-style.min.css' ];
 		}
 
-		wp_enqueue_style(
-			Helper\get_main_style_handle(),
-			$src,
-			[],
-			filemtime( $path )
-		);
+		add_editor_style( $stylesheet );
 	}
 );

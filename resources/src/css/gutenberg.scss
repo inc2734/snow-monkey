@@ -2,120 +2,99 @@
 
 @import 'core/core';
 
-.edit-post-visual-editor .editor-writing-flow {
-  @import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
-  @import 'foundation/_element/element';
-  @import 'foundation/_packages/packages';
+@import 'style';
 
-  @include body();
+.editor-post-title__input {
+  @include _font-size-line-height($_base-font-size-px * 1.25);
+  font-weight: bold;
+  font-family: sans-serif;
+  @include _padding(.25, .5);
+}
 
-  @import 'foundation/_wordpress/wordpress';
-
-  /**
-   * Object - Component
-   */
-  @import 'object/component/component';
-
-  /**
-   * Object - Project
-   */
-  @import 'object/project/project';
-
-  /**
-   * Object - utility
-   */
-  @import 'object/utility/utility';
-
-  .editor-block-list__block {
-    &,
-    p {
-      color: $_color-text;
-      @include _font-size-line-height($_base-font-size-px);
-    }
+.editor-block-list__block {
+  &,
+  p {
+    color: $_color-text;
+    @include _font-size-line-height($_base-font-size-px);
   }
+}
 
-  // @todo 本来不要かも
-  .editor-block-list__block[data-align="full"] .editor-warning {
-    @include _media-min(600px) {
-      padding-right: 36px;
-      padding-left: 36px;
-    }
+// @todo 本来不要かも
+.editor-block-list__block[data-align="full"] .editor-warning {
+  @include _media-min(600px) {
+    padding-right: 36px;
+    padding-left: 36px;
   }
+}
 
-  [data-type="core/paragraph"] .components-autocomplete,
-  [data-type="core/heading"] .components-autocomplete,
-  .wp-block-freeform {
-    @include entry-content();
+[data-type="core/paragraph"] .components-autocomplete,
+[data-type="core/heading"] .components-autocomplete,
+.wp-block-freeform {
+  @include entry-content();
+}
+
+.components-autocomplete {
+  > [role="presentation"]:last-child {
+    margin-top: 0 !important;
   }
+}
 
-  .components-autocomplete {
-    > [role="presentation"]:last-child {
-      margin-top: 0 !important;
-    }
+// @todo 要検討
+.editor-post-title__block,
+.editor-default-block-appender,
+.editor-block-list__block {
+  max-width: 1220px; // = $content_width
+}
+
+.editor-post-title__block > div {
+  padding-right: 14px;
+  padding-left: 14px;
+
+  @include _media-min(600px) {
+    margin-right: 0;
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
   }
+}
 
-  // @todo 要検討
-  .editor-post-title__block,
-  .editor-default-block-appender,
-  .editor-block-list__block {
-    max-width: 1220px; // = $content_width
-  }
-
-  // @todo
-  .editor-block-switcher {
-    overflow: hidden;
-  }
-
-  .editor-post-title__block > div {
-    padding-right: 14px;
-    padding-left: 14px;
-
-    @include _media-min(600px) {
-      margin-right: 0;
-      margin-left: 0;
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-
-  .wp-block-image {
+.wp-block-image {
+  > div {
     > div {
-      > div {
-        max-width: none !important;
-        max-height: none !important;
-      }
+      max-width: none !important;
+      max-height: none !important;
+    }
+  }
+}
+
+.editor-block-list__block {
+  &[data-align="right"],
+  &[data-align="left"] {
+    > .editor-block-list__block-edit {
+      margin-top: 0;
     }
   }
 
-  .editor-block-list__block {
-    &[data-align="right"],
-    &[data-align="left"] {
-      > .editor-block-list__block-edit {
-        margin-top: 0;
-      }
-    }
-
-    &[data-align="wide"] {
-      @include _media-min(600px) {
-        margin-left: -25px;
-        margin-right: -25px;
-      }
+  &[data-align="wide"] {
+    @include _media-min(600px) {
+      margin-left: -25px;
+      margin-right: -25px;
     }
   }
+}
 
-  .wp-block-code {
-    font-size: 0;
+.wp-block-code {
+  font-size: 0;
 
-    textarea {
-      background-color: _lightest($_color-gray);
-      @include _font-size-line-height($_base-font-size-px);
-    }
+  textarea {
+    background-color: _lightest($_color-gray);
+    @include _font-size-line-height($_base-font-size-px);
   }
+}
 
-  .wp-block-html {
-    pre {
-      border-radius: 0;
-      padding: 0 1rem;
-    }
+.wp-block-html {
+  pre {
+    border-radius: 0;
+    padding: 0 1rem;
   }
 }

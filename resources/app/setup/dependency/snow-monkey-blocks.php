@@ -29,10 +29,16 @@ add_action(
 			return;
 		}
 
+		if ( is_admin() ) {
+			$dependencies = [];
+		} else {
+			$dependencies = [ Helper\get_main_style_handle() ];
+		}
+
 		wp_enqueue_style(
 			Helper\get_main_style_handle() . '-snow-monkey-blocks',
 			$src,
-			[ Helper\get_main_style_handle() ],
+			$dependencies,
 			filemtime( $path )
 		);
 	}
