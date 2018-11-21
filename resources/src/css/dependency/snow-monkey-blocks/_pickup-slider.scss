@@ -1,0 +1,5 @@
+.smb-pickup-slider {
+  [data-has-sidebar="false"] .#{$_prefix}c-entry__content & {
+    margin-top: 0;
+  }
+}

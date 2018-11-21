@@ -1,0 +1,22 @@
+.smb-media-text {
+  &__title {
+    @include _font-size-line-height($_base-font-size * $_h2-font-size-scale / 1.25);
+
+    @include _media-min(lg) {
+      @include _font-size-line-height($_base-font-size * $_h2-font-size-scale);
+    }
+
+    & + .smb-media-text__body {
+      @include _margin-top(1);
+    }
+  }
+
+  &__body {
+    @include entry-content();
+
+    .#{$_prefix}c-container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
