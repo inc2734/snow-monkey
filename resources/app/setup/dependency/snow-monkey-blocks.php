@@ -19,7 +19,7 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
  * @return void
  */
 add_action(
-	'enqueue_block_assets',
+	'wp_enqueue_scripts',
 	function() {
 		$relative_path = '/assets/css/dependency/snow-monkey-blocks/snow-monkey-blocks.min.css';
 		$src  = get_theme_file_uri( $relative_path );
@@ -41,6 +41,23 @@ add_action(
 			$dependencies,
 			filemtime( $path )
 		);
+	}
+);
+
+/**
+ * Enqueue Snow Monkey Blocks style in Gutenberg
+ *
+ * @return void
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		if ( ! function_exists( 'is_gutenberg_page' ) || isset( $_GET['classic-editor'] ) ) {
+			return;
+		}
+
+		$relative_path = '/assets/css/dependency/snow-monkey-blocks/snow-monkey-blocks.min.css';
+		add_editor_style( [ $relative_path ] );
 	}
 );
 
