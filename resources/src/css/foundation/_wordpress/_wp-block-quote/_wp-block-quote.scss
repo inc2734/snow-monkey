@@ -1,3 +1,7 @@
 .wp-block-quote {
   @include blockquote();
+
+  &__citation {
+    @include blockquote__cite();
+  }
 }

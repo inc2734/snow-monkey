@@ -20,6 +20,11 @@
     }
   }
 
+  &__citation,
+  cite {
+    @include blockquote__cite();
+  }
+
   blockquote {
     margin: 0;
     border-left: none;
@@ -28,12 +33,5 @@
     p {
       @include _font-size-line-height($_base-font-size-px * 1.5);
     }
-  }
-
-  cite {
-    @include _margin-top(.5);
-    display: block;
-    @include _font-size-line-height($_base-font-size-px - 2);
-    color: $_color-gray;
   }
 }

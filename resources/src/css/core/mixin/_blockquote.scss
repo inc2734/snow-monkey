@@ -30,9 +30,14 @@
   }
 
   cite {
-    @include _margin-top(.5);
-    display: block;
-    @include _font-size-line-height($_base-font-size-px - 2);
-    color: $_color-gray;
+    @include blockquote__cite();
   }
+}
+
+@mixin blockquote__cite {
+  @include _margin-top(.5);
+  display: block;
+  @include _font-size-line-height($_base-font-size-px - 2);
+  color: $_color-gray;
+  font-style: italic;
 }
