@@ -1,0 +1,7 @@
+.wp-block-cover {
+  .wp-block-cover-text {
+    color: #fff;
+    @include _font-size-line-height($_base-font-size-px * 1.5);
+    @include _padding(1);
+  }
+}
