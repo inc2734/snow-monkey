@@ -15,14 +15,6 @@ body {
   @include _padding(.25, .5);
 }
 
-.editor-block-list__block {
-  &,
-  p {
-    color: $_color-text;
-    @include _font-size-line-height($_base-font-size-px);
-  }
-}
-
 // @todo 本来不要かも
 .editor-block-list__block[data-align="full"] .editor-warning {
   @include _media-min(600px) {
@@ -37,33 +29,40 @@ body {
   @include entry-content();
 }
 
-.components-autocomplete {
-  > [role="presentation"]:last-child {
-    margin-top: 0 !important;
-  }
+$content-width: 1000px;
+$border-width: 1px;
+
+.wp-block {
+  max-width: $content-width;
 }
 
-// @todo 要検討
-.editor-post-title__block,
-.editor-default-block-appender,
+.wp-block[data-align="wide"] {
+  max-width: $content-width + 220px;
+}
+
+.wp-block[data-align="full"] {
+  max-width: none;
+}
+
 .editor-block-list__block {
-  max-width: 1220px; // = $content_width
+  @include _media-min(600px) {
+    &[data-align="wide"] > .editor-block-list__block-edit > .editor-block-contextual-toolbar,
+    &[data-align="full"] > .editor-block-list__block-edit > .editor-block-contextual-toolbar {
+      .editor-block-toolbar {
+        max-width: $content-width;
+      }
+    }
+
+    &[data-align="full"] > .editor-block-list__block-edit > .editor-block-contextual-toolbar {
+      .editor-block-toolbar {
+        max-width: $content-width - $border-width - $border-width;
+      }
+    }
+  }
 }
 
 .editor-block-switcher {
   overflow: hidden;
-}
-
-.editor-post-title__block > div {
-  padding-right: 14px;
-  padding-left: 14px;
-
-  @include _media-min(600px) {
-    margin-right: 0;
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
 }
 
 .wp-block-image {
@@ -71,22 +70,6 @@ body {
     > div {
       max-width: none !important;
       max-height: none !important;
-    }
-  }
-}
-
-.editor-block-list__block {
-  &[data-align="right"],
-  &[data-align="left"] {
-    > .editor-block-list__block-edit {
-      margin-top: 0;
-    }
-  }
-
-  &[data-align="wide"] {
-    @include _media-min(600px) {
-      margin-left: -25px;
-      margin-right: -25px;
     }
   }
 }
