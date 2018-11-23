@@ -20,33 +20,7 @@
 
   > table,
   > .#{$_prefix}c-responsive-table > table {
-    border-collapse: collapse;
-    width: 100%;
-
-    th, td {
-      border: 1px solid _lighter($_color-gray);
-      @include _padding(.25, .5);
-    }
-
-    th {
-      font-weight: bold;
-    }
-
-    thead {
-      th {
-        background-color: $color-accent;
-        border-right: 1px solid _light($color-accent);
-        border-left: 1px solid _light($color-accent);
-        color: #fff;
-      }
-    }
-
-    tbody {
-      th {
-        background-color: _lightest($_color-gray);
-        text-align: left;
-      }
-    }
+    @include table();
   }
 
   > ul,
