@@ -50,9 +50,9 @@ add_action(
  * @return void
  */
 add_action(
-	'after_setup_theme',
+	'admin_enqueue_scripts',
 	function() {
-		if ( ! function_exists( 'is_gutenberg_page' ) || isset( $_GET['classic-editor'] ) ) {
+		if ( ! function_exists( 'is_gutenberg_page' ) || ! is_gutenberg_page() ) {
 			return;
 		}
 

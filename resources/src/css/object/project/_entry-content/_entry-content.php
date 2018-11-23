@@ -6,7 +6,7 @@
  */
 
 if ( is_admin() ) {
-	if ( function_exists( 'is_gutenberg_page' ) && ! isset( $_GET['classic-editor'] ) ) {
+	if ( function_exists( 'is_gutenberg_page' ) && is_gutenberg_page() ) {
 		snow_monkey_entry_content_styles(
 			[
 				'',

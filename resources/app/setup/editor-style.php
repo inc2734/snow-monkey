@@ -8,7 +8,7 @@
 use Inc2734\Mimizuku_Core\Helper;
 
 /**
- * Use main stylesheet for visual editor
+ * Support editor styles
  *
  * @return void
  */
@@ -16,8 +16,18 @@ add_action(
 	'after_setup_theme',
 	function() {
 		add_theme_support( 'editor-styles' );
+	}
+);
 
-		if ( function_exists( 'is_gutenberg_page' ) && ! isset( $_GET['classic-editor'] ) ) {
+/**
+ * Use main stylesheet for visual editor
+ *
+ * @return void
+ */
+add_action(
+	'admin_enqueue_scripts',
+	function() {
+		if ( function_exists( 'is_gutenberg_page' ) && is_gutenberg_page() ) {
 			$stylesheet = [ 'assets/css/gutenberg.min.css' ];
 		} else {
 			$stylesheet = [ 'assets/css/editor-style.min.css' ];
