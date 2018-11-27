@@ -1,5 +1,8 @@
 'use strict';
 
+import BasisDrawerCloseZone from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer-close-zone.js';
+import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer.js';
+
 export default class SnowMonkeyHashNav {
   constructor() {
     window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
@@ -11,36 +14,19 @@ export default class SnowMonkeyHashNav {
       return;
     }
 
-    this.hamburgerBtn = document.getElementById(this.drawer.getAttribute('aria-labelledby'));
-    if (! this.hamburgerBtn) {
-      return;
-    }
-
     this._forEachHtmlNodes(document.querySelectorAll('a[href="#sm-drawer"]'), (element) => {
-      element.addEventListener('click', (event) => {
-        event.stopPropagation();
-        this._drawer();
-        return false
-      }, false);
+      element.addEventListener('click', (event) => this._click(event), false);
     });
   }
 
-  _drawer() {
+  _click(event) {
+    event.stopPropagation();
     if ('false' === this.drawer.getAttribute('aria-hidden')) {
-      this.drawer.setAttribute('aria-hidden', 'true');
-      this.hamburgerBtn.setAttribute('aria-expanded', 'false');
-
-      this._forEachHtmlNodes(this.drawer.getElementsByClassName('c-drawer__toggle'), (element) => {
-        element.setAttribute('aria-expanded', 'false');
-      });
-
-      this._forEachHtmlNodes(this.drawer.getElementsByClassName('c-drawer__submenu'), (element) => {
-        element.setAttribute('aria-hidden', 'true');
-      });
+      BasisDrawer.close(this.drawer);
     } else {
-      this.drawer.setAttribute('aria-hidden', 'false');
-      this.hamburgerBtn.setAttribute('aria-expanded', 'true');
+      BasisDrawer.open(this.drawer);
     }
+    return false
   }
 
   _forEachHtmlNodes(htmlNodes, callback) {
