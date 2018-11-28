@@ -27,7 +27,16 @@ if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
 	<?php if ( snow_monkey_is_output_page_header_title() ) : ?>
 		<div class="c-container js-bg-parallax__content">
 			<div class="c-page-header__content">
-				<h1 class="c-page-header__title"><?php the_title(); ?></h1>
+				<h1 class="c-page-header__title">
+					<?php
+					echo wp_kses_post(
+						apply_filters(
+							'snow_monkey_page_header_title',
+							snow_monkey_get_page_title_from_breadcrumbs()
+						)
+					);
+					?>
+				</h1>
 
 				<?php if ( is_singular( 'post' ) ) : ?>
 					<div class="c-page-header__meta">
