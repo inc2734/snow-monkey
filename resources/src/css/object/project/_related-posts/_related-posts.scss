@@ -21,7 +21,8 @@
     }
   }
 
-  [data-has-sidebar="true"] & {
+  [data-has-sidebar="true"] &,
+  [data-is-slim-width="true"] & {
     @include _media-min(lg) {
       .#{$_prefix}c-entries--rich-media {
         @include _row--margin(1);
