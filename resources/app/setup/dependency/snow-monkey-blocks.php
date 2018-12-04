@@ -21,7 +21,7 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/css/dependency/snow-monkey-blocks/snow-monkey-blocks.min.css';
+		$relative_path = '/assets/css/dependency/snow-monkey-blocks/style.min.css';
 		$src  = get_theme_file_uri( $relative_path );
 		$path = get_theme_file_path( $relative_path );
 
@@ -56,7 +56,7 @@ add_action(
 			return;
 		}
 
-		$relative_path = '/assets/css/dependency/snow-monkey-blocks/snow-monkey-blocks.min.css';
+		$relative_path = '/assets/css/dependency/snow-monkey-blocks/gutenberg.min.css';
 		add_editor_style( [ $relative_path ] );
 	}
 );

@@ -1,0 +1,5 @@
+.smb-box {
+  &__body {
+    @include entry-content(.75);
+  }
+}

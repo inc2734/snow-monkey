@@ -1,0 +1,10 @@
+@charset 'utf-8';
+
+$_font-path: false;
+@import '../../core/core';
+
+@import 'box/block';
+@import 'section/block';
+@import 'section-with-image/block';
+@import 'media-text/block';
+@import 'pickup-slider/block';
