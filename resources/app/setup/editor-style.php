@@ -26,8 +26,12 @@ add_action(
  */
 add_action(
 	'admin_enqueue_scripts',
-	function() {
-		if ( function_exists( 'is_gutenberg_page' ) && is_gutenberg_page() ) {
+	function( $hook_suffix ) {
+		if ( ! in_array( $hook_suffix, [ 'post.php', 'post-new.php' ] ) ) {
+			return;
+		}
+
+		if ( Helper\is_block_editor() ) {
 			$stylesheet = [ 'assets/css/gutenberg.min.css' ];
 		} else {
 			$stylesheet = [ 'assets/css/editor-style.min.css' ];

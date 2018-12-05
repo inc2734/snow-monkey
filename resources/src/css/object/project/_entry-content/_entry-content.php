@@ -5,11 +5,17 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 if ( is_admin() ) {
 	add_action(
 		'admin_enqueue_scripts',
-		function() {
-			if ( function_exists( 'is_gutenberg_page' ) && is_gutenberg_page() ) {
+		function( $hook_suffix ) {
+			if ( ! in_array( $hook_suffix, [ 'post.php', 'post-new.php' ] ) ) {
+				return;
+			}
+
+			if ( Helper\is_block_editor() ) {
 				snow_monkey_entry_content_styles(
 					[
 						'',

@@ -51,8 +51,8 @@ add_action(
  */
 add_action(
 	'admin_enqueue_scripts',
-	function() {
-		if ( ! function_exists( 'is_gutenberg_page' ) || ! is_gutenberg_page() ) {
+	function( $hook_suffix ) {
+		if ( ! Helper\is_block_editor() ) {
 			return;
 		}
 
