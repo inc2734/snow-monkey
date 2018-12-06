@@ -170,16 +170,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "4.0.5",
+            "version": "4.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "5bd063626c031d077f18f783db3d8619b46cf60a"
+                "reference": "9a1f97d0db129f4761d05c6a1f27cc67d69540ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/5bd063626c031d077f18f783db3d8619b46cf60a",
-                "reference": "5bd063626c031d077f18f783db3d8619b46cf60a",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/9a1f97d0db129f4761d05c6a1f27cc67d69540ee",
+                "reference": "9a1f97d0db129f4761d05c6a1f27cc67d69540ee",
                 "shasum": ""
             },
             "require": {
@@ -214,7 +214,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-12-05T01:35:16+00:00"
+            "time": "2018-12-06T02:46:50+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -314,16 +314,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "3.3.1",
+            "version": "3.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "2dd527816324221ebe468abf63cfb3413ffefb3c"
+                "reference": "2c9c067083ec4d891c3cf4c338469d517483e956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/2dd527816324221ebe468abf63cfb3413ffefb3c",
-                "reference": "2dd527816324221ebe468abf63cfb3413ffefb3c",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/2c9c067083ec4d891c3cf4c338469d517483e956",
+                "reference": "2c9c067083ec4d891c3cf4c338469d517483e956",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +358,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2018-12-04T13:10:05+00:00"
+            "time": "2018-12-06T02:48:48+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",

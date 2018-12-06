@@ -45,18 +45,14 @@ add_action(
 );
 
 /**
- * Enqueue Snow Monkey Blocks style in Gutenberg
+ * Enqueue Snow Monkey Blocks style in the block editor
  *
  * @return void
  */
 add_action(
-	'admin_enqueue_scripts',
-	function( $hook_suffix ) {
-		if ( ! Helper\is_block_editor() ) {
-			return;
-		}
-
-		$relative_path = '/assets/css/dependency/snow-monkey-blocks/gutenberg.min.css';
+	'after_setup_theme',
+	function() {
+		$relative_path = '/assets/css/dependency/snow-monkey-blocks/editor-style.min.css';
 		add_editor_style( [ $relative_path ] );
 	}
 );
