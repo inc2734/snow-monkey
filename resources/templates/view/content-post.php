@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Inc2734\Mimizuku_Core\Helper;
 ?>
 <?php get_template_part( 'template-parts/title-top-widget-area' ); ?>
 
@@ -25,7 +27,7 @@
 		?>
 
 		<?php
-		wpvc_get_template_part(
+		Helper\get_template_part(
 			'template-parts/google-adsense',
 			null,
 			[
@@ -74,7 +76,7 @@
 		?>
 
 		<?php
-		wpvc_get_template_part(
+		Helper\get_template_part(
 			'template-parts/google-adsense',
 			null,
 			[

@@ -5,13 +5,15 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 /**
  * Add google adsense to sidebar
  *
  * @return void
  */
 function snow_monkey_sidebar_add_google_adsense() {
-	wpvc_get_template_part(
+	Helper\get_template_part(
 		'template-parts/google-adsense',
 		null,
 		[

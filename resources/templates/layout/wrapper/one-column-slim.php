@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Inc2734\Mimizuku_Core\Helper;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
@@ -19,7 +21,7 @@
 
 	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
 	<div class="l-container">
-		<?php wpvc_get_header(); ?>
+		<?php Helper\get_header(); ?>
 
 		<div class="l-contents" role="document">
 			<?php get_template_part( 'template-parts/header-content', 'sm' ); ?>
@@ -70,7 +72,7 @@
 			</div>
 		</div>
 
-		<?php wpvc_get_footer(); ?>
+		<?php Helper\get_footer(); ?>
 	</div>
 
 <?php wp_footer(); ?>

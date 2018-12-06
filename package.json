@@ -81,7 +81,7 @@
     "packages": "npm run cleanup:packages && npm-run-all packages:*",
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=resources/src/img --parents",
     "build": "npm run packages && npm-run-all -p js css img",
-    "zip:pack": "composer install --no-dev && rsync -a --exclude='.*' resources/ snow-monkey",
+    "zip:pack": "composer install --no-dev -o -a && rsync -a --exclude='.*' resources/ snow-monkey",
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run cleanup:zip && npm run zip:pack && npm run zip:archive"
   }

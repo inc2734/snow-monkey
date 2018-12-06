@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 add_action(
 	'wp_head',
 	function() {
@@ -18,7 +20,7 @@ add_action(
 			return;
 		}
 
-		\Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $google_adsense );
+		Helper\display_adsense_code( $google_adsense );
 
 		add_filter(
 			'snow_monkey_google_adsense',

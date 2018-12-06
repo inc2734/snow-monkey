@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 $widget_id = explode( '-', $args['widget_id'] );
 $widget_id = end( $widget_id );
 
@@ -69,7 +71,7 @@ if ( ! $recent_posts_query->have_posts() ) {
 				<?php $recent_posts_query->the_post(); ?>
 				<li class="c-entries__item">
 					<?php
-					wpvc_get_template_part(
+					Helper\get_template_part(
 						'template-parts/loop/entry-summary',
 						$_post_type,
 						[

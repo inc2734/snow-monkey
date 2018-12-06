@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 $comments_by_type = $wp_query->comments_by_type;
 if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 	return;
@@ -24,7 +26,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 						?>
 						<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php
-							wpvc_get_template_part(
+							Helper\get_template_part(
 								'template-parts/comment',
 								null,
 								[

@@ -31,7 +31,7 @@ if ( ! $use_matched_content ) {
 
 	<?php if ( $use_matched_content ) : ?>
 
-		<?php \Inc2734\WP_Awesome_Widgets\inc2734_wpaw_display_adsense_code( $matched_content ); ?>
+		<?php Helper\display_adsense_code( $matched_content ); ?>
 
 	<?php else : ?>
 
