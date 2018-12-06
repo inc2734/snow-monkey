@@ -11,5 +11,5 @@ if ( post_password_required() ) {
 	return;
 }
 
-Helper\get_template_part( 'template-parts/comments' );
-Helper\get_template_part( 'template-parts/pings' );
+Helper\get_template_part( 'template-parts/discussion/comments' );
+Helper\get_template_part( 'template-parts/discussion/pings' );

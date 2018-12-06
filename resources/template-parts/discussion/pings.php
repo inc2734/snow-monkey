@@ -25,7 +25,7 @@ if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
 					'callback' => function() {
 						?>
 						<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
-							<?php Helper\get_template_part( 'template-parts/trackback' ); ?>
+							<?php Helper\get_template_part( 'template-parts/discussion/trackback' ); ?>
 						<?php
 					},
 				]

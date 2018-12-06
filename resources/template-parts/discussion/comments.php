@@ -27,7 +27,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 						<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php
 							Helper\get_template_part(
-								'template-parts/comment',
+								'template-parts/discussion/comment',
 								null,
 								[
 									'_comment' => $comment,
@@ -43,7 +43,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 			?>
 		</ol>
 
-		<?php Helper\get_template_part( 'template-parts/comments-pagination' ); ?>
+		<?php Helper\get_template_part( 'template-parts/discussion/pagination' ); ?>
 
 	<?php else : ?>
 		<p class="p-comments__nocomments">
