@@ -16,7 +16,7 @@ $default_header_position = snow_monkey_get_default_header_position();
 	<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
 		<div class="l-header__drop-nav" aria-hidden="true">
 			<div class="c-container">
-				<?php Helper\get_template_part( 'template-parts/global-nav' ); ?>
+				<?php Helper\get_template_part( 'template-parts/nav/global' ); ?>
 			</div>
 		</div>
 	<?php endif; ?>

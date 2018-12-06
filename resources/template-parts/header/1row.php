@@ -19,7 +19,7 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 	<div class="c-container">
 		<?php if ( $has_header_sub_nav ) : ?>
 			<div class="u-hidden u-visible-lg-up">
-				<?php Helper\get_template_part( 'template-parts/header-sub-nav' ); ?>
+				<?php Helper\get_template_part( 'template-parts/nav/header-sub' ); ?>
 			</div>
 		<?php endif; ?>
 
@@ -35,7 +35,7 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 					<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 						<?php if ( $has_global_nav ) : ?>
 							<div class="c-row__col c-row__col--auto">
-								<?php Helper\get_template_part( 'template-parts/global-nav' ); ?>
+								<?php Helper\get_template_part( 'template-parts/nav/global' ); ?>
 							</div>
 						<?php endif; ?>
 

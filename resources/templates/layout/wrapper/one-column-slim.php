@@ -19,7 +19,7 @@ use Inc2734\Mimizuku_Core\Helper;
 
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
-	<?php Helper\get_template_part( 'template-parts/drawer-nav' ); ?>
+	<?php Helper\get_template_part( 'template-parts/nav/drawer' ); ?>
 	<div class="l-container">
 		<?php Helper\get_header(); ?>
 

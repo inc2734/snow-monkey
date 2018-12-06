@@ -23,7 +23,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 	<div class="c-container">
 		<?php if ( $has_header_sub_nav ) : ?>
 			<div class="u-hidden u-visible-lg-up">
-				<?php Helper\get_template_part( 'template-parts/header-sub-nav' ); ?>
+				<?php Helper\get_template_part( 'template-parts/nav/header-sub' ); ?>
 			</div>
 		<?php endif; ?>
 
@@ -61,7 +61,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 
 		<?php if ( $has_global_nav ) : ?>
 			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-hidden u-visible-lg-up">
-				<?php Helper\get_template_part( 'template-parts/global-nav' ); ?>
+				<?php Helper\get_template_part( 'template-parts/nav/global' ); ?>
 			</div>
 		<?php endif; ?>
 	</div>
