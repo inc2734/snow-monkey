@@ -44,7 +44,7 @@ foreach ( $terms as $_term ) {
 	}
 
 	$cfs->register(
-		'.c-entries--rich-media .c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__figure::after',
+		'.c-entries--rich-media a > .c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__figure::after',
 		[
 			'background-color: ' . $cfs->rgba( $accent_color, .4 ),
 			'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
