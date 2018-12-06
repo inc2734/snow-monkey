@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Landing page ( has no side margins )
+ * Template Name: Landing page
  * Template Post Type: post, page
  *
  * @package snow-monkey

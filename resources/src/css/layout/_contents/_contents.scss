@@ -11,12 +11,12 @@
       @include _margin-bottom($contents-innner-margin-lg);
     }
 
-    [data-has-sidebar="false"][data-is-fluid-template="false"] & {
+    [data-has-sidebar="false"][data-is-full-template="true"] & {
       margin-top: 0;
       margin-bottom: 0;
     }
 
-    [data-has-sidebar="false"][data-is-fluid-template="true"] & {
+    [data-has-sidebar="false"][data-is-full-template="false"] & {
       &:first-child {
         [data-is-content-widget-area="true"]:first-child {
           @include _margin-top(-1 * $contents-innner-margin);

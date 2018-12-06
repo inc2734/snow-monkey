@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Full width ( has no side margins )
+ * Template Name: Full width
  * Template Post Type: post, page
  *
  * @package snow-monkey

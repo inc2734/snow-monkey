@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-11-17 16:17+0900\n"
-"PO-Revision-Date: 2018-11-17 16:17+0900\n"
+"POT-Creation-Date: 2018-12-06 13:34+0900\n"
+"PO-Revision-Date: 2018-12-06 13:35+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -24,7 +24,7 @@ msgstr ""
 
 #: app/customizer/advertisement/controls/google-adsense.php:16
 msgid "Google Adsense"
-msgstr "Google アドセンス"
+msgstr "WPAW: Google アドセンス"
 
 #: app/customizer/advertisement/controls/google-adsense.php:17
 msgid ""
@@ -1152,12 +1152,8 @@ msgid "https://2inc.org"
 msgstr "https://2inc.org"
 
 #. Template Name of the plugin/theme
-msgid "Landing page ( has no side margins )"
-msgstr "ランディングページ ( 左右余白なし ）"
-
-#. Template Name of the plugin/theme
-msgid "Landing page ( has side margins )"
-msgstr "ランディングページ ( 左右余白あり ）"
+msgid "Landing page"
+msgstr "ランディングページ"
 
 #. Template Name of the plugin/theme
 msgid "One column"
@@ -1172,16 +1168,24 @@ msgid "One column ( slim width )"
 msgstr "1カラム ( スリム幅 )"
 
 #. Template Name of the plugin/theme
-msgid "Full width ( has no side margins )"
-msgstr "フル幅 ( 左右余白なし )"
+msgid "Full width"
+msgstr "フル幅"
 
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
-#. Template Name of the plugin/theme
-msgid "Full width ( has side margins )"
-msgstr "フル幅 ( 左右余白あり )"
+#~ msgid "Landing page ( has no side margins )"
+#~ msgstr "ランディングページ ( 左右余白なし ）"
+
+#~ msgid "Full width ( has no side margins )"
+#~ msgstr "フル幅 ( 左右余白なし )"
+
+#~ msgid "Landing page ( has side margins )"
+#~ msgstr "ランディングページ ( 左右余白あり ）"
+
+#~ msgid "Full width ( has side margins )"
+#~ msgstr "フル幅 ( 左右余白あり )"
 
 #~ msgid "Currently singular post settings is displayed."
 #~ msgstr "現在、個別投稿の設定を表示しています。"

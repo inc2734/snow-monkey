@@ -11,9 +11,8 @@
 
 <body <?php body_class( [ 'l-body--one-column' ] ); ?> id="body"
 	data-has-sidebar="false"
-	data-is-fluid-template="true"
+	data-is-full-template="false"
 	data-is-slim-width="false"
-	data-is-fixed-width="true"
 	>
 
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>

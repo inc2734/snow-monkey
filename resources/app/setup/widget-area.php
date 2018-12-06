@@ -155,7 +155,7 @@ add_action(
 				}
 
 				$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
+				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
 					$params[0]['before_widget'] .= '<div class="c-container">';
 					$params[0]['after_widget']  .= '</div>';
 				}
@@ -194,7 +194,7 @@ add_action(
 			}
 
 			$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-			if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
+			if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
 				$params[0]['before_widget'] .= '<div class="c-container">';
 				$params[0]['after_widget']  .= '</div>';
 			}
@@ -233,7 +233,7 @@ add_action(
 			}
 
 			$wp_page_template = get_theme_mod( 'archive-page-layout' );
-			if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
+			if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
 				$params[0]['before_widget'] .= '<div class="c-container">';
 				$params[0]['after_widget']  .= '</div>';
 			}
@@ -272,7 +272,7 @@ add_action(
 				}
 
 				$wp_page_template = get_theme_mod( 'archive-page-layout' );
-				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) || false !== strpos( $wp_page_template, 'one-column-fluid.php' ) ) {
+				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
 					$params[0]['before_widget'] .= '<div class="c-container">';
 					$params[0]['after_widget']  .= '</div>';
 				}

@@ -24,8 +24,7 @@ $content = ob_get_clean();
 
 	$require_container = ! $wp_page_template
 										|| 'default' === $wp_page_template
-										|| false !== strpos( $wp_page_template, 'one-column-full.php' )
-										|| false !== strpos( $wp_page_template, 'one-column-fluid.php' );
+										|| false !== strpos( $wp_page_template, 'one-column-full.php' );
 	?>
 
 	<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
