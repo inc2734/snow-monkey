@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\Mimizuku_Core\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -38,7 +39,7 @@ $control->partial(
 	[
 		'selector'        => '.l-header',
 		'render_callback' => function() {
-			get_template_part( 'template-parts/' . get_theme_mod( 'header-layout' ) . '-header' );
+			Helper\get_template_part( 'template-parts/' . get_theme_mod( 'header-layout' ) . '-header' );
 		},
 	]
 );

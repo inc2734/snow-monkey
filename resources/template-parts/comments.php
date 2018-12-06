@@ -43,7 +43,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 			?>
 		</ol>
 
-		<?php get_template_part( 'template-parts/comments-pagination' ); ?>
+		<?php Helper\get_template_part( 'template-parts/comments-pagination' ); ?>
 
 	<?php else : ?>
 		<p class="p-comments__nocomments">

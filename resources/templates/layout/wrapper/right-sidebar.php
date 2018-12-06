@@ -9,7 +9,7 @@ use Inc2734\Mimizuku_Core\Helper;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
-<?php get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
+<?php Helper\get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
 <body <?php body_class( [ 'l-body--right-sidebar' ] ); ?> id="body"
 	data-has-sidebar="true"
@@ -19,24 +19,24 @@ use Inc2734\Mimizuku_Core\Helper;
 
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
-	<?php get_template_part( 'template-parts/drawer-nav' ); ?>
+	<?php Helper\get_template_part( 'template-parts/drawer-nav' ); ?>
 	<div class="l-container">
 		<?php Helper\get_header(); ?>
 
 		<div class="l-contents" role="document">
-			<?php get_template_part( 'template-parts/header-content', 'sm' ); ?>
-			<?php get_template_part( 'template-parts/infobar' ); ?>
+			<?php Helper\get_template_part( 'template-parts/header-content', 'sm' ); ?>
+			<?php Helper\get_template_part( 'template-parts/infobar' ); ?>
 
 			<?php
 			if ( snow_monkey_is_output_page_header() ) {
-				get_template_part( 'template-parts/page-header' );
+				Helper\get_template_part( 'template-parts/page-header' );
 			}
 			?>
 
 			<div class="c-container">
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
-					get_template_part( 'template-parts/breadcrumbs' );
+					Helper\get_template_part( 'template-parts/breadcrumbs' );
 				}
 				?>
 
@@ -56,7 +56,7 @@ use Inc2734\Mimizuku_Core\Helper;
 
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
-					get_template_part( 'template-parts/breadcrumbs' );
+					Helper\get_template_part( 'template-parts/breadcrumbs' );
 				}
 				?>
 			</div>

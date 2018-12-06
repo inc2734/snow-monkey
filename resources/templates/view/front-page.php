@@ -4,8 +4,10 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Inc2734\Mimizuku_Core\Helper;
 ?>
-<?php get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
+<?php Helper\get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
 
 <?php
 ob_start();
@@ -46,4 +48,4 @@ $content = ob_get_clean();
 	</div>
 <?php endif; ?>
 
-<?php get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>
+<?php Helper\get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>

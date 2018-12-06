@@ -27,7 +27,7 @@ if ( ! $pages_query->have_posts() ) {
 		<?php while ( $pages_query->have_posts() ) : ?>
 			<?php $pages_query->the_post(); ?>
 			<li class="c-entries__item">
-				<?php get_template_part( 'template-parts/page-summary' ); ?>
+				<?php Helper\get_template_part( 'template-parts/page-summary' ); ?>
 			</li>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>

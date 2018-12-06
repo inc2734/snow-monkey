@@ -39,7 +39,7 @@ if ( ! $use_matched_content ) {
 			<?php while ( $related_posts_query->have_posts() ) : ?>
 				<?php $related_posts_query->the_post(); ?>
 				<li class="c-entries__item">
-					<?php get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
+					<?php Helper\get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 				</li>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>

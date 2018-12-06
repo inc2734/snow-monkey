@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 $comments_by_type = $wp_query->comments_by_type;
 if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
 	return;
@@ -23,7 +25,7 @@ if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {
 					'callback' => function() {
 						?>
 						<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
-							<?php get_template_part( 'template-parts/trackback' ); ?>
+							<?php Helper\get_template_part( 'template-parts/trackback' ); ?>
 						<?php
 					},
 				]

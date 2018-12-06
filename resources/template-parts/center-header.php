@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\Mimizuku_Core\Helper;
+
 $header_content      = get_theme_mod( 'header-content' );
 $header_type         = get_theme_mod( 'header-layout' ) . '-header';
 $has_global_nav      = has_nav_menu( 'global-nav' );
@@ -21,7 +23,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 	<div class="c-container">
 		<?php if ( $has_header_sub_nav ) : ?>
 			<div class="u-hidden u-visible-lg-up">
-				<?php get_template_part( 'template-parts/header-sub-nav' ); ?>
+				<?php Helper\get_template_part( 'template-parts/header-sub-nav' ); ?>
 			</div>
 		<?php endif; ?>
 
@@ -36,13 +38,13 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				<?php endif; ?>
 
 				<div class="c-row__col <?php echo esc_attr( $class_for_site_branding_col ); ?> u-text-center">
-					<?php get_template_part( 'template-parts/site-branding' ); ?>
+					<?php Helper\get_template_part( 'template-parts/site-branding' ); ?>
 				</div>
 
 				<?php if ( $has_drawer_nav ) : ?>
 					<div class="c-row__col c-row__col--1-6 u-hidden-lg-up">
 						<div class="u-pull-right">
-							<?php get_template_part( 'template-parts/hamburger-btn' ); ?>
+							<?php Helper\get_template_part( 'template-parts/hamburger-btn' ); ?>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -50,7 +52,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				<?php if ( $header_content ) : ?>
 					<div class="c-row__col c-row__col--1-4 u-hidden u-visible-lg-up">
 						<div class="u-pull-right">
-							<?php get_template_part( 'template-parts/header-content', 'lg' ); ?>
+							<?php Helper\get_template_part( 'template-parts/header-content', 'lg' ); ?>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -59,7 +61,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 
 		<?php if ( $has_global_nav ) : ?>
 			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-hidden u-visible-lg-up">
-				<?php get_template_part( 'template-parts/global-nav' ); ?>
+				<?php Helper\get_template_part( 'template-parts/global-nav' ); ?>
 			</div>
 		<?php endif; ?>
 	</div>

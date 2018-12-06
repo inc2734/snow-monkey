@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Inc2734\Mimizuku_Core\Helper;
 ?>
 <div class="c-entry">
 	<header class="c-entry__header">
@@ -17,13 +19,13 @@
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<li class="c-entries__item">
-							<?php get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
+							<?php Helper\get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 						</li>
 					<?php endwhile; ?>
 				</ul>
 			</div>
 		</div>
 
-		<?php get_template_part( 'template-parts/pagination' ); ?>
+		<?php Helper\get_template_part( 'template-parts/pagination' ); ?>
 	</div>
 </div>

@@ -113,41 +113,4 @@ if ( defined( 'WP_DEBUG' ) && WP_DEBUG && ! is_customize_preview() ) {
 			2
 		);
 	}
-}/**
- * WooCommerce の商品一覧ページで、ページヘッダーを表示
- */
-add_filter(
-	'snow_monkey_is_output_page_header',
-	function( $return ) {
-		if ( function_exists( 'is_woocommerce' ) && is_woocommerce() && is_shop() ) {
-			return true;
-		}
-		return $return;
-	}
-);
-
-/**
- * WooCommerce の商品一覧ページでページヘッダーに表示する画像を指定
- */
-add_filter(
-	'snow_monkey_pre_page_header_image_url',
-	function( $url ) {
-		if ( function_exists( 'is_woocommerce' ) && is_woocommerce() && is_shop() ) {
-			return 'http://127.0.0.1:8080/wp-content/uploads/2011/07/dsc03149.jpg';
-		}
-		return $url;
-	}
-);
-
-/**
- * WooCommerce の商品一覧ページでページヘッダーにタイトルを表示
- */
-add_filter(
-	'snow_monkey_is_output_page_header_title',
-	function( $return ) {
-		if ( function_exists( 'is_woocommerce' ) && is_woocommerce() && is_shop() ) {
-			return true;
-		}
-		return $return;
-	}
-);
+}
