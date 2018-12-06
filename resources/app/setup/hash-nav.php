@@ -11,6 +11,6 @@ add_action(
 	'wp_footer',
 	function() {
 		Helper\get_template_part( 'template-parts/overlay-search-box' );
-		Helper\get_template_part( 'template-parts/overlay-widget-area' );
+		Helper\get_template_part( 'template-parts/widget-area/overlay' );
 	}
 );

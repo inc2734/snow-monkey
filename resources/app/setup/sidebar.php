@@ -30,12 +30,12 @@ add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_google_adsense', 10 
  */
 function snow_monkey_sidebar_add_sidebar_widget_area() {
 	if ( class_exists( '\woocommerce' ) && is_woocommerce() ) {
-		Helper\get_template_part( 'template-parts/woocommerce-sidebar-widget-area' );
+		Helper\get_template_part( 'template-parts/widget-area/woocommerce-sidebar' );
 	} elseif ( is_home() || is_archive() || is_search() ) {
-		Helper\get_template_part( 'template-parts/archive-sidebar-widget-area' );
+		Helper\get_template_part( 'template-parts/widget-area/archive-sidebar' );
 	} else {
-		Helper\get_template_part( 'template-parts/sidebar-widget-area' );
-		Helper\get_template_part( 'template-parts/sidebar-sticky-widget-area' );
+		Helper\get_template_part( 'template-parts/widget-area/sidebar' );
+		Helper\get_template_part( 'template-parts/widget-area/sidebar-sticky' );
 	}
 }
 add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_sidebar_widget_area', 20 );

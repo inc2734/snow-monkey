@@ -8,7 +8,7 @@
 use Inc2734\Mimizuku_Core\Helper;
 ?>
 <?php if ( ! is_paged() ) : ?>
-	<?php Helper\get_template_part( 'template-parts/posts-page-widget-area-top' ); ?>
+	<?php Helper\get_template_part( 'template-parts/widget-area/posts-page-top' ); ?>
 <?php endif; ?>
 
 <div class="c-entry">
@@ -37,5 +37,5 @@ use Inc2734\Mimizuku_Core\Helper;
 </div>
 
 <?php if ( ! is_paged() ) : ?>
-	<?php Helper\get_template_part( 'template-parts/posts-page-widget-area-bottom' ); ?>
+	<?php Helper\get_template_part( 'template-parts/widget-area/posts-page-bottom' ); ?>
 <?php endif; ?>

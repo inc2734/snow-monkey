@@ -9,7 +9,7 @@ use Inc2734\Mimizuku_Core\Helper;
 ?>
 <footer class="l-footer" role="contentinfo">
 	<?php Helper\get_template_part( 'template-parts/social-nav' ); ?>
-	<?php Helper\get_template_part( 'template-parts/footer-widget-area' ); ?>
+	<?php Helper\get_template_part( 'template-parts/widget-area/footer' ); ?>
 	<?php Helper\get_template_part( 'template-parts/footer-sub-nav' ); ?>
 	<?php Helper\get_template_part( 'template-parts/copyright' ); ?>
 </footer>

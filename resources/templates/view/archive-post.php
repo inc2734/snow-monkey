@@ -7,7 +7,7 @@
 
 use Inc2734\Mimizuku_Core\Helper;
 ?>
-<?php Helper\get_template_part( 'template-parts/archive-top-widget-area' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/archive-top' ); ?>
 
 <div class="c-entry">
 	<header class="c-entry__header">

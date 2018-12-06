@@ -7,7 +7,7 @@
 
 use Inc2734\Mimizuku_Core\Helper;
 ?>
-<?php Helper\get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/front-page-top' ); ?>
 
 <?php
 ob_start();
@@ -48,4 +48,4 @@ $content = ob_get_clean();
 	</div>
 <?php endif; ?>
 
-<?php Helper\get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/front-page-bottom' ); ?>

@@ -7,7 +7,7 @@
 
 use Inc2734\Mimizuku_Core\Helper;
 ?>
-<?php Helper\get_template_part( 'template-parts/title-top-widget-area' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/title-top' ); ?>
 
 <article <?php post_class(); ?>>
 	<?php if ( 'title-on-page-header' !== get_theme_mod( 'post-eyecatch' ) ) : ?>
@@ -42,7 +42,7 @@ use Inc2734\Mimizuku_Core\Helper;
 		}
 		?>
 
-		<?php Helper\get_template_part( 'template-parts/article-top-widget-area' ); ?>
+		<?php Helper\get_template_part( 'template-parts/widget-area/article-top' ); ?>
 		<?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
 		<div class="c-entry__content p-entry-content">
@@ -57,7 +57,7 @@ use Inc2734\Mimizuku_Core\Helper;
 		</div>
 
 		<?php do_action( 'snow_monkey_after_entry_content' ); ?>
-		<?php Helper\get_template_part( 'template-parts/article-bottom-widget-area' ); ?>
+		<?php Helper\get_template_part( 'template-parts/widget-area/article-bottom' ); ?>
 	</div>
 
 	<footer class="c-entry__footer">
@@ -91,7 +91,7 @@ use Inc2734\Mimizuku_Core\Helper;
 
 <?php Helper\get_template_part( 'template-parts/prev-next-nav' ); ?>
 
-<?php Helper\get_template_part( 'template-parts/contents-bottom-widget-area' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/contents-bottom' ); ?>
 
 <?php
 if ( get_option( 'mwt-display-related-posts' ) ) {

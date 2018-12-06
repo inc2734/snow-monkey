@@ -40,7 +40,7 @@ $control->partial(
 		'selector'            => '.l-footer-widget-area',
 		'container_inclusive' => true,
 		'render_callback'     => function() {
-			Helper\get_template_part( 'template-parts/footer-widget-area' );
+			Helper\get_template_part( 'template-parts/widget-area/footer' );
 		},
 	]
 );
