@@ -13,5 +13,5 @@ if ( ! get_theme_mod( 'header-content' ) ) {
 ?>
 
 <div class="p-header-content p-header-content--lg">
-	<?php Helper\get_template_part( 'template-parts/header-content' ); ?>
+	<?php Helper\get_template_part( 'template-parts/header/content' ); ?>
 </div>

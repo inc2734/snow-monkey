@@ -24,7 +24,7 @@ use Inc2734\Mimizuku_Core\Helper;
 		<?php Helper\get_header(); ?>
 
 		<div class="l-contents" role="document">
-			<?php Helper\get_template_part( 'template-parts/header-content', 'sm' ); ?>
+			<?php Helper\get_template_part( 'template-parts/header/content', 'sm' ); ?>
 			<?php Helper\get_template_part( 'template-parts/infobar' ); ?>
 
 			<div class="c-full-container">

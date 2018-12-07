@@ -38,13 +38,13 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				<?php endif; ?>
 
 				<div class="c-row__col <?php echo esc_attr( $class_for_site_branding_col ); ?> u-text-center">
-					<?php Helper\get_template_part( 'template-parts/site-branding' ); ?>
+					<?php Helper\get_template_part( 'template-parts/header/site-branding' ); ?>
 				</div>
 
 				<?php if ( $has_drawer_nav ) : ?>
 					<div class="c-row__col c-row__col--1-6 u-hidden-lg-up">
 						<div class="u-pull-right">
-							<?php Helper\get_template_part( 'template-parts/hamburger-btn' ); ?>
+							<?php Helper\get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 						</div>
 					</div>
 				<?php endif; ?>
@@ -52,7 +52,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				<?php if ( $header_content ) : ?>
 					<div class="c-row__col c-row__col--1-4 u-hidden u-visible-lg-up">
 						<div class="u-pull-right">
-							<?php Helper\get_template_part( 'template-parts/header-content', 'lg' ); ?>
+							<?php Helper\get_template_part( 'template-parts/header/content', 'lg' ); ?>
 						</div>
 					</div>
 				<?php endif; ?>

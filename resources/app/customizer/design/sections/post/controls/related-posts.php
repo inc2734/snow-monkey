@@ -36,7 +36,7 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback'     => function() {
 			if ( get_option( 'mwt-display-related-posts' ) ) {
-				Helper\get_template_part( 'template-parts/related-posts' );
+				Helper\get_template_part( 'template-parts/content/related-posts' );
 			}
 		},
 	]

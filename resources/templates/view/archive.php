@@ -26,6 +26,6 @@ use Inc2734\Mimizuku_Core\Helper;
 			</div>
 		</div>
 
-		<?php Helper\get_template_part( 'template-parts/pagination' ); ?>
+		<?php Helper\get_template_part( 'template-parts/archive/pagination' ); ?>
 	</div>
 </div>

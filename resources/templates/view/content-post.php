@@ -14,7 +14,7 @@ use Inc2734\Mimizuku_Core\Helper;
 		<header class="c-entry__header">
 			<h1 class="c-entry__title"><?php the_title(); ?></h1>
 			<div class="c-entry__meta">
-				<?php Helper\get_template_part( 'template-parts/entry-meta' ); ?>
+				<?php Helper\get_template_part( 'template-parts/content/entry-meta' ); ?>
 			</div>
 		</header>
 	<?php endif; ?>
@@ -22,7 +22,7 @@ use Inc2734\Mimizuku_Core\Helper;
 	<div class="c-entry__body">
 		<?php
 		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) ) {
-			Helper\get_template_part( 'template-parts/share-buttons' );
+			Helper\get_template_part( 'template-parts/content/share-buttons' );
 		}
 		?>
 
@@ -38,7 +38,7 @@ use Inc2734\Mimizuku_Core\Helper;
 
 		<?php
 		if ( 'content-top' === get_theme_mod( 'post-eyecatch' ) ) {
-			Helper\get_template_part( 'template-parts/eyecatch' );
+			Helper\get_template_part( 'template-parts/content/eyecatch' );
 		}
 		?>
 
@@ -48,12 +48,12 @@ use Inc2734\Mimizuku_Core\Helper;
 		<div class="c-entry__content p-entry-content">
 			<?php
 			if ( get_option( 'mwt-display-contents-outline' ) ) {
-				Helper\get_template_part( 'template-parts/contents-outline' );
+				Helper\get_template_part( 'template-parts/content/contents-outline' );
 			}
 			?>
 
 			<?php the_content(); ?>
-			<?php Helper\get_template_part( 'template-parts/link-pages' ); ?>
+			<?php Helper\get_template_part( 'template-parts/content/link-pages' ); ?>
 		</div>
 
 		<?php do_action( 'snow_monkey_after_entry_content' ); ?>
@@ -63,11 +63,11 @@ use Inc2734\Mimizuku_Core\Helper;
 	<footer class="c-entry__footer">
 		<?php
 		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'bottom', 'both' ] ) ) {
-			Helper\get_template_part( 'template-parts/share-buttons' );
+			Helper\get_template_part( 'template-parts/content/share-buttons' );
 		}
 		?>
 
-		<?php Helper\get_template_part( 'template-parts/entry-tags' ); ?>
+		<?php Helper\get_template_part( 'template-parts/content/entry-tags' ); ?>
 
 		<?php
 		if ( get_option( 'mwt-display-profile-box' ) ) {
@@ -89,13 +89,13 @@ use Inc2734\Mimizuku_Core\Helper;
 	</footer>
 </article>
 
-<?php Helper\get_template_part( 'template-parts/prev-next-nav' ); ?>
+<?php Helper\get_template_part( 'template-parts/content/prev-next-nav' ); ?>
 
 <?php Helper\get_template_part( 'template-parts/widget-area/contents-bottom' ); ?>
 
 <?php
 if ( get_option( 'mwt-display-related-posts' ) ) {
-	Helper\get_template_part( 'template-parts/related-posts' );
+	Helper\get_template_part( 'template-parts/content/related-posts' );
 }
 ?>
 

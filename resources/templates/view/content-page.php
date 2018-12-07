@@ -19,7 +19,7 @@ use Inc2734\Mimizuku_Core\Helper;
 	<div class="c-entry__body">
 		<?php
 		if ( 'content-top' === get_theme_mod( 'page-eyecatch' ) ) {
-			Helper\get_template_part( 'template-parts/eyecatch' );
+			Helper\get_template_part( 'template-parts/content/eyecatch' );
 		}
 		?>
 
@@ -28,7 +28,7 @@ use Inc2734\Mimizuku_Core\Helper;
 
 		<div class="c-entry__content p-entry-content">
 			<?php the_content(); ?>
-			<?php Helper\get_template_part( 'template-parts/link-pages' ); ?>
+			<?php Helper\get_template_part( 'template-parts/content/link-pages' ); ?>
 		</div>
 
 		<?php do_action( 'snow_monkey_after_entry_content' ); ?>
@@ -38,7 +38,7 @@ use Inc2734\Mimizuku_Core\Helper;
 
 <?php
 if ( get_option( 'mwt-display-child-pages' ) ) {
-	Helper\get_template_part( 'template-parts/child-pages' );
+	Helper\get_template_part( 'template-parts/content/child-pages' );
 }
 ?>
 

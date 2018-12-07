@@ -26,14 +26,14 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
 			<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 				<div class="c-row__col c-row__col--auto">
-					<?php Helper\get_template_part( 'template-parts/site-branding' ); ?>
+					<?php Helper\get_template_part( 'template-parts/header/site-branding' ); ?>
 				</div>
 
 				<?php if ( $header_content ) : ?>
 					<div class="c-row__col c-row__col--fit u-hidden u-visible-lg-up">
 						<div class="c-row c-row--right">
 							<div class="c-row__col c-row__col--fit">
-								<?php Helper\get_template_part( 'template-parts/header-content', 'lg' ); ?>
+								<?php Helper\get_template_part( 'template-parts/header/content', 'lg' ); ?>
 							</div>
 						</div>
 					</div>
@@ -41,7 +41,7 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 
 				<?php if ( $has_drawer_nav ) : ?>
 					<div class="c-row__col c-row__col--fit u-hidden-lg-up">
-						<?php Helper\get_template_part( 'template-parts/hamburger-btn' ); ?>
+						<?php Helper\get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 					</div>
 				<?php endif; ?>
 			</div>

@@ -34,7 +34,7 @@ $control->partial(
 		'selector'            => '#js-selective-refresh-header-content',
 		'container_inclusive' => true,
 		'render_callback'     => function() {
-			Helper\get_template_part( 'template-parts/header-content' );
+			Helper\get_template_part( 'template-parts/header/content' );
 		},
 	]
 );

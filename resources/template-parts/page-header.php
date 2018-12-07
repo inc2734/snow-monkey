@@ -42,7 +42,7 @@ if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
 
 				<?php if ( is_singular( 'post' ) ) : ?>
 					<div class="c-page-header__meta">
-						<?php Helper\get_template_part( 'template-parts/entry-meta' ); ?>
+						<?php Helper\get_template_part( 'template-parts/content/entry-meta' ); ?>
 					</div>
 				<?php endif; ?>
 			</div>

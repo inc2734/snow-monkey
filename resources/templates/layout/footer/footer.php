@@ -11,7 +11,7 @@ use Inc2734\Mimizuku_Core\Helper;
 	<?php Helper\get_template_part( 'template-parts/nav/social' ); ?>
 	<?php Helper\get_template_part( 'template-parts/widget-area/footer' ); ?>
 	<?php Helper\get_template_part( 'template-parts/nav/footer-sub' ); ?>
-	<?php Helper\get_template_part( 'template-parts/copyright' ); ?>
+	<?php Helper\get_template_part( 'template-parts/footer/copyright' ); ?>
 </footer>
 
 <?php Helper\get_template_part( 'template-parts/page-top' ); ?>
