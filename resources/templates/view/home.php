@@ -4,9 +4,11 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Inc2734\Mimizuku_Core\Helper;
 ?>
 <?php if ( ! is_paged() ) : ?>
-	<?php get_template_part( 'template-parts/posts-page-widget-area-top' ); ?>
+	<?php Helper\get_template_part( 'template-parts/widget-area/posts-page-top' ); ?>
 <?php endif; ?>
 
 <div class="c-entry">
@@ -23,17 +25,17 @@
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<li class="c-entries__item">
-							<?php get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
+							<?php Helper\get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 						</li>
 					<?php endwhile; ?>
 				</ul>
 			</div>
 		</div>
 
-		<?php get_template_part( 'template-parts/pagination' ); ?>
+		<?php Helper\get_template_part( 'template-parts/archive/pagination' ); ?>
 	</div>
 </div>
 
 <?php if ( ! is_paged() ) : ?>
-	<?php get_template_part( 'template-parts/posts-page-widget-area-bottom' ); ?>
+	<?php Helper\get_template_part( 'template-parts/widget-area/posts-page-bottom' ); ?>
 <?php endif; ?>

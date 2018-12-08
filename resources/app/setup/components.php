@@ -7,7 +7,12 @@
 
 use Inc2734\WP_Awesome_Components\Awesome_Components;
 
-new Awesome_Components();
+/**
+ * Activate WP Awesome components
+ */
+if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
+	new Awesome_Components();
+}
 
 /**
  * Awesome_Components の各コンポーネントをカスタマイズ

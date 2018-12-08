@@ -5,4 +5,6 @@
  * @license GPL-2.0+
  */
 
-wpvc_get_wrapper_template( 'right-sidebar' );
+use Inc2734\Mimizuku_Core\Helper;
+
+Helper\get_wrapper_template( 'right-sidebar' );

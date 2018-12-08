@@ -5,9 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Awesome_Widgets\Awesome_Widgets;
-
-new Awesome_Widgets();
+new \Inc2734\WP_Awesome_Widgets\Bootstrap();
 
 add_action(
 	'after_setup_theme',

@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\Mimizuku_Core\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -39,7 +40,7 @@ $control->partial(
 		'selector'            => '.l-footer-widget-area',
 		'container_inclusive' => true,
 		'render_callback'     => function() {
-			get_template_part( 'template-parts/footer-widget-area' );
+			Helper\get_template_part( 'template-parts/widget-area/footer' );
 		},
 	]
 );

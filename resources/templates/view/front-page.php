@@ -4,8 +4,10 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Inc2734\Mimizuku_Core\Helper;
 ?>
-<?php get_template_part( 'template-parts/front-page-widget-area-top' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/front-page-top' ); ?>
 
 <?php
 ob_start();
@@ -24,8 +26,7 @@ $content = ob_get_clean();
 
 	$require_container = ! $wp_page_template
 										|| 'default' === $wp_page_template
-										|| false !== strpos( $wp_page_template, 'one-column-full.php' )
-										|| false !== strpos( $wp_page_template, 'one-column-fluid.php' );
+										|| false !== strpos( $wp_page_template, 'one-column-full.php' );
 	?>
 
 	<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
@@ -47,4 +48,4 @@ $content = ob_get_clean();
 	</div>
 <?php endif; ?>
 
-<?php get_template_part( 'template-parts/front-page-widget-area-bottom' ); ?>
+<?php Helper\get_template_part( 'template-parts/widget-area/front-page-bottom' ); ?>

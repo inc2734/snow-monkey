@@ -39,7 +39,7 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback'     => function() {
 			if ( get_option( 'mwt-display-child-pages' ) ) {
-				get_template_part( 'template-parts/child-pages' );
+				Helper\get_template_part( 'template-parts/content/child-pages' );
 			}
 		},
 	]

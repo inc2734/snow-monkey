@@ -5,6 +5,10 @@
  * @license GPL-2.0+
  */
 
+if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets_Abstract_Widget' ) ) {
+	return;
+}
+
 /**
  * Snow_Monkey_Recent_Posts_Widget
  */

@@ -7,10 +7,10 @@
  * This procceses are beta.
  */
 
-use Inc2734\WP_Page_Speed_Optimization\Page_Speed_Optimization;
+use Inc2734\WP_Page_Speed_Optimization;
 use Inc2734\Mimizuku_Core\Helper;
 
-new Page_Speed_Optimization();
+new WP_Page_Speed_Optimization\Bootstrap();
 
 /**
  * Optimize the Snow Monkey JavaScript loading
@@ -94,26 +94,26 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function() {
-	if ( ! get_theme_mod( 'output-head-style' ) ) {
+		if ( ! get_theme_mod( 'output-head-style' ) ) {
 			return;
-	}
-
-	add_filter(
-		'inc2734_wp_page_speed_optimization_output_head_styles',
-		function( $handles ) {
-		return array_merge(
-			$handles,
-			[
-				Helper\get_main_style_handle(),
-				'wp-pure-css-gallery',
-				'wp-oembed-blog-card',
-				'wp-share-buttons',
-				'wp-like-me-box',
-				'wp-awesome-widgets',
-			]
-		);
 		}
-	);
+
+		add_filter(
+			'inc2734_wp_page_speed_optimization_output_head_styles',
+			function( $handles ) {
+				return array_merge(
+					$handles,
+					[
+						Helper\get_main_style_handle(),
+						'wp-pure-css-gallery',
+						'wp-oembed-blog-card',
+						'wp-share-buttons',
+						'wp-like-me-box',
+						'wp-awesome-widgets',
+					]
+				);
+			}
+		);
 	}
 );
 
@@ -123,11 +123,26 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function() {
-	if ( ! get_theme_mod( 'cache-nav-menus' ) ) {
+		if ( ! get_theme_mod( 'cache-nav-menus' ) ) {
 			return;
-	}
+		}
 
-	add_filter( 'inc2734_wp_page_speed_optimization_caching_nav_menus', '__return_true' );
+		add_filter( 'inc2734_wp_page_speed_optimization_caching_nav_menus', '__return_true' );
+	}
+);
+
+/**
+ * Async loading images
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		if ( ! get_theme_mod( 'async-load-images' ) ) {
+			return;
+		}
+
+		add_filter( 'inc2734_wp_page_speed_async_attachment_images', '__return_true' );
+		add_filter( 'inc2734_wp_page_speed_async_content_images', '__return_true' );
 	}
 );
 
