@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "8b4d69274bf97c0df4a2902d477f81f421b34344"
+                "reference": "9e6ca47a7ce34426ca8701a9ff6a42d3791e49d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8b4d69274bf97c0df4a2902d477f81f421b34344",
-                "reference": "8b4d69274bf97c0df4a2902d477f81f421b34344",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/9e6ca47a7ce34426ca8701a9ff6a42d3791e49d7",
+                "reference": "9e6ca47a7ce34426ca8701a9ff6a42d3791e49d7",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,7 @@
                 "inc2734/wp-github-theme-updater": "^0.2",
                 "inc2734/wp-like-me-box": "^1.0",
                 "inc2734/wp-oembed-blog-card": "^5.1",
-                "inc2734/wp-page-speed-optimization": "^0.7",
+                "inc2734/wp-page-speed-optimization": "^1.0",
                 "inc2734/wp-profile-box": "^1.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^1.1",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-12-06T11:08:53+00:00"
+            "time": "2018-12-08T01:57:32+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -553,16 +553,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "0.7.3",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "df1a6738aab420977e6a6db2a0352e6fcd781ef8"
+                "reference": "52bc816b3eea6a8efa1444397026abd825b73c8c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/df1a6738aab420977e6a6db2a0352e6fcd781ef8",
-                "reference": "df1a6738aab420977e6a6db2a0352e6fcd781ef8",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/52bc816b3eea6a8efa1444397026abd825b73c8c",
+                "reference": "52bc816b3eea6a8efa1444397026abd825b73c8c",
                 "shasum": ""
             },
             "require": {
@@ -597,7 +597,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2018-08-17T13:04:12+00:00"
+            "time": "2018-12-08T01:49:22+00:00"
         },
         {
             "name": "inc2734/wp-profile-box",
@@ -2263,7 +2263,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2327,16 +2327,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "622b330ced1bdf29d240bd1c364c038f647eb0f5"
+                "reference": "5be2d762b51076295a972c86604a977fbcc5c12b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/622b330ced1bdf29d240bd1c364c038f647eb0f5",
-                "reference": "622b330ced1bdf29d240bd1c364c038f647eb0f5",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5be2d762b51076295a972c86604a977fbcc5c12b",
+                "reference": "5be2d762b51076295a972c86604a977fbcc5c12b",
                 "shasum": ""
             },
             "require": {
@@ -2394,11 +2394,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-20T16:14:23+00:00"
+            "time": "2018-12-02T15:50:25+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",

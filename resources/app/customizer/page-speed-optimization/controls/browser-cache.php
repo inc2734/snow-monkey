@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\Mimizuku_Core\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -37,10 +38,10 @@ $control->join( $section );
 add_action(
 	'customize_save_set-browser-cache',
 	function( $customize_setting ) {
-	if ( $customize_setting->post_value() === $customize_setting->value() ) {
+		if ( $customize_setting->post_value() === $customize_setting->value() ) {
 			return;
-	}
+		}
 
-	\Inc2734\WP_Page_Speed_Optimization\Page_Speed_Optimization::write_cache_control_setting( (bool) $customize_setting->post_value() );
+		Helper\write_cache_control_setting( (bool) $customize_setting->post_value() );
 	}
 );
