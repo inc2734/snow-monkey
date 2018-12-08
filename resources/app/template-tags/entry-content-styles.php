@@ -31,5 +31,7 @@ function snow_monkey_entry_content_styles( $selectors ) {
 				'border-left-color: ' . $cfs->light( $accent_color ),
 			]
 		);
+
+		do_action( 'snow_monkey_entry_content_styles', $cfs, $selector );
 	}
 }
