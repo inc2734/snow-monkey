@@ -8,7 +8,7 @@
  */
 
 use Inc2734\WP_Page_Speed_Optimization;
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 new WP_Page_Speed_Optimization\Bootstrap();
 
@@ -28,7 +28,7 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						Helper\get_main_script_handle(),
+						Helper::get_main_script_handle(),
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',
@@ -104,7 +104,7 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						Helper\get_main_style_handle(),
+						Helper::get_main_style_handle(),
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',

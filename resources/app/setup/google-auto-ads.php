@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 add_action(
 	'wp_head',
@@ -20,7 +20,7 @@ add_action(
 			return;
 		}
 
-		Helper\display_adsense_code( $google_adsense );
+		Helper::display_adsense_code( $google_adsense );
 
 		add_filter(
 			'snow_monkey_google_adsense',

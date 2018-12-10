@@ -6,7 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -42,6 +42,6 @@ add_action(
 			return;
 		}
 
-		Helper\write_cache_control_setting( (bool) $customize_setting->post_value() );
+		Helper::write_cache_control_setting( (bool) $customize_setting->post_value() );
 	}
 );

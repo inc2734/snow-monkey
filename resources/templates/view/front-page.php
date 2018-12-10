@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 ?>
-<?php Helper\get_template_part( 'template-parts/widget-area/front-page-top' ); ?>
+<?php Helper::get_template_part( 'template-parts/widget-area/front-page-top' ); ?>
 
 <?php
 ob_start();
@@ -48,4 +48,4 @@ $content = ob_get_clean();
 	</div>
 <?php endif; ?>
 
-<?php Helper\get_template_part( 'template-parts/widget-area/front-page-bottom' ); ?>
+<?php Helper::get_template_part( 'template-parts/widget-area/front-page-bottom' ); ?>

@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Snow_Monkey\app\Helper;
+
 $terms = get_the_terms( get_the_ID(), 'category' );
 $_term = null;
 if ( $terms && ! is_wp_error( $terms ) ) {
@@ -31,7 +33,7 @@ if ( isset( $widget_layout ) ) {
 				<h2 class="c-entry-summary__title">
 					<?php
 					if ( 'rich-media' === $layout ) {
-						snow_monkey_the_title_trimed();
+						Helper::the_title_trimed();
 					} else {
 						the_title();
 					}

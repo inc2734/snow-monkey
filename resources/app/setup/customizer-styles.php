@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 add_action(
 	'wp_loaded',
@@ -24,7 +24,7 @@ add_action(
 			'/assets/css/object/project',
 		];
 		foreach ( $includes as $include ) {
-			Helper\load_theme_files( get_template_directory() . $include );
+			Helper::load_theme_files( get_template_directory() . $include );
 		}
 	}
 );

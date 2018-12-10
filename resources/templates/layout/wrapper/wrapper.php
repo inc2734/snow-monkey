@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
-Helper\get_wrapper_template( 'right-sidebar' );
+Helper::get_wrapper_template( 'right-sidebar' );

@@ -5,14 +5,15 @@
  * @license GPL-2.0+
  */
 
+use Snow_Monkey\app\Helper;
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 if ( ! class_exists( '\woocommerce' ) ) {
 	return;
 }
 
-snow_monkey_entry_content_styles( [ '.woocommerce-Tabs-panel' ] );
-snow_monkey_entry_content_styles( [ '.related.products' ] );
+Helper::entry_content_styles( [ '.woocommerce-Tabs-panel' ] );
+Helper::entry_content_styles( [ '.related.products' ] );
 
 $cfs = Customizer_Framework::styles();
 

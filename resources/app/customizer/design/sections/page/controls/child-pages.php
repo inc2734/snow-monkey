@@ -6,7 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -20,7 +20,7 @@ $customizer->control(
 		'type'            => 'option',
 		'default'         => true,
 		'active_callback' => function() {
-			return Helper\get_child_pages_query( get_the_ID() )->have_posts();
+			return Helper::get_child_pages_query( get_the_ID() )->have_posts();
 		},
 	]
 );
@@ -39,7 +39,7 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback'     => function() {
 			if ( get_option( 'mwt-display-child-pages' ) ) {
-				Helper\get_template_part( 'template-parts/content/child-pages' );
+				Helper::get_template_part( 'template-parts/content/child-pages' );
 			}
 		},
 	]

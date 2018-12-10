@@ -7,7 +7,7 @@
 
 namespace Snow_Monkey\app\model;
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 class Design_Skin {
 
@@ -89,7 +89,7 @@ class Design_Skin {
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
 		$file_url      = plugins_url( $relative_path, $this->file );
 		if ( file_exists( $file_path ) ) {
-			wp_enqueue_style( $this->plugin['slug'], $file_url, [ Helper\get_main_style_handle() ], filemtime( $file_path ) );
+			wp_enqueue_style( $this->plugin['slug'], $file_url, [ Helper::get_main_style_handle() ], filemtime( $file_path ) );
 		}
 	}
 

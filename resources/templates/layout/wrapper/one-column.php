@@ -5,11 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
-<?php Helper\get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
+<?php Helper::get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
 <body <?php body_class( [ 'l-body--one-column' ] ); ?> id="body"
 	data-has-sidebar="false"
@@ -19,24 +19,24 @@ use Inc2734\Mimizuku_Core\Helper;
 
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
-	<?php Helper\get_template_part( 'template-parts/nav/drawer' ); ?>
+	<?php Helper::get_template_part( 'template-parts/nav/drawer' ); ?>
 	<div class="l-container">
-		<?php Helper\get_header(); ?>
+		<?php Helper::get_header(); ?>
 
 		<div class="l-contents" role="document">
-			<?php Helper\get_template_part( 'template-parts/header/content', 'sm' ); ?>
-			<?php Helper\get_template_part( 'template-parts/infobar' ); ?>
+			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
+			<?php Helper::get_template_part( 'template-parts/infobar' ); ?>
 
 			<?php
-			if ( snow_monkey_is_output_page_header() ) {
-				Helper\get_template_part( 'template-parts/page-header' );
+			if ( Helper::is_output_page_header() ) {
+				Helper::get_template_part( 'template-parts/page-header' );
 			}
 			?>
 
 			<div class="c-container">
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
-					Helper\get_template_part( 'template-parts/breadcrumbs' );
+					Helper::get_template_part( 'template-parts/breadcrumbs' );
 				}
 				?>
 
@@ -52,13 +52,13 @@ use Inc2734\Mimizuku_Core\Helper;
 
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
-					Helper\get_template_part( 'template-parts/breadcrumbs' );
+					Helper::get_template_part( 'template-parts/breadcrumbs' );
 				}
 				?>
 			</div>
 		</div>
 
-		<?php Helper\get_footer(); ?>
+		<?php Helper::get_footer(); ?>
 	</div>
 
 <?php wp_footer(); ?>

@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 /**
  * Enqueue main style
@@ -16,34 +16,23 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		$relative_path = '/assets/css/style.min.css';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
 
-		if ( ! file_exists( $path ) ) {
-			return;
-		}
-
-		$dependencies = [];
-		$maybe_dependencies = [
-			'wp-block-library',
-			'wp-share-buttons',
-			'wp-like-me-box',
-			'wp-oembed-blog-card',
-			'wp-pure-css-gallery',
-			'wp-awesome-widgets',
-		];
-		foreach ( $maybe_dependencies as $dependency ) {
-			if ( ! wp_style_is( $dependency, 'enqueued' ) && ! wp_style_is( $dependency, 'registered' ) ) {
-				continue;
-			}
-			$dependencies[] = $dependency;
-		}
+		$dependencies = Helper::generate_style_dependencies(
+			[
+				'wp-block-library',
+				'wp-share-buttons',
+				'wp-like-me-box',
+				'wp-oembed-blog-card',
+				'wp-pure-css-gallery',
+				'wp-awesome-widgets',
+			]
+		);
 
 		wp_enqueue_style(
-			Helper\get_main_style_handle(),
-			$src,
+			Helper::get_main_style_handle(),
+			get_theme_file_uri( $relative_path ),
 			$dependencies,
-			filemtime( $path )
+			filemtime( get_theme_file_path( $relative_path ) )
 		);
 	},
 	11
@@ -58,30 +47,19 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		$relative_path = '/assets/js/app.min.js';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
 
-		if ( ! file_exists( $path ) ) {
-			return;
-		}
-
-		$dependencies = [];
-		$maybe_dependencies = [
-			'jquery',
-			'wp-awesome-widgets',
-		];
-		foreach ( $maybe_dependencies as $dependency ) {
-			if ( ! wp_script_is( $dependency, 'enqueued' ) && ! wp_script_is( $dependency, 'registered' ) ) {
-				continue;
-			}
-			$dependencies[] = $dependency;
-		}
+		$dependencies = Helper::generate_script_dependencies(
+			[
+				'jquery',
+				'wp-awesome-widgets',
+			]
+		);
 
 		wp_enqueue_script(
-			Helper\get_main_script_handle(),
-			$src,
+			Helper::get_main_script_handle(),
+			get_theme_file_uri( $relative_path ),
 			$dependencies,
-			filemtime( $path ),
+			filemtime( get_theme_file_path( $relative_path ) ),
 			true
 		);
 	}
@@ -98,25 +76,7 @@ add_action(
 		$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
 		$header_position_only_mobile = ( $header_position_only_mobile ) ? 'true' : 'false';
 		$data = 'var snow_monkey_header_position_only_mobile = ' . $header_position_only_mobile;
-		wp_add_inline_script( Helper\get_main_script_handle(), $data, 'before' );
-	}
-);
-
-/**
- * Enqueue script for global navigation
- *
- * @return void
- */
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		wp_localize_script(
-			Helper\get_main_script_handle(),
-			'snow_monkey',
-			[
-				'home_url' => home_url(),
-			]
-		);
+		wp_add_inline_script( Helper::get_main_script_handle(), $data, 'before' );
 	}
 );
 
@@ -125,47 +85,43 @@ add_action(
  *
  * @return void
  */
-function snow_monkey_enqueue_awesome_components() {
-	$relative_path = '/assets/packages/fontawesome-free/js/brands.min.js';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
+foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
+	add_action(
+		$action_hook,
+		function() {
+			$relative_path = '/assets/packages/fontawesome-free/js/brands.min.js';
+			wp_register_script(
+				'fontawesome5-brands',
+				get_theme_file_uri( $relative_path ),
+				[],
+				filemtime( get_theme_file_path( $relative_path ) ),
+				true
+			);
 
-	wp_register_script(
-		'fontawesome5-brands',
-		$src,
-		[],
-		filemtime( $path ),
-		true
-	);
+			$relative_path = '/assets/packages/fontawesome-free/js/solid.min.js';
+			wp_register_script(
+				'fontawesome5-solid',
+				get_theme_file_uri( $relative_path ),
+				[],
+				filemtime( get_theme_file_path( $relative_path ) ),
+				true
+			);
 
-	$relative_path = '/assets/packages/fontawesome-free/js/solid.min.js';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
-
-	wp_register_script(
-		'fontawesome5-solid',
-		$src,
-		[],
-		filemtime( $path ),
-		true
-	);
-
-	$relative_path = '/assets/packages/fontawesome-free/js/fontawesome.min.js';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
-
-	wp_enqueue_script(
-		'fontawesome5',
-		$src,
-		[ 'fontawesome5-brands', 'fontawesome5-solid' ],
-		filemtime( $path ),
-		true
+			$relative_path = '/assets/packages/fontawesome-free/js/fontawesome.min.js';
+			wp_enqueue_script(
+				'fontawesome5',
+				get_theme_file_uri( $relative_path ),
+				[ 'fontawesome5-brands', 'fontawesome5-solid' ],
+				filemtime( get_theme_file_path( $relative_path ) ),
+				true
+			);
+		}
 	);
 }
-add_action( 'wp_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
-add_action( 'admin_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
 
 /**
+ * Enqueue script for comment
+ *
  * @return void
  */
 add_action(
@@ -178,6 +134,8 @@ add_action(
 );
 
 /**
+ * Enqueue jquery.easing
+ *
  * @return void
  */
 add_action(
@@ -185,9 +143,9 @@ add_action(
 	function() {
 		wp_enqueue_script(
 			'jquery.easing',
-			'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js',
+			'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
 			[ 'jquery' ],
-			1.3,
+			'1.4.1',
 			true
 		);
 	}
@@ -202,19 +160,31 @@ add_action(
 	'customize_preview_init',
 	function() {
 		$relative_path = '/assets/js/customize-preview.js';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
-
-		if ( ! file_exists( $path ) ) {
-			return;
-		}
 
 		wp_enqueue_script(
-			Helper\get_main_script_handle() . '-customize-preview',
-			$src,
-			[ 'jquery', 'customize-preview', Helper\get_main_script_handle() ],
-			filemtime( $path ),
+			Helper::get_main_script_handle() . '-customize-preview',
+			get_theme_file_uri( $relative_path ),
+			[ 'jquery', 'customize-preview', Helper::get_main_script_handle() ],
+			filemtime( get_theme_file_path( $relative_path ) ),
 			true
+		);
+	}
+);
+
+/**
+ * Enqueue script for global navigation
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		wp_localize_script(
+			Helper::get_main_script_handle(),
+			'snow_monkey',
+			[
+				'home_url' => home_url(),
+			]
 		);
 	}
 );

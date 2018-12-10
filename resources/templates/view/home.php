@@ -5,10 +5,10 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 ?>
 <?php if ( ! is_paged() ) : ?>
-	<?php Helper\get_template_part( 'template-parts/widget-area/posts-page-top' ); ?>
+	<?php Helper::get_template_part( 'template-parts/widget-area/posts-page-top' ); ?>
 <?php endif; ?>
 
 <div class="c-entry">
@@ -25,17 +25,17 @@ use Inc2734\Mimizuku_Core\Helper;
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<li class="c-entries__item">
-							<?php Helper\get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
+							<?php Helper::get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 						</li>
 					<?php endwhile; ?>
 				</ul>
 			</div>
 		</div>
 
-		<?php Helper\get_template_part( 'template-parts/archive/pagination' ); ?>
+		<?php Helper::get_template_part( 'template-parts/archive/pagination' ); ?>
 	</div>
 </div>
 
 <?php if ( ! is_paged() ) : ?>
-	<?php Helper\get_template_part( 'template-parts/widget-area/posts-page-bottom' ); ?>
+	<?php Helper::get_template_part( 'template-parts/widget-area/posts-page-bottom' ); ?>
 <?php endif; ?>

@@ -5,6 +5,7 @@
  * @license GPL-2.0+
  */
 
+use Snow_Monkey\app\Helper;
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $customizer = Customizer_Framework::init();
@@ -17,7 +18,7 @@ $customizer->control(
 		'description' => __( 'Select how to display the eyecatch image in post.', 'snow-monkey' ),
 		'priority'    => 100,
 		'default'     => 'page-header',
-		'choices'     => snow_monkey_eyecatch_position_choices(),
+		'choices'     => Helper::eyecatch_position_choices(),
 	]
 );
 

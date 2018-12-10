@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Snow_Monkey\app\Helper;
+
 // When loaded by widget, $widget_layout is exist.
 if ( isset( $widget_layout ) ) {
 	$layout = $widget_layout;
@@ -22,7 +24,7 @@ if ( isset( $widget_layout ) ) {
 				<h2 class="c-entry-summary__title">
 					<?php
 					if ( 'rich-media' === $layout ) {
-						snow_monkey_the_title_trimed();
+						Helper::the_title_trimed();
 					} else {
 						the_title();
 					}

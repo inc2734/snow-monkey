@@ -5,18 +5,18 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
-$header_image = snow_monkey_get_page_header_image_url();
+$header_image = Helper::get_page_header_image_url();
 
-if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
+if ( empty( $header_image ) && ! Helper::is_output_page_header_title() ) {
 	return;
 }
 ?>
 
 <div
 	class="c-page-header js-bg-parallax"
-	data-has-content="<?php echo esc_attr( snow_monkey_is_output_page_header_title() ? 'true' : 'false' ); ?>"
+	data-has-content="<?php echo esc_attr( Helper::is_output_page_header_title() ? 'true' : 'false' ); ?>"
 	data-has-image="<?php echo esc_attr( empty( $header_image ) ? 'false' : 'true' ); ?>"
 	>
 
@@ -26,7 +26,7 @@ if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
 		</div>
 	<?php endif; ?>
 
-	<?php if ( snow_monkey_is_output_page_header_title() ) : ?>
+	<?php if ( Helper::is_output_page_header_title() ) : ?>
 		<div class="c-container js-bg-parallax__content">
 			<div class="c-page-header__content">
 				<h1 class="c-page-header__title">
@@ -34,7 +34,7 @@ if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
 					echo wp_kses_post(
 						apply_filters(
 							'snow_monkey_page_header_title',
-							snow_monkey_get_page_title_from_breadcrumbs()
+							Helper::get_page_title_from_breadcrumbs()
 						)
 					);
 					?>
@@ -42,7 +42,7 @@ if ( empty( $header_image ) && ! snow_monkey_is_output_page_header_title() ) {
 
 				<?php if ( is_singular( 'post' ) ) : ?>
 					<div class="c-page-header__meta">
-						<?php Helper\get_template_part( 'template-parts/content/entry-meta' ); ?>
+						<?php Helper::get_template_part( 'template-parts/content/entry-meta' ); ?>
 					</div>
 				<?php endif; ?>
 			</div>

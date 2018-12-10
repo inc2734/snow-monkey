@@ -6,7 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 $customizer = Customizer_Framework::init();
 
@@ -32,7 +32,7 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback' => function() {
 			if ( get_theme_mod( 'infobar-content' ) ) {
-				Helper\get_template_part( 'template-parts/infobar' );
+				Helper::get_template_part( 'template-parts/infobar' );
 			}
 		},
 	]
