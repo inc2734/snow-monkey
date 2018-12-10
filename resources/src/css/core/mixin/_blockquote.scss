@@ -1,6 +1,6 @@
 @mixin blockquote {
   position: relative;
-  background-image: url(../img/blockquote/top.svg), url(../img/blockquote/bottom.svg);
+  background-image: url(#{$img-path}/blockquote/top.svg), url(#{$img-path}/blockquote/bottom.svg);
   background-repeat: no-repeat;
   background-position: 0 0, 100% 100%;
   background-size: 35px;
@@ -20,7 +20,7 @@
     @include _position(absolute, $_base-font-size-px, null, null, $_base-font-size-px);
     display: block;
     @include _square($_base-font-size-px + 2);
-    background-image: url(../img/blockquote/icon.svg);
+    background-image: url(#{$img-path}/blockquote/icon.svg);
     background-repeat: no-repeat;
     background-size: contain;
 
