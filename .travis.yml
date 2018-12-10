@@ -8,6 +8,7 @@ branches:
   - master
   - develop
   - "/\\d+\\.\\d+\\.\\d+?.*/"
+  - 4.4
 env:
   global:
   - GIT_COMMITTER_NAME=travis-ci
