@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-namespace Snow_Monkey\app\model;
+namespace Snow_Monkey\App\Model;
 
 class Page_Header_Image_Url {
 

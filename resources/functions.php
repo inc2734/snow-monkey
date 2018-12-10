@@ -6,30 +6,12 @@
  */
 
 use Inc2734\Mimizuku_Core\Core;
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 /**
 * Uses composer autoloader
 */
 require_once( get_template_directory() . '/vendor/autoload.php' );
-
-spl_autoload_register(
-	function( $class ) {
-		if ( 0 !== strpos( $class, 'Snow_Monkey' ) ) {
-			return;
-		}
-
-		$class = str_replace( 'Snow_Monkey', '', $class );
-		$class = str_replace( '\\', '/', $class );
-		$class_path = get_theme_file_path( $class . '.php' );
-
-		if ( ! file_exists( $class_path ) ) {
-			return;
-		}
-
-		require $class_path;
-	}
-);
 
 /**
  * Make theme available for translation

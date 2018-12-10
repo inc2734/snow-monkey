@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 $comments_by_type = $wp_query->comments_by_type;
 if ( ! pings_open() && empty( $comments_by_type['pings'] ) ) {

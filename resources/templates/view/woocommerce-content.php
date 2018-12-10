@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 ?>
 <article <?php post_class(); ?>>
 	<header class="c-entry__header">

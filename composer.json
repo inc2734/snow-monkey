@@ -51,7 +51,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Snow_Monkey\\": "resources"
+      "Snow_Monkey\\App\\": "app"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Snow_Monkey\\App\\": "resources/app"
     }
   }
 }

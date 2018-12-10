@@ -22,12 +22,12 @@ if ( 'sans-serif' === $base_font ) {
 	$font_family = [ 'serif' ];
 } elseif ( 'noto-sans-jp' === $base_font ) {
 	$font_family = [ '"Noto Sans JP"', 'sans-serif' ];
-	add_action( 'wp_enqueue_scripts', [ '\Snow_Monkey\app\Helper', 'enqueue_noto_sans_jp' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Snow_Monkey\app\Helper', 'enqueue_noto_sans_jp' ] );
+	add_action( 'wp_enqueue_scripts', [ '\Snow_Monkey\App\Helper', 'enqueue_noto_sans_jp' ], 5 );
+	add_action( 'enqueue_block_editor_assets', [ '\Snow_Monkey\App\Helper', 'enqueue_noto_sans_jp' ] );
 } elseif ( 'noto-serif-jp' === $base_font ) {
 	$font_family = [ '"Noto Serif JP"', 'serif' ];
-	add_action( 'wp_enqueue_scripts', [ '\Snow_Monkey\app\Helper', 'enqueue_noto_serif_jp' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Snow_Monkey\app\Helper', 'enqueue_noto_serif_jp' ] );
+	add_action( 'wp_enqueue_scripts', [ '\Snow_Monkey\App\Helper', 'enqueue_noto_serif_jp' ], 5 );
+	add_action( 'enqueue_block_editor_assets', [ '\Snow_Monkey\App\Helper', 'enqueue_noto_serif_jp' ] );
 }
 
 $cfs->register(

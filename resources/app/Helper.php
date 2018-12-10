@@ -8,7 +8,7 @@
 namespace Snow_Monkey\app;
 
 use Inc2734\Mimizuku_Core\Utility;
-use Snow_Monkey\app\model\Page_Header_Image_Url;
+use Snow_Monkey\App\Model\Page_Header_Image_Url;
 
 class Helper {
 

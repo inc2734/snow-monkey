@@ -6,6 +6,17 @@
  */
 
 /**
+ * Load Design_Skin class
+ */
+spl_autoload_register(
+	function( $class ) {
+		if ( 'Snow_Monkey\app\model\Design_Skin' === $class ) {
+			require_once( get_theme_file_path( '/app/Model/Design_Skin.php' ) );
+		}
+	}
+);
+
+/**
  * Add .p-entry-content to .c-entry__content
  *
  * @param string $content

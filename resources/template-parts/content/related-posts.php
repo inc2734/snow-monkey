@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 $matched_content     = get_option( 'mwt-google-matched-content' );
 $use_matched_content = (bool) $matched_content;

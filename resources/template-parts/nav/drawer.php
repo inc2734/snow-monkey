@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 $has_drawer_nav     = has_nav_menu( 'drawer-nav' );
 $has_drawer_sub_nav = has_nav_menu( 'drawer-sub-nav' );

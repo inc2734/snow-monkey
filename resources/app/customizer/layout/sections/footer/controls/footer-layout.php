@@ -6,7 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 $customizer = Customizer_Framework::init();
 

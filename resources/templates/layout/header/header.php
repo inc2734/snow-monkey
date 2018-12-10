@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 Helper::get_header_template( get_theme_mod( 'header-layout' ) );

@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 ?>
 <div class="c-site-branding">
 	<?php if ( is_front_page() || is_home() ) : ?>

@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 $header_content = get_theme_mod( 'header-content' );
 $header_type    = get_theme_mod( 'header-layout' ) . '-header';

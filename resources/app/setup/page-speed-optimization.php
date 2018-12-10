@@ -8,7 +8,7 @@
  */
 
 use Inc2734\WP_Page_Speed_Optimization;
-use Snow_Monkey\app\Helper;
+use Snow_Monkey\App\Helper;
 
 new WP_Page_Speed_Optimization\Bootstrap();
 
