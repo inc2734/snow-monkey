@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 if ( ! defined( 'SNOW_MONKEY_BLOCKS_DIR_PATH' ) ) {
 	return;
@@ -32,11 +32,11 @@ add_action(
 		if ( is_admin() ) {
 			$dependencies = [];
 		} else {
-			$dependencies = [ Helper\get_main_style_handle() ];
+			$dependencies = [ Helper::get_main_style_handle() ];
 		}
 
 		wp_enqueue_style(
-			Helper\get_main_style_handle() . '-snow-monkey-blocks',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks',
 			$src,
 			$dependencies,
 			filemtime( $path )
@@ -63,6 +63,6 @@ add_action(
 add_action(
 	'snow_monkey_load_customizer_styles',
 	function() {
-		Helper\load_theme_files( get_template_directory() . '/assets/css/dependency/snow-monkey-blocks' );
+		Helper::load_theme_files( get_template_directory() . '/assets/css/dependency/snow-monkey-blocks' );
 	}
 );

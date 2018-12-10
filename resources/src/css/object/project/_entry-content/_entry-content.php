@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 if ( is_admin() ) {
 	add_action(
@@ -15,8 +15,8 @@ if ( is_admin() ) {
 				return;
 			}
 
-			if ( Helper\is_block_editor() ) {
-				snow_monkey_entry_content_styles(
+			if ( Helper::is_block_editor() ) {
+				Helper::entry_content_styles(
 					[
 						'',
 						'[data-type="core/paragraph"] .components-autocomplete',
@@ -25,10 +25,10 @@ if ( is_admin() ) {
 					]
 				);
 			} else {
-				snow_monkey_entry_content_styles( [ '' ] );
+				Helper::entry_content_styles( [ '' ] );
 			}
 		}
 	);
 } else {
-	snow_monkey_entry_content_styles( [ '.p-entry-content' ] );
+	Helper::entry_content_styles( [ '.p-entry-content' ] );
 }

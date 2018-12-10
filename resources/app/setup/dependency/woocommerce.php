@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 if ( ! class_exists( '\woocommerce' ) ) {
 	return;
@@ -72,9 +72,9 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			Helper\get_main_style_handle() . '-woocommerce',
+			Helper::get_main_style_handle() . '-woocommerce',
 			$src,
-			[ Helper\get_main_style_handle() ],
+			[ Helper::get_main_style_handle() ],
 			filemtime( $path )
 		);
 	}
@@ -83,7 +83,7 @@ add_action(
 add_action(
 	'snow_monkey_load_customizer_styles',
 	function() {
-		Helper\load_theme_files( get_template_directory() . '/assets/css/dependency/woocommerce' );
+		Helper::load_theme_files( get_template_directory() . '/assets/css/dependency/woocommerce' );
 	}
 );
 

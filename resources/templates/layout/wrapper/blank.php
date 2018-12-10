@@ -5,11 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">
-<?php Helper\get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
+<?php Helper::get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
 <body <?php body_class( [ 'l-body--blank' ] ); ?> id="body"
 	data-has-sidebar="false"

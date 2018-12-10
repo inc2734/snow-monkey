@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
-Helper\get_header_template( get_theme_mod( 'header-layout' ) );
+Helper::get_header_template( get_theme_mod( 'header-layout' ) );

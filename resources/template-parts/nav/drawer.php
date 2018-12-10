@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 $has_drawer_nav     = has_nav_menu( 'drawer-nav' );
 $has_drawer_sub_nav = has_nav_menu( 'drawer-sub-nav' );
@@ -40,7 +40,7 @@ if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 	}
 
 	if ( $has_drawer_sub_nav ) {
-		Helper\get_template_part( 'template-parts/nav/drawer-sub' );
+		Helper::get_template_part( 'template-parts/nav/drawer-sub' );
 	}
 	?>
 

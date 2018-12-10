@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 /**
  * Add google adsense to sidebar
@@ -13,7 +13,7 @@ use Inc2734\Mimizuku_Core\Helper;
  * @return void
  */
 function snow_monkey_sidebar_add_google_adsense() {
-	Helper\get_template_part(
+	Helper::get_template_part(
 		'template-parts/google-adsense',
 		null,
 		[
@@ -30,12 +30,12 @@ add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_google_adsense', 10 
  */
 function snow_monkey_sidebar_add_sidebar_widget_area() {
 	if ( class_exists( '\woocommerce' ) && is_woocommerce() ) {
-		Helper\get_template_part( 'template-parts/widget-area/woocommerce-sidebar' );
+		Helper::get_template_part( 'template-parts/widget-area/woocommerce-sidebar' );
 	} elseif ( is_home() || is_archive() || is_search() ) {
-		Helper\get_template_part( 'template-parts/widget-area/archive-sidebar' );
+		Helper::get_template_part( 'template-parts/widget-area/archive-sidebar' );
 	} else {
-		Helper\get_template_part( 'template-parts/widget-area/sidebar' );
-		Helper\get_template_part( 'template-parts/widget-area/sidebar-sticky' );
+		Helper::get_template_part( 'template-parts/widget-area/sidebar' );
+		Helper::get_template_part( 'template-parts/widget-area/sidebar-sticky' );
 	}
 }
 add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_sidebar_widget_area', 20 );

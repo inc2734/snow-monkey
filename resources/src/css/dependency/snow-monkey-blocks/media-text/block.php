@@ -5,4 +5,6 @@
  * @license GPL-2.0+
  */
 
-snow_monkey_entry_content_styles( [ '.smb-media-text__body' ] );
+use Snow_Monkey\app\Helper;
+
+Helper::entry_content_styles( [ '.smb-media-text__body' ] );

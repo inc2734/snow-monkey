@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Snow_Monkey\app\Helper;
+
 /**
  * Replace excerpt content when post_excerpt is empty
  */
@@ -15,7 +17,7 @@ add_filter(
 		if ( $excerpt ) {
 			return $excerpt;
 		}
-		return \Inc2734\Mimizuku_Core\Helper\pure_trim_excerpt();
+		return Helper::pure_trim_excerpt();
 	}
 );
 

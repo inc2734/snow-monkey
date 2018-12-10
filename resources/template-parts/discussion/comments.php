@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 $comments_by_type = $wp_query->comments_by_type;
 if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
@@ -26,7 +26,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 						?>
 						<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php
-							Helper\get_template_part(
+							Helper::get_template_part(
 								'template-parts/discussion/comment',
 								null,
 								[
@@ -43,7 +43,7 @@ if ( ! comments_open() && empty( $comments_by_type['comment'] ) ) {
 			?>
 		</ol>
 
-		<?php Helper\get_template_part( 'template-parts/discussion/pagination' ); ?>
+		<?php Helper::get_template_part( 'template-parts/discussion/pagination' ); ?>
 
 	<?php else : ?>
 		<p class="p-comments__nocomments">

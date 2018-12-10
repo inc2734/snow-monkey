@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 	return;
@@ -28,9 +28,9 @@ add_action(
 		}
 
 		wp_enqueue_style(
-			Helper\get_main_style_handle() . '-elementor',
+			Helper::get_main_style_handle() . '-elementor',
 			$src,
-			[ Helper\get_main_style_handle() ],
+			[ Helper::get_main_style_handle() ],
 			filemtime( $path )
 		);
 	}

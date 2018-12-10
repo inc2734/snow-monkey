@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 add_action(
 	'get_template_part_template-parts/loop/entry-summary',
@@ -30,7 +30,7 @@ add_action(
 			return;
 		}
 
-		Helper\display_adsense_code( $infeed_ads );
+		Helper::display_adsense_code( $infeed_ads );
 		?>
 		</li>
 		<li class="c-entries__item">

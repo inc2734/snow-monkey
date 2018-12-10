@@ -5,14 +5,14 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 ?>
 <footer class="l-footer" role="contentinfo">
-	<?php Helper\get_template_part( 'template-parts/nav/social' ); ?>
-	<?php Helper\get_template_part( 'template-parts/widget-area/footer' ); ?>
-	<?php Helper\get_template_part( 'template-parts/nav/footer-sub' ); ?>
-	<?php Helper\get_template_part( 'template-parts/footer/copyright' ); ?>
+	<?php Helper::get_template_part( 'template-parts/nav/social' ); ?>
+	<?php Helper::get_template_part( 'template-parts/widget-area/footer' ); ?>
+	<?php Helper::get_template_part( 'template-parts/nav/footer-sub' ); ?>
+	<?php Helper::get_template_part( 'template-parts/footer/copyright' ); ?>
 </footer>
 
-<?php Helper\get_template_part( 'template-parts/page-top' ); ?>
-<?php Helper\get_template_part( 'template-parts/nav/footer-sticky' ); ?>
+<?php Helper::get_template_part( 'template-parts/page-top' ); ?>
+<?php Helper::get_template_part( 'template-parts/nav/footer-sticky' ); ?>

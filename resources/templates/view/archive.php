@@ -5,11 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 ?>
 <div class="c-entry">
 	<header class="c-entry__header">
-		<h1 class="c-entry__title"><?php echo esc_html( snow_monkey_get_page_title_from_breadcrumbs() ); ?></h1>
+		<h1 class="c-entry__title"><?php echo esc_html( Helper::get_page_title_from_breadcrumbs() ); ?></h1>
 	</header>
 
 	<div class="c-entry__body">
@@ -19,13 +19,13 @@ use Inc2734\Mimizuku_Core\Helper;
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<li class="c-entries__item">
-							<?php Helper\get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
+							<?php Helper::get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 						</li>
 					<?php endwhile; ?>
 				</ul>
 			</div>
 		</div>
 
-		<?php Helper\get_template_part( 'template-parts/archive/pagination' ); ?>
+		<?php Helper::get_template_part( 'template-parts/archive/pagination' ); ?>
 	</div>
 </div>

@@ -5,6 +5,7 @@
  * @license GPL-2.0+
  */
 
+use Snow_Monkey\app\Helper;
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 $cfs = Customizer_Framework::styles();
@@ -16,4 +17,4 @@ $cfs->register(
 	'background-color: ' . $accent_color
 );
 
-snow_monkey_entry_content_styles( [ '.smb-section__body' ] );
+Helper::entry_content_styles( [ '.smb-section__body' ] );

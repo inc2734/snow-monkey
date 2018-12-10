@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 $header_content      = get_theme_mod( 'header-content' );
 $header_type         = get_theme_mod( 'header-layout' ) . '-header';
@@ -19,14 +19,14 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 	<div class="c-container">
 		<?php if ( $has_header_sub_nav ) : ?>
 			<div class="u-hidden u-visible-lg-up">
-				<?php Helper\get_template_part( 'template-parts/nav/header-sub' ); ?>
+				<?php Helper::get_template_part( 'template-parts/nav/header-sub' ); ?>
 			</div>
 		<?php endif; ?>
 
 		<div class="c-row c-row--margin c-row--middle c-row--between c-row--nowrap">
 			<div class="c-row__col c-row__col--auto c-row__col--lg-fit">
 				<div class="l-<?php echo esc_attr( $header_type ); ?>__branding">
-					<?php Helper\get_template_part( 'template-parts/header/site-branding' ); ?>
+					<?php Helper::get_template_part( 'template-parts/header/site-branding' ); ?>
 				</div>
 			</div>
 
@@ -35,14 +35,14 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 					<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 						<?php if ( $has_global_nav ) : ?>
 							<div class="c-row__col c-row__col--auto">
-								<?php Helper\get_template_part( 'template-parts/nav/global' ); ?>
+								<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>
 							</div>
 						<?php endif; ?>
 
 						<?php if ( $header_content ) : ?>
 							<div class="c-row__col c-row__col--fit">
 								<div class="l-<?php echo esc_attr( $header_type ); ?>__content">
-									<?php Helper\get_template_part( 'template-parts/header/content', 'lg' ); ?>
+									<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
 								</div>
 							</div>
 						<?php endif; ?>
@@ -52,7 +52,7 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 
 			<?php if ( $has_drawer_nav ) : ?>
 				<div class="c-row__col c-row__col--fit u-pull-right u-hidden-lg-up">
-					<?php Helper\get_template_part( 'template-parts/header/hamburger-btn' ); ?>
+					<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 				</div>
 			<?php endif; ?>
 		</div>

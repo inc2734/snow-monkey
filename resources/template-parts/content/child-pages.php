@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
-$pages_query = Helper\get_child_pages_query( get_the_ID() );
+$pages_query = Helper::get_child_pages_query( get_the_ID() );
 if ( ! $pages_query->have_posts() ) {
 	return;
 }
@@ -27,7 +27,7 @@ if ( ! $pages_query->have_posts() ) {
 		<?php while ( $pages_query->have_posts() ) : ?>
 			<?php $pages_query->the_post(); ?>
 			<li class="c-entries__item">
-				<?php Helper\get_template_part( 'template-parts/content/page-summary' ); ?>
+				<?php Helper::get_template_part( 'template-parts/content/page-summary' ); ?>
 			</li>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>

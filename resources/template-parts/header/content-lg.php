@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\Helper;
+use Snow_Monkey\app\Helper;
 
 if ( ! get_theme_mod( 'header-content' ) ) {
 	return;
@@ -13,5 +13,5 @@ if ( ! get_theme_mod( 'header-content' ) ) {
 ?>
 
 <div class="p-header-content p-header-content--lg">
-	<?php Helper\get_template_part( 'template-parts/header/content' ); ?>
+	<?php Helper::get_template_part( 'template-parts/header/content' ); ?>
 </div>
