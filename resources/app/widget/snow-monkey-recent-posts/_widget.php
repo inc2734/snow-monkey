@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 $widget_id = explode( '-', $args['widget_id'] );
 $widget_id = end( $widget_id );

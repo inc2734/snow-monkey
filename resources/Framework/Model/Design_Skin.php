@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-namespace Snow_Monkey\App\Model;
+namespace Framework\Model;
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 class Design_Skin {
 

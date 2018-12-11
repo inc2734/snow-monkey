@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 ?>
 <footer class="l-footer" role="contentinfo">
 	<?php Helper::get_template_part( 'template-parts/nav/social' ); ?>

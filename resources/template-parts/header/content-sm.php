@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 if ( ! get_theme_mod( 'header-content' ) || ! get_theme_mod( 'display-header-content-on-mobile' ) ) {
 	return;

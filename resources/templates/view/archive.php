@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 ?>
 <div class="c-entry">
 	<header class="c-entry__header">

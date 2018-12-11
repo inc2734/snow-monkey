@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 // When loaded by widget, $widget_layout is exist.
 if ( isset( $widget_layout ) ) {

@@ -5,10 +5,10 @@
  * @license GPL-2.0+
  */
 
-namespace Snow_Monkey\App;
+namespace Framework;
 
 use Inc2734\Mimizuku_Core\Utility;
-use Snow_Monkey\App\Model\Page_Header_Image_Url;
+use Framework\Model\Page_Header_Image_Url;
 
 class Helper {
 

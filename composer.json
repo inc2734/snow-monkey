@@ -51,12 +51,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Snow_Monkey\\App\\": "app"
+      "Framework\\": "Framework"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Snow_Monkey\\App\\": "resources/app"
+      "Framework\\": "resources/Framework"
     }
   }
 }

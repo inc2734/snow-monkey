@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> data-sticky-footer="true">

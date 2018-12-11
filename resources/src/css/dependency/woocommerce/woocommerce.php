@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
 
 if ( ! class_exists( '\woocommerce' ) ) {

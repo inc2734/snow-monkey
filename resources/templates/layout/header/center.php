@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 $header_position = Helper::get_header_position();
 $default_header_position = Helper::get_default_header_position();

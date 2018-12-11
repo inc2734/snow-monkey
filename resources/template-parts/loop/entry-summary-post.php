@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 $terms = get_the_terms( get_the_ID(), 'category' );
 $_term = null;

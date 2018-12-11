@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 if ( ! defined( 'SNOW_MONKEY_BLOCKS_DIR_PATH' ) ) {
 	return;

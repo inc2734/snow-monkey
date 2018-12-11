@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 
 $pages_query = Helper::get_child_pages_query( get_the_ID() );
 if ( ! $pages_query->have_posts() ) {

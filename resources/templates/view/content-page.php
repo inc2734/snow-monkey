@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Snow_Monkey\App\Helper;
+use Framework\Helper;
 ?>
 <?php Helper::get_template_part( 'template-parts/widget-area/title-top' ); ?>
 
