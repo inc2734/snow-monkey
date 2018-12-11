@@ -1,0 +1,9 @@
+.wp-block-categories {
+  &.alignright {
+    @include _margin-left(1);
+  }
+
+  &.alignleft {
+    @include _margin-right(1);
+  }
+}
