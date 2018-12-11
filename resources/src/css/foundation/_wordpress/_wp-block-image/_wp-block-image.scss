@@ -1,0 +1,96 @@
+.wp-block-image {
+  margin-bottom: 0;
+
+  img {
+    @include img();
+  }
+
+  figcaption {
+    @include _margin(6px, 0, 0);
+    color: $_color-gray;
+    @include _font-size($_base-font-size-px - 2);
+    @include _line-height($_base-font-size-px + 4);
+    text-align: left;
+  }
+
+  &.noshadow {
+    img {
+      box-shadow: none;
+    }
+  }
+
+  &.alignfull {
+    @mixin alignfull-image() {
+      width: 100vw;
+      max-width: none;
+    }
+
+    @include _media-max(md) {
+      > img {
+        @include alignfull-image();
+      }
+    }
+
+    [data-has-sidebar="false"] & {
+      > img {
+        @include alignfull-image();
+      }
+    }
+  }
+
+  &.alignwide {
+    @mixin alignwide-image() {
+      width: 100%;
+      max-width: none;
+    }
+
+    @include _media-max(md) {
+      > img {
+        @include alignwide-image();
+      }
+    }
+
+    [data-has-sidebar="false"] & {
+      > img {
+        @include alignwide-image();
+      }
+    }
+  }
+
+  > .alignleft,
+  > .alignright {
+    margin-top: $_between-lines;
+  }
+
+  > .alignright {
+    @include _margin-left(1);
+  }
+
+  > .alignleft {
+    @include _margin-right(1);
+  }
+}
+
+img.alignnone,
+img.aligncenter,
+img.alignleft,
+img.alignright {
+  @include img();
+
+  &.noshadow {
+    box-shadow: none;
+  }
+}
+
+img.alignleft,
+img.alignright {
+  margin-top: $_between-lines;
+}
+
+img.alignleft {
+  @include _margin-right(1);
+}
+
+img.alignright {
+  @include _margin-left(1);
+}
