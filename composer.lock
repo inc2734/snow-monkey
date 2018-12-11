@@ -797,16 +797,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "6.0.1",
+            "version": "6.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "b90b7886aec705f5b6bcc02b8c5ffcebcce64bf1"
+                "reference": "48d1e440cf0e2dff59371e56db1fbb7e86d4df69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/b90b7886aec705f5b6bcc02b8c5ffcebcce64bf1",
-                "reference": "b90b7886aec705f5b6bcc02b8c5ffcebcce64bf1",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/48d1e440cf0e2dff59371e56db1fbb7e86d4df69",
+                "reference": "48d1e440cf0e2dff59371e56db1fbb7e86d4df69",
                 "shasum": ""
             },
             "require": {
@@ -841,7 +841,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2018-11-14T06:42:16+00:00"
+            "time": "2018-12-11T07:09:00+00:00"
         }
     ],
     "packages-dev": [
@@ -2264,7 +2264,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2328,16 +2328,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "622b330ced1bdf29d240bd1c364c038f647eb0f5"
+                "reference": "5be2d762b51076295a972c86604a977fbcc5c12b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/622b330ced1bdf29d240bd1c364c038f647eb0f5",
-                "reference": "622b330ced1bdf29d240bd1c364c038f647eb0f5",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5be2d762b51076295a972c86604a977fbcc5c12b",
+                "reference": "5be2d762b51076295a972c86604a977fbcc5c12b",
                 "shasum": ""
             },
             "require": {
@@ -2395,11 +2395,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2018-11-20T16:14:23+00:00"
+            "time": "2018-12-02T15:50:25+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v3.4.19",
+            "version": "v3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
