@@ -44,13 +44,19 @@ $img-path: '../../../img';
   @include _content();
 
   > h2,
-  > header > h2 {
-    @include _margin-bottom(.5);
+  > header > h2,
+  > form > h3 {
+    @include _margin-bottom(.25);
+    @include _font-size-line-height($_base-font-size-px * 1.25);
   }
 
   > header + .shop_table {
     @include _margin-top(.5);
   }
+}
+
+.woocommerce .woocommerce-MyAccount-content .my_account_orders {
+  @include _font-size-line-height($_base-font-size-px);
 }
 
 .woocommerce-MyAccount-navigation {
@@ -264,6 +270,29 @@ $img-path: '../../../img';
 .woocommerce .product .woocommerce-Price-amount {
   color: $_color-text;
   font-weight: bold;
+}
+
+// Cart total in cart page
+.woocommerce .cart_totals h2 {
+  @include _margin-bottom(.25);
+  @include _font-size-line-height($_base-font-size-px * 1.25);
+}
+
+// HEadings in checkout page
+.woocommerce .woocommerce-billing-fields h3,
+.woocommerce .woocommerce-additional-fields h3,
+.woocommerce h3[id="order_review_heading"] {
+  @include _margin-bottom(.25);
+  @include _font-size-line-height($_base-font-size-px * 1.25);
+}
+.woocommerce [id="customer_details"] {
+  @include _margin-bottom(1);
+}
+
+// My account > edit-address
+.woocommerce-Addresses .woocommerce-Address-title h3 {
+  @include _margin-bottom(.25);
+  @include _font-size-line-height($_base-font-size-px * 1.25);
 }
 
 // Product category widget
