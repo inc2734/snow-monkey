@@ -32,6 +32,8 @@ export default class SnowMonkeyDropNav {
 
     if (this._isUpdateVisibility()) {
       this._gnav();
+    } else {
+      this._hideDropNav();
     }
 
     (() => {
