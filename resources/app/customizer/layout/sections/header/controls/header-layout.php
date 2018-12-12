@@ -39,7 +39,7 @@ $control->partial(
 	[
 		'selector'        => '.l-header',
 		'render_callback' => function() {
-			Helper::get_template_part( 'template-parts/' . get_theme_mod( 'header-layout' ) . '-header' );
+			Helper::get_template_part( 'template-parts/header/' . get_theme_mod( 'header-layout' ) );
 		},
 	]
 );
