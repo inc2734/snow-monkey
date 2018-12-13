@@ -13,7 +13,7 @@
 function snow_monkey_is_output_page_header_title() {
 	$return = false;
 
-	if ( is_page() && 'title-on-page-header' === get_theme_mod( 'page-eyecatch' ) ) {
+	if ( is_page() && ! is_front_page() && 'title-on-page-header' === get_theme_mod( 'page-eyecatch' ) ) {
 		$return = true;
 	} elseif ( is_singular( 'post' ) && 'title-on-page-header' === get_theme_mod( 'post-eyecatch' ) ) {
 		$return = true;

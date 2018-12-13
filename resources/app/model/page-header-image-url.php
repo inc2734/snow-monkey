@@ -15,29 +15,45 @@ class Page_Header_Image_Url {
 	 * @return string
 	 */
 	public static function get() {
-		$url = get_theme_mod( 'default-page-header-image' );
-
-		if ( is_singular() ) {
-			$_url = self::_get_singlular_page_header_image_url();
+		if ( is_singular( 'post' ) ) {
+			return static::_get_post_page_header_image_url();
+		} elseif ( is_page() && ! is_front_page() ) {
+			return static::_get_page_page_header_image_url();
+		} elseif ( is_category() ) {
+			return static::_get_category_page_header_image_url();
 		} elseif ( is_home() || ( is_archive() && ! is_post_type_archive() ) ) {
-			if ( is_category() ) {
-				$_url = self::_get_category_page_header_image_url();
-			}
-
-			if ( empty( $_url ) ) {
-				$_url = self::_get_blog_page_header_image_url();
-			}
+			return static::_get_home_page_header_image_url();
 		}
-
-		if ( ! empty( $_url ) ) {
-			$url = $_url;
-		}
-
-		return $url;
 	}
 
 	/**
-	 * Return page header image url for singular page
+	 * Return page header image url for post
+	 *
+	 * @return string
+	 */
+	protected static function _get_post_page_header_image_url() {
+		$valid_choices = [ 'page-header', 'title-on-page-header' ];
+		if ( ! is_singular( 'post' ) || ! in_array( get_theme_mod( 'post-eyecatch' ), $valid_choices ) ) {
+			return;
+		}
+		return static::_get_singlular_page_header_image_url();
+	}
+
+	/**
+	 * Return page header image url for page
+	 *
+	 * @return string
+	 */
+	protected static function _get_page_page_header_image_url() {
+		$valid_choices = [ 'page-header', 'title-on-page-header' ];
+		if ( ! is_page() || is_front_page() || ! in_array( get_theme_mod( 'page-eyecatch' ), $valid_choices ) ) {
+			return;
+		}
+		return static::_get_singlular_page_header_image_url();
+	}
+
+	/**
+	 * Return page header image url for singular post
 	 *
 	 * @return string
 	 */
@@ -45,9 +61,10 @@ class Page_Header_Image_Url {
 		if ( has_post_thumbnail() ) {
 			$thumbnail_id = get_post_thumbnail_id();
 			if ( $thumbnail_id ) {
-				return wp_get_attachment_image_url( $thumbnail_id, self::_get_thumbnail_size() );
+				return wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() );
 			}
 		}
+		return static::_get_default_page_header_image_url();
 	}
 
 	/**
@@ -55,13 +72,14 @@ class Page_Header_Image_Url {
 	 *
 	 * @return string
 	 */
-	protected static function _get_blog_page_header_image_url() {
+	protected static function _get_home_page_header_image_url() {
 		if ( 'page' === get_option( 'show_on_front' ) ) {
 			$thumbnail_id = get_post_thumbnail_id( get_option( 'page_for_posts' ) );
 			if ( $thumbnail_id ) {
-				return wp_get_attachment_image_url( $thumbnail_id, self::_get_thumbnail_size() );
+				return wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() );
 			}
 		}
+		return static::_get_default_page_header_image_url();
 	}
 
 	/**
@@ -72,11 +90,9 @@ class Page_Header_Image_Url {
 	protected static function _get_category_page_header_image_url() {
 		$term = get_queried_object();
 		$header_image = get_theme_mod( 'category-' . $term->term_id . '-header-image' );
-
 		if ( $header_image ) {
 			return $header_image;
 		}
-
 		$ancestors = get_ancestors( $term->term_id, 'category' );
 		foreach ( $ancestors as $ancestor ) {
 			$header_image = get_theme_mod( 'category-' . $ancestor . '-header-image' );
@@ -84,6 +100,7 @@ class Page_Header_Image_Url {
 				return $header_image;
 			}
 		}
+		return static::_get_default_page_header_image_url();
 	}
 
 	/**
@@ -93,5 +110,14 @@ class Page_Header_Image_Url {
 	 */
 	protected static function _get_thumbnail_size() {
 		return apply_filters( 'snow_monkey_page_header_thumbnail_size', 'xlarge' );
+	}
+
+	/**
+	 * Return default page header image url
+	 *
+	 * @return string
+	 */
+	protected function _get_default_page_header_image_url() {
+		return get_theme_mod( 'default-page-header-image' );
 	}
 }
