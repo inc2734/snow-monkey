@@ -117,11 +117,12 @@ add_action(
 add_filter(
 	'snow_monkey_is_output_page_header',
 	function( $return ) {
-		if ( class_exists( '\woocommerce' ) && ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) ) {
+		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
 			return false;
 		}
 		return $return;
-	}
+	},
+	9
 );
 
 /**
@@ -136,7 +137,8 @@ add_filter(
 			return 'one-column';
 		}
 		return $layout;
-	}
+	},
+	9
 );
 
 /**
@@ -154,7 +156,8 @@ add_filter(
 			];
 		}
 		return $view;
-	}
+	},
+	9
 );
 
 /**
