@@ -12,14 +12,8 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
-	[
-		'.c-entries--rich-media a > .c-entry-summary .c-entry-summary__figure::after',
-		'.c-entries--rich-media a > .c-entry-summary .c-page-summary__figure::after',
-	],
-	[
-		'background-color: ' . $cfs->rgba( $accent_color, .4 ),
-		'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
-	]
+	'.c-entries--rich-media a > .c-entry-summary .c-entry-summary__figure::after',
+	'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
 );
 
 $cfs->register(
@@ -45,10 +39,7 @@ foreach ( $terms as $_term ) {
 
 	$cfs->register(
 		'.c-entries--rich-media a > .c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__figure::after',
-		[
-			'background-color: ' . $cfs->rgba( $accent_color, .4 ),
-			'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
-		]
+		'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
 	);
 
 	$cfs->register(

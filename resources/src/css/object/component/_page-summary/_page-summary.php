@@ -12,6 +12,11 @@ $cfs = Customizer_Framework::styles();
 $accent_color = get_theme_mod( 'accent-color' );
 
 $cfs->register(
+	'.c-entries--rich-media .c-page-summary .c-page-summary__figure::after',
+	'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
+);
+
+$cfs->register(
 	'.c-page-summary__more',
 	[
 		'border-color: ' . $accent_color,

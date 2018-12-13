@@ -74,9 +74,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba($color-accent, .4);
-        background-image: radial-gradient(rgba($color-accent, .9) 33%, transparent 33%);
-        background-size: 1px 1px;
+        background-image: radial-gradient(rgba($color-accent, .5) 33%, transparent 33%);
+        background-size: 2px 2px;
         content: 'READ MORE';
         color: #fff;
         font-weight: bold;
