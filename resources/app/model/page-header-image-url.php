@@ -117,7 +117,7 @@ class Page_Header_Image_Url {
 	 *
 	 * @return string
 	 */
-	protected function _get_default_page_header_image_url() {
+	protected static function _get_default_page_header_image_url() {
 		return get_theme_mod( 'default-page-header-image' );
 	}
 }
