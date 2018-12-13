@@ -554,16 +554,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "0.7.3",
+            "version": "0.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "df1a6738aab420977e6a6db2a0352e6fcd781ef8"
+                "reference": "47ffb4b7c7689c1807edd437c1b08650792f3999"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/df1a6738aab420977e6a6db2a0352e6fcd781ef8",
-                "reference": "df1a6738aab420977e6a6db2a0352e6fcd781ef8",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/47ffb4b7c7689c1807edd437c1b08650792f3999",
+                "reference": "47ffb4b7c7689c1807edd437c1b08650792f3999",
                 "shasum": ""
             },
             "require": {
@@ -598,7 +598,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2018-08-17T13:04:12+00:00"
+            "time": "2018-12-13T01:02:59+00:00"
         },
         {
             "name": "inc2734/wp-profile-box",
