@@ -8,11 +8,11 @@
 namespace Framework;
 
 use Inc2734\Mimizuku_Core\Utility;
-use Framework\Model\Page_Header_Image_Url;
 
 class Helper {
 
 	use Utility\Helper\Helper;
+	use Contract\Helper\Page_Header;
 
 	/**
 	 * Sets entry content styles
@@ -82,22 +82,6 @@ class Helper {
 	}
 
 	/**
-	 * Returns page header image url
-	 *
-	 * @return string
-	 */
-	public static function get_page_header_image_url() {
-		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
-		if ( $url ) {
-			return $url;
-		}
-
-		$url = Page_Header_Image_Url::get();
-
-		return apply_filters( 'snow_monkey_page_header_image_url', $url );
-	}
-
-	/**
 	 * Returns page title from Breadcrumbs
 	 *
 	 * @return string
@@ -107,50 +91,6 @@ class Helper {
 		$breadcrumbs = $breadcrumbs->get();
 		$title_item  = end( $breadcrumbs );
 		return array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
-	}
-
-	/**
-	 * Return whether to display the page header title
-	 *
-	 * @return boolean
-	 */
-	public static function is_output_page_header_title() {
-		$return = false;
-
-		if ( is_page() && 'title-on-page-header' === get_theme_mod( 'page-eyecatch' ) ) {
-			$return = true;
-		} elseif ( is_singular( 'post' ) && 'title-on-page-header' === get_theme_mod( 'post-eyecatch' ) ) {
-			$return = true;
-		}
-
-		return apply_filters( 'snow_monkey_is_output_page_header_title', $return );
-	}
-
-	/**
-	 * Return whether to display the page header
-	 *
-	 * @return boolean
-	 */
-	public static function is_output_page_header() {
-		$return    = false;
-		$image_url = Page_Header_Image_Url::get();
-		$valid_choices = [ 'page-header', 'title-on-page-header' ];
-
-		if ( is_front_page() ) {
-			$return = false;
-		} elseif ( static::is_output_page_header_title() ) {
-			$return = true;
-		} elseif ( $image_url ) {
-			if ( is_singular( 'post' ) && in_array( get_theme_mod( 'post-eyecatch' ), $valid_choices ) ) {
-				$return = true;
-			} elseif ( is_page() && in_array( get_theme_mod( 'page-eyecatch' ), $valid_choices ) ) {
-				$return = true;
-			} elseif ( ! is_singular() ) {
-				$return = true;
-			}
-		}
-
-		return apply_filters( 'snow_monkey_is_output_page_header', $return );
 	}
 
 	/**
