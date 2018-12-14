@@ -32,6 +32,7 @@ add_action(
 						'wp-pure-css-gallery',
 						'jquery.contents-outline',
 						'wp-contents-outline',
+						'wp-awesome-widgets',
 					]
 				);
 			}
@@ -49,7 +50,6 @@ add_action(
 						'jquery.easing',
 						'fontawesome5',
 						'wp-share-buttons',
-						'wp-awesome-widgets',
 						'wp-oembed-blog-card',
 					]
 				);
