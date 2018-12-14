@@ -30,12 +30,8 @@ add_action(
 					[
 						Helper::get_main_script_handle(),
 						'wp-pure-css-gallery',
-						'wp-oembed-blog-card',
-						'wp-share-buttons',
-						'wp-awesome-widgets',
 						'jquery.contents-outline',
 						'wp-contents-outline',
-						'fontawesome5',
 					]
 				);
 			}
@@ -51,6 +47,10 @@ add_action(
 						'wp-embed',
 						'comment-reply',
 						'jquery.easing',
+						'fontawesome5',
+						'wp-share-buttons',
+						'wp-awesome-widgets',
+						'wp-oembed-blog-card',
 					]
 				);
 			}
