@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "156db64eb946bd9124e30938198d9093",
+    "content-hash": "bc765441f02377017688989cf4be3b71",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "3.1.2",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "361621eabe44b721ec2ca02238bbf83078538dde"
+                "reference": "5f989213c07c81eb28c84e499b4cde35f90ad48c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/361621eabe44b721ec2ca02238bbf83078538dde",
-                "reference": "361621eabe44b721ec2ca02238bbf83078538dde",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/5f989213c07c81eb28c84e499b4cde35f90ad48c",
+                "reference": "5f989213c07c81eb28c84e499b4cde35f90ad48c",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-12-05T11:49:18+00:00"
+            "time": "2018-12-14T06:33:14+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
