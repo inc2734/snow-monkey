@@ -1,5 +1,9 @@
 .smb-box {
   &__body {
     @include entry-content(.75);
+
+    @include _media-min(md) {
+      @include entry-content(1);
+    }
   }
 }
