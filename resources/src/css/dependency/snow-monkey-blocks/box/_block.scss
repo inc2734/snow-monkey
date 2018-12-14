@@ -1,9 +1,11 @@
 .smb-box {
+  @include _padding(.5);
+
+  @include _media-min(md) {
+    @include _padding(1);
+  }
+
   &__body {
     @include entry-content(.75);
-
-    @include _media-min(md) {
-      @include entry-content(1);
-    }
   }
 }
