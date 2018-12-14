@@ -35,8 +35,6 @@ add_action(
 						'wp-awesome-widgets',
 						'jquery.contents-outline',
 						'wp-contents-outline',
-						'fontawesome5-brands',
-						'fontawesome5-solid',
 						'fontawesome5',
 					]
 				);

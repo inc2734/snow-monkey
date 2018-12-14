@@ -77,7 +77,7 @@
     "packages:jquery.smoothscroll": "cpy 'jquery.smoothscroll/**' '../resources/assets/packages' --cwd=node_modules --parents",
     "packages:jquery.sticky": "cpy 'jquery.sticky/**' '../resources/assets/packages' --cwd=node_modules --parents",
     "packages:slick-carousel": "cpy 'slick-carousel/**' '../resources/assets/packages' --cwd=node_modules --parents",
-    "packages:fontawesome": "cpy 'fontawesome-free/js/brands.min.js' 'fontawesome-free/js/fontawesome.min.js' 'fontawesome-free/js/solid.min.js' '../../resources/assets/packages' --cwd=node_modules/@fortawesome --parents",
+    "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' '../../resources/assets/packages' --cwd=node_modules/@fortawesome --parents",
     "packages": "npm run cleanup:packages && npm-run-all packages:*",
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=resources/src/img --parents",
     "build": "npm run packages && npm-run-all -p js css img",

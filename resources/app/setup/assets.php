@@ -89,29 +89,11 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 	add_action(
 		$action_hook,
 		function() {
-			$relative_path = '/assets/packages/fontawesome-free/js/brands.min.js';
-			wp_register_script(
-				'fontawesome5-brands',
-				get_theme_file_uri( $relative_path ),
-				[],
-				filemtime( get_theme_file_path( $relative_path ) ),
-				true
-			);
-
-			$relative_path = '/assets/packages/fontawesome-free/js/solid.min.js';
-			wp_register_script(
-				'fontawesome5-solid',
-				get_theme_file_uri( $relative_path ),
-				[],
-				filemtime( get_theme_file_path( $relative_path ) ),
-				true
-			);
-
-			$relative_path = '/assets/packages/fontawesome-free/js/fontawesome.min.js';
+			$relative_path = '/assets/packages/fontawesome-free/js/all.min.js';
 			wp_enqueue_script(
 				'fontawesome5',
 				get_theme_file_uri( $relative_path ),
-				[ 'fontawesome5-brands', 'fontawesome5-solid' ],
+				[],
 				filemtime( get_theme_file_path( $relative_path ) ),
 				true
 			);
