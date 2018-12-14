@@ -125,45 +125,21 @@ add_action(
  *
  * @return void
  */
-function snow_monkey_enqueue_awesome_components() {
-	$relative_path = '/assets/packages/fontawesome-free/js/brands.min.js';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
-
-	wp_register_script(
-		'fontawesome5-brands',
-		$src,
-		[],
-		filemtime( $path ),
-		true
-	);
-
-	$relative_path = '/assets/packages/fontawesome-free/js/solid.min.js';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
-
-	wp_register_script(
-		'fontawesome5-solid',
-		$src,
-		[],
-		filemtime( $path ),
-		true
-	);
-
-	$relative_path = '/assets/packages/fontawesome-free/js/fontawesome.min.js';
-	$src  = get_theme_file_uri( $relative_path );
-	$path = get_theme_file_path( $relative_path );
-
-	wp_enqueue_script(
-		'fontawesome5',
-		$src,
-		[ 'fontawesome5-brands', 'fontawesome5-solid' ],
-		filemtime( $path ),
-		true
+foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
+	add_action(
+		$action_hook,
+		function() {
+			$relative_path = '/assets/packages/fontawesome-free/js/all.min.js';
+			wp_enqueue_script(
+				'fontawesome5',
+				get_theme_file_uri( $relative_path ),
+				[],
+				filemtime( get_theme_file_path( $relative_path ) ),
+				true
+			);
+		}
 	);
 }
-add_action( 'wp_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
-add_action( 'admin_enqueue_scripts', 'snow_monkey_enqueue_awesome_components' );
 
 /**
  * @return void
