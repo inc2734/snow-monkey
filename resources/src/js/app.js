@@ -13,7 +13,7 @@ import FixAdminBar from './_fix-adminbar.js';
 import SnowMonkeyWidgetItemExpander from './_widget-item-expander.js';
 import SnowMonkeyHeader from './_header.js';
 import SnowMonkeyDropNav from './_drop-nav.js';
-import SnowMonkeyPageTopScroll from './_page-top-scroll.js';
+import SnowMonkeySmoothScroll from './_smooth-scroll.js';
 import SnowMonkeyFooterStickyNav from './_footer-sticky-nav.js';
 import SnowMonkeyHashNav from './_hash-nav.js';
 import SnowMonkeyActiveMenu from './_active-menu.js';
@@ -30,7 +30,7 @@ if (snow_monkey_header_position_only_mobile) {
 
 new SnowMonkeyDropNav();
 
-new SnowMonkeyPageTopScroll();
+new SnowMonkeySmoothScroll();
 
 new SnowMonkeyFooterStickyNav();
 
