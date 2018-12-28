@@ -1,0 +1,7 @@
+.smb-accordion {
+  &__item {
+    &__body {
+      @include entry-content();
+    }
+  }
+}
