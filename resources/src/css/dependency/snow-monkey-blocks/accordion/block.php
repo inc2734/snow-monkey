@@ -5,4 +5,6 @@
  * @license GPL-2.0+
  */
 
-snow_monkey_entry_content_styles( [ '.smb-accordion__item__body' ] );
+use Framework\Helper;
+
+Helper::entry_content_styles( [ '.smb-accordion__item__body' ] );
