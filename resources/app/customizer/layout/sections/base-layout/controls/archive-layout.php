@@ -19,6 +19,7 @@ $customizer->control(
 		'choices'  => [
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),
 			'simple'     => __( 'Simple', 'snow-monkey' ),
+			'text'       => __( 'Text', 'snow-monkey' ),
 		],
 	]
 );

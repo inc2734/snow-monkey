@@ -26,7 +26,7 @@
   }
 
   &__body {
-    @include _transition(color);
+    @include _transition(opacity);
     overflow: hidden;
   }
 
@@ -59,15 +59,6 @@
     text-align: center;
   }
 
-  a > & {
-    @include _hover(lg) {
-      .#{$_prefix}c-entry-summary__body,
-      .#{$_prefix}c-entry-summary__content {
-        color: $_color-gray;
-      }
-    }
-  }
-
   .#{$_prefix}c-entries--rich-media a > & {
     .#{$_prefix}c-entry-summary__figure {
       &::after {
@@ -87,19 +78,6 @@
 
       > img {
         @include _transition(transform);
-      }
-    }
-
-    @include _hover(lg) {
-      .#{$_prefix}c-entry-summary__figure {
-        > img {
-          transform: scale(1.05);
-        }
-
-        &::after {
-          opacity: 1;
-          visibility: visible;
-        }
       }
     }
   }
@@ -127,6 +105,75 @@
 
     &__meta {
       text-align: left;
+    }
+  }
+
+  .#{$_prefix}c-entries--text & {
+    &__figure,
+    &__content,
+    .#{$_prefix}c-meta__item--author {
+      display: none;
+    }
+
+    &__title {
+      margin: 0;
+      @include _font-size-line-height($_base-font-size-px);
+      font-weight: normal;
+    }
+
+    &__meta {
+      margin: 1px 0 0;
+      @include _font-size-line-height($_base-font-size-px - 2);
+      font-weight: normal;
+      text-align: left;
+    }
+
+    &__body {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include _media-min(lg) {
+        flex-direction: row-reverse;
+
+        > .#{$_prefix}c-entry-summary__header {
+          flex: 1 1 auto;
+        }
+
+        > .#{$_prefix}c-entry-summary__meta {
+          flex: 0 0 auto;
+          @include _margin-right(1);
+          width: 8em;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .#{$_prefix}c-meta__item {
+      padding-left: 0;
+    }
+  }
+}
+
+.#{$_prefix}c-entries__item > a {
+  @include _hover(lg) {
+    .#{$_prefix}c-entry-summary__body {
+      opacity: .7;
+    }
+  }
+}
+
+.#{$_prefix}c-entries--rich-media > .#{$_prefix}c-entries__item > a {
+  @include _hover(lg) {
+    .#{$_prefix}c-entry-summary__figure {
+      > img {
+        transform: scale(1.05);
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 }

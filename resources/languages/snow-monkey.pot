@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-10-25 11:20+0900\n"
-"PO-Revision-Date: 2018-10-25 11:21+0900\n"
+"POT-Creation-Date: 2018-12-30 22:19+0900\n"
+"PO-Revision-Date: 2018-12-30 22:19+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,9 +22,29 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
+#: Framework/Helper.php:55
+msgid "Page header"
+msgstr "ページヘッダー"
+
+#: Framework/Helper.php:56
+msgid "Title on page header"
+msgstr "ページヘッダーの上にタイトルを表示"
+
+#: Framework/Helper.php:57
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:20
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
+msgid "Top of contents"
+msgstr "コンテンツの上"
+
+#: Framework/Helper.php:58
+#: app/customizer/design-skin/controls/design-skin.php:22
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:24
+msgid "None"
+msgstr "なし"
+
 #: app/customizer/advertisement/controls/google-adsense.php:16
 msgid "Google Adsense"
-msgstr "Google アドセンス"
+msgstr "WPAW: Google アドセンス"
 
 #: app/customizer/advertisement/controls/google-adsense.php:17
 msgid ""
@@ -83,12 +103,6 @@ msgstr "デザインスキン"
 #: app/customizer/design-skin/controls/design-skin.php:17
 msgid "If set this, please save and reload."
 msgstr "設定したら、保存してリロードしてください。"
-
-#: app/customizer/design-skin/controls/design-skin.php:22
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:24
-#: app/template-tags/eyecatch-position-choices.php:18
-msgid "None"
-msgstr "なし"
 
 #: app/customizer/design-skin/section.php:22
 #, php-format
@@ -197,12 +211,12 @@ msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
 msgid "Display child pages in page"
 msgstr "固定ページにそのページの子ページ一覧を表示する"
 
-#: app/customizer/design/sections/page/controls/eyecatch.php:16
-#: app/customizer/design/sections/post/controls/eyecatch.php:16
+#: app/customizer/design/sections/page/controls/eyecatch.php:17
+#: app/customizer/design/sections/post/controls/eyecatch.php:17
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
 
-#: app/customizer/design/sections/page/controls/eyecatch.php:17
+#: app/customizer/design/sections/page/controls/eyecatch.php:18
 msgid "Select how to display the eyecatch image in page."
 msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
 
@@ -214,15 +228,15 @@ msgstr "現在、固定ページの設定を表示しています。"
 msgid "Display contents outline in posts"
 msgstr "記事に目次を表示する"
 
-#: app/customizer/design/sections/post/controls/eyecatch.php:17
+#: app/customizer/design/sections/post/controls/eyecatch.php:18
 msgid "Select how to display the eyecatch image in post."
 msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
 
-#: app/customizer/design/sections/post/controls/profile-box.php:17
+#: app/customizer/design/sections/post/controls/profile-box.php:18
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
-#: app/customizer/design/sections/post/controls/related-posts.php:17
+#: app/customizer/design/sections/post/controls/related-posts.php:18
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
 
@@ -230,7 +244,7 @@ msgstr "記事に関連記事を表示する"
 msgid "Currently post settings is displayed."
 msgstr "現在、投稿の設定を表示しています。"
 
-#: app/customizer/infobar/controls/content.php:16
+#: app/customizer/infobar/controls/content.php:17
 msgid "Infobar content"
 msgstr "お知らせバーコンテンツ"
 
@@ -272,20 +286,19 @@ msgid "Rich media"
 msgstr "リッチメディア"
 
 #: app/customizer/layout/sections/base-layout/controls/archive-layout.php:21
-#: app/customizer/layout/sections/header/controls/header-layout.php:21
+#: app/customizer/layout/sections/header/controls/header-layout.php:22
 #: app/widget/snow-monkey-recent-posts/_form.php:43
 msgid "Simple"
 msgstr "シンプル"
 
+#: app/customizer/layout/sections/base-layout/controls/archive-layout.php:22
+#: app/widget/snow-monkey-recent-posts/_form.php:44
+msgid "Text"
+msgstr "テキスト"
+
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:16
 msgid "Breadcrumbs display position"
 msgstr "パンくずリストの表示位置"
-
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:20
-#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
-#: app/template-tags/eyecatch-position-choices.php:17
-msgid "Top of contents"
-msgstr "コンテンツの上"
 
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:21
 msgid "Top of contents ( Fit to content width )"
@@ -329,23 +342,23 @@ msgstr "スリム幅"
 msgid "Base settings"
 msgstr "基本設定"
 
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:17
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:18
 msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
 
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:21
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:22
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:22
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:23
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:23
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:24
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:24
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:25
 msgid "4 columns"
 msgstr "4カラム"
 
@@ -358,27 +371,27 @@ msgstr "フッター"
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示"
 
-#: app/customizer/layout/sections/header/controls/header-content.php:17
+#: app/customizer/layout/sections/header/controls/header-content.php:18
 msgid "Header contents"
 msgstr "ヘッダーコンテンツ"
 
-#: app/customizer/layout/sections/header/controls/header-content.php:18
+#: app/customizer/layout/sections/header/controls/header-content.php:19
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
-#: app/customizer/layout/sections/header/controls/header-layout.php:17
+#: app/customizer/layout/sections/header/controls/header-layout.php:18
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/layout/sections/header/controls/header-layout.php:22
+#: app/customizer/layout/sections/header/controls/header-layout.php:23
 msgid "One row"
 msgstr "1行"
 
-#: app/customizer/layout/sections/header/controls/header-layout.php:23
+#: app/customizer/layout/sections/header/controls/header-layout.php:24
 msgid "Two rows"
 msgstr "2行"
 
-#: app/customizer/layout/sections/header/controls/header-layout.php:24
+#: app/customizer/layout/sections/header/controls/header-layout.php:25
 msgid "Center logo"
 msgstr "中央ロゴ"
 
@@ -419,11 +432,15 @@ msgstr "現在、WooCommerce アーカイブページの設定を表示してい
 msgid "Currently product page settings is displayed."
 msgstr "現在、商品ページの設定を表示しています。"
 
-#: app/customizer/page-speed-optimization/controls/browser-cache.php:16
+#: app/customizer/page-speed-optimization/controls/async-load-images.php:16
+msgid "Async loading of images"
+msgstr "画像の非同期読み込み"
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:17
 msgid "Use browser cache"
 msgstr "ブラウザキャッシュを使用する"
 
-#: app/customizer/page-speed-optimization/controls/browser-cache.php:17
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:18
 msgid "The server must support htaccess."
 msgstr "サーバーが .htaccess に対応している必要があります。"
 
@@ -540,11 +557,11 @@ msgstr "例: GTM-X11X1XX"
 msgid "Google Tag Manager"
 msgstr "Google タグマネージャ"
 
-#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:18
+#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:19
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
-#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:20
+#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:21
 #, php-format
 msgctxt "facebook-page-name"
 msgid "Please enter %1$s of %2$s"
@@ -620,8 +637,16 @@ msgid "Pocket"
 msgstr "Pocket"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:28
+msgid "Pinterest"
+msgstr "Pinterest"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:29
 msgid "Feed"
 msgstr "フィード"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:30
+msgid "Copy"
+msgstr "コピー"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php:16
 msgid "Share counts cache time (seconds)"
@@ -817,35 +842,43 @@ msgstr "%1$sジョブボード%2$s"
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
 
-#: app/customizer/title-tagline/controls/copyright.php:14
-#: template-parts/copyright.php:10
+#: app/customizer/title-tagline/controls/copyright.php:15
+#: template-parts/footer/copyright.php:10
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: app/customizer/title-tagline/controls/copyright.php:19
-#: template-parts/copyright.php:15
+#: app/customizer/title-tagline/controls/copyright.php:20
+#: template-parts/footer/copyright.php:15
 msgid "WordPress"
 msgstr "WordPress"
 
-#: app/customizer/title-tagline/controls/copyright.php:22
-#: template-parts/copyright.php:18
+#: app/customizer/title-tagline/controls/copyright.php:23
+#: template-parts/footer/copyright.php:18
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: app/customizer/title-tagline/controls/copyright.php:23
-#: template-parts/copyright.php:19
+#: app/customizer/title-tagline/controls/copyright.php:24
+#: template-parts/footer/copyright.php:19
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: app/customizer/title-tagline/controls/copyright.php:31
+#: app/customizer/title-tagline/controls/copyright.php:32
 msgid "Copyright"
 msgstr "コピーライト"
 
-#: app/customizer/title-tagline/controls/copyright.php:32
+#: app/customizer/title-tagline/controls/copyright.php:33
 msgid "HTML usable"
 msgstr "HTML 使用可"
+
+#: app/setup/dependency/woocommerce.php:100
+msgid "WooCommerce sidebar"
+msgstr "WooCommerce サイドバー"
+
+#: app/setup/dependency/woocommerce.php:101
+msgid "These widgets are displayed in the sidebar on WooCommerce."
+msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
 #: app/setup/entry-meta.php:16 app/setup/entry-meta.php:31
 msgid "Published"
@@ -992,22 +1025,6 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/woocommerce.php:91
-msgid "WooCommerce sidebar"
-msgstr "WooCommerce サイドバー"
-
-#: app/setup/woocommerce.php:92
-msgid "These widgets are displayed in the sidebar on WooCommerce."
-msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
-
-#: app/template-tags/eyecatch-position-choices.php:15
-msgid "Page header"
-msgstr "ページヘッダー"
-
-#: app/template-tags/eyecatch-position-choices.php:16
-msgid "Title on page header"
-msgstr "ページヘッダーの上にタイトルを表示"
-
 #: app/widget/snow-monkey-recent-posts/_form.php:11
 msgid "Title"
 msgstr "タイトル"
@@ -1016,53 +1033,86 @@ msgstr "タイトル"
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:53
+#: app/widget/snow-monkey-recent-posts/_form.php:54
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:64
+#: app/widget/snow-monkey-recent-posts/_form.php:65
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:27
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:31
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:33
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:37
 msgid "Recent posts"
 msgstr "最近の投稿"
 
-#: template-parts/child-pages.php:20
+#: template-parts/content/child-pages.php:20
 msgid "Child pages"
 msgstr "このページの子ページ"
 
-#: template-parts/comment.php:14
+#: template-parts/content/page-summary.php:26
+msgid "More"
+msgstr "More"
+
+#: template-parts/content/prev-next-nav.php:31
+msgid "Old post"
+msgstr "古い投稿"
+
+#: template-parts/content/prev-next-nav.php:33
+msgid "New post"
+msgstr "新しい投稿"
+
+#: template-parts/content/related-posts.php:25
+msgid "Related posts"
+msgstr "関連記事"
+
+#: template-parts/content/related-posts.php:27
+msgid "(Including some ads)"
+msgstr "（一部広告含む）"
+
+#: template-parts/discussion/comment.php:14
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
-#: template-parts/comment.php:23 template-parts/trackback.php:15
+#: template-parts/discussion/comment.php:23
+#: template-parts/discussion/trackback.php:15
 #, php-format
 msgid "%1$s said on %2$s at %3$s"
 msgstr "%1$s said on %2$s at %3$s"
 
-#: template-parts/comment.php:28
+#: template-parts/discussion/comment.php:28
 msgid "Edit this comment"
 msgstr "コメントを編集"
 
-#: template-parts/comments.php:15
+#: template-parts/discussion/comments.php:17
 msgid "Comments on this post"
 msgstr "この投稿へのコメント"
 
-#: template-parts/comments.php:48
+#: template-parts/discussion/comments.php:50
 msgid "No comments."
 msgstr "コメントはありません。"
 
-#: template-parts/hamburger-btn.php:15
+#: template-parts/discussion/pings.php:17
+msgid "Trackbacks and Pingbacks on this post"
+msgstr "この投稿へのトラックバック"
+
+#: template-parts/discussion/pings.php:37
+msgid "No trackbacks."
+msgstr "トラックバックはありません。"
+
+#: template-parts/discussion/pings.php:44
+msgid "TrackBack URL"
+msgstr "トラックバック URL"
+
+#: template-parts/header/hamburger-btn.php:15
 msgid "MENU"
 msgstr "MENU"
 
 #: template-parts/overlay-search-box.php:12
-#: template-parts/overlay-widget-area.php:18
+#: template-parts/widget-area/overlay.php:18
 msgid "Close"
 msgstr "閉じる"
 
@@ -1071,55 +1121,23 @@ msgstr "閉じる"
 msgid "Search"
 msgstr "検索する"
 
-#: template-parts/page-summary.php:26
-msgid "More"
-msgstr "More"
-
 #: template-parts/page-top.php:11
 msgid "Scroll up"
 msgstr "上にスクロール"
 
-#: template-parts/pings.php:15
-msgid "Trackbacks and Pingbacks on this post"
-msgstr "この投稿へのトラックバック"
-
-#: template-parts/pings.php:35
-msgid "No trackbacks."
-msgstr "トラックバックはありません。"
-
-#: template-parts/pings.php:42
-msgid "TrackBack URL"
-msgstr "トラックバック URL"
-
-#: template-parts/prev-next-nav.php:31
-msgid "Old post"
-msgstr "古い投稿"
-
-#: template-parts/prev-next-nav.php:33
-msgid "New post"
-msgstr "新しい投稿"
-
-#: template-parts/related-posts.php:25
-msgid "Related posts"
-msgstr "関連記事"
-
-#: template-parts/related-posts.php:27
-msgid "(Including some ads)"
-msgstr "（一部広告含む）"
-
-#: templates/view/404.php:13
+#: templates/view/404.php:14
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: templates/view/404.php:14
+#: templates/view/404.php:15
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: templates/view/404.php:15
+#: templates/view/404.php:16
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
-#: templates/view/no-match.php:11
+#: templates/view/no-match.php:12
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -1144,12 +1162,8 @@ msgid "https://2inc.org"
 msgstr "https://2inc.org"
 
 #. Template Name of the plugin/theme
-msgid "Landing page ( has no side margins )"
-msgstr "ランディングページ ( 左右余白なし ）"
-
-#. Template Name of the plugin/theme
-msgid "Landing page ( has side margins )"
-msgstr "ランディングページ ( 左右余白あり ）"
+msgid "Landing page"
+msgstr "ランディングページ"
 
 #. Template Name of the plugin/theme
 msgid "One column"
@@ -1164,16 +1178,24 @@ msgid "One column ( slim width )"
 msgstr "1カラム ( スリム幅 )"
 
 #. Template Name of the plugin/theme
-msgid "Full width ( has no side margins )"
-msgstr "フル幅 ( 左右余白なし )"
+msgid "Full width"
+msgstr "フル幅"
 
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
-#. Template Name of the plugin/theme
-msgid "Full width ( has side margins )"
-msgstr "フル幅 ( 左右余白あり )"
+#~ msgid "Landing page ( has no side margins )"
+#~ msgstr "ランディングページ ( 左右余白なし ）"
+
+#~ msgid "Full width ( has no side margins )"
+#~ msgstr "フル幅 ( 左右余白なし )"
+
+#~ msgid "Landing page ( has side margins )"
+#~ msgstr "ランディングページ ( 左右余白あり ）"
+
+#~ msgid "Full width ( has side margins )"
+#~ msgstr "フル幅 ( 左右余白あり )"
 
 #~ msgid "Currently singular post settings is displayed."
 #~ msgstr "現在、個別投稿の設定を表示しています。"
