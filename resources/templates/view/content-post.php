@@ -46,12 +46,6 @@ use Framework\Helper;
 		<?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
 		<div class="c-entry__content p-entry-content">
-			<?php
-			if ( get_option( 'mwt-display-contents-outline' ) ) {
-				Helper::get_template_part( 'template-parts/content/contents-outline' );
-			}
-			?>
-
 			<?php the_content(); ?>
 			<?php Helper::get_template_part( 'template-parts/content/link-pages' ); ?>
 		</div>

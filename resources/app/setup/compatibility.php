@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Framework\Helper;
+
 /**
  * Add .p-entry-content to .c-entry__content
  *
@@ -25,7 +27,7 @@ add_filter(
 );
 
 /**
- * Fallback for Awesome Components
+ * Backward compatibility for Awesome Components
  *
  * @param string $content
  * @return string
@@ -39,5 +41,17 @@ add_filter(
 		$content = str_replace( 'wpac-section__container', 'c-container', $content );
 		$content = str_replace( 'wpac-btn', 'wpac-btn c-btn', $content );
 		return $content;
+	}
+);
+
+/**
+ * Backward compatibility for contents outline
+ */
+add_action(
+	'snow_monkey_after_entry_content',
+	function() {
+		if ( apply_filters( 'snow_monkey_display_contents_outline', false ) ) {
+			Helper::get_template_part( 'template-parts/content/contents-outline' );
+		}
 	}
 );
