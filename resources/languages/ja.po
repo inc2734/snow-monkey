@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2018-11-17 16:17+0900\n"
-"PO-Revision-Date: 2018-11-17 16:17+0900\n"
+"POT-Creation-Date: 2019-01-11 09:34+0900\n"
+"PO-Revision-Date: 2019-01-11 09:34+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -276,6 +276,11 @@ msgstr "リッチメディア"
 #: app/widget/snow-monkey-recent-posts/_form.php:43
 msgid "Simple"
 msgstr "シンプル"
+
+#: app/customizer/layout/sections/base-layout/controls/archive-layout.php:22
+#: app/widget/snow-monkey-recent-posts/_form.php:44
+msgid "Text"
+msgstr "テキスト"
 
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:16
 msgid "Breadcrumbs display position"
@@ -1024,11 +1029,11 @@ msgstr "タイトル"
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:53
+#: app/widget/snow-monkey-recent-posts/_form.php:54
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:64
+#: app/widget/snow-monkey-recent-posts/_form.php:65
 msgid "Link text"
 msgstr "リンクテキスト"
 

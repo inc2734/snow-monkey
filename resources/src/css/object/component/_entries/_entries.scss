@@ -39,7 +39,8 @@
     }
   }
 
-  &--simple {
+  &--simple,
+  &--text {
     margin: 0;
     display: block;
 
@@ -48,13 +49,25 @@
       max-width: none;
       border-bottom: 1px solid _lighter($_color-gray);
       padding: 0;
+    }
+  }
 
+  &--simple {
+    .#{$_prefix}c-entries__item {
       > a {
         @include _padding(.5, 0);
 
         @include _media-min(md) {
           @include _padding(1, 0);
         }
+      }
+    }
+  }
+
+  &--text {
+    .#{$_prefix}c-entries__item {
+      > a {
+        @include _padding(.5, 0);
       }
     }
   }
