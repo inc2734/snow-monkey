@@ -55,3 +55,15 @@ add_action(
 		}
 	}
 );
+
+/**
+ * Backward compatibility for child pages
+ */
+add_action(
+	'snow_monkey_after_entry_content',
+	function() {
+		if ( apply_filters( 'snow_monkey_display_child_pages', false ) ) {
+			Helper::get_template_part( 'template-parts/content/child-pages' );
+		}
+	}
+);

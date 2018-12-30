@@ -36,12 +36,6 @@ use Framework\Helper;
 	</div>
 </article>
 
-<?php
-if ( get_option( 'mwt-display-child-pages' ) ) {
-	Helper::get_template_part( 'template-parts/content/child-pages' );
-}
-?>
-
 <?php Helper::get_template_part( 'template-parts/widget-area/contents-bottom' ); ?>
 
 <?php
