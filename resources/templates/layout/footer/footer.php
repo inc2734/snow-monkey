@@ -14,5 +14,5 @@ use Framework\Helper;
 	<?php Helper::get_template_part( 'template-parts/footer/copyright' ); ?>
 </footer>
 
-<?php Helper::get_template_part( 'template-parts/page-top' ); ?>
+<?php Helper::get_template_part( 'template-parts/common/page-top' ); ?>
 <?php Helper::get_template_part( 'template-parts/nav/footer-sticky' ); ?>

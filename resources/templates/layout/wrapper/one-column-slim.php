@@ -25,25 +25,25 @@ use Framework\Helper;
 
 		<div class="l-contents" role="document">
 			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
-			<?php Helper::get_template_part( 'template-parts/infobar' ); ?>
+			<?php Helper::get_template_part( 'template-parts/common/infobar' ); ?>
 
 			<?php
 			if ( Helper::is_output_page_header() ) {
-				Helper::get_template_part( 'template-parts/page-header' );
+				Helper::get_template_part( 'template-parts/common/page-header' );
 			}
 			?>
 
 			<div class="c-container">
 				<?php
 				if ( 'default' === get_theme_mod( 'breadcrumbs-position' ) ) {
-					Helper::get_template_part( 'template-parts/breadcrumbs' );
+					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>
 
 				<div class="u-slim-width">
 					<?php
 					if ( 'content-width' === get_theme_mod( 'breadcrumbs-position' ) ) {
-						Helper::get_template_part( 'template-parts/breadcrumbs' );
+						Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 					}
 					?>
 
@@ -59,14 +59,14 @@ use Framework\Helper;
 
 					<?php
 					if ( 'bottom-content-width' === get_theme_mod( 'breadcrumbs-position' ) ) {
-						Helper::get_template_part( 'template-parts/breadcrumbs' );
+						Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 					}
 					?>
 				</div>
 
 				<?php
 				if ( 'bottom' === get_theme_mod( 'breadcrumbs-position' ) ) {
-					Helper::get_template_part( 'template-parts/breadcrumbs' );
+					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>
 			</div>

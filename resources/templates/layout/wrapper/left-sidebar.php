@@ -25,18 +25,18 @@ use Framework\Helper;
 
 		<div class="l-contents" role="document">
 			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
-			<?php Helper::get_template_part( 'template-parts/infobar' ); ?>
+			<?php Helper::get_template_part( 'template-parts/common/infobar' ); ?>
 
 			<?php
 			if ( Helper::is_output_page_header() ) {
-				Helper::get_template_part( 'template-parts/page-header' );
+				Helper::get_template_part( 'template-parts/common/page-header' );
 			}
 			?>
 
 			<div class="c-container">
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
-					Helper::get_template_part( 'template-parts/breadcrumbs' );
+					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>
 
@@ -56,7 +56,7 @@ use Framework\Helper;
 
 				<?php
 				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
-					Helper::get_template_part( 'template-parts/breadcrumbs' );
+					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>
 			</div>

@@ -14,7 +14,7 @@ use Framework\Helper;
  */
 function snow_monkey_sidebar_add_google_adsense() {
 	Helper::get_template_part(
-		'template-parts/google-adsense',
+		'template-parts/common/google-adsense',
 		null,
 		[
 			'position' => 'sidebar-top',

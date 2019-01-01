@@ -32,7 +32,7 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback' => function() {
 			if ( get_theme_mod( 'infobar-content' ) ) {
-				Helper::get_template_part( 'template-parts/infobar' );
+				Helper::get_template_part( 'template-parts/common/infobar' );
 			}
 		},
 	]

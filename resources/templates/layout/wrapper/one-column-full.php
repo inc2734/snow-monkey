@@ -25,7 +25,7 @@ use Framework\Helper;
 
 		<div class="l-contents" role="document">
 			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
-			<?php Helper::get_template_part( 'template-parts/infobar' ); ?>
+			<?php Helper::get_template_part( 'template-parts/common/infobar' ); ?>
 
 			<div class="c-full-container">
 				<?php do_action( 'snow_monkey_before_contents_inner' ); ?>

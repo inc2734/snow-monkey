@@ -28,7 +28,7 @@ use Framework\Helper;
 
 		<?php
 		Helper::get_template_part(
-			'template-parts/google-adsense',
+			'template-parts/common/google-adsense',
 			null,
 			[
 				'position' => 'content-top',
@@ -65,13 +65,13 @@ use Framework\Helper;
 
 		<?php
 		if ( get_option( 'mwt-display-profile-box' ) ) {
-			Helper::get_template_part( 'template-parts/profile-box' );
+			Helper::get_template_part( 'template-parts/common/profile-box' );
 		}
 		?>
 
 		<?php
 		Helper::get_template_part(
-			'template-parts/google-adsense',
+			'template-parts/common/google-adsense',
 			null,
 			[
 				'position' => 'content-bottom',
@@ -79,7 +79,7 @@ use Framework\Helper;
 		);
 		?>
 
-		<?php Helper::get_template_part( 'template-parts/like-me-box' ); ?>
+		<?php Helper::get_template_part( 'template-parts/common/like-me-box' ); ?>
 	</footer>
 </article>
 

@@ -39,7 +39,7 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback'     => function() {
 			if ( get_option( 'mwt-facebook-page-name' ) ) {
-				Helper::get_template_part( 'template-parts/profile-box' );
+				Helper::get_template_part( 'template-parts/common/profile-box' );
 			}
 		},
 	]
