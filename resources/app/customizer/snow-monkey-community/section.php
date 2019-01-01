@@ -43,7 +43,7 @@ $customizer->control(
 		'description' => __( 'This is an online community that only purchasers of the Snow Monkey can participate. It is a place to share information and discuss about future function development etc.', 'snow-monkey' ),
 		'content'     => sprintf(
 			__( '%1$sOnline Community%2$s' ),
-			'<a class="button" href="https://www.facebook.com/groups/wp.snowmonkey/" target="_blank">',
+			'<a class="button" href="https://snow-monkey.2inc.org/community/online-community/" target="_blank">',
 			'</a>'
 		),
 	]
