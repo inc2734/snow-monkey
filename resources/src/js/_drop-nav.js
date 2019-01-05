@@ -1,5 +1,7 @@
 'use strict';
 
+import addCustomEvent from '@inc2734/add-custom-event';
+
 export default class SnowMonkeyDropNav {
   constructor() {
     this.defaultWindowWidth = window.innerWidth;
@@ -79,13 +81,22 @@ export default class SnowMonkeyDropNav {
   }
 
   _gnav() {
+    if ('false' === this.gnav.getAttribute('aria-hidden')) {
+      return;
+    }
+
     this._showGnav();
     this._hideDropNav();
   }
 
   _dropNav() {
+    if ('false' === this.dropNav.getAttribute('aria-hidden')) {
+      return;
+    }
+
     this._hideGnav();
     this._showDropNav();
+    addCustomEvent(window, 'showDropNav');
   }
 
   _showGnav() {

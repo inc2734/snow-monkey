@@ -1,5 +1,6 @@
 'use strict';
 
+import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 import BasisDrawerCloseZone from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer-close-zone.js';
 import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer.js';
 
@@ -14,7 +15,7 @@ export default class SnowMonkeyHashNav {
       return;
     }
 
-    this._forEachHtmlNodes(document.querySelectorAll('a[href="#sm-drawer"]'), (element) => {
+    forEachHtmlNodes(document.querySelectorAll('a[href="#sm-drawer"]'), (element) => {
       element.addEventListener('click', (event) => this._click(event), false);
     });
   }
@@ -27,11 +28,5 @@ export default class SnowMonkeyHashNav {
       BasisDrawer.open(this.drawer);
     }
     return false
-  }
-
-  _forEachHtmlNodes(htmlNodes, callback) {
-    if (0 < htmlNodes.length) {
-      [].forEach.call(htmlNodes, (htmlNode) => callback(htmlNode));
-    }
   }
 }

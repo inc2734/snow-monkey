@@ -1,5 +1,7 @@
 'use strict';
 
+import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
+
 export default class SnowMonkeyWidgetItemExpander {
 
   constructor() {
@@ -9,7 +11,7 @@ export default class SnowMonkeyWidgetItemExpander {
   _DOMContentLoaded() {
     const children = document.querySelectorAll('.c-widget .children, .c-widget .sub-menu');
 
-    this._forEachHtmlNodes(children, (element) => {
+    forEachHtmlNodes(children, (element) => {
       element.setAttribute('data-is-hidden', 'true');
 
       const parent = element.parentNode;
@@ -30,25 +32,19 @@ export default class SnowMonkeyWidgetItemExpander {
     if ('false' === btn.getAttribute('data-is-expanded')) {
       btn.setAttribute('data-is-expanded', 'true');
 
-      this._forEachHtmlNodes(parent.children, (element) => {
+      forEachHtmlNodes(parent.children, (element) => {
         if ('true' === element.getAttribute('data-is-hidden')) {
           element.setAttribute('data-is-hidden', 'false');
         }
       });
     } else {
-      this._forEachHtmlNodes(parent.getElementsByClassName('children-expander'), (element) => {
+      forEachHtmlNodes(parent.getElementsByClassName('children-expander'), (element) => {
         element.setAttribute('data-is-expanded', 'false');
       });
 
-      this._forEachHtmlNodes(parent.querySelectorAll('.children, .sub-menu'), (element) => {
+      forEachHtmlNodes(parent.querySelectorAll('.children, .sub-menu'), (element) => {
         element.setAttribute('data-is-hidden', 'true');
       });
-    }
-  }
-
-  _forEachHtmlNodes(htmlNodes, callback) {
-    if (0 < htmlNodes.length) {
-      [].forEach.call(htmlNodes, (htmlNode) => callback(htmlNode));
     }
   }
 }

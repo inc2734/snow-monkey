@@ -16,6 +16,7 @@ import SnowMonkeyDropNav from './_drop-nav.js';
 import SnowMonkeySmoothScroll from './_smooth-scroll.js';
 import SnowMonkeyFooterStickyNav from './_footer-sticky-nav.js';
 import SnowMonkeyHashNav from './_hash-nav.js';
+import SnowMonkeyAnchorPageScroll from './_anchor-page-scroll.js';
 import SnowMonkeyActiveMenu from './_active-menu.js';
 
 new BasisStickyHeader();
@@ -35,6 +36,8 @@ new SnowMonkeySmoothScroll();
 new SnowMonkeyFooterStickyNav();
 
 new SnowMonkeyHashNav();
+
+new SnowMonkeyAnchorPageScroll();
 
 new SnowMonkeyActiveMenu('.p-global-nav', {
   home_url: snow_monkey.home_url,

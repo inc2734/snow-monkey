@@ -1,5 +1,7 @@
 'use strict';
 
+import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
+
 export default class SnowMonkeyActiveMenu {
   constructor(selector, params = {}) {
     this.selector = selector;
@@ -13,11 +15,11 @@ export default class SnowMonkeyActiveMenu {
   _DOMContentLoaded() {
     const navs = document.querySelectorAll(this.selector);
 
-    this._forEachHtmlNodes(navs, (nav) => {
+    forEachHtmlNodes(navs, (nav) => {
       const links     = nav.getElementsByTagName('a');
       const vlocation = this._createVlocation();
 
-      this._forEachHtmlNodes(links, (atag) => {
+      forEachHtmlNodes(links, (atag) => {
         if (typeof atag.hostname === 'undefined') {
           return;
         }
@@ -44,12 +46,6 @@ export default class SnowMonkeyActiveMenu {
     const element = document.createElement('a');
     element.setAttribute('href', this.params.home_url);
     return element;
-  }
-
-  _forEachHtmlNodes(htmlNodes, callback) {
-    if (0 < htmlNodes.length) {
-      [].forEach.call(htmlNodes, (htmlNode) => callback(htmlNode));
-    }
   }
 
   _active(element) {
