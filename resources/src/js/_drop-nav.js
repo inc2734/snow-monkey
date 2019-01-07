@@ -1,6 +1,7 @@
 'use strict';
 
 import addCustomEvent from '@inc2734/add-custom-event';
+import {getHeader, getDropNavWrapper, scrollTop, isHeaderPositionOnlyMobile, maybeShowDropNav} from './_helper.js';
 
 export default class SnowMonkeyDropNav {
   constructor() {
@@ -10,20 +11,13 @@ export default class SnowMonkeyDropNav {
   }
 
   _DOMContentLoaded() {
-    this.header = document.getElementsByClassName('l-header');
-    if (1 > this.header.length) {
+    this.header = getHeader();
+    if (! this.header) {
       return;
     }
-    this.header = this.header[0];
 
-    this.dropNavWrapper = document.getElementsByClassName('l-header__drop-nav');
-    if (1 > this.dropNavWrapper.length) {
-      return;
-    }
-    this.dropNavWrapper = this.dropNavWrapper[0];
-
-    this.dropNav = this.dropNavWrapper.querySelector('.p-global-nav');
-    if (! this.dropNav) {
+    this.dropNavWrapper = getDropNavWrapper();
+    if (! this.dropNavWrapper) {
       return;
     }
 
@@ -32,33 +26,26 @@ export default class SnowMonkeyDropNav {
       return;
     }
 
-    if (this._isUpdateVisibility()) {
+    if (isHeaderPositionOnlyMobile()) {
       this._gnav();
     } else {
       this._hideDropNav();
     }
 
-    (() => {
-      this.timer = null;
-      window.addEventListener('scroll', () => this._scroll(), false);
-    })();
-
+    this.timer = null;
+    window.addEventListener('scroll', () => this._scroll(), false);
     window.addEventListener('resize', () => this._resize(), false);
   }
 
   _scroll() {
     clearTimeout(this.timer);
     this.timer = setTimeout(() => {
-      if (window.matchMedia('(min-width: 1023px)').matches) {
-        if (this.header.offsetHeight + this.header.getBoundingClientRect().top + this._scrollTop() < this._scrollTop()) {
-          if (this._isUpdateVisibility()) {
-            this._dropNav();
-            return;
-          }
-        }
+      if (maybeShowDropNav()) {
+        this._dropNav();
+        return;
       }
 
-      if (this._isUpdateVisibility()) {
+      if (isHeaderPositionOnlyMobile()) {
         this._gnav();
       }
     }, 100);
@@ -66,18 +53,10 @@ export default class SnowMonkeyDropNav {
 
   _resize() {
     if (window.innerWidth !== this.defaultWindowWidth) {
-      if (this._isUpdateVisibility()) {
+      if (isHeaderPositionOnlyMobile()) {
         this._gnav();
       }
     }
-  }
-
-  _isUpdateVisibility() {
-    return false === snow_monkey_header_position_only_mobile ? false : true;
-  }
-
-  _scrollTop() {
-    return document.documentElement.scrollTop || document.body.scrollTop;
   }
 
   _gnav() {
@@ -90,7 +69,7 @@ export default class SnowMonkeyDropNav {
   }
 
   _dropNav() {
-    if ('false' === this.dropNav.getAttribute('aria-hidden')) {
+    if ('false' === this.dropNavWrapper.getAttribute('aria-hidden')) {
       return;
     }
 
@@ -109,12 +88,10 @@ export default class SnowMonkeyDropNav {
 
   _showDropNav() {
     this._show(this.dropNavWrapper);
-    this._show(this.dropNav);
   }
 
   _hideDropNav() {
     this._hide(this.dropNavWrapper);
-    this._hide(this.dropNav);
   }
 
   _show(target) {

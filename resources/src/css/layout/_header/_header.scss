@@ -47,11 +47,16 @@
   }
 
   &__drop-nav {
-    @include _position(fixed, -100%, 0, null, 0, 10);
+    visibility: hidden;
+    @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
     background-color: #fff;
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
     @include _transition(transform);
+
+    @include _media-min(lg) {
+      visibility: visible;
+    }
 
     &[aria-hidden="false"] {
       top: 0;

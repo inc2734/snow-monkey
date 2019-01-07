@@ -1,6 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
+import {getHeader, getDropNavWrapper, scrollTop, getHeaderType, maybeShowDropNav} from './_helper.js';
 
 export default class SnowMonkeyAnchorPageScroll {
   constructor(selector, params = {}) {
@@ -13,42 +14,39 @@ export default class SnowMonkeyAnchorPageScroll {
       return;
     }
 
-    this.header = document.getElementsByClassName('l-header');
+    this.header = getHeader();
     if (! this.header) {
       return;
     }
-    this.header = this.header[0];
 
-    this.dropNavWrapper = document.getElementsByClassName('l-header__drop-nav');
+    this.dropNavWrapper = getDropNavWrapper();
     if (! this.dropNavWrapper) {
       return;
     }
-    this.dropNavWrapper = this.dropNavWrapper[0];
 
-    if (0 < this._scrollTop()) {
+    this.defaultScrollTop = scrollTop();
+    this.scrolled = false;
+    window.addEventListener('scroll', () => this._scrollEvent(), false);
+  }
+
+  _scrollEvent() {
+    if (0 < this.defaultScrollTop) {
       return;
     }
 
-    this._init();
-    window.addEventListener('resize', () => this._init(), false);
-    window.addEventListener('showDropNav', () => this._init(), false);
-  }
+    if (this.scrolled) {
+      return;
+    }
+    this.scrolled = true;
 
-  _init() {
-    const headerType = this.header.getAttribute('data-l-header-type');
-
-    if ('false' === this.dropNavWrapper.getAttribute('aria-hidden')) {
-      this._scrollTo(this._scrollTop() - this.dropNavWrapper.offsetHeight);
-    } else if ('sticky' === headerType || 'overlay' === headerType) {
-      this._scrollTo(this._scrollTop() - this.header.offsetHeight);
+    if (maybeShowDropNav()) {
+      this._scrollToTarget(this.dropNavWrapper.offsetHeight);
+    } else if ('sticky' === getHeaderType() || 'overlay' === getHeaderType()) {
+      this._scrollToTarget(this.header.offsetHeight);
     }
   }
 
-  _scrollTop() {
-    return document.documentElement.scrollTop || document.body.scrollTop;
-  }
-
-  _scrollTo(y) {
-    window.scrollTo(0, y)
+  _scrollToTarget(y) {
+    window.scrollTo(0, scrollTop() - y);
   }
 }

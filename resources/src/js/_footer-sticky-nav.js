@@ -1,12 +1,14 @@
 'use strict';
 
+import {getBody, getFooterStickyNav, getStyle, setStyle} from './_helper.js';
+
 export default class SnowMonkeyFooterStickyNav {
   constructor() {
     window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
   }
 
   _DOMContentLoaded() {
-    this.nav = document.getElementById('footer-sticky-nav');
+    this.nav = getFooterStickyNav();
     if (! this.nav) {
       return;
     }
@@ -16,9 +18,9 @@ export default class SnowMonkeyFooterStickyNav {
   }
 
   _init() {
-    const display = window.getComputedStyle(this.nav).getPropertyValue('display');
-    const body    = document.getElementById('body');
+    const display = getStyle(this.nav, 'display');
+    const body    = getBody();
 
-    body.style.marginBottom = 'none' !== display ? `${this.nav.offsetHeight}px` : '';
+    setStyle(body, 'marginBottom', 'none' !== display ? `${this.nav.offsetHeight}px` : '');
   }
 }

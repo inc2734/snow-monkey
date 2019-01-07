@@ -20,24 +20,15 @@ import SnowMonkeyAnchorPageScroll from './_anchor-page-scroll.js';
 import SnowMonkeyActiveMenu from './_active-menu.js';
 
 new BasisStickyHeader();
-
 new FixAdminBar();
-
-new SnowMonkeyWidgetItemExpander();
-
-if (snow_monkey_header_position_only_mobile) {
-  new SnowMonkeyHeader();
-}
-
+new SnowMonkeyHeader();
 new SnowMonkeyDropNav();
-
+new SnowMonkeyAnchorPageScroll();
 new SnowMonkeySmoothScroll();
 
 new SnowMonkeyFooterStickyNav();
 
 new SnowMonkeyHashNav();
-
-new SnowMonkeyAnchorPageScroll();
 
 new SnowMonkeyActiveMenu('.p-global-nav', {
   home_url: snow_monkey.home_url,
@@ -46,6 +37,8 @@ new SnowMonkeyActiveMenu('.p-global-nav', {
 new SnowMonkeyActiveMenu('.p-footer-sticky-nav', {
   home_url: snow_monkey.home_url,
 });
+
+new SnowMonkeyWidgetItemExpander();
 
 $('.l-sidebar-sticky-widget-area').sticky({
   breakpoint: 1024,

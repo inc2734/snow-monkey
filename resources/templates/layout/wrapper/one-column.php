@@ -8,7 +8,7 @@
 use Framework\Helper;
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> data-sticky-footer="true">
+<html <?php language_attributes(); ?> data-sticky-footer="true" data-scrolled="false">
 <?php Helper::get_template_part( 'vendor/inc2734/mimizuku-core/src/view/template-parts/head' ); ?>
 
 <body <?php body_class( [ 'l-body--one-column' ] ); ?> id="body"
