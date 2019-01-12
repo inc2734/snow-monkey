@@ -3,6 +3,7 @@
 $_font-path: false;
 $img-path: '../../../img';
 @import '../../core/core';
+@import '../../foundation/_placeholder/placeholder';
 
 .woocommerce-input-wrapper,
 .quantity,
@@ -203,7 +204,7 @@ $img-path: '../../../img';
 
 .woocommerce-Tabs-panel,
 .related.products {
-  @include entry-content();
+  @extend %entry-content;
 }
 
 // Product meta in single
@@ -297,18 +298,18 @@ $img-path: '../../../img';
 
 // Product category widget
 .product-categories {
-  @include widget-list-base();
+  @extend %widget-list-base;
 
   a {
-    @include widget-link-base();
+    @extend %widget-link-base;
   }
 
   .cat-item {
-    @include widget-has-children-expander();
+    @extend %widget-has-children-expander;
   }
 
   .children {
-    @include widget-children();
+    @extend %widget-children;
   }
 }
 

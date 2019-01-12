@@ -1,17 +1,17 @@
 .widget_categories {
   ul {
-    @include widget-list-base();
+    @extend %widget-list-base;
   }
 
   a {
-    @include widget-link-base();
+    @extend %widget-link-base;
   }
 
   .cat-item {
-    @include widget-has-children-expander();
+    @extend %widget-has-children-expander;
   }
 
   .children {
-    @include widget-children();
+    @extend %widget-children;
   }
 }

@@ -1,7 +1,5 @@
 @charset 'utf-8';
 
-@import 'core/core';
-
 @import 'style';
 
 #tinymce {
@@ -35,7 +33,7 @@ body {
 [data-type="core/paragraph"] .components-autocomplete,
 [data-type="core/heading"] .components-autocomplete,
 .wp-block-freeform {
-  @include entry-content();
+  @extend %entry-content;
 }
 
 $content-width: 1000px;

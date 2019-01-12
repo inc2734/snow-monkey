@@ -1,11 +1,11 @@
 .smb-section {
-  @include section();
+  @extend %section;
 
   &__title {
-    @include section-title();
+    @extend %section-title;
   }
 
   &__body {
-    @include entry-content();
+    @extend %entry-content;
   }
 }

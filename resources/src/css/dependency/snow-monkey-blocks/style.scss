@@ -3,6 +3,7 @@
 $_font-path: false;
 $img-path: '../../../img';
 @import '../../core/core';
+@import '../../foundation/_placeholder/placeholder';
 
 @import 'box/block';
 @import 'section/block';

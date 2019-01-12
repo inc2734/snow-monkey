@@ -22,7 +22,7 @@
 
   &__citation,
   cite {
-    @include blockquote__cite();
+    @extend %blockquote__cite;
   }
 
   blockquote {

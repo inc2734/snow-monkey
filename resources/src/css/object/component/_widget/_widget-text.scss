@@ -2,5 +2,5 @@
 }
 
 .textwidget {
-  @include entry-content();
+  @extend %entry-content;
 }

@@ -6,6 +6,6 @@
   }
 
   &__body {
-    @include entry-content(.75);
+    @extend %entry-content--sub;
   }
 }

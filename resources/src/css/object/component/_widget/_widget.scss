@@ -1,6 +1,6 @@
 .#{$_prefix}c-widget {
   &__title {
-    @include widget-title();
+    @extend %widget-title;
   }
 
   [data-is-slim-widget-area="true"] & {

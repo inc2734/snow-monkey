@@ -168,10 +168,10 @@
  * Section
  */
 .wpac-section {
-  @include section();
+  @extend %section;
 
   &__title {
-    @include section-title();
+    @extend %section-title;
   }
 
   &--inverse {

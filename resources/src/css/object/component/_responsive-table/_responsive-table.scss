@@ -1,0 +1,5 @@
+.#{$_prefix}c-responsive-table {
+  > table {
+    @extend %table;
+  }
+}

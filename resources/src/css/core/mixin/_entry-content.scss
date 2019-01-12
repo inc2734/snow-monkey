@@ -18,9 +18,8 @@
     @include _padding(0, 0, .25);
   }
 
-  > table,
-  > .#{$_prefix}c-responsive-table > table {
-    @include table();
+  > table {
+    @extend %table;
   }
 
   > ul,
@@ -33,6 +32,6 @@
   }
 
   > blockquote {
-    @include blockquote();
+    @extend %blockquote;
   }
 }

@@ -1,5 +1,5 @@
 .smb-media-text {
   &__body {
-    @include entry-content();
+    @extend %entry-content;
   }
 }

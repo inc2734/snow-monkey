@@ -1,0 +1,7 @@
+%blockquote {
+  @include blockquote();
+}
+
+%blockquote__cite {
+  @include blockquote__cite();
+}

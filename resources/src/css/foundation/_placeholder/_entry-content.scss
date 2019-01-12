@@ -1,0 +1,7 @@
+%entry-content {
+  @include entry-content();
+}
+
+%entry-content--sub {
+  @include entry-content(.75);
+}
