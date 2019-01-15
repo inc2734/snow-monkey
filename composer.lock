@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "1efbb3225387f074e09560b2a22ecfdcc97f2f0b"
+                "reference": "673607471b0f6895da583ac8afcdd3dfd8a0c8da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/1efbb3225387f074e09560b2a22ecfdcc97f2f0b",
-                "reference": "1efbb3225387f074e09560b2a22ecfdcc97f2f0b",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/673607471b0f6895da583ac8afcdd3dfd8a0c8da",
+                "reference": "673607471b0f6895da583ac8afcdd3dfd8a0c8da",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2018-12-30T15:01:56+00:00"
+            "time": "2019-01-12T01:30:50+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -505,16 +505,16 @@
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "d3fe7fd88075afe63f837fb9688f4315b84c8467"
+                "reference": "faa1d10ceeadb009f211ab7fe82208c5a8a53b32"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/d3fe7fd88075afe63f837fb9688f4315b84c8467",
-                "reference": "d3fe7fd88075afe63f837fb9688f4315b84c8467",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/faa1d10ceeadb009f211ab7fe82208c5a8a53b32",
+                "reference": "faa1d10ceeadb009f211ab7fe82208c5a8a53b32",
                 "shasum": ""
             },
             "require": {
@@ -549,7 +549,7 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2018-10-10T03:38:08+00:00"
+            "time": "2019-01-15T01:15:23+00:00"
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
