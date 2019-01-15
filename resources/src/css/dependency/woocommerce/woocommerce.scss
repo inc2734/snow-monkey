@@ -297,19 +297,15 @@ $img-path: '../../../img';
 }
 
 // Product category widget
-.product-categories {
-  @extend %widget-list-base;
-
-  a {
-    @extend %widget-link-base;
-  }
+.widget_product_categories {
+  @extend %widget-core-list-base;
 
   .cat-item {
-    @extend %widget-has-children-expander;
+    @include widget-has-children-expander();
   }
 
   .children {
-    @extend %widget-children;
+    @include widget-children();
   }
 }
 
@@ -325,10 +321,8 @@ $img-path: '../../../img';
 }
 
 // Product list widget
-.product_list_widget {
-  a {
-    text-decoration: none;
-  }
+.widget_recently_viewed_products {
+  @extend %widget-core-list-base;
 
   .product-title {
     color: $_color-text;
