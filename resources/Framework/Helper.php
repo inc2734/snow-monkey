@@ -88,7 +88,7 @@ class Helper {
 	 */
 	public static function get_page_title_from_breadcrumbs() {
 		$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Breadcrumbs();
-		$breadcrumbs = $breadcrumbs->get();
+		$breadcrumbs = apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
 		$title_item  = end( $breadcrumbs );
 		return array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
 	}
