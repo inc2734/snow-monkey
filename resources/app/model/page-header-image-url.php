@@ -15,7 +15,9 @@ class Page_Header_Image_Url {
 	 * @return string
 	 */
 	public static function get() {
-		if ( is_singular( 'post' ) ) {
+		if ( is_search() || is_404() ) {
+			return static::_get_default_page_header_image_url();
+		} elseif ( is_singular( 'post' ) ) {
 			return static::_get_post_page_header_image_url();
 		} elseif ( is_page() && ! is_front_page() ) {
 			return static::_get_page_page_header_image_url();
