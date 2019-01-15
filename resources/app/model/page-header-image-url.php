@@ -12,6 +12,8 @@ class Page_Header_Image_Url {
 	/**
 	 * Return page header image url
 	 *
+	 * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+	 *
 	 * @return string
 	 */
 	public static function get() {
