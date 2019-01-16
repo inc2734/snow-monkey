@@ -5,8 +5,8 @@
  * @license GPL-2.0+
  */
 
-use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Framework\Model\Styles;
 
 $cfs = Customizer_Framework::styles();
 
@@ -17,4 +17,4 @@ $cfs->register(
 	'background-color: ' . $accent_color
 );
 
-Helper::entry_content_styles( [ '.smb-section__body' ] );
+Styles::extend( 'entry-content', [ '.smb-section__body' ] );

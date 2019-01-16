@@ -15,37 +15,6 @@ class Helper {
 	use Contract\Helper\Page_Header;
 
 	/**
-	 * Sets entry content styles
-	 *
-	 * @param string|array $selector
-	 * @return void
-	 */
-	public static function entry_content_styles( $selectors ) {
-		$accent_color = get_theme_mod( 'accent-color' );
-
-		$cfs = \Inc2734\WP_Customizer_Framework\Customizer_Framework::styles();
-
-		$selectors = (array) $selectors;
-		foreach ( $selectors as $selector ) {
-			$cfs->register(
-				$selector . ' > h2',
-				'border-color: ' . $accent_color
-			);
-
-			$cfs->register(
-				$selector . ' > table thead th',
-				[
-					'background-color: ' . $accent_color,
-					'border-right-color: ' . $cfs->light( $accent_color ),
-					'border-left-color: ' . $cfs->light( $accent_color ),
-				]
-			);
-
-			do_action( 'snow_monkey_entry_content_styles', $cfs, $selector );
-		}
-	}
-
-	/**
 	 * Return output positions of eyecatch
 	 *
 	 * @return array

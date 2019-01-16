@@ -5,15 +5,14 @@
  * @license GPL-2.0+
  */
 
-use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Framework\Model\Styles;
 
 if ( ! class_exists( '\woocommerce' ) ) {
 	return;
 }
 
-Helper::entry_content_styles( [ '.woocommerce-Tabs-panel' ] );
-Helper::entry_content_styles( [ '.related.products' ] );
+Styles::extend( 'entry-content', [ '.woocommerce-Tabs-panel', '.related.products' ] );
 
 $cfs = Customizer_Framework::styles();
 

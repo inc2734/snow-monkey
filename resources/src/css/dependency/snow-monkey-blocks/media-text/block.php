@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Framework\Helper;
+use Framework\Model\Styles;
 
-Helper::entry_content_styles( [ '.smb-media-text__body' ] );
+Styles::extend( 'entry-content', [ '.smb-media-text__body' ] );

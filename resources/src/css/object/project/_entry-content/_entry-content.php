@@ -6,6 +6,7 @@
  */
 
 use Framework\Helper;
+use Framework\Model\Styles;
 
 if ( is_admin() ) {
 	add_action(
@@ -16,7 +17,8 @@ if ( is_admin() ) {
 			}
 
 			if ( Helper::is_block_editor() ) {
-				Helper::entry_content_styles(
+				Styles::extend(
+					'entry-content',
 					[
 						'',
 						'[data-type="core/paragraph"] .components-autocomplete',
@@ -25,10 +27,10 @@ if ( is_admin() ) {
 					]
 				);
 			} else {
-				Helper::entry_content_styles( [ '' ] );
+				Styles::extend( 'entry-content', [ '' ] );
 			}
 		}
 	);
 } else {
-	Helper::entry_content_styles( [ '.p-entry-content' ] );
+	Styles::extend( 'entry-content', [ '.p-entry-content' ] );
 }
