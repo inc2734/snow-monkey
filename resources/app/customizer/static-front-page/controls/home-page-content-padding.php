@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'home-page-content-padding',
 	[
@@ -25,8 +23,8 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'static_front_page' );
-$control = $customizer->get_control( 'home-page-content-padding' );
+$section = Framework::get_section( 'static_front_page' );
+$control = Framework::get_control( 'home-page-content-padding' );
 $control->join( $section );
 $control->partial(
 	[

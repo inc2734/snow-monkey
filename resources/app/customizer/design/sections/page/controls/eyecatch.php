@@ -6,11 +6,9 @@
  */
 
 use Framework\Helper;
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'select',
 	'page-eyecatch',
 	[
@@ -26,7 +24,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'design' );
-$section = $customizer->get_section( 'page' );
-$control = $customizer->get_control( 'page-eyecatch' );
+$panel   = Framework::get_panel( 'design' );
+$section = Framework::get_section( 'page' );
+$control = Framework::get_control( 'page-eyecatch' );
 $control->join( $section )->join( $panel );

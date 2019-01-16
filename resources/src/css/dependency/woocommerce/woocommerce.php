@@ -5,20 +5,17 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-use Framework\Model\Styles;
+use Inc2734\WP_Customizer_Framework\Style;
 
 if ( ! class_exists( '\woocommerce' ) ) {
 	return;
 }
 
-Styles::extend( 'entry-content', [ '.woocommerce-Tabs-panel', '.related.products' ] );
-
-$cfs = Customizer_Framework::styles();
-
 $accent_color = get_theme_mod( 'accent-color' );
 
-$cfs->register(
+Style::extend( 'entry-content', [ '.woocommerce-Tabs-panel', '.related.products' ] );
+
+Style::register(
 	[
 		'.l-container .l-contents .store-notice',
 		'.l-container .l-contents .demo_store',
@@ -26,7 +23,7 @@ $cfs->register(
 	'background-color: ' . $accent_color
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.l-container .l-contents #respond #submit.alt',
 		'.l-container .l-contents .button.alt',
@@ -58,7 +55,7 @@ $cfs->register(
 	'background-color: ' . $accent_color
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.l-container .l-contents #respond #submit.alt:hover',
 		'.l-container .l-contents .button.alt:hover',
@@ -67,10 +64,10 @@ $cfs->register(
 		'.l-container .l-contents #respond #submit.alt:focus',
 		'.l-container .l-contents .button.alt:focus',
 	],
-	'background-color: ' . $cfs->darken( $accent_color, 0.05 )
+	'background-color: ' . Style::darken( $accent_color, 0.05 )
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.l-container .l-contents .widget_price_filter .ui-slider .ui-slider-handle',
 		'.l-container .l-contents .widget_price_filter .ui-slider .ui-slider-range',
@@ -78,7 +75,7 @@ $cfs->register(
 	'background-color: ' . $accent_color
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.woocommerce-error',
 		'.woocommerce-info',

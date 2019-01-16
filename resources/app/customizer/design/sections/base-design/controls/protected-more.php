@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'mwt-protected-more',
 	[
@@ -24,7 +22,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'design' );
-$section = $customizer->get_section( 'base-design' );
-$control = $customizer->get_control( 'mwt-protected-more' );
+$panel   = Framework::get_panel( 'design' );
+$section = Framework::get_section( 'base-design' );
+$control = Framework::get_control( 'mwt-protected-more' );
 $control->join( $section )->join( $panel );

@@ -5,12 +5,10 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'set-browser-cache',
 	[
@@ -26,8 +24,8 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'page-speed-optimization' );
-$control = $customizer->get_control( 'set-browser-cache' );
+$section = Framework::get_section( 'page-speed-optimization' );
+$control = Framework::get_control( 'set-browser-cache' );
 $control->join( $section );
 
 /**

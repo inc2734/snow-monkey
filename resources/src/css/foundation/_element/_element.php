@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Style;
 
-$cfs = Customizer_Framework::styles();
-
-$cfs->register(
+Style::register(
 	'a',
 	'color: ' . get_theme_mod( 'accent-color' )
 );

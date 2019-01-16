@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'mwt-json-ld',
 	array(
@@ -24,7 +22,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'seo-sns' );
-$section = $customizer->get_section( 'json-ld' );
-$control = $customizer->get_control( 'mwt-json-ld' );
+$panel   = Framework::get_panel( 'seo-sns' );
+$section = Framework::get_section( 'json-ld' );
+$control = Framework::get_control( 'mwt-json-ld' );
 $control->join( $section )->join( $panel );

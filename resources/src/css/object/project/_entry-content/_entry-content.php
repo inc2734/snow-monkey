@@ -6,7 +6,7 @@
  */
 
 use Framework\Helper;
-use Framework\Model\Styles;
+use Inc2734\WP_Customizer_Framework\Style;
 
 if ( is_admin() ) {
 	add_action(
@@ -17,7 +17,7 @@ if ( is_admin() ) {
 			}
 
 			if ( Helper::is_block_editor() ) {
-				Styles::extend(
+				Style::extend(
 					'entry-content',
 					[
 						'',
@@ -27,10 +27,10 @@ if ( is_admin() ) {
 					]
 				);
 			} else {
-				Styles::extend( 'entry-content', [ '' ] );
+				Style::extend( 'entry-content', [ '' ] );
 			}
 		}
 	);
 } else {
-	Styles::extend( 'entry-content', [ '.p-entry-content' ] );
+	Style::extend( 'entry-content', [ '.p-entry-content' ] );
 }

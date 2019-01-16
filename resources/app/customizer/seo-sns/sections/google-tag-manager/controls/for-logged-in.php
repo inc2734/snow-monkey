@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'mwt-google-tag-manager-for-loggedin',
 	array(
@@ -24,7 +22,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'seo-sns' );
-$section = $customizer->get_section( 'google-tag-manager' );
-$control = $customizer->get_control( 'mwt-google-tag-manager-for-loggedin' );
+$panel   = Framework::get_panel( 'seo-sns' );
+$section = Framework::get_section( 'google-tag-manager' );
+$control = Framework::get_control( 'mwt-google-tag-manager-for-loggedin' );
 $control->join( $section )->join( $panel );

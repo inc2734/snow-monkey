@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Framework\Model\Styles;
+use Inc2734\WP_Customizer_Framework\Style;
 
-Styles::extend( 'entry-content', [ '.smb-media-text__body' ] );
+Style::extend( 'entry-content', [ '.smb-media-text__body' ] );

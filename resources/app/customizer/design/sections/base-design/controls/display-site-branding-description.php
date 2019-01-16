@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'display-site-branding-description',
 	[
@@ -24,9 +22,9 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'design' );
-$section = $customizer->get_section( 'base-design' );
-$control = $customizer->get_control( 'display-site-branding-description' );
+$panel   = Framework::get_panel( 'design' );
+$section = Framework::get_section( 'base-design' );
+$control = Framework::get_control( 'display-site-branding-description' );
 $control->join( $section )->join( $panel );
 $control->partial(
 	[

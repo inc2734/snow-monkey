@@ -5,13 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-
-$cfs = Customizer_Framework::styles();
+use Inc2734\WP_Customizer_Framework\Style;
 
 $container_max_width = get_theme_mod( 'container-max-width' );
 
-$cfs->register(
+Style::register(
 	'.l-contents .c-container',
 	'max-width: ' . $container_max_width . 'px',
 	'@media (min-width: 64em)'

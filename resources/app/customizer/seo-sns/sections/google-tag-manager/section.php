@@ -5,15 +5,13 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
 if ( ! is_customize_preview() ) {
 	return;
 }
 
-$customizer = Customizer_Framework::init();
-
-$customizer->section(
+Framework::section(
 	'google-tag-manager',
 	array(
 		'title'    => __( 'Google Tag Manager', 'snow-monkey' ),

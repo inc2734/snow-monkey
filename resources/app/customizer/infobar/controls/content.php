@@ -5,12 +5,10 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'text',
 	'infobar-content',
 	[
@@ -23,8 +21,8 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'infobar' );
-$control = $customizer->get_control( 'infobar-content' );
+$section = Framework::get_section( 'infobar' );
+$control = Framework::get_control( 'infobar-content' );
 $control->join( $section );
 $control->partial(
 	[

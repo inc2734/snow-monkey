@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
 $terms = get_terms( [ 'category' ] );
 wp_cache_set( 'all-categories', $terms );
@@ -14,10 +14,8 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$customizer = Customizer_Framework::init();
-
 foreach ( $terms as $_term ) {
-	$customizer->section(
+	Framework::section(
 		'category-' . $_term->term_id,
 		[
 			'title'           => __( 'Page settings', 'snow-monkey' ),

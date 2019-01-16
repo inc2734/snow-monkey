@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'textarea',
 	'mwt-google-adsense',
 	[
@@ -36,6 +34,6 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'advertisement' );
-$control = $customizer->get_control( 'mwt-google-adsense' );
+$section = Framework::get_section( 'advertisement' );
+$control = Framework::get_control( 'mwt-google-adsense' );
 $control->join( $section );

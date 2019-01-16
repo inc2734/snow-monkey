@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'jquery-loading-optimization',
 	[
@@ -24,6 +22,6 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'page-speed-optimization' );
-$control = $customizer->get_control( 'jquery-loading-optimization' );
+$section = Framework::get_section( 'page-speed-optimization' );
+$control = Framework::get_control( 'jquery-loading-optimization' );
 $control->join( $section );

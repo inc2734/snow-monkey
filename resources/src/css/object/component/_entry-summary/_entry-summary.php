@@ -5,18 +5,16 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-
-$cfs = Customizer_Framework::styles();
+use Inc2734\WP_Customizer_Framework\Style;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
-$cfs->register(
+Style::register(
 	'.c-entries--rich-media a > .c-entry-summary .c-entry-summary__figure::after',
-	'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
+	'background-image: radial-gradient(' . Style::rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
 );
 
-$cfs->register(
+Style::register(
 	'.c-entry-summary__term',
 	'background-color: ' . $accent_color
 );
@@ -37,15 +35,15 @@ foreach ( $terms as $_term ) {
 		continue;
 	}
 
-	$cfs->register(
+	Style::register(
 		'.c-entries--rich-media a > .c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__figure::after',
 		[
-			'background-color: ' . $cfs->rgba( $accent_color, .4 ),
-			'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
+			'background-color: ' . Style::rgba( $accent_color, .4 ),
+			'background-image: radial-gradient(' . Style::rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
 		]
 	);
 
-	$cfs->register(
+	Style::register(
 		'.c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__term',
 		'background-color: ' . $accent_color
 	);

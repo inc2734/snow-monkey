@@ -6,7 +6,10 @@
  */
 
 use Framework\Helper;
-use Framework\Model\Styles;
+use Inc2734\WP_Customizer_Framework\Bootstrap;
+use Inc2734\WP_Customizer_Framework\Style;
+
+new Bootstrap();
 
 /**
  * Output styles from PHP files
@@ -43,33 +46,37 @@ add_action(
 /**
  * Register styles for entry content.
  */
-Styles::register(
-	'entry-content',
-	function( $selector ) {
-		$accent_color = get_theme_mod( 'accent-color' );
+add_action(
+	'snow_monkey_load_customizer_styles',
+	function() {
+		Style::placeholder(
+			'entry-content',
+			function( $selector ) {
+				$accent_color = get_theme_mod( 'accent-color' );
 
-		$cfs = \Inc2734\WP_Customizer_Framework\Customizer_Framework::styles();
+				$selectors_for_h2 = [];
+				$selectors_for_th = [];
 
-		$selectors_for_h2 = [];
-		$selectors_for_th = [];
+				foreach ( $selector as $key => $selector ) {
+					$selectors_for_h2[ $key ] = $selector . ' > h2';
+					$selectors_for_th[ $key ] = $selector . ' > table thead th';
+				}
 
-		foreach ( $selector as $key => $selector ) {
-			$selectors_for_h2[ $key ] = $selector . ' > h2';
-			$selectors_for_th[ $key ] = $selector . ' > table thead th';
-		}
+				Style::register(
+					$selectors_for_h2,
+					'border-color: ' . $accent_color
+				);
 
-		$cfs->register(
-			$selectors_for_h2,
-			'border-color: ' . $accent_color
+				Style::register(
+					$selectors_for_th,
+					[
+						'background-color: ' . $accent_color,
+						'border-right-color: ' . Style::light( $accent_color ),
+						'border-left-color: ' . Style::light( $accent_color ),
+					]
+				);
+			}
 		);
-
-		$cfs->register(
-			$selectors_for_th,
-			[
-				'background-color: ' . $accent_color,
-				'border-right-color: ' . $cfs->light( $accent_color ),
-				'border-left-color: ' . $cfs->light( $accent_color ),
-			]
-		);
-	}
+	},
+	11
 );

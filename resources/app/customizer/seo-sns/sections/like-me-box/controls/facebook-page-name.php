@@ -5,12 +5,10 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'text',
 	'mwt-facebook-page-name',
 	[
@@ -29,9 +27,9 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'seo-sns' );
-$section = $customizer->get_section( 'like-me-box' );
-$control = $customizer->get_control( 'mwt-facebook-page-name' );
+$panel   = Framework::get_panel( 'seo-sns' );
+$section = Framework::get_section( 'like-me-box' );
+$control = Framework::get_control( 'mwt-facebook-page-name' );
 $control->join( $section )->join( $panel );
 $control->partial(
 	[

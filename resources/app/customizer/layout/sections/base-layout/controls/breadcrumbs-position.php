@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'select',
 	'breadcrumbs-position',
 	[
@@ -30,9 +28,9 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'layout' );
-$section = $customizer->get_section( 'base-layout' );
-$control = $customizer->get_control( 'breadcrumbs-position' );
+$panel   = Framework::get_panel( 'layout' );
+$section = Framework::get_section( 'base-layout' );
+$control = Framework::get_control( 'breadcrumbs-position' );
 $control->join( $section )->join( $panel );
 $control->partial(
 	[

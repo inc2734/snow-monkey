@@ -5,10 +5,8 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
-
-$customizer = Customizer_Framework::init();
 
 $theme_link = sprintf(
 	'<a href="https://2inc.org" target="_blank">%s</a>',
@@ -24,7 +22,7 @@ $theme_by   = sprintf( __( 'Snow Monkey theme by %s', 'snow-monkey' ), $theme_li
 $powered_by = sprintf( __( 'Powered by %s', 'snow-monkey' ), $wordpress_link );
 $copyright  = $theme_by . ' ' . $powered_by;
 
-$customizer->control(
+Framework::control(
 	'text',
 	'mwt-copyright',
 	[
@@ -40,8 +38,8 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'title_tagline' );
-$control = $customizer->get_control( 'mwt-copyright' );
+$section = Framework::get_section( 'title_tagline' );
+$control = Framework::get_control( 'mwt-copyright' );
 $control->join( $section );
 $control->partial(
 	[

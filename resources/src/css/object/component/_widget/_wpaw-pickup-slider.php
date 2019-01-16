@@ -5,13 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-
-$cfs = Customizer_Framework::styles();
+use Inc2734\WP_Customizer_Framework\Style;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
-$cfs->register(
+Style::register(
 	[
 		'.wpaw-pickup-slider__item-more:hover',
 		'.wpaw-pickup-slider__item-more:active',
@@ -24,17 +22,17 @@ $cfs->register(
 	'@media (min-width: 64em)'
 );
 
-$cfs->register(
+Style::register(
 	'.wpaw-pickup-slider .slick-arrow',
 	'background-color: ' . $accent_color
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.wpaw-pickup-slider .slick-arrow:hover',
 		'.wpaw-pickup-slider .slick-arrow:active',
 		'.wpaw-pickup-slider .slick-arrow:focus',
 	],
-	'background-color: ' . $cfs->darken( $accent_color, 0.05 ),
+	'background-color: ' . Style::darken( $accent_color, 0.05 ),
 	'@media (min-width: 64em)'
 );

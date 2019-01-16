@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'text',
 	'mwt-twitter-site',
 	array(
@@ -28,7 +26,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'seo-sns' );
-$section = $customizer->get_section( 'twitter-cards' );
-$control = $customizer->get_control( 'mwt-twitter-site' );
+$panel   = Framework::get_panel( 'seo-sns' );
+$section = Framework::get_section( 'twitter-cards' );
+$control = Framework::get_control( 'mwt-twitter-site' );
 $control->join( $section )->join( $panel );

@@ -5,12 +5,10 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'select',
 	'header-layout',
 	[
@@ -31,9 +29,9 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'layout' );
-$section = $customizer->get_section( 'header' );
-$control = $customizer->get_control( 'header-layout' );
+$panel   = Framework::get_panel( 'layout' );
+$section = Framework::get_section( 'header' );
+$control = Framework::get_control( 'header-layout' );
 $control->join( $section )->join( $panel );
 $control->partial(
 	[

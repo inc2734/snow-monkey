@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'checkbox',
 	'header-position-only-mobile',
 	[
@@ -23,7 +21,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'layout' );
-$section = $customizer->get_section( 'header' );
-$control = $customizer->get_control( 'header-position-only-mobile' );
+$panel   = Framework::get_panel( 'layout' );
+$section = Framework::get_section( 'header' );
+$control = Framework::get_control( 'header-position-only-mobile' );
 $control->join( $section )->join( $panel );

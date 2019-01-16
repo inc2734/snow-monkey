@@ -5,11 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Style;
 
-$cfs = Customizer_Framework::styles();
-
-$cfs->register(
+Style::register(
 	'html',
 	'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px'
 );
@@ -30,7 +28,7 @@ if ( 'sans-serif' === $base_font ) {
 	add_action( 'enqueue_block_editor_assets', [ '\Framework\Helper', 'enqueue_noto_serif_jp' ] );
 }
 
-$cfs->register(
+Style::register(
 	[ '.l-body', '.editor-block-list__block' ],
 	'font-family: ' . implode( ',', $font_family )
 );

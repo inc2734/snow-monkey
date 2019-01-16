@@ -5,15 +5,13 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
 if ( ! is_customize_preview() ) {
 	return;
 }
 
-$customizer = Customizer_Framework::init();
-
-$customizer->section(
+Framework::section(
 	'snow-monkey-community',
 	[
 		'title'    => sprintf( __( '%1$s Snow Monkey Community %1$s', 'snow-monkey' ), '🐒' ),
@@ -21,7 +19,7 @@ $customizer->section(
 	]
 );
 
-$customizer->control(
+Framework::control(
 	'content',
 	'official-website',
 	[
@@ -35,7 +33,7 @@ $customizer->control(
 	]
 );
 
-$customizer->control(
+Framework::control(
 	'content',
 	'online-community',
 	[
@@ -49,7 +47,7 @@ $customizer->control(
 	]
 );
 
-$customizer->control(
+Framework::control(
 	'content',
 	'support-forum',
 	[
@@ -63,7 +61,7 @@ $customizer->control(
 	]
 );
 
-$customizer->control(
+Framework::control(
 	'content',
 	'job-board',
 	[
@@ -81,16 +79,16 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$section = $customizer->get_section( 'snow-monkey-community' );
+$section = Framework::get_section( 'snow-monkey-community' );
 
-$control = $customizer->get_control( 'official-website' );
+$control = Framework::get_control( 'official-website' );
 $control->join( $section );
 
-$control = $customizer->get_control( 'online-community' );
+$control = Framework::get_control( 'online-community' );
 $control->join( $section );
 
-$control = $customizer->get_control( 'support-forum' );
+$control = Framework::get_control( 'support-forum' );
 $control->join( $section );
 
-$control = $customizer->get_control( 'job-board' );
+$control = Framework::get_control( 'job-board' );
 $control->join( $section );

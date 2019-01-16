@@ -5,13 +5,11 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-
-$cfs = Customizer_Framework::styles();
+use Inc2734\WP_Customizer_Framework\Style;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
-$cfs->register(
+Style::register(
 	[
 		'.p-global-nav .c-navbar__item[data-active-menu="true"] > a',
 		'.l-header[data-l-header-type="overlay"] [data-has-global-nav] .p-global-nav .c-navbar__item[data-active-menu="true"] > a',
@@ -19,7 +17,7 @@ $cfs->register(
 	'color: ' . $accent_color
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.p-global-nav .c-navbar__item:hover > a',
 		'.p-global-nav .c-navbar__item:active > a',
@@ -32,12 +30,12 @@ $cfs->register(
 	'@media (min-width: 64em)'
 );
 
-$cfs->register(
+Style::register(
 	'.p-global-nav .c-navbar__item > .c-navbar__submenu::before',
 	'border-bottom-color: ' . $accent_color
 );
 
-$cfs->register(
+Style::register(
 	'.p-global-nav .c-navbar__submenu',
 	'background-color: ' . $accent_color
 );

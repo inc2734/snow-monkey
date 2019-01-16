@@ -5,18 +5,16 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
-
-$cfs = Customizer_Framework::styles();
+use Inc2734\WP_Customizer_Framework\Style;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
-$cfs->register(
+Style::register(
 	'.c-entries--rich-media .c-page-summary .c-page-summary__figure::after',
-	'background-image: radial-gradient(' . $cfs->rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
+	'background-image: radial-gradient(' . Style::rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
 );
 
-$cfs->register(
+Style::register(
 	'.c-page-summary__more',
 	[
 		'border-color: ' . $accent_color,
@@ -24,7 +22,7 @@ $cfs->register(
 	]
 );
 
-$cfs->register(
+Style::register(
 	[
 		'.c-page-summary__more:hover',
 		'.c-page-summary__more:active',

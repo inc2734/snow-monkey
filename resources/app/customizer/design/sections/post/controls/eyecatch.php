@@ -6,11 +6,9 @@
  */
 
 use Framework\Helper;
-use Inc2734\WP_Customizer_Framework\Customizer_Framework;
+use Inc2734\WP_Customizer_Framework\Framework;
 
-$customizer = Customizer_Framework::init();
-
-$customizer->control(
+Framework::control(
 	'select',
 	'post-eyecatch',
 	[
@@ -26,7 +24,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = $customizer->get_panel( 'design' );
-$section = $customizer->get_section( 'post' );
-$control = $customizer->get_control( 'post-eyecatch' );
+$panel   = Framework::get_panel( 'design' );
+$section = Framework::get_section( 'post' );
+$control = Framework::get_control( 'post-eyecatch' );
 $control->join( $section )->join( $panel );
