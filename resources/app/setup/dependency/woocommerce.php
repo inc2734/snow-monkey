@@ -64,24 +64,22 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		$relative_path = '/assets/css/dependency/woocommerce/woocommerce.min.css';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
 
-		if ( ! file_exists( $path ) ) {
+		if ( ! file_exists( get_theme_file_path( $relative_path ) ) ) {
 			return;
 		}
 
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-woocommerce',
-			$src,
+			get_theme_file_uri( $relative_path ),
 			[ Helper::get_main_style_handle() ],
-			filemtime( $path )
+			filemtime( get_theme_file_path( $relative_path ) )
 		);
 	}
 );
 
 add_action(
-	'snow_monkey_load_customizer_styles',
+	'inc2734_wp_customizer_framework_load_styles',
 	function() {
 		Helper::load_theme_files( get_template_directory() . '/assets/css/dependency/woocommerce' );
 	}

@@ -12,25 +12,12 @@ use Inc2734\WP_Customizer_Framework\Style;
 new Bootstrap();
 
 /**
- * Output styles from PHP files
- *
- * @return void
- */
-add_action(
-	'wp_loaded',
-	function() {
-		do_action( 'snow_monkey_load_customizer_styles' );
-	},
-	11
-);
-
-/**
  * Load PHP files for styles
  *
  * @return void
  */
 add_action(
-	'snow_monkey_load_customizer_styles',
+	'inc2734_wp_customizer_framework_load_styles',
 	function() {
 		$includes = [
 			'/assets/css/foundation',
@@ -47,17 +34,17 @@ add_action(
  * Register styles for entry content.
  */
 add_action(
-	'snow_monkey_load_customizer_styles',
+	'inc2734_wp_customizer_framework_after_load_styles',
 	function() {
 		Style::placeholder(
 			'entry-content',
-			function( $selector ) {
+			function( $selectors ) {
 				$accent_color = get_theme_mod( 'accent-color' );
 
 				$selectors_for_h2 = [];
 				$selectors_for_th = [];
 
-				foreach ( $selector as $key => $selector ) {
+				foreach ( $selectors as $key => $selector ) {
 					$selectors_for_h2[ $key ] = $selector . ' > h2';
 					$selectors_for_th[ $key ] = $selector . ' > table thead th';
 				}
@@ -77,6 +64,5 @@ add_action(
 				);
 			}
 		);
-	},
-	12
+	}
 );

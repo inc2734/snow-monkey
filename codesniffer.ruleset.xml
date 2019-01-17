@@ -14,7 +14,6 @@
     <exclude name="Squiz.Commenting.FunctionComment" />
     <exclude name="Squiz.Commenting.FileComment.SpacingAfterComment" />
     <exclude name="Generic.Commenting.DocComment" />
-    <exclude name="WordPress.VIP" />
     <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
     <exclude name="WordPress.WP.I18n.MissingTranslatorsComment" />
     <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />

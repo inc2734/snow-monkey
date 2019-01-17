@@ -22,10 +22,8 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		$relative_path = '/assets/css/dependency/snow-monkey-blocks/style.min.css';
-		$src  = get_theme_file_uri( $relative_path );
-		$path = get_theme_file_path( $relative_path );
 
-		if ( ! file_exists( $path ) ) {
+		if ( ! file_exists( get_theme_file_path( $relative_path ) ) ) {
 			return;
 		}
 
@@ -37,9 +35,9 @@ add_action(
 
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
-			$src,
+			get_theme_file_uri( $relative_path ),
 			$dependencies,
-			filemtime( $path )
+			filemtime( get_theme_file_path( $relative_path ) )
 		);
 	}
 );
@@ -52,8 +50,7 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function() {
-		$relative_path = '/assets/css/dependency/snow-monkey-blocks/editor-style.min.css';
-		add_editor_style( [ $relative_path ] );
+		add_editor_style( [ '/assets/css/dependency/snow-monkey-blocks/editor-style.min.css' ] );
 	}
 );
 
@@ -61,7 +58,7 @@ add_action(
  * Load styles from customizer
  */
 add_action(
-	'snow_monkey_load_customizer_styles',
+	'inc2734_wp_customizer_framework_load_styles',
 	function() {
 		Helper::load_theme_files( get_template_directory() . '/assets/css/dependency/snow-monkey-blocks' );
 	}

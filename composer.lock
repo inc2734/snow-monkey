@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "48102c7c7ea605552b546aeb272675af",
+    "content-hash": "22445ba5e2731498ae1946e500d48286",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "6.0.0",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "0a5e9df62ddec687ba5dfa7eeced878cc810b27d"
+                "reference": "ed0c0dd8bf3a0f1cb52caf81e667088dc7999db3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/0a5e9df62ddec687ba5dfa7eeced878cc810b27d",
-                "reference": "0a5e9df62ddec687ba5dfa7eeced878cc810b27d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/ed0c0dd8bf3a0f1cb52caf81e667088dc7999db3",
+                "reference": "ed0c0dd8bf3a0f1cb52caf81e667088dc7999db3",
                 "shasum": ""
             },
             "require": {
@@ -26,7 +26,7 @@
                 "inc2734/wp-basis": "^4.0",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
-                "inc2734/wp-customizer-framework": "^4.0",
+                "inc2734/wp-customizer-framework": "^4.1",
                 "inc2734/wp-github-theme-updater": "^0.2",
                 "inc2734/wp-like-me-box": "^1.0",
                 "inc2734/wp-oembed-blog-card": "^5.1",
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-01-16T07:30:22+00:00"
+            "time": "2019-01-17T05:31:23+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -313,16 +313,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "88614596e07d7454355da21839ed8419ee7edb27"
+                "reference": "b2a93ad132298b0d30632de0ee4a1118b0c5fa2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/88614596e07d7454355da21839ed8419ee7edb27",
-                "reference": "88614596e07d7454355da21839ed8419ee7edb27",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/b2a93ad132298b0d30632de0ee4a1118b0c5fa2e",
+                "reference": "b2a93ad132298b0d30632de0ee4a1118b0c5fa2e",
                 "shasum": ""
             },
             "require": {
@@ -357,7 +357,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2019-01-16T07:26:26+00:00"
+            "time": "2019-01-17T05:22:38+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -2615,24 +2615,26 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "1.2.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards.git",
-                "reference": "f328bcafd97377e8e5e5d7b244d5ddbf301a3a5c"
+                "reference": "c9eaadaafefce36b3cb7e06eb15305b8c4cae9ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/f328bcafd97377e8e5e5d7b244d5ddbf301a3a5c",
-                "reference": "f328bcafd97377e8e5e5d7b244d5ddbf301a3a5c",
+                "url": "https://api.github.com/repos/WordPress-Coding-Standards/WordPress-Coding-Standards/zipball/c9eaadaafefce36b3cb7e06eb15305b8c4cae9ce",
+                "reference": "c9eaadaafefce36b3cb7e06eb15305b8c4cae9ce",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3",
-                "squizlabs/php_codesniffer": "^2.9.0 || ^3.0.2"
+                "php": ">=5.4",
+                "squizlabs/php_codesniffer": "^3.3.1"
             },
             "require-dev": {
-                "phpcompatibility/php-compatibility": "^9.0"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "phpcompatibility/php-compatibility": "^9.0",
+                "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "suggest": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
@@ -2654,7 +2656,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2018-12-18T09:43:51+00:00"
+            "time": "2019-01-16T10:13:16+00:00"
         }
     ],
     "aliases": [],
