@@ -52,7 +52,6 @@ add_action(
 		Style::placeholder(
 			'entry-content',
 			function( $selector ) {
-				var_dump( $selector );
 				$accent_color = get_theme_mod( 'accent-color' );
 
 				$selectors_for_h2 = [];
