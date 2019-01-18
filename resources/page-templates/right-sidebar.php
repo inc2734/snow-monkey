@@ -8,7 +8,7 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\Mimizuku_Core\App\Controller\Controller;
+use Framework\Controller\Controller;
 
 Controller::layout( 'right-sidebar' );
 if ( is_front_page() ) {

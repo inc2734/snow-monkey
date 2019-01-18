@@ -129,7 +129,7 @@ add_filter(
  * @return string
  */
 add_filter(
-	'mimizuku_layout',
+	'snow_monkey_layout',
 	function( $layout ) {
 		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
 			return 'one-column';
@@ -145,7 +145,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'mimizuku_view',
+	'snow_monkey_view',
 	function( $view ) {
 		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
 			return [
