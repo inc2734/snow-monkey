@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "6.1.1",
+            "version": "6.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "5842324d975aa27675eda0fd1037a2eb9096c13f"
+                "reference": "493cab22d5708fd71472ec72b5bfd70fc8ec8c03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/5842324d975aa27675eda0fd1037a2eb9096c13f",
-                "reference": "5842324d975aa27675eda0fd1037a2eb9096c13f",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/493cab22d5708fd71472ec72b5bfd70fc8ec8c03",
+                "reference": "493cab22d5708fd71472ec72b5bfd70fc8ec8c03",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-01-18T03:06:25+00:00"
+            "time": "2019-01-19T11:38:55+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -553,16 +553,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "0011907932badd156d655655423f98455e25fad1"
+                "reference": "d91cbd34ce92aa93cde0c77930fb0a0b5b5e038d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/0011907932badd156d655655423f98455e25fad1",
-                "reference": "0011907932badd156d655655423f98455e25fad1",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/d91cbd34ce92aa93cde0c77930fb0a0b5b5e038d",
+                "reference": "d91cbd34ce92aa93cde0c77930fb0a0b5b5e038d",
                 "shasum": ""
             },
             "require": {
@@ -597,7 +597,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2018-12-12T00:52:46+00:00"
+            "time": "2019-01-19T11:34:12+00:00"
         },
         {
             "name": "inc2734/wp-profile-box",
@@ -796,16 +796,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "7.0.3",
+            "version": "7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "8877fad81d2ae73513d1b957675c172c65b1dbf9"
+                "reference": "118dc9743bdc5ccae824637ba41bfe974876ae40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/8877fad81d2ae73513d1b957675c172c65b1dbf9",
-                "reference": "8877fad81d2ae73513d1b957675c172c65b1dbf9",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/118dc9743bdc5ccae824637ba41bfe974876ae40",
+                "reference": "118dc9743bdc5ccae824637ba41bfe974876ae40",
                 "shasum": ""
             },
             "require": {
@@ -840,7 +840,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-01-18T02:44:30+00:00"
+            "time": "2019-01-19T12:00:59+00:00"
         }
     ],
     "packages-dev": [
