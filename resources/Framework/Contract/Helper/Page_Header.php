@@ -7,8 +7,6 @@
 
 namespace Framework\Contract\Helper;
 
-use Framework\Model\Page_Header_Image_Url;
-
 trait Page_Header {
 
 	/**
@@ -22,7 +20,22 @@ trait Page_Header {
 			return $url;
 		}
 
-		$url = Page_Header_Image_Url::get();
+		$types = array_filter(
+			[
+				'Default'  => is_search() || is_404(),
+				'Post'     => is_singular( 'post' ),
+				'Page'     => is_page() && ! is_front_page(),
+				'Category' => is_category(),
+				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() ),
+			]
+		);
+
+		if ( $types ) {
+			$class = '\Framework\Model\Page_Header\\' . key( $types ) . '_Page_Header';
+			if ( class_exists( $class ) ) {
+				$url = $class::get_image_url();
+			}
+		}
 
 		return apply_filters( 'snow_monkey_page_header_image_url', $url );
 	}
