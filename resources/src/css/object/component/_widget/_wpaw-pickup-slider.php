@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Style;
+use Inc2734\WP_Customizer_Framework\Color;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
@@ -33,6 +34,6 @@ Style::register(
 		'.wpaw-pickup-slider .slick-arrow:active',
 		'.wpaw-pickup-slider .slick-arrow:focus',
 	],
-	'background-color: ' . Style::darken( $accent_color, 0.05 ),
+	'background-color: ' . Color::darken( $accent_color, 0.05 ),
 	'@media (min-width: 64em)'
 );

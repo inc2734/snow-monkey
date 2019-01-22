@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22445ba5e2731498ae1946e500d48286",
+    "content-hash": "4c5d314b8c5e4449c002e0b28d3b332e",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "6.1.2",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "493cab22d5708fd71472ec72b5bfd70fc8ec8c03"
+                "reference": "32f7b10d792f71cc14e9abe65682e586df37377c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/493cab22d5708fd71472ec72b5bfd70fc8ec8c03",
-                "reference": "493cab22d5708fd71472ec72b5bfd70fc8ec8c03",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/32f7b10d792f71cc14e9abe65682e586df37377c",
+                "reference": "32f7b10d792f71cc14e9abe65682e586df37377c",
                 "shasum": ""
             },
             "require": {
@@ -26,15 +26,15 @@
                 "inc2734/wp-basis": "^4.0",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
-                "inc2734/wp-customizer-framework": "^4.1",
+                "inc2734/wp-customizer-framework": "^5.0",
                 "inc2734/wp-github-theme-updater": "^0.2",
                 "inc2734/wp-like-me-box": "^1.0",
-                "inc2734/wp-oembed-blog-card": "^5.1",
+                "inc2734/wp-oembed-blog-card": "^6.0",
                 "inc2734/wp-page-speed-optimization": "^1.0",
                 "inc2734/wp-profile-box": "^1.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
-                "inc2734/wp-seo": "^1.1",
-                "inc2734/wp-share-buttons": "^3.1",
+                "inc2734/wp-seo": "^2.0",
+                "inc2734/wp-share-buttons": "^4.0",
                 "inc2734/wp-view-controller": "^7.0",
                 "php": ">=5.6"
             },
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-01-19T11:38:55+00:00"
+            "time": "2019-01-22T01:40:23+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -217,16 +217,16 @@
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "8e9c67f6ce3c950c8545830db5f5b41820b6baeb"
+                "reference": "0be5bea0e1bad8456e9db926c117dbca7624c344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/8e9c67f6ce3c950c8545830db5f5b41820b6baeb",
-                "reference": "8e9c67f6ce3c950c8545830db5f5b41820b6baeb",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/0be5bea0e1bad8456e9db926c117dbca7624c344",
+                "reference": "0be5bea0e1bad8456e9db926c117dbca7624c344",
                 "shasum": ""
             },
             "require": {
@@ -261,7 +261,7 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2018-07-27T12:57:18+00:00"
+            "time": "2019-01-21T06:15:24+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
@@ -313,16 +313,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "4.1.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "b2a93ad132298b0d30632de0ee4a1118b0c5fa2e"
+                "reference": "30bf1ba0a8f252b5f5fbfa942d9e10960b9afee3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/b2a93ad132298b0d30632de0ee4a1118b0c5fa2e",
-                "reference": "b2a93ad132298b0d30632de0ee4a1118b0c5fa2e",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/30bf1ba0a8f252b5f5fbfa942d9e10960b9afee3",
+                "reference": "30bf1ba0a8f252b5f5fbfa942d9e10960b9afee3",
                 "shasum": ""
             },
             "require": {
@@ -357,7 +357,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2019-01-17T05:22:38+00:00"
+            "time": "2019-01-21T06:22:27+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -457,16 +457,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "5.1.3",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "86c5c1b9804c65228a82341045c5dca69913d2c9"
+                "reference": "b22d616d75d46a6654cea35c94cab50e2ab54048"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/86c5c1b9804c65228a82341045c5dca69913d2c9",
-                "reference": "86c5c1b9804c65228a82341045c5dca69913d2c9",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/b22d616d75d46a6654cea35c94cab50e2ab54048",
+                "reference": "b22d616d75d46a6654cea35c94cab50e2ab54048",
                 "shasum": ""
             },
             "require": {
@@ -501,20 +501,20 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2018-11-01T15:15:03+00:00"
+            "time": "2019-01-21T06:52:20+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "1.1.1",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "faa1d10ceeadb009f211ab7fe82208c5a8a53b32"
+                "reference": "f6f6ac80f4a945bb256849ba7b625147a87952b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/faa1d10ceeadb009f211ab7fe82208c5a8a53b32",
-                "reference": "faa1d10ceeadb009f211ab7fe82208c5a8a53b32",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/f6f6ac80f4a945bb256849ba7b625147a87952b9",
+                "reference": "f6f6ac80f4a945bb256849ba7b625147a87952b9",
                 "shasum": ""
             },
             "require": {
@@ -549,7 +549,7 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2019-01-15T01:15:23+00:00"
+            "time": "2019-01-22T00:13:34+00:00"
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
@@ -697,20 +697,20 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "1.1.4",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "1d55789188c47f606762d15c94856e94f2d4f061"
+                "reference": "d08f3fad346751232859c335d289237a82f9eef3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/1d55789188c47f606762d15c94856e94f2d4f061",
-                "reference": "1d55789188c47f606762d15c94856e94f2d4f061",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/d08f3fad346751232859c335d289237a82f9eef3",
+                "reference": "d08f3fad346751232859c335d289237a82f9eef3",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-ogp": "^1.1",
+                "inc2734/wp-ogp": "^2.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -742,24 +742,24 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2018-11-26T08:34:14+00:00"
+            "time": "2019-01-22T01:55:45+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "3.1.3",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "5bb6fac5f5ca6c922b5d104ecb0ce35532cbf533"
+                "reference": "cd032893ca083a343f5871e855cce68f4ede3a17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/5bb6fac5f5ca6c922b5d104ecb0ce35532cbf533",
-                "reference": "5bb6fac5f5ca6c922b5d104ecb0ce35532cbf533",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/cd032893ca083a343f5871e855cce68f4ede3a17",
+                "reference": "cd032893ca083a343f5871e855cce68f4ede3a17",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-ogp": "^1.1",
+                "inc2734/wp-ogp": "^2.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -792,7 +792,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2018-11-28T04:31:37+00:00"
+            "time": "2019-01-22T01:29:09+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",

@@ -8,6 +8,7 @@
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Bootstrap;
 use Inc2734\WP_Customizer_Framework\Style;
+use Inc2734\WP_Customizer_Framework\Color;
 
 new Bootstrap();
 
@@ -58,8 +59,8 @@ add_action(
 					$selectors_for_th,
 					[
 						'background-color: ' . $accent_color,
-						'border-right-color: ' . Style::light( $accent_color ),
-						'border-left-color: ' . Style::light( $accent_color ),
+						'border-right-color: ' . Color::light( $accent_color ),
+						'border-left-color: ' . Color::light( $accent_color ),
 					]
 				);
 			}

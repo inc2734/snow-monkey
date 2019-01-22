@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Style;
+use Inc2734\WP_Customizer_Framework\Color;
 
 if ( ! class_exists( '\woocommerce' ) ) {
 	return;
@@ -64,7 +65,7 @@ Style::register(
 		'.l-container .l-contents #respond #submit.alt:focus',
 		'.l-container .l-contents .button.alt:focus',
 	],
-	'background-color: ' . Style::darken( $accent_color, 0.05 )
+	'background-color: ' . Color::darken( $accent_color, 0.05 )
 );
 
 Style::register(

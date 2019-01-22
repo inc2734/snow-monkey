@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Style;
+use Inc2734\WP_Customizer_Framework\Color;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
@@ -20,6 +21,6 @@ Style::register(
 		'.c-page-top:active',
 		'.c-page-top:focus',
 	],
-	'background-color: ' . Style::darken( $accent_color, 0.05 ),
+	'background-color: ' . Color::darken( $accent_color, 0.05 ),
 	'@media (min-width: 64em)'
 );

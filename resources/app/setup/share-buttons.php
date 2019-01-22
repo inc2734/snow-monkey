@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Share_Buttons\Share_Buttons;
+use Inc2734\WP_Share_Buttons\Bootstrap;
 
-new Share_Buttons();
+new Bootstrap();
 
 /**
  * Set count cache time
