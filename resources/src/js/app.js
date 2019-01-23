@@ -53,15 +53,3 @@ $('.l-sidebar-sticky-widget-area').sticky({
 $('.js-bg-parallax').backgroundParallaxScroll();
 
 $('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
-
-$(window).on('elementor/frontend/init', () => {
-  elementorFrontend.hooks.addAction('frontend/element_ready/widget', (scope) => {
-    if (scope.hasClass('elementor-widget-wp-widget-inc2734_wp_awesome_widgets_slider')) {
-      scope.find('.wpaw-slider__canvas').WpawSlider();
-    } else if (scope.hasClass('elementor-widget-wp-widget-inc2734_wp_awesome_widgets_pickup_slider')) {
-      scope.find('.wpaw-pickup-slider__canvas').SnowMonkeyWpawPickupSlider();
-    } else if (scope.hasClass('elementor-widget-wp-widget-inc2734_wp_awesome_widgets_showcase')) {
-      scope.find('.wpaw-showcase').backgroundParallaxScroll();
-    }
-  });
-});
