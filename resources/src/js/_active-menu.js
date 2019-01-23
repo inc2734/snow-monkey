@@ -25,8 +25,8 @@ export default class SnowMonkeyActiveMenu {
         }
 
         const atagPathname     = atag.pathname.replace(/\/$/, '');
-        const atagHref         = atag.href.replace(/\/$/, '');
-        const locationHref     = this.location.href.replace(/\/$/, '');
+        const atagHref         = atag.href.replace(/\/$/, '') + '/';
+        const locationHref     = this.location.href.replace(/\/$/, '') + '/';
         const locationPathname = this.location.pathname.replace(/\/$/, '');
         const vaPathname       = atagPathname.replace(new RegExp(`^${vlocation.pathname}`), '');
 
