@@ -13,9 +13,10 @@
 
   &__toggle {
     @include _transition(transform);
+    transform: rotate(90deg);
 
     &[aria-expanded="true"] {
-      transform: rotate(90deg);
+      transform: rotate(-90deg);
     }
   }
 
