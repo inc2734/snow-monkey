@@ -14,7 +14,7 @@ Framework::control(
 		'label'             => __( 'Google Matched Content', 'snow-monkey' ),
 		'description'       => __( 'When pasting the code of the matched content, related posts are replaced with advertisements.', 'snow-monkey' ) . __( 'Paste only the ins tag.', 'snow-monkey' ),
 		'type'              => 'option',
-		'priority'          => 120,
+		'priority'          => 130,
 		'sanitize_callback' => function( $value ) {
 			$value = preg_replace( '@<script>[^<]*<\/script>@s', '', $value );
 			$value = strip_tags( $value, '<ins>' );

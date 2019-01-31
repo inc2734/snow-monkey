@@ -14,7 +14,7 @@ Framework::control(
 		'label'             => __( 'Google Infeed Ads', 'snow-monkey' ),
 		'description'       => __( 'When pasting the code of the infeed ads, the advertisement is displayed in posts list.', 'snow-monkey' ) . __( 'Paste only the ins tag.', 'snow-monkey' ),
 		'type'              => 'option',
-		'priority'          => 110,
+		'priority'          => 120,
 		'sanitize_callback' => function( $value ) {
 			$value = preg_replace( '@<script>[^<]*<\/script>@s', '', $value );
 			$value = strip_tags( $value, '<ins>' );
