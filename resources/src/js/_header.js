@@ -4,7 +4,6 @@ import {getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyl
 
 export default class SnowMonkeyHeader {
   constructor() {
-    console.log(isHeaderPositionOnlyMobile());
     if (! isHeaderPositionOnlyMobile()) {
       return;
     }
