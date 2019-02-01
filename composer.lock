@@ -361,16 +361,16 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "6211191a69103e10ad291f87379fcc513b1d2e32"
+                "reference": "01af92ea173deff0d0a5d65d08996ce0d12c6cb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/6211191a69103e10ad291f87379fcc513b1d2e32",
-                "reference": "6211191a69103e10ad291f87379fcc513b1d2e32",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/01af92ea173deff0d0a5d65d08996ce0d12c6cb9",
+                "reference": "01af92ea173deff0d0a5d65d08996ce0d12c6cb9",
                 "shasum": ""
             },
             "require": {
@@ -405,7 +405,7 @@
                 }
             ],
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
-            "time": "2019-02-01T00:29:23+00:00"
+            "time": "2019-02-01T06:29:04+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",
