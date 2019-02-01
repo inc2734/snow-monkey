@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "8.0.0",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "097dbb4436005b8822f1920a30e90d128129b127"
+                "reference": "c62546f18275f35d04a1c27c49a1915babb7692a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/097dbb4436005b8822f1920a30e90d128129b127",
-                "reference": "097dbb4436005b8822f1920a30e90d128129b127",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c62546f18275f35d04a1c27c49a1915babb7692a",
+                "reference": "c62546f18275f35d04a1c27c49a1915babb7692a",
                 "shasum": ""
             },
             "require": {
@@ -67,7 +67,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-01-28T06:10:27+00:00"
+            "time": "2019-02-01T01:00:03+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",

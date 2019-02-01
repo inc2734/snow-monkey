@@ -1,10 +1,11 @@
 'use strict';
 
-import {getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyle, setStyle} from './_helper.js';
+import {getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyle, setStyle, isHeaderPositionOnlyMobile} from './_helper.js';
 
 export default class SnowMonkeyHeader {
   constructor() {
-    if (! snow_monkey_header_position_only_mobile) {
+    console.log(isHeaderPositionOnlyMobile());
+    if (! isHeaderPositionOnlyMobile()) {
       return;
     }
 

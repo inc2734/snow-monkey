@@ -66,21 +66,6 @@ add_action(
 );
 
 /**
- * Enqueue script for header position
- *
- * @return void
- */
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
-		$header_position_only_mobile = ( $header_position_only_mobile ) ? 'true' : 'false';
-		$data = 'var snow_monkey_header_position_only_mobile = ' . $header_position_only_mobile;
-		wp_add_inline_script( Helper::get_main_script_handle(), $data, 'before' );
-	}
-);
-
-/**
  * Enqueue FontAwesome
  *
  * @return void
@@ -161,11 +146,13 @@ add_action(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
+
 		wp_localize_script(
 			Helper::get_main_script_handle(),
 			'snow_monkey',
 			[
 				'home_url' => home_url(),
+				'header_position_only_mobile' => get_theme_mod( 'header-position-only-mobile' ) ? true : false,
 			]
 		);
 	}

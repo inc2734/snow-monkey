@@ -167,12 +167,12 @@ export function setStyle(element, property, value) {
 }
 
 /**
- * Return snow_monkey_header_position_only_mobile
+ * Return snow_monkey.header_position_only_mobile
  *
  * @return boolean
  */
 export function isHeaderPositionOnlyMobile() {
-  return false === snow_monkey_header_position_only_mobile ? false : true;
+  return false === snow_monkey.header_position_only_mobile ? false : true;
 }
 
 /**

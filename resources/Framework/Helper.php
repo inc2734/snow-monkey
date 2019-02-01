@@ -7,11 +7,11 @@
 
 namespace Framework;
 
-use Inc2734\Mimizuku_Core\Utility;
+use Inc2734\Mimizuku_Core;
 
 class Helper {
 
-	use Utility\Helper\Helper;
+	use Mimizuku_Core\App\Contract\Helper\Helper;
 	use Contract\Helper\Page_Header;
 
 	/**
