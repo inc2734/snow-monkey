@@ -2,8 +2,8 @@
 
 import {getDrawerNav} from './_helper.js';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
-import BasisDrawerCloseZone from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer-close-zone.js';
-import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer.js';
+import BasisDrawerCloseZone from '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer-close-zone.js';
+import BasisDrawer from '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer.js';
 
 export default class SnowMonkeyHashNav {
   constructor() {

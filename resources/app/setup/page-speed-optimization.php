@@ -33,6 +33,12 @@ add_action(
 						'jquery.contents-outline',
 						'wp-contents-outline',
 						'wp-awesome-widgets',
+						Helper::get_main_script_handle() . '-fix-adminbar',
+						Helper::get_main_script_handle() . '-header',
+						Helper::get_main_script_handle() . '-drop-nav',
+						Helper::get_main_script_handle() . '-footer-sticky-nav',
+						Helper::get_main_script_handle() . '-global-nav',
+						Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
 					]
 				);
 			}

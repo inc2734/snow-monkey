@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import '../../assets/packages/jquery.smoothscroll/src/jquery.smoothscroll.js';
+import '../../../assets/packages/jquery.smoothscroll/src/jquery.smoothscroll.js';
 
 export default class SnowMonkeySmoothScroll {
 
