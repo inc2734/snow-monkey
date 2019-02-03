@@ -172,7 +172,7 @@ export function setStyle(element, property, value) {
  * @return boolean
  */
 export function isHeaderPositionOnlyMobile() {
-  return false === snow_monkey.header_position_only_mobile ? false : true;
+  return 'false' === snow_monkey.header_position_only_mobile ? false : true;
 }
 
 /**

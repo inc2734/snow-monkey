@@ -220,7 +220,7 @@ add_action(
 			'snow_monkey',
 			[
 				'home_url' => home_url(),
-				'header_position_only_mobile' => get_theme_mod( 'header-position-only-mobile' ) ? true : false,
+				'header_position_only_mobile' => get_theme_mod( 'header-position-only-mobile' ) ? 'true' : 'false',
 			]
 		);
 	}
