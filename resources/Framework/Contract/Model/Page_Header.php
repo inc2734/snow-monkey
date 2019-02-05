@@ -29,7 +29,7 @@ abstract class Page_Header {
 
 		$image_id = attachment_url_to_postid( $image_url );
 		if ( ! $image_id ) {
-			$image = srintf(
+			$image = sprintf(
 				'<img src="%1$s" alt="">',
 				esc_url( $image_url )
 			);
