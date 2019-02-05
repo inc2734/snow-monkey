@@ -6,6 +6,17 @@ a {
   color: $color-accent;
 }
 
+img {
+  &[decoding="async"] {
+    opacity: 0;
+    @include _transition(opacity);
+  }
+
+  &[decoding="async"]:not([data-src]) {
+    opacity: 1;
+  }
+}
+
 h1 {
   @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.5);
 

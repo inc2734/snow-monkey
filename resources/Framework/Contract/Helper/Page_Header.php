@@ -9,6 +9,29 @@ namespace Framework\Contract\Helper;
 
 trait Page_Header {
 
+	protected static function _get_class() {
+		$types = array_filter(
+			[
+				'Default'  => is_search() || is_404(),
+				'Post'     => is_singular( 'post' ),
+				'Page'     => is_page() && ! is_front_page(),
+				'Category' => is_category(),
+				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() ),
+			]
+		);
+
+		if ( ! $types ) {
+			return false;
+		}
+
+		$class = '\Framework\Model\Page_Header\\' . key( $types ) . '_Page_Header';
+		if ( ! class_exists( $class ) ) {
+			return false;
+		}
+
+		return $class;
+	}
+
 	/**
 	 * Returns page header image url
 	 *
@@ -20,24 +43,37 @@ trait Page_Header {
 			return $url;
 		}
 
-		$types = array_filter(
-			[
-				'Default'  => is_search() || is_404(),
-				'Post'     => is_singular( 'post' ),
-				'Page'     => is_page() && ! is_front_page(),
-				'Category' => is_category(),
-				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() ),
-			]
-		);
-
-		if ( $types ) {
-			$class = '\Framework\Model\Page_Header\\' . key( $types ) . '_Page_Header';
-			if ( class_exists( $class ) ) {
-				$url = $class::get_image_url();
-			}
+		$class = static::_get_class();
+		if ( $class ) {
+			$url = $class::get_image_url();
 		}
 
 		return apply_filters( 'snow_monkey_page_header_image_url', $url );
+	}
+
+	/**
+	 * Returns page header image
+	 *
+	 * @return void
+	 */
+	public static function the_page_header_image() {
+		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
+		if ( ! $url ) {
+			$url = apply_filters( 'snow_monkey_page_header_image_url', $url );
+		}
+
+		if ( $url ) {
+			printf(
+				'<img src="%1$s" alt="">',
+				esc_url( $url )
+			);
+			return;
+		}
+
+		$class = static::_get_class();
+		if ( $class ) {
+			$class::the_image();
+		}
 	}
 
 	/**

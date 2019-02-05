@@ -22,7 +22,7 @@ if ( empty( $header_image ) && ! Helper::is_output_page_header_title() ) {
 
 	<?php if ( $header_image ) : ?>
 		<div class="c-page-header__bgimage js-bg-parallax__bgimage">
-			<img src="<?php echo esc_url( $header_image ); ?>" alt="">
+			<?php Helper::the_page_header_image(); ?>
 		</div>
 	<?php endif; ?>
 

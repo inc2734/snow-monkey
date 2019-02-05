@@ -17,6 +17,30 @@ abstract class Page_Header {
 	abstract public static function get_image_url();
 
 	/**
+	 * Display page header image
+	 *
+	 * @return void
+	 */
+	public static function the_image() {
+		$image_url = static::get_image_url();
+		if ( ! $image_url ) {
+			return;
+		}
+
+		$image_id = attachment_url_to_postid( $image_url );
+		if ( ! $image_id ) {
+			$image = srintf(
+				'<img src="%1$s" alt="">',
+				esc_url( $image_url )
+			);
+		} else {
+			$image = wp_get_attachment_image( $image_id, static::_get_thumbnail_size() );
+		}
+
+		echo wp_kses_post( $image );
+	}
+
+	/**
 	 * Return thumbnail size of page header image
 	 *
 	 * @return string
