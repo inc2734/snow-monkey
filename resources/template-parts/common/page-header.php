@@ -7,17 +7,18 @@
 
 use Framework\Helper;
 
-$header_image = Helper::get_page_header_image_url();
-
-if ( empty( $header_image ) && ! Helper::is_output_page_header_title() ) {
+if ( ! Helper::is_output_page_header() ) {
 	return;
 }
+
+$is_output_page_header_title = Helper::is_output_page_header_title();
+$header_image = Helper::get_page_header_image();
 ?>
 
 <div
 	class="c-page-header js-bg-parallax"
-	data-has-content="<?php echo esc_attr( Helper::is_output_page_header_title() ? 'true' : 'false' ); ?>"
-	data-has-image="<?php echo esc_attr( empty( $header_image ) ? 'false' : 'true' ); ?>"
+	data-has-content="<?php echo esc_attr( $is_output_page_header_title ? 'true' : 'false' ); ?>"
+	data-has-image="<?php echo esc_attr( $header_image ? 'true' : 'false' ); ?>"
 	>
 
 	<?php if ( $header_image ) : ?>
@@ -26,7 +27,7 @@ if ( empty( $header_image ) && ! Helper::is_output_page_header_title() ) {
 		</div>
 	<?php endif; ?>
 
-	<?php if ( Helper::is_output_page_header_title() ) : ?>
+	<?php if ( $is_output_page_header_title ) : ?>
 		<div class="c-container js-bg-parallax__content">
 			<div class="c-page-header__content">
 				<h1 class="c-page-header__title">
