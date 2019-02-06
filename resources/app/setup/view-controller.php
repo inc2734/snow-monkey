@@ -6,6 +6,21 @@
  */
 
 /**
+ * Override inc2734_wp_view_controller_controller
+ *
+ * @param string $args
+ * @return array
+ */
+add_filter(
+	'inc2734_wp_view_controller_controller',
+	function( $template, $filename ) {
+		return apply_filters( 'snow_monkey_controller', $template, $filename );
+	},
+	9,
+	2
+);
+
+/**
  * Override mimizuku_get_template_part_args
  *
  * @param array $args
