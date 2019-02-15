@@ -21,6 +21,24 @@ add_filter(
 );
 
 /**
+ * Change root directory of get_template_part().
+ * If return empty, root is theme directory (= default get_template_part()).
+ *
+ * @param string $root
+ * @param string $slug
+ * @param string $name
+ * @param array $vars
+ */
+add_filter(
+	'mimizuku_template_part_root',
+	function( $root, $slug, $name, $vars ) {
+		return apply_filters( 'snow_monkey_template_part_root', $root, $slug, $name, $vars );
+	},
+	10,
+	4
+);
+
+/**
  * Override mimizuku_get_template_part_args
  *
  * @param array $args
