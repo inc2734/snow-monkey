@@ -14,6 +14,7 @@
     position: relative;
     max-width: 100%;
     @include _padding(1);
+    overflow: hidden; // For IE11
   }
 
   &__item-content {
