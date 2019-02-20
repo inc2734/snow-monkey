@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; // For IE11
 
     .wpaw-pickup-slider__figure {
       @include _position(absolute, 0, -2em, 0, -2em);
@@ -45,6 +46,7 @@
     transition: opacity .5s ease-in 1s;
     opacity: 0;
     visibility: hidden;
+    overflow: hidden; // For IE11
   }
 
   &__item-content {
