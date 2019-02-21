@@ -1,0 +1,16 @@
+@supports (max-width: calc(100vw - constant(safe-area-inset-right) - constant(safe-area-inset-left))) or (max-width: calc(100vw - env(safe-area-inset-right) - env(safe-area-inset-left))) {
+  .#{$_prefix}c-fluid-container,
+  .#{$_prefix}c-container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: calc(100vw - constant(safe-area-inset-right) - constant(safe-area-inset-left));
+    max-width: calc(100vw - env(safe-area-inset-right) - env(safe-area-inset-left));
+  }
+
+  .#{$_prefix}c-container {
+    @include _media-min(lg) {
+      max-width: calc(#{$_container-max-width} - constant(safe-area-inset-right) - constant(safe-area-inset-left));
+      max-width: calc(#{$_container-max-width} - env(safe-area-inset-right) - env(safe-area-inset-left));
+    }
+  }
+}

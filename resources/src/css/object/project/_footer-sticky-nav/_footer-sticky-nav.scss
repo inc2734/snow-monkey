@@ -2,7 +2,11 @@
   @include _position(fixed, null, 0, 0, 0, 10);
   background-color: #fff;
   box-shadow: 0 0 2px 0 rgba(#000, .25);
-  padding-bottom: env(safe-area-inset-bottom); // For iPhone X
+
+  @supports (padding-bottom: env(safe-area-inset-bottom)) or (padding-bottom: constant(safe-area-inset-bottom)) {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
 
   @include _media-min(lg) {
     display: none;

@@ -46,3 +46,12 @@
     }
   }
 }
+
+@supports (padding-left: constant(safe-area-inset-left)) or (padding-left: env(safe-area-inset-left)) {
+  [id="drawer-nav"] {
+    padding-left: constant(safe-area-inset-left);
+    padding-left: env(safe-area-inset-left);
+    width: calc(#{$_base-line-height * 10} + constant(safe-area-inset-left));
+    width: calc(#{$_base-line-height * 10} + env(safe-area-inset-left));
+  }
+}
