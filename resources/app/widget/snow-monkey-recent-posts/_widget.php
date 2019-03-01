@@ -10,10 +10,20 @@ use Framework\Helper;
 $widget_id = explode( '-', $args['widget_id'] );
 $widget_id = end( $widget_id );
 
+$has_sticky   = get_option( 'sticky_posts' ) && ! $instance['ignore-sticky-posts'];
+$sticky_count = 0;
+if ( $has_sticky ) {
+	foreach ( get_option( 'sticky_posts' ) as $post_id ) {
+		if ( 'publish' === get_post_status( $post_id ) ) {
+			$sticky_count ++;
+		}
+	}
+}
+
 $query_args = [
 	'post_type'           => 'post',
-	'posts_per_page'      => $instance['posts-per-page'],
-	'ignore_sticky_posts' => false,
+	'posts_per_page'      => $instance['posts-per-page'] - $sticky_count,
+	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
 ];
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_id, $query_args );

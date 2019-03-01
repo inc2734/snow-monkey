@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-01 22:31+0900\n"
-"PO-Revision-Date: 2019-03-01 22:31+0900\n"
+"POT-Creation-Date: 2019-03-02 00:20+0900\n"
+"PO-Revision-Date: 2019-03-02 00:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1041,11 +1041,15 @@ msgstr "リンク URL"
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:31
+#: app/widget/snow-monkey-recent-posts/_form.php:84
+msgid "Ignore sticky posts"
+msgstr "先頭固定表示を除外する"
+
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:32
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:37
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:38
 msgid "Recent posts"
 msgstr "最近の投稿"
 

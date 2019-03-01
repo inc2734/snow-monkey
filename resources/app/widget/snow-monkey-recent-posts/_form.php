@@ -71,4 +71,16 @@
 			value="<?php echo esc_attr( $instance['link-text'] ); ?>"
 		>
 	</p>
+
+	<p>
+		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'ignore-sticky-posts' ) ); ?>" value="0">
+		<input
+			type="checkbox"
+			name="<?php echo esc_attr( $this->get_field_name( 'ignore-sticky-posts' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'ignore-sticky-posts' ) ); ?>"
+			value="1"
+			<?php checked( 1, $instance['ignore-sticky-posts'] ); ?>
+		>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'ignore-sticky-posts' ) ); ?>"><?php esc_html_e( 'Ignore sticky posts', 'snow-monkey' ); ?></label>
+	</p>
 </div>
