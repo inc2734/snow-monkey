@@ -214,7 +214,6 @@ add_action(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-
 		wp_localize_script(
 			Helper::get_main_script_handle(),
 			'snow_monkey',

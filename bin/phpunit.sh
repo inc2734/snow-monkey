@@ -12,7 +12,7 @@ if [ -e ${WP_TESTS_DIR} -a -e ${WP_TESTS_DIR}/includes/functions.php ]; then
   fi
 
   cd ${themedir};
-  resources/vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml
+  resources/vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml.dist
   exit 0
 fi
 

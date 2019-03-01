@@ -16,8 +16,8 @@
 		<?php
 		$form = get_search_form( false );
 		$form = str_replace(
-			'<button class="c-input-group__btn">' . esc_html__( 'Search', 'inc2734-wp-basis' ) . '</button>',
-			'<button class="c-input-group__btn"><i class="fas fa-search" aria-label="' . esc_html__( 'Search', 'inc2734-wp-basis' ) . '"></i></button>',
+			'<button class="c-input-group__btn">' . esc_html__( 'Search', 'snow-monkey' ) . '</button>',
+			'<button class="c-input-group__btn"><i class="fas fa-search" aria-label="' . esc_html__( 'Search', 'snow-monkey' ) . '"></i></button>',
 			$form
 		);
 		$form = str_replace(

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-01-31 09:38+0900\n"
-"PO-Revision-Date: 2019-01-31 09:38+0900\n"
+"POT-Creation-Date: 2019-03-01 22:31+0900\n"
+"PO-Revision-Date: 2019-03-01 22:31+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -41,6 +41,14 @@ msgstr "コンテンツの上"
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:22
 msgid "None"
 msgstr "なし"
+
+#: app/customizer/advertisement/controls/google-adsense-auth-code.php:14
+msgid "Google Adsense authentication code"
+msgstr "Google AdSense 認証コード"
+
+#: app/customizer/advertisement/controls/google-adsense-auth-code.php:15
+msgid "Paste only the contents of script tag."
+msgstr "script タグの内容だけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-adsense.php:14
 msgid "Google Adsense"
