@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4c4f07a75e6c9e8cb9fe7dceca47d530",
+    "content-hash": "f3e7e6290e64954711e1819c5443cc25",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "8.1.1",
+            "version": "9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "4c2c08d2a1b323ddecee5480e2085ef2968cb80f"
+                "reference": "c35b2024095ab0e72f329d5e1b23705d37ee27b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4c2c08d2a1b323ddecee5480e2085ef2968cb80f",
-                "reference": "4c2c08d2a1b323ddecee5480e2085ef2968cb80f",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/c35b2024095ab0e72f329d5e1b23705d37ee27b3",
+                "reference": "c35b2024095ab0e72f329d5e1b23705d37ee27b3",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-awesome-components": "^1.0",
                 "inc2734/wp-awesome-widgets": "^4.0",
-                "inc2734/wp-basis": "^4.0",
+                "inc2734/wp-basis": "^5.0",
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^2.0",
                 "inc2734/wp-customizer-framework": "^5.0",
@@ -39,15 +39,11 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -67,7 +63,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-02-16T05:42:18+00:00"
+            "time": "2019-03-01T13:15:47+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -169,31 +165,27 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "4.0.6",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "9a1f97d0db129f4761d05c6a1f27cc67d69540ee"
+                "reference": "edf3bc902082208148c829526cc9a2ff7c8862f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/9a1f97d0db129f4761d05c6a1f27cc67d69540ee",
-                "reference": "9a1f97d0db129f4761d05c6a1f27cc67d69540ee",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/edf3bc902082208148c829526cc9a2ff7c8862f1",
+                "reference": "edf3bc902082208148c829526cc9a2ff7c8862f1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -213,7 +205,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2018-12-06T02:46:50+00:00"
+            "time": "2019-03-01T13:06:45+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",

@@ -5,6 +5,6 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Basis\Basis;
+use Inc2734\WP_Basis\Bootstrap;
 
-new Basis();
+new Bootstrap();
