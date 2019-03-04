@@ -53,6 +53,7 @@ add_action(
 			Helper::generate_script_dependencies(
 				[
 					'jquery',
+					'wp-page-speed-optimization',
 					'wp-awesome-widgets',
 				]
 			),
@@ -199,7 +200,11 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-customize-preview',
 			get_theme_file_uri( $relative_path ),
-			[ 'jquery', 'customize-preview', Helper::get_main_script_handle() ],
+			[
+				'customize-preview',
+				'wp-awesome-widgets-customize-preview',
+				Helper::get_main_script_handle()
+			],
 			filemtime( get_theme_file_path( $relative_path ) ),
 			true
 		);

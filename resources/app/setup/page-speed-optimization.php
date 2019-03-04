@@ -33,7 +33,7 @@ add_action(
 						'jquery.contents-outline',
 						'wp-contents-outline',
 						'wp-awesome-widgets',
-						'wp-page-speed-optimization-lazyload',
+						'wp-page-speed-optimization',
 						Helper::get_main_script_handle() . '-fix-adminbar',
 						Helper::get_main_script_handle() . '-header',
 						Helper::get_main_script_handle() . '-drop-nav',

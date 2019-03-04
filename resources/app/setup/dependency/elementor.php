@@ -36,8 +36,15 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_style_handle() . '-elementor-preview',
 			get_theme_file_uri( $relative_path ),
-			[ 'wp-awesome-widgets' ],
+			[],
 			filemtime( get_theme_file_path( $relative_path ) )
 		);
+	}
+);
+
+add_action(
+	'elementor/frontend/after_register_scripts',
+	function() {
+  	wp_deregister_script( 'jquery-slick' );
 	}
 );
