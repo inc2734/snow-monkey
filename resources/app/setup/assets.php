@@ -195,7 +195,7 @@ add_action(
 add_action(
 	'customize_preview_init',
 	function() {
-		$relative_path = '/assets/js/customize-preview.js';
+		$relative_path = '/assets/js/customize-preview.min.js';
 
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-customize-preview',
