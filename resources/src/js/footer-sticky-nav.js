@@ -5,9 +5,15 @@ import SnowMonkeyActiveMenu from './module/_active-menu.js';
 
 new SnowMonkeyFooterStickyNav();
 
-new SnowMonkeyActiveMenu(
-  '.p-footer-sticky-nav',
-  {
-    home_url: snow_monkey.home_url,
-  }
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    new SnowMonkeyActiveMenu(
+      '.p-footer-sticky-nav',
+      {
+        home_url: snow_monkey.home_url,
+      }
+    );
+  },
+  false
 );

@@ -7,39 +7,41 @@ export default class SnowMonkeyActiveMenu {
     this.selector = selector;
     this.location = window.location;
     this.params   = params;
-    this.params.home_url = !! this.params.home_url ? this.params.home_url : `${this.location.protocol}//${this.location.host}`;
+    this.params.home_url = !! this.params.home_url || `${this.location.protocol}//${this.location.host}`;
 
-    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
-  }
-
-  _DOMContentLoaded() {
     const navs = document.querySelectorAll(this.selector);
 
-    forEachHtmlNodes(navs, (nav) => {
-      const links     = nav.getElementsByTagName('a');
-      const vlocation = this._createVlocation();
+    forEachHtmlNodes(
+      navs,
+      (nav) => {
+        const links     = nav.getElementsByTagName('a');
+        const vlocation = this._createVlocation();
 
-      forEachHtmlNodes(links, (atag) => {
-        if (typeof atag.hostname === 'undefined') {
-          return;
-        }
+        forEachHtmlNodes(
+          links,
+          (atag) => {
+            if (typeof atag.hostname === 'undefined') {
+              return;
+            }
 
-        const atagPathname     = atag.pathname.replace(/\/$/, '');
-        const atagHref         = atag.href.replace(/\/$/, '') + '/';
-        const locationHref     = this.location.href.replace(/\/$/, '') + '/';
-        const locationPathname = this.location.pathname.replace(/\/$/, '');
-        const vaPathname       = atagPathname.replace(new RegExp(`^${vlocation.pathname}`), '');
+            const atagPathname     = atag.pathname.replace(/\/$/, '');
+            const atagHref         = atag.href.replace(/\/$/, '') + '/';
+            const locationHref     = this.location.href.replace(/\/$/, '') + '/';
+            const locationPathname = this.location.pathname.replace(/\/$/, '');
+            const vaPathname       = atagPathname.replace(new RegExp(`^${vlocation.pathname}`), '');
 
-        const sameUrl  = locationHref === atagHref;
-        const childUrl = 0 === locationHref.indexOf(atagHref)
-                      && 1 < locationPathname.length
-                      && 1 < atagPathname.length
-                      && 1 < vaPathname.length;
-        if (sameUrl || childUrl) {
-          return this._active(atag);
-        }
-      });
-    });
+            const sameUrl  = locationHref === atagHref;
+            const childUrl = 0 === locationHref.indexOf(atagHref)
+                          && 1 < locationPathname.length
+                          && 1 < atagPathname.length
+                          && 1 < vaPathname.length;
+            if (sameUrl || childUrl) {
+              return this._active(atag);
+            }
+          }
+        );
+      }
+    );
   }
 
   _createVlocation() {
