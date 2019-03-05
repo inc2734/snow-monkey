@@ -18,9 +18,17 @@ new BasisStickyHeader();
 new SnowMonkeyAnchorPageScroll();
 new SnowMonkeySmoothScroll();
 new SnowMonkeyHashNav();
-new SnowMonkeyWidgetItemExpander();
 
 $('.js-bg-parallax').backgroundParallaxScroll();
 
 const canvases = document.querySelectorAll('.wpaw-pickup-slider__canvas');
 forEachHtmlNodes(canvases, (canvas) => initWpawPickupSlider(canvas));
+
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const submenus = document.querySelectorAll('.c-widget .children, .c-widget .sub-menu');
+    forEachHtmlNodes(submenus, (submenu) => new SnowMonkeyWidgetItemExpander(submenu));
+  },
+  false
+);

@@ -3,50 +3,42 @@
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
 export default class SnowMonkeyActiveMenu {
-  constructor(selector, params = {}) {
-    this.selector = selector;
-    this.location = window.location;
-    this.params   = params;
-    this.params.home_url = !! this.params.home_url || `${this.location.protocol}//${this.location.host}`;
+  constructor(nav, params = {}) {
+    const location = window.location;
 
-    const navs = document.querySelectorAll(this.selector);
+    params.home_url = params.home_url || `${location.protocol}//${location.host}`;
+
+    const links     = nav.getElementsByTagName('a');
+    const vlocation = this._createVlocation(params.home_url);
 
     forEachHtmlNodes(
-      navs,
-      (nav) => {
-        const links     = nav.getElementsByTagName('a');
-        const vlocation = this._createVlocation();
+      links,
+      (atag) => {
+        if (typeof atag.hostname === 'undefined') {
+          return;
+        }
 
-        forEachHtmlNodes(
-          links,
-          (atag) => {
-            if (typeof atag.hostname === 'undefined') {
-              return;
-            }
+        const atagPathname     = atag.pathname.replace(/\/$/, '');
+        const atagHref         = atag.href.replace(/\/$/, '') + '/';
+        const locationHref     = location.href.replace(/\/$/, '') + '/';
+        const locationPathname = location.pathname.replace(/\/$/, '');
+        const vaPathname       = atagPathname.replace(new RegExp(`^${vlocation.pathname}`), '');
 
-            const atagPathname     = atag.pathname.replace(/\/$/, '');
-            const atagHref         = atag.href.replace(/\/$/, '') + '/';
-            const locationHref     = this.location.href.replace(/\/$/, '') + '/';
-            const locationPathname = this.location.pathname.replace(/\/$/, '');
-            const vaPathname       = atagPathname.replace(new RegExp(`^${vlocation.pathname}`), '');
-
-            const sameUrl  = locationHref === atagHref;
-            const childUrl = 0 === locationHref.indexOf(atagHref)
-                          && 1 < locationPathname.length
-                          && 1 < atagPathname.length
-                          && 1 < vaPathname.length;
-            if (sameUrl || childUrl) {
-              return this._active(atag);
-            }
-          }
-        );
+        const sameUrl  = locationHref === atagHref;
+        const childUrl = 0 === locationHref.indexOf(atagHref)
+                      && 1 < locationPathname.length
+                      && 1 < atagPathname.length
+                      && 1 < vaPathname.length;
+        if (sameUrl || childUrl) {
+          return this._active(atag);
+        }
       }
     );
   }
 
-  _createVlocation() {
+  _createVlocation(homeUrl) {
     const element = document.createElement('a');
-    element.setAttribute('href', this.params.home_url);
+    element.setAttribute('href', homeUrl);
     return element;
   }
 
