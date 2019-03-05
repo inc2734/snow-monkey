@@ -86,8 +86,14 @@
   @include _padding(.25, 0);
 
   &[data-is-hidden="false"] {
+    @include _margin-bottom(.25);
     display: block;
     animation: widget_children_show .5s;
+
+    [data-is-hidden="false"] {
+      @include _margin-bottom(-.25);
+      border-bottom: none;
+    }
   }
 }
 
