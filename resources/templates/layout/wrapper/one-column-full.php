@@ -24,6 +24,8 @@ use Framework\Helper;
 		<?php Helper::get_header(); ?>
 
 		<div class="l-contents" role="document">
+			<?php do_action( 'snow_monkey_prepend_contents' ); ?>
+
 			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
 			<?php Helper::get_template_part( 'template-parts/common/infobar' ); ?>
 
@@ -32,12 +34,18 @@ use Framework\Helper;
 
 				<div class="l-contents__inner">
 					<main class="l-contents__main" role="main">
+						<?php do_action( 'snow_monkey_prepend_main' ); ?>
+
 						<?php $_view_controller->view(); ?>
+
+						<?php do_action( 'snow_monkey_append_main' ); ?>
 					</main>
 				</div>
 
 				<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 			</div>
+
+			<?php do_action( 'snow_monkey_append_contents' ); ?>
 		</div>
 
 		<?php Helper::get_footer(); ?>

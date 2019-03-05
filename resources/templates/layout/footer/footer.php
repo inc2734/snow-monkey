@@ -8,10 +8,14 @@
 use Framework\Helper;
 ?>
 <footer class="l-footer" role="contentinfo">
+	<?php do_action( 'snow_monkey_prepend_footer' ); ?>
+
 	<?php Helper::get_template_part( 'template-parts/nav/social' ); ?>
 	<?php Helper::get_template_part( 'template-parts/widget-area/footer' ); ?>
 	<?php Helper::get_template_part( 'template-parts/nav/footer-sub' ); ?>
 	<?php Helper::get_template_part( 'template-parts/footer/copyright' ); ?>
+
+	<?php do_action( 'snow_monkey_append_footer' ); ?>
 </footer>
 
 <?php Helper::get_template_part( 'template-parts/common/page-top' ); ?>
