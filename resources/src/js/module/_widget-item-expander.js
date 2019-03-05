@@ -2,7 +2,7 @@
 
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
-export default class SnowMonkeyWidgetItemExpander {
+export default class WidgetItemExpander {
   constructor(submenu) {
     this._hide(submenu);
 

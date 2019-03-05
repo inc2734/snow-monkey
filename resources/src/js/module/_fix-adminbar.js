@@ -4,10 +4,6 @@ import {getHeader, getContents, getHtml, getContainer, getAdminBar, scrollTop, g
 
 export default class FixAdminBar {
   constructor() {
-    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
-  }
-
-  _DOMContentLoaded() {
     this.container = getContainer();
     this.header    = getHeader();
     this.contents  = getContents();

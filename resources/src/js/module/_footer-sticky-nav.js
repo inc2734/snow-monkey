@@ -2,12 +2,8 @@
 
 import {getBody, getFooterStickyNav, getStyle, setStyle} from './_helper.js';
 
-export default class SnowMonkeyFooterStickyNav {
+export default class FooterStickyNav {
   constructor() {
-    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
-  }
-
-  _DOMContentLoaded() {
     this.nav = getFooterStickyNav();
     if (! this.nav) {
       return;

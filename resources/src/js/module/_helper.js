@@ -153,6 +153,10 @@ export function scrollTop() {
  * @return string
  */
 export function getStyle(element, property) {
+  if (! element) {
+    return undefined;
+  }
+
   return window.getComputedStyle(element).getPropertyValue(property);
 }
 

@@ -2,8 +2,12 @@
 
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
-export default class SnowMonkeyActiveMenu {
+export default class ActiveMenu {
   constructor(nav, params = {}) {
+    if (! nav) {
+      return;
+    }
+
     const location = window.location;
 
     params.home_url = params.home_url || `${location.protocol}//${location.host}`;

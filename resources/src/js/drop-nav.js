@@ -1,5 +1,11 @@
 'use strict';
 
-import SnowMonkeyDropNav from './module/_drop-nav.js';
+import DropNav from './module/_drop-nav.js';
 
-new SnowMonkeyDropNav();
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    new DropNav();
+  },
+  false
+);

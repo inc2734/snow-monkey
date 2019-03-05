@@ -2,4 +2,10 @@
 
 import FixAdminBar from './module/_fix-adminbar.js';
 
-new FixAdminBar();
+window.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    new FixAdminBar();
+  },
+  false
+);

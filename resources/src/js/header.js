@@ -1,5 +1,11 @@
 'use strict';
 
-import SnowMonkeyHeader from './module/_header.js';
+import Header from './module/_header.js';
 
-new SnowMonkeyHeader();
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    new Header();
+  },
+  false
+);

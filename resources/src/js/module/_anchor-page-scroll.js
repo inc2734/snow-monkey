@@ -1,19 +1,14 @@
 'use strict';
 
-import $ from 'jquery';
 import {getHeader, getDropNavWrapper, scrollTop, getHeaderType, maybeShowDropNav} from './_helper.js';
 
-export default class SnowMonkeyAnchorPageScroll {
-  constructor(selector, params = {}) {
+export default class AnchorPageScroll {
+  constructor() {
     this.hash = window.location.hash;
     if (! this.hash) {
       return;
     }
 
-    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
-  }
-
-  _DOMContentLoaded() {
     this.header = getHeader();
     if (! this.header) {
       return;
@@ -21,7 +16,8 @@ export default class SnowMonkeyAnchorPageScroll {
 
     this.dropNavWrapper   = getDropNavWrapper();
     this.defaultScrollTop = scrollTop();
-    this.scrolled = false;
+    this.scrolled         = false;
+
     window.addEventListener('scroll', () => this._scrollEvent(), false);
   }
 

@@ -3,14 +3,10 @@
 import addCustomEvent from '@inc2734/add-custom-event';
 import {getHeader, getDropNavWrapper, scrollTop, isHeaderPositionOnlyMobile, maybeShowDropNav} from './_helper.js';
 
-export default class SnowMonkeyDropNav {
+export default class DropNav {
   constructor() {
     this.defaultWindowWidth = window.innerWidth;
 
-    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
-  }
-
-  _DOMContentLoaded() {
     this.header = getHeader();
     if (! this.header) {
       return;

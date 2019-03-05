@@ -2,16 +2,12 @@
 
 import {getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyle, setStyle, isHeaderPositionOnlyMobile} from './_helper.js';
 
-export default class SnowMonkeyHeader {
+export default class Header {
   constructor() {
     if (! isHeaderPositionOnlyMobile()) {
       return;
     }
 
-    window.addEventListener('DOMContentLoaded', () => this._DOMContentLoaded(), false);
-  }
-
-  _DOMContentLoaded() {
     this.header = getHeader();
     if (! this.header) {
       return;
