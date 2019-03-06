@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c99fd29c92ee9eb9cf6d3ef9e0a84ab",
+    "content-hash": "96131f364cc95199e8e7a367d47d4c10",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "10.0.0",
+            "version": "10.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "453b24b8febe10b0b8e85d3bc807184fd9a7043d"
+                "reference": "802bc1a2d8bc117e4ba0abe7b18e8ce51f7dd0a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/453b24b8febe10b0b8e85d3bc807184fd9a7043d",
-                "reference": "453b24b8febe10b0b8e85d3bc807184fd9a7043d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/802bc1a2d8bc117e4ba0abe7b18e8ce51f7dd0a9",
+                "reference": "802bc1a2d8bc117e4ba0abe7b18e8ce51f7dd0a9",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^2.0",
                 "inc2734/wp-share-buttons": "^4.0",
-                "inc2734/wp-view-controller": "^7.2",
+                "inc2734/wp-view-controller": "^7.3",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -63,7 +63,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-03-04T16:07:58+00:00"
+            "time": "2019-03-06T05:39:48+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -776,31 +776,27 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "7.2.1",
+            "version": "7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "ad97f7647b0d3e28866cca0cc4ae36c4dfdd2a02"
+                "reference": "65e48cc54a03ed4f105c67ca5a40582cda37f743"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/ad97f7647b0d3e28866cca0cc4ae36c4dfdd2a02",
-                "reference": "ad97f7647b0d3e28866cca0cc4ae36c4dfdd2a02",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/65e48cc54a03ed4f105c67ca5a40582cda37f743",
+                "reference": "65e48cc54a03ed4f105c67ca5a40582cda37f743",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -820,7 +816,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-02-21T01:29:22+00:00"
+            "time": "2019-03-06T05:30:04+00:00"
         }
     ],
     "packages-dev": [
