@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-02 00:20+0900\n"
-"PO-Revision-Date: 2019-03-02 00:21+0900\n"
+"POT-Creation-Date: 2019-03-06 14:47+0900\n"
+"PO-Revision-Date: 2019-03-06 14:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1060,8 +1060,9 @@ msgstr "閉じる"
 
 #: template-parts/common/overlay-search-box.php:19
 #: template-parts/common/overlay-search-box.php:20
+msgctxt "search-form"
 msgid "Search"
-msgstr "検索する"
+msgstr "検索"
 
 #: template-parts/common/page-top.php:11
 msgid "Scroll up"
