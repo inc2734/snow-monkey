@@ -12,7 +12,7 @@
 				<?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'snow-monkey' ); ?>
 			</p>
 
-			<?php get_search_form(); ?>
+			<?php get_template_part( 'template-parts/common/search-form', 'no-match' ); ?>
 		</div>
 	</div>
 </div>

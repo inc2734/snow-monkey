@@ -14,7 +14,9 @@
 
 	<div class="p-overlay-search-box__inner c-overlay-container__inner">
 		<?php
-		$form = get_search_form( false );
+		ob_start();
+		get_template_part( 'template-parts/common/search-form', 'overlay-search-box' );
+		$form = ob_get_clean();
 		$form = str_replace(
 			'<button class="c-input-group__btn">' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '</button>',
 			'<button class="c-input-group__btn"><i class="fas fa-search" aria-label="' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '"></i></button>',

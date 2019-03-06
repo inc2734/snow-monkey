@@ -21,7 +21,7 @@ if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 	<?php if ( get_theme_mod( 'display-drawer-nav-search-box' ) ) : ?>
 		<ul class="c-drawer__menu">
 			<li class="c-drawer__item">
-				<?php get_search_form( true ); ?>
+				<?php get_template_part( 'template-parts/common/search-form', 'drawer' ); ?>
 			</li>
 		</ul>
 	<?php endif; ?>

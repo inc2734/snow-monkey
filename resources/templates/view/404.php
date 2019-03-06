@@ -16,7 +16,7 @@
 				<?php esc_html_e( 'Please search this search box.', 'snow-monkey' ); ?>
 			</p>
 
-			<?php get_search_form(); ?>
+			<?php get_template_part( 'template-parts/common/search-form', '404' ); ?>
 		</div>
 
 		<?php do_action( 'snow_monkey_after_entry_content' ); ?>
