@@ -776,16 +776,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "7.3.0",
+            "version": "7.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "65e48cc54a03ed4f105c67ca5a40582cda37f743"
+                "reference": "8dfdc1896feb13098fa05d38798851d20a04833a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/65e48cc54a03ed4f105c67ca5a40582cda37f743",
-                "reference": "65e48cc54a03ed4f105c67ca5a40582cda37f743",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/8dfdc1896feb13098fa05d38798851d20a04833a",
+                "reference": "8dfdc1896feb13098fa05d38798851d20a04833a",
                 "shasum": ""
             },
             "require": {
@@ -816,7 +816,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-03-06T05:30:04+00:00"
+            "time": "2019-03-08T02:11:09+00:00"
         }
     ],
     "packages-dev": [
