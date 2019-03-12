@@ -63,12 +63,17 @@ foreach ( $includes as $include ) {
 /**
  * Loads customizer
  */
-$includes = [
-	'/app/customizer',
-];
-foreach ( $includes as $include ) {
-	Helper::load_theme_files( __DIR__ . $include );
-}
+add_action(
+	'init',
+	function() {
+		$includes = [
+			'/app/customizer',
+		];
+		foreach ( $includes as $include ) {
+			Helper::load_theme_files( __DIR__ . $include );
+		}
+	}
+);
 
 /**
  * Output comment for get_template_part()

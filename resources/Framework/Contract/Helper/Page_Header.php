@@ -15,11 +15,16 @@ trait Page_Header {
 	 * @return string
 	 */
 	protected static function _get_class() {
+		$cache = wp_cache_get( 'page_header_class', '\Framework\Contract\Helper\Page_Header' );
+		if ( false !== $cache ) {
+			return $cache;
+		}
+
+		$custom_post_types = \Framework\Helper::get_custom_post_types();
 		$types = array_filter(
 			[
 				'Default'  => is_search() || is_404(),
-				'Post'     => is_singular( 'post' ),
-				'Page'     => is_page() && ! is_front_page(),
+				'Singular' => is_singular( array_merge( [ 'post' ], $custom_post_types ) || is_page() && ! is_front_page() ),
 				'Category' => is_category(),
 				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() ),
 			]
@@ -34,6 +39,7 @@ trait Page_Header {
 			return false;
 		}
 
+		wp_cache_set( 'page_header_class', $class, '\Framework\Contract\Helper\Page_Header' );
 		return $class;
 	}
 
@@ -79,11 +85,22 @@ trait Page_Header {
 		}
 
 		$class = static::_get_class();
-		if ( $class ) {
-			ob_start();
-			$class::the_image();
-			return ob_get_clean();
+		if ( ! $class ) {
+			return;
 		}
+
+		$valid_choices      = [ 'page-header', 'title-on-page-header' ];
+		$post_type          = get_post_type();
+		$is_singular        = false !== strpos( $class, '\Singular_Page_Header' );
+		$is_displayed_image = in_array( get_theme_mod( $post_type . '-eyecatch' ), $valid_choices );
+
+		if ( $is_singular && ! $is_displayed_image ) {
+			return;
+		}
+
+		ob_start();
+		$class::the_image();
+		return ob_get_clean();
 	}
 
 	/**
@@ -103,9 +120,13 @@ trait Page_Header {
 	public static function is_output_page_header_title() {
 		$return = false;
 
-		if ( is_page() && ! is_front_page() && 'title-on-page-header' === get_theme_mod( 'page-eyecatch' ) ) {
-			$return = true;
-		} elseif ( is_singular( 'post' ) && 'title-on-page-header' === get_theme_mod( 'post-eyecatch' ) ) {
+		$class              = static::_get_class();
+		$valid_choices      = [ 'title-on-page-header' ];
+		$post_type          = get_post_type();
+		$is_singular        = false !== strpos( $class, '\Singular_Page_Header' );
+		$is_displayed_title = in_array( get_theme_mod( $post_type . '-eyecatch' ), $valid_choices );
+
+		if ( $is_singular && $is_displayed_title ) {
 			$return = true;
 		}
 

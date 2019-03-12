@@ -6,11 +6,13 @@
  */
 
 use Framework\Helper;
+
+$eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 ?>
 <?php Helper::get_template_part( 'template-parts/widget-area/title-top' ); ?>
 
 <article <?php post_class(); ?>>
-	<?php if ( 'title-on-page-header' !== get_theme_mod( 'post-eyecatch' ) ) : ?>
+	<?php if ( 'title-on-page-header' !== $eyecatch_position ) : ?>
 		<header class="c-entry__header">
 			<h1 class="c-entry__title"><?php the_title(); ?></h1>
 			<div class="c-entry__meta">
@@ -37,7 +39,7 @@ use Framework\Helper;
 		?>
 
 		<?php
-		if ( 'content-top' === get_theme_mod( 'post-eyecatch' ) ) {
+		if ( 'content-top' === $eyecatch_position ) {
 			Helper::get_template_part( 'template-parts/content/eyecatch' );
 		}
 		?>

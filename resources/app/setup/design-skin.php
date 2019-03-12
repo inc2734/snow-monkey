@@ -11,7 +11,7 @@ add_action(
 		$relative_path = '/assets/js/customize-control.min.js';
 
 		wp_enqueue_script(
-			get_template() . '-customize-preview',
+			get_template() . '-customize-control',
 			get_theme_file_uri( $relative_path ),
 			[],
 			filemtime( get_theme_file_path( $relative_path ) ),
