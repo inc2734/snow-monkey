@@ -14,19 +14,30 @@ trait Page_Header {
 	 *
 	 * @return string
 	 */
-	protected static function _get_class() {
+	protected static function _get_page_header_class() {
 		$cache = wp_cache_get( 'page_header_class', '\Framework\Contract\Helper\Page_Header' );
 		if ( false !== $cache ) {
 			return $cache;
 		}
 
+		$class = static::_get_page_header_class_no_cache();
+		wp_cache_set( 'page_header_class', $class, '\Framework\Contract\Helper\Page_Header' );
+		return $class;
+	}
+
+	/**
+	 * Return page header class
+	 *
+	 * @return string
+	 */
+	protected static function _get_page_header_class_no_cache() {
 		$custom_post_types = \Framework\Helper::get_custom_post_types();
 		$types = array_filter(
 			[
 				'Default'  => is_search() || is_404(),
 				'Singular' => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
 				'Category' => is_category(),
-				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() ),
+				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
 			]
 		);
 
@@ -39,7 +50,6 @@ trait Page_Header {
 			return false;
 		}
 
-		wp_cache_set( 'page_header_class', $class, '\Framework\Contract\Helper\Page_Header' );
 		return $class;
 	}
 
@@ -84,7 +94,7 @@ trait Page_Header {
 			);
 		}
 
-		$class = static::_get_class();
+		$class = static::_get_page_header_class();
 		if ( ! $class ) {
 			return;
 		}
@@ -118,7 +128,7 @@ trait Page_Header {
 	public static function is_output_page_header_title() {
 		$return = false;
 
-		$is_singular        = false !== strpos( static::_get_class(), '\Singular_Page_Header' );
+		$is_singular        = false !== strpos( static::_get_page_header_class(), '\Singular_Page_Header' );
 		$is_displayed_title = in_array( get_theme_mod( get_post_type() . '-eyecatch' ), [ 'title-on-page-header' ] );
 
 		if ( $is_singular && $is_displayed_title ) {

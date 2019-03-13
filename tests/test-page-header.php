@@ -11,7 +11,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 
 	protected function _get_page_header_class() {
 		$class = new ReflectionClass( '\Framework\Helper' );
-		$method = $class->getMethod( '_get_class' );
+		$method = $class->getMethod( '_get_page_header_class' );
 		$method->setAccessible( true );
 		return $method->invokeArgs( null, [] );
 	}
@@ -108,5 +108,36 @@ class Page_Header_Test extends WP_UnitTestCase {
 		$term_id = $this->factory->tag->create();
 		$this->go_to( get_term_link( $term_id, 'post_tag' ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Home_Page_Header', $this->_get_page_header_class() );
+	}
+
+	/**
+	 * @test
+	 */
+	public function is_post_type_archive() {
+		register_post_type( 'test_post_type', [ 'public' => true, 'has_archive' => true ] );
+		$post_id = $this->factory->post->create( [ 'post_type' => 'test_post_type' ] );
+		$this->go_to( get_post_type_archive_link( 'test_post_type' ) );
+		$this->assertFalse( $this->_get_page_header_class() );
+	}
+
+	/**
+	 * @test
+	 */
+	public function is_custom_post() {
+		register_post_type( 'test_post_type', [ 'public' => true, 'has_archive' => true ] );
+		$post_id = $this->factory->post->create( [ 'post_type' => 'test_post_type' ] );
+		$this->go_to( get_permalink( $post_id ) );
+		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', $this->_get_page_header_class() );
+	}
+
+	/**
+	 * @test
+	 */
+	public function is_term() {
+		register_post_type( 'test_post_type', [ 'public' => true, 'taxonomies' => [ 'test_tax' ] ] );
+		register_taxonomy( 'test_tax', [ 'test_post_type' ] );
+		$term_id = $this->factory->term->create( [ 'taxonomy' => 'test_tax', 'name' => 'test_term' ] );
+		$this->go_to( get_term_link( $term_id, 'test_tax' ) );
+		$this->assertFalse( $this->_get_page_header_class() );
 	}
 }
