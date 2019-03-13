@@ -18,7 +18,7 @@ use Framework\Helper;
 				<?php
 				$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
 				$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
-				$archive_layout  = get_theme_mod( 'archive-layout' );
+				$archive_layout  = get_theme_mod( get_post_type() . '-entries-layout' );
 				?>
 
 				<ul class="c-entries c-entries--<?php echo esc_attr( $archive_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">

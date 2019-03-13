@@ -14,7 +14,7 @@ if ( ! is_customize_preview() ) {
 Framework::section(
 	'post',
 	[
-		'title'           => __( 'Page settings', 'snow-monkey' ),
+		'title'           => __( 'Posts settings', 'snow-monkey' ),
 		'description'     => __( 'By the type of page displayed on the preview screen on the right side of the screen, the display setting items switched.', 'snow-monkey' ) . __( 'Currently post settings is displayed.', 'snow-monkey' ),
 		'priority'        => 110,
 		'active_callback' => function() {

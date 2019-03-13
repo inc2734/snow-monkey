@@ -15,7 +15,7 @@ use Framework\Helper;
 	<div class="c-entry__body">
 		<div class="c-entry__content p-entry-content">
 			<div class="p-archive">
-				<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
+				<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( get_post_type() . '-entries-layout' ) ); ?>">
 					<?php while ( have_posts() ) : ?>
 						<?php the_post(); ?>
 						<li class="c-entries__item">

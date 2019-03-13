@@ -14,7 +14,7 @@ if ( ! is_customize_preview() ) {
 Framework::section(
 	'page',
 	[
-		'title'           => __( 'Page settings', 'snow-monkey' ),
+		'title'           => __( 'Pages settings', 'snow-monkey' ),
 		'description'     => __( 'By the type of page displayed on the preview screen on the right side of the screen, the display setting items switched.', 'snow-monkey' ) . __( 'Currently page settings is displayed.', 'snow-monkey' ),
 		'priority'        => 110,
 		'active_callback' => function() {

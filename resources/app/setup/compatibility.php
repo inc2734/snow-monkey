@@ -67,3 +67,17 @@ add_action(
 		}
 	}
 );
+
+/**
+ * Backward compatibility for archive-layout
+ */
+add_filter(
+	'theme_mod_post-entries-layout',
+	function( $mod ) {
+		if ( ! $mod || ! is_string( $mod ) ) {
+			return get_theme_mod( 'archive-layout' );
+		}
+		return $mod;
+	},
+	9
+);

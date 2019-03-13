@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-13 01:02+0900\n"
-"PO-Revision-Date: 2019-03-13 01:02+0900\n"
+"POT-Creation-Date: 2019-03-13 17:24+0900\n"
+"PO-Revision-Date: 2019-03-13 17:25+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -121,6 +121,56 @@ msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダ�
 msgid "Design"
 msgstr "デザイン"
 
+#: app/customizer/design/sections/archive/controls/entries-layout.php:14
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
+msgid "Entries layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:18
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
+#: app/widget/snow-monkey-recent-posts/_form.php:42
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:19
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: app/customizer/layout/sections/header/controls/header-layout.php:20
+#: app/widget/snow-monkey-recent-posts/_form.php:43
+msgid "Simple"
+msgstr "シンプル"
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
+#: app/widget/snow-monkey-recent-posts/_form.php:44
+msgid "Text"
+msgstr "テキスト"
+
+#: app/customizer/design/sections/archive/section.php:17
+msgid "Archive pages settings"
+msgstr "アーカイブページ設定"
+
+#: app/customizer/design/sections/archive/section.php:18
+#: app/customizer/design/sections/category/section.php:22
+#: app/customizer/design/sections/custom-post-archive/section.php:24
+#: app/customizer/design/sections/custom-post/section.php:24
+#: app/customizer/design/sections/page/section.php:18
+#: app/customizer/design/sections/post/section.php:18
+#: app/customizer/layout/sections/archive-page/section.php:18
+#: app/customizer/layout/sections/singular-post/section.php:18
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
+#: app/customizer/layout/sections/woocommerce-single/section.php:18
+msgid ""
+"By the type of page displayed on the preview screen on the right side of the "
+"screen, the display setting items switched."
+msgstr ""
+"画面右側のプレビュー画面に表示されているページの種類によって、表示される設定"
+"項目が切り替わります。"
+
+#: app/customizer/design/sections/archive/section.php:18
+#: app/customizer/layout/sections/archive-page/section.php:18
+msgid "Currently archive page settings is displayed."
+msgstr "現在、アーカイブページの設定を表示しています。"
+
 #: app/customizer/design/sections/base-design/controls/accent-color.php:14
 #: app/customizer/design/sections/category/controls/accent-color.php:17
 msgid "Accent color"
@@ -191,39 +241,31 @@ msgid "Header image"
 msgstr "ヘッダー画像"
 
 #: app/customizer/design/sections/category/section.php:21
-#: app/customizer/design/sections/custom-post/section.php:23
-#: app/customizer/design/sections/page/section.php:17
-#: app/customizer/design/sections/post/section.php:17
-msgid "Page settings"
-msgstr "ページ設定"
-
-#: app/customizer/design/sections/category/section.php:22
-#: app/customizer/design/sections/custom-post/section.php:24
-#: app/customizer/design/sections/page/section.php:18
-#: app/customizer/design/sections/post/section.php:18
-#: app/customizer/layout/sections/archive-page/section.php:18
-#: app/customizer/layout/sections/singular-post/section.php:18
-#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
-#: app/customizer/layout/sections/woocommerce-single/section.php:18
-msgid ""
-"By the type of page displayed on the preview screen on the right side of the "
-"screen, the display setting items switched."
-msgstr ""
-"画面右側のプレビュー画面に表示されているページの種類によって、表示される設定"
-"項目が切り替わります。"
+msgid "Category pages settings"
+msgstr "カテゴリーページ設定"
 
 #: app/customizer/design/sections/category/section.php:22
 #, php-format
 msgid "Currently [ %1$s ] category settings is displayed."
 msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
 
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:20
+#: app/customizer/design/sections/custom-post-archive/section.php:23
+#, php-format
+msgid "%1$s Archive page settings"
+msgstr "%1$sアーカイブページ設定"
+
+#: app/customizer/design/sections/custom-post-archive/section.php:24
+#, php-format
+msgid "Currently %1$s archive page settings is displayed."
+msgstr "現在、%1$sアーカイブページの設定を表示しています。"
+
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
 #: app/customizer/design/sections/page/controls/eyecatch.php:15
 #: app/customizer/design/sections/post/controls/eyecatch.php:15
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
 
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:21
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
 #, php-format
 msgid "Select how to display the eyecatch image in %1$s page."
 msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
@@ -248,6 +290,11 @@ msgstr "投稿のビューテンプレート"
 msgid "The view template of the page"
 msgstr "固定ページのビューテンプレート"
 
+#: app/customizer/design/sections/custom-post/section.php:23
+#, php-format
+msgid "%1$s pages settings"
+msgstr "%1$sページ設定"
+
 #: app/customizer/design/sections/custom-post/section.php:24
 #, php-format
 msgid "Currently %1$s page settings is displayed."
@@ -256,6 +303,10 @@ msgstr "現在、%1$sページの設定を表示しています。"
 #: app/customizer/design/sections/page/controls/eyecatch.php:16
 msgid "Select how to display the eyecatch image in page."
 msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/design/sections/page/section.php:17
+msgid "Pages settings"
+msgstr "固定ページ設定"
 
 #: app/customizer/design/sections/page/section.php:18
 msgid "Currently page settings is displayed."
@@ -272,6 +323,10 @@ msgstr "記事にプロフィールボックスを表示する"
 #: app/customizer/design/sections/post/controls/related-posts.php:16
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
+
+#: app/customizer/design/sections/post/section.php:17
+msgid "Posts settings"
+msgstr "投稿ページ設定"
 
 #: app/customizer/design/sections/post/section.php:18
 msgid "Currently post settings is displayed."
@@ -304,30 +359,6 @@ msgstr "レイアウト"
 #: app/customizer/layout/sections/woocommerce-single/section.php:17
 msgid "Page layout"
 msgstr "ページレイアウト"
-
-#: app/customizer/layout/sections/archive-page/section.php:18
-msgid "Currently archive page settings is displayed."
-msgstr "現在、アーカイブページの設定を表示しています。"
-
-#: app/customizer/layout/sections/base-layout/controls/archive-layout.php:14
-msgid "Archive layout"
-msgstr "記事一覧レイアウト"
-
-#: app/customizer/layout/sections/base-layout/controls/archive-layout.php:18
-#: app/widget/snow-monkey-recent-posts/_form.php:42
-msgid "Rich media"
-msgstr "リッチメディア"
-
-#: app/customizer/layout/sections/base-layout/controls/archive-layout.php:19
-#: app/customizer/layout/sections/header/controls/header-layout.php:20
-#: app/widget/snow-monkey-recent-posts/_form.php:43
-msgid "Simple"
-msgstr "シンプル"
-
-#: app/customizer/layout/sections/base-layout/controls/archive-layout.php:20
-#: app/widget/snow-monkey-recent-posts/_form.php:44
-msgid "Text"
-msgstr "テキスト"
 
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:14
 msgid "Breadcrumbs display position"
@@ -1309,9 +1340,6 @@ msgstr "右サイドバー"
 
 #~ msgid "Applies to page."
 #~ msgstr "固定ページに適用されます。"
-
-#~ msgid "Post settings"
-#~ msgstr "投稿ページの設定"
 
 #~ msgid "Applies to post."
 #~ msgstr "投稿ページに適用されます。"

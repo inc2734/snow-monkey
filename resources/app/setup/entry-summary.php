@@ -30,7 +30,7 @@ add_filter(
 add_filter(
 	'excerpt_length',
 	function( $length ) {
-		if ( 'rich-media' !== get_theme_mod( 'archive-layout' ) ) {
+		if ( 'rich-media' !== get_theme_mod( get_post_type() . '-entries-layout' ) ) {
 			return $length;
 		}
 

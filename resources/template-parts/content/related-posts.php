@@ -35,7 +35,7 @@ if ( ! $use_matched_content ) {
 
 	<?php else : ?>
 
-		<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( 'archive-layout' ) ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( get_post_type() . '-entries-layout' ) ); ?>">
 			<?php while ( $related_posts_query->have_posts() ) : ?>
 				<?php $related_posts_query->the_post(); ?>
 				<li class="c-entries__item">

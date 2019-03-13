@@ -11,7 +11,7 @@ use Framework\Helper;
 if ( isset( $widget_layout ) ) {
 	$layout = $widget_layout;
 } else {
-	$layout = get_theme_mod( 'archive-layout' );
+	$layout = get_theme_mod( get_post_type() . '-entries-layout' );
 }
 ?>
 <a href="<?php the_permalink(); ?>">

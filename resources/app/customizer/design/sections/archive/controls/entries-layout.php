@@ -9,10 +9,10 @@ use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'select',
-	'archive-layout',
+	'post-entries-layout',
 	[
-		'label'    => __( 'Archive layout', 'snow-monkey' ),
-		'priority' => 120,
+		'label'    => __( 'Entries layout', 'snow-monkey' ),
+		'priority' => 100,
 		'default'  => 'rich-media',
 		'choices'  => [
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),
@@ -26,7 +26,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = Framework::get_panel( 'layout' );
-$section = Framework::get_section( 'base-layout' );
-$control = Framework::get_control( 'archive-layout' );
+$panel   = Framework::get_panel( 'design' );
+$section = Framework::get_section( 'design-archive' );
+$control = Framework::get_control( 'post-entries-layout' );
 $control->join( $section )->join( $panel );
