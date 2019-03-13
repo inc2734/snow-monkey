@@ -27,7 +27,7 @@ if ( ! is_customize_preview() ) {
 $panel = Framework::get_panel( 'design' );
 
 foreach ( $terms as $_term ) {
-	$section = Framework::get_section( 'category-' . $_term->term_id );
+	$section = Framework::get_section( 'design-category-' . $_term->term_id );
 	$control = Framework::get_control( 'category-' . $_term->term_id . '-accent-color' );
 	$control->join( $section )->join( $panel );
 }

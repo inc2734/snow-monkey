@@ -25,6 +25,6 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = Framework::get_panel( 'design' );
-$section = Framework::get_section( 'page' );
+$section = Framework::get_section( 'design-page' );
 $control = Framework::get_control( 'page-eyecatch' );
 $control->join( $section )->join( $panel );

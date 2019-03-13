@@ -25,7 +25,7 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = Framework::get_panel( 'design' );
-$section = Framework::get_section( 'post' );
+$section = Framework::get_section( 'design-post' );
 $control = Framework::get_control( 'mwt-display-related-posts' );
 $control->join( $section )->join( $panel );
 $control->partial(

@@ -15,7 +15,6 @@ Framework::section(
 	'design-archive',
 	[
 		'title'           => __( 'Archive pages settings', 'snow-monkey' ),
-		'description'     => __( 'By the type of page displayed on the preview screen on the right side of the screen, the display setting items switched.', 'snow-monkey' ) . __( 'Currently archive page settings is displayed.', 'snow-monkey' ),
 		'priority'        => 110,
 		'active_callback' => function() {
 			if ( class_exists( '\woocommerce' ) && is_woocommerce() ) {

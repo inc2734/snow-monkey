@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-13 17:24+0900\n"
-"PO-Revision-Date: 2019-03-13 17:25+0900\n"
+"POT-Creation-Date: 2019-03-13 21:02+0900\n"
+"PO-Revision-Date: 2019-03-13 21:02+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -149,28 +149,6 @@ msgstr "テキスト"
 msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
 
-#: app/customizer/design/sections/archive/section.php:18
-#: app/customizer/design/sections/category/section.php:22
-#: app/customizer/design/sections/custom-post-archive/section.php:24
-#: app/customizer/design/sections/custom-post/section.php:24
-#: app/customizer/design/sections/page/section.php:18
-#: app/customizer/design/sections/post/section.php:18
-#: app/customizer/layout/sections/archive-page/section.php:18
-#: app/customizer/layout/sections/singular-post/section.php:18
-#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
-#: app/customizer/layout/sections/woocommerce-single/section.php:18
-msgid ""
-"By the type of page displayed on the preview screen on the right side of the "
-"screen, the display setting items switched."
-msgstr ""
-"画面右側のプレビュー画面に表示されているページの種類によって、表示される設定"
-"項目が切り替わります。"
-
-#: app/customizer/design/sections/archive/section.php:18
-#: app/customizer/layout/sections/archive-page/section.php:18
-msgid "Currently archive page settings is displayed."
-msgstr "現在、アーカイブページの設定を表示しています。"
-
 #: app/customizer/design/sections/base-design/controls/accent-color.php:14
 #: app/customizer/design/sections/category/controls/accent-color.php:17
 msgid "Accent color"
@@ -241,23 +219,14 @@ msgid "Header image"
 msgstr "ヘッダー画像"
 
 #: app/customizer/design/sections/category/section.php:21
-msgid "Category pages settings"
-msgstr "カテゴリーページ設定"
-
-#: app/customizer/design/sections/category/section.php:22
 #, php-format
-msgid "Currently [ %1$s ] category settings is displayed."
-msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
+msgid "[ %1$s ] category pages settings"
+msgstr "[ %1$s ] カテゴリーページ設定"
 
 #: app/customizer/design/sections/custom-post-archive/section.php:23
 #, php-format
-msgid "%1$s Archive page settings"
+msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
-
-#: app/customizer/design/sections/custom-post-archive/section.php:24
-#, php-format
-msgid "Currently %1$s archive page settings is displayed."
-msgstr "現在、%1$sアーカイブページの設定を表示しています。"
 
 #: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
 #: app/customizer/design/sections/page/controls/eyecatch.php:15
@@ -295,11 +264,6 @@ msgstr "固定ページのビューテンプレート"
 msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
 
-#: app/customizer/design/sections/custom-post/section.php:24
-#, php-format
-msgid "Currently %1$s page settings is displayed."
-msgstr "現在、%1$sページの設定を表示しています。"
-
 #: app/customizer/design/sections/page/controls/eyecatch.php:16
 msgid "Select how to display the eyecatch image in page."
 msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
@@ -307,10 +271,6 @@ msgstr "固定ページでアイキャッチ画像をどのように表示する
 #: app/customizer/design/sections/page/section.php:17
 msgid "Pages settings"
 msgstr "固定ページ設定"
-
-#: app/customizer/design/sections/page/section.php:18
-msgid "Currently page settings is displayed."
-msgstr "現在、固定ページの設定を表示しています。"
 
 #: app/customizer/design/sections/post/controls/eyecatch.php:16
 msgid "Select how to display the eyecatch image in post."
@@ -327,10 +287,6 @@ msgstr "記事に関連記事を表示する"
 #: app/customizer/design/sections/post/section.php:17
 msgid "Posts settings"
 msgstr "投稿ページ設定"
-
-#: app/customizer/design/sections/post/section.php:18
-msgid "Currently post settings is displayed."
-msgstr "現在、投稿の設定を表示しています。"
 
 #: app/customizer/infobar/controls/content.php:15
 msgid "Infobar content"
@@ -359,6 +315,21 @@ msgstr "レイアウト"
 #: app/customizer/layout/sections/woocommerce-single/section.php:17
 msgid "Page layout"
 msgstr "ページレイアウト"
+
+#: app/customizer/layout/sections/archive-page/section.php:18
+#: app/customizer/layout/sections/singular-post/section.php:18
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
+#: app/customizer/layout/sections/woocommerce-single/section.php:18
+msgid ""
+"By the type of page displayed on the preview screen on the right side of the "
+"screen, the display setting items switched."
+msgstr ""
+"画面右側のプレビュー画面に表示されているページの種類によって、表示される設定"
+"項目が切り替わります。"
+
+#: app/customizer/layout/sections/archive-page/section.php:18
+msgid "Currently archive page settings is displayed."
+msgstr "現在、アーカイブページの設定を表示しています。"
 
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:14
 msgid "Breadcrumbs display position"
@@ -1253,6 +1224,21 @@ msgstr "フル幅"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "Currently [ %1$s ] category settings is displayed."
+#~ msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
+
+#~ msgid "Currently %1$s archive page settings is displayed."
+#~ msgstr "現在、%1$sアーカイブページの設定を表示しています。"
+
+#~ msgid "Currently %1$s page settings is displayed."
+#~ msgstr "現在、%1$sページの設定を表示しています。"
+
+#~ msgid "Currently page settings is displayed."
+#~ msgstr "現在、固定ページの設定を表示しています。"
+
+#~ msgid "Currently post settings is displayed."
+#~ msgstr "現在、投稿の設定を表示しています。"
 
 #~ msgid "Display child pages in page"
 #~ msgstr "固定ページにそのページの子ページ一覧を表示する"
