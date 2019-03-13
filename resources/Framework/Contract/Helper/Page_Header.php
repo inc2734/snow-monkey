@@ -24,7 +24,7 @@ trait Page_Header {
 		$types = array_filter(
 			[
 				'Default'  => is_search() || is_404(),
-				'Singular' => is_singular( array_merge( [ 'post' ], $custom_post_types ) || is_page() && ! is_front_page() ),
+				'Singular' => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
 				'Category' => is_category(),
 				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() ),
 			]
