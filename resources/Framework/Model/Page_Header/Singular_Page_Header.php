@@ -17,6 +17,13 @@ class Singular_Page_Header extends Base {
 	 * @return string
 	 */
 	public static function get_image_url() {
-		return static::_get_singlular_image_url();
+		if ( has_post_thumbnail() ) {
+			$thumbnail_id = get_post_thumbnail_id();
+			if ( $thumbnail_id ) {
+				return wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() );
+			}
+		}
+
+		return static::_get_default_image_url();
 	}
 }

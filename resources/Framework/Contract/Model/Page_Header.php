@@ -50,22 +50,6 @@ abstract class Page_Header {
 	}
 
 	/**
-	 * Return page header image url for singular post
-	 *
-	 * @return string
-	 */
-	protected static function _get_singlular_image_url() {
-		if ( has_post_thumbnail() ) {
-			$thumbnail_id = get_post_thumbnail_id();
-			if ( $thumbnail_id ) {
-				return wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() );
-			}
-		}
-
-		return static::_get_default_image_url();
-	}
-
-	/**
 	 * Return default page header image url
 	 *
 	 * @return string

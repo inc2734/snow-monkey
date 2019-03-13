@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-06 14:47+0900\n"
-"PO-Revision-Date: 2019-03-06 14:47+0900\n"
+"POT-Creation-Date: 2019-03-13 01:02+0900\n"
+"PO-Revision-Date: 2019-03-13 01:02+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -191,12 +191,14 @@ msgid "Header image"
 msgstr "ヘッダー画像"
 
 #: app/customizer/design/sections/category/section.php:21
+#: app/customizer/design/sections/custom-post/section.php:23
 #: app/customizer/design/sections/page/section.php:17
 #: app/customizer/design/sections/post/section.php:17
 msgid "Page settings"
 msgstr "ページ設定"
 
 #: app/customizer/design/sections/category/section.php:22
+#: app/customizer/design/sections/custom-post/section.php:24
 #: app/customizer/design/sections/page/section.php:18
 #: app/customizer/design/sections/post/section.php:18
 #: app/customizer/layout/sections/archive-page/section.php:18
@@ -215,10 +217,41 @@ msgstr ""
 msgid "Currently [ %1$s ] category settings is displayed."
 msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"
 
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:20
 #: app/customizer/design/sections/page/controls/eyecatch.php:15
 #: app/customizer/design/sections/post/controls/eyecatch.php:15
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
+
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:21
+#, php-format
+msgid "Select how to display the eyecatch image in %1$s page."
+msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/design/sections/custom-post/controls/view.php:19
+msgid "View template"
+msgstr "ビューテンプレート"
+
+#: app/customizer/design/sections/custom-post/controls/view.php:20
+msgid "Select the view template to use."
+msgstr "使用するビューテンプレートを選択してください。"
+
+#: app/customizer/design/sections/custom-post/controls/view.php:24
+msgid "default"
+msgstr "デフォルト"
+
+#: app/customizer/design/sections/custom-post/controls/view.php:25
+msgid "The view template of the post"
+msgstr "投稿のビューテンプレート"
+
+#: app/customizer/design/sections/custom-post/controls/view.php:26
+msgid "The view template of the page"
+msgstr "固定ページのビューテンプレート"
+
+#: app/customizer/design/sections/custom-post/section.php:24
+#, php-format
+msgid "Currently %1$s page settings is displayed."
+msgstr "現在、%1$sページの設定を表示しています。"
 
 #: app/customizer/design/sections/page/controls/eyecatch.php:16
 msgid "Select how to display the eyecatch image in page."
@@ -1058,8 +1091,8 @@ msgstr "最近の投稿"
 msgid "Close"
 msgstr "閉じる"
 
-#: template-parts/common/overlay-search-box.php:19
-#: template-parts/common/overlay-search-box.php:20
+#: template-parts/common/overlay-search-box.php:21
+#: template-parts/common/overlay-search-box.php:22
 msgctxt "search-form"
 msgid "Search"
 msgstr "検索"
@@ -1294,9 +1327,6 @@ msgstr "右サイドバー"
 
 #~ msgid "Top of content"
 #~ msgstr "コンテンツの上"
-
-#~ msgid "Default"
-#~ msgstr "デフォルト"
 
 #~ msgid ""
 #~ "If set, the page header is displayed on all pages (except the homepage)."

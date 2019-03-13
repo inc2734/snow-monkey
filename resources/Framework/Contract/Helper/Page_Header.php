@@ -89,10 +89,8 @@ trait Page_Header {
 			return;
 		}
 
-		$valid_choices      = [ 'page-header', 'title-on-page-header' ];
-		$post_type          = get_post_type();
 		$is_singular        = false !== strpos( $class, '\Singular_Page_Header' );
-		$is_displayed_image = in_array( get_theme_mod( $post_type . '-eyecatch' ), $valid_choices );
+		$is_displayed_image = in_array( get_theme_mod( get_post_type() . '-eyecatch' ), [ 'page-header', 'title-on-page-header' ] );
 
 		if ( $is_singular && ! $is_displayed_image ) {
 			return;
@@ -120,11 +118,8 @@ trait Page_Header {
 	public static function is_output_page_header_title() {
 		$return = false;
 
-		$class              = static::_get_class();
-		$valid_choices      = [ 'title-on-page-header' ];
-		$post_type          = get_post_type();
-		$is_singular        = false !== strpos( $class, '\Singular_Page_Header' );
-		$is_displayed_title = in_array( get_theme_mod( $post_type . '-eyecatch' ), $valid_choices );
+		$is_singular        = false !== strpos( static::_get_class(), '\Singular_Page_Header' );
+		$is_displayed_title = in_array( get_theme_mod( get_post_type() . '-eyecatch' ), [ 'title-on-page-header' ] );
 
 		if ( $is_singular && $is_displayed_title ) {
 			$return = true;
