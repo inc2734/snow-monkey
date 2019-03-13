@@ -72,7 +72,8 @@ add_action(
 		foreach ( $includes as $include ) {
 			Helper::load_theme_files( __DIR__ . $include );
 		}
-	}
+	},
+	10000
 );
 
 /**
