@@ -34,6 +34,7 @@ add_action(
 						'wp-contents-outline',
 						'wp-awesome-widgets',
 						'wp-page-speed-optimization',
+						'wp-oembed-blog-card',
 						Helper::get_main_script_handle() . '-fix-adminbar',
 						Helper::get_main_script_handle() . '-header',
 						Helper::get_main_script_handle() . '-drop-nav',
@@ -57,7 +58,6 @@ add_action(
 						'jquery.easing',
 						'fontawesome5',
 						'wp-share-buttons',
-						'wp-oembed-blog-card',
 					]
 				);
 			}

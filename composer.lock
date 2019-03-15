@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b174356280e407df712f9861da2d5a15",
+    "content-hash": "bd4894c4921b1dceba34f1a593c30927",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "10.3.0",
+            "version": "11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "d72b9cbe6f98063e0095f7473595788e4aa226c4"
+                "reference": "8397627e4e7c2cfc5cbd6d95ae804ecee7f798aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/d72b9cbe6f98063e0095f7473595788e4aa226c4",
-                "reference": "d72b9cbe6f98063e0095f7473595788e4aa226c4",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8397627e4e7c2cfc5cbd6d95ae804ecee7f798aa",
+                "reference": "8397627e4e7c2cfc5cbd6d95ae804ecee7f798aa",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,7 @@
                 "inc2734/wp-customizer-framework": "^5.0",
                 "inc2734/wp-github-theme-updater": "^1.0",
                 "inc2734/wp-like-me-box": "^1.0",
-                "inc2734/wp-oembed-blog-card": "^6.0",
+                "inc2734/wp-oembed-blog-card": "^7.0",
                 "inc2734/wp-page-speed-optimization": "^1.0",
                 "inc2734/wp-profile-box": "^1.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
@@ -63,7 +63,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-03-12T15:17:47+00:00"
+            "time": "2019-03-15T00:33:58+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -441,31 +441,27 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "6.0.1",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "e75d5ace64ae074f146c053ed25c22789d091130"
+                "reference": "19a8e98b2d9c16ba8bf9ab597007574d8244440f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/e75d5ace64ae074f146c053ed25c22789d091130",
-                "reference": "e75d5ace64ae074f146c053ed25c22789d091130",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/19a8e98b2d9c16ba8bf9ab597007574d8244440f",
+                "reference": "19a8e98b2d9c16ba8bf9ab597007574d8244440f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -485,7 +481,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2019-01-23T06:58:15+00:00"
+            "time": "2019-03-14T18:09:45+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -537,16 +533,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "1.0.6",
+            "version": "1.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "e24c5b6062131ee83486ef132f30b19b7232e2da"
+                "reference": "219963582b592eef4bde6cdd4ed1cf0dc71a6114"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/e24c5b6062131ee83486ef132f30b19b7232e2da",
-                "reference": "e24c5b6062131ee83486ef132f30b19b7232e2da",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/219963582b592eef4bde6cdd4ed1cf0dc71a6114",
+                "reference": "219963582b592eef4bde6cdd4ed1cf0dc71a6114",
                 "shasum": ""
             },
             "require": {
@@ -577,7 +573,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2019-03-04T08:03:25+00:00"
+            "time": "2019-03-14T18:14:31+00:00"
         },
         {
             "name": "inc2734/wp-profile-box",
