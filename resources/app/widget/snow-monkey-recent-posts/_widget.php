@@ -27,7 +27,6 @@ $query_args = [
 ];
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_id, $query_args );
-$_post_type = empty( $query_args['post_type'] ) ? '' : $query_args['post_type'];
 
 $recent_posts_query = new WP_Query(
 	array_merge(
@@ -83,7 +82,7 @@ if ( ! $recent_posts_query->have_posts() ) {
 					<?php
 					Helper::get_template_part(
 						'template-parts/loop/entry-summary',
-						$_post_type,
+						get_post_type(),
 						[
 							'widget_layout' => $instance['layout'],
 						]
