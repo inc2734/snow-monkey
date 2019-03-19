@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 
-WP_TESTS_DIR=${WP_TESTS_DIR-/tmp/wordpress-tests-lib}
+TMPDIR=${TMPDIR-/tmp}
+TMPDIR=$(echo $TMPDIR | sed -e "s/\/$//")
+WP_TESTS_DIR=${WP_TESTS_DIR-$TMPDIR/wordpress-tests-lib}
 
-if [ -e ${WP_TESTS_DIR} -a -e ${WP_TESTS_DIR}/includes/functions.php ]; then
+if [ -e ${WP_TESTS_DIR} ] && [ -e ${WP_TESTS_DIR}/includes/functions.php ]; then
 
   themedir=$(pwd)
   if [ ! -e resources/style.css ]; then

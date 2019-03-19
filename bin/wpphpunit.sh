@@ -28,7 +28,7 @@ if [ -e ${themedir}/bin/install-wp-tests.sh ] || [ ! -e ${WP_TESTS_DIR}/includes
   fi
 
   bash "${themedir}/bin/install-wp-tests.sh" wordpress_test root '' localhost latest;
-  vendor/bin/phpunit --configuration=${themedir}/phpunit.xml.dist
+  resources/vendor/bin/phpunit --configuration=${themedir}/phpunit.xml.dist
 else
   echo "${themedir}/bin/install-wp-tests.sh not found."
 fi;
