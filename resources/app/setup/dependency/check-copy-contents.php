@@ -29,3 +29,18 @@ add_filter(
 	10,
 	2
 );
+
+/**
+ * Support contents outline
+ *
+ * @param string $content
+ * @param string $slug
+ * @return string
+ */
+add_filter(
+	'inc2734_wp_contents_outline_args',
+	function( $args ) {
+		$args['selector'] = '.theContentWrap-ccc';
+		return $args;
+	}
+);

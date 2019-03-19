@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bd4894c4921b1dceba34f1a593c30927",
+    "content-hash": "f61e8a5e4171f69ab41109e01ac2976b",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "11.0.0",
+            "version": "11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "8397627e4e7c2cfc5cbd6d95ae804ecee7f798aa"
+                "reference": "44fe39d4307cdbd157976806792c19202b53e8a5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8397627e4e7c2cfc5cbd6d95ae804ecee7f798aa",
-                "reference": "8397627e4e7c2cfc5cbd6d95ae804ecee7f798aa",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/44fe39d4307cdbd157976806792c19202b53e8a5",
+                "reference": "44fe39d4307cdbd157976806792c19202b53e8a5",
                 "shasum": ""
             },
             "require": {
@@ -25,7 +25,7 @@
                 "inc2734/wp-awesome-widgets": "^5.0",
                 "inc2734/wp-basis": "^5.0",
                 "inc2734/wp-breadcrumbs": "^1.0",
-                "inc2734/wp-contents-outline": "^3.0",
+                "inc2734/wp-contents-outline": "^3.1",
                 "inc2734/wp-customizer-framework": "^5.0",
                 "inc2734/wp-github-theme-updater": "^1.0",
                 "inc2734/wp-like-me-box": "^1.0",
@@ -63,7 +63,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-03-15T00:33:58+00:00"
+            "time": "2019-03-19T04:09:19+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -115,20 +115,20 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "5.0.1",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "093246bc8c9628d19535d584ba18e65f09ce1190"
+                "reference": "f8d251931245a0839ed5e8ce04d182e31bc6402b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/093246bc8c9628d19535d584ba18e65f09ce1190",
-                "reference": "093246bc8c9628d19535d584ba18e65f09ce1190",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/f8d251931245a0839ed5e8ce04d182e31bc6402b",
+                "reference": "f8d251931245a0839ed5e8ce04d182e31bc6402b",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-contents-outline": "^3.0",
+                "inc2734/wp-contents-outline": "^3.1",
                 "inc2734/wp-profile-box": "^1.1",
                 "php": ">=5.6"
             },
@@ -157,7 +157,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2019-03-05T01:42:32+00:00"
+            "time": "2019-03-19T04:04:18+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -253,16 +253,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "d158bb35e1d27dc69c39f6a324bc2d8a53ce013a"
+                "reference": "fe6c6dc015936390826f3929ce393abdec9dc2fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/d158bb35e1d27dc69c39f6a324bc2d8a53ce013a",
-                "reference": "d158bb35e1d27dc69c39f6a324bc2d8a53ce013a",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/fe6c6dc015936390826f3929ce393abdec9dc2fd",
+                "reference": "fe6c6dc015936390826f3929ce393abdec9dc2fd",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2019-03-04T07:16:00+00:00"
+            "time": "2019-03-19T03:31:05+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
@@ -2520,16 +2520,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.4.0",
+            "version": "3.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "379deb987e26c7cd103a7b387aea178baec96e48"
+                "reference": "5b4333b4010625d29580eb4a41f1e53251be6baa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/379deb987e26c7cd103a7b387aea178baec96e48",
-                "reference": "379deb987e26c7cd103a7b387aea178baec96e48",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/5b4333b4010625d29580eb4a41f1e53251be6baa",
+                "reference": "5b4333b4010625d29580eb4a41f1e53251be6baa",
                 "shasum": ""
             },
             "require": {
@@ -2562,12 +2562,12 @@
                 }
             ],
             "description": "PHP_CodeSniffer tokenizes PHP, JavaScript and CSS files and detects violations of a defined set of coding standards.",
-            "homepage": "http://www.squizlabs.com/php-codesniffer",
+            "homepage": "https://github.com/squizlabs/PHP_CodeSniffer",
             "keywords": [
                 "phpcs",
                 "standards"
             ],
-            "time": "2018-12-19T23:57:18+00:00"
+            "time": "2019-03-19T03:22:27+00:00"
         },
         {
             "name": "symfony/config",
