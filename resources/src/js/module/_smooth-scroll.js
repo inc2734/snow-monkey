@@ -16,13 +16,14 @@ export default class SmoothScroll {
   _getAdminBarHeight() {
     const headerType     = getHeaderType();
     const adminBarHeight = 'fixed' === getStyle(getAdminBar(), 'position') ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
+    const dropNavWrapper = getDropNavWrapper();
 
     if ('sticky' === headerType || 'overlay' === headerType) {
       return getHeader().offsetHeight + adminBarHeight;
     }
 
-    if ('false' === getDropNavWrapper().getAttribute('aria-hidden')) {
-      return getDropNavWrapper().offsetHeight + adminBarHeight;
+    if (!! dropNavWrapper && 'false' === dropNavWrapper.getAttribute('aria-hidden')) {
+      return dropNavWrapper.offsetHeight + adminBarHeight;
     }
 
     return adminBarHeight;
