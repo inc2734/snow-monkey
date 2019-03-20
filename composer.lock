@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f61e8a5e4171f69ab41109e01ac2976b",
+    "content-hash": "c1c10e726cfb1134e3a343561c34acd5",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "11.1.0",
+            "version": "12.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "44fe39d4307cdbd157976806792c19202b53e8a5"
+                "reference": "3db816ec99c9da3d5a21b42893cecba093b6f657"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/44fe39d4307cdbd157976806792c19202b53e8a5",
-                "reference": "44fe39d4307cdbd157976806792c19202b53e8a5",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/3db816ec99c9da3d5a21b42893cecba093b6f657",
+                "reference": "3db816ec99c9da3d5a21b42893cecba093b6f657",
                 "shasum": ""
             },
             "require": {
@@ -27,7 +27,7 @@
                 "inc2734/wp-breadcrumbs": "^1.0",
                 "inc2734/wp-contents-outline": "^3.1",
                 "inc2734/wp-customizer-framework": "^5.0",
-                "inc2734/wp-github-theme-updater": "^1.0",
+                "inc2734/wp-github-theme-updater": "^2.0",
                 "inc2734/wp-like-me-box": "^1.0",
                 "inc2734/wp-oembed-blog-card": "^7.0",
                 "inc2734/wp-page-speed-optimization": "^1.0",
@@ -63,7 +63,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-03-19T04:09:19+00:00"
+            "time": "2019-03-20T04:30:28+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -345,31 +345,27 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "1.0.3",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "01af92ea173deff0d0a5d65d08996ce0d12c6cb9"
+                "reference": "760f66af814bd04d7c4f5e37d693e67eeb2ac174"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/01af92ea173deff0d0a5d65d08996ce0d12c6cb9",
-                "reference": "01af92ea173deff0d0a5d65d08996ce0d12c6cb9",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/760f66af814bd04d7c4f5e37d693e67eeb2ac174",
+                "reference": "760f66af814bd04d7c4f5e37d693e67eeb2ac174",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -389,7 +385,7 @@
                 }
             ],
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
-            "time": "2019-02-01T06:29:04+00:00"
+            "time": "2019-03-20T05:29:09+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",

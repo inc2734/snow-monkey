@@ -17,7 +17,7 @@ $updater = new Bootstrap( get_template(), 'inc2734', 'snow-monkey' );
  * @return string|false
  */
 add_filter(
-	'inc2734_github_theme_updater_zip_url',
+	'inc2734_github_theme_updater_zip_url_inc2734/snow-monkey',
 	function( $url ) {
 		if ( 0 !== strpos( $url, 'https://snow-monkey.2inc.org/' ) ) {
 			return false;
@@ -33,7 +33,7 @@ add_filter(
  * @return string
  */
 add_filter(
-	'inc2734_github_theme_updater_request_url',
+	'inc2734_github_theme_updater_request_url_inc2734/snow-monkey',
 	function( $url ) {
 		return 'https://snow-monkey.2inc.org/github-api/response.json';
 	}
