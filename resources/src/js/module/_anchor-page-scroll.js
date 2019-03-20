@@ -16,20 +16,17 @@ export default class AnchorPageScroll {
 
     this.dropNavWrapper   = getDropNavWrapper();
     this.defaultScrollTop = scrollTop();
-    this.scrolled         = false;
 
-    window.addEventListener('scroll', () => this._scrollEvent(), false);
+    this._scrollEvent = this._scrollEvent.bind(this);
+    window.addEventListener('scroll', this._scrollEvent, false);
   }
 
   _scrollEvent() {
+    window.removeEventListener('scroll', this._scrollEvent, false);
+
     if (0 < this.defaultScrollTop) {
       return;
     }
-
-    if (this.scrolled) {
-      return;
-    }
-    this.scrolled = true;
 
     if (maybeShowDropNav() && !! this.dropNavWrapper) {
       this._scrollToTarget(this.dropNavWrapper.offsetHeight);

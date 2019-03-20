@@ -44,8 +44,8 @@ window.addEventListener(
       [
         '.c-page-top a[href^="#"]',
         '.wpco a[href^="#"]',
-        '.u-smooth-scroll[href^="#"]',
-        '.u-smooth-scroll a[href^="#"]',
+        '.u-smooth-scroll[href*="#"]',
+        '.u-smooth-scroll a[href*="#"]',
       ].join(',')
     );
     forEachHtmlNodes(smoothScrollLinks, (link) => new SmoothScroll(link));
