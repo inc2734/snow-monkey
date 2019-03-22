@@ -13,12 +13,7 @@ if ( $terms && ! is_wp_error( $terms ) ) {
 	$_term  = $terms[0];
 }
 
-// When loaded by widget, $widget_layout is exist.
-if ( isset( $widget_layout ) ) {
-	$layout = $widget_layout;
-} else {
-	$layout = get_theme_mod( get_post_type() . '-entries-layout' );
-}
+$layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
 ?>
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary c-entry-summary--category-<?php echo esc_attr( $_term ? $_term->term_id : 0 ); ?>">

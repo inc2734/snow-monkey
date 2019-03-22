@@ -7,12 +7,7 @@
 
 use Framework\Helper;
 
-// When loaded by widget, $widget_layout is exist.
-if ( isset( $widget_layout ) ) {
-	$layout = $widget_layout;
-} else {
-	$layout = get_theme_mod( get_post_type() . '-entries-layout' );
-}
+$layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
 ?>
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary">

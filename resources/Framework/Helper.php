@@ -78,4 +78,11 @@ class Helper {
 			the_title();
 		}
 	}
+
+	/**
+	 * Get global variable ( For template part )
+	 */
+	public static function get_var( &$name, $default = null ) {
+		return isset( $name ) ? $name : $default;
+	}
 }
