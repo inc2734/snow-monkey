@@ -7,13 +7,18 @@
 
 use Framework\Controller\Controller;
 
+global $wp_query;
+
 $post_type = filter_input( INPUT_GET, 'post_type' );
 $post_type = $post_type ? $post_type : 'any';
 
 query_posts(
-	[
-		'post_type' => $post_type,
-	]
+	array_merge(
+		$wp_query->query,
+		[
+			'post_type' => $post_type,
+		]
+	)
 );
 
 Controller::layout( get_theme_mod( 'archive-page-layout' ) );
