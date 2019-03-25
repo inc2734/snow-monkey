@@ -12,7 +12,17 @@ if ( is_front_page() ) {
 }
 
 $breadcrumbs = new Breadcrumbs();
-$items = apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
+$_items = $breadcrumbs->get();
+$_items = apply_filters( 'snow_monkey_breadcrumbs', $_items );
+
+$items  = [];
+$unique_checker = [];
+foreach ( $_items as $key => $item ) {
+	if ( ! in_array( $item['link'], $unique_checker ) ) {
+		$unique_checker[] = $item['link'];
+		$items[] = $item;
+	}
+}
 ?>
 
 <ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">

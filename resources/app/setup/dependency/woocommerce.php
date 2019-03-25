@@ -181,3 +181,20 @@ add_filter(
 		return $html;
 	}
 );
+
+/**
+ * Breadcrubs
+ */
+add_filter(
+	'snow_monkey_breadcrumbs',
+	function( $breadcrumbs ) {
+		if ( is_product() ) {
+			foreach ( $breadcrumbs as $key => $item ) {
+				if ( false !== strpos( $item['link'], '?taxonomy=product_type' ) ) {
+					unset( $breadcrumbs[ $key ] );
+				}
+			}
+		}
+		return $breadcrumbs;
+	}
+);
