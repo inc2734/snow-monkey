@@ -7,6 +7,20 @@
 
 use Framework\Helper;
 
+if ( empty( $instance['taxonomy'] ) ) {
+	return;
+}
+
+$_taxonomy = explode( '@', $instance['taxonomy'] );
+if ( 2 !== count( $_taxonomy ) ) {
+	return;
+}
+
+$taxonomy_id = $_taxonomy[0];
+$term_id     = $_taxonomy[1];
+$_taxonomy   = get_taxonomy( $taxonomy_id );
+$post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
+
 $widget_number = explode( '-', $args['widget_id'] );
 $widget_number = end( $widget_number );
 
@@ -21,14 +35,20 @@ if ( $has_sticky ) {
 }
 
 $query_args = [
-	'post_type'           => ! empty( $instance['post-type'] ) ? $instance['post-type'] : 'post',
+	'post_type'           => $post_types,
 	'posts_per_page'      => $instance['posts-per-page'] - $sticky_count,
 	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
+	'tax_query'      => [
+		[
+			'taxonomy' => $taxonomy_id,
+			'terms'    => $term_id,
+		],
+	],
 ];
-$query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
-$query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_number, $query_args );
+$query_args = apply_filters( 'snow_monkey_taxonomy_posts_widget_args', $query_args );
+$query_args = apply_filters( 'snow_monkey_taxonomy_posts_widget_args_' . $widget_number, $query_args );
 
-$recent_posts_query = new WP_Query(
+$taxonomy_posts_query = new WP_Query(
 	array_merge(
 		$query_args,
 		[
@@ -38,7 +58,7 @@ $recent_posts_query = new WP_Query(
 	)
 );
 
-if ( ! $recent_posts_query->have_posts() ) {
+if ( ! $taxonomy_posts_query->have_posts() ) {
 	return;
 }
 
@@ -47,9 +67,9 @@ echo wp_kses_post( $args['before_widget'] );
 		'template-parts/widget/snow-monkey-posts',
 		'recent',
 		[
-			'_posts_query'    => $recent_posts_query,
+			'_posts_query'    => $taxonomy_posts_query,
 			'_widget_area_id' => $args['id'],
-			'_classname'      => 'snow-monkey-recent-posts',
+			'_classname'      => 'snow-monkey-taxonomy-posts',
 			'_id'             => $args['widget_id'],
 			'_entries_layout' => $instance['layout'],
 			'_title'          => $instance['title'],
