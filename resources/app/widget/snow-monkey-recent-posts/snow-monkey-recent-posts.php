@@ -19,6 +19,7 @@ class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstrac
 	 */
 	protected $_defaults = [
 		'title'               => '',
+		'post-type'           => 'post',
 		'posts-per-page'      => 12,
 		'layout'              => 'rich-media',
 		'link-text'           => null,

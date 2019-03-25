@@ -19,6 +19,32 @@
 	</p>
 
 	<p>
+		<label for="<?php echo esc_attr( $this->get_field_id( 'post-type' ) ); ?>"><?php esc_html_e( 'Post type', 'snow-monkey' ); ?></label><br>
+		<select
+			name="<?php echo esc_attr( $this->get_field_name( 'post-type' ) ); ?>"
+			id="<?php echo esc_attr( $this->get_field_id( 'post-type' ) ); ?>"
+			class="widefat"
+		>
+			<?php
+			$post_types = get_post_types(
+				[
+					'public'       => true,
+					'show_ui'      => true,
+					'hierarchical' => false,
+				],
+				'objects'
+			);
+			unset( $post_types['attachment'] );
+			?>
+			<?php foreach ( $post_types as $_post_type ) : ?>
+				<option value="<?php echo esc_attr( $_post_type->name ); ?>" <?php selected( $_post_type->name, $instance['post-type'] ); ?>>
+					<?php echo esc_html( $_post_type->label ); ?>
+				</option>
+			<?php endforeach; ?>
+		</select>
+	</p>
+
+	<p>
 		<label for="<?php echo esc_attr( $this->get_field_id( 'posts-per-page' ) ); ?>"><?php esc_html_e( 'Number of posts', 'snow-monkey' ); ?></label><br>
 		<input
 			type="number"
