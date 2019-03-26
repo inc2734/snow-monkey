@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-26 01:24+0900\n"
-"PO-Revision-Date: 2019-03-26 01:25+0900\n"
+"POT-Creation-Date: 2019-03-26 09:58+0900\n"
+"PO-Revision-Date: 2019-03-26 09:58+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -832,12 +832,11 @@ msgstr "オンラインコミュニティ"
 
 #: app/customizer/snow-monkey-community/section.php:41
 msgid ""
-"This is an online community that only purchasers of the Snow Monkey can "
-"participate. It is a place to share information and discuss about future "
-"function development etc."
+"It is a place to share information and discuss about future function "
+"development etc. Please feel free to join us!"
 msgstr ""
-"Snow Monkey の購入者のみが参加できるオンラインコミュニティです。情報を共有し"
-"たり、今後の機能開発等についてディスカッションしたりする場所です。"
+"情報を共有したり、今後の機能開発等についてディスカッションしたりする場所で"
+"す。ぜひ気軽にご参加ください！"
 
 #: app/customizer/snow-monkey-community/section.php:43
 #, php-format
@@ -859,23 +858,6 @@ msgstr ""
 #, php-format
 msgid "%1$sSupport Forum%2$s"
 msgstr "%1$sサポートフォーラム%2$s"
-
-#: app/customizer/snow-monkey-community/section.php:68
-msgid "Job Board"
-msgstr "ジョブボード"
-
-#: app/customizer/snow-monkey-community/section.php:69
-msgid ""
-"This is a job board that only purchasers of the Snow Monkey can participate. "
-"People who wants to work or wants to request work can register information."
-msgstr ""
-"Snow Monkey の購入者のみが参加できるジョブボードです。仕事をしたい人、仕事を"
-"依頼したい人が情報を登録できます。"
-
-#: app/customizer/snow-monkey-community/section.php:71
-#, php-format
-msgid "%1$sJob Board%2$s"
-msgstr "%1$sジョブボード%2$s"
 
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:14
 msgid "Add vertical padding to content area of homepage"
@@ -1249,6 +1231,20 @@ msgstr "フル幅"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "Job Board"
+#~ msgstr "ジョブボード"
+
+#~ msgid ""
+#~ "This is a job board that only purchasers of the Snow Monkey can "
+#~ "participate. People who wants to work or wants to request work can "
+#~ "register information."
+#~ msgstr ""
+#~ "Snow Monkey の購入者のみが参加できるジョブボードです。仕事をしたい人、仕事"
+#~ "を依頼したい人が情報を登録できます。"
+
+#~ msgid "%1$sJob Board%2$s"
+#~ msgstr "%1$sジョブボード%2$s"
 
 #~ msgid "Currently [ %1$s ] category settings is displayed."
 #~ msgstr "現在、[ %1$s ] カテゴリーの設定を表示しています。"

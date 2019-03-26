@@ -38,7 +38,7 @@ Framework::control(
 	'online-community',
 	[
 		'label'       => __( 'Online Community', 'snow-monkey' ),
-		'description' => __( 'This is an online community that only purchasers of the Snow Monkey can participate. It is a place to share information and discuss about future function development etc.', 'snow-monkey' ),
+		'description' => __( 'It is a place to share information and discuss about future function development etc. Please feel free to join us!', 'snow-monkey' ),
 		'content'     => sprintf(
 			__( '%1$sOnline Community%2$s', 'snow-monkey' ),
 			'<a class="button" href="https://snow-monkey.2inc.org/community/online-community/" target="_blank">',
