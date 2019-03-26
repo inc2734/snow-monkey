@@ -48,7 +48,8 @@ add_filter(
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
 	function( $content, $args ) {
-		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_pickup_slider' ) ) {
+		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_pickup_slider' )
+			&& false === strpos( $args['widget_id'], 'snow_monkey_blocks_pickup_slider' ) ) {
 			return $content;
 		}
 
