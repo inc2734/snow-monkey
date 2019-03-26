@@ -61,20 +61,6 @@ Framework::control(
 	]
 );
 
-Framework::control(
-	'content',
-	'job-board',
-	[
-		'label'       => __( 'Job Board', 'snow-monkey' ),
-		'description' => __( 'This is a job board that only purchasers of the Snow Monkey can participate. People who wants to work or wants to request work can register information.', 'snow-monkey' ),
-		'content'     => sprintf(
-			__( '%1$sJob Board%2$s', 'snow-monkey' ),
-			'<a class="button" href="https://snow-monkey.2inc.org/jobboard/" target="_blank">',
-			'</a>'
-		),
-	]
-);
-
 if ( ! is_customize_preview() ) {
 	return;
 }
@@ -88,7 +74,4 @@ $control = Framework::get_control( 'online-community' );
 $control->join( $section );
 
 $control = Framework::get_control( 'support-forum' );
-$control->join( $section );
-
-$control = Framework::get_control( 'job-board' );
 $control->join( $section );
