@@ -87,7 +87,26 @@ add_action(
 		if ( false !== has_action( 'snow_monkey_get_template_part_' . $args['slug'] ) ) {
 			do_action( 'snow_monkey_get_template_part_' . $args['slug'], $args['name'], $args['vars'] );
 			add_action( 'inc2734_view_controller_get_template_part_' . $args['slug'], '__return_true' );
+		} else {
+			remove_action( 'inc2734_view_controller_get_template_part_' . $args['slug'], '__return_true' );
 		}
 	},
 	9
+);
+
+/**
+ * Override mimizuku_template_part_render
+ *
+ * @param string $slug
+ * @param string $name
+ * @param array $vars
+ * @return array
+ */
+add_filter(
+	'snow_monkey_template_part_render',
+	function( $html, $slug, $name, $vars ) {
+		return apply_filters( 'mimizuku_template_part_render', $html, $slug, $name, $vars );
+	},
+	9,
+	4
 );
