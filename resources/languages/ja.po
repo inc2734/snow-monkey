@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-03-26 09:58+0900\n"
-"PO-Revision-Date: 2019-03-26 09:58+0900\n"
+"POT-Creation-Date: 2019-04-08 13:56+0900\n"
+"PO-Revision-Date: 2019-04-08 13:56+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -858,6 +858,10 @@ msgstr ""
 #, php-format
 msgid "%1$sSupport Forum%2$s"
 msgstr "%1$sサポートフォーラム%2$s"
+
+#: app/customizer/static-front-page/controls/home-page-container.php:14
+msgid "Add side padding to content area of homepage"
+msgstr "ホームページのコンテンツエリアに左右余白を追加する"
 
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:14
 msgid "Add vertical padding to content area of homepage"
