@@ -7,6 +7,12 @@
 
 use Framework\Helper;
 
+if ( ! function_exists( 'wp_body_open' ) ) {
+	function wp_body_open() {
+		do_action( 'wp_body_open' );
+	}
+}
+
 /**
  * Add .p-entry-content to .c-entry__content
  *

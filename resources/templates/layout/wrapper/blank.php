@@ -17,6 +17,7 @@ use Framework\Helper;
 	data-is-slim-width="false"
 	>
 
+	<?php wp_body_open(); ?>
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
 	<?php $_view_controller->view(); ?>
