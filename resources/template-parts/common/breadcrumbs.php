@@ -5,13 +5,13 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Breadcrumbs\Breadcrumbs;
+use Inc2734\WP_Breadcrumbs\Bootstrap;
 
 if ( is_front_page() ) {
 	return;
 }
 
-$breadcrumbs = new Breadcrumbs();
+$breadcrumbs = new Bootstrap();
 $_items = $breadcrumbs->get();
 $_items = apply_filters( 'snow_monkey_breadcrumbs', $_items );
 

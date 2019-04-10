@@ -18,7 +18,7 @@
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": "^12.1"
+    "inc2734/mimizuku-core": "^13.0"
   },
   "config": {
     "process-timeout": 0,

@@ -11,7 +11,7 @@ use Framework\Helper;
 
 <div class="c-entry">
 	<header class="c-entry__header">
-		<h1 class="c-entry__title"><?php echo esc_html( Helper::get_page_title_from_breadcrumbs() ); ?></h1>
+		<h1 class="c-entry__title"><?php echo wp_kses_post( Helper::get_page_title_from_breadcrumbs() ); ?></h1>
 	</header>
 
 	<div class="c-entry__body">
