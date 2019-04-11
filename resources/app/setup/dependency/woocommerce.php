@@ -198,3 +198,25 @@ add_filter(
 		return $breadcrumbs;
 	}
 );
+
+/**
+ * Sets up default fields html
+ *
+ * @param array $fields The default comment fields
+ * @return array
+ */
+add_filter(
+	'woocommerce_product_review_comment_form_args',
+	function( $comment_form ) {
+		foreach ( $comment_form as $key => $form ) {
+			if ( 'fields' !== $key ) {
+				continue;
+			}
+
+			foreach ( $comment_form[ $key ] as $field_key => $field ) {
+				$comment_form[ $key ][ $field_key ] = wpbasis_add_class_attribute( $field );
+			}
+		}
+		return $comment_form;
+	}
+);

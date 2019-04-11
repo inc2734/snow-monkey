@@ -16,6 +16,22 @@ $img-path: '../../../img';
   }
 }
 
+.select2-selection.select2-selection--single {
+  @include _form-control();
+  line-height: normal;
+  margin-bottom: 0;
+  height: auto;
+
+  .select2-selection__rendered {
+    line-height: normal;
+  }
+
+  .select2-selection__arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
 .woocommerce-page .cart .actions .coupon .input-text {
   width: 200px;
   height: 36px;
@@ -232,6 +248,10 @@ $img-path: '../../../img';
   @include _padding(0, 0, .25);
 }
 
+.woocommerce #review_form #respond p {
+  @include _margin(.5, 0, 0);
+}
+
 // Posted star in review area in single
 .woocommerce .stars a {
   color: #f2b611;
@@ -279,15 +299,26 @@ $img-path: '../../../img';
   @include _font-size-line-height($_base-font-size-px * 1.25);
 }
 
-// HEadings in checkout page
+// Headings in checkout page
 .woocommerce .woocommerce-billing-fields h3,
 .woocommerce .woocommerce-additional-fields h3,
-.woocommerce h3[id="order_review_heading"] {
+.woocommerce h3[id="order_review_heading"],
+.woocommerce h3[id="ship-to-different-address"] {
   @include _margin-bottom(.25);
   @include _font-size-line-height($_base-font-size-px * 1.25);
 }
 .woocommerce [id="customer_details"] {
   @include _margin-bottom(1);
+}
+[id="ship-to-different-address"] {
+  label {
+    display: inline-flex;
+    align-items: center;
+
+    input[type="checkbox"] {
+      margin-right: .25em;
+    }
+  }
 }
 
 // My account > edit-address
