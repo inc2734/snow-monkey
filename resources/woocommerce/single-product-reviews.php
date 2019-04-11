@@ -8,6 +8,6 @@
 
 <div class="p-comments">
 	<div class="p-comments__form">
-		<?php wc_get_template( 'single-product-reviews.php', '', dirname( WC_PLUGIN_FILE ) . '/templates' ); ?>
+		<?php wc_get_template( 'single-product-reviews.php', [], true ); ?>
 	</div>
 </div>
