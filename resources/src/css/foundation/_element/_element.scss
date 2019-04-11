@@ -56,3 +56,14 @@ h4 {
 iframe {
   max-width: 100%;
 }
+
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea {
+  @include _font-size($_base-font-size-px);
+}
