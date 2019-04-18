@@ -13,3 +13,5 @@ Style::register(
 	'.smb-step__item__link',
 	'color: ' . $accent_color
 );
+
+Style::extend( 'entry-content', [ '.smb-step__item__summary' ] );
