@@ -3,6 +3,11 @@
   background-color: $color-accent;
   @include _font-size-line-height($_base-font-size-px - 2);
 
+  > .#{$_prefix}c-drawer__menu:last-child,
+  > .#{$_prefix}c-drawer__sub-nav:last-child {
+    @include _padding(0, 0, .5);
+  }
+
   &, a {
     color: #fff;
   }
