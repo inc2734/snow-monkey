@@ -5,12 +5,27 @@
  * @license GPL-2.0+
  */
 
+use Framework\Helper;
+
 new \Inc2734\WP_Awesome_Widgets\Bootstrap();
 
 add_action(
 	'after_setup_theme',
 	function() {
 		add_theme_support( 'customize-selective-refresh-widgets' );
+	}
+);
+
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-custom-widgets',
+			get_theme_file_uri( '/assets/js/custom-widgets.min.js' ),
+			[ 'wp-awesome-widgets' ],
+			filemtime( get_theme_file_path( '/assets/js/custom-widgets.min.js' ) ),
+			true
+		);
 	}
 );
 

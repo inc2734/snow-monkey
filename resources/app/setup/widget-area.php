@@ -5,6 +5,8 @@
  * @license GPL-2.0+
  */
 
+use Framework\Helper;
+
 /**
  * Add sidebar widget area
  *
@@ -24,7 +26,17 @@ add_action(
 				'after_title'   => '</h2>',
 			]
 		);
+	}
+);
 
+/**
+ * Add sidebar sticky widget area
+ *
+ * @return void
+ */
+add_action(
+	'widgets_init',
+	function() {
 		register_sidebar(
 			[
 				'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
@@ -368,5 +380,34 @@ add_action(
 				'after_title'   => '</h2>',
 			]
 		);
+	}
+);
+
+/**
+ * Enqueue scripts
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-widgets',
+			get_theme_file_uri( '/assets/js/widgets.min.js' ),
+			[],
+			filemtime( get_theme_file_path( '/assets/js/widgets.min.js' ) ),
+			true
+		);
+
+		$sidebar_id = 'sidebar-sticky-widget-area';
+		if ( is_active_sidebar( $sidebar_id ) && is_registered_sidebar( $sidebar_id ) ) {
+			wp_enqueue_script(
+				Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
+				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.min.js' ),
+				[ 'jquery' ],
+				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.min.js' ) ),
+				true
+			);
+		}
 	}
 );

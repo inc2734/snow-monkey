@@ -7,6 +7,7 @@
 
 use Inc2734\WP_Basis\App\Model\Navbar;
 use Inc2734\WP_Basis\App\Model\Drawer;
+use Framework\Helper;
 
 /**
  * Registers wp_nav_menu() menus
@@ -28,6 +29,48 @@ add_action(
 				'footer-sticky-nav' => esc_html__( 'Footer Sticky Navigation (For Mobile)', 'snow-monkey' ),
 			]
 		);
+	}
+);
+
+/**
+ * Enqueue scripts
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		if ( get_theme_mod( 'header-position-only-mobile' ) ) {
+			if ( has_nav_menu( 'global-nav' ) ) {
+				wp_enqueue_script(
+					Helper::get_main_script_handle() . '-drop-nav',
+					get_theme_file_uri( '/assets/js/drop-nav.min.js' ),
+					[ 'jquery' ],
+					filemtime( get_theme_file_path( '/assets/js/drop-nav.min.js' ) ),
+					true
+				);
+			}
+		}
+
+		if ( has_nav_menu( 'footer-sticky-nav' ) ) {
+			wp_enqueue_script(
+				Helper::get_main_script_handle() . '-footer-sticky-nav',
+				get_theme_file_uri( '/assets/js/footer-sticky-nav.min.js' ),
+				[ 'jquery' ],
+				filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.min.js' ) ),
+				true
+			);
+		}
+
+		if ( has_nav_menu( 'global-nav' ) ) {
+			wp_enqueue_script(
+				Helper::get_main_script_handle() . '-global-nav',
+				get_theme_file_uri( '/assets/js/global-nav.min.js' ),
+				[ 'jquery' ],
+				filemtime( get_theme_file_path( '/assets/js/global-nav.min.js' ) ),
+				true
+			);
+		}
 	}
 );
 

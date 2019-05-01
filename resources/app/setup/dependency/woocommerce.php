@@ -63,17 +63,11 @@ add_filter(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/css/dependency/woocommerce/woocommerce.min.css';
-
-		if ( ! file_exists( get_theme_file_path( $relative_path ) ) ) {
-			return;
-		}
-
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-woocommerce',
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/css/dependency/woocommerce/woocommerce.min.css' ),
 			[ Helper::get_main_style_handle() ],
-			filemtime( get_theme_file_path( $relative_path ) )
+			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/woocommerce.min.css' ) )
 		);
 	}
 );

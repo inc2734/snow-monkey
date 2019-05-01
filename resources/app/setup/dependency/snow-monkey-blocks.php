@@ -21,12 +21,6 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/css/dependency/snow-monkey-blocks/style.min.css';
-
-		if ( ! file_exists( get_theme_file_path( $relative_path ) ) ) {
-			return;
-		}
-
 		if ( is_admin() ) {
 			$dependencies = [];
 		} else {
@@ -35,9 +29,9 @@ add_action(
 
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/style.min.css' ),
 			$dependencies,
-			filemtime( get_theme_file_path( $relative_path ) )
+			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/style.min.css' ) )
 		);
 	}
 );

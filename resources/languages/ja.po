@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-04-08 13:56+0900\n"
-"PO-Revision-Date: 2019-04-08 13:56+0900\n"
+"POT-Creation-Date: 2019-05-01 18:11+0900\n"
+"PO-Revision-Date: 2019-05-01 18:12+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -197,6 +197,10 @@ msgstr "デフォルトアイキャッチ画像"
 msgid "Display the search box in drawer navigation"
 msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
 
+#: app/customizer/design/sections/base-design/controls/display-page-top.php:14
+msgid "Display the page top button"
+msgstr "ページ上部へ戻るボタンを表示"
+
 #: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:15
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
@@ -345,7 +349,7 @@ msgstr "コンテンツの上（コンテンツ幅に合わせる）"
 
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:20
 #: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
-#: app/setup/widget-area.php:96
+#: app/setup/widget-area.php:108
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
@@ -402,7 +406,7 @@ msgid "4 columns"
 msgstr "4カラム"
 
 #: app/customizer/layout/sections/footer/section.php:17
-#: app/setup/widget-area.php:296
+#: app/setup/widget-area.php:308
 msgid "Footer"
 msgstr "フッター"
 
@@ -447,7 +451,7 @@ msgid "Sticky"
 msgstr "固定"
 
 #: app/customizer/layout/sections/header/controls/header-position.php:19
-#: app/setup/widget-area.php:318
+#: app/setup/widget-area.php:330
 msgid "Overlay"
 msgstr "オーバレイ"
 
@@ -897,11 +901,11 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/setup/dependency/woocommerce.php:98
+#: app/setup/dependency/woocommerce.php:92
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
-#: app/setup/dependency/woocommerce.php:99
+#: app/setup/dependency/woocommerce.php:93
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
@@ -925,31 +929,31 @@ msgstr "カテゴリー"
 msgid "xLarge"
 msgstr "xLarge"
 
-#: app/setup/nav-menus.php:22
+#: app/setup/nav-menus.php:23
 msgid "Global Navigation (For PC)"
 msgstr "グローバルナビゲーション（PC用）"
 
-#: app/setup/nav-menus.php:23
+#: app/setup/nav-menus.php:24
 msgid "Drawer Navigation (For Mobile)"
 msgstr "ドロワーナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:24
+#: app/setup/nav-menus.php:25
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
-#: app/setup/nav-menus.php:25
+#: app/setup/nav-menus.php:26
 msgid "Header Sub Navigation"
 msgstr "ヘッダーサブナビゲーション"
 
-#: app/setup/nav-menus.php:26
+#: app/setup/nav-menus.php:27
 msgid "Footer Sub Navigation"
 msgstr "フッターサブナビゲーション"
 
-#: app/setup/nav-menus.php:27
+#: app/setup/nav-menus.php:28
 msgid "Drawer Sub Navigation (For Mobile)"
 msgstr "ドロワーサブナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:28
+#: app/setup/nav-menus.php:29
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
@@ -957,76 +961,76 @@ msgstr "フッター固定ナビゲーション（モバイル用）"
 msgid "Recent topics of Snow Monkey support forum"
 msgstr "Snow Monkey サポートフォーラムの最近のトピック"
 
-#: app/setup/widget-area.php:18
+#: app/setup/widget-area.php:20
 msgid "Sidebar"
 msgstr "サイドバー"
 
-#: app/setup/widget-area.php:19 app/setup/widget-area.php:31
+#: app/setup/widget-area.php:21 app/setup/widget-area.php:43
 msgid "These widgets are displayed in the sidebar on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:30
+#: app/setup/widget-area.php:42
 msgid "Sticky sidebar"
 msgstr "追尾サイドバー"
 
-#: app/setup/widget-area.php:52
+#: app/setup/widget-area.php:64
 msgid "Top of the page title"
 msgstr "ページタイトルの上"
 
-#: app/setup/widget-area.php:53
+#: app/setup/widget-area.php:65
 msgid "These widgets are displayed on the page title on the posts and pages."
 msgstr ""
 "これらのウィジェットは投稿と固定ページのページタイトルの上に表示されます。"
 
-#: app/setup/widget-area.php:74
+#: app/setup/widget-area.php:86
 msgid "Top of the archive page"
 msgstr "アーカイブページ上部"
 
-#: app/setup/widget-area.php:75
+#: app/setup/widget-area.php:87
 msgid "These widgets are displayed top of the contents on archive page."
 msgstr "これらのウィジェットはアーカイブページの上部に表示されます。"
 
-#: app/setup/widget-area.php:97
+#: app/setup/widget-area.php:109
 msgid "These widgets are displayed bottom of the contents on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページのコンテンツ下部に表示されます。"
 
-#: app/setup/widget-area.php:118
+#: app/setup/widget-area.php:130
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:120
+#: app/setup/widget-area.php:132
 msgid "These widgets are displayed in the sidebar on archive page."
 msgstr "これらのウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:140
+#: app/setup/widget-area.php:152
 msgid "Homepage (Top of page)"
 msgstr "ホームページ上部"
 
-#: app/setup/widget-area.php:142 app/setup/widget-area.php:181
+#: app/setup/widget-area.php:154 app/setup/widget-area.php:193
 msgid "These widgets are displayed in the homepage."
 msgstr "これらのウィジェットはホームページに表示されます。"
 
-#: app/setup/widget-area.php:179
+#: app/setup/widget-area.php:191
 msgid "Homepage (Bottom of page)"
 msgstr "ホームページ下部"
 
-#: app/setup/widget-area.php:218
+#: app/setup/widget-area.php:230
 msgid "Posts page (Top of page)"
 msgstr "投稿ページ上部"
 
-#: app/setup/widget-area.php:220 app/setup/widget-area.php:259
+#: app/setup/widget-area.php:232 app/setup/widget-area.php:271
 msgid "These widgets are displayed in the posts page."
 msgstr "これらのウィジェットは投稿ページに表示されます。"
 
-#: app/setup/widget-area.php:257
+#: app/setup/widget-area.php:269
 msgid "Posts page (Bottom of page)"
 msgstr "投稿ページ下部"
 
-#: app/setup/widget-area.php:298
+#: app/setup/widget-area.php:310
 msgid "These widgets are displayed in the footer."
 msgstr "これらのウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:320
+#: app/setup/widget-area.php:332
 msgid ""
 "These widgets are displayed in the overlay that opens with clicking #sm-"
 "overlay-widget-area."
@@ -1034,19 +1038,19 @@ msgstr ""
 "これらのウィジェットは #sm-overlay-widget-area をクリックすると開くオーバレイ"
 "に表示されます。"
 
-#: app/setup/widget-area.php:340
+#: app/setup/widget-area.php:352
 msgid "Top of the article"
 msgstr "記事本文の上"
 
-#: app/setup/widget-area.php:341
+#: app/setup/widget-area.php:353
 msgid "These widgets are displayed top of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の上に表示されます。"
 
-#: app/setup/widget-area.php:362
+#: app/setup/widget-area.php:374
 msgid "Bottom of the article"
 msgstr "記事本文の下"
 
-#: app/setup/widget-area.php:363
+#: app/setup/widget-area.php:375
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
@@ -1110,7 +1114,7 @@ msgctxt "search-form"
 msgid "Search"
 msgstr "検索"
 
-#: template-parts/common/page-top.php:11
+#: template-parts/common/page-top.php:15
 msgid "Scroll up"
 msgstr "上にスクロール"
 
@@ -1195,6 +1199,10 @@ msgid ""
 msgstr ""
 "ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
 "てみてください。"
+
+#: woocommerce/loop/orderby.php:25
+msgid "Shop order"
+msgstr "買い物"
 
 #. Theme Name of the plugin/theme
 msgid "Snow Monkey"

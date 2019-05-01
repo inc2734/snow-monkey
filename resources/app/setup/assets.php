@@ -15,8 +15,6 @@ use Framework\Helper;
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/css/style.min.css';
-
 		$dependencies = Helper::generate_style_dependencies(
 			[
 				'wp-block-library',
@@ -30,9 +28,9 @@ add_action(
 
 		wp_enqueue_style(
 			Helper::get_main_style_handle(),
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/css/style.min.css' ),
 			$dependencies,
-			filemtime( get_theme_file_path( $relative_path ) )
+			filemtime( get_theme_file_path( '/assets/css/style.min.css' ) )
 		);
 	},
 	11
@@ -46,10 +44,9 @@ add_action(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/js/app.min.js';
 		wp_enqueue_script(
 			Helper::get_main_script_handle(),
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/js/app.min.js' ),
 			Helper::generate_script_dependencies(
 				[
 					'jquery',
@@ -57,79 +54,38 @@ add_action(
 					'wp-awesome-widgets',
 				]
 			),
-			filemtime( get_theme_file_path( $relative_path ) ),
+			filemtime( get_theme_file_path( '/assets/js/app.min.js' ) ),
+			true
+		);
+
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-smooth-scroll',
+			get_theme_file_uri( '/assets/js/smooth-scroll.min.js' ),
+			[],
+			filemtime( get_theme_file_path( '/assets/js/smooth-scroll.min.js' ) ),
 			true
 		);
 
 		if ( is_user_logged_in() ) {
-			$relative_path = '/assets/js/fix-adminbar.min.js';
 			wp_enqueue_script(
 				Helper::get_main_script_handle() . '-fix-adminbar',
-				get_theme_file_uri( $relative_path ),
+				get_theme_file_uri( '/assets/js/fix-adminbar.min.js' ),
 				[ 'jquery' ],
-				filemtime( get_theme_file_path( $relative_path ) ),
+				filemtime( get_theme_file_path( '/assets/js/fix-adminbar.min.js' ) ),
 				true
 			);
 		}
 
 		if ( get_theme_mod( 'header-position-only-mobile' ) ) {
 			if ( in_array( Helper::get_default_header_position(), [ 'sticky', 'overlay' ] ) ) {
-				$relative_path = '/assets/js/header.min.js';
 				wp_enqueue_script(
 					Helper::get_main_script_handle() . '-header',
-					get_theme_file_uri( $relative_path ),
+					get_theme_file_uri( '/assets/js/header.min.js' ),
 					[ 'jquery', Helper::get_main_script_handle() ],
-					filemtime( get_theme_file_path( $relative_path ) ),
+					filemtime( get_theme_file_path( '/assets/js/header.min.js' ) ),
 					true
 				);
 			}
-		}
-
-		if ( get_theme_mod( 'header-position-only-mobile' ) ) {
-			if ( has_nav_menu( 'global-nav' ) ) {
-				$relative_path = '/assets/js/drop-nav.min.js';
-				wp_enqueue_script(
-					Helper::get_main_script_handle() . '-drop-nav',
-					get_theme_file_uri( $relative_path ),
-					[ 'jquery' ],
-					filemtime( get_theme_file_path( $relative_path ) ),
-					true
-				);
-			}
-		}
-
-		if ( has_nav_menu( 'footer-sticky-nav' ) ) {
-			$relative_path = '/assets/js/footer-sticky-nav.min.js';
-			wp_enqueue_script(
-				Helper::get_main_script_handle() . '-footer-sticky-nav',
-				get_theme_file_uri( $relative_path ),
-				[ 'jquery' ],
-				filemtime( get_theme_file_path( $relative_path ) ),
-				true
-			);
-		}
-
-		if ( has_nav_menu( 'global-nav' ) ) {
-			$relative_path = '/assets/js/global-nav.min.js';
-			wp_enqueue_script(
-				Helper::get_main_script_handle() . '-global-nav',
-				get_theme_file_uri( $relative_path ),
-				[ 'jquery' ],
-				filemtime( get_theme_file_path( $relative_path ) ),
-				true
-			);
-		}
-
-		$sidebar_id = 'sidebar-sticky-widget-area';
-		if ( is_active_sidebar( $sidebar_id ) && is_registered_sidebar( $sidebar_id ) ) {
-			$relative_path = '/assets/js/sidebar-sticky-widget-area.min.js';
-			wp_enqueue_script(
-				Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
-				get_theme_file_uri( $relative_path ),
-				[ 'jquery' ],
-				filemtime( get_theme_file_path( $relative_path ) ),
-				true
-			);
 		}
 	}
 );
@@ -143,12 +99,11 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 	add_action(
 		$action_hook,
 		function() {
-			$relative_path = '/assets/packages/fontawesome-free/js/all.min.js';
 			wp_enqueue_script(
 				'fontawesome5',
-				get_theme_file_uri( $relative_path ),
+				get_theme_file_uri( '/assets/packages/fontawesome-free/js/all.min.js' ),
 				[],
-				filemtime( get_theme_file_path( $relative_path ) ),
+				filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/js/all.min.js' ) ),
 				true
 			);
 		}
@@ -195,17 +150,15 @@ add_action(
 add_action(
 	'customize_preview_init',
 	function() {
-		$relative_path = '/assets/js/customize-preview.min.js';
-
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-customize-preview',
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/js/customize-preview.min.js' ),
 			[
 				'customize-preview',
 				'wp-awesome-widgets-customize-preview',
 				Helper::get_main_script_handle()
 			],
-			filemtime( get_theme_file_path( $relative_path ) ),
+			filemtime( get_theme_file_path( '/assets/js/customize-preview.min.js' ) ),
 			true
 		);
 	}

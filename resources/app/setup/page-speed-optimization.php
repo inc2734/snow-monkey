@@ -41,6 +41,11 @@ add_action(
 						Helper::get_main_script_handle() . '-footer-sticky-nav',
 						Helper::get_main_script_handle() . '-global-nav',
 						Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
+						Helper::get_main_script_handle() . '-custom-widgets',
+						Helper::get_main_script_handle() . '-widgets',
+						Helper::get_main_script_handle() . '-page-top',
+						Helper::get_main_script_handle() . '-hash-nav',
+						Helper::get_main_script_handle() . '-smooth-scroll',
 					]
 				);
 			}

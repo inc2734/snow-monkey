@@ -14,3 +14,16 @@ add_action(
 		Helper::get_template_part( 'template-parts/widget-area/overlay' );
 	}
 );
+
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-hash-nav',
+			get_theme_file_uri( '/assets/js/hash-nav.min.js' ),
+			[],
+			filemtime( get_theme_file_path( '/assets/js/hash-nav.min.js' ) ),
+			true
+		);
+	}
+);

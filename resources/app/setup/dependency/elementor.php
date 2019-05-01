@@ -19,12 +19,11 @@ if ( ! defined( 'ELEMENTOR_VERSION' ) ) {
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$relative_path = '/assets/css/dependency/elementor/elementor.min.css';
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-elementor',
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/css/dependency/elementor/elementor.min.css' ),
 			[ Helper::get_main_style_handle() ],
-			filemtime( get_theme_file_path( $relative_path ) )
+			filemtime( get_theme_file_path( '/assets/css/dependency/elementor/elementor.min.css' ) )
 		);
 	}
 );
@@ -32,12 +31,11 @@ add_action(
 add_action(
 	'elementor/preview/init',
 	function() {
-		$relative_path = '/assets/js/dependency/elementor/preview.min.js';
 		wp_enqueue_script(
 			Helper::get_main_style_handle() . '-elementor-preview',
-			get_theme_file_uri( $relative_path ),
+			get_theme_file_uri( '/assets/js/dependency/elementor/preview.min.js' ),
 			[],
-			filemtime( get_theme_file_path( $relative_path ) )
+			filemtime( get_theme_file_path( '/assets/js/dependency/elementor/preview.min.js' ) )
 		);
 	}
 );
