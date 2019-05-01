@@ -1,4 +1,6 @@
 .#{$_prefix}c-widget {
+  word-break: break-word;
+
   &__title {
     @extend %widget-title;
   }
