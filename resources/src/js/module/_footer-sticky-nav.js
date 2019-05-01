@@ -9,8 +9,11 @@ export default class FooterStickyNav {
       return;
     }
 
+    this.defaultWindowWidth = window.innerWidth;
+
     window.addEventListener('load', () => this._init(), false);
-    window.addEventListener('resize', () => this._init(), false);
+    window.addEventListener('resize', () => this._resize(), false);
+    window.addEventListener('scroll', () => this._scroll(), false);
   }
 
   _init() {
@@ -18,5 +21,17 @@ export default class FooterStickyNav {
     const body    = getBody();
 
     setStyle(body, 'marginBottom', 'none' !== display ? `${this.nav.offsetHeight}px` : '');
+  }
+
+  _resize() {
+    window.innerWidth !== this.defaultWindowWidth && this._init();
+  }
+
+  _scroll() {
+    this.nav.setAttribute('aria-hidden', this._visibleBrowserBar() ? 'false' : 'true');
+  }
+
+  _visibleBrowserBar() {
+    return window.innerHeight === document.documentElement.clientHeight;
   }
 }
