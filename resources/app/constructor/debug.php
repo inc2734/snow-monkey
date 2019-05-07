@@ -22,7 +22,7 @@ if ( function_exists( 'tests_add_filter' ) ) {
 add_action(
 	'inc2734_view_controller_get_template_part_pre_render',
 	function( $args ) {
-		if ( ! $args['slug'] ) {
+		if ( ! $args['slug'] || 0 === strpos( $args['slug'], 'app/' ) ) {
 			return;
 		}
 
@@ -36,7 +36,7 @@ add_action(
 add_action(
 	'inc2734_view_controller_get_template_part_post_render',
 	function( $args ) {
-		if ( ! $args['slug'] ) {
+		if ( ! $args['slug'] || 0 === strpos( $args['slug'], 'app/' ) ) {
 			return;
 		}
 
