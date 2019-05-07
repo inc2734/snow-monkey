@@ -35,6 +35,7 @@ export default class PageTopBtn {
   _updatePageTopBtnPosition() {
     const footerStickyNav = getFooterStickyNav();
     if (! footerStickyNav) {
+      setStyle(this.btn, 'bottom', '');
       return;
     }
 

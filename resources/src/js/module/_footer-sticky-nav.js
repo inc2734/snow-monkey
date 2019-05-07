@@ -18,13 +18,16 @@ export default class FooterStickyNav {
 
   _init() {
     const display = getStyle(this.nav, 'display');
+    const hidden  = this.nav.getAttribute('aria-hidden');
     const body    = getBody();
 
-    setStyle(body, 'marginBottom', 'none' !== display ? `${this.nav.offsetHeight}px` : '');
+    setStyle(body, 'marginBottom', 'none' !== display && 'true' !== hidden ? `${this.nav.offsetHeight}px` : '');
   }
 
   _resize() {
-    window.innerWidth !== this.defaultWindowWidth && this._init();
+    if (window.innerWidth !== this.defaultWindowWidth || ! this._visibleBrowserBar()) {
+      this._init();
+    }
   }
 
   _scroll() {
