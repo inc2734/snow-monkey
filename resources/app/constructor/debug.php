@@ -7,7 +7,15 @@
 
 use Framework\Helper;
 
-if ( ! defined( 'WP_DEBUG' ) || ! WP_DEBUG || is_customize_preview() || function_exists( 'tests_add_filter' ) ) {
+if ( ! defined( 'WP_DEBUG' ) || ! WP_DEBUG ) {
+	return;
+}
+
+if ( is_customize_preview() || is_admin() ) {
+	return;
+}
+
+if ( function_exists( 'tests_add_filter' ) ) {
 	return;
 }
 
