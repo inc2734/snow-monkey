@@ -47,7 +47,7 @@ $layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-en
 					<li class="c-meta__item c-meta__item--author">
 						<?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?>
 					</li>
-					<li class="c-meta__item">
+					<li class="c-meta__item c-meta__item--published">
 						<?php the_time( get_option( 'date_format' ) ); ?>
 					</li>
 				</ul>
