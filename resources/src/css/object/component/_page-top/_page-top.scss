@@ -1,5 +1,5 @@
 .#{$_prefix}c-page-top {
-  @include _position(fixed, null, 0, 0, null);
+  @include _position(fixed, null, 0, 0, null, 1);
   background-color: $color-accent;
   @include _square(40px);
   @include _transition(all);
