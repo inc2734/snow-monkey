@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+use Framework\Helper;
+
 ?>
 <div class="c-entry">
 	<div class="c-entry__body">
@@ -16,7 +18,7 @@
 				<?php esc_html_e( 'Please search this search box.', 'snow-monkey' ); ?>
 			</p>
 
-			<?php get_template_part( 'template-parts/common/search-form', '404' ); ?>
+			<?php Helper::get_template_part( 'template-parts/common/search-form', '404' ); ?>
 		</div>
 
 		<?php do_action( 'snow_monkey_after_entry_content' ); ?>

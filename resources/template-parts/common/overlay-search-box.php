@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Framework\Helper;
 ?>
 
 <div id="sm-overlay-search-box" class="p-overlay-search-box c-overlay-container">
@@ -15,7 +17,7 @@
 	<div class="p-overlay-search-box__inner c-overlay-container__inner">
 		<?php
 		ob_start();
-		get_template_part( 'template-parts/common/search-form', 'overlay-search-box' );
+		Helper::get_template_part( 'template-parts/common/search-form', 'overlay-search-box' );
 		$form = ob_get_clean();
 		$form = str_replace(
 			'<button class="c-input-group__btn">' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '</button>',

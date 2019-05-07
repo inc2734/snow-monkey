@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd135389c927b000b9a18a3d19871d36",
+    "content-hash": "131d0c049b0c4dd0c5004599f88760a5",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "13.0.0",
+            "version": "13.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "d192a01f4a730e53bced3dfcd0ef29fbecc80330"
+                "reference": "73e8080f769a9960f7a37641d4c2af308ac77b13"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/d192a01f4a730e53bced3dfcd0ef29fbecc80330",
-                "reference": "d192a01f4a730e53bced3dfcd0ef29fbecc80330",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/73e8080f769a9960f7a37641d4c2af308ac77b13",
+                "reference": "73e8080f769a9960f7a37641d4c2af308ac77b13",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^2.0",
                 "inc2734/wp-share-buttons": "^4.0",
-                "inc2734/wp-view-controller": "^7.4",
+                "inc2734/wp-view-controller": "^7.5",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -63,7 +63,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-04-10T02:35:57+00:00"
+            "time": "2019-05-07T01:25:37+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -764,16 +764,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "7.4.1",
+            "version": "7.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "d146b7dce51fead749f83b48fc49d1386e676bae"
+                "reference": "c5d4ddc75d2b1bfb62d9c034a89edaeca9f5422d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/d146b7dce51fead749f83b48fc49d1386e676bae",
-                "reference": "d146b7dce51fead749f83b48fc49d1386e676bae",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/c5d4ddc75d2b1bfb62d9c034a89edaeca9f5422d",
+                "reference": "c5d4ddc75d2b1bfb62d9c034a89edaeca9f5422d",
                 "shasum": ""
             },
             "require": {
@@ -804,7 +804,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-03-13T01:48:34+00:00"
+            "time": "2019-05-07T01:18:18+00:00"
         }
     ],
     "packages-dev": [
@@ -2113,16 +2113,16 @@
         },
         {
             "name": "sebastian/environment",
-            "version": "4.2.1",
+            "version": "4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/environment.git",
-                "reference": "3095910f0f0fb155ac4021fc51a4a7a39ac04e8a"
+                "reference": "f2a2c8e1c97c11ace607a7a667d73d47c19fe404"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/3095910f0f0fb155ac4021fc51a4a7a39ac04e8a",
-                "reference": "3095910f0f0fb155ac4021fc51a4a7a39ac04e8a",
+                "url": "https://api.github.com/repos/sebastianbergmann/environment/zipball/f2a2c8e1c97c11ace607a7a667d73d47c19fe404",
+                "reference": "f2a2c8e1c97c11ace607a7a667d73d47c19fe404",
                 "shasum": ""
             },
             "require": {
@@ -2162,7 +2162,7 @@
                 "environment",
                 "hhvm"
             ],
-            "time": "2019-04-25T07:55:20+00:00"
+            "time": "2019-05-05T09:05:15+00:00"
         },
         {
             "name": "sebastian/exporter",
@@ -2565,7 +2565,7 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2696,16 +2696,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "2748643dd378626c4d348a31ad12394e2d6f7ea8"
+                "reference": "d161c0c8bc77ad6fdb8f5083b9e34c3015d43eb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/2748643dd378626c4d348a31ad12394e2d6f7ea8",
-                "reference": "2748643dd378626c4d348a31ad12394e2d6f7ea8",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/d161c0c8bc77ad6fdb8f5083b9e34c3015d43eb1",
+                "reference": "d161c0c8bc77ad6fdb8f5083b9e34c3015d43eb1",
                 "shasum": ""
             },
             "require": {
@@ -2765,11 +2765,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-16T11:19:53+00:00"
+            "time": "2019-04-27T11:48:17+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.2.7",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",

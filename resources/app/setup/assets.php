@@ -57,7 +57,17 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/js/app.min.js' ) ),
 			true
 		);
+	}
+);
 
+/**
+ * Enqueue smooth scroll script
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-smooth-scroll',
 			get_theme_file_uri( '/assets/js/smooth-scroll.min.js' ),
@@ -65,28 +75,54 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/js/smooth-scroll.min.js' ) ),
 			true
 		);
+	}
+);
 
-		if ( is_user_logged_in() ) {
-			wp_enqueue_script(
-				Helper::get_main_script_handle() . '-fix-adminbar',
-				get_theme_file_uri( '/assets/js/fix-adminbar.min.js' ),
-				[ 'jquery' ],
-				filemtime( get_theme_file_path( '/assets/js/fix-adminbar.min.js' ) ),
-				true
-			);
+/**
+ * Enqueue script for adminbar
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		if ( ! is_user_logged_in() ) {
+			return;
 		}
 
-		if ( get_theme_mod( 'header-position-only-mobile' ) ) {
-			if ( in_array( Helper::get_default_header_position(), [ 'sticky', 'overlay' ] ) ) {
-				wp_enqueue_script(
-					Helper::get_main_script_handle() . '-header',
-					get_theme_file_uri( '/assets/js/header.min.js' ),
-					[ 'jquery', Helper::get_main_script_handle() ],
-					filemtime( get_theme_file_path( '/assets/js/header.min.js' ) ),
-					true
-				);
-			}
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-fix-adminbar',
+			get_theme_file_uri( '/assets/js/fix-adminbar.min.js' ),
+			[ 'jquery' ],
+			filemtime( get_theme_file_path( '/assets/js/fix-adminbar.min.js' ) ),
+			true
+		);
+	}
+);
+
+/**
+ * Enqueue script for header
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		if ( ! get_theme_mod( 'header-position-only-mobile' ) ) {
+			return;
 		}
+
+		if ( ! in_array( Helper::get_default_header_position(), [ 'sticky', 'overlay' ] ) ) {
+			return;
+		}
+
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-header',
+			get_theme_file_uri( '/assets/js/header.min.js' ),
+			[ 'jquery', Helper::get_main_script_handle() ],
+			filemtime( get_theme_file_path( '/assets/js/header.min.js' ) ),
+			true
+		);
 	}
 );
 

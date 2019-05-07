@@ -50,15 +50,19 @@ if ( ! isset( $content_width ) ) {
 }
 
 /**
+ * Loads theme constructer files
+ */
+Helper::load_theme_files( untrailingslashit( __DIR__ ) . '/app/constructor', true );
+
+/**
  * Loads theme setup files
  */
-$includes = [
-	'/app/setup',
-	'/app/widget',
-];
-foreach ( $includes as $include ) {
-	Helper::load_theme_files( __DIR__ . $include, true );
-}
+Helper::get_template_parts( untrailingslashit( __DIR__ ) . '/app/setup', true );
+
+/**
+ * Loads theme widget files
+ */
+Helper::load_theme_files( untrailingslashit( __DIR__ ) . '/app/widget', true );
 
 /**
  * Loads customizer
@@ -75,34 +79,3 @@ add_action(
 	},
 	10000
 );
-
-/**
- * Output comment for get_template_part()
- */
-if ( defined( 'WP_DEBUG' ) && WP_DEBUG && ! is_customize_preview() ) {
-	$slugs = [];
-	$files = Helper::glob_recursive( get_template_directory() );
-	if ( is_child_theme() ) {
-		$files = array_merge( $files, Helper::glob_recursive( get_stylesheet_directory() ) );
-	}
-
-	foreach ( $files as $file ) {
-		$slug = str_replace( [ get_template_directory() . '/', get_stylesheet_directory() . '/', '.php' ], '', $file );
-		$slugs[ $slug ] = $slug;
-	}
-
-	foreach ( $slugs as $slug ) {
-		add_action(
-			'get_template_part_' . $slug,
-			function( $slug, $name ) {
-				if ( $name ) {
-					$slug = $slug . '-' . $name;
-				}
-
-				printf( "\n" . '<!-- Start : %1$s -->' . "\n", esc_html( $slug ) );
-			},
-			10,
-			2
-		);
-	}
-}
