@@ -8,21 +8,22 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "13.1.0",
+            "version": "13.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "73e8080f769a9960f7a37641d4c2af308ac77b13"
+                "reference": "9388ee3aa6a20186a22ba4f6dbe05bcdb35463a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/73e8080f769a9960f7a37641d4c2af308ac77b13",
-                "reference": "73e8080f769a9960f7a37641d4c2af308ac77b13",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/9388ee3aa6a20186a22ba4f6dbe05bcdb35463a6",
+                "reference": "9388ee3aa6a20186a22ba4f6dbe05bcdb35463a6",
                 "shasum": ""
             },
             "require": {
+                "inc2734/wp-adsense": "^0.1",
                 "inc2734/wp-awesome-components": "^1.0",
-                "inc2734/wp-awesome-widgets": "^5.0",
+                "inc2734/wp-awesome-widgets": "^6.0",
                 "inc2734/wp-basis": "^5.0",
                 "inc2734/wp-breadcrumbs": "^2.0",
                 "inc2734/wp-contents-outline": "^3.1",
@@ -63,7 +64,50 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-07T01:25:37+00:00"
+            "time": "2019-05-07T17:04:05+00:00"
+        },
+        {
+            "name": "inc2734/wp-adsense",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-adsense.git",
+                "reference": "007939c444c3f352288382ff16dd7203919e334d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-adsense/zipball/007939c444c3f352288382ff16dd7203919e334d",
+                "reference": "007939c444c3f352288382ff16dd7203919e334d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "7.*",
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Adsense\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "time": "2019-05-07T16:51:16+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
@@ -115,19 +159,20 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "5.0.3",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "2557a1365212d8b8a555578f20058afcc94d2bcb"
+                "reference": "b29f64d46fbea8eff27a12a329e5432b0bffa2b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/2557a1365212d8b8a555578f20058afcc94d2bcb",
-                "reference": "2557a1365212d8b8a555578f20058afcc94d2bcb",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/b29f64d46fbea8eff27a12a329e5432b0bffa2b5",
+                "reference": "b29f64d46fbea8eff27a12a329e5432b0bffa2b5",
                 "shasum": ""
             },
             "require": {
+                "inc2734/wp-adsense": "^0.1",
                 "inc2734/wp-contents-outline": "^3.1",
                 "inc2734/wp-profile-box": "^1.1",
                 "php": ">=5.6"
@@ -157,7 +202,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2019-03-25T16:23:18+00:00"
+            "time": "2019-05-07T16:57:33+00:00"
         },
         {
             "name": "inc2734/wp-basis",
