@@ -7,7 +7,13 @@
 
 use Framework\Helper;
 
-$items = array_values( Helper::get_var( $_items, Helper::get_breadcrumbs_items() ) );
+$items = Helper::get_var( $_items, Helper::get_breadcrumbs_items() );
+$items = apply_filters( 'snow_monkey_breadcrumbs', $items );
+$items = array_values( $items );
+
+if ( ! $items ) {
+	return;
+}
 ?>
 
 <ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">

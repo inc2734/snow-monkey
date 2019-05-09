@@ -7,17 +7,20 @@
 
 use Framework\Helper;
 
-$google_adsense = apply_filters( 'snow_monkey_google_adsense', get_option( 'mwt-google-adsense' ), $position );
+$code     = Helper::get_var( $_code, null );
+$position = Helper::get_var( $_position, null );
 
-if ( ! $google_adsense ) {
+$code = apply_filters( 'snow_monkey_google_adsense', $code, $position );
+
+if ( ! $code ) {
 	return;
 }
 
-if ( ! preg_match( '/<ins /s', $google_adsense ) ) {
+if ( ! preg_match( '/<ins /s', $code ) ) {
 	return;
 }
 ?>
 
 <div class="c-google-adsense">
-	<?php Helper::display_adsense_code( $google_adsense ); ?>
+	<?php Helper::display_adsense_code( $code ); ?>
 </div>

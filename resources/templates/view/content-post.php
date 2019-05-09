@@ -33,7 +33,8 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 			'template-parts/common/google-adsense',
 			null,
 			[
-				'position' => 'content-top',
+				'_code'     => get_option( 'mwt-google-adsense' ),
+				'_position' => 'content-top',
 			]
 		);
 		?>
@@ -76,7 +77,8 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 			'template-parts/common/google-adsense',
 			null,
 			[
-				'position' => 'content-bottom',
+				'_code'     => get_option( 'mwt-google-adsense' ),
+				'_position' => 'content-bottom',
 			]
 		);
 		?>

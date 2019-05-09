@@ -17,7 +17,8 @@ function snow_monkey_sidebar_add_google_adsense() {
 		'template-parts/common/google-adsense',
 		null,
 		[
-			'position' => 'sidebar-top',
+			'_code'     => get_option( 'mwt-google-adsense' ),
+			'_position' => 'sidebar-top',
 		]
 	);
 }
