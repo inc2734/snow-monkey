@@ -85,7 +85,11 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 		}
 		?>
 
-		<?php Helper::get_template_part( 'template-parts/common/like-me-box' ); ?>
+		<?php
+		if ( get_option( 'mwt-facebook-page-name' ) ) {
+			Helper::get_template_part( 'template-parts/common/like-me-box' );
+		}
+		?>
 	</footer>
 </article>
 

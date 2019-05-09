@@ -5,7 +5,9 @@
  * @license GPL-2.0+
  */
 
-$facebook_page_name = get_option( 'mwt-facebook-page-name' );
+use Framework\Helper;
+
+$facebook_page_name = Helper::get_var( $_facebook_page_name, get_option( 'mwt-facebook-page-name' ) );
 
 if ( ! $facebook_page_name ) {
 	return;
