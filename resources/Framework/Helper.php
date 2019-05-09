@@ -85,4 +85,16 @@ class Helper {
 	public static function get_var( &$name, $default = null ) {
 		return isset( $name ) ? $name : $default;
 	}
+
+	/**
+	 * Return bread crumbs items of current page
+	 *
+	 * @return array
+	 *   @var string $title
+	 *   @var string $link
+	 */
+	public static function get_breadcrumbs_items() {
+		$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Bootstrap();
+		return $breadcrumbs->get();
+	}
 }

@@ -38,7 +38,7 @@ use Framework\Helper;
 
 			<div class="c-container">
 				<?php
-				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
+				if ( ! is_front_page() && in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
 					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>
@@ -66,7 +66,7 @@ use Framework\Helper;
 				<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 
 				<?php
-				if ( in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
+				if ( ! is_front_page() && in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
 					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>

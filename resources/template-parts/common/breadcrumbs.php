@@ -5,24 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Breadcrumbs\Bootstrap;
+use Framework\Helper;
 
-if ( is_front_page() ) {
-	return;
-}
-
-$breadcrumbs = new Bootstrap();
-$_items = $breadcrumbs->get();
-$_items = apply_filters( 'snow_monkey_breadcrumbs', $_items );
-
-$items  = [];
-$unique_checker = [];
-foreach ( $_items as $key => $item ) {
-	if ( ! in_array( $item['link'], $unique_checker ) ) {
-		$unique_checker[] = $item['link'];
-		$items[] = $item;
-	}
-}
+$items = array_values( Helper::get_var( $_items, Helper::get_breadcrumbs_items() ) );
 ?>
 
 <ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
