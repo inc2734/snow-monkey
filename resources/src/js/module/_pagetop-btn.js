@@ -32,9 +32,10 @@ export default class PageTopBtn {
 
   _updatePageTopBtnPosition() {
     const footerStickyNav = getFooterStickyNav();
+
     if (! footerStickyNav) {
       setStyle(this.btn, 'bottom', '');
-    } else if (getStyle(this.btn, 'bottom') < footerStickyNav.offsetHeight) {
+    } else if (parseInt(getStyle(this.btn, 'bottom')) < parseInt(footerStickyNav.offsetHeight)) {
       setStyle(this.btn, 'bottom', `${footerStickyNav.offsetHeight}px`);
     } else {
       setStyle(this.btn, 'bottom', '');
