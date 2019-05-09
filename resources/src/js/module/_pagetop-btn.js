@@ -20,11 +20,8 @@ export default class PageTopBtn {
 
     timer = setTimeout(
       () => {
-        if (500 > scrollTop()) {
-          this.btn.setAttribute('aria-hidden', 'true');
-        } else {
-          this.btn.setAttribute('aria-hidden', 'false');
-        }
+        const ariaHidden = 500 > scrollTop() ? 'true' : 'false';
+        this.btn.setAttribute('aria-hidden', ariaHidden);
       },
       500
     );
@@ -33,13 +30,9 @@ export default class PageTopBtn {
   _updatePageTopBtnPosition() {
     const footerStickyNav = getFooterStickyNav();
 
-    if (! footerStickyNav) {
-      setStyle(this.btn, 'bottom', '');
-    } else if (parseInt(getStyle(this.btn, 'bottom')) < parseInt(footerStickyNav.offsetHeight)) {
-      setStyle(this.btn, 'bottom', `${footerStickyNav.offsetHeight}px`);
-    } else {
-      setStyle(this.btn, 'bottom', '');
-    }
+    const isOverlapping = parseInt(getStyle(this.btn, 'bottom')) < parseInt(footerStickyNav.offsetHeight);
+    let bottom = !! footerStickyNav && isOverlapping ? `${footerStickyNav.offsetHeight}px` : '';
+    setStyle(this.btn, 'bottom', bottom);
   }
 
   _resize() {

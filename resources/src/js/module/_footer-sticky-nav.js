@@ -21,7 +21,8 @@ export default class FooterStickyNav {
     const hidden  = this.nav.getAttribute('aria-hidden');
     const body    = getBody();
 
-    setStyle(body, 'marginBottom', `${this.nav.offsetHeight}px`);
+    const marginBottom = 'true' === this.nav.getAttribute('aria-hidden') ? '' : `${this.nav.offsetHeight}px`;
+    setStyle(body, 'marginBottom', marginBottom);
   }
 
   _resize() {
@@ -36,10 +37,7 @@ export default class FooterStickyNav {
   }
 
   _updateNavHidden() {
-    if (this.navDefaultPaddingBottom !== getStyle(this.nav, 'padding-bottom')) {
-      this.nav.setAttribute('aria-hidden', 'true');
-    } else {
-      this.nav.setAttribute('aria-hidden', 'false');
-    }
+    const ariaHidden = this.navDefaultPaddingBottom !== getStyle(this.nav, 'padding-bottom') ? 'true' : 'false';
+    this.nav.setAttribute('aria-hidden', ariaHidden);
   }
 }
