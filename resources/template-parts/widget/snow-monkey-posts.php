@@ -63,7 +63,7 @@ $more_classnames = [
 
 	<?php if ( $title ) : ?>
 		<h2 class="<?php echo esc_attr( join( ' ', $title_classnames ) ); ?>">
-			<?php echo esc_html( $title ); ?>
+			<?php echo wp_kses_post( $title ); ?>
 		</h2>
 	<?php endif; ?>
 
