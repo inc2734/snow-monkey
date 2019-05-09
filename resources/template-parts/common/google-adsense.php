@@ -7,7 +7,7 @@
 
 use Framework\Helper;
 
-$code     = Helper::get_var( $_code, null );
+$code     = Helper::get_var( $_code, get_option( 'mwt-google-adsense' ) );
 $position = Helper::get_var( $_position, null );
 
 $code = apply_filters( 'snow_monkey_google_adsense', $code, $position );

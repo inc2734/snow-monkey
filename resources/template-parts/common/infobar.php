@@ -5,12 +5,14 @@
  * @license GPL-2.0+
  */
 
-if ( ! get_theme_mod( 'infobar-content' ) ) {
+use Framework\Helper;
+
+$content = Helper::get_var( $_content, get_theme_mod( 'infobar-content' ) );
+$url     = Helper::get_var( $_url, get_theme_mod( 'infobar-url' ) );
+
+if ( ! $content ) {
 	return;
 }
-
-$content = get_theme_mod( 'infobar-content' );
-$url     = get_theme_mod( 'infobar-url' );
 ?>
 <div class="p-infobar">
 	<?php if ( $url ) : ?>

@@ -26,9 +26,9 @@ $control = Framework::get_control( 'infobar-content' );
 $control->join( $section );
 $control->partial(
 	[
-		'selector'        => '.p-infobar',
+		'selector'            => '.p-infobar',
 		'container_inclusive' => true,
-		'render_callback' => function() {
+		'render_callback'     => function() {
 			if ( get_theme_mod( 'infobar-content' ) ) {
 				Helper::get_template_part( 'template-parts/common/infobar' );
 			}

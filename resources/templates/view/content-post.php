@@ -29,14 +29,15 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 		?>
 
 		<?php
-		Helper::get_template_part(
-			'template-parts/common/google-adsense',
-			null,
-			[
-				'_code'     => get_option( 'mwt-google-adsense' ),
-				'_position' => 'content-top',
-			]
-		);
+		if ( get_option( 'mwt-google-adsense' ) ) {
+			Helper::get_template_part(
+				'template-parts/common/google-adsense',
+				null,
+				[
+					'_position' => 'content-top',
+				]
+			);
+		}
 		?>
 
 		<?php
@@ -73,14 +74,15 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 		?>
 
 		<?php
-		Helper::get_template_part(
-			'template-parts/common/google-adsense',
-			null,
-			[
-				'_code'     => get_option( 'mwt-google-adsense' ),
-				'_position' => 'content-bottom',
-			]
-		);
+		if ( get_option( 'mwt-google-adsense' ) ) {
+			Helper::get_template_part(
+				'template-parts/common/google-adsense',
+				null,
+				[
+					'_position' => 'content-bottom',
+				]
+			);
+		}
 		?>
 
 		<?php Helper::get_template_part( 'template-parts/common/like-me-box' ); ?>

@@ -28,7 +28,12 @@ use Framework\Helper;
 			<?php do_action( 'snow_monkey_prepend_contents' ); ?>
 
 			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
-			<?php Helper::get_template_part( 'template-parts/common/infobar' ); ?>
+
+			<?php
+			if ( get_theme_mod( 'infobar-content' ) ) {
+				Helper::get_template_part( 'template-parts/common/infobar' );
+			}
+			?>
 
 			<?php
 			if ( Helper::is_output_page_header() ) {
