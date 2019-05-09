@@ -2,7 +2,6 @@
   @include _position(fixed, null, 0, 0, 0, 10);
   background-color: #fff;
   box-shadow: 0 0 2px 0 rgba(#000, .25);
-  @include _transition(opacity);
 
   @supports (padding-bottom: env(safe-area-inset-bottom)) or (padding-bottom: constant(safe-area-inset-bottom)) {
     padding-bottom: constant(safe-area-inset-bottom);
@@ -10,7 +9,9 @@
   }
 
   &[aria-hidden="true"] {
-    opacity: 0;
+    .#{$_prefix}c-navbar {
+      opacity: .2;
+    }
   }
 
   @include _media-min(lg) {

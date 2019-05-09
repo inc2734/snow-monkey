@@ -10,10 +10,10 @@ export default class FooterStickyNav {
     }
 
     this.defaultWindowWidth = window.innerWidth;
+    this.navDefaultPaddingBottom = getStyle(this.nav, 'padding-bottom');
 
     window.addEventListener('load', () => this._init(), false);
     window.addEventListener('resize', () => this._resize(), false);
-    window.addEventListener('scroll', () => this._scroll(), false);
   }
 
   _init() {
@@ -21,20 +21,25 @@ export default class FooterStickyNav {
     const hidden  = this.nav.getAttribute('aria-hidden');
     const body    = getBody();
 
-    setStyle(body, 'marginBottom', 'none' !== display && 'true' !== hidden ? `${this.nav.offsetHeight}px` : '');
+    setStyle(body, 'marginBottom', `${this.nav.offsetHeight}px`);
   }
 
   _resize() {
-    if (window.innerWidth !== this.defaultWindowWidth || ! this._visibleBrowserBar()) {
-      this._init();
+    this._updateNavHidden();
+
+    if (window.innerWidth === this.defaultWindowWidth) {
+      return;
     }
+
+    this.defaultWindowWidth = window.innerWidth;
+    this._init();
   }
 
-  _scroll() {
-    this.nav.setAttribute('aria-hidden', this._visibleBrowserBar() ? 'false' : 'true');
-  }
-
-  _visibleBrowserBar() {
-    return window.innerHeight === document.documentElement.clientHeight;
+  _updateNavHidden() {
+    if (this.navDefaultPaddingBottom !== getStyle(this.nav, 'padding-bottom')) {
+      this.nav.setAttribute('aria-hidden', 'true');
+    } else {
+      this.nav.setAttribute('aria-hidden', 'false');
+    }
   }
 }
