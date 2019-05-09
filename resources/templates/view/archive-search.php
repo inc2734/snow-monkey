@@ -32,6 +32,10 @@ $entries_layout = false !== $entries_layout ? $entries_layout : get_theme_mod( '
 			</div>
 		</div>
 
-		<?php Helper::get_template_part( 'template-parts/archive/pagination' ); ?>
+		<?php
+		if ( ! empty( $wp_query->max_num_pages ) && $wp_query->max_num_pages > 2 ) {
+			Helper::get_template_part( 'template-parts/archive/pagination' );
+		}
+		?>
 	</div>
 </div>
