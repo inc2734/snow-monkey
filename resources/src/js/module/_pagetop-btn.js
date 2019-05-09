@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import {scrollTop, getFooterStickyNav, setStyle} from './_helper.js';
+import {scrollTop, getFooterStickyNav, setStyle, getStyle} from './_helper.js';
 
 export default class PageTopBtn {
   constructor(btn) {
@@ -20,9 +20,7 @@ export default class PageTopBtn {
 
     timer = setTimeout(
       () => {
-        if (! this._visibleBrowserBar()) {
-          this.btn.setAttribute('aria-hidden', 'true');
-        } else if (500 > scrollTop()) {
+        if (500 > scrollTop()) {
           this.btn.setAttribute('aria-hidden', 'true');
         } else {
           this.btn.setAttribute('aria-hidden', 'false');
@@ -36,17 +34,19 @@ export default class PageTopBtn {
     const footerStickyNav = getFooterStickyNav();
     if (! footerStickyNav) {
       setStyle(this.btn, 'bottom', '');
-      return;
+    } else if (getStyle(this.btn, 'bottom') < footerStickyNav.offsetHeight) {
+      setStyle(this.btn, 'bottom', `${footerStickyNav.offsetHeight}px`);
+    } else {
+      setStyle(this.btn, 'bottom', '');
     }
-
-    setStyle(this.btn, 'bottom', `${footerStickyNav.offsetHeight}px`);
   }
 
   _resize() {
-    window.innerWidth !== this.defaultWindowWidth && this._updatePageTopBtnPosition();
-  }
+    if (window.innerWidth === this.defaultWindowWidth) {
+      return;
+    }
 
-  _visibleBrowserBar() {
-    return window.innerHeight === document.documentElement.clientHeight;
+    this.defaultWindowWidth = window.innerWidth;
+    this._updatePageTopBtnPosition();
   }
 }

@@ -1,10 +1,15 @@
 .#{$_prefix}c-page-top {
-  @include _position(fixed, null, 0, 0, null, 1);
+  @include _position(fixed, null, 0, 44px, null, 1);
   background-color: $color-accent;
   @include _square(40px);
   @include _transition(all);
   visibility: hidden;
   opacity: 0;
+
+  @supports (bottom: env(safe-area-inset-bottom)) or (bottom: constant(safe-area-inset-bottom)) {
+    bottom: calc(env(safe-area-inset-bottom) + 49px);
+    bottom: calc(constant(safe-area-inset-bottom) + 49px);
+  }
 
   &[aria-hidden="false"] {
     visibility: visible;
