@@ -14,13 +14,10 @@ use Framework\Helper;
  */
 function snow_monkey_sidebar_add_google_adsense() {
 	if ( get_option( 'mwt-google-adsense' ) ) {
-		Helper::get_template_part(
-			'template-parts/common/google-adsense',
-			null,
-			[
-				'_position' => 'sidebar-top',
-			]
-		);
+		$vars = [
+			'_position' => 'sidebar-top',
+		];
+		Helper::get_template_part( 'template-parts/common/google-adsense', null, $vars );
 	}
 }
 add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_google_adsense', 10 );

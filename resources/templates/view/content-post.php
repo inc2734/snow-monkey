@@ -30,13 +30,10 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 
 		<?php
 		if ( get_option( 'mwt-google-adsense' ) ) {
-			Helper::get_template_part(
-				'template-parts/common/google-adsense',
-				null,
-				[
-					'_position' => 'content-top',
-				]
-			);
+			$vars = [
+				'_position' => 'content-top',
+			];
+			Helper::get_template_part( 'template-parts/common/google-adsense', null, $vars );
 		}
 		?>
 
@@ -75,13 +72,10 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 
 		<?php
 		if ( get_option( 'mwt-google-adsense' ) ) {
-			Helper::get_template_part(
-				'template-parts/common/google-adsense',
-				null,
-				[
-					'_position' => 'content-bottom',
-				]
-			);
+			$vars = [
+				'_position' => 'content-bottom',
+			];
+			Helper::get_template_part( 'template-parts/common/google-adsense', null, $vars );
 		}
 		?>
 
