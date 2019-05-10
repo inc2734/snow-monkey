@@ -7,15 +7,13 @@
 
 use Framework\Helper;
 
-$matched_content     = get_option( 'mwt-google-matched-content' );
-$use_matched_content = (bool) $matched_content;
-$related_posts       = [];
+$code    = Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) );
+$post_id = Helper::get_var( $_post_id, get_the_ID() );
 
-if ( ! $use_matched_content ) {
-	$related_posts_query = Helper::get_related_posts_query( get_the_ID() );
-	if ( ! $related_posts_query->have_posts() ) {
-		return;
-	}
+$related_posts_query = Helper::get_related_posts_query( $post_id );
+
+if ( ! $code && ! $related_posts_query->have_posts() ) {
+	return;
 }
 ?>
 
@@ -23,15 +21,15 @@ if ( ! $use_matched_content ) {
 	<h2 class="p-related-posts__title c-entry-aside__title">
 		<span>
 			<?php esc_html_e( 'Related posts', 'snow-monkey' ); ?>
-			<?php if ( $use_matched_content ) : ?>
+			<?php if ( $code ) : ?>
 				<?php esc_html_e( '(Including some ads)', 'snow-monkey' ); ?>
 			<?php endif; ?>
 		</span>
 	</h2>
 
-	<?php if ( $use_matched_content ) : ?>
+	<?php if ( $code ) : ?>
 
-		<?php Helper::display_adsense_code( $matched_content ); ?>
+		<?php Helper::display_adsense_code( $code ); ?>
 
 	<?php else : ?>
 
