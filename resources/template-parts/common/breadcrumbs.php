@@ -8,7 +8,6 @@
 use Framework\Helper;
 
 $items = Helper::get_var( $_items, Helper::get_breadcrumbs_items() );
-$items = apply_filters( 'snow_monkey_breadcrumbs', $items );
 $items = array_values( $items );
 
 if ( ! $items ) {

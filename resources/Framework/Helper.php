@@ -95,6 +95,29 @@ class Helper {
 	 */
 	public static function get_breadcrumbs_items() {
 		$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Bootstrap();
-		return $breadcrumbs->get();
+		return apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
+	}
+
+	/**
+	 * Return copyright text
+	 *
+	 * @return string
+	 */
+	public static function get_copyright() {
+		$theme_link = sprintf(
+			'<a href="https://2inc.org" target="_blank">%s</a>',
+			__( 'Monkey Wrench', 'snow-monkey' )
+		);
+
+		$wordpress_link = sprintf(
+			'<a href="https://wordpress.org/" target="_blank">%s</a>',
+			__( 'WordPress', 'snow-monkey' )
+		);
+
+		$theme_by   = sprintf( __( 'Snow Monkey theme by %s', 'snow-monkey' ), $theme_link );
+		$powered_by = sprintf( __( 'Powered by %s', 'snow-monkey' ), $wordpress_link );
+		$copyright  = $theme_by . ' ' . $powered_by;
+
+		return apply_filters( 'snow_monkey_copyright', $copyright );
 	}
 }

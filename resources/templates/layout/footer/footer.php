@@ -13,7 +13,12 @@ use Framework\Helper;
 	<?php Helper::get_template_part( 'template-parts/nav/social' ); ?>
 	<?php Helper::get_template_part( 'template-parts/widget-area/footer' ); ?>
 	<?php Helper::get_template_part( 'template-parts/nav/footer-sub' ); ?>
-	<?php Helper::get_template_part( 'template-parts/footer/copyright' ); ?>
+
+	<?php
+	if ( Helper::get_copyright() ) {
+		Helper::get_template_part( 'template-parts/footer/copyright' );
+	}
+	?>
 
 	<?php do_action( 'snow_monkey_append_footer' ); ?>
 </footer>

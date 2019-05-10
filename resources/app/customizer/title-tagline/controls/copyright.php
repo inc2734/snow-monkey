@@ -45,7 +45,9 @@ $control->partial(
 	[
 		'selector'        => '.c-copyright',
 		'render_callback' => function() {
-			Helper::get_template_part( 'template-parts/footer/copyright' );
+			if ( Helper::get_copyright() ) {
+				Helper::get_template_part( 'template-parts/footer/copyright' );
+			}
 		},
 	]
 );
