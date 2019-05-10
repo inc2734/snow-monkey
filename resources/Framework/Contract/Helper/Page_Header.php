@@ -114,6 +114,7 @@ trait Page_Header {
 	/**
 	 * Display page header image
 	 *
+	 * @deprecated
 	 * @return void
 	 */
 	public static function the_page_header_image() {

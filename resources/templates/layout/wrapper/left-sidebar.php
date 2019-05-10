@@ -37,7 +37,10 @@ use Framework\Helper;
 
 			<?php
 			if ( Helper::is_output_page_header() ) {
-				Helper::get_template_part( 'template-parts/common/page-header' );
+				$vars = [
+					'_display_entry_meta' => is_singular( 'post' ),
+				];
+				Helper::get_template_part( 'template-parts/common/page-header', null, $vars );
 			}
 			?>
 
