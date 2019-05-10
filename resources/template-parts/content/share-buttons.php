@@ -5,14 +5,17 @@
  * @license GPL-2.0+
  */
 
-if ( ! get_option( 'mwt-share-buttons-buttons' ) ) {
+use Framework\Helper;
+
+$buttons = Helper::get_var( $_buttons, explode( ',', get_option( 'mwt-share-buttons-buttons' ) ) );
+
+if ( ! $buttons ) {
 	return;
 }
 ?>
 
 <div class="wp-share-buttons wp-share-buttons--<?php echo esc_attr( get_option( 'mwt-share-buttons-type' ) ); ?>">
 	<ul class="wp-share-buttons__list">
-		<?php $buttons = explode( ',', get_option( 'mwt-share-buttons-buttons' ) ); ?>
 		<?php foreach ( $buttons as $button ) : ?>
 			<li class="wp-share-buttons__item">
 				<?php

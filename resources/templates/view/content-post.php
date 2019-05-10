@@ -23,7 +23,7 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 
 	<div class="c-entry__body">
 		<?php
-		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) ) {
+		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'top', 'both' ] ) && get_option( 'mwt-share-buttons-buttons' ) ) {
 			Helper::get_template_part( 'template-parts/content/share-buttons' );
 		}
 		?>
@@ -57,7 +57,7 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 
 	<footer class="c-entry__footer">
 		<?php
-		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'bottom', 'both' ] ) ) {
+		if ( in_array( get_option( 'mwt-share-buttons-display-position' ), [ 'bottom', 'both' ] ) && get_option( 'mwt-share-buttons-buttons' ) ) {
 			Helper::get_template_part( 'template-parts/content/share-buttons' );
 		}
 		?>
