@@ -4,10 +4,6 @@
  * @author inc2734
  * @license GPL-2.0+
  */
-
-if ( ! get_theme_mod( 'display-page-top' ) ) {
-	return;
-}
 ?>
 
 <div class="c-page-top" aria-hidden="true">

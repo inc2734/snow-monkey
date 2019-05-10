@@ -18,5 +18,10 @@ use Framework\Helper;
 	<?php do_action( 'snow_monkey_append_footer' ); ?>
 </footer>
 
-<?php Helper::get_template_part( 'template-parts/common/page-top' ); ?>
+<?php
+if ( get_theme_mod( 'display-page-top' ) ) {
+	Helper::get_template_part( 'template-parts/common/page-top' );
+}
+?>
+
 <?php Helper::get_template_part( 'template-parts/nav/footer-sticky' ); ?>
