@@ -11,5 +11,10 @@ if ( post_password_required() ) {
 	return;
 }
 
-Helper::get_template_part( 'template-parts/discussion/comments' );
-Helper::get_template_part( 'template-parts/discussion/pings' );
+if ( comments_open() || ! empty( $wp_query->comments_by_type['comment'] ) ) {
+	Helper::get_template_part( 'template-parts/discussion/comments' );
+}
+
+if ( pings_open() || ! empty( $wp_query->comments_by_type['pings'] ) ) {
+	Helper::get_template_part( 'template-parts/discussion/pings' );
+}

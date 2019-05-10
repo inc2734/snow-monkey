@@ -41,7 +41,7 @@ use Framework\Helper;
 		</div>
 
 		<?php
-		if ( ! empty( $wp_query->max_num_pages ) && $wp_query->max_num_pages > 2 ) {
+		if ( ! empty( $wp_query->max_num_pages ) && $wp_query->max_num_pages >= 2 ) {
 			Helper::get_template_part( 'template-parts/archive/pagination' );
 		}
 		?>
