@@ -20,7 +20,7 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 
 	<div class="c-entry__body">
 		<?php
-		if ( 'content-top' === $eyecatch_position ) {
+		if ( 'content-top' === $eyecatch_position && has_post_thumbnail() ) {
 			Helper::get_template_part( 'template-parts/content/eyecatch' );
 		}
 		?>
