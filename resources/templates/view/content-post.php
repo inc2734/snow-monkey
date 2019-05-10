@@ -62,7 +62,11 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 		}
 		?>
 
-		<?php Helper::get_template_part( 'template-parts/content/entry-tags' ); ?>
+		<?php
+		if ( get_the_terms( get_the_ID(), 'post_tag' ) ) {
+			Helper::get_template_part( 'template-parts/content/entry-tags' );
+		}
+		?>
 
 		<?php
 		if ( get_option( 'mwt-display-profile-box' ) ) {

@@ -5,14 +5,17 @@
  * @license GPL-2.0+
  */
 
-$tags = get_the_terms( get_the_ID(), 'post_tag' );
-if ( ! $tags ) {
+use Framework\Helper;
+
+$terms = Helper::get_var( $_terms, get_the_terms( get_the_ID(), 'post_tag' ) );
+
+if ( ! $terms || ! is_array( $terms ) ) {
 	return;
 }
 ?>
 
 <div class="c-entry-tags">
-	<?php foreach ( $tags as $_tag ) : ?>
-		<a class="tag-cloud-link" href="<?php echo esc_url( get_term_link( $_tag ) ); ?>"><?php echo esc_html( $_tag->name ); ?></a>
+	<?php foreach ( $terms as $term ) : ?>
+		<a class="tag-cloud-link" href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
 	<?php endforeach; ?>
 </div>
