@@ -56,9 +56,11 @@ add_filter(
 add_action(
 	'snow_monkey_after_entry_content',
 	function() {
-		if ( apply_filters( 'snow_monkey_display_contents_outline', false ) ) {
-			Helper::get_template_part( 'template-parts/content/contents-outline' );
+		if ( ! apply_filters( 'snow_monkey_display_contents_outline', false ) ) {
+			return;
 		}
+
+		Helper::get_template_part( 'template-parts/content/contents-outline' );
 	}
 );
 
@@ -68,9 +70,20 @@ add_action(
 add_action(
 	'snow_monkey_after_entry_content',
 	function() {
-		if ( apply_filters( 'snow_monkey_display_child_pages', false ) ) {
-			Helper::get_template_part( 'template-parts/content/child-pages' );
+		if ( ! is_singular() ) {
+			return;
 		}
+
+		$pages_query = Helper::get_child_pages_query( get_the_ID() );
+		if ( ! $pages_query->have_posts() ) {
+			return;
+		}
+
+		if ( ! apply_filters( 'snow_monkey_display_child_pages', false ) ) {
+			return;
+		}
+
+		Helper::get_template_part( 'template-parts/content/child-pages' );
 	}
 );
 

@@ -7,7 +7,9 @@
 
 use Framework\Helper;
 
-$pages_query = Helper::get_child_pages_query( get_the_ID() );
+$parent_post_id = Helper::get_var( $_parent_post_id, get_the_ID() );
+
+$pages_query = Helper::get_child_pages_query( $parent_post_id );
 if ( ! $pages_query->have_posts() ) {
 	return;
 }
