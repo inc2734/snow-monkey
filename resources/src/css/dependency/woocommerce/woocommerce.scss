@@ -357,9 +357,10 @@ $img-path: '../../../img';
 
   .product-title {
     color: $_color-text;
+    @include _transition(opacity);
 
     @include _hover(lg) {
-      color: _light($_color-text);
+      opacity: .8;
     }
   }
 
