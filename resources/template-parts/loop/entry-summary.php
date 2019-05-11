@@ -9,40 +9,36 @@ use Framework\Helper;
 
 $layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
 ?>
+
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary">
 		<div class="c-entry-summary__figure">
 			<?php the_post_thumbnail( 'xlarge' ); ?>
 		</div>
+
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">
-				<h2 class="c-entry-summary__title">
-					<?php
-					if ( 'rich-media' === $layout ) {
-						Helper::the_title_trimed();
-					} else {
-						the_title();
-					}
-					?>
-				</h2>
-			</header>
-			<div class="c-entry-summary__content">
 				<?php
-				ob_start();
-				the_excerpt();
-				echo esc_html( wp_strip_all_tags( ob_get_clean() ) );
+				$vars = [
+					'_layout' => $layout,
+				];
+				Helper::get_template_part( 'template-parts/loop/entry-summary/title', null, $vars );
 				?>
-			</div>
-			<div class="c-entry-summary__meta">
-				<ul class="c-meta">
-					<li class="c-meta__item c-meta__item--author">
-						<?php echo get_avatar( $post->post_author ); ?><?php echo esc_html( get_the_author() ); ?>
-					</li>
-					<li class="c-meta__item c-meta__item--published">
-						<?php the_time( get_option( 'date_format' ) ); ?>
-					</li>
-				</ul>
-			</div>
+			</header>
+
+			<?php
+			ob_start();
+			the_excerpt();
+			$content = wp_strip_all_tags( ob_get_clean() );
+			if ( $content ) {
+				$vars = [
+					'_content' => $content,
+				];
+				Helper::get_template_part( 'template-parts/loop/entry-summary/content', null, $vars );
+			}
+			?>
+
+			<?php Helper::get_template_part( 'template-parts/loop/entry-summary/meta' ); ?>
 		</div>
 	</section>
 </a>
