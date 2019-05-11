@@ -52,7 +52,11 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				<?php if ( $header_content ) : ?>
 					<div class="c-row__col c-row__col--1-4 u-hidden u-visible-lg-up">
 						<div class="u-pull-right">
-							<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
+							<?php
+							if ( get_theme_mod( 'header-content' ) ) {
+								Helper::get_template_part( 'template-parts/header/content', 'lg' );
+							}
+							?>
 						</div>
 					</div>
 				<?php endif; ?>

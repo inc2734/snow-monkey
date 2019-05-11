@@ -42,7 +42,11 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 						<?php if ( $header_content ) : ?>
 							<div class="c-row__col c-row__col--fit">
 								<div class="l-<?php echo esc_attr( $header_type ); ?>__content">
-									<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
+									<?php
+									if ( get_theme_mod( 'header-content' ) ) {
+										Helper::get_template_part( 'template-parts/header/content', 'lg' );
+									}
+									?>
 								</div>
 							</div>
 						<?php endif; ?>

@@ -27,7 +27,11 @@ use Framework\Helper;
 		<div class="l-contents" role="document">
 			<?php do_action( 'snow_monkey_prepend_contents' ); ?>
 
-			<?php Helper::get_template_part( 'template-parts/header/content', 'sm' ); ?>
+			<?php
+			if ( get_theme_mod( 'header-content' ) ) {
+				Helper::get_template_part( 'template-parts/header/content', 'sm' );
+			}
+			?>
 
 			<?php
 			if ( get_theme_mod( 'infobar-content' ) ) {

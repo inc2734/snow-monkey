@@ -5,13 +5,15 @@
  * @license GPL-2.0+
  */
 
-$header_content = get_theme_mod( 'header-content' );
+use Framework\Helper;
 
-if ( ! $header_content ) {
+$content = Helper::get_var( $_content, get_theme_mod( 'header-content' ) );
+
+if ( ! $content ) {
 	return;
 }
 ?>
 
-<div id="js-selective-refresh-header-content">
-	<?php echo wp_kses_post( $header_content ); ?>
+<div class="c-header-content">
+	<?php echo wp_kses_post( $content ); ?>
 </div>

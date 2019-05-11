@@ -25,7 +25,11 @@ $has_drawer_nav = has_nav_menu( 'drawer-nav' );
 						<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 							<?php if ( $header_content ) : ?>
 								<div class="c-row__col c-row__col--fit u-hidden u-visible-lg-up">
-									<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
+									<?php
+									if ( get_theme_mod( 'header-content' ) ) {
+										Helper::get_template_part( 'template-parts/header/content', 'lg' );
+									}
+									?>
 								</div>
 							<?php endif; ?>
 

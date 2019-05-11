@@ -7,11 +7,18 @@
 
 use Framework\Helper;
 
-if ( ! get_theme_mod( 'header-content' ) ) {
+$content = Helper::get_var( $_content, get_theme_mod( 'header-content' ) );
+
+if ( ! $content ) {
 	return;
 }
 ?>
 
 <div class="p-header-content p-header-content--lg">
-	<?php Helper::get_template_part( 'template-parts/header/content' ); ?>
+	<?php
+	$vars = [
+		'_content' => $content,
+	];
+	Helper::get_template_part( 'template-parts/header/content', null, $vars );
+	?>
 </div>
