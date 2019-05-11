@@ -399,8 +399,7 @@ add_action(
 			true
 		);
 
-		$sidebar_id = 'sidebar-sticky-widget-area';
-		if ( is_active_sidebar( $sidebar_id ) && is_registered_sidebar( $sidebar_id ) ) {
+		if ( Helper::is_active_sidebar( 'sidebar-sticky-widget-area' ) ) {
 			wp_enqueue_script(
 				Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
 				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.min.js' ),

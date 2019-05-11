@@ -16,7 +16,11 @@ use Framework\Helper;
 	}
 	?>
 
-	<?php Helper::get_template_part( 'template-parts/widget-area/footer' ); ?>
+	<?php
+	if ( Helper::is_active_sidebar( 'footer-widget-area' ) ) {
+		Helper::get_template_part( 'template-parts/widget-area/footer' );
+	}
+	?>
 
 	<?php
 	if ( has_nav_menu( 'footer-sub-nav' ) ) {

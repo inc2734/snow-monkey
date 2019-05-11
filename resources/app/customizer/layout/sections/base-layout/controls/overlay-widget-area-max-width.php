@@ -20,7 +20,7 @@ Framework::control(
 			'true'  => __( 'Slim width', 'snow-monkey' ),
 		],
 		'active_callback' => function() {
-			return is_active_sidebar( 'overlay-widget-area' ) && is_registered_sidebar( 'overlay-widget-area' );
+			return Helper::is_active_sidebar( 'overlay-widget-area' );
 		},
 	]
 );

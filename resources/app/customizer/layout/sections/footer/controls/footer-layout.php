@@ -38,7 +38,7 @@ $control->partial(
 		'selector'            => '.l-footer-widget-area',
 		'container_inclusive' => true,
 		'render_callback'     => function() {
-			Helper::get_template_part( 'template-parts/widget-area/footer' );
+			return Helper::is_active_sidebar( 'footer-widget-area' );
 		},
 	]
 );

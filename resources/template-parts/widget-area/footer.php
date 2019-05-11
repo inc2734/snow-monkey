@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-$sidebar_id = 'footer-widget-area';
+use Framework\Helper;
 
-if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id ) ) {
+if ( ! Helper::is_active_sidebar( 'footer-widget-area' ) ) {
 	return;
 }
 ?>
@@ -19,7 +19,7 @@ if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id 
 
 	<div class="c-container">
 		<div class="c-row c-row--margin c-row--lg-margin-l">
-			<?php dynamic_sidebar( $sidebar_id ); ?>
+			<?php dynamic_sidebar( 'footer-widget-area' ); ?>
 		</div>
 	</div>
 </div>

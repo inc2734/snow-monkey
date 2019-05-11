@@ -9,7 +9,12 @@ use Framework\Helper;
 
 $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 ?>
-<?php Helper::get_template_part( 'template-parts/widget-area/title-top' ); ?>
+
+<?php
+if ( Helper::is_active_sidebar( 'title-top-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/title-top' );
+}
+?>
 
 <article <?php post_class(); ?>>
 	<?php if ( 'title-on-page-header' !== $eyecatch_position ) : ?>
@@ -25,7 +30,12 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 		}
 		?>
 
-		<?php Helper::get_template_part( 'template-parts/widget-area/article-top' ); ?>
+		<?php
+		if ( Helper::is_active_sidebar( 'article-top-widget-area' ) ) {
+			Helper::get_template_part( 'template-parts/widget-area/article-top' );
+		}
+		?>
+
 		<?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
 		<div class="c-entry__content p-entry-content">
@@ -34,11 +44,20 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 		</div>
 
 		<?php do_action( 'snow_monkey_after_entry_content' ); ?>
-		<?php Helper::get_template_part( 'template-parts/widget-area/article-bottom' ); ?>
+
+		<?php
+		if ( Helper::is_active_sidebar( 'article-bottom-widget-area' ) ) {
+			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );
+		}
+		?>
 	</div>
 </article>
 
-<?php Helper::get_template_part( 'template-parts/widget-area/contents-bottom' ); ?>
+<?php
+if ( Helper::is_active_sidebar( 'contents-bottom-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/contents-bottom' );
+}
+?>
 
 <?php
 if ( comments_open() || pings_open() || get_comments_number() ) {

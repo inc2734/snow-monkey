@@ -7,7 +7,12 @@
 
 use Framework\Helper;
 ?>
-<?php Helper::get_template_part( 'template-parts/widget-area/archive-top' ); ?>
+
+<?php
+if ( Helper::is_active_sidebar( 'archive-top-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/archive-top' );
+}
+?>
 
 <div class="c-entry">
 	<header class="c-entry__header">

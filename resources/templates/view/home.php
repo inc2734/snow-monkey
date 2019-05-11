@@ -7,9 +7,12 @@
 
 use Framework\Helper;
 ?>
-<?php if ( ! is_paged() ) : ?>
-	<?php Helper::get_template_part( 'template-parts/widget-area/posts-page-top' ); ?>
-<?php endif; ?>
+
+<?php
+if ( ! is_paged() && Helper::is_active_sidebar( 'posts-page-top-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/posts-page-top' );
+}
+?>
 
 <div class="c-entry">
 	<div class="c-entry__body">
@@ -40,6 +43,7 @@ use Framework\Helper;
 	</div>
 </div>
 
-<?php if ( ! is_paged() ) : ?>
-	<?php Helper::get_template_part( 'template-parts/widget-area/posts-page-bottom' ); ?>
-<?php endif; ?>
+<?php
+if ( ! is_paged() && Helper::is_active_sidebar( 'posts-page-bottom-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/posts-page-bottom' );
+}

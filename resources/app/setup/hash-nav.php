@@ -11,7 +11,10 @@ add_action(
 	'wp_footer',
 	function() {
 		Helper::get_template_part( 'template-parts/common/overlay-search-box' );
-		Helper::get_template_part( 'template-parts/widget-area/overlay' );
+
+		if ( Helper::is_active_sidebar( 'overlay-widget-area' ) ) {
+			Helper::get_template_part( 'template-parts/widget-area/overlay' );
+		}
 	}
 );
 

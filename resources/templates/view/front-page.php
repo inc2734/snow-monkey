@@ -7,7 +7,12 @@
 
 use Framework\Helper;
 ?>
-<?php Helper::get_template_part( 'template-parts/widget-area/front-page-top' ); ?>
+
+<?php
+if ( Helper::is_active_sidebar( 'front-page-top-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/front-page-top' );
+}
+?>
 
 <?php
 ob_start();
@@ -57,4 +62,7 @@ $content = ob_get_clean();
 	</div>
 <?php endif; ?>
 
-<?php Helper::get_template_part( 'template-parts/widget-area/front-page-bottom' ); ?>
+<?php
+if ( Helper::is_active_sidebar( 'front-page-bottom-widget-area' ) ) {
+	Helper::get_template_part( 'template-parts/widget-area/front-page-bottom' );
+}

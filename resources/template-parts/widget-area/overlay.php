@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-$sidebar_id = 'overlay-widget-area';
+use Framework\Helper;
 
-if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id ) ) {
+if ( ! Helper::is_active_sidebar( 'overlay-widget-area' ) ) {
 	return;
 }
 ?>
@@ -24,7 +24,7 @@ if ( ! is_active_sidebar( $sidebar_id ) || ! is_registered_sidebar( $sidebar_id 
 			data-is-content-widget-area="false"
 			>
 
-			<?php dynamic_sidebar( $sidebar_id ); ?>
+			<?php dynamic_sidebar( 'overlay-widget-area' ); ?>
 		</div>
 	</div>
 </div>
