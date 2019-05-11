@@ -25,11 +25,6 @@
     @include _padding(.25, .5);
   }
 
-  &__body {
-    @include _transition(opacity);
-    overflow: hidden;
-  }
-
   &__title {
     @include _margin(0, 0, .2);
     @include _font-size($_base-font-size);
@@ -57,29 +52,6 @@
     @include _font-size-line-height(10px);
     font-weight: bold;
     text-align: center;
-  }
-
-  .#{$_prefix}c-entries--rich-media a > & {
-    .#{$_prefix}c-entry-summary__figure {
-      &::after {
-        @include _position(absolute, 8px, 8px, 8px, 8px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image: radial-gradient(rgba($color-accent, .5) 33%, transparent 33%);
-        background-size: 2px 2px;
-        content: 'READ MORE';
-        color: #fff;
-        font-weight: bold;
-        opacity: 0;
-        visibility: hidden;
-        @include _transition(opacity);
-      }
-
-      > img {
-        @include _transition(transform);
-      }
-    }
   }
 
   .#{$_prefix}c-entries--simple & {
@@ -156,24 +128,9 @@
 }
 
 .#{$_prefix}c-entries__item > a {
-  @include _hover(lg) {
-    .#{$_prefix}c-entry-summary__body {
-      opacity: .7;
-    }
-  }
-}
+  @include _transition(opacity);
 
-.#{$_prefix}c-entries--rich-media > .#{$_prefix}c-entries__item > a {
   @include _hover(lg) {
-    .#{$_prefix}c-entry-summary__figure {
-      > img {
-        transform: scale(1.05);
-      }
-
-      &::after {
-        opacity: 1;
-        visibility: visible;
-      }
-    }
+    opacity: .8;
   }
 }

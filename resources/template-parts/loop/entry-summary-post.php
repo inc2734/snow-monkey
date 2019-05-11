@@ -9,17 +9,20 @@ use Framework\Helper;
 
 $terms  = Helper::get_var( $_terms, get_the_terms( get_the_ID(), 'category' ) );
 $layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
+
+$term = $terms && is_array( $terms ) && ! is_wp_error( $terms ) ? $terms[0] : null;
+$wrapper_class = $term ? 'c-entry-summary--' . $term->taxonomy . '-' . $term->term_id : null;
 ?>
 
 <a href="<?php the_permalink(); ?>">
-	<section class="c-entry-summary">
+	<section class="c-entry-summary <?php echo esc_attr( $wrapper_class ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php the_post_thumbnail( 'xlarge' ); ?>
 
 			<?php
-			if ( $terms && is_array( $terms ) && ! is_wp_error( $terms ) ) {
+			if ( $term ) {
 				$vars = [
-					'_terms' => [ $terms[0] ],
+					'_terms' => [ $term ],
 				];
 				Helper::get_template_part( 'template-parts/loop/entry-summary/term', 'post', $vars );
 			}

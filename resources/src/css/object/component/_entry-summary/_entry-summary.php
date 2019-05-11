@@ -6,14 +6,8 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Style;
-use Inc2734\WP_Customizer_Framework\Color;
 
 $accent_color = get_theme_mod( 'accent-color' );
-
-Style::register(
-	'.c-entries--rich-media a > .c-entry-summary .c-entry-summary__figure::after',
-	'background-image: radial-gradient(' . Color::rgba( $accent_color, .5 ) . ' 33%, transparent 33%)'
-);
 
 Style::register(
 	'.c-entry-summary__term',
@@ -35,14 +29,6 @@ foreach ( $terms as $_term ) {
 
 		continue;
 	}
-
-	Style::register(
-		'.c-entries--rich-media a > .c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__figure::after',
-		[
-			'background-color: ' . Color::rgba( $accent_color, .4 ),
-			'background-image: radial-gradient(' . Color::rgba( $accent_color, .9 ) . ' 33%, transparent 33%)',
-		]
-	);
 
 	Style::register(
 		'.c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__term',
