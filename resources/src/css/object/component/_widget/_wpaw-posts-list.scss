@@ -8,10 +8,10 @@
 
     > a {
       color: $_color-text;
-      @include _transition(color);
+      @include _transition(opacity);
 
       @include _hover(lg) {
-        color: $_color-gray;
+        opacity: .8;
       }
     }
   }
