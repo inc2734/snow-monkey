@@ -7,11 +7,7 @@
 
 use Framework\Helper;
 
-$posts_query = Helper::get_var( $_posts_query, null );
-if ( ! $posts_query ) {
-	return;
-}
-
+$posts_query    = Helper::get_var( $_posts_query, null );
 $widget_area_id = Helper::get_var( $_widget_area_id, null );
 $classname      = Helper::get_var( $_classname, null );
 $id             = Helper::get_var( $_id, null );
@@ -19,6 +15,10 @@ $entries_layout = Helper::get_var( $_entries_layout, 'rich-media' );
 $title          = Helper::get_var( $_title, null );
 $link_url       = Helper::get_var( $_link_url, null );
 $link_text      = Helper::get_var( $_link_text, null );
+
+if ( ! $posts_query ) {
+	return;
+}
 
 $content_widget_areas = [
 	'front-page-top-widget-area',
