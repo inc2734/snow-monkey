@@ -20,7 +20,12 @@ use Framework\Helper;
 	<?php wp_body_open(); ?>
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
-	<?php Helper::get_template_part( 'template-parts/nav/drawer' ); ?>
+	<?php
+	if ( has_nav_menu( 'drawer-nav' ) && has_nav_menu( 'drawer-sub-nav' ) ) {
+		Helper::get_template_part( 'template-parts/nav/drawer' );
+	}
+	?>
+
 	<div class="l-container">
 		<?php Helper::get_header(); ?>
 
