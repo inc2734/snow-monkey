@@ -30,8 +30,12 @@ export default class PageTopBtn {
   _updatePageTopBtnPosition() {
     const footerStickyNav = getFooterStickyNav();
 
-    const isOverlapping = parseInt(getStyle(this.btn, 'bottom')) < parseInt(footerStickyNav.offsetHeight);
-    let bottom = !! footerStickyNav && isOverlapping ? `${footerStickyNav.offsetHeight}px` : '';
+    let bottom = '';
+    if (footerStickyNav) {
+      const isOverlapping = parseInt(getStyle(this.btn, 'bottom')) < parseInt(footerStickyNav.offsetHeight);
+      bottom = isOverlapping ? `${footerStickyNav.offsetHeight}px` : bottom;
+    }
+
     setStyle(this.btn, 'bottom', bottom);
   }
 
