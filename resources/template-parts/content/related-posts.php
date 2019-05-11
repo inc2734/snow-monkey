@@ -7,10 +7,9 @@
 
 use Framework\Helper;
 
-$code    = Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) );
-$post_id = Helper::get_var( $_post_id, get_the_ID() );
+$code = Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) );
 
-$related_posts_query = Helper::get_related_posts_query( $post_id );
+$related_posts_query = Helper::get_related_posts_query( get_the_ID() );
 
 if ( ! $code && ! $related_posts_query->have_posts() ) {
 	return;
