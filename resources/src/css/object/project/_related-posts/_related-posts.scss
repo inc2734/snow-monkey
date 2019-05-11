@@ -20,17 +20,4 @@
       @include _line-height($_base-font-size * 1.5);
     }
   }
-
-  [data-has-sidebar="true"] &,
-  [data-is-slim-width="true"] & {
-    @include _media-min(lg) {
-      .#{$_prefix}c-entries--rich-media {
-        @include _row--margin(1);
-
-        .#{$_prefix}c-entries__item {
-          @include _row__col--margin(1);
-        }
-      }
-    }
-  }
 }

@@ -72,10 +72,14 @@
     }
   }
 
+  [data-has-sidebar="true"] &,
   [data-is-slim-width="true"] & {
     &--rich-media {
-      .#{$_prefix}c-entries__item {
-        @include _media-min(lg) {
+      @include _media-min(lg) {
+        @include _row--margin(1);
+
+        .#{$_prefix}c-entries__item {
+          @include _row__col--margin(1);
           @include _row__col--width(50%);
         }
       }
