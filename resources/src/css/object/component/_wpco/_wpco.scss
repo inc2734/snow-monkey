@@ -39,9 +39,10 @@
       color: $_color-text;
       @include _padding(.25, 0);
       text-decoration: none;
+      @include _transition(opacity);
 
       @include _hover(lg) {
-        color: _lighter($_color-text);
+        opacity: .8;
       }
 
       &::before {
