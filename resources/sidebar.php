@@ -7,4 +7,4 @@
 
 use Framework\Helper;
 
-Helper::get_template_part( 'templates/layout/header/' . get_theme_mod( 'header-layout' ) );
+Helper::get_template_part( 'templates/layout/sidebar/sidebar' );

@@ -7,6 +7,7 @@
 
 use Framework\Helper;
 ?>
+
 <footer class="l-footer" role="contentinfo">
 	<?php do_action( 'snow_monkey_prepend_footer' ); ?>
 
