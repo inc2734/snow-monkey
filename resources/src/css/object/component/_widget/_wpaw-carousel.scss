@@ -21,19 +21,10 @@
   &__item {
     color: $_color-text;
     text-decoration: none;
+    @include _transition(opacity);
 
     @include _hover(lg) {
-      .wpaw-carousel__figure {
-        > img {
-          transform: scale(1.05);
-        }
-      }
-    }
-  }
-
-  &__figure {
-    > img {
-      @include _transition(transform);
+      opacity: .8;
     }
   }
 
