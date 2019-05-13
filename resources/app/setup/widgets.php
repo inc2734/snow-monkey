@@ -156,26 +156,8 @@ add_filter(
 		}
 
 		$content = str_replace(
-			'wpaw-showcase ',
-			'js-bg-parallax wpaw-showcase ',
-			$content
-		);
-
-		$content = str_replace(
-			'wpaw-showcase__bgimage',
-			'wpaw-showcase__bgimage js-bg-parallax__bgimage',
-			$content
-		);
-
-		$content = str_replace(
 			'wpaw-showcase__more',
 			'wpaw-showcase__more c-btn',
-			$content
-		);
-
-		$content = str_replace(
-			'<div class="wpaw-showcase__inner">',
-			'<div class="c-container js-bg-parallax__content wpaw-showcase__inner">',
 			$content
 		);
 

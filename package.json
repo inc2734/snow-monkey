@@ -75,6 +75,7 @@
     "js:page-top": "webpack resources/src/js/page-top.js -o resources/assets/js/page-top.min.js --config webpack.config.js",
     "js:hash-nav": "webpack resources/src/js/hash-nav.js -o resources/assets/js/hash-nav.min.js --config webpack.config.js",
     "js:smooth-scroll": "webpack resources/src/js/smooth-scroll.js -o resources/assets/js/smooth-scroll.min.js --config webpack.config.js",
+    "js:background-parallax-scroll": "webpack resources/src/js/background-parallax-scroll.js -o resources/assets/js/background-parallax-scroll.min.js --config webpack.config.js",
     "js:customize-control": "webpack resources/src/js/customize-control.js -o resources/assets/js/customize-control.min.js",
     "js:customize-preview": "webpack resources/src/js/customize-preview.js -o resources/assets/js/customize-preview.min.js",
     "js:dependency:elementor:preview": "webpack resources/src/js/dependency/elementor/preview.js -o resources/assets/js/dependency/elementor/preview.min.js",

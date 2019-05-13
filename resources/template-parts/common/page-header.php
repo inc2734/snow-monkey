@@ -14,19 +14,19 @@ $display_entry_meta          = Helper::get_var( $_display_entry_meta, false );
 ?>
 
 <div
-	class="c-page-header js-bg-parallax"
+	class="c-page-header"
 	data-has-content="<?php echo esc_attr( $is_output_page_header_title ? 'true' : 'false' ); ?>"
 	data-has-image="<?php echo esc_attr( $page_header_image ? 'true' : 'false' ); ?>"
 	>
 
 	<?php if ( $page_header_image ) : ?>
-		<div class="c-page-header__bgimage js-bg-parallax__bgimage">
+		<div class="c-page-header__bgimage">
 			<?php echo wp_kses_post( $page_header_image ); ?>
 		</div>
 	<?php endif; ?>
 
 	<?php if ( $is_output_page_header_title ) : ?>
-		<div class="c-container js-bg-parallax__content">
+		<div class="c-container">
 			<div class="c-page-header__content">
 				<h1 class="c-page-header__title">
 					<?php echo wp_kses_post( apply_filters( 'snow_monkey_page_header_title', $page_header_title ) ); ?>
