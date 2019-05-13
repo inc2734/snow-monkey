@@ -4,15 +4,22 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Framework\Helper;
+
+$in_same_term   = Helper::get_var( $_in_same_term, false );
+$excluded_terms = Helper::get_var( $_excluded_terms, [] );
+$taxonomy       = Helper::get_var( $_taxonomy, 'category' );
 ?>
+
 <div class="c-prev-next-nav">
 	<?php foreach ( [ 'next', 'prev' ] as $key ) : ?>
 		<div class="c-prev-next-nav__item c-prev-next-nav__item--<?php echo esc_attr( $key ); ?>">
 			<?php
 			if ( 'next' === $key ) {
-				$_post = get_previous_post();
+				$_post = get_previous_post( $in_same_term, $excluded_terms, $taxonomy );
 			} elseif ( 'prev' === $key ) {
-				$_post = get_next_post();
+				$_post = get_next_post( $in_same_term, $excluded_terms, $taxonomy );
 			}
 			?>
 

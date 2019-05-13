@@ -13,4 +13,9 @@ if ( ! $facebook_page_name ) {
 	return;
 }
 
-echo do_shortcode( '[wp_like_me_box facebook_page_name="' . $facebook_page_name . '"]' );
+echo do_shortcode(
+	sprintf(
+		'[wp_like_me_box facebook_page_name="%1$s"]',
+		esc_attr( $facebook_page_name )
+	)
+);

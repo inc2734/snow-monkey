@@ -7,13 +7,35 @@
 
 use Framework\Helper;
 
-$layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
+$name         = Helper::get_var( $_name, null );
+$layout       = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
+$terms        = Helper::get_var( $_terms, [] );
+$display_meta = Helper::get_var( $_display_meta, true );
+
+$term = $terms && is_array( $terms ) && ! is_wp_error( $terms ) ? $terms[0] : null;
+
+$wrapper_classes = [];
+if ( $term ) {
+	$wrapper_classes[] = 'c-entry-summary--' . $term->taxonomy . '-' . $term->term_id;
+}
+if ( $name ) {
+	$wrapper_classes[] = 'c-entry-summary--' . $name;
+}
 ?>
 
 <a href="<?php the_permalink(); ?>">
-	<section class="c-entry-summary">
+	<section class="c-entry-summary <?php echo esc_attr( join( ' ', $wrapper_classes ) ); ?>">
 		<div class="c-entry-summary__figure">
 			<?php the_post_thumbnail( 'xlarge' ); ?>
+
+			<?php
+			if ( $term ) {
+				$vars = [
+					'_terms' => [ $term ],
+				];
+				Helper::get_template_part( 'template-parts/loop/entry-summary/term', 'post', $vars );
+			}
+			?>
 		</div>
 
 		<div class="c-entry-summary__body">
@@ -38,7 +60,11 @@ $layout = Helper::get_var( $widget_layout, get_theme_mod( get_post_type() . '-en
 			}
 			?>
 
-			<?php Helper::get_template_part( 'template-parts/loop/entry-summary/meta' ); ?>
+			<?php
+			if ( $display_meta ) {
+				Helper::get_template_part( 'template-parts/loop/entry-summary/meta' );
+			}
+			?>
 		</div>
 	</section>
 </a>

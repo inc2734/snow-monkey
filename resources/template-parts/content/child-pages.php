@@ -7,9 +7,10 @@
 
 use Framework\Helper;
 
-$pages_query = Helper::get_child_pages_query( get_the_ID() );
+$parent_id = Helper::get_var( $_parent_id, get_the_ID() );
+$query     = Helper::get_child_pages_query( $parent_id );
 
-if ( ! $pages_query->have_posts() ) {
+if ( ! $query->have_posts() ) {
 	return;
 }
 ?>
@@ -25,8 +26,8 @@ if ( ! $pages_query->have_posts() ) {
 		</span>
 	</h2>
 	<ul class="c-entries c-entries--rich-media">
-		<?php while ( $pages_query->have_posts() ) : ?>
-			<?php $pages_query->the_post(); ?>
+		<?php while ( $query->have_posts() ) : ?>
+			<?php $query->the_post(); ?>
 			<li class="c-entries__item">
 				<?php Helper::get_template_part( 'template-parts/loop/entry-summary', 'page' ); ?>
 			</li>

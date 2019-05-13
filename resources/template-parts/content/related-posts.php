@@ -7,11 +7,12 @@
 
 use Framework\Helper;
 
-$code = Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) );
+$code    = Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) );
+$post_id = Helper::get_var( $_post_id, get_the_ID() );
 
-$related_posts_query = Helper::get_related_posts_query( get_the_ID() );
+$query = Helper::get_related_posts_query( $post_id );
 
-if ( ! $code && ! $related_posts_query->have_posts() ) {
+if ( ! $code && ! $query->have_posts() ) {
 	return;
 }
 ?>
@@ -33,8 +34,8 @@ if ( ! $code && ! $related_posts_query->have_posts() ) {
 	<?php else : ?>
 
 		<ul class="c-entries c-entries--<?php echo esc_attr( get_theme_mod( get_post_type() . '-entries-layout' ) ); ?>">
-			<?php while ( $related_posts_query->have_posts() ) : ?>
-				<?php $related_posts_query->the_post(); ?>
+			<?php while ( $query->have_posts() ) : ?>
+				<?php $query->the_post(); ?>
 				<li class="c-entries__item">
 					<?php Helper::get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
 				</li>

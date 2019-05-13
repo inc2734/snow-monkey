@@ -19,11 +19,13 @@ use Framework\Helper;
 		ob_start();
 		Helper::get_template_part( 'template-parts/common/search-form', 'overlay-search-box' );
 		$form = ob_get_clean();
+
 		$form = str_replace(
 			'<button class="c-input-group__btn">' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '</button>',
 			'<button class="c-input-group__btn"><i class="fas fa-search" aria-label="' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '"></i></button>',
 			$form
 		);
+
 		$form = str_replace(
 			'method="get"',
 			'method="get" autocomplete="off"',
