@@ -23,7 +23,7 @@
       text-decoration: none;
 
       @include _hover(lg) {
-        opacity: .8;
+        text-decoration: underline;
       }
     }
   }

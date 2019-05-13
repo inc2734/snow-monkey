@@ -128,9 +128,21 @@
 }
 
 .#{$_prefix}c-entries__item > a {
-  @include _transition(opacity);
+  .#{$_prefix}c-entry-summary__figure > img {
+    @include _transition(filter);
+  }
+
+  .#{$_prefix}c-entry-summary__body {
+    @include _transition(opacity);
+  }
 
   @include _hover(lg) {
-    opacity: .8;
+    .#{$_prefix}c-entry-summary__figure > img {
+      filter: brightness(80%);
+    }
+
+    .#{$_prefix}c-entry-summary__body {
+      opacity: .8;
+    }
   }
 }

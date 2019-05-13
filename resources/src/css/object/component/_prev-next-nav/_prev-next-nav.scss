@@ -49,14 +49,15 @@
       font-weight: bold;
       text-decoration: none;
       @include _padding(.5);
-      @include _transition(opacity);
 
       @include _media-min(md) {
         @include _padding(1);
       }
 
       @include _hover(lg) {
-        opacity: .8;
+        .#{$_prefix}c-prev-next-nav__item-figure {
+          opacity: .5;
+        }
       }
     }
   }
@@ -66,6 +67,7 @@
     @include _position(absolute, 0, 0, 0, 0);
     background-color: _lighter($_color-gray);
     backface-visibility: hidden;
+    @include _transition(opacity);
     opacity: .6;
   }
 

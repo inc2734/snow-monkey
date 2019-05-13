@@ -21,11 +21,24 @@
   &__item {
     color: $_color-text;
     text-decoration: none;
-    @include _transition(opacity);
 
     @include _hover(lg) {
-      opacity: .8;
+      .wpaw-carousel__item-figure {
+        filter: brightness(80%);
+      }
+
+      .wpaw-carousel__item-body {
+        opacity: .8;
+      }
     }
+  }
+
+  &__item-figure {
+    @include _transition(filter);
+  }
+
+  &__item-body {
+    @include _transition(opacity);
   }
 
   &__item-title {

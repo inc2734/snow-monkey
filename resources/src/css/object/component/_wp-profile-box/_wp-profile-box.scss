@@ -68,10 +68,9 @@
     a {
       color: $_color-text;
       text-decoration: none;
-      @include _transition(opacity);
 
       @include _hover(lg) {
-        opacity: .8;
+      text-decoration: underline;
       }
 
       svg {
