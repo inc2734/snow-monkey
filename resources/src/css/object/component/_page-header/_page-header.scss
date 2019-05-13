@@ -30,6 +30,8 @@
   }
 
   &__bgimage {
+    @include cover-img();
+    @include _position(absolute, 0, 0, 0, 0);
   }
 
   > .#{$_prefix}c-container {
