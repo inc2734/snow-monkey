@@ -18,7 +18,7 @@
     width: auto;
   }
 
-  [data-is-slim-widget-area="true"] &
+  [data-is-slim-widget-area="true"] &,
   .#{$_prefix}c-entry__content & {
     @include _media-min(lg) {
       .#{$_prefix}c-entries--rich-media {
