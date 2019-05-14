@@ -18,20 +18,14 @@
     width: auto;
   }
 
-  [data-is-slim-widget-area="true"] &,
-  .#{$_prefix}c-entry__content & {
+  [data-is-slim-widget-area="true"] & {
     @include _media-min(lg) {
       .#{$_prefix}c-entries--rich-media {
-        @include _media-min(lg) {
-          @include _row--margin(1);
-        }
-
         .#{$_prefix}c-entries__item {
           @include _row__col(1, 2);
 
           @include _media-min(lg) {
             @include _row__col(1, 1);
-            @include _row__col--margin(1);
           }
         }
       }

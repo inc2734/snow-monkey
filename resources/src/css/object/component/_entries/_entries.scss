@@ -7,10 +7,6 @@
     @include _row--margin(1);
   }
 
-  @include _media-min(lg) {
-    @include _row--margin(2);
-  }
-
   &[data-has-infeed-ads="true"] {
     .#{$_prefix}c-entries__item {
       @include _media-max(sm) {
@@ -29,7 +25,6 @@
 
     @include _media-min(lg) {
       @include _row__col(1, 3);
-      @include _row__col--margin(2);
     }
 
     > a {
@@ -75,10 +70,8 @@
   [data-has-sidebar="true"] &,
   [data-is-slim-width="true"] & {
     &--rich-media {
-      @include _media-min(lg) {
-        @include _row--margin(1);
-
-        .#{$_prefix}c-entries__item {
+      .#{$_prefix}c-entries__item {
+        @include _media-min(lg) {
           @include _row__col--margin(1);
           @include _row__col--width(50%);
         }
