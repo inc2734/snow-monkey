@@ -35,6 +35,7 @@ add_action(
 						'wp-awesome-widgets',
 						'wp-page-speed-optimization',
 						'wp-oembed-blog-card',
+						'slick-carousel',
 						Helper::get_main_script_handle() . '-fix-adminbar',
 						Helper::get_main_script_handle() . '-header',
 						Helper::get_main_script_handle() . '-drop-nav',

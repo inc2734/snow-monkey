@@ -8,6 +8,38 @@
 use Framework\Helper;
 
 /**
+ * Enqueue slick-carousel
+ *
+ * @return void
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		wp_enqueue_script(
+			'slick-carousel',
+			get_theme_file_uri( '/assets/packages/slick-carousel/slick/slick.min.js' ),
+			[ 'jquery' ],
+			filemtime( get_theme_file_path( '/assets/packages/slick-carousel/slick/slick.min.js' ) ),
+			true
+		);
+
+		wp_enqueue_style(
+			'slick-carousel',
+			get_theme_file_uri( '/assets/packages/slick-carousel/slick/slick.css' ),
+			[],
+			filemtime( get_theme_file_path( '/assets/packages/slick-carousel/slick/slick.css' ) )
+		);
+
+		wp_enqueue_style(
+			'slick-carousel-theme',
+			get_theme_file_uri( '/assets/packages/slick-carousel/slick/slick-theme.css' ),
+			[ 'slick-carousel' ],
+			filemtime( get_theme_file_path( '/assets/packages/slick-carousel/slick/slick-theme.css' ) )
+		);
+	}
+);
+
+/**
  * Enqueue main style
  *
  * @return void
@@ -23,6 +55,7 @@ add_action(
 				'wp-oembed-blog-card',
 				'wp-pure-css-gallery',
 				'wp-awesome-widgets',
+				'slick-carousel',
 			]
 		);
 
@@ -52,6 +85,7 @@ add_action(
 					'jquery',
 					'wp-page-speed-optimization',
 					'wp-awesome-widgets',
+					'slick-carousel',
 				]
 			),
 			filemtime( get_theme_file_path( '/assets/js/app.min.js' ) ),
