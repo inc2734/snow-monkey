@@ -41,9 +41,7 @@ $content = ob_get_clean();
 			<div class="c-container">
 				<div <?php post_class(); ?>>
 					<div class="c-entry__body">
-						<div class="c-entry__content p-entry-content">
-							<?php the_content(); ?>
-						</div>
+						<?php Helper::get_template_part( 'template-parts/content/entry/content/content' ); ?>
 					</div>
 				</div>
 			</div>
@@ -52,9 +50,7 @@ $content = ob_get_clean();
 
 			<div <?php post_class(); ?>>
 				<div class="c-entry__body">
-					<div class="c-entry__content p-entry-content">
-						<?php the_content(); ?>
-					</div>
+					<?php Helper::get_template_part( 'template-parts/content/entry/content/content' ); ?>
 				</div>
 			</div>
 

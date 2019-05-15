@@ -1,11 +1,6 @@
 .#{$_prefix}c-pagination {
   text-align: center;
   font-size: 0;
-  @include _margin(1, 0);
-
-  @include _media-min(lg) {
-    @include _margin(2, 0);
-  }
 
   &__item,
   &__item-link,
@@ -37,6 +32,15 @@
     @include _hover(lg) {
       background-color: _light($_color-gray);
       color: #fff;
+    }
+  }
+
+  .#{$_prefix}p-archive &,
+  .#{$_prefix}p-archive + & {
+    @include _margin-top(1);
+
+    @include _media-min(lg) {
+      @include _margin-top(2);
     }
   }
 }
