@@ -16,16 +16,19 @@ import {
   faChevronCircleRight,
   faChevronUp,
   faEdit,
+  faEnvelope,
   faExclamationCircle,
   faFolder,
   faGlobe,
   faHandPointRight,
+  faKey,
   faLightbulb,
   faSearch,
   faStar,
   faStarHalfAlt,
   faSyncAlt,
   faTimes,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -42,16 +45,19 @@ library.add(
   faChevronCircleRight,
   faChevronUp,
   faEdit,
+  faEnvelope,
   faExclamationCircle,
   faFolder,
   faGlobe,
   faHandPointRight,
+  faKey,
   faLightbulb,
   faSearch,
   faStar,
   faStarHalfAlt,
   faSyncAlt,
   faTimes,
+  faUser,
 );
 
 import {
