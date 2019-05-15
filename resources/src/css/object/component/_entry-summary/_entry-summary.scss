@@ -1,8 +1,12 @@
 .#{$_prefix}c-entry-summary {
   &__figure {
     @include cover-img();
-    @include _margin(0, 0, .25);
+    @include _margin(0, 0, .5);
     background-color: _lighter($_color-gray);
+
+    @include _media-min(lg) {
+      @include _margin(0, 0, .75);
+    }
 
     &::before {
       content: '';
@@ -26,32 +30,31 @@
   }
 
   &__title {
-    @include _margin(0, 0, .2);
+    @include _margin(0, 0, .25);
     @include _font-size($_base-font-size);
     @include _line-height($_base-font-size * 1.5);
 
     @include _media-min(lg) {
-      @include _margin(0, 0, .25);
-      @include _font-size($_base-font-size * 1.5);
-      @include _line-height($_base-font-size * 1.8);
+      @include _margin(0, 0, .5);
+      @include _font-size($_base-font-size * 1.25);
+      @include _line-height($_base-font-size * 1.75);
     }
   }
 
   &__content {
-    @include _margin(0, 0, .2);
-    @include _font-size($_base-font-size-px - 4);
-    @include _line-height($_base-font-size * 1.25);
-    color: _light($_color-text);
-
-    @include _media-min(lg) {
-      @include _margin(0, 0, .5);
-    }
+    @include _font-size-line-height($_base-font-size-px - 4);
+    color: _lighter($_color-text);
   }
 
   &__meta {
+    @include _margin(.25, 0, 0);
     @include _font-size-line-height(10px);
     font-weight: bold;
     text-align: center;
+
+    @include _media-min(lg) {
+      @include _margin(.5, 0, 0);
+    }
   }
 
   .#{$_prefix}c-entries--simple & {
