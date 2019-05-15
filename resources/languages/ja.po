@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-05-01 18:11+0900\n"
-"PO-Revision-Date: 2019-05-01 18:12+0900\n"
+"POT-Creation-Date: 2019-05-15 10:57+0900\n"
+"PO-Revision-Date: 2019-05-15 10:57+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -41,6 +41,28 @@ msgstr "コンテンツの上"
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:22
 msgid "None"
 msgstr "なし"
+
+#: Framework/Helper.php:109
+#: app/customizer/title-tagline/controls/copyright.php:13
+msgid "Monkey Wrench"
+msgstr "モンキーレンチ"
+
+#: Framework/Helper.php:114
+#: app/customizer/title-tagline/controls/copyright.php:18
+msgid "WordPress"
+msgstr "WordPress"
+
+#: Framework/Helper.php:117
+#: app/customizer/title-tagline/controls/copyright.php:21
+#, php-format
+msgid "Snow Monkey theme by %s"
+msgstr "Snow Monkey theme by %s"
+
+#: Framework/Helper.php:118
+#: app/customizer/title-tagline/controls/copyright.php:22
+#, php-format
+msgid "Powered by %s"
+msgstr "Powered by %s"
 
 #: app/customizer/advertisement/controls/google-adsense-auth-code.php:14
 msgid "Google Adsense authentication code"
@@ -365,19 +387,19 @@ msgstr "コンテンツの最大幅"
 msgid "You can set max width of contents area (1024 - 1280)"
 msgstr "コンテンツエリアの最大幅を設定することができます（1024〜1280）"
 
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:14
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:15
 msgid "Overlay widget area max width"
 msgstr "オーバーレイウィジェットエリアの最大幅"
 
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:15
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:16
 msgid "You can set max width of overlay widget area"
 msgstr "オーバーレイウィジェットエリアの最大幅を設定することができます"
 
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:19
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:20
 msgid "Wide width"
 msgstr "ワイド幅"
 
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:20
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:21
 msgid "Slim width"
 msgstr "スリム幅"
 
@@ -414,11 +436,11 @@ msgstr "フッター"
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示"
 
-#: app/customizer/layout/sections/header/controls/header-content.php:16
+#: app/customizer/layout/sections/header/controls/header-content.php:15
 msgid "Header contents"
 msgstr "ヘッダーコンテンツ"
 
-#: app/customizer/layout/sections/header/controls/header-content.php:17
+#: app/customizer/layout/sections/header/controls/header-content.php:16
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
@@ -512,6 +534,10 @@ msgstr "Snow Monkey の JavaScript 読み込みを最適化する"
 #: app/customizer/page-speed-optimization/controls/output-head-style.php:14
 msgid "Output CSS in head"
 msgstr "CSS を head に出力する"
+
+#: app/customizer/page-speed-optimization/controls/use-lightweight-fontawesome.php:14
+msgid "Use lightweight FontAwesome"
+msgstr "軽量な FontAwesome を使用する"
 
 #: app/customizer/page-speed-optimization/section.php:17
 msgid "Page speed optimization"
@@ -871,28 +897,6 @@ msgstr "ホームページのコンテンツエリアに左右余白を追加す
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
 
-#: app/customizer/title-tagline/controls/copyright.php:13
-#: template-parts/footer/copyright.php:10
-msgid "Monkey Wrench"
-msgstr "モンキーレンチ"
-
-#: app/customizer/title-tagline/controls/copyright.php:18
-#: template-parts/footer/copyright.php:15
-msgid "WordPress"
-msgstr "WordPress"
-
-#: app/customizer/title-tagline/controls/copyright.php:21
-#: template-parts/footer/copyright.php:18
-#, php-format
-msgid "Snow Monkey theme by %s"
-msgstr "Snow Monkey theme by %s"
-
-#: app/customizer/title-tagline/controls/copyright.php:22
-#: template-parts/footer/copyright.php:19
-#, php-format
-msgid "Powered by %s"
-msgstr "Powered by %s"
-
 #: app/customizer/title-tagline/controls/copyright.php:30
 msgid "Copyright"
 msgstr "コピーライト"
@@ -1103,42 +1107,38 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#: template-parts/common/overlay-search-box.php:12
+#: template-parts/common/overlay-search-box.php:14
 #: template-parts/widget-area/overlay.php:18
 msgid "Close"
 msgstr "閉じる"
 
-#: template-parts/common/overlay-search-box.php:21
-#: template-parts/common/overlay-search-box.php:22
+#: template-parts/common/overlay-search-box.php:24
+#: template-parts/common/overlay-search-box.php:25
 msgctxt "search-form"
 msgid "Search"
 msgstr "検索"
 
-#: template-parts/common/page-top.php:15
+#: template-parts/common/page-top.php:11
 msgid "Scroll up"
 msgstr "上にスクロール"
 
-#: template-parts/content/child-pages.php:20
+#: template-parts/content/child-pages.php:22
 msgid "Child pages"
 msgstr "このページの子ページ"
 
-#: template-parts/content/page-summary.php:26
-msgid "More"
-msgstr "More"
-
-#: template-parts/content/prev-next-nav.php:31
+#: template-parts/content/prev-next-nav.php:38
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/content/prev-next-nav.php:33
+#: template-parts/content/prev-next-nav.php:40
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/content/related-posts.php:25
+#: template-parts/content/related-posts.php:23
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/content/related-posts.php:27
+#: template-parts/content/related-posts.php:25
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
@@ -1156,23 +1156,23 @@ msgstr "%1$s said on %2$s at %3$s"
 msgid "Edit this comment"
 msgstr "コメントを編集"
 
-#: template-parts/discussion/comments.php:17
+#: template-parts/discussion/comments.php:16
 msgid "Comments on this post"
 msgstr "この投稿へのコメント"
 
-#: template-parts/discussion/comments.php:50
+#: template-parts/discussion/comments.php:55
 msgid "No comments."
 msgstr "コメントはありません。"
 
-#: template-parts/discussion/pings.php:17
+#: template-parts/discussion/pings.php:16
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
 
-#: template-parts/discussion/pings.php:37
+#: template-parts/discussion/pings.php:39
 msgid "No trackbacks."
 msgstr "トラックバックはありません。"
 
-#: template-parts/discussion/pings.php:44
+#: template-parts/discussion/pings.php:48
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
@@ -1180,19 +1180,19 @@ msgstr "トラックバック URL"
 msgid "MENU"
 msgstr "MENU"
 
-#: templates/view/404.php:14
+#: templates/view/404.php:16
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: templates/view/404.php:15
+#: templates/view/404.php:17
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: templates/view/404.php:16
+#: templates/view/404.php:18
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
-#: templates/view/no-match.php:12
+#: templates/view/no-match.php:14
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -1243,6 +1243,9 @@ msgstr "フル幅"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "More"
+#~ msgstr "More"
 
 #~ msgid "Job Board"
 #~ msgstr "ジョブボード"

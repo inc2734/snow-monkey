@@ -169,13 +169,23 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 	add_action(
 		$action_hook,
 		function() {
-			wp_enqueue_script(
-				'fontawesome5',
-				get_theme_file_uri( '/assets/packages/fontawesome-free/js/all.min.js' ),
-				[],
-				filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/js/all.min.js' ) ),
-				true
-			);
+			if ( ! get_theme_mod( 'use-lightweight-fontawesome' ) ) {
+				wp_enqueue_script(
+					'fontawesome5',
+					get_theme_file_uri( '/assets/packages/fontawesome-free/js/all.min.js' ),
+					[],
+					filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/js/all.min.js' ) ),
+					true
+				);
+			} else {
+				wp_enqueue_script(
+					Helper::get_main_script_handle() . '-fontawesome',
+					get_theme_file_uri( '/assets/js/fontawesome.min.js' ),
+					[],
+					filemtime( get_theme_file_path( '/assets/js/fontawesome.min.js' ) ),
+					true
+				);
+			}
 		}
 	);
 }

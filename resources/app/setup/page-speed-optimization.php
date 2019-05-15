@@ -64,6 +64,7 @@ add_action(
 						'jquery.easing',
 						'fontawesome5',
 						'wp-share-buttons',
+						Helper::get_main_script_handle() . '-fontawesome',
 					]
 				);
 			}
