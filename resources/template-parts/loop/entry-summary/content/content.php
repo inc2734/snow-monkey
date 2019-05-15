@@ -7,11 +7,9 @@
 
 use Framework\Helper;
 
-$content = Helper::get_var( $_content, [] );
-
-if ( ! $content ) {
-	return;
-}
+ob_start();
+the_excerpt();
+$content = wp_strip_all_tags( ob_get_clean() );
 ?>
 
 <div class="c-entry-summary__content">

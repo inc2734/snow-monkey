@@ -58,24 +58,27 @@
   }
 
   .#{$_prefix}c-entries--simple & {
-    overflow: hidden;
+    @include _clearfix();
 
     &__figure {
-      float: left;
-      @include _margin($_between-lines, .5, 0, 0);
-      width: 20%;
-
       @include _media-min(md) {
+        float: left;
+        @include _margin(0, .5, 0, 0);
+        width: 25%;
+      }
+
+      @include _media-min(lg) {
         @include _margin-right(1);
+        width: 20%;
       }
     }
 
-    &__term {
-      display: none;
+    &__body {
+      overflow: hidden;
+    }
 
-      @include _media-min(md) {
-        display: block;
-      }
+    &__content {
+      color: $_color-text;
     }
 
     &__meta {

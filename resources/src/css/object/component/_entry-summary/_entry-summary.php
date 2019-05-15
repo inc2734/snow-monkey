@@ -31,7 +31,7 @@ foreach ( $terms as $_term ) {
 	}
 
 	Style::register(
-		'.c-entry-summary--' . $_term->taxonomy . '-' . $_term->term_id . ' .c-entry-summary__term',
+		'.c-entry-summary__term--' . $_term->taxonomy . '-' . $_term->term_id,
 		'background-color: ' . $accent_color
 	);
 }

@@ -30,15 +30,12 @@ add_filter(
 add_filter(
 	'excerpt_length',
 	function( $length ) {
-		if ( 'rich-media' !== get_theme_mod( get_post_type() . '-entries-layout' ) ) {
+		$layout = get_theme_mod( get_post_type() . '-entries-layout' );
+		if ( 'rich-media' !== $layout && false !== $layout ) {
 			return $length;
 		}
 
-		if ( class_exists( 'multibyte_patch' ) ) {
-			return 50;
-		}
-
-		return 25;
+		return class_exists( 'multibyte_patch' ) ? 50 : 25;
 	},
 	99
 );
