@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "15.0.0",
+            "version": "15.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "6ab80d445556600ead20eefb49c8edbb5e87cd89"
+                "reference": "3b748a06bd2cb5f9a6aeee22756517a341b3336a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6ab80d445556600ead20eefb49c8edbb5e87cd89",
-                "reference": "6ab80d445556600ead20eefb49c8edbb5e87cd89",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/3b748a06bd2cb5f9a6aeee22756517a341b3336a",
+                "reference": "3b748a06bd2cb5f9a6aeee22756517a341b3336a",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-16T04:30:14+00:00"
+            "time": "2019-05-16T15:59:32+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -809,16 +809,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "8.0.0",
+            "version": "8.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "4e389296b58c3b0ac6b5359ee2aff7289f13fd67"
+                "reference": "f93146dfd17fc729a73df4cb115fa8ab35a4389c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/4e389296b58c3b0ac6b5359ee2aff7289f13fd67",
-                "reference": "4e389296b58c3b0ac6b5359ee2aff7289f13fd67",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/f93146dfd17fc729a73df4cb115fa8ab35a4389c",
+                "reference": "f93146dfd17fc729a73df4cb115fa8ab35a4389c",
                 "shasum": ""
             },
             "require": {
@@ -849,7 +849,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-05-16T04:22:13+00:00"
+            "time": "2019-05-16T15:48:11+00:00"
         }
     ],
     "packages-dev": [
