@@ -341,6 +341,51 @@ $img-path: '../../../img';
 }
 
 // Product search widget
+.woocommerce .product_list_widget {
+  @include widget-list-base();
+
+  > li {
+    > a {
+      color: $_color-text;
+      text-decoration: none;
+
+      @include _hover(lg) {
+        text-decoration: underline;
+      }
+
+      > img {
+        width: 64px;
+      }
+    }
+  }
+
+  .star-rating {
+    @include _margin-top(.25);
+  }
+
+  .woocommerce-Price-amount,
+  .reviewer {
+    @include _margin-top(.25);
+    display: block;
+    color: _lighter($_color-text);
+    @include _font-size-line-height($_base-font-size-px - 4);
+  }
+}
+
+// Cart widget
+.woocommerce .widget_shopping_cart {
+  .woocommerce-mini-cart__total {
+    @include _margin-top(.25);
+    border-top: 1px solid _lighter($_color-gray);
+    @include _padding-top(.5);
+  }
+
+  .woocommerce-mini-cart__buttons {
+    @include _margin-top(.5);
+  }
+}
+
+// Product list widget
 .widget_product_search {
   .#{$_prefix}c-input-group__btn {
     position: relative;
