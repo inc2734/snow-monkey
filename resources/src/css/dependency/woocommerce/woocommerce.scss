@@ -136,10 +136,10 @@ $img-path: '../../../img';
 
 // Gallery in single
 .woocommerce .product .woocommerce-product-gallery .flex-control-thumbs.flex-control-nav {
-  margin: 0 -1em;
+  margin: 0 -.5em;
 
   li {
-    padding: 2em 1em 0;
+    padding: 1em .5em 0;
 
     img {
       @include _transition(opacity);
