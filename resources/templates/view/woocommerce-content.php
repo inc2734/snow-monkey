@@ -7,6 +7,7 @@
 
 use Framework\Helper;
 ?>
+
 <article <?php post_class(); ?>>
 	<?php Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() ); ?>
 

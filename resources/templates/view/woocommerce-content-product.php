@@ -4,11 +4,12 @@
  * @author inc2734
  * @license GPL-2.0+
  */
+
+use Framework\Helper;
 ?>
+
 <article <?php post_class(); ?>>
 	<div class="c-entry__body">
-		<div class="c-entry__content p-entry-content">
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
-		</div>
+		<?php Helper::get_template_part( 'template-parts/content/entry/content/woocommerce' ); ?>
 	</div>
 </article>
