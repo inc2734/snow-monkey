@@ -42,8 +42,8 @@
   }
 
   &__content {
-    @include _font-size-line-height($_base-font-size-px - 4);
     color: _lighter($_color-text);
+    @include _font-size-line-height($_base-font-size-px - 4);
   }
 
   &__meta {
@@ -79,6 +79,7 @@
 
     &__content {
       color: $_color-text;
+      @include _font-size-line-height($_base-font-size-px - 2);
     }
 
     &__meta {
