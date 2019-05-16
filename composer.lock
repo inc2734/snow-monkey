@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e73aac5152ee8051c0a3d8319ee04dc8",
+    "content-hash": "c8235e3ed862a41fa0bd1e85cb831f6a",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "14.0.0",
+            "version": "15.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "4b27ae07f9f00510272c72de67706141d4528cb2"
+                "reference": "6ab80d445556600ead20eefb49c8edbb5e87cd89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4b27ae07f9f00510272c72de67706141d4528cb2",
-                "reference": "4b27ae07f9f00510272c72de67706141d4528cb2",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6ab80d445556600ead20eefb49c8edbb5e87cd89",
+                "reference": "6ab80d445556600ead20eefb49c8edbb5e87cd89",
                 "shasum": ""
             },
             "require": {
@@ -36,7 +36,7 @@
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^2.0",
                 "inc2734/wp-share-buttons": "^4.0",
-                "inc2734/wp-view-controller": "^7.5",
+                "inc2734/wp-view-controller": "^8.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-13T02:37:36+00:00"
+            "time": "2019-05-16T04:30:14+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -809,16 +809,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "7.5.0",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "c5d4ddc75d2b1bfb62d9c034a89edaeca9f5422d"
+                "reference": "4e389296b58c3b0ac6b5359ee2aff7289f13fd67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/c5d4ddc75d2b1bfb62d9c034a89edaeca9f5422d",
-                "reference": "c5d4ddc75d2b1bfb62d9c034a89edaeca9f5422d",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/4e389296b58c3b0ac6b5359ee2aff7289f13fd67",
+                "reference": "4e389296b58c3b0ac6b5359ee2aff7289f13fd67",
                 "shasum": ""
             },
             "require": {
@@ -849,7 +849,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-05-07T01:18:18+00:00"
+            "time": "2019-05-16T04:22:13+00:00"
         }
     ],
     "packages-dev": [
@@ -2910,7 +2910,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
