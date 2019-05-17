@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7728b6b2b4cc1f81794154baff4a70d5",
+    "content-hash": "cde973c795ec140a735ed11eec9bba26",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "15.1.0",
+            "version": "15.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "4f41166d62ac508588e41985aa70d0b62a931242"
+                "reference": "60632ca1c1c739a1841788ad62ec39181a275b2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/4f41166d62ac508588e41985aa70d0b62a931242",
-                "reference": "4f41166d62ac508588e41985aa70d0b62a931242",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/60632ca1c1c739a1841788ad62ec39181a275b2c",
+                "reference": "60632ca1c1c739a1841788ad62ec39181a275b2c",
                 "shasum": ""
             },
             "require": {
@@ -35,7 +35,7 @@
                 "inc2734/wp-profile-box": "^1.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^2.0",
-                "inc2734/wp-share-buttons": "^4.0",
+                "inc2734/wp-share-buttons": "^4.1",
                 "inc2734/wp-view-controller": "^8.0",
                 "php": ">=5.6"
             },
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-17T01:16:44+00:00"
+            "time": "2019-05-17T05:55:46+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -759,16 +759,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "4.0.0",
+            "version": "4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "cd032893ca083a343f5871e855cce68f4ede3a17"
+                "reference": "d8c8162a91de4756160094158d4f8abccd8d023e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/cd032893ca083a343f5871e855cce68f4ede3a17",
-                "reference": "cd032893ca083a343f5871e855cce68f4ede3a17",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/d8c8162a91de4756160094158d4f8abccd8d023e",
+                "reference": "d8c8162a91de4756160094158d4f8abccd8d023e",
                 "shasum": ""
             },
             "require": {
@@ -776,15 +776,11 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -805,7 +801,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2019-01-22T01:29:09+00:00"
+            "time": "2019-05-17T05:40:53+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",

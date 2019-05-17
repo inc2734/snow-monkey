@@ -9,7 +9,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'text',
-	'share-buttons-facebook-settings',
+	'facebook-app-token',
 	[
 		'label'       => __( 'Facebook settings', 'snow-monkey' ),
 		'description' => __( 'If you want to count of Facebook share count then needs to register Facebook App.', 'snow-monkey' ) . sprintf(
@@ -27,5 +27,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'seo-sns' );
 $section = Framework::get_section( 'share-buttons' );
-$control = Framework::get_control( 'share-buttons-facebook-settings' );
+$control = Framework::get_control( 'facebook-app-token' );
 $control->join( $section )->join( $panel );

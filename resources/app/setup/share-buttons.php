@@ -18,7 +18,7 @@ new Bootstrap();
 add_filter(
 	'inc2734_wp_share_buttons_facebook_app_token',
 	function( $app_token ) {
-		return get_theme_mod( 'share-buttons-facebook-settings' );
+		return get_theme_mod( 'facebook-app-token' );
 	}
 );
 
