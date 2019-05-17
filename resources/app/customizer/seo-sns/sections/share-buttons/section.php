@@ -14,11 +14,7 @@ if ( ! is_customize_preview() ) {
 Framework::section(
 	'share-buttons',
 	[
-		'title'       => __( 'Share buttons', 'snow-monkey' ),
-		'priority'    => 160,
-		'description' => sprintf(
-			__( 'If you want to count of tweet then needs to register to %1$s.', 'snow-monkey' ),
-			'<a href="https://opensharecount.com/" target="_blank">OpenShareCount</a>'
-		),
+		'title'    => __( 'Share buttons', 'snow-monkey' ),
+		'priority' => 160,
 	]
 );

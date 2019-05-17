@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-05-15 10:57+0900\n"
-"PO-Revision-Date: 2019-05-15 10:57+0900\n"
+"POT-Creation-Date: 2019-05-17 15:01+0900\n"
+"PO-Revision-Date: 2019-05-17 15:01+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -739,6 +739,32 @@ msgstr "表示する場所"
 msgid "Both"
 msgstr "両方"
 
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-settings.php:14
+msgid "Facebook settings"
+msgstr "Facebook 設定"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-settings.php:15
+msgid ""
+"If you want to count of Facebook share count then needs to register Facebook "
+"App."
+msgstr ""
+"あなたが Facebook のシェアカウントをカウントする場合は、Facebook App を登録す"
+"る必要があります。"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-settings.php:16
+#, php-format
+msgid "%1$sAccessToken tools%2$s"
+msgstr "%1$sアクセストークンツール%2$s"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/twitter-settings.php:14
+msgid "Twitter settings"
+msgstr "Twitter 設定"
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/twitter-settings.php:17
+#, php-format
+msgid "If you want to count of tweet then needs to register to %1$s."
+msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
+
 #: app/customizer/seo-sns/sections/share-buttons/controls/type.php:15
 msgid "Type"
 msgstr "種類"
@@ -766,11 +792,6 @@ msgstr "公式"
 #: app/customizer/seo-sns/sections/share-buttons/section.php:17
 msgid "Share buttons"
 msgstr "シェアボタン"
-
-#: app/customizer/seo-sns/sections/share-buttons/section.php:20
-#, php-format
-msgid "If you want to count of tweet then needs to register to %1$s."
-msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
 #: app/customizer/seo-sns/sections/structured-data/controls/json-ld.php:14
 msgid "Output structred data (JSON+LD)"
@@ -1107,6 +1128,14 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
+#: template-parts/archive/entry/content/content-no-match.php:13
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
+"てみてください。"
+
 #: template-parts/common/overlay-search-box.php:14
 #: template-parts/widget-area/overlay.php:18
 msgid "Close"
@@ -1125,6 +1154,18 @@ msgstr "上にスクロール"
 #: template-parts/content/child-pages.php:22
 msgid "Child pages"
 msgstr "このページの子ページ"
+
+#: template-parts/content/entry/content/content-404.php:15
+msgid "Woops! Page not found."
+msgstr "ページが見つかりませんでした。"
+
+#: template-parts/content/entry/content/content-404.php:16
+msgid "The page you are looking for may be moved or deleted."
+msgstr "お探しのページは移動したか削除されています。"
+
+#: template-parts/content/entry/content/content-404.php:17
+msgid "Please search this search box."
+msgstr "この検索ボックスから検索してください。"
 
 #: template-parts/content/prev-next-nav.php:38
 msgid "Old post"
@@ -1179,26 +1220,6 @@ msgstr "トラックバック URL"
 #: template-parts/header/hamburger-btn.php:15
 msgid "MENU"
 msgstr "MENU"
-
-#: templates/view/404.php:16
-msgid "Woops! Page not found."
-msgstr "ページが見つかりませんでした。"
-
-#: templates/view/404.php:17
-msgid "The page you are looking for may be moved or deleted."
-msgstr "お探しのページは移動したか削除されています。"
-
-#: templates/view/404.php:18
-msgid "Please search this search box."
-msgstr "この検索ボックスから検索してください。"
-
-#: templates/view/no-match.php:14
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
-"てみてください。"
 
 #: woocommerce/loop/orderby.php:25
 msgid "Shop order"
