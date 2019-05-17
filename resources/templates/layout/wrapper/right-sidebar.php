@@ -21,7 +21,7 @@ use Framework\Helper;
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
 	<?php
-	if ( has_nav_menu( 'drawer-nav' ) && has_nav_menu( 'drawer-sub-nav' ) ) {
+	if ( has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' ) ) {
 		Helper::get_template_part( 'template-parts/nav/drawer' );
 	}
 	?>
