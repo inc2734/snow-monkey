@@ -38,6 +38,7 @@ $query_args = [
 	'post_type'           => $post_types,
 	'posts_per_page'      => $instance['posts-per-page'] - $sticky_count,
 	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
+	'suppress_filters'    => true,
 	'tax_query'      => [
 		[
 			'taxonomy' => $taxonomy_id,
@@ -52,8 +53,7 @@ $taxonomy_posts_query = new WP_Query(
 	array_merge(
 		$query_args,
 		[
-			'no_found_rows'    => true,
-			'suppress_filters' => true,
+			'no_found_rows' => true,
 		]
 	)
 );

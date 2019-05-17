@@ -24,6 +24,7 @@ $query_args = [
 	'post_type'           => ! empty( $instance['post-type'] ) ? $instance['post-type'] : 'post',
 	'posts_per_page'      => $instance['posts-per-page'] - $sticky_count,
 	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
+	'suppress_filters'    => true,
 ];
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_number, $query_args );
@@ -32,8 +33,7 @@ $recent_posts_query = new WP_Query(
 	array_merge(
 		$query_args,
 		[
-			'no_found_rows'    => true,
-			'suppress_filters' => true,
+			'no_found_rows' => true,
 		]
 	)
 );
