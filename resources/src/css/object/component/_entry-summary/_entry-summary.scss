@@ -4,10 +4,6 @@
     @include _margin(0, 0, .5);
     background-color: _lighter($_color-gray);
 
-    @include _media-min(lg) {
-      @include _margin(0, 0, .75);
-    }
-
     &::before {
       content: '';
       display: block;
@@ -29,13 +25,15 @@
     @include _padding(.25, .5);
   }
 
-  &__title {
+  &__header {
     @include _margin(0, 0, .25);
+  }
+
+  &__title {
     @include _font-size($_base-font-size);
     @include _line-height($_base-font-size * 1.5);
 
     @include _media-min(lg) {
-      @include _margin(0, 0, .5);
       @include _font-size($_base-font-size * 1.25);
       @include _line-height($_base-font-size * 1.75);
     }
@@ -73,6 +71,12 @@
       }
     }
 
+    &__header {
+      @include _media-min(lg) {
+        @include _margin(0, 0, .5);
+      }
+    }
+
     &__body {
       overflow: hidden;
     }
@@ -94,8 +98,11 @@
       display: none;
     }
 
-    &__title {
+    &__header {
       margin: 0;
+    }
+
+    &__title {
       @include _font-size-line-height($_base-font-size-px);
       font-weight: normal;
     }
