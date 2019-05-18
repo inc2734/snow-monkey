@@ -1,11 +1,3 @@
-<svg id="d57fb361-40b8-447d-ba72-3cf0d91d66ea" data-name="レイヤー 1" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70">
-  <defs>
-    <style>
-      .\32 979c612-6373-4c93-8da2-69daa3964fa9 {
-        fill: #eee;
-      }
-    </style>
-  </defs>
-  <title>blockquote-bottom</title>
-  <polygon class="2979c612-6373-4c93-8da2-69daa3964fa9" points="0 70 68 70 70 70 70 68 70 0 68 0 68 68 0 68 0 70"/>
+<svg role="img" focusable="false" width="70" height="70" viewBox="0 0 70 70" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<polygon fill="#eee" points="0 70 68 70 70 70 70 68 70 0 68 0 68 68 0 68 0 70"/>
 </svg>
