@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cde973c795ec140a735ed11eec9bba26",
+    "content-hash": "e3e44090b54345153ed4ce71a966af0c",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "15.2.0",
+            "version": "15.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "60632ca1c1c739a1841788ad62ec39181a275b2c"
+                "reference": "f6e718ab21a33972b1218b741f86eaaf08c722b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/60632ca1c1c739a1841788ad62ec39181a275b2c",
-                "reference": "60632ca1c1c739a1841788ad62ec39181a275b2c",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/f6e718ab21a33972b1218b741f86eaaf08c722b6",
+                "reference": "f6e718ab21a33972b1218b741f86eaaf08c722b6",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-adsense": "^0.1",
                 "inc2734/wp-awesome-components": "^1.0",
                 "inc2734/wp-awesome-widgets": "^7.1",
-                "inc2734/wp-basis": "^5.0",
-                "inc2734/wp-breadcrumbs": "^2.0",
-                "inc2734/wp-contents-outline": "^3.1",
+                "inc2734/wp-basis": "^5.1",
+                "inc2734/wp-breadcrumbs": "^2.1",
+                "inc2734/wp-contents-outline": "^3.2",
                 "inc2734/wp-customizer-framework": "^5.0",
                 "inc2734/wp-github-theme-updater": "^2.0",
                 "inc2734/wp-like-me-box": "^1.0",
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-17T05:55:46+00:00"
+            "time": "2019-05-18T23:55:52+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -206,16 +206,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "5.0.6",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "0c3f32a796210aafcee5295b4837cfaaf5201b22"
+                "reference": "0f448e8248bbdb80dba0bbabc19ed8175cdcffb0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/0c3f32a796210aafcee5295b4837cfaaf5201b22",
-                "reference": "0c3f32a796210aafcee5295b4837cfaaf5201b22",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/0f448e8248bbdb80dba0bbabc19ed8175cdcffb0",
+                "reference": "0f448e8248bbdb80dba0bbabc19ed8175cdcffb0",
                 "shasum": ""
             },
             "require": {
@@ -246,20 +246,20 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2019-05-10T01:13:55+00:00"
+            "time": "2019-05-18T23:38:04+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "fb904467f5ab3ec18c17c7420d1cbd98248367d8"
+                "reference": "ec15f941981a18c414587df93a875a07b1ec4e06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/fb904467f5ab3ec18c17c7420d1cbd98248367d8",
-                "reference": "fb904467f5ab3ec18c17c7420d1cbd98248367d8",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/ec15f941981a18c414587df93a875a07b1ec4e06",
+                "reference": "ec15f941981a18c414587df93a875a07b1ec4e06",
                 "shasum": ""
             },
             "require": {
@@ -290,20 +290,20 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2019-04-10T02:29:54+00:00"
+            "time": "2019-05-18T23:40:55+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "3.1.0",
+            "version": "3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "fe6c6dc015936390826f3929ce393abdec9dc2fd"
+                "reference": "5cde2a32f766f852152d04c0944429a77c9cbc36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/fe6c6dc015936390826f3929ce393abdec9dc2fd",
-                "reference": "fe6c6dc015936390826f3929ce393abdec9dc2fd",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/5cde2a32f766f852152d04c0944429a77c9cbc36",
+                "reference": "5cde2a32f766f852152d04c0944429a77c9cbc36",
                 "shasum": ""
             },
             "require": {
@@ -334,7 +334,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2019-03-19T03:31:05+00:00"
+            "time": "2019-05-18T23:43:03+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",

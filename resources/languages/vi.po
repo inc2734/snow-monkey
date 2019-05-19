@@ -1,0 +1,1254 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Snow Monkey\n"
+"POT-Creation-Date: 2019-05-19 08:30+0900\n"
+"PO-Revision-Date: 2019-05-19 08:31+0900\n"
+"Last-Translator: inc2734 <inc@2inc.org>\n"
+"Language-Team: inc2734 <inc@2inc.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: Framework/Helper.php:24
+msgid "Page header"
+msgstr ""
+
+#: Framework/Helper.php:25
+msgid "Title on page header"
+msgstr ""
+
+#: Framework/Helper.php:26
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:18
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:19
+msgid "Top of contents"
+msgstr ""
+
+#: Framework/Helper.php:27
+#: app/customizer/design-skin/controls/design-skin.php:20
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:22
+msgid "None"
+msgstr ""
+
+#: Framework/Helper.php:109
+#: app/customizer/title-tagline/controls/copyright.php:13
+msgid "Monkey Wrench"
+msgstr ""
+
+#: Framework/Helper.php:114
+#: app/customizer/title-tagline/controls/copyright.php:18
+msgid "WordPress"
+msgstr ""
+
+#: Framework/Helper.php:117
+#: app/customizer/title-tagline/controls/copyright.php:21
+#, php-format
+msgid "Snow Monkey theme by %s"
+msgstr ""
+
+#: Framework/Helper.php:118
+#: app/customizer/title-tagline/controls/copyright.php:22
+#, php-format
+msgid "Powered by %s"
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-adsense-auth-code.php:14
+msgid "Google Adsense authentication code"
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-adsense-auth-code.php:15
+msgid "Paste only the contents of script tag."
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-adsense.php:14
+msgid "Google Adsense"
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-adsense.php:15
+msgid ""
+"When pasting the code of the responsive ad unit or auto ads code, the "
+"advertisement is displayed in the prescribed part of the theme. If you want "
+"to display at arbitrary position, please use widgets etc."
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-adsense.php:15
+msgid ""
+"Paste only the ins tag for ad units, only the contents of script tag for "
+"auto ads."
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:14
+msgid "Google Infeed Ads"
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:15
+msgid ""
+"When pasting the code of the infeed ads, the advertisement is displayed in "
+"posts list."
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-infeed-ads.php:15
+#: app/customizer/advertisement/controls/google-matched-content.php:15
+msgid "Paste only the ins tag."
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-matched-content.php:14
+msgid "Google Matched Content"
+msgstr ""
+
+#: app/customizer/advertisement/controls/google-matched-content.php:15
+msgid ""
+"When pasting the code of the matched content, related posts are replaced "
+"with advertisements."
+msgstr ""
+
+#: app/customizer/advertisement/section.php:17
+msgid "Advertisement"
+msgstr ""
+
+#: app/customizer/design-skin/controls/design-skin.php:14
+#: app/customizer/design-skin/section.php:17
+msgid "Design skin"
+msgstr ""
+
+#: app/customizer/design-skin/controls/design-skin.php:15
+msgid "If set this, please save and reload."
+msgstr ""
+
+#: app/customizer/design-skin/section.php:20
+#, php-format
+msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
+msgstr ""
+
+#: app/customizer/design/panel.php:17
+msgid "Design"
+msgstr ""
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:14
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
+msgid "Entries layout"
+msgstr ""
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:18
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
+#: app/widget/snow-monkey-recent-posts/_form.php:68
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:98
+msgid "Rich media"
+msgstr ""
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:19
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: app/customizer/layout/sections/header/controls/header-layout.php:20
+#: app/widget/snow-monkey-recent-posts/_form.php:69
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:99
+msgid "Simple"
+msgstr ""
+
+#: app/customizer/design/sections/archive/controls/entries-layout.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
+#: app/widget/snow-monkey-recent-posts/_form.php:70
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:100
+msgid "Text"
+msgstr ""
+
+#: app/customizer/design/sections/archive/section.php:17
+msgid "Archive pages settings"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/accent-color.php:14
+#: app/customizer/design/sections/category/controls/accent-color.php:17
+msgid "Accent color"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/base-font-size.php:14
+msgid "Base font size(px)"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:14
+msgid "Base font"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:18
+msgid "Sans serif"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:19
+msgid "Serif"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:20
+msgid "Noto Sans JP"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:21
+msgid "Noto Serif JP"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/custom-logo-scale.php:14
+msgid "Custom logo scale (%) on smartphone"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/default-page-header-image.php:14
+msgid "Default page header image"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/default-thumbnail.php:14
+msgid "Default thumbnail"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php:15
+msgid "Display the search box in drawer navigation"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/display-page-top.php:14
+msgid "Display the page top button"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:15
+msgid "Display site description under the site logo"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/protected-more.php:14
+msgid ""
+"If the post using more tag and password protect at the same time, display "
+"contents before more tag"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/controls/pure-css-gallery.php:14
+msgid "Use Pure CSS Gallery"
+msgstr ""
+
+#: app/customizer/design/sections/base-design/section.php:17
+msgid "Base design settings"
+msgstr ""
+
+#: app/customizer/design/sections/category/controls/header-image.php:17
+msgid "Header image"
+msgstr ""
+
+#: app/customizer/design/sections/category/section.php:21
+#, php-format
+msgid "[ %1$s ] category pages settings"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post-archive/section.php:23
+#, php-format
+msgid "%1$s archive page settings"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
+#: app/customizer/design/sections/page/controls/eyecatch.php:15
+#: app/customizer/design/sections/post/controls/eyecatch.php:15
+msgid "Eyecatch image"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
+#, php-format
+msgid "Select how to display the eyecatch image in %1$s page."
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/view.php:19
+msgid "View template"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/view.php:20
+msgid "Select the view template to use."
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/view.php:24
+msgid "default"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/view.php:25
+msgid "The view template of the post"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/controls/view.php:26
+msgid "The view template of the page"
+msgstr ""
+
+#: app/customizer/design/sections/custom-post/section.php:23
+#, php-format
+msgid "%1$s pages settings"
+msgstr ""
+
+#: app/customizer/design/sections/page/controls/eyecatch.php:16
+msgid "Select how to display the eyecatch image in page."
+msgstr ""
+
+#: app/customizer/design/sections/page/section.php:17
+msgid "Pages settings"
+msgstr ""
+
+#: app/customizer/design/sections/post/controls/eyecatch.php:16
+msgid "Select how to display the eyecatch image in post."
+msgstr ""
+
+#: app/customizer/design/sections/post/controls/profile-box.php:16
+msgid "Display profile box in posts"
+msgstr ""
+
+#: app/customizer/design/sections/post/controls/related-posts.php:16
+msgid "Display related posts in posts"
+msgstr ""
+
+#: app/customizer/design/sections/post/section.php:17
+msgid "Posts settings"
+msgstr ""
+
+#: app/customizer/infobar/controls/content.php:15
+msgid "Infobar content"
+msgstr ""
+
+#: app/customizer/infobar/controls/url.php:14
+msgid "Infobar link URL"
+msgstr ""
+
+#: app/customizer/infobar/section.php:17
+msgid "Infobar"
+msgstr ""
+
+#: app/customizer/layout/panel.php:17
+#: app/widget/snow-monkey-recent-posts/_form.php:60
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:90
+msgid "Layout"
+msgstr ""
+
+#: app/customizer/layout/sections/archive-page/controls/layout.php:15
+#: app/customizer/layout/sections/archive-page/section.php:17
+#: app/customizer/layout/sections/singular-post/controls/layout.php:15
+#: app/customizer/layout/sections/singular-post/section.php:17
+#: app/customizer/layout/sections/woocommerce-archive-page/controls/layout.php:15
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:17
+#: app/customizer/layout/sections/woocommerce-single/controls/layout.php:15
+#: app/customizer/layout/sections/woocommerce-single/section.php:17
+msgid "Page layout"
+msgstr ""
+
+#: app/customizer/layout/sections/archive-page/section.php:18
+#: app/customizer/layout/sections/singular-post/section.php:18
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
+#: app/customizer/layout/sections/woocommerce-single/section.php:18
+msgid ""
+"By the type of page displayed on the preview screen on the right side of the "
+"screen, the display setting items switched."
+msgstr ""
+
+#: app/customizer/layout/sections/archive-page/section.php:18
+msgid "Currently archive page settings is displayed."
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:14
+msgid "Breadcrumbs display position"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:19
+msgid "Top of contents ( Fit to content width )"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:20
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
+#: app/setup/widget-area.php:108
+msgid "Bottom of contents"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:21
+msgid "Bottom of contents ( Fit to content width )"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/container-max-width.php:14
+msgid "Contents max width"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/container-max-width.php:15
+msgid "You can set max width of contents area (1024 - 1280)"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:15
+msgid "Overlay widget area max width"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:16
+msgid "You can set max width of overlay widget area"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:20
+msgid "Wide width"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:21
+msgid "Slim width"
+msgstr ""
+
+#: app/customizer/layout/sections/base-layout/section.php:17
+msgid "Base settings"
+msgstr ""
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:16
+msgid "Number of columns in the footer widget area"
+msgstr ""
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:20
+msgid "1 column"
+msgstr ""
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:21
+msgid "2 columns"
+msgstr ""
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:22
+msgid "3 columns"
+msgstr ""
+
+#: app/customizer/layout/sections/footer/controls/footer-layout.php:23
+msgid "4 columns"
+msgstr ""
+
+#: app/customizer/layout/sections/footer/section.php:17
+#: app/setup/widget-area.php:308
+msgid "Footer"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/display-header-content-on-mobile.php:14
+msgid "Display header content on mobile too."
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-content.php:15
+msgid "Header contents"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-content.php:16
+msgid "Displayed at only PC size."
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:16
+msgid "Header layout"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:21
+msgid "One row"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:22
+msgid "Two rows"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-layout.php:23
+msgid "Center logo"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-position-only-mobile.php:14
+msgid "Use header position setting for mobile only"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-position.php:14
+msgid "Header position"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-position.php:18
+msgid "Sticky"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-position.php:19
+#: app/setup/widget-area.php:330
+msgid "Overlay"
+msgstr ""
+
+#: app/customizer/layout/sections/header/controls/header-position.php:20
+msgid "Normal"
+msgstr ""
+
+#: app/customizer/layout/sections/header/section.php:17
+msgid "Header"
+msgstr ""
+
+#: app/customizer/layout/sections/singular-post/section.php:18
+msgid "Currently posts and pages settings is displayed."
+msgstr ""
+
+#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
+msgid "Currently WooCommerce archive page settings is displayed."
+msgstr ""
+
+#: app/customizer/layout/sections/woocommerce-single/section.php:18
+msgid "Currently product page settings is displayed."
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/async-load-images.php:14
+msgid "Async loading of images"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:15
+msgid "Use browser cache"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/browser-cache.php:16
+msgid "The server must support htaccess."
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/cache-nav-menus.php:14
+msgid "Cache nav menus"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/http2-server-push.php:14
+msgid "Use HTTP2 Server Push"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:14
+msgid "Optimize the jQuery loading"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:15
+msgid "Depending on your plugins and child theme, JavaScript error may occur."
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/js-loading-optimization.php:14
+msgid "Optimize the Snow Monkey JavaScript loading"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/output-head-style.php:14
+msgid "Output CSS in head"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/controls/use-lightweight-fontawesome.php:14
+msgid "Use lightweight FontAwesome"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/section.php:17
+msgid "Page speed optimization"
+msgstr ""
+
+#: app/customizer/page-speed-optimization/section.php:18
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:15
+msgid "This feature is a beta version."
+msgstr ""
+
+#: app/customizer/seo-sns/panel.php:17
+msgid "SEO/SNS"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:15
+msgid "noindex settings"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:19
+msgid "Set category pages to noindex"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:20
+msgid "Set tag pages to noindex"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:21
+msgid "Set author pages to noindex"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:22
+msgid "Set year pages to noindex"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:23
+msgid "Set month pages to noindex"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php:24
+msgid "Set day pages to noindex"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/crawler/section.php:17
+msgid "Crawler"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-analytics/controls/for-logged-in.php:14
+#: app/customizer/seo-sns/sections/google-tag-manager/controls/for-logged-in.php:14
+msgid "Don't output tags to logged-in users"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-analytics/controls/tracking-id.php:14
+msgid "Tracking ID"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-analytics/controls/tracking-id.php:15
+msgid "e.g. UA-1111111-11"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-analytics/section.php:17
+msgid "Google Analytics"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-search-console/controls/google-site-verification.php:15
+msgid "Google site verification"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-search-console/controls/google-site-verification.php:17
+#, php-format
+msgid "Please enter part %1$s of %2$s"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-search-console/section.php:17
+msgid "Google Search Console"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-tag-manager/controls/tag-manager-id.php:14
+msgid "Tag Manager ID"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-tag-manager/controls/tag-manager-id.php:15
+msgid "e.g. GTM-X11X1XX"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/google-tag-manager/section.php:17
+msgid "Google Tag Manager"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:17
+msgid "Facebook page name"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php:19
+#, php-format
+msgctxt "facebook-page-name"
+msgid "Please enter %1$s of %2$s"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/like-me-box/section.php:17
+msgid "Like me box"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:14
+msgid "fb:app_id"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:15
+msgid "If you want to output fb:app_id meta tag, please input."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:17
+#, php-format
+msgid "fb:app_id can be obtained from %1$sfacebook for developers%2$s."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/controls/og-image.php:14
+msgid "Default OGP image"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/controls/og-image.php:15
+msgid ""
+"If a featured image is set in an article, that the featured image is used, "
+"if not set, this image will be used."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/controls/ogp.php:14
+msgid "Output OGP meta tag"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/ogp/section.php:17
+msgid "OGP"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:15
+msgid "Display buttons"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:19
+msgid "Facebook"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:20
+msgid "Twitter"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:21
+msgid "Hatena Bookmark"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:22
+msgid "Google+"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:23
+msgid "Feedly"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:24
+msgid "LINE"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:25
+msgid "Pocket"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:26
+msgid "Pinterest"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:27
+msgid "Feed"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:28
+msgid "Copy"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php:14
+msgid "Share counts cache time (seconds)"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/count-both.php:15
+msgid "Count both http and https"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/count-both.php:16
+msgid ""
+"In the case of the http site, only http will be counted regardless of the "
+"setting."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:15
+msgid "Display position"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
+msgid "Both"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php:14
+msgid "Facebook settings"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php:15
+msgid ""
+"If you want to count of Facebook share count then needs to register Facebook "
+"App."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php:16
+#, php-format
+msgid "%1$sAccessToken tools%2$s"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/twitter-settings.php:14
+msgid "Twitter settings"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/twitter-settings.php:17
+#, php-format
+msgid "If you want to count of tweet then needs to register to %1$s."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:15
+msgid "Type"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:19
+msgid "Balloon"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:20
+msgid "Horizontal"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:21
+msgid "Icon"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:22
+msgid "Block"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/controls/type.php:23
+msgid "Official"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/share-buttons/section.php:17
+msgid "Share buttons"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/json-ld.php:14
+msgid "Output structred data (JSON+LD)"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:14
+msgid "Date for the search engine"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:19
+msgid "Published date"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:19
+msgid "(Display published date and modifiled date)"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:20
+msgid "Only modified date"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:20
+msgid "(Only modified date displayed when updating post)"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
+msgid "Prioritize display of modified date"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/controls/post-date.php:21
+msgid "(Display modifiled date and published date)"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/structured-data/section.php:17
+msgid "Structured data"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php:14
+msgid "twitter:card"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php:15
+msgid "Twitter Cards format"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php:20
+msgid "Do not use"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-site.php:14
+msgid "twitter:site"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-site.php:17
+#, php-format
+msgid "The Twitter account name of the site. Please enter in the form %1$s."
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/section.php:17
+msgid "Twitter Cards"
+msgstr ""
+
+#: app/customizer/seo-sns/sections/twitter-cards/section.php:20
+#, php-format
+msgid "Application of URL is necessary for using Twitter Cards. %1$s"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:17
+#, php-format
+msgid "%1$s Snow Monkey Community %1$s"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:26
+msgid "Official Web Site"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:27
+msgid "Informations, manuals, etc."
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:29
+#, php-format
+msgid "%1$sOfficial Web Site%2$s"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:40
+msgid "Online Community"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:41
+msgid ""
+"It is a place to share information and discuss about future function "
+"development etc. Please feel free to join us!"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:43
+#, php-format
+msgid "%1$sOnline Community%2$s"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:54
+msgid "Support Forum"
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:55
+msgid ""
+"This is an open forum that supports the Snow Monkey usage and customization."
+msgstr ""
+
+#: app/customizer/snow-monkey-community/section.php:57
+#, php-format
+msgid "%1$sSupport Forum%2$s"
+msgstr ""
+
+#: app/customizer/static-front-page/controls/home-page-container.php:14
+msgid "Add side padding to content area of homepage"
+msgstr ""
+
+#: app/customizer/static-front-page/controls/home-page-content-padding.php:14
+msgid "Add vertical padding to content area of homepage"
+msgstr ""
+
+#: app/customizer/title-tagline/controls/copyright.php:30
+msgid "Copyright"
+msgstr ""
+
+#: app/customizer/title-tagline/controls/copyright.php:31
+msgid "HTML usable"
+msgstr ""
+
+#: app/setup/dependency/woocommerce.php:92
+msgid "WooCommerce sidebar"
+msgstr ""
+
+#: app/setup/dependency/woocommerce.php:93
+msgid "These widgets are displayed in the sidebar on WooCommerce."
+msgstr ""
+
+#: app/setup/entry-meta.php:16 app/setup/entry-meta.php:31
+msgid "Published"
+msgstr ""
+
+#: app/setup/entry-meta.php:48
+msgid "Modified"
+msgstr ""
+
+#: app/setup/entry-meta.php:62
+msgid "Author"
+msgstr ""
+
+#: app/setup/entry-meta.php:81
+msgid "Categories"
+msgstr ""
+
+#: app/setup/image-size.php:34
+msgid "xLarge"
+msgstr ""
+
+#: app/setup/nav-menus.php:23
+msgid "Global Navigation (For PC)"
+msgstr ""
+
+#: app/setup/nav-menus.php:24
+msgid "Drawer Navigation (For Mobile)"
+msgstr ""
+
+#: app/setup/nav-menus.php:25
+msgid "Social Navigation"
+msgstr ""
+
+#: app/setup/nav-menus.php:26
+msgid "Header Sub Navigation"
+msgstr ""
+
+#: app/setup/nav-menus.php:27
+msgid "Footer Sub Navigation"
+msgstr ""
+
+#: app/setup/nav-menus.php:28
+msgid "Drawer Sub Navigation (For Mobile)"
+msgstr ""
+
+#: app/setup/nav-menus.php:29
+msgid "Footer Sticky Navigation (For Mobile)"
+msgstr ""
+
+#: app/setup/suppot-forum-widget.php:12
+msgid "Recent topics of Snow Monkey support forum"
+msgstr ""
+
+#: app/setup/widget-area.php:20
+msgid "Sidebar"
+msgstr ""
+
+#: app/setup/widget-area.php:21 app/setup/widget-area.php:43
+msgid "These widgets are displayed in the sidebar on posts and pages."
+msgstr ""
+
+#: app/setup/widget-area.php:42
+msgid "Sticky sidebar"
+msgstr ""
+
+#: app/setup/widget-area.php:64
+msgid "Top of the page title"
+msgstr ""
+
+#: app/setup/widget-area.php:65
+msgid "These widgets are displayed on the page title on the posts and pages."
+msgstr ""
+
+#: app/setup/widget-area.php:86
+msgid "Top of the archive page"
+msgstr ""
+
+#: app/setup/widget-area.php:87
+msgid "These widgets are displayed top of the contents on archive page."
+msgstr ""
+
+#: app/setup/widget-area.php:109
+msgid "These widgets are displayed bottom of the contents on posts and pages."
+msgstr ""
+
+#: app/setup/widget-area.php:130
+msgid "Archive sidebar"
+msgstr ""
+
+#: app/setup/widget-area.php:132
+msgid "These widgets are displayed in the sidebar on archive page."
+msgstr ""
+
+#: app/setup/widget-area.php:152
+msgid "Homepage (Top of page)"
+msgstr ""
+
+#: app/setup/widget-area.php:154 app/setup/widget-area.php:193
+msgid "These widgets are displayed in the homepage."
+msgstr ""
+
+#: app/setup/widget-area.php:191
+msgid "Homepage (Bottom of page)"
+msgstr ""
+
+#: app/setup/widget-area.php:230
+msgid "Posts page (Top of page)"
+msgstr ""
+
+#: app/setup/widget-area.php:232 app/setup/widget-area.php:271
+msgid "These widgets are displayed in the posts page."
+msgstr ""
+
+#: app/setup/widget-area.php:269
+msgid "Posts page (Bottom of page)"
+msgstr ""
+
+#: app/setup/widget-area.php:310
+msgid "These widgets are displayed in the footer."
+msgstr ""
+
+#: app/setup/widget-area.php:332
+msgid ""
+"These widgets are displayed in the overlay that opens with clicking #sm-"
+"overlay-widget-area."
+msgstr ""
+
+#: app/setup/widget-area.php:352
+msgid "Top of the article"
+msgstr ""
+
+#: app/setup/widget-area.php:353
+msgid "These widgets are displayed top of the article on posts and pages."
+msgstr ""
+
+#: app/setup/widget-area.php:374
+msgid "Bottom of the article"
+msgstr ""
+
+#: app/setup/widget-area.php:375
+msgid "These widgets are displayed bottom of the article on posts and pages."
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/_form.php:11
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:11
+msgid "Title"
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/_form.php:22
+msgid "Post type"
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/_form.php:48
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:78
+msgid "Number of posts"
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/_form.php:80
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:110
+msgid "Link URL"
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/_form.php:91
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:121
+msgid "Link text"
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/_form.php:110
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:140
+msgid "Ignore sticky posts"
+msgstr ""
+
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:33
+msgid "Snow Monkey: Recent posts"
+msgstr "Snow Monkey: Bài viết gần đây"
+
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:39
+msgid "Recent posts"
+msgstr "Bài viết gần đây"
+
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:41
+msgid "Displayed term"
+msgstr ""
+
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:33
+msgid "Snow Monkey: Taxonomy posts"
+msgstr ""
+
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:39
+msgid "Taxonomy posts"
+msgstr ""
+
+#: template-parts/archive/entry/content/content-no-match.php:13
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Chúng tôi không tìm thấy bài viết nào phù hợp với điều kiện tìm kiếm của "
+"bạn. Vui lòng thay đổi từ khóa và thử lại."
+
+#: template-parts/common/overlay-search-box.php:14
+#: template-parts/widget-area/overlay.php:18
+msgid "Close"
+msgstr "Đóng"
+
+#: template-parts/common/overlay-search-box.php:24
+#: template-parts/common/overlay-search-box.php:25
+msgctxt "search-form"
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#: template-parts/common/page-top.php:11
+msgid "Scroll up"
+msgstr "Lên đầu trang"
+
+#: template-parts/content/child-pages.php:22
+msgid "Child pages"
+msgstr "Trang con của trang này"
+
+#: template-parts/content/entry/content/content-404.php:15
+msgid "Woops! Page not found."
+msgstr "Không tìm thấy trang này"
+
+#: template-parts/content/entry/content/content-404.php:16
+msgid "The page you are looking for may be moved or deleted."
+msgstr "Trang này đã bị di dời hoặc đã bị xóa."
+
+#: template-parts/content/entry/content/content-404.php:17
+msgid "Please search this search box."
+msgstr "Hãy tìm kiếm ở hộp tìm kiếm"
+
+#: template-parts/content/prev-next-nav.php:38
+msgid "Old post"
+msgstr "Bài viết cũ hơn"
+
+#: template-parts/content/prev-next-nav.php:40
+msgid "New post"
+msgstr "Bài viết mới hơn"
+
+#: template-parts/content/related-posts.php:23
+msgid "Related posts"
+msgstr "Bài viết liên quan"
+
+#: template-parts/content/related-posts.php:25
+msgid "(Including some ads)"
+msgstr ""
+
+#: template-parts/discussion/comment.php:14
+msgid "Your comment is awaiting moderation."
+msgstr "Bình luận của bạn đang chờ phản hồi."
+
+#: template-parts/discussion/comment.php:23
+#: template-parts/discussion/trackback.php:15
+#, php-format
+msgid "%1$s said on %2$s at %3$s"
+msgstr ""
+
+#: template-parts/discussion/comment.php:28
+msgid "Edit this comment"
+msgstr "Chỉnh sửa bình luận"
+
+#: template-parts/discussion/comments.php:16
+msgid "Comments on this post"
+msgstr "Bình luận bài viết này"
+
+#: template-parts/discussion/comments.php:55
+msgid "No comments."
+msgstr "Không có bình luận."
+
+#: template-parts/discussion/pings.php:16
+msgid "Trackbacks and Pingbacks on this post"
+msgstr "Gửi quan tâm tới bài này."
+
+#: template-parts/discussion/pings.php:39
+msgid "No trackbacks."
+msgstr "Không có quan tâm nào."
+
+#: template-parts/discussion/pings.php:48
+msgid "TrackBack URL"
+msgstr "Đường dẫn quan tâm."
+
+#: template-parts/header/hamburger-btn.php:15
+msgid "MENU"
+msgstr ""
+
+#: woocommerce/loop/orderby.php:25
+msgid "Shop order"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Snow Monkey"
+msgstr ""
+
+#. Theme URI of the plugin/theme
+msgid "https://snow-monkey.2inc.org"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "inc2734"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://2inc.org"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Landing page"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "One column"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Left sidebar"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "One column ( slim width )"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Full width"
+msgstr ""
+
+#. Template Name of the plugin/theme
+msgid "Right sidebar"
+msgstr ""
+
+#~ msgid "WPAW: Recent posts"
+#~ msgstr "WPAW: Bài viết gần đây"
+
+#~ msgid "Search for:"
+#~ msgstr "Tìm kiếm:"
+
+#~ msgid "Search &hellip;"
+#~ msgstr "Tìm kiếm  &hellip;"
+
+#~ msgid "Search"
+#~ msgstr "Tìm kiếm"
