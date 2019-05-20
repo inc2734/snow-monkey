@@ -93,8 +93,7 @@
 
   .#{$_prefix}c-entries--text & {
     &__figure,
-    &__content,
-    .#{$_prefix}c-meta__item--author {
+    &__content {
       display: none;
     }
 
@@ -133,10 +132,6 @@
           white-space: nowrap;
         }
       }
-    }
-
-    .#{$_prefix}c-meta__item {
-      padding-left: 0;
     }
   }
 }

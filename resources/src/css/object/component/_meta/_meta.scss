@@ -1,9 +1,9 @@
 .#{$_prefix}c-meta {
   &__item {
-    white-space: nowrap;
+    display: inline-block;
 
-    & + & {
-      padding-left: .75em;
+    &:not(:last-child) {
+      margin-right: .75em;
     }
 
     &--author {
@@ -12,5 +12,11 @@
         margin-right: 5px;
       }
     }
+  }
+}
+
+.#{$_prefix}c-entries--text {
+  .#{$_prefix}c-meta__item:not(.#{$_prefix}c-meta__item--published) {
+    display: none;
   }
 }
