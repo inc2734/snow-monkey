@@ -1,6 +1,5 @@
 .wpco {
   background-color: _lightest($_color-gray);
-  border: 1px solid _lighter($_color-gray);
   @include _padding(.5, .5, .25);
   visibility: hidden;
 
