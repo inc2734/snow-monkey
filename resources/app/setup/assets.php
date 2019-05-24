@@ -83,7 +83,6 @@ add_action(
 			Helper::generate_script_dependencies(
 				[
 					'jquery',
-					'wp-page-speed-optimization',
 					'wp-awesome-widgets',
 					'slick-carousel',
 				]

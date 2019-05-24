@@ -33,7 +33,6 @@ add_action(
 						'jquery.contents-outline',
 						'wp-contents-outline',
 						'wp-awesome-widgets',
-						'wp-page-speed-optimization',
 						'wp-oembed-blog-card',
 						'slick-carousel',
 						Helper::get_main_script_handle() . '-fix-adminbar',
