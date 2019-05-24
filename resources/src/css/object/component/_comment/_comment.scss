@@ -150,7 +150,7 @@
       }
 
       @include _media-min(md) {
-        @include _balloon-triangle(right, 10px, #fff, 1px, _light($_color-gray));
+        @include _balloon-triangle(right, 10px, _lightest($_color-gray));
 
         &::before,
         &::after {
