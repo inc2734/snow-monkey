@@ -61,6 +61,11 @@ trait Page_Header {
 	 * @return string
 	 */
 	public static function get_page_header_image_url() {
+		_deprecated_function(
+			'\Framework\Contract\Helper::get_page_header_image_url()',
+			'Snow Monkey 5.1.0'
+		);
+
 		$image = static::get_page_header_image();
 		if ( ! $image ) {
 			return;
@@ -83,8 +88,14 @@ trait Page_Header {
 	public static function get_page_header_image() {
 		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
 		if ( ! $url ) {
-			// @deprecated filter
+			// @deprecated
 			$url = apply_filters( 'snow_monkey_page_header_image_url', $url );
+			if ( has_filter( 'snow_monkey_page_header_image_url' ) ) {
+				_deprecated_hook(
+					'snow_monkey_page_header_image_url',
+					'Snow Monkey 5.1.0'
+				);
+			}
 		}
 
 		if ( $url ) {
@@ -118,6 +129,11 @@ trait Page_Header {
 	 * @return void
 	 */
 	public static function the_page_header_image() {
+		_deprecated_function(
+			'\Framework\Contract\Helper::the_page_header_image()',
+			'Snow Monkey 5.1.0'
+		);
+
 		echo wp_kses_post( static::get_page_header_image() );
 	}
 
