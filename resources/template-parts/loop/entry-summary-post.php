@@ -6,6 +6,8 @@
  */
 
 use Framework\Helper;
+
+$entries_layout = Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
 ?>
 
 <a href="<?php the_permalink(); ?>">
@@ -17,7 +19,16 @@ use Framework\Helper;
 				<?php Helper::get_template_part( 'template-parts/loop/entry-summary/title/title', get_post_type() ); ?>
 			</header>
 
-			<?php Helper::get_template_part( 'template-parts/loop/entry-summary/content/content', get_post_type() ); ?>
+			<?php
+			Helper::get_template_part(
+				'template-parts/loop/entry-summary/content/content',
+				get_post_type(),
+				[
+					'_entries_layout' => $entries_layout,
+				]
+			);
+			?>
+
 			<?php Helper::get_template_part( 'template-parts/loop/entry-summary/meta/meta', get_post_type() ); ?>
 		</div>
 	</section>

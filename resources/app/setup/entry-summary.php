@@ -20,22 +20,3 @@ add_filter(
 		return Helper::pure_trim_excerpt();
 	}
 );
-
-/**
- * Set excerpt length
- *
- * @param int $length
- * @return int
- */
-add_filter(
-	'excerpt_length',
-	function( $length ) {
-		$layout = get_theme_mod( get_post_type() . '-entries-layout' );
-		if ( 'rich-media' !== $layout && false !== $layout ) {
-			return $length;
-		}
-
-		return class_exists( 'multibyte_patch' ) ? 50 : 25;
-	},
-	99
-);

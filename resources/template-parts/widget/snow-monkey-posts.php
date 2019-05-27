@@ -76,7 +76,7 @@ $more_classnames = [
 					'template-parts/loop/entry-summary',
 					get_post_type(),
 					[
-						'widget_layout' => $entries_layout,
+						'_entries_layout' => $entries_layout,
 					]
 				);
 				?>
