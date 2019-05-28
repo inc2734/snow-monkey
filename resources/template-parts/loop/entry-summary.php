@@ -28,6 +28,12 @@ $entries_layout = Helper::get_var( $_entries_layout, get_theme_mod( get_post_typ
 				]
 			);
 			?>
+
+			<?php
+			if ( ! get_post_type_object( get_post_type() )->hierarchical ) {
+				Helper::get_template_part( 'template-parts/loop/entry-summary/meta/meta', get_post_type() );
+			}
+			?>
 		</div>
 	</section>
 </a>
