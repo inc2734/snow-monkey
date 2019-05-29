@@ -18,6 +18,7 @@ if ( Helper::is_active_sidebar( 'front-page-top-widget-area' ) ) {
 ob_start();
 the_content();
 $content = ob_get_clean();
+wp_reset_postdata();
 ?>
 
 <?php if ( $content ) : ?>
