@@ -161,6 +161,12 @@ add_filter(
 			$content
 		);
 
+		$content = str_replace(
+			'wpaw-showcase__inner',
+			'c-container wpaw-showcase__inner',
+			$content
+		);
+
 		return $content;
 	},
 	10,
