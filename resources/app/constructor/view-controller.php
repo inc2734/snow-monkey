@@ -112,9 +112,9 @@ add_action(
  * @return array
  */
 add_filter(
-	'snow_monkey_template_part_render',
+	'mimizuku_template_part_render',
 	function( $html, $slug, $name, $vars ) {
-		return apply_filters( 'mimizuku_template_part_render', $html, $slug, $name, $vars );
+		return apply_filters( 'snow_monkey_template_part_render', $html, $slug, $name, $vars );
 	},
 	9,
 	4
