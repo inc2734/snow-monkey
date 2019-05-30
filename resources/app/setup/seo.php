@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_SEO\SEO;
+use Inc2734\WP_SEO\Bootstrap;
 
-new SEO();
+new Bootstrap();
 
 /**
  * Google Tag Manager ID
@@ -137,6 +137,54 @@ add_filter(
 	'inc2734_wp_seo_use_json_ld',
 	function( $bool ) {
 		return get_option( 'mwt-json-ld' );
+	}
+);
+
+/**
+ * meta robots
+ *
+ * @param array $robots
+ * @return array
+ */
+add_filter(
+	'inc2734_wp_seo_meta_robots',
+	function( $robots ) {
+		$robots_noindex = get_option( 'mwt-robots-noindex' );
+
+		if ( ! $robots_noindex ) {
+			return $robots;
+		}
+
+		$robots_noindex = explode( ',', $robots_noindex );
+		$flipped = array_flip( $robots_noindex );
+
+		if ( is_category() && isset( $flipped['category'] )
+			|| is_tag() && isset( $flipped['post_tag'] )
+			|| is_author() && isset( $flipped['author'] )
+			|| is_year() && isset( $flipped['year'] )
+			|| is_month() && isset( $flipped['month'] )
+			|| is_day() && isset( $flipped['day'] )
+		) {
+			$robots = [ 'noindex' ];
+		}
+
+		return $robots;
+	}
+);
+
+/**
+ * meta thumbnail
+ *
+ * @param string $thumbnail
+ * @return string
+ */
+add_filter(
+	'inc2734_wp_seo_thumbnail',
+	function( $thumbnail ) {
+		if ( ! $thumbnail ) {
+			$thumbnail = get_theme_mod( 'default-thumbnail' );
+		}
+		return $thumbnail;
 	}
 );
 

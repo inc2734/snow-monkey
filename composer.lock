@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "29f26b2e5f78ae25c4aa66fcda1342d3",
+    "content-hash": "3702a0c9c1ff27334aaa2543e9486f42",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "17.0.0",
+            "version": "18.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "35b79758b03fcc4b5c4fe282751c2ff7d6e44477"
+                "reference": "6c131e7e322b2549b2c8e67ac688f0f3895ad3d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/35b79758b03fcc4b5c4fe282751c2ff7d6e44477",
-                "reference": "35b79758b03fcc4b5c4fe282751c2ff7d6e44477",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6c131e7e322b2549b2c8e67ac688f0f3895ad3d0",
+                "reference": "6c131e7e322b2549b2c8e67ac688f0f3895ad3d0",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "inc2734/wp-page-speed-optimization": "^2.0",
                 "inc2734/wp-profile-box": "^2.0",
                 "inc2734/wp-pure-css-gallery": "^2.0",
-                "inc2734/wp-seo": "^2.0",
+                "inc2734/wp-seo": "^3.0",
                 "inc2734/wp-share-buttons": "^4.1",
                 "inc2734/wp-view-controller": "^8.0",
                 "php": ">=5.6"
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-30T00:45:04+00:00"
+            "time": "2019-05-30T01:23:22+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -706,16 +706,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "2.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "d08f3fad346751232859c335d289237a82f9eef3"
+                "reference": "02fa25d7f31c7fd5e2cdc181231ac27418990186"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/d08f3fad346751232859c335d289237a82f9eef3",
-                "reference": "d08f3fad346751232859c335d289237a82f9eef3",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/02fa25d7f31c7fd5e2cdc181231ac27418990186",
+                "reference": "02fa25d7f31c7fd5e2cdc181231ac27418990186",
                 "shasum": ""
             },
             "require": {
@@ -723,15 +723,11 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -751,7 +747,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2019-01-22T01:55:45+00:00"
+            "time": "2019-05-30T01:20:05+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
