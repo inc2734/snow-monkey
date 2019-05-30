@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d75fae8d9f7a5cf5b141b69dc8d5b042",
+    "content-hash": "29f26b2e5f78ae25c4aa66fcda1342d3",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "16.0.1",
+            "version": "17.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "15305d0c1aafe5b19476fe5425ba8e9a2d18d80d"
+                "reference": "35b79758b03fcc4b5c4fe282751c2ff7d6e44477"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/15305d0c1aafe5b19476fe5425ba8e9a2d18d80d",
-                "reference": "15305d0c1aafe5b19476fe5425ba8e9a2d18d80d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/35b79758b03fcc4b5c4fe282751c2ff7d6e44477",
+                "reference": "35b79758b03fcc4b5c4fe282751c2ff7d6e44477",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-adsense": "^0.1",
                 "inc2734/wp-awesome-components": "^1.0",
-                "inc2734/wp-awesome-widgets": "^7.1",
+                "inc2734/wp-awesome-widgets": "^8.0",
                 "inc2734/wp-basis": "^5.2",
                 "inc2734/wp-breadcrumbs": "^2.1",
                 "inc2734/wp-contents-outline": "^3.2",
@@ -32,7 +32,7 @@
                 "inc2734/wp-like-me-box": "^1.0",
                 "inc2734/wp-oembed-blog-card": "^8.0",
                 "inc2734/wp-page-speed-optimization": "^2.0",
-                "inc2734/wp-profile-box": "^1.1",
+                "inc2734/wp-profile-box": "^2.0",
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^2.0",
                 "inc2734/wp-share-buttons": "^4.1",
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-05-29T01:39:46+00:00"
+            "time": "2019-05-30T00:45:04+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -159,22 +159,22 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "7.1.0",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "39e360735a3b2177e6742eba9aed059f7d7ae68c"
+                "reference": "ddb6b016cc99f26a652cab9df11d62acef9e1144"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/39e360735a3b2177e6742eba9aed059f7d7ae68c",
-                "reference": "39e360735a3b2177e6742eba9aed059f7d7ae68c",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/ddb6b016cc99f26a652cab9df11d62acef9e1144",
+                "reference": "ddb6b016cc99f26a652cab9df11d62acef9e1144",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-adsense": "^0.1",
                 "inc2734/wp-contents-outline": "^3.1",
-                "inc2734/wp-profile-box": "^1.1",
+                "inc2734/wp-profile-box": "^2.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -202,7 +202,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2019-05-17T01:12:23+00:00"
+            "time": "2019-05-30T00:40:58+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -614,31 +614,27 @@
         },
         {
             "name": "inc2734/wp-profile-box",
-            "version": "1.1.2",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-profile-box.git",
-                "reference": "f4a3885539c5ee734b968e71bb579e3bd5386f79"
+                "reference": "a9ccd8aeb59c3db9255b11955dc28042d53a7672"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/f4a3885539c5ee734b968e71bb579e3bd5386f79",
-                "reference": "f4a3885539c5ee734b968e71bb579e3bd5386f79",
+                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/a9ccd8aeb59c3db9255b11955dc28042d53a7672",
+                "reference": "a9ccd8aeb59c3db9255b11955dc28042d53a7672",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -658,7 +654,7 @@
                 }
             ],
             "description": "A library to add profile box for WordPress.",
-            "time": "2018-08-01T02:57:22+00:00"
+            "time": "2019-05-30T00:36:35+00:00"
         },
         {
             "name": "inc2734/wp-pure-css-gallery",

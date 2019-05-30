@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-use Inc2734\WP_Profile_Box\Profile_Box;
+use Inc2734\WP_Profile_Box\Bootstrap;
 
-new Profile_Box();
+new Bootstrap();
 
 add_filter(
 	'inc2734_wp_profile_box_sns_accounts',
@@ -25,6 +25,9 @@ add_filter(
 					break;
 				case 'instagram':
 					$label = '<i class="fab fa-instagram"></i>' . $label;
+					break;
+				case 'pinterest':
+					$label = '<i class="fab fa-pinterest"></i>' . $label;
 					break;
 				case 'youtube':
 					$label = '<i class="fab fa-youtube"></i>' . $label;
