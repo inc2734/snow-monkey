@@ -14,7 +14,11 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 ?>
 
 <article <?php post_class(); ?>>
-	<?php Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() ); ?>
+	<?php
+	if ( 'title-on-page-header' !== $eyecatch_position ) {
+		Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() );
+	}
+	?>
 
 	<div class="c-entry__body">
 		<?php

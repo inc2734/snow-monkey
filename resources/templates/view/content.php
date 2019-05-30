@@ -6,10 +6,16 @@
  */
 
 use Framework\Helper;
+
+$eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 ?>
 
 <article <?php post_class(); ?>>
-	<?php Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() ); ?>
+	<?php
+	if ( 'title-on-page-header' !== $eyecatch_position ) {
+		Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() );
+	}
+	?>
 
 	<div class="c-entry__body">
 		<?php Helper::get_template_part( 'template-parts/content/entry/content/content', get_post_type() ); ?>
