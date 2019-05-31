@@ -1,0 +1,7 @@
+.smb-directory-structure {
+  @include _padding(.5);
+
+  @include _media-min(md) {
+    @include _padding(1);
+  }
+}

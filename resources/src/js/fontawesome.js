@@ -18,7 +18,9 @@ import {
   faEdit,
   faEnvelope,
   faExclamationCircle,
+  faFile,
   faFolder,
+  faFolderOpen,
   faGlobe,
   faHandPointRight,
   faKey,
@@ -47,7 +49,9 @@ library.add(
   faEdit,
   faEnvelope,
   faExclamationCircle,
+  faFile,
   faFolder,
+  faFolderOpen,
   faGlobe,
   faHandPointRight,
   faKey,
@@ -62,10 +66,16 @@ library.add(
 
 import {
   faClock,
+  faFile as faFileRegular,
+  faFolder as faFolderRegular,
+  faFolderOpen as faFolderOpenRegular,
 } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
   faClock,
+  faFileRegular,
+  faFolderRegular,
+  faFolderOpenRegular,
 );
 
 import {
