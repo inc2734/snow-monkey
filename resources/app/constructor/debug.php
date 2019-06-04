@@ -26,8 +26,10 @@ add_action(
 			return;
 		}
 
-		$slug  = $args['slug'];
-		$slug .= $args['name'] ? '-' . $args['name'] : '';
+		$located = \Inc2734\WP_View_Controller\Helper::locate_template( $args['slug'] . '-' . $args['name'] . '.php', false );
+		$slug    = $args['slug'];
+		$slug   .= $args['name'] && $located ? '-' . $args['name'] : '';
+
 		printf( "\n" . '<!-- Start : %1$s -->' . "\n", esc_html( $slug ) );
 	},
 	1
@@ -40,8 +42,10 @@ add_action(
 			return;
 		}
 
-		$slug  = $args['slug'];
-		$slug .= $args['name'] ? '-' . $args['name'] : '';
+		$located = \Inc2734\WP_View_Controller\Helper::locate_template( $args['slug'] . '-' . $args['name'] . '.php', false );
+		$slug    = $args['slug'];
+		$slug   .= $args['name'] && $located ? '-' . $args['name'] : '';
+
 		printf( "\n" . '<!-- End : %1$s -->' . "\n", esc_html( $slug ) );
 	},
 	1
