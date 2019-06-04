@@ -14,15 +14,15 @@ $custom_post_types = Helper::get_custom_post_types();
 foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::control(
 		'select',
-		$custom_post_type . '-entries-layout',
+		$custom_post_type . '-archive-view',
 		[
-			'label'    => __( 'Entries layout', 'snow-monkey' ),
-			'priority' => 110,
-			'default'  => 'rich-media',
-			'choices'  => [
-				'rich-media' => __( 'Rich media', 'snow-monkey' ),
-				'simple'     => __( 'Simple', 'snow-monkey' ),
-				'text'       => __( 'Text', 'snow-monkey' ),
+			'label'       => __( 'View template', 'snow-monkey' ),
+			'description' => __( 'Select the view template to use.', 'snow-monkey' ),
+			'priority'    => 100,
+			'default'     => '',
+			'choices'     => [
+				''     => __( 'default', 'snow-monkey' ),
+				'post' => __( 'The view template of the post', 'snow-monkey' ),
 			],
 			'active_callback' => function() {
 				return 'archive' === Controller::get_view();
@@ -36,6 +36,6 @@ foreach ( $custom_post_types as $custom_post_type ) {
 
 	$panel   = Framework::get_panel( 'design' );
 	$section = Framework::get_section( 'design-' . $custom_post_type . '-archive' );
-	$control = Framework::get_control( $custom_post_type . '-entries-layout' );
+	$control = Framework::get_control( $custom_post_type . '-archive-view' );
 	$control->join( $section )->join( $panel );
 }

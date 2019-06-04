@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-05-17 15:01+0900\n"
-"PO-Revision-Date: 2019-05-17 15:01+0900\n"
+"POT-Creation-Date: 2019-06-04 10:32+0900\n"
+"PO-Revision-Date: 2019-06-04 10:32+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -252,6 +252,26 @@ msgstr "ヘッダー画像"
 msgid "[ %1$s ] category pages settings"
 msgstr "[ %1$s ] カテゴリーページ設定"
 
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:19
+#: app/customizer/design/sections/custom-post/controls/view.php:19
+msgid "View template"
+msgstr "ビューテンプレート"
+
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:20
+#: app/customizer/design/sections/custom-post/controls/view.php:20
+msgid "Select the view template to use."
+msgstr "使用するビューテンプレートを選択してください。"
+
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:24
+#: app/customizer/design/sections/custom-post/controls/view.php:24
+msgid "default"
+msgstr "デフォルト"
+
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:25
+#: app/customizer/design/sections/custom-post/controls/view.php:25
+msgid "The view template of the post"
+msgstr "投稿のビューテンプレート"
+
 #: app/customizer/design/sections/custom-post-archive/section.php:23
 #, php-format
 msgid "%1$s archive page settings"
@@ -267,22 +287,6 @@ msgstr "アイキャッチ画像"
 #, php-format
 msgid "Select how to display the eyecatch image in %1$s page."
 msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
-
-#: app/customizer/design/sections/custom-post/controls/view.php:19
-msgid "View template"
-msgstr "ビューテンプレート"
-
-#: app/customizer/design/sections/custom-post/controls/view.php:20
-msgid "Select the view template to use."
-msgstr "使用するビューテンプレートを選択してください。"
-
-#: app/customizer/design/sections/custom-post/controls/view.php:24
-msgid "default"
-msgstr "デフォルト"
-
-#: app/customizer/design/sections/custom-post/controls/view.php:25
-msgid "The view template of the post"
-msgstr "投稿のビューテンプレート"
 
 #: app/customizer/design/sections/custom-post/controls/view.php:26
 msgid "The view template of the page"
@@ -739,11 +743,11 @@ msgstr "表示する場所"
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-settings.php:14
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php:14
 msgid "Facebook settings"
 msgstr "Facebook 設定"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-settings.php:15
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php:15
 msgid ""
 "If you want to count of Facebook share count then needs to register Facebook "
 "App."
@@ -751,7 +755,7 @@ msgstr ""
 "あなたが Facebook のシェアカウントをカウントする場合は、Facebook App を登録す"
 "る必要があります。"
 
-#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-settings.php:16
+#: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php:16
 #, php-format
 msgid "%1$sAccessToken tools%2$s"
 msgstr "%1$sアクセストークンツール%2$s"

@@ -15,7 +15,7 @@ if ( Helper::is_active_sidebar( 'archive-top-widget-area' ) ) {
 ?>
 
 <div class="c-entry">
-	<?php Helper::get_template_part( 'template-parts/archive/entry/header/header', get_post_type() ); ?>
+	<?php Helper::get_template_part( 'template-parts/archive/entry/header/header', 'post' ); ?>
 
 	<div class="c-entry__body">
 		<?php if ( ! is_paged() && term_description() ) : ?>
@@ -24,6 +24,6 @@ if ( Helper::is_active_sidebar( 'archive-top-widget-area' ) ) {
 			</div>
 		<?php endif; ?>
 
-		<?php Helper::get_template_part( 'template-parts/archive/entry/content/content', get_post_type() ); ?>
+		<?php Helper::get_template_part( 'template-parts/archive/entry/content/content', 'post' ); ?>
 	</div>
 </div>

@@ -20,7 +20,7 @@ use Framework\Helper;
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">
-					<?php Helper::get_template_part( 'template-parts/loop/entry-summary', get_post_type() ); ?>
+					<?php Helper::get_template_part( 'template-parts/loop/entry-summary', 'post' ); ?>
 				</li>
 			<?php endwhile; ?>
 		</ul>
