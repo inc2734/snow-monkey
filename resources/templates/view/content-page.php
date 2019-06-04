@@ -13,7 +13,7 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 <article <?php post_class(); ?>>
 	<?php
 	if ( 'title-on-page-header' !== $eyecatch_position ) {
-		Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() );
+		Helper::get_template_part( 'template-parts/content/entry/header/header', 'post' );
 	}
 	?>
 
@@ -27,7 +27,7 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 			Helper::get_template_part( 'template-parts/widget-area/article-top' );
 		}
 
-		Helper::get_template_part( 'template-parts/content/entry/content/content', get_post_type() );
+		Helper::get_template_part( 'template-parts/content/entry/content/content', 'post' );
 
 		if ( Helper::is_active_sidebar( 'article-bottom-widget-area' ) ) {
 			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );

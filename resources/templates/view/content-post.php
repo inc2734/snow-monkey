@@ -16,7 +16,7 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 <article <?php post_class(); ?>>
 	<?php
 	if ( 'title-on-page-header' !== $eyecatch_position ) {
-		Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() );
+		Helper::get_template_part( 'template-parts/content/entry/header/header', 'post' );
 	}
 	?>
 
@@ -41,7 +41,7 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 			Helper::get_template_part( 'template-parts/widget-area/article-top' );
 		}
 
-		Helper::get_template_part( 'template-parts/content/entry/content/content', get_post_type() );
+		Helper::get_template_part( 'template-parts/content/entry/content/content', 'post' );
 
 		if ( Helper::is_active_sidebar( 'article-bottom-widget-area' ) ) {
 			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );
@@ -68,7 +68,7 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 		?>
 	</div>
 
-	<?php Helper::get_template_part( 'template-parts/content/entry/footer/footer', get_post_type() ); ?>
+	<?php Helper::get_template_part( 'template-parts/content/entry/footer/footer', 'post' ); ?>
 </article>
 
 <?php
