@@ -23,7 +23,7 @@ foreach ( $taxonomies as $taxonomy ) {
 	<?php the_post_thumbnail( 'xlarge' ); ?>
 
 	<?php
-	if ( $term ) {
+	if ( ! empty( $term ) ) {
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/term/term',
 			get_post_type(),

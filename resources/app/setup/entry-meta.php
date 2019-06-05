@@ -71,16 +71,25 @@ add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_author
  * Categories
  */
 function snow_monkey_entry_meta_items_categories() {
-	$categories = get_the_terms( get_the_ID(), 'category' );
-	if ( ! $categories ) {
+	$taxonomies = get_object_taxonomies( get_post_type(), 'object' );
+	foreach ( $taxonomies as $taxonomy ) {
+		if ( ! $taxonomy->public ) {
+			continue;
+		}
+
+		$terms = get_the_terms( get_the_ID(), $taxonomy->name );
+		break;
+	}
+
+	if ( empty( $terms ) || is_wp_error( is_wp_error( $terms ) ) || ! is_array( $terms ) ) {
 		return;
 	}
 	?>
-	<?php foreach ( $categories as $category ) : ?>
+	<?php foreach ( $terms as $term ) : ?>
 		<li class="c-meta__item c-meta__item--categories">
-			<span class="screen-reader-text"><?php esc_html_e( 'Categories', 'snow-monkey' ); ?></span>
+			<span class="screen-reader-text"><?php echo esc_html( $taxonomy->label ); ?></span>
 			<i class="fas fa-folder" aria-hidden="true"></i>
-			<a href="<?php echo esc_url( get_term_link( $category ) ); ?>"><?php echo esc_html( $category->name ); ?></a>
+			<a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
 		</li>
 	<?php endforeach; ?>
 	<?php
