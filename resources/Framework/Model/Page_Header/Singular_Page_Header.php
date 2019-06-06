@@ -3,6 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
+ * @version 5.3.4
  */
 
 namespace Framework\Model\Page_Header;

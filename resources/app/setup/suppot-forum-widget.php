@@ -3,6 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
+ * @version 5.0.8
  */
 add_action(
 	'wp_dashboard_setup',

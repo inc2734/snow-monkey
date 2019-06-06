@@ -3,6 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
+ * @version 5.4.7
  */
 
 if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets_Abstract_Widget' ) ) {

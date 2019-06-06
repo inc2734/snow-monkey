@@ -3,8 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
+ * @version 5.0.0
  */
 ?>
+
 <div class="c-comment" id="comment-<?php comment_ID(); ?>">
 	<div class="c-comment__figure">
 		<?php echo get_avatar( $_comment, '96' ); ?>
