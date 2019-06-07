@@ -15,6 +15,20 @@ add_action(
 			return;
 		}
 
+		if ( ! \Inc2734\WP_View_Controller\Helper::locate_template( $templates, false ) ) {
+			ob_start();
+			trigger_error(
+				sprintf(
+					/* translators: 1: Template slug */
+					esc_html__( '%1$s is not found. It may have been deleted or moved.', 'snow-monkey' ),
+					esc_html( $slug )
+				),
+				E_USER_NOTICE
+			);
+			ob_end_clean();
+			return;
+		}
+
 		foreach ( $templates as $template ) {
 			$parent  = get_template_directory() . '/' . $template;
 			$located = \Inc2734\WP_View_Controller\Helper::locate_template( $template, false );
@@ -23,7 +37,6 @@ add_action(
 				continue;
 			}
 
-			// もしテンプレート階層が変わって、なおかつ子テーマに古いテンプレートが存在している場合
 			if ( $parent === $located ) {
 				$renameds = Helper::get_file_renamed( $parent );
 				foreach ( $renameds as $renamed ) {
@@ -32,7 +45,8 @@ add_action(
 						ob_start();
 						trigger_error(
 							sprintf(
-								'%1$sは古い配置です。最新の配置は%2$sです。',
+								/* translators: 1: Old template slug, 2: Latest template slug */
+								esc_html__( 'The overwrite of %1$s may have failed. The latest position is %2$s.', 'snow-monkey' ),
 								esc_html( $renamed ),
 								esc_html( $template )
 							),
@@ -44,7 +58,6 @@ add_action(
 				}
 			}
 
-			// バージョンが古い場合
 			if ( $parent !== $located ) {
 				$parent_version = Helper::get_file_version( get_template_directory() . '/' . $template );
 				$child_version  = Helper::get_file_version( $located );
@@ -54,7 +67,9 @@ add_action(
 					ob_start();
 					trigger_error(
 						sprintf(
-							'このテンプレート（%1$s）は古いです。最新のバージョンは%2$sです。',
+							/* translators: 1: Template slug, 2: Child template version, 3: Parent template version */
+							esc_html__( '%1$s has been overwritten with the old version (%2$s). The latest version is %3$s.', 'snow-monkey' ),
+							esc_html( $template ),
 							esc_html( $child_version ),
 							esc_html( $parent_version )
 						),
