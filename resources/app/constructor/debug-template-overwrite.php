@@ -16,16 +16,16 @@ add_action(
 		}
 
 		if ( ! \Inc2734\WP_View_Controller\Helper::locate_template( $templates, false ) ) {
-			ob_start();
-			trigger_error(
-				sprintf(
-					/* translators: 1: Template slug */
-					esc_html__( '%1$s is not found. It may have been deleted or moved.', 'snow-monkey' ),
-					esc_html( $slug )
-				),
-				E_USER_NOTICE
+			$message = sprintf(
+				/* translators: 1: Template slug */
+				esc_html__( '%1$s is not found. It may have been deleted or moved.', 'snow-monkey' ),
+				esc_html( $slug )
 			);
-			ob_end_clean();
+
+			defined( 'WP_DEBUG' ) && WP_DEBUG
+				? trigger_error( esc_html( $message ), E_USER_NOTICE )
+				: error_log( 'Notice: ' . esc_html( $message ) );
+
 			return;
 		}
 
@@ -42,17 +42,17 @@ add_action(
 				foreach ( $renameds as $renamed ) {
 					$old_template_located = \Inc2734\WP_View_Controller\Helper::locate_template( $renamed, false );
 					if ( $old_template_located ) {
-						ob_start();
-						trigger_error(
-							sprintf(
-								/* translators: 1: Old template slug, 2: Latest template slug */
-								esc_html__( 'The overwrite of %1$s may have failed. The latest position is %2$s.', 'snow-monkey' ),
-								esc_html( $renamed ),
-								esc_html( $template )
-							),
-							E_USER_NOTICE
+						$message = sprintf(
+							/* translators: 1: Old template slug, 2: Latest template slug */
+							esc_html__( 'The overwrite of %1$s may have failed. The latest position is %2$s.', 'snow-monkey' ),
+							esc_html( $renamed ),
+							esc_html( $template )
 						);
-						ob_end_clean();
+
+						defined( 'WP_DEBUG' ) && WP_DEBUG
+							? trigger_error( esc_html( $message ), E_USER_NOTICE )
+							: error_log( 'Notice: ' . esc_html( $message ) );
+
 						return;
 					}
 				}
@@ -62,20 +62,19 @@ add_action(
 				$parent_version = Helper::get_file_version( get_template_directory() . '/' . $template );
 				$child_version  = Helper::get_file_version( $located );
 
-				$is_old_template = version_compare( $parent_version, $child_version, '>' );
-				if ( $is_old_template ) {
-					ob_start();
-					trigger_error(
-						sprintf(
-							/* translators: 1: Template slug, 2: Child template version, 3: Parent template version */
-							esc_html__( '%1$s has been overwritten with the old version (%2$s). The latest version is %3$s.', 'snow-monkey' ),
-							esc_html( $template ),
-							esc_html( $child_version ),
-							esc_html( $parent_version )
-						),
-						E_USER_WARNING
+				if ( $parent_version && $child_version && version_compare( $parent_version, $child_version, '>' ) ) {
+					$message = sprintf(
+						/* translators: 1: Template slug, 2: Child template version, 3: Parent template version */
+						esc_html__( '%1$s has been overwritten with the old version (%2$s). The latest version is %3$s.', 'snow-monkey' ),
+						esc_html( $template ),
+						esc_html( $child_version ),
+						esc_html( $parent_version )
 					);
-					ob_end_clean();
+
+					defined( 'WP_DEBUG' ) && WP_DEBUG
+						? trigger_error( esc_html( $message ), E_USER_NOTICE )
+						: error_log( 'Notice: ' . esc_html( $message ) );
+
 					return;
 				}
 			}
