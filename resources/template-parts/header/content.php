@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version <unversion>
+ * @version 7.0.0
  *
  * renamed: template-parts/header-content.php
  */
