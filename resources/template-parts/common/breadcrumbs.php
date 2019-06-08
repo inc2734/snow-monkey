@@ -10,6 +10,8 @@
 
 use Framework\Helper;
 
+add_filter( 'inc2734_wp_breadcrumbs_remove_last_link', '__return_false' );
+
 $template_args = [
 	'items' => Helper::get_var( $_items, Helper::get_breadcrumbs_items() ),
 ];
@@ -24,15 +26,9 @@ if ( ! $template_args['items'] ) {
 <ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
 	<?php foreach ( $template_args['items'] as $key => $item ) : ?>
 		<li class="c-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
-			<?php if ( empty( $item['link'] ) ) : ?>
-				<span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="<?php echo esc_url( $item['link'] ); ?>">
-					<span itemprop="name"><?php echo esc_html( strip_tags( $item['title'] ) ); ?></span>
-				</span>
-			<?php else : ?>
-				<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="<?php echo esc_url( $item['link'] ); ?>" itemid="<?php echo esc_url( $item['link'] ); ?>">
-					<span itemprop="name"><?php echo esc_html( strip_tags( $item['title'] ) ); ?></span>
-				</a>
-			<?php endif; ?>
+			<a itemscope itemtype="http://schema.org/Thing" itemprop="item" href="<?php echo esc_url( $item['link'] ); ?>" itemid="<?php echo esc_url( $item['link'] ); ?>">
+				<span itemprop="name"><?php echo esc_html( strip_tags( $item['title'] ) ); ?></span>
+			</a>
 			<meta itemprop="position" content="<?php echo esc_attr( $key + 1 ); ?>" />
 		</li>
 	<?php endforeach; ?>
