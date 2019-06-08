@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  *
  * renamed: template-parts/pings.php
  */
@@ -33,7 +33,7 @@ if ( ! pings_open() && empty( $wp_query->comments_by_type['pings'] ) ) {
 					},
 				]
 			);
-			?>
+		?>
 		</ol>
 
 	<?php else : ?>

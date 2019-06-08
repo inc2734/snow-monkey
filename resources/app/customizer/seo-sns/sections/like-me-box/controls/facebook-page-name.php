@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,6 +17,7 @@ Framework::control(
 		'type'        => 'option',
 		'label'       => __( 'Facebook page name', 'snow-monkey' ),
 		'description' => sprintf(
+			/* translators: 1: Facebook page slug, 2: Facebook page URL */
 			_x( 'Please enter %1$s of %2$s', 'facebook-page-name', 'snow-monkey' ),
 			'<code>xxxxx</code>',
 			'<code>https://www.facebook.com/xxxxx</code>'

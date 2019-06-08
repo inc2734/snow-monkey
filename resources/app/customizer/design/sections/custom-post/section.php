@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.3.6
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -21,7 +21,11 @@ foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::section(
 		'design-' . $custom_post_type,
 		[
-			'title'           => sprintf( __( '%1$s pages settings', 'snow-monkey' ), $custom_post_type_object->label ),
+			'title' => sprintf(
+				/* translators: 1: Custom post type label */
+				__( '%1$s pages settings', 'snow-monkey' ),
+				$custom_post_type_object->label
+			),
 			'priority'        => 110,
 			'active_callback' => function() use ( $custom_post_type_object ) {
 				return is_singular( $custom_post_type_object->name );

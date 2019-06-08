@@ -3,8 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.2
+ * @version <unversion>
  */
+
+use Framework\Helper;
 
 /**
  * Published
@@ -72,25 +74,26 @@ add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_author
  * Categories
  */
 function snow_monkey_entry_meta_items_categories() {
-	$taxonomies = get_object_taxonomies( get_post_type(), 'object' );
-	foreach ( $taxonomies as $taxonomy ) {
-		if ( ! $taxonomy->public ) {
-			continue;
-		}
+	$public_taxonomies = Helper::get_the_public_taxonomy( get_the_ID() );
+	$public_terms = [];
 
-		$terms = get_the_terms( get_the_ID(), $taxonomy->name );
-		break;
+	foreach ( $public_taxonomies as $public_taxonomy ) {
+		$_terms = get_the_terms( get_the_ID(), $public_taxonomy->name );
+		if ( ! empty( $_terms ) && is_array( $_terms ) && ! is_wp_error( $_terms ) ) {
+			$public_terms = $_terms;
+			break;
+		}
 	}
 
-	if ( empty( $terms ) || is_wp_error( is_wp_error( $terms ) ) || ! is_array( $terms ) ) {
+	if ( ! $public_terms ) {
 		return;
 	}
 	?>
-	<?php foreach ( $terms as $term ) : ?>
+	<?php foreach ( $public_terms as $public_term ) : ?>
 		<li class="c-meta__item c-meta__item--categories">
-			<span class="screen-reader-text"><?php echo esc_html( $taxonomy->label ); ?></span>
+			<span class="screen-reader-text"><?php echo esc_html( $public_taxonomy->label ); ?></span>
 			<i class="fas fa-folder" aria-hidden="true"></i>
-			<a href="<?php echo esc_url( get_term_link( $term ) ); ?>"><?php echo esc_html( $term->name ); ?></a>
+			<a href="<?php echo esc_url( get_term_link( $public_term ) ); ?>"><?php echo esc_html( $public_term->name ); ?></a>
 		</li>
 	<?php endforeach; ?>
 	<?php

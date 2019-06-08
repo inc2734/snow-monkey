@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.7.1
+ * @version <unversion>
  */
 
 use Framework\Helper;
@@ -44,6 +44,6 @@ add_action(
 add_action(
 	'elementor/frontend/after_register_scripts',
 	function() {
-  	wp_deregister_script( 'jquery-slick' );
+		wp_deregister_script( 'jquery-slick' );
 	}
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.6.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -23,7 +23,6 @@ Framework::control(
 			$is_one_column_full       = false !== strpos( $wp_page_template, 'one-column-full.php' );
 
 			$active = ( ! $wp_page_template || $is_default_page_template || $is_one_column_full ) && $use_static_frontpage;
-
 
 			return $active;
 		},

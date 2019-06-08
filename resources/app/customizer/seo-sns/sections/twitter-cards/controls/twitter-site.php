@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,6 +15,7 @@ Framework::control(
 		'label'       => __( 'twitter:site', 'snow-monkey' ),
 		'priority'    => 110,
 		'description' => sprintf(
+			/* translators: 1: @username */
 			__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
 			'<code>@username</code>'
 		),

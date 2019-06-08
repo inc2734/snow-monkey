@@ -3,20 +3,20 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.2
+ * @version <unversion>
  */
 
 use Framework\Helper;
 
-$taxonomies = get_object_taxonomies( get_post_type(), 'object' );
-foreach ( $taxonomies as $taxonomy ) {
-	if ( ! $taxonomy->public ) {
-		continue;
-	}
+$public_taxonomies = Helper::get_the_public_taxonomy( get_the_ID() );
+$public_terms = [];
 
-	$terms = get_the_terms( get_the_ID(), $taxonomy->name );
-	$term  = $terms && is_array( $terms ) && ! is_wp_error( $terms ) ? $terms[0] : null;
-	break;
+foreach ( $public_taxonomies as $public_taxonomy ) {
+	$_terms = get_the_terms( get_the_ID(), $public_taxonomy->name );
+	if ( ! empty( $_terms ) && is_array( $_terms ) && ! is_wp_error( $_terms ) ) {
+		$public_terms = $_terms;
+		break;
+	}
 }
 ?>
 
@@ -24,12 +24,12 @@ foreach ( $taxonomies as $taxonomy ) {
 	<?php the_post_thumbnail( 'xlarge' ); ?>
 
 	<?php
-	if ( ! empty( $term ) ) {
+	if ( $public_terms ) {
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/term/term',
 			get_post_type(),
 			[
-				'_terms' => [ $term ],
+				'_terms' => [ $public_terms[0] ],
 			]
 		);
 	}

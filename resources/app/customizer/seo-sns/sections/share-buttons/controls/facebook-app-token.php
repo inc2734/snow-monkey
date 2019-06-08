@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,6 +14,7 @@ Framework::control(
 	[
 		'label'       => __( 'Facebook settings', 'snow-monkey' ),
 		'description' => __( 'If you want to count of Facebook share count then needs to register Facebook App.', 'snow-monkey' ) . sprintf(
+			/* translators: 1: <a> tag, 2: </a> tag */
 			__( '%1$sAccessToken tools%2$s', 'snow-monkey' ),
 			'<a href="https://developers.facebook.com/tools/accesstoken" target="_blank">',
 			'</a>'

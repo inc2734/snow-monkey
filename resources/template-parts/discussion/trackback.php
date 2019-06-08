@@ -3,11 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  *
  * renamed: template-parts/trackback.php
  */
 ?>
+
 <dl class="c-trackback" id="comment-<?php comment_ID(); ?>">
 	<dt class="c-trackback__meta">
 		<?php
@@ -15,6 +16,7 @@
 		$date   = get_comment_date();
 		$time   = get_comment_time();
 		printf(
+			/* translators: 1: Author, 2: Date, 3, Time */
 			esc_html__( '%1$s said on %2$s at %3$s', 'snow-monkey' ),
 			wp_kses_post( $author ),
 			wp_kses_post( $date ),

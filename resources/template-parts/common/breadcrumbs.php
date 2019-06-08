@@ -3,23 +3,26 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  *
  * renamed: template-parts/breadcrumbs.php
  */
 
 use Framework\Helper;
 
-$items = Helper::get_var( $_items, Helper::get_breadcrumbs_items() );
-$items = array_values( $items );
+$template_args = [
+	'items' => Helper::get_var( $_items, Helper::get_breadcrumbs_items() ),
+];
 
-if ( ! $items ) {
+$template_args['items'] = array_values( $template_args['items'] );
+
+if ( ! $template_args['items'] ) {
 	return;
 }
 ?>
 
 <ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-	<?php foreach ( $items as $key => $item ) : ?>
+	<?php foreach ( $template_args['items'] as $key => $item ) : ?>
 		<li class="c-breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 			<?php if ( empty( $item['link'] ) ) : ?>
 				<span itemscope itemtype="http://schema.org/Thing" itemprop="item" itemid="<?php echo esc_url( $item['link'] ); ?>">

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.3.0
+ * @version <unversion>
  */
 
 use Framework\Helper;

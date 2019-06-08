@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 use Framework\Helper;
@@ -202,17 +202,17 @@ add_action(
 		add_filter(
 			'dynamic_sidebar_params',
 			function( $params ) {
-			if ( 'front-page-bottom-widget-area' !== $params[0]['id'] ) {
+				if ( 'front-page-bottom-widget-area' !== $params[0]['id'] ) {
+					return $params;
+				}
+
+				$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
+					$params[0]['before_widget'] .= '<div class="c-container">';
+					$params[0]['after_widget']  .= '</div>';
+				}
+
 				return $params;
-			}
-
-			$wp_page_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
-			if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
-				$params[0]['before_widget'] .= '<div class="c-container">';
-				$params[0]['after_widget']  .= '</div>';
-			}
-
-			return $params;
 			}
 		);
 	}
@@ -241,17 +241,17 @@ add_action(
 		add_filter(
 			'dynamic_sidebar_params',
 			function( $params ) {
-			if ( 'posts-page-top-widget-area' !== $params[0]['id'] ) {
+				if ( 'posts-page-top-widget-area' !== $params[0]['id'] ) {
+					return $params;
+				}
+
+				$wp_page_template = get_theme_mod( 'archive-page-layout' );
+				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
+					$params[0]['before_widget'] .= '<div class="c-container">';
+					$params[0]['after_widget']  .= '</div>';
+				}
+
 				return $params;
-			}
-
-			$wp_page_template = get_theme_mod( 'archive-page-layout' );
-			if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
-				$params[0]['before_widget'] .= '<div class="c-container">';
-				$params[0]['after_widget']  .= '</div>';
-			}
-
-			return $params;
 			}
 		);
 	}

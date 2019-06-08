@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,6 +15,7 @@ Framework::control(
 		'label'       => __( 'fb:app_id', 'snow-monkey' ),
 		'description' => __( 'If you want to output fb:app_id meta tag, please input.', 'snow-monkey' )
 										. sprintf(
+											/* translators: 1: <a> tag, 2: </a> tag */
 											__( 'fb:app_id can be obtained from %1$sfacebook for developers%2$s.', 'snow-monkey' ),
 											'<a href="https://developers.facebook.com/" target="_blank">',
 											'</a>'

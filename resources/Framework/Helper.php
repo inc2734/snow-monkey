@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 namespace Framework;
@@ -115,9 +115,19 @@ class Helper {
 			__( 'WordPress', 'snow-monkey' )
 		);
 
-		$theme_by   = sprintf( __( 'Snow Monkey theme by %s', 'snow-monkey' ), $theme_link );
-		$powered_by = sprintf( __( 'Powered by %s', 'snow-monkey' ), $wordpress_link );
-		$copyright  = $theme_by . ' ' . $powered_by;
+		$theme_by = sprintf(
+			/* translators: %s: Theme link */
+			__( 'Snow Monkey theme by %s', 'snow-monkey' ),
+			$theme_link
+		);
+
+		$powered_by = sprintf(
+			/* translators: %s: WordPress link */
+			__( 'Powered by %s', 'snow-monkey' ),
+			$wordpress_link
+		);
+
+		$copyright = $theme_by . ' ' . $powered_by;
 
 		return apply_filters( 'snow_monkey_copyright', $copyright );
 	}
@@ -183,5 +193,28 @@ class Helper {
 		}
 
 		return [];
+	}
+
+	/**
+	 * Return public taxonomy tied to the post
+	 *
+	 * @param int|WP_Post $post
+	 * @return array
+	 */
+	public static function get_the_public_taxonomy( $post = 0 ) {
+		$post = get_post( $post );
+
+		$taxonomies = get_object_taxonomies( get_post_type( $post ), 'object' );
+		$public_taxonomies = [];
+
+		foreach ( $taxonomies as $taxonomy ) {
+			if ( ! $taxonomy->public ) {
+				continue;
+			}
+
+			$public_taxonomies[ $taxonomy->name ] = $taxonomy;
+		}
+
+		return $public_taxonomies;
 	}
 }

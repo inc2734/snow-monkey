@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 use Framework\Helper;
@@ -236,7 +236,7 @@ add_action(
 			[
 				'customize-preview',
 				'wp-awesome-widgets-customize-preview',
-				Helper::get_main_script_handle()
+				Helper::get_main_script_handle(),
 			],
 			filemtime( get_theme_file_path( '/assets/js/customize-preview.min.js' ) ),
 			true

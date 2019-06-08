@@ -10,14 +10,14 @@ use Framework\Controller\Controller;
 
 global $wp_query;
 
-$post_type = filter_input( INPUT_GET, 'post_type' );
-$post_type = $post_type ? $post_type : 'any';
+$_post_type = filter_input( INPUT_GET, 'post_type' );
+$_post_type = $_post_type ? $_post_type : 'any';
 
 query_posts(
 	array_merge(
 		$wp_query->query,
 		[
-			'post_type' => $post_type,
+			'post_type' => $_post_type,
 		]
 	)
 );

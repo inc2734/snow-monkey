@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.1.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Profile_Box\Bootstrap;
@@ -42,7 +42,7 @@ add_filter(
 				case 'tumblr':
 					$label = '<i class="fab fa-tumblr"></i>' . $label;
 					break;
-				}
+			}
 			$accounts[ $service ] = $label;
 		}
 		return $accounts;

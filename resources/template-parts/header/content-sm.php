@@ -3,14 +3,16 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 use Framework\Helper;
 
-$content = Helper::get_var( $_content, get_theme_mod( 'header-content' ) );
+$template_args = [
+	'content' => Helper::get_var( $_content, get_theme_mod( 'header-content' ) ),
+];
 
-if ( ! $content || ! get_theme_mod( 'display-header-content-on-mobile' ) ) {
+if ( ! $template_args['content'] || ! get_theme_mod( 'display-header-content-on-mobile' ) ) {
 	return;
 }
 ?>
@@ -19,7 +21,7 @@ if ( ! $content || ! get_theme_mod( 'display-header-content-on-mobile' ) ) {
 	<div class="c-container">
 		<?php
 		$vars = [
-			'_content' => $content,
+			'_content' => $template_args['content'],
 		];
 		Helper::get_template_part( 'template-parts/header/content', null, $vars );
 		?>

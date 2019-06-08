@@ -3,12 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.0
+ * @version <unversion>
  */
 
 use Framework\Helper;
 
-$entries_layout = Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) );
+$template_args = [
+	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) ),
+];
 ?>
 
 <a href="<?php the_permalink(); ?>">
@@ -25,7 +27,7 @@ $entries_layout = Helper::get_var( $_entries_layout, get_theme_mod( get_post_typ
 				'template-parts/loop/entry-summary/content/content',
 				'post',
 				[
-					'_entries_layout' => $entries_layout,
+					'_entries_layout' => $template_args['entries_layout'],
 				]
 			);
 			?>

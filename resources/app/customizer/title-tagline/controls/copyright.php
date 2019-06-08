@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -19,9 +19,19 @@ $wordpress_link = sprintf(
 	__( 'WordPress', 'snow-monkey' )
 );
 
-$theme_by   = sprintf( __( 'Snow Monkey theme by %s', 'snow-monkey' ), $theme_link );
-$powered_by = sprintf( __( 'Powered by %s', 'snow-monkey' ), $wordpress_link );
-$copyright  = $theme_by . ' ' . $powered_by;
+$theme_by = sprintf(
+	/* translators: %s: Theme link */
+	__( 'Snow Monkey theme by %s', 'snow-monkey' ),
+	$theme_link
+);
+
+$powered_by = sprintf(
+	/* translators: %s: WordPress link */
+	__( 'Powered by %s', 'snow-monkey' ),
+	$wordpress_link
+);
+
+$copyright = $theme_by . ' ' . $powered_by;
 
 Framework::control(
 	'text',

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 4.2.13
+ * @version <unversion>
  */
 
 add_action(
@@ -46,11 +46,11 @@ add_action(
 
 		$sm_logo_scale = get_theme_mod( 'sm-logo-scale', 33 );
 		$sm_logo_scale = ( $sm_logo_scale / 100 );
-	?>
+		?>
 <style>
 .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
 @media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width / 2 ); ?>px; } }
 </style>
-	<?php
+		<?php
 	}
 );

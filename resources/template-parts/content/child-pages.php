@@ -3,17 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  *
  * renamed: template-parts/child-pages.php
  */
 
 use Framework\Helper;
 
-$parent_id = Helper::get_var( $_parent_id, get_the_ID() );
-$query     = Helper::get_child_pages_query( $parent_id );
+$template_args['parent_id'] = Helper::get_var( $_parent_id, get_the_ID() );
+$template_args['query']     = Helper::get_child_pages_query( $template_args['parent_id'] );
 
-if ( ! $query->have_posts() ) {
+if ( ! $template_args['query']->have_posts() ) {
 	return;
 }
 ?>
@@ -29,8 +29,8 @@ if ( ! $query->have_posts() ) {
 		</span>
 	</h2>
 	<ul class="c-entries c-entries--rich-media">
-		<?php while ( $query->have_posts() ) : ?>
-			<?php $query->the_post(); ?>
+		<?php while ( $template_args['query']->have_posts() ) : ?>
+			<?php $template_args['query']->the_post(); ?>
 			<li class="c-entries__item">
 				<?php Helper::get_template_part( 'template-parts/loop/entry-summary', 'page' ); ?>
 			</li>

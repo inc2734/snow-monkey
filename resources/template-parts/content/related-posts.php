@@ -3,19 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  *
  * renamed: template-parts/related-posts.php
  */
 
 use Framework\Helper;
 
-$code    = Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) );
-$post_id = Helper::get_var( $_post_id, get_the_ID() );
+$template_args = [
+	'code'    => Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) ),
+	'post_id' => Helper::get_var( $_post_id, get_the_ID() ),
+];
 
-$query = Helper::get_related_posts_query( $post_id );
+$query = Helper::get_related_posts_query( $template_args['post_id'] );
 
-if ( ! $code && ! $query->have_posts() ) {
+if ( ! $template_args['code'] && ! $query->have_posts() ) {
 	return;
 }
 ?>
@@ -24,15 +26,15 @@ if ( ! $code && ! $query->have_posts() ) {
 	<h2 class="p-related-posts__title c-entry-aside__title">
 		<span>
 			<?php esc_html_e( 'Related posts', 'snow-monkey' ); ?>
-			<?php if ( $code ) : ?>
+			<?php if ( $template_args['code'] ) : ?>
 				<?php esc_html_e( '(Including some ads)', 'snow-monkey' ); ?>
 			<?php endif; ?>
 		</span>
 	</h2>
 
-	<?php if ( $code ) : ?>
+	<?php if ( $template_args['code'] ) : ?>
 
-		<?php Helper::display_adsense_code( $code ); ?>
+		<?php Helper::display_adsense_code( $template_args['code'] ); ?>
 
 	<?php else : ?>
 

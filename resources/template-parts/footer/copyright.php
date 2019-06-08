@@ -3,22 +3,24 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  *
  * renamed: template-parts/copyright.php
  */
 
 use Framework\Helper;
 
-$copyright = Helper::get_var( $_copyright, Helper::get_copyright() );
+$template_args = [
+	'copyright' => Helper::get_var( $_copyright, Helper::get_copyright() ),
+];
 
-if ( ! $copyright ) {
+if ( ! $template_args['copyright'] ) {
 	return;
 }
 ?>
 
 <div class="c-copyright">
 	<div class="c-container">
-		<?php echo wp_kses_post( $copyright ); ?>
+		<?php echo wp_kses_post( $template_args['copyright'] ); ?>
 	</div>
 </div>

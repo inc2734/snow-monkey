@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <unversion>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,6 +15,7 @@ Framework::control(
 		'label'    => __( 'Twitter settings', 'snow-monkey' ),
 		'priority' => 80,
 		'content'  => sprintf(
+			/* translators: 1: Link of OpenShareCount  */
 			__( 'If you want to count of tweet then needs to register to %1$s.', 'snow-monkey' ),
 			'<a href="https://opensharecount.com/" target="_blank">OpenShareCount</a>'
 		),
