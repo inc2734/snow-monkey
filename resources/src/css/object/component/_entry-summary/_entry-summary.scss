@@ -59,9 +59,11 @@
     @include _clearfix();
 
     &__figure {
+      float: left;
+      @include _margin(0, .5, 0, 0);
+      width: 33%;
+
       @include _media-min(md) {
-        float: left;
-        @include _margin(0, .5, 0, 0);
         width: 25%;
       }
 
@@ -71,19 +73,18 @@
       }
     }
 
-    &__header {
-      @include _media-min(lg) {
-        @include _margin(0, 0, .5);
-      }
-    }
-
     &__body {
       overflow: hidden;
     }
 
     &__content {
+      display: none;
       color: $_color-text;
       @include _font-size-line-height($_base-font-size-px - 2);
+
+      @include _media-min(md) {
+        display: block;
+      }
     }
 
     &__meta {
