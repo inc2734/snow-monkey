@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.0
+ * @version 7.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -22,7 +22,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'priority'    => 100,
 			'default'     => '',
 			'choices'     => [
-				''     => __( 'default', 'snow-monkey' ),
+				''     => __( 'Default', 'snow-monkey' ),
 				'post' => __( 'The view template of the post', 'snow-monkey' ),
 			],
 			'active_callback' => function() {

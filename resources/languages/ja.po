@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-06-08 10:58+0900\n"
-"PO-Revision-Date: 2019-06-08 10:58+0900\n"
+"POT-Creation-Date: 2019-06-10 15:38+0900\n"
+"PO-Revision-Date: 2019-06-10 15:38+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -64,17 +64,17 @@ msgstr "Snow Monkey theme by %s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: app/constructor/debug-template-overwrite.php:23
+#: app/constructor/debug-template-overwrite.php:21
 #, php-format
 msgid "%1$s is not found. It may have been deleted or moved."
 msgstr "%1$s が見つかりません。削除または移動された可能性があります。"
 
-#: app/constructor/debug-template-overwrite.php:49
+#: app/constructor/debug-template-overwrite.php:47
 #, php-format
 msgid "The overwrite of %1$s may have failed. The latest position is %2$s."
 msgstr "%1$s の上書きが失敗した可能性があります。最新の位置は %2$s です。"
 
-#: app/constructor/debug-template-overwrite.php:71
+#: app/constructor/debug-template-overwrite.php:68
 #, php-format
 msgid ""
 "%1$s has been overwritten with the old version (%2$s). The latest version is "
@@ -169,6 +169,7 @@ msgstr "記事一覧レイアウト"
 
 #: app/customizer/design/sections/archive/controls/entries-layout.php:19
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:22
 #: app/widget/snow-monkey-recent-posts/_form.php:69
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:99
 msgid "Rich media"
@@ -176,6 +177,7 @@ msgstr "リッチメディア"
 
 #: app/customizer/design/sections/archive/controls/entries-layout.php:20
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:23
 #: app/customizer/layout/sections/header/controls/header-layout.php:21
 #: app/widget/snow-monkey-recent-posts/_form.php:70
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:100
@@ -184,6 +186,7 @@ msgstr "シンプル"
 
 #: app/customizer/design/sections/archive/controls/entries-layout.php:21
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:24
 #: app/widget/snow-monkey-recent-posts/_form.php:71
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:101
 msgid "Text"
@@ -283,7 +286,8 @@ msgstr "使用するビューテンプレートを選択してください。"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:25
 #: app/customizer/design/sections/custom-post/controls/view.php:25
-msgid "default"
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:21
+msgid "Default"
 msgstr "デフォルト"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:26
@@ -331,6 +335,10 @@ msgstr "投稿ページでアイキャッチ画像をどのように表示する
 #: app/customizer/design/sections/post/controls/profile-box.php:17
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
+
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:17
+msgid "Related posts layout"
+msgstr "関連記事のレイアウト"
 
 #: app/customizer/design/sections/post/controls/related-posts.php:17
 msgid "Display related posts in posts"
@@ -1194,11 +1202,11 @@ msgstr "古い投稿"
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/content/related-posts.php:28
+#: template-parts/content/related-posts.php:33
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/content/related-posts.php:30
+#: template-parts/content/related-posts.php:35
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
@@ -1283,6 +1291,9 @@ msgstr "フル幅"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "default"
+#~ msgstr "デフォルト"
 
 #~ msgid "Categories"
 #~ msgstr "カテゴリー"
