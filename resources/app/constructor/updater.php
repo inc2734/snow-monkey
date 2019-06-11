@@ -8,7 +8,14 @@
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
 
-$updater = new Bootstrap( get_template(), 'inc2734', 'snow-monkey' );
+$updater = new Bootstrap(
+	get_template(),
+	'inc2734',
+	'snow-monkey',
+	[
+		'homepage' => 'https://snow-monkey.2inc.org',
+	]
+);
 
 /**
  * There is a case that comes back to GitHub's zip url.
