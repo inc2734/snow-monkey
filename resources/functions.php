@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.7.1
+ * @version 7.0.0
  */
 
 use Inc2734\Mimizuku_Core\Core;
@@ -71,12 +71,11 @@ Helper::load_theme_files( untrailingslashit( __DIR__ ) . '/app/widget', true );
 add_action(
 	'init',
 	function() {
-		$includes = [
-			'/app/customizer',
-		];
-		foreach ( $includes as $include ) {
+		do_action( 'snow_monkey_pre_load_customizer' );
+		foreach ( [ '/app/customizer' ] as $include ) {
 			Helper::load_theme_files( __DIR__ . $include );
 		}
+		do_action( 'snow_monkey_post_load_customizer' );
 	},
 	10000
 );
