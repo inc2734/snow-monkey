@@ -32,6 +32,6 @@ add_action(
 add_action(
 	'inc2734_wp_customizer_framework_load_styles',
 	function() {
-		Helper::load_theme_files( get_template_directory() . '/assets/css/dependency/contact-form-7' );
+		Helper::get_template_parts( get_template_directory() . '/assets/css/dependency/contact-form-7' );
 	}
 );

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "19.1.0",
+            "version": "19.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "6e91526be329752714ba4e25049f08cb8e28d7e3"
+                "reference": "07ea6a5a7ac5b2aacbf53ac27b5c76ddfc2d1e36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6e91526be329752714ba4e25049f08cb8e28d7e3",
-                "reference": "6e91526be329752714ba4e25049f08cb8e28d7e3",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/07ea6a5a7ac5b2aacbf53ac27b5c76ddfc2d1e36",
+                "reference": "07ea6a5a7ac5b2aacbf53ac27b5c76ddfc2d1e36",
                 "shasum": ""
             },
             "require": {
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-06-12T00:28:49+00:00"
+            "time": "2019-06-12T07:55:35+00:00"
         },
         {
             "name": "inc2734/wp-adsense",

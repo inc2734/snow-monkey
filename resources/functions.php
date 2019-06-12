@@ -53,7 +53,7 @@ if ( ! isset( $content_width ) ) {
 /**
  * Loads theme constructer files
  */
-Helper::load_theme_files( untrailingslashit( __DIR__ ) . '/app/constructor', true );
+Helper::include_files( untrailingslashit( __DIR__ ) . '/app/constructor', true );
 
 /**
  * Loads theme setup files
@@ -63,7 +63,7 @@ Helper::get_template_parts( untrailingslashit( __DIR__ ) . '/app/setup', true );
 /**
  * Loads theme widget files
  */
-Helper::load_theme_files( untrailingslashit( __DIR__ ) . '/app/widget', true );
+Helper::get_template_parts( untrailingslashit( __DIR__ ) . '/app/widget', true );
 
 /**
  * Loads customizer
@@ -73,7 +73,7 @@ add_action(
 	function() {
 		do_action( 'snow_monkey_pre_load_customizer' );
 		foreach ( [ '/app/customizer' ] as $include ) {
-			Helper::load_theme_files( __DIR__ . $include );
+			Helper::get_template_parts( untrailingslashit( __DIR__ ) . $include );
 		}
 		do_action( 'snow_monkey_post_load_customizer' );
 	},

@@ -27,7 +27,7 @@ add_action(
 			'/assets/css/object/project',
 		];
 		foreach ( $includes as $include ) {
-			Helper::load_theme_files( get_template_directory() . $include );
+			Helper::get_template_parts( get_template_directory() . $include );
 		}
 	}
 );
