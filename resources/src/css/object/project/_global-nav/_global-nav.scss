@@ -71,5 +71,32 @@
         @include _padding(.5rem, 1rem);
       }
     }
+
+    &[data-popup-mode=click] {
+      .#{$_prefix}c-navbar__toggle {
+        @include _transition(transform);
+      }
+
+      .#{$_prefix}c-navbar__item {
+        .#{$_prefix}c-navbar__toggle {
+          transform: rotate(90deg);
+
+          &[aria-expanded="true"] {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      .#{$_prefix}c-navbar__subitem {
+        .#{$_prefix}c-navbar__toggle {
+          color: #fff;
+          transform: rotate(0);
+
+          &[aria-expanded="true"] {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
   }
 }
