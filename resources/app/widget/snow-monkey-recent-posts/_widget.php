@@ -56,6 +56,7 @@ Helper::get_template_part(
 		'_title'          => $instance['title'],
 		'_link_url'       => $instance['link-url'],
 		'_link_text'      => $instance['link-text'],
+		'_excerpt_length' => null,
 	]
 );
 echo wp_kses_post( $args['after_widget'] );

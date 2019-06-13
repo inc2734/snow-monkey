@@ -12,6 +12,7 @@ use Framework\Helper;
 
 $template_args = [
 	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) ),
+	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
 ];
 ?>
 
@@ -30,6 +31,7 @@ $template_args = [
 				get_post_type(),
 				[
 					'_entries_layout' => $template_args['entries_layout'],
+					'_excerpt_length' => $template_args['excerpt_length'],
 				]
 			);
 			?>

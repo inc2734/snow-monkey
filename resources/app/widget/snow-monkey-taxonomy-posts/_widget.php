@@ -66,7 +66,7 @@ if ( ! $taxonomy_posts_query->have_posts() ) {
 echo wp_kses_post( $args['before_widget'] );
 Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
-	'recent',
+	'taxonomy',
 	[
 		'_posts_query'    => $taxonomy_posts_query,
 		'_widget_area_id' => $args['id'],
@@ -76,6 +76,7 @@ Helper::get_template_part(
 		'_title'          => $instance['title'],
 		'_link_url'       => $instance['link-url'],
 		'_link_text'      => $instance['link-text'],
+		'_excerpt_length' => null,
 	]
 );
 echo wp_kses_post( $args['after_widget'] );

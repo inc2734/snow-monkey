@@ -21,7 +21,15 @@ $entries_layout = false !== $entries_layout ? $entries_layout : get_theme_mod( '
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">
-					<?php Helper::get_template_part( 'template-parts/loop/entry-summary', $_post_type ); ?>
+					<?php
+					Helper::get_template_part(
+						'template-parts/loop/entry-summary',
+						$_post_type,
+						[
+							'_entries_layout' => $entries_layout,
+						]
+					);
+					?>
 				</li>
 			<?php endwhile; ?>
 		</ul>

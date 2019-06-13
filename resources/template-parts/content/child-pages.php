@@ -32,7 +32,15 @@ if ( ! $template_args['query']->have_posts() ) {
 		<?php while ( $template_args['query']->have_posts() ) : ?>
 			<?php $template_args['query']->the_post(); ?>
 			<li class="c-entries__item">
-				<?php Helper::get_template_part( 'template-parts/loop/entry-summary', 'page' ); ?>
+				<?php
+				Helper::get_template_part(
+					'template-parts/loop/entry-summary',
+					'page',
+					[
+						'_entries_layout' => 'rich-media',
+					]
+				);
+				?>
 			</li>
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
