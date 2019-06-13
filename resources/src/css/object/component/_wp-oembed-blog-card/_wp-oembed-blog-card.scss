@@ -1,0 +1,10 @@
+.wp-oembed-blog-card {
+  > a,
+  > span {
+    @include _padding(.5);
+
+    @include _media-min(lg) {
+      @include _padding(.75);
+    }
+  }
+}
