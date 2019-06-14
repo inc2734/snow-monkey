@@ -1,7 +1,7 @@
 .#{$_prefix}p-term-description {
-  @include _margin-bottom(1.5);
+  @include _margin-bottom(1);
 
   @include _media-min(lg) {
-    @include _margin-bottom(2);
+    @include _margin-bottom(1.25);
   }
 }

@@ -38,6 +38,7 @@
   &--text {
     margin: 0;
     display: block;
+    border-top: 1px solid _lighter($_color-gray);
 
     .#{$_prefix}c-entries__item {
       margin: 0;
@@ -50,11 +51,7 @@
   &--simple {
     .#{$_prefix}c-entries__item {
       > a {
-        @include _padding(.5, 0);
-
-        @include _media-min(md) {
-          @include _padding(1, 0);
-        }
+        @include _padding(1, 0);
       }
     }
   }

@@ -80,7 +80,7 @@
 
     &__sidebar {
       flex: 1 1 0%;
-      @include _margin(1, 0, 0);
+      @include _margin(1.5, 0, 0);
 
       @include _media-min(lg) {
         margin: 0;

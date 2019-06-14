@@ -1,22 +1,20 @@
 .#{$_prefix}c-entry {
   &__header {
     @include _margin-bottom(1);
-    border-bottom: $border-bottom-width solid $_color-black;
-    @include _padding(0, 0, .25);
 
-    .wp-share-buttons {
-      @include _margin(.5, 0, 0);
+    @include _media-min(lg) {
+      @include _margin-bottom(1.25);
     }
   }
 
   &__title {
-    @include _margin(0, 0, .25);
     letter-spacing: 0;
   }
 
   &__meta {
+    @include _margin-top(.25);
     @include _font-size-line-height(12px);
-    font-weight: bold;
+    letter-spacing: 0;
 
     a {
       color: $_color-text;
