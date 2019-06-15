@@ -7,13 +7,13 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
-
-$terms = get_terms( [ 'category' ] );
-wp_cache_set( 'all-categories', $terms );
+use Framework\Helper;
 
 if ( ! is_customize_preview() ) {
 	return;
 }
+
+$terms = Helper::get_terms( 'category' );
 
 foreach ( $terms as $_term ) {
 	Framework::section(

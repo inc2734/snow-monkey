@@ -154,4 +154,25 @@ class Helper {
 
 		return $public_taxonomies;
 	}
+
+	/**
+	 * Return specific terms
+	 *
+	 * @param string $taxonomy
+	 * @return array
+	 */
+	public static function get_terms( $taxonomy ) {
+		$terms = wp_cache_get( 'snow-monkey-all-' . $taxonomy );
+		if ( is_array( $terms ) ) {
+			return $terms;
+		}
+
+		$terms = get_terms( [ $taxonomy ] );
+		wp_cache_set( 'snow-monkey-all-' . $taxonomy, $terms );
+		if ( is_array( $terms ) ) {
+			return $terms;
+		}
+
+		return [];
+	}
 }

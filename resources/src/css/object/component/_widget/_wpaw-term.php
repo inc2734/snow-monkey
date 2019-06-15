@@ -6,6 +6,7 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Style;
+use Framework\Helper;
 
 $accent_color = get_theme_mod( 'accent-color' );
 
@@ -14,10 +15,7 @@ Style::register(
 	'background-color: ' . $accent_color
 );
 
-$terms = wp_cache_get( 'all-categories' );
-if ( ! is_array( $terms ) ) {
-	return;
-}
+$terms = Helper::get_terms( 'category' );
 
 foreach ( $terms as $_term ) {
 	$accent_color = get_theme_mod( $_term->taxonomy . '-' . $_term->term_id . '-accent-color' );

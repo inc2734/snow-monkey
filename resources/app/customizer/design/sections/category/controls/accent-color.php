@@ -7,11 +7,9 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+use Framework\Helper;
 
-$terms = wp_cache_get( 'all-categories' );
-if ( ! is_array( $terms ) ) {
-	return;
-}
+$terms = Helper::get_terms( 'category' );
 
 foreach ( $terms as $_term ) {
 	Framework::control(
