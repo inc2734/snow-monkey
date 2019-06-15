@@ -17,7 +17,7 @@ if ( ! is_customize_preview() ) {
 
 foreach ( $terms as $_term ) {
 	Framework::section(
-		'design-category-' . $_term->term_id,
+		'design-' . $_term->taxonomy . '-' . $_term->term_id,
 		[
 			'title' => sprintf(
 				/* translators: 1: Category name */

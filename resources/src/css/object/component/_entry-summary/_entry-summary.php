@@ -14,12 +14,16 @@ Style::register(
 	'background-color: ' . $accent_color
 );
 
-$terms = get_terms( [ 'category' ] );
+$terms = wp_cache_get( 'all-categories' );
+if ( ! is_array( $terms ) ) {
+	return;
+}
+
 foreach ( $terms as $_term ) {
 	$accent_color = get_theme_mod( $_term->taxonomy . '-' . $_term->term_id . '-accent-color' );
 
 	if ( ! $accent_color ) {
-		$ancestors = get_ancestors( $_term->term_id, 'category' );
+		$ancestors = get_ancestors( $_term->term_id, $_term->taxonomy );
 		foreach ( $ancestors as $ancestor ) {
 			$accent_color = get_theme_mod( $_term->taxonomy . '-' . $ancestor . '-accent-color' );
 			if ( ! $accent_color ) {

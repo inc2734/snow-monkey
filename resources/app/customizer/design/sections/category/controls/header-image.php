@@ -3,12 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.3.6
+ * @version 7.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 
 $terms = wp_cache_get( 'all-categories' );
+if ( ! is_array( $terms ) ) {
+	return;
+}
 
 foreach ( $terms as $_term ) {
 	Framework::control(
@@ -28,7 +31,7 @@ if ( ! is_customize_preview() ) {
 $panel = Framework::get_panel( 'design' );
 
 foreach ( $terms as $_term ) {
-	$section = Framework::get_section( 'design-category-' . $_term->term_id );
+	$section = Framework::get_section( 'design-' . $_term->taxonomy . '-' . $_term->term_id );
 	$control = Framework::get_control( $_term->taxonomy . '-' . $_term->term_id . '-header-image' );
 	$control->join( $section )->join( $panel );
 }

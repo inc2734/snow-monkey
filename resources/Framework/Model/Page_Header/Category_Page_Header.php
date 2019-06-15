@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.2
+ * @version 7.0.0
  */
 
 namespace Framework\Model\Page_Header;
@@ -19,15 +19,15 @@ class Category_Page_Header extends Base {
 	 */
 	public static function get_image_url() {
 		$term = get_queried_object();
-		$header_image = get_theme_mod( 'category-' . $term->term_id . '-header-image' );
+		$header_image = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-header-image' );
 
 		if ( $header_image ) {
 			return $header_image;
 		}
 
-		$ancestors = get_ancestors( $term->term_id, 'category' );
+		$ancestors = get_ancestors( $term->term_id, $term->taxonomy );
 		foreach ( $ancestors as $ancestor ) {
-			$header_image = get_theme_mod( 'category-' . $ancestor . '-header-image' );
+			$header_image = get_theme_mod( $term->taxonomy . '-' . $ancestor . '-header-image' );
 			if ( $header_image ) {
 				return $header_image;
 			}
