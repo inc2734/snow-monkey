@@ -10,8 +10,6 @@
 
 use Framework\Helper;
 
-add_filter( 'inc2734_wp_breadcrumbs_remove_last_link', '__return_false' );
-
 $template_args = [
 	'items' => Helper::get_var( $_items, Helper::get_breadcrumbs_items() ),
 ];
