@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 7.0.0
  *
  * renamed: template-parts/site-branding.php
  */
@@ -11,7 +11,7 @@
 use Framework\Helper;
 ?>
 <div class="c-site-branding">
-	<?php if ( is_front_page() || is_home() ) : ?>
+	<?php if ( is_front_page() ) : ?>
 
 		<h1 class="c-site-branding__title">
 			<?php Helper::the_site_branding(); ?>
