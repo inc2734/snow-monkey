@@ -17,7 +17,7 @@ if ( ! is_paged() && Helper::is_active_sidebar( 'posts-page-top-widget-area' ) )
 
 <div class="c-entry">
 	<?php
-	if ( ! is_front_page() ) {
+	if ( ! is_front_page() && get_theme_mod( 'posts-page-display-title' ) ) {
 		Helper::get_template_part( 'template-parts/archive/entry/header/header', 'post' );
 	}
 	?>

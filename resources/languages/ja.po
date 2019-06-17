@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-06-10 15:38+0900\n"
-"PO-Revision-Date: 2019-06-10 15:38+0900\n"
+"POT-Creation-Date: 2019-06-17 10:15+0900\n"
+"PO-Revision-Date: 2019-06-17 10:16+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -63,25 +63,6 @@ msgstr "Snow Monkey theme by %s"
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
-
-#: app/constructor/debug-template-overwrite.php:21
-#, php-format
-msgid "%1$s is not found. It may have been deleted or moved."
-msgstr "%1$s が見つかりません。削除または移動された可能性があります。"
-
-#: app/constructor/debug-template-overwrite.php:47
-#, php-format
-msgid "The overwrite of %1$s may have failed. The latest position is %2$s."
-msgstr "%1$s の上書きが失敗した可能性があります。最新の位置は %2$s です。"
-
-#: app/constructor/debug-template-overwrite.php:68
-#, php-format
-msgid ""
-"%1$s has been overwritten with the old version (%2$s). The latest version is "
-"%3$s."
-msgstr ""
-"%1$s は古いバージョン（%2$s）で上書きされました。最新のバージョンは %3$s で"
-"す。"
 
 #: app/customizer/advertisement/controls/google-adsense-auth-code.php:15
 msgid "Google Adsense authentication code"
@@ -197,7 +178,7 @@ msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
 
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
-#: app/customizer/design/sections/category/controls/accent-color.php:18
+#: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
@@ -265,7 +246,7 @@ msgstr "Pure CSS ギャラリーを使用する"
 msgid "Base design settings"
 msgstr "基本デザイン設定"
 
-#: app/customizer/design/sections/category/controls/header-image.php:18
+#: app/customizer/design/sections/category/controls/header-image.php:19
 msgid "Header image"
 msgstr "ヘッダー画像"
 
@@ -320,6 +301,11 @@ msgstr "固定ページのビューテンプレート"
 msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
 
+#: app/customizer/design/sections/custom-taxonomy/section.php:27
+#, php-format
+msgid "[ %1$s ] taxonomy pages settings"
+msgstr "[ %1$s ] タクソノミーページ設定"
+
 #: app/customizer/design/sections/page/controls/eyecatch.php:17
 msgid "Select how to display the eyecatch image in page."
 msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
@@ -327,6 +313,11 @@ msgstr "固定ページでアイキャッチ画像をどのように表示する
 #: app/customizer/design/sections/page/section.php:18
 msgid "Pages settings"
 msgstr "固定ページ設定"
+
+#: app/customizer/design/sections/post-tag/section.php:24
+#, php-format
+msgid "[ %1$s ] tag pages settings"
+msgstr "[ %1$s ] タグページ設定"
 
 #: app/customizer/design/sections/post/controls/eyecatch.php:17
 msgid "Select how to display the eyecatch image in post."
@@ -949,6 +940,18 @@ msgstr "ホームページのコンテンツエリアに左右余白を追加す
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
 
+#: app/customizer/static-front-page/controls/home-page-setting-label.php:15
+msgid "Front page setting"
+msgstr "ホームページ設定"
+
+#: app/customizer/static-front-page/controls/posts-page-display-title.php:15
+msgid "Display posts page title"
+msgstr "投稿ページのタイトルを表示"
+
+#: app/customizer/static-front-page/controls/posts-page-setting-label.php:15
+msgid "Posts page setting"
+msgstr "投稿ページ設定"
+
 #: app/customizer/title-tagline/controls/copyright.php:41
 msgid "Copyright"
 msgstr "コピーライト"
@@ -1291,6 +1294,19 @@ msgstr "フル幅"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "%1$s is not found. It may have been deleted or moved."
+#~ msgstr "%1$s が見つかりません。削除または移動された可能性があります。"
+
+#~ msgid "The overwrite of %1$s may have failed. The latest position is %2$s."
+#~ msgstr "%1$s の上書きが失敗した可能性があります。最新の位置は %2$s です。"
+
+#~ msgid ""
+#~ "%1$s has been overwritten with the old version (%2$s). The latest version "
+#~ "is %3$s."
+#~ msgstr ""
+#~ "%1$s は古いバージョン（%2$s）で上書きされました。最新のバージョンは %3$s "
+#~ "です。"
 
 #~ msgid "default"
 #~ msgstr "デフォルト"

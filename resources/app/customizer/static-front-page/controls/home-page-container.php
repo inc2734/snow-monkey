@@ -14,6 +14,7 @@ Framework::control(
 	[
 		'label'           => __( 'Add side padding to content area of homepage', 'snow-monkey' ),
 		'default'         => true,
+		'priority'        => 110,
 		'active_callback' => function() {
 			$page_on_front        = get_option( 'page_on_front' );
 			$use_static_frontpage = 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );

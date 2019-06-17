@@ -9,12 +9,11 @@
 use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
-	'checkbox',
-	'home-page-content-padding',
+	'content',
+	'posts-page-setting-label',
 	[
-		'label'           => __( 'Add vertical padding to content area of homepage', 'snow-monkey' ),
-		'default'         => true,
-		'priority'        => 120,
+		'label'           => __( 'Posts page setting', 'snow-monkey' ),
+		'priority'        => 200,
 		'active_callback' => function() {
 			return 'page' === get_option( 'show_on_front' ) && ! empty( get_option( 'page_on_front' ) );
 		},
@@ -26,10 +25,5 @@ if ( ! is_customize_preview() ) {
 }
 
 $section = Framework::get_section( 'static_front_page' );
-$control = Framework::get_control( 'home-page-content-padding' );
+$control = Framework::get_control( 'posts-page-setting-label' );
 $control->join( $section );
-$control->partial(
-	[
-		'selector' => '.p-section-front-page-content',
-	]
-);
