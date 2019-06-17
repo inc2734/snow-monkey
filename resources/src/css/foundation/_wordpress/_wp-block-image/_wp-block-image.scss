@@ -1,10 +1,6 @@
 .wp-block-image {
   margin-bottom: 0;
 
-  img {
-    @extend %img;
-  }
-
   figcaption {
     @include _margin(6px, 0, 0);
     color: $_color-gray;
@@ -68,17 +64,6 @@
 
   > .alignleft {
     @include _margin-right(1);
-  }
-}
-
-img.alignnone,
-img.aligncenter,
-img.alignleft,
-img.alignright {
-  @extend %img;
-
-  &.noshadow {
-    box-shadow: none;
   }
 }
 
