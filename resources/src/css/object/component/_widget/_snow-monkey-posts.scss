@@ -34,6 +34,7 @@
         .#{$_prefix}c-entries__item {
           &:first-child {
             > a {
+              border-top: none;
               padding-top: 0;
             }
           }
