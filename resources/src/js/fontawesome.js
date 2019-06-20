@@ -69,6 +69,7 @@ import {
   faFile as faFileRegular,
   faFolder as faFolderRegular,
   faFolderOpen as faFolderOpenRegular,
+  faStar as faStarRegular,
 } from "@fortawesome/free-regular-svg-icons";
 
 library.add(
@@ -76,6 +77,7 @@ library.add(
   faFileRegular,
   faFolderRegular,
   faFolderOpenRegular,
+  faStarRegular,
 );
 
 import {
