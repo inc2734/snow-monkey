@@ -1,11 +1,6 @@
 .#{$_prefix}p-infobar {
   $infobar-background-color: #ffca00;
 
-  .#{$_prefix}c-container {
-    margin-right: 0; // For IE11
-    margin-left: 0; // For IE11
-  }
-
   &__content {
     display: flex;
     flex: 0 1 auto;

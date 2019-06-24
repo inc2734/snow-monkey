@@ -5,15 +5,6 @@
 .wpaw-pr-box {
   @include _padding(1, 0);
 
-  &--chameleon {
-    .#{$_prefix}c-container {
-      @include _media-min(lg) {
-        padding-right: 0;
-        padding-left: 0;
-      }
-    }
-  }
-
   &__title {
     @include section-title();
     margin-bottom: 0;

@@ -34,10 +34,6 @@
     @include _position(absolute, 0, 0, 0, 0);
   }
 
-  > .#{$_prefix}c-container {
-    margin: 0; // For IE11
-  }
-
   &__content {
     position: relative;
     flex: 1 1 auto;

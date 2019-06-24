@@ -23,12 +23,6 @@
   [data-has-sidebar="false"] & {
     @include alignfull();
   }
-
-  [data-is-slim-width="true"][data-has-sidebar="false"] & {
-    .#{$_prefix}c-container {
-      @include container-slim-width();
-    }
-  }
 }
 
 .alignwide {
@@ -39,10 +33,6 @@
   [data-is-slim-width="true"][data-has-sidebar="false"] & {
     @include _media-min(lg) {
       @include alignwide();
-    }
-
-    .#{$_prefix}c-container {
-      @include container-slim-width();
     }
   }
 
