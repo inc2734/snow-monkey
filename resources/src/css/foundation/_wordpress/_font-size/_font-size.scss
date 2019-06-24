@@ -1,0 +1,15 @@
+.has-small-font-size {
+  @include _font-size-line-height(13px);
+}
+
+.has-medium-font-size {
+  @include _font-size-line-height(20px);
+}
+
+.has-large-font-size {
+  @include _font-size-line-height(36px);
+}
+
+.has-huge-font-size {
+  @include _font-size-line-height(48px);
+}
