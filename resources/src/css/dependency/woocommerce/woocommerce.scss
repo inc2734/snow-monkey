@@ -261,7 +261,7 @@ $img-path: '../../../img';
 // Archive
 .related.products,
 .woocommerce ul.products {
-  @include _margin-top(2);
+  @include _margin-top(1.5);
 }
 
 // Orderby in archive

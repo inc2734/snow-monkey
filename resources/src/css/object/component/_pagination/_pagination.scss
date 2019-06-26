@@ -40,7 +40,7 @@
     @include _margin-top(1);
 
     @include _media-min(lg) {
-      @include _margin-top(2);
+      @include _margin-top(1.5);
     }
   }
 }

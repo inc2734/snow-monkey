@@ -1,8 +1,4 @@
 .#{$_prefix}l-title-top-widget-area {
   @include items-gutter();
   @include _margin-bottom(1.5);
-
-  @include _media-min(lg) {
-    @include _margin-bottom(2);
-  }
 }

@@ -5,11 +5,14 @@
   }
 
   [data-has-sidebar="true"] & {
-    @include _padding(1.5, 0);
+    @include _media-min(md) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     & + * {
       @include _media-min(lg) {
-        @include _margin-top(2);
+        @include _margin-top(1);
       }
     }
   }
@@ -18,7 +21,7 @@
 [data-has-sidebar="true"] {
   * + .#{$_prefix}p-section-front-page-content {
     @include _media-min(lg) {
-      @include _margin-top(2);
+      @include _margin-top(1);
     }
   }
 }
