@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 7.2.0
  */
 
 use Framework\Helper;
@@ -44,5 +44,20 @@ add_action(
 	function() {
 		wp_deregister_style( 'wp-block-library-theme' );
 		wp_register_style( 'wp-block-library-theme', null, [], 1 );
+	}
+);
+
+/**
+ * Color palette
+ *
+ * @var void
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		add_theme_support(
+			'editor-color-palette',
+			Helper::get_color_palette()
+		);
 	}
 );

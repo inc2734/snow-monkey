@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-06-17 10:15+0900\n"
-"PO-Revision-Date: 2019-06-17 10:16+0900\n"
+"POT-Creation-Date: 2019-06-27 13:14+0900\n"
+"PO-Revision-Date: 2019-06-27 13:15+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -63,6 +63,85 @@ msgstr "Snow Monkey theme by %s"
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
+
+#: Framework/Helper.php:191
+msgid "White"
+msgstr "ホワイト"
+
+#: Framework/Helper.php:196
+msgid "Black"
+msgstr "ブラック"
+
+#: Framework/Helper.php:201
+msgid "Text color"
+msgstr "テキストカラー"
+
+#: Framework/Helper.php:206
+msgid "Dark gray"
+msgstr "ダークグレー"
+
+#: Framework/Helper.php:211
+msgid "Gray"
+msgstr "灰色"
+
+#: Framework/Helper.php:216
+msgid "Light gray"
+msgstr "ライトグレー"
+
+#: Framework/Helper.php:221
+msgid "Lightest gray"
+msgstr "最も明るいグレー"
+
+#: Framework/Helper.php:226
+#: app/customizer/design/sections/base-design/controls/accent-color.php:15
+#: app/customizer/design/sections/category/controls/accent-color.php:19
+msgid "Accent color"
+msgstr "アクセントカラー"
+
+#: Framework/Helper.php:231
+#: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
+msgid "Sub accent color"
+msgstr "サブアクセントカラー"
+
+#: Framework/Helper.php:236
+msgid "Pale pink"
+msgstr "ピンク"
+
+#: Framework/Helper.php:242
+msgid "Vivid red"
+msgstr "レッド"
+
+#: Framework/Helper.php:248
+msgid "Luminous vivid orange"
+msgstr "オレンジ"
+
+#: Framework/Helper.php:254
+msgid "Luminous vivid amber"
+msgstr "琥珀"
+
+#: Framework/Helper.php:260
+msgid "Light green cyan"
+msgstr "薄いグリーンシアン"
+
+#: Framework/Helper.php:266
+msgid "Vivid green cyan"
+msgstr "鮮やかなグリーンシアン"
+
+#: Framework/Helper.php:272
+msgid "Pale cyan blue"
+msgstr "淡いシアンブルー"
+
+#: Framework/Helper.php:278
+msgid "Vivid cyan blue"
+msgstr "鮮やかなシアンブルー"
+
+#: Framework/Helper.php:284
+msgid "Cyan bluish gray"
+msgstr "シアンブルーグレー"
+
+#: Framework/Helper.php:290
+msgid "Very dark gray"
+msgstr "濃灰"
 
 #: app/customizer/advertisement/controls/google-adsense-auth-code.php:15
 msgid "Google Adsense authentication code"
@@ -176,11 +255,6 @@ msgstr "テキスト"
 #: app/customizer/design/sections/archive/section.php:18
 msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
-
-#: app/customizer/design/sections/base-design/controls/accent-color.php:15
-#: app/customizer/design/sections/category/controls/accent-color.php:19
-msgid "Accent color"
-msgstr "アクセントカラー"
 
 #: app/customizer/design/sections/base-design/controls/base-font-size.php:15
 msgid "Base font size(px)"
@@ -1294,6 +1368,9 @@ msgstr "フル幅"
 #. Template Name of the plugin/theme
 msgid "Right sidebar"
 msgstr "右サイドバー"
+
+#~ msgid "Very light gray"
+#~ msgstr "ライト・グレー"
 
 #~ msgid "%1$s is not found. It may have been deleted or moved."
 #~ msgstr "%1$s が見つかりません。削除または移動された可能性があります。"
