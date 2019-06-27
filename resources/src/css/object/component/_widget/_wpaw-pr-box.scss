@@ -16,13 +16,21 @@
 
   &__lead {
     @include _content(.5);
-    @include _margin(.75, 0, 0);
+    @include _margin(.5, 0, 0);
     @include _font-size-line-height($_base-font-size-px - 2);
     color: _light($_color-text);
+
+    @include _media-min(md) {
+      @include _margin-top(1);
+    }
   }
 
   &__row {
-    @include _margin-top(1);
+    @include _margin-top(.5);
+
+    @include _media-min(md) {
+      @include _margin-top(1);
+    }
   }
 
   &__item-figure {
@@ -54,7 +62,7 @@
     @include _margin(.5, 0, 0);
 
     @include _media-min(md) {
-      @include _margin(1, 0, 0);
+      @include _margin-top(1);
     }
   }
 
@@ -72,12 +80,6 @@
 
     @include _media-min(lg) {
       @include _padding(3, 0);
-    }
-
-    &__action {
-      @include _media-min(lg) {
-        @include _margin(1.5, 0, 0);
-      }
     }
   }
 }

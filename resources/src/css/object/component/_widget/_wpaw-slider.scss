@@ -41,6 +41,10 @@
     font-weight: bold;
     @include _font-size($_base-font-size * 1.25);
     @include _line-height($_base-font-size * 2);
+
+    @include _media-min(md) {
+      @include _margin-bottom(.5);
+    }
   }
 
   &__item-summary {
