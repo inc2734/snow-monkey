@@ -16,12 +16,6 @@
 }
 
 .#{$_prefix}c-container {
-  [data-is-slim-width="true"][data-has-sidebar="false"] .alignfull &,
-  [data-is-slim-width="true"][data-has-sidebar="false"] .alignwide &,
-  [data-is-slim-width="true"][data-has-sidebar="false"] .wpac-section & {
-    @include container-slim-width();
-  }
-
   &.#{$_prefix}u-slim-width {
     @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
       padding-right: 0;
