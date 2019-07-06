@@ -10,7 +10,7 @@ use Inc2734\WP_Customizer_Framework\Style;
 $container_max_width = get_theme_mod( 'container-max-width' );
 
 Style::register(
-	'.l-contents .c-container',
+	'.c-container',
 	'max-width: ' . $container_max_width . 'px',
 	'@media (min-width: 64em)'
 );
