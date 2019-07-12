@@ -6,20 +6,9 @@
   @include _padding(1.5, 0);
 
   &__body {
-    //@include _padding(0, .5);
-
-    @include _media-min(md) {
-      //@include _padding(0, 1);
-    }
   }
 
   &__figure {
-    @include _margin(1, 0, 0);
-    //@include _padding(0, .5);
-
-    @include _media-min(md) {
-      //@include _padding(0, 1);
-    }
   }
 
   &__title {
@@ -56,7 +45,7 @@
       }
 
       .wpaw-showcase__figure {
-        flex: 0 0 auto;
+        flex: 1 1 auto;
         margin-top: 0;
         margin-right: 0;
         margin-left: 0;
@@ -65,7 +54,7 @@
       }
 
       .wpaw-showcase__body {
-        flex: 1 1 0;
+        flex: 1 1 auto;
       }
 
       .wpaw-showcase__action {
