@@ -1,17 +1,21 @@
-@supports (max-width: calc(100vw - constant(safe-area-inset-right) - constant(safe-area-inset-left))) or (max-width: calc(100vw - env(safe-area-inset-right) - env(safe-area-inset-left))) {
-  .#{$_prefix}c-fluid-container,
-  .#{$_prefix}c-container {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: calc(100vw - constant(safe-area-inset-right) - constant(safe-area-inset-left));
-    max-width: calc(100vw - env(safe-area-inset-right) - env(safe-area-inset-left));
-  }
+.#{$_prefix}c-fluid-container,
+.#{$_prefix}c-container {
+  padding-right: $_container-margin / 2;
+  padding-right: calc(#{$_container-margin / 2} + constant(safe-area-inset-right));
+  padding-right: calc(#{$_container-margin / 2} + env(safe-area-inset-right));
 
-  .#{$_prefix}c-container {
-    @include _media-min(lg) {
-      max-width: calc(#{$_container-max-width} - constant(safe-area-inset-right) - constant(safe-area-inset-left));
-      max-width: calc(#{$_container-max-width} - env(safe-area-inset-right) - env(safe-area-inset-left));
-    }
+  padding-left: $_container-margin / 2;
+  padding-left: calc(#{$_container-margin / 2} + constant(safe-area-inset-left));
+  padding-left: calc(#{$_container-margin / 2} + env(safe-area-inset-left));
+
+  @include _media-min(md) {
+    padding-right: $_container-margin;
+    padding-right: calc(#{$_container-margin} + constant(safe-area-inset-right));
+    padding-right: calc(#{$_container-margin} + env(safe-area-inset-right));
+
+    padding-left: $_container-margin;
+    padding-left: calc(#{$_container-margin} + constant(safe-area-inset-left));
+    padding-left: calc(#{$_container-margin} + env(safe-area-inset-left));
   }
 }
 

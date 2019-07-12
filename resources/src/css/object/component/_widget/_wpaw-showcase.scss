@@ -5,25 +5,20 @@
 .wpaw-showcase {
   @include _padding(1.5, 0);
 
-  &__inner {
-    padding-right: 0;
-    padding-left: 0;
-  }
-
   &__body {
-    @include _padding(0, .5);
+    //@include _padding(0, .5);
 
     @include _media-min(md) {
-      @include _padding(0, 1);
+      //@include _padding(0, 1);
     }
   }
 
   &__figure {
     @include _margin(1, 0, 0);
-    @include _padding(0, .5);
+    //@include _padding(0, .5);
 
     @include _media-min(md) {
-      @include _padding(0, 1);
+      //@include _padding(0, 1);
     }
   }
 
@@ -84,6 +79,22 @@
       .wpaw-showcase__inner {
         flex-direction: row;
         flex-wrap: nowrap;
+
+        > :first-child {
+          padding-left: 0;
+        }
+
+        > :last-child {
+          padding-right: 0;
+        }
+      }
+
+      .wpaw-showcase__body {
+        @include _padding-right(1);
+      }
+
+      .wpaw-showcase__figure {
+        @include _padding-left(1);
       }
     }
   }
@@ -93,6 +104,22 @@
       .wpaw-showcase__inner {
         flex-direction: row-reverse;
         flex-wrap: nowrap;
+
+        > :first-child {
+          padding-right: 0;
+        }
+
+        > :last-child {
+          padding-left: 0;
+        }
+      }
+
+      .wpaw-showcase__body {
+        @include _padding-left(1);
+      }
+
+      .wpaw-showcase__figure {
+        @include _padding-right(1);
       }
     }
   }
