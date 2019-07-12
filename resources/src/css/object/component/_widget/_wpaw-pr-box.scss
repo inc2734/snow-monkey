@@ -3,7 +3,17 @@
 }
 
 .wpaw-pr-box {
-  @include _padding(1, 0);
+  @include _padding(1, .5);
+
+  @include _media-min(md) {
+    @include _padding-right(1);
+    @include _padding-left(1);
+  }
+
+  &--chameleon {
+    padding-right: 0;
+    padding-left: 0;
+  }
 
   &__title {
     @include section-title();

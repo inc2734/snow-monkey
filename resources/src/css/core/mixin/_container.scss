@@ -1,0 +1,30 @@
+@mixin container-padding() {
+  padding-right: $_container-margin / 2;
+  padding-right: calc(#{$_container-margin / 2} + constant(safe-area-inset-right));
+  padding-right: calc(#{$_container-margin / 2} + env(safe-area-inset-right));
+
+  padding-left: $_container-margin / 2;
+  padding-left: calc(#{$_container-margin / 2} + constant(safe-area-inset-left));
+  padding-left: calc(#{$_container-margin / 2} + env(safe-area-inset-left));
+
+  @include _media-min(md) {
+    padding-right: $_container-margin;
+    padding-right: calc(#{$_container-margin} + constant(safe-area-inset-right));
+    padding-right: calc(#{$_container-margin} + env(safe-area-inset-right));
+
+    padding-left: $_container-margin;
+    padding-left: calc(#{$_container-margin} + constant(safe-area-inset-left));
+    padding-left: calc(#{$_container-margin} + env(safe-area-inset-left));
+  }
+}
+
+
+@mixin container-slim-width() {
+  @include _media-min(lg) {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $one-column-slim-max-width;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

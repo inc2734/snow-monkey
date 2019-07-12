@@ -2,4 +2,11 @@
   &__body {
     @extend %entry-content;
   }
+
+  &.alignfull,
+  &.alignwide {
+    .#{$_prefix}c-container {
+      @include container-padding();
+    }
+  }
 }

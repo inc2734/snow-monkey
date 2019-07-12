@@ -3,6 +3,10 @@
   margin-left: calc(50% - 50vw);
   width: auto;
   max-width: none;
+
+  > .#{$_prefix}c-container {
+    @include container-padding();
+  }
 }
 
 @mixin alignwide() {
@@ -12,14 +16,4 @@
   right: -50vw;
   transform: translateX(-50%);
   max-width: $_container-max-width;
-}
-
-@mixin container-slim-width() {
-  @include _media-min(lg) {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: $one-column-slim-max-width;
-    padding-right: 0;
-    padding-left: 0;
-  }
 }

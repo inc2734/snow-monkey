@@ -3,12 +3,21 @@
 }
 
 .wpaw-showcase {
-  @include _padding(1.5, 0);
+  @include _padding(1.5, .5);
+
+  @include _media-min(md) {
+    @include _padding-right(1);
+    @include _padding-left(1);
+  }
+
+  &__inner {
+  }
 
   &__body {
   }
 
   &__figure {
+    @include _margin-top(.5);
   }
 
   &__title {
@@ -45,7 +54,7 @@
       }
 
       .wpaw-showcase__figure {
-        flex: 1 1 auto;
+        flex: 0 0 auto;
         margin-top: 0;
         margin-right: 0;
         margin-left: 0;
@@ -54,7 +63,7 @@
       }
 
       .wpaw-showcase__body {
-        flex: 1 1 auto;
+        flex: 1 1 0;
       }
 
       .wpaw-showcase__action {
@@ -116,6 +125,10 @@
   &--format-3 {
     .wpaw-showcase__figure {
       @include _margin-bottom(-1.5); // equal .wpaw-showcase bottom padding
+
+      @include _media-min(md) {
+        @include _margin-top(1);
+      }
     }
 
     .wpaw-showcase__body {
