@@ -4,3 +4,9 @@
   position: relative;
 	overflow: hidden;
 }
+
+@media all and (-ms-high-contrast: none) {
+  .#{$_prefix}l-container {
+    display: block !important;
+  }
+}
