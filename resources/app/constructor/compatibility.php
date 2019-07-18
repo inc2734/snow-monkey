@@ -101,3 +101,41 @@ add_filter(
 	},
 	9
 );
+
+/**
+ * Fallback layout template
+ *
+ * @param null|null $fallback_slug
+ * @param array $relative_dir_paths
+ * @param string $slug
+ * @param string $name
+ * @return string
+ */
+add_filter(
+	'inc2734_view_controller_located_template_slug_fallback',
+	function( $fallback_slug, $relative_dir_paths, $slug, $name ) {
+		if ( $fallback_slug ) {
+			return $fallback_slug;
+		}
+
+		if ( ! in_array( 'templates/layout/wrapper', $relative_dir_paths ) ) {
+			return $fallback_slug;
+		}
+
+		if ( is_front_page() && ! is_home() ) {
+			return 'templates/layout/wrapper/one-column-full';
+		}
+
+		if ( is_singular() ) {
+			return 'templates/layout/wrapper/right-sidebar';
+		}
+
+		if ( ! is_singular() ) {
+			return 'templates/layout/wrapper/one-column';
+		}
+
+		return $fallback_slug;
+	},
+	9,
+	4
+);
