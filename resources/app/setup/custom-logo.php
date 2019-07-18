@@ -36,8 +36,8 @@ add_action(
 		if ( ! isset( $reg[1] ) ) {
 			return;
 		}
-
 		$height = $reg[1];
+
 		preg_match( '/width="(\d+?)"/', $custom_logo, $reg );
 		if ( ! isset( $reg[1] ) ) {
 			return;
@@ -47,9 +47,9 @@ add_action(
 		$sm_logo_scale = get_theme_mod( 'sm-logo-scale', 33 );
 		$sm_logo_scale = ( $sm_logo_scale / 100 );
 		?>
-<style>
-.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
-@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: auto; width: <?php echo absint( $width / 2 ); ?>px; } }
+<style id="snow-monkey-custom-logo-size">
+.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height * $sm_logo_scale ); ?>px; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
+@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height / 2 ); ?>px; width: <?php echo absint( $width / 2 ); ?>px; } }
 </style>
 		<?php
 	}
