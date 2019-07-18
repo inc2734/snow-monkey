@@ -54,3 +54,34 @@ add_action(
 		<?php
 	}
 );
+
+/**
+ * The alt of custom logo uses blog title
+ *
+ * @see https://developer.wordpress.org/reference/functions/get_custom_logo/
+ *
+ * @param string $html
+ * @param int $blog_id
+ * @return string
+ */
+add_filter(
+	'get_custom_logo',
+	function( $html, $blog_id ) {
+		$switched_blog = false;
+
+		if ( is_multisite() && ! empty( $blog_id ) && get_current_blog_id() !== (int) $blog_id ) {
+			switch_to_blog( $blog_id );
+			$switched_blog = true;
+		}
+
+		$html = preg_replace( '|alt="[^"]*?"|', 'alt="' . get_bloginfo( 'name', 'display' ) . '"', $html );
+
+		if ( $switched_blog ) {
+			restore_current_blog();
+		}
+
+		return $html;
+	},
+	10,
+	2
+);
