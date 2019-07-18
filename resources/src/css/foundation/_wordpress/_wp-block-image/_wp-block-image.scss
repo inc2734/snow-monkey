@@ -3,7 +3,7 @@
 
   figcaption {
     @include _margin(6px, 0, 0);
-    color: $_color-gray;
+    color: #333;
     @include _font-size($_base-font-size-px - 2);
     @include _line-height($_base-font-size-px + 4);
     text-align: left;
