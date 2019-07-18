@@ -32,13 +32,13 @@ add_action(
 			return;
 		}
 
-		preg_match( '/height="(\d+?)"/', $custom_logo, $reg );
+		preg_match( '/height="([\d\.]+?)"/', $custom_logo, $reg );
 		if ( ! isset( $reg[1] ) ) {
 			return;
 		}
 		$height = $reg[1];
 
-		preg_match( '/width="(\d+?)"/', $custom_logo, $reg );
+		preg_match( '/width="([\d\.]+?)"/', $custom_logo, $reg );
 		if ( ! isset( $reg[1] ) ) {
 			return;
 		}
