@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 7.5.0
  */
 
 use Inc2734\WP_Profile_Box\Bootstrap;
@@ -41,6 +41,9 @@ add_filter(
 					break;
 				case 'tumblr':
 					$label = '<i class="fab fa-tumblr"></i>' . $label;
+					break;
+				case 'amazon':
+					$label = '<i class="fab fa-amazon"></i>' . $label;
 					break;
 			}
 			$accounts[ $service ] = $label;
