@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "004a47b490eed319f1db770dbc778d8a",
+    "content-hash": "682244728c3ad0cbc7d8013d3130dd9c",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "19.3.0",
+            "version": "19.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "acec04c495f640444fde5a421feee33e360d4e6b"
+                "reference": "edf3a9815643cc580b39e8788ce75279f7119ba4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/acec04c495f640444fde5a421feee33e360d4e6b",
-                "reference": "acec04c495f640444fde5a421feee33e360d4e6b",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/edf3a9815643cc580b39e8788ce75279f7119ba4",
+                "reference": "edf3a9815643cc580b39e8788ce75279f7119ba4",
                 "shasum": ""
             },
             "require": {
@@ -32,7 +32,7 @@
                 "inc2734/wp-like-me-box": "^1.0",
                 "inc2734/wp-oembed-blog-card": "^8.0",
                 "inc2734/wp-page-speed-optimization": "^2.0",
-                "inc2734/wp-profile-box": "^2.0",
+                "inc2734/wp-profile-box": "^2.1",
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^3.0",
                 "inc2734/wp-share-buttons": "^4.1",
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-07-18T03:22:43+00:00"
+            "time": "2019-07-19T01:57:34+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -614,16 +614,16 @@
         },
         {
             "name": "inc2734/wp-profile-box",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-profile-box.git",
-                "reference": "a9ccd8aeb59c3db9255b11955dc28042d53a7672"
+                "reference": "74c83f0046b33f57957132a2a4e7d64ed013701c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/a9ccd8aeb59c3db9255b11955dc28042d53a7672",
-                "reference": "a9ccd8aeb59c3db9255b11955dc28042d53a7672",
+                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/74c83f0046b33f57957132a2a4e7d64ed013701c",
+                "reference": "74c83f0046b33f57957132a2a4e7d64ed013701c",
                 "shasum": ""
             },
             "require": {
@@ -654,7 +654,7 @@
                 }
             ],
             "description": "A library to add profile box for WordPress.",
-            "time": "2019-05-30T00:36:35+00:00"
+            "time": "2019-07-19T01:50:52+00:00"
         },
         {
             "name": "inc2734/wp-pure-css-gallery",

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 7.5.1
  */
 
 add_filter(
@@ -16,6 +16,8 @@ add_filter(
 		$new_item_output = '';
 
 		if ( false !== strpos( $item->url, 'amazon.com' ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-amazon"></i>' . $args->link_before, $item_output );
+		} elseif ( false !== strpos( $item->url, 'amazon.co.jp' ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-amazon"></i>' . $args->link_before, $item_output );
 		} elseif ( false !== strpos( $item->url, 'bitbucket.org' ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-bitbucket"></i>' . $args->link_before, $item_output );
