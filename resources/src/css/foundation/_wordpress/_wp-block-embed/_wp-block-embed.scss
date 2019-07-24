@@ -1,0 +1,5 @@
+.wp-block-embed {
+  figcaption {
+    @include figcaption();
+  }
+}
