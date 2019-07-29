@@ -31,15 +31,6 @@
       }
 
       .#{$_prefix}c-entries--simple {
-        .#{$_prefix}c-entries__item {
-          &:first-child {
-            > a {
-              border-top: none;
-              padding-top: 0;
-            }
-          }
-        }
-
         .#{$_prefix}c-entry-summary__term {
           @include _media-min(lg) {
             display: none;
