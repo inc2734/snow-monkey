@@ -17,6 +17,7 @@ $template_args = [
 	'title'          => Helper::get_var( $_title, null ),
 	'link_url'       => Helper::get_var( $_link_url, null ),
 	'link_text'      => Helper::get_var( $_link_text, null ),
+	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
 ];
 
 if ( ! $template_args['posts_query'] ) {
@@ -80,6 +81,7 @@ $more_classnames = [
 					get_post_type(),
 					[
 						'_entries_layout' => $template_args['entries_layout'],
+						'_excerpt_length' => $template_args['excerpt_length'],
 					]
 				);
 				?>
