@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.6.0
+ * @version 7.6.0
  */
 
 use Framework\Helper;
@@ -21,7 +21,9 @@ use Framework\Helper;
 	<?php wp_body_open(); ?>
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
-	<?php $_view_controller->view(); ?>
+	<div class="l-container">
+		<?php $_view_controller->view(); ?>
+	</div>
 
 <?php wp_footer(); ?>
 </body>

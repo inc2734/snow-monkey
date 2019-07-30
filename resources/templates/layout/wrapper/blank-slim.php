@@ -21,8 +21,10 @@ use Framework\Helper;
 	<?php wp_body_open(); ?>
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
-	<div class="u-slim-width">
-		<?php $_view_controller->view(); ?>
+	<div class="l-container">
+		<div class="u-slim-width">
+			<?php $_view_controller->view(); ?>
+		</div>
 	</div>
 
 <?php wp_footer(); ?>
