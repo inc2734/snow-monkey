@@ -22,7 +22,9 @@ use Framework\Helper;
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
 	<div class="l-container">
-		<?php $_view_controller->view(); ?>
+		<div class="l-contents" role="document">
+			<?php $_view_controller->view(); ?>
+		</div>
 	</div>
 
 <?php wp_footer(); ?>

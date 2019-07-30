@@ -22,8 +22,10 @@ use Framework\Helper;
 	<?php do_action( 'snow_monkey_prepend_body' ); ?>
 
 	<div class="l-container">
-		<div class="u-slim-width">
-			<?php $_view_controller->view(); ?>
+		<div class="l-contents" role="document">
+			<div class="u-slim-width">
+				<?php $_view_controller->view(); ?>
+			</div>
 		</div>
 	</div>
 
