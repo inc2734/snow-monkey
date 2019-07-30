@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-06-27 13:14+0900\n"
-"PO-Revision-Date: 2019-06-27 13:15+0900\n"
+"POT-Creation-Date: 2019-07-30 10:09+0900\n"
+"PO-Revision-Date: 2019-07-30 10:10+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1350,6 +1350,10 @@ msgid "Landing page"
 msgstr "ランディングページ"
 
 #. Template Name of the plugin/theme
+msgid "Landing page ( slim width )"
+msgstr "ランディングページ（スリム幅）"
+
+#. Template Name of the plugin/theme
 msgid "One column"
 msgstr "1カラム"
 
@@ -1359,7 +1363,7 @@ msgstr "左サイドバー"
 
 #. Template Name of the plugin/theme
 msgid "One column ( slim width )"
-msgstr "1カラム ( スリム幅 )"
+msgstr "1カラム（スリム幅）"
 
 #. Template Name of the plugin/theme
 msgid "Full width"
@@ -1434,9 +1438,6 @@ msgstr "右サイドバー"
 
 #~ msgid "Full width ( has no side margins )"
 #~ msgstr "フル幅 ( 左右余白なし )"
-
-#~ msgid "Landing page ( has side margins )"
-#~ msgstr "ランディングページ ( 左右余白あり ）"
 
 #~ msgid "Full width ( has side margins )"
 #~ msgstr "フル幅 ( 左右余白あり )"

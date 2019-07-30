@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 7.6.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,7 +16,16 @@ Framework::control(
 		'default'         => true,
 		'priority'        => 120,
 		'active_callback' => function() {
-			return 'page' === get_option( 'show_on_front' ) && ! empty( get_option( 'page_on_front' ) );
+			$page_on_front        = get_option( 'page_on_front' );
+			$use_static_frontpage = 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );
+
+			$wp_page_template = get_post_meta( $page_on_front, '_wp_page_template', true );
+			$is_blank         = false !== strpos( $wp_page_template, 'blank.php' );
+			$is_blank_slim    = false !== strpos( $wp_page_template, 'blank-slim.php' );
+
+			$active = ! $is_blank && ! $is_blank_slim && $use_static_frontpage;
+
+			return $active;
 		},
 	]
 );
