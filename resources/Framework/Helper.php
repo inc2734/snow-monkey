@@ -9,6 +9,7 @@
 namespace Framework;
 
 use Inc2734\Mimizuku_Core;
+use Inc2734\WP_Breadcrumbs;
 
 class Helper {
 
@@ -57,7 +58,7 @@ class Helper {
 	 * @return string
 	 */
 	public static function get_page_title_from_breadcrumbs() {
-		$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Bootstrap();
+		$breadcrumbs = new WP_Breadcrumbs\Bootstrap();
 		$breadcrumbs = apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
 		$title_item  = end( $breadcrumbs );
 		return array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
@@ -95,7 +96,7 @@ class Helper {
 	 *   @var string $link
 	 */
 	public static function get_breadcrumbs_items() {
-		$breadcrumbs = new \Inc2734\WP_Breadcrumbs\Bootstrap();
+		$breadcrumbs = new WP_Breadcrumbs\Bootstrap();
 		return apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
 	}
 
