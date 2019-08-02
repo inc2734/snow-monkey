@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-07-30 10:09+0900\n"
-"PO-Revision-Date: 2019-07-30 10:10+0900\n"
+"POT-Creation-Date: 2019-08-02 15:19+0900\n"
+"PO-Revision-Date: 2019-08-02 15:19+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,124 +22,124 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: Framework/Helper.php:25
+#: Framework/Helper.php:26
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: Framework/Helper.php:26
+#: Framework/Helper.php:27
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: Framework/Helper.php:27
+#: Framework/Helper.php:28
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:19
 #: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: Framework/Helper.php:28
+#: Framework/Helper.php:29
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:23
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:110
+#: Framework/Helper.php:111
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:115
+#: Framework/Helper.php:116
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:120
+#: Framework/Helper.php:121
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:126
+#: Framework/Helper.php:127
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:191
+#: Framework/Helper.php:192
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:196
+#: Framework/Helper.php:197
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:201
+#: Framework/Helper.php:202
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:206
+#: Framework/Helper.php:207
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:211
+#: Framework/Helper.php:212
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:216
+#: Framework/Helper.php:217
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:221
+#: Framework/Helper.php:222
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:226
+#: Framework/Helper.php:227
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:231
+#: Framework/Helper.php:232
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:236
+#: Framework/Helper.php:237
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:242
+#: Framework/Helper.php:243
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:248
+#: Framework/Helper.php:249
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:254
+#: Framework/Helper.php:255
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:260
+#: Framework/Helper.php:261
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:266
+#: Framework/Helper.php:267
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:272
+#: Framework/Helper.php:273
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:278
+#: Framework/Helper.php:279
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:284
+#: Framework/Helper.php:285
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:290
+#: Framework/Helper.php:291
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -280,10 +280,6 @@ msgstr "Noto Sans JP"
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
-#: app/customizer/design/sections/base-design/controls/custom-logo-scale.php:15
-msgid "Custom logo scale (%) on smartphone"
-msgstr "スマホ時のカスタムロゴの拡大率（%）"
-
 #: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
@@ -304,6 +300,10 @@ msgstr "ページ上部へ戻るボタンを表示"
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
+#: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:15
+msgid "Custom logo scale (%) on PC"
+msgstr "PC 時のカスタムロゴの拡大率（%）"
+
 #: app/customizer/design/sections/base-design/controls/protected-more.php:15
 msgid ""
 "If the post using more tag and password protect at the same time, display "
@@ -315,6 +315,10 @@ msgstr ""
 #: app/customizer/design/sections/base-design/controls/pure-css-gallery.php:15
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
+
+#: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:17
+msgid "Custom logo scale (%) on mobile device"
+msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
 
 #: app/customizer/design/sections/base-design/section.php:18
 msgid "Base design settings"

@@ -19,6 +19,12 @@
       color: $_color-text;
       text-decoration: none;
     }
+
+    .custom-logo {
+      .l-center-header & {
+        max-width: none;
+      }
+    }
   }
 
   &__description {

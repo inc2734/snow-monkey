@@ -3,21 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 7.7.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'number',
-	'sm-logo-scale',
+	'lg-logo-scale',
 	[
-		'label'       => __( 'Custom logo scale (%) on smartphone', 'snow-monkey' ),
-		'priority'    => 180,
-		'default'     => 25,
+		'label'       => __( 'Custom logo scale (%) on PC', 'snow-monkey' ),
+		'priority'    => 181,
+		'default'     => 50,
 		'input_attrs' => [
-			'min' => 25,
-			'max' => 50,
+			'min' => 1,
+			'max' => 100,
 		],
 		'active_callback' => function() {
 			$custom_logo = get_custom_logo();
@@ -41,5 +41,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'base-design' );
-$control = Framework::get_control( 'sm-logo-scale' );
+$control = Framework::get_control( 'lg-logo-scale' );
 $control->join( $section )->join( $panel );

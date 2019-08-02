@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.4.5
+ * @version 7.7.0
  */
 
 add_action(
@@ -22,7 +22,8 @@ add_action(
 );
 
 /**
- * Set custom logo size with ratina
+ * Set custom logo size with ratina.
+ * Output before wp_enqueue_scripts.
  */
 add_action(
 	'wp_head',
@@ -44,15 +45,19 @@ add_action(
 		}
 		$width = $reg[1];
 
-		$sm_logo_scale = get_theme_mod( 'sm-logo-scale', 33 );
-		$sm_logo_scale = ( $sm_logo_scale / 100 );
+		$sm_logo_scale = get_theme_mod( 'sm-logo-scale' );
+		$sm_logo_scale = $sm_logo_scale / 100;
+
+		$lg_logo_scale = get_theme_mod( 'lg-logo-scale' );
+		$lg_logo_scale = $lg_logo_scale / 100;
 		?>
 <style id="snow-monkey-custom-logo-size">
-.c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height * $sm_logo_scale ); ?>px; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
-@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding .custom-logo { height: <?php echo absint( $height / 2 ); ?>px; width: <?php echo absint( $width / 2 ); ?>px; } }
+.c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { height: <?php echo absint( $height * $sm_logo_scale ); ?>px; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
+@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { height: <?php echo absint( $height * $lg_logo_scale ); ?>px; width: <?php echo absint( $width * $lg_logo_scale ); ?>px; } }
 </style>
 		<?php
-	}
+	},
+	7
 );
 
 /**
