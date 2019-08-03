@@ -90,3 +90,21 @@ add_filter(
 	10,
 	2
 );
+
+/**
+ * When replacing the logo with the customizer,
+ * the logo part is reloaded but the style of width / height of the logo are not reloaded.
+ * So, distorted the logo.
+ * Take action by reloading the screen.
+ *
+ * @param WP_Customize_Manager $wp_customize
+ * @return void
+ */
+add_action(
+	'customize_register',
+	function( $wp_customize ) {
+		$wp_customize->selective_refresh->remove_partial( 'custom-logo' );
+		$wp_customize->get_setting( 'custom_logo' )->transport = 'refresh';
+	},
+	11
+);
