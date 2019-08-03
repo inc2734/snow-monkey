@@ -15,12 +15,12 @@
     font-weight: bold;
     text-decoration: none;
     padding: 5px;
-  }
 
-  a.#{$_prefix}p-infobar__inner {
-    @include _transition(background-color);
-    @include _hover(lg) {
-      background-color: desaturate($infobar-background-color, 5%);
+    @at-root a#{&} {
+      @include _transition(background-color);
+      @include _hover(lg) {
+        background-color: darken($infobar-background-color, 5%);
+      }
     }
   }
 }

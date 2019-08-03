@@ -9,11 +9,12 @@
 use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
-	'text',
-	'infobar-url',
+	'color',
+	'infobar-font-color',
 	[
-		'label'    => __( 'Infobar link URL', 'snow-monkey' ),
-		'priority' => 110,
+		'label'    => __( 'Text color', 'snow-monkey' ),
+		'default'  => '#fff',
+		'priority' => 120,
 	]
 );
 
@@ -22,5 +23,5 @@ if ( ! is_customize_preview() ) {
 }
 
 $section = Framework::get_section( 'infobar' );
-$control = Framework::get_control( 'infobar-url' );
+$control = Framework::get_control( 'infobar-font-color' );
 $control->join( $section );

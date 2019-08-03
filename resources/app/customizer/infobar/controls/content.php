@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 7.7.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,6 +15,7 @@ Framework::control(
 	[
 		'label'     => __( 'Infobar content', 'snow-monkey' ),
 		'transport' => 'postMessage',
+		'priority'  => 100,
 	]
 );
 

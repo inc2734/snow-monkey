@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-08-02 15:19+0900\n"
-"PO-Revision-Date: 2019-08-02 15:19+0900\n"
+"POT-Creation-Date: 2019-08-03 12:45+0900\n"
+"PO-Revision-Date: 2019-08-03 12:45+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -72,7 +72,7 @@ msgstr "ホワイト"
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:202
+#: Framework/Helper.php:202 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
@@ -416,6 +416,10 @@ msgstr "記事に関連記事を表示する"
 #: app/customizer/design/sections/post/section.php:18
 msgid "Posts settings"
 msgstr "投稿ページ設定"
+
+#: app/customizer/infobar/controls/background-color.php:15
+msgid "Background color"
+msgstr "背景色"
 
 #: app/customizer/infobar/controls/content.php:16
 msgid "Infobar content"
