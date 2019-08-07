@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.5.1
+ * @version 7.8.0
  */
 
 add_filter(
@@ -99,6 +99,10 @@ add_filter(
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-spotify"></i>' . $args->link_before, $item_output );
 		} elseif ( false !== strpos( $item->url, 'foursquare.com' ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-foursquare"></i>' . $args->link_before, $item_output );
+		} elseif ( false !== strpos( $item->url, 'line.me' ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
+		} elseif ( false !== strpos( $item->url, 'lineblog.me' ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
 		} else {
 			$new_item_output = str_replace( $args->link_before, '<i class="fas fa-globe"></i>' . $args->link_before, $item_output );
 		}

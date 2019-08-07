@@ -118,6 +118,7 @@ import {
   faWeibo,
   faWordpress,
   faYoutube,
+  faLine,
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -158,6 +159,7 @@ library.add(
   faWeibo,
   faWordpress,
   faYoutube,
+  faLine,
 );
 
 dom.watch();
