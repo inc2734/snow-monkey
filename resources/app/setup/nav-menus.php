@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.7.1
+ * @version 7.9.0
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -87,7 +87,10 @@ add_action(
 add_filter(
 	'nav_menu_item_title',
 	function( $title, $item, $args, $depth ) {
-		if ( 0 != $depth || 'global-nav' !== $args->theme_location ) {
+		$show_description = 0 == $depth && 'global-nav' === $args->theme_location;
+		$show_description = apply_filters( 'snow_monkey_nav_menu_item_title_show_description', $show_description, $depth, $args->theme_location );
+
+		if ( ! $show_description ) {
 			return $title;
 		}
 
