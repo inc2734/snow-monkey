@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.0
+ * @version 7.8.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -30,12 +30,15 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			},
 		]
 	);
+}
 
-	if ( ! is_customize_preview() ) {
-		return;
-	}
+if ( ! is_customize_preview() ) {
+	return;
+}
 
-	$panel   = Framework::get_panel( 'design' );
+$panel = Framework::get_panel( 'design' );
+
+foreach ( $custom_post_types as $custom_post_type ) {
 	$section = Framework::get_section( 'design-' . $custom_post_type . '-archive' );
 	$control = Framework::get_control( $custom_post_type . '-entries-layout' );
 	$control->join( $section )->join( $panel );

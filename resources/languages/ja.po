@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-08-03 12:45+0900\n"
-"PO-Revision-Date: 2019-08-03 12:45+0900\n"
+"POT-Creation-Date: 2019-08-08 15:53+0900\n"
+"PO-Revision-Date: 2019-08-08 15:53+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -383,6 +383,10 @@ msgstr "%1$sページ設定"
 #, php-format
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
+
+#: app/customizer/design/sections/home/section.php:18
+msgid "Posts page settings"
+msgstr "投稿ページ設定"
 
 #: app/customizer/design/sections/page/controls/eyecatch.php:17
 msgid "Select how to display the eyecatch image in page."
