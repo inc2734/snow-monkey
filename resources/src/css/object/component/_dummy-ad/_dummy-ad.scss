@@ -1,0 +1,9 @@
+.#{$_prefix}c-dummy-ad {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: _lightest($_color-gray);
+  @include _font-size-line-height($_base-font-size-px - 2);
+  @include _padding(1);
+}

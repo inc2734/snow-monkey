@@ -22,6 +22,11 @@ add_action(
 			return;
 		}
 
+		// @see https://github.com/inc2734/snow-monkey/issues/616
+		if ( is_customize_preview() ) {
+			return;
+		}
+
 		// @codingStandardsIgnoreStart
 		wp_enqueue_script(
 			'google-adsense',
@@ -74,14 +79,7 @@ add_action(
 			'after'
 		);
 
-		add_filter(
-			'snow_monkey_google_adsense',
-			function( $adsense, $position ) {
-				return;
-			},
-			11,
-			2
-		);
+		add_filter( 'snow_monkey_google_adsense', '__return_false' );
 	}
 );
 
@@ -104,4 +102,23 @@ add_filter(
 	},
 	10,
 	3
+);
+
+/**
+ * Display dummy advertisement when customize preview screen
+ *
+ * @param string $code
+ * @return string
+ */
+add_filter(
+	'inc2734_wp_adsense_the_adsense_code',
+	function( $code ) {
+		if ( ! is_customize_preview() ) {
+			return $code;
+		}
+
+		ob_start();
+		Helper::get_template_part( 'template-parts/common/dummy-ad' );
+		return wp_kses_post( ob_get_clean() );
+	}
 );

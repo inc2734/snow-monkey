@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-08-08 15:53+0900\n"
-"PO-Revision-Date: 2019-08-08 15:53+0900\n"
+"POT-Creation-Date: 2019-08-23 18:23+0900\n"
+"PO-Revision-Date: 2019-08-23 18:23+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1252,6 +1252,10 @@ msgstr ""
 "ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
 "てみてください。"
 
+#: template-parts/common/dummy-ad.php:11
+msgid "An advertisement is displayed."
+msgstr "広告が表示されます。"
+
 #: template-parts/common/overlay-search-box.php:17
 #: template-parts/widget-area/overlay.php:21
 msgid "Close"
@@ -1432,9 +1436,6 @@ msgstr "右サイドバー"
 
 #~ msgid "Currently %1$s page settings is displayed."
 #~ msgstr "現在、%1$sページの設定を表示しています。"
-
-#~ msgid "Currently page settings is displayed."
-#~ msgstr "現在、固定ページの設定を表示しています。"
 
 #~ msgid "Currently post settings is displayed."
 #~ msgstr "現在、投稿の設定を表示しています。"
