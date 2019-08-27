@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-08-23 18:23+0900\n"
-"PO-Revision-Date: 2019-08-23 18:23+0900\n"
+"POT-Creation-Date: 2019-08-27 22:28+0900\n"
+"PO-Revision-Date: 2019-08-27 22:28+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -64,82 +64,82 @@ msgstr "Snow Monkey theme by %s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:192
+#: Framework/Helper.php:212
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:197
+#: Framework/Helper.php:217
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:202 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:222 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:207
+#: Framework/Helper.php:227
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:212
+#: Framework/Helper.php:232
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:217
+#: Framework/Helper.php:237
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:222
+#: Framework/Helper.php:242
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:227
+#: Framework/Helper.php:247
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:232
+#: Framework/Helper.php:252
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:237
+#: Framework/Helper.php:257
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:243
+#: Framework/Helper.php:263
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:249
+#: Framework/Helper.php:269
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:255
+#: Framework/Helper.php:275
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:261
+#: Framework/Helper.php:281
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:267
+#: Framework/Helper.php:287
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:273
+#: Framework/Helper.php:293
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:279
+#: Framework/Helper.php:299
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:285
+#: Framework/Helper.php:305
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:291
+#: Framework/Helper.php:311
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -255,6 +255,11 @@ msgstr "テキスト"
 #: app/customizer/design/sections/archive/section.php:18
 msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
+
+#: app/customizer/design/sections/author/section.php:24
+#, php-format
+msgid "[ %1$s ] author page settings"
+msgstr "[ %1$s ] 著者ページ設定"
 
 #: app/customizer/design/sections/base-design/controls/base-font-size.php:15
 msgid "Base font size(px)"

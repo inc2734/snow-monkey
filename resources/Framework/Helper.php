@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.2.0
+ * @version 7.10.0
  */
 
 namespace Framework;
@@ -172,6 +172,26 @@ class Helper {
 		wp_cache_set( 'snow-monkey-all-' . $taxonomy, $terms );
 		if ( is_array( $terms ) ) {
 			return $terms;
+		}
+
+		return [];
+	}
+
+	/**
+	 * Return all users
+	 *
+	 * @return array
+	 */
+	public static function get_users() {
+		$users = wp_cache_get( 'snow-monkey-all-users' );
+		if ( is_array( $users ) ) {
+			return $users;
+		}
+
+		$users = get_users();
+		wp_cache_set( 'snow-monkey-all-users', $users );
+		if ( is_array( $users ) ) {
+			return $users;
 		}
 
 		return [];
