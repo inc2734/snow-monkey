@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 7.10.1
  */
 
 use Framework\Helper;
@@ -20,7 +20,8 @@ if ( 2 !== count( $_taxonomy ) ) {
 $taxonomy_id = $_taxonomy[0];
 $term_id     = $_taxonomy[1];
 $_taxonomy   = get_taxonomy( $taxonomy_id );
-$post_types  = empty( $_taxonomy->object_type ) ? 'post' : $_taxonomy->object_type;
+$post_types  = empty( $_taxonomy->object_type ) ? [ 'post' ] : $_taxonomy->object_type;
+$post_types  = (array) $post_types;
 
 $widget_number = explode( '-', $args['widget_id'] );
 $widget_number = end( $widget_number );
@@ -29,9 +30,15 @@ $has_sticky   = get_option( 'sticky_posts' ) && ! $instance['ignore-sticky-posts
 $sticky_count = 0;
 if ( $has_sticky ) {
 	foreach ( get_option( 'sticky_posts' ) as $_post_id ) {
-		if ( 'publish' === get_post_status( $_post_id ) ) {
-			$sticky_count ++;
+		if ( ! in_array( get_post_type( $_post_id ), $post_types ) ) {
+			continue;
 		}
+
+		if ( 'publish' !== get_post_status( $_post_id ) ) {
+			continue;
+		}
+
+		$sticky_count ++;
 	}
 }
 

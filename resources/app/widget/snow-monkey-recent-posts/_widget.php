@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 7.10.1
  */
 
 use Framework\Helper;
@@ -15,9 +15,15 @@ $has_sticky   = get_option( 'sticky_posts' ) && ! $instance['ignore-sticky-posts
 $sticky_count = 0;
 if ( $has_sticky ) {
 	foreach ( get_option( 'sticky_posts' ) as $_post_id ) {
-		if ( 'publish' === get_post_status( $_post_id ) ) {
-			$sticky_count ++;
+		if ( get_post_type( $_post_id ) !== $instance['post-type'] ) {
+			continue;
 		}
+
+		if ( 'publish' !== get_post_status( $_post_id ) ) {
+			continue;
+		}
+
+		$sticky_count ++;
 	}
 }
 
