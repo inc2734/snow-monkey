@@ -11,8 +11,6 @@ export default class PageTopBtn {
 
     let timer = null;
     window.addEventListener('scroll', () => this._scroll(timer), false);
-    window.addEventListener('load', () => this._updatePageTopBtnPosition(), false);
-    window.addEventListener('resize', () => this._resize(), false);
   }
 
   _scroll(timer) {
@@ -25,26 +23,5 @@ export default class PageTopBtn {
       },
       500
     );
-  }
-
-  _updatePageTopBtnPosition() {
-    const footerStickyNav = getFooterStickyNav();
-
-    let bottom = '';
-    if (footerStickyNav) {
-      const isOverlapping = parseInt(getStyle(this.btn, 'bottom')) < parseInt(footerStickyNav.offsetHeight);
-      bottom = isOverlapping ? `${footerStickyNav.offsetHeight}px` : bottom;
-    }
-
-    setStyle(this.btn, 'bottom', bottom);
-  }
-
-  _resize() {
-    if (window.innerWidth === this.defaultWindowWidth) {
-      return;
-    }
-
-    this.defaultWindowWidth = window.innerWidth;
-    this._updatePageTopBtnPosition();
   }
 }

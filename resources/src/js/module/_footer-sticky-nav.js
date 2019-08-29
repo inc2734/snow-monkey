@@ -1,5 +1,6 @@
 'use strict';
 
+import addCustomEvent from '@inc2734/add-custom-event';
 import {getBody, getFooterStickyNav, getStyle, setStyle} from './_helper.js';
 
 export default class FooterStickyNav {
@@ -16,13 +17,19 @@ export default class FooterStickyNav {
     window.addEventListener('resize', () => this._resize(), false);
   }
 
-  _init() {
-    const display = getStyle(this.nav, 'display');
-    const hidden  = this.nav.getAttribute('aria-hidden');
+  static init(nav) {
+    const display = getStyle(nav, 'display');
+    const hidden  = nav.getAttribute('aria-hidden');
     const body    = getBody();
 
-    const marginBottom = 'true' === this.nav.getAttribute('aria-hidden') ? '' : `${this.nav.offsetHeight}px`;
+    const marginBottom = 'true' === nav.getAttribute('aria-hidden') ? '' : `${nav.offsetHeight}px`;
     setStyle(body, 'marginBottom', marginBottom);
+
+    addCustomEvent(nav, 'initFooterStickyNav');
+  }
+
+  _init() {
+    FooterStickyNav.init(this.nav);
   }
 
   _resize() {
