@@ -1,27 +1,23 @@
 'use strict';
 
-import $ from 'jquery';
-import {scrollTop, getFooterStickyNav, setStyle, getStyle} from './_helper.js';
+import {scrollTop} from './_helper.js';
 
-export default class PageTopBtn {
-  constructor(btn) {
-    this.btn = btn;
+const toggleBtn = (btn, timer) => {
+  clearTimeout(timer);
 
-    this.defaultWindowWidth = window.innerWidth;
+  timer = setTimeout(
+    () => {
+      const oldAriaHidden = btn.getAttribute('aria-hidden');
+      const newAriaHidden = 500 > scrollTop() ? 'true' : 'false';
+      if (oldAriaHidden !== newAriaHidden) {
+        btn.setAttribute('aria-hidden', newAriaHidden);
+      }
+    },
+    500
+  );
+};
 
-    let timer = null;
-    window.addEventListener('scroll', () => this._scroll(timer), false);
-  }
-
-  _scroll(timer) {
-    clearTimeout(timer);
-
-    timer = setTimeout(
-      () => {
-        const ariaHidden = 500 > scrollTop() ? 'true' : 'false';
-        this.btn.setAttribute('aria-hidden', ariaHidden);
-      },
-      500
-    );
-  }
-}
+export const PageTopBtn = (btn) => {
+  let timer = null;
+  window.addEventListener('scroll', () => toggleBtn(btn, timer), false);
+};

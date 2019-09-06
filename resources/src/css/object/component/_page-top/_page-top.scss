@@ -2,7 +2,7 @@
   @include _position(fixed, null, 0, 44px, null, 1);
   background-color: $color-accent;
   @include _square(40px);
-  @include _transition(all);
+  @include _transition(opacity);
   visibility: hidden;
   opacity: 0;
 

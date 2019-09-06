@@ -1,48 +1,45 @@
 'use strict';
 
 import addCustomEvent from '@inc2734/add-custom-event';
-import {getBody, getFooterStickyNav, getStyle, setStyle} from './_helper.js';
+import {getBody, getStyle, setStyle} from './_helper.js';
 
-export default class FooterStickyNav {
-  constructor() {
-    this.nav = getFooterStickyNav();
-    if (! this.nav) {
-      return;
-    }
+let defaultWindowWidth  = window.innerWidth;
+let defaultWindowHeight = window.innerHeight;
 
-    this.defaultWindowWidth = window.innerWidth;
-    this.navDefaultPaddingBottom = getStyle(this.nav, 'padding-bottom');
+const init = (nav) => addCustomEvent(nav, 'initFooterStickyNav');
+const onLoad = (nav) => init(nav);
+const onResize = (nav) => window.innerWidth !== defaultWindowWidth ? resize(nav) : toggleBars(nav);
+const toggleBars = (nav) => updateClickable(nav);
 
-    window.addEventListener('load', () => this._init(), false);
-    window.addEventListener('resize', () => this._resize(), false);
-    this.nav.addEventListener('initFooterStickyNav', () => this._addBodyMargin(), false);
+const resize = (nav) => {
+  defaultWindowWidth  = window.innerWidth;
+  defaultWindowHeight = window.innerHeight;
+  init(nav);
+};
+
+const updateClickable = (nav) => {
+  const oldClickable = nav.getAttribute('data-clickable');
+  const newClickable = window.innerHeight === defaultWindowHeight;
+  if (oldClickable !== newClickable) {
+    nav.setAttribute('data-clickable', newClickable);
+    init();
+  }
+};
+
+const addBodyMargin = (nav) => {
+  const hidden = nav.getAttribute('aria-hidden');
+  const body   = getBody();
+
+  const marginBottom = 'true' === nav.getAttribute('aria-hidden') ? '' : `${nav.offsetHeight}px`;
+  setStyle(body, 'marginBottom', marginBottom);
+};
+
+export const FooterStickyNav = (nav) => {
+  if (! nav) {
+    return;
   }
 
-  _init() {
-    addCustomEvent(this.nav, 'initFooterStickyNav');
-  }
-
-  _resize() {
-    this._updateClickable();
-
-    if (window.innerWidth === this.defaultWindowWidth) {
-      return;
-    }
-
-    this.defaultWindowWidth = window.innerWidth;
-    this._init();
-  }
-
-  _addBodyMargin() {
-    const hidden = this.nav.getAttribute('aria-hidden');
-    const body   = getBody();
-
-    const marginBottom = 'true' === this.nav.getAttribute('aria-hidden') ? '' : `${this.nav.offsetHeight}px`;
-    setStyle(body, 'marginBottom', marginBottom);
-  }
-
-  _updateClickable() {
-    const clickable = this.navDefaultPaddingBottom !== getStyle(this.nav, 'padding-bottom') ? 'false' : 'true';
-    this.nav.setAttribute('data-clickable', clickable);
-  }
-}
+  window.addEventListener('load', () => onLoad(nav), false);
+  window.addEventListener('resize', () => onResize(nav), false);
+  nav.addEventListener('initFooterStickyNav', () => addBodyMargin(nav), false);
+};

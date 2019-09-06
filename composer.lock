@@ -1157,16 +1157,16 @@
         },
         {
             "name": "phpcompatibility/php-compatibility",
-            "version": "9.3.0",
+            "version": "9.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCompatibility/PHPCompatibility.git",
-                "reference": "06cc8d2c2ed62a70f52963dbdf5eaa1ec0fe34c5"
+                "reference": "9999344e47e7af6b00e1a898eacc4e4368fb7196"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibility/zipball/06cc8d2c2ed62a70f52963dbdf5eaa1ec0fe34c5",
-                "reference": "06cc8d2c2ed62a70f52963dbdf5eaa1ec0fe34c5",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibility/zipball/9999344e47e7af6b00e1a898eacc4e4368fb7196",
+                "reference": "9999344e47e7af6b00e1a898eacc4e4368fb7196",
                 "shasum": ""
             },
             "require": {
@@ -1191,13 +1191,13 @@
             "authors": [
                 {
                     "name": "Wim Godden",
-                    "role": "lead",
-                    "homepage": "https://github.com/wimg"
+                    "homepage": "https://github.com/wimg",
+                    "role": "lead"
                 },
                 {
                     "name": "Juliette Reinders Folmer",
-                    "role": "lead",
-                    "homepage": "https://github.com/jrfnl"
+                    "homepage": "https://github.com/jrfnl",
+                    "role": "lead"
                 },
                 {
                     "name": "Contributors",
@@ -1211,7 +1211,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-08-28T15:29:06+00:00"
+            "time": "2019-09-05T18:36:49+00:00"
         },
         {
             "name": "phpcompatibility/phpcompatibility-paragonie",
