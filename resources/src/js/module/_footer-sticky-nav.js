@@ -15,25 +15,15 @@ export default class FooterStickyNav {
 
     window.addEventListener('load', () => this._init(), false);
     window.addEventListener('resize', () => this._resize(), false);
-  }
-
-  static init(nav) {
-    const display = getStyle(nav, 'display');
-    const hidden  = nav.getAttribute('aria-hidden');
-    const body    = getBody();
-
-    const marginBottom = 'true' === nav.getAttribute('aria-hidden') ? '' : `${nav.offsetHeight}px`;
-    setStyle(body, 'marginBottom', marginBottom);
-
-    addCustomEvent(nav, 'initFooterStickyNav');
+    this.nav.addEventListener('initFooterStickyNav', () => this._addBodyMargin(), false);
   }
 
   _init() {
-    FooterStickyNav.init(this.nav);
+    addCustomEvent(this.nav, 'initFooterStickyNav');
   }
 
   _resize() {
-    this._updateNavHidden();
+    this._updateClickable();
 
     if (window.innerWidth === this.defaultWindowWidth) {
       return;
@@ -43,8 +33,16 @@ export default class FooterStickyNav {
     this._init();
   }
 
-  _updateNavHidden() {
-    const ariaHidden = this.navDefaultPaddingBottom !== getStyle(this.nav, 'padding-bottom') ? 'true' : 'false';
-    this.nav.setAttribute('aria-hidden', ariaHidden);
+  _addBodyMargin() {
+    const hidden = this.nav.getAttribute('aria-hidden');
+    const body   = getBody();
+
+    const marginBottom = 'true' === this.nav.getAttribute('aria-hidden') ? '' : `${this.nav.offsetHeight}px`;
+    setStyle(body, 'marginBottom', marginBottom);
+  }
+
+  _updateClickable() {
+    const clickable = this.navDefaultPaddingBottom !== getStyle(this.nav, 'padding-bottom') ? 'false' : 'true';
+    this.nav.setAttribute('data-clickable', clickable);
   }
 }
