@@ -1,100 +1,42 @@
 'use strict';
 
+import '@inc2734/dispatch-custom-resize-event';
 import addCustomEvent from '@inc2734/add-custom-event';
-import {getHeader, getDropNavWrapper, scrollTop, isHeaderPositionOnlyMobile, maybeShowDropNav} from './_helper.js';
+import { scrollTop, isHeaderPositionOnlyMobile, maybeShowDropNav } from './_helper.js';
 
-export default class DropNav {
-  constructor() {
-    this.defaultWindowWidth = window.innerWidth;
+const hide = (target) => target.setAttribute('aria-hidden', 'true');
+const show = (target) => target.setAttribute('aria-hidden', 'false');
 
-    this.header = getHeader();
-    if (! this.header) {
-      return;
+export const GlobalNav = (gnav) => {
+  window.addEventListener('showDropNav', () => hide(gnav));
+  window.addEventListener('hideDropNav', () => show(gnav));
+};
+
+export const DropNav = (dropNavWrapper) => {
+  let timer = null;
+
+  const hideDropNav = () => {
+    if ('false' === dropNavWrapper.getAttribute('aria-hidden')) {
+      hide(dropNavWrapper);
+      addCustomEvent(window, 'hideDropNav');
     }
+  };
 
-    this.dropNavWrapper = getDropNavWrapper();
-    if (! this.dropNavWrapper) {
-      return;
+  const showDropNav = () => {
+    if ('true' === dropNavWrapper.getAttribute('aria-hidden')) {
+      show(dropNavWrapper);
+      addCustomEvent(window, 'showDropNav');
     }
+  };
 
-    this.gnav = document.querySelector('[data-has-global-nav="true"] .p-global-nav');
-    if (! this.gnav) {
-      return;
-    }
+  const scrol = () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => maybeShowDropNav() ? showDropNav() : hideDropNav(), 100);
+  };
 
-    if (isHeaderPositionOnlyMobile()) {
-      this._gnav();
-    } else {
-      this._hideDropNav();
-    }
-
-    this.timer = null;
-    window.addEventListener('scroll', () => this._scroll(), false);
-    window.addEventListener('resize', () => this._resize(), false);
+  hideDropNav();
+  if (isHeaderPositionOnlyMobile()) {
+    window.addEventListener('resize:width', () => hideDropNav(), false);
+    window.addEventListener('scroll', () => scrol(), false);
   }
-
-  _scroll() {
-    clearTimeout(this.timer);
-    this.timer = setTimeout(() => {
-      if (maybeShowDropNav()) {
-        this._dropNav();
-        return;
-      }
-
-      if (isHeaderPositionOnlyMobile()) {
-        this._gnav();
-      }
-    }, 100);
-  }
-
-  _resize() {
-    if (window.innerWidth !== this.defaultWindowWidth) {
-      if (isHeaderPositionOnlyMobile()) {
-        this._gnav();
-      }
-    }
-  }
-
-  _gnav() {
-    if ('false' === this.gnav.getAttribute('aria-hidden')) {
-      return;
-    }
-
-    this._showGnav();
-    this._hideDropNav();
-  }
-
-  _dropNav() {
-    if ('false' === this.dropNavWrapper.getAttribute('aria-hidden')) {
-      return;
-    }
-
-    this._hideGnav();
-    this._showDropNav();
-    addCustomEvent(window, 'showDropNav');
-  }
-
-  _showGnav() {
-    this._show(this.gnav);
-  }
-
-  _hideGnav() {
-    this._hide(this.gnav);
-  }
-
-  _showDropNav() {
-    this._show(this.dropNavWrapper);
-  }
-
-  _hideDropNav() {
-    this._hide(this.dropNavWrapper);
-  }
-
-  _show(target) {
-    target.setAttribute('aria-hidden', 'false');
-  }
-
-  _hide(target) {
-    target.setAttribute('aria-hidden', 'true');
-  }
-}
+};
