@@ -17,6 +17,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.10.2",
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@inc2734/add-custom-event": "^0.1.0",
+    "@inc2734/dispatch-custom-resize-event": "^0.1.0",
     "@inc2734/for-each-html-nodes": "^0.2.0",
     "autoprefixer": "^9.6.1",
     "babel-loader": "^8.0.6",
