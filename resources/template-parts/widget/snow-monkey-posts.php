@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 7.10.6
  */
 
 use Framework\Helper;
@@ -58,6 +58,9 @@ $more_classnames = [
 	'snow-monkey-posts__more',
 	$template_args['classname'] . '__more',
 ];
+
+$posts_per_page = $template_args['posts_query']->get( 'posts_per_page' );
+$loop_count = 0;
 ?>
 
 <div
@@ -73,7 +76,13 @@ $more_classnames = [
 
 	<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
 		<?php while ( $template_args['posts_query']->have_posts() ) : ?>
-			<?php $template_args['posts_query']->the_post(); ?>
+			<?php
+			$template_args['posts_query']->the_post();
+			$loop_count ++;
+			if ( $loop_count > $posts_per_page ) {
+				break;
+			}
+			?>
 			<li class="c-entries__item">
 				<?php
 				Helper::get_template_part(

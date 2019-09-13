@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.10.1
+ * @version 7.10.6
  */
 
 use Framework\Helper;
@@ -11,25 +11,9 @@ use Framework\Helper;
 $widget_number = explode( '-', $args['widget_id'] );
 $widget_number = end( $widget_number );
 
-$has_sticky   = get_option( 'sticky_posts' ) && ! $instance['ignore-sticky-posts'];
-$sticky_count = 0;
-if ( $has_sticky ) {
-	foreach ( get_option( 'sticky_posts' ) as $_post_id ) {
-		if ( get_post_type( $_post_id ) !== $instance['post-type'] ) {
-			continue;
-		}
-
-		if ( 'publish' !== get_post_status( $_post_id ) ) {
-			continue;
-		}
-
-		$sticky_count ++;
-	}
-}
-
 $query_args = [
 	'post_type'           => ! empty( $instance['post-type'] ) ? $instance['post-type'] : 'post',
-	'posts_per_page'      => $instance['posts-per-page'] - $sticky_count,
+	'posts_per_page'      => $instance['posts-per-page'],
 	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
 	'suppress_filters'    => true,
 ];
