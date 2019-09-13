@@ -18,14 +18,14 @@ document.addEventListener(
       return;
     }
 
+    const defaultPosition = getStyle(pageTop, 'bottom');
+
     footerStickyNav.addEventListener(
       'initFooterStickyNav',
       () => {
-        setStyle(pageTop, 'bottom', '');
-
         setTimeout(
           () => {
-            const isOverlapping = parseInt(getStyle(pageTop, 'bottom')) < parseInt(footerStickyNav.offsetHeight);
+            const isOverlapping = parseInt(defaultPosition) < parseInt(footerStickyNav.offsetHeight);
             const bottom = isOverlapping ? `${footerStickyNav.offsetHeight}px` : '';
             setStyle(pageTop, 'bottom', bottom);
           },
