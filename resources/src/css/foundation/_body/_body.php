@@ -15,7 +15,7 @@ Style::register(
 $base_font   = get_theme_mod( 'base-font' );
 $font_family = [];
 if ( 'sans-serif' === $base_font ) {
-	$font_family = [ 'sans-serif' ];
+	$font_family = [ '-apple-system', 'sans-serif' ];
 } elseif ( 'serif' === $base_font ) {
 	$font_family = [ 'serif' ];
 } elseif ( 'noto-sans-jp' === $base_font ) {

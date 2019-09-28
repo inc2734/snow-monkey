@@ -18,7 +18,7 @@ body {
 .editor-post-title__input {
   @include _font-size-line-height($_base-font-size-px * 1.25);
   font-weight: bold;
-  font-family: sans-serif;
+  font-family: -apple-system, sans-serif;
   @include _padding(.25, .5);
 }
 
