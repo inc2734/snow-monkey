@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.8.0
+ * @version 7.12.0
  */
 
 add_filter(
@@ -15,93 +15,85 @@ add_filter(
 
 		$new_item_output = '';
 
-		if ( false !== strpos( $item->url, 'amazon.com' ) ) {
+		if ( preg_match( '|^https?://([^\.]+?\.)*?amazon\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-amazon"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'amazon.co.jp' ) ) {
-			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-amazon"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'bitbucket.org' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?bitbucket\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-bitbucket"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'paypal.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?paypal\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-paypal"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'stripe.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?stripe\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-stripe"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'codepen.io' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?codepen\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-codepen"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'digg.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?digg\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-digg"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'dribbble.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?dribbble\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-dribbble"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'dropbox.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?dropbox\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-dropbox"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'facebook.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?facebook\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-facebook"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'flickr.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?flickr\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-flickr"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'getpocket.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?getpocket\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-get-pocket"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'github.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?github\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-github"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'gitlab.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?gitlab\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-gitlab"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'plus.google.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?plus.google\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-google-plus"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'google.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?google\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-google"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'instagram.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?instagram\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-instagram"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'linkedin.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?linkedin\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-linkedin"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'medium.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?medium\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-medium"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'pinterest.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?pinterest\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-pinterest"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'pinterest.jp' ) ) {
-			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-pinterest"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'reddit.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?reddit\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-reddit"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'skype.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?skype\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-skype"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'slack.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?slack\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-slack"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'slideshare.net' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?slideshare\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-slideshare"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'snapchat.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?snapchat\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-snapchat"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'stackoverflow.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?stackoverflow\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-stack-overflow"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'tumblr.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?tumblr\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-tumblr"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'vimeo.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?vimeo\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-vimeo"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'twitter.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?twitter\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-twitter"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'weibo.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?weibo\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-weibo"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'wordpress.org' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?wordpress\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-wordpress"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'wordpress.com' ) ) {
-			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-wordpress"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'youtube.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?youtube\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-youtube"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'behance.net' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?behance\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-behance"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, '500px.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?500px\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-500px"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'blogger.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?blogger\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-blogger"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'blogspot.jp' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?blogspot\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-blogger"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'blogspot.com' ) ) {
-			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-blogger"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'soundcloud.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?soundcloud\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-soundcloud"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'spotify.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?spotify\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-spotify"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'foursquare.com' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?foursquare\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-foursquare"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'line.me' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?line\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
-		} elseif ( false !== strpos( $item->url, 'lineblog.me' ) ) {
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?lineblog\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
 		} else {
 			$new_item_output = str_replace( $args->link_before, '<i class="fas fa-globe"></i>' . $args->link_before, $item_output );
