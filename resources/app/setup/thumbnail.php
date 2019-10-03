@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 4.4.0-beta2
+ * @version 7.13.0
  */
 
 add_filter(
@@ -18,6 +18,10 @@ add_filter(
 			return $html;
 		}
 
+		$image_id = attachment_url_to_postid( $default_thumbnail );
+		$post     = get_post( $image_id );
+		$alt      = $post->post_excerpt;
+
 		$attr_html = '';
 		$attr = wp_parse_args( $attr, [] );
 		foreach ( $attr as $name => $value ) {
@@ -25,10 +29,11 @@ add_filter(
 		}
 
 		return sprintf(
-			'<img src="%1$s" class="attachment-%2$s size-%2$s wp-post-image" %3$s alt="">',
+			'<img src="%1$s" class="attachment-%2$s size-%2$s wp-post-image" %3$s alt="%4$s">',
 			esc_url( $default_thumbnail ),
 			esc_attr( $size ),
-			esc_attr( $attr_html )
+			esc_attr( $attr_html ),
+			esc_attr( $alt )
 		);
 	},
 	10,
