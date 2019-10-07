@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1323f5f35b725e6b27ce9ba5bb72332a",
+    "content-hash": "d9c920efa9761ea4cd7670f6ea56c798",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "19.12.0",
+            "version": "20.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "6ceda31fc5e5fb0a3fa1a5fffeb68990c181863d"
+                "reference": "6e59acced5f4547ee221ec31a1d6662e9f15f370"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6ceda31fc5e5fb0a3fa1a5fffeb68990c181863d",
-                "reference": "6ceda31fc5e5fb0a3fa1a5fffeb68990c181863d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6e59acced5f4547ee221ec31a1d6662e9f15f370",
+                "reference": "6e59acced5f4547ee221ec31a1d6662e9f15f370",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                 "inc2734/wp-page-speed-optimization": "^2.0",
                 "inc2734/wp-profile-box": "^2.2",
                 "inc2734/wp-pure-css-gallery": "^2.0",
-                "inc2734/wp-seo": "^3.0",
+                "inc2734/wp-seo": "^4.0",
                 "inc2734/wp-share-buttons": "^4.1",
                 "inc2734/wp-view-controller": "^8.2",
                 "php": ">=5.6"
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-10-02T13:52:38+00:00"
+            "time": "2019-10-07T07:48:05+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -523,16 +523,16 @@
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "f6f6ac80f4a945bb256849ba7b625147a87952b9"
+                "reference": "b85b183ac1d7519ec15a7cb0afc4f49c92c68181"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/f6f6ac80f4a945bb256849ba7b625147a87952b9",
-                "reference": "f6f6ac80f4a945bb256849ba7b625147a87952b9",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/b85b183ac1d7519ec15a7cb0afc4f49c92c68181",
+                "reference": "b85b183ac1d7519ec15a7cb0afc4f49c92c68181",
                 "shasum": ""
             },
             "require": {
@@ -567,7 +567,7 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2019-01-22T00:13:34+00:00"
+            "time": "2019-10-07T07:34:40+00:00"
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
@@ -750,16 +750,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "3.0.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "02fa25d7f31c7fd5e2cdc181231ac27418990186"
+                "reference": "b6b04db17481d969c732df5ab31732c993d3e2be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/02fa25d7f31c7fd5e2cdc181231ac27418990186",
-                "reference": "02fa25d7f31c7fd5e2cdc181231ac27418990186",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/b6b04db17481d969c732df5ab31732c993d3e2be",
+                "reference": "b6b04db17481d969c732df5ab31732c993d3e2be",
                 "shasum": ""
             },
             "require": {
@@ -791,7 +791,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2019-05-30T01:20:05+00:00"
+            "time": "2019-10-07T07:44:48+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",

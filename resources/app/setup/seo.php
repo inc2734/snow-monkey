@@ -182,7 +182,7 @@ add_filter(
 add_filter(
 	'inc2734_wp_seo_thumbnail',
 	function( $thumbnail ) {
-		if ( ! $thumbnail ) {
+		if ( ! $thumbnail && is_singular() ) {
 			$thumbnail = get_theme_mod( 'default-thumbnail' );
 		}
 		return $thumbnail;
