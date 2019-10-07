@@ -1,5 +1,5 @@
 .#{$_prefix}l-header {
-  z-index: 3;
+  z-index: 99999;
   background-color: #fff;
   @include _padding(.25, 0);
   @include _transition(all);
