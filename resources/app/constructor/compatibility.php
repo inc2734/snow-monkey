@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <version>
  */
 
 use Framework\Helper;
@@ -22,7 +22,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
  * @return string
  */
 add_filter(
-	'inc2734_view_controller_template_part_render',
+	'inc2734_wp_view_controller_template_part_render',
 	function( $content, $slug ) {
 		if ( 'templates/view/content' === $slug ) {
 			$content = str_replace( 'class="c-entry__content"', 'class="c-entry__content p-entry-content"', $content );
@@ -112,7 +112,7 @@ add_filter(
  * @return string
  */
 add_filter(
-	'inc2734_view_controller_located_template_slug_fallback',
+	'inc2734_wp_view_controller_located_template_slug_fallback',
 	function( $fallback_slug, $relative_dir_paths, $slug, $name ) {
 		if ( $fallback_slug ) {
 			return $fallback_slug;

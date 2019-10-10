@@ -1,9 +1,11 @@
 <?php
 /**
+ * Name: Center logo
+ *
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Framework\Helper;

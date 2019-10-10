@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,12 +17,7 @@ Framework::control(
 		'label'     => __( 'Header layout', 'snow-monkey' ),
 		'priority'  => 100,
 		'default'   => 'center',
-		'choices'   => [
-			'simple' => __( 'Simple', 'snow-monkey' ),
-			'1row'   => __( 'One row', 'snow-monkey' ),
-			'2row'   => __( 'Two rows', 'snow-monkey' ),
-			'center' => __( 'Center logo', 'snow-monkey' ),
-		],
+		'choices'  => is_customize_preview() ? Helper::get_header_templates() : [],
 	]
 );
 

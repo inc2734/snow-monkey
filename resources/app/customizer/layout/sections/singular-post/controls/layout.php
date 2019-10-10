@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,7 +16,7 @@ Framework::control(
 		'label'    => __( 'Page layout', 'snow-monkey' ),
 		'priority' => 100,
 		'default'  => 'right-sidebar',
-		'choices'  => Helper::get_page_templates(),
+		'choices'  => is_customize_preview() ? Helper::get_wrapper_templates() : [],
 	]
 );
 

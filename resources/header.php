@@ -3,9 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <version>
  */
 
 use Framework\Helper;
 
-Helper::get_template_part( 'templates/layout/header/header' );
+Helper::get_header_template( get_theme_mod( 'header-layout' ) );

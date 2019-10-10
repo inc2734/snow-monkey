@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9c920efa9761ea4cd7670f6ea56c798",
+    "content-hash": "90f693b433b6408de6446ec100378625",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "20.0.0",
+            "version": "21.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "6e59acced5f4547ee221ec31a1d6662e9f15f370"
+                "reference": "94b9f2cc6873ad74733dc59b1525b6d270e2f2b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/6e59acced5f4547ee221ec31a1d6662e9f15f370",
-                "reference": "6e59acced5f4547ee221ec31a1d6662e9f15f370",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/94b9f2cc6873ad74733dc59b1525b6d270e2f2b4",
+                "reference": "94b9f2cc6873ad74733dc59b1525b6d270e2f2b4",
                 "shasum": ""
             },
             "require": {
@@ -36,7 +36,7 @@
                 "inc2734/wp-pure-css-gallery": "^2.0",
                 "inc2734/wp-seo": "^4.0",
                 "inc2734/wp-share-buttons": "^4.1",
-                "inc2734/wp-view-controller": "^8.2",
+                "inc2734/wp-view-controller": "^10.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-10-07T07:48:05+00:00"
+            "time": "2019-10-10T00:31:10+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -841,16 +841,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "8.2.0",
+            "version": "10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "28cc3751ec5142ef1099d9c318000767b5d603ab"
+                "reference": "6a5f7298d94afe1db7dfff6e513297ede271d269"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/28cc3751ec5142ef1099d9c318000767b5d603ab",
-                "reference": "28cc3751ec5142ef1099d9c318000767b5d603ab",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/6a5f7298d94afe1db7dfff6e513297ede271d269",
+                "reference": "6a5f7298d94afe1db7dfff6e513297ede271d269",
                 "shasum": ""
             },
             "require": {
@@ -881,7 +881,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-10-02T13:48:58+00:00"
+            "time": "2019-10-10T00:24:15+00:00"
         }
     ],
     "packages-dev": [
@@ -2644,16 +2644,16 @@
         },
         {
             "name": "symfony/config",
-            "version": "v4.3.4",
+            "version": "v4.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
-                "reference": "07d49c0f823e0bc367c6d84e35b61419188a5ece"
+                "reference": "0acb26407a9e1a64a275142f0ae5e36436342720"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/07d49c0f823e0bc367c6d84e35b61419188a5ece",
-                "reference": "07d49c0f823e0bc367c6d84e35b61419188a5ece",
+                "url": "https://api.github.com/repos/symfony/config/zipball/0acb26407a9e1a64a275142f0ae5e36436342720",
+                "reference": "0acb26407a9e1a64a275142f0ae5e36436342720",
                 "shasum": ""
             },
             "require": {
@@ -2704,20 +2704,20 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T08:26:39+00:00"
+            "time": "2019-09-19T15:51:53+00:00"
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v4.3.4",
+            "version": "v4.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "d3ad14b66ac773ba6123622eb9b5b010165fe3d9"
+                "reference": "e1e0762a814b957a1092bff75a550db49724d05b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/d3ad14b66ac773ba6123622eb9b5b010165fe3d9",
-                "reference": "d3ad14b66ac773ba6123622eb9b5b010165fe3d9",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/e1e0762a814b957a1092bff75a550db49724d05b",
+                "reference": "e1e0762a814b957a1092bff75a550db49724d05b",
                 "shasum": ""
             },
             "require": {
@@ -2777,11 +2777,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2019-08-26T16:27:33+00:00"
+            "time": "2019-10-02T12:58:58+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v4.3.4",
+            "version": "v4.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -2889,16 +2889,16 @@
         },
         {
             "name": "symfony/service-contracts",
-            "version": "v1.1.6",
+            "version": "v1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/service-contracts.git",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3"
+                "reference": "ffcde9615dc5bb4825b9f6aed07716f1f57faae0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
-                "reference": "ea7263d6b6d5f798b56a45a5b8d686725f2719a3",
+                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/ffcde9615dc5bb4825b9f6aed07716f1f57faae0",
+                "reference": "ffcde9615dc5bb4825b9f6aed07716f1f57faae0",
                 "shasum": ""
             },
             "require": {
@@ -2943,7 +2943,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-08-20T14:44:19+00:00"
+            "time": "2019-09-17T11:12:18+00:00"
         },
         {
             "name": "theseer/tokenizer",

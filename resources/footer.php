@@ -3,9 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <version>
  */
 
 use Framework\Helper;
 
-Helper::get_template_part( 'templates/layout/footer/footer' );
+Helper::get_footer_template( 'footer' );

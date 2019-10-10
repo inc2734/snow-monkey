@@ -3,22 +3,60 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.2
+ * @version <version>
  */
+
+/**
+ * Update view controller config
+ *
+ * @param array $config
+ * @return array
+ */
+add_filter(
+	'inc2734_wp_view_controller_config',
+	function() {
+		return [
+			'templates' => [
+				'',
+			],
+			'page-templates' => [
+				'page-templates',
+			],
+			'layout' => [
+				'templates/layout/wrapper',
+			],
+			'header' => [
+				'templates/layout/header',
+			],
+			'sidebar' => [
+				'templates/layout/sidebar',
+			],
+			'footer' => [
+				'templates/layout/footer',
+			],
+			'view' => [
+				'templates/view',
+				'vendor/inc2734/mimizuku-core/src/view/templates/view',
+			],
+			'static' => [
+				'templates/static',
+			],
+		];
+	}
+);
 
 /**
  * Override inc2734_wp_view_controller_controller
  *
- * @param string $args
+ * @param string $template
  * @return array
  */
 add_filter(
 	'inc2734_wp_view_controller_controller',
-	function( $template, $filename ) {
-		return apply_filters( 'snow_monkey_controller', $template, $filename );
+	function( $template ) {
+		return apply_filters( 'snow_monkey_controller', $template );
 	},
-	9,
-	2
+	9
 );
 
 /**
@@ -75,7 +113,7 @@ add_filter(
 );
 
 /**
- * Override inc2734_view_controller_get_template_part_{ $slug }
+ * Override inc2734_wp_view_controller_get_template_part_{ $slug }
  *
  * @param array $args
  *   @param string $slug
@@ -83,22 +121,27 @@ add_filter(
  *   @param array $vars
  */
 add_action(
-	'inc2734_view_controller_get_template_part_pre_render',
+	'inc2734_wp_view_controller_get_template_part_pre_render',
 	function( $args ) {
-		if ( false !== has_action( 'snow_monkey_get_template_part_' . $args['slug'] ) ) {
-			do_action( 'snow_monkey_get_template_part_' . $args['slug'], $args['name'], $args['vars'] );
-			add_action( 'inc2734_view_controller_get_template_part_' . $args['slug'], '__return_true' );
-		} else {
-			remove_action( 'inc2734_view_controller_get_template_part_' . $args['slug'], '__return_true' );
-		}
+		$slug = $args['slug'];
+		$name = $args['name'];
 
-		if ( $args['name'] ) {
-			if ( false !== has_action( 'snow_monkey_get_template_part_' . $args['slug'] . '-' . $args['name'] ) ) {
-				do_action( 'snow_monkey_get_template_part_' . $args['slug'] . '-' . $args['name'], $args['vars'] );
-				add_action( 'inc2734_view_controller_get_template_part_' . $args['slug'] . '-' . $args['name'], '__return_true' );
-			} else {
-				remove_action( 'inc2734_view_controller_get_template_part_' . $args['slug'] . '-' . $args['name'], '__return_true' );
-			}
+		if ( $name && has_action( 'snow_monkey_get_template_part_' . $slug . '-' . $name ) ) {
+			add_action(
+				'inc2734_wp_view_controller_get_template_part_' . $slug . '-' . $name,
+				function( $vars ) use ( $slug, $name ) {
+					do_action( 'snow_monkey_get_template_part_' . $slug . '-' . $name, $vars );
+				}
+			);
+		} elseif ( has_action( 'snow_monkey_get_template_part_' . $slug ) ) {
+			add_action(
+				'inc2734_wp_view_controller_get_template_part_' . $slug,
+				function( $name, $vars ) use ( $slug ) {
+					do_action( 'snow_monkey_get_template_part_' . $slug, $name, $vars );
+				},
+				10,
+				2
+			);
 		}
 	},
 	9
