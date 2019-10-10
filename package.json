@@ -98,7 +98,7 @@
     "translation:name": "php resources/translation/template-header.php",
     "translation": "npm-run-all -p translation:*",
     "build": "npm run packages && npm-run-all -p js css img",
-    "zip:pack": "composer install --no-dev && rsync -a --exclude='.*' resources/ snow-monkey",
+    "zip:pack": "composer install --no-dev && rsync -a --exclude='.*' --exclude='/translation' resources/ snow-monkey",
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run cleanup:zip && npm run zip:pack && npm run zip:archive"
   }
