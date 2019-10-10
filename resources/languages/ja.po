@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-08-27 22:28+0900\n"
-"PO-Revision-Date: 2019-08-27 22:28+0900\n"
+"POT-Creation-Date: 2019-10-10 10:03+0900\n"
+"PO-Revision-Date: 2019-10-10 10:03+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -238,9 +238,9 @@ msgstr "リッチメディア"
 #: app/customizer/design/sections/archive/controls/entries-layout.php:20
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:23
-#: app/customizer/layout/sections/header/controls/header-layout.php:21
 #: app/widget/snow-monkey-recent-posts/_form.php:70
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:100
+#: translation/bundle-template-header.php:12
 msgid "Simple"
 msgstr "シンプル"
 
@@ -560,18 +560,6 @@ msgstr "PC サイズでのみ表示されます。"
 #: app/customizer/layout/sections/header/controls/header-layout.php:17
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
-
-#: app/customizer/layout/sections/header/controls/header-layout.php:22
-msgid "One row"
-msgstr "1行"
-
-#: app/customizer/layout/sections/header/controls/header-layout.php:23
-msgid "Two rows"
-msgstr "2行"
-
-#: app/customizer/layout/sections/header/controls/header-layout.php:24
-msgid "Center logo"
-msgstr "中央ロゴ"
 
 #: app/customizer/layout/sections/header/controls/header-position-only-mobile.php:15
 msgid "Use header position setting for mobile only"
@@ -1346,6 +1334,53 @@ msgstr "トラックバック URL"
 msgid "MENU"
 msgstr "MENU"
 
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:2
+msgid "Landing page ( slim width )"
+msgstr "ランディングページ（スリム幅）"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:3
+msgid "Landing page"
+msgstr "ランディングページ"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:4
+msgid "Left sidebar"
+msgstr "左サイドバー"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:5
+msgid "Full width"
+msgstr "フル幅"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:6
+msgid "One column ( slim width )"
+msgstr "1カラム（スリム幅）"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:7
+msgid "One column"
+msgstr "1カラム"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:8
+msgid "Right sidebar"
+msgstr "右サイドバー"
+
+#: translation/bundle-template-header.php:9
+msgid "One row"
+msgstr "1行"
+
+#: translation/bundle-template-header.php:10
+msgid "Two rows"
+msgstr "2行"
+
+#: translation/bundle-template-header.php:11
+msgid "Center logo"
+msgstr "中央ロゴ"
+
 #: woocommerce/loop/orderby.php:25
 msgid "Shop order"
 msgstr "買い物"
@@ -1365,34 +1400,6 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
-
-#. Template Name of the plugin/theme
-msgid "Landing page"
-msgstr "ランディングページ"
-
-#. Template Name of the plugin/theme
-msgid "Landing page ( slim width )"
-msgstr "ランディングページ（スリム幅）"
-
-#. Template Name of the plugin/theme
-msgid "One column"
-msgstr "1カラム"
-
-#. Template Name of the plugin/theme
-msgid "Left sidebar"
-msgstr "左サイドバー"
-
-#. Template Name of the plugin/theme
-msgid "One column ( slim width )"
-msgstr "1カラム（スリム幅）"
-
-#. Template Name of the plugin/theme
-msgid "Full width"
-msgstr "フル幅"
-
-#. Template Name of the plugin/theme
-msgid "Right sidebar"
-msgstr "右サイドバー"
 
 #~ msgid "Very light gray"
 #~ msgstr "ライト・グレー"

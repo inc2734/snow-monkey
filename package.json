@@ -95,6 +95,8 @@
     "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' '../../resources/assets/packages' --cwd=node_modules/@fortawesome --parents",
     "packages": "npm run cleanup:packages && npm-run-all packages:*",
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=resources/src/img --parents",
+    "translation:name": "php resources/translation/template-header.php",
+    "translation": "npm-run-all -p translation:*",
     "build": "npm run packages && npm-run-all -p js css img",
     "zip:pack": "composer install --no-dev && rsync -a --exclude='.*' resources/ snow-monkey",
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
