@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.2
+ * @version 8.0.0
  */
 
 use Framework\Helper;
@@ -64,8 +64,8 @@ add_filter(
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
 	function( $content, $args ) {
-		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_pickup_slider' )
-			&& false === strpos( $args['widget_id'], 'snow_monkey_blocks_pickup_slider' ) ) {
+		if ( ! preg_match( '|id="wpaw-pickup-slider-[^"]+?|', $content )
+		  && ! preg_match( '|id="inc2734_wp_awesome_widgets_pickup_slider-[^"]+?|', $content ) ) {
 			return $content;
 		}
 
