@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 8.0.0
  *
  * renamed: template-parts/header-content.php
  */
@@ -20,5 +20,5 @@ if ( ! $template_args['content'] ) {
 ?>
 
 <div class="c-header-content">
-	<?php echo wp_kses_post( $template_args['content'] ); ?>
+	<?php echo do_shortcode( wp_kses_post( $template_args['content'] ) ); ?>
 </div>
