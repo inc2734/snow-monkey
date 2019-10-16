@@ -37,6 +37,20 @@ body {
   @extend %entry-content;
 }
 
+.editor-block-list__layout > [data-type="core/heading"]:not(:first-child) {
+  h2 {
+    @include _margin-top($_h2-margin-top);
+  }
+
+  h3 {
+    @include _margin-top($_h3-margin-top);
+  }
+
+  h4 {
+    @include _margin-top($_h4-margin-top);
+  }
+}
+
 $content-width: 1280px;
 $border-width: 1px;
 
