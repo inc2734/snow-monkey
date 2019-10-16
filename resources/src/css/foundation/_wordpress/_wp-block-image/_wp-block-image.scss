@@ -53,25 +53,9 @@
   > .alignright {
     margin-top: $_between-lines;
   }
-
-  > .alignright {
-    @include _margin-left(1);
-  }
-
-  > .alignleft {
-    @include _margin-right(1);
-  }
 }
 
 img.alignleft,
 img.alignright {
   margin-top: $_between-lines;
-}
-
-img.alignleft {
-  @include _margin-right(1);
-}
-
-img.alignright {
-  @include _margin-left(1);
 }

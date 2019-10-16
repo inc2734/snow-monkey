@@ -1,0 +1,58 @@
+@mixin calendar {
+  table {
+    border: none;
+    table-layout: fixed;
+    width: 100%;
+
+    caption {
+      font-weight: bold;
+      letter-spacing: .2em;
+      text-align: center;
+    }
+
+    th, td {
+      background-color: transparent;
+      border: none;
+      line-height: 1;
+      padding: .5em;
+    }
+
+    thead th, tbody td {
+      text-align: center;
+
+      > a {
+        display: inline-block;
+        background-color: #eee;
+        border-radius: 2px;
+        color: $_color-text;
+        margin: -.5em;
+        padding: .5em;
+        text-decoration: none;
+      }
+    }
+
+    tfoot {
+      @include _font-size-line-height($_base-font-size-px - 2);
+
+      #prev, #next {
+        padding-top: 1em;
+      }
+
+      #prev {
+        text-align: left;
+      }
+
+      #next {
+        text-align: right;
+      }
+
+      a {
+        color: $_color-text;
+      }
+    }
+  }
+
+  #next {
+    text-align: right;
+  }
+}

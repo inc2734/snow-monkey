@@ -1,0 +1,35 @@
+.wp-block-search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  &__label {
+    @include _hidden();
+  }
+
+  &__input {
+    @include _form-control();
+    flex: 1 1 0%;
+    position: relative;
+    z-index: 1;
+    border-radius: $_border-radius 0 0 $_border-radius;
+  }
+
+  &__button {
+    margin-left: 0 !important;
+    @include _btn();
+    @include _form-control-base-border();
+    @include _form-control-base-padding();
+    color: $_color-text;
+    flex: none;
+    overflow: visible;
+    position: relative;
+    z-index: 0;
+    left: -1px;
+    border-radius: 0 $_border-radius $_border-radius 0;
+
+    &:hover, &:active, &:focus {
+      z-index: 1;
+    }
+  }
+}

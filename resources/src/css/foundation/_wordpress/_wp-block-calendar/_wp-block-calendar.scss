@@ -1,0 +1,15 @@
+.wp-block-calendar {
+  @extend %calendar;
+
+  table {
+    width: auto !important;
+  }
+}
+
+.alignfull,
+.alignwide {
+  table {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

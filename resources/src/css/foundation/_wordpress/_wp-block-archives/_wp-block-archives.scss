@@ -1,0 +1,7 @@
+.wp-block-archives {
+  @include widget-list-base();
+}
+
+.editor-block-list__layout .wp-block-archives {
+  padding-left: 0;
+}

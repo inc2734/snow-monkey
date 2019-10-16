@@ -1,0 +1,27 @@
+.wp-block-latest-comments {
+  @include _list-unstyled();
+
+  &__comment {
+    margin: 0;
+    line-height: inherit;
+
+    &:not(:first-child) {
+      @include _margin(.25, 0, 0);
+    }
+  }
+
+  &__comment-meta {
+    @include _font-size-line-height($_base-font-size-px);
+  }
+
+  &__comment-date {
+    @include _font-size-line-height($_base-font-size-px - 4);
+  }
+
+  &__comment-excerpt {
+    > p {
+      margin: 0;
+      @include _font-size-line-height($_base-font-size-px - 2);
+    }
+  }
+}

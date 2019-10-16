@@ -1,9 +1,20 @@
 .wp-block-categories {
-  &.alignright {
-    @include _margin-left(1);
-  }
+  @include widget-list-base();
 
-  &.alignleft {
-    @include _margin-right(1);
+  .children {
+    @include widget-list-base();
+    @include _margin-top(.25);
+    margin-left: 1em;
+  }
+}
+
+.editor-block-list__layout .wp-block-categories {
+  &__list {
+    @include widget-list-base();
+
+    .wp-block-categories__list {
+      @include _margin-top(.25);
+      margin-left: 1em;
+    }
   }
 }

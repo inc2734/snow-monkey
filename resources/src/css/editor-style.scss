@@ -58,12 +58,27 @@ $border-width: 1px;
   max-width: $content-width;
 }
 
+.wp-block[data-align="center"] {
+  text-align: initial;
+}
+
 .wp-block[data-align="wide"] {
   max-width: $content-width + 220px;
 }
 
 .wp-block[data-align="full"] {
   max-width: none;
+}
+
+.wp-block[data-align="right"],
+.wp-block[data-align="left"] {
+  > .editor-block-list__block-edit::before {
+    content: '';
+  }
+
+  > .editor-block-list__block-edit > [data-block] {
+    margin-top: 0;
+  }
 }
 
 .editor-block-list__block {

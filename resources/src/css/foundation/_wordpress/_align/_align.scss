@@ -1,11 +1,20 @@
 .alignleft {
-  // Margin is set in each block
   float: left;
+  @include _margin-right(1);
 }
 
 .alignright {
-  // Margin is set in each block
   float: right;
+  @include _margin-left(1);
+}
+
+.alignleft,
+.alignright {
+  max-width: calc(5 * (100vw / 12));
+
+  &:first-child + * {
+    margin-top: 0;
+  }
 }
 
 .aligncenter {
@@ -16,6 +25,8 @@
 }
 
 .alignfull {
+  clear: both;
+
   @include _media-max(md) {
     @include alignfull();
   }
@@ -26,6 +37,8 @@
 }
 
 .alignwide {
+  clear: both;
+
   @include _media-max(md) {
     @include alignfull();
   }
