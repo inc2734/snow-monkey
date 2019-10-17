@@ -1,8 +1,13 @@
 .wp-block-latest-posts {
   @include widget-list-base();
 
+  &__post-date {
+    @include _font-size-line-height($_base-font-size-px - 4);
+  }
+
   &__post-excerpt {
     margin: 0;
+    @include _font-size-line-height($_base-font-size-px - 2);
   }
 
   &.is-grid {
