@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.9.0
+ * @version 8.0.0
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -53,14 +53,16 @@ add_action(
 			}
 		}
 
+		wp_register_script(
+			Helper::get_main_script_handle() . '-footer-sticky-nav',
+			get_theme_file_uri( '/assets/js/footer-sticky-nav.min.js' ),
+			[ 'jquery' ],
+			filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.min.js' ) ),
+			true
+		);
+
 		if ( has_nav_menu( 'footer-sticky-nav' ) ) {
-			wp_enqueue_script(
-				Helper::get_main_script_handle() . '-footer-sticky-nav',
-				get_theme_file_uri( '/assets/js/footer-sticky-nav.min.js' ),
-				[ 'jquery' ],
-				filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.min.js' ) ),
-				true
-			);
+			wp_enqueue_script( Helper::get_main_script_handle() . '-footer-sticky-nav' );
 		}
 
 		if ( has_nav_menu( 'global-nav' ) ) {

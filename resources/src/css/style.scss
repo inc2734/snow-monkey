@@ -30,3 +30,10 @@
  * Object - utility
  */
 @import 'object/utility/utility';
+
+#page-end {
+  margin-top: -1px;
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+}

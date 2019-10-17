@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 8.0.0
  *
  * renamed: template-parts/footer-sticky-nav.php
  */
@@ -13,7 +13,7 @@ if ( ! has_nav_menu( 'footer-sticky-nav' ) ) {
 }
 ?>
 
-<nav class="p-footer-sticky-nav" id="footer-sticky-nav" role="navigation">
+<nav class="p-footer-sticky-nav" id="footer-sticky-nav" role="navigation" aria-hidden="false">
 	<?php
 	wp_nav_menu(
 		[
