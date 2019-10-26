@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90f693b433b6408de6446ec100378625",
+    "content-hash": "7835dcfbdd3c29b633dc810287a28001",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "21.0.0",
+            "version": "22.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "94b9f2cc6873ad74733dc59b1525b6d270e2f2b4"
+                "reference": "8bf98fdc8dcc429086703723a919cba21e475177"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/94b9f2cc6873ad74733dc59b1525b6d270e2f2b4",
-                "reference": "94b9f2cc6873ad74733dc59b1525b6d270e2f2b4",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8bf98fdc8dcc429086703723a919cba21e475177",
+                "reference": "8bf98fdc8dcc429086703723a919cba21e475177",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,17 @@
                     "Inc2734\\Mimizuku_Core\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "test": [
+                    "vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility,vendor/phpcompatibility/phpcompatibility-paragonie,vendor/phpcompatibility/phpcompatibility-wp,vendor/wp-coding-standards/wpcs",
+                    "vendor/bin/phpcs -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
+                    "vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /vendor/,/tests/",
+                    "bash bin/phpunit.sh"
+                ],
+                "phpcbf": [
+                    "vendor/bin/phpcbf -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php"
+                ]
+            },
             "license": [
                 "GPL-2.0-or-later"
             ],
@@ -64,7 +74,11 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-10-10T00:31:10+00:00"
+            "support": {
+                "source": "https://github.com/inc2734/mimizuku-core/tree/22.0.0",
+                "issues": "https://github.com/inc2734/mimizuku-core/issues"
+            },
+            "time": "2019-10-26T00:56:44+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
