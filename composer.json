@@ -8,12 +8,6 @@
       "homepage": "https://2inc.org"
     }
   ],
-  "repositories": {
-    "inc2734/mimizuku-core": {
-      "type": "vcs",
-      "url": "https://github.com/inc2734/mimizuku-core"
-    }
-  },
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
