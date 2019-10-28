@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.10.6
+ * @version 8.0.0
  */
 
 use Framework\Helper;
@@ -12,7 +12,6 @@ $template_args = [
 	'posts_query'    => Helper::get_var( $_posts_query, null ),
 	'widget_area_id' => Helper::get_var( $_widget_area_id, null ),
 	'classname'      => Helper::get_var( $_classname, null ),
-	'id'             => Helper::get_var( $_id, null ),
 	'entries_layout' => Helper::get_var( $_entries_layout, 'rich-media' ),
 	'title'          => Helper::get_var( $_title, null ),
 	'link_url'       => Helper::get_var( $_link_url, null ),
@@ -63,11 +62,7 @@ $posts_per_page = $template_args['posts_query']->get( 'posts_per_page' );
 $loop_count = 0;
 ?>
 
-<div
-	class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>"
-	id="<?php echo esc_attr( $template_args['id'] ); ?>"
-	>
-
+<div class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>">
 	<?php if ( $template_args['title'] ) : ?>
 		<h2 class="<?php echo esc_attr( join( ' ', $title_classnames ) ); ?>">
 			<?php echo wp_kses_post( $template_args['title'] ); ?>

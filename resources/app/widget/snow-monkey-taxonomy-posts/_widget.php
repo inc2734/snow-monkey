@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.10.6
+ * @version 8.0.0
  */
 
 use Framework\Helper;
@@ -24,7 +24,12 @@ $post_types  = empty( $_taxonomy->object_type ) ? [ 'post' ] : $_taxonomy->objec
 $post_types  = (array) $post_types;
 
 $widget_number = explode( '-', $args['widget_id'] );
-$widget_number = end( $widget_number );
+if ( 1 < count( $widget_number ) ) {
+	array_shift( $widget_number );
+	$widget_number = implode( '-', $widget_number );
+} else {
+	$widget_number = $widget_number[0];
+}
 
 $query_args = [
 	'post_type'           => $post_types,
@@ -62,7 +67,6 @@ Helper::get_template_part(
 		'_posts_query'    => $taxonomy_posts_query,
 		'_widget_area_id' => $args['id'],
 		'_classname'      => 'snow-monkey-taxonomy-posts',
-		'_id'             => $args['widget_id'],
 		'_entries_layout' => $instance['layout'],
 		'_title'          => $instance['title'],
 		'_link_url'       => $instance['link-url'],
