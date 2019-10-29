@@ -15,7 +15,9 @@ abstract class Page_Header {
 	 *
 	 * @return string
 	 */
-	abstract public static function get_image_url();
+	public static function get_image_url() {
+		error_log( '\Framework\Contract\Model\Page_Header::get_image_url() should be overwritten.', 'snow-monkey' );
+	}
 
 	/**
 	 * Display page header image
