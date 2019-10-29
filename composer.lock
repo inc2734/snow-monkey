@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd136f26e289c78377c3b1216bfeab58",
+    "content-hash": "0be7953f19a34352616fc17fad0c3081",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "22.0.0",
+            "version": "22.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "8bf98fdc8dcc429086703723a919cba21e475177"
+                "reference": "414e876016c8d35ce4132bd4591f2cbba480d41f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/8bf98fdc8dcc429086703723a919cba21e475177",
-                "reference": "8bf98fdc8dcc429086703723a919cba21e475177",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/414e876016c8d35ce4132bd4591f2cbba480d41f",
+                "reference": "414e876016c8d35ce4132bd4591f2cbba480d41f",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-adsense": "^1.0",
                 "inc2734/wp-awesome-components": "^1.0",
-                "inc2734/wp-awesome-widgets": "^8.3",
+                "inc2734/wp-awesome-widgets": "^9.0",
                 "inc2734/wp-basis": "^5.6",
                 "inc2734/wp-breadcrumbs": "^3.0",
-                "inc2734/wp-contents-outline": "^3.3",
+                "inc2734/wp-contents-outline": "^4.0",
                 "inc2734/wp-customizer-framework": "^5.0",
                 "inc2734/wp-github-theme-updater": "^2.0",
                 "inc2734/wp-like-me-box": "^1.0",
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-10-26T00:56:44+00:00"
+            "time": "2019-10-29T03:05:09+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -159,22 +159,23 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "8.3.1",
+            "version": "9.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "6265b9590cc8ec4305ab5cc6ff498275f1cbca55"
+                "reference": "4aea7b1696a64817cc6cff4c4dc19b5db1024bee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/6265b9590cc8ec4305ab5cc6ff498275f1cbca55",
-                "reference": "6265b9590cc8ec4305ab5cc6ff498275f1cbca55",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/4aea7b1696a64817cc6cff4c4dc19b5db1024bee",
+                "reference": "4aea7b1696a64817cc6cff4c4dc19b5db1024bee",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-adsense": "^1.0",
-                "inc2734/wp-contents-outline": "^3.1",
-                "inc2734/wp-profile-box": "^2.0",
+                "inc2734/wp-adsense": "^1.0.0",
+                "inc2734/wp-contents-outline": "^4.0.1",
+                "inc2734/wp-plugin-view-controller": "^1.0.0",
+                "inc2734/wp-profile-box": "^2.0.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -202,7 +203,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2019-10-15T08:16:32+00:00"
+            "time": "2019-10-29T02:22:06+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -294,20 +295,20 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "3.3.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "db879e70b750e5e9e56e5f41c6b30ec4028bd627"
+                "reference": "4ac747bd1bd6bcdc62b69d7dd3c31996543e3ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/db879e70b750e5e9e56e5f41c6b30ec4028bd627",
-                "reference": "db879e70b750e5e9e56e5f41c6b30ec4028bd627",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/4ac747bd1bd6bcdc62b69d7dd3c31996543e3ae6",
+                "reference": "4ac747bd1bd6bcdc62b69d7dd3c31996543e3ae6",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-plugin-view-controller": "^0.3.1",
+                "inc2734/wp-plugin-view-controller": "^1.0.0",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -335,7 +336,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2019-09-14T02:08:38+00:00"
+            "time": "2019-10-29T02:03:35+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
@@ -615,16 +616,16 @@
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
-            "version": "0.3.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-plugin-view-controller.git",
-                "reference": "408efc0040ee39199d06eefadb698a3c9bb6a31f"
+                "reference": "ec4f7150100c11e66927cb87ee776257ded1fb21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-plugin-view-controller/zipball/408efc0040ee39199d06eefadb698a3c9bb6a31f",
-                "reference": "408efc0040ee39199d06eefadb698a3c9bb6a31f",
+                "url": "https://api.github.com/repos/inc2734/wp-plugin-view-controller/zipball/ec4f7150100c11e66927cb87ee776257ded1fb21",
+                "reference": "ec4f7150100c11e66927cb87ee776257ded1fb21",
                 "shasum": ""
             },
             "require": {
@@ -654,7 +655,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2019-09-14T01:18:13+00:00"
+            "time": "2019-10-29T00:03:32+00:00"
         },
         {
             "name": "inc2734/wp-profile-box",
@@ -1894,16 +1895,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.16",
+            "version": "7.5.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "316afa6888d2562e04aeb67ea7f2017a0eb41661"
+                "reference": "4c92a15296e58191a4cd74cff3b34fc8e374174a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/316afa6888d2562e04aeb67ea7f2017a0eb41661",
-                "reference": "316afa6888d2562e04aeb67ea7f2017a0eb41661",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/4c92a15296e58191a4cd74cff3b34fc8e374174a",
+                "reference": "4c92a15296e58191a4cd74cff3b34fc8e374174a",
                 "shasum": ""
             },
             "require": {
@@ -1974,7 +1975,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-09-14T09:08:39+00:00"
+            "time": "2019-10-28T10:37:36+00:00"
         },
         {
             "name": "psr/container",

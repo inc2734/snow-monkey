@@ -126,22 +126,29 @@ add_action(
 		$slug = $args['slug'];
 		$name = $args['name'];
 
-		if ( $name && has_action( 'snow_monkey_get_template_part_' . $slug . '-' . $name ) ) {
+		$action           = 'snow_monkey_get_template_part_' . $slug;
+		$action_with_name = 'snow_monkey_get_template_part_' . $slug . '-' . $name;
+
+		if ( $name && has_action( $action_with_name ) ) {
 			add_action(
 				'inc2734_wp_view_controller_get_template_part_' . $slug . '-' . $name,
-				function( $vars ) use ( $slug, $name ) {
-					do_action( 'snow_monkey_get_template_part_' . $slug . '-' . $name, $vars );
+				function( $vars ) use ( $slug, $name, $action_with_name ) {
+					do_action( $action_with_name, $vars );
 				}
 			);
-		} elseif ( has_action( 'snow_monkey_get_template_part_' . $slug ) ) {
+			return;
+		}
+
+		if ( has_action( $action ) ) {
 			add_action(
 				'inc2734_wp_view_controller_get_template_part_' . $slug,
-				function( $name, $vars ) use ( $slug ) {
-					do_action( 'snow_monkey_get_template_part_' . $slug, $name, $vars );
+				function( $name, $vars ) use ( $slug, $action ) {
+					do_action( $action, $name, $vars );
 				},
 				10,
 				2
 			);
+			return;
 		}
 	},
 	9
