@@ -1,6 +1,7 @@
 .#{$_prefix}l-overlay-widget-area {
   @include items-gutter();
 
+  position: relative;
   margin: auto;
   background-color: #fff;
   max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
