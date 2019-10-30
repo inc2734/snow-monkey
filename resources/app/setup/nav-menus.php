@@ -41,17 +41,13 @@ add_action(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		if ( get_theme_mod( 'header-position-only-mobile' ) ) {
-			if ( has_nav_menu( 'global-nav' ) ) {
-				wp_enqueue_script(
-					Helper::get_main_script_handle() . '-drop-nav',
-					get_theme_file_uri( '/assets/js/drop-nav.min.js' ),
-					[ 'jquery' ],
-					filemtime( get_theme_file_path( '/assets/js/drop-nav.min.js' ) ),
-					true
-				);
-			}
-		}
+		wp_register_script(
+			Helper::get_main_script_handle() . '-drop-nav',
+			get_theme_file_uri( '/assets/js/drop-nav.min.js' ),
+			[ 'jquery' ],
+			filemtime( get_theme_file_path( '/assets/js/drop-nav.min.js' ) ),
+			true
+		);
 
 		wp_register_script(
 			Helper::get_main_script_handle() . '-footer-sticky-nav',
@@ -61,18 +57,24 @@ add_action(
 			true
 		);
 
+		wp_register_script(
+			Helper::get_main_script_handle() . '-global-nav',
+			get_theme_file_uri( '/assets/js/global-nav.min.js' ),
+			[ 'jquery' ],
+			filemtime( get_theme_file_path( '/assets/js/global-nav.min.js' ) ),
+			true
+		);
+
+		if ( get_theme_mod( 'header-position-only-mobile' ) && has_nav_menu( 'global-nav' ) ) {
+			wp_enqueue_script( Helper::get_main_script_handle() . '-drop-nav' );
+		}
+
 		if ( has_nav_menu( 'footer-sticky-nav' ) ) {
 			wp_enqueue_script( Helper::get_main_script_handle() . '-footer-sticky-nav' );
 		}
 
 		if ( has_nav_menu( 'global-nav' ) ) {
-			wp_enqueue_script(
-				Helper::get_main_script_handle() . '-global-nav',
-				get_theme_file_uri( '/assets/js/global-nav.min.js' ),
-				[ 'jquery' ],
-				filemtime( get_theme_file_path( '/assets/js/global-nav.min.js' ) ),
-				true
-			);
+			wp_enqueue_script( Helper::get_main_script_handle() . '-global-nav' );
 		}
 	}
 );
