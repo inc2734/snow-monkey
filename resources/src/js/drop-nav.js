@@ -1,7 +1,7 @@
 'use strict';
 
-import { getHeader, getDropNavWrapper } from './module/_helper.js';
-import { DropNav, GlobalNav } from './module/_drop-nav.js';
+import { getHeader, getDropNavWrapper } from './module/_helper';
+import { DropNav, GlobalNav } from './module/_drop-nav';
 
 document.addEventListener(
   'DOMContentLoaded',

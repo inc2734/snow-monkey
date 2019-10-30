@@ -1,6 +1,6 @@
 'use strict';
 
-import {getHeader, getContents, getHtml, getContainer, getAdminBar, scrollTop, getHeaderType, setStyle} from './_helper.js';
+import { getHeader, getContents, getHtml, getContainer, getAdminBar, scrollTop, getHeaderType, setStyle } from './_helper';
 
 export default class FixAdminBar {
   constructor() {

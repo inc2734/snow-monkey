@@ -2,7 +2,7 @@
 
 import $ from 'jquery';
 import '../../../assets/packages/jquery.smoothscroll/src/jquery.smoothscroll.js';
-import {getHeaderType, getHeader, getAdminBar, getHtml, getDropNavWrapper, getStyle} from './_helper.js';
+import { getHeaderType, getHeader, getAdminBar, getHtml, getDropNavWrapper, getStyle } from './_helper';
 
 export default class SmoothScroll {
   constructor(link) {

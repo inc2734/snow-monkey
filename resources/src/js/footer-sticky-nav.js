@@ -1,9 +1,9 @@
 'use strict';
 
-import { getFooterStickyNav } from './module/_helper.js';
+import { getFooterStickyNav } from './module/_helper';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
-import { FooterStickyNav } from './module/_footer-sticky-nav.js';
-import ActiveMenu from './module/_active-menu.js';
+import { FooterStickyNav } from './module/_footer-sticky-nav';
+import ActiveMenu from './module/_active-menu';
 
 document.addEventListener(
   'DOMContentLoaded',

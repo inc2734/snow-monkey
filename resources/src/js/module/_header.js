@@ -1,6 +1,7 @@
 'use strict';
 
-import {getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyle, setStyle, isHeaderPositionOnlyMobile} from './_helper.js';
+import { getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyle, setStyle, isHeaderPositionOnlyMobile } from './_helper';
+import addCustomEvent from '@inc2734/add-custom-event';
 
 export default class Header {
   constructor() {
@@ -31,9 +32,11 @@ export default class Header {
 
     if (window.matchMedia('(min-width: 1023px)').matches) {
       setHeaderType('');
+      addCustomEvent(this.header, 'setHeaderType');
       setStyle(this.contents, 'marginTop', '');
     } else {
       setHeaderType(this.defaultType);
+      addCustomEvent(this.header, 'setHeaderType');
       const position = getStyle(this.header, 'position');
       if ('fixed' === position || 'absolute' === position) {
         if ('sticky' === this.defaultType) {

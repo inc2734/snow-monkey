@@ -1,6 +1,6 @@
 'use strict';
 
-import {getHeader, getDropNavWrapper, scrollTop, getHeaderType, maybeShowDropNav, getStyle, getAdminBar, getHtml} from './_helper.js';
+import { getHeader, getDropNavWrapper, scrollTop, getHeaderType, maybeShowDropNav, getStyle, getAdminBar, getHtml } from './_helper';
 
 export default class AnchorPageScroll {
   constructor() {

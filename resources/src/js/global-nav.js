@@ -1,7 +1,7 @@
 'use strict';
 
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
-import ActiveMenu from './module/_active-menu.js';
+import ActiveMenu from './module/_active-menu';
 
 document.addEventListener(
   'DOMContentLoaded',

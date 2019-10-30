@@ -1,7 +1,7 @@
 'use strict';
 
-import {PageTopBtn} from './module/_pagetop-btn.js';
-import {getFooterStickyNav, setStyle, getStyle} from './module/_helper.js';
+import { PageTopBtn } from './module/_pagetop-btn';
+import { getFooterStickyNav, setStyle, getStyle } from './module/_helper';
 
 document.addEventListener(
   'DOMContentLoaded',

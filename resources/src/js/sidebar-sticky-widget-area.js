@@ -5,6 +5,8 @@ import { getHeader, getHeaderType, getAdminBar, getDropNavWrapper, getStyle, set
 document.addEventListener(
   'DOMContentLoaded',
   () => {
+    const header = getHeader();
+
     const init = () => {
       const target   = document.querySelector('.l-sidebar-sticky-widget-area');
       const isSticky = 'sticky' === getStyle(target, 'position');
@@ -20,7 +22,6 @@ document.addEventListener(
       const headerType     = getHeaderType();
 
       if ('sticky' === headerType || 'overlay' === headerType) {
-        const header = getHeader();
         const headerHeight = header ? header.offsetHeight : 0;
         const offset = headerHeight + adminBarHeight + targetMargin;
         offset && setStyle(target, 'top', `${offset}px`);
@@ -33,6 +34,7 @@ document.addEventListener(
     };
 
     init();
-    window.addEventListener('resize', () => init());
+    window.addEventListener('resize', () => init(), false);
+    header && header.addEventListener('setHeaderType', () => init(), false)
   }
 );

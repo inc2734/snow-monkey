@@ -1,6 +1,6 @@
 'use strict';
 
-import {scrollTop} from './_helper.js';
+import { scrollTop } from './_helper';
 
 const toggleBtn = (btn, timer) => {
   clearTimeout(timer);

@@ -1,6 +1,6 @@
 'use strict';
 
-import SmoothScroll from './module/_smooth-scroll.js';
+import SmoothScroll from './module/_smooth-scroll';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
 window.addEventListener(

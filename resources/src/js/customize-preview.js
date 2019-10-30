@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import {initWpawPickupSlider} from './module/_wpaw-pickup-slider.js';
+import { initWpawPickupSlider } from './module/_wpaw-pickup-slider';
 
 $(() => {
   const api = wp.customize;

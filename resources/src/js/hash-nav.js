@@ -1,6 +1,6 @@
 'use strict';
 
-import HashNav from './module/_hash-nav.js';
+import HashNav from './module/_hash-nav';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
 document.addEventListener(
