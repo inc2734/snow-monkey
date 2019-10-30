@@ -32,6 +32,7 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 			}
 		);
 
+		add_action( 'snow_monkey_get_template_part_template2-name2', '__return_true' );
 		Framework\Helper::get_template_part( 'template', 'name', [ 'key' => 'value' ] );
 	}
 
@@ -73,6 +74,7 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 
 		file_exists( $file2 ) && unlink( $file2 );
 		ob_start();
+		add_action( 'snow_monkey_get_template_part_template-name', '__return_true' );
 		Framework\Helper::get_template_part( 'template', 'name' );
 		$this->assertEquals( '', ob_get_clean() );
 	}
