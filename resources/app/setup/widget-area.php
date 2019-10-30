@@ -408,13 +408,6 @@ add_action(
 				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.min.js' ) ),
 				true
 			);
-
-			wp_enqueue_style(
-				'jquery.sticky',
-				get_theme_file_uri( '/assets/packages/jquery.sticky/dist/sticky.min.css' ),
-				[],
-				filemtime( get_theme_file_path( '/assets/packages/jquery.sticky/dist/sticky.min.css' ) )
-			);
 		}
 	}
 );

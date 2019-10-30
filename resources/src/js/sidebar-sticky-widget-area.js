@@ -1,18 +1,38 @@
 'use strict';
 
-import '../../assets/packages/jquery.sticky';
-import $ from 'jquery';
+import { getHeader, getHeaderType, getAdminBar, getDropNavWrapper, getStyle, setStyle } from './module/_helper';
 
-$('.l-sidebar-sticky-widget-area').sticky({
-  breakpoint: 1024,
-  offset  : (() => {
-    const headerType = $('.l-header').attr('data-l-header-type');
-    const adminBarHeight = parseInt($('html').css('margin-top'));
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const init = () => {
+      const target   = document.querySelector('.l-sidebar-sticky-widget-area');
+      const isSticky = 'sticky' === getStyle(target, 'position');
 
-    if ('sticky' === headerType || 'overlay' === headerType) {
-      return $('.l-header').outerHeight() + adminBarHeight;
-    }
+      if (! isSticky) {
+        setStyle(target, 'top', '');
+        return;
+      }
 
-    return $('.l-header__drop-nav .p-global-nav').outerHeight() + adminBarHeight;
-  })()
-});
+      const targetMargin   = parseInt(getStyle(target, 'margin-top'));
+      const adminBar       = getAdminBar();
+      const adminBarHeight = adminBar ? adminBar.offsetHeight : 0;
+      const headerType     = getHeaderType();
+
+      if ('sticky' === headerType || 'overlay' === headerType) {
+        const header = getHeader();
+        const headerHeight = header ? header.offsetHeight : 0;
+        const offset = headerHeight + adminBarHeight + targetMargin;
+        offset && setStyle(target, 'top', `${offset}px`);
+      } else {
+        const dropNav = getDropNavWrapper();
+        const dropNavHeight = dropNav ? dropNav.offsetHeight : 0;
+        const offset = dropNavHeight + adminBarHeight + targetMargin;
+        offset && setStyle(target, 'top', `${offset}px`);
+      }
+    };
+
+    init();
+    window.addEventListener('resize', () => init());
+  }
+);
