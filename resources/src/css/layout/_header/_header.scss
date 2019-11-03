@@ -3,7 +3,6 @@
   background-color: #fff;
   @include _padding(.25, 0);
   @include _transition(all);
-  overflow: hidden;
 
   @include _media-min(lg) {
     padding: 0;
