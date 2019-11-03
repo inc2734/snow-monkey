@@ -2,6 +2,10 @@
 
 .#{$_prefix}l-container {
   position: relative;
+
+  @include _media-min(lg) {
+    overflow: hidden;
+  }
 }
 
 @media all and (-ms-high-contrast: none) {

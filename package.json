@@ -18,7 +18,7 @@
     "@inc2734/add-custom-event": "^0.1.0",
     "@inc2734/dispatch-custom-resize-event": "^0.2.0",
     "@inc2734/for-each-html-nodes": "^0.2.0",
-    "autoprefixer": "^9.7.0",
+    "autoprefixer": "^9.7.1",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "cpy-cli": "^2.0.0",
@@ -28,7 +28,7 @@
     "postcss-cli": "^6.1.3",
     "rimraf": "^3.0.0",
     "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "webpack-cli": "^3.3.10"
   },
   "scripts": {
     "start": "npm run build",
