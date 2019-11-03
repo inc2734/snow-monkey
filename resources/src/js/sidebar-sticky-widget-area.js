@@ -11,6 +11,10 @@ document.addEventListener(
       const target   = document.querySelector('.l-sidebar-sticky-widget-area');
       const isSticky = 'sticky' === getStyle(target, 'position');
 
+      if (! target) {
+        return;
+      }
+
       if (! isSticky) {
         setStyle(target, 'top', '');
         return;
