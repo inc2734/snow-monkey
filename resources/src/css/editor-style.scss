@@ -60,6 +60,12 @@ $border-width: 1px;
 
 .wp-block[data-align="center"] {
   text-align: initial;
+
+  > .editor-block-list__block-edit > [data-block] {
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+  }
 }
 
 .wp-block[data-align="wide"] {
