@@ -480,16 +480,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "8.0.9",
+            "version": "8.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "dcaef787862971f914c76dac22d28166b869eb2a"
+                "reference": "297cc94589b80dd455ced1a881611ac7c00f1614"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/dcaef787862971f914c76dac22d28166b869eb2a",
-                "reference": "dcaef787862971f914c76dac22d28166b869eb2a",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/297cc94589b80dd455ced1a881611ac7c00f1614",
+                "reference": "297cc94589b80dd455ced1a881611ac7c00f1614",
                 "shasum": ""
             },
             "require": {
@@ -520,7 +520,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2019-10-21T14:33:56+00:00"
+            "time": "2019-11-07T04:02:01+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -1260,16 +1260,16 @@
         },
         {
             "name": "phpcompatibility/phpcompatibility-paragonie",
-            "version": "1.2.0",
+            "version": "1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCompatibility/PHPCompatibilityParagonie.git",
-                "reference": "94b2388c4fe99e9e2ef0772e280fa0eafa1d0603"
+                "reference": "b862bc32f7e860d0b164b199bd995e690b4b191c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityParagonie/zipball/94b2388c4fe99e9e2ef0772e280fa0eafa1d0603",
-                "reference": "94b2388c4fe99e9e2ef0772e280fa0eafa1d0603",
+                "url": "https://api.github.com/repos/PHPCompatibility/PHPCompatibilityParagonie/zipball/b862bc32f7e860d0b164b199bd995e690b4b191c",
+                "reference": "b862bc32f7e860d0b164b199bd995e690b4b191c",
                 "shasum": ""
             },
             "require": {
@@ -1308,7 +1308,7 @@
                 "polyfill",
                 "standards"
             ],
-            "time": "2019-10-16T21:41:26+00:00"
+            "time": "2019-11-04T15:17:54+00:00"
         },
         {
             "name": "phpcompatibility/phpcompatibility-wp",
