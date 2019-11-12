@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d97369886ebb4ab89e38f1f34d4d2f79",
+    "content-hash": "fa6651c972b0fb052d1d26527d14a023",
     "packages": [
         {
             "name": "inc2734/mimizuku-core",
-            "version": "23.0.0",
+            "version": "23.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "0f3a3af678a530a0d0f3d0bca3202353f2af9a7d"
+                "reference": "b396933cf11c1801f92512cdbfcf290fc76d92b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/0f3a3af678a530a0d0f3d0bca3202353f2af9a7d",
-                "reference": "0f3a3af678a530a0d0f3d0bca3202353f2af9a7d",
+                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/b396933cf11c1801f92512cdbfcf290fc76d92b0",
+                "reference": "b396933cf11c1801f92512cdbfcf290fc76d92b0",
                 "shasum": ""
             },
             "require": {
@@ -25,7 +25,7 @@
                 "inc2734/wp-awesome-components": "^1.0",
                 "inc2734/wp-awesome-widgets": "^9.0",
                 "inc2734/wp-basis": "^5.6",
-                "inc2734/wp-breadcrumbs": "^3.0",
+                "inc2734/wp-breadcrumbs": "^3.1",
                 "inc2734/wp-contents-outline": "^4.0",
                 "inc2734/wp-customizer-framework": "^5.0",
                 "inc2734/wp-github-theme-updater": "^2.0",
@@ -64,7 +64,7 @@
                 }
             ],
             "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-10-30T05:51:49+00:00"
+            "time": "2019-11-12T04:03:47+00:00"
         },
         {
             "name": "inc2734/wp-adsense",
@@ -251,16 +251,16 @@
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "3.0.3",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "48a6c7041c542c1cbbdf70ee140404246fa74d87"
+                "reference": "44fe6a91489e6ebfdd06acba66657489c585eb55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/48a6c7041c542c1cbbdf70ee140404246fa74d87",
-                "reference": "48a6c7041c542c1cbbdf70ee140404246fa74d87",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/44fe6a91489e6ebfdd06acba66657489c585eb55",
+                "reference": "44fe6a91489e6ebfdd06acba66657489c585eb55",
                 "shasum": ""
             },
             "require": {
@@ -291,7 +291,7 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2019-10-07T01:52:56+00:00"
+            "time": "2019-11-12T03:54:03+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
