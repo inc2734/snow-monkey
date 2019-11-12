@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 8.0.5
  */
 
 namespace Framework\Contract\Helper;
@@ -16,13 +16,16 @@ trait Page_Header {
 	 * @return string
 	 */
 	protected static function _get_page_header_class() {
-		$cache = wp_cache_get( 'page_header_class', '\Framework\Contract\Helper\Page_Header' );
+		$queried_object = get_queried_object();
+		$cache_key      = md5( json_encode( $queried_object ) );
+		$cache          = wp_cache_get( $cache_key, 'page_header_class' );
+
 		if ( false !== $cache ) {
 			return $cache;
 		}
 
 		$class = static::_get_page_header_class_no_cache();
-		wp_cache_set( 'page_header_class', $class, '\Framework\Contract\Helper\Page_Header' );
+		wp_cache_set( $cache_key, $class, 'page_header_class' );
 		return $class;
 	}
 
