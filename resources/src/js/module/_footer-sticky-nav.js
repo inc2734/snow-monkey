@@ -29,7 +29,7 @@ export const FooterStickyNav = (nav) => {
     const observerCallback = (entries) => {
       entries.forEach(
         (entry) => {
-          if (isFirstIntersecting && entry.isIntersecting) {
+          if (isFirstIntersecting) {
             isFirstIntersecting = false;
             return;
           }
