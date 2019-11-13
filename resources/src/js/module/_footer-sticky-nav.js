@@ -25,14 +25,25 @@ export const FooterStickyNav = (nav) => {
   const onLoad = (nav) => {
     init(nav);
 
+    let isFirstIntersecting = true;
     const observerCallback = (entries) => {
       entries.forEach(
         (entry) => {
+          if (isFirstIntersecting && entry.isIntersecting) {
+            isFirstIntersecting = false;
+            return;
+          }
           const oldAriaHidden = nav.getAttribute('aria-hidden');
-          const newAriaHidden = entry.isIntersecting ? 'true' : 'false';
-          if (oldAriaHidden !== newAriaHidden) {
-            nav.setAttribute('aria-hidden', newAriaHidden);
-            addCustomEvent(nav, 'initFooterStickyNav');
+          if (entry.rootBounds.height <= entry.boundingClientRect.y) {
+            if ('false' !== oldAriaHidden) {
+              nav.setAttribute('aria-hidden', 'false');
+              addCustomEvent(nav, 'initFooterStickyNav');
+            }
+          } else {
+            if ('true' !== oldAriaHidden) {
+              nav.setAttribute('aria-hidden', 'true');
+              addCustomEvent(nav, 'initFooterStickyNav');
+            }
           }
         }
       );
