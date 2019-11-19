@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.1.0
+ * @version 8.0.8
  */
 
 use Framework\Helper;
@@ -19,6 +19,12 @@ $eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
 	?>
 
 	<div class="c-entry__body">
+		<?php
+		if ( 'content-top' === $eyecatch_position && has_post_thumbnail() ) {
+			Helper::get_template_part( 'template-parts/content/eyecatch' );
+		}
+		?>
+
 		<?php Helper::get_template_part( 'template-parts/content/entry/content/content', get_post_type() ); ?>
 	</div>
 </article>
