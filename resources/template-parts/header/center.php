@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 8.1.0
  *
  * renamed: template-parts/center-header.php
  */
@@ -68,7 +68,15 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 
 		<?php if ( $has_global_nav ) : ?>
 			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-hidden u-visible-lg-up">
-				<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>
+				<?php
+				Helper::get_template_part(
+					'template-parts/nav/global',
+					null,
+					[
+						'_vertical' => get_theme_mod( 'vertical-global-nav' ),
+					]
+				);
+				?>
 			</div>
 		<?php endif; ?>
 	</div>

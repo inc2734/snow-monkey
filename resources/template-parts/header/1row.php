@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 8.1.0
  *
  * renamed: template-parts/1row-header.php
  */
@@ -38,7 +38,15 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 					<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 						<?php if ( $has_global_nav ) : ?>
 							<div class="c-row__col c-row__col--auto">
-								<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>
+								<?php
+								Helper::get_template_part(
+									'template-parts/nav/global',
+									null,
+									[
+										'_vertical' => get_theme_mod( 'vertical-global-nav' ),
+									]
+								);
+								?>
 							</div>
 						<?php endif; ?>
 

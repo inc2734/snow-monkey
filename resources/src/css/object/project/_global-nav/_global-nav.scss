@@ -3,6 +3,19 @@
     visibility: hidden;
   }
 
+  &--vertical {
+    display: flex;
+
+    .#{$_prefix}c-navbar {
+      display: inline-flex;
+
+      &__item > a {
+        writing-mode: vertical-rl;
+        align-items: flex-start;
+      }
+    }
+  }
+
   .#{$_prefix}c-navbar {
     &__item {
       > a {
