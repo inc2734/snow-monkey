@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-10-10 10:03+0900\n"
-"PO-Revision-Date: 2019-10-10 10:03+0900\n"
+"POT-Creation-Date: 2019-11-21 11:26+0900\n"
+"PO-Revision-Date: 2019-11-21 11:27+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,104 +42,104 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:111
+#: Framework/Helper.php:127
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:116
+#: Framework/Helper.php:132
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:121
+#: Framework/Helper.php:137
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:127
+#: Framework/Helper.php:143
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:212
+#: Framework/Helper.php:228
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:217
+#: Framework/Helper.php:233
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:222 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:238 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:227
+#: Framework/Helper.php:243
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:232
+#: Framework/Helper.php:248
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:237
+#: Framework/Helper.php:253
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:242
+#: Framework/Helper.php:258
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:247
+#: Framework/Helper.php:263
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:252
+#: Framework/Helper.php:268
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:257
+#: Framework/Helper.php:273
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:263
+#: Framework/Helper.php:279
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:269
+#: Framework/Helper.php:285
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:275
+#: Framework/Helper.php:291
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:281
+#: Framework/Helper.php:297
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:287
+#: Framework/Helper.php:303
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:293
+#: Framework/Helper.php:309
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:299
+#: Framework/Helper.php:315
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:305
+#: Framework/Helper.php:321
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:311
+#: Framework/Helper.php:327
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -364,13 +364,13 @@ msgstr "投稿のビューテンプレート"
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
 
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
 #: app/customizer/design/sections/page/controls/eyecatch.php:16
 #: app/customizer/design/sections/post/controls/eyecatch.php:16
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
 
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:26
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:25
 #, php-format
 msgid "Select how to display the eyecatch image in %1$s page."
 msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
@@ -557,13 +557,17 @@ msgstr "ヘッダーコンテンツ"
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
-#: app/customizer/layout/sections/header/controls/header-layout.php:17
+#: app/customizer/layout/sections/header/controls/header-layout.php:16
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
+#: app/customizer/layout/sections/header/controls/header-position-fixed.php:15
+msgid "Fix header position"
+msgstr "ヘッダー位置を固定する"
+
 #: app/customizer/layout/sections/header/controls/header-position-only-mobile.php:15
-msgid "Use header position setting for mobile only"
-msgstr "ヘッダー位置設定をモバイルのみに適用"
+msgid "[PC] Overwrite header position with \"Normal\""
+msgstr "【PC】ヘッダー位置設定を「ノーマル」で上書きする"
 
 #: app/customizer/layout/sections/header/controls/header-position.php:15
 msgid "Header position"
@@ -581,6 +585,10 @@ msgstr "オーバレイ"
 #: app/customizer/layout/sections/header/controls/header-position.php:21
 msgid "Normal"
 msgstr "ノーマル"
+
+#: app/customizer/layout/sections/header/controls/vertial-global-nav.php:15
+msgid "Make global navigation vertical"
+msgstr "グローバルナビゲーションを縦書きにする"
 
 #: app/customizer/layout/sections/header/section.php:18
 msgid "Header"
@@ -749,7 +757,7 @@ msgstr "fb:app_id"
 msgid "If you want to output fb:app_id meta tag, please input."
 msgstr "fb:app_id meta タグを出力させたい場合は入力してください。"
 
-#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:19
+#: app/customizer/seo-sns/sections/ogp/controls/fb-app-id.php:18
 #, php-format
 msgid "fb:app_id can be obtained from %1$sfacebook for developers%2$s."
 msgstr "fb:app_id は %1$sfacebook for developers%2$s から取得できます。"
@@ -1400,6 +1408,9 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Use header position setting for mobile only"
+#~ msgstr "ヘッダー位置設定をモバイルのみに適用"
 
 #~ msgid "Very light gray"
 #~ msgstr "ライト・グレー"

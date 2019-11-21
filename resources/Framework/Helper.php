@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.10.0
+ * @version 8.1.0
  */
 
 namespace Framework;
@@ -50,6 +50,22 @@ class Helper {
 		}
 
 		return static::get_default_header_position();
+	}
+
+	/**
+	 * Return header-position-fixed
+	 *
+	 * @return string
+	 */
+	public static function get_header_position_fixed() {
+		$fixed           = get_theme_mod( 'header-position-fixed' );
+		$header_position = get_theme_mod( 'header-position' );
+
+		if ( 'overlay' !== $header_position ) {
+			return null;
+		}
+
+		return $fixed ? 'true' : 'false';
 	}
 
 	/**

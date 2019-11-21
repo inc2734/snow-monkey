@@ -3,19 +3,6 @@
     visibility: hidden;
   }
 
-  &--vertical {
-    display: flex;
-
-    .#{$_prefix}c-navbar {
-      display: inline-flex;
-
-      &__item > a {
-        writing-mode: vertical-rl;
-        align-items: flex-start;
-      }
-    }
-  }
-
   .#{$_prefix}c-navbar {
     &__item {
       > a {
@@ -107,6 +94,28 @@
 
           &[aria-expanded="true"] {
             transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &--vertical {
+    display: flex;
+
+    .#{$_prefix}c-navbar {
+      display: inline-flex;
+
+      &__item {
+        display: block;
+
+        > a {
+          display: block;
+          writing-mode: vertical-rl;
+          text-align: left;
+
+          > span {
+            display: block;
           }
         }
       }

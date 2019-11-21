@@ -10,13 +10,13 @@ use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'checkbox',
-	'header-position-only-mobile',
+	'header-position-fixed',
 	[
-		'label'    => __( '[PC] Overwrite header position with "Normal"', 'snow-monkey' ),
-		'priority' => 120,
+		'label'    => __( 'Fix header position', 'snow-monkey' ),
+		'priority' => 119,
 		'default'  => true,
 		'active_callback' => function() {
-			return '' !== get_theme_mod( 'header-position' );
+			return 'overlay' === get_theme_mod( 'header-position' );
 		},
 	]
 );
@@ -27,5 +27,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'layout' );
 $section = Framework::get_section( 'header' );
-$control = Framework::get_control( 'header-position-only-mobile' );
+$control = Framework::get_control( 'header-position-fixed' );
 $control->join( $section )->join( $panel );
