@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.1.0
+ * @version 8.2.0
  */
 
 namespace Framework;
@@ -66,6 +66,22 @@ class Helper {
 		}
 
 		return $fixed ? 'true' : 'false';
+	}
+
+	/**
+	 * Return scrolling-header-colored
+	 *
+	 * @return string
+	 */
+	public static function get_scrolling_header_colored() {
+		$scrolling_colored = get_theme_mod( 'scrolling-header-colored' );
+		$header_position   = get_theme_mod( 'header-position' );
+
+		if ( 'overlay' !== $header_position ) {
+			return null;
+		}
+
+		return $scrolling_colored ? 'true' : 'false';
 	}
 
 	/**

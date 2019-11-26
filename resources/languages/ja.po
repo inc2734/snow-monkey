@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-11-21 11:26+0900\n"
-"PO-Revision-Date: 2019-11-21 11:27+0900\n"
+"POT-Creation-Date: 2019-11-26 21:21+0900\n"
+"PO-Revision-Date: 2019-11-26 21:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,104 +42,104 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:127
+#: Framework/Helper.php:143
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:132
+#: Framework/Helper.php:148
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:137
+#: Framework/Helper.php:153
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:143
+#: Framework/Helper.php:159
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:228
+#: Framework/Helper.php:244
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:233
+#: Framework/Helper.php:249
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:238 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:254 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:243
+#: Framework/Helper.php:259
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:248
+#: Framework/Helper.php:264
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:253
+#: Framework/Helper.php:269
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:258
+#: Framework/Helper.php:274
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:263
+#: Framework/Helper.php:279
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:268
+#: Framework/Helper.php:284
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:273
+#: Framework/Helper.php:289
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:279
+#: Framework/Helper.php:295
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:285
+#: Framework/Helper.php:301
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:291
+#: Framework/Helper.php:307
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:297
+#: Framework/Helper.php:313
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:303
+#: Framework/Helper.php:319
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:309
+#: Framework/Helper.php:325
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:315
+#: Framework/Helper.php:331
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:321
+#: Framework/Helper.php:337
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:327
+#: Framework/Helper.php:343
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -585,6 +585,10 @@ msgstr "オーバレイ"
 #: app/customizer/layout/sections/header/controls/header-position.php:21
 msgid "Normal"
 msgstr "ノーマル"
+
+#: app/customizer/layout/sections/header/controls/scrolling-header-colored.php:15
+msgid "White background when scrolling"
+msgstr "スクロール時に背景を白くする"
 
 #: app/customizer/layout/sections/header/controls/vertial-global-nav.php:15
 msgid "Make global navigation vertical"

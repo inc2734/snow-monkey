@@ -29,12 +29,13 @@
         background-color: transparent;
       }
 
-      [data-scrolled="true"] & {
+      [data-scrolled="true"] &[data-snow-monkey-scrolling-header-colored="true"] {
         box-shadow: 0 1px 2px 1px rgba(#000, .05);
       }
     }
 
     &[data-snow-monkey-header-position-fixed="false"],
+    &[data-snow-monkey-scrolling-header-colored="false"],
     [data-scrolled="false"] &[data-snow-monkey-header-position-fixed="true"] {
       background-color: transparent;
 

@@ -10,13 +10,15 @@ use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'checkbox',
-	'header-position-fixed',
+	'scrolling-header-colored',
 	[
-		'label'    => __( 'Fix header position', 'snow-monkey' ),
-		'priority' => 118,
+		'label'    => __( 'White background when scrolling', 'snow-monkey' ),
+		'priority' => 119,
 		'default'  => true,
 		'active_callback' => function() {
-			return 'overlay' === get_theme_mod( 'header-position' );
+			$header_position_fixed = get_theme_mod( 'header-position-fixed' );
+			$header_position       = get_theme_mod( 'header-position' );
+			return 'overlay' === $header_position && $header_position_fixed;
 		},
 	]
 );
@@ -27,5 +29,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'layout' );
 $section = Framework::get_section( 'header' );
-$control = Framework::get_control( 'header-position-fixed' );
+$control = Framework::get_control( 'scrolling-header-colored' );
 $control->join( $section )->join( $panel );
