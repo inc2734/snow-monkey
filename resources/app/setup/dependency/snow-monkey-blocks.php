@@ -72,8 +72,18 @@ add_action(
 		add_filter(
 			'inc2734_wp_page_speed_optimization_output_head_styles',
 			function( $handles ) {
+				$styles = wp_styles();
+
+				$block_handles = array_filter (
+					$styles->queue,
+					function( $handle ) {
+						return 0 === strpos( $handle, 'snow-monkey-blocks/' );
+					}
+				);
+
 				return array_merge(
 					$handles,
+					$block_handles,
 					[
 						'snow-monkey-blocks',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks',
@@ -97,8 +107,18 @@ add_action(
 		add_filter(
 			'inc2734_wp_page_speed_optimization_defer_scripts',
 			function( $handles ) {
+				$styles = wp_scripts();
+
+				$block_handles = array_filter (
+					$styles->queue,
+					function( $handle ) {
+						return 0 === strpos( $handle, 'snow-monkey-blocks/' );
+					}
+				);
+
 				return array_merge(
 					$handles,
+					$block_handles,
 					[
 						'snow-monkey-blocks',
 					]
