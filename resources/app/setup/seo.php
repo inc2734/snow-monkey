@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.1.0
+ * @version 8.3.0
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -170,6 +170,36 @@ add_filter(
 		}
 
 		return $robots;
+	}
+);
+
+/**
+ * meta description
+ *
+ * @see https://github.com/inc2734/snow-monkey/issues/675
+ */
+add_filter(
+	'inc2734_wp_seo_description',
+	function( $description ) {
+		if ( ! get_option( 'mwt-auto-description' ) ) {
+			return $description;
+		}
+
+		if ( $description ) {
+			return $description;
+		}
+
+		if ( is_front_page() && ! is_home() ) {
+			return get_bloginfo( 'description' );
+		} elseif ( is_page() ) {
+			$ogp = new \Inc2734\WP_OGP\App\Controller\Page();
+			return wp_strip_all_tags( $ogp->get_description() );
+		} elseif ( is_single() ) {
+			$ogp = new \Inc2734\WP_OGP\App\Controller\Single();
+			return wp_strip_all_tags( $ogp->get_description() );
+		}
+
+		return $description;
 	}
 );
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-11-26 21:21+0900\n"
-"PO-Revision-Date: 2019-11-26 21:21+0900\n"
+"POT-Creation-Date: 2019-12-05 11:44+0900\n"
+"PO-Revision-Date: 2019-12-05 11:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -785,6 +785,36 @@ msgstr "OGP メタタグを出力する"
 #: app/customizer/seo-sns/sections/ogp/section.php:18
 msgid "OGP"
 msgstr "OGP"
+
+#: app/customizer/seo-sns/sections/seo-meta/controls/auto-description.php:15
+msgid "Automatically output meta description"
+msgstr "Meta description を自動的に出力する"
+
+#: app/customizer/seo-sns/sections/seo-meta/controls/description-introduction.php:15
+msgid "Meta description"
+msgstr "Meta description"
+
+#: app/customizer/seo-sns/sections/seo-meta/controls/description-introduction.php:17
+msgid ""
+"The meta description is normally output only when \"meta description\" in "
+"the page edit screen is entered."
+msgstr ""
+"通常、Meta description はページ編集画面で「Meta description」が入力された場合"
+"にのみ出力されます。"
+
+#: app/customizer/seo-sns/sections/seo-meta/controls/description-introduction.php:17
+msgid ""
+"When \"Automatically output meta description\" is enabled, even if \"meta "
+"description\" is not entered, meta description is automatically generated "
+"from the excerpt etc. and output (excluding the archive page)"
+msgstr ""
+"「Meta description を自動的に出力する」を有効にすると「Meta description」を入"
+"力しなくても、抜粋などから Meta description 自動的に生成され出力されます"
+"（アーカイブページを除く）"
+
+#: app/customizer/seo-sns/sections/seo-meta/section.php:18
+msgid "Meta"
+msgstr "Meta"
 
 #: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php:16
 msgid "Display buttons"
