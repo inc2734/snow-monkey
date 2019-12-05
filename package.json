@@ -18,7 +18,7 @@
     "@inc2734/add-custom-event": "^0.1.0",
     "@inc2734/dispatch-custom-resize-event": "^0.2.0",
     "@inc2734/for-each-html-nodes": "^0.2.0",
-    "autoprefixer": "^9.7.2",
+    "autoprefixer": "^9.7.3",
     "babel-loader": "^8.0.6",
     "browser-sync": "^2.26.7",
     "cpy-cli": "^2.0.0",

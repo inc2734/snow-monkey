@@ -1,0 +1,19 @@
+.slick-arrow.slick-prev::before {
+  content: '\2190';
+}
+
+[dir='rtl'] .slick-arrow.slick-prev::before {
+  content: '\2192';
+}
+
+.slick-arrow.slick-next::before {
+  content: '\2192';
+}
+
+[dir='rtl'] .slick-arrow.slick-next::before {
+  content: '\2190';
+}
+
+.slick-dotted > .slick-dots > li > button::before {
+  content: '\2022';
+}
