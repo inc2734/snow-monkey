@@ -49,6 +49,10 @@
       .#{$_prefix}c-hamburger-btn__bar {
         background-color: #fff;
       }
+
+      .#{$_prefix}c-hamburger-btn[aria-expanded="true"] .#{$_prefix}c-hamburger-btn__bar:nth-of-type(2) {
+        background-color: transparent;
+      }
     }
   }
 
