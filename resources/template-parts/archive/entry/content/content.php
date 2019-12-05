@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 8.3.1
  */
 
 use Framework\Helper;
@@ -12,7 +12,8 @@ use Framework\Helper;
 <div class="c-entry__content p-entry-content">
 	<div class="p-archive">
 		<?php
-		$entries_layout = get_theme_mod( get_post_type() . '-entries-layout' );
+		$_post_type     = get_post_type() ? get_post_type() : 'post';
+		$entries_layout = get_theme_mod( $_post_type . '-entries-layout' );
 		?>
 		<ul class="c-entries c-entries--<?php echo esc_attr( $entries_layout ); ?>">
 			<?php while ( have_posts() ) : ?>

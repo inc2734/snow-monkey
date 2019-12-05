@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 8.3.1
  */
 
 use Framework\Helper;
@@ -12,9 +12,11 @@ use Framework\Helper;
 <div class="c-entry__content p-entry-content">
 	<div class="p-archive">
 		<?php
+		$_post_type      = get_post_type() ? get_post_type() : 'post';
+		$_post_type      = is_home() ? 'post' : $_post_type;
 		$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
 		$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
-		$entries_layout  = get_theme_mod( get_post_type() . '-entries-layout' );
+		$entries_layout  = get_theme_mod( $_post_type . '-entries-layout' );
 		?>
 
 		<ul class="c-entries c-entries--<?php echo esc_attr( $entries_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
