@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 8.3.2
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -65,8 +65,10 @@ add_action(
 			true
 		);
 
-		if ( get_theme_mod( 'header-position-only-mobile' ) && has_nav_menu( 'global-nav' ) ) {
-			wp_enqueue_script( Helper::get_main_script_handle() . '-drop-nav' );
+		if ( '' === Helper::get_default_header_position() || get_theme_mod( 'header-position-only-mobile' ) ) {
+			if ( has_nav_menu( 'global-nav' ) ) {
+				wp_enqueue_script( Helper::get_main_script_handle() . '-drop-nav' );
+			}
 		}
 
 		if ( has_nav_menu( 'footer-sticky-nav' ) ) {

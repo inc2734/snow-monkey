@@ -1,14 +1,9 @@
 'use strict';
 
 import { getHeader, getContents, getDefaultHeaderPosition, setHeaderType, getStyle, setStyle, isHeaderPositionOnlyMobile } from './_helper';
-import addCustomEvent from '@inc2734/add-custom-event';
 
 export default class Header {
   constructor() {
-    if (! isHeaderPositionOnlyMobile()) {
-      return;
-    }
-
     this.header = getHeader();
     if (! this.header) {
       return;
@@ -26,17 +21,15 @@ export default class Header {
   }
 
   _init() {
-    if ('sticky' !== this.defaultType && 'overlay' !== this.defaultType) {
+    if ('' === this.defaultType) {
       return;
     }
 
-    if (window.matchMedia('(min-width: 1023px)').matches) {
+    if (window.matchMedia('(min-width: 1024px)').matches && isHeaderPositionOnlyMobile()) {
       setHeaderType('');
-      addCustomEvent(this.header, 'setHeaderType');
       setStyle(this.contents, 'marginTop', '');
     } else {
       setHeaderType(this.defaultType);
-      addCustomEvent(this.header, 'setHeaderType');
       const position = getStyle(this.header, 'position');
       if ('fixed' === position || 'absolute' === position) {
         if ('sticky' === this.defaultType) {

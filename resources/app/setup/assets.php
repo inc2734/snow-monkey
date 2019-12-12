@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 8.3.2
  */
 
 use Framework\Helper;
@@ -146,7 +146,7 @@ add_action(
 			return;
 		}
 
-		if ( ! in_array( Helper::get_default_header_position(), [ 'sticky', 'overlay' ] ) ) {
+		if ( '' === Helper::get_default_header_position() ) {
 			return;
 		}
 

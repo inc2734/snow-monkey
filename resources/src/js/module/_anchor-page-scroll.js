@@ -1,6 +1,6 @@
 'use strict';
 
-import { getHeader, getDropNavWrapper, scrollTop, getHeaderType, maybeShowDropNav, getStyle, getAdminBar, getHtml } from './_helper';
+import { getHeader, getDropNavWrapper, scrollTop, getHeaderType, shouldShowDropNav, getStyle, getAdminBar, getHtml } from './_helper';
 
 export default class AnchorPageScroll {
   constructor() {
@@ -30,7 +30,7 @@ export default class AnchorPageScroll {
 
     const adminBarHeight = 'fixed' === getStyle(getAdminBar(), 'position') ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
 
-    if (maybeShowDropNav() && !! this.dropNavWrapper) {
+    if (shouldShowDropNav() && !! this.dropNavWrapper) {
       this._scrollToTarget(this.dropNavWrapper.offsetHeight + adminBarHeight);
     } else if ('sticky' === getHeaderType() || 'overlay' === getHeaderType()) {
       this._scrollToTarget(this.header.offsetHeight + adminBarHeight);

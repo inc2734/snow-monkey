@@ -1,5 +1,7 @@
 'use strict';
 
+import addCustomEvent from '@inc2734/add-custom-event';
+
 /**
  * Return html
  *
@@ -63,7 +65,8 @@ export function getHeaderType() {
  */
 export function setHeaderType(value) {
   const header = getHeader();
-  return header.setAttribute('data-l-header-type', value);
+  header.setAttribute('data-l-header-type', value);
+  addCustomEvent(header, 'setHeaderType');
 }
 
 /**
@@ -184,7 +187,7 @@ export function isHeaderPositionOnlyMobile() {
  *
  * @return boolean
  */
-export function maybeShowDropNav() {
+export function shouldShowDropNav() {
   const header = getHeader();
   const dropNavWrapper = getDropNavWrapper();
 
@@ -201,7 +204,8 @@ export function maybeShowDropNav() {
     return false;
   }
 
-  if (! isHeaderPositionOnlyMobile()) {
+  const headerType = getHeaderType();
+  if ('' !== headerType) {
     return false;
   }
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.2.0
+ * @version 8.3.2
  */
 
 namespace Framework;
@@ -45,10 +45,6 @@ class Helper {
 	 * @return string
 	 */
 	public static function get_header_position() {
-		if ( ! wp_is_mobile() && get_theme_mod( 'header-position-only-mobile' ) ) {
-			return;
-		}
-
 		return static::get_default_header_position();
 	}
 

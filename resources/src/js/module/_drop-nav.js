@@ -2,7 +2,7 @@
 
 import '@inc2734/dispatch-custom-resize-event';
 import addCustomEvent from '@inc2734/add-custom-event';
-import { scrollTop, isHeaderPositionOnlyMobile, maybeShowDropNav } from './_helper';
+import { scrollTop, isHeaderPositionOnlyMobile, shouldShowDropNav } from './_helper';
 
 const hide = (target) => target.setAttribute('aria-hidden', 'true');
 const show = (target) => target.setAttribute('aria-hidden', 'false');
@@ -29,14 +29,12 @@ export const DropNav = (dropNavWrapper) => {
     }
   };
 
-  const scrol = () => {
+  const scroll = () => {
     clearTimeout(timer);
-    timer = setTimeout(() => maybeShowDropNav() ? showDropNav() : hideDropNav(), 100);
+    timer = setTimeout(() => shouldShowDropNav() ? showDropNav() : hideDropNav(), 100);
   };
 
   hideDropNav();
-  if (isHeaderPositionOnlyMobile()) {
-    window.addEventListener('resize:width', () => hideDropNav(), false);
-    window.addEventListener('scroll', () => scrol(), false);
-  }
+  window.addEventListener('resize:width', () => hideDropNav(), false);
+  window.addEventListener('scroll', () => scroll(), false);
 };
