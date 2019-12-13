@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-12-05 11:44+0900\n"
-"PO-Revision-Date: 2019-12-05 11:47+0900\n"
+"POT-Creation-Date: 2019-12-14 02:02+0900\n"
+"PO-Revision-Date: 2019-12-14 02:03+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,104 +42,104 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:143
+#: Framework/Helper.php:148
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:148
+#: Framework/Helper.php:153
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:153
+#: Framework/Helper.php:158
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:159
+#: Framework/Helper.php:164
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:244
+#: Framework/Helper.php:249
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:249
+#: Framework/Helper.php:254
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:254 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:259 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:259
+#: Framework/Helper.php:264
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:264
+#: Framework/Helper.php:269
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:269
+#: Framework/Helper.php:274
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:274
+#: Framework/Helper.php:279
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:279
+#: Framework/Helper.php:284
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:284
+#: Framework/Helper.php:289
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:289
+#: Framework/Helper.php:294
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:295
+#: Framework/Helper.php:300
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:301
+#: Framework/Helper.php:306
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:307
+#: Framework/Helper.php:312
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:313
+#: Framework/Helper.php:318
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:319
+#: Framework/Helper.php:324
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:325
+#: Framework/Helper.php:330
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:331
+#: Framework/Helper.php:336
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:337
+#: Framework/Helper.php:342
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:343
+#: Framework/Helper.php:348
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -561,10 +561,6 @@ msgstr "PC サイズでのみ表示されます。"
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/layout/sections/header/controls/header-position-fixed.php:15
-msgid "Fix header position"
-msgstr "ヘッダー位置を固定する"
-
 #: app/customizer/layout/sections/header/controls/header-position-only-mobile.php:15
 msgid "[PC] Overwrite header position with \"Normal\""
 msgstr "【PC】ヘッダー位置設定を「ノーマル」で上書きする"
@@ -575,14 +571,18 @@ msgstr "ヘッダー位置"
 
 #: app/customizer/layout/sections/header/controls/header-position.php:19
 msgid "Sticky"
-msgstr "固定"
+msgstr "上部固定"
 
 #: app/customizer/layout/sections/header/controls/header-position.php:20
+msgid "Overlay (Sticky)"
+msgstr "オーバレイ（上部固定）"
+
+#: app/customizer/layout/sections/header/controls/header-position.php:21
 #: app/setup/widget-area.php:331
 msgid "Overlay"
 msgstr "オーバレイ"
 
-#: app/customizer/layout/sections/header/controls/header-position.php:21
+#: app/customizer/layout/sections/header/controls/header-position.php:22
 msgid "Normal"
 msgstr "ノーマル"
 
@@ -1442,6 +1442,9 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Fix header position"
+#~ msgstr "ヘッダー位置を固定する"
 
 #~ msgid "Use header position setting for mobile only"
 #~ msgstr "ヘッダー位置設定をモバイルのみに適用"
