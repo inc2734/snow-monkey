@@ -1,60 +1,54 @@
 'use strict';
 
-import { getHeader, getContents, getHtml, getContainer, getAdminBar, scrollTop, getHeaderType, setStyle } from './_helper';
+import '@inc2734/dispatch-custom-resize-event';
 
-export default class FixAdminBar {
+import {
+  getHeader,
+  getHtml,
+  getAdminbar,
+  scrollTop,
+  setStyle,
+  getStyle,
+  hasClass,
+} from './_helper';
+
+export default class Fixadminbar {
   constructor() {
-    this.container = getContainer();
-    this.header    = getHeader();
-    this.contents  = getContents();
-    this.html      = getHtml();
-    this.adminBar  = getAdminBar();
+    this.header   = getHeader();
+    this.html     = getHtml();
+    this.adminbar = getAdminbar();
 
-    if (! this.container || ! this.header || ! this.contents || ! this.adminBar) {
+    if ( ! this.header || ! this.adminbar) {
       return;
     }
 
-    this._init()
+    this._fixHeaderPosition = this._fixHeaderPosition.bind(this);
 
-    window.addEventListener('resize', () => this._init(), false);
-    window.addEventListener('scroll', () => this._fixHeaderPosition(), false);
+    this._init()
+    window.addEventListener('resize:width', () => this._init(), false);
   }
 
   _init() {
-    this._fixHeaderPosition();
-    this._fixStickyFooter();
-    this._fixDisableWindowScroll();
+    const hasStickySm        = hasClass(this.header, 'l-header--sticky-sm');
+    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm');
+
+    if ('fixed' !== getStyle(this.adminbar, 'position') && (hasStickySm || hasStickyOverlaySm)) {
+      window.addEventListener('scroll', this._fixHeaderPosition, false);
+      this._fixHeaderPosition()
+    } else {
+      window.removeEventListener('scroll', this._fixHeaderPosition, false);
+      this._setHeaderTop(null);
+      this._setHeaderPosition(null);
+    }
   }
 
   _fixHeaderPosition() {
-    const headerType = getHeaderType();
-
-    if ( 'sticky' !== headerType && 'overlay' !== headerType) {
-      return;
-    }
-
-    const scroll = scrollTop();
-    const adminbarHeight = this.adminBar.offsetHeight;
-
-    if (window.matchMedia('(min-width: 601px)').matches) {
+    if (scrollTop() > this.adminbar.offsetHeight) {
       this._setHeaderPosition(null);
-      this._setHeaderTop(null);
+      this._setHeaderTop(0);
     } else {
-      if (scroll >= adminbarHeight) {
-        this._setHeaderPosition(null);
-        this._setHeaderTop(0);
-      } else {
-        if ('sticky' === headerType) {
-          this._setHeaderPosition('relative');
-          this._setHeaderTop(null);
-        } else if ('overlay' === headerType) {
-          this._setHeaderPosition('absolute');
-          this._setHeaderTop(null);
-        }
-
-        this.html.setAttribute('data-scrolled', false);
-        this._setContentsMarginTop(0);
-      }
+      this._setHeaderPosition('absolute');
+      this._setHeaderTop(null);
     }
   }
 
@@ -65,24 +59,5 @@ export default class FixAdminBar {
   _setHeaderTop(top) {
     top = null !== top ? `${parseInt(top)}px` : top;
     setStyle(this.header, 'top', top);
-  }
-
-  _setContentsMarginTop(marginTop) {
-    marginTop = null !== marginTop ? `${parseInt(marginTop)}px` : marginTop;
-    setStyle(this.contents, 'marginTop', marginTop);
-  }
-
-  _fixStickyFooter() {
-    if ('true' == this.html.getAttribute('data-sticky-footer')) {
-      const adminbarHeight = this.adminBar.offsetHeight;
-      setStyle(this.container, 'minHeight', `calc(100vh - ${adminbarHeight}px)`);
-    }
-  }
-
-  _fixDisableWindowScroll() {
-    if ('false' == this.html.getAttribute('data-window-scroll')) {
-      const adminbarHeight = this.adminBar.offsetHeight;
-      setStyle(this.container, 'maxHeight', `calc(100vh - ${adminbarHeight}px)`);
-    }
   }
 }

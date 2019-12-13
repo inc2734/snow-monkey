@@ -2,14 +2,14 @@
 
 import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis';
 
-import BasisStickyHeader from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/js/sticky-header';
 import AnchorPageScroll from './module/_anchor-page-scroll';
+import ScrollChecker from './module/_scroll-checker';
 
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    new BasisStickyHeader();
     new AnchorPageScroll();
+    new ScrollChecker();
   },
   false
 );

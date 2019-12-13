@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.2.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,9 +16,7 @@ Framework::control(
 		'priority' => 119,
 		'default'  => true,
 		'active_callback' => function() {
-			$header_position_fixed = get_theme_mod( 'header-position-fixed' );
-			$header_position       = get_theme_mod( 'header-position' );
-			return 'overlay' === $header_position && $header_position_fixed;
+			return 'sticky-overlay' === get_theme_mod( 'header-position' );
 		},
 	]
 );

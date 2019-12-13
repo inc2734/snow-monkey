@@ -1,6 +1,16 @@
 'use strict';
 
-import { getHeader, getDropNavWrapper, scrollTop, getHeaderType, shouldShowDropNav, getStyle, getAdminBar, getHtml } from './_helper';
+import {
+  getHeader,
+  getDropNavWrapper,
+  shouldShowDropNav,
+  scrollTop,
+  getAdminbar,
+  getHtml,
+  getStyle,
+  media,
+  hasClass
+} from './_helper';
 
 export default class AnchorPageScroll {
   constructor() {
@@ -17,25 +27,31 @@ export default class AnchorPageScroll {
     this.dropNavWrapper   = getDropNavWrapper();
     this.defaultScrollTop = scrollTop();
 
-    this._scrollEvent = this._scrollEvent.bind(this);
-    window.addEventListener('scroll', this._scrollEvent, false);
+    this._init = this._init.bind(this);
+    window.addEventListener('scroll', this._init, false);
   }
 
-  _scrollEvent() {
-    window.removeEventListener('scroll', this._scrollEvent, false);
+  _init() {
+    window.removeEventListener('scroll', this._init, false);
 
     if (0 < this.defaultScrollTop) {
       return;
     }
 
-    const adminBarHeight = 'fixed' === getStyle(getAdminBar(), 'position') ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
+    const adminbarHeight     = 'fixed' === getStyle(getAdminbar(), 'position') ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
+    const dropNavHeight      = shouldShowDropNav() ? this.dropNavWrapper.offsetHeight : 0;
+    const headerHeight       = this.header.offsetHeight;
+    const hasStickySm        = hasClass(this.header, 'l-header--sticky-sm');
+    const hasStickyLg        = hasClass(this.header, 'l-header--sticky-lg');
+    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm');
+    const hasStickyOverlayLg = hasClass(this.header, 'l-header--sticky-overlay-lg');
+    const activeHeaderSm     = media('max-width: 1023px') && (hasStickySm || hasStickyOverlaySm);
+    const activeHeaderLg     = media('min-width: 1024px') && (hasStickyLg || hasStickyOverlayLg);
 
-    if (shouldShowDropNav() && !! this.dropNavWrapper) {
-      this._scrollToTarget(this.dropNavWrapper.offsetHeight + adminBarHeight);
-    } else if ('sticky' === getHeaderType() || 'overlay' === getHeaderType()) {
-      this._scrollToTarget(this.header.offsetHeight + adminBarHeight);
-    } else if (0 < adminBarHeight) {
-      this._scrollToTarget(adminBarHeight);
+    if (activeHeaderSm || activeHeaderLg) {
+      this._scrollToTarget(headerHeight + adminbarHeight + dropNavHeight);
+    } else {
+      this._scrollToTarget(adminbarHeight + dropNavHeight);
     }
   }
 

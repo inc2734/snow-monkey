@@ -49,37 +49,6 @@ export function getHeader() {
 }
 
 /**
- * Return data-l-header-type of header
- *
- * @return string
- */
-export function getHeaderType() {
-  const header = getHeader();
-  return header.getAttribute('data-l-header-type');
-}
-
-/**
- * Return data-l-header-type of header
- *
- * @return string
- */
-export function setHeaderType(value) {
-  const header = getHeader();
-  header.setAttribute('data-l-header-type', value);
-  addCustomEvent(header, 'setHeaderType');
-}
-
-/**
- * Return data-snow-monkey-default-header-position
- *
- * @return string
- */
-export function getDefaultHeaderPosition() {
-  const header = getHeader();
-  return header.getAttribute('data-snow-monkey-default-header-position');
-}
-
-/**
  * Return .l-header__drop-nav
  *
  * @return object|null
@@ -126,7 +95,7 @@ export function getContainer() {
  *
  * @return object|null
  */
-export function getAdminBar() {
+export function getAdminbar() {
   return document.getElementById('wpadminbar');
 }
 
@@ -204,10 +173,27 @@ export function shouldShowDropNav() {
     return false;
   }
 
-  const headerType = getHeaderType();
-  if ('' !== headerType) {
+  if ('fixed' === getStyle(header, 'position')) {
     return false;
   }
 
   return true;
+}
+
+/**
+ * Return true when match the media query
+ *
+ * @return boolean
+ */
+export function media(query) {
+  return window.matchMedia(`(${query})`).matches;
+}
+
+/**
+ * Return true when the target has the class
+ *
+ * @return boolean
+ */
+export function hasClass(target, className) {
+  return target.classList.contains(className);
 }

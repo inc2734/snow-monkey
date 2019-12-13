@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.3.2
+ * @version <version>
  */
 
 namespace Framework;
@@ -33,6 +33,8 @@ class Helper {
 	/**
 	 * Return default header position
 	 *
+	 * @deprecated
+	 *
 	 * @return string
 	 */
 	public static function get_default_header_position() {
@@ -42,14 +44,21 @@ class Helper {
 	/**
 	 * Return header position
 	 *
+	 * @deprecated
+	 *
 	 * @return string
 	 */
 	public static function get_header_position() {
+		if ( ! wp_is_mobile() && get_theme_mod( 'header-position-only-mobile' ) ) {
+			return;
+		}
 		return static::get_default_header_position();
 	}
 
 	/**
 	 * Return header-position-fixed
+	 *
+	 * @deprecated
 	 *
 	 * @return string
 	 */
@@ -343,5 +352,32 @@ class Helper {
 				],
 			]
 		);
+	}
+
+	/**
+	 * Retrun header classes
+	 *
+	 * @return array
+	 */
+	public static function get_header_classes() {
+		$header_position = get_theme_mod( 'header-position' );
+		$classes = [ 'l-header' ];
+
+		if ( ! $header_position ) {
+			return $classes;
+		}
+
+		$classes[] = 'l-header--' . $header_position . '-sm';
+		$classes[] = ! get_theme_mod( 'header-position-only-mobile' ) ? 'l-header--' . $header_position . '-lg' : null;
+
+		if ( 'sticky-overlay' === $header_position ) {
+			$colored = get_theme_mod( 'scrolling-header-colored' );
+			if ( $colored ) {
+				$classes[] = 'l-header--' . $header_position . '-sm--colored';
+				$classes[] = ! get_theme_mod( 'header-position-only-mobile' ) ? 'l-header--' . $header_position . '-lg--colored' : null;
+			}
+		}
+
+		return array_filter( $classes );
 	}
 }

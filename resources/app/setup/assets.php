@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.3.2
+ * @version <version>
  */
 
 use Framework\Helper;
@@ -142,10 +142,6 @@ add_action(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		if ( ! get_theme_mod( 'header-position-only-mobile' ) ) {
-			return;
-		}
-
 		if ( '' === Helper::get_default_header_position() ) {
 			return;
 		}
