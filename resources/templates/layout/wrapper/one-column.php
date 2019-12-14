@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version <version>
  */
 
 use Framework\Helper;
@@ -42,7 +42,9 @@ use Framework\Helper;
 			?>
 
 			<?php
-			if ( get_theme_mod( 'infobar-content' ) ) {
+			$should_infobar_in_header    = in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ] );
+			$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
+			if ( get_theme_mod( 'infobar-content' ) && ( ! $should_infobar_in_header || $header_position_only_mobile ) ) {
 				Helper::get_template_part( 'template-parts/common/infobar' );
 			}
 			?>

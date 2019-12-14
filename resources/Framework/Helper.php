@@ -398,4 +398,14 @@ class Helper {
 
 		return false;
 	}
+
+	/**
+	 * Return hooked value of snow_monkey_use_auto_custom_logo_size.
+	 * If return true, the logo size setting in customizer is applyed.
+	 *
+	 * @return boolean
+	 */
+	public static function use_auto_custom_logo_size() {
+		return apply_filters( 'snow_monkey_use_auto_custom_logo_size', true );
+	}
 }

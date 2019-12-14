@@ -24,9 +24,3 @@
     }
   }
 }
-
-[data-l-header-type=""] + .#{$_prefix}l-contents > .#{$_prefix}p-infobar {
-  .#{$_prefix}p-infobar__inner {
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .05) inset;
-  }
-}

@@ -1,11 +1,14 @@
 .#{$_prefix}l-header {
   z-index: 99999;
   background-color: #fff;
-  @include _padding(.25, 0);
   @include _transition(background-color);
 
-  @include _media-min(lg) {
-    padding: 0;
+  &__content {
+    @include _padding(.25, 0);
+
+    @include _media-min(lg) {
+      padding: 0;
+    }
   }
 
   /**
@@ -69,11 +72,6 @@
   @mixin sticky-overlay-header() {
     @include overlay-header();
     position: fixed;
-
-    [data-scrolled="true"] & {
-      background-color: #fff;
-      box-shadow: 0 1px 2px 1px rgba(#000, .05);
-    }
 
     &--colored {
       [data-scrolled="false"] & {
