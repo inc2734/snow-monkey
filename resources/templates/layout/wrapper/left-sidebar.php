@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 8.4.0
  */
 
 use Framework\Helper;
@@ -42,7 +42,7 @@ use Framework\Helper;
 			?>
 
 			<?php
-			if ( get_theme_mod( 'infobar-content' ) ) {
+			if ( get_theme_mod( 'infobar-content' ) && 'overlay' !== get_theme_mod( 'header-position' ) ) {
 				Helper::get_template_part( 'template-parts/common/infobar' );
 			}
 			?>
