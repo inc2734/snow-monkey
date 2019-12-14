@@ -2,22 +2,21 @@
 
 import {
   getHtml,
-  scrollTop,
 } from './_helper';
 
-export default class ScrollChecker {
-  constructor() {
-    this.html = getHtml();
-
-    this._init();
-    window.addEventListener('scroll', () => this._init());
-    window.addEventListener('resize', () => this._init());
+export default function() {
+  if ('undefined' === typeof IntersectionObserver) {
+    return;
   }
 
-  _init() {
-    const scroll   = scrollTop();
-    const scrolled = scroll > 0 ? 'true' : 'false';
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  };
 
-    this.html.setAttribute('data-scrolled', scrolled);
-  }
+  const toggle   = (isIntersecting) => getHtml().setAttribute('data-scrolled', ! isIntersecting);
+  const callback = (entries) => entries.forEach(entry => toggle(entry.isIntersecting));
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(document.getElementById('page-start'));
 }

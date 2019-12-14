@@ -164,16 +164,8 @@ export function shouldShowDropNav() {
     return false;
   }
 
-  if (! window.matchMedia('(min-width: 1024px)').matches) {
-    return false;
-  }
-
   const headerOffsetTop = header.offsetHeight + header.getBoundingClientRect().top + scrollTop();
   if (headerOffsetTop > scrollTop()) {
-    return false;
-  }
-
-  if ('fixed' === getStyle(header, 'position')) {
     return false;
   }
 

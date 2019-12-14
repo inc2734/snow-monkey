@@ -15,7 +15,7 @@ $classes = Helper::get_header_classes();
 <header class="<?php echo esc_attr( join( ' ', $classes ) ); ?>" role="banner">
 	<?php Helper::get_template_part( 'template-parts/header/2row' ); ?>
 
-	<?php if ( has_nav_menu( 'global-nav' ) ) : ?>
+	<?php if ( Helper::has_drop_nav() ) : ?>
 		<div class="l-header__drop-nav" aria-hidden="true">
 			<div class="c-container">
 				<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>

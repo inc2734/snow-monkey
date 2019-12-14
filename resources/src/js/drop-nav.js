@@ -14,7 +14,7 @@ document.addEventListener(
       return;
     }
 
-    DropNav(dropNavWrapper);
+    DropNav(dropNavWrapper, header);
     GlobalNav(gnav);
   },
   false

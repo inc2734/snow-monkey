@@ -12,8 +12,10 @@ export const GlobalNav = (gnav) => {
   window.addEventListener('hideDropNav', () => show(gnav));
 };
 
-export const DropNav = (dropNavWrapper) => {
-  let timer = null;
+export const DropNav = (dropNavWrapper, header) => {
+  if ('undefined' === typeof IntersectionObserver) {
+    return;
+  }
 
   const hideDropNav = () => {
     if ('false' === dropNavWrapper.getAttribute('aria-hidden')) {
@@ -29,12 +31,17 @@ export const DropNav = (dropNavWrapper) => {
     }
   };
 
-  const scroll = () => {
-    clearTimeout(timer);
-    timer = setTimeout(() => shouldShowDropNav() ? showDropNav() : hideDropNav(), 100);
-  };
-
   hideDropNav();
   window.addEventListener('resize:width', () => hideDropNav(), false);
-  window.addEventListener('scroll', () => scroll(), false);
+
+  const options = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  };
+
+  const toggle   = (isIntersecting) => isIntersecting ? hideDropNav() : showDropNav();
+  const callback = (entries) => entries.forEach(entry => toggle(entry.isIntersecting));
+  const observer = new IntersectionObserver(callback, options);
+  observer.observe(header);
 };

@@ -380,4 +380,22 @@ class Helper {
 
 		return array_filter( $classes );
 	}
+
+	/**
+	 * Return true if has the drop-nav
+	 *
+	 * @return boolean
+	 */
+	public static function has_drop_nav() {
+		if ( has_nav_menu( 'global-nav' ) ) {
+			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ 'normal', 'overlay' ] );
+			$has_drop_nav_on_pc = get_theme_mod( 'header-position-only-mobile' );
+
+			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
 }
