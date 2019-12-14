@@ -3,8 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.7.0
+ * @version 8.4.0
  */
+
+use Framework\Helper;
 
 add_action(
 	'after_setup_theme',
@@ -28,6 +30,10 @@ add_action(
 add_action(
 	'wp_head',
 	function() {
+		if ( ! Helper::use_auto_custom_logo_size() ) {
+			return;
+		}
+
 		$custom_logo = get_custom_logo();
 		if ( ! $custom_logo ) {
 			return;

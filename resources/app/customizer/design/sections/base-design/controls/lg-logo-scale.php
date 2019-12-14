@@ -3,10 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.7.0
+ * @version 8.4.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+use Framework\Helper;
 
 Framework::control(
 	'number',
@@ -20,6 +21,10 @@ Framework::control(
 			'max' => 100,
 		],
 		'active_callback' => function() {
+			if ( ! Helper::use_auto_custom_logo_size() ) {
+				return false;
+			}
+
 			$custom_logo = get_custom_logo();
 			if ( ! $custom_logo ) {
 				return false;
