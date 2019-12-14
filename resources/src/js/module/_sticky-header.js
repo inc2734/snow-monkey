@@ -31,13 +31,10 @@ export default class StickyHeader {
   }
 
   _init() {
-    const isSm = media('max-width: 1023px');
-    const isLg = media('min-width: 1024px');
-    if ((isLg && ! this.hasStickyLg) || (isSm && ! this.hasStickySm)) {
-      return;
-    }
-
-    this.contents.style.marginTop = `${this.header.offsetHeight}px`;
+    const isStickySm = media('max-width: 1023px') && this.hasStickySm;
+    const isStickyLg = media('min-width: 1024px') && this.hasStickyLg;
+    const marginTop = isStickySm || isStickyLg ? `${ this.header.offsetHeight }px` : '';
+    this.contents.style.marginTop = marginTop;
     addCustomEvent(window, 'afterStickyHeaderSetting');
   }
 }

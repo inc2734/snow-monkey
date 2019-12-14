@@ -42,9 +42,7 @@ use Framework\Helper;
 			?>
 
 			<?php
-			$should_infobar_in_header    = in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ] );
-			$header_position_only_mobile = get_theme_mod( 'header-position-only-mobile' );
-			if ( get_theme_mod( 'infobar-content' ) && ( ! $should_infobar_in_header || $header_position_only_mobile ) ) {
+			if ( get_theme_mod( 'infobar-content' ) && ( ! Helper::should_infobar_in_header() || get_theme_mod( 'header-position-only-mobile' ) ) ) {
 				Helper::get_template_part( 'template-parts/common/infobar' );
 			}
 			?>

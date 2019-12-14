@@ -15,7 +15,7 @@ $classes = Helper::get_header_classes();
 
 <header class="<?php echo esc_attr( join( ' ', $classes ) ); ?>" role="banner">
 	<?php
-	if ( get_theme_mod( 'infobar-content' ) && in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ] ) ) {
+	if ( get_theme_mod( 'infobar-content' ) && Helper::should_infobar_in_header() ) {
 		Helper::get_template_part( 'template-parts/common/infobar' );
 	}
 	?>

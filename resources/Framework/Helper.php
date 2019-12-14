@@ -408,4 +408,13 @@ class Helper {
 	public static function use_auto_custom_logo_size() {
 		return apply_filters( 'snow_monkey_use_auto_custom_logo_size', true );
 	}
+
+	/**
+	 * The overlay header and the ticky overlay has infobar in the header.
+	 *
+	 * @return boolean
+	 */
+	public static function should_infobar_in_header() {
+		return in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ] );
+	}
 }
