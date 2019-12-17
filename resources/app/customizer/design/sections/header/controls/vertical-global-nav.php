@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.1.0
+ * @version <version>
+ *
+ * renamed: app/customizer/layout/sections/header/controls/vertial-global-nav.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -25,7 +27,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = Framework::get_panel( 'layout' );
+$panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'header' );
 $control = Framework::get_control( 'vertical-global-nav' );
 $control->join( $section )->join( $panel );

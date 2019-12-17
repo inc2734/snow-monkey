@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.3.6
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,7 +16,7 @@ Framework::section(
 	'design-post',
 	[
 		'title'           => __( 'Posts settings', 'snow-monkey' ),
-		'priority'        => 110,
+		'priority'        => 130,
 		'active_callback' => function() {
 			return is_singular( 'post' );
 		},

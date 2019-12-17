@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
+ *
+ * renamed: app/customizer/layout/sections/footer/section.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;

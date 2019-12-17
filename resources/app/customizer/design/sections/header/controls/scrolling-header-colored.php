@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  * @version <version>
+ *
+ * renamed: app/customizer/layout/sections/header/controls/scrolling-header-colored.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -25,7 +27,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = Framework::get_panel( 'layout' );
+$panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'header' );
 $control = Framework::get_control( 'scrolling-header-colored' );
 $control->join( $section )->join( $panel );

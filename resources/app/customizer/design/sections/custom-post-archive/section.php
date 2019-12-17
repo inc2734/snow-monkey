@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -26,7 +26,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 				__( '%1$s archive page settings', 'snow-monkey' ),
 				$custom_post_type_object->label
 			),
-			'priority'        => 110,
+			'priority'        => 130,
 			'active_callback' => function() use ( $custom_post_type_object ) {
 				return is_post_type_archive( $custom_post_type_object->name );
 			},

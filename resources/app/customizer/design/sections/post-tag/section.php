@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -24,7 +24,7 @@ foreach ( $terms as $_term ) {
 				__( '[ %1$s ] tag pages settings', 'snow-monkey' ),
 				$_term->name
 			),
-			'priority'        => 110,
+			'priority'        => 130,
 			'active_callback' => function() use ( $_term ) {
 				return is_tag( $_term->term_id );
 			},
