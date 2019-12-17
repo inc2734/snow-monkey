@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2019-12-14 02:02+0900\n"
-"PO-Revision-Date: 2019-12-14 02:03+0900\n"
+"POT-Creation-Date: 2019-12-17 14:14+0900\n"
+"PO-Revision-Date: 2019-12-17 14:16+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -31,14 +31,14 @@ msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
 #: Framework/Helper.php:28
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:19
+#: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:20
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
 #: Framework/Helper.php:29
 #: app/customizer/design-skin/controls/design-skin.php:21
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:23
+#: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 msgid "None"
 msgstr "なし"
 
@@ -222,35 +222,9 @@ msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダ�
 msgid "Design"
 msgstr "デザイン"
 
-#: app/customizer/design/sections/archive/controls/entries-layout.php:15
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:20
-msgid "Entries layout"
-msgstr "記事一覧レイアウト"
-
-#: app/customizer/design/sections/archive/controls/entries-layout.php:19
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:22
-#: app/widget/snow-monkey-recent-posts/_form.php:69
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:99
-msgid "Rich media"
-msgstr "リッチメディア"
-
-#: app/customizer/design/sections/archive/controls/entries-layout.php:20
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:23
-#: app/widget/snow-monkey-recent-posts/_form.php:70
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:100
-#: translation/bundle-template-header.php:12
-msgid "Simple"
-msgstr "シンプル"
-
-#: app/customizer/design/sections/archive/controls/entries-layout.php:21
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:24
-#: app/widget/snow-monkey-recent-posts/_form.php:71
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:101
-msgid "Text"
-msgstr "テキスト"
+#: app/customizer/design/sections/archive/controls/layout.php:18
+msgid "Archive page layout"
+msgstr "アーカイブページレイアウト"
 
 #: app/customizer/design/sections/archive/section.php:18
 msgid "Archive pages settings"
@@ -285,6 +259,32 @@ msgstr "Noto Sans JP"
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
+#: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:17
+msgid "Breadcrumbs display position"
+msgstr "パンくずリストの表示位置"
+
+#: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:22
+msgid "Top of contents ( Fit to content width )"
+msgstr "コンテンツの上（コンテンツ幅に合わせる）"
+
+#: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:23
+#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
+#: app/setup/widget-area.php:109
+msgid "Bottom of contents"
+msgstr "コンテンツの下"
+
+#: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:24
+msgid "Bottom of contents ( Fit to content width )"
+msgstr "コンテンツの下（コンテンツ幅に合わせる）"
+
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:17
+msgid "Contents max width"
+msgstr "コンテンツの最大幅"
+
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:18
+msgid "You can set max width of contents area (1024 - 1280)"
+msgstr "コンテンツエリアの最大幅を設定することができます（1024〜1280）"
+
 #: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
@@ -305,9 +305,55 @@ msgstr "ページ上部へ戻るボタンを表示"
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
-#: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:15
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:17
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:20
+msgid "Entries layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:21
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:22
+#: app/widget/snow-monkey-recent-posts/_form.php:69
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:99
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:22
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:23
+#: app/widget/snow-monkey-recent-posts/_form.php:70
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:100
+#: translation/bundle-template-header.php:12
+msgid "Simple"
+msgstr "シンプル"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:23
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:24
+#: app/widget/snow-monkey-recent-posts/_form.php:71
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:101
+msgid "Text"
+msgstr "テキスト"
+
+#: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
 msgid "Custom logo scale (%) on PC"
 msgstr "PC 時のカスタムロゴの拡大率（%）"
+
+#: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:18
+msgid "Overlay widget area max width"
+msgstr "オーバーレイウィジェットエリアの最大幅"
+
+#: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:19
+msgid "You can set max width of overlay widget area"
+msgstr "オーバーレイウィジェットエリアの最大幅を設定することができます"
+
+#: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:23
+msgid "Wide width"
+msgstr "ワイド幅"
+
+#: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:24
+msgid "Slim width"
+msgstr "スリム幅"
 
 #: app/customizer/design/sections/base-design/controls/protected-more.php:15
 msgid ""
@@ -321,7 +367,7 @@ msgstr ""
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
 
-#: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:17
+#: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:18
 msgid "Custom logo scale (%) on mobile device"
 msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
 
@@ -364,13 +410,13 @@ msgstr "投稿のビューテンプレート"
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
 
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
 #: app/customizer/design/sections/page/controls/eyecatch.php:16
 #: app/customizer/design/sections/post/controls/eyecatch.php:16
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
 
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:25
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:26
 #, php-format
 msgid "Select how to display the eyecatch image in %1$s page."
 msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
@@ -389,6 +435,84 @@ msgstr "%1$sページ設定"
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
 
+#: app/customizer/design/sections/footer/controls/footer-layout.php:19
+msgid "Number of columns in the footer widget area"
+msgstr "フッターウィジェットエリアのカラム数"
+
+#: app/customizer/design/sections/footer/controls/footer-layout.php:23
+msgid "1 column"
+msgstr "1カラム"
+
+#: app/customizer/design/sections/footer/controls/footer-layout.php:24
+msgid "2 columns"
+msgstr "2カラム"
+
+#: app/customizer/design/sections/footer/controls/footer-layout.php:25
+msgid "3 columns"
+msgstr "3カラム"
+
+#: app/customizer/design/sections/footer/controls/footer-layout.php:26
+msgid "4 columns"
+msgstr "4カラム"
+
+#: app/customizer/design/sections/footer/section.php:20
+#: app/setup/widget-area.php:309
+msgid "Footer"
+msgstr "フッター"
+
+#: app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
+msgid "Display header content on mobile too."
+msgstr "モバイルでもヘッダーコンテンツを表示"
+
+#: app/customizer/design/sections/header/controls/header-content.php:18
+msgid "Header contents"
+msgstr "ヘッダーコンテンツ"
+
+#: app/customizer/design/sections/header/controls/header-content.php:19
+msgid "Displayed at only PC size."
+msgstr "PC サイズでのみ表示されます。"
+
+#: app/customizer/design/sections/header/controls/header-layout.php:18
+msgid "Header layout"
+msgstr "ヘッダーレイアウト"
+
+#: app/customizer/design/sections/header/controls/header-position-only-mobile.php:17
+msgid "[PC] Overwrite header position with \"Normal\""
+msgstr "【PC】ヘッダー位置設定を「ノーマル」で上書きする"
+
+#: app/customizer/design/sections/header/controls/header-position.php:17
+msgid "Header position"
+msgstr "ヘッダー位置"
+
+#: app/customizer/design/sections/header/controls/header-position.php:21
+msgid "Sticky"
+msgstr "上部固定"
+
+#: app/customizer/design/sections/header/controls/header-position.php:22
+msgid "Overlay (Sticky)"
+msgstr "オーバレイ（上部固定）"
+
+#: app/customizer/design/sections/header/controls/header-position.php:23
+#: app/setup/widget-area.php:331
+msgid "Overlay"
+msgstr "オーバレイ"
+
+#: app/customizer/design/sections/header/controls/header-position.php:24
+msgid "Normal"
+msgstr "ノーマル"
+
+#: app/customizer/design/sections/header/controls/scrolling-header-colored.php:17
+msgid "White background when scrolling"
+msgstr "スクロール時に背景を白くする"
+
+#: app/customizer/design/sections/header/controls/vertical-global-nav.php:17
+msgid "Make global navigation vertical"
+msgstr "グローバルナビゲーションを縦書きにする"
+
+#: app/customizer/design/sections/header/section.php:20
+msgid "Header"
+msgstr "ヘッダー"
+
 #: app/customizer/design/sections/home/section.php:18
 msgid "Posts page settings"
 msgstr "投稿ページ設定"
@@ -396,6 +520,14 @@ msgstr "投稿ページ設定"
 #: app/customizer/design/sections/page/controls/eyecatch.php:17
 msgid "Select how to display the eyecatch image in page."
 msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/design/sections/page/controls/layout.php:16
+msgid "Page layout"
+msgstr "ページレイアウト"
+
+#: app/customizer/design/sections/page/controls/layout.php:19
+msgid "Same as the post page layout"
+msgstr "投稿のページレイアウトと同じ"
 
 #: app/customizer/design/sections/page/section.php:18
 msgid "Pages settings"
@@ -410,6 +542,10 @@ msgstr "[ %1$s ] タグページ設定"
 msgid "Select how to display the eyecatch image in post."
 msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
 
+#: app/customizer/design/sections/post/controls/layout.php:18
+msgid "Post page layout"
+msgstr "投稿のページレイアウト"
+
 #: app/customizer/design/sections/post/controls/profile-box.php:17
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
@@ -418,13 +554,29 @@ msgstr "記事にプロフィールボックスを表示する"
 msgid "Related posts layout"
 msgstr "関連記事のレイアウト"
 
-#: app/customizer/design/sections/post/controls/related-posts.php:17
+#: app/customizer/design/sections/post/controls/related-posts.php:16
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
 
 #: app/customizer/design/sections/post/section.php:18
 msgid "Posts settings"
 msgstr "投稿ページ設定"
+
+#: app/customizer/design/sections/woocommerce-archive-page/controls/layout.php:18
+msgid "WooCommerce archive page layout"
+msgstr "WooCommerce 一覧ページレイアウト"
+
+#: app/customizer/design/sections/woocommerce-archive-page/section.php:20
+msgid "WooCommerce archive page settings"
+msgstr "WooCommerce 一覧ページ設定"
+
+#: app/customizer/design/sections/woocommerce-single/controls/layout.php:18
+msgid "WooCommerce product page layout"
+msgstr "WooCommerce 商品ページレイアウト"
+
+#: app/customizer/design/sections/woocommerce-single/section.php:20
+msgid "WooCommerce product page settings"
+msgstr "WooCommerce 商品ページ設定"
 
 #: app/customizer/infobar/controls/background-color.php:15
 msgid "Background color"
@@ -447,168 +599,6 @@ msgstr "お知らせバー"
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:91
 msgid "Layout"
 msgstr "レイアウト"
-
-#: app/customizer/layout/sections/archive-page/controls/layout.php:16
-#: app/customizer/layout/sections/archive-page/section.php:18
-#: app/customizer/layout/sections/singular-post/controls/layout.php:16
-#: app/customizer/layout/sections/singular-post/section.php:18
-#: app/customizer/layout/sections/woocommerce-archive-page/controls/layout.php:16
-#: app/customizer/layout/sections/woocommerce-archive-page/section.php:18
-#: app/customizer/layout/sections/woocommerce-single/controls/layout.php:16
-#: app/customizer/layout/sections/woocommerce-single/section.php:18
-msgid "Page layout"
-msgstr "ページレイアウト"
-
-#: app/customizer/layout/sections/archive-page/section.php:19
-#: app/customizer/layout/sections/singular-post/section.php:19
-#: app/customizer/layout/sections/woocommerce-archive-page/section.php:19
-#: app/customizer/layout/sections/woocommerce-single/section.php:19
-msgid ""
-"By the type of page displayed on the preview screen on the right side of the "
-"screen, the display setting items switched."
-msgstr ""
-"画面右側のプレビュー画面に表示されているページの種類によって、表示される設定"
-"項目が切り替わります。"
-
-#: app/customizer/layout/sections/archive-page/section.php:19
-msgid "Currently archive page settings is displayed."
-msgstr "現在、アーカイブページの設定を表示しています。"
-
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:15
-msgid "Breadcrumbs display position"
-msgstr "パンくずリストの表示位置"
-
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:20
-msgid "Top of contents ( Fit to content width )"
-msgstr "コンテンツの上（コンテンツ幅に合わせる）"
-
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:21
-#: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php:21
-#: app/setup/widget-area.php:109
-msgid "Bottom of contents"
-msgstr "コンテンツの下"
-
-#: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php:22
-msgid "Bottom of contents ( Fit to content width )"
-msgstr "コンテンツの下（コンテンツ幅に合わせる）"
-
-#: app/customizer/layout/sections/base-layout/controls/container-max-width.php:15
-msgid "Contents max width"
-msgstr "コンテンツの最大幅"
-
-#: app/customizer/layout/sections/base-layout/controls/container-max-width.php:16
-msgid "You can set max width of contents area (1024 - 1280)"
-msgstr "コンテンツエリアの最大幅を設定することができます（1024〜1280）"
-
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:16
-msgid "Overlay widget area max width"
-msgstr "オーバーレイウィジェットエリアの最大幅"
-
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:17
-msgid "You can set max width of overlay widget area"
-msgstr "オーバーレイウィジェットエリアの最大幅を設定することができます"
-
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:21
-msgid "Wide width"
-msgstr "ワイド幅"
-
-#: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php:22
-msgid "Slim width"
-msgstr "スリム幅"
-
-#: app/customizer/layout/sections/base-layout/section.php:18
-msgid "Base settings"
-msgstr "基本設定"
-
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:17
-msgid "Number of columns in the footer widget area"
-msgstr "フッターウィジェットエリアのカラム数"
-
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:21
-msgid "1 column"
-msgstr "1カラム"
-
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:22
-msgid "2 columns"
-msgstr "2カラム"
-
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:23
-msgid "3 columns"
-msgstr "3カラム"
-
-#: app/customizer/layout/sections/footer/controls/footer-layout.php:24
-msgid "4 columns"
-msgstr "4カラム"
-
-#: app/customizer/layout/sections/footer/section.php:18
-#: app/setup/widget-area.php:309
-msgid "Footer"
-msgstr "フッター"
-
-#: app/customizer/layout/sections/header/controls/display-header-content-on-mobile.php:15
-msgid "Display header content on mobile too."
-msgstr "モバイルでもヘッダーコンテンツを表示"
-
-#: app/customizer/layout/sections/header/controls/header-content.php:16
-msgid "Header contents"
-msgstr "ヘッダーコンテンツ"
-
-#: app/customizer/layout/sections/header/controls/header-content.php:17
-msgid "Displayed at only PC size."
-msgstr "PC サイズでのみ表示されます。"
-
-#: app/customizer/layout/sections/header/controls/header-layout.php:16
-msgid "Header layout"
-msgstr "ヘッダーレイアウト"
-
-#: app/customizer/layout/sections/header/controls/header-position-only-mobile.php:15
-msgid "[PC] Overwrite header position with \"Normal\""
-msgstr "【PC】ヘッダー位置設定を「ノーマル」で上書きする"
-
-#: app/customizer/layout/sections/header/controls/header-position.php:15
-msgid "Header position"
-msgstr "ヘッダー位置"
-
-#: app/customizer/layout/sections/header/controls/header-position.php:19
-msgid "Sticky"
-msgstr "上部固定"
-
-#: app/customizer/layout/sections/header/controls/header-position.php:20
-msgid "Overlay (Sticky)"
-msgstr "オーバレイ（上部固定）"
-
-#: app/customizer/layout/sections/header/controls/header-position.php:21
-#: app/setup/widget-area.php:331
-msgid "Overlay"
-msgstr "オーバレイ"
-
-#: app/customizer/layout/sections/header/controls/header-position.php:22
-msgid "Normal"
-msgstr "ノーマル"
-
-#: app/customizer/layout/sections/header/controls/scrolling-header-colored.php:15
-msgid "White background when scrolling"
-msgstr "スクロール時に背景を白くする"
-
-#: app/customizer/layout/sections/header/controls/vertial-global-nav.php:15
-msgid "Make global navigation vertical"
-msgstr "グローバルナビゲーションを縦書きにする"
-
-#: app/customizer/layout/sections/header/section.php:18
-msgid "Header"
-msgstr "ヘッダー"
-
-#: app/customizer/layout/sections/singular-post/section.php:19
-msgid "Currently posts and pages settings is displayed."
-msgstr "現在、投稿と固定ページの設定を表示しています。"
-
-#: app/customizer/layout/sections/woocommerce-archive-page/section.php:19
-msgid "Currently WooCommerce archive page settings is displayed."
-msgstr "現在、WooCommerce アーカイブページの設定を表示しています。"
-
-#: app/customizer/layout/sections/woocommerce-single/section.php:19
-msgid "Currently product page settings is displayed."
-msgstr "現在、商品ページの設定を表示しています。"
 
 #: app/customizer/page-speed-optimization/controls/async-load-images.php:15
 msgid "Async loading of images"
@@ -1442,6 +1432,22 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid ""
+#~ "By the type of page displayed on the preview screen on the right side of "
+#~ "the screen, the display setting items switched."
+#~ msgstr ""
+#~ "画面右側のプレビュー画面に表示されているページの種類によって、表示される設"
+#~ "定項目が切り替わります。"
+
+#~ msgid "Currently archive page settings is displayed."
+#~ msgstr "現在、アーカイブページの設定を表示しています。"
+
+#~ msgid "Base settings"
+#~ msgstr "基本設定"
+
+#~ msgid "Currently posts and pages settings is displayed."
+#~ msgstr "現在、投稿と固定ページの設定を表示しています。"
 
 #~ msgid "Fix header position"
 #~ msgstr "ヘッダー位置を固定する"

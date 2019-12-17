@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
+ *
+ * renamed: app/customizer/layout/sections/woocommerce-single/section.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,10 +15,9 @@ if ( ! is_customize_preview() ) {
 }
 
 Framework::section(
-	'woocommerce-single',
+	'design-woocommerce-single',
 	[
-		'title'           => __( 'Page layout', 'snow-monkey' ),
-		'description'     => __( 'By the type of page displayed on the preview screen on the right side of the screen, the display setting items switched.', 'snow-monkey' ) . __( 'Currently product page settings is displayed.', 'snow-monkey' ),
+		'title'           => __( 'WooCommerce product page settings', 'snow-monkey' ),
 		'priority'        => 130,
 		'active_callback' => function() {
 			if ( ! class_exists( '\woocommerce' ) ) {

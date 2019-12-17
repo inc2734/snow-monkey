@@ -6,18 +6,17 @@
  * @version <version>
  */
 
-use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Framework;
+use Framework\Helper;
 
 Framework::control(
 	'select',
-	'page-eyecatch',
+	'page-layout',
 	[
-		'label'       => __( 'Eyecatch image', 'snow-monkey' ),
-		'description' => __( 'Select how to display the eyecatch image in page.', 'snow-monkey' ),
-		'priority'    => 110,
-		'default'     => 'page-header',
-		'choices'     => Helper::eyecatch_position_choices(),
+		'label'    => __( 'Page layout', 'snow-monkey' ),
+		'priority' => 100,
+		'default'  => '',
+		'choices'  => is_customize_preview() ? array_merge( [ '' => __( 'Same as the post page layout', 'snow-monkey' ) ], Helper::get_wrapper_templates() ) : [],
 	]
 );
 
@@ -27,5 +26,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'design-page' );
-$control = Framework::get_control( 'page-eyecatch' );
+$control = Framework::get_control( 'page-layout' );
 $control->join( $section )->join( $panel );

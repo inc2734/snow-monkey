@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -23,6 +23,9 @@ Framework::control(
 			'simple'     => __( 'Simple', 'snow-monkey' ),
 			'text'       => __( 'Text', 'snow-monkey' ),
 		],
+		'active_callback' => function() {
+			return get_option( 'mwt-display-related-posts' );
+		}
 	]
 );
 

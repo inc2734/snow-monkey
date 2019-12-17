@@ -3,10 +3,20 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Framework\Controller\Controller;
 
-Controller::layout( get_theme_mod( 'singular-post-layout' ) );
+$post_type_object = get_post_type_object( get_post_type() );
+
+if ( $post_type_object->hierarchical ) {
+	$layout = get_theme_mod( 'page-layout' );
+}
+
+if ( empty( $layout ) ) {
+	$layout = get_theme_mod( 'singular-post-layout' );
+}
+
+Controller::layout( $layout );
 Controller::render( 'content', get_post_type() );
