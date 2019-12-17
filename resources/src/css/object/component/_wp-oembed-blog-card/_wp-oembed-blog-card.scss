@@ -1,4 +1,6 @@
 .wp-oembed-blog-card {
+  background-color: #fff;
+
   > a,
   > span {
     @include _padding(.5);
