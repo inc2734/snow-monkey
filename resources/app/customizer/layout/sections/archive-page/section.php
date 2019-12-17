@@ -22,7 +22,7 @@ Framework::section(
 			if ( class_exists( '\woocommerce' ) && is_woocommerce() ) {
 				return false;
 			}
-			return ( is_home() || is_search() || ( is_archive() && ! is_post_type_archive() ) );
+			return is_home() || is_search() || ( is_archive() && ! is_post_type_archive() && ! is_tax() );
 		},
 	]
 );

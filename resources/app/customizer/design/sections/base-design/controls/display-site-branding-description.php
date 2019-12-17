@@ -14,7 +14,7 @@ Framework::control(
 	[
 		'transport' => 'postMessage',
 		'label'     => __( 'Display site description under the site logo', 'snow-monkey' ),
-		'priority'  => 190,
+		'priority'  => 200,
 		'default'   => false,
 	]
 );

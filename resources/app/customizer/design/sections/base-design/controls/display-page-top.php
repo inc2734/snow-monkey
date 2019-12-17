@@ -13,7 +13,7 @@ Framework::control(
 	'display-page-top',
 	[
 		'label'    => __( 'Display the page top button', 'snow-monkey' ),
-		'priority' => 230,
+		'priority' => 240,
 		'default'  => true,
 	]
 );

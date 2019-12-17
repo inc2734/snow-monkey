@@ -13,7 +13,7 @@ Framework::control(
 	'pure-css-gallery',
 	[
 		'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
-		'priority' => 200,
+		'priority' => 210,
 		'default'  => true,
 	]
 );

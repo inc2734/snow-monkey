@@ -13,7 +13,7 @@ Framework::control(
 	'default-thumbnail',
 	[
 		'label'    => __( 'Default thumbnail', 'snow-monkey' ),
-		'priority' => 180,
+		'priority' => 190,
 	]
 );
 
