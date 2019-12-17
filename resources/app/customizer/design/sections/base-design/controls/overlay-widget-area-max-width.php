@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version <version>
+ *
+ * renamed: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,7 +17,7 @@ Framework::control(
 	[
 		'label'       => __( 'Overlay widget area max width', 'snow-monkey' ),
 		'description' => __( 'You can set max width of overlay widget area', 'snow-monkey' ),
-		'priority'    => 110,
+		'priority'    => 160,
 		'default'     => 'false',
 		'choices'     => [
 			'false' => __( 'Wide width', 'snow-monkey' ),
@@ -31,7 +33,7 @@ if ( ! is_customize_preview() ) {
 	return;
 }
 
-$panel   = Framework::get_panel( 'layout' );
-$section = Framework::get_section( 'base-layout' );
+$panel   = Framework::get_panel( 'design' );
+$section = Framework::get_section( 'base-design' );
 $control = Framework::get_control( 'overlay-widget-area-max-width' );
 $control->join( $section )->join( $panel );

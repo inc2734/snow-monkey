@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,7 +14,7 @@ Framework::control(
 	[
 		'transport'       => 'postMessage',
 		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
-		'priority'        => 190,
+		'priority'        => 220,
 		'default'         => true,
 		'active_callback' => function() {
 			return has_nav_menu( 'drawer-nav' );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'pure-css-gallery',
 	[
 		'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
-		'priority' => 160,
+		'priority' => 200,
 		'default'  => true,
 	]
 );

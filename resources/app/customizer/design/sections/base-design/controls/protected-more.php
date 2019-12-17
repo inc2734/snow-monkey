@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'mwt-protected-more',
 	[
 		'label'     => __( 'If the post using more tag and password protect at the same time, display contents before more tag', 'snow-monkey' ),
-		'priority'  => 170,
+		'priority'  => 210,
 		'type'      => 'option',
 		'default'   => true,
 	]

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'default-page-header-image',
 	[
 		'label'    => __( 'Default page header image', 'snow-monkey' ),
-		'priority' => 140,
+		'priority' => 170,
 	]
 );
 

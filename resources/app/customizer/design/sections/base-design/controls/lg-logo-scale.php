@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.4.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,7 +14,7 @@ Framework::control(
 	'lg-logo-scale',
 	[
 		'label'       => __( 'Custom logo scale (%) on PC', 'snow-monkey' ),
-		'priority'    => 181,
+		'priority'    => 131,
 		'default'     => 50,
 		'input_attrs' => [
 			'min' => 1,

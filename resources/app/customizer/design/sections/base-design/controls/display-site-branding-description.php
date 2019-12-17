@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version <version>
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,7 +14,7 @@ Framework::control(
 	[
 		'transport' => 'postMessage',
 		'label'     => __( 'Display site description under the site logo', 'snow-monkey' ),
-		'priority'  => 130,
+		'priority'  => 190,
 		'default'   => false,
 	]
 );
