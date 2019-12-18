@@ -11,44 +11,6 @@
     }
   }
 
-  &.alignfull {
-    @mixin alignfull-image() {
-      width: 100vw;
-      max-width: none;
-    }
-
-    @include _media-max(md) {
-      > img {
-        @include alignfull-image();
-      }
-    }
-
-    [data-has-sidebar="false"] & {
-      > img {
-        @include alignfull-image();
-      }
-    }
-  }
-
-  &.alignwide {
-    @mixin alignwide-image() {
-      width: 100%;
-      max-width: none;
-    }
-
-    @include _media-max(md) {
-      > img {
-        @include alignwide-image();
-      }
-    }
-
-    [data-has-sidebar="false"] & {
-      > img {
-        @include alignwide-image();
-      }
-    }
-  }
-
   > .alignleft,
   > .alignright {
     margin-top: $_between-lines;

@@ -1,3 +1,19 @@
 @charset 'utf-8';
 
 @import 'style';
+
+// @todo Maybe this should be given to Snow Monkey Blocks.
+.smb-section {
+  .c-container {
+    @media (min-width: 600px) {
+      padding-left: calc(43px + 14px);
+      padding-right: calc(43px + 14px);
+    }
+  }
+}
+
+// @todo Maybe this should be given to Snow Monkey Blocks.
+.smb-container {
+  padding-right: 0;
+  padding-left: 0;
+}

@@ -76,6 +76,24 @@ $border-width: 1px;
   max-width: none;
 }
 
+[data-type^="snow-monkey-blocks/"] {
+  .editor-inner-blocks {
+    >.editor-block-list__layout {
+      >.wp-block[data-align=full] {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 28px;
+        padding-right: 28px;
+
+        @media (min-width: 600px) {
+          padding-left: 58px;
+          padding-right: 58px;
+        }
+      }
+    }
+  }
+}
+
 .wp-block[data-align="right"],
 .wp-block[data-align="left"] {
   > .editor-block-list__block-edit::before {

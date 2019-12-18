@@ -8,13 +8,4 @@
   &__body {
     @extend %entry-content;
   }
-
-  &.alignfull,
-  &.alignwide {
-    > .smb-section__inner {
-      > .#{$_prefix}c-container {
-        @include container-padding();
-      }
-    }
-  }
 }

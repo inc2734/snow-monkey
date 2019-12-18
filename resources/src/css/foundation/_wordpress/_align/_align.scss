@@ -23,39 +23,3 @@
   display: block;
   clear: both;
 }
-
-.alignfull {
-  clear: both;
-
-  @include _media-max(md) {
-    @include alignfull();
-  }
-
-  [data-has-sidebar="false"] & {
-    @include alignfull();
-  }
-}
-
-.alignwide {
-  clear: both;
-
-  @include _media-max(md) {
-    @include alignfull();
-  }
-
-  [data-is-slim-width="true"][data-has-sidebar="false"] & {
-    @include _media-min(lg) {
-      @include alignwide();
-    }
-  }
-
-  [data-is-slim-width="false"][data-has-sidebar="false"] & {
-    @include _media-only(lg) {
-      @include alignfull();
-    }
-
-    @include _media-min(xl) {
-      @include alignwide();
-    }
-  }
-}
