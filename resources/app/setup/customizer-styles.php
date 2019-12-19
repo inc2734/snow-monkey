@@ -3,15 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.2
+ * @version 9.0.0
  */
 
 use Framework\Helper;
-use Inc2734\WP_Customizer_Framework\Bootstrap;
 use Inc2734\WP_Customizer_Framework\Style;
 use Inc2734\WP_Customizer_Framework\Color;
-
-new Bootstrap();
 
 /**
  * Load PHP files for styles
