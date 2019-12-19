@@ -340,31 +340,27 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "5.0.0",
+            "version": "5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "30bf1ba0a8f252b5f5fbfa942d9e10960b9afee3"
+                "reference": "4c9b582520a14e4874b47de1222b3d586c25876f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/30bf1ba0a8f252b5f5fbfa942d9e10960b9afee3",
-                "reference": "30bf1ba0a8f252b5f5fbfa942d9e10960b9afee3",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/4c9b582520a14e4874b47de1222b3d586c25876f",
+                "reference": "4c9b582520a14e4874b47de1222b3d586c25876f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -384,7 +380,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2019-01-21T06:22:27+00:00"
+            "time": "2019-12-19T16:04:50+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
