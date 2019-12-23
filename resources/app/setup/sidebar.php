@@ -3,25 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 9.0.0
  */
 
 use Framework\Helper;
-
-/**
- * Add google adsense to sidebar
- *
- * @return void
- */
-function snow_monkey_sidebar_add_google_adsense() {
-	if ( get_option( 'mwt-google-adsense' ) ) {
-		$vars = [
-			'_position' => 'sidebar-top',
-		];
-		Helper::get_template_part( 'template-parts/common/google-adsense', null, $vars );
-	}
-}
-add_action( 'snow_monkey_sidebar', 'snow_monkey_sidebar_add_google_adsense', 10 );
 
 /**
  * Add woocommerce sidebar widget area to sidebar
