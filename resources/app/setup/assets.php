@@ -83,7 +83,6 @@ add_action(
 			get_theme_file_uri( '/assets/js/app.min.js' ),
 			Helper::generate_script_dependencies(
 				[
-					'jquery',
 					'wp-awesome-widgets',
 					'slick-carousel',
 				]
@@ -109,7 +108,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-fix-adminbar',
 			get_theme_file_uri( '/assets/js/fix-adminbar.min.js' ),
-			[ 'jquery' ],
+			[],
 			filemtime( get_theme_file_path( '/assets/js/fix-adminbar.min.js' ) ),
 			true
 		);
@@ -131,7 +130,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-header',
 			get_theme_file_uri( '/assets/js/header.min.js' ),
-			[ 'jquery', Helper::get_main_script_handle() ],
+			[ Helper::get_main_script_handle() ],
 			filemtime( get_theme_file_path( '/assets/js/header.min.js' ) ),
 			true
 		);

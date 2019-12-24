@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 9.0.0
  *
  * This procceses are beta.
  */
@@ -36,17 +36,16 @@ add_action(
 						'wp-awesome-widgets',
 						'wp-oembed-blog-card',
 						'slick-carousel',
-						Helper::get_main_script_handle() . '-fix-adminbar',
-						Helper::get_main_script_handle() . '-header',
+						Helper::get_main_script_handle() . '-custom-widgets',
 						Helper::get_main_script_handle() . '-drop-nav',
+						Helper::get_main_script_handle() . '-fix-adminbar',
 						Helper::get_main_script_handle() . '-footer-sticky-nav',
 						Helper::get_main_script_handle() . '-global-nav',
-						Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
-						Helper::get_main_script_handle() . '-custom-widgets',
-						Helper::get_main_script_handle() . '-widgets',
-						Helper::get_main_script_handle() . '-page-top',
 						Helper::get_main_script_handle() . '-hash-nav',
-						Helper::get_main_script_handle() . '-smooth-scroll',
+						Helper::get_main_script_handle() . '-header',
+						Helper::get_main_script_handle() . '-page-top',
+						Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
+						Helper::get_main_script_handle() . '-widgets',
 					]
 				);
 			}
@@ -64,7 +63,9 @@ add_action(
 						'jquery.easing',
 						'fontawesome5',
 						'wp-share-buttons',
+						Helper::get_main_script_handle() . '-background-parallax-scroll',
 						Helper::get_main_script_handle() . '-fontawesome',
+						Helper::get_main_script_handle() . '-smooth-scroll',
 					]
 				);
 			}
@@ -116,12 +117,13 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						Helper::get_main_style_handle(),
+						//Helper::get_main_style_handle(),
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',
 						'wp-like-me-box',
 						'wp-awesome-widgets',
+						'jquery.background-parallax-scroll',
 					]
 				);
 			}
