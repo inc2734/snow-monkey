@@ -117,13 +117,16 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						//Helper::get_main_style_handle(),
+						'wp-block-library',
+						Helper::get_main_style_handle(),
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',
 						'wp-like-me-box',
 						'wp-awesome-widgets',
 						'jquery.background-parallax-scroll',
+						'slick-carousel',
+						'slick-carousel-theme',
 					]
 				);
 			}
