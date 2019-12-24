@@ -295,16 +295,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "4.1.0",
+            "version": "4.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "3f27a26216fd6fbf5e6f1767317b595440412575"
+                "reference": "0fea5a0d65d38ae3a685b4d64a7ad648edc4fc4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/3f27a26216fd6fbf5e6f1767317b595440412575",
-                "reference": "3f27a26216fd6fbf5e6f1767317b595440412575",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/0fea5a0d65d38ae3a685b4d64a7ad648edc4fc4c",
+                "reference": "0fea5a0d65d38ae3a685b4d64a7ad648edc4fc4c",
                 "shasum": ""
             },
             "require": {
@@ -336,7 +336,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2019-12-17T16:46:19+00:00"
+            "time": "2019-12-24T07:33:18+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
@@ -568,16 +568,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "6005087e655c057e629858a0c69ee188dd576f5a"
+                "reference": "d18e7837dd966babe96108fc5b7c7c9f61d26485"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/6005087e655c057e629858a0c69ee188dd576f5a",
-                "reference": "6005087e655c057e629858a0c69ee188dd576f5a",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/d18e7837dd966babe96108fc5b7c7c9f61d26485",
+                "reference": "d18e7837dd966babe96108fc5b7c7c9f61d26485",
                 "shasum": ""
             },
             "require": {
@@ -608,7 +608,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2019-12-24T02:35:26+00:00"
+            "time": "2019-12-24T07:45:20+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
