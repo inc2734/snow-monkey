@@ -16,6 +16,14 @@ Style::register(
 );
 
 Style::register(
+	'.is-style-ghost > .smb-btn',
+	[
+		'border-color: ' . $accent_color,
+		'color: ' . $accent_color,
+	]
+);
+
+Style::register(
 	[
 		'.smb-btn:hover',
 		'.smb-btn:active',
