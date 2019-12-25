@@ -29,13 +29,13 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						Helper::get_main_script_handle(),
-						'wp-pure-css-gallery',
 						'jquery.contents-outline',
-						'wp-contents-outline',
-						'wp-awesome-widgets',
-						'wp-oembed-blog-card',
 						'slick-carousel',
+						'wp-awesome-widgets',
+						'wp-contents-outline',
+						'wp-oembed-blog-card',
+						'wp-pure-css-gallery',
+						Helper::get_main_script_handle(),
 						Helper::get_main_script_handle() . '-custom-widgets',
 						Helper::get_main_script_handle() . '-drop-nav',
 						Helper::get_main_script_handle() . '-fix-adminbar',
@@ -57,11 +57,11 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						'inc2734-wp-seo-google-analytics',
-						'wp-embed',
 						'comment-reply',
-						'jquery.easing',
 						'fontawesome5',
+						'inc2734-wp-seo-google-analytics',
+						'jquery.easing',
+						'wp-embed',
 						'wp-share-buttons',
 						Helper::get_main_script_handle() . '-background-parallax-scroll',
 						Helper::get_main_script_handle() . '-fontawesome',
