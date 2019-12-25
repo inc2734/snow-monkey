@@ -18,9 +18,35 @@ add_filter(
 			return $html;
 		}
 
-		$image_id = attachment_url_to_postid( $default_thumbnail );
-		$post     = get_post( $image_id );
-		$alt      = $post->post_excerpt;
+		$cache_group = 'snow-monkey/thumbnail';
+
+		// ID
+		$cache_key = 'default-thumbnail-id';
+		$image_id  = wp_cache_get( $cache_key, $cache_group );
+		if ( false === $image_id ) {
+			$image_id = attachment_url_to_postid( $default_thumbnail );
+			wp_cache_set( $cache_key, $image_id, $cache_group );
+		}
+
+		if ( ! $image_id ) {
+			return $html;
+		}
+
+		// alt
+		$cache_key  = 'default-thumbnail-alt';
+		$alt        = wp_cache_get( $cache_key, $cache_group );
+		if ( false === $alt ) {
+			$post = get_post( $image_id );
+			$alt  = $post ? $post->post_excerpt : '';
+			wp_cache_set( $cache_key, $alt, $cache_group );
+		}
+
+		// img
+		$cache_key  = md5( $size . json_encode( $attr ) );
+		$image      = wp_cache_get( $cache_key, $cache_group );
+		if ( false !== $image ) {
+			return $image;
+		}
 
 		$attr_html = '';
 		$attr = wp_parse_args( $attr, [] );
@@ -50,13 +76,16 @@ add_filter(
 			$attr_html .= sprintf( ' %1$s="%2$s"', esc_html( $name ), esc_attr( $value ) );
 		}
 
-		return sprintf(
+		$image = sprintf(
 			'<img src="%1$s" class="attachment-%2$s size-%2$s wp-post-image" %3$s alt="%4$s">',
 			esc_url( $default_thumbnail ),
 			esc_attr( $size ),
 			$attr_html,
 			esc_attr( $alt )
 		);
+
+		wp_cache_set( $cache_key, $image, $cache_group );
+		return $image;
 	},
 	9,
 	5
