@@ -45,7 +45,7 @@ add_action(
 		}
 
 		add_filter(
-			'inc2734_wp_page_speed_optimization_async_scripts',
+			'inc2734_wp_page_speed_optimization_defer_scripts',
 			function( $handles ) {
 				return array_merge(
 					$handles,
