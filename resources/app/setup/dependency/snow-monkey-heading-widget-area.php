@@ -50,7 +50,7 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						'snow-monkey-heading-widget-area'
+						'snow-monkey-heading-widget-area',
 					]
 				);
 			}

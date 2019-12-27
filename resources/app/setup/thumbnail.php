@@ -51,7 +51,7 @@ add_filter(
 		$attr_html = '';
 		$attr = wp_parse_args( $attr, [] );
 
-		if ( empty( $attr['width'] ) || empty( $attr['height' ] ) ) {
+		if ( empty( $attr['width'] ) || empty( $attr['height'] ) ) {
 			$meta         = wp_get_attachment_metadata( $image_id );
 			$intermediate = image_get_intermediate_size( $image_id, $size );
 

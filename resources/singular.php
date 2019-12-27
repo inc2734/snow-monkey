@@ -8,9 +8,9 @@
 
 use Framework\Controller\Controller;
 
-$post_type_object = get_post_type_object( get_post_type() );
+$_post_type_object = get_post_type_object( get_post_type() );
 
-if ( $post_type_object->hierarchical ) {
+if ( $_post_type_object->hierarchical ) {
 	$layout = get_theme_mod( 'page-layout' );
 }
 

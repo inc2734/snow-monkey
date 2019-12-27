@@ -16,7 +16,7 @@ Framework::control(
 	[
 		'label'    => __( 'Meta description', 'snow-monkey' ),
 		'priority' => 90,
-		'content'  => __( 'The meta description is normally output only when "meta description" in the page edit screen is entered.', 'snow-monkey' ) . __( 'When "Automatically output meta description" is enabled, even if "meta description" is not entered, meta description is automatically generated from the excerpt etc. and output (excluding the archive page)' , 'snow-monkey' ),
+		'content'  => __( 'The meta description is normally output only when "meta description" in the page edit screen is entered.', 'snow-monkey' ) . __( 'When "Automatically output meta description" is enabled, even if "meta description" is not entered, meta description is automatically generated from the excerpt etc. and output (excluding the archive page)', 'snow-monkey' ),
 	]
 );
 

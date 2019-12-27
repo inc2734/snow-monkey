@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.7.1
+ * @version 9.0.0
  */
 
 use Framework\Helper;
@@ -74,7 +74,7 @@ add_action(
 			function( $handles ) {
 				$styles = wp_styles();
 
-				$block_handles = array_filter (
+				$block_handles = array_filter(
 					$styles->queue,
 					function( $handle ) {
 						return 0 === strpos( $handle, 'snow-monkey-blocks/' );
@@ -109,7 +109,7 @@ add_action(
 			function( $handles ) {
 				$styles = wp_scripts();
 
-				$block_handles = array_filter (
+				$block_handles = array_filter(
 					$styles->queue,
 					function( $handle ) {
 						return 0 === strpos( $handle, 'snow-monkey-blocks/' );

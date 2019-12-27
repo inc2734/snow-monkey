@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.12.0
+ * @version 9.0.0
  */
 
 add_filter(
@@ -41,8 +41,6 @@ add_filter(
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-github"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?gitlab\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-gitlab"></i>' . $args->link_before, $item_output );
-		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?plus.google\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
-			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-google-plus"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?google\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-google"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?instagram\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {

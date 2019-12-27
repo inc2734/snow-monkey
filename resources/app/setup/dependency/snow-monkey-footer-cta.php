@@ -52,7 +52,7 @@ add_action(
 				return array_merge(
 					$handles,
 					[
-						'snow-monkey-footer-cta'
+						'snow-monkey-footer-cta',
 					]
 				);
 			}

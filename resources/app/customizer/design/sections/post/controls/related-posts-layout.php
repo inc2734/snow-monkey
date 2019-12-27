@@ -25,7 +25,7 @@ Framework::control(
 		],
 		'active_callback' => function() {
 			return get_option( 'mwt-display-related-posts' );
-		}
+		},
 	]
 );
 
