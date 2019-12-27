@@ -4,68 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ba8be6f4b5e95b96467cb49840efeab6",
+    "content-hash": "ef0879ced3eeb0f28cbb9adad16a87d5",
     "packages": [
-        {
-            "name": "inc2734/mimizuku-core",
-            "version": "23.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/inc2734/mimizuku-core.git",
-                "reference": "68851e956e011aae0abb75383ec4a2fab7a1b37f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/mimizuku-core/zipball/68851e956e011aae0abb75383ec4a2fab7a1b37f",
-                "reference": "68851e956e011aae0abb75383ec4a2fab7a1b37f",
-                "shasum": ""
-            },
-            "require": {
-                "inc2734/wp-adsense": "^1.0",
-                "inc2734/wp-awesome-components": "^1.0",
-                "inc2734/wp-awesome-widgets": "^9.1",
-                "inc2734/wp-basis": "^5.6",
-                "inc2734/wp-breadcrumbs": "^3.1",
-                "inc2734/wp-contents-outline": "^4.1",
-                "inc2734/wp-customizer-framework": "^5.0",
-                "inc2734/wp-github-theme-updater": "^2.0",
-                "inc2734/wp-like-me-box": "^1.0",
-                "inc2734/wp-oembed-blog-card": "^8.0",
-                "inc2734/wp-page-speed-optimization": "^2.0",
-                "inc2734/wp-profile-box": "^2.2",
-                "inc2734/wp-pure-css-gallery": "^2.0",
-                "inc2734/wp-seo": "^4.0",
-                "inc2734/wp-share-buttons": "^4.1",
-                "inc2734/wp-view-controller": "^10.1",
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Inc2734\\Mimizuku_Core\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Takashi Kitajima",
-                    "email": "inc@2inc.org"
-                }
-            ],
-            "description": "This library is core of WordPress theme mimizuku",
-            "time": "2019-12-17T16:55:42+00:00"
-        },
         {
             "name": "inc2734/wp-adsense",
             "version": "1.0.0",
@@ -339,6 +279,49 @@
             "time": "2019-12-24T07:33:18+00:00"
         },
         {
+            "name": "inc2734/wp-custom-css-to-editor",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-custom-css-to-editor.git",
+                "reference": "ab302043a10605fe368f69faf063a2a3bbf7b338"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/ab302043a10605fe368f69faf063a2a3bbf7b338",
+                "reference": "ab302043a10605fe368f69faf063a2a3bbf7b338",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "7.*",
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Custom_CSS_To_Editor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "time": "2019-12-27T01:20:45+00:00"
+        },
+        {
             "name": "inc2734/wp-customizer-framework",
             "version": "5.0.2",
             "source": {
@@ -425,6 +408,92 @@
             ],
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
             "time": "2019-08-26T06:56:17+00:00"
+        },
+        {
+            "name": "inc2734/wp-google-fonts",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-google-fonts.git",
+                "reference": "4d4420be9a721766bef6d08ccde738762b42afb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/4d4420be9a721766bef6d08ccde738762b42afb5",
+                "reference": "4d4420be9a721766bef6d08ccde738762b42afb5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "7.*",
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Google_Fonts\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "time": "2019-12-27T01:56:56+00:00"
+        },
+        {
+            "name": "inc2734/wp-helper",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/inc2734/wp-helper.git",
+                "reference": "fdd0e679824fb18442bec9c36c3182976051f479"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/fdd0e679824fb18442bec9c36c3182976051f479",
+                "reference": "fdd0e679824fb18442bec9c36c3182976051f479",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpmd/phpmd": "2.*",
+                "phpunit/phpunit": "7.*",
+                "squizlabs/php_codesniffer": "*",
+                "wp-coding-standards/wpcs": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Inc2734\\WP_Helper\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Takashi Kitajima",
+                    "email": "inc@2inc.org"
+                }
+            ],
+            "time": "2019-12-27T02:56:29+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",
@@ -838,16 +907,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "10.1.2",
+            "version": "11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "1f125c68eecffefbb62c41ae2c6aae8b357d1571"
+                "reference": "6da908d02eb1c56b6799cc337ea787bd175433b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/1f125c68eecffefbb62c41ae2c6aae8b357d1571",
-                "reference": "1f125c68eecffefbb62c41ae2c6aae8b357d1571",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/6da908d02eb1c56b6799cc337ea787bd175433b6",
+                "reference": "6da908d02eb1c56b6799cc337ea787bd175433b6",
                 "shasum": ""
             },
             "require": {
@@ -856,7 +925,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
+                "phpmd/phpmd": "2.7.0|>=2.8.1",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -878,7 +947,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-11-12T01:50:55+00:00"
+            "time": "2019-12-27T04:31:50+00:00"
         }
     ],
     "packages-dev": [

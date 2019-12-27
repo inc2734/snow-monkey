@@ -3,9 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 9.0.0
  */
 
+use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 add_action(
@@ -31,7 +32,7 @@ add_action(
 			return;
 		}
 
-		Helper::display_adsense_code( $infeed_ads );
+		WP_Adsense\Helper::the_adsense_code( $infeed_ads );
 		?>
 		</li>
 		<li class="c-entries__item">

@@ -3,10 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 9.0.0
  */
 
-use Inc2734\Mimizuku_Core\Core;
 use Framework\Helper;
 
 /**
@@ -37,11 +36,6 @@ spl_autoload_register(
  * @return void
  */
 load_theme_textdomain( 'snow-monkey', get_template_directory() . '/languages' );
-
-/**
- * Loads snow-monkey Bootstrap
- */
-new Core();
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.

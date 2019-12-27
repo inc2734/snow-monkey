@@ -60,6 +60,8 @@ trait Page_Header {
 	/**
 	 * Returns page header image url
 	 *
+	 * @SuppressWarnings(PHPMD.UndefinedVariable)
+	 *
 	 * @deprecated
 	 *
 	 * @return string
@@ -75,13 +77,15 @@ trait Page_Header {
 			return;
 		}
 
-		if ( ! preg_match( '@ data-src="([^"]*?)"@', $image, $matches ) ) {
-			if ( ! preg_match( '@ src="([^"]*?)"@', $image, $matches ) ) {
-				return false;
-			}
+		if ( preg_match( '@ data-src="([^"]*?)"@', $image, $matches ) ) {
+			return $matches[1];
 		}
 
-		return $matches[1];
+		if ( preg_match( '@ src="([^"]*?)"@', $image, $matches ) ) {
+			return $matches[1];
+		}
+
+		return false;
 	}
 
 	/**

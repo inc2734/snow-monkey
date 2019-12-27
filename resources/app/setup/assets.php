@@ -6,7 +6,13 @@
  * @version 9.0.0
  */
 
+use Inc2734\WP_Google_Fonts;
 use Framework\Helper;
+
+/**
+ * Apply Google Fonts asset url
+ */
+new WP_Google_Fonts\Bootstrap();
 
 /**
  * Enqueue slick-carousel

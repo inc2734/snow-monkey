@@ -3,8 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 9.0.0
  */
+
+use Framework\Controller\Controller;
+
+new Controller();
 
 /**
  * Update view controller config
@@ -36,12 +40,24 @@ add_filter(
 			],
 			'view' => [
 				'templates/view',
-				'vendor/inc2734/mimizuku-core/src/view/templates/view',
 			],
 			'static' => [
 				'templates/static',
 			],
 		];
+	}
+);
+
+/**
+ * If return true, output template debug log
+ *
+ * @param boolean $debug
+ * @return boolean
+ */
+add_filter(
+	'inc2734_wp_view_controller_debug',
+	function( $debug ) {
+		return apply_filters( 'snow_monkey_debug', $debug );
 	}
 );
 
@@ -69,7 +85,7 @@ add_filter(
  * @param array $vars
  */
 add_filter(
-	'mimizuku_template_part_root',
+	'inc2734_wp_view_controller_template_part_root',
 	function( $root, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_template_part_root', $root, $slug, $name, $vars );
 	},
@@ -87,7 +103,7 @@ add_filter(
  * @param array $vars
  */
 add_filter(
-	'mimizuku_template_part_root_hierarchy',
+	'inc2734_wp_view_controller_template_part_root_hierarchy',
 	function( $hierarchy, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_template_part_root_hierarchy', $hierarchy, $slug, $name, $vars );
 	},
@@ -96,7 +112,7 @@ add_filter(
 );
 
 /**
- * Override mimizuku_get_template_part_args
+ * Override inc2734_wp_view_controller_get_template_part_args
  *
  * @param array $args
  *   @param string $slug
@@ -105,7 +121,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'mimizuku_get_template_part_args',
+	'inc2734_wp_view_controller_get_template_part_args',
 	function( $args ) {
 		return apply_filters( 'snow_monkey_get_template_part_args', $args );
 	},
@@ -155,7 +171,7 @@ add_action(
 );
 
 /**
- * Override mimizuku_template_part_render
+ * Override inc2734_wp_view_controller_template_part_render
  *
  * @param string $slug
  * @param string $name
@@ -163,7 +179,7 @@ add_action(
  * @return array
  */
 add_filter(
-	'mimizuku_template_part_render',
+	'inc2734_wp_view_controller_template_part_render',
 	function( $html, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_template_part_render', $html, $slug, $name, $vars );
 	},

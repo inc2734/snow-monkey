@@ -11,14 +11,32 @@
   "require-dev": {
     "squizlabs/php_codesniffer": "*",
     "wp-coding-standards/wpcs": "*",
-    "phpmd/phpmd": "2.*",
+    "phpmd/phpmd": "2.7.0|>=2.8.1",
     "phpunit/phpunit": "7.*",
     "phpcompatibility/phpcompatibility-wp": "*",
     "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
   },
   "require": {
     "php": ">=5.6",
-    "inc2734/mimizuku-core": "^23.3.0"
+    "inc2734/wp-breadcrumbs": "^3.1",
+    "inc2734/wp-oembed-blog-card": "^8.0",
+    "inc2734/wp-view-controller": "^11.0",
+    "inc2734/wp-basis": "^5.6",
+    "inc2734/wp-customizer-framework": "^5.0",
+    "inc2734/wp-github-theme-updater": "^2.0",
+    "inc2734/wp-share-buttons": "^4.1",
+    "inc2734/wp-seo": "^4.0",
+    "inc2734/wp-like-me-box": "^1.0",
+    "inc2734/wp-pure-css-gallery": "^2.0",
+    "inc2734/wp-awesome-widgets": "^9.1",
+    "inc2734/wp-awesome-components": "^1.0",
+    "inc2734/wp-contents-outline": "^4.1",
+    "inc2734/wp-profile-box": "^2.2",
+    "inc2734/wp-page-speed-optimization": "^2.0",
+    "inc2734/wp-adsense": "^1.0",
+    "inc2734/wp-custom-css-to-editor": "^0.1",
+    "inc2734/wp-google-fonts": "^0.1",
+    "inc2734/wp-helper": "^0.1"
   },
   "config": {
     "process-timeout": 0,
@@ -28,7 +46,7 @@
     "test": [
       "resources/vendor/bin/phpcs --config-set installed_paths resources/vendor/phpcompatibility/php-compatibility,resources/vendor/phpcompatibility/phpcompatibility-paragonie,resources/vendor/phpcompatibility/phpcompatibility-wp,resources/vendor/wp-coding-standards/wpcs",
       "resources/vendor/bin/phpcs -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
-      "resources/vendor/bin/phpmd ./ text phpmd.ruleset.xml --suffixes php --exclude /resources/vendor/,/tests/",
+      "resources/vendor/bin/phpmd ./ text .phpmd.ruleset.xml --suffixes php --exclude /resources/vendor/,/tests/",
       "bash bin/phpunit.sh"
     ],
     "phpcbf": "resources/vendor/bin/phpcbf -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",

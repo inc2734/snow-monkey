@@ -14,7 +14,7 @@ if [ -e ${WP_TESTS_DIR} ] && [ -e ${WP_TESTS_DIR}/includes/functions.php ]; then
   fi
 
   cd ${themedir};
-  resources/vendor/bin/phpunit --configuration= ${themedir}/phpunit.xml.dist
+  resources/vendor/bin/phpunit --configuration= ${themedir}/.phpunit.xml.dist
   exit 0
 fi
 

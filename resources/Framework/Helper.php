@@ -8,13 +8,15 @@
 
 namespace Framework;
 
-use Inc2734\Mimizuku_Core;
+use Inc2734\WP_Helper;
 use Inc2734\WP_Breadcrumbs;
+use Inc2734\WP_View_Controller;
 
 class Helper {
 
-	use Mimizuku_Core\App\Contract\Helper\Helper;
+	use WP_Helper\Contract\Helper;
 	use Contract\Helper\Page_Header;
+	use WP_View_Controller\App\Contract\Template_Tag;
 
 	/**
 	 * Return output positions of eyecatch
@@ -416,5 +418,36 @@ class Helper {
 	 */
 	public static function should_infobar_in_header() {
 		return in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ] );
+	}
+
+	/**
+	 * get_template_part php files
+	 *
+	 * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
+	 *
+	 * @param string $directory
+	 * @param boolean $exclude_underscore
+	 * @return void
+	 */
+	public static function get_template_parts( $directory, $exclude_underscore = false ) {
+		$directory = realpath( $directory );
+
+		if ( ! is_dir( $directory ) ) {
+			return;
+		}
+
+		$template_directory = realpath( get_template_directory() );
+
+		$files = static::get_include_files( $directory, $exclude_underscore );
+
+		foreach ( $files['files'] as $file ) {
+			$file = realpath( $file );
+			$template_name = str_replace( [ $template_directory . DIRECTORY_SEPARATOR, '.php' ], '', $file );
+			WP_View_Controller\Helper::get_template_part( $template_name );
+		}
+
+		foreach ( $files['directories'] as $directory ) {
+			static::get_template_parts( $directory, $exclude_underscore );
+		}
 	}
 }

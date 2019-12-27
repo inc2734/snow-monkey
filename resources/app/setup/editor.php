@@ -3,10 +3,16 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.2.0
+ * @version 9.0.0
  */
 
+use Inc2734\WP_Custom_CSS_To_Editor;
 use Framework\Helper;
+
+/**
+ * Custom CSS apply to editor
+ */
+new WP_Custom_CSS_To_Editor\Bootstrap();
 
 /**
  * Support editor styles

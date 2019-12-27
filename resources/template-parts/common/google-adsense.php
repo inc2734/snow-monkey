@@ -3,11 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 9.0.0
  *
  * renamed: template-parts/google-adsense.php
  */
 
+use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 $template_args = [
@@ -27,5 +28,5 @@ if ( ! preg_match( '/<ins /s', $template_args['code'] ) ) {
 ?>
 
 <div class="c-google-adsense">
-	<?php Helper::display_adsense_code( $template_args['code'] ); ?>
+	<?php WP_Adsense\Helper::the_adsense_code( $template_args['code'] ); ?>
 </div>

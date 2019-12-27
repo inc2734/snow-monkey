@@ -15,7 +15,7 @@
  * @param array $vars
  */
 add_filter(
-	'mimizuku_wp_awesome_widgets_view_hierarchy',
+	'inc2734_wp_awesome_widgets_view_hierarchy',
 	function( $hierarchy, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_wp_awesome_widgets_view_hierarchy', $hierarchy, $slug, $name, $vars );
 	},
@@ -24,7 +24,7 @@ add_filter(
 );
 
 /**
- * Override mimizuku_wp_awesome_widgets_view_args
+ * Override inc2734_wp_awesome_widgets_view_args
  *
  * @param array $args
  *   @param string $slug
@@ -33,7 +33,7 @@ add_filter(
  * @return array
  */
 add_filter(
-	'mimizuku_wp_awesome_widgets_view_args',
+	'inc2734_wp_awesome_widgets_view_args',
 	function( $args ) {
 		return apply_filters( 'snow_monkey_wp_awesome_widgets_view_args', $args );
 	},
@@ -41,7 +41,7 @@ add_filter(
 );
 
 /**
- * Override mimizuku_wp_awesome_widgets_{ $slug }
+ * Override inc2734_wp_awesome_widgets_view_{ $slug }
  *
  * @param array $args
  *   @param string $slug
@@ -83,7 +83,7 @@ add_action(
 );
 
 /**
- * Override mimizuku_wp_awesome_widgets_view_render
+ * Override inc2734_wp_awesome_widgets_view_render
  *
  * @param string $slug
  * @param string $name
@@ -91,7 +91,7 @@ add_action(
  * @return array
  */
 add_filter(
-	'mimizuku_wp_awesome_widgets_view_render',
+	'inc2734_wp_awesome_widgets_view_render',
 	function( $html, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_wp_awesome_widgets_view_render', $html, $slug, $name, $vars );
 	},

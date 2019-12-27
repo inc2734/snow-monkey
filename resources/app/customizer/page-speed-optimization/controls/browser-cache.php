@@ -3,10 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 9.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+use Inc2734\WP_Page_Speed_Optimization;
 use Framework\Helper;
 
 Framework::control(
@@ -41,6 +42,6 @@ add_action(
 			return;
 		}
 
-		Helper::write_cache_control_setting( (bool) $customize_setting->post_value() );
+		WP_Page_Speed_Optimization\Helper\write_cache_control_setting( (bool) $customize_setting->post_value() );
 	}
 );

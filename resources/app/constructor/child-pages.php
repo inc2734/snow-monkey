@@ -7,8 +7,8 @@
  */
 
 add_filter(
-	'inc2734_wp_helper_related_posts_args',
+	'inc2734_wp_helper_child_pages_args',
 	function( $args ) {
-		return apply_filters( 'snow_monkey_related_posts_args', $args );
+		return apply_filters( 'snow_monkey_child_pages_args', $args );
 	}
 );

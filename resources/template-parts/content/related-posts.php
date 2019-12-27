@@ -3,11 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 9.0.0
  *
  * renamed: template-parts/related-posts.php
  */
 
+use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 $template_args = [
@@ -39,7 +40,7 @@ if ( ! $template_args['code'] && ! $query->have_posts() ) {
 
 	<?php if ( $template_args['code'] ) : ?>
 
-		<?php Helper::display_adsense_code( $template_args['code'] ); ?>
+		<?php WP_Adsense\Helper::the_adsense_code( $template_args['code'] ); ?>
 
 	<?php else : ?>
 
