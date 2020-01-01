@@ -4,10 +4,6 @@
   width: auto;
   max-width: none;
 
-  > .#{$_prefix}c-container {
-    @include container-padding();
-  }
-
   table {
     margin-right: auto;
     margin-left: auto;

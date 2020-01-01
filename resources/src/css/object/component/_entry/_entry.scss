@@ -29,23 +29,6 @@
   &__content {
     @include _clearfix();
 
-    > .alignfull,
-    > .alignwide {
-      &.smb-container {
-        .#{$_prefix}c-container {
-          @include container-padding();
-        }
-      }
-
-      &.smb-section {
-        > .smb-section__inner {
-          > .#{$_prefix}c-container {
-            @include container-padding();
-          }
-        }
-      }
-    }
-
     > .alignfull {
       clear: both;
 
