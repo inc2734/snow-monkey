@@ -42,7 +42,7 @@ use Framework\Helper;
 			?>
 
 			<?php
-			if ( get_theme_mod( 'infobar-content' ) && ( ! Helper::should_infobar_in_header() || get_theme_mod( 'header-position-only-mobile' ) ) ) {
+			if ( get_theme_mod( 'infobar-content' ) ) {
 				Helper::get_template_part( 'template-parts/common/infobar' );
 			}
 			?>

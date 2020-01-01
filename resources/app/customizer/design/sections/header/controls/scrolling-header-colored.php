@@ -15,10 +15,10 @@ Framework::control(
 	'scrolling-header-colored',
 	[
 		'label'    => __( 'White background when scrolling', 'snow-monkey' ),
-		'priority' => 119,
+		'priority' => 120,
 		'default'  => true,
 		'active_callback' => function() {
-			return 'sticky-overlay' === get_theme_mod( 'header-position' );
+			return 'sticky-overlay' === get_theme_mod( 'header-position' ) || 'sticky-overlay' === get_theme_mod( 'header-position-lg' );
 		},
 	]
 );

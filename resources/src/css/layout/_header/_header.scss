@@ -83,21 +83,29 @@
         box-shadow: 0 1px 2px 1px rgba(#000, .05);
       }
     }
-
-    &:not(&--colored) {
-      @include overlay-header-white-text();
-    }
   }
 
   &--sticky-overlay-sm {
     @include _media-max(md) {
       @include sticky-overlay-header();
     }
+
+    &:not(&--colored) {
+      @include _media-max(md) {
+        @include overlay-header-white-text();
+      }
+    }
   }
 
   &--sticky-overlay-lg {
     @include _media-min(lg) {
       @include sticky-overlay-header();
+    }
+
+    &:not(&--colored) {
+      @include _media-min(lg) {
+        @include overlay-header-white-text();
+      }
     }
   }
 

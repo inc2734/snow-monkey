@@ -16,6 +16,7 @@ class Helper {
 
 	use WP_Helper\Contract\Helper;
 	use Contract\Helper\Page_Header;
+	use Contract\Helper\Deprecated;
 	use WP_View_Controller\App\Contract\Template_Tag;
 
 	/**
@@ -33,58 +34,16 @@ class Helper {
 	}
 
 	/**
-	 * Return default header position
-	 *
-	 * @deprecated
-	 *
-	 * @return string
-	 */
-	public static function get_default_header_position() {
-		return get_theme_mod( 'header-position' );
-	}
-
-	/**
-	 * Return header position
-	 *
-	 * @deprecated
-	 *
-	 * @return string
-	 */
-	public static function get_header_position() {
-		if ( ! wp_is_mobile() && get_theme_mod( 'header-position-only-mobile' ) ) {
-			return;
-		}
-		return static::get_default_header_position();
-	}
-
-	/**
-	 * Return header-position-fixed
-	 *
-	 * @deprecated
-	 *
-	 * @return string
-	 */
-	public static function get_header_position_fixed() {
-		$fixed           = get_theme_mod( 'header-position-fixed' );
-		$header_position = get_theme_mod( 'header-position' );
-
-		if ( 'overlay' !== $header_position ) {
-			return null;
-		}
-
-		return $fixed ? 'true' : 'false';
-	}
-
-	/**
 	 * Return scrolling-header-colored
 	 *
 	 * @return string
 	 */
 	public static function get_scrolling_header_colored() {
-		$scrolling_colored = get_theme_mod( 'scrolling-header-colored' );
-		$header_position   = get_theme_mod( 'header-position' );
+		$scrolling_colored  = get_theme_mod( 'scrolling-header-colored' );
+		$header_position    = get_theme_mod( 'header-position' );
+		$header_position_lg = get_theme_mod( 'header-position-lg' );
 
-		if ( 'overlay' !== $header_position ) {
+		if ( 'overlay' !== $header_position && 'overlay' !== $header_position_lg  ) {
 			return null;
 		}
 
@@ -362,25 +321,32 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_header_classes() {
-		$header_position = get_theme_mod( 'header-position' );
+		$header_position    = get_theme_mod( 'header-position' );
+		$header_position_lg = get_theme_mod( 'header-position-lg' );
 		$classes = [ 'l-header' ];
 
-		if ( ! $header_position ) {
-			return $classes;
+		if ( $header_position ) {
+			$classes[] = 'l-header--' . $header_position . '-sm';
 		}
 
-		$classes[] = 'l-header--' . $header_position . '-sm';
-		$classes[] = ! get_theme_mod( 'header-position-only-mobile' ) ? 'l-header--' . $header_position . '-lg' : null;
+		if ( $header_position_lg ) {
+			$classes[] = 'l-header--' . $header_position_lg . '-lg';
+		}
 
-		if ( 'sticky-overlay' === $header_position ) {
+		if ( 'sticky-overlay' === $header_position || 'sticky-overlay' === $header_position_lg ) {
 			$colored = get_theme_mod( 'scrolling-header-colored' );
 			if ( $colored ) {
-				$classes[] = 'l-header--' . $header_position . '-sm--colored';
-				$classes[] = ! get_theme_mod( 'header-position-only-mobile' ) ? 'l-header--' . $header_position . '-lg--colored' : null;
+				if ( 'sticky-overlay' === $header_position ) {
+					$classes[] = 'l-header--' . $header_position . '-sm--colored';
+				}
+
+				if ( 'sticky-overlay' === $header_position_lg ) {
+					$classes[] = 'l-header--' . $header_position_lg . '-lg--colored';
+				}
 			}
 		}
 
-		return array_filter( $classes );
+		return $classes;
 	}
 
 	/**
@@ -391,7 +357,7 @@ class Helper {
 	public static function has_drop_nav() {
 		if ( has_nav_menu( 'global-nav' ) ) {
 			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ 'normal', 'overlay' ] );
-			$has_drop_nav_on_pc = get_theme_mod( 'header-position-only-mobile' );
+			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ 'normal', 'overlay' ] );
 
 			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
 				return true;
@@ -409,15 +375,6 @@ class Helper {
 	 */
 	public static function use_auto_custom_logo_size() {
 		return apply_filters( 'snow_monkey_use_auto_custom_logo_size', true );
-	}
-
-	/**
-	 * The overlay header and the ticky overlay has infobar in the header.
-	 *
-	 * @return boolean
-	 */
-	public static function should_infobar_in_header() {
-		return in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ] );
 	}
 
 	/**
