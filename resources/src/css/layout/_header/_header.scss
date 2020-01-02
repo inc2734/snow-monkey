@@ -72,28 +72,11 @@
   @mixin sticky-overlay-header() {
     @include overlay-header();
     position: fixed;
-
-    &--colored {
-      [data-scrolled="false"] & {
-        @include overlay-header-white-text();
-      }
-
-      [data-scrolled="true"] & {
-        background-color: #fff;
-        box-shadow: 0 1px 2px 1px rgba(#000, .05);
-      }
-    }
   }
 
   &--sticky-overlay-sm {
     @include _media-max(md) {
       @include sticky-overlay-header();
-    }
-
-    &:not(&--colored) {
-      @include _media-max(md) {
-        @include overlay-header-white-text();
-      }
     }
   }
 
@@ -101,11 +84,34 @@
     @include _media-min(lg) {
       @include sticky-overlay-header();
     }
+  }
 
-    &:not(&--colored) {
-      @include _media-min(lg) {
-        @include overlay-header-white-text();
-      }
+  /**
+   * Colored sticky overlay
+   */
+  @mixin sticky-overlay-colored-header() {
+    @include overlay-header();
+    position: fixed;
+
+    [data-scrolled="false"] & {
+      @include overlay-header-white-text();
+    }
+
+    [data-scrolled="true"] & {
+      background-color: #fff;
+      box-shadow: 0 1px 2px 1px rgba(#000, .05);
+    }
+  }
+
+  &--sticky-overlay-colored-sm {
+    @include _media-max(md) {
+      @include sticky-overlay-colored-header();
+    }
+  }
+
+  &--sticky-overlay-colored-lg {
+    @include _media-min(lg) {
+      @include sticky-overlay-colored-header();
     }
   }
 

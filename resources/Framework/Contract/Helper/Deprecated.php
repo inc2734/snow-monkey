@@ -54,6 +54,25 @@ trait Deprecated {
 	}
 
 	/**
+	 * Return scrolling-header-colored
+	 *
+	 * @deprecated
+	 *
+	 * @return string
+	 */
+	public static function get_scrolling_header_colored() {
+		$scrolling_colored  = get_theme_mod( 'scrolling-header-colored' );
+		$header_position    = get_theme_mod( 'header-position' );
+		$header_position_lg = get_theme_mod( 'header-position-lg' );
+
+		if ( 'overlay' !== $header_position && 'overlay' !== $header_position_lg ) {
+			return null;
+		}
+
+		return $scrolling_colored ? 'true' : 'false';
+	}
+
+	/**
 	 * The overlay header and the ticky overlay has infobar in the header.
 	 *
 	 * @deprecated

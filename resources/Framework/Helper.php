@@ -34,23 +34,6 @@ class Helper {
 	}
 
 	/**
-	 * Return scrolling-header-colored
-	 *
-	 * @return string
-	 */
-	public static function get_scrolling_header_colored() {
-		$scrolling_colored  = get_theme_mod( 'scrolling-header-colored' );
-		$header_position    = get_theme_mod( 'header-position' );
-		$header_position_lg = get_theme_mod( 'header-position-lg' );
-
-		if ( 'overlay' !== $header_position && 'overlay' !== $header_position_lg  ) {
-			return null;
-		}
-
-		return $scrolling_colored ? 'true' : 'false';
-	}
-
-	/**
 	 * Returns page title from Breadcrumbs
 	 *
 	 * @return string
@@ -333,19 +316,6 @@ class Helper {
 			$classes[] = 'l-header--' . $header_position_lg . '-lg';
 		}
 
-		if ( 'sticky-overlay' === $header_position || 'sticky-overlay' === $header_position_lg ) {
-			$colored = get_theme_mod( 'scrolling-header-colored' );
-			if ( $colored ) {
-				if ( 'sticky-overlay' === $header_position ) {
-					$classes[] = 'l-header--' . $header_position . '-sm--colored';
-				}
-
-				if ( 'sticky-overlay' === $header_position_lg ) {
-					$classes[] = 'l-header--' . $header_position_lg . '-lg--colored';
-				}
-			}
-		}
-
 		return $classes;
 	}
 
@@ -356,8 +326,8 @@ class Helper {
 	 */
 	public static function has_drop_nav() {
 		if ( has_nav_menu( 'global-nav' ) ) {
-			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ 'normal', 'overlay' ] );
-			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ 'normal', 'overlay' ] );
+			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ '', 'overlay' ] );
+			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ '', 'overlay' ] );
 
 			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
 				return true;

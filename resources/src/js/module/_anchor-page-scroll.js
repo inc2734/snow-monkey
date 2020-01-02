@@ -43,8 +43,8 @@ export default class AnchorPageScroll {
     const headerHeight       = this.header.offsetHeight;
     const hasStickySm        = hasClass(this.header, 'l-header--sticky-sm');
     const hasStickyLg        = hasClass(this.header, 'l-header--sticky-lg');
-    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm');
-    const hasStickyOverlayLg = hasClass(this.header, 'l-header--sticky-overlay-lg');
+    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm') || hasClass(this.header, 'l-header--sticky-overlay-colored-sm');
+    const hasStickyOverlayLg = hasClass(this.header, 'l-header--sticky-overlay-lg') || hasClass(this.header, 'l-header--sticky-overlay-colored-lg');
     const activeHeaderSm     = media('max-width: 1023px') && (hasStickySm || hasStickyOverlaySm);
     const activeHeaderLg     = media('min-width: 1024px') && (hasStickyLg || hasStickyOverlayLg);
 

@@ -18,11 +18,23 @@ Framework::control(
 		'priority' => 110,
 		'default'  => 'sticky',
 		'choices'  => [
-			'sticky'         => __( 'Sticky', 'snow-monkey' ),
-			'sticky-overlay' => __( 'Overlay (Sticky)', 'snow-monkey' ),
-			'overlay'        => __( 'Overlay', 'snow-monkey' ),
-			''               => __( 'Normal', 'snow-monkey' ),
+			'sticky'                 => __( 'Sticky', 'snow-monkey' ),
+			'sticky-overlay'         => __( 'Overlay (Sticky)', 'snow-monkey' ),
+			'sticky-overlay-colored' => __( 'Overlay (Sticky / When scrolling, whilte background)', 'snow-monkey' ),
+			'overlay'                => __( 'Overlay', 'snow-monkey' ),
+			''                       => __( 'Normal', 'snow-monkey' ),
 		],
+		'sanitize_callback' => function( $value ) {
+			// Backward compatibility
+			$mods = get_theme_mods();
+			$header_position = $mods['header-position'];
+			if ( 'sticky-overlay' === $header_position && ! empty( $mods['scrolling-header-colored'] ) ) {
+				remove_theme_mod( 'scrolling-header-colored' );
+				return 'sticky-overlay-colored';
+			}
+
+			return $value;
+		},
 	]
 );
 

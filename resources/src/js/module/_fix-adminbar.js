@@ -30,7 +30,7 @@ export default class Fixadminbar {
 
   _init() {
     const hasStickySm        = hasClass(this.header, 'l-header--sticky-sm');
-    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm');
+    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm') || hasClass(this.header, 'l-header--sticky-overlay-colored-sm');
 
     if ('fixed' !== getStyle(this.adminbar, 'position') && (hasStickySm || hasStickyOverlaySm)) {
       window.addEventListener('scroll', this._fixHeaderPosition, false);
