@@ -10,7 +10,7 @@ use Framework\Controller\Controller;
 
 $_post_type_object = get_post_type_object( get_post_type() );
 
-if ( ! isset( $_post_type_object->hierarchical ) || ! empty( $_post_type_object->hierarchical ) ) {
+if ( ! empty( $_post_type_object->hierarchical ) ) {
 	$layout = get_theme_mod( 'page-layout' );
 }
 
