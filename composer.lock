@@ -637,16 +637,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "d18e7837dd966babe96108fc5b7c7c9f61d26485"
+                "reference": "4bf3445ac5570a68ff213fde51e10db4c08737dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/d18e7837dd966babe96108fc5b7c7c9f61d26485",
-                "reference": "d18e7837dd966babe96108fc5b7c7c9f61d26485",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/4bf3445ac5570a68ff213fde51e10db4c08737dc",
+                "reference": "4bf3445ac5570a68ff213fde51e10db4c08737dc",
                 "shasum": ""
             },
             "require": {
@@ -655,7 +655,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
+                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -677,7 +677,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2019-12-24T07:45:20+00:00"
+            "time": "2020-01-03T07:53:01+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -1530,16 +1530,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.3.3",
+            "version": "4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "2ecaa9fef01634c83bfa8dc1fe35fb5cef223a62"
+                "reference": "da3fd972d6bafd628114f7e7e036f45944b62e9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/2ecaa9fef01634c83bfa8dc1fe35fb5cef223a62",
-                "reference": "2ecaa9fef01634c83bfa8dc1fe35fb5cef223a62",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/da3fd972d6bafd628114f7e7e036f45944b62e9c",
+                "reference": "da3fd972d6bafd628114f7e7e036f45944b62e9c",
                 "shasum": ""
             },
             "require": {
@@ -1551,6 +1551,7 @@
             "require-dev": {
                 "doctrine/instantiator": "^1.0.5",
                 "mockery/mockery": "^1.0",
+                "phpdocumentor/type-resolver": "0.4.*",
                 "phpunit/phpunit": "^6.4"
             },
             "type": "library",
@@ -1577,7 +1578,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2019-12-20T13:40:23+00:00"
+            "time": "2019-12-28T18:55:12+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
