@@ -80,14 +80,6 @@
     }
   }
 
-  // @see https://github.com/kenwheeler/slick/issues/1868
-  .slick-slider {
-    overflow: hidden;
-    .slick-list {
-      margin-right: -1px;
-    }
-  }
-
   .slick-dotted.slick-slider {
     margin: 0;
   }
