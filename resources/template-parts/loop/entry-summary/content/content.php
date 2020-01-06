@@ -26,8 +26,10 @@ $entry_summary_content_excerpt_length = function( $default_excerpt_length ) use 
 	}
 
 	if ( 'rich-media' === $template_args['entries_layout'] ) {
+		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
 		$num_words = 25;
 		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
+		// phpcs:enable
 		return $num_words / $excerpt_length_ratio;
 	}
 

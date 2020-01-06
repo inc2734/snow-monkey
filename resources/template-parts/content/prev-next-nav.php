@@ -54,8 +54,10 @@ $template_args = [
 
 				if ( ! function_exists( 'snow_monkey_prev_next_nav_title' ) ) {
 					function snow_monkey_prev_next_nav_title( $nav_title ) {
+						// phpcs:disable WordPress.WP.I18n.MissingArgDomain
 						$num_words = 60;
 						$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
+						// phpcs:enable
 						return wp_trim_words( $nav_title, $num_words * $excerpt_length_ratio );
 					}
 				}
