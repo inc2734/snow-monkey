@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 9.0.0
  */
 
 use Framework\Helper;
@@ -26,7 +26,9 @@ $entry_summary_content_excerpt_length = function( $default_excerpt_length ) use 
 	}
 
 	if ( 'rich-media' === $template_args['entries_layout'] ) {
-		return class_exists( 'multibyte_patch' ) ? 50 : 25;
+		$num_words = 25;
+		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
+		return $num_words / $excerpt_length_ratio;
 	}
 
 	return $default_excerpt_length;

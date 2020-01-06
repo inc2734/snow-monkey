@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 9.0.0
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -54,7 +54,9 @@ $template_args = [
 
 				if ( ! function_exists( 'snow_monkey_prev_next_nav_title' ) ) {
 					function snow_monkey_prev_next_nav_title( $nav_title ) {
-						return wp_trim_words( $nav_title, class_exists( 'multibyte_patch' ) ? 30 : 60 );
+						$num_words = 60;
+						$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
+						return wp_trim_words( $nav_title, $num_words * $excerpt_length_ratio );
 					}
 				}
 				add_filter( 'the_title', 'snow_monkey_prev_next_nav_title' );

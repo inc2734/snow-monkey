@@ -51,7 +51,9 @@ class Helper {
 	 * @return void
 	 */
 	public static function the_title_trimed() {
-		$num_words = apply_filters( 'snow_monkey_entry_summary_title_num_words', class_exists( 'multibyte_patch' ) ? 40 : 80 );
+		$num_words = 80;
+		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
+		$num_words = apply_filters( 'snow_monkey_entry_summary_title_num_words', $num_words * $excerpt_length_ratio );
 		if ( $num_words ) {
 			ob_start();
 			the_title();
