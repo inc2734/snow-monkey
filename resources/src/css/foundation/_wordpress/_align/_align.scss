@@ -23,3 +23,80 @@
   display: block;
   clear: both;
 }
+
+.#{$_prefix}c-entry__content,
+[data-is-content-widget-area="true"] .custom-html-widget {
+  > .alignfull {
+    clear: both;
+
+    @include _media-max(md) {
+      @include alignfull();
+    }
+
+    [data-has-sidebar="false"] & {
+      @include alignfull();
+    }
+
+    &.wp-block-image {
+      @mixin alignfull-image() {
+        width: 100vw;
+        max-width: none;
+      }
+
+      @include _media-max(md) {
+        > img {
+          @include alignfull-image();
+        }
+      }
+
+      [data-has-sidebar="false"] & {
+        > img {
+          @include alignfull-image();
+        }
+      }
+    }
+  }
+
+  > .alignwide {
+    clear: both;
+
+    @include _media-max(md) {
+      @include alignfull();
+    }
+
+    [data-is-slim-width="true"][data-has-sidebar="false"] & {
+      @include _media-min(lg) {
+        @include alignwide();
+      }
+    }
+
+    [data-is-slim-width="false"][data-has-sidebar="false"] & {
+      @include _media-only(lg) {
+        @include alignfull();
+      }
+
+      @include _media-min(xl) {
+        @include alignwide();
+      }
+    }
+
+    &.wp-block-image {
+      @mixin alignwide-image() {
+        width: 100%;
+        max-width: none;
+      }
+
+      @include _media-max(md) {
+        > img {
+          @include alignwide-image();
+        }
+      }
+
+      [data-has-sidebar="false"] & {
+        > img {
+          @include alignwide-image();
+        }
+      }
+    }
+  }
+}
