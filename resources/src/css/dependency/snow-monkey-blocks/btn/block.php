@@ -22,13 +22,3 @@ Style::register(
 		'color: ' . $accent_color,
 	]
 );
-
-Style::register(
-	[
-		'.smb-btn:hover',
-		'.smb-btn:active',
-		'.smb-btn:focus',
-	],
-	'background-color: ' . Color::darken( $accent_color, 0.05 ),
-	'@media (min-width: 64em)'
-);

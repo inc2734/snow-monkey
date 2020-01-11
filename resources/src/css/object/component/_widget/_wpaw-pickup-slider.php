@@ -27,13 +27,3 @@ Style::register(
 	'.wpaw-pickup-slider .slick-arrow',
 	'background-color: ' . $accent_color
 );
-
-Style::register(
-	[
-		'.wpaw-pickup-slider .slick-arrow:hover',
-		'.wpaw-pickup-slider .slick-arrow:active',
-		'.wpaw-pickup-slider .slick-arrow:focus',
-	],
-	'background-color: ' . Color::darken( $accent_color, 0.05 ),
-	'@media (min-width: 64em)'
-);

@@ -14,13 +14,3 @@ Style::register(
 	'.c-page-top',
 	'background-color: ' . $accent_color
 );
-
-Style::register(
-	[
-		'.c-page-top:hover',
-		'.c-page-top:active',
-		'.c-page-top:focus',
-	],
-	'background-color: ' . Color::darken( $accent_color, 0.05 ),
-	'@media (min-width: 64em)'
-);

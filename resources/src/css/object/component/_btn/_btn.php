@@ -14,13 +14,3 @@ Style::register(
 	'.c-btn',
 	'background-color: ' . $accent_color
 );
-
-Style::register(
-	[
-		'.c-btn:hover',
-		'.c-btn:active',
-		'.c-btn:focus',
-	],
-	'background-color: ' . Color::darken( $accent_color, 0.05 ),
-	'@media (min-width: 64em)'
-);

@@ -16,16 +16,6 @@ Style::register(
 );
 
 Style::register(
-	[
-		'.snow-monkey-posts__more:hover',
-		'.snow-monkey-posts__more:active',
-		'.snow-monkey-posts__more:focus',
-	],
-	'background-color: ' . Color::darken( $accent_color, 0.05 ),
-	'@media (min-width: 64em)'
-);
-
-Style::register(
 	'.snow-monkey-posts__title::after',
 	'background-color: ' . $accent_color
 );

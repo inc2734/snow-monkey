@@ -9,6 +9,6 @@
   @include _transition(all);
 
   @include _hover(lg) {
-    background-color: darken($color-accent, 5%);
+    filter: brightness(90%);
   }
 }

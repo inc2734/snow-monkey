@@ -115,17 +115,13 @@
   }
 
   .comment-reply-link {
-    @include _btn();
+    @include btn();
     @include _margin(.5, 0, 0);
     background-color: $color-accent;
     border-radius: $_border-radius;
     color: #fff;
     @include _font-size-line-height($_base-font-size-px - 2);
     @include _padding(.25rem, 1rem);
-
-    @include _hover(lg) {
-      background-color: darken($color-accent, 5%);
-    }
   }
 
   .bypostauthor & {

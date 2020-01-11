@@ -18,13 +18,3 @@ Style::register(
 		'color: ' . $infobar_font_color,
 	]
 );
-
-Style::register(
-	[
-		'a.p-infobar__inner:hover',
-		'a.p-infobar__inner:active',
-		'a.p-infobar__inner:focus',
-	],
-	'background-color: ' . Color::darken( $infobar_background_color, 0.05 ),
-	'@media (min-width: 64em)'
-);

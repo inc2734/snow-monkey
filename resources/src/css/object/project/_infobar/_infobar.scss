@@ -17,9 +17,9 @@
     padding: 5px;
 
     @at-root a#{&} {
-      @include _transition(background-color);
+      @include _transition(filter);
       @include _hover(lg) {
-        background-color: darken($infobar-background-color, 5%);
+        filter: brightness(90%);
       }
     }
   }

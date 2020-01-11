@@ -3,7 +3,7 @@
   z-index: 99998;
   background-color: $color-accent;
   @include _square(40px);
-  @include _transition(opacity);
+  @include _transition(opacity, filter);
   visibility: hidden;
   opacity: 0;
 
@@ -21,7 +21,7 @@
   }
 
   @include _hover(lg) {
-    background-color: darken($color-accent, 5%);
+    filter: brightness(90%);
   }
 
   a {
