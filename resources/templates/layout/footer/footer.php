@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 9.0.3
  */
 
 use Framework\Helper;
@@ -38,11 +38,3 @@ use Framework\Helper;
 
 	<?php do_action( 'snow_monkey_append_footer' ); ?>
 </footer>
-
-<?php
-if ( get_theme_mod( 'display-page-top' ) ) {
-	Helper::get_template_part( 'template-parts/common/page-top' );
-}
-?>
-
-<?php Helper::get_template_part( 'template-parts/nav/footer-sticky' ); ?>

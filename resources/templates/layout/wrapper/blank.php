@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 9.0.3
  */
 
 use Framework\Helper;
@@ -30,5 +30,17 @@ use Framework\Helper;
 	</div>
 
 <?php wp_footer(); ?>
+
+<?php
+if ( get_theme_mod( 'display-page-top' ) ) {
+	Helper::get_template_part( 'template-parts/common/page-top' );
+}
+?>
+
+<?php
+if ( has_nav_menu( 'footer-sticky-nav' ) ) {
+	Helper::get_template_part( 'template-parts/nav/footer-sticky' );
+}
+?>
 </body>
 </html>
