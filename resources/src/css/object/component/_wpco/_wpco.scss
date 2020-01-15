@@ -1,14 +1,10 @@
 .wpco {
   background-color: _lightest($_color-gray);
-  @include _padding(.5, .5, .25);
+  @include _padding(.75, 1, .5);
   visibility: hidden;
 
   .wpco-wrapper[aria-hidden="false"] & {
     visibility: visible;
-  }
-
-  @include _media-min(md) {
-    @include _padding(.5, 1, .25);
   }
 
   &__title {
@@ -45,15 +41,16 @@
       }
 
       &::before {
+        @include _square(24px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex: 0 0 auto;
-        align-self: flex-start;
-        @include _margin(calc(#{$_between-lines} - 1px), .25, 0, 0);
-        display: inline-block;
+        @include _margin(2px, .5, 0, 0);
         background-color: $color-accent;
         color: #fff;
         font-size: 10px;
         line-height: 1;
-        padding: .25em .55em .35em .55em;
         counter-increment: wpco;
         content: counter(wpco);
       }
