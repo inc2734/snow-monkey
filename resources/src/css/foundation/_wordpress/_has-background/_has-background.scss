@@ -1,0 +1,6 @@
+p,
+.wp-block-group {
+  &.has-background {
+    @include _padding(1);
+  }
+}
