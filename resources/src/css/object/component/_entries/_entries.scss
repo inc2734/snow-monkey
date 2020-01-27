@@ -1,11 +1,7 @@
 .#{$_prefix}c-entries {
   @include _list-unstyled();
   @include _row();
-  @include _row--margin(.5);
-
-  @include _media-min(md) {
-    @include _row--margin(1);
-  }
+  @include _row--margin(1);
 
   &[data-has-infeed-ads="true"] {
     .#{$_prefix}c-entries__item {
@@ -17,11 +13,7 @@
 
   &__item {
     @include _row__col(1, 2);
-    @include _row__col--margin(.5);
-
-    @include _media-min(md) {
-      @include _row__col--margin(1);
-    }
+    @include _row__col--margin(1);
 
     @include _media-min(lg) {
       @include _row__col(1, 3);
