@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 9.0.6
  */
 
 use Framework\Helper;
@@ -77,12 +77,15 @@ $loop_count = 0;
 			if ( $loop_count > $posts_per_page ) {
 				break;
 			}
+
+			$_post_type   = get_post_type();
+			$archive_view = get_theme_mod( $_post_type . '-archive-view' );
 			?>
 			<li class="c-entries__item">
 				<?php
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary',
-					get_post_type(),
+					$archive_view ? $archive_view : $_post_type,
 					[
 						'_entries_layout' => $template_args['entries_layout'],
 						'_excerpt_length' => $template_args['excerpt_length'],
