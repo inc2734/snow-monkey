@@ -454,16 +454,16 @@
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "52b202f702a76498e5e6da596681bf6ea16d985e"
+                "reference": "3843801d6c162624531ccd15c5f53e577771514c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/52b202f702a76498e5e6da596681bf6ea16d985e",
-                "reference": "52b202f702a76498e5e6da596681bf6ea16d985e",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/3843801d6c162624531ccd15c5f53e577771514c",
+                "reference": "3843801d6c162624531ccd15c5f53e577771514c",
                 "shasum": ""
             },
             "require": {
@@ -493,7 +493,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2020-01-17T05:28:53+00:00"
+            "time": "2020-01-29T06:19:48+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",
