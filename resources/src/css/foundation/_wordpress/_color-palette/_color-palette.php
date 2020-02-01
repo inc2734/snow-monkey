@@ -21,7 +21,10 @@ foreach ( $color_palette as $color ) {
 	);
 
 	Style::register(
-		'.has-' . $color['slug'] . '-color',
+		[
+			'.has-' . $color['slug'] . '-color',
+			'.wp-block-button__link.has-' . $color['slug'] . '-color',
+		],
 		'color: ' . $color['color']
 	);
 }
