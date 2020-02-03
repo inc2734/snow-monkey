@@ -6,6 +6,15 @@ a {
   color: $color-accent;
 }
 
+ol,
+ul {
+  &,
+  .block-library-list & {
+    margin-left: 1.5em;
+    padding-left: 0;
+  }
+}
+
 h1 {
   @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.5);
 
