@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "inc2734/wp-adsense",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-adsense.git",
-                "reference": "047148c7af16c04d59109260f50076fb989aae59"
+                "reference": "7ead7e5a66b3b03de62477e6502dda2b9c44e32b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-adsense/zipball/047148c7af16c04d59109260f50076fb989aae59",
-                "reference": "047148c7af16c04d59109260f50076fb989aae59",
+                "url": "https://api.github.com/repos/inc2734/wp-adsense/zipball/7ead7e5a66b3b03de62477e6502dda2b9c44e32b",
+                "reference": "7ead7e5a66b3b03de62477e6502dda2b9c44e32b",
                 "shasum": ""
             },
             "require": {
@@ -47,35 +47,31 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2019-08-23T06:33:10+00:00"
+            "time": "2020-02-04T04:08:16+00:00"
         },
         {
             "name": "inc2734/wp-awesome-components",
-            "version": "1.0.7",
+            "version": "1.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-components.git",
-                "reference": "45ce014943db141350a001d4138921b1c7bec0a2"
+                "reference": "0b49ac530601369576a14bf5fe32a1e48f9a33c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/45ce014943db141350a001d4138921b1c7bec0a2",
-                "reference": "45ce014943db141350a001d4138921b1c7bec0a2",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-components/zipball/0b49ac530601369576a14bf5fe32a1e48f9a33c3",
+                "reference": "0b49ac530601369576a14bf5fe32a1e48f9a33c3",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -95,20 +91,20 @@
                 }
             ],
             "description": "A library to add some awesome components for WordPress.",
-            "time": "2018-09-10T11:36:14+00:00"
+            "time": "2020-02-04T04:35:04+00:00"
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "9.1.2",
+            "version": "9.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "bbb818746fa7a98bb66a243413f884491f6994b8"
+                "reference": "b5d32a60d504ddaada6bebd3f83151e2276f52bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/bbb818746fa7a98bb66a243413f884491f6994b8",
-                "reference": "bbb818746fa7a98bb66a243413f884491f6994b8",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/b5d32a60d504ddaada6bebd3f83151e2276f52bd",
+                "reference": "b5d32a60d504ddaada6bebd3f83151e2276f52bd",
                 "shasum": ""
             },
             "require": {
@@ -143,20 +139,20 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2020-01-28T02:15:09+00:00"
+            "time": "2020-02-04T04:36:49+00:00"
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "5.6.4",
+            "version": "5.6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "c416fc27f5a86876aaad1bd112557db22e438bb7"
+                "reference": "d83020738834cefd6c53bc86bdcd2f5be794fa30"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/c416fc27f5a86876aaad1bd112557db22e438bb7",
-                "reference": "c416fc27f5a86876aaad1bd112557db22e438bb7",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/d83020738834cefd6c53bc86bdcd2f5be794fa30",
+                "reference": "d83020738834cefd6c53bc86bdcd2f5be794fa30",
                 "shasum": ""
             },
             "require": {
@@ -187,20 +183,20 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2020-01-11T01:52:34+00:00"
+            "time": "2020-02-04T03:15:50+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "44fe6a91489e6ebfdd06acba66657489c585eb55"
+                "reference": "bbfa7ea058b344fc2c7e92e3083b0949b3ed0b38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/44fe6a91489e6ebfdd06acba66657489c585eb55",
-                "reference": "44fe6a91489e6ebfdd06acba66657489c585eb55",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/bbfa7ea058b344fc2c7e92e3083b0949b3ed0b38",
+                "reference": "bbfa7ea058b344fc2c7e92e3083b0949b3ed0b38",
                 "shasum": ""
             },
             "require": {
@@ -231,20 +227,20 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
-            "time": "2019-11-12T03:54:03+00:00"
+            "time": "2020-02-04T04:40:48+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "4.1.2",
+            "version": "4.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "c109846d92b555c08383b26d1740f3e7b5b4c2d8"
+                "reference": "f3bb3797d0e9f406dea01a19614863e469bff2ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/c109846d92b555c08383b26d1740f3e7b5b4c2d8",
-                "reference": "c109846d92b555c08383b26d1740f3e7b5b4c2d8",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/f3bb3797d0e9f406dea01a19614863e469bff2ec",
+                "reference": "f3bb3797d0e9f406dea01a19614863e469bff2ec",
                 "shasum": ""
             },
             "require": {
@@ -276,20 +272,20 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2020-01-27T05:41:59+00:00"
+            "time": "2020-02-04T04:44:08+00:00"
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-custom-css-to-editor.git",
-                "reference": "ab302043a10605fe368f69faf063a2a3bbf7b338"
+                "reference": "957086e47fb929dd40599457580426c5a3e06b8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/ab302043a10605fe368f69faf063a2a3bbf7b338",
-                "reference": "ab302043a10605fe368f69faf063a2a3bbf7b338",
+                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/957086e47fb929dd40599457580426c5a3e06b8b",
+                "reference": "957086e47fb929dd40599457580426c5a3e06b8b",
                 "shasum": ""
             },
             "require": {
@@ -319,20 +315,20 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2019-12-27T01:20:45+00:00"
+            "time": "2020-02-04T04:45:37+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "4c9b582520a14e4874b47de1222b3d586c25876f"
+                "reference": "f4ef880a0eb409ae246e2b974f326c791f5e5eba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/4c9b582520a14e4874b47de1222b3d586c25876f",
-                "reference": "4c9b582520a14e4874b47de1222b3d586c25876f",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/f4ef880a0eb409ae246e2b974f326c791f5e5eba",
+                "reference": "f4ef880a0eb409ae246e2b974f326c791f5e5eba",
                 "shasum": ""
             },
             "require": {
@@ -341,7 +337,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
+                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -363,20 +359,20 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2019-12-19T16:04:50+00:00"
+            "time": "2020-02-04T05:00:28+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "5183568b3999bc82cbc0fa39e32a87da00b7c63a"
+                "reference": "2116dbc72f547a3d0294ebd8ef8ca115dedcca58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/5183568b3999bc82cbc0fa39e32a87da00b7c63a",
-                "reference": "5183568b3999bc82cbc0fa39e32a87da00b7c63a",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/2116dbc72f547a3d0294ebd8ef8ca115dedcca58",
+                "reference": "2116dbc72f547a3d0294ebd8ef8ca115dedcca58",
                 "shasum": ""
             },
             "require": {
@@ -407,20 +403,20 @@
                 }
             ],
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
-            "time": "2019-08-26T06:56:17+00:00"
+            "time": "2020-02-04T05:06:24+00:00"
         },
         {
             "name": "inc2734/wp-google-fonts",
-            "version": "0.1.0",
+            "version": "0.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-google-fonts.git",
-                "reference": "4d4420be9a721766bef6d08ccde738762b42afb5"
+                "reference": "55b02672bf79dcecabbee26cc51251fd600f4775"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/4d4420be9a721766bef6d08ccde738762b42afb5",
-                "reference": "4d4420be9a721766bef6d08ccde738762b42afb5",
+                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/55b02672bf79dcecabbee26cc51251fd600f4775",
+                "reference": "55b02672bf79dcecabbee26cc51251fd600f4775",
                 "shasum": ""
             },
             "require": {
@@ -450,7 +446,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2019-12-27T01:56:56+00:00"
+            "time": "2020-02-04T05:08:06+00:00"
         },
         {
             "name": "inc2734/wp-helper",
@@ -497,31 +493,27 @@
         },
         {
             "name": "inc2734/wp-like-me-box",
-            "version": "1.0.1",
+            "version": "1.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-like-me-box.git",
-                "reference": "f0145f5e7c859f84697d4c87b997e557e0b6a038"
+                "reference": "3dd9ae62cc4a8a4ba84111a5b82e6d88de5f9f8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/f0145f5e7c859f84697d4c87b997e557e0b6a038",
-                "reference": "f0145f5e7c859f84697d4c87b997e557e0b6a038",
+                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/3dd9ae62cc4a8a4ba84111a5b82e6d88de5f9f8a",
+                "reference": "3dd9ae62cc4a8a4ba84111a5b82e6d88de5f9f8a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -541,20 +533,20 @@
                 }
             ],
             "description": "A library for WordPress that added Facebook like me box for article.",
-            "time": "2018-09-06T01:10:35+00:00"
+            "time": "2020-02-04T05:16:29+00:00"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "8.0.10",
+            "version": "8.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "297cc94589b80dd455ced1a881611ac7c00f1614"
+                "reference": "b17e2e6553cda843eeecce6dda4d5cf989abb69d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/297cc94589b80dd455ced1a881611ac7c00f1614",
-                "reference": "297cc94589b80dd455ced1a881611ac7c00f1614",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/b17e2e6553cda843eeecce6dda4d5cf989abb69d",
+                "reference": "b17e2e6553cda843eeecce6dda4d5cf989abb69d",
                 "shasum": ""
             },
             "require": {
@@ -563,7 +555,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
+                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -585,35 +577,31 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2019-11-07T04:02:01+00:00"
+            "time": "2020-02-04T05:22:14+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "b85b183ac1d7519ec15a7cb0afc4f49c92c68181"
+                "reference": "0c4c3c7413a5ed963cb79d0409b612e4f2b569f1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/b85b183ac1d7519ec15a7cb0afc4f49c92c68181",
-                "reference": "b85b183ac1d7519ec15a7cb0afc4f49c92c68181",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/0c4c3c7413a5ed963cb79d0409b612e4f2b569f1",
+                "reference": "0c4c3c7413a5ed963cb79d0409b612e4f2b569f1",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -633,7 +621,7 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
-            "time": "2019-10-07T07:34:40+00:00"
+            "time": "2020-02-04T05:26:25+00:00"
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
@@ -724,16 +712,16 @@
         },
         {
             "name": "inc2734/wp-profile-box",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-profile-box.git",
-                "reference": "7d5b1c0420e04fc5fd637705a3849525666322f0"
+                "reference": "fbc139fd6fc4b614e5ca22a978069cf7853ef99c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/7d5b1c0420e04fc5fd637705a3849525666322f0",
-                "reference": "7d5b1c0420e04fc5fd637705a3849525666322f0",
+                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/fbc139fd6fc4b614e5ca22a978069cf7853ef99c",
+                "reference": "fbc139fd6fc4b614e5ca22a978069cf7853ef99c",
                 "shasum": ""
             },
             "require": {
@@ -764,35 +752,31 @@
                 }
             ],
             "description": "A library to add profile box for WordPress.",
-            "time": "2019-08-07T05:36:46+00:00"
+            "time": "2020-02-04T05:32:34+00:00"
         },
         {
             "name": "inc2734/wp-pure-css-gallery",
-            "version": "2.0.0",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-pure-css-gallery.git",
-                "reference": "31010deb9224ed57b6f03d35b52ee42133f1aac5"
+                "reference": "b4d4d1d7ebcc2d70e2b7d437c546447da63f31fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/31010deb9224ed57b6f03d35b52ee42133f1aac5",
-                "reference": "31010deb9224ed57b6f03d35b52ee42133f1aac5",
+                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/b4d4d1d7ebcc2d70e2b7d437c546447da63f31fb",
+                "reference": "b4d4d1d7ebcc2d70e2b7d437c546447da63f31fb",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "doctrine/instantiator": "1.0.4",
-                "myclabs/deep-copy": "1.7.0",
-                "pdepend/pdepend": "2.5.0",
-                "phpdocumentor/reflection-docblock": "3.2.2",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
+                "phpcompatibility/phpcompatibility-wp": "*",
                 "phpmd/phpmd": "2.*",
-                "phpunit/php-token-stream": "1.4.11",
-                "phpunit/phpunit": "^5.7",
+                "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
-                "symfony/yaml": "3.4.1",
                 "wp-coding-standards/wpcs": "*"
             },
             "type": "library",
@@ -812,20 +796,20 @@
                 }
             ],
             "description": "A library to change WordPress gallery to pure css gallery.",
-            "time": "2018-09-05T01:23:21+00:00"
+            "time": "2020-02-04T06:03:23+00:00"
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "4.0.2",
+            "version": "4.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "9caea51fa82012d6fc7a3ff3ebe42b51ed132c40"
+                "reference": "949750f4b3f555d5f8fdb220a71e536def446d8b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/9caea51fa82012d6fc7a3ff3ebe42b51ed132c40",
-                "reference": "9caea51fa82012d6fc7a3ff3ebe42b51ed132c40",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/949750f4b3f555d5f8fdb220a71e536def446d8b",
+                "reference": "949750f4b3f555d5f8fdb220a71e536def446d8b",
                 "shasum": ""
             },
             "require": {
@@ -857,20 +841,20 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2019-12-05T03:16:56+00:00"
+            "time": "2020-02-04T05:44:17+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "72c8798147042ee59f3dbd5c554a62596dba0c07"
+                "reference": "789f48e2363bb3158146f5c033cc2d5c34f85948"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/72c8798147042ee59f3dbd5c554a62596dba0c07",
-                "reference": "72c8798147042ee59f3dbd5c554a62596dba0c07",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/789f48e2363bb3158146f5c033cc2d5c34f85948",
+                "reference": "789f48e2363bb3158146f5c033cc2d5c34f85948",
                 "shasum": ""
             },
             "require": {
@@ -903,20 +887,20 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2020-01-15T09:29:32+00:00"
+            "time": "2020-02-04T05:48:27+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "11.0.0",
+            "version": "11.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "6da908d02eb1c56b6799cc337ea787bd175433b6"
+                "reference": "05c8858c91f60dd13d1fb6b5e48bb3fa47103cfc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/6da908d02eb1c56b6799cc337ea787bd175433b6",
-                "reference": "6da908d02eb1c56b6799cc337ea787bd175433b6",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/05c8858c91f60dd13d1fb6b5e48bb3fa47103cfc",
+                "reference": "05c8858c91f60dd13d1fb6b5e48bb3fa47103cfc",
                 "shasum": ""
             },
             "require": {
@@ -925,7 +909,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.7.0|>=2.8.1",
+                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -947,7 +931,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2019-12-27T04:31:50+00:00"
+            "time": "2020-02-04T05:51:43+00:00"
         }
     ],
     "packages-dev": [
@@ -2760,16 +2744,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.3",
+            "version": "3.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb"
+                "reference": "dceec07328401de6211037abbb18bda423677e26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
-                "reference": "557a1fc7ac702c66b0bbfe16ab3d55839ef724cb",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/dceec07328401de6211037abbb18bda423677e26",
+                "reference": "dceec07328401de6211037abbb18bda423677e26",
                 "shasum": ""
             },
             "require": {
@@ -2807,11 +2791,11 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2019-12-04T04:46:47+00:00"
+            "time": "2020-01-30T22:20:29+00:00"
         },
         {
             "name": "symfony/config",
-            "version": "v5.0.3",
+            "version": "v5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/config.git",
@@ -2875,16 +2859,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v5.0.3",
+            "version": "v5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "5a56807650c7258bbcc4a15a020904958c70247e"
+                "reference": "86338f459313525dd95f5a012f8a9ea118002f94"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/5a56807650c7258bbcc4a15a020904958c70247e",
-                "reference": "5a56807650c7258bbcc4a15a020904958c70247e",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/86338f459313525dd95f5a012f8a9ea118002f94",
+                "reference": "86338f459313525dd95f5a012f8a9ea118002f94",
                 "shasum": ""
             },
             "require": {
@@ -2944,11 +2928,11 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2020-01-21T08:40:24+00:00"
+            "time": "2020-01-31T09:49:43+00:00"
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.0.3",
+            "version": "v5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -3202,16 +3186,16 @@
         },
         {
             "name": "wp-coding-standards/wpcs",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress-Coding-Standards.git",
-                "reference": "f90e8692ce97b693633db7ab20bfa78d930f536a"
+                "reference": "b5a453203114cc2284b1a614c4953456fbe4f546"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/f90e8692ce97b693633db7ab20bfa78d930f536a",
-                "reference": "f90e8692ce97b693633db7ab20bfa78d930f536a",
+                "url": "https://api.github.com/repos/WordPress/WordPress-Coding-Standards/zipball/b5a453203114cc2284b1a614c4953456fbe4f546",
+                "reference": "b5a453203114cc2284b1a614c4953456fbe4f546",
                 "shasum": ""
             },
             "require": {
@@ -3219,12 +3203,12 @@
                 "squizlabs/php_codesniffer": "^3.3.1"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.5 || ^0.6",
                 "phpcompatibility/php-compatibility": "^9.0",
                 "phpunit/phpunit": "^4.0 || ^5.0 || ^6.0 || ^7.0"
             },
             "suggest": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6 || This Composer plugin will sort out the PHPCS 'installed_paths' automatically."
             },
             "type": "phpcodesniffer-standard",
             "notification-url": "https://packagist.org/downloads/",
@@ -3243,7 +3227,7 @@
                 "standards",
                 "wordpress"
             ],
-            "time": "2019-11-11T12:34:03+00:00"
+            "time": "2020-02-04T02:52:06+00:00"
         }
     ],
     "aliases": [],

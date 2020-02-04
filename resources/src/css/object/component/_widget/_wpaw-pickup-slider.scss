@@ -71,8 +71,7 @@
   &__item-title {
     position: relative;
     font-weight: bold;
-    @include _font-size($_base-font-size * 1.25);
-    @include _line-height($_base-font-size * 2);
+    @include _font-size-line-height($_base-font-size-px * 1.25);
     text-shadow: rgba($_color-text, .3) 1px 1px 3px;
   }
 

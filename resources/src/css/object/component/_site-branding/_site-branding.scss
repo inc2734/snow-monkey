@@ -1,12 +1,10 @@
 .#{$_prefix}c-site-branding {
   &__title {
-    @include _font-size($_base-font-size);
-    @include _line-height($_base-font-size * 1.5);
+    @include _font-size-line-height($_base-font-size-px);
     font-weight: bold;
 
     @include _media-min(md) {
-      @include _font-size($_base-font-size * 1.5);
-      @include _line-height($_base-font-size * 2);
+      @include _font-size-line-height($_base-font-size-px * 1.5);
     }
 
     .l-center-header & {

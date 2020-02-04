@@ -8,8 +8,7 @@
       > a {
         flex-direction: column;
         color: $_color-text;
-        @include _font-size($_base-font-size-px - 2);
-        @include _line-height($_base-font-size-px + 4);
+        @include _font-size-line-height($_base-font-size-px - 2);
         font-weight: bold;
         @include _padding(.75);
 
@@ -21,8 +20,7 @@
 
         > small {
           display: block;
-          @include _font-size($_base-font-size-px - 6);
-          @include _line-height($_base-font-size-px + 10);
+          @include _font-size-line-height($_base-font-size-px - 6);
           font-weight: normal;
         }
       }
@@ -59,8 +57,7 @@
     }
 
     &__subitem {
-      @include _font-size($_base-font-size-px - 2);
-      @include _line-height($_base-font-size-px + 4);
+      @include _font-size-line-height($_base-font-size-px - 2);
 
       @include _hover(lg) {
         background-color: rgba(#fff, .05);

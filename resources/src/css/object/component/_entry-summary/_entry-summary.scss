@@ -30,12 +30,8 @@
   }
 
   &__title {
-    @include _font-size($_base-font-size);
-    @include _line-height($_base-font-size * 1.5);
-
     @include _media-min(lg) {
-      @include _font-size($_base-font-size * 1.25);
-      @include _line-height($_base-font-size * 1.75);
+      @include _font-size-line-height($_base-font-size-px * 1.25);
     }
   }
 
