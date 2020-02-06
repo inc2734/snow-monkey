@@ -32,11 +32,15 @@ export default class WidgetItemExpander {
       false
     );
 
-    parent.insertBefore(btn, parent.firstElementChild);
+    parent.insertBefore(btn, parent.firstElementChild.nextSibling);
   }
 
   _createBtn() {
     const btn = document.createElement('button');
+    const arrow = document.createElement('span');
+    arrow.classList.add('c-ic-angle-right');
+    arrow.setAttribute('aria-hidden', 'true');
+    btn.insertBefore(arrow, btn.firstElementChild);
     btn.classList.add('children-expander');
     this._close(btn);
     return btn;

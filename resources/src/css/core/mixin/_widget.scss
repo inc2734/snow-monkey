@@ -58,11 +58,8 @@
 @mixin widget-has-children-expander() {
   position: relative;
 
-  @include _hover(lg) {
-    .children-expander {
-      opacity: 1;
-      visibility: visible;
-    }
+  > a {
+    margin-right: 20px;
   }
 }
 
