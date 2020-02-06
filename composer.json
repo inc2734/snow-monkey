@@ -55,11 +55,8 @@
     "theme-unit-test-ja": "bash bin/theme-unit-test-ja.sh",
     "wpphpunit": "bash bin/wpphpunit.sh",
     "phpunit": "bash bin/phpunit.sh",
-    "post-install-cmd": [
-      "npm run build"
-    ],
     "post-update-cmd": [
-      "composer run post-install-cmd"
+      "npm run build"
     ]
   },
   "autoload": {
