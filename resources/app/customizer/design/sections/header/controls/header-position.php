@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 9.0.14
  *
  * renamed: app/customizer/layout/sections/header/controls/header-position.php
  */
@@ -24,17 +24,6 @@ Framework::control(
 			'overlay'                => __( 'Overlay', 'snow-monkey' ),
 			''                       => __( 'Normal', 'snow-monkey' ),
 		],
-		'sanitize_callback' => function( $value ) {
-			// Backward compatibility
-			$mods = get_theme_mods();
-			$header_position = $mods['header-position'];
-			if ( 'sticky-overlay' === $header_position && ! empty( $mods['scrolling-header-colored'] ) ) {
-				remove_theme_mod( 'scrolling-header-colored' );
-				return 'sticky-overlay-colored';
-			}
-
-			return $value;
-		},
 	]
 );
 
