@@ -1,6 +1,7 @@
 .#{$_prefix}c-meta {
   &__item {
     display: inline-block;
+    white-space: nowrap;
 
     &:not(:last-child) {
       margin-right: .75em;
@@ -12,11 +13,5 @@
         margin-right: 5px;
       }
     }
-  }
-}
-
-.#{$_prefix}c-entries--text {
-  .#{$_prefix}c-meta__item:not(.#{$_prefix}c-meta__item--published) {
-    display: none;
   }
 }
