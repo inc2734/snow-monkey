@@ -57,10 +57,6 @@
  */
 @mixin widget-has-children-expander() {
   position: relative;
-
-  > a {
-    margin-right: 20px;
-  }
 }
 
 /**

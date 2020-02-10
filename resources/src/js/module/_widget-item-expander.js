@@ -32,7 +32,7 @@ export default class WidgetItemExpander {
       false
     );
 
-    parent.insertBefore(btn, parent.firstElementChild.nextSibling);
+    parent.insertBefore(btn, submenu);
   }
 
   _createBtn() {
