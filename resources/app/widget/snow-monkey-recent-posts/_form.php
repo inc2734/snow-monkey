@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.4.7
+ * @version 9.1.0
  */
 ?>
 
@@ -69,6 +69,7 @@
 				'rich-media' => __( 'Rich media', 'snow-monkey' ),
 				'simple'     => __( 'Simple', 'snow-monkey' ),
 				'text'       => __( 'Text', 'snow-monkey' ),
+				'panel'      => __( 'Panels', 'snow-monkey' ),
 			]
 			?>
 			<?php foreach ( $layouts as $value => $label ) : ?>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-01-02 10:29+0900\n"
-"PO-Revision-Date: 2020-01-02 10:30+0900\n"
+"POT-Creation-Date: 2020-02-14 10:19+0900\n"
+"PO-Revision-Date: 2020-02-14 10:19+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,104 +42,110 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:92
+#: Framework/Helper.php:56 template-parts/content/prev-next-nav.php:59
+#: template-parts/loop/entry-summary/content/content.php:31
+msgctxt "excerpt_length"
+msgid "55"
+msgstr ""
+
+#: Framework/Helper.php:96
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:97
+#: Framework/Helper.php:101
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:102
+#: Framework/Helper.php:106
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:108
+#: Framework/Helper.php:112
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:193
+#: Framework/Helper.php:197
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:198
+#: Framework/Helper.php:202
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:203 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:207 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:208
+#: Framework/Helper.php:212
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:213
+#: Framework/Helper.php:217
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:218
+#: Framework/Helper.php:222
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:223
+#: Framework/Helper.php:227
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:228
+#: Framework/Helper.php:232
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:233
+#: Framework/Helper.php:237
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:238
+#: Framework/Helper.php:242
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:244
+#: Framework/Helper.php:248
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:250
+#: Framework/Helper.php:254
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:256
+#: Framework/Helper.php:260
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:262
+#: Framework/Helper.php:266
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:268
+#: Framework/Helper.php:272
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:274
+#: Framework/Helper.php:278
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:280
+#: Framework/Helper.php:284
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:286
+#: Framework/Helper.php:290
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:292
+#: Framework/Helper.php:296
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -334,6 +340,14 @@ msgstr "シンプル"
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:101
 msgid "Text"
 msgstr "テキスト"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:24
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:25
+#: app/widget/snow-monkey-recent-posts/_form.php:72
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:102
+msgid "Panels"
+msgstr "パネル"
 
 #: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
 msgid "Custom logo scale (%) on PC"
@@ -1238,18 +1252,18 @@ msgstr "表示する投稿数"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:81
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:111
+#: app/widget/snow-monkey-recent-posts/_form.php:82
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:112
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:92
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:122
+#: app/widget/snow-monkey-recent-posts/_form.php:93
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:123
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:111
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:141
+#: app/widget/snow-monkey-recent-posts/_form.php:112
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:142
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 

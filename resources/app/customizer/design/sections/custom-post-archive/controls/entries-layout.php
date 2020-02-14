@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.8.2
+ * @version 9.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -24,6 +24,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 				'rich-media' => __( 'Rich media', 'snow-monkey' ),
 				'simple'     => __( 'Simple', 'snow-monkey' ),
 				'text'       => __( 'Text', 'snow-monkey' ),
+				'panel'      => __( 'Panels', 'snow-monkey' ),
 			],
 			'active_callback' => function() {
 				return 'archive' === Controller::get_view();

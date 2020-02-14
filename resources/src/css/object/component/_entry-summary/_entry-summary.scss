@@ -141,6 +141,28 @@
       }
     }
   }
+
+  .#{$_prefix}c-entries--panel & {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      font-size: 100%;
+    }
+
+    &__body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include _padding(.5, 1, 1);
+    }
+
+    &__content {
+      display: none;
+    }
+  }
 }
 
 .#{$_prefix}c-entries__item > a {

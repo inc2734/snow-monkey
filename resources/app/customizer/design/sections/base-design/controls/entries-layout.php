@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 9.1.0
  *
  * renamed: app/customizer/layout/sections/archive/controls/entries-layout.php
  */
@@ -21,6 +21,7 @@ Framework::control(
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),
 			'simple'     => __( 'Simple', 'snow-monkey' ),
 			'text'       => __( 'Text', 'snow-monkey' ),
+			'panel'      => __( 'Panels', 'snow-monkey' ),
 		],
 	]
 );

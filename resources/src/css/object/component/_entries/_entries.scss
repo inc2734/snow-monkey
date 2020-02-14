@@ -54,6 +54,23 @@
     }
   }
 
+  &--panel {
+    .#{$_prefix}c-entries__item {
+      display: flex;
+
+      > a {
+        flex: 1 1 auto;
+        box-shadow: 0 0 35px 0 rgba(#000, .1);
+        @include _transition(box-shadow);
+        display: flex;
+
+        @include _hover(lg) {
+          box-shadow: 0 7px 35px 0 rgba(#000, .15);
+        }
+      }
+    }
+  }
+
   [data-has-sidebar="true"] &,
   [data-is-slim-width="true"] & {
     &--rich-media {
