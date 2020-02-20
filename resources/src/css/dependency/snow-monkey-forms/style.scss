@@ -1,0 +1,12 @@
+@charset 'utf-8';
+
+$_font-path: false;
+$img-path: '../../../img';
+@import '../../core/core';
+@import '../../foundation/_placeholder/placeholder';
+
+.smf-complete-content,
+.smf-system-error-content,
+.smf-item__controls {
+  @extend %entry-content;
+}
