@@ -20,7 +20,7 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
  * @return void
  */
 add_action(
-	'wp_enqueue_scripts',
+	'enqueue_block_assets',
 	function() {
 		if ( is_admin() ) {
 			$dependencies = [];

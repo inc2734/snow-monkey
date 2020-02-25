@@ -18,7 +18,7 @@ if ( ! defined( 'SNOW_MONKEY_FORMS_PATH' ) ) {
  * @return void
  */
 add_action(
-	'wp_enqueue_scripts',
+	'enqueue_block_assets',
 	function() {
 		if ( is_admin() ) {
 			$dependencies = [];
