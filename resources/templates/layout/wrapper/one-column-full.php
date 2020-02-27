@@ -47,6 +47,15 @@ use Framework\Helper;
 			}
 			?>
 
+			<?php
+			if ( Helper::is_output_page_header() ) {
+				$vars = [
+					'_display_entry_meta' => is_singular( 'post' ),
+				];
+				Helper::get_template_part( 'template-parts/common/page-header', null, $vars );
+			}
+			?>
+
 			<div class="c-full-container">
 				<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
 
