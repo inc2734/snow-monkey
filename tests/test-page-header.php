@@ -58,7 +58,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 		update_option( 'show_on_front', 'page' );
 		update_option( 'page_on_front', $post_id );
 		$this->go_to( get_permalink( $post_id ) );
-		$this->assertFalse( $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Front_Page_Header', $this->_get_page_header_class() );
 	}
 
 	/**

@@ -32,6 +32,8 @@ trait Page_Header {
 	/**
 	 * Return page header class
 	 *
+	 * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+	 *
 	 * @return string
 	 */
 	protected static function _get_page_header_class_no_cache() {
@@ -42,6 +44,7 @@ trait Page_Header {
 				'Singular' => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
 				'Category' => is_category(),
 				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
+				'Front'    => is_front_page() && ! is_home(),
 			]
 		);
 

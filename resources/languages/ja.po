@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-02-14 10:19+0900\n"
-"PO-Revision-Date: 2020-02-14 10:19+0900\n"
+"POT-Creation-Date: 2020-03-02 11:41+0900\n"
+"PO-Revision-Date: 2020-03-02 11:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1063,6 +1063,14 @@ msgstr "ホームページのコンテンツエリアに左右余白を追加す
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:15
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
+
+#: app/customizer/static-front-page/controls/home-page-display-page-header.php:15
+msgid ""
+"Display page header on homepage (You need to set the default page header or "
+"featured image)"
+msgstr ""
+"ホームページにページヘッダーを表示する（デフォルトページヘッダーまたはアイ"
+"キャッチ画像を設定する必要があります）"
 
 #: app/customizer/static-front-page/controls/home-page-setting-label.php:15
 msgid "Front page setting"
