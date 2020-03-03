@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-03-02 11:41+0900\n"
-"PO-Revision-Date: 2020-03-02 11:41+0900\n"
+"POT-Creation-Date: 2020-03-03 16:05+0900\n"
+"PO-Revision-Date: 2020-03-03 16:05+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -265,6 +265,14 @@ msgstr "Noto Sans JP"
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
+#: app/customizer/design/sections/base-design/controls/base-font.php:23
+msgid "M PLUS 1p"
+msgstr "M PLUS 1p"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:24
+msgid "M PLUS Rounded 1c"
+msgstr "M PLUS Rounded 1c"
+
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:17
 msgid "Breadcrumbs display position"
 msgstr "パンくずリストの表示位置"
@@ -352,6 +360,67 @@ msgstr "パネル"
 #: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
 msgid "Custom logo scale (%) on PC"
 msgstr "PC 時のカスタムロゴの拡大率（%）"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:15
+msgid "Font weight"
+msgstr "フォントの太さ"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:19
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:19
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:19
+msgid "Thin 100"
+msgstr "Thin 100"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:20
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:20
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:20
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:20
+msgid "Light 300"
+msgstr "Light 300"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:21
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:21
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:21
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:21
+msgid "Regular 400"
+msgstr "Regular 400"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:22
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:22
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:22
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:22
+msgid "Medium 500"
+msgstr "Medium 500"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:23
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:23
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:23
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:24
+msgid "Bold 700"
+msgstr "Bold 700"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:24
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:24
+msgid "Extra-Bold 800"
+msgstr "Extra-Bold 800"
+
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:25
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:25
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:24
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:25
+msgid "Black 900"
+msgstr "Black 900"
+
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:19
+msgid "Extra-Light 200"
+msgstr "Extra-Light 200"
+
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:23
+msgid "Semi-Bold 600"
+msgstr "Semi-Bold 600"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:18
 msgid "Overlay widget area max width"

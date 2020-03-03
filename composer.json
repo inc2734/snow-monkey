@@ -35,7 +35,7 @@
     "inc2734/wp-page-speed-optimization": "^2.0",
     "inc2734/wp-adsense": "^1.0",
     "inc2734/wp-custom-css-to-editor": "^0.1",
-    "inc2734/wp-google-fonts": "^0.1",
+    "inc2734/wp-google-fonts": "^0.2",
     "inc2734/wp-helper": "^0.1"
   },
   "config": {
@@ -54,10 +54,7 @@
     "theme-unit-test": "bash bin/theme-unit-test.sh",
     "theme-unit-test-ja": "bash bin/theme-unit-test-ja.sh",
     "wpphpunit": "bash bin/wpphpunit.sh",
-    "phpunit": "bash bin/phpunit.sh",
-    "post-update-cmd": [
-      "npm run build"
-    ]
+    "phpunit": "bash bin/phpunit.sh"
   },
   "autoload": {
     "psr-4": {

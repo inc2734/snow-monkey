@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d7bf95d094a0e518dbe53627e03cd2ab",
+    "content-hash": "d2775f6da9140cf2568bc7a561b48f97",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -407,16 +407,16 @@
         },
         {
             "name": "inc2734/wp-google-fonts",
-            "version": "0.1.1",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-google-fonts.git",
-                "reference": "55b02672bf79dcecabbee26cc51251fd600f4775"
+                "reference": "77455d4ec1531327f5d64e038f297e0e58e6dfda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/55b02672bf79dcecabbee26cc51251fd600f4775",
-                "reference": "55b02672bf79dcecabbee26cc51251fd600f4775",
+                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/77455d4ec1531327f5d64e038f297e0e58e6dfda",
+                "reference": "77455d4ec1531327f5d64e038f297e0e58e6dfda",
                 "shasum": ""
             },
             "require": {
@@ -446,7 +446,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2020-02-04T05:08:06+00:00"
+            "time": "2020-03-03T05:20:40+00:00"
         },
         {
             "name": "inc2734/wp-helper",
