@@ -26,6 +26,14 @@ if ( 'sans-serif' === $base_font ) {
 	$font_family = [ '"Noto Serif JP"', 'serif' ];
 	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ], 5 );
 	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ] );
+} elseif ( 'm-plus-1p' === $base_font ) {
+	$font_family = [ '"M PLUS 1p"', 'sans-serif' ];
+	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ], 5 );
+	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ] );
+} elseif ( 'm-plus-rounded-1c' === $base_font ) {
+	$font_family = [ '"M PLUS Rounded 1c"', 'sans-serif' ];
+	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ], 5 );
+	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ] );
 }
 
 Style::register(

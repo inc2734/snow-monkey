@@ -16,10 +16,12 @@ Framework::control(
 		'priority' => 120,
 		'default'  => 'sans-serif',
 		'choices'  => [
-			'sans-serif'    => __( 'Sans serif', 'snow-monkey' ),
-			'serif'         => __( 'Serif', 'snow-monkey' ),
-			'noto-sans-jp'  => __( 'Noto Sans JP', 'snow-monkey' ),
-			'noto-serif-jp' => __( 'Noto Serif JP', 'snow-monkey' ),
+			'sans-serif'        => __( 'Sans serif', 'snow-monkey' ),
+			'serif'             => __( 'Serif', 'snow-monkey' ),
+			'noto-sans-jp'      => __( 'Noto Sans JP', 'snow-monkey' ),
+			'noto-serif-jp'     => __( 'Noto Serif JP', 'snow-monkey' ),
+			'm-plus-1p'         => __( 'M PLUS 1p', 'snow-monkey' ),
+			'm-plus-rounded-1c' => __( 'M PLUS Rounded 1c', 'snow-monkey' ),
 		],
 	]
 );
