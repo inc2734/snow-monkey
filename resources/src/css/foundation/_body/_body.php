@@ -37,6 +37,6 @@ if ( 'sans-serif' === $base_font ) {
 }
 
 Style::register(
-	[ '.l-body', '.editor-block-list__block' ],
+	[ '.l-body', '.block-editor-block-list__block' ],
 	'font-family: ' . implode( ',', $font_family )
 );

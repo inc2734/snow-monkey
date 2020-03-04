@@ -8,7 +8,7 @@ Premium WordPress theme by Monkey Wrench
 * Contributors: https://github.com/inc2734/snow-monkey/graphs/contributors
 
 ## Requirements
-* WordPress 4.7
+* WordPress 5.4
 * PHP 5.6+
 
 ## Browser support
