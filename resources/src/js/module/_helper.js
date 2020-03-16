@@ -181,7 +181,13 @@ export function hasClass(target, className) {
   return target.classList.contains(className);
 }
 
-export function getScrollOffset() {
+/**
+ * [getScrollOffset description]
+ *
+ * @param Object
+ *    @var boolean forceDropNav Default false.
+ */
+export function getScrollOffset(option = {}) {
 	const header = getHeader();
 	const adminbar = getAdminbar();
 	const dropNav = getDropNavWrapper();
@@ -190,8 +196,12 @@ export function getScrollOffset() {
 	const headerHeight = header ? header.offsetHeight : 0;
   const adminbarPosition = getStyle(adminbar, 'position');
   const adminbarHeight = 'fixed' === adminbarPosition ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
-	//const dropNavHeight = dropNav && 'false' === dropNav.getAttribute('aria-hidden') ? dropNav.offsetHeight : 0;
-  const dropNavHeight = shouldShowDropNav() ? dropNav.offsetHeight : 0;
+  const dropNavHeight = (() => {
+    if (true === option.forceDropNav) {
+      return dropNav ? dropNav.offsetHeight : 0;
+    }
+    return shouldShowDropNav() ? dropNav.offsetHeight : 0;
+  })();
 
 	if ('fixed' === headerPosition) {
 		return headerHeight + adminbarHeight;

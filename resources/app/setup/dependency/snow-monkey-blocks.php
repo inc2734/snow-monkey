@@ -128,6 +128,7 @@ add_action(
 					$block_handles,
 					[
 						'snow-monkey-blocks',
+						Helper::get_main_style_handle() . '-snow-monkey-blocks',
 					]
 				);
 			}
