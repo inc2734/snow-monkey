@@ -180,3 +180,22 @@ export function media(query) {
 export function hasClass(target, className) {
   return target.classList.contains(className);
 }
+
+export function getScrollOffset() {
+	const header = getHeader();
+	const adminbar = getAdminbar();
+	const dropNav = getDropNavWrapper();
+
+	const headerPosition = getStyle(header, 'position');
+	const headerHeight = header ? header.offsetHeight : 0;
+  const adminbarPosition = getStyle(adminbar, 'position');
+  const adminbarHeight = 'fixed' === adminbarPosition ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
+	//const dropNavHeight = dropNav && 'false' === dropNav.getAttribute('aria-hidden') ? dropNav.offsetHeight : 0;
+  const dropNavHeight = shouldShowDropNav() ? dropNav.offsetHeight : 0;
+
+	if ('fixed' === headerPosition) {
+		return headerHeight + adminbarHeight;
+	}
+
+	return dropNavHeight + adminbarHeight;
+}

@@ -91,6 +91,8 @@
     "js:customize-preview": "webpack resources/src/js/customize-preview.js -o resources/assets/js/customize-preview.min.js",
     "js:dependency:elementor:preview": "webpack resources/src/js/dependency/elementor/preview.js -o resources/assets/js/dependency/elementor/preview.min.js",
     "js:dependency:elementor": "npm-run-all -p js:dependency:elementor:*",
+    "js:dependency:snow-monkey-blocks:app": "webpack resources/src/js/dependency/snow-monkey-blocks/app.js -o resources/assets/js/dependency/snow-monkey-blocks/app.min.js",
+    "js:dependency:snow-monkey-blocks": "npm-run-all -p js:dependency:snow-monkey-blocks:*",
     "js:dependency": "npm-run-all -p js:dependency:*",
     "js": "npm run cleanup:js && npm-run-all -p js:*",
     "packages:jquery.background-parallax-scroll": "cpy 'jquery.background-parallax-scroll/**' '../resources/assets/packages' --cwd=node_modules --parents",
