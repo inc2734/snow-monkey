@@ -4,10 +4,9 @@ import '@inc2734/dispatch-custom-resize-event';
 
 import {
   getHeader,
-  getAdminbar,
-  getDropNavWrapper,
   getStyle,
   setStyle,
+  getScrollOffset,
 } from './_helper';
 
 export default class SidebarStickyWidgetArea {
@@ -27,9 +26,7 @@ export default class SidebarStickyWidgetArea {
   _init() {
     this.isSticky       = 'sticky' === getStyle(this.target, 'position');
     this.targetMargin   = parseInt(getStyle(this.target, 'margin-top'));
-    this.adminbarHeight = getAdminbar() ? getAdminbar().offsetHeight : 0;
     this.headerPosition = getStyle(this.header, 'position');
-    this.headerHeight   = this.header.offsetHeight;
     this.offset         = this._getOffset();
 
     if (! this.isSticky) {
@@ -59,12 +56,8 @@ export default class SidebarStickyWidgetArea {
   }
 
   _getOffset() {
-    if ('fixed' === this.headerPosition) {
-      return this.headerHeight + this.adminbarHeight + this.targetMargin;
-    }
-
-    const dropNav = getDropNavWrapper();
-    const dropNavHeight = dropNav ? dropNav.offsetHeight : 0;
-    return dropNavHeight + this.adminbarHeight + this.targetMargin;
+    return getScrollOffset({
+      forceDropNav: true,
+    });
   }
 }

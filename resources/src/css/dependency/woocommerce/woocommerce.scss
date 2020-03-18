@@ -5,6 +5,11 @@ $img-path: '../../../img';
 @import '../../core/core';
 @import '../../foundation/_placeholder/placeholder';
 
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+  @include _font-size-line-height($_base-font-size-px);
+}
+
 .woocommerce-input-wrapper,
 .quantity,
 .coupon,

@@ -34,6 +34,13 @@ add_action(
 			$dependencies,
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/style.min.css' ) )
 		);
+
+		wp_enqueue_script(
+			Helper::get_main_script_handle() . '-snow-monkey-blocks',
+			get_theme_file_uri( '/assets/js/dependency/snow-monkey-blocks/app.min.js' ),
+			[ 'snow-monkey-blocks/thumbnail-gallery' ],
+			filemtime( get_theme_file_path( '/assets/js/dependency/snow-monkey-blocks/app.min.js' ) )
+		);
 	}
 );
 
@@ -121,6 +128,7 @@ add_action(
 					$block_handles,
 					[
 						'snow-monkey-blocks',
+						Helper::get_main_style_handle() . '-snow-monkey-blocks',
 					]
 				);
 			}

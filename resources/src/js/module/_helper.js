@@ -180,3 +180,32 @@ export function media(query) {
 export function hasClass(target, className) {
   return target.classList.contains(className);
 }
+
+/**
+ * [getScrollOffset description]
+ *
+ * @param Object
+ *    @var boolean forceDropNav Default false.
+ */
+export function getScrollOffset(option = {}) {
+	const header = getHeader();
+	const adminbar = getAdminbar();
+	const dropNav = getDropNavWrapper();
+
+	const headerPosition = getStyle(header, 'position');
+	const headerHeight = header ? header.offsetHeight : 0;
+  const adminbarPosition = getStyle(adminbar, 'position');
+  const adminbarHeight = 'fixed' === adminbarPosition ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
+  const dropNavHeight = (() => {
+    if (true === option.forceDropNav) {
+      return dropNav ? dropNav.offsetHeight : 0;
+    }
+    return shouldShowDropNav() ? dropNav.offsetHeight : 0;
+  })();
+
+	if ('fixed' === headerPosition) {
+		return headerHeight + adminbarHeight;
+	}
+
+	return dropNavHeight + adminbarHeight;
+}
