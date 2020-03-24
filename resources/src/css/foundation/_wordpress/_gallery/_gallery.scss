@@ -1,15 +1,15 @@
 .gallery {
   @include _clearfix();
-  margin-right: _space(-.5);
-  margin-bottom: _space(-1);
-  margin-left: _space(-.5);
+  @include _margin-right(-.5);
+  @include _margin-left(-.5);
+  @include _margin-bottom(-1);
 
   &-item {
-    margin-bottom: _space(1);
     float: left;
     display: block;
-    padding-right: _space(.5);
-    padding-left: _space(.5);
+    @include _padding-right(.5, true);
+    @include _padding-left(.5, true);
+    @include _margin-bottom(1);
 
     @for $i from 2 through 9 {
       .gallery-columns-#{$i} & {

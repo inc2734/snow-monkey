@@ -3,7 +3,8 @@
     text-align: center;
 
     a {
-      color: $_color-text;
+      color: $_color-text; // for IE11
+      color: _var-color-text();
       text-decoration: none;
       font-weight: bold;
     }
@@ -16,6 +17,6 @@
 
   &__description {
     @include _margin(.75, 0, 0);
-    @include _content(.5);
+    @include _between-content(.5);
   }
 }

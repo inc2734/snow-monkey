@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 9.3.4
  */
 
 use Framework\Helper;
@@ -22,6 +22,7 @@ add_action(
 			'/assets/css/foundation',
 			'/assets/css/object/component',
 			'/assets/css/object/project',
+			'/assets/css/custom-widgets',
 		];
 		foreach ( $includes as $include ) {
 			Helper::get_template_parts( get_template_directory() . $include );

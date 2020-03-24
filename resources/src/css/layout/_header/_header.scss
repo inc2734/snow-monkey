@@ -1,6 +1,7 @@
 .#{$_prefix}l-header {
   z-index: 9999;
-  background-color: #fff;
+  background-color: #fff; // for IE11
+  background-color: _var-background-color();
   @include _transition(background-color);
 
   &__content {
@@ -98,7 +99,8 @@
     }
 
     [data-scrolled="true"] & {
-      background-color: #fff;
+      background-color: #fff; // for IE11
+      background-color: _var-background-color();
       box-shadow: 0 1px 2px 1px rgba(#000, .05);
     }
   }
@@ -127,7 +129,8 @@
     visibility: hidden;
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
-    background-color: #fff;
+    background-color: #fff; // for IE11
+    background-color: _var-background-color();
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
     @include _transition(transform, visibility);
     transition-timing-function: ease-in;

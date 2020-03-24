@@ -13,7 +13,8 @@
 
     > a {
       display: inline-block;
-      color: $_color-text;
+      color: $_color-text; // for IE11
+      color: _var-color-text();
       text-decoration: none;
 
       @include _hover(lg) {
@@ -41,8 +42,8 @@
 
     &__icon {
       position: absolute;
-      left: 0;
-      top: _space(.25);
+      @include _top(.25);
+      @include _left(0);
       color: $color-accent;
     }
 

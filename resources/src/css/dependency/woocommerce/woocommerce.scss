@@ -115,6 +115,7 @@ $img-path: '../../../img';
     thead {
       th {
         background-color: _lightest($_color-gray);
+        color: $_color-text;
       }
     }
   }
@@ -124,7 +125,8 @@ $img-path: '../../../img';
 .#{$_prefix}l-container .#{$_prefix}l-contents #respond #submit,
 .#{$_prefix}l-container .#{$_prefix}l-contents .button {
   @include _transition(all);
-  border-radius: $_border-radius;
+  border-radius: $_border-radius; // for IE11
+  border-radius: _var-border-radius();
 }
 
 // Product title in single
@@ -213,6 +215,7 @@ $img-path: '../../../img';
     li {
       background-color: _lightest($_color-gray);
       border-color: _lighter($_color-gray);
+      color: $_color-text;
 
       &::before,
       &::after {
@@ -294,7 +297,8 @@ $img-path: '../../../img';
 
 // Price in loop and single
 .woocommerce .product .woocommerce-Price-amount {
-  color: $_color-text;
+  color: $_color-text; // for IE11
+  color: _var-color-text();
   font-weight: bold;
 }
 
@@ -351,7 +355,8 @@ $img-path: '../../../img';
 
   > li {
     > a {
-      color: $_color-text;
+      color: $_color-text; // for IE11
+      color: _var-color-text();
       text-decoration: none;
 
       @include _hover(lg) {
@@ -406,7 +411,8 @@ $img-path: '../../../img';
   @extend %widget-core-list-base;
 
   .product-title {
-    color: $_color-text;
+    color: $_color-text; // for IE11
+    color: _var-color-text();
     @include _transition(opacity);
 
     @include _hover(lg) {
@@ -423,4 +429,5 @@ $img-path: '../../../img';
 // Range widget
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
   background-color: _light($_color-gray);
+  color: $_color-text;
 }

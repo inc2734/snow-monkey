@@ -4,6 +4,7 @@
   position: relative;
   margin: auto;
   background-color: #fff;
+  color: $_color-text;
   max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
   @include _padding(.5);
 

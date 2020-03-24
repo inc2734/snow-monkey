@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 9.3.4
  */
 
 use Framework\Helper;
@@ -17,6 +17,9 @@ add_action(
 	}
 );
 
+/**
+ * Enqueue assets
+ */
 add_action(
 	'wp_enqueue_scripts',
 	function() {
@@ -27,6 +30,20 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/js/custom-widgets.min.js' ) ),
 			true
 		);
+
+		wp_enqueue_style(
+			Helper::get_main_style_handle() . '-custom-widgets',
+			get_theme_file_uri( '/assets/css/custom-widgets.min.css' ),
+			[ Helper::get_main_style_handle() ],
+			filemtime( get_theme_file_path( '/assets/css/custom-widgets.min.css' ) )
+		);
+	}
+);
+
+add_action(
+	'after_setup_theme',
+	function() {
+		add_editor_style( [ '/assets/css/custom-widgets.min.css' ] );
 	}
 );
 
@@ -196,4 +213,24 @@ add_filter(
 	},
 	10,
 	2
+);
+
+/**
+ * Update showcase widget background image size
+ */
+add_filter(
+	'inc2734_wp_awesome_widgets_showcase_backgroud_image_size',
+	function( $thumbnail_size ) {
+		return 'xlarge';
+	}
+);
+
+/**
+ * Update showcase widget thumbnail image size
+ */
+add_filter(
+	'inc2734_wp_awesome_widgets_showcase_image_size',
+	function( $thumbnail_size ) {
+		return 'xlarge';
+	}
 );

@@ -16,5 +16,6 @@
   position: relative;
   right: -50vw;
   transform: translateX(-50%);
-  max-width: $_container-max-width;
+  max-width: $_container-max-width; // for IE11
+  max-width: _var-container-max-width();
 }

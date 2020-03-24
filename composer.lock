@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2775f6da9140cf2568bc7a561b48f97",
+    "content-hash": "7b0599367ff99b6b367499a012d6ab1e",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -143,16 +143,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "5.6.7",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "be943ea4aa7e957e59136f817aaca8b9a7bb3cf7"
+                "reference": "639c820cd58df9fd656e32b984dc8cbb32e8e971"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/be943ea4aa7e957e59136f817aaca8b9a7bb3cf7",
-                "reference": "be943ea4aa7e957e59136f817aaca8b9a7bb3cf7",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/639c820cd58df9fd656e32b984dc8cbb32e8e971",
+                "reference": "639c820cd58df9fd656e32b984dc8cbb32e8e971",
                 "shasum": ""
             },
             "require": {
@@ -183,7 +183,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2020-03-04T00:38:18+00:00"
+            "time": "2020-03-24T01:18:50+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -625,16 +625,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "57e9e99d63a32c126a3a0ce8f3e7112af1ec5b6b"
+                "reference": "3a478497743140c276b852b7a1d7113920f42a86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/57e9e99d63a32c126a3a0ce8f3e7112af1ec5b6b",
-                "reference": "57e9e99d63a32c126a3a0ce8f3e7112af1ec5b6b",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/3a478497743140c276b852b7a1d7113920f42a86",
+                "reference": "3a478497743140c276b852b7a1d7113920f42a86",
                 "shasum": ""
             },
             "require": {
@@ -643,7 +643,6 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -665,7 +664,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2020-01-06T03:10:27+00:00"
+            "time": "2020-03-18T03:00:01+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -845,16 +844,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "5.0.3",
+            "version": "5.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "789f48e2363bb3158146f5c033cc2d5c34f85948"
+                "reference": "0daba225aae625adef45ed8def4282ff0cb3b9a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/789f48e2363bb3158146f5c033cc2d5c34f85948",
-                "reference": "789f48e2363bb3158146f5c033cc2d5c34f85948",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/0daba225aae625adef45ed8def4282ff0cb3b9a6",
+                "reference": "0daba225aae625adef45ed8def4282ff0cb3b9a6",
                 "shasum": ""
             },
             "require": {
@@ -887,7 +886,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2020-02-04T05:48:27+00:00"
+            "time": "2020-03-24T01:36:00+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",

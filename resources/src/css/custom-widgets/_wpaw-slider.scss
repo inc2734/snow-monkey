@@ -47,11 +47,11 @@
   }
 
   &__item-summary {
-    @include _content(.25);
+    @include _between-content(.25);
     @include _font-size-line-height($_base-font-size-px - 2);
 
     @include _media-min(md) {
-      @include _content(.5);
+      @include _between-content(.5);
     }
   }
 

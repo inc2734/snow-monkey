@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  @include _square(_space(1));
+  @include _square($_base-line-height);
   transform: rotate(90deg);
   @include _transition(transform);
 

@@ -48,7 +48,8 @@
 
       @include _media-min(lg) {
         flex: none;
-        width: calc(100% - 336px - #{_space(2)});
+        width: calc(100% - 336px - #{ _space(2) }); // for IE11
+        width: calc(100% - 336px - #{ _var-space() } * 2 * #{ _var-margin-scale() });
       }
     }
 

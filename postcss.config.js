@@ -3,6 +3,7 @@ module.exports = {
     require('autoprefixer')({
       cascade: false,
     }),
+    require('css-mqpacker')(),
     require('cssnano')({
       preset: 'default',
     })

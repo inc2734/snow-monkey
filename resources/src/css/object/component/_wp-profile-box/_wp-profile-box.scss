@@ -1,5 +1,6 @@
 .wp-profile-box {
   background-color: _lightest($_color-gray);
+  color: $_color-text;
 
   &__title {
     border-bottom: 1px solid _lighter($_color-gray);
@@ -85,7 +86,8 @@
 
   &__detail-btn, &__archives-btn {
     @include _btn();
-    border-radius: $_border-radius;
+    border-radius: $_border-radius; // for IE11
+    border-radius: _var-border-radius();
     @include _font-size($_base-font-size-px - 2);
     @include _padding(.25, .5);
     @include _transition(opacity);

@@ -25,7 +25,7 @@
   }
 
   &__lead {
-    @include _content(.5);
+    @include _between-content(.5);
     @include _margin(.5, 0, 0);
     @include _font-size-line-height($_base-font-size-px - 2);
     color: _light($_color-text);
@@ -52,7 +52,7 @@
   }
 
   &__item-summary {
-    @include _content(.5);
+    @include _between-content(.5);
     @include _font-size-line-height($_base-font-size-px - 2);
 
     @include _media-min(lg) {

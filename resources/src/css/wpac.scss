@@ -1,13 +1,20 @@
+@charset 'utf-8';
+
+$_font-path: false;
+@import 'core/core';
+@import 'foundation/_placeholder/placeholder';
+
 /**
  * Alert
  */
 .wpac-alert {
   $color: #fff9e6;
   @include _alert();
-  @include _content(.75);
+  @include _between-content(.75);
   background-color: $color;
   border: 1px solid darken(desaturate($color, 10%), 10%);
-  border-radius: $_border-radius;
+  border-radius: $_border-radius; // for IE11
+  border-radius: _var-border-radius();
   color: darken(desaturate($color, 60%), 60%);
   @include _padding(.5);
 
@@ -76,9 +83,10 @@
   }
 
   &__body {
-    @include _content(.75);
+    @include _between-content(.75);
     flex: 1 1 auto;
-    border-radius: $_border-radius;
+    border-radius: $_border-radius; // for IE11
+    border-radius: _var-border-radius();
     overflow-wrap: break-word;
     @include _padding(.5);
     max-width: 100%;
@@ -149,7 +157,7 @@
         @for $max_columns from 1 through 5 {
           @for $i from 1 through $max_columns {
             &#{$prefix}-#{$i}-#{$max_columns} {
-              @include _lattice__col($i, $max_columns);
+              @include _lattice__col--width($i / $max_columns * 100%);
             }
           }
         }

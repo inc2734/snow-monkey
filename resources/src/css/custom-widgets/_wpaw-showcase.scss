@@ -29,10 +29,10 @@
   }
 
   &__lead {
-    @include _content(.5);
+    @include _between-content(.5);
 
     @include _media-min(md) {
-      @include _content(1);
+      @include _between-content(1);
     }
   }
 
@@ -154,7 +154,7 @@
       }
 
       .wpaw-showcase_lead {
-        @include _content(.5);
+        @include _between-content(.5);
       }
 
       .wpaw-showcase_action {

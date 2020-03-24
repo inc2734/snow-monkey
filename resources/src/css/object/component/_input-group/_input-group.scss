@@ -5,7 +5,8 @@
 
   &__field {
     > input[type="search"] {
-      border-radius: $_border-radius 0 0 $_border-radius;
+      border-radius: $_border-radius 0 0 $_border-radius; // for IE11
+      border-radius: _var-border-radius() 0 0 _var-border-radius();
     }
   }
 }

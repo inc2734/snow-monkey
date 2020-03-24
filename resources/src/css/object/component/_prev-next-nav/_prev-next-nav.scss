@@ -14,8 +14,8 @@
     overflow: hidden;
 
     @include _media-min(md) {
-      flex: 1 1 0%;
-      max-width: calc(50% - #{_space(.5)});
+      flex: 0 1 auto;
+      width: 50%;
     }
 
     &:not(:first-child) {

@@ -37,7 +37,7 @@
     }
 
     .comment-form {
-      @include _content(.5);
+      @include _between-content(.5);
 
       .logged-in-as {
         display: none;
