@@ -1,4 +1,4 @@
-.#{$_prefix}c-page-header {
+.#{ $_prefix }c-page-header {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -20,7 +20,7 @@
       min-height: 500px;
     }
 
-    .#{$_prefix}c-page-header__content {
+    .#{ $_prefix }c-page-header__content {
       color: #fff;
 
       a {

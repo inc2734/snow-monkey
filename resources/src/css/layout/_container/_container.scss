@@ -1,6 +1,6 @@
 @import '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/css/layout/container';
 
-.#{$_prefix}l-container {
+.#{ $_prefix }l-container {
   position: relative;
   overflow: hidden;
 
@@ -10,7 +10,7 @@
 }
 
 @media all and (-ms-high-contrast: none) {
-  .#{$_prefix}l-container {
+  .#{ $_prefix }l-container {
     display: block !important;
   }
 }

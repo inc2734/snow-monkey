@@ -1,28 +1,28 @@
-.#{$_prefix}c-fluid-container,
-.#{$_prefix}c-container {
+.#{ $_prefix }c-fluid-container,
+.#{ $_prefix }c-container {
   @include container-padding();
 
-  .#{$_prefix}c-fluid-container,
-  .#{$_prefix}c-container {
+  .#{ $_prefix }c-fluid-container,
+  .#{ $_prefix }c-container {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
-.#{$_prefix}c-container {
-  &.#{$_prefix}u-slim-width {
+.#{ $_prefix }c-container {
+  &.#{ $_prefix }u-slim-width {
     @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
       padding-right: 0;
       padding-left: 0;
     }
   }
 
-  .#{$_prefix}c-page-header > & {
+  .#{ $_prefix }c-page-header > & {
     margin-right: 0; // For IE11
     margin-left: 0; // For IE11
   }
 
-  .#{$_prefix}p-infobar__inner > & {
+  .#{ $_prefix }p-infobar__inner > & {
     margin-right: 0; // For IE11
     margin-left: 0; // For IE11
   }

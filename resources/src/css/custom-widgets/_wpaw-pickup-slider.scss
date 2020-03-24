@@ -90,7 +90,7 @@
     @include _padding(.5, 1);
     border: 1px solid #fff;
 
-    &.#{$_prefix}c-btn {
+    &.#{ $_prefix }c-btn {
       background-color: transparent;
     }
 
@@ -171,7 +171,7 @@
   }
 
   [data-has-sidebar="true"] [data-is-content-widget-area="true"] &,
-  [data-has-sidebar="true"] .#{$_prefix}c-entry__content & {
+  [data-has-sidebar="true"] .#{ $_prefix }c-entry__content & {
     @include _media-max(md) {
       @include widget-full-width();
     }
@@ -184,7 +184,7 @@
   }
 
   [data-has-sidebar="false"] [data-is-content-widget-area="true"] &,
-  [data-has-sidebar="false"] .#{$_prefix}c-entry__content & {
+  [data-has-sidebar="false"] .#{ $_prefix }c-entry__content & {
     @include widget-full-width();
 
     &__item-title {

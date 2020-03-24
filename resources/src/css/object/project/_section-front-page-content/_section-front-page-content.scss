@@ -1,4 +1,4 @@
-.#{$_prefix}p-section-front-page-content {
+.#{ $_prefix }p-section-front-page-content {
   &--no-vpadding {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -19,7 +19,7 @@
 }
 
 [data-has-sidebar="true"] {
-  * + .#{$_prefix}p-section-front-page-content {
+  * + .#{ $_prefix }p-section-front-page-content {
     @include _media-min(lg) {
       @include _margin-top(1);
     }

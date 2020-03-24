@@ -12,10 +12,10 @@
     @include _margin-bottom(1);
 
     @for $i from 2 through 9 {
-      .gallery-columns-#{$i} & {
+      .gallery-columns-#{ $i } & {
         width: percentage(1 / $i);
 
-        &:nth-child(#{$i}n + 1) {
+        &:nth-child(#{ $i }n + 1) {
           clear: both;
         }
       }

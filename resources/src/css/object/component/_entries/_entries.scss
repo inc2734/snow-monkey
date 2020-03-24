@@ -1,4 +1,4 @@
-.#{$_prefix}c-entries {
+.#{ $_prefix }c-entries {
   @include _list-unstyled();
   @include _lattice();
 
@@ -23,7 +23,7 @@
     display: block;
     border-top: 1px solid _lighter($_color-gray);
 
-    .#{$_prefix}c-entries__item {
+    .#{ $_prefix }c-entries__item {
       margin: 0;
       max-width: none;
       border-bottom: 1px solid _lighter($_color-gray);
@@ -32,7 +32,7 @@
   }
 
   &--simple {
-    .#{$_prefix}c-entries__item {
+    .#{ $_prefix }c-entries__item {
       > a {
         @include _padding(1, 0);
       }
@@ -40,7 +40,7 @@
   }
 
   &--text {
-    .#{$_prefix}c-entries__item {
+    .#{ $_prefix }c-entries__item {
       > a {
         @include _padding(.5, 0);
       }
@@ -48,7 +48,7 @@
   }
 
   &--panel {
-    .#{$_prefix}c-entries__item {
+    .#{ $_prefix }c-entries__item {
       display: flex;
 
       > a {
@@ -65,7 +65,7 @@
   }
 
   &[data-has-infeed-ads="true"] {
-    .#{$_prefix}c-entries__item {
+    .#{ $_prefix }c-entries__item {
       @include _media-max(sm) {
         @include _lattice__col--width(100%);
       }
@@ -75,7 +75,7 @@
   [data-has-sidebar="true"] &,
   [data-is-slim-width="true"] & {
     &--rich-media {
-      .#{$_prefix}c-entries__item {
+      .#{ $_prefix }c-entries__item {
         @include _media-min(lg) {
           @include _lattice__col--width(1 / 2 * 100%);
         }

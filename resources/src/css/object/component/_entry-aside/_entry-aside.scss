@@ -1,4 +1,4 @@
-.#{$_prefix}c-entry-aside {
+.#{ $_prefix }c-entry-aside {
   @include _margin(1, 0, 0);
 
   @include _media-min(lg) {

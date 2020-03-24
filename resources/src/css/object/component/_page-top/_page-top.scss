@@ -1,4 +1,4 @@
-.#{$_prefix}c-page-top {
+.#{ $_prefix }c-page-top {
   @include _position(fixed, null, 0, 44px, null);
   z-index: 99998;
   background-color: $color-accent;

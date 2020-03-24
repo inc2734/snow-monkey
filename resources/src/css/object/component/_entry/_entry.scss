@@ -1,4 +1,4 @@
-.#{$_prefix}c-entry {
+.#{ $_prefix }c-entry {
   &__header {
     @include _margin-bottom(1);
   }
@@ -36,11 +36,11 @@
     @include _margin-top(1.5);
   }
 
-  [data-is-full-template="false"] .#{$_prefix}l-contents__main > & {
+  [data-is-full-template="false"] .#{ $_prefix }l-contents__main > & {
     @include _margin-top(1.5);
   }
 
-  [data-has-sidebar="true"] .#{$_prefix}l-contents__main > & {
+  [data-has-sidebar="true"] .#{ $_prefix }l-contents__main > & {
     @include _media-min(lg) {
       margin-top: 0;
     }

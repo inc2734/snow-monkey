@@ -1,4 +1,4 @@
-.#{$_prefix}c-breadcrumbs {
+.#{ $_prefix }c-breadcrumbs {
   @include _font-size-line-height(11px);
   color: #999;
 
@@ -11,7 +11,7 @@
     }
   }
 
-  .#{$_prefix}l-contents & {
+  .#{ $_prefix }l-contents & {
     &:first-child,
     &:last-child {
       @include _margin-top(.25);

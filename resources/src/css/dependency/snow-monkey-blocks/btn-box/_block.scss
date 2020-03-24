@@ -1,5 +1,5 @@
 .smb-btn-box {
-  > .#{$_prefix}c-container {
+  > .#{ $_prefix }c-container {
     @include container-padding();
   }
 }

@@ -1,4 +1,4 @@
-.#{$_prefix}l-sidebar-sticky-widget-area {
+.#{ $_prefix }l-sidebar-sticky-widget-area {
   @include items-gutter();
 
   @include _media-min(lg) {

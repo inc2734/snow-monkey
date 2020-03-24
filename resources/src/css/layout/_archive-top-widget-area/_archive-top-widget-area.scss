@@ -1,4 +1,4 @@
-.#{$_prefix}l-archive-top-widget-area {
+.#{ $_prefix }l-archive-top-widget-area {
   @include _margin-bottom(1.5);
 
   [data-has-sidebar="true"] & {

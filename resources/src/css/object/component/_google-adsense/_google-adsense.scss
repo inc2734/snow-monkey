@@ -1,7 +1,7 @@
-.#{$_prefix}c-google-adsense {
+.#{ $_prefix }c-google-adsense {
   text-align: center;
 
-  .#{$_prefix}l-contents__sidebar & {
+  .#{ $_prefix }l-contents__sidebar & {
     @include _margin(0, 0, 1);
 
     &:last-child {

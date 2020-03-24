@@ -1,4 +1,4 @@
-.#{$_prefix}p-comments {
+.#{ $_prefix }p-comments {
   &__list {
     @include _list-unstyled();
     @include _margin(0, 0, 1);
@@ -64,7 +64,7 @@
       }
     }
 
-    .#{$_prefix}c-form-control {
+    .#{ $_prefix }c-form-control {
       display: block;
       width: 100%;
       max-height: 100px;

@@ -1,4 +1,4 @@
-.#{$_prefix}c-overlay-container {
+.#{ $_prefix }c-overlay-container {
   @include _position(fixed, 100%, 0, 0, 0, 0);
   opacity: 0;
   visibility: hidden;

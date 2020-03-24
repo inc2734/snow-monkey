@@ -1,10 +1,10 @@
-.#{$_prefix}c-drawer {
+.#{ $_prefix }c-drawer {
   z-index: 100000;
   background-color: $color-accent;
   @include _font-size-line-height($_base-font-size-px - 2);
 
-  > .#{$_prefix}c-drawer__menu:last-child,
-  > .#{$_prefix}c-drawer__sub-nav:last-child {
+  > .#{ $_prefix }c-drawer__menu:last-child,
+  > .#{ $_prefix }c-drawer__sub-nav:last-child {
     @include _padding(0, 0, .5);
   }
 
@@ -42,11 +42,11 @@
       border-top: 1px solid rgba(#fff, .4);
     }
 
-    .#{$_prefix}c-drawer__item {
+    .#{ $_prefix }c-drawer__item {
       @include _padding-top(.25);
     }
 
-    .#{$_prefix}c-drawer__submenu {
+    .#{ $_prefix }c-drawer__submenu {
       @include _margin-right(-.25);
     }
   }
@@ -57,6 +57,6 @@
   padding-left: env(safe-area-inset-left);
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
-  width: calc(#{$_base-line-height * 10} + constant(safe-area-inset-left));
-  width: calc(#{$_base-line-height * 10} + env(safe-area-inset-left));
+  width: calc(#{ $_base-line-height * 10 } + constant(safe-area-inset-left));
+  width: calc(#{ $_base-line-height * 10 } + env(safe-area-inset-left));
 }

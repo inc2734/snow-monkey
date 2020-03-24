@@ -1,4 +1,4 @@
-.#{$_prefix}c-site-branding {
+.#{ $_prefix }c-site-branding {
   &__title {
     @include _font-size-line-height($_base-font-size-px);
     font-weight: bold;

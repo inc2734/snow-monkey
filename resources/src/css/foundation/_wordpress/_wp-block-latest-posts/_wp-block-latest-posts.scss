@@ -30,7 +30,7 @@
       @include _row--margin(1);
 
       @for $i from 2 through 6 {
-        &.columns-#{$i} {
+        &.columns-#{ $i } {
           > li {
             $width: percentage(1 / $i);
             @include _row__col--width($width);

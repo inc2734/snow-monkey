@@ -1,4 +1,4 @@
-.#{$_prefix}c-copyright {
+.#{ $_prefix }c-copyright {
   background-color: $_color-black;
   color: #ccc;
   @include _font-size-line-height($_base-font-size-px - 2);
@@ -13,7 +13,7 @@
     }
   }
 
-  body:not([style*="margin-bottom"]) .#{$_prefix}l-footer & {
+  body:not([style*="margin-bottom"]) .#{ $_prefix }l-footer & {
     padding-bottom: calc(#{ _space(.5) } + constant(safe-area-inset-bottom)); // for IE11
     padding-bottom: calc(#{ _space(.5) } + env(safe-area-inset-bottom)); // for IE11
 

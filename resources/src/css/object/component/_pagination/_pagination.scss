@@ -1,4 +1,4 @@
-.#{$_prefix}c-pagination {
+.#{ $_prefix }c-pagination {
   text-align: center;
   font-size: 0;
 
@@ -35,8 +35,8 @@
     }
   }
 
-  .#{$_prefix}p-archive &,
-  .#{$_prefix}p-archive + & {
+  .#{ $_prefix }p-archive &,
+  .#{ $_prefix }p-archive + & {
     @include _margin-top(1);
 
     @include _media-min(lg) {

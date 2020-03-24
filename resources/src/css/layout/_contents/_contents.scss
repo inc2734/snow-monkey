@@ -1,4 +1,4 @@
-.#{$_prefix}l-contents {
+.#{ $_prefix }l-contents {
   &__inner {
     @include _margin-bottom(1.5);
 
@@ -68,7 +68,7 @@
   /**
    * Right sidebar
    */
-  .#{$_prefix}l-body--right-sidebar & {
+  .#{ $_prefix }l-body--right-sidebar & {
     &__inner {
       @include _media-min(lg) {
         flex-direction: row;
@@ -85,7 +85,7 @@
   /**
    * Left sidebar
    */
-  .#{$_prefix}l-body--left-sidebar & {
+  .#{ $_prefix }l-body--left-sidebar & {
     &__inner {
       @include _media-min(lg) {
         flex-direction: row-reverse;

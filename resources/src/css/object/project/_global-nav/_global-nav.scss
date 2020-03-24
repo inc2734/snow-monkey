@@ -1,9 +1,9 @@
-.#{$_prefix}p-global-nav {
+.#{ $_prefix }p-global-nav {
   &[aria-hidden="true"] {
     visibility: hidden;
   }
 
-  .#{$_prefix}c-navbar {
+  .#{ $_prefix }c-navbar {
     &__item {
       > a {
         flex-direction: column;
@@ -38,7 +38,7 @@
         }
       }
 
-      > .#{$_prefix}c-navbar__submenu {
+      > .#{ $_prefix }c-navbar__submenu {
         left: 50%;
         transform: translateX(-50%);
         &::before {
@@ -71,12 +71,12 @@
     }
 
     &[data-popup-mode=click] {
-      .#{$_prefix}c-navbar__toggle {
+      .#{ $_prefix }c-navbar__toggle {
         @include _transition(transform);
       }
 
-      .#{$_prefix}c-navbar__item {
-        .#{$_prefix}c-navbar__toggle {
+      .#{ $_prefix }c-navbar__item {
+        .#{ $_prefix }c-navbar__toggle {
           transform: rotate(90deg);
 
           &[aria-expanded="true"] {
@@ -85,8 +85,8 @@
         }
       }
 
-      .#{$_prefix}c-navbar__subitem {
-        .#{$_prefix}c-navbar__toggle {
+      .#{ $_prefix }c-navbar__subitem {
+        .#{ $_prefix }c-navbar__toggle {
           color: #fff;
           transform: rotate(0);
 
@@ -101,7 +101,7 @@
   &--vertical {
     display: flex;
 
-    .#{$_prefix}c-navbar {
+    .#{ $_prefix }c-navbar {
       display: inline-flex;
 
       &__item {

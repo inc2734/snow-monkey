@@ -1,4 +1,4 @@
-.#{$_prefix}l-posts-page-widget-area {
+.#{ $_prefix }l-posts-page-widget-area {
   [data-has-sidebar="true"] & {
     @include _media-min(lg) {
       @include items-gutter();

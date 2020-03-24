@@ -1,10 +1,10 @@
-.#{$_prefix}p-social-nav {
+.#{ $_prefix }p-social-nav {
   background-color: _lightest($_color-gray);
   border-top: 1px solid _lightest($_color-gray);
   @include _padding(1, 0);
   text-align: center;
 
-  .#{$_prefix}c-navbar {
+  .#{ $_prefix }c-navbar {
     &__item {
       margin: 0 .5em;
     }

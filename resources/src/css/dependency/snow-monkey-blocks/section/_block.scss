@@ -9,8 +9,8 @@
     @extend %entry-content;
   }
 
-  > .#{$_prefix}c-container,
-  &__inner > .#{$_prefix}c-container {
+  > .#{ $_prefix }c-container,
+  &__inner > .#{ $_prefix }c-container {
     @include container-padding();
   }
 }

@@ -1,4 +1,4 @@
-.#{$_prefix}l-header {
+.#{ $_prefix }l-header {
   z-index: 9999;
   background-color: #fff; // for IE11
   background-color: _var-background-color();
@@ -41,14 +41,14 @@
   }
 
   @mixin overlay-header-white-text() {
-    .#{$_prefix}c-site-branding__title > a,
-    .#{$_prefix}c-site-branding__description,
-    .#{$_prefix}c-hamburger-btn__label,
-    [data-has-global-nav] .#{$_prefix}p-global-nav .#{$_prefix}c-navbar__item > a {
+    .#{ $_prefix }c-site-branding__title > a,
+    .#{ $_prefix }c-site-branding__description,
+    .#{ $_prefix }c-hamburger-btn__label,
+    [data-has-global-nav] .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar__item > a {
       color: #fff;
     }
 
-    .#{$_prefix}c-hamburger-btn__bar {
+    .#{ $_prefix }c-hamburger-btn__bar {
       background-color: #fff;
     }
   }
@@ -117,7 +117,7 @@
     }
   }
 
-  .#{$_prefix}c-row {
+  .#{ $_prefix }c-row {
     &,
     &__col {
       margin-bottom: 0;
@@ -153,7 +153,7 @@
       }
     }
 
-    .#{$_prefix}p-global-nav .#{$_prefix}c-navbar {
+    .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar {
       justify-content: center;
 
       &__item {
@@ -171,7 +171,7 @@
 /**
  * simple header
  */
-.#{$_prefix}l-simple-header {
+.#{ $_prefix }l-simple-header {
   &__row {
     @include _media-min(lg) {
       @include _padding(.5, 0);
@@ -182,7 +182,7 @@
 /**
  * 1row header
  */
-.#{$_prefix}l-1row-header {
+.#{ $_prefix }l-1row-header {
   &__branding,
   &__content {
     @include _media-min(lg) {
@@ -190,12 +190,12 @@
     }
   }
 
-  .#{$_prefix}p-global-nav {
+  .#{ $_prefix }p-global-nav {
     &--vertical {
       justify-content: flex-end;
     }
 
-    .#{$_prefix}c-navbar {
+    .#{ $_prefix }c-navbar {
       &__item {
         flex: 0 1 auto;
       }
@@ -206,7 +206,7 @@
 /**
  * 2rows header
  */
-.#{$_prefix}l-2row-header {
+.#{ $_prefix }l-2row-header {
   &__row {
     &:nth-child(1) {
       @include _media-min(lg) {
@@ -215,8 +215,8 @@
     }
   }
 
-  .#{$_prefix}p-global-nav {
-    .#{$_prefix}c-navbar {
+  .#{ $_prefix }p-global-nav {
+    .#{ $_prefix }c-navbar {
       &__item {
         > a {
           @include _padding-top(.5);
@@ -230,13 +230,13 @@
 /**
  * centered header
  */
-.#{$_prefix}l-center-header {
+.#{ $_prefix }l-center-header {
   &__row:nth-child(1) {
     @include _media-min(lg) {
       @include _padding(.5, 0);
     }
 
-    .#{$_prefix}l-center-header[data-has-global-nav="true"] & {
+    .#{ $_prefix }l-center-header[data-has-global-nav="true"] & {
       @include _media-min(lg) {
         @include _margin(1, 0, .25);
         padding: 0;
@@ -244,12 +244,12 @@
     }
   }
 
-  .#{$_prefix}p-global-nav {
+  .#{ $_prefix }p-global-nav {
     &--vertical {
       justify-content: center;
     }
 
-    .#{$_prefix}c-navbar {
+    .#{ $_prefix }c-navbar {
       justify-content: center;
 
       &__item {

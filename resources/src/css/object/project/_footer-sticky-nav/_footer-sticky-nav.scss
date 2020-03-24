@@ -1,4 +1,4 @@
-.#{$_prefix}p-footer-sticky-nav {
+.#{ $_prefix }p-footer-sticky-nav {
   @include _position(fixed, null, 0, 0, 0);
   z-index: 9999;
   background-color: #fff;
@@ -12,7 +12,7 @@
   }
 
   &[data-clickable="false"] {
-    .#{$_prefix}c-navbar {
+    .#{ $_prefix }c-navbar {
       opacity: .2;
     }
   }
@@ -36,7 +36,7 @@
     }
   }
 
-  .#{$_prefix}c-navbar {
+  .#{ $_prefix }c-navbar {
     &__item {
       flex: 1 1 0%;
 

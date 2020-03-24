@@ -1,4 +1,4 @@
-.#{$_prefix}c-prev-next-nav {
+.#{ $_prefix }c-prev-next-nav {
   @include _margin(1, 0, 0);
   position: relative;
 
@@ -55,7 +55,7 @@
       }
 
       @include _hover(lg) {
-        .#{$_prefix}c-prev-next-nav__item-figure {
+        .#{ $_prefix }c-prev-next-nav__item-figure {
           opacity: .5;
         }
       }
