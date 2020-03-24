@@ -11,23 +11,22 @@ import {
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    const thumbnailGalleryBlocks = document.querySelectorAll('.smb-thumbnail-gallery__canvas');
-    forEachHtmlNodes(
-      thumbnailGalleryBlocks,
-      (slider) => {
-				$(slider).on( 'beforeChange', (event, slick, currentSlideIndex, nextSlideIndex) => {
-          const nextSlideId = slick.$slides[ nextSlideIndex ].getAttribute('id');
-          const nextSlide = document.getElementById(nextSlideId);
-
-          if ( nextSlide ) {
-            const nextSlideRectTop = nextSlide.getBoundingClientRect().top;
-            if (0 > nextSlideRectTop) {
-              const offsetTop = nextSlideRectTop + scrollTop();
-              window.scrollTo(0, offsetTop - getScrollOffset());
-            }
+    const main = (slider) => {
+      const dots = slider.querySelectorAll('.slick-dots > li');
+      const addClickEvent = (dot) => {
+        const handleClick = (event) => {
+          const sliderRectTop = slider.getBoundingClientRect().top;
+          if (0 > sliderRectTop) {
+            const offsetTop = sliderRectTop + scrollTop();
+            window.scrollTo(0, offsetTop - getScrollOffset());
           }
-				} );
-      },
-    );
+        };
+        dot.addEventListener('click', handleClick, false);
+      };
+      forEachHtmlNodes(dots, addClickEvent);
+    };
+
+    const thumbnailGalleryBlocks = document.querySelectorAll('.smb-thumbnail-gallery__canvas');
+    forEachHtmlNodes(thumbnailGalleryBlocks, main);
   }
 );
