@@ -25,6 +25,11 @@ if ( $container_margin ) {
 	$root_variables[] = '--_container-margin: ' . $container_margin;
 }
 
+$container_max_width = get_theme_mod( 'container-max-width' );
+if ( $container_max_width ) {
+	$root_variables[] = '--_container-max-width: ' . $container_max_width . 'px';
+}
+
 if ( $root_variables ) {
 	Style::register(
 		':root',
