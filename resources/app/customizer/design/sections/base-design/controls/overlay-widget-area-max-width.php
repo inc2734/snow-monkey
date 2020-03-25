@@ -17,7 +17,7 @@ Framework::control(
 	[
 		'label'       => __( 'Overlay widget area max width', 'snow-monkey' ),
 		'description' => __( 'You can set max width of overlay widget area', 'snow-monkey' ),
-		'priority'    => 180,
+		'priority'    => 190,
 		'default'     => 'false',
 		'choices'     => [
 			'false' => __( 'Wide width', 'snow-monkey' ),

@@ -15,7 +15,7 @@ Framework::control(
 	'breadcrumbs-position',
 	[
 		'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
-		'priority' => 160,
+		'priority' => 170,
 		'default'  => 'default',
 		'choices'  => [
 			'default'              => __( 'Top of contents', 'snow-monkey' ),

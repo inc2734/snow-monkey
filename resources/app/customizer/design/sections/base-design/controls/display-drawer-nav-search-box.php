@@ -14,7 +14,7 @@ Framework::control(
 	[
 		'transport'       => 'postMessage',
 		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
-		'priority'        => 240,
+		'priority'        => 250,
 		'default'         => true,
 		'active_callback' => function() {
 			return has_nav_menu( 'drawer-nav' );

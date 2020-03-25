@@ -13,7 +13,7 @@ Framework::control(
 	'default-page-header-image',
 	[
 		'label'    => __( 'Default page header image', 'snow-monkey' ),
-		'priority' => 190,
+		'priority' => 200,
 	]
 );
 

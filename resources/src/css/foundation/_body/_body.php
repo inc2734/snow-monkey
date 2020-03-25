@@ -15,6 +15,12 @@ $get_container_margin_var = function( $container_margin ) {
 	}
 };
 
+$get_margin_scale_var = function( $margin_scale ) {
+	if ( 'l' === $margin_scale ) {
+		return 1.5;
+	}
+};
+
 $root_variables = [];
 $container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
 if ( $container_margin_sm ) {
@@ -28,6 +34,16 @@ if ( $container_margin ) {
 $container_max_width = get_theme_mod( 'container-max-width' );
 if ( $container_max_width ) {
 	$root_variables[] = '--_container-max-width: ' . $container_max_width . 'px';
+}
+
+$margin_scale = $get_margin_scale_var( get_theme_mod( 'margin-scale' ) );
+if ( $margin_scale ) {
+	$root_variables[] = '--_margin-scale: ' . $margin_scale;
+}
+
+$space = $get_container_margin_var( get_theme_mod( 'space' ) );
+if ( $space ) {
+	$root_variables[] = '--_space: ' . $space;
 }
 
 if ( $root_variables ) {

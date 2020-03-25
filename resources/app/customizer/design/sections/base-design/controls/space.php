@@ -7,15 +7,19 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+use Framework\Helper;
 
 Framework::control(
-	'checkbox',
-	'mwt-protected-more',
+	'select',
+	'space',
 	[
-		'label'     => __( 'If the post using more tag and password protect at the same time, display contents before more tag', 'snow-monkey' ),
-		'priority'  => 240,
-		'type'      => 'option',
-		'default'   => true,
+		'label'    => __( 'White space size', 'snow-monkey' ),
+		'priority' => 161,
+		'default'  => '',
+		'choices'  => [
+			''  => __( 'Standard', 'snow-monkey' ),
+			'l' => __( 'Wide', 'snow-monkey' ),
+		],
 	]
 );
 
@@ -25,5 +29,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'base-design' );
-$control = Framework::get_control( 'mwt-protected-more' );
+$control = Framework::get_control( 'space' );
 $control->join( $section )->join( $panel );

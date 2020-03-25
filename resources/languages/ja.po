@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-03-25 11:09+0900\n"
-"PO-Revision-Date: 2020-03-25 11:11+0900\n"
+"POT-Creation-Date: 2020-03-25 11:47+0900\n"
+"PO-Revision-Date: 2020-03-25 11:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -362,12 +362,16 @@ msgid "Contents left/right margins on PC"
 msgstr "PC 時のコンテンツの左右余白"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
+#: app/customizer/design/sections/base-design/controls/margin-scale.php:20
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
+#: app/customizer/design/sections/base-design/controls/space.php:20
 msgid "Standard"
 msgstr "標準"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
+#: app/customizer/design/sections/base-design/controls/margin-scale.php:21
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
+#: app/customizer/design/sections/base-design/controls/space.php:21
 msgid "Wide"
 msgstr "広め"
 
@@ -428,6 +432,10 @@ msgstr "Extra-Bold 800"
 msgid "Black 900"
 msgstr "Black 900"
 
+#: app/customizer/design/sections/base-design/controls/margin-scale.php:16
+msgid "White space size between elements"
+msgstr "要素間の余白サイズ"
+
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:19
 msgid "Extra-Light 200"
 msgstr "Extra-Light 200"
@@ -471,6 +479,10 @@ msgstr "モバイル端末時のコンテンツの左右余白"
 #: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:18
 msgid "Custom logo scale (%) on mobile device"
 msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
+
+#: app/customizer/design/sections/base-design/controls/space.php:16
+msgid "White space size"
+msgstr "余白サイズ"
 
 #: app/customizer/design/sections/base-design/section.php:18
 msgid "Base design settings"

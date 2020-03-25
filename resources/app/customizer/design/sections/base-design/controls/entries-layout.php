@@ -15,7 +15,7 @@ Framework::control(
 	'post-entries-layout',
 	[
 		'label'    => __( 'Entries layout', 'snow-monkey' ),
-		'priority' => 170,
+		'priority' => 180,
 		'default'  => 'rich-media',
 		'choices'  => [
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),
