@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'default-thumbnail',
 	[
 		'label'    => __( 'Default thumbnail', 'snow-monkey' ),
-		'priority' => 190,
+		'priority' => 200,
 	]
 );
 

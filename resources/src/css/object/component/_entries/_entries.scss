@@ -19,7 +19,12 @@
 
   &--simple,
   &--text {
-    margin: 0;
+    &.#{ $_prefix }c-entries {
+      margin-right: 0;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
     display: block;
     border-top: 1px solid _lighter($_color-gray);
 

@@ -7,14 +7,19 @@
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+use Framework\Helper;
 
 Framework::control(
-	'checkbox',
-	'pure-css-gallery',
+	'select',
+	'sm-container-margin',
 	[
-		'label'    => __( 'Use Pure CSS Gallery', 'snow-monkey' ),
-		'priority' => 220,
-		'default'  => true,
+		'label'    => __( 'Contents left/right margins on mobile device', 'snow-monkey' ),
+		'priority' => 150,
+		'default'  => '',
+		'choices'  => [
+			''  => __( 'Standard', 'snow-monkey' ),
+			'm' => __( 'Wide', 'snow-monkey' ),
+		],
 	]
 );
 
@@ -24,5 +29,5 @@ if ( ! is_customize_preview() ) {
 
 $panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'base-design' );
-$control = Framework::get_control( 'pure-css-gallery' );
+$control = Framework::get_control( 'sm-container-margin' );
 $control->join( $section )->join( $panel );

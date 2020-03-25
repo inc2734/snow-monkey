@@ -7,6 +7,31 @@
 
 use Inc2734\WP_Customizer_Framework\Style;
 
+$get_container_margin_var = function( $container_margin ) {
+	if ( 'm' === $container_margin ) {
+		return '1.76923rem';
+	} elseif ( 'l' === $container_margin ) {
+		return '2.65386rem';
+	}
+};
+
+$root_variables = [];
+$container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
+if ( $container_margin_sm ) {
+	$root_variables[] = '--_container-margin-sm: ' . $container_margin_sm;
+}
+$container_margin = $get_container_margin_var( get_theme_mod( 'lg-container-margin' ) );
+if ( $container_margin ) {
+	$root_variables[] = '--_container-margin: ' . $container_margin;
+}
+
+if ( $root_variables ) {
+	Style::register(
+		':root',
+		$root_variables
+	);
+}
+
 Style::register(
 	'html',
 	'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px'

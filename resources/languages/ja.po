@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-03-03 16:05+0900\n"
-"PO-Revision-Date: 2020-03-03 16:05+0900\n"
+"POT-Creation-Date: 2020-03-25 11:09+0900\n"
+"PO-Revision-Date: 2020-03-25 11:11+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -357,6 +357,20 @@ msgstr "テキスト"
 msgid "Panels"
 msgstr "パネル"
 
+#: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
+msgid "Contents left/right margins on PC"
+msgstr "PC 時のコンテンツの左右余白"
+
+#: app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
+#: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
+msgid "Standard"
+msgstr "標準"
+
+#: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
+#: app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
+msgid "Wide"
+msgstr "広め"
+
 #: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
 msgid "Custom logo scale (%) on PC"
 msgstr "PC 時のカスタムロゴの拡大率（%）"
@@ -449,6 +463,10 @@ msgstr ""
 #: app/customizer/design/sections/base-design/controls/pure-css-gallery.php:15
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
+
+#: app/customizer/design/sections/base-design/controls/sm-container-margin.php:16
+msgid "Contents left/right margins on mobile device"
+msgstr "モバイル端末時のコンテンツの左右余白"
 
 #: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:18
 msgid "Custom logo scale (%) on mobile device"
@@ -1213,7 +1231,7 @@ msgstr "ドロワーサブナビゲーション（モバイル用）"
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/suppot-forum-widget.php:13
+#: app/setup/support-forum-widget.php:15
 msgid "Recent topics of Snow Monkey support forum"
 msgstr "Snow Monkey サポートフォーラムの最近のトピック"
 
@@ -1634,9 +1652,6 @@ msgstr "https://2inc.org"
 
 #~ msgid "Loads CSS asynchronously"
 #~ msgstr "CSS を非同期読み込みする"
-
-#~ msgid "Wide"
-#~ msgstr "広め"
 
 #~ msgid "Slim"
 #~ msgstr "スリム"

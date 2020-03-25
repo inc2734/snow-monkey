@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.1.0
+ * @version 10.0.0
  *
  * renamed: app/customizer/layout/sections/archive/controls/entries-layout.php
  */
@@ -15,7 +15,7 @@ Framework::control(
 	'post-entries-layout',
 	[
 		'label'    => __( 'Entries layout', 'snow-monkey' ),
-		'priority' => 160,
+		'priority' => 170,
 		'default'  => 'rich-media',
 		'choices'  => [
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),

@@ -2,11 +2,22 @@
   padding-right: $_container-margin;
   padding-left: $_container-margin;
 
-  padding-right: calc(#{ _var-container-margin() } + constant(safe-area-inset-right));
-  padding-left: calc(#{ _var-container-margin() } + constant(safe-area-inset-left));
+  padding-right: calc(#{ _var-container-margin-sm() } + constant(safe-area-inset-right));
+  padding-left: calc(#{ _var-container-margin-sm() } + constant(safe-area-inset-left));
 
-  padding-right: calc(#{ _var-container-margin() } + env(safe-area-inset-right));
-  padding-left: calc(#{ _var-container-margin() } + env(safe-area-inset-left));
+  padding-right: calc(#{ _var-container-margin-sm() } + env(safe-area-inset-right));
+  padding-left: calc(#{ _var-container-margin-sm() } + env(safe-area-inset-left));
+
+  @include _media-min(md) {
+    padding-right: $_container-margin * 2;
+    padding-left: $_container-margin * 2;
+
+    padding-right: calc(#{ _var-container-margin() } + constant(safe-area-inset-right));
+    padding-left: calc(#{ _var-container-margin() } + constant(safe-area-inset-left));
+
+    padding-right: calc(#{ _var-container-margin() } + env(safe-area-inset-right));
+    padding-left: calc(#{ _var-container-margin() } + env(safe-area-inset-left));
+  }
 }
 
 @mixin container-slim-width() {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.0.0
  *
  * renamed: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php
  */
@@ -15,7 +15,7 @@ Framework::control(
 	'breadcrumbs-position',
 	[
 		'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
-		'priority' => 150,
+		'priority' => 160,
 		'default'  => 'default',
 		'choices'  => [
 			'default'              => __( 'Top of contents', 'snow-monkey' ),
