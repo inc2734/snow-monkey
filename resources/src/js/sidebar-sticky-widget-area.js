@@ -1,10 +1,23 @@
 'use strict';
 
 import '@inc2734/dispatch-custom-resize-event';
-import SidebarStickyWidgetArea from './module/_sidebar-sticky-widget-area';
+import { sidebarStickyWidgetArea } from './module/_sidebar-sticky-widget-area';
+
+import {
+  getHeader,
+} from './module/_helper';
 
 document.addEventListener(
   'DOMContentLoaded',
-  () => new SidebarStickyWidgetArea(),
+  () => {
+    const header = getHeader();
+    const target = document.querySelector('.l-sidebar-sticky-widget-area');
+
+    if (! header || ! target) {
+      return;
+    }
+
+    sidebarStickyWidgetArea(target, header);
+  },
   false
 );

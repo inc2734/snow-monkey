@@ -1,6 +1,6 @@
 'use strict';
 
-import { PageTopBtn } from './module/_pagetop-btn';
+import { pageTopBtn } from './module/_pagetop-btn';
 import { getFooterStickyNav, setStyle, getStyle } from './module/_helper';
 
 document.addEventListener(
@@ -11,7 +11,7 @@ document.addEventListener(
       return;
     }
 
-    PageTopBtn(pageTop);
+    pageTopBtn(pageTop);
 
     const footerStickyNav = getFooterStickyNav();
     if (! footerStickyNav) {

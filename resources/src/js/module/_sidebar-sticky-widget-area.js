@@ -3,61 +3,43 @@
 import '@inc2734/dispatch-custom-resize-event';
 
 import {
-  getHeader,
   getStyle,
   setStyle,
   getScrollOffset,
 } from './_helper';
 
-export default class SidebarStickyWidgetArea {
-  constructor() {
-    this.header = getHeader();
-    this.target = document.querySelector('.l-sidebar-sticky-widget-area');
+export function sidebarStickyWidgetArea(target, header) {
+  const isSticky       = 'sticky' === getStyle(target, 'position');
+  const targetMargin   = parseInt(getStyle(target, 'margin-top'));
+  const headerPosition = getStyle(header, 'position');
+  const offset         = getScrollOffset({ forceDropNav: true });
 
-    if (! this.header || ! this.target) {
-      return;
-    }
-
-    this._setTopMargin = this._setTopMargin.bind(this);
-    this._init();
-    window.addEventListener('resize:width', () => this._init(), false);
-  }
-
-  _init() {
-    this.isSticky       = 'sticky' === getStyle(this.target, 'position');
-    this.targetMargin   = parseInt(getStyle(this.target, 'margin-top'));
-    this.headerPosition = getStyle(this.header, 'position');
-    this.offset         = this._getOffset();
-
-    if (! this.isSticky) {
-      window.removeEventListener('scroll', this._setTopMargin, false);
-      setStyle(this.target, 'top', '');
-    } else {
-      window.addEventListener('scroll', this._setTopMargin, false);
-      this._setTopMargin();
-    }
-  }
-
-  _setTopMargin() {
+  const setTopMargin = () => {
     // Patch for some reason because reflection of header position is delayed
-    const headerPosition = getStyle(this.header, 'position');
-    'fixed' === headerPosition && headerPosition !== this.headerPosition && this._init();
+    const headerPosition = getStyle(header, 'position');
+    'fixed' === headerPosition && headerPosition !== headerPosition && init();
 
-    const prev = this.target.previousElementSibling;
+    const prev = target.previousElementSibling;
     const measurement = (() => {
       if (prev) {
         const rect = prev.getBoundingClientRect();
         return rect.y + rect.height;
       }
-      return this.target.parentNode.getBoundingClientRect().y;
+      return target.parentNode.getBoundingClientRect().y;
     })();
 
-    measurement <= this.offset && setStyle(this.target, 'top', `${this.offset}px`);
-  }
+    measurement <= offset && setStyle(target, 'top', `${ offset }px`);
+  };
 
-  _getOffset() {
-    return getScrollOffset({
-      forceDropNav: true,
-    });
-  }
+  const init = () => {
+    if (! isSticky) {
+      window.removeEventListener('scroll', setTopMargin, false);
+      setStyle(target, 'top', '');
+    } else {
+      window.addEventListener('scroll', setTopMargin, false);
+    }
+  };
+
+  init();
+  window.addEventListener('resize:width', init, false);
 }

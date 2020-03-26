@@ -2,17 +2,16 @@
 
 import '@inc2734/dispatch-custom-resize-event';
 import addCustomEvent from '@inc2734/add-custom-event';
-import { scrollTop, shouldShowDropNav } from './_helper';
 
 const hide = (target) => target.setAttribute('aria-hidden', 'true');
 const show = (target) => target.setAttribute('aria-hidden', 'false');
 
-export const GlobalNav = (gnav) => {
+export const applyGlobalNav = (gnav) => {
   window.addEventListener('showDropNav', () => hide(gnav));
   window.addEventListener('hideDropNav', () => show(gnav));
 };
 
-export const DropNav = (dropNavWrapper, header) => {
+export const applyDropNav = (dropNavWrapper, header) => {
   if ('undefined' === typeof IntersectionObserver) {
     return;
   }

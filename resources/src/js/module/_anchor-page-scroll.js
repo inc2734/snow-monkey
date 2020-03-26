@@ -8,42 +8,39 @@ import {
   getScrollOffset,
 } from './_helper';
 
-export default class AnchorPageScroll {
-  constructor() {
-    this.hash = window.location.hash;
-    if (! this.hash) {
-      return;
-    }
-
-    this.header = getHeader();
-    if (! this.header) {
-      return;
-    }
-
-    this.defaultScrollTop = scrollTop();
-
-    this._init = this._init.bind(this);
-    window.addEventListener('scroll', this._init, false);
+export function anchorPageScroll() {
+  const hash = window.location.hash;
+  if (! hash) {
+    return;
   }
 
-  _init() {
-    window.removeEventListener('scroll', this._init, false);
+  const header = getHeader();
+  if (! header) {
+    return;
+  }
 
-    if (0 < this.defaultScrollTop) {
+  const scrollToTarget = (y) => {
+    window.scrollTo(0, scrollTop() - y);
+  }
+
+  const defaultScrollTop = scrollTop();
+
+  const init = () => {
+    window.removeEventListener('scroll', init, false);
+
+    if (0 < defaultScrollTop) {
       return;
     }
 
-    const hasStickySm        = hasClass(this.header, 'l-header--sticky-sm');
-    const hasStickyLg        = hasClass(this.header, 'l-header--sticky-lg');
-    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm') || hasClass(this.header, 'l-header--sticky-overlay-colored-sm');
-    const hasStickyOverlayLg = hasClass(this.header, 'l-header--sticky-overlay-lg') || hasClass(this.header, 'l-header--sticky-overlay-colored-lg');
+    const hasStickySm        = hasClass(header, 'l-header--sticky-sm');
+    const hasStickyLg        = hasClass(header, 'l-header--sticky-lg');
+    const hasStickyOverlaySm = hasClass(header, 'l-header--sticky-overlay-sm') || hasClass(header, 'l-header--sticky-overlay-colored-sm');
+    const hasStickyOverlayLg = hasClass(header, 'l-header--sticky-overlay-lg') || hasClass(header, 'l-header--sticky-overlay-colored-lg');
     const activeHeaderSm     = media('max-width: 1023px') && (hasStickySm || hasStickyOverlaySm);
     const activeHeaderLg     = media('min-width: 1024px') && (hasStickyLg || hasStickyOverlayLg);
 
-    this._scrollToTarget(getScrollOffset());
-  }
+    scrollToTarget(getScrollOffset());
+  };
 
-  _scrollToTarget(y) {
-    window.scrollTo(0, scrollTop() - y);
-  }
+  window.addEventListener('scroll', init, false);
 }

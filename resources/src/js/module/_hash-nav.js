@@ -5,29 +5,23 @@ import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 import BasisDrawerCloseZone from '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer-close-zone';
 import BasisDrawer from '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer';
 
-export default class HashNav {
-  constructor(link) {
-    this.drawer = getDrawerNav();
-    if (! this.drawer) {
-      return;
-    }
-
-    link.addEventListener(
-      'click',
-      (event) => {
-        event.stopPropagation();
-        this._click();
-        return false
-      },
-      false
-    );
+export function hashNav(link) {
+  const drawer = getDrawerNav();
+  if (! drawer) {
+    return;
   }
 
-  _click() {
-    if ('false' === this.drawer.getAttribute('aria-hidden')) {
-      BasisDrawer.close(this.drawer);
+  const handleClick = (event) => {
+    event.stopPropagation();
+
+    if ('false' === drawer.getAttribute('aria-hidden')) {
+      BasisDrawer.close(drawer);
     } else {
-      BasisDrawer.open(this.drawer);
+      BasisDrawer.open(drawer);
     }
-  }
+
+    return false
+  };
+
+  link.addEventListener('click', handleClick, false);
 }

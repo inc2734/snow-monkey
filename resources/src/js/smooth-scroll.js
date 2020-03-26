@@ -1,10 +1,10 @@
 'use strict';
 
-import SmoothScroll from './module/_smooth-scroll';
+import { smoothScroll } from './module/_smooth-scroll';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
-window.addEventListener(
-  'load',
+document.addEventListener(
+  'DOMContentLoaded',
   () => {
     const smoothScrollLinks = document.querySelectorAll(
       [
@@ -14,7 +14,7 @@ window.addEventListener(
         '.u-smooth-scroll a[href*="#"]',
       ].join(',')
     );
-    forEachHtmlNodes(smoothScrollLinks, (link) => new SmoothScroll(link));
+    forEachHtmlNodes(smoothScrollLinks, smoothScroll);
   },
   false
 );

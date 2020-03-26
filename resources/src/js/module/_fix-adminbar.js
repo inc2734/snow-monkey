@@ -3,61 +3,54 @@
 import '@inc2734/dispatch-custom-resize-event';
 
 import {
-  getHeader,
-  getHtml,
-  getAdminbar,
   scrollTop,
   setStyle,
   getStyle,
   hasClass,
 } from './_helper';
 
-export default class Fixadminbar {
-  constructor() {
-    this.header   = getHeader();
-    this.html     = getHtml();
-    this.adminbar = getAdminbar();
+let hasStickySm;
+let hasStickyOverlaySm;
 
-    if ( ! this.header || ! this.adminbar) {
-      return;
-    }
+export function fixAdminbar(header, adminbar) {
+  const setHeaderPosition = (position) => {
+    setStyle(header, 'position', position);
+  };
 
-    this._fixHeaderPosition = this._fixHeaderPosition.bind(this);
+  const setHeaderTop = (top) => {
+    top = null !== top ? `${ parseInt(top) }px` : top;
+    setStyle(header, 'top', top);
+  };
 
-    this._init()
-    window.addEventListener('resize:width', () => this._init(), false);
-  }
-
-  _init() {
-    const hasStickySm        = hasClass(this.header, 'l-header--sticky-sm');
-    const hasStickyOverlaySm = hasClass(this.header, 'l-header--sticky-overlay-sm') || hasClass(this.header, 'l-header--sticky-overlay-colored-sm');
-
-    if ('fixed' !== getStyle(this.adminbar, 'position') && (hasStickySm || hasStickyOverlaySm)) {
-      window.addEventListener('scroll', this._fixHeaderPosition, false);
-      this._fixHeaderPosition()
+  const fixHeaderPosition = () => {
+    if (scrollTop() > adminbar.offsetHeight) {
+      setHeaderPosition(null);
+      setHeaderTop(0);
     } else {
-      window.removeEventListener('scroll', this._fixHeaderPosition, false);
-      this._setHeaderTop(null);
-      this._setHeaderPosition(null);
+      setHeaderPosition('absolute');
+      setHeaderTop(null);
     }
-  }
+  };
 
-  _fixHeaderPosition() {
-    if (scrollTop() > this.adminbar.offsetHeight) {
-      this._setHeaderPosition(null);
-      this._setHeaderTop(0);
+  const init = () => {
+    if ('fixed' !== getStyle(adminbar, 'position') && (hasStickySm || hasStickyOverlaySm)) {
+      window.addEventListener('scroll', fixHeaderPosition, false);
     } else {
-      this._setHeaderPosition('absolute');
-      this._setHeaderTop(null);
+      window.removeEventListener('scroll', fixHeaderPosition, false);
+      setHeaderTop(null);
+      setHeaderPosition(null);
     }
+  };
+
+  if ('undefined' === typeof hasStickySm) {
+    hasStickySm = hasClass(header, 'l-header--sticky-sm');
   }
 
-  _setHeaderPosition(position) {
-    setStyle(this.header, 'position', position);
+  if ('undefined' === typeof hasStickySm) {
+    hasStickyOverlaySm = hasClass(header, 'l-header--sticky-overlay-sm') || hasClass(header, 'l-header--sticky-overlay-colored-sm');
   }
 
-  _setHeaderTop(top) {
-    top = null !== top ? `${parseInt(top)}px` : top;
-    setStyle(this.header, 'top', top);
-  }
+  init();
+
+  window.addEventListener('resize:width', init, false);
 }

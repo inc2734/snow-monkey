@@ -17,7 +17,7 @@ const toggleBtn = (btn, timer) => {
   );
 };
 
-export const PageTopBtn = (btn) => {
+export const pageTopBtn = (btn) => {
   let timer = null;
   window.addEventListener('scroll', () => toggleBtn(btn, timer), false);
 };

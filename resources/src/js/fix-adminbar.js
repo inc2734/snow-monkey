@@ -1,5 +1,23 @@
 'use strict';
 
-import Fixadminbar from './module/_fix-adminbar';
+import { fixAdminbar } from './module/_fix-adminbar';
 
-document.addEventListener('DOMContentLoaded', () => new Fixadminbar(), false);
+import {
+  getHeader,
+  getAdminbar,
+} from './module/_helper';
+
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const header   = getHeader();
+    const adminbar = getAdminbar();
+
+    if ( ! header || ! adminbar) {
+      return;
+    }
+
+    fixAdminbar(header, adminbar);
+  },
+  false
+);

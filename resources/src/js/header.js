@@ -1,11 +1,23 @@
 'use strict';
 
-import StickyHeader from './module/_sticky-header';
+import { stickyHeader } from './module/_sticky-header';
+
+import {
+  getHeader,
+  getContents,
+} from './module/_helper';
 
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    new StickyHeader();
+    const header   = getHeader();
+    const contents = getContents();
+
+    if (! header || ! contents) {
+      return;
+    }
+
+    stickyHeader(header, contents);
   },
   false
 );

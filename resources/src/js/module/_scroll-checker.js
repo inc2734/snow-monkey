@@ -4,7 +4,7 @@ import {
   getHtml,
 } from './_helper';
 
-export default function() {
+export function scrollChecker() {
   if ('undefined' === typeof IntersectionObserver) {
     return;
   }

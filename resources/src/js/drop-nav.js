@@ -1,7 +1,7 @@
 'use strict';
 
 import { getHeader, getDropNavWrapper } from './module/_helper';
-import { DropNav, GlobalNav } from './module/_drop-nav';
+import { applyDropNav, applyGlobalNav } from './module/_drop-nav';
 
 document.addEventListener(
   'DOMContentLoaded',
@@ -14,8 +14,8 @@ document.addEventListener(
       return;
     }
 
-    DropNav(dropNavWrapper, header);
-    GlobalNav(gnav);
+    applyDropNav(dropNavWrapper, header);
+    applyGlobalNav(gnav);
   },
   false
 );
