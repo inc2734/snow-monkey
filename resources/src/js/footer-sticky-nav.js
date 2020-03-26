@@ -2,7 +2,7 @@
 
 import { getFooterStickyNav } from './module/_helper';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
-import { applyFooterStickyNav } from './module/_footer-sticky-nav';
+import { onResize, onResizeHeightUndo, onResizeHeightUpdate, onLoad } from './module/_footer-sticky-nav';
 import { activeMenu } from './module/_active-menu';
 
 document.addEventListener(
@@ -13,7 +13,10 @@ document.addEventListener(
       return;
     }
 
-    applyFooterStickyNav(nav);
+    window.addEventListener('resize', () => onResize(nav), false);
+    window.addEventListener('resize:height:undo', () => onResizeHeightUndo(nav), false);
+    window.addEventListener('resize:height:ios', () => onResizeHeightUpdate(nav), false);
+    window.addEventListener('load', () => onLoad(nav), false);
 
     const links = nav.getElementsByTagName('a');
 

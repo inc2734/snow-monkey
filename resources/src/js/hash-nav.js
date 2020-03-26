@@ -7,7 +7,8 @@ document.addEventListener(
   'DOMContentLoaded',
   () => {
     const drawerControlLinks = document.querySelectorAll('a[href="#sm-drawer"]');
-    forEachHtmlNodes(drawerControlLinks, hashNav);
+    const applyHashNav = (link) => link.addEventListener('click', hashNav, false);
+    forEachHtmlNodes(drawerControlLinks, applyHashNav);
   },
   false
 );

@@ -1,10 +1,6 @@
 'use strict';
 
-import {
-  getHtml,
-} from './_helper';
-
-export function scrollChecker() {
+export function scrollChecker(target) {
   if ('undefined' === typeof IntersectionObserver) {
     return;
   }
@@ -15,7 +11,7 @@ export function scrollChecker() {
     threshold: 0,
   };
 
-  const toggle   = (isIntersecting) => getHtml().setAttribute('data-scrolled', ! isIntersecting);
+  const toggle   = (isIntersecting) => target.setAttribute('data-scrolled', ! isIntersecting);
   const callback = (entries) => entries.forEach(entry => toggle(entry.isIntersecting));
   const observer = new IntersectionObserver(callback, options);
   observer.observe(document.getElementById('page-start'));

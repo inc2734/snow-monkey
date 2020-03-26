@@ -18,6 +18,7 @@ document.addEventListener(
     }
 
     sidebarStickyWidgetArea(target, header);
+    window.addEventListener('resize:width', () => sidebarStickyWidgetArea(target, header), false);
   },
   false
 );

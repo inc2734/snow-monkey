@@ -2,7 +2,9 @@
 
 import { scrollTop } from './_helper';
 
-const toggleBtn = (btn, timer) => {
+let timer = null;
+
+export function pageTopBtn(btn) {
   clearTimeout(timer);
 
   timer = setTimeout(
@@ -15,9 +17,4 @@ const toggleBtn = (btn, timer) => {
     },
     500
   );
-};
-
-export const pageTopBtn = (btn) => {
-  let timer = null;
-  window.addEventListener('scroll', () => toggleBtn(btn, timer), false);
-};
+}

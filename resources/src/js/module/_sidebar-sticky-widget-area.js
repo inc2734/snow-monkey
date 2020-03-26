@@ -31,15 +31,10 @@ export function sidebarStickyWidgetArea(target, header) {
     measurement <= offset && setStyle(target, 'top', `${ offset }px`);
   };
 
-  const init = () => {
-    if (! isSticky) {
-      window.removeEventListener('scroll', setTopMargin, false);
-      setStyle(target, 'top', '');
-    } else {
-      window.addEventListener('scroll', setTopMargin, false);
-    }
-  };
-
-  init();
-  window.addEventListener('resize:width', init, false);
+  if (! isSticky) {
+    window.removeEventListener('scroll', setTopMargin, false);
+    setStyle(target, 'top', '');
+  } else {
+    window.addEventListener('scroll', setTopMargin, false);
+  }
 }

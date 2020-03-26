@@ -11,7 +11,7 @@ document.addEventListener(
       return;
     }
 
-    pageTopBtn(pageTop);
+    window.addEventListener('scroll', () => pageTopBtn(pageTop), false);
 
     const footerStickyNav = getFooterStickyNav();
     if (! footerStickyNav) {
