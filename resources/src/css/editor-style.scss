@@ -56,6 +56,7 @@ body {
 }
 
 // @see app/setup/editor.php
+// @see --wp-bock-width
 .wp-block {
   max-width: 1280px; // for IE11
   max-width: var(--wp-bock-width);

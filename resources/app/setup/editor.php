@@ -113,6 +113,14 @@ add_action(
 	function() {
 		?>
 		<style>
+		.block-editor-editor-skeleton__content {
+			max-width: 100%;
+		}
+
+		.block-editor-writing-flow {
+			overflow: hidden;
+		}
+
 		.l-body--one-column-slim .editor-styles-wrapper .wp-block,
 		.l-body--blank-slim .editor-styles-wrapper .wp-block {
 			--wp-bock-width: 46em;
