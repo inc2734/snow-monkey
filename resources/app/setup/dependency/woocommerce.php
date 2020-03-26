@@ -183,14 +183,26 @@ add_filter(
 add_filter(
 	'snow_monkey_breadcrumbs',
 	function( $breadcrumbs ) {
-		if ( is_product() ) {
-			foreach ( $breadcrumbs as $key => $item ) {
-				if ( false !== strpos( $item['link'], '?taxonomy=product_type' ) ) {
-					unset( $breadcrumbs[ $key ] );
-				}
-			}
+		if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
+			return $breadcrumbs;
 		}
-		return $breadcrumbs;
+
+		$wc_breadcrumb  = new WC_Breadcrumb();
+		$wc_breadcrumb_arr = $wc_breadcrumb->generate();
+		$wc_breadcrumbs = [];
+		foreach ( $wc_breadcrumb_arr as $value ) {
+			$wc_breadcrumbs[] = [
+				'title' => $value[0],
+				'link'  => $value[1],
+			];
+		}
+
+		return array_merge(
+			[
+				$breadcrumbs[0],
+			],
+			$wc_breadcrumbs
+		);
 	}
 );
 
