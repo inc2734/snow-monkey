@@ -1,0 +1,11 @@
+.wp-block-buttons {
+  @include _row();
+  @include _row--margin(.5);
+
+  .wp-block-button {
+    margin: 0;
+    @include _row__col();
+    @include _row__col--margin(.5);
+    flex: 0 0 auto;
+  }
+}
