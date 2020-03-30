@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-03-25 11:47+0900\n"
-"PO-Revision-Date: 2020-03-25 11:47+0900\n"
+"POT-Creation-Date: 2020-03-30 11:31+0900\n"
+"PO-Revision-Date: 2020-03-30 11:32+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -745,6 +745,10 @@ msgstr ""
 #: app/customizer/page-speed-optimization/controls/js-loading-optimization.php:15
 msgid "Optimize the Snow Monkey JavaScript loading"
 msgstr "Snow Monkey の JavaScript 読み込みを最適化する"
+
+#: app/customizer/page-speed-optimization/controls/link-prefetching.php:15
+msgid "Use link prefetching"
+msgstr "リンクの先読み機能（prefetch）を使用する"
 
 #: app/customizer/page-speed-optimization/controls/output-head-style.php:15
 msgid "Output CSS in head"

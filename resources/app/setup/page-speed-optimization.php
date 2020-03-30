@@ -155,6 +155,20 @@ add_action(
 );
 
 /**
+ * Link prefetching
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		if ( ! get_theme_mod( 'use-link-prefetching' ) ) {
+			return;
+		}
+
+		add_filter( 'inc2734_wp_page_speed_optimization_link_prefetching', '__return_true' );
+	}
+);
+
+/**
  * Emoji assets move to footer
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
