@@ -537,16 +537,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "8.0.11",
+            "version": "8.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "b17e2e6553cda843eeecce6dda4d5cf989abb69d"
+                "reference": "0de1f0d9841967d551c32efd5ec1fcb02aa52794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/b17e2e6553cda843eeecce6dda4d5cf989abb69d",
-                "reference": "b17e2e6553cda843eeecce6dda4d5cf989abb69d",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/0de1f0d9841967d551c32efd5ec1fcb02aa52794",
+                "reference": "0de1f0d9841967d551c32efd5ec1fcb02aa52794",
                 "shasum": ""
             },
             "require": {
@@ -555,7 +555,6 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -577,7 +576,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2020-02-04T05:22:14+00:00"
+            "time": "2020-03-30T04:17:15+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
