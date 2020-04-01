@@ -13,9 +13,7 @@ if ( is_admin() ) {
 		'entry-content',
 		[
 			'',
-			'[data-type="core/paragraph"] .components-autocomplete', // < WP 5.3
-			'[data-type="core/heading"] .components-autocomplete', // < WP 5.3
-			'[data-type="core/heading"] .block-editor-rich-text', // >= WP 5.3
+			'[data-type="core/heading"]',
 			'.wp-block-freeform',
 		]
 	);
