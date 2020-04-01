@@ -2,6 +2,18 @@
   @include _row();
   @include _row--margin(.5);
 
+  &.alignleft {
+    justify-content: flex-start;
+  }
+
+  &.aligncenter {
+    justify-content: center;
+  }
+
+  &.alignright {
+    justify-content: flex-end;
+  }
+
   .wp-block-button {
     margin: 0;
     @include _row__col();
