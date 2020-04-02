@@ -17,7 +17,7 @@ foreach ( $color_palette as $color ) {
 
 	Style::register(
 		'.has-' . $color['slug'] . '-background-color',
-		'background-color: ' . $color['color']
+		'background-color: ' . $color['color'] . '!important'
 	);
 
 	Style::register(
@@ -25,6 +25,6 @@ foreach ( $color_palette as $color ) {
 			'.has-' . $color['slug'] . '-color',
 			'.wp-block-button__link.has-' . $color['slug'] . '-color',
 		],
-		'color: ' . $color['color']
+		'color: ' . $color['color'] . '!important'
 	);
 }
