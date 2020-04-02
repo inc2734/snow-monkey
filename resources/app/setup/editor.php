@@ -117,8 +117,8 @@ add_action(
 			max-width: 100%;
 		}
 
-		.block-editor-writing-flow {
-			overflow: hidden;
+		.block-editor-editor-skeleton__content {
+			overflow-x: hidden;
 		}
 
 		.l-body--one-column-slim .editor-styles-wrapper .wp-block,
