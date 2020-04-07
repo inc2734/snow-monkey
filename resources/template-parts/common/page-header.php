@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.0.5
  *
  * renamed: template-parts/page-header.php
  */
@@ -26,7 +26,14 @@ $template_args = [
 
 	<?php if ( $template_args['page_header_image'] ) : ?>
 		<div class="c-page-header__bgimage">
-			<?php echo wp_kses_post( $template_args['page_header_image'] ); ?>
+			<?php
+			echo wp_kses(
+				$template_args['page_header_image'],
+				[
+					'img' => Helper::img_allowed_attributes(),
+				]
+			);
+			?>
 		</div>
 	<?php endif; ?>
 

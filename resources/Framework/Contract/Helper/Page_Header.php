@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.5
+ * @version 10.0.5
  */
 
 namespace Framework\Contract\Helper;
@@ -128,9 +128,7 @@ trait Page_Header {
 			return;
 		}
 
-		ob_start();
-		$class::the_image();
-		return ob_get_clean();
+		return $class::get_the_image();
 	}
 
 	/**

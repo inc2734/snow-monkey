@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7973f8f49f697e62bcd0e78f7d10946d",
+    "content-hash": "6d4a8af6e4302ed329ee7d1984eb028b",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -449,16 +449,16 @@
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "0.1.2",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "3843801d6c162624531ccd15c5f53e577771514c"
+                "reference": "53b0aef4750fb91bb90bea6c61188251d9f8788e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/3843801d6c162624531ccd15c5f53e577771514c",
-                "reference": "3843801d6c162624531ccd15c5f53e577771514c",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/53b0aef4750fb91bb90bea6c61188251d9f8788e",
+                "reference": "53b0aef4750fb91bb90bea6c61188251d9f8788e",
                 "shasum": ""
             },
             "require": {
@@ -467,7 +467,6 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -488,7 +487,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2020-01-29T06:19:48+00:00"
+            "time": "2020-04-07T00:21:03+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",

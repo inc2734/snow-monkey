@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.13.0
+ * @version 10.0.5
  */
 
 namespace Framework\Contract\Model;
@@ -20,11 +20,11 @@ abstract class Page_Header {
 	}
 
 	/**
-	 * Display page header image
+	 * Return page header image html
 	 *
 	 * @return void
 	 */
-	public static function the_image() {
+	public static function get_the_image() {
 		$image_url = static::get_image_url();
 		if ( ! $image_url ) {
 			return;
@@ -44,7 +44,21 @@ abstract class Page_Header {
 			$image = wp_get_attachment_image( $image_id, static::_get_thumbnail_size() );
 		}
 
-		echo wp_kses_post( $image );
+		return $image;
+	}
+
+	/**
+	 * Display page header image
+	 *
+	 * @return void
+	 */
+	public static function the_image() {
+		echo wp_kses(
+			static::get_the_image(),
+			[
+				'img' => Helper::img_allowed_attributes(),
+			]
+		);
 	}
 
 	/**
