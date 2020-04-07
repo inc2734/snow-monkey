@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.7.1
+ * @version 10.0.5
  */
 
 use Framework\Helper;
@@ -77,6 +77,30 @@ add_action(
 	'inc2734_wp_customizer_framework_load_styles',
 	function() {
 		Helper::get_template_parts( get_template_directory() . '/assets/css/dependency/woocommerce' );
+	}
+);
+
+/**
+ * Output CSS in head
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		if ( ! get_theme_mod( 'output-head-style' ) ) {
+			return;
+		}
+
+		add_filter(
+			'inc2734_wp_page_speed_optimization_output_head_styles',
+			function( $handles ) {
+				return array_merge(
+					$handles,
+					[
+						Helper::get_main_style_handle() . '-woocommerce',
+					]
+				);
+			}
+		);
 	}
 );
 
