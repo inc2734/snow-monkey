@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.0.7
  *
  * renamed: template-parts/comment.php
  */
@@ -48,7 +48,8 @@
 		);
 		?>
 
-		<?php if ( ! empty( get_comment_reply_link( $args ) ) ) : ?>
+		<?php $comment_reply_link = get_comment_reply_link( $args ); ?>
+		<?php if ( ! empty( $comment_reply_link ) ) : ?>
 			<div class="c-comment__reply">
 				<?php comment_reply_link( $args ); ?>
 			</div>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.0.7
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,7 +15,8 @@ Framework::control(
 		'label'           => __( 'Front page setting', 'snow-monkey' ),
 		'priority'        => 100,
 		'active_callback' => function() {
-			return 'page' === get_option( 'show_on_front' ) && ! empty( get_option( 'page_on_front' ) );
+			$page_on_front = get_option( 'page_on_front' );
+			return 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );
 		},
 	]
 );
