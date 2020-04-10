@@ -1,17 +1,36 @@
 'use strict';
 
-import { pageTopBtn } from './module/_pagetop-btn';
 import { getFooterStickyNav, setStyle, getStyle } from './module/_helper';
 
-document.addEventListener(
-  'DOMContentLoaded',
+window.addEventListener(
+  'load',
   () => {
-    const pageTop = document.querySelector('.c-page-top');
+    if ('undefined' === typeof IntersectionObserver) {
+      return;
+    }
+
+    const pageTop = document.getElementById('page-top');
     if (! pageTop) {
       return;
     }
 
-    window.addEventListener('scroll', () => pageTopBtn(pageTop), false);
+    const sensor = document.getElementById('page-top-sensor');
+    if (! sensor) {
+      return;
+    }
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0,
+    };
+
+    const toggle = isIntersecting => ! isIntersecting
+      ? pageTop.setAttribute('aria-hidden', 'false')
+      : pageTop.setAttribute('aria-hidden', 'true');
+    const callback = (entries) => entries.forEach(entry => toggle(entry.isIntersecting));
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(sensor);
 
     const footerStickyNav = getFooterStickyNav();
     if (! footerStickyNav) {
