@@ -2,6 +2,19 @@
 
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
+const vlocations = {};
+
+const createVlocation = (homeUrl) => {
+  if ( !! vlocations[ homeUrl ] ) {
+    return vlocations[ homeUrl ];
+  }
+
+  const element = document.createElement('a');
+  element.setAttribute('href', homeUrl);
+  vlocations[ homeUrl ] = element;
+  return element;
+};
+
 export function activeMenu(atag, params = {}) {
   if ('undefined' === typeof atag.hostname) {
     return;
@@ -10,12 +23,6 @@ export function activeMenu(atag, params = {}) {
   const location = window.location;
 
   params.home_url = params.home_url || `${location.protocol}//${location.host}`;
-
-  const createVlocation = (homeUrl) => {
-    const element = document.createElement('a');
-    element.setAttribute('href', homeUrl);
-    return element;
-  };
 
   const vlocation = createVlocation(params.home_url);
 

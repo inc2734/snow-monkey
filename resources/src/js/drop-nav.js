@@ -14,8 +14,8 @@ document.addEventListener(
       return;
     }
 
-    applyDropNav(dropNavWrapper, header);
     applyGlobalNav(gnav);
+    window.addEventListener('load', () => applyDropNav(dropNavWrapper, header), false);
   },
   false
 );

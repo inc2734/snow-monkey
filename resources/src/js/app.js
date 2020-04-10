@@ -33,10 +33,4 @@ document.addEventListener(
   false
 );
 
-document.addEventListener(
-  'DOMContentLoaded',
-  () => {
-    scrollChecker(getHtml());
-  },
-  false
-);
+scrollChecker(getHtml());
