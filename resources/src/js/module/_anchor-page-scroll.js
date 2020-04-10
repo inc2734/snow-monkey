@@ -12,10 +12,6 @@ export function anchorPageScroll(header) {
     window.scrollTo(0, scrollTop() - y);
   }
 
-  if (0 < scrollTop()) {
-    //return;
-  }
-
   const hasStickySm        = hasClass(header, 'l-header--sticky-sm');
   const hasStickyLg        = hasClass(header, 'l-header--sticky-lg');
   const hasStickyOverlaySm = hasClass(header, 'l-header--sticky-overlay-sm') || hasClass(header, 'l-header--sticky-overlay-colored-sm');
