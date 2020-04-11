@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.5
+ * @version 10.1.0
  */
 
 namespace Framework\Contract\Helper;
@@ -16,16 +16,16 @@ trait Page_Header {
 	 * @return string
 	 */
 	protected static function _get_page_header_class() {
-		$queried_object = get_queried_object();
-		$cache_key      = md5( json_encode( $queried_object ) );
-		$cache          = wp_cache_get( $cache_key, 'page_header_class' );
+		$cache_key   = md5( json_encode( get_queried_object() ) );
+		$cache_group = 'snow-monkey/page_header_class';
+		$cache       = wp_cache_get( $cache_key, $cache_group );
 
 		if ( false !== $cache ) {
 			return $cache;
 		}
 
 		$class = static::_get_page_header_class_no_cache();
-		wp_cache_set( $cache_key, $class, 'page_header_class' );
+		wp_cache_set( $cache_key, $class, $cache_group );
 		return $class;
 	}
 
@@ -40,11 +40,12 @@ trait Page_Header {
 		$custom_post_types = \Framework\Helper::get_custom_post_types();
 		$types = array_filter(
 			[
-				'Default'  => is_search() || is_404(),
-				'Singular' => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
-				'Category' => is_category(),
-				'Home'     => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
-				'Front'    => is_front_page() && ! is_home(),
+				'Default'            => is_search() || is_404(),
+				'WooCommerce_Single' => class_exists( '\woocommerce' ) && is_product(),
+				'Singular'           => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
+				'Category'           => is_category(),
+				'Home'               => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
+				'Front'              => is_front_page() && ! is_home(),
 			]
 		);
 
@@ -117,14 +118,7 @@ trait Page_Header {
 		}
 
 		$class = static::_get_page_header_class();
-		if ( ! $class ) {
-			return;
-		}
-
-		$is_singular        = false !== strpos( $class, '\Singular_Page_Header' );
-		$is_displayed_image = in_array( get_theme_mod( get_post_type() . '-eyecatch' ), [ 'page-header', 'title-on-page-header' ] );
-
-		if ( $is_singular && ! $is_displayed_image ) {
+		if ( ! $class || ! $class::is_display_image() ) {
 			return;
 		}
 
@@ -154,10 +148,8 @@ trait Page_Header {
 	public static function is_output_page_header_title() {
 		$return = false;
 
-		$is_singular        = false !== strpos( static::_get_page_header_class(), '\Singular_Page_Header' );
-		$is_displayed_title = in_array( get_theme_mod( get_post_type() . '-eyecatch' ), [ 'title-on-page-header' ] );
-
-		if ( $is_singular && $is_displayed_title ) {
+		$class = static::_get_page_header_class();
+		if ( $class && $class::is_display_title() ) {
 			$return = true;
 		}
 

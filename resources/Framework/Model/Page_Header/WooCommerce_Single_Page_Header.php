@@ -10,7 +10,7 @@ namespace Framework\Model\Page_Header;
 
 use Framework\Contract\Model\Page_Header as Base;
 
-class Home_Page_Header extends Base {
+class WooCommerce_Single_Page_Header extends Base {
 
 	/**
 	 * Return page header image url
@@ -18,8 +18,8 @@ class Home_Page_Header extends Base {
 	 * @return string
 	 */
 	public static function get_image_url() {
-		if ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) ) {
-			$thumbnail_id = get_post_thumbnail_id( get_option( 'page_for_posts' ) );
+		if ( has_post_thumbnail() ) {
+			$thumbnail_id = get_post_thumbnail_id();
 			if ( $thumbnail_id ) {
 				return wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() );
 			}
@@ -34,7 +34,8 @@ class Home_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_image() {
-		return static::get_the_image() ? true : false;
+		$should_display = in_array( get_theme_mod( 'woocommerce-single-eyecatch' ), static::$image_mods );
+		return $should_display && static::get_the_image() ? true : false;
 	}
 
 	/**
@@ -43,6 +44,6 @@ class Home_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_title() {
-		return false;
+		return in_array( get_theme_mod( 'woocommerce-single-eyecatch' ), static::$title_mods );
 	}
 }

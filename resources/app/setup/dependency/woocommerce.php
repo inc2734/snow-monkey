@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.5
+ * @version 10.1.0
  */
 
 use Framework\Helper;
@@ -134,7 +134,7 @@ add_action(
 add_filter(
 	'snow_monkey_is_output_page_header',
 	function( $return ) {
-		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
+		if ( is_cart() || is_checkout() || is_account_page() ) {
 			return false;
 		}
 		return $return;

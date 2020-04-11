@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-03-30 11:31+0900\n"
-"PO-Revision-Date: 2020-03-30 11:32+0900\n"
+"POT-Creation-Date: 2020-04-11 10:22+0900\n"
+"PO-Revision-Date: 2020-04-11 10:23+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -526,6 +526,7 @@ msgstr "%1$sアーカイブページ設定"
 #: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
 #: app/customizer/design/sections/page/controls/eyecatch.php:16
 #: app/customizer/design/sections/post/controls/eyecatch.php:16
+#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
 
@@ -687,6 +688,12 @@ msgstr "WooCommerce 一覧ページレイアウト"
 #: app/customizer/design/sections/woocommerce-archive-page/section.php:20
 msgid "WooCommerce archive page settings"
 msgstr "WooCommerce 一覧ページ設定"
+
+#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:20
+msgid "Select how to display the eyecatch image in WooCommerce product page."
+msgstr ""
+"WooCommerce 商品ページでアイキャッチ画像をどのように表示するか選択してくださ"
+"い。"
 
 #: app/customizer/design/sections/woocommerce-single/controls/layout.php:18
 msgid "WooCommerce product page layout"
@@ -1195,11 +1202,11 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/setup/dependency/woocommerce.php:93
+#: app/setup/dependency/woocommerce.php:117
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
-#: app/setup/dependency/woocommerce.php:94
+#: app/setup/dependency/woocommerce.php:118
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
@@ -1425,7 +1432,7 @@ msgctxt "search-form"
 msgid "Search"
 msgstr "検索"
 
-#: template-parts/common/page-top.php:14
+#: template-parts/common/page-top.php:16
 msgid "Scroll up"
 msgstr "上にスクロール"
 

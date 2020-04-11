@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.3.4
+ * @version 10.1.0
  */
 
 namespace Framework\Model\Page_Header;
@@ -26,5 +26,24 @@ class Singular_Page_Header extends Base {
 		}
 
 		return static::_get_default_image_url();
+	}
+
+	/**
+	 * Return true when should display page header image
+	 *
+	 * @return boolean
+	 */
+	public static function is_display_image() {
+		$should_display = in_array( get_theme_mod( get_post_type() . '-eyecatch' ), static::$image_mods );
+		return $should_display && static::get_the_image() ? true : false;
+	}
+
+	/**
+	 * Return true when should display page header title
+	 *
+	 * @return boolean
+	 */
+	public static function is_display_title() {
+		return in_array( get_theme_mod( get_post_type() . '-eyecatch' ), static::$title_mods );
 	}
 }
