@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.1.1
  */
 
 use Framework\Helper;
@@ -39,7 +39,8 @@ add_action(
 			Helper::get_main_script_handle() . '-snow-monkey-blocks',
 			get_theme_file_uri( '/assets/js/dependency/snow-monkey-blocks/app.min.js' ),
 			[ 'snow-monkey-blocks/thumbnail-gallery' ],
-			filemtime( get_theme_file_path( '/assets/js/dependency/snow-monkey-blocks/app.min.js' ) )
+			filemtime( get_theme_file_path( '/assets/js/dependency/snow-monkey-blocks/app.min.js' ) ),
+			true
 		);
 	}
 );
