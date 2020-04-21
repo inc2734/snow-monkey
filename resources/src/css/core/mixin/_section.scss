@@ -7,13 +7,17 @@
   }
 }
 
+@mixin section-subtitle() {
+  @include _margin-bottom(.25);
+  color: $color-accent;
+  font-weight: bold;
+}
+
 @mixin section-title() {
-  @include _margin(0, 0, 1);
   @include _font-size-line-height($_base-font-size * 1.5);
   text-align: center;
 
   @include _media-min(lg) {
-    @include _margin(0, 0, 1.5);
     @include _font-size-line-height($_base-font-size * 2);
   }
 
@@ -24,5 +28,21 @@
     width: 60px;
     height: 1px;
     background-color: $color-accent;
+  }
+}
+
+@mixin section-lede() {
+  @include _margin-top(.5);
+
+  @include _media-min(lg) {
+    @include _margin-top(1);
+  }
+}
+
+@mixin section-body() {
+  @include _margin-top(1);
+
+  @include _media-min(lg) {
+    @include _margin-top(1.5);
   }
 }

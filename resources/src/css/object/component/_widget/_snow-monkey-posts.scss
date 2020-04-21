@@ -1,6 +1,10 @@
 .snow-monkey-posts {
   &__title {
     @include section-title();
+
+    & + .#{ $_prefix }c-entries {
+      @include section-body();
+    }
   }
 
   &__action {

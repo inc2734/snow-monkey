@@ -17,11 +17,6 @@
 
   &__title {
     @include section-title();
-    margin-bottom: 0;
-
-    @include _media-min(lg) {
-      margin-bottom: 0;
-    }
   }
 
   &__lead {

@@ -1,0 +1,9 @@
+.smb-section-side-heading {
+  &__title {
+    text-align: left;
+
+    &::after {
+      margin-left: 0;
+    }
+  }
+}

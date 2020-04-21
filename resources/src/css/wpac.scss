@@ -178,13 +178,14 @@ $_font-path: false;
 
   &__title {
     @extend %section-title;
+
+    & + .wpac-section__body {
+      @extend %section-body;
+    }
   }
 
   &--inverse {
     background-color: _lightest($_color-gray);
-  }
-
-  &__body {
   }
 
   & + & {

@@ -1,8 +1,23 @@
 .smb-section {
   @extend %section;
 
+  &__subtitle {
+    @extend %section-subtitle;
+  }
+
   &__title {
     @extend %section-title;
+  }
+
+  &__lede {
+    @extend %section-lede;
+  }
+
+  &__title,
+  &__lede {
+    & + .smb-section__body {
+      @extend %section-body;
+    }
   }
 
   &__body {
