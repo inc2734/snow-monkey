@@ -75,7 +75,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 	 */
 	public function is_home() {
 		$this->go_to( get_home_url() );
-		$this->assertEquals( '\Framework\Model\Page_Header\Home_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
 	}
 
 	/**
@@ -88,7 +88,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 		update_option( 'page_on_front', $front_page_id );
 		update_option( 'page_for_posts', $home_page_id );
 		$this->go_to( get_permalink( $home_page_id ) );
-		$this->assertEquals( '\Framework\Model\Page_Header\Home_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
 	}
 
 	/**
@@ -98,7 +98,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 		$post_id = $this->factory->post->create( [ 'post_type' => 'post' ] );
 		$post    = get_post( $post_id );
 		$this->go_to( home_url() . '?year=' . date( 'Y', strtotime( $post->post_date ) ) );
-		$this->assertEquals( '\Framework\Model\Page_Header\Home_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
 	}
 
 	/**
@@ -107,7 +107,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 	public function is_tag() {
 		$term_id = $this->factory->tag->create();
 		$this->go_to( get_term_link( $term_id, 'post_tag' ) );
-		$this->assertEquals( '\Framework\Model\Page_Header\Home_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
 	}
 
 	/**

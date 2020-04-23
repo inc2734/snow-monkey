@@ -3,10 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.2.0
  */
 
 use Framework\Helper;
+
+$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
 ?>
 
 <?php
@@ -17,13 +19,19 @@ if ( ! is_paged() && Helper::is_active_sidebar( 'posts-page-top-widget-area' ) )
 
 <div class="c-entry">
 	<?php
-	if ( ! is_front_page() && get_theme_mod( 'posts-page-display-title' ) ) {
+	if ( ! is_front_page() && get_theme_mod( 'posts-page-display-title' ) && 'title-on-page-header' !== $eyecatch_position ) {
 		Helper::get_template_part( 'template-parts/archive/entry/header/header', 'post' );
 	}
 	?>
 
 	<div class="c-entry__body">
-		<?php Helper::get_template_part( 'template-parts/archive/entry/content/content', 'post' ); ?>
+		<?php
+		if ( 'content-top' === $eyecatch_position ) {
+			Helper::get_template_part( 'template-parts/archive/eyecatch' );
+		}
+
+		Helper::get_template_part( 'template-parts/archive/entry/content/content', 'post' );
+		?>
 	</div>
 </div>
 

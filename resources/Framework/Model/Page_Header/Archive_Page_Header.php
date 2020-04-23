@@ -3,14 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.1.0
+ * @version 10.2.0
  */
 
 namespace Framework\Model\Page_Header;
 
+use Framework\Helper;
 use Framework\Contract\Model\Page_Header as Base;
 
-class Home_Page_Header extends Base {
+class Archive_Page_Header extends Base {
 
 	/**
 	 * Return page header image url
@@ -18,11 +19,8 @@ class Home_Page_Header extends Base {
 	 * @return string
 	 */
 	public static function get_image_url() {
-		if ( 'page' === get_option( 'show_on_front' ) && get_option( 'page_for_posts' ) ) {
-			$thumbnail_id = get_post_thumbnail_id( get_option( 'page_for_posts' ) );
-			if ( $thumbnail_id ) {
-				return wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() );
-			}
+		if ( Helper::has_homepage_thumbnail() ) {
+			return Helper::get_the_homepage_thumbnail_url( static::_get_thumbnail_size() );
 		}
 
 		return static::_get_default_image_url();
@@ -34,7 +32,8 @@ class Home_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_image() {
-		return static::get_the_image() ? true : false;
+		$should_display = in_array( get_theme_mod( 'archive-eyecatch' ), static::$image_mods );
+		return $should_display && static::get_the_image() ? true : false;
 	}
 
 	/**
@@ -43,6 +42,6 @@ class Home_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_title() {
-		return false;
+		return in_array( get_theme_mod( 'archive-eyecatch' ), static::$title_mods );
 	}
 }

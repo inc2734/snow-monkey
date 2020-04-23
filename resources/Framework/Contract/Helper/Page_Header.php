@@ -44,7 +44,7 @@ trait Page_Header {
 				'WooCommerce_Single' => class_exists( '\woocommerce' ) && is_product(),
 				'Singular'           => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
 				'Category'           => is_category(),
-				'Home'               => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
+				'Archive'            => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
 				'Front'              => is_front_page() && ! is_home(),
 			]
 		);

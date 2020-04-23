@@ -3,11 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.1.0
+ * @version 10.2.0
  */
 
 namespace Framework\Model\Page_Header;
 
+use Framework\Helper;
 use Framework\Contract\Model\Page_Header as Base;
 
 class Category_Page_Header extends Base {
@@ -18,19 +19,8 @@ class Category_Page_Header extends Base {
 	 * @return string
 	 */
 	public static function get_image_url() {
-		$term = get_queried_object();
-		$header_image = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-header-image' );
-
-		if ( $header_image ) {
-			return $header_image;
-		}
-
-		$ancestors = get_ancestors( $term->term_id, $term->taxonomy );
-		foreach ( $ancestors as $ancestor ) {
-			$header_image = get_theme_mod( $term->taxonomy . '-' . $ancestor . '-header-image' );
-			if ( $header_image ) {
-				return $header_image;
-			}
+		if ( Helper::has_category_thumbnail() ) {
+			return Helper::get_the_category_thumbnail_url();
 		}
 
 		return static::_get_default_image_url();
@@ -42,7 +32,8 @@ class Category_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_image() {
-		return static::get_the_image() ? true : false;
+		$should_display = in_array( get_theme_mod( 'archive-eyecatch' ), static::$image_mods );
+		return $should_display && static::get_the_image() ? true : false;
 	}
 
 	/**
@@ -51,6 +42,6 @@ class Category_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_title() {
-		return false;
+		return in_array( get_theme_mod( 'archive-eyecatch' ), static::$title_mods );
 	}
 }

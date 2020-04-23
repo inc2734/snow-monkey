@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-04-11 10:22+0900\n"
-"PO-Revision-Date: 2020-04-11 10:23+0900\n"
+"POT-Creation-Date: 2020-04-23 12:35+0900\n"
+"PO-Revision-Date: 2020-04-23 12:35+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,130 +22,130 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: Framework/Helper.php:29
+#: Framework/Helper.php:31
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: Framework/Helper.php:30
+#: Framework/Helper.php:32
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: Framework/Helper.php:31
+#: Framework/Helper.php:33
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:22
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: Framework/Helper.php:32
+#: Framework/Helper.php:34
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:56 template-parts/content/prev-next-nav.php:59
+#: Framework/Helper.php:58 template-parts/content/prev-next-nav.php:59
 #: template-parts/loop/entry-summary/content/content.php:31
 msgctxt "excerpt_length"
 msgid "55"
 msgstr ""
 
-#: Framework/Helper.php:96
+#: Framework/Helper.php:98
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:101
+#: Framework/Helper.php:103
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:106
+#: Framework/Helper.php:108
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:112
+#: Framework/Helper.php:114
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:197
+#: Framework/Helper.php:199
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:202
+#: Framework/Helper.php:204
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:207 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:209 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:212
+#: Framework/Helper.php:214
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:217
+#: Framework/Helper.php:219
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:222
+#: Framework/Helper.php:224
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:227
+#: Framework/Helper.php:229
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:232
+#: Framework/Helper.php:234
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:237
+#: Framework/Helper.php:239
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:242
+#: Framework/Helper.php:244
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:248
+#: Framework/Helper.php:250
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:254
+#: Framework/Helper.php:256
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:260
+#: Framework/Helper.php:262
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:266
+#: Framework/Helper.php:268
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:272
+#: Framework/Helper.php:274
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:278
+#: Framework/Helper.php:280
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:284
+#: Framework/Helper.php:286
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:290
+#: Framework/Helper.php:292
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:296
+#: Framework/Helper.php:298
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -227,6 +227,19 @@ msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダ�
 #: app/customizer/design/panel.php:18
 msgid "Design"
 msgstr "デザイン"
+
+#: app/customizer/design/sections/archive/controls/eyecatch.php:16
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
+#: app/customizer/design/sections/page/controls/eyecatch.php:16
+#: app/customizer/design/sections/post/controls/eyecatch.php:16
+#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
+msgid "Eyecatch image"
+msgstr "アイキャッチ画像"
+
+#: app/customizer/design/sections/archive/controls/eyecatch.php:17
+msgid "Select how to display the eyecatch image in archive page."
+msgstr ""
+"アーカイブページでアイキャッチ画像をどのように表示するか選択してください。"
 
 #: app/customizer/design/sections/archive/controls/layout.php:18
 msgid "Archive page layout"
@@ -489,8 +502,8 @@ msgid "Base design settings"
 msgstr "基本デザイン設定"
 
 #: app/customizer/design/sections/category/controls/header-image.php:19
-msgid "Header image"
-msgstr "ヘッダー画像"
+msgid "Featured Image"
+msgstr "アイキャッチ画像"
 
 #: app/customizer/design/sections/category/section.php:24
 #, php-format
@@ -522,13 +535,6 @@ msgstr "投稿のビューテンプレート"
 #, php-format
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
-
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
-#: app/customizer/design/sections/page/controls/eyecatch.php:16
-#: app/customizer/design/sections/post/controls/eyecatch.php:16
-#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
-msgid "Eyecatch image"
-msgstr "アイキャッチ画像"
 
 #: app/customizer/design/sections/custom-post/controls/eyecatch.php:26
 #, php-format
