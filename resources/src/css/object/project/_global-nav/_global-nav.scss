@@ -12,6 +12,7 @@
         @include _font-size-line-height($_base-font-size-px - 2);
         font-weight: bold;
         @include _padding(.75);
+        @include _transition(color);
 
         > span {
           display: flex;
