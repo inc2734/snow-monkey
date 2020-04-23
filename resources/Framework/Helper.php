@@ -331,16 +331,18 @@ class Helper {
 	 * @return boolean
 	 */
 	public static function has_drop_nav() {
+		$return = false;
+
 		if ( has_nav_menu( 'global-nav' ) ) {
 			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ '', 'overlay' ] );
 			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ '', 'overlay' ] );
 
 			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
-				return true;
+				$return = true;
 			}
 		}
 
-		return false;
+		return apply_filters( 'snow_monkey_has_drop_nav', $return );
 	}
 
 	/**

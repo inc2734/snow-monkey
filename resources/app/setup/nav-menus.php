@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.2.0
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -42,14 +42,6 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		wp_register_script(
-			Helper::get_main_script_handle() . '-drop-nav',
-			get_theme_file_uri( '/assets/js/drop-nav.min.js' ),
-			[ 'jquery' ],
-			filemtime( get_theme_file_path( '/assets/js/drop-nav.min.js' ) ),
-			true
-		);
-
-		wp_register_script(
 			Helper::get_main_script_handle() . '-footer-sticky-nav',
 			get_theme_file_uri( '/assets/js/footer-sticky-nav.min.js' ),
 			[ 'jquery' ],
@@ -64,10 +56,6 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/js/global-nav.min.js' ) ),
 			true
 		);
-
-		if ( Helper::has_drop_nav() ) {
-			wp_enqueue_script( Helper::get_main_script_handle() . '-drop-nav' );
-		}
 
 		if ( has_nav_menu( 'footer-sticky-nav' ) ) {
 			wp_enqueue_script( Helper::get_main_script_handle() . '-footer-sticky-nav' );

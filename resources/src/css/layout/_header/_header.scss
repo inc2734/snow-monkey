@@ -129,8 +129,8 @@
     visibility: hidden;
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
-    background-color: #fff; // for IE11
-    background-color: _var-background-color();
+    //background-color: #fff; // for IE11
+    //background-color: _var-background-color();
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
     @include _transition(transform, visibility);
     transition-timing-function: ease-in;
@@ -150,19 +150,6 @@
     .admin-bar & {
       &[aria-hidden="false"] {
         transform: translateY(32px);
-      }
-    }
-
-    .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar {
-      justify-content: center;
-
-      &__item {
-        flex: 0 1 auto;
-
-        > a {
-          @include _padding-top(.5);
-          @include _padding-bottom(.5);
-        }
       }
     }
   }
