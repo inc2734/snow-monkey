@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.6
+ * @version 10.2.0
  */
 
 use Framework\Helper;
@@ -13,6 +13,7 @@ $template_args = [
 	'widget_area_id' => Helper::get_var( $_widget_area_id, null ),
 	'classname'      => Helper::get_var( $_classname, null ),
 	'entries_layout' => Helper::get_var( $_entries_layout, 'rich-media' ),
+	'force_sm_1col'  => Helper::get_var( $_force_sm_1col, false ),
 	'title'          => Helper::get_var( $_title, null ),
 	'link_url'       => Helper::get_var( $_link_url, null ),
 	'link_text'      => Helper::get_var( $_link_text, null ),
@@ -60,6 +61,8 @@ $more_classnames = [
 
 $posts_per_page = $template_args['posts_query']->get( 'posts_per_page' );
 $loop_count = 0;
+
+$force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 ?>
 
 <div class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>">
@@ -69,7 +72,7 @@ $loop_count = 0;
 		</h2>
 	<?php endif; ?>
 
-	<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
+	<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
 		<?php while ( $template_args['posts_query']->have_posts() ) : ?>
 			<?php
 			$template_args['posts_query']->the_post();

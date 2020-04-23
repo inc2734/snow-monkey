@@ -58,6 +58,7 @@
 
       > a {
         flex: 1 1 auto;
+        max-width: 100%;
         box-shadow: 0 0 35px 0 rgba(#000, .1);
         @include _transition(box-shadow);
         display: flex;
@@ -69,10 +70,14 @@
     }
   }
 
-  &[data-has-infeed-ads="true"] {
-    .#{ $_prefix }c-entries__item {
-      @include _media-max(sm) {
-        @include _lattice__col--width(100%);
+  &--rich-media,
+  &--panel {
+    &[data-has-infeed-ads="true"],
+    &[data-force-sm-1col="true"] {
+      .#{ $_prefix }c-entries__item {
+        @include _media-max(sm) {
+          @include _lattice__col--width(100%);
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.3.1
+ * @version 10.2.0
  */
 
 use Framework\Helper;
@@ -17,9 +17,10 @@ use Framework\Helper;
 		$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
 		$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 		$entries_layout  = get_theme_mod( $_post_type . '-entries-layout' );
+		$force_sm_1col   = get_theme_mod( $_post_type . '-entries-layout-sm-1col' ) ? 'true' : 'false';
 		?>
 
-		<ul class="c-entries c-entries--<?php echo esc_attr( $entries_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( $entries_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">

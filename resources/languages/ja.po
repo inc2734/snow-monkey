@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-04-23 12:35+0900\n"
-"PO-Revision-Date: 2020-04-23 12:35+0900\n"
+"POT-Creation-Date: 2020-04-23 13:45+0900\n"
+"PO-Revision-Date: 2020-04-23 13:46+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -331,6 +331,11 @@ msgstr "ページ上部へ戻るボタンを表示"
 #: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:16
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:20
+msgid "Make the entries one column on mobile device"
+msgstr "モバイル端末時に記事一覧を1列にする"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:17
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:20

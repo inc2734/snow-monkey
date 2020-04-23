@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 10.2.0
  */
 
 use Framework\Helper;
@@ -59,6 +59,10 @@ if ( ! $taxonomy_posts_query->have_posts() ) {
 	return;
 }
 
+$is_multi_cols_pattern = in_array( $instance['layout'], [ 'rich-media', 'panel' ] );
+$force_sm_1col = get_theme_mod( $query_args['post_type'][0] . '-entries-layout-sm-1col' );
+$force_sm_1col = $is_multi_cols_pattern ? $force_sm_1col : false;
+
 echo wp_kses_post( $args['before_widget'] );
 Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
@@ -68,6 +72,7 @@ Helper::get_template_part(
 		'_widget_area_id' => $args['id'],
 		'_classname'      => 'snow-monkey-taxonomy-posts',
 		'_entries_layout' => $instance['layout'],
+		'_force_sm_1col'  => $force_sm_1col,
 		'_title'          => $instance['title'],
 		'_link_url'       => $instance['link-url'],
 		'_link_text'      => $instance['link-text'],
