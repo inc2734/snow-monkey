@@ -4,6 +4,10 @@
   &__content {
     display: flex;
     flex: 0 1 auto;
+
+    a {
+      color: #fff;
+    }
   }
 
   &__inner {

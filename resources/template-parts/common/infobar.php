@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.2.1
  *
  * renamed: template-parts/infobar.php
  */
@@ -25,7 +25,17 @@ if ( ! $template_args['content'] ) {
 		<a class="p-infobar__inner" href="<?php echo esc_url( $template_args['url'] ); ?>">
 			<div class="c-container">
 				<div class="p-infobar__content">
-					<?php echo esc_html( $template_args['content'] ); ?>
+					<?php
+					$kses_allowed_html = wp_kses_allowed_html( 'user_description' );
+					if ( isset( $kses_allowed_html['a'] ) ) {
+						unset( $kses_allowed_html['a'] );
+					}
+
+					echo wp_kses(
+						$template_args['content'],
+						$kses_allowed_html
+					);
+					?>
 				</div>
 			</div>
 		</a>
@@ -35,7 +45,14 @@ if ( ! $template_args['content'] ) {
 		<span class="p-infobar__inner">
 			<div class="c-container">
 				<div class="p-infobar__content">
-					<?php echo esc_html( $template_args['content'] ); ?>
+					<?php
+					$kses_allowed_html = wp_kses_allowed_html( 'user_description' );
+
+					echo wp_kses(
+						$template_args['content'],
+						$kses_allowed_html
+					);
+					?>
 				</div>
 			</div>
 		</span>
