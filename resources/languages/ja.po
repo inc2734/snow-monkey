@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-04-23 13:45+0900\n"
-"PO-Revision-Date: 2020-04-23 13:46+0900\n"
+"POT-Creation-Date: 2020-04-30 15:21+0900\n"
+"PO-Revision-Date: 2020-04-30 15:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -739,8 +739,13 @@ msgid "Use browser cache"
 msgstr "ブラウザキャッシュを使用する"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:18
-msgid "The server must support htaccess."
-msgstr "サーバーが .htaccess に対応している必要があります。"
+msgid ""
+"The server must support htaccess, IfModule and mod_expires. If you get the "
+"Internal Server Error (500), delete the characters added to .htaccess."
+msgstr ""
+"サーバーは .htaccess、IfModule、および mod_expires をサポートしている必要があ"
+"ります。Internal Server Error (500) が表示された場合は、.htaccess に追加され"
+"た文字を削除してください。"
 
 #: app/customizer/page-speed-optimization/controls/cache-nav-menus.php:15
 msgid "Cache nav menus"
@@ -1583,6 +1588,9 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "The server must support htaccess."
+#~ msgstr "サーバーが .htaccess に対応している必要があります。"
 
 #~ msgid "[PC] Overwrite header position with \"Normal\""
 #~ msgstr "【PC】ヘッダー位置設定を「ノーマル」で上書きする"
