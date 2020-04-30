@@ -23,5 +23,5 @@ if ( $infobar_background_color ) {
 
 Style::register(
 	'.p-infobar__inner',
-	$infobar_background_color
+	$styles
 );
