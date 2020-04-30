@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 10.2.2
  */
 
 use Framework\Helper;
@@ -40,6 +40,9 @@ add_action(
 			'entry-content',
 			function( $selectors ) {
 				$accent_color = get_theme_mod( 'accent-color' );
+				if ( ! $accent_color ) {
+					return;
+				}
 
 				$selectors_for_h2 = [];
 				$selectors_for_th = [];

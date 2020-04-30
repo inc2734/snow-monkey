@@ -8,6 +8,9 @@
 use Inc2734\WP_Customizer_Framework\Style;
 
 $accent_color = get_theme_mod( 'accent-color' );
+if ( ! $accent_color ) {
+	return;
+}
 
 Style::register(
 	'.wpco .contents-outline ol li a::before',

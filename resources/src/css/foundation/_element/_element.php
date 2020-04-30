@@ -7,10 +7,13 @@
 
 use Inc2734\WP_Customizer_Framework\Style;
 
-Style::register(
-	'a',
-	'color: ' . get_theme_mod( 'accent-color' )
-);
+$accent_color = get_theme_mod( 'accent-color' );
+if ( $accent_color ) {
+	Style::register(
+		'a',
+		'color: ' . get_theme_mod( 'accent-color' )
+	);
+}
 
 Style::register(
 	[

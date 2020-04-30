@@ -9,6 +9,9 @@ use Inc2734\WP_Customizer_Framework\Style;
 use Inc2734\WP_Customizer_Framework\Color;
 
 $accent_color = get_theme_mod( 'accent-color' );
+if ( ! $accent_color ) {
+	return;
+}
 
 Style::register(
 	'.c-page-top',
