@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.1.0
+ * @version 10.2.3
  */
 
 use Framework\Helper;
@@ -219,6 +219,25 @@ add_filter(
 				'title' => $value[0],
 				'link'  => $value[1],
 			];
+		}
+
+		/**
+		 * @see https://github.com/inc2734/snow-monkey/issues/766
+		 */
+		if ( class_exists( '\WC_Subscriptions_Change_Payment_Gateway' ) ) {
+			$is_request_to_change_payment = \WC_Subscriptions_Change_Payment_Gateway::$is_request_to_change_payment;
+
+			if ( is_main_query() && is_page() && is_checkout_pay_page() && $is_request_to_change_payment ) {
+				$page_on_front = get_option( 'page_on_front' );
+				$home_label    = __( 'Home', 'snow-monkey' );
+				if ( $page_on_front ) {
+					$home_label = get_post( $page_on_front )->post_title;
+				}
+
+				$wc_breadcrumbs[0]['title'] = $home_label;
+				$wc_breadcrumbs[1]['title'] = __( 'My account', 'snow-monkey' );
+				return $wc_breadcrumbs;
+			}
 		}
 
 		return array_merge(

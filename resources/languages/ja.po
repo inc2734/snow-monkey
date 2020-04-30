@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-04-30 15:21+0900\n"
-"PO-Revision-Date: 2020-04-30 15:21+0900\n"
+"POT-Creation-Date: 2020-05-01 08:40+0900\n"
+"PO-Revision-Date: 2020-05-01 08:40+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1225,6 +1225,14 @@ msgstr "WooCommerce サイドバー"
 #: app/setup/dependency/woocommerce.php:118
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
+
+#: app/setup/dependency/woocommerce.php:232
+msgid "Home"
+msgstr "ホーム"
+
+#: app/setup/dependency/woocommerce.php:238
+msgid "My account"
+msgstr "マイアカウント"
 
 #: app/setup/entry-meta.php:19 app/setup/entry-meta.php:34
 msgid "Published"
