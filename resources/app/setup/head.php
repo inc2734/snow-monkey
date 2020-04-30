@@ -30,14 +30,18 @@ add_action(
 * @return void
 */
 add_action(
- 'wp_head',
- function() {
-	 ?>
-	 <link rel="profile" href="http://gmpg.org/xfn/11">
-	 <?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-		 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	 <?php endif; ?>
-	 <?php
- },
- 2
+	'wp_head',
+	function() {
+		$accent_color = get_theme_mod( 'accent-color' );
+		?>
+		<link rel="profile" href="http://gmpg.org/xfn/11">
+		<?php if ( $accent_color ) : ?>
+			<meta name="theme-color" content="<?php echo esc_attr( $accent_color ); ?>">
+		<?php endif; ?>
+		<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+			<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<?php endif; ?>
+		<?php
+	},
+	2
 );
