@@ -66,6 +66,7 @@ body {
 }
 
 .wp-block[data-align="center"] {
+  clear: both;
   text-align: initial;
 
   > .is-block-content {
