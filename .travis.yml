@@ -22,8 +22,9 @@ cache:
   - resources/vendor
   - "$HOME/.composer/cache"
 install:
-- nvm install 8
+- nvm install 12
 - npm install
+- npm rebuild node-sass
 - composer install
 - npm run build
 before_script:
