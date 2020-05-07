@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-05-01 08:40+0900\n"
-"PO-Revision-Date: 2020-05-01 08:40+0900\n"
+"POT-Creation-Date: 2020-05-07 08:58+0900\n"
+"PO-Revision-Date: 2020-05-07 08:58+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -355,7 +355,7 @@ msgstr "リッチメディア"
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:23
 #: app/widget/snow-monkey-recent-posts/_form.php:70
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:100
-#: translation/bundle-template-header.php:12
+#: translation/bundle-template-header.php:13
 msgid "Simple"
 msgstr "シンプル"
 
@@ -1530,50 +1530,55 @@ msgstr "トラックバック URL"
 msgid "MENU"
 msgstr "MENU"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:2
+msgid "Landing page ( with header/footer )"
+msgstr "ランディングページ（ヘッダー・フッターあり）"
+
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:3
 msgid "Landing page ( slim width )"
 msgstr "ランディングページ（スリム幅）"
 
 #. Template Name of the plugin/theme
-#: translation/bundle-template-header.php:3
+#. Template Name of the plugin/theme
+#: translation/bundle-template-header.php:4
 msgid "Landing page"
 msgstr "ランディングページ"
 
 #. Template Name of the plugin/theme
-#: translation/bundle-template-header.php:4
+#: translation/bundle-template-header.php:5
 msgid "Left sidebar"
 msgstr "左サイドバー"
 
 #. Template Name of the plugin/theme
-#: translation/bundle-template-header.php:5
+#: translation/bundle-template-header.php:6
 msgid "Full width"
 msgstr "フル幅"
 
 #. Template Name of the plugin/theme
-#: translation/bundle-template-header.php:6
+#: translation/bundle-template-header.php:7
 msgid "One column ( slim width )"
 msgstr "1カラム（スリム幅）"
 
 #. Template Name of the plugin/theme
-#: translation/bundle-template-header.php:7
+#: translation/bundle-template-header.php:8
 msgid "One column"
 msgstr "1カラム"
 
 #. Template Name of the plugin/theme
-#: translation/bundle-template-header.php:8
+#: translation/bundle-template-header.php:9
 msgid "Right sidebar"
 msgstr "右サイドバー"
 
-#: translation/bundle-template-header.php:9
+#: translation/bundle-template-header.php:10
 msgid "One row"
 msgstr "1行"
 
-#: translation/bundle-template-header.php:10
+#: translation/bundle-template-header.php:11
 msgid "Two rows"
 msgstr "2行"
 
-#: translation/bundle-template-header.php:11
+#: translation/bundle-template-header.php:12
 msgid "Center logo"
 msgstr "中央ロゴ"
 
