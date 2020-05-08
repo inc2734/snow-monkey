@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d4a8af6e4302ed329ee7d1984eb028b",
+    "content-hash": "18e9786ec97c982861bcef38102dd3bb",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -886,16 +886,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "11.0.1",
+            "version": "11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "05c8858c91f60dd13d1fb6b5e48bb3fa47103cfc"
+                "reference": "1b15abc5fdc3abf14537e44e214759cd9c44eba3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/05c8858c91f60dd13d1fb6b5e48bb3fa47103cfc",
-                "reference": "05c8858c91f60dd13d1fb6b5e48bb3fa47103cfc",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/1b15abc5fdc3abf14537e44e214759cd9c44eba3",
+                "reference": "1b15abc5fdc3abf14537e44e214759cd9c44eba3",
                 "shasum": ""
             },
             "require": {
@@ -904,7 +904,6 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.7.0|>=2.8.2",
                 "phpunit/phpunit": "7.*",
                 "squizlabs/php_codesniffer": "*",
                 "wp-coding-standards/wpcs": "*"
@@ -926,7 +925,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2020-02-04T05:51:43+00:00"
+            "time": "2020-05-08T05:42:26+00:00"
         }
     ],
     "packages-dev": [
