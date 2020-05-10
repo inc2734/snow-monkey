@@ -133,6 +133,11 @@ body {
   padding: 0;
 }
 
+// for block styles of core/list block
+.block-editor-block-preview__content [data-type="core/list"] ul {
+  padding-left: 1.3em;
+}
+
 .u-hidden,
 .u-hidden-sm,
 .u-hidden-md,
