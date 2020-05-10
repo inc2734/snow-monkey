@@ -79,3 +79,27 @@ add_action(
 		);
 	}
 );
+
+/**
+ * Optimize the Snow Monkey JavaScript loading
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		if ( ! get_theme_mod( 'js-loading-optimization' ) ) {
+			return;
+		}
+
+		add_filter(
+			'inc2734_wp_page_speed_optimization_defer_scripts',
+			function( $handles ) {
+				return array_merge(
+					$handles,
+					[
+						'snow-monkey-forms',
+					]
+				);
+			}
+		);
+	}
+);
