@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.3
+ * @version 10.5.0
  */
 
 use Framework\Helper;
@@ -97,6 +97,10 @@ add_action(
 					$handles,
 					[
 						Helper::get_main_style_handle() . '-woocommerce',
+						'wc-block-style',
+						'woocommerce-layout',
+						'woocommerce-smallscreen',
+						'woocommerce-general',
 					]
 				);
 			}
