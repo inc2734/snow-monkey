@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 10.4.6
  *
  * This procceses are beta.
  */
@@ -41,6 +41,8 @@ add_action(
 						'wp-oembed-blog-card',
 						'wp-pure-css-gallery',
 						'wp-share-buttons',
+						'admin-bar',
+						'hoverintent-js',
 						Helper::get_main_script_handle() . '-background-parallax-scroll',
 						Helper::get_main_script_handle() . '-custom-widgets',
 						Helper::get_main_script_handle() . '-drop-nav',
