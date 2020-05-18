@@ -3,20 +3,22 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 10.5.0
  *
  * renamed: template-parts/simple-header.php
  */
 
 use Framework\Helper;
 
-$header_content = get_theme_mod( 'header-content' );
-$header_type    = get_theme_mod( 'header-layout' ) . '-header';
-$has_drawer_nav = has_nav_menu( 'drawer-nav' );
+$header_content   = get_theme_mod( 'header-content' );
+$header_type      = get_theme_mod( 'header-layout' ) . '-header';
+$header_alignfull = get_theme_mod( 'header-alignfull' );
+$has_drawer_nav   = has_nav_menu( 'drawer-nav' );
+$container_class  = $header_alignfull ? 'c-fluid-container' : 'c-container';
 ?>
 
 <div class="l-<?php echo esc_attr( $header_type ); ?>">
-	<div class="c-container">
+	<div class="<?php echo esc_attr( $container_class ); ?>">
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
 			<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 				<div class="c-row__col c-row__col--auto">

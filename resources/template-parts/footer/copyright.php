@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.5.0
  *
  * renamed: template-parts/copyright.php
  */
@@ -17,10 +17,13 @@ $template_args = [
 if ( ! $template_args['copyright'] ) {
 	return;
 }
+
+$footer_alignfull = get_theme_mod( 'footer-alignfull' );
+$container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 ?>
 
 <div class="c-copyright">
-	<div class="c-container">
+	<div class="<?php echo esc_attr( $container_class ); ?>">
 		<?php echo wp_kses_post( $template_args['copyright'] ); ?>
 	</div>
 </div>

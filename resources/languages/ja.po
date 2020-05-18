@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-05-07 08:58+0900\n"
-"PO-Revision-Date: 2020-05-07 08:58+0900\n"
+"POT-Creation-Date: 2020-05-18 16:26+0900\n"
+"PO-Revision-Date: 2020-05-18 16:26+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -560,6 +560,10 @@ msgstr "%1$sページ設定"
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
 
+#: app/customizer/design/sections/footer/controls/alignfull.php:15
+msgid "Make footer full width"
+msgstr "フッターを全幅にする"
+
 #: app/customizer/design/sections/footer/controls/footer-layout.php:19
 msgid "Number of columns in the footer widget area"
 msgstr "フッターウィジェットエリアのカラム数"
@@ -584,6 +588,10 @@ msgstr "4カラム"
 #: app/setup/widget-area.php:309
 msgid "Footer"
 msgstr "フッター"
+
+#: app/customizer/design/sections/header/controls/alignfull.php:15
+msgid "Make header full width"
+msgstr "ヘッダーを全幅にする"
 
 #: app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
 msgid "Display header content on mobile too."
@@ -1218,19 +1226,19 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/setup/dependency/woocommerce.php:117
+#: app/setup/dependency/woocommerce.php:121
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
-#: app/setup/dependency/woocommerce.php:118
+#: app/setup/dependency/woocommerce.php:122
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
-#: app/setup/dependency/woocommerce.php:232
+#: app/setup/dependency/woocommerce.php:236
 msgid "Home"
 msgstr "ホーム"
 
-#: app/setup/dependency/woocommerce.php:238
+#: app/setup/dependency/woocommerce.php:242
 msgid "My account"
 msgstr "マイアカウント"
 
@@ -1530,6 +1538,7 @@ msgstr "トラックバック URL"
 msgid "MENU"
 msgstr "MENU"
 
+#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:2
 msgid "Landing page ( with header/footer )"
 msgstr "ランディングページ（ヘッダー・フッターあり）"
@@ -1539,7 +1548,6 @@ msgstr "ランディングページ（ヘッダー・フッターあり）"
 msgid "Landing page ( slim width )"
 msgstr "ランディングページ（スリム幅）"
 
-#. Template Name of the plugin/theme
 #. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:4
 msgid "Landing page"
