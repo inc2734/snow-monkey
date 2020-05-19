@@ -3,7 +3,7 @@
   "license": "GPL-2.0+",
   "dependencies": {
     "jquery.background-parallax-scroll": "^3.0.6",
-    "jquery.smoothscroll": "^3.0.0",
+    "jquery.smoothscroll": "^3.0.1",
     "node-normalize-scss": "^8.0.1",
     "slick-carousel": "^1.8.1"
   },
