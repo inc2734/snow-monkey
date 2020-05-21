@@ -1,7 +1,9 @@
 .#{ $_prefix }c-drawer {
+  $drawer-font-size: $_base-font-size-px - 2;
+
   z-index: 100000;
   background-color: $color-accent;
-  @include _font-size-line-height($_base-font-size-px - 2);
+  @include _font-size-line-height($drawer-font-size);
 
   > .#{ $_prefix }c-drawer__menu:last-child,
   > .#{ $_prefix }c-drawer__sub-nav:last-child {
@@ -12,11 +14,16 @@
     color: #fff;
   }
 
-  &__body {
-    z-index: 100000;
+  .#{$_prefix}c-ic-angle-right {
+    transform: translateY(0) translateX(-.15em);
+
+    &::before {
+      border-color: #fff;
+    }
   }
 
   &__toggle {
+    @include _square(_px2rem(_vertical-rhythm($drawer-font-size)));
     @include _transition(transform);
     transform: rotate(90deg);
 
