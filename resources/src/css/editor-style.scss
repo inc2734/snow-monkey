@@ -15,8 +15,8 @@ body {
   padding: 50px 0;
 }
 
-.editor-post-title__input {
-  @include _font-size-line-height($_base-font-size-px * 1.25);
+textarea.editor-post-title__input {
+  @include _font-size-line-height($_base-font-size * $_h2-font-size-scale);
   font-weight: bold;
   font-family: $_font-family;
   @include _padding(.25, .5);
