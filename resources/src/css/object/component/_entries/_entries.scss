@@ -84,7 +84,8 @@
 
   [data-has-sidebar="true"] &,
   [data-is-slim-width="true"] & {
-    &--rich-media {
+    &--rich-media,
+    &--panel {
       .#{ $_prefix }c-entries__item {
         @include _media-min(lg) {
           @include _lattice__col--width(1 / 2 * 100%);
