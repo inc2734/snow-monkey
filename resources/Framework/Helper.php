@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 10.6.0
  */
 
 namespace Framework;
@@ -50,21 +50,30 @@ class Helper {
 	/**
 	 * Return trimed title
 	 *
+	 * @param string|null $title
 	 * @return void
 	 */
-	public static function the_title_trimed() {
+	public static function the_title_trimed( $title = null ) {
 		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
 		$num_words = 80;
 		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
 		$num_words = apply_filters( 'snow_monkey_entry_summary_title_num_words', $num_words * $excerpt_length_ratio );
 		// phpcs:enable
 		if ( $num_words ) {
-			ob_start();
-			the_title();
-			$title = wp_trim_words( ob_get_clean(), $num_words );
+			if ( is_null( $title ) ) {
+				ob_start();
+				the_title();
+				$title = ob_get_clean();
+			}
+
+			$title = wp_trim_words( $title, $num_words );
 			echo esc_html( $title );
 		} else {
-			the_title();
+			if ( is_null( $title ) ) {
+				the_title();
+			} else {
+				echo esc_html( $title );
+			}
 		}
 	}
 

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-05-18 16:26+0900\n"
-"PO-Revision-Date: 2020-05-18 16:26+0900\n"
+"POT-Creation-Date: 2020-05-26 10:50+0900\n"
+"PO-Revision-Date: 2020-05-26 10:51+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,110 +42,111 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:58 template-parts/content/prev-next-nav.php:59
+#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:59
+#: template-parts/loop/entry-summary/content/content-rss.php:35
 #: template-parts/loop/entry-summary/content/content.php:31
 msgctxt "excerpt_length"
 msgid "55"
 msgstr ""
 
-#: Framework/Helper.php:98
+#: Framework/Helper.php:107
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:103
+#: Framework/Helper.php:112
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:108
+#: Framework/Helper.php:117
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:114
+#: Framework/Helper.php:123
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:199
+#: Framework/Helper.php:208
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:204
+#: Framework/Helper.php:213
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:209 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:218 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:214
+#: Framework/Helper.php:223
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:219
+#: Framework/Helper.php:228
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:224
+#: Framework/Helper.php:233
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:229
+#: Framework/Helper.php:238
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:234
+#: Framework/Helper.php:243
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:239
+#: Framework/Helper.php:248
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:244
+#: Framework/Helper.php:253
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:250
+#: Framework/Helper.php:259
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:256
+#: Framework/Helper.php:265
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:262
+#: Framework/Helper.php:271
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:268
+#: Framework/Helper.php:277
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:274
+#: Framework/Helper.php:283
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:280
+#: Framework/Helper.php:289
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:286
+#: Framework/Helper.php:295
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:292
+#: Framework/Helper.php:301
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:298
+#: Framework/Helper.php:307
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -346,6 +347,7 @@ msgstr "記事一覧レイアウト"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:22
 #: app/widget/snow-monkey-recent-posts/_form.php:69
+#: app/widget/snow-monkey-rss/_form.php:54
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:99
 msgid "Rich media"
 msgstr "リッチメディア"
@@ -354,6 +356,7 @@ msgstr "リッチメディア"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:23
 #: app/widget/snow-monkey-recent-posts/_form.php:70
+#: app/widget/snow-monkey-rss/_form.php:55
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:100
 #: translation/bundle-template-header.php:13
 msgid "Simple"
@@ -363,6 +366,7 @@ msgstr "シンプル"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:24
 #: app/widget/snow-monkey-recent-posts/_form.php:71
+#: app/widget/snow-monkey-rss/_form.php:56
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:101
 msgid "Text"
 msgstr "テキスト"
@@ -371,6 +375,7 @@ msgstr "テキスト"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:25
 #: app/widget/snow-monkey-recent-posts/_form.php:72
+#: app/widget/snow-monkey-rss/_form.php:57
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:102
 msgid "Panels"
 msgstr "パネル"
@@ -1384,6 +1389,7 @@ msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:12
+#: app/widget/snow-monkey-rss/_form.php:23
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:12
 msgid "Title"
 msgstr "タイトル"
@@ -1393,21 +1399,25 @@ msgid "Post type"
 msgstr "投稿タイプ"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:49
+#: app/widget/snow-monkey-rss/_form.php:34
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:79
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:61
+#: app/widget/snow-monkey-rss/_form.php:46
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:91
 msgid "Layout"
 msgstr "レイアウト"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:82
+#: app/widget/snow-monkey-rss/_form.php:67
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:112
 msgid "Link URL"
 msgstr "リンク URL"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:93
+#: app/widget/snow-monkey-rss/_form.php:78
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:123
 msgid "Link text"
 msgstr "リンクテキスト"
@@ -1424,6 +1434,18 @@ msgstr "Snow Monkey: 最近の投稿"
 #: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:40
 msgid "Recent posts"
 msgstr "最近の投稿"
+
+#: app/widget/snow-monkey-rss/_form.php:12
+msgid "Feed URL"
+msgstr "フィード URL"
+
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:33
+msgid "Snow Monkey: RSS"
+msgstr "Snow Monkey: RSS"
+
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:39
+msgid "RSS"
+msgstr "RSS"
 
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:42
 msgid "Displayed term"
