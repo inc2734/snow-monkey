@@ -2,12 +2,13 @@
 
 import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/basis';
 
-import { anchorPageScroll } from './module/_anchor-page-scroll';
 import { scrollChecker } from './module/_scroll-checker';
 
 import {
   getHeader,
   getHtml,
+  scrollTop,
+  getScrollOffset,
 } from './module/_helper';
 
 document.addEventListener(
@@ -25,7 +26,7 @@ document.addEventListener(
 
     const apply = () => {
       window.removeEventListener('scroll', apply, false);
-      anchorPageScroll(header);
+      window.scrollTo(0, scrollTop() - getScrollOffset());
     };
 
     window.addEventListener('scroll', apply, false);
