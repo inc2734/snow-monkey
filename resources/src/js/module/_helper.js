@@ -197,8 +197,6 @@ export function getScrollOffset(option = {}) {
     }
     return shouldShowDropNav() ? dropNav.offsetHeight : 0;
   })();
-  console.log(shouldShowDropNav());
-  console.log(dropNavHeight);
 
 	if ('fixed' === headerPosition) {
 		return headerHeight + adminbarHeight;
