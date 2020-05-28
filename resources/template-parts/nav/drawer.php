@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.5.2
+ * @version 10.6.1
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -19,9 +19,9 @@ if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 ?>
 
 <nav id="drawer-nav" class="c-drawer c-drawer--fixed" role="navigation" aria-hidden="true" aria-labelledby="hamburger-btn">
-	<?php do_action( 'snow_monkey_prepend_drawer_nav' ); ?>
-
 	<div class="c-drawer__inner">
+		<?php do_action( 'snow_monkey_prepend_drawer_nav' ); ?>
+
 		<?php
 		if ( $has_drawer_nav ) {
 			wp_nav_menu(
@@ -47,7 +47,7 @@ if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 				</li>
 			</ul>
 		<?php endif; ?>
-	</div>
 
-	<?php do_action( 'snow_monkey_append_drawer_nav' ); ?>
+		<?php do_action( 'snow_monkey_append_drawer_nav' ); ?>
+	</div>
 </nav>
