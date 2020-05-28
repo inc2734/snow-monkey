@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.1.0
+ * @version 10.6.1
  */
 
 namespace Framework\Contract\Helper;
@@ -99,7 +99,7 @@ trait Page_Header {
 	 */
 	public static function get_page_header_image() {
 		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
-		if ( ! $url ) {
+		if ( null === $url ) {
 			// @deprecated
 			$url = apply_filters( 'snow_monkey_page_header_image_url', $url );
 			if ( has_filter( 'snow_monkey_page_header_image_url' ) ) {
@@ -108,6 +108,10 @@ trait Page_Header {
 					'Snow Monkey 5.1.0'
 				);
 			}
+		}
+
+		if ( false === $url ) {
+			return;
 		}
 
 		if ( $url ) {
