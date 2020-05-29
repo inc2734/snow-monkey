@@ -143,6 +143,22 @@ export function setStyle(element, property, value) {
 }
 
 /**
+ * Return true when dropnav will show
+ *
+ * @return boolean
+ */
+export function shouldShowDropNav() {
+  const header = getHeader();
+  const dropNavWrapper = getDropNavWrapper();
+
+  if (! header || ! dropNavWrapper) {
+    return false;
+  }
+
+  return true;
+}
+
+/**
  * Return true when match the media query
  *
  * @return boolean
@@ -169,15 +185,22 @@ export function hasClass(target, className) {
 export function getScrollOffset(option = {}) {
 	const header = getHeader();
 	const adminbar = getAdminbar();
+	const dropNav = getDropNavWrapper();
 
 	const headerPosition = getStyle(header, 'position');
 	const headerHeight = header ? header.offsetHeight : 0;
   const adminbarPosition = getStyle(adminbar, 'position');
   const adminbarHeight = 'fixed' === adminbarPosition ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
+  const dropNavHeight = (() => {
+    if (true === option.forceDropNav) {
+      return dropNav ? dropNav.offsetHeight : 0;
+    }
+    return shouldShowDropNav() ? dropNav.offsetHeight : 0;
+  })();
 
 	if ('fixed' === headerPosition) {
 		return headerHeight + adminbarHeight;
 	}
 
-  return adminbarHeight;
+	return dropNavHeight + adminbarHeight;
 }
