@@ -1,0 +1,5 @@
+.wp-block-group {
+  &__inner-container {
+    @extend %theme-entry-content;
+  }
+}

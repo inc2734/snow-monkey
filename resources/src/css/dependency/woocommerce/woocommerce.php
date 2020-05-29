@@ -84,4 +84,6 @@ if ( $accent_color ) {
 	);
 }
 
-Style::extend( 'entry-content', [ '.woocommerce-Tabs-panel', '.related.products' ] );
+$selectors = [ '.woocommerce-Tabs-panel', '.related.products' ];
+Style::extend( 'entry-content', $selectors );
+Style::extend( 'theme-entry-content', $selectors );

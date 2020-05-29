@@ -1,0 +1,80 @@
+/**
+ * Widget title
+ */
+@mixin widget-title() {
+  @include _margin(0, 0, .5);
+  @include _font-size-line-height($_base-font-size-px);
+}
+
+/**
+ * Unstyled list base style
+ */
+@mixin widget-list-base() {
+  @include _list-unstyled();
+
+  > li + li {
+    @include _margin(.25, 0, 0);
+  }
+}
+
+/**
+ * Text link base style
+ */
+@mixin widget-link-base() {
+  color: $_color-text; // for IE11
+  color: _var-color-text();
+  text-decoration: none;
+
+  @include _hover(lg) {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Item has children expander
+ */
+@mixin widget-has-children-expander() {
+  position: relative;
+}
+
+/**
+ * Children
+ */
+@mixin widget-children() {
+  @keyframes widget_children_show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  display: none;
+  @include _margin(.25, 0, 0);
+  @include _padding(.25, 0);
+
+  &[data-is-hidden="false"] {
+    @include _margin-bottom(.25);
+    display: block;
+    animation: widget_children_show .5s;
+
+    [data-is-hidden="false"] {
+      @include _margin-bottom(-.25);
+      border-bottom: none;
+    }
+  }
+}
+
+/**
+ * Full width
+ */
+@mixin widget-full-width() {
+  @include alignfull();
+  padding-right: 0;
+  padding-left: 0;
+
+  .#{ $_prefix }c-container {
+    @include container-padding();
+  }
+}

@@ -14,10 +14,13 @@ if ( $accent_color ) {
 		'color: ' . $accent_color
 	);
 
+	// @todo
 	Style::register(
 		'.smb-section__title::after',
 		'background-color: ' . $accent_color
 	);
 }
 
-Style::extend( 'entry-content', [ '.smb-section__body' ] );
+$selectors = [ '.smb-section__body' ];
+Style::extend( 'entry-content', $selectors );
+Style::extend( 'theme-entry-content', $selectors );

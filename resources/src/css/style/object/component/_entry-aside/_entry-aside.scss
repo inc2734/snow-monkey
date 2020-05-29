@@ -1,0 +1,17 @@
+.#{ $_prefix }c-entry-aside {
+  @include _margin(1, 0, 0);
+
+  @include _media-min(lg) {
+    @include _margin(2, 0, 0);
+  }
+
+  &__title {
+    @include _margin(0, 0, .5);
+    @include _font-size-line-height($_base-font-size-px * 1.25);
+
+    @include _media-min(lg) {
+      @include _margin(0, 0, 1);
+      @include _font-size-line-height($_base-font-size-px * 1.5);
+    }
+  }
+}

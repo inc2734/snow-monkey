@@ -1,0 +1,121 @@
+.#{ $_prefix }p-global-nav {
+  &[aria-hidden="true"] {
+    visibility: hidden;
+  }
+
+  .#{ $_prefix }c-navbar {
+    &__item {
+      > a {
+        flex-direction: column;
+        color: $_color-text; // for IE11
+        color: _var-color-text();
+        @include _font-size-line-height($_base-font-size-px - 2);
+        @include _padding(.75);
+        @include _transition(color);
+
+        > span {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+        > small {
+          display: block;
+          @include _font-size-line-height($_base-font-size-px - 6);
+        }
+      }
+
+      &[data-active-menu] {
+        > a {
+          color: $color-accent;
+        }
+      }
+
+      @include _hover(lg) {
+        > a {
+          color: $color-accent;
+        }
+      }
+
+      > .#{ $_prefix }c-navbar__submenu {
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+          content: '';
+          display: block;
+          @include _triangle-top(16px, 10px, $color-accent);
+          position: absolute;
+          top: -10px;
+          left: calc(50% - 8px);
+        }
+      }
+    }
+
+    &__submenu {
+      background-color: $color-accent;
+      z-index: 1;
+    }
+
+    &__subitem {
+      @include _font-size-line-height($_base-font-size-px - 2);
+
+      @include _hover(lg) {
+        background-color: rgba(#fff, .05);
+      }
+
+      > a {
+        color: #fff;
+        @include _padding(.5rem, 1rem);
+      }
+    }
+
+    &[data-popup-mode=click] {
+      .#{ $_prefix }c-navbar__toggle {
+        @include _transition(transform);
+      }
+
+      .#{ $_prefix }c-navbar__item {
+        .#{ $_prefix }c-navbar__toggle {
+          transform: rotate(90deg);
+
+          &[aria-expanded="true"] {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+
+      .#{ $_prefix }c-navbar__subitem {
+        .#{ $_prefix }c-navbar__toggle {
+          color: #fff;
+          transform: rotate(0);
+
+          &[aria-expanded="true"] {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+
+  &--vertical {
+    display: flex;
+
+    .#{ $_prefix }c-navbar {
+      display: inline-flex;
+
+      &__item {
+        display: block;
+
+        > a {
+          display: block;
+          writing-mode: vertical-rl;
+          text-align: left;
+
+          > span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

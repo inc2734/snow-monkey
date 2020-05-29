@@ -1,5 +1,6 @@
 .smb-container {
   &__body {
     @extend %entry-content;
+    @extend %theme-entry-content;
   }
 }

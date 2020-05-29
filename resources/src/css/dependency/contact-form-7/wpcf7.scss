@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
-$_font-path: false;
 @import '../../core/core';
+@import '../../style/mixin/mixin';
 
 .wpcf7:not(:last-child) {
   @include _margin-bottom(1.5);

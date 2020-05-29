@@ -15,4 +15,6 @@ if ( $accent_color ) {
 	);
 }
 
-Style::extend( 'entry-content', [ '.smb-step__item__summary' ] );
+$selectors = [ '.smb-step__item__summary' ];
+Style::extend( 'entry-content', $selectors );
+Style::extend( 'theme-entry-content', $selectors );

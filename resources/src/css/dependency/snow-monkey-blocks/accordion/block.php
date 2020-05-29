@@ -7,4 +7,6 @@
 
 use Inc2734\WP_Customizer_Framework\Style;
 
-Style::extend( 'entry-content', [ '.smb-accordion__item__body' ] );
+$selectors = [ '.smb-accordion__item__body' ];
+Style::extend( 'entry-content', $selectors );
+Style::extend( 'theme-entry-content', $selectors );

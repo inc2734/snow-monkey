@@ -1,9 +1,11 @@
 @charset 'utf-8';
 
-$_font-path: false;
 $img-path: '../../../img';
 @import '../../core/core';
-@import '../../foundation/_placeholder/placeholder';
+@import '../../style/mixin/mixin';
+@import '../../style/placeholder/placeholder';
+@import '../../theme/mixin/mixin';
+@import '../../theme/placeholder/placeholder';
 
 @import 'btn-box/block';
 @import 'box/block';

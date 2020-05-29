@@ -1,0 +1,19 @@
+.#{ $_prefix }c-pagination {
+  &__item {
+    background-color: $color-accent;
+    color: #fff;
+  }
+
+  &__item-link,
+  &__item-ellipsis {
+    background-color: _lighter($_color-gray);
+    color: #999;
+  }
+
+  &__item-link {
+    @include _hover(lg) {
+      background-color: _light($_color-gray);
+      color: #fff;
+    }
+  }
+}

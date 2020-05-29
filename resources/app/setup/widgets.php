@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 10.7.0
  */
 
 use Framework\Helper;
@@ -33,9 +33,9 @@ add_action(
 
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-custom-widgets',
-			get_theme_file_uri( '/assets/css/custom-widgets.min.css' ),
+			get_theme_file_uri( '/assets/css/custom-widgets/custom-widgets.min.css' ),
 			[ Helper::get_main_style_handle() ],
-			filemtime( get_theme_file_path( '/assets/css/custom-widgets.min.css' ) )
+			filemtime( get_theme_file_path( '/assets/css/custom-widgets/custom-widgets.min.css' ) )
 		);
 	}
 );

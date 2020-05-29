@@ -1,0 +1,7 @@
+.#{ $_prefix }p-footer-sticky-nav {
+  &[data-clickable="false"] {
+    .#{ $_prefix }c-navbar {
+      opacity: .2;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 @charset 'utf-8';
 
-$_font-path: false;
 $img-path: '../../../img';
 @import '../../core/core';
-@import '../../foundation/_placeholder/placeholder';
+@import '../../style/mixin/mixin';
+@import '../../style/placeholder/placeholder';
+@import '../../theme/mixin/mixin';
+@import '../../theme/placeholder/placeholder';
 
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
@@ -229,6 +231,7 @@ $img-path: '../../../img';
 .woocommerce-Tabs-panel,
 .related.products {
   @extend %entry-content;
+  @extend %theme-entry-content;
 }
 
 // Product meta in single
@@ -346,6 +349,7 @@ $img-path: '../../../img';
 
   .children {
     @include widget-children();
+    @include theme-widget-children();
   }
 }
 

@@ -7,6 +7,7 @@
 
   &__title {
     @extend %section-title;
+    @extend %theme-section-title;
   }
 
   &__lede {
@@ -22,6 +23,7 @@
 
   &__body {
     @extend %entry-content;
+    @extend %theme-entry-content;
   }
 
   > .#{ $_prefix }c-container,

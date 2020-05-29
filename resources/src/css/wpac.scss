@@ -1,8 +1,10 @@
 @charset 'utf-8';
 
-$_font-path: false;
 @import 'core/core';
-@import 'foundation/_placeholder/placeholder';
+@import 'style/mixin/mixin';
+@import 'style/placeholder/placeholder';
+@import 'theme/mixin/mixin';
+@import 'theme/placeholder/placeholder';
 
 /**
  * Alert
@@ -178,6 +180,7 @@ $_font-path: false;
 
   &__title {
     @extend %section-title;
+    @extend %theme-section-title;
 
     & + .wpac-section__body {
       @extend %section-body;

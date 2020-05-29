@@ -7,11 +7,11 @@
 
 use Inc2734\WP_Customizer_Framework\Style;
 
-Style::extend(
-	'entry-content',
-	[
-		'.smf-complete-content',
-		'.smf-system-error-content',
-		'.smf-item__controls',
-	]
-);
+$selectors = [
+	'.smf-complete-content',
+	'.smf-system-error-content',
+	'.smf-item__controls',
+];
+
+Style::extend( 'entry-content', $selectors );
+Style::extend( 'theme-entry-content', $selectors );

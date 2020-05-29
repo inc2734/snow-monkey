@@ -1,0 +1,13 @@
+.#{ $_prefix }p-global-nav {
+  .#{ $_prefix }c-navbar {
+    &__item {
+      > a {
+        font-weight: bold;
+
+        > small {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

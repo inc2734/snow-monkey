@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.4.6
+ * @version 10.7.0
  *
  * This procceses are beta.
  */
@@ -109,9 +109,10 @@ add_action(
 					$handles,
 					[
 						'wp-block-library',
-						Helper::get_main_style_handle(),
-						Helper::get_main_script_handle() . '-wpac',
-						Helper::get_main_script_handle() . '-custom-widgets',
+						Helper::get_main_style_handle() . '-style',
+						Helper::get_main_style_handle() . '-theme',
+						Helper::get_main_style_handle() . '-wpac',
+						Helper::get_main_style_handle() . '-custom-widgets',
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',

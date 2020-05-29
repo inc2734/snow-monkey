@@ -2,6 +2,7 @@
   &__item {
     &__summary {
       @extend %entry-content;
+      @extend %theme-entry-content;
     }
   }
 }

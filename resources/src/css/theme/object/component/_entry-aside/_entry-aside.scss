@@ -1,0 +1,26 @@
+.#{ $_prefix }c-entry-aside {
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+      display: block;
+      content: '';
+      height: $border-bottom-width;
+      background-color: $_color-black;
+      flex: 1 0 0%;
+      min-width: 20px;
+    }
+
+    &::before {
+      margin-right: .5em;
+    }
+
+    &::after {
+      margin-left: .5em;
+    }
+  }
+}

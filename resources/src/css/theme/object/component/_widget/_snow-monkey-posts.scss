@@ -1,0 +1,9 @@
+.snow-monkey-posts {
+  &__title {
+    @include theme-section-title();
+  }
+
+  &__more {
+    font-weight: bold;
+  }
+}

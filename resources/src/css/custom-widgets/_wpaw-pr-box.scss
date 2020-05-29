@@ -17,6 +17,7 @@
 
   &__title {
     @include section-title();
+    @include theme-section-title();
   }
 
   &__lead {

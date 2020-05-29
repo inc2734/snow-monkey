@@ -1,0 +1,44 @@
+.#{ $_prefix }p-footer-sticky-nav {
+  @include _position(fixed, null, 0, 0, 0);
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 0 0 2px 0 rgba(#000, .25);
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+  @include _transition(opacity);
+
+  @include _media-min(lg) {
+    display: none;
+  }
+
+  &[aria-hidden="true"] {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  a {
+    display: block;
+    color: $_color-gray;
+    @include _font-size(10px);
+    line-height: 1.2;
+    padding: .5em 0;
+    text-decoration: none;
+
+    > svg {
+      margin: 0 auto 2px;
+      display: block;
+    }
+  }
+
+  .#{ $_prefix }c-navbar {
+    &__item {
+      flex: 1 1 0%;
+
+      &[data-active-menu] {
+        > a {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+}

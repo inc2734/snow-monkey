@@ -1,0 +1,13 @@
+.#{ $_prefix }c-copyright {
+  background-color: $_color-black;
+  color: _light($_color-gray);
+
+  a {
+    color: _lighter($_color-text);
+    text-decoration: none;
+
+    @include _hover(lg) {
+      text-decoration: underline;
+    }
+  }
+}

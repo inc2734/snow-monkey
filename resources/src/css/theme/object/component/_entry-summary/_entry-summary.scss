@@ -1,0 +1,27 @@
+.#{ $_prefix }c-entry-summary {
+  &__term {
+    font-weight: bold;
+  }
+
+  &__content {
+    color: _lighter($_color-text);
+  }
+
+  &__meta {
+    font-weight: bold;
+
+    @include _media-min(lg) {
+      @include _margin(.5, 0, 0);
+    }
+  }
+
+  .#{ $_prefix }c-entries--text & {
+    &__title {
+      font-weight: normal;
+    }
+
+    &__meta {
+      font-weight: normal;
+    }
+  }
+}

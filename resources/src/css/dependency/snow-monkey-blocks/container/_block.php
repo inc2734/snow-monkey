@@ -7,4 +7,6 @@
 
 use Inc2734\WP_Customizer_Framework\Style;
 
-Style::extend( 'entry-content', [ '.smb-container__body' ] );
+$selectors = [ '.smb-container__body' ];
+Style::extend( 'entry-content', $selectors );
+Style::extend( 'theme-entry-content', $selectors );

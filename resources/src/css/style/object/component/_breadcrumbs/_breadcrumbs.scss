@@ -1,0 +1,11 @@
+.#{ $_prefix }c-breadcrumbs {
+  @include _font-size-line-height($_base-font-size-px - 4);
+
+  .#{ $_prefix }l-contents & {
+    &:first-child,
+    &:last-child {
+      @include _margin-top(.25);
+      @include _margin-bottom(.25);
+    }
+  }
+}

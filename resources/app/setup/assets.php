@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.7.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -54,24 +54,42 @@ add_action(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$dependencies = Helper::generate_style_dependencies(
+		wp_register_style(
+			Helper::get_main_style_handle(),
+			false,
 			[
-				'wp-block-library',
-				'wp-share-buttons',
-				'wp-like-me-box',
-				'wp-oembed-blog-card',
-				'wp-pure-css-gallery',
-				'wp-awesome-widgets',
-				'slick-carousel',
+				Helper::get_main_style_handle() . '-style',
+				Helper::get_main_style_handle() . '-theme',
 			]
 		);
 
-		wp_enqueue_style(
-			Helper::get_main_style_handle(),
-			get_theme_file_uri( '/assets/css/style.min.css' ),
-			$dependencies,
-			filemtime( get_theme_file_path( '/assets/css/style.min.css' ) )
+		wp_register_style(
+			Helper::get_main_style_handle() . '-style',
+			get_theme_file_uri( '/assets/css/style/style.min.css' ),
+			Helper::generate_style_dependencies(
+				[
+					'wp-block-library',
+					'wp-share-buttons',
+					'wp-like-me-box',
+					'wp-oembed-blog-card',
+					'wp-pure-css-gallery',
+					'wp-awesome-widgets',
+					'slick-carousel',
+				]
+			),
+			filemtime( get_theme_file_path( '/assets/css/style/style.min.css' ) )
 		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-theme',
+			get_theme_file_uri( '/assets/css/theme/theme.min.css' ),
+			[
+				Helper::get_main_style_handle() . '-style',
+			],
+			filemtime( get_theme_file_path( '/assets/css/theme/theme.min.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() );
 	},
 	11
 );

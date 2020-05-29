@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 10.7.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -23,7 +23,11 @@ add_action(
 	'after_setup_theme',
 	function() {
 		add_theme_support( 'editor-styles' );
-		$stylesheet = [ 'assets/css/editor-style.min.css' ];
+		$stylesheet = [
+			'assets/css/style/editor-style.min.css',
+			'assets/css/theme/editor-theme.min.css',
+			'assets/css/editor-style.min.css',
+		];
 		add_editor_style( $stylesheet );
 	}
 );

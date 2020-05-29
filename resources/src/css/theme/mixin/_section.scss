@@ -1,0 +1,10 @@
+@mixin theme-section-title() {
+  &::after {
+    @include _margin(.25, auto, 0);
+    content: '';
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: $color-accent;
+  }
+}
