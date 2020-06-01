@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.4.7
+ * @version 10.7.0
  */
 
 if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets_Abstract_Widget' ) ) {
@@ -23,6 +23,7 @@ class Snow_Monkey_Recent_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstrac
 		'post-type'           => 'post',
 		'posts-per-page'      => 12,
 		'layout'              => 'rich-media',
+		'item-title-tag'      => 'h3',
 		'link-text'           => null,
 		'link-url'            => null,
 		'ignore-sticky-posts' => 1,

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.6.0
+ * @version 10.7.0
  */
 
 use Framework\Helper;
@@ -37,6 +37,7 @@ Helper::get_template_part(
 		'_entries_layout' => $instance['layout'],
 		'_force_sm_1col'  => $force_sm_1col,
 		'_title'          => $instance['title'],
+		'_item_title_tag' => $instance['item-title-tag'],
 		'_link_url'       => $instance['link-url'],
 		'_link_text'      => $instance['link-text'],
 		'_excerpt_length' => null,
