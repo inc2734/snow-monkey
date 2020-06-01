@@ -2,12 +2,12 @@
   @include _font-size-line-height(11px);
 
   &__item:nth-child(n + 2)::before {
-    border-color: #999;
+    border-color: $_color-gray;
   }
 
   &,
   a {
-    color: #999;
+    color: $_color-gray;
   }
 
   a {

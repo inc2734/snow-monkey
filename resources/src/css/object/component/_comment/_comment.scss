@@ -65,7 +65,7 @@
   &__meta {
     @include _margin(0, 0, .5);
     @include _font-size-line-height($_base-font-size-px - 4);
-    color: #999;
+    color: $_color-gray;
 
     cite {
       font-style: normal;
@@ -73,7 +73,7 @@
     }
 
     a {
-      color: #999;
+      color: $_color-gray;
       text-decoration: none;
 
       @include _hover(lg) {

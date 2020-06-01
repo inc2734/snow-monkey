@@ -1,11 +1,11 @@
 .#{ $_prefix }c-copyright {
   background-color: $_color-black;
-  color: #ccc;
+  color: _light($_color-gray);
   @include _font-size-line-height($_base-font-size-px - 2);
   @include _padding(.5, 0);
 
   a {
-    color: _lighter($_color-text);
+    color: _lighter($_color-gray);
     text-decoration: none;
 
     @include _hover(lg) {

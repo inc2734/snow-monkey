@@ -25,7 +25,7 @@
   &__item-link,
   &__item-ellipsis {
     background-color: _lighter($_color-gray);
-    color: #999;
+    color: $_color-gray;
   }
 
   &__item-link {

@@ -22,7 +22,7 @@
 
       > a {
         display: inline-block;
-        background-color: #eee;
+        background-color: _lighter($_color-gray);
         border-radius: 2px;
         color: $_color-text;
         margin: -.5em;

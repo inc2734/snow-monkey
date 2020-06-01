@@ -74,8 +74,8 @@
   }
 
   display: none;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
+  border-top: 1px solid _lighter($_color-gray);
+  border-bottom: 1px solid _lighter($_color-gray);
   @include _margin(.25, 0, 0);
   @include _padding(.25, 0);
 
