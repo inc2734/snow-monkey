@@ -3,21 +3,23 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 10.7.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'posts_query'    => Helper::get_var( $_posts_query, null ),
-	'widget_area_id' => Helper::get_var( $_widget_area_id, null ),
-	'classname'      => Helper::get_var( $_classname, null ),
-	'entries_layout' => Helper::get_var( $_entries_layout, 'rich-media' ),
-	'force_sm_1col'  => Helper::get_var( $_force_sm_1col, false ),
-	'title'          => Helper::get_var( $_title, null ),
-	'link_url'       => Helper::get_var( $_link_url, null ),
-	'link_text'      => Helper::get_var( $_link_text, null ),
-	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
+	'posts_query'         => Helper::get_var( $_posts_query, null ),
+	'widget_area_id'      => Helper::get_var( $_widget_area_id, null ),
+	'classname'           => Helper::get_var( $_classname, null ),
+	'entries_layout'      => Helper::get_var( $_entries_layout, 'rich-media' ),
+	'force_sm_1col'       => Helper::get_var( $_force_sm_1col, false ),
+	'title'               => Helper::get_var( $_title, null ),
+	'item_title_tag'      => Helper::get_var( $_item_title_tag, 'h3' ),
+	'item_thumbnail_size' => Helper::get_var( $_item_thumbnail_size, 'medium_large' ),
+	'link_url'            => Helper::get_var( $_link_url, null ),
+	'link_text'           => Helper::get_var( $_link_text, null ),
+	'excerpt_length'      => Helper::get_var( $_excerpt_length, null ),
 ];
 
 if ( ! $template_args['posts_query'] ) {
@@ -90,6 +92,8 @@ $force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 					'template-parts/loop/entry-summary',
 					$archive_view ? $archive_view : $_post_type,
 					[
+						'_title_tag'      => $template_args['item_title_tag'],
+						'_thumbnail_size' => $template_args['item_thumbnail_size'],
 						'_entries_layout' => $template_args['entries_layout'],
 						'_excerpt_length' => $template_args['excerpt_length'],
 					]

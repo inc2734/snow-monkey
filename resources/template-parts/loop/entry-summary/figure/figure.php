@@ -6,6 +6,8 @@
  * @version 10.7.0
  */
 
+use Framework\Helper;
+
 $template_args = [
 	'thumbnail_size' => Helper::get_var( $_thumbnail_size, 'medium_large' ),
 ];

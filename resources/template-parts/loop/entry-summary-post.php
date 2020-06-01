@@ -9,6 +9,8 @@
 use Framework\Helper;
 
 $template_args = [
+	'title_tag'      => Helper::get_var( $_title_tag, 'h2' ),
+	'thumbnail_size' => Helper::get_var( $_thumbnail_size, 'medium_large' ),
 	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) ),
 	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
 ];
@@ -21,14 +23,22 @@ $template_args = [
 			'template-parts/loop/entry-summary/figure/figure',
 			'post',
 			[
-				'_thumbnail_size' => 'medium_large',
+				'_thumbnail_size' => $template_args['thumbnail_size'],
 			]
 		);
 		?>
 
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">
-				<?php Helper::get_template_part( 'template-parts/loop/entry-summary/title/title', 'post' ); ?>
+				<?php
+				Helper::get_template_part(
+					'template-parts/loop/entry-summary/title/title',
+					'post',
+					[
+						'_title_tag' => $template_args['title_tag'],
+					]
+				);
+				?>
 			</header>
 
 			<?php
