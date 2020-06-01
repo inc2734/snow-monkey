@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.7.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -72,8 +72,9 @@ add_action(
 			$dependencies,
 			filemtime( get_theme_file_path( '/assets/css/style.min.css' ) )
 		);
-	},
-	11
+
+		do_action( 'snow_monkey_enqueued_main_style' );
+	}
 );
 
 /**
@@ -96,6 +97,8 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/js/app.min.js' ) ),
 			true
 		);
+
+		do_action( 'snow_monkey_enqueued_main_script' );
 	}
 );
 
