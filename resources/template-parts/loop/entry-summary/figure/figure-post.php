@@ -3,10 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.7.0
  */
 
 use Framework\Helper;
+
+$template_args = [
+	'thumbnail_size' => Helper::get_var( $_thumbnail_size, 'medium_large' ),
+];
 
 $public_taxonomies = Helper::get_the_public_taxonomy( get_the_ID() );
 $public_terms = [];
@@ -21,7 +25,7 @@ foreach ( $public_taxonomies as $public_taxonomy ) {
 ?>
 
 <div class="c-entry-summary__figure">
-	<?php the_post_thumbnail( 'medium_large' ); ?>
+	<?php the_post_thumbnail( $template_args['thumbnail_size'] ); ?>
 
 	<?php
 	if ( $public_terms ) {

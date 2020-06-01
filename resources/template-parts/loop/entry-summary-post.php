@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.7.0
  */
 
 use Framework\Helper;
@@ -16,7 +16,15 @@ $template_args = [
 
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary c-entry-summary--post">
-		<?php Helper::get_template_part( 'template-parts/loop/entry-summary/figure/figure', 'post' ); ?>
+		<?php
+		Helper::get_template_part(
+			'template-parts/loop/entry-summary/figure/figure',
+			'post',
+			[
+				'_thumbnail_size' => 'medium_large',
+			]
+		);
+		?>
 
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">

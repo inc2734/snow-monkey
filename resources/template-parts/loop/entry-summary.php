@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.7.0
  *
  * renamed: template-parts/entry-summary.php
  */
@@ -18,7 +18,15 @@ $template_args = [
 
 <a href="<?php the_permalink(); ?>">
 	<section class="c-entry-summary c-entry-summary--<?php echo esc_attr( get_post_type() ); ?>">
-		<?php Helper::get_template_part( 'template-parts/loop/entry-summary/figure/figure', get_post_type() ); ?>
+		<?php
+		Helper::get_template_part(
+			'template-parts/loop/entry-summary/figure/figure',
+			get_post_type(),
+			[
+				'_thumbnail_size' => 'medium_large',
+			]
+		);
+		?>
 
 		<div class="c-entry-summary__body">
 			<header class="c-entry-summary__header">
