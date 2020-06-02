@@ -24,6 +24,7 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Inc2734_WP_Awesome_Widgets_Abstr
 		'posts-per-page'      => 12,
 		'layout'              => 'rich-media',
 		'item-title-tag'      => 'h3',
+		'item-thumbnail-size' => 'medium',
 		'link-text'           => null,
 		'link-url'            => null,
 		'ignore-sticky-posts' => 1,

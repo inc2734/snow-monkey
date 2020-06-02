@@ -68,16 +68,17 @@ Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
 	'taxonomy',
 	[
-		'_posts_query'    => $taxonomy_posts_query,
-		'_widget_area_id' => $args['id'],
-		'_classname'      => 'snow-monkey-taxonomy-posts',
-		'_entries_layout' => $instance['layout'],
-		'_force_sm_1col'  => $force_sm_1col,
-		'_title'          => $instance['title'],
-		'_item_title_tag' => $instance['item-title-tag'],
-		'_link_url'       => $instance['link-url'],
-		'_link_text'      => $instance['link-text'],
-		'_excerpt_length' => null,
+		'_posts_query'         => $taxonomy_posts_query,
+		'_widget_area_id'      => $args['id'],
+		'_classname'           => 'snow-monkey-taxonomy-posts',
+		'_entries_layout'      => $instance['layout'],
+		'_force_sm_1col'       => $force_sm_1col,
+		'_title'               => $instance['title'],
+		'_item_title_tag'      => $instance['item-title-tag'],
+		'_item_thumbnail_size' => $instance['item-thumbnail-size'],
+		'_link_url'            => $instance['link-url'],
+		'_link_text'           => $instance['link-text'],
+		'_excerpt_length'      => null,
 	]
 );
 echo wp_kses_post( $args['after_widget'] );
