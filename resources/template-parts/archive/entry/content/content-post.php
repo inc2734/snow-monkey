@@ -3,24 +3,23 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 10.7.1
  */
 
 use Framework\Helper;
+
+$template_args = [
+	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( 'post-entries-layout' ) ),
+	'force_sm_1col'  => Helper::get_var( $_force_sm_1col, get_theme_mod( 'post-entries-layout-sm-1col' ) ),
+];
+
+$force_sm_1col   = $template_args['force_sm_1col'] ? 'true' : 'false';
+$data_infeed_ads = get_option( 'mwt-google-infeed-ads' ) ? 'true' : 'false';
 ?>
 
 <div class="c-entry__content p-entry-content">
 	<div class="p-archive">
-		<?php
-		$_post_type      = get_post_type() ? get_post_type() : 'post';
-		$_post_type      = is_home() ? 'post' : $_post_type;
-		$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
-		$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
-		$entries_layout  = get_theme_mod( $_post_type . '-entries-layout' );
-		$force_sm_1col   = get_theme_mod( $_post_type . '-entries-layout-sm-1col' ) ? 'true' : 'false';
-		?>
-
-		<ul class="c-entries c-entries--<?php echo esc_attr( $entries_layout ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">
@@ -29,7 +28,7 @@ use Framework\Helper;
 						'template-parts/loop/entry-summary',
 						'post',
 						[
-							'_entries_layout' => $entries_layout,
+							'_entries_layout' => $template_args['entries_layout'],
 						]
 					);
 					?>

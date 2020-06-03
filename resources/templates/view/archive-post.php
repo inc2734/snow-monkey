@@ -3,12 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 10.7.1
  */
 
 use Framework\Helper;
 
-$eyecatch_position = 'post' === get_post_type() ? get_theme_mod( 'archive-eyecatch' ) : false;
+$_post_type        = get_post_type() ? get_post_type() : 'post';
+$eyecatch_position = 'post' === $_post_type ? get_theme_mod( 'archive-eyecatch' ) : false;
 ?>
 
 <?php
@@ -37,6 +38,15 @@ if ( Helper::is_active_sidebar( 'archive-top-widget-area' ) ) {
 			</div>
 		<?php endif; ?>
 
-		<?php Helper::get_template_part( 'template-parts/archive/entry/content/content', 'post' ); ?>
+		<?php
+		Helper::get_template_part(
+			'template-parts/archive/entry/content/content',
+			'post',
+			[
+				'_entries_layout' => get_theme_mod( $_post_type . '-entries-layout' ),
+				'_force_sm_1col'  => get_theme_mod( $_post_type . '-entries-layout-sm-1col' ),
+			]
+		);
+		?>
 	</div>
 </div>

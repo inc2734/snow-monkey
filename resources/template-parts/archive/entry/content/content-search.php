@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.7.1
  */
 
 use Framework\Helper;
@@ -11,13 +11,17 @@ use Framework\Helper;
 $_post_type = filter_input( INPUT_GET, 'post_type' );
 $_post_type = $_post_type ? $_post_type : 'post';
 
-$entries_layout = get_theme_mod( $_post_type . '-entries-layout' );
-$entries_layout = false !== $entries_layout ? $entries_layout : get_theme_mod( 'post-entries-layout' );
+$template_args = [
+	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( $_post_type . '-entries-layout' ) ),
+	'force_sm_1col'  => Helper::get_var( $_force_sm_1col, get_theme_mod( $_post_type . '-entries-layout-sm-1col' ) ),
+];
+
+$force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 ?>
 
 <div class="c-entry__content p-entry-content">
 	<div class="p-archive">
-		<ul class="c-entries c-entries--<?php echo esc_attr( $entries_layout ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">
@@ -26,7 +30,7 @@ $entries_layout = false !== $entries_layout ? $entries_layout : get_theme_mod( '
 						'template-parts/loop/entry-summary',
 						$_post_type,
 						[
-							'_entries_layout' => $entries_layout,
+							'_entries_layout' => $template_args['entries_layout'],
 						]
 					);
 					?>
