@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.8.0
  *
  * renamed: template-parts/comments.php
  */
@@ -64,7 +64,7 @@ if ( ! comments_open() && empty( $wp_query->comments_by_type['comment'] ) ) {
 
 		<div id="respond" class="p-comments__respond">
 			<div class="p-comments__form">
-				<?php comment_form(); ?>
+				<?php Helper::get_template_part( 'template-parts/discussion/comment-form' ); ?>
 			</div>
 		</div>
 
