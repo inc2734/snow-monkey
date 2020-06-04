@@ -2,8 +2,6 @@
 
 import '@inc2734/dispatch-custom-resize-event';
 
-import { fixAdminbar } from './module/_fix-adminbar';
-
 import {
   getHeader,
   getAdminbar,
