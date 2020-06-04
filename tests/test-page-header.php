@@ -140,4 +140,17 @@ class Page_Header_Test extends WP_UnitTestCase {
 		$this->go_to( get_term_link( $term_id, 'test_tax' ) );
 		$this->assertFalse( $this->_get_page_header_class() );
 	}
+
+	/**
+	 * @test
+	 */
+	public function not_found_saved_class() {
+		$this->go_to( get_home_url() );
+
+		$cache_key   = md5( json_encode( get_queried_object() ) );
+		$cache_group = 'snow-monkey/page_header_class';
+		wp_cache_set( $cache_key, 'DUMMY', $cache_group );
+
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
+	}
 }

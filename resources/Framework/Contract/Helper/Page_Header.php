@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.6.1
+ * @version 10.7.1
  */
 
 namespace Framework\Contract\Helper;
@@ -20,7 +20,7 @@ trait Page_Header {
 		$cache_group = 'snow-monkey/page_header_class';
 		$cache       = wp_cache_get( $cache_key, $cache_group );
 
-		if ( false !== $cache ) {
+		if ( false !== $cache && class_exists( $cache ) ) {
 			return $cache;
 		}
 
