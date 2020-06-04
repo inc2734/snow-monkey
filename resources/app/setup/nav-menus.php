@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 10.7.1
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -52,7 +52,12 @@ add_action(
 		wp_register_script(
 			Helper::get_main_script_handle() . '-global-nav',
 			get_theme_file_uri( '/assets/js/global-nav.min.js' ),
-			[ 'jquery' ],
+			Helper::generate_script_dependencies(
+				[
+					'jquery',
+					Helper::get_main_script_handle() . '-drop-nav',
+				]
+			),
 			filemtime( get_theme_file_path( '/assets/js/global-nav.min.js' ) ),
 			true
 		);

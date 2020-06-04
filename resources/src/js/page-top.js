@@ -1,6 +1,6 @@
 'use strict';
 
-import { getFooterStickyNav, setStyle, getStyle } from './module/_helper';
+import { getFooterStickyNav, setStyle, getStyle, hide, show } from './module/_helper';
 
 window.addEventListener(
   'load',
@@ -26,8 +26,8 @@ window.addEventListener(
     };
 
     const toggle = isIntersecting => ! isIntersecting
-      ? pageTop.setAttribute('aria-hidden', 'false')
-      : pageTop.setAttribute('aria-hidden', 'true');
+      ? show(pageTop)
+      : hide(pageTop);
     const callback = (entries) => entries.forEach(entry => toggle(entry.isIntersecting));
     const observer = new IntersectionObserver(callback, options);
     observer.observe(sensor);

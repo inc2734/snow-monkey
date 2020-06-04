@@ -204,3 +204,21 @@ export function getScrollOffset(option = {}) {
 
 	return dropNavHeight + adminbarHeight;
 }
+
+/**
+ * Add [aria-hidden="true"] to element
+ *
+ * @param Object element
+ */
+export function hide(element) {
+  element.setAttribute('aria-hidden', 'true');
+}
+
+/**
+ * Add [aria-hidden="false"] to element
+ *
+ * @param Object element
+ */
+export function show(element) {
+  element.setAttribute('aria-hidden', 'false');
+}

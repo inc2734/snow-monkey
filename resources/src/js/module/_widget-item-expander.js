@@ -1,6 +1,7 @@
 'use strict';
 
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
+import { hide } from './_helper';
 
 export function widgetItemExpander(submenu) {
   const open = (element) => {
@@ -23,7 +24,7 @@ export function widgetItemExpander(submenu) {
     const btn   = document.createElement('button');
     const arrow = document.createElement('span');
     arrow.classList.add('c-ic-angle-right');
-    arrow.setAttribute('aria-hidden', 'true');
+    hide(arrow);
     btn.insertBefore(arrow, btn.firstElementChild);
     btn.classList.add('children-expander');
     close(btn);

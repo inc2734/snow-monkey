@@ -17,4 +17,8 @@
   &[data-is-expanded="true"] {
     transform: rotate(-90deg)
   }
+
+  > .#{ $_prefix }c-ic-angle-right {
+    transform: none;
+  }
 }
