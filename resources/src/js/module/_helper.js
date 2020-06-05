@@ -1,5 +1,3 @@
-'use strict';
-
 import addCustomEvent from '@inc2734/add-custom-event';
 
 /**
@@ -221,4 +219,48 @@ export function hide(element) {
  */
 export function show(element) {
   element.setAttribute('aria-hidden', 'false');
+}
+
+/**
+ * Creates a throttled function that only invokes 'callback' at most once per every 'delay' milliseconds.
+ *
+ * @param function callback
+ * @param int delay
+ */
+export function throttle(callback, delay) {
+  let time = Date.now();
+  return () => {
+    if ((time + delay - Date.now()) < 0) {
+      callback.apply(this, arguments);
+      time = Date.now();
+    }
+  };
+}
+
+/**
+ * check for the passive option
+ *
+ * @return boolean
+ */
+export function isPassiveSupported() {
+  let passiveSupported = false;
+
+  try {
+    const options = Object.defineProperty(
+      {},
+      'passive',
+      {
+        get: () => {
+          passiveSupported = true;
+        }
+      }
+    );
+
+    window.addEventListener('test', options, options);
+    window.removeEventListener('test', options, options);
+  } catch(err) {
+    passiveSupported = false;
+  }
+
+  return passiveSupported;
 }

@@ -1,36 +1,42 @@
-'use strict';
-
-import { getFooterStickyNav, setStyle, getStyle, hide, show } from './module/_helper';
+import {
+  getFooterStickyNav,
+  setStyle,
+  getStyle,
+  hide,
+  show,
+  throttle,
+  scrollTop,
+  isPassiveSupported
+} from './module/_helper';
 
 window.addEventListener(
   'load',
   () => {
-    if ('undefined' === typeof IntersectionObserver) {
-      return;
-    }
-
     const pageTop = document.getElementById('page-top');
     if (! pageTop) {
       return;
     }
 
-    const sensor = document.getElementById('page-top-sensor');
-    if (! sensor) {
-      return;
-    }
+    let ariaHidden = pageTop.getAttribute('aria-hidden');
 
-    const options = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0,
-    };
+    const handleScroll = throttle(
+      () => {
+        if (500 <= scrollTop()) {
+          if ('false' !== ariaHidden) {
+            show(pageTop);
+            ariaHidden = 'false';
+          }
+        } else {
+          if ('true' !== ariaHidden) {
+            hide(pageTop);
+            ariaHidden = 'true';
+          }
+        }
+      },
+      150
+    );
 
-    const toggle = isIntersecting => ! isIntersecting
-      ? show(pageTop)
-      : hide(pageTop);
-    const callback = (entries) => entries.forEach(entry => toggle(entry.isIntersecting));
-    const observer = new IntersectionObserver(callback, options);
-    observer.observe(sensor);
+    window.addEventListener('scroll', handleScroll, isPassiveSupported() ? { passive: true } : false);
 
     const footerStickyNav = getFooterStickyNav();
     if (! footerStickyNav) {

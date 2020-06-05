@@ -1,5 +1,3 @@
-'use strict';
-
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer';
 

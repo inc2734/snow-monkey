@@ -1,5 +1,3 @@
-'use strict';
-
 import { smoothScroll } from './module/_smooth-scroll';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 

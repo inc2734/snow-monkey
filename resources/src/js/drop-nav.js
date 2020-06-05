@@ -1,5 +1,3 @@
-'use strict';
-
 import '@inc2734/dispatch-custom-resize-event';
 import addCustomEvent from '@inc2734/add-custom-event';
 import { getHeader, getDropNavWrapper, hide, show } from './module/_helper';

@@ -1,5 +1,3 @@
-'use strict';
-
 const api = wp.customize;
 
 api.bind(

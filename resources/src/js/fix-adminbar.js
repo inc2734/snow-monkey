@@ -1,5 +1,3 @@
-'use strict';
-
 import '@inc2734/dispatch-custom-resize-event';
 
 import {

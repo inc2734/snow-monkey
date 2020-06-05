@@ -1,5 +1,3 @@
-'use strict';
-
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
 const vlocations = {};

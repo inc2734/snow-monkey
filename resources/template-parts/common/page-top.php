@@ -3,13 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.8
+ * @version 10.8.0
  *
  * renamed: template-parts/page-top.php
  */
 ?>
-
-<div id="page-top-sensor"></div>
 
 <div id="page-top" class="c-page-top" aria-hidden="true">
 	<a href="#body">

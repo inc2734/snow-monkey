@@ -1,5 +1,3 @@
-'use strict';
-
 import '@inc2734/dispatch-custom-resize-event';
 import addCustomEvent from '@inc2734/add-custom-event';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
@@ -41,23 +39,18 @@ document.addEventListener(
       const handleLoad = () => {
         init(nav);
 
-        let isFirstIntersecting = true;
+        let hadIsIntersecting = false;
 
         const observerCallback = (entries) => {
           const updateVisibility = (entry) => {
-            // @todo Required to set the display position of the footer CTA
-            if (isFirstIntersecting) {
-              isFirstIntersecting = false;
-              return;
-            }
-
             const oldAriaHidden = nav.getAttribute('aria-hidden');
-            if (entry.rootBounds.height <= entry.boundingClientRect.y) {
-              if ('false' !== oldAriaHidden) {
+            if (! entry.isIntersecting) {
+              if (hadIsIntersecting && 'false' !== oldAriaHidden) {
                 show(nav);
                 addCustomEvent(nav, 'initFooterStickyNav');
               }
             } else {
+              hadIsIntersecting = true;
               if ('true' !== oldAriaHidden) {
                 hide(nav);
                 addCustomEvent(nav, 'initFooterStickyNav');

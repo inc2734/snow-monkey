@@ -1,5 +1,3 @@
-'use strict';
-
 export function scrollChecker(target) {
   if ('undefined' === typeof IntersectionObserver) {
     return;

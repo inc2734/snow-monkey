@@ -1,5 +1,3 @@
-'use strict';
-
 import $ from 'jquery';
 import { initWpawPickupSlider } from '../../module/_wpaw-pickup-slider';
 

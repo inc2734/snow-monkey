@@ -1,5 +1,3 @@
-'use strict';
-
 import {
   scrollTop,
   getScrollOffset,
