@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.8.1
  */
 
 use Framework\Controller\Controller;
@@ -131,6 +131,8 @@ add_filter(
 /**
  * Override inc2734_wp_view_controller_get_template_part_{ $slug }
  *
+ * @deprecated
+ *
  * @param array $args
  *   @param string $slug
  *   @param string $name
@@ -139,30 +141,42 @@ add_filter(
 add_action(
 	'inc2734_wp_view_controller_get_template_part_pre_render',
 	function( $args ) {
-		$slug = $args['slug'];
-		$name = $args['name'];
+		$target_slug = $args['slug'];
+		$target_name = $args['name'];
 
-		$action           = 'snow_monkey_get_template_part_' . $slug;
-		$action_with_name = 'snow_monkey_get_template_part_' . $slug . '-' . $name;
+		$action           = 'snow_monkey_get_template_part_' . $target_slug;
+		$action_with_name = 'snow_monkey_get_template_part_' . $target_slug . '-' . $target_name;
 
-		if ( $name && has_action( $action_with_name ) ) {
-			add_action(
-				'inc2734_wp_view_controller_get_template_part_' . $slug . '-' . $name,
-				function( $vars ) use ( $slug, $name, $action_with_name ) {
-					do_action( $action_with_name, $vars );
-				}
+		if ( $target_name && has_action( $action_with_name ) ) {
+			add_filter(
+				'inc2734_wp_view_controller_template_part_render',
+				function( $html, $slug, $name, $vars ) use ( $action_with_name, $target_slug, $target_name ) {
+					if ( $target_slug === $slug && $target_name === $name ) {
+						ob_start();
+						do_action( $action_with_name, $vars );
+						return ob_get_clean();
+					}
+					return $html;
+				},
+				1,
+				4
 			);
 			return;
 		}
 
 		if ( has_action( $action ) ) {
-			add_action(
-				'inc2734_wp_view_controller_get_template_part_' . $slug,
-				function( $name, $vars ) use ( $slug, $action ) {
-					do_action( $action, $name, $vars );
+			add_filter(
+				'inc2734_wp_view_controller_template_part_render',
+				function( $html, $slug, $name, $vars ) use ( $action, $target_slug ) {
+					if ( $target_slug === $slug ) {
+						ob_start();
+						do_action( $action, $name, $vars );
+						return ob_get_clean();
+					}
+					return $html;
 				},
-				10,
-				2
+				1,
+				4
 			);
 			return;
 		}
