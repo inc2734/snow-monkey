@@ -18,6 +18,15 @@
   @mixin sticky-header() {
     @include _position(fixed, null, 0, null, 0);
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
+
+    // For IE11
+    @media all and (-ms-high-contrast: none) {
+      top: 0;
+
+      .admin-bar & {
+        top: 32px;
+      }
+    }
   }
 
   &--sticky-sm {
@@ -38,6 +47,15 @@
   @mixin overlay-header() {
     @include _position(absolute, null, 0, null, 0);
     background-color: transparent;
+
+    // For IE11
+    @media all and (-ms-high-contrast: none) {
+      top: 0;
+
+      .admin-bar & {
+        top: 32px;
+      }
+    }
   }
 
   @mixin overlay-header-white-text() {
