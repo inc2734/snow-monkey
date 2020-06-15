@@ -35,6 +35,11 @@ Style::register(
 );
 
 Style::register(
+	'.l-header--left .p-global-nav .c-navbar__item > .c-navbar__submenu::before',
+	'border-right-color: ' . $accent_color
+);
+
+Style::register(
 	'.p-global-nav .c-navbar__submenu',
 	'background-color: ' . $accent_color
 );

@@ -15,6 +15,9 @@ Framework::control(
 		'label'    => __( 'Make header full width', 'snow-monkey' ),
 		'priority' => 150,
 		'default'  => false,
+		'active_callback' => function() {
+			return 'left' !== get_theme_mod( 'header-layout' );
+		},
 	]
 );
 

@@ -135,10 +135,12 @@
     }
   }
 
-  .#{ $_prefix }c-row {
-    &,
-    &__col {
-      margin-bottom: 0;
+  &:not(.l-header--left) {
+    .#{ $_prefix }c-row {
+      &,
+      &__col {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -147,8 +149,6 @@
     visibility: hidden;
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
-    //background-color: #fff; // for IE11
-    //background-color: _var-background-color();
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
     @include _transition(transform, visibility);
     transition-timing-function: ease-in;
@@ -263,6 +263,92 @@
         > a {
           @include _padding-top(1);
           @include _padding-bottom(1);
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Left
+ */
+[data-header-layout="left"] {
+  @include _media-min(lg) {
+    $body-margin-left: 280px; // for IE
+    --body-margin-left: #{ $body-margin-left };
+
+    margin-left: $body-margin-left; // for IE
+    margin-left: var-body-margin-left();
+
+    @media all and (-ms-high-contrast: none) {
+      .#{ $_prefix }l-container {
+        overflow: hidden; // for IE
+      }
+    }
+
+    .#{ $_prefix }p-footer-sticky-nav,
+    .#{ $_prefix }p-footer-cta {
+      left: $body-margin-left; // for IE
+      left: var-body-margin-left();
+    }
+  }
+}
+.#{ $_prefix }l-header--left {
+  @include _media-min(lg) {
+    $body-margin-left: 280px; // for IE
+    --body-margin-left: #{ $body-margin-left };
+
+    @include _position(fixed, 0, 0, 0, 0);
+    width: $body-margin-left; // for IE
+    width: var-body-margin-left();
+    @include _padding-top(1);
+
+    .admin-bar & {
+      top: 32px;
+    }
+
+    .#{ $_prefix }c-container {
+      @include _padding-right(1);
+      @include _padding-left(1);
+    }
+
+    .#{ $_prefix }c-site-branding--has-logo {
+      text-align: center;
+    }
+
+    .#{ $_prefix }p-global-nav,
+    .#{ $_prefix }p-header-sub-nav {
+      .#{ $_prefix }c-navbar {
+        flex-direction: column;
+      }
+    }
+
+    .#{ $_prefix }p-global-nav {
+      .#{ $_prefix }c-navbar {
+        &__item > a {
+          align-items: flex-start;
+          @include _padding(.5, 0);
+        }
+
+        &__item > .c-navbar__submenu {
+          top: 50%;
+          left: 100%;
+          transform: translateY(-50%);
+
+          &::before {
+            @include _triangle-left(10px, 16px, $color-accent);
+            top: calc(50% - 8px);
+            left: -10px;
+          }
+        }
+      }
+    }
+
+    .#{ $_prefix }p-header-sub-nav {
+      .#{ $_prefix }c-navbar {
+        &__item > a {
+          justify-content: flex-start;
+          @include _padding(.125, 0);
         }
       }
     }

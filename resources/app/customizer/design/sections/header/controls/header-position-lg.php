@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.14
+ * @version 10.9.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -22,6 +22,9 @@ Framework::control(
 			'overlay'                => __( 'Overlay', 'snow-monkey' ),
 			''                       => __( 'Normal', 'snow-monkey' ),
 		],
+		'active_callback' => function() {
+			return 'left' !== get_theme_mod( 'header-layout' );
+		},
 	]
 );
 

@@ -92,29 +92,57 @@
       display: none;
     }
   }
+}
 
-  [data-has-sidebar="true"] [data-is-content-widget-area="true"] & {
-    @include _media-max(md) {
-      @include widget-full-width();
-    }
+[data-has-sidebar="true"] {
+  [data-is-content-widget-area="true"] {
+    .wpaw-slider {
+      @include _media-max(md) {
+        @include widget-full-width();
+      }
 
-    &__item-title {
-      @include _media-only(md) {
-        @include _font-size-line-height($_base-font-size * 2);
+      &__item-title {
+        @include _media-only(md) {
+          @include _font-size-line-height($_base-font-size * 2);
+        }
       }
     }
   }
+}
 
-  [data-has-sidebar="false"] [data-is-content-widget-area="true"] & {
-    @include widget-full-width();
+[data-has-sidebar="false"] {
+  [data-is-content-widget-area="true"] {
+    .wpaw-slider {
+      @include widget-full-width();
+    }
+  }
 
-    &__item-title {
-      @include _media-min(md) {
-        @include _font-size-line-height($_base-font-size * 2);
+  @media all and (-ms-high-contrast: none) {
+    &[data-header-layout="left"] {
+      [data-is-content-widget-area="true"] {
+        .wpaw-slider {
+          @include _media-min(lg) {
+            $body-margin-left: 280px;
+            margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+            margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+          }
+        }
       }
+    }
+  }
+}
 
-      @include _media-min(lg) {
-        @include _font-size-line-height($_base-font-size * 3);
+[data-has-sidebar="false"] {
+  [data-is-content-widget-area="true"] {
+    .wpaw-slider {
+      &__item-title {
+        @include _media-min(md) {
+          @include _font-size-line-height($_base-font-size * 2);
+        }
+
+        @include _media-min(lg) {
+          @include _font-size-line-height($_base-font-size * 3);
+        }
       }
     }
   }

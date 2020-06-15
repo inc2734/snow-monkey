@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 10.9.0
  *
  * renamed: app/customizer/layout/sections/header/controls/vertial-global-nav.php
  */
@@ -18,7 +18,8 @@ Framework::control(
 		'priority' => 101,
 		'default'  => false,
 		'active_callback' => function() {
-			return '2row' !== get_theme_mod( 'header-layout' );
+			return '2row' !== get_theme_mod( 'header-layout' )
+					&& 'left' !== get_theme_mod( 'header-layout' );
 		},
 	]
 );

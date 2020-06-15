@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.6.0
+ * @version 10.9.0
  */
 
 namespace Framework;
@@ -319,9 +319,10 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_header_classes() {
+		$header_layout      = get_theme_mod( 'header-layout' );
 		$header_position    = get_theme_mod( 'header-position' );
 		$header_position_lg = get_theme_mod( 'header-position-lg' );
-		$classes = [ 'l-header' ];
+		$classes = [ 'l-header', 'l-header--' . $header_layout ];
 
 		if ( $header_position ) {
 			$classes[] = 'l-header--' . $header_position . '-sm';

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-05-26 10:50+0900\n"
-"PO-Revision-Date: 2020-05-26 10:51+0900\n"
+"POT-Creation-Date: 2020-06-15 15:49+0900\n"
+"PO-Revision-Date: 2020-06-15 15:50+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -358,7 +358,7 @@ msgstr "リッチメディア"
 #: app/widget/snow-monkey-recent-posts/_form.php:70
 #: app/widget/snow-monkey-rss/_form.php:55
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:100
-#: translation/bundle-template-header.php:13
+#: translation/bundle-template-header.php:14
 msgid "Simple"
 msgstr "シンプル"
 
@@ -1427,11 +1427,11 @@ msgstr "リンクテキスト"
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:34
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:36
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:40
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:42
 msgid "Recent posts"
 msgstr "最近の投稿"
 
@@ -1439,11 +1439,11 @@ msgstr "最近の投稿"
 msgid "Feed URL"
 msgstr "フィード URL"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:33
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:34
 msgid "Snow Monkey: RSS"
 msgstr "Snow Monkey: RSS"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:39
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:40
 msgid "RSS"
 msgstr "RSS"
 
@@ -1451,15 +1451,15 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:34
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:36
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:40
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:42
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#: template-parts/archive/entry/content/content-no-match.php:14
+#: template-parts/archive/entry/content/content-no-match.php:18
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -1467,7 +1467,7 @@ msgstr ""
 "ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
 "てみてください。"
 
-#: template-parts/archive/entry/content/content-none.php:13
+#: template-parts/archive/entry/content/content-none.php:17
 msgid "No posts."
 msgstr "投稿がありません。"
 
@@ -1486,7 +1486,7 @@ msgctxt "search-form"
 msgid "Search"
 msgstr "検索"
 
-#: template-parts/common/page-top.php:16
+#: template-parts/common/page-top.php:14
 msgid "Scroll up"
 msgstr "上にスクロール"
 
@@ -1494,15 +1494,15 @@ msgstr "上にスクロール"
 msgid "Child pages"
 msgstr "このページの子ページ"
 
-#: template-parts/content/entry/content/content-404.php:16
+#: template-parts/content/entry/content/content-404.php:18
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: template-parts/content/entry/content/content-404.php:17
+#: template-parts/content/entry/content/content-404.php:19
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: template-parts/content/entry/content/content-404.php:18
+#: template-parts/content/entry/content/content-404.php:20
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
@@ -1611,6 +1611,10 @@ msgstr "2行"
 #: translation/bundle-template-header.php:12
 msgid "Center logo"
 msgstr "中央ロゴ"
+
+#: translation/bundle-template-header.php:13
+msgid "Left"
+msgstr "左"
 
 #: woocommerce/loop/orderby.php:25
 msgid "Shop order"

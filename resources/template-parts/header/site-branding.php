@@ -3,14 +3,19 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.9.0
  *
  * renamed: template-parts/site-branding.php
  */
 
 use Framework\Helper;
+
+$classes = [ 'c-site-branding' ];
+if ( has_custom_logo() ) {
+	$classes[] = 'c-site-branding--has-logo';
+}
 ?>
-<div class="c-site-branding">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<?php if ( is_front_page() ) : ?>
 
 		<h1 class="c-site-branding__title">

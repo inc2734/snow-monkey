@@ -181,26 +181,35 @@ export function hasClass(target, className) {
  *    @var boolean forceDropNav Default false.
  */
 export function getScrollOffset(option = {}) {
-	const header = getHeader();
-	const adminbar = getAdminbar();
-	const dropNav = getDropNavWrapper();
+  const adminbar = getAdminbar();
+  let adminbarHeight = 0;
+  if (adminbar) {
+    adminbarHeight = 'fixed' === getStyle(adminbar, 'position')
+      ? parseInt(getStyle(getHtml(), 'margin-top'))
+      : adminbarHeight;
+  }
 
-	const headerPosition = getStyle(header, 'position');
-	const headerHeight = header ? header.offsetHeight : 0;
-  const adminbarPosition = getStyle(adminbar, 'position');
-  const adminbarHeight = 'fixed' === adminbarPosition ? parseInt(getStyle(getHtml(), 'margin-top')) : 0;
-  const dropNavHeight = (() => {
-    if (true === option.forceDropNav) {
-      return dropNav ? dropNav.offsetHeight : 0;
+  const header = getHeader();
+  if (header) {
+  	if ('fixed' === getStyle(header, 'position')) {
+      const headerHeight = adminbarHeight < window.innerHeight
+        ? header.offsetHeight
+        : 0;
+
+  		return headerHeight + adminbarHeight;
+  	}
+
+    const dropNav = getDropNavWrapper();
+    if (dropNav) {
+      const dropNavHeight = true === option.forceDropNav || shouldShowDropNav()
+        ? dropNav.offsetHeight
+        : 0;
+
+      return dropNavHeight + adminbarHeight;
     }
-    return shouldShowDropNav() ? dropNav.offsetHeight : 0;
-  })();
+  }
 
-	if ('fixed' === headerPosition) {
-		return headerHeight + adminbarHeight;
-	}
-
-	return dropNavHeight + adminbarHeight;
+	return adminbarHeight;
 }
 
 /**

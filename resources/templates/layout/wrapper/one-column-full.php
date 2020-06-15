@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.3
+ * @version 10.9.0
  */
 
 use Framework\Helper;
@@ -18,6 +18,7 @@ use Framework\Helper;
 	data-has-sidebar="false"
 	data-is-full-template="true"
 	data-is-slim-width="false"
+	data-header-layout="<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>"
 	>
 
 	<?php wp_body_open(); ?>

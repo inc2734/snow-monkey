@@ -42,6 +42,7 @@
       > .#{ $_prefix }c-navbar__submenu {
         left: 50%;
         transform: translateX(-50%);
+
         &::before {
           content: '';
           display: block;

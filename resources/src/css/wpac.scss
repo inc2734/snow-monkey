@@ -190,9 +190,24 @@
   & + & {
     margin-top: 0 !important;
   }
-
-  [data-has-sidebar="false"] & {
+}
+[data-has-sidebar="false"] {
+  .wpac-section {
     @include alignfull();
+  }
+
+  &[data-header-layout="left"] {
+    .wpac-section {
+      @include _media-min(lg) {
+        --body-margin-left: 280px;
+
+        @media all and (-ms-high-contrast: none) {
+          $body-margin-left: 280px;
+          margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+          margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+        }
+      }
+    }
   }
 }
 

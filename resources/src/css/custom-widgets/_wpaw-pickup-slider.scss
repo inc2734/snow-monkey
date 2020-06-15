@@ -169,44 +169,74 @@
     right: 0;
     transform: translate(100%, -50%);
   }
+}
 
-  [data-has-sidebar="true"] [data-is-content-widget-area="true"] &,
-  [data-has-sidebar="true"] .#{ $_prefix }c-entry__content & {
-    @include _media-max(md) {
-      @include widget-full-width();
-    }
+[data-has-sidebar="true"] {
+  [data-is-content-widget-area="true"],
+  .#{ $_prefix }c-entry__content {
+    .wpaw-pickup-slider {
+      @include _media-max(md) {
+        @include widget-full-width();
+      }
 
-    &__item-title {
-      @include _media-only(md) {
-        @include _font-size-line-height($_base-font-size * 2);
+      &__item-title {
+        @include _media-only(md) {
+          @include _font-size-line-height($_base-font-size * 2);
+        }
       }
     }
   }
+}
 
-  [data-has-sidebar="false"] [data-is-content-widget-area="true"] &,
-  [data-has-sidebar="false"] .#{ $_prefix }c-entry__content & {
-    @include widget-full-width();
+[data-has-sidebar="false"] {
+  [data-is-content-widget-area="true"],
+  .#{ $_prefix }c-entry__content {
+    .wpaw-pickup-slider {
+      @include widget-full-width();
+    }
+  }
 
-    &__item-title {
-      @include _media-min(md) {
-        @include _font-size-line-height($_base-font-size * 2);
-      }
-
-      @include _media-min(lg) {
-        @include _font-size-line-height($_base-font-size * 3);
+  @media all and (-ms-high-contrast: none) {
+    &[data-header-layout="left"] {
+    [data-is-content-widget-area="true"],
+      .#{ $_prefix }c-entry__content {
+        .wpaw-pickup-slider {
+          @include _media-min(lg) {
+            $body-margin-left: 280px;
+            margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+            margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+          }
+        }
       }
     }
+  }
+}
 
-    &__item-meta {
-      @include _media-min(lg) {
-        @include _margin-top(.75);
+[data-has-sidebar="false"] {
+  [data-is-content-widget-area="true"],
+  .#{ $_prefix }c-entry__content {
+    .wpaw-pickup-slider {
+      &__item-title {
+        @include _media-min(md) {
+          @include _font-size-line-height($_base-font-size * 2);
+        }
+
+        @include _media-min(lg) {
+          @include _font-size-line-height($_base-font-size * 3);
+        }
       }
-    }
 
-    &__item-more {
-      @include _media-min(lg) {
-        @include _margin-top(1.5);
-        @include _padding(.5, 3);
+      &__item-meta {
+        @include _media-min(lg) {
+          @include _margin-top(.75);
+        }
+      }
+
+      &__item-more {
+        @include _media-min(lg) {
+          @include _margin-top(1.5);
+          @include _padding(.5, 3);
+        }
       }
     }
   }

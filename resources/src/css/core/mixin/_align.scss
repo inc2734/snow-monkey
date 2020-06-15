@@ -1,6 +1,9 @@
 @mixin alignfull() {
-  margin-right: calc(50% - 50vw);
-  margin-left: calc(50% - 50vw);
+  $body-margin-left: 0;
+  margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+  margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+  margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
+  margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
   width: auto;
   max-width: none;
 
@@ -10,6 +13,7 @@
   }
 }
 
+/*
 @mixin alignwide() {
   @include _container();
   @include alignfull();
@@ -19,3 +23,4 @@
   max-width: $_container-max-width; // for IE11
   max-width: _var-container-max-width();
 }
+*/
