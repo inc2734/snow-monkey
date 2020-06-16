@@ -16,14 +16,30 @@ if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item
 	return;
 }
 
+$thumbnail = false;
+
 // note
-$thumbnail = $template_args['item']->get_item_tags( SIMPLEPIE_NAMESPACE_MEDIARSS, 'thumbnail' );
-$thumbnail = ! empty( $thumbnail[0]['data'] ) ? $thumbnail[0]['data'] : false;
+$simplepie_thumbnail = $template_args['item']->get_item_tags( SIMPLEPIE_NAMESPACE_MEDIARSS, 'thumbnail' );
+$thumbnail_src = ! empty( $simplepie_thumbnail[0]['data'] ) ? $simplepie_thumbnail[0]['data'] : false;
+if ( $thumbnail_src ) {
+	$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
+}
+
+// first img
+if ( ! $thumbnail ) {
+	$description = $template_args['item']->get_description();
+	if ( preg_match( '|^(?:<a [^>]+?>)?(<img [^>]+?>)|ims', $description, $match ) ) {
+		$thumbnail = $match[1];
+		$thumbnail = preg_replace( '|style="[^"]*?"|', '', $thumbnail );
+		$thumbnail = preg_replace( '|class="[^"]*?"|', '', $thumbnail );
+	}
+}
+
 if ( ! $thumbnail ) {
 	return;
 }
 ?>
 
 <div class="c-entry-summary__figure">
-	<img src="<?php echo esc_url( $thumbnail ); ?>" alt="">
+	<?php echo wp_kses_post( $thumbnail ); ?>
 </div>
