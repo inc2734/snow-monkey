@@ -80,22 +80,26 @@ textarea.editor-post-title__input {
   max-width: none;
 }
 
-[data-type^="snow-monkey-blocks/"] {
-  .block-editor-inner-blocks {
-    > .block-editor-block-list__layout {
-      > .wp-block[data-align=full] {
-        margin-left: auto;
-        margin-right: auto;
-        padding-left: 28px;
-        padding-right: 28px;
+// normal width > alignfull
+.block-editor-inner-blocks {
+  > .block-editor-block-list__layout {
+    > .wp-block[data-align="full"] {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-        @media (min-width: 600px) {
-          padding-left: 58px;
-          padding-right: 58px;
-        }
-      }
+    .block-editor-block-list__block[data-align=full]::before {
+      left: -14px;
+      right: -14px;
+      border-left-width: 1px;
+      border-right-width: 1px;
     }
   }
+}
+
+// Parent block
+.block-editor-block-list__layout .has-child-selected::before {
+  border: 1px solid rgba(66, 88, 99, .2);
 }
 
 .block-editor-block-switcher {
