@@ -8,6 +8,11 @@
   padding-right: calc(#{ _var-container-margin-sm() } + env(safe-area-inset-right));
   padding-left: calc(#{ _var-container-margin-sm() } + env(safe-area-inset-left));
 
+  @supports (-ms-ime-align: auto) {
+    padding-right: #{ _var-container-margin-sm() }; // for Edge
+    padding-left: #{ _var-container-margin-sm() }; // for Edge
+  }
+
   @include _media-min(md) {
     padding-right: $_container-margin * 2;
     padding-left: $_container-margin * 2;
@@ -17,6 +22,11 @@
 
     padding-right: calc(#{ _var-container-margin() } + env(safe-area-inset-right));
     padding-left: calc(#{ _var-container-margin() } + env(safe-area-inset-left));
+
+    @supports (-ms-ime-align: auto) {
+      padding-right: #{ _var-container-margin-sm() }; // for Edge
+      padding-left: #{ _var-container-margin-sm() }; // for Edge
+    }
   }
 }
 

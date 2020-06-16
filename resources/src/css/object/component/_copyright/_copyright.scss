@@ -19,5 +19,9 @@
 
     padding-bottom: calc(#{ _var-space() } * .5 + constant(safe-area-inset-bottom));
     padding-bottom: calc(#{ _var-space() } * .5 + env(safe-area-inset-bottom));
+
+    @supports (-ms-ime-align: auto) {
+      padding-bottom: calc(#{ _var-space() } * .5); // for Edge
+    }
   }
 }
