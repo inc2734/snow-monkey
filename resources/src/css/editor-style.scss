@@ -100,6 +100,7 @@ textarea.editor-post-title__input {
 // Parent block
 .block-editor-block-list__layout .has-child-selected::before {
   border: 1px solid rgba(66, 88, 99, .2);
+  pointer-events: auto;
 }
 
 .block-editor-block-switcher {
