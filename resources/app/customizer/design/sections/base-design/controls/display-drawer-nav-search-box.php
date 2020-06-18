@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.0
+ * @version 10.9.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ Framework::control(
 		'priority'        => 250,
 		'default'         => true,
 		'active_callback' => function() {
-			return has_nav_menu( 'drawer-nav' );
+			return has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
 		},
 	]
 );

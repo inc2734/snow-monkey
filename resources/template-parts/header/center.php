@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.5.0
+ * @version 10.9.3
  *
  * renamed: template-parts/center-header.php
  */
@@ -14,7 +14,7 @@ $header_content      = get_theme_mod( 'header-content' );
 $header_type         = get_theme_mod( 'header-layout' ) . '-header';
 $header_alignfull    = get_theme_mod( 'header-alignfull' );
 $has_global_nav      = has_nav_menu( 'global-nav' );
-$has_drawer_nav      = has_nav_menu( 'drawer-nav' );
+$has_drawer_nav      = has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
 $has_header_sub_nav  = has_nav_menu( 'header-sub-nav' );
 $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
