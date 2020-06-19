@@ -90,16 +90,3 @@
     }
   }
 }
-
-/**
- * Full width
- */
-@mixin widget-full-width() {
-  @include alignfull();
-  padding-right: 0;
-  padding-left: 0;
-
-  .#{ $_prefix }c-container {
-    @include container-padding();
-  }
-}

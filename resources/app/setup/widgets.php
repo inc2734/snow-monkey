@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 10.9.3
  */
 
 use Framework\Helper;
@@ -210,6 +210,48 @@ add_filter(
 			'c-btn wpaw-slider__item-more',
 			$content
 		);
+	},
+	10,
+	2
+);
+
+/**
+ * Add .alignfull to specific widgets in [data-is-content-widget-area="true"]
+ *
+ * @param string $content
+ * @param array $args
+ * @return string
+ */
+add_filter(
+	'inc2734_wp_awesome_widgets_render_widget',
+	function( $widget, $args ) {
+		$content_widget_areas = [
+			'archive-top-widget-area',
+			'front-page-top-widget-area',
+			'front-page-bottom-widget-area',
+			'posts-page-bottom-widget-area',
+			'posts-page-top-widget-area',
+		];
+
+		if ( ! isset( $args['id'] ) || in_array( $args['id'], $content_widget_areas ) ) {
+			if ( false !== strpos( $widget, 'class="wpaw-pickup-slider ' ) ) {
+				return str_replace( 'class="wpaw-pickup-slider ', 'class="wpaw-pickup-slider alignfull ', $widget );
+			}
+
+			if ( false !== strpos( $widget, 'class="wpaw-showcase ' ) ) {
+				return str_replace( 'class="wpaw-showcase ', 'class="wpaw-showcase alignfull ', $widget );
+			}
+
+			if ( false !== strpos( $widget, 'class="wpaw-pr-box ' ) ) {
+				return str_replace( 'class="wpaw-pr-box ', 'class="wpaw-pr-box alignfull ', $widget );
+			}
+
+			if ( false !== strpos( $widget, 'class="wpaw-slider ' ) ) {
+				return str_replace( 'class="wpaw-slider ', 'class="wpaw-slider alignfull ', $widget );
+			}
+		}
+
+		return $widget;
 	},
 	10,
 	2

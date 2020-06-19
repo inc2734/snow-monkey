@@ -166,38 +166,6 @@
   }
 }
 
-[data-has-sidebar="true"] {
-  [data-is-content-widget-area="true"] {
-    .wpaw-showcase {
-      @include _media-max(md) {
-        @include widget-full-width();
-      }
-    }
-  }
-}
-
-[data-has-sidebar="false"] {
-  [data-is-content-widget-area="true"] {
-    .wpaw-showcase {
-      @include widget-full-width();
-    }
-  }
-
-  @media all and (-ms-high-contrast: none) {
-    &[data-header-layout="left"] {
-      [data-is-content-widget-area="true"] {
-        .wpaw-showcase {
-          @include _media-min(lg) {
-            $body-margin-left: 280px;
-            margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-            margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-          }
-        }
-      }
-    }
-  }
-}
-
 [data-has-sidebar="false"] {
   [data-is-content-widget-area="true"] {
     .wpaw-showcase {
