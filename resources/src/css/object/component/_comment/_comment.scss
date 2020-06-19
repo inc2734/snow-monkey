@@ -73,7 +73,7 @@
     }
 
     a {
-      color: $_color-gray;
+      color: inherit;
       text-decoration: none;
 
       @include _hover(lg) {

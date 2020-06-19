@@ -1,3 +1,9 @@
 .widget_calendar {
   @extend %calendar;
 }
+
+.wp-calendar-nav {
+  a {
+    color: inherit;
+  }
+}

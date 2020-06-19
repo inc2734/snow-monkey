@@ -7,8 +7,7 @@
     &__item {
       > a {
         flex-direction: column;
-        color: $_color-text; // for IE11
-        color: _var-color-text();
+        color: inherit;
         @include _font-size-line-height($_base-font-size-px - 2);
         font-weight: bold;
         @include _padding(.75);

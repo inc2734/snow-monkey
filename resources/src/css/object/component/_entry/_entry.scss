@@ -13,8 +13,7 @@
     letter-spacing: 0;
 
     a {
-      color: $_color-text; // for IE11
-      color: _var-color-text();
+      color: inherit;
       text-decoration: none;
 
       @include _hover(lg) {

@@ -1,16 +1,13 @@
 .#{ $_prefix }c-breadcrumbs {
+  color: $_color-gray;
   @include _font-size-line-height(11px);
 
   &__item:nth-child(n + 2)::before {
     border-color: $_color-gray;
   }
 
-  &,
   a {
-    color: $_color-gray;
-  }
-
-  a {
+    color: inherit;
     text-decoration: none;
 
     @include _hover(lg) {

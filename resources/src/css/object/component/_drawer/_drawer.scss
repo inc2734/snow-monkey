@@ -3,6 +3,7 @@
 
   z-index: 100000;
   background-color: $color-accent;
+  color: #fff;
   @include _font-size-line-height($drawer-font-size);
 
   > .#{ $_prefix }c-drawer__menu:last-child,
@@ -10,8 +11,8 @@
     @include _padding(0, 0, .5);
   }
 
-  &, a {
-    color: #fff;
+  a {
+    color: inherit;
   }
 
   .#{$_prefix}c-ic-angle-right {

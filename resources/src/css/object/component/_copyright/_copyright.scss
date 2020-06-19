@@ -5,11 +5,11 @@
   @include _padding(.5, 0);
 
   a {
-    color: _lighter($_color-gray);
+    color: inherit;
     text-decoration: none;
 
     @include _hover(lg) {
-    text-decoration: underline;
+      text-decoration: underline;
     }
   }
 
