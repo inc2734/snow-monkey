@@ -24,78 +24,98 @@
   clear: both;
 }
 
-.#{ $_prefix }c-entry__content,
-.#{ $_prefix }c-entry__content [class*="smb-"]
-[data-is-content-widget-area="true"] .custom-html-widget,
-[data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] {
-  > .alignfull,
-  > .alignwide {
-    clear: both;
+.#{ $_prefix }c-entry__content > .alignfull,
+.#{ $_prefix }c-entry__content > .alignwide,
+.#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
+.#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
+[data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
+[data-is-content-widget-area="true"] .custom-html-widget > .alignwide,
+[data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
+[data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull {
+  clear: both;
 
+  &.wp-block-image {
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+
+[data-has-sidebar="true"] {
+  .#{ $_prefix }c-entry__content > .alignfull,
+  .#{ $_prefix }c-entry__content > .alignwide,
+  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
+  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
+  [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
+  [data-is-content-widget-area="true"] .custom-html-widget > .alignwide,
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull {
     @include _media-max(md) {
       @include alignfull();
-    }
-
-    &.wp-block-image {
-      img {
-        width: 100%;
-        max-width: none;
-      }
     }
   }
 }
 
 [data-has-sidebar="false"] {
-  .#{ $_prefix }c-entry__content,
-  .#{ $_prefix }c-entry__content [class*="smb-"],
-  [data-is-content-widget-area="true"] .custom-html-widget,
-  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] {
-    > .alignfull,
-    > .alignwide {
-      @include alignfull();
+  .#{ $_prefix }c-entry__content > .alignfull,
+  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
+  [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull {
+    @include alignfull();
+  }
 
-      &[class*="inc2734_wp_awesome_widgets_"] {
-        padding-right: 0;
-        padding-left: 0;
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull  {
+    padding-right: 0;
+    padding-left: 0;
 
-        .#{ $_prefix }c-container {
-          @include container-padding();
-        }
-      }
-    }
-
-    > .alignwide {
-      @include _media-min(lg) {
-        position: relative;
-        right: -50vw; // for IE
-        right: calc(-50vw + #{ var-body-margin-left() } / 2);
-        transform: translateX(-50%);
-        max-width: $_container-max-width; // for IE11
-        max-width: _var-container-max-width();
-      }
+    .#{ $_prefix }c-container {
+      @include container-padding();
     }
   }
 
-  &[data-header-layout="left"] {
-    .#{ $_prefix }c-entry__content,,
-    .#{ $_prefix }c-entry__content [class*="smb-"],
-    [data-is-content-widget-area="true"] .custom-html-widget,
-    [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] {
-      > .alignfull,
-      > .alignwide {
-        @include _media-min(lg) {
-          --body-margin-left: 280px;
+  .#{ $_prefix }c-entry__content > .alignwide,
+  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
+  [data-is-content-widget-area="true"] .custom-html-widget > .alignwide {
+    @include alignfull();
 
-          @media all and (-ms-high-contrast: none) {
-            $body-margin-left: 280px;
-            margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-            margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-          }
+    @include _media-min(lg) {
+      position: relative;
+      right: -50vw; // for IE
+      right: calc(-50vw + #{ var-body-margin-left() } / 2);
+      transform: translateX(-50%);
+      max-width: $_container-max-width; // for IE11
+      max-width: _var-container-max-width();
+    }
+  }
+}
+
+[data-has-sidebar="false"] {
+  &[data-header-layout="left"] {
+    .#{ $_prefix }c-entry__content > .alignfull,
+    .#{ $_prefix }c-entry__content > .alignwide,
+    .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
+    .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
+    [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
+    [data-is-content-widget-area="true"] .custom-html-widget > .alignwide,
+    [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
+    [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull  {
+      @include _media-min(lg) {
+        --body-margin-left: 280px;
+
+        @media all and (-ms-high-contrast: none) {
+          $body-margin-left: 280px;
+          margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
+          margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
         }
       }
 
       @media all and (-ms-high-contrast: none) {
-        > .alignwide {
+        .#{ $_prefix }c-entry__content > .alignwide,
+        .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
+        [data-is-content-widget-area="true"] .custom-html-widget > .alignwide {
           @include _media-min(lg) {
             $body-margin-left: 280px;
             right: calc(-50vw + #{ $body-margin-left } / 2); // for IE
