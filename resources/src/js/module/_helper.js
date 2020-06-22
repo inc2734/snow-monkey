@@ -192,7 +192,7 @@ export function getScrollOffset(option = {}) {
   const header = getHeader();
   if (header) {
   	if ('fixed' === getStyle(header, 'position')) {
-      const headerHeight = adminbarHeight < window.innerHeight
+      const headerHeight = header.scrollHeight < window.innerHeight
         ? header.offsetHeight
         : 0;
 
