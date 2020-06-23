@@ -23,6 +23,8 @@ class Template_Cache {
 	 */
 	protected $directory;
 
+	protected static $is_removing = false;
+
 	public function __construct() {
 		$this->directory = path_join( get_template_directory(), 'cache' );
 
@@ -30,33 +32,16 @@ class Template_Cache {
 			wp_mkdir_p( $this->directory );
 		}
 
-		add_action( 'customize_save_after', [ $this, '_customize_save_after' ] );
-		add_action( 'update_option', [ $this, '_update_option' ] );
-		add_action( 'save_post', [ $this, '_save_post' ] );
-		add_action( 'edited_terms', [ $this, '_edited_terms' ] );
-		add_action( 'wp_update_nav_menu', [ $this, 'wp_update_nav_menu' ] );
+		add_action( 'customize_save_after', [ $this, 'remove' ] );
+		add_action( 'wp_update_nav_menu', [ $this, 'remove' ] );
 		add_filter( 'widget_update_callback', [ $this, '_widget_update_callback' ] );
-	}
 
-	/**
-	 * Remove caches when the customizer is saved
-	 *
-	 * @return void
-	 */
-	public function _customize_save_after() {
-		$this->remove();
-	}
+		add_action( 'save_post', [ $this, '_save_post' ] );
 
-	/**
-	 * Remove caches when options are updated
-	 *
-	 * @return void
-	 */
-	public function _update_option() {
-		if ( ! is_admin() ) {
-			return;
-		}
-		$this->remove();
+		add_action( 'comment_post', [ $this, 'remove' ] );
+		add_action( 'wp_set_comment_status', [ $this, 'remove' ] );
+
+		add_action( 'edited_terms', [ $this, 'remove' ] );
 	}
 
 	/**
@@ -69,24 +54,6 @@ class Template_Cache {
 			return;
 		}
 
-		$this->remove();
-	}
-
-	/**
-	 * Remove caches when terms are edited
-	 *
-	 * @return void
-	 */
-	public function _edited_terms() {
-		$this->remove();
-	}
-
-	/**
-	 * Remove caches when nav menus are updated
-	 *
-	 * @return void
-	 */
-	public function _wp_update_nav_menu() {
 		$this->remove();
 	}
 
@@ -173,7 +140,14 @@ class Template_Cache {
 	 * @return void
 	 */
 	public function remove() {
-		return $this->_remove_children( $this->directory );
+		if ( static::$is_removing ) {
+			return;
+		}
+
+		static::$is_removing = true;
+		$return = $this->_remove_children( $this->directory );
+		static::$is_removing = false;
+		return $return;
 	}
 
 	/**
