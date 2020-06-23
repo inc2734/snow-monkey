@@ -13,3 +13,4 @@ snow-monkey
 composer-dev.json
 composer-dev.lock
 /resources/translation/
+/resources/cache/

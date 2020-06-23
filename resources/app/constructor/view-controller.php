@@ -185,6 +185,23 @@ add_action(
 );
 
 /**
+ * Override inc2734_wp_view_controller_pre_template_part_render
+ *
+ * @param string $slug
+ * @param string $name
+ * @param array $vars
+ * @return array
+ */
+add_filter(
+	'inc2734_wp_view_controller_pre_template_part_render',
+	function( $html, $slug, $name, $vars ) {
+		return apply_filters( 'snow_monkey_pre_template_part_render', $html, $slug, $name, $vars );
+	},
+	9,
+	4
+);
+
+/**
  * Override inc2734_wp_view_controller_template_part_render
  *
  * @param string $slug
