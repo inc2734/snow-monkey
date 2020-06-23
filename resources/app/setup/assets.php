@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 10.10.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -221,6 +221,7 @@ add_action(
 			get_theme_file_uri( '/assets/js/customize-preview.min.js' ),
 			[
 				'customize-preview',
+				'customize-selective-refresh',
 				'wp-awesome-widgets-customize-preview',
 				Helper::get_main_script_handle(),
 			],

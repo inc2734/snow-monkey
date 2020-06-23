@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-06-15 15:49+0900\n"
-"PO-Revision-Date: 2020-06-15 15:50+0900\n"
+"POT-Creation-Date: 2020-06-23 18:55+0900\n"
+"PO-Revision-Date: 2020-06-23 18:56+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -760,9 +760,21 @@ msgstr ""
 "ります。Internal Server Error (500) が表示された場合は、.htaccess に追加され"
 "た文字を削除してください。"
 
+#: app/customizer/page-speed-optimization/controls/cache-footer.php:15
+msgid "Caching footer"
+msgstr "フッターをキャッシュ"
+
+#: app/customizer/page-speed-optimization/controls/cache-header.php:15
+msgid "Caching header"
+msgstr "ヘッダーをキャッシュ"
+
 #: app/customizer/page-speed-optimization/controls/cache-nav-menus.php:15
-msgid "Cache nav menus"
+msgid "Caching nav menus"
 msgstr "メニューをキャッシュ"
+
+#: app/customizer/page-speed-optimization/controls/cache-widget-areas.php:15
+msgid "Caching widget areas"
+msgstr "ウィジェットエリアをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:15
 msgid "Use HTTP2 Server Push"
@@ -773,14 +785,13 @@ msgid "Optimize the jQuery loading"
 msgstr "jQuery の 読み込みを最適化する"
 
 #: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:16
-msgid "Depending on your plugins and child theme, JavaScript error may occur."
+msgid ""
+"Load jQuery and other scripts as defer + head as much as possible. Depending "
+"on your plugins and child theme, JavaScript error may occur."
 msgstr ""
-"使用しているプラグインおよび子テーマによっては JavaScript エラーが発生するこ"
-"とがあります。"
-
-#: app/customizer/page-speed-optimization/controls/js-loading-optimization.php:15
-msgid "Optimize the Snow Monkey JavaScript loading"
-msgstr "Snow Monkey の JavaScript 読み込みを最適化する"
+"jQuery とその他の script をできるだけ defer + head 読み込みします。使用してい"
+"るプラグインおよび子テーマによっては JavaScript エラーが発生することがありま"
+"す。"
 
 #: app/customizer/page-speed-optimization/controls/link-prefetching.php:15
 msgid "Use link prefetching"
@@ -1636,6 +1647,9 @@ msgstr "inc2734"
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
 
+#~ msgid "Optimize the Snow Monkey JavaScript loading"
+#~ msgstr "Snow Monkey の JavaScript 読み込みを最適化する"
+
 #~ msgid "The server must support htaccess."
 #~ msgstr "サーバーが .htaccess に対応している必要があります。"
 
@@ -1759,9 +1773,6 @@ msgstr "https://2inc.org"
 
 #~ msgid "One column (fluid)"
 #~ msgstr "1カラム（fluid）"
-
-#~ msgid "Caching widget areas"
-#~ msgstr "ウィジェットエリアをキャッシュ"
 
 #~ msgid "%1$s sidebar"
 #~ msgstr "%1$s サイドバー"

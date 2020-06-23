@@ -10,10 +10,10 @@ use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'checkbox',
-	'cache-nav-menus',
+	'cache-footer',
 	[
-		'label'    => __( 'Caching nav menus', 'snow-monkey' ),
-		'priority' => 210,
+		'label'    => __( 'Caching footer', 'snow-monkey' ),
+		'priority' => 200,
 		'default'  => false,
 	]
 );
@@ -23,5 +23,5 @@ if ( ! is_customize_preview() ) {
 }
 
 $section = Framework::get_section( 'page-speed-optimization' );
-$control = Framework::get_control( 'cache-nav-menus' );
+$control = Framework::get_control( 'cache-footer' );
 $control->join( $section );
