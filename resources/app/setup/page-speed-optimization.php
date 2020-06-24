@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.0
+ * @version 10.10.1
  *
  * This procceses are beta.
  */
@@ -211,7 +211,7 @@ if ( ! is_customize_preview() ) {
 					}
 
 					if ( $cache_widget_areas && false !== strpos( $slug, 'template-parts/widget-area' ) ) {
-						$template_cache->save( 'widget-area', $slug, $name, $vars );
+						$template_cache->save( 'widget-area', $html, $slug, $name, $vars );
 					}
 
 					return $html;
