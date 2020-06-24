@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.1
+ * @version 10.10.2
  *
  * This procceses are beta.
  */
@@ -135,7 +135,7 @@ if ( ! is_customize_preview() ) {
 						'title' => sprintf(
 							'%1$s%2$s',
 							file_get_contents( get_template_directory() . '/assets/img/icon.svg' ),
-							esc_html( 'Remove caches', 'snow-monkey' )
+							esc_html__( 'Remove caches', 'snow-monkey' )
 						),
 						'href'  => '?sm-remove-caches=1',
 					]

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-06-23 18:55+0900\n"
-"PO-Revision-Date: 2020-06-23 18:56+0900\n"
+"POT-Creation-Date: 2020-06-24 13:44+0900\n"
+"PO-Revision-Date: 2020-06-24 13:44+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1301,6 +1301,10 @@ msgstr "ドロワーサブナビゲーション（モバイル用）"
 #: app/setup/nav-menus.php:30
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
+
+#: app/setup/page-speed-optimization.php:138
+msgid "Remove caches"
+msgstr "キャッシュを削除"
 
 #: app/setup/support-forum-widget.php:15
 msgid "Recent topics of Snow Monkey support forum"
