@@ -27,8 +27,8 @@ document.addEventListener(
     };
 
     window.addEventListener('scroll', apply, false);
+
+    scrollChecker(getHtml());
   },
   false
 );
-
-scrollChecker(getHtml());
