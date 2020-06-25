@@ -621,16 +621,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "3.0.2",
+            "version": "3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "5db0ab95637b0ab2f0a88910a559286634d5748a"
+                "reference": "2bf25d00798de862b3a5d4d1a8d1e4c090f60490"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/5db0ab95637b0ab2f0a88910a559286634d5748a",
-                "reference": "5db0ab95637b0ab2f0a88910a559286634d5748a",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/2bf25d00798de862b3a5d4d1a8d1e4c090f60490",
+                "reference": "2bf25d00798de862b3a5d4d1a8d1e4c090f60490",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +660,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2020-06-24T06:36:38+00:00"
+            "time": "2020-06-25T14:01:18+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
