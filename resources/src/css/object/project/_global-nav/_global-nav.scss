@@ -69,11 +69,11 @@
         position: relative;
         color: #fff;
         @include _padding(.5rem, 1rem);
+      }
 
-        &::before {
-          content: '';
-          @include _position(absolute, -20px, -20px, -20px, -20px);
-        }
+      .#{ $_prefix }c-navbar__subitem:first-child > a:before {
+        content: '';
+        @include _position(absolute, -20px, -20px, -20px, -20px);
       }
     }
 
