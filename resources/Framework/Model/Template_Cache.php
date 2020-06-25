@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.0
+ * @version 10.10.3
  */
 
 namespace Framework\Model;
@@ -26,6 +26,10 @@ class Template_Cache {
 	protected static $is_removing = false;
 
 	public function __construct() {
+		if ( ! is_writable( get_template_directory() ) ) {
+			return;
+		}
+
 		$this->directory = path_join( get_template_directory(), 'cache' );
 
 		if ( ! file_exists( $this->directory ) ) {
