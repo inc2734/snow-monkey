@@ -191,7 +191,8 @@ export function getScrollOffset(option = {}) {
 
   const header = getHeader();
   if (header) {
-  	if ('fixed' === getStyle(header, 'position')) {
+    const position = getStyle(header, 'position');
+  	if ('fixed' === position || 'sticky' === position) {
       const headerHeight = header.scrollHeight < window.innerHeight
         ? header.offsetHeight
         : 0;

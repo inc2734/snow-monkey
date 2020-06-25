@@ -16,14 +16,16 @@
    * Sticky header
    */
   @mixin sticky-header() {
-    @include _position(fixed, null, 0, null, 0);
+    position: sticky;
+    top: 0;
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
 
-    // For IE11
-    @media all and (-ms-high-contrast: none) {
-      top: 0;
+    .admin-bar & {
+      @include _media-min(601px) {
+        top: 46px;
+      }
 
-      .admin-bar & {
+      @include _media-min(783px) {
         top: 32px;
       }
     }
@@ -279,12 +281,6 @@
 
     margin-left: $body-margin-left; // for IE
     margin-left: var-body-margin-left();
-
-    @media all and (-ms-high-contrast: none) {
-      .#{ $_prefix }l-container {
-        overflow: hidden; // for IE
-      }
-    }
 
     .#{ $_prefix }p-footer-sticky-nav,
     .#{ $_prefix }p-footer-cta {

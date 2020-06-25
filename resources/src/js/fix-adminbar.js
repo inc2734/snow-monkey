@@ -10,11 +10,6 @@ import {
 } from './module/_helper';
 
 const apply = (header, adminbar) => {
-
-  const hasStickySm = hasClass(header, 'l-header--sticky-sm');
-  const hasStickyOverlaySm = hasClass(header, 'l-header--sticky-overlay-sm')
-                          || hasClass(header, 'l-header--sticky-overlay-colored-sm');
-
   const setHeaderPosition = (position) => {
     setStyle(header, 'position', position);
   };
@@ -35,7 +30,9 @@ const apply = (header, adminbar) => {
   };
 
   const init = () => {
-    if ('fixed' !== getStyle(adminbar, 'position') && (hasStickySm || hasStickyOverlaySm)) {
+    const headerPsition   = getStyle(header, 'position');
+    const adminbarPsition = getStyle(adminbar, 'position');
+    if ('fixed' !== adminbarPsition && 'fixed' === headerPsition && header.scrollHeight < window.innerHeight) {
       window.addEventListener('scroll', fixHeaderPosition, false);
     } else {
       window.removeEventListener('scroll', fixHeaderPosition, false);

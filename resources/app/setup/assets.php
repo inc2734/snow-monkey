@@ -125,28 +125,6 @@ add_action(
 );
 
 /**
- * Enqueue script for header
- *
- * @return void
- */
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		if ( '' === Helper::get_default_header_position() ) {
-			return;
-		}
-
-		wp_enqueue_script(
-			Helper::get_main_script_handle() . '-header',
-			get_theme_file_uri( '/assets/js/header.min.js' ),
-			[ Helper::get_main_script_handle() ],
-			filemtime( get_theme_file_path( '/assets/js/header.min.js' ) ),
-			true
-		);
-	}
-);
-
-/**
  * Enqueue FontAwesome
  *
  * @return void

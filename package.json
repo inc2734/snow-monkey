@@ -84,7 +84,6 @@
     "css": "npm run cleanup:css && npm-run-all -p css:*",
     "js:app": "webpack resources/src/js/app.js -o resources/assets/js/app.min.js --config webpack.config.js",
     "js:fix-adminbar": "webpack resources/src/js/fix-adminbar.js -o resources/assets/js/fix-adminbar.min.js --config webpack.config.js",
-    "js:header": "webpack resources/src/js/header.js -o resources/assets/js/header.min.js --config webpack.config.js",
     "js:drop-nav": "webpack resources/src/js/drop-nav.js -o resources/assets/js/drop-nav.min.js --config webpack.config.js",
     "js:footer-sticky-nav": "webpack resources/src/js/footer-sticky-nav.js -o resources/assets/js/footer-sticky-nav.min.js --config webpack.config.js",
     "js:global-nav": "webpack resources/src/js/global-nav.js -o resources/assets/js/global-nav.min.js --config webpack.config.js",

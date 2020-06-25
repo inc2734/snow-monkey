@@ -11,6 +11,8 @@ import {
 document.addEventListener(
   'DOMContentLoaded',
   () => {
+    scrollChecker(getHtml());
+
     const hash = window.location.hash;
     if (! hash) {
       return;
@@ -27,8 +29,6 @@ document.addEventListener(
     };
 
     window.addEventListener('scroll', apply, false);
-
-    scrollChecker(getHtml());
   },
   false
 );

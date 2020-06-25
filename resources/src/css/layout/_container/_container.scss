@@ -2,15 +2,9 @@
 
 .#{ $_prefix }l-container {
   position: relative;
-  overflow: hidden;
 
-  @include _media-min(lg) {
-    overflow: visible;
-  }
-}
-
-@media all and (-ms-high-contrast: none) {
-  .#{ $_prefix }l-container {
-    display: block !important;
+  @media all and (-ms-high-contrast: none) {
+    display: block !important; // for IE
+    overflow: hidden; // for IE
   }
 }
