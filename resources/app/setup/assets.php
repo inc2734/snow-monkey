@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.0
+ * @version 10.10.3
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -223,6 +223,23 @@ add_action(
 			[
 				'home_url' => home_url(),
 			]
+		);
+	}
+);
+
+/**
+ * Enqueue admin screen CSS
+ *
+ * @return void
+ */
+add_action(
+	'admin_enqueue_scripts',
+	function() {
+		wp_enqueue_style(
+			Helper::get_main_style_handle() . '-admin',
+			get_theme_file_uri( '/assets/css/admin.min.css' ),
+			[],
+			filemtime( get_theme_file_path( '/assets/css/admin.min.css' ) )
 		);
 	}
 );

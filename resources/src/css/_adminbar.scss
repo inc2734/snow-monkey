@@ -1,0 +1,13 @@
+#wp-admin-bar-sm-remove-caches {
+  svg {
+    fill: rgba(240, 245, 250, .6);
+    height: 20px;
+    width: 20px;
+    transform: translateY(6px);
+  }
+
+  #wpadminbar:not(.mobile) &:hover > .ab-item svg,
+  #wpadminbar:not(.mobile) &:focus > .ab-item svg {
+    fill: #00b9eb;
+  }
+}
