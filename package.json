@@ -2,7 +2,6 @@
   "author": "inc2734",
   "license": "GPL-2.0+",
   "dependencies": {
-    "jquery.background-parallax-scroll": "^3.0.6",
     "jquery.smoothscroll": "^3.0.1",
     "node-normalize-scss": "^8.0.1",
     "slick-carousel": "^1.8.1"
@@ -96,7 +95,6 @@
     "js:page-top": "webpack resources/src/js/page-top.js -o resources/assets/js/page-top.min.js --config webpack.config.js",
     "js:hash-nav": "webpack resources/src/js/hash-nav.js -o resources/assets/js/hash-nav.min.js --config webpack.config.js",
     "js:smooth-scroll": "webpack resources/src/js/smooth-scroll.js -o resources/assets/js/smooth-scroll.min.js --config webpack.config.js",
-    "js:background-parallax-scroll": "webpack resources/src/js/background-parallax-scroll.js -o resources/assets/js/background-parallax-scroll.min.js --config webpack.config.js",
     "js:fontawesome": "webpack resources/src/js/fontawesome.js -o resources/assets/js/fontawesome.min.js --config webpack.config.js",
     "js:customize-control": "webpack resources/src/js/customize-control.js -o resources/assets/js/customize-control.min.js",
     "js:customize-preview": "webpack resources/src/js/customize-preview.js -o resources/assets/js/customize-preview.min.js",
@@ -106,7 +104,6 @@
     "js:dependency:snow-monkey-blocks": "npm-run-all -p js:dependency:snow-monkey-blocks:*",
     "js:dependency": "npm-run-all -p js:dependency:*",
     "js": "npm run cleanup:js && npm-run-all -p js:*",
-    "packages:jquery.background-parallax-scroll": "cpy 'jquery.background-parallax-scroll/**' '../resources/assets/packages' --cwd=node_modules --parents",
     "packages:jquery.smoothscroll": "cpy 'jquery.smoothscroll/**' '../resources/assets/packages' --cwd=node_modules --parents",
     "packages:slick-carousel": "cpy 'slick-carousel/**' '../resources/assets/packages' --cwd=node_modules --parents",
     "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' '../../resources/assets/packages' --cwd=node_modules/@fortawesome --parents",
