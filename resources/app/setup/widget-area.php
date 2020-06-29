@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.0.4
  */
 
 use Framework\Helper;
@@ -404,7 +404,7 @@ add_action(
 			wp_enqueue_script(
 				Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
 				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.min.js' ),
-				[ 'jquery' ],
+				[],
 				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.min.js' ) ),
 				true
 			);

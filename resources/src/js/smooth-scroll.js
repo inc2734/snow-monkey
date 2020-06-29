@@ -1,15 +1,22 @@
-import { smoothScroll } from './module/_smooth-scroll';
-import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
+import { SmoothScroll } from '@inc2734/smooth-scroll';
+import { getScrollOffset } from './module/_helper';
 
-document.addEventListener(
-  'DOMContentLoaded',
+window.addEventListener(
+  'load',
   () => {
     [
       '.c-page-top a[href^="#"]',
       '.wpco a[href^="#"]',
       '.u-smooth-scroll[href*="#"]',
       '.u-smooth-scroll a[href*="#"]',
-    ].forEach(smoothScroll);
+    ].forEach((selector) => {
+      new SmoothScroll(
+        {
+          selector,
+          offset: () => getScrollOffset(),
+        }
+      );
+    } );
   },
   false
 );

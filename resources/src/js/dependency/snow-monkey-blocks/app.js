@@ -2,7 +2,6 @@ import $ from 'jquery';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
 import {
-  scrollTop,
   getScrollOffset,
 } from '../../module/_helper';
 
@@ -15,7 +14,7 @@ document.addEventListener(
         const handleClick = (event) => {
           const sliderRectTop = slider.getBoundingClientRect().top;
           if (0 > sliderRectTop) {
-            const offsetTop = sliderRectTop + scrollTop();
+            const offsetTop = sliderRectTop + window.pageYOffset;
             window.scrollTo(0, offsetTop - getScrollOffset());
           }
         };

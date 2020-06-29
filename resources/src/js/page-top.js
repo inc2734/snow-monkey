@@ -5,7 +5,6 @@ import {
   hide,
   show,
   throttle,
-  scrollTop,
   isPassiveSupported
 } from './module/_helper';
 
@@ -21,7 +20,7 @@ window.addEventListener(
 
     const handleScroll = throttle(
       () => {
-        if (500 <= scrollTop()) {
+        if (500 <= window.pageYOffset) {
           if ('false' !== ariaHidden) {
             show(pageTop);
             ariaHidden = 'false';

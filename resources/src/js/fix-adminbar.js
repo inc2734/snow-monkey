@@ -3,7 +3,6 @@ import '@inc2734/dispatch-custom-resize-event';
 import {
   getHeader,
   getAdminbar,
-  scrollTop,
   setStyle,
   getStyle,
   hasClass,
@@ -20,7 +19,7 @@ const apply = (header, adminbar) => {
   };
 
   const fixHeaderPosition = () => {
-    if (scrollTop() > adminbar.offsetHeight) {
+    if (window.pageYOffset > adminbar.offsetHeight) {
       setHeaderPosition(null);
       setHeaderTop(0);
     } else {

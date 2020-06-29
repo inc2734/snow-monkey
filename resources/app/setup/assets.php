@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.3
+ * @version 10.10.4
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -165,24 +165,6 @@ add_action(
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-	}
-);
-
-/**
- * Enqueue jquery.easing
- *
- * @return void
- */
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		wp_enqueue_script(
-			'jquery.easing',
-			'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js',
-			[ 'jquery' ],
-			'1.4.1',
-			true
-		);
 	}
 );
 

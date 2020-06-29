@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 10.10.4
  */
 
 use Framework\Helper;
@@ -19,7 +19,7 @@ add_action(
 		wp_register_script(
 			Helper::get_main_script_handle() . '-drop-nav',
 			get_theme_file_uri( '/assets/js/drop-nav.min.js' ),
-			[ 'jquery' ],
+			[],
 			filemtime( get_theme_file_path( '/assets/js/drop-nav.min.js' ) ),
 			true
 		);

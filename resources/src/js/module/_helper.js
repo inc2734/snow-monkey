@@ -107,15 +107,6 @@ export function getDrawerNav() {
 }
 
 /**
- * Return scroll position
- *
- * @return int
- */
-export function scrollTop() {
-  return document.documentElement.scrollTop || document.body.scrollTop;
-}
-
-/**
  * Return specific css property
  *
  * @param object element
