@@ -123,12 +123,12 @@ add_action(
 
 		.l-body--one-column-slim .editor-styles-wrapper .wp-block,
 		.l-body--blank-slim .editor-styles-wrapper .wp-block {
-			--wp-bock-width: 46em;
+			--wp-block-width: 46em;
 		}
 
 		.l-body--right-sidebar .editor-styles-wrapper .wp-block,
 		.l-body--left-sidebar .editor-styles-wrapper .wp-block {
-			max-width: calc(var(--wp-bock-width) - 336px);
+			max-width: calc(var(--wp-block-width) - 336px);
 		}
 		</style>
 		<?php

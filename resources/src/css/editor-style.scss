@@ -50,19 +50,19 @@ textarea.editor-post-title__input {
 }
 
 :root {
-  --wp-bock-width: 1280px;
+  --wp-block-width: 1280px;
 }
 
 // @see app/setup/editor.php
-// @see --wp-bock-width
+// @see --wp-block-width
 .wp-block {
   max-width: 1280px; // for IE11
-  max-width: var(--wp-bock-width);
+  max-width: var(--wp-block-width);
 }
 
 .wp-block[data-align="wide"] {
   max-width: calc(1280px + 220px); // for IE11
-  max-width: calc(var(--wp-bock-width) + 220px);
+  max-width: calc(var(--wp-block-width) + 220px);
 }
 
 .wp-block[data-align="center"] {
