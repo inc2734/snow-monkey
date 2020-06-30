@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9afb1edcb9a0e0ec6047cf4b14e62183",
+    "content-hash": "734abb960f41db7716ba64fd4d6302d3",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -95,16 +95,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "10.0.1",
+            "version": "11.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "4ebc55d148babed3357df13ffcd5204ddc8631bf"
+                "reference": "7bb8ec768d7bd57a3ccf3e71630a9c0b25e7e44a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/4ebc55d148babed3357df13ffcd5204ddc8631bf",
-                "reference": "4ebc55d148babed3357df13ffcd5204ddc8631bf",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/7bb8ec768d7bd57a3ccf3e71630a9c0b25e7e44a",
+                "reference": "7bb8ec768d7bd57a3ccf3e71630a9c0b25e7e44a",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2020-06-23T09:35:27+00:00"
+            "time": "2020-06-30T05:27:07+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -621,16 +621,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "2bf25d00798de862b3a5d4d1a8d1e4c090f60490"
+                "reference": "ef86bf47b3fdf97a38201e4339adfa8782991e06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/2bf25d00798de862b3a5d4d1a8d1e4c090f60490",
-                "reference": "2bf25d00798de862b3a5d4d1a8d1e4c090f60490",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/ef86bf47b3fdf97a38201e4339adfa8782991e06",
+                "reference": "ef86bf47b3fdf97a38201e4339adfa8782991e06",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +660,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2020-06-25T14:01:18+00:00"
+            "time": "2020-06-30T05:29:33+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -1127,16 +1127,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.10.0",
+            "version": "1.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "5796d127b0c4ff505b77455148ea9d5269d99758"
+                "reference": "969b211f9a51aa1f6c01d1d2aef56d3bd91598e5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5796d127b0c4ff505b77455148ea9d5269d99758",
-                "reference": "5796d127b0c4ff505b77455148ea9d5269d99758",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/969b211f9a51aa1f6c01d1d2aef56d3bd91598e5",
+                "reference": "969b211f9a51aa1f6c01d1d2aef56d3bd91598e5",
                 "shasum": ""
             },
             "require": {
@@ -1177,7 +1177,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-06-28T07:02:41+00:00"
+            "time": "2020-06-29T13:22:24+00:00"
         },
         {
             "name": "pdepend/pdepend",

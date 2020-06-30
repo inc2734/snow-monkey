@@ -1,9 +1,6 @@
 {
   "author": "inc2734",
   "license": "GPL-2.0+",
-  "dependencies": {
-    "slick-carousel": "^1.8.1"
-  },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
@@ -67,7 +64,6 @@
     "js:footer-sticky-nav": "webpack resources/src/js/footer-sticky-nav.js -o resources/assets/js/footer-sticky-nav.min.js --config webpack.config.js",
     "js:global-nav": "webpack resources/src/js/global-nav.js -o resources/assets/js/global-nav.min.js --config webpack.config.js",
     "js:sidebar-sticky-widget-area": "webpack resources/src/js/sidebar-sticky-widget-area.js -o resources/assets/js/sidebar-sticky-widget-area.min.js --config webpack.config.js",
-    "js:custom-widgets": "webpack resources/src/js/custom-widgets.js -o resources/assets/js/custom-widgets.min.js --config webpack.config.js",
     "js:widgets": "webpack resources/src/js/widgets.js -o resources/assets/js/widgets.min.js --config webpack.config.js",
     "js:page-top": "webpack resources/src/js/page-top.js -o resources/assets/js/page-top.min.js --config webpack.config.js",
     "js:hash-nav": "webpack resources/src/js/hash-nav.js -o resources/assets/js/hash-nav.min.js --config webpack.config.js",
@@ -81,7 +77,6 @@
     "js:dependency:snow-monkey-blocks": "npm-run-all -p js:dependency:snow-monkey-blocks:*",
     "js:dependency": "npm-run-all -p js:dependency:*",
     "js": "npm run cleanup:js && npm-run-all -p js:*",
-    "packages:slick-carousel": "cpy 'slick-carousel/**' '../resources/assets/packages' --cwd=node_modules --parents",
     "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' '../../resources/assets/packages' --cwd=node_modules/@fortawesome --parents",
     "packages": "npm run cleanup:packages && npm-run-all packages:*",
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=resources/src/img --parents",

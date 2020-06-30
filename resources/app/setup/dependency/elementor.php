@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 10.10.4
  */
 
 use Framework\Helper;
@@ -35,7 +35,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_style_handle() . '-elementor-preview',
 			get_theme_file_uri( '/assets/js/dependency/elementor/preview.min.js' ),
-			[],
+			[ 'jquery' ],
 			filemtime( get_theme_file_path( '/assets/js/dependency/elementor/preview.min.js' ) )
 		);
 	}

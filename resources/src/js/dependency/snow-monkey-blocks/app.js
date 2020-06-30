@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 
 import {

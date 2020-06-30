@@ -156,18 +156,38 @@
     }
 
     &::before {
-      display: none;
+      position: absolute;
+      content: '';
+      display: block;
+      height: 10px;
+      width: 10px;
     }
   }
 
   .slick-prev {
     left: 0;
     transform: translate(-100%, -50%);
+
+    &::before {
+      left: calc(50% - 5px);
+      top: calc(50% - 5px);
+      border-top: 2px solid #fff;
+      border-left: 2px solid #fff;
+      transform: rotate(-45deg);
+    }
   }
 
   .slick-next {
     right: 0;
     transform: translate(100%, -50%);
+
+    &::before {
+      left: calc(50% - 5px);
+      top: calc(50% - 5px);
+      border-top: 2px solid #fff;
+      border-right: 2px solid #fff;
+      transform: rotate(45deg);
+    }
   }
 }
 
