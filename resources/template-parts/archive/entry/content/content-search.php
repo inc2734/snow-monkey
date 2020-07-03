@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.8.0
+ * @version 10.10.6
  */
 
 use Framework\Helper;
 
-$_post_type = filter_input( INPUT_GET, 'post_type' );
-$_post_type = $_post_type ? $_post_type : 'post';
+global $wp_query;
+
+$_post_type = $wp_query->get( 'post_type' );
+$_post_type = 'any' !== $_post_type ? $_post_type : 'post';
 
 $template_args = [
 	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( $_post_type . '-entries-layout' ) ),

@@ -3,12 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.1
+ * @version 10.10.6
  */
 
 use Framework\Helper;
 
-$_post_type = get_post_type() ? get_post_type() : 'post';
+global $wp_query;
+
+$_post_type = $wp_query->get( 'post_type' );
+$_post_type = 'any' !== $_post_type ? $_post_type : 'post';
 ?>
 
 <div class="c-entry">
