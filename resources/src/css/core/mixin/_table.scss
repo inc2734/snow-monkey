@@ -27,4 +27,8 @@
       text-align: left;
     }
   }
+
+  figcaption {
+    @include figcaption();
+  }
 }
