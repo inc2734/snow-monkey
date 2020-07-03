@@ -1,3 +1,52 @@
 @charset 'utf-8';
 
+@import 'core/core';
 @import 'adminbar';
+
+.block-editor-editor-skeleton__content {
+  max-width: 100%;
+}
+
+.block-editor-editor-skeleton__content {
+  overflow-x: hidden;
+}
+
+.l-body--one-column-slim,
+.l-body--blank-slim {
+  .editor-styles-wrapper {
+    .wp-block {
+      --wp-block-width: 46em;
+    }
+  }
+}
+
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+  .editor-styles-wrapper {
+    .wp-block {
+      $container_margin: _space(1);
+      $sidebar_margin: _space(1);
+
+      max-width: calc(var(--wp-block-width) - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
+    }
+  }
+}
+
+// @see resources/src/css/object/component/_entries.scss
+.l-body--one-column-slim,
+.l-body--blank-slim,
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+  .editor-styles-wrapper {
+    .#{ $_prefix }c-entries {
+      &--rich-media,
+      &--panel {
+        .#{ $_prefix }c-entries__item {
+          @include _media-min(lg) {
+            @include _lattice__col--width(1 / 2 * 100%);
+          }
+        }
+      }
+    }
+  }
+}

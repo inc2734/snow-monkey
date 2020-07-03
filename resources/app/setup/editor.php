@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 10.10.6
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -102,35 +102,5 @@ add_filter(
 		return $classes . ' l-body--' . $layout;
 
 		return $classes;
-	}
-);
-
-/**
- * Set editor width by using template
- */
-add_action(
-	'admin_head',
-	function() {
-		?>
-		<style>
-		.block-editor-editor-skeleton__content {
-			max-width: 100%;
-		}
-
-		.block-editor-editor-skeleton__content {
-			overflow-x: hidden;
-		}
-
-		.l-body--one-column-slim .editor-styles-wrapper .wp-block,
-		.l-body--blank-slim .editor-styles-wrapper .wp-block {
-			--wp-block-width: 46em;
-		}
-
-		.l-body--right-sidebar .editor-styles-wrapper .wp-block,
-		.l-body--left-sidebar .editor-styles-wrapper .wp-block {
-			max-width: calc(var(--wp-block-width) - 336px);
-		}
-		</style>
-		<?php
 	}
 );

@@ -50,7 +50,7 @@ textarea.editor-post-title__input {
 }
 
 :root {
-  --wp-block-width: 1280px;
+  --wp-block-width: var(--_container-max-width, 1280px);
 }
 
 // @see app/setup/editor.php
