@@ -95,16 +95,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "11.0.2",
+            "version": "11.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "09b9da70c5cd4c155455d823a5ab769ca857252d"
+                "reference": "ba904f713caaaf4b2de60195b4b7e36ed222f01f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/09b9da70c5cd4c155455d823a5ab769ca857252d",
-                "reference": "09b9da70c5cd4c155455d823a5ab769ca857252d",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/ba904f713caaaf4b2de60195b4b7e36ed222f01f",
+                "reference": "ba904f713caaaf4b2de60195b4b7e36ed222f01f",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2020-06-30T13:24:36+00:00"
+            "time": "2020-07-03T11:01:56+00:00"
         },
         {
             "name": "inc2734/wp-basis",
