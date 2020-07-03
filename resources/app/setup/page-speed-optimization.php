@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.3
+ * @version 10.10.6
  *
  * This procceses are beta.
  */
@@ -117,40 +117,41 @@ add_action( 'wp_footer', 'print_emoji_styles' );
 /**
  * Caching template parts
  */
-if ( ! is_customize_preview() ) {
-	$cache_header       = get_theme_mod( 'cache-header' );
-	$cache_footer       = get_theme_mod( 'cache-footer' );
-	$cache_nav_menus    = get_theme_mod( 'cache-nav-menus' );
-	$cache_widget_areas = get_theme_mod( 'cache-widget-areas' );
 
-	if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas ) {
-		$template_cache = new Template_Cache();
-		$remove_caches  = filter_input( INPUT_GET, 'sm-remove-caches' );
+$cache_header       = get_theme_mod( 'cache-header' );
+$cache_footer       = get_theme_mod( 'cache-footer' );
+$cache_nav_menus    = get_theme_mod( 'cache-nav-menus' );
+$cache_widget_areas = get_theme_mod( 'cache-widget-areas' );
 
-		if ( current_user_can( 'administrator' ) ) {
-			add_action(
-				'admin_bar_menu',
-				function( $wp_admin_bar ) {
-					$wp_admin_bar->add_menu(
-						[
-							'id'    => 'sm-remove-caches',
-							'title' => sprintf(
-								'%1$s%2$s',
-								file_get_contents( get_template_directory() . '/assets/img/icon.svg' ),
-								esc_html__( 'Remove caches', 'snow-monkey' )
-							),
-							'href'  => '?sm-remove-caches=1',
-						]
-					);
-				},
-				1000
-			);
+if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas ) {
+	$template_cache = new Template_Cache();
+	$remove_caches  = filter_input( INPUT_GET, 'sm-remove-caches' );
 
-			if ( $remove_caches ) {
-				$template_cache->remove();
-			}
+	if ( current_user_can( 'administrator' ) ) {
+		add_action(
+			'admin_bar_menu',
+			function( $wp_admin_bar ) {
+				$wp_admin_bar->add_menu(
+					[
+						'id'    => 'sm-remove-caches',
+						'title' => sprintf(
+							'%1$s%2$s',
+							file_get_contents( get_template_directory() . '/assets/img/icon.svg' ),
+							esc_html__( 'Remove caches', 'snow-monkey' )
+						),
+						'href'  => '?sm-remove-caches=1',
+					]
+				);
+			},
+			1000
+		);
+
+		if ( $remove_caches ) {
+			$template_cache->remove();
 		}
+	}
 
+	if ( ! is_customize_preview() ) {
 		if ( ! $remove_caches ) {
 			add_action(
 				'snow_monkey_pre_template_part_render',
