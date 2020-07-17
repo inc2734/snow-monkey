@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.8.1
+ * @version 10.10.8
  */
 
 use Framework\Controller\Controller;
@@ -149,7 +149,7 @@ add_action(
 
 		if ( $target_name && has_action( $action_with_name ) ) {
 			add_filter(
-				'inc2734_wp_view_controller_template_part_render',
+				'inc2734_wp_view_controller_pre_template_part_render',
 				function( $html, $slug, $name, $vars ) use ( $action_with_name, $target_slug, $target_name ) {
 					if ( $target_slug === $slug && $target_name === $name ) {
 						ob_start();
@@ -166,7 +166,7 @@ add_action(
 
 		if ( has_action( $action ) ) {
 			add_filter(
-				'inc2734_wp_view_controller_template_part_render',
+				'inc2734_wp_view_controller_pre_template_part_render',
 				function( $html, $slug, $name, $vars ) use ( $action, $target_slug ) {
 					if ( $target_slug === $slug ) {
 						ob_start();
