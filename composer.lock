@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "734abb960f41db7716ba64fd4d6302d3",
+    "content-hash": "1ff1a6db20190136ba0ce47731b2c217",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -751,16 +751,16 @@
         },
         {
             "name": "inc2734/wp-pure-css-gallery",
-            "version": "2.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-pure-css-gallery.git",
-                "reference": "b4d4d1d7ebcc2d70e2b7d437c546447da63f31fb"
+                "reference": "3acc025381afe1a9dfb5054c0fef16cda4bcb8b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/b4d4d1d7ebcc2d70e2b7d437c546447da63f31fb",
-                "reference": "b4d4d1d7ebcc2d70e2b7d437c546447da63f31fb",
+                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/3acc025381afe1a9dfb5054c0fef16cda4bcb8b3",
+                "reference": "3acc025381afe1a9dfb5054c0fef16cda4bcb8b3",
                 "shasum": ""
             },
             "require": {
@@ -791,7 +791,7 @@
                 }
             ],
             "description": "A library to change WordPress gallery to pure css gallery.",
-            "time": "2020-02-04T06:03:23+00:00"
+            "time": "2020-07-17T06:40:23+00:00"
         },
         {
             "name": "inc2734/wp-seo",

@@ -3,10 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 4.2.13
+ * @version 11.0.0
  */
 
-use Inc2734\WP_Pure_CSS_Gallery\Pure_CSS_Gallery;
+use Inc2734\WP_Pure_CSS_Gallery\Bootstrap;
 
 /**
  * Activate Pure CSS Gallery
@@ -30,6 +30,6 @@ add_action(
 			}
 		}
 
-		new Pure_CSS_Gallery();
+		new Bootstrap();
 	}
 );
