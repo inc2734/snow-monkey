@@ -20,7 +20,7 @@
   &::before {
     margin-right: 3px;
     content: '#';
-    color: $color-accent;
+    color: var-color-accent();
     font-weight: bold;
   }
 }

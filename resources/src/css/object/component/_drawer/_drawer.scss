@@ -2,7 +2,7 @@
   $drawer-font-size: $_base-font-size-px - 2;
 
   z-index: 100000;
-  background-color: $color-accent;
+  background-color: var-color-accent();
   color: #fff;
   @include _font-size-line-height($drawer-font-size);
 

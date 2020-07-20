@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.2
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -39,17 +39,23 @@ add_action(
 		Style::placeholder(
 			'entry-content',
 			function( $selectors ) {
+				if ( ! Helper::is_ie() ) {
+					return;
+				}
+
 				$accent_color = get_theme_mod( 'accent-color' );
 				if ( ! $accent_color ) {
 					return;
 				}
 
 				$selectors_for_h2 = [];
-				$selectors_for_th = [];
+				$selectors_for_thead_th = [];
+				$selectors_for_tbody_th = [];
 
 				foreach ( $selectors as $key => $selector ) {
 					$selectors_for_h2[ $key ] = $selector . ' > h2';
-					$selectors_for_th[ $key ] = $selector . ' > table thead th';
+					$selectors_for_thead_th[ $key ] = $selector . ' > table thead th';
+					$selectors_for_tbody_th[ $key ] = $selector . ' > table tbody th';
 				}
 
 				Style::register(
@@ -58,12 +64,17 @@ add_action(
 				);
 
 				Style::register(
-					$selectors_for_th,
+					$selectors_for_thead_th,
 					[
 						'background-color: ' . $accent_color,
 						'border-right-color: ' . Color::light( $accent_color ),
 						'border-left-color: ' . Color::light( $accent_color ),
 					]
+				);
+
+				Style::register(
+					$selectors_for_tbody_th,
+					'background-color: ' . Color::lightest( $accent_color )
 				);
 			}
 		);

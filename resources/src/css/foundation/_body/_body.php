@@ -5,6 +5,7 @@
  * @license GPL-2.0+
  */
 
+use Inc2734\WP_Customizer_Framework\Color;
 use Inc2734\WP_Customizer_Framework\Style;
 
 $get_container_margin_var = function( $container_margin ) {
@@ -44,6 +45,14 @@ if ( $margin_scale ) {
 $space = $get_container_margin_var( get_theme_mod( 'space' ) );
 if ( $space ) {
 	$root_variables[] = '--_space: ' . $space;
+}
+
+$accent_color = get_theme_mod( 'accent-color' );
+if ( $accent_color ) {
+	$root_variables[] = '--accent-color: ' . $accent_color;
+	$root_variables[] = '--light-accent-color: ' . Color::light( $accent_color );
+	$root_variables[] = '--lighter-accent-color: ' . Color::lighter( $accent_color );
+	$root_variables[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
 }
 
 if ( $root_variables ) {

@@ -18,7 +18,7 @@
   }
 
   &__item {
-    background-color: $color-accent;
+    background-color: var-color-accent();
     color: #fff;
   }
 

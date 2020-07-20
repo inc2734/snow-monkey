@@ -9,7 +9,8 @@
   }
 
   > h2 {
-    border-left: $border-bottom-width solid $color-accent;
+    border-left: $border-bottom-width solid transparent;
+    border-left-color: var-color-accent();
     background-color: _lightest($_color-gray);
     color: $_color-text;
     @include _padding(.25, .25, .25, .5);

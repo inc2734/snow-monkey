@@ -9,7 +9,7 @@
 
 @mixin section-subtitle() {
   @include _margin-bottom(.25);
-  color: $color-accent;
+  color: var-color-accent();
   font-weight: bold;
 }
 
@@ -27,7 +27,7 @@
     display: block;
     width: 60px;
     height: 1px;
-    background-color: $color-accent;
+    background-color: var-color-accent();
   }
 }
 

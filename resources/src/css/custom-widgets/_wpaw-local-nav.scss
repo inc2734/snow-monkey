@@ -17,7 +17,7 @@
       text-decoration: none;
 
       @include _hover(lg) {
-        color: $color-accent;
+        color: var-color-accent();
       }
     }
   }
@@ -43,7 +43,7 @@
       position: absolute;
       @include _top(.25);
       @include _left(0);
-      color: $color-accent;
+      color: var-color-accent();
     }
 
     > a {

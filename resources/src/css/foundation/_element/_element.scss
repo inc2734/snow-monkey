@@ -3,7 +3,7 @@ input, textarea, keygen, select, button {
 }
 
 a {
-  color: $color-accent;
+  color: var-color-accent();
 }
 
 ol,

@@ -8,12 +8,14 @@
 use Inc2734\WP_Customizer_Framework\Style;
 use Framework\Helper;
 
-$accent_color = get_theme_mod( 'accent-color' );
-if ( $accent_color ) {
-	Style::register(
-		'.c-entry-summary__term',
-		'background-color: ' . $accent_color
-	);
+if ( Helper::is_ie() ) {
+	$accent_color = get_theme_mod( 'accent-color' );
+	if ( $accent_color ) {
+		Style::register(
+			'.c-entry-summary__term',
+			'background-color: ' . $accent_color
+		);
+	}
 }
 
 $terms = Helper::get_terms( 'category' );

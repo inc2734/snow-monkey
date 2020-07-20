@@ -1,3 +1,19 @@
 @function var-body-margin-left() {
   @return var(--body-margin-left, 0px);
 }
+
+@function var-color-accent() {
+  @return var(--accent-color, #{ $color-accent });
+}
+
+@function var-color-accent-light() {
+  @return var(--light-accent-color, #{ _light($color-accent) });
+}
+
+@function var-color-accent-lighter() {
+  @return var(--lighter-accent-color, #{ _lighter($color-accent) });
+}
+
+@function var-color-accent-lightest() {
+  @return var(--lightest-accent-color, #{ _lightest($color-accent) });
+}

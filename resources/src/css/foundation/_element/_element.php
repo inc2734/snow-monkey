@@ -5,14 +5,17 @@
  * @license GPL-2.0+
  */
 
+use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
 
-$accent_color = get_theme_mod( 'accent-color' );
-if ( $accent_color ) {
-	Style::register(
-		'a',
-		'color: ' . get_theme_mod( 'accent-color' )
-	);
+if ( Helper::is_ie() ) {
+	$accent_color = get_theme_mod( 'accent-color' );
+	if ( $accent_color ) {
+		Style::register(
+			'a',
+			'color: ' . get_theme_mod( 'accent-color' )
+		);
+	}
 }
 
 Style::register(

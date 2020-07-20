@@ -42,7 +42,7 @@
 
       &[data-active-menu] {
         > a {
-          color: $color-accent;
+          color: var-color-accent();
         }
       }
     }

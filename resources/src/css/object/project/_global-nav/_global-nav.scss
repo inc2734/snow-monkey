@@ -28,13 +28,13 @@
 
       &[data-active-menu] {
         > a {
-          color: $color-accent;
+          color: var-color-accent();
         }
       }
 
       @include _hover(lg) {
         > a {
-          color: $color-accent;
+          color: var-color-accent();
         }
       }
 
@@ -45,7 +45,7 @@
         &::before {
           content: '';
           display: block;
-          @include _triangle-top(16px, 10px, $color-accent);
+          @include _triangle-top(16px, 10px, var-color-accent());
           position: absolute;
           top: -10px;
           left: calc(50% - 8px);
@@ -54,7 +54,7 @@
     }
 
     &__submenu {
-      background-color: $color-accent;
+      background-color: var-color-accent();
       z-index: 1;
     }
 

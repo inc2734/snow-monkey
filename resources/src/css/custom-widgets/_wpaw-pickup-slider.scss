@@ -100,8 +100,8 @@
     }
 
     @include _hover(lg) {
-      background-color: $color-accent;
-      border-color: $color-accent;
+      background-color: var-color-accent();
+      border-color: var-color-accent();
     }
   }
 
@@ -137,7 +137,7 @@
 
   .slick-arrow {
     z-index: 1;
-    background-color: $color-accent;
+    background-color: var-color-accent();
     border-radius: 0;
     @include _square(40px);
     @include _transition(all);

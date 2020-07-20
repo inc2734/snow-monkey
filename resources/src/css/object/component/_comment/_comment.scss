@@ -118,7 +118,7 @@
   .comment-reply-link {
     @include btn();
     @include _margin(.5, 0, 0);
-    background-color: $color-accent;
+    background-color: var-color-accent();
     border-radius: $_border-radius; // for IE11
     border-radius: _var-border-radius();
     color: #fff;

@@ -1,6 +1,6 @@
 @mixin btn() {
   @include _btn();
-  background-color: $color-accent;
+  background-color: var-color-accent();
   border: none;
   border-radius: $_border-radius; // for IE11
   border-radius: _var-border-radius();

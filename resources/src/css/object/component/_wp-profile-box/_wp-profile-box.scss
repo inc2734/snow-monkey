@@ -102,14 +102,16 @@
 
   &__detail-btn {
     margin-right: .5em;
-    background-color: $color-accent;
-    border: 1px solid $color-accent;
+    background-color: var-color-accent();
+    border: 1px solid transparent;
+    border-color: var-color-accent();
     color: #fff;
   }
 
   &__archives-btn {
     background-color: #fff;
-    border: 1px solid $color-accent;
-    color: $color-accent;
+    border: 1px solid transparent;
+    border-color: var-color-accent();
+    color: var-color-accent();
   }
 }

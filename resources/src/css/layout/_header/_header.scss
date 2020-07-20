@@ -337,7 +337,7 @@
           transform: translateY(-50%);
 
           &::before {
-            @include _triangle-left(10px, 16px, $color-accent);
+            @include _triangle-left(10px, 16px, var-color-accent());
             top: calc(50% - 8px);
             left: -10px;
           }

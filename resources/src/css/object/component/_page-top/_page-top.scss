@@ -1,6 +1,6 @@
 .#{ $_prefix }c-page-top {
   position: relative;
-  background-color: $color-accent;
+  background-color: var-color-accent();
   @include _square(40px);
   @include _transition(opacity, filter);
   visibility: hidden;

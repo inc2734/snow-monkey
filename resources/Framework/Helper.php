@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.0
+ * @version 11.0.0
  */
 
 namespace Framework;
@@ -394,5 +394,10 @@ class Helper {
 		foreach ( $files['directories'] as $directory ) {
 			static::get_template_parts( $directory, $exclude_underscore );
 		}
+	}
+
+	public static function is_ie() {
+		$browser = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+		return strstr( $browser , 'trident' ) || strstr( $browser , 'msie' );
 	}
 }

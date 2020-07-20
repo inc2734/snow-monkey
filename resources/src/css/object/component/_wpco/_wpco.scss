@@ -48,7 +48,7 @@
         justify-content: center;
         flex: 0 0 auto;
         @include _margin(2px, .5, 0, 0);
-        background-color: $color-accent;
+        background-color: var-color-accent();
         color: #fff;
         font-size: 10px;
         line-height: 1;

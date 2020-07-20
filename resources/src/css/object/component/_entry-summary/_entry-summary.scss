@@ -19,7 +19,7 @@
 
   &__term {
     display: inline-block;
-    background-color: $color-accent;
+    background-color: var-color-accent();
     color: #fff;
     font-weight: bold;
     @include _font-size($_base-font-size-px - 4);

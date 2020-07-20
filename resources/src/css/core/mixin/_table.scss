@@ -13,16 +13,18 @@
 
   thead {
     th {
-      background-color: $color-accent;
-      border-right: 1px solid _light($color-accent);
-      border-left: 1px solid _light($color-accent);
+      background-color: var-color-accent();
+      border-right: 1px solid transparent;
+      border-right-color: var-color-accent-light();
+      border-left: 1px solid transparent;
+      border-left-color: var-color-accent-light();
       color: #fff;
     }
   }
 
   tbody {
     th {
-      background-color: _lightest($_color-gray);
+      background-color: var-color-accent-lightest();
       color: $_color-text;
       text-align: left;
     }
