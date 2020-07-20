@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "345a916365b27af55a39eff37cbbeca0",
+    "content-hash": "7b634d37e6313a6aa11eeca4cc76194f",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -95,23 +95,23 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "11.0.5",
+            "version": "11.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "a3fb233afa3804d8951e387ba91f5164b384c51e"
+                "reference": "d4cfea75736a60c948112c4ba8838b605f5cbd0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/a3fb233afa3804d8951e387ba91f5164b384c51e",
-                "reference": "a3fb233afa3804d8951e387ba91f5164b384c51e",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/d4cfea75736a60c948112c4ba8838b605f5cbd0b",
+                "reference": "d4cfea75736a60c948112c4ba8838b605f5cbd0b",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-adsense": "^1.0.0",
-                "inc2734/wp-contents-outline": "^4.0.1",
-                "inc2734/wp-plugin-view-controller": "^1.0.0",
-                "inc2734/wp-profile-box": "^2.0.0",
+                "inc2734/wp-adsense": "^1.0",
+                "inc2734/wp-contents-outline": "^5.0",
+                "inc2734/wp-plugin-view-controller": "^1.0",
+                "inc2734/wp-profile-box": "^2.2",
                 "php": ">=5.6"
             },
             "require-dev": {
@@ -139,7 +139,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2020-07-06T06:59:28+00:00"
+            "time": "2020-07-20T10:23:31+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -231,16 +231,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "4.1.5",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "74a76c126cc006a027d23938df84899ee72864b0"
+                "reference": "00f90bf9dd4595bf23be797de65a9ae07ed53897"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/74a76c126cc006a027d23938df84899ee72864b0",
-                "reference": "74a76c126cc006a027d23938df84899ee72864b0",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/00f90bf9dd4595bf23be797de65a9ae07ed53897",
+                "reference": "00f90bf9dd4595bf23be797de65a9ae07ed53897",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +272,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2020-04-02T01:06:54+00:00"
+            "time": "2020-07-20T10:15:57+00:00"
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
