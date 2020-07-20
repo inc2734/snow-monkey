@@ -8,11 +8,11 @@ Premium WordPress theme by Monkey Wrench
 * Contributors: https://github.com/inc2734/snow-monkey/graphs/contributors
 
 ## Requirements
-* WordPress 5.4
+* WordPress 5.5
 * PHP 5.6+
 
 ## Browser support
-* IE10 + Modern browser
+* IE11 + Modern browser
 
 ## Directory structure
 ```
@@ -49,51 +49,3 @@ themes/snow-monkey
 
 ### FLOCSS
 * Source: https://github.com/hiloki/flocss
-
-### jquery.background-parallax-scroll
-* Source: https://github.com/inc2734/jquery.background-parallax-scroll
-
-### jquery.smoothscroll
-* Source: https://github.com/inc2734/jquery.smoothscroll
-
-### jquery.sticky
-* Source: https://github.com/inc2734/jquery.sticky
-
-### inc2734/wp-breadcrumbs
-* Source: https://github.com/inc2734/wp-breadcrumbs
-
-### inc2734/wp-ogp
-* Source: https://github.com/inc2734/wp-ogp
-
-### inc2734/wp-oembed-blog-card
-* Source: https://github.com/inc2734/wp-oembed-blog-card
-
-### inc2734/wp-view-controller
-* Source: https://github.com/inc2734/wp-view-controller
-
-### inc2734/wp-basis
-* Source: https://github.com/inc2734/wp-basis
-
-### inc2734/wp-customizer-framework
-* Source: https://github.com/inc2734/wp-customizer-framework
-
-### inc2734/wp-github-theme-updater
-* Source: https://github.com/inc2734/wp-github-theme-updater
-
-### inc2734/wp-share-buttons
-* Source: https://github.com/inc2734/wp-share-buttons
-
-### inc2734/wp-seo
-* Source: https://github.com/inc2734/wp-seo
-
-### inc2734/wp-like-me-box
-* Source: https://github.com/inc2734/wp-like-me-box
-
-### inc2734/wp-pure-css-gallery
-* Source: https://github.com/inc2734/wp-pure-css-gallery
-
-### inc2734/wp-awesome-widgets
-* Source: https://github.com/inc2734/wp-awesome-widgets
-
-### inc2734/wp-awesome-components
-* Source: https://github.com/inc2734/wp-awesome-components
