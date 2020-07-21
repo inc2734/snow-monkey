@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.3
+ * @version 11.0.0
  *
  * renamed: template-parts/2row-header.php
  */
@@ -23,7 +23,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 <div class="l-<?php echo esc_attr( $header_type ); ?>" data-has-global-nav="<?php echo esc_attr( $data_has_global_nav ); ?>">
 	<div class="<?php echo esc_attr( $container_class ); ?>">
 		<?php if ( $has_header_sub_nav ) : ?>
-			<div class="u-hidden u-visible-lg-up">
+			<div class="u-invisible-md-down">
 				<?php Helper::get_template_part( 'template-parts/nav/header-sub' ); ?>
 			</div>
 		<?php endif; ?>
@@ -35,7 +35,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 				</div>
 
 				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--fit u-hidden u-visible-lg-up">
+					<div class="c-row__col c-row__col--fit u-invisible-md-down">
 						<div class="c-row c-row--right">
 							<div class="c-row__col c-row__col--fit">
 								<?php
@@ -49,7 +49,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 				<?php endif; ?>
 
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--fit u-hidden-lg-up">
+					<div class="c-row__col c-row__col--fit u-invisible-lg-up">
 						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 					</div>
 				<?php endif; ?>
@@ -57,7 +57,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 		</div>
 
 		<?php if ( $has_global_nav ) : ?>
-			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-hidden u-visible-lg-up">
+			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-invisible-md-down">
 				<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>
 			</div>
 		<?php endif; ?>

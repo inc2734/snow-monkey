@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.3
+ * @version 11.0.0
  *
  * renamed: template-parts/center-header.php
  */
@@ -27,7 +27,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 <div class="l-<?php echo esc_attr( $header_type ); ?>" data-has-global-nav="<?php echo esc_attr( $data_has_global_nav ); ?>">
 	<div class="<?php echo esc_attr( $container_class ); ?>">
 		<?php if ( $has_header_sub_nav ) : ?>
-			<div class="u-hidden u-visible-lg-up">
+			<div class="u-invisible-md-down">
 				<?php Helper::get_template_part( 'template-parts/nav/header-sub' ); ?>
 			</div>
 		<?php endif; ?>
@@ -35,11 +35,11 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
 			<div class="c-row c-row--margin-s c-row--middle c-row--between c-row--nowrap">
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--1-6 u-hidden-lg-up"></div>
+					<div class="c-row__col c-row__col--1-6 u-invisible-lg-up"></div>
 				<?php endif; ?>
 
 				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--1-4 u-hidden u-visible-lg-up"></div>
+					<div class="c-row__col c-row__col--1-4 u-invisible-md-down"></div>
 				<?php endif; ?>
 
 				<div class="c-row__col <?php echo esc_attr( $class_for_site_branding_col ); ?> u-text-center">
@@ -47,7 +47,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				</div>
 
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--1-6 u-hidden-lg-up">
+					<div class="c-row__col c-row__col--1-6 u-invisible-lg-up">
 						<div class="u-pull-right">
 							<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 						</div>
@@ -55,7 +55,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 				<?php endif; ?>
 
 				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--1-4 u-hidden u-visible-lg-up">
+					<div class="c-row__col c-row__col--1-4 u-invisible-md-down">
 						<div class="u-pull-right">
 							<?php
 							if ( get_theme_mod( 'header-content' ) ) {
@@ -69,7 +69,7 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 		</div>
 
 		<?php if ( $has_global_nav ) : ?>
-			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-hidden u-visible-lg-up">
+			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-invisible-md-down">
 				<?php
 				Helper::get_template_part(
 					'template-parts/nav/global',

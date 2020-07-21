@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.3
+ * @version 11.0.0
  *
  * renamed: template-parts/simple-header.php
  */
@@ -29,7 +29,7 @@ $container_class  = $header_alignfull ? 'c-fluid-container' : 'c-container';
 					<div class="c-row__col c-row__col--fit">
 						<div class="c-row c-row--margin c-row--middle c-row--nowrap">
 							<?php if ( $header_content ) : ?>
-								<div class="c-row__col c-row__col--fit u-hidden u-visible-lg-up">
+								<div class="c-row__col c-row__col--fit u-invisible-md-down">
 									<?php
 									if ( get_theme_mod( 'header-content' ) ) {
 										Helper::get_template_part( 'template-parts/header/content', 'lg' );

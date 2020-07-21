@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.3
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -24,25 +24,25 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 			</div>
 
 			<?php if ( $has_drawer_nav ) : ?>
-				<div class="c-row__col c-row__col--fit u-hidden-lg-up">
+				<div class="c-row__col c-row__col--fit u-invisible-lg-up">
 					<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 				</div>
 			<?php endif; ?>
 
 			<?php if ( $has_global_nav ) : ?>
-				<div class="c-row__col c-row__col--1-1 u-hidden u-visible-lg-up">
+				<div class="c-row__col c-row__col--1-1 u-invisible-md-down">
 					<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>
 				</div>
 			<?php endif; ?>
 
 			<?php if ( $has_header_sub_nav ) : ?>
-				<div class="c-row__col c-row__col--1-1 u-hidden u-visible-lg-up">
+				<div class="c-row__col c-row__col--1-1 u-invisible-md-down">
 					<?php Helper::get_template_part( 'template-parts/nav/header-sub' ); ?>
 				</div>
 			<?php endif; ?>
 
 			<?php if ( $header_content ) : ?>
-				<div class="c-row__col c-row__col--1-1 u-hidden u-visible-lg-up">
+				<div class="c-row__col c-row__col--1-1 u-invisible-md-down">
 					<?php
 					if ( get_theme_mod( 'header-content' ) ) {
 						Helper::get_template_part( 'template-parts/header/content', 'lg' );
