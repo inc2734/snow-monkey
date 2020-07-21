@@ -11,10 +11,18 @@
   overflow-x: hidden;
 }
 
+// サイドバーの横幅分 alignfull, alignwide から引く
+.edit-post-layout.is-mode-visual.is-sidebar-opened {
+  @include _media-min(782px) {
+    --body-margin-left: 280px;
+  }
+}
+
 .l-body--one-column-slim,
 .l-body--blank-slim {
   .editor-styles-wrapper {
-    .wp-block {
+    .edit-post-visual-editor__post-title-wrapper,
+    .block-editor-block-list__layout.is-root-container {
       --wp-block-width: 46em;
     }
   }
@@ -23,7 +31,8 @@
 .l-body--right-sidebar,
 .l-body--left-sidebar {
   .editor-styles-wrapper {
-    .wp-block {
+    .edit-post-visual-editor__post-title-wrapper,
+    .block-editor-block-list__layout.is-root-container {
       $container_margin: _space(1);
       $sidebar_margin: _space(1);
 

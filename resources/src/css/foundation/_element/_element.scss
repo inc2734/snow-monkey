@@ -6,13 +6,11 @@ a {
   color: var-color-accent();
 }
 
+// @see resources/src/css/editor-style.scss
 ol,
 ul {
-  &,
-  .block-library-list & {
-    margin-left: 1.5em;
-    padding-left: 0;
-  }
+  margin-left: 1.5em;
+  padding-left: 0;
 }
 
 h1 {
