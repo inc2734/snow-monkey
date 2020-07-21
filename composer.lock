@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fe8a39481c4a1dca570d81a88d6ee94f",
+    "content-hash": "db5660686995dd2e838d01eaf34f280d",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -95,16 +95,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "11.0.6",
+            "version": "11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "d4cfea75736a60c948112c4ba8838b605f5cbd0b"
+                "reference": "4a16f0a102db4dd3640662e31f2edec2125d196c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/d4cfea75736a60c948112c4ba8838b605f5cbd0b",
-                "reference": "d4cfea75736a60c948112c4ba8838b605f5cbd0b",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/4a16f0a102db4dd3640662e31f2edec2125d196c",
+                "reference": "4a16f0a102db4dd3640662e31f2edec2125d196c",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2020-07-20T10:23:31+00:00"
+            "time": "2020-07-21T00:11:02+00:00"
         },
         {
             "name": "inc2734/wp-basis",

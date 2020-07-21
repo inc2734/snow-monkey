@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -23,7 +23,7 @@ $query_args = [
 	'post_type'           => $post_types,
 	'posts_per_page'      => $instance['posts-per-page'],
 	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
-	'suppress_filters'    => true,
+	'suppress_filters'    => false,
 ];
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args', $query_args );
 $query_args = apply_filters( 'snow_monkey_recent_posts_widget_args_' . $widget_number, $query_args );
