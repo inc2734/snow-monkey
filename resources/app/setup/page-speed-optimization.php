@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.6
+ * @version 11.0.0
  *
  * This procceses are beta.
  */
@@ -74,21 +74,6 @@ add_action(
 				);
 			}
 		);
-	}
-);
-
-/**
- * Async loading images
- */
-add_action(
-	'after_setup_theme',
-	function() {
-		if ( ! get_theme_mod( 'async-load-images' ) ) {
-			return;
-		}
-
-		add_filter( 'inc2734_wp_page_speed_async_attachment_images', '__return_true' );
-		add_filter( 'inc2734_wp_page_speed_async_content_images', '__return_true' );
 	}
 );
 
