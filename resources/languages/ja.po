@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-06-24 13:44+0900\n"
-"PO-Revision-Date: 2020-06-24 13:44+0900\n"
+"POT-Creation-Date: 2020-07-22 10:51+0900\n"
+"PO-Revision-Date: 2020-07-22 10:51+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -743,10 +743,6 @@ msgstr "お知らせバーリンク URL"
 msgid "Infobar"
 msgstr "お知らせバー"
 
-#: app/customizer/page-speed-optimization/controls/async-load-images.php:15
-msgid "Async loading of images"
-msgstr "画像の非同期読み込み"
-
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:17
 msgid "Use browser cache"
 msgstr "ブラウザキャッシュを使用する"
@@ -1302,7 +1298,7 @@ msgstr "ドロワーサブナビゲーション（モバイル用）"
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/page-speed-optimization.php:138
+#: app/setup/page-speed-optimization.php:125
 msgid "Remove caches"
 msgstr "キャッシュを削除"
 
@@ -1473,6 +1469,10 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 #: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:42
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
+
+#: template-parts/archive/entry/content/content-no-keywords.php:18
+msgid "Please enter a search keyword."
+msgstr "検索キーワードを入力してください。"
 
 #: template-parts/archive/entry/content/content-no-match.php:18
 msgid ""
@@ -1650,6 +1650,9 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Async loading of images"
+#~ msgstr "画像の非同期読み込み"
 
 #~ msgid "Optimize the Snow Monkey JavaScript loading"
 #~ msgstr "Snow Monkey の JavaScript 読み込みを最適化する"

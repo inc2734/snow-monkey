@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.6
+ * @version 11.0.0
  */
 
 use Framework\Controller\Controller;
@@ -23,7 +23,9 @@ query_posts(
 );
 
 Controller::layout( get_theme_mod( 'archive-page-layout' ) );
-if ( have_posts() ) {
+if ( '' === get_search_query() ) {
+	Controller::render( 'no-keywords' );
+} elseif ( have_posts() ) {
 	Controller::render( 'archive', 'search' );
 } else {
 	Controller::render( 'no-match' );
