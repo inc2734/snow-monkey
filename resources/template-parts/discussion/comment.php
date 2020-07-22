@@ -3,16 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.7
+ * @version 11.0.0
  *
  * renamed: template-parts/comment.php
  */
+
+$avatar = get_avatar( $_comment, '96' );
 ?>
 
 <div class="c-comment" id="comment-<?php comment_ID(); ?>">
-	<div class="c-comment__figure">
-		<?php echo get_avatar( $_comment, '96' ); ?>
-	</div>
+	<?php if ( $avatar ) : ?>
+		<div class="c-comment__figure">
+			<?php echo wp_kses_post( $avatar ); ?>
+		</div>
+	<?php endif; ?>
+
 	<div class="c-comment__body">
 		<?php if ( 0 === $_comment->comment_approved ) : ?>
 			<em><?php esc_html_e( 'Your comment is awaiting moderation.', 'snow-monkey' ); ?></em>

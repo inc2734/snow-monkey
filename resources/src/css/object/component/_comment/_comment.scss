@@ -1,4 +1,6 @@
 .#{ $_prefix }c-comment {
+  $bgcolor: _lightest($_color-gray);
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -30,6 +32,7 @@
 
   &__body {
     flex: 1 1 auto;
+    background-color: $bgcolor;
     border-radius: $_border-radius; // for IE11
     border-radius: _var-border-radius();
     overflow-wrap: break-word;
@@ -37,27 +40,32 @@
     max-width: 100%;
     width: 100%;
 
-    @include _top-balloon((
-      background-color: _lightest($_color-gray),
-      border-color: null,
-      border-size: null,
-      triangle-size: 10px,
-    ));
-
-    &::before,
-    &::after {
-      margin-left: 0;
-      left: 24px;
-    }
-
     @include _media-min(md) {
       @include _padding(.75);
-      max-width: calc(100% - 80px);
-      @include _balloon-triangle(left, 10px, _lightest($_color-gray));
+    }
+
+    .#{ $_prefix }c-comment__figure + & {
+      @include _top-balloon((
+        background-color: $bgcolor,
+        border-color: null,
+        border-size: null,
+        triangle-size: 10px,
+      ));
 
       &::before,
       &::after {
-        top: 28px;
+        margin-left: 0;
+        left: 24px;
+      }
+
+      @include _media-min(md) {
+        @include _balloon-triangle(left, 10px, $bgcolor);
+        max-width: calc(100% - 80px);
+
+        &::before,
+        &::after {
+          top: 28px;
+        }
       }
     }
   }
@@ -141,18 +149,20 @@
     }
 
     &__body {
-      &::before,
-      &::after {
-        left: auto;
-        right: 24px;
-      }
-
-      @include _media-min(md) {
-        @include _balloon-triangle(right, 10px, _lightest($_color-gray));
-
+      .#{ $_prefix }c-comment__figure + & {
         &::before,
         &::after {
-          top: 28px;
+          left: auto;
+          right: 24px;
+        }
+
+        @include _media-min(md) {
+          @include _balloon-triangle(right, 10px, $bgcolor);
+
+          &::before,
+          &::after {
+            top: 28px;
+          }
         }
       }
     }

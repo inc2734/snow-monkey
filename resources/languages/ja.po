@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-07-22 10:51+0900\n"
-"PO-Revision-Date: 2020-07-22 10:51+0900\n"
+"POT-Creation-Date: 2020-07-22 15:43+0900\n"
+"PO-Revision-Date: 2020-07-22 15:44+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1537,17 +1537,17 @@ msgstr "関連記事"
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
-#: template-parts/discussion/comment.php:18
+#: template-parts/discussion/comment.php:23
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
-#: template-parts/discussion/comment.php:28
+#: template-parts/discussion/comment.php:33
 #: template-parts/discussion/trackback.php:20
 #, php-format
 msgid "%1$s said on %2$s at %3$s"
-msgstr "%1$s said on %2$s at %3$s"
+msgstr "%1$s が %2$s %3$s にコメント"
 
-#: template-parts/discussion/comment.php:33
+#: template-parts/discussion/comment.php:38
 msgid "Edit this comment"
 msgstr "コメントを編集"
 
