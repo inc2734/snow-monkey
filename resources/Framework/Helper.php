@@ -397,7 +397,11 @@ class Helper {
 	}
 
 	public static function is_ie() {
+		if ( ! isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
+			return false;
+		}
+
 		$browser = strtolower( $_SERVER['HTTP_USER_AGENT'] );
-		return strstr( $browser , 'trident' ) || strstr( $browser , 'msie' );
+		return strstr( $browser, 'trident' ) || strstr( $browser, 'msie' );
 	}
 }

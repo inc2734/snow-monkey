@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.3
+ * @version 11.0.0
  *
  * renamed: template-parts/breadcrumbs.php
  */
@@ -11,7 +11,7 @@
 use Framework\Helper;
 
 $template_args = [
-	'items' => Helper::get_var( $_items, Helper::get_breadcrumbs_items() ),
+	'items' => Helper::get_var( $args['_items'], Helper::get_breadcrumbs_items() ),
 ];
 
 $template_args['items'] = array_values( $template_args['items'] );

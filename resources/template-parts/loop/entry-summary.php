@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 11.0.0
  *
  * renamed: template-parts/entry-summary.php
  */
@@ -11,10 +11,10 @@
 use Framework\Helper;
 
 $template_args = [
-	'title_tag'      => Helper::get_var( $_title_tag, 'h2' ),
-	'thumbnail_size' => Helper::get_var( $_thumbnail_size, 'medium_large' ),
-	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
+	'title_tag'      => Helper::get_var( $args['_title_tag'], 'h2' ),
+	'thumbnail_size' => Helper::get_var( $args['_thumbnail_size'], 'medium_large' ),
+	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( get_post_type() . '-entries-layout' ) ),
+	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
 ];
 ?>
 

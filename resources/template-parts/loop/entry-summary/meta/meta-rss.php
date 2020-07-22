@@ -3,13 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.6.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'item' => Helper::get_var( $_item, false ),
+	'item' => Helper::get_var( $args['_item'], false ),
 ];
 
 if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item' ) ) {

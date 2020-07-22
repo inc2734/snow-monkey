@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -34,7 +34,7 @@ use Framework\Helper;
 		<?php Helper::get_header(); ?>
 
 		<div class="l-contents" role="document">
-			<?php $_view_controller->view(); ?>
+			<?php $args['_view_controller']->view(); ?>
 		</div>
 
 		<?php Helper::get_footer(); ?>

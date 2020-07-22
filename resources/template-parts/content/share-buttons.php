@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/share-buttons.php
  */
@@ -11,7 +11,7 @@
 use Framework\Helper;
 
 $template_args = [
-	'buttons' => Helper::get_var( $_buttons, explode( ',', get_option( 'mwt-share-buttons-buttons' ) ) ),
+	'buttons' => Helper::get_var( $args['_buttons'], explode( ',', get_option( 'mwt-share-buttons-buttons' ) ) ),
 ];
 
 if ( ! $template_args['buttons'] ) {

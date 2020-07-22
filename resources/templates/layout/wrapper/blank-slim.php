@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -26,7 +26,7 @@ use Framework\Helper;
 	<div class="l-container">
 		<div class="l-contents" role="document">
 			<div class="u-slim-width">
-				<?php $_view_controller->view(); ?>
+				<?php $args['_view_controller']->view(); ?>
 			</div>
 		</div>
 	</div>

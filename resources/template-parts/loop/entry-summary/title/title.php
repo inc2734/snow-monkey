@@ -3,13 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'title_tag' => Helper::get_var( $_title_tag, 'h2' ),
+	'title_tag' => Helper::get_var( $args['_title_tag'], 'h2' ),
 ];
 
 $layout    = get_theme_mod( get_post_type() . '-entries-layout' );

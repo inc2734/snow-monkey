@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.1.0
+ * @version 11.0.0
  *
  * renamed: template-parts/global-nav.php
  */
@@ -15,7 +15,7 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 }
 
 $template_args = [
-	'vertical' => Helper::get_var( $_vertical, false ),
+	'vertical' => Helper::get_var( $args['_vertical'], false ),
 ];
 
 $classes[] = 'p-global-nav';

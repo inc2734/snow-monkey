@@ -3,13 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'terms' => Helper::get_var( $_terms, [] ),
+	'terms' => Helper::get_var( $args['_terms'], [] ),
 ];
 
 if ( ! $template_args['terms'] ) {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/google-adsense.php
  */
@@ -12,8 +12,8 @@ use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 $template_args = [
-	'code'     => Helper::get_var( $_code, get_option( 'mwt-google-adsense' ) ),
-	'position' => Helper::get_var( $_position, null ),
+	'code'     => Helper::get_var( $args['_code'], get_option( 'mwt-google-adsense' ) ),
+	'position' => Helper::get_var( $args['_position'], null ),
 ];
 
 $template_args['code'] = apply_filters( 'snow_monkey_google_adsense', $template_args['code'], $template_args['position'] );

@@ -3,16 +3,16 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'title_tag'      => Helper::get_var( $_title_tag, 'h2' ),
-	'item'           => Helper::get_var( $_item, false ),
-	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( 'post-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
+	'title_tag'      => Helper::get_var( $args['_title_tag'], 'h2' ),
+	'item'           => Helper::get_var( $args['_item'], false ),
+	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( 'post-entries-layout' ) ),
+	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
 ];
 
 if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item' ) ) {

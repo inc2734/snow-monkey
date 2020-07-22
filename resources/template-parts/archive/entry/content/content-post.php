@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.8.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( 'post-entries-layout' ) ),
-	'force_sm_1col'  => Helper::get_var( $_force_sm_1col, get_theme_mod( 'post-entries-layout-sm-1col' ) ),
+	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( 'post-entries-layout' ) ),
+	'force_sm_1col'  => Helper::get_var( $args['_force_sm_1col'], get_theme_mod( 'post-entries-layout-sm-1col' ) ),
 ];
 
 $force_sm_1col   = $template_args['force_sm_1col'] ? 'true' : 'false';

@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -70,7 +70,7 @@ use Framework\Helper;
 					<main class="l-contents__main" role="main">
 						<?php do_action( 'snow_monkey_prepend_main' ); ?>
 
-						<?php $_view_controller->view(); ?>
+						<?php $args['_view_controller']->view(); ?>
 
 						<?php do_action( 'snow_monkey_append_main' ); ?>
 					</main>

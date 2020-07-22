@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.6
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -14,8 +14,8 @@ $_post_type = $wp_query->get( 'post_type' );
 $_post_type = 'any' !== $_post_type ? $_post_type : 'post';
 
 $template_args = [
-	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( $_post_type . '-entries-layout' ) ),
-	'force_sm_1col'  => Helper::get_var( $_force_sm_1col, get_theme_mod( $_post_type . '-entries-layout-sm-1col' ) ),
+	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( $_post_type . '-entries-layout' ) ),
+	'force_sm_1col'  => Helper::get_var( $args['_force_sm_1col'], get_theme_mod( $_post_type . '-entries-layout-sm-1col' ) ),
 ];
 
 $force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';

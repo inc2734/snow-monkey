@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/child-pages.php
  */
 
 use Framework\Helper;
 
-$template_args['parent_id'] = Helper::get_var( $_parent_id, get_the_ID() );
+$template_args['parent_id'] = Helper::get_var( $args['_parent_id'], get_the_ID() );
 $template_args['query']     = Helper::get_child_pages_query( $template_args['parent_id'] );
 
 if ( ! $template_args['query']->have_posts() ) {

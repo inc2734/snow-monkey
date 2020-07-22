@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
 
 $template_args = [
-	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( get_post_type() . '-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $_excerpt_length, null ),
+	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( get_post_type() . '-entries-layout' ) ),
+	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
 ];
 
 /**

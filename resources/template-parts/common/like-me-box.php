@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/like-me-box.php
  */
@@ -11,7 +11,7 @@
 use Framework\Helper;
 
 $template_args = [
-	'facebook_page_name' => Helper::get_var( $_facebook_page_name, get_option( 'mwt-facebook-page-name' ) ),
+	'facebook_page_name' => Helper::get_var( $args['_facebook_page_name'], get_option( 'mwt-facebook-page-name' ) ),
 ];
 
 if ( ! $template_args['facebook_page_name'] ) {

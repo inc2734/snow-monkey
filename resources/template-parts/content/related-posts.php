@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/related-posts.php
  */
@@ -12,9 +12,9 @@ use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 $template_args = [
-	'code'           => Helper::get_var( $_code, get_option( 'mwt-google-matched-content' ) ),
-	'post_id'        => Helper::get_var( $_post_id, get_the_ID() ),
-	'entries_layout' => Helper::get_var( $_entries_layout, get_theme_mod( 'related-posts-layout' ) ),
+	'code'           => Helper::get_var( $args['_code'], get_option( 'mwt-google-matched-content' ) ),
+	'post_id'        => Helper::get_var( $args['_post_id'], get_the_ID() ),
+	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( 'related-posts-layout' ) ),
 ];
 
 if ( ! $template_args['entries_layout'] ) {

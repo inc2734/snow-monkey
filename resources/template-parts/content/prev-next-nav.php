@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -11,9 +11,9 @@
 use Framework\Helper;
 
 $template_args = [
-	'in_same_term'   => Helper::get_var( $_in_same_term, false ),
-	'excluded_terms' => Helper::get_var( $_excluded_terms, [] ),
-	'taxonomy'       => Helper::get_var( $_taxonomy, 'category' ),
+	'in_same_term'   => Helper::get_var( $args['_in_same_term'], false ),
+	'excluded_terms' => Helper::get_var( $args['_excluded_terms'], [] ),
+	'taxonomy'       => Helper::get_var( $args['_taxonomy'], 'category' ),
 ];
 ?>
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.5
+ * @version 11.0.0
  *
  * renamed: template-parts/page-header.php
  */
@@ -11,10 +11,10 @@
 use Framework\Helper;
 
 $template_args = [
-	'is_output_page_header_title' => Helper::get_var( $_is_output_page_header_title, Helper::is_output_page_header_title() ),
-	'page_header_title'           => Helper::get_var( $_page_header_title, Helper::get_page_title_from_breadcrumbs() ),
-	'page_header_image'           => Helper::get_var( $_page_header_image, Helper::get_page_header_image() ),
-	'display_entry_meta'          => Helper::get_var( $_display_entry_meta, false ),
+	'is_output_page_header_title' => Helper::get_var( $args['_is_output_page_header_title'], Helper::is_output_page_header_title() ),
+	'page_header_title'           => Helper::get_var( $args['_page_header_title'], Helper::get_page_title_from_breadcrumbs() ),
+	'page_header_image'           => Helper::get_var( $args['_page_header_image'], Helper::get_page_header_image() ),
+	'display_entry_meta'          => Helper::get_var( $args['_display_entry_meta'], false ),
 ];
 ?>
 
