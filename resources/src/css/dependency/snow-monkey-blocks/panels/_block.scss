@@ -1,9 +1,5 @@
-.smb-step {
+.smb-panels {
   &__item {
-    &__summary {
-      @extend %entry-content;
-    }
-
     &__link {
       color: var-color-accent();
     }

@@ -50,6 +50,7 @@ if ( $space ) {
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
 	$root_variables[] = '--accent-color: ' . $accent_color;
+	$root_variables[] = '--dark-accent-color: ' . Color::dark( $accent_color );
 	$root_variables[] = '--light-accent-color: ' . Color::light( $accent_color );
 	$root_variables[] = '--lighter-accent-color: ' . Color::lighter( $accent_color );
 	$root_variables[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );

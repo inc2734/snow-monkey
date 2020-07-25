@@ -3,10 +3,15 @@
 
   &__subtitle {
     @extend %section-subtitle;
+    color: var-color-accent();
   }
 
   &__title {
     @extend %section-title;
+
+    &::after {
+      background-color: var-color-accent();
+    }
   }
 
   &__lede {

@@ -6,6 +6,10 @@
   @return var(--accent-color, #{ $color-accent });
 }
 
+@function var-color-accent-dark() {
+  @return var(--dark-accent-color, #{ _dark($color-accent) });
+}
+
 @function var-color-accent-light() {
   @return var(--light-accent-color, #{ _light($color-accent) });
 }

@@ -28,8 +28,7 @@ body {
   @extend %entry-content;
 
   // @see resources/src/css/foundation/_element/_element.scss
-  ol,
-  ul {
+  [data-type="core/list"] {
     margin-left: 1.5em;
     padding-left: 0;
   }

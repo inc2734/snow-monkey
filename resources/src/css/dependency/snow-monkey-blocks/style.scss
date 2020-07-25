@@ -4,16 +4,19 @@ $img-path: '../../../img';
 @import '../../core/core';
 @import '../../foundation/_placeholder/placeholder';
 
-@import 'btn-box/block';
-@import 'box/block';
-@import 'section/block';
-@import 'section-with-image/block';
-@import 'section-side-heading/block';
-@import 'section-break-the-grid/block';
-@import 'media-text/block';
 @import 'accordion/block';
-@import 'step/block';
+@import 'box/block';
+@import 'btn-box/block';
+@import 'btn/block';
 @import 'container/block';
+@import 'faq/block';
+@import 'media-text/block';
+@import 'panels/block';
+@import 'section-break-the-grid/block';
+@import 'section-side-heading/block';
+@import 'section-with-image/block';
+@import 'section/block';
+@import 'step/block';
 
 .c-row[data-columns]:not([data-columns="1"]) {
 	@include _media-max(sm) {

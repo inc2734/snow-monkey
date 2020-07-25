@@ -1,0 +1,10 @@
+.smb-faq {
+  &__item {
+    &__question,
+    &__answer {
+      &__label {
+        color: var-color-accent();
+      }
+    }
+  }
+}

@@ -18,6 +18,7 @@
 
 .wpcf7-submit {
   @include btn();
+  background-color: var-color-accent();
 }
 
 span.wpcf7-not-valid-tip {

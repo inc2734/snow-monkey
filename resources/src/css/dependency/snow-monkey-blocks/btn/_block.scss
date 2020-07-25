@@ -1,0 +1,8 @@
+.smb-btn {
+  background-color: var-color-accent();
+}
+
+.is-style-ghost > .smb-btn {
+  border-color: var-color-accent();
+  color: var-color-accent();
+}

@@ -4,6 +4,58 @@ $img-path: '../../../img';
 @import '../../core/core';
 @import '../../foundation/_placeholder/placeholder';
 
+.#{ $_prefix }l-container .#{ $_prefix }l-contents {
+  .store-notice,
+  .demo_store {
+    background-color: var-color-accent();
+  }
+
+  .button.alt,
+  #respond #submit.alt {
+    background-color: var-color-accent();
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: var-color-accent-dark();
+    }
+  }
+
+  .button.alt,
+  #respond #submit.alt {
+    &.disabled,
+    &:disabled {
+      &,
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var-color-accent();
+      }
+    }
+
+    &:disabled[disabled] {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: var-color-accent();
+      }
+    }
+  }
+
+  .widget_price_filter .ui-slider {
+    .ui-slider-handle,
+    .ui-slider-range {
+      background-color: var-color-accent();
+    }
+  }
+}
+
+.woocommerce-error,
+.woocommerce-info,
+.woocommerce-message {
+  border-top-color: var-color-accent();
+}
+
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
   @include _font-size-line-height($_base-font-size-px);
