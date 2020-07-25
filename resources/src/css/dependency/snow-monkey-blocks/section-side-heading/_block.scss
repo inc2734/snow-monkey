@@ -6,4 +6,10 @@
       margin-left: 0;
     }
   }
+
+  &__body {
+    @include _media-max(sm) {
+      @include section-body();
+    }
+  }
 }
