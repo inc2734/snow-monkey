@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.0
+ * @version 11.0.0
  */
 
 if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets_Abstract_Widget' ) ) {
@@ -26,6 +26,7 @@ class Snow_Monkey_RSS_Widget extends Inc2734_WP_Awesome_Widgets_Abstract_Widget 
 		'item-title-tag' => 'h3',
 		'link-text'      => null,
 		'link-url'       => null,
+		'force-sm-1col'  => 0,
 	];
 
 	public function __construct() {

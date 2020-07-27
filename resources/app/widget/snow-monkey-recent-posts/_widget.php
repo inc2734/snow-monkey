@@ -42,8 +42,11 @@ if ( ! $recent_posts_query->have_posts() ) {
 }
 
 $is_multi_cols_pattern = in_array( $instance['layout'], [ 'rich-media', 'panel' ] );
-$force_sm_1col = get_theme_mod( $query_args['post_type'][0] . '-entries-layout-sm-1col' );
-$force_sm_1col = $is_multi_cols_pattern ? $force_sm_1col : false;
+$force_sm_1col = $instance['force-sm-1col'];
+$force_sm_1col = 0 === $force_sm_1col || 1 === $force_sm_1col ? $force_sm_1col : false;
+$force_sm_1col = false === $force_sm_1col && $is_multi_cols_pattern
+	? get_theme_mod( $query_args['post_type'][0] . '-entries-layout-sm-1col' )
+	: $force_sm_1col;
 
 echo wp_kses_post( $args['before_widget'] );
 Helper::get_template_part(
