@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.6
+ * @version 11.0.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -37,6 +37,18 @@ add_action(
 	'after_setup_theme',
 	function() {
 		add_theme_support( 'align-wide' );
+	}
+);
+
+/**
+ * Remove core block patterns
+ *
+ * @var void
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		remove_theme_support( 'core-block-patterns' );
 	}
 );
 
