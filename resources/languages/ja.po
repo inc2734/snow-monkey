@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-07-22 15:43+0900\n"
-"PO-Revision-Date: 2020-07-22 15:44+0900\n"
+"POT-Creation-Date: 2020-07-27 10:30+0900\n"
+"PO-Revision-Date: 2020-07-27 10:30+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1398,6 +1398,12 @@ msgstr "記事本文の下"
 #: app/setup/widget-area.php:376
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
+
+#: app/setup/widgets.php:54
+msgid "This widget is deprecated. It may slow down the page when used."
+msgstr ""
+"このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"
+"す。"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:12
 #: app/widget/snow-monkey-rss/_form.php:23

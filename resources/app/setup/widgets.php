@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.4
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -37,6 +37,49 @@ add_action(
 	function() {
 		add_editor_style( [ '/assets/css/custom-widgets.min.css' ] );
 	}
+);
+
+/**
+ * Add deprecated message in widget description
+ */
+add_filter(
+	'inc2734_wp_awesome_widgets_widget_options',
+	function( $widget_options, $classname ) {
+		$deprecated_widgets = [
+			'Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts',
+			'Inc2734_WP_Awesome_Widgets_Pickup_Slider',
+			'Inc2734_WP_Awesome_Widgets_Slider',
+		];
+		if ( in_array( $classname, $deprecated_widgets ) ) {
+			$widget_options['description'] = __( 'This widget is deprecated. It may slow down the page when used.', 'snow-monkey' );
+		}
+		return $widget_options;
+	},
+	10,
+	2
+);
+
+/**
+ * Add deprecated message in widget form
+ */
+add_action(
+	'in_widget_form',
+	function( $self, $return, $instance ) {
+		$deprecated_widgets = [
+			'inc2734_wp_awesome_widgets_carousel_any_posts',
+			'inc2734_wp_awesome_widgets_pickup_slider',
+			'inc2734_wp_awesome_widgets_slider',
+		];
+		if ( in_array( $self->id_base, $deprecated_widgets ) ) {
+			?>
+			<div style="background-color: #ffede6; padding: 1em; margin: 1em 0">
+				<b><?php echo esc_html( $self->widget_options['description'] ); ?></b>
+			</div>
+			<?php
+		}
+	},
+	10,
+	3
 );
 
 /**
