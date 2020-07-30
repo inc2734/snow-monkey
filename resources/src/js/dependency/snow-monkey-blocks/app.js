@@ -8,7 +8,7 @@ document.addEventListener(
   'DOMContentLoaded',
   () => {
     const main = (slider) => {
-      const dots = slider.querySelectorAll('.slick-dots > li');
+      const dots = slider.querySelectorAll('.slick-dots > li, .spider__dots[data-thumbnails="true"] > .spider_dot');
       const addClickEvent = (dot) => {
         const handleClick = (event) => {
           const sliderRectTop = slider.getBoundingClientRect().top;
@@ -24,5 +24,8 @@ document.addEventListener(
 
     const thumbnailGalleryBlocks = document.querySelectorAll('.smb-thumbnail-gallery__canvas');
     forEachHtmlNodes(thumbnailGalleryBlocks, main);
+
+    const spiderSliderBlocks = document.querySelectorAll('.smb-spider-slider');
+    forEachHtmlNodes(spiderSliderBlocks, main);
   }
 );

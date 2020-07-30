@@ -24,7 +24,7 @@ Style::register(
 );
 
 Style::register(
-	'.is-style-ghost > .smb-btn',
+	'.smb-btn-wrapper.is-style-ghost > .smb-btn',
 	[
 		'border-color: ' . $accent_color,
 		'color: ' . $accent_color,
