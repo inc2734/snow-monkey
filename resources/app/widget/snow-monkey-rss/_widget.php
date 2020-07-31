@@ -33,7 +33,7 @@ Helper::get_template_part(
 	'template-parts/widget/snow-monkey-rss',
 	null,
 	[
-		'_items'          => $items,
+		'_items'          => $rss->get_items( 0, $instance['posts-per-page'] ),
 		'_widget_area_id' => $args['id'],
 		'_classname'      => 'snow-monkey-rss',
 		'_entries_layout' => $instance['layout'],
