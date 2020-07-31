@@ -119,7 +119,7 @@ add_filter(
 			$new_item_output = str_replace( $args->link_before, '<i class="fas fa-globe"></i>' . $args->link_before, $item_output );
 		}
 
-		return apply_filters( 'snow_monkey_social_nav_item', $new_item_output, $item_output, $args );
+		return apply_filters( 'snow_monkey_social_nav_item', $new_item_output, $item_output, $args, $item );
 	},
 	10,
 	4
