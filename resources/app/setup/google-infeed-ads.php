@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.0
+ * @version 11.0.0
  */
 
 use Inc2734\WP_Adsense;
@@ -76,12 +76,12 @@ add_filter(
 
 add_filter(
 	'snow_monkey_template_part_render',
-	function( $html, $slug, $name, $args ) {
+	function( $html, $slug, $name, $vars ) {
 		if ( 'template-parts/widget/snow-monkey-posts' !== $slug ) {
 			return $html;
 		}
 
-		return snow_monkey_insert_infeed_ads( $html, $args['_posts_query']->get( 'post_type' ), $args['_entries_layout'] );
+		return snow_monkey_insert_infeed_ads( $html, $vars['_posts_query']->get( 'post_type' ), $vars['_entries_layout'] );
 	},
 	10,
 	4

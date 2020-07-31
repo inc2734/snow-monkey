@@ -10,11 +10,14 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'in_same_term'   => Helper::get_var( $args['_in_same_term'], false ),
-	'excluded_terms' => Helper::get_var( $args['_excluded_terms'], [] ),
-	'taxonomy'       => Helper::get_var( $args['_taxonomy'], 'category' ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_in_same_term'   => false,
+		'_excluded_terms' => [],
+		'_taxonomy'       => 'category',
+	]
+);
 ?>
 
 <div class="c-prev-next-nav">
@@ -22,9 +25,9 @@ $template_args = [
 		<div class="c-prev-next-nav__item c-prev-next-nav__item--<?php echo esc_attr( $key ); ?>">
 			<?php
 			if ( 'next' === $key ) {
-				$_post = get_previous_post( $template_args['in_same_term'], $template_args['excluded_terms'], $template_args['taxonomy'] );
+				$_post = get_previous_post( $args['_in_same_term'], $args['_excluded_terms'], $args['_taxonomy'] );
 			} elseif ( 'prev' === $key ) {
-				$_post = get_next_post( $template_args['in_same_term'], $template_args['excluded_terms'], $template_args['taxonomy'] );
+				$_post = get_next_post( $args['_in_same_term'], $args['_excluded_terms'], $args['_taxonomy'] );
 			}
 			?>
 

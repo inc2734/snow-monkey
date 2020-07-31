@@ -86,13 +86,13 @@ add_action(
  * Customize the local nav widget html
  *
  * @param string $content
- * @param array $args
+ * @param array $widget_args
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $args ) {
-		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_local_nav' ) ) {
+	function( $content, $widget_args ) {
+		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_local_nav' ) ) {
 			return $content;
 		}
 
@@ -110,12 +110,12 @@ add_filter(
  * Customize the pickup slider widget html
  *
  * @param string $content
- * @param array $args
+ * @param array $widget_args
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $args ) {
+	function( $content, $widget_args ) {
 		if ( ! preg_match( '|id="wpaw-pickup-slider-[^"]+?|', $content )
 		  && ! preg_match( '|id="inc2734_wp_awesome_widgets_pickup_slider-[^"]+?|', $content ) ) {
 			return $content;
@@ -135,13 +135,13 @@ add_filter(
  * Customize the pickup slider widget html
  *
  * @param string $content
- * @param array $args
+ * @param array $widget_args
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $args, $instance ) {
-		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_pr_box' ) ) {
+	function( $content, $widget_args, $instance ) {
+		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_pr_box' ) ) {
 			return $content;
 		}
 
@@ -159,7 +159,7 @@ add_filter(
 				'posts-page-bottom-widget-area',
 				'archive-top-widget-area',
 			];
-			if ( ! in_array( $args['id'], $content_widget_areas ) ) {
+			if ( ! in_array( $widget_args['id'], $content_widget_areas ) ) {
 				$content = str_replace( 'wpaw-pr-box__title', 'c-widget__title', $content );
 			}
 		}
@@ -198,13 +198,13 @@ add_filter(
  * Customize the carousel widget html
  *
  * @param string $content
- * @param array $args
+ * @param array $widget_args
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $args ) {
-		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_showcase' ) ) {
+	function( $content, $widget_args ) {
+		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_showcase' ) ) {
 			return $content;
 		}
 
@@ -230,13 +230,13 @@ add_filter(
  * Customize the carousel widget html
  *
  * @param string $content
- * @param array $args
+ * @param array $widget_args
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $args ) {
-		if ( false === strpos( $args['widget_id'], 'inc2734_wp_awesome_widgets_slider' ) ) {
+	function( $content, $widget_args ) {
+		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_slider' ) ) {
 			return $content;
 		}
 
@@ -254,12 +254,12 @@ add_filter(
  * Add .alignfull to specific widgets in [data-is-content-widget-area="true"]
  *
  * @param string $content
- * @param array $args
+ * @param array $widget_args
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $widget, $args ) {
+	function( $widget, $widget_args ) {
 		$content_widget_areas = [
 			'archive-top-widget-area',
 			'front-page-top-widget-area',
@@ -268,7 +268,7 @@ add_filter(
 			'posts-page-top-widget-area',
 		];
 
-		if ( ! isset( $args['id'] ) || in_array( $args['id'], $content_widget_areas ) ) {
+		if ( ! isset( $widget_args['id'] ) || in_array( $widget_args['id'], $content_widget_areas ) ) {
 			if ( false !== strpos( $widget, 'class="wpaw-pickup-slider ' ) ) {
 				return str_replace( 'class="wpaw-pickup-slider ', 'class="wpaw-pickup-slider alignfull ', $widget );
 			}

@@ -10,11 +10,14 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'copyright' => Helper::get_var( $args['_copyright'], Helper::get_copyright() ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_copyright' => Helper::get_copyright(),
+	]
+);
 
-if ( ! $template_args['copyright'] ) {
+if ( ! $args['_copyright'] ) {
 	return;
 }
 
@@ -24,6 +27,6 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 
 <div class="c-copyright">
 	<div class="<?php echo esc_attr( $container_class ); ?>">
-		<?php echo wp_kses_post( $template_args['copyright'] ); ?>
+		<?php echo wp_kses_post( $args['_copyright'] ); ?>
 	</div>
 </div>

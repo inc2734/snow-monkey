@@ -11,19 +11,22 @@
 use Inc2734\WP_Adsense;
 use Framework\Helper;
 
-$template_args = [
-	'code'           => Helper::get_var( $args['_code'], get_option( 'mwt-google-matched-content' ) ),
-	'post_id'        => Helper::get_var( $args['_post_id'], get_the_ID() ),
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( 'related-posts-layout' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_code'           => get_option( 'mwt-google-matched-content' ),
+		'_post_id'        => get_the_ID(),
+		'_entries_layout' => get_theme_mod( 'related-posts-layout' ),
+	]
+);
 
-if ( ! $template_args['entries_layout'] ) {
-	$template_args['entries_layout'] = get_theme_mod( get_post_type() . '-entries-layout' );
+if ( ! $args['_entries_layout'] ) {
+	$args['_entries_layout'] = get_theme_mod( get_post_type() . '-entries-layout' );
 }
 
-$query = Helper::get_related_posts_query( $template_args['post_id'] );
+$query = Helper::get_related_posts_query( $args['_post_id'] );
 
-if ( ! $template_args['code'] && ! $query->have_posts() ) {
+if ( ! $args['_code'] && ! $query->have_posts() ) {
 	return;
 }
 ?>
@@ -32,19 +35,19 @@ if ( ! $template_args['code'] && ! $query->have_posts() ) {
 	<h2 class="p-related-posts__title c-entry-aside__title">
 		<span>
 			<?php esc_html_e( 'Related posts', 'snow-monkey' ); ?>
-			<?php if ( $template_args['code'] ) : ?>
+			<?php if ( $args['_code'] ) : ?>
 				<?php esc_html_e( '(Including some ads)', 'snow-monkey' ); ?>
 			<?php endif; ?>
 		</span>
 	</h2>
 
-	<?php if ( $template_args['code'] ) : ?>
+	<?php if ( $args['_code'] ) : ?>
 
-		<?php WP_Adsense\Helper::the_adsense_code( $template_args['code'] ); ?>
+		<?php WP_Adsense\Helper::the_adsense_code( $args['_code'] ); ?>
 
 	<?php else : ?>
 
-		<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>">
 			<?php while ( $query->have_posts() ) : ?>
 				<?php $query->the_post(); ?>
 				<li class="c-entries__item">
@@ -53,7 +56,7 @@ if ( ! $template_args['code'] && ! $query->have_posts() ) {
 						'template-parts/loop/entry-summary',
 						get_post_type(),
 						[
-							'_entries_layout' => $template_args['entries_layout'],
+							'_entries_layout' => $args['_entries_layout'],
 						]
 					);
 					?>

@@ -8,26 +8,29 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'title_tag'      => Helper::get_var( $args['_title_tag'], 'h2' ),
-	'item'           => Helper::get_var( $args['_item'], false ),
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( 'post-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_title_tag'      => 'h2',
+		'_item'           => false,
+		'_entries_layout' => get_theme_mod( 'post-entries-layout' ),
+		'_excerpt_length' => null,
+	]
+);
 
-if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item' ) ) {
+if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 	return;
 }
 ?>
 
-<a href="<?php echo esc_url( $template_args['item']->get_permalink() ); ?>" target="_blank" rel="noopener">
+<a href="<?php echo esc_url( $args['_item']->get_permalink() ); ?>" target="_blank" rel="noopener">
 	<section class="c-entry-summary c-entry-summary--post">
 		<?php
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/figure/figure',
 			'rss',
 			[
-				'_item' => $template_args['item'],
+				'_item' => $args['_item'],
 			]
 		);
 		?>
@@ -39,8 +42,8 @@ if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item
 					'template-parts/loop/entry-summary/title/title',
 					'rss',
 					[
-						'_title_tag' => $template_args['title_tag'],
-						'_item'      => $template_args['item'],
+						'_title_tag' => $args['_title_tag'],
+						'_item'      => $args['_item'],
 					]
 				);
 				?>
@@ -51,9 +54,9 @@ if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item
 				'template-parts/loop/entry-summary/content/content',
 				'rss',
 				[
-					'_item'           => $template_args['item'],
-					'_entries_layout' => $template_args['entries_layout'],
-					'_excerpt_length' => $template_args['excerpt_length'],
+					'_item'           => $args['_item'],
+					'_entries_layout' => $args['_entries_layout'],
+					'_excerpt_length' => $args['_excerpt_length'],
 				]
 			);
 			?>
@@ -63,7 +66,7 @@ if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item
 				'template-parts/loop/entry-summary/meta/meta',
 				'rss',
 				[
-					'_item' => $template_args['item'],
+					'_item' => $args['_item'],
 				]
 			);
 			?>

@@ -14,12 +14,15 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 	return;
 }
 
-$template_args = [
-	'vertical' => Helper::get_var( $args['_vertical'], false ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_vertical' => false,
+	]
+);
 
 $classes[] = 'p-global-nav';
-if ( $template_args['vertical'] ) {
+if ( $args['_vertical'] ) {
 	$classes[] = 'p-global-nav--vertical';
 }
 ?>

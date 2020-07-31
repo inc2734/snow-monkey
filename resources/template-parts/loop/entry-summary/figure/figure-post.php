@@ -8,9 +8,12 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'thumbnail_size' => Helper::get_var( $args['_thumbnail_size'], 'medium_large' ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_thumbnail_size' => 'medium_large',
+	]
+);
 
 $public_taxonomies = Helper::get_the_public_taxonomy( get_the_ID() );
 $public_terms = [];
@@ -25,7 +28,7 @@ foreach ( $public_taxonomies as $public_taxonomy ) {
 ?>
 
 <div class="c-entry-summary__figure">
-	<?php the_post_thumbnail( $template_args['thumbnail_size'] ); ?>
+	<?php the_post_thumbnail( $args['_thumbnail_size'] ); ?>
 
 	<?php
 	if ( $public_terms ) {

@@ -8,12 +8,15 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'title_tag'      => Helper::get_var( $args['_title_tag'], 'h2' ),
-	'thumbnail_size' => Helper::get_var( $args['_thumbnail_size'], 'medium_large' ),
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( get_post_type() . '-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_title_tag'      => 'h2',
+		'_thumbnail_size' => 'medium_large',
+		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
+		'_excerpt_length' => null,
+	]
+);
 ?>
 
 <a href="<?php the_permalink(); ?>">
@@ -23,7 +26,7 @@ $template_args = [
 			'template-parts/loop/entry-summary/figure/figure',
 			'post',
 			[
-				'_thumbnail_size' => $template_args['thumbnail_size'],
+				'_thumbnail_size' => $args['_thumbnail_size'],
 			]
 		);
 		?>
@@ -35,7 +38,7 @@ $template_args = [
 					'template-parts/loop/entry-summary/title/title',
 					'post',
 					[
-						'_title_tag' => $template_args['title_tag'],
+						'_title_tag' => $args['_title_tag'],
 					]
 				);
 				?>
@@ -46,8 +49,8 @@ $template_args = [
 				'template-parts/loop/entry-summary/content/content',
 				'post',
 				[
-					'_entries_layout' => $template_args['entries_layout'],
-					'_excerpt_length' => $template_args['excerpt_length'],
+					'_entries_layout' => $args['_entries_layout'],
+					'_excerpt_length' => $args['_excerpt_length'],
 				]
 			);
 			?>

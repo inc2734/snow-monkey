@@ -8,24 +8,27 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( get_post_type() . '-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
+		'_excerpt_length' => null,
+	]
+);
 
 /**
  * Callback for excerpt_length
  *
- * @global array $template_args
+ * @global array $args
  * @param int $default_excerpt_length
  * @return int
  */
-$entry_summary_content_excerpt_length = function( $default_excerpt_length ) use ( $template_args ) {
-	if ( null !== $template_args['excerpt_length'] ) {
-		return $template_args['excerpt_length'];
+$entry_summary_content_excerpt_length = function( $default_excerpt_length ) use ( $args ) {
+	if ( null !== $args['_excerpt_length'] ) {
+		return $args['_excerpt_length'];
 	}
 
-	if ( 'rich-media' === $template_args['entries_layout'] ) {
+	if ( 'rich-media' === $args['_entries_layout'] ) {
 		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
 		$num_words = 25;
 		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );

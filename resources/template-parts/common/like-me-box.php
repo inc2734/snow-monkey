@@ -10,17 +10,20 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'facebook_page_name' => Helper::get_var( $args['_facebook_page_name'], get_option( 'mwt-facebook-page-name' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_facebook_page_name' => get_option( 'mwt-facebook-page-name' ),
+	]
+);
 
-if ( ! $template_args['facebook_page_name'] ) {
+if ( ! $args['_facebook_page_name'] ) {
 	return;
 }
 
 echo do_shortcode(
 	sprintf(
 		'[wp_like_me_box facebook_page_name="%1$s"]',
-		esc_attr( $template_args['facebook_page_name'] )
+		esc_attr( $args['_facebook_page_name'] )
 	)
 );

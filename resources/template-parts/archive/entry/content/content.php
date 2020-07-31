@@ -10,12 +10,15 @@ use Framework\Helper;
 
 $_post_type = get_post_type() ? get_post_type() : 'post';
 
-$template_args = [
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( $_post_type . '-entries-layout' ) ),
-	'force_sm_1col'  => Helper::get_var( $args['_force_sm_1col'], get_theme_mod( $_post_type . '-entries-layout-sm-1col' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_entries_layout' => get_theme_mod( $_post_type . '-entries-layout' ),
+		'_force_sm_1col'  => get_theme_mod( $_post_type . '-entries-layout-sm-1col' ),
+	]
+);
 
-$force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
+$force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 ?>
 
 <?php do_action( 'snow_monkey_before_archive_entry_content' ); ?>
@@ -24,7 +27,7 @@ $force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 	<?php do_action( 'snow_monkey_prepend_archive_entry_content' ); ?>
 
 	<div class="p-archive">
-		<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">
@@ -33,7 +36,7 @@ $force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 						'template-parts/loop/entry-summary',
 						$_post_type,
 						[
-							'_entries_layout' => $template_args['entries_layout'],
+							'_entries_layout' => $args['_entries_layout'],
 						]
 					);
 					?>

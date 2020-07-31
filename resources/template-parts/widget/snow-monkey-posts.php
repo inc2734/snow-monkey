@@ -8,21 +8,25 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'posts_query'         => Helper::get_var( $args['_posts_query'], null ),
-	'widget_area_id'      => Helper::get_var( $args['_widget_area_id'], null ),
-	'classname'           => Helper::get_var( $args['_classname'], null ),
-	'entries_layout'      => Helper::get_var( $args['_entries_layout'], 'rich-media' ),
-	'force_sm_1col'       => Helper::get_var( $args['_force_sm_1col'], false ),
-	'title'               => Helper::get_var( $args['_title'], null ),
-	'item_title_tag'      => Helper::get_var( $args['_item_title_tag'], 'h3' ),
-	'item_thumbnail_size' => Helper::get_var( $args['_item_thumbnail_size'], 'medium_large' ),
-	'link_url'            => Helper::get_var( $args['_link_url'], null ),
-	'link_text'           => Helper::get_var( $args['_link_text'], null ),
-	'excerpt_length'      => Helper::get_var( $args['_excerpt_length'], null ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_vertical'            => false,
+		'_posts_query'         => null,
+		'_widget_area_id'      => null,
+		'_classname'           => null,
+		'_entries_layout'      => 'rich-media',
+		'_force_sm_1col'       => false,
+		'_title'               => null,
+		'_item_title_tag'      => 'h3',
+		'_item_thumbnail_size' => 'medium_large',
+		'_link_url'            => null,
+		'_link_text'           => null,
+		'_excerpt_length'      => null,
+	]
+);
 
-if ( ! $template_args['posts_query'] ) {
+if ( ! $args['_posts_query'] ) {
 	return;
 }
 
@@ -38,46 +42,46 @@ $infeed_ads      = get_option( 'mwt-google-infeed-ads' );
 $data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 
 $classnames[] = 'snow-monkey-posts';
-if ( $template_args['classname'] ) {
-	$classnames[] = $template_args['classname'];
+if ( $args['_classname'] ) {
+	$classnames[] = $args['_classname'];
 }
 
 $title_classname = 'c-widget__title';
-if ( in_array( $template_args['widget_area_id'], $content_widget_areas ) ) {
+if ( in_array( $args['_widget_area_id'], $content_widget_areas ) ) {
 	$title_classname = 'snow-monkey-posts__title';
 }
 $title_classnames = [
 	$title_classname,
-	$template_args['classname'] . '__title',
+	$args['_classname'] . '__title',
 ];
 
 $action_classnames = [
 	'snow-monkey-posts__action',
-	$template_args['classname'] . '__action',
+	$args['_classname'] . '__action',
 ];
 
 $more_classnames = [
 	'snow-monkey-posts__more',
-	$template_args['classname'] . '__more',
+	$args['_classname'] . '__more',
 ];
 
-$posts_per_page = $template_args['posts_query']->get( 'posts_per_page' );
+$posts_per_page = $args['_posts_query']->get( 'posts_per_page' );
 $loop_count = 0;
 
-$force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
+$force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 ?>
 
 <div class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>">
-	<?php if ( $template_args['title'] ) : ?>
+	<?php if ( $args['_title'] ) : ?>
 		<h2 class="<?php echo esc_attr( join( ' ', $title_classnames ) ); ?>">
-			<?php echo wp_kses_post( $template_args['title'] ); ?>
+			<?php echo wp_kses_post( $args['_title'] ); ?>
 		</h2>
 	<?php endif; ?>
 
-	<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
-		<?php while ( $template_args['posts_query']->have_posts() ) : ?>
+	<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
+		<?php while ( $args['_posts_query']->have_posts() ) : ?>
 			<?php
-			$template_args['posts_query']->the_post();
+			$args['_posts_query']->the_post();
 			$loop_count ++;
 			if ( $loop_count > $posts_per_page ) {
 				break;
@@ -92,10 +96,10 @@ $force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 					'template-parts/loop/entry-summary',
 					$archive_view ? $archive_view : $_post_type,
 					[
-						'_title_tag'      => $template_args['item_title_tag'],
-						'_thumbnail_size' => $template_args['item_thumbnail_size'],
-						'_entries_layout' => $template_args['entries_layout'],
-						'_excerpt_length' => $template_args['excerpt_length'],
+						'_title_tag'      => $args['_item_title_tag'],
+						'_thumbnail_size' => $args['_item_thumbnail_size'],
+						'_entries_layout' => $args['_entries_layout'],
+						'_excerpt_length' => $args['_excerpt_length'],
 					]
 				);
 				?>
@@ -104,10 +108,10 @@ $force_sm_1col = $template_args['force_sm_1col'] ? 'true' : 'false';
 		<?php wp_reset_postdata(); ?>
 	</ul>
 
-	<?php if ( $template_args['link_url'] && $template_args['link_text'] ) : ?>
+	<?php if ( $args['_link_url'] && $args['_link_text'] ) : ?>
 		<div class="<?php echo esc_attr( join( ' ', $action_classnames ) ); ?>">
-			<a class="<?php echo esc_attr( join( ' ', $more_classnames ) ); ?>" href="<?php echo esc_url( $template_args['link_url'] ); ?>">
-				<?php echo esc_html( $template_args['link_text'] ); ?>
+			<a class="<?php echo esc_attr( join( ' ', $more_classnames ) ); ?>" href="<?php echo esc_url( $args['_link_url'] ); ?>">
+				<?php echo esc_html( $args['_link_text'] ); ?>
 			</a>
 		</div>
 	<?php endif; ?>

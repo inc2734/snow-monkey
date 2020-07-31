@@ -8,11 +8,14 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'content' => Helper::get_var( $args['_content'], get_theme_mod( 'header-content' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_content' => get_theme_mod( 'header-content' ),
+	]
+);
 
-if ( ! $template_args['content'] || ! get_theme_mod( 'display-header-content-on-mobile' ) ) {
+if ( ! $args['_content'] || ! get_theme_mod( 'display-header-content-on-mobile' ) ) {
 	return;
 }
 ?>
@@ -21,7 +24,7 @@ if ( ! $template_args['content'] || ! get_theme_mod( 'display-header-content-on-
 	<div class="c-container">
 		<?php
 		$vars = [
-			'_content' => $template_args['content'],
+			'_content' => $args['_content'],
 		];
 		Helper::get_template_part( 'template-parts/header/content', null, $vars );
 		?>

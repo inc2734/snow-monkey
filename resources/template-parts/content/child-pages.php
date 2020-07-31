@@ -10,10 +10,16 @@
 
 use Framework\Helper;
 
-$template_args['parent_id'] = Helper::get_var( $args['_parent_id'], get_the_ID() );
-$template_args['query']     = Helper::get_child_pages_query( $template_args['parent_id'] );
+$args = wp_parse_args(
+	$args,
+	[
+		'_parent_id' => get_the_ID(),
+	]
+);
 
-if ( ! $template_args['query']->have_posts() ) {
+$child_pages_query = Helper::get_child_pages_query( $args['_parent_id'] );
+
+if ( ! $child_pages_query->have_posts() ) {
 	return;
 }
 ?>
@@ -29,8 +35,8 @@ if ( ! $template_args['query']->have_posts() ) {
 		</span>
 	</h2>
 	<ul class="c-entries c-entries--rich-media">
-		<?php while ( $template_args['query']->have_posts() ) : ?>
-			<?php $template_args['query']->the_post(); ?>
+		<?php while ( $child_pages_query->have_posts() ) : ?>
+			<?php $child_pages_query->the_post(); ?>
 			<li class="c-entries__item">
 				<?php
 				Helper::get_template_part(

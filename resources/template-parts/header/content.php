@@ -10,15 +10,18 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'content' => Helper::get_var( $args['_content'], get_theme_mod( 'header-content' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_content' => get_theme_mod( 'header-content' ),
+	]
+);
 
-if ( ! $template_args['content'] ) {
+if ( ! $args['_content'] ) {
 	return;
 }
 ?>
 
 <div class="c-header-content">
-	<?php echo do_shortcode( wp_kses_post( $template_args['content'] ) ); ?>
+	<?php echo do_shortcode( wp_kses_post( $args['_content'] ) ); ?>
 </div>

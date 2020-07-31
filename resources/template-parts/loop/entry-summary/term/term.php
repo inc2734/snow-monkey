@@ -8,16 +8,19 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'terms' => Helper::get_var( $args['_terms'], [] ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_terms' => [],
+	]
+);
 
-if ( ! $template_args['terms'] ) {
+if ( ! $args['_terms'] ) {
 	return;
 }
 ?>
 
-<?php foreach ( $template_args['terms'] as $_term ) : ?>
+<?php foreach ( $args['_terms'] as $_term ) : ?>
 	<span class="c-entry-summary__term c-entry-summary__term--<?php echo esc_attr( $_term->taxonomy . '-' . $_term->term_id ); ?>">
 		<?php echo esc_html( $_term->name ); ?>
 	</span>

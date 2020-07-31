@@ -10,18 +10,21 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'buttons' => Helper::get_var( $args['_buttons'], explode( ',', get_option( 'mwt-share-buttons-buttons' ) ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_buttons' => explode( ',', get_option( 'mwt-share-buttons-buttons' ) ),
+	]
+);
 
-if ( ! $template_args['buttons'] ) {
+if ( ! $args['_buttons'] ) {
 	return;
 }
 ?>
 
 <div class="wp-share-buttons wp-share-buttons--<?php echo esc_attr( get_option( 'mwt-share-buttons-type' ) ); ?>">
 	<ul class="wp-share-buttons__list">
-		<?php foreach ( $template_args['buttons'] as $button ) : ?>
+		<?php foreach ( $args['_buttons'] as $button ) : ?>
 			<?php
 			$share_button = do_shortcode(
 				sprintf(

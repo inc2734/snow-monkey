@@ -8,12 +8,15 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'title_tag' => Helper::get_var( $args['_title_tag'], 'h2' ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_title_tag' => 'h2',
+	]
+);
 
 $layout    = get_theme_mod( get_post_type() . '-entries-layout' );
-$title_tag = $template_args['title_tag'];
+$title_tag = $args['_title_tag'];
 ?>
 
 <<?php echo esc_html( $title_tag ); ?> class="c-entry-summary__title">

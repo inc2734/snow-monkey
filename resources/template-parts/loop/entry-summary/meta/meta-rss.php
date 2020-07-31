@@ -8,15 +8,18 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'item' => Helper::get_var( $args['_item'], false ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_item' => false,
+	]
+);
 
-if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item' ) ) {
+if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 	return;
 }
 
-$item = $template_args['item'];
+$item = $args['_item'];
 $feed = $item->get_feed();
 ?>
 

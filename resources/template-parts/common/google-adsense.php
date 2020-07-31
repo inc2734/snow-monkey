@@ -11,22 +11,25 @@
 use Inc2734\WP_Adsense;
 use Framework\Helper;
 
-$template_args = [
-	'code'     => Helper::get_var( $args['_code'], get_option( 'mwt-google-adsense' ) ),
-	'position' => Helper::get_var( $args['_position'], null ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_code'     => get_option( 'mwt-google-adsense' ),
+		'_position' => null,
+	]
+);
 
-$template_args['code'] = apply_filters( 'snow_monkey_google_adsense', $template_args['code'], $template_args['position'] );
+$args['_code'] = apply_filters( 'snow_monkey_google_adsense', $args['_code'], $args['_position'] );
 
-if ( ! $template_args['code'] ) {
+if ( ! $args['_code'] ) {
 	return;
 }
 
-if ( ! preg_match( '/<ins /s', $template_args['code'] ) ) {
+if ( ! preg_match( '/<ins /s', $args['_code'] ) ) {
 	return;
 }
 ?>
 
 <div class="c-google-adsense">
-	<?php WP_Adsense\Helper::the_adsense_code( $template_args['code'] ); ?>
+	<?php WP_Adsense\Helper::the_adsense_code( $args['_code'] ); ?>
 </div>

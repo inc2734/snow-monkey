@@ -10,13 +10,16 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'items' => Helper::get_var( $args['_items'], Helper::get_breadcrumbs_items() ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_items' => Helper::get_breadcrumbs_items(),
+	]
+);
 
-$template_args['items'] = array_values( $template_args['items'] );
+$args['_items'] = array_values( $args['_items'] );
 
-if ( ! $template_args['items'] ) {
+if ( ! $args['_items'] ) {
 	return;
 }
 
@@ -26,7 +29,7 @@ unset( $allowed_html['a'] );
 
 <div class="p-breadcrumbs-wrapper">
 	<ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
-		<?php foreach ( $template_args['items'] as $key => $item ) : ?>
+		<?php foreach ( $args['_items'] as $key => $item ) : ?>
 			<?php
 			/**
 			 * @see https://github.com/WordPress/WordPress/blob/5.4-branch/wp-includes/default-filters.php#L168-L170

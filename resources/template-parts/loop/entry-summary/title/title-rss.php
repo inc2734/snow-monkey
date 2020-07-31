@@ -8,18 +8,21 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'title_tag' => Helper::get_var( $args['_title_tag'], 'h2' ),
-	'item'      => Helper::get_var( $args['_item'], false ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_title_tag' => 'h2',
+		'_item'      => false,
+	]
+);
 
-if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item' ) ) {
+if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 	return;
 }
 
 $layout    = get_theme_mod( 'post-entries-layout' );
-$_title    = $template_args['item']->get_title();
-$title_tag = $template_args['title_tag'];
+$_title    = $args['_item']->get_title();
+$title_tag = $args['_title_tag'];
 ?>
 
 <<?php echo esc_html( $title_tag ); ?> class="c-entry-summary__title">

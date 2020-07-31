@@ -23,7 +23,7 @@ $_taxonomy   = get_taxonomy( $taxonomy_id );
 $post_types  = empty( $_taxonomy->object_type ) ? [ 'post' ] : $_taxonomy->object_type;
 $post_types  = (array) $post_types;
 
-$widget_number = explode( '-', $args['widget_id'] );
+$widget_number = explode( '-', $widget_args['widget_id'] );
 if ( 1 < count( $widget_number ) ) {
 	array_shift( $widget_number );
 	$widget_number = implode( '-', $widget_number );
@@ -66,13 +66,13 @@ $force_sm_1col = false === $force_sm_1col && $is_multi_cols_pattern
 	? get_theme_mod( $query_args['post_type'][0] . '-entries-layout-sm-1col' )
 	: $force_sm_1col;
 
-echo wp_kses_post( $args['before_widget'] );
+echo wp_kses_post( $widget_args['before_widget'] );
 Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
 	'taxonomy',
 	[
 		'_posts_query'         => $taxonomy_posts_query,
-		'_widget_area_id'      => $args['id'],
+		'_widget_area_id'      => $widget_args['id'],
 		'_classname'           => 'snow-monkey-taxonomy-posts',
 		'_entries_layout'      => $instance['layout'],
 		'_force_sm_1col'       => $force_sm_1col,
@@ -84,4 +84,4 @@ Helper::get_template_part(
 		'_excerpt_length'      => null,
 	]
 );
-echo wp_kses_post( $args['after_widget'] );
+echo wp_kses_post( $widget_args['after_widget'] );

@@ -10,19 +10,22 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'content' => Helper::get_var( $args['_content'], get_theme_mod( 'infobar-content' ) ),
-	'url'     => Helper::get_var( $args['_url'], get_theme_mod( 'infobar-url' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_content' => get_theme_mod( 'infobar-content' ),
+		'_url'     => get_theme_mod( 'infobar-url' ),
+	]
+);
 
-if ( ! $template_args['content'] ) {
+if ( ! $args['_content'] ) {
 	return;
 }
 ?>
 <div class="p-infobar">
-	<?php if ( $template_args['url'] ) : ?>
+	<?php if ( $args['_url'] ) : ?>
 
-		<a class="p-infobar__inner" href="<?php echo esc_url( $template_args['url'] ); ?>">
+		<a class="p-infobar__inner" href="<?php echo esc_url( $args['_url'] ); ?>">
 			<div class="c-container">
 				<div class="p-infobar__content">
 					<?php
@@ -32,7 +35,7 @@ if ( ! $template_args['content'] ) {
 					}
 
 					echo wp_kses(
-						$template_args['content'],
+						$args['_content'],
 						$kses_allowed_html
 					);
 					?>
@@ -49,7 +52,7 @@ if ( ! $template_args['content'] ) {
 					$kses_allowed_html = wp_kses_allowed_html( 'user_description' );
 
 					echo wp_kses(
-						$template_args['content'],
+						$args['_content'],
 						$kses_allowed_html
 					);
 					?>

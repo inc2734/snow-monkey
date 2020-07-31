@@ -8,17 +8,20 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'item'           => Helper::get_var( $args['_item'], false ),
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( get_post_type() . '-entries-layout' ) ),
-	'excerpt_length' => Helper::get_var( $args['_excerpt_length'], null ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_item'           => false,
+		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
+		'_excerpt_length' => null,
+	]
+);
 
-if ( ! $template_args['item'] || ! is_a( $template_args['item'], 'SimplePie_Item' ) ) {
+if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 	return;
 }
 
-$description = $template_args['item']->get_description();
+$description = $args['_item']->get_description();
 
 /**
  * Callback for excerpt_length
@@ -26,16 +29,16 @@ $description = $template_args['item']->get_description();
  * @global array $template_args
  * @return int
  */
-$entry_summary_content_excerpt_length = function() use ( $template_args ) {
-	if ( null !== $template_args['excerpt_length'] ) {
-		return $template_args['excerpt_length'];
+$entry_summary_content_excerpt_length = function() use ( $args ) {
+	if ( null !== $args['_excerpt_length'] ) {
+		return $args['_excerpt_length'];
 	}
 
 	// phpcs:disable WordPress.WP.I18n.MissingArgDomain
 	$default_excerpt_length = _x( '55', 'excerpt_length' );
 	// phpcs:enable
 
-	if ( 'rich-media' === $template_args['entries_layout'] ) {
+	if ( 'rich-media' === $args['_entries_layout'] ) {
 		$num_words = 25;
 		$excerpt_length_ratio = 55 / $default_excerpt_length;
 		return $num_words / $excerpt_length_ratio;

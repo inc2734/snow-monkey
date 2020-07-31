@@ -8,12 +8,15 @@
 
 use Framework\Helper;
 
-$template_args = [
-	'entries_layout' => Helper::get_var( $args['_entries_layout'], get_theme_mod( 'post-entries-layout' ) ),
-	'force_sm_1col'  => Helper::get_var( $args['_force_sm_1col'], get_theme_mod( 'post-entries-layout-sm-1col' ) ),
-];
+$args = wp_parse_args(
+	$args,
+	[
+		'_entries_layout' => get_theme_mod( 'post-entries-layout' ),
+		'_force_sm_1col'  => get_theme_mod( 'post-entries-layout-sm-1col' ),
+	]
+);
 
-$force_sm_1col   = $template_args['force_sm_1col'] ? 'true' : 'false';
+$force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 $data_infeed_ads = get_option( 'mwt-google-infeed-ads' ) ? 'true' : 'false';
 ?>
 
@@ -23,7 +26,7 @@ $data_infeed_ads = get_option( 'mwt-google-infeed-ads' ) ? 'true' : 'false';
 	<?php do_action( 'snow_monkey_prepend_archive_entry_content' ); ?>
 
 	<div class="p-archive">
-		<ul class="c-entries c-entries--<?php echo esc_attr( $template_args['entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
+		<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
 				<li class="c-entries__item">
@@ -32,7 +35,7 @@ $data_infeed_ads = get_option( 'mwt-google-infeed-ads' ) ? 'true' : 'false';
 						'template-parts/loop/entry-summary',
 						'post',
 						[
-							'_entries_layout' => $template_args['entries_layout'],
+							'_entries_layout' => $args['_entries_layout'],
 						]
 					);
 					?>
