@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 11.0.0
  *
  * renamed: template-parts/social-nav.php
  */
@@ -20,7 +20,7 @@ if ( ! has_nav_menu( 'social-nav' ) ) {
 			'theme_location' => 'social-nav',
 			'container'      => false,
 			'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			'menu_class'     => 'c-navbar c-navbar--center',
+			'menu_class'     => 'c-navbar',
 			'depth'          => 1,
 			'link_before'    => '<span>',
 			'link_after'     => '</span>',

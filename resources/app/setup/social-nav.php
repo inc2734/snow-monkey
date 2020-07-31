@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.0.0
  */
 
 add_filter(
@@ -12,6 +12,14 @@ add_filter(
 		if ( 'social-nav' !== $args->theme_location ) {
 			return $item_output;
 		}
+
+		$get_brand_icon = function( $path ) {
+			if ( file_exists( $path ) ) {
+				$icon = file_get_contents( $path );
+				$icon = str_replace( '<svg ', '<svg class="svg-inline--fa fa-w-14" ', $icon );
+				return $icon;
+			}
+		};
 
 		$new_item_output = '';
 
@@ -41,6 +49,8 @@ add_filter(
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-github"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?gitlab\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-gitlab"></i>' . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://play\.google\.com|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-google-play"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?google\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-google"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?instagram\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
@@ -93,6 +103,18 @@ add_filter(
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
 		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?lineblog\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
 			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?lin\.ee|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-line"></i>' . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?note\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, $get_brand_icon( get_template_directory() . '/assets/img/note.svg' ) . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://apps\.apple\.com|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-app-store"></i>' . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?twitch\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-twitch"></i>' . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://([^\.]+?\.)*?discord\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-discord"></i>' . $args->link_before, $item_output );
+		} elseif ( preg_match( '|^https?://music\.apple\.com|', $item->url ) ) {
+			$new_item_output = str_replace( $args->link_before, '<i class="fab fa-apple"></i>' . $args->link_before, $item_output );
 		} else {
 			$new_item_output = str_replace( $args->link_before, '<i class="fas fa-globe"></i>' . $args->link_before, $item_output );
 		}

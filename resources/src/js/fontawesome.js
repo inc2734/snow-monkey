@@ -118,6 +118,11 @@ import {
   faWordpress,
   faYoutube,
   faLine,
+  faAppStore,
+  faGooglePlay,
+  faTwitch,
+  faDiscord,
+  faApple,
 } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -158,6 +163,11 @@ library.add(
   faWordpress,
   faYoutube,
   faLine,
+  faAppStore,
+  faGooglePlay,
+  faTwitch,
+  faDiscord,
+  faApple,
 );
 
 dom.watch();

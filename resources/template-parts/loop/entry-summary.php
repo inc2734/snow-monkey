@@ -55,8 +55,8 @@ $template_args = [
 			?>
 
 			<?php
-			$post_type_object = get_post_type_object( get_post_type() );
-			if ( $post_type_object && ! $post_type_object->hierarchical ) {
+			$_post_type_object = get_post_type_object( get_post_type() );
+			if ( $_post_type_object && ! $_post_type_object->hierarchical ) {
 				Helper::get_template_part( 'template-parts/loop/entry-summary/meta/meta', get_post_type() );
 			}
 			?>

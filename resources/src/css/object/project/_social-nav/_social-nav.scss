@@ -2,11 +2,15 @@
   background-color: _lightest($_color-gray);
   border-top: 1px solid _lightest($_color-gray);
   @include _padding(1, 0);
-  text-align: center;
+  display: flex;
+  justify-content: center;
 
   .#{ $_prefix }c-navbar {
+    flex-wrap: wrap;
+
     &__item {
-      margin: 0 .5em;
+      flex: 0 0 auto;
+      margin: .25em .5em;
     }
   }
 
@@ -21,6 +25,13 @@
     > span {
       display: none;
     }
+  }
+
+  svg {
+    display: inline-block;
+    height: 1em;
+    width: 0.875em;
+    vertical-align: -0.125em;
   }
 
   .fa-amazon {
@@ -169,5 +180,25 @@
 
   .fa-line {
     color: #1bb71f;
+  }
+
+  .fa-app-store {
+    color: #0070c9;
+  }
+
+  .fa-google-play {
+    color: #15a9bf;
+  }
+
+  .fa-twitch {
+    color: #9147ff;
+  }
+
+  .fa-discord {
+    color: #7289da;
+  }
+
+  .fa-apple {
+    color: #a3aaae;
   }
 }
