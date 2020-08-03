@@ -12,7 +12,7 @@
     "@inc2734/add-custom-event": "^0.5.0",
     "@inc2734/dispatch-custom-resize-event": "^0.4.0",
     "@inc2734/for-each-html-nodes": "^0.4.0",
-    "@inc2734/smooth-scroll": "^1.0.1",
+    "@inc2734/smooth-scroll": "^1.0.2",
     "@wordpress/browserslist-config": "^2.7.0",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
@@ -86,5 +86,8 @@
     "zip:pack": "composer install --no-dev && rsync -a --exclude='.*' --exclude='/translation' resources/ snow-monkey",
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run cleanup:zip && npm run zip:pack && npm run zip:archive"
+  },
+  "dependencies": {
+    "smoothscroll-polyfill": "^0.4.4"
   }
 }
