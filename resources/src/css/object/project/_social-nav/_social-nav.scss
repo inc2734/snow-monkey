@@ -2,8 +2,11 @@
   background-color: _lightest($_color-gray);
   border-top: 1px solid _lightest($_color-gray);
   @include _padding(1, 0);
-  display: flex;
-  justify-content: center;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
 
   .#{ $_prefix }c-navbar {
     flex-wrap: wrap;
