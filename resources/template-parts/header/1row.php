@@ -23,7 +23,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 <div class="l-<?php echo esc_attr( $header_type ); ?>" data-has-global-nav="<?php echo esc_attr( $data_has_global_nav ); ?>">
 	<div class="<?php echo esc_attr( $container_class ); ?>">
 		<?php if ( $has_header_sub_nav ) : ?>
-			<div class="-invisible-md-down">
+			<div class="u-invisible-md-down">
 				<?php Helper::get_template_part( 'template-parts/nav/header-sub' ); ?>
 			</div>
 		<?php endif; ?>
