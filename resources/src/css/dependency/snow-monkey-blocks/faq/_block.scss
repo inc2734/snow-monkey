@@ -6,5 +6,11 @@
         color: var-color-accent();
       }
     }
+
+    &__answer {
+      &__body {
+        @extend %entry-content;
+      }
+    }
   }
 }

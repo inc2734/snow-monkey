@@ -1,0 +1,9 @@
+.smb-box {
+  &__body {
+    .block-editor-inner-blocks {
+      .block-editor-block-list__layout {
+        @extend %entry-content;
+      }
+    }
+  }
+}

@@ -2,6 +2,10 @@
 
 @import 'style';
 
+:root {
+  --wp-block-width: var(--_container-max-width, 1280px);
+}
+
 #tinymce {
   margin: 10px;
   padding: 0;
@@ -25,8 +29,6 @@ body {
 
 .block-editor-block-list__layout,
 .wp-block-freeform {
-  @extend %entry-content;
-
   // @see resources/src/css/foundation/_element/_element.scss
   [data-type="core/list"] {
     margin-left: 1.5em;
@@ -34,12 +36,13 @@ body {
   }
 }
 
-:root {
-  --wp-block-width: var(--_container-max-width, 1280px);
-}
+.is-root-container {
+  > * {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-.wp-block {
-  max-width: none;
+  @extend %entry-content;
 }
 
 .edit-post-visual-editor__post-title-wrapper,
@@ -56,6 +59,10 @@ body {
   font-weight: bold;
   font-family: $_font-family;
   @include _padding(.25, 0);
+}
+
+.wp-block {
+  max-width: none;
 }
 
 .wp-block[data-align="center"] {
@@ -105,6 +112,7 @@ body {
 .block-list-appender {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
+  height: 0;
 }
 
 .wp-block-image {
