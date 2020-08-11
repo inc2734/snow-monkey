@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "945e8b17b170c7a087e11657526b7c5e",
+    "content-hash": "14fbd92d66814e042dfd05270955a6d7",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -362,16 +362,16 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "3b268f2996ac5b06c041494e1d2b972467e1eca5"
+                "reference": "37b207a4ca0da99a8f6ad4ab0d84aaa388f90ec7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/3b268f2996ac5b06c041494e1d2b972467e1eca5",
-                "reference": "3b268f2996ac5b06c041494e1d2b972467e1eca5",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/37b207a4ca0da99a8f6ad4ab0d84aaa388f90ec7",
+                "reference": "37b207a4ca0da99a8f6ad4ab0d84aaa388f90ec7",
                 "shasum": ""
             },
             "require": {
@@ -401,7 +401,7 @@
                 }
             ],
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
-            "time": "2020-04-24T09:09:00+00:00"
+            "time": "2020-08-10T10:59:28+00:00"
         },
         {
             "name": "inc2734/wp-google-fonts",
@@ -2773,16 +2773,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.5.5",
+            "version": "3.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6"
+                "reference": "e97627871a7eab2f70e59166072a6b767d5834e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
-                "reference": "73e2e7f57d958e7228fce50dc0c61f58f017f9f6",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/e97627871a7eab2f70e59166072a6b767d5834e0",
+                "reference": "e97627871a7eab2f70e59166072a6b767d5834e0",
                 "shasum": ""
             },
             "require": {
@@ -2820,7 +2820,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-04-17T01:09:41+00:00"
+            "time": "2020-08-10T04:50:15+00:00"
         },
         {
             "name": "symfony/config",
@@ -3121,7 +3121,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -3197,7 +3197,7 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.18.0",
+            "version": "v1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
