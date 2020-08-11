@@ -1,8 +1,5 @@
 .wp-block-buttons {
-  @include _margin-right(-.25);
-  @include _margin-left(-.25);
-
-  .wp-block-button {
-    @include _margin(0, .25);
+  > *:not(:first-child) {
+    @include _margin-left(.5);
   }
 }

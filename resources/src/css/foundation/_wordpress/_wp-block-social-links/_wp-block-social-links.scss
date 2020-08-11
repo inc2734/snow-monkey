@@ -1,8 +1,9 @@
 .wp-block-social-links {
-  @include _margin-right(-.25);
-  @include _margin-left(-.25);
+  > .wp-social-link {
+    margin-top: 0;
+  }
 
-  .wp-social-link {
-    @include _margin(0, .25);
+  > *:not(:first-child) {
+    @include _margin-left(.5);
   }
 }
