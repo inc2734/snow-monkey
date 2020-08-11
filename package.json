@@ -54,6 +54,7 @@
     "css:dependency:snow-monkey-blocks:editor": "node-sass resources/src/css/dependency/snow-monkey-blocks/editor.scss resources/assets/css/dependency/snow-monkey-blocks/editor.min.css && postcss -r resources/assets/css/dependency/snow-monkey-blocks/editor.min.css -c=postcss.config.js",
     "css:dependency:snow-monkey-blocks": "npm-run-all -p css:dependency:snow-monkey-blocks:*",
     "css:dependency:snow-monkey-forms:style": "node-sass resources/src/css/dependency/snow-monkey-forms/style.scss resources/assets/css/dependency/snow-monkey-forms/style.min.css && postcss -r resources/assets/css/dependency/snow-monkey-forms/style.min.css -c=postcss.config.js",
+    "css:dependency:snow-monkey-forms:editor": "node-sass resources/src/css/dependency/snow-monkey-forms/editor.scss resources/assets/css/dependency/snow-monkey-forms/editor.min.css && postcss -r resources/assets/css/dependency/snow-monkey-forms/editor.min.css -c=postcss.config.js",
     "css:dependency:snow-monkey-forms": "npm-run-all -p css:dependency:snow-monkey-forms:*",
     "css:dependency": "npm-run-all -p css:dependency:*",
     "css:php": "cpy '**/*.php' '../../assets/css' --cwd=resources/src/css --parents",

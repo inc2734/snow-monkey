@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.0
+ * @version 11.0.0
  */
 
 use Framework\Helper;
@@ -18,19 +18,25 @@ if ( ! defined( 'SNOW_MONKEY_FORMS_PATH' ) ) {
  * @return void
  */
 add_action(
-	'enqueue_block_assets',
+	'wp_enqueue_scripts',
 	function() {
-		if ( is_admin() ) {
-			$dependencies = [];
-		} else {
-			$dependencies = [ Helper::get_main_style_handle() ];
-		}
-
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-snow-monkey-forms',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/style.min.css' ),
-			$dependencies,
+			[ 'snow-monkey-forms' ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/style.min.css' ) )
+		);
+	}
+);
+
+add_action(
+	'enqueue_block_editor_assets',
+	function() {
+		wp_enqueue_style(
+			Helper::get_main_style_handle() . '-snow-monkey-forms-editor',
+			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/editor.min.css' ),
+			[ 'snow-monkey-forms@editor' ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/editor.min.css' ) )
 		);
 	}
 );
