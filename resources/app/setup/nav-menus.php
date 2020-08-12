@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.4
+ * @version 11.0.2
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -68,7 +68,8 @@ add_action(
 		if ( has_nav_menu( 'global-nav' ) ) {
 			wp_enqueue_script( Helper::get_main_script_handle() . '-global-nav' );
 		}
-	}
+	},
+	11
 );
 
 /**

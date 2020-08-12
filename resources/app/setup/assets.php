@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.4
+ * @version 11.0.2
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -43,7 +43,8 @@ add_action(
 		);
 
 		do_action( 'snow_monkey_enqueued_main_style' );
-	}
+	},
+	11
 );
 
 /**
