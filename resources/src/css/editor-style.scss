@@ -109,10 +109,28 @@ body {
   overflow: hidden;
 }
 
-.block-list-appender {
-  margin-top: 0;
-  margin-bottom: 0;
-  height: 0;
+[data-type^=snow-monkey-blocks] {
+  .block-editor-inner-blocks {
+    .block-editor-block-list__layout {
+      .block-list-appender {
+        margin-top: 0;
+        margin-bottom: 0;
+        height: 0;
+        z-index: 6;
+      }
+    }
+  }
+
+  &.is-selected,
+  &.has-child-selected {
+    .block-editor-inner-blocks {
+      .block-editor-block-list__layout {
+        .block-list-appender {
+          height: auto;
+        }
+      }
+    }
+  }
 }
 
 .wp-block-image {
