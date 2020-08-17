@@ -142,19 +142,10 @@ body {
   }
 }
 
-.wp-block-code {
-  font-size: 0;
-
-  textarea {
-    background-color: _lightest($_color-gray);
-    @include _font-size-line-height($_base-font-size-px);
-  }
-}
-
 .wp-block-html {
-  pre {
+  textarea {
     border-radius: 0;
-    padding: 0 1rem;
+    padding: 1rem;
   }
 }
 
