@@ -1,5 +1,9 @@
 .wp-block-buttons {
-  > *:not(:first-child) {
-    @include _margin-left(.5);
+  .wp-block-button {
+    margin: 0;
+
+    &:not(:first-child) {
+      @include _margin-left(.5);
+    }
   }
 }

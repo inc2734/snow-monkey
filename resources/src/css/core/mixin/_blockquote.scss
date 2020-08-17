@@ -5,14 +5,24 @@
   background-position: 0 0, 100% 100%;
   background-size: 35px;
   border: none;
-  @include _padding(.75, .5, .5, 1.5);
   @include _content(.5);
 
+  &,
+  &.is-large,
+  &.is-style-large {
+    @include _padding(.75, .5, .5, 1.5);
+  }
+
   @include _media-min(md) {
-    @include _margin-right(1);
-    @include _margin-left(1);
     background-size: 70px;
-    @include _padding(1, 1, .75, 2);
+
+    &,
+    &.is-large,
+    &.is-style-large {
+      @include _margin-right(1);
+      @include _margin-left(1);
+      @include _padding(1, 1, .75, 2);
+    }
   }
 
   &::before {
