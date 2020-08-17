@@ -95,16 +95,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "12.0.0",
+            "version": "12.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "8fdf5da333cbaed9b42bf8d299b584316ef1c671"
+                "reference": "35dcae147f70928b1f865b8589845d1f77bfef73"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/8fdf5da333cbaed9b42bf8d299b584316ef1c671",
-                "reference": "8fdf5da333cbaed9b42bf8d299b584316ef1c671",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/35dcae147f70928b1f865b8589845d1f77bfef73",
+                "reference": "35dcae147f70928b1f865b8589845d1f77bfef73",
                 "shasum": ""
             },
             "require": {
@@ -139,7 +139,7 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
-            "time": "2020-07-31T03:55:11+00:00"
+            "time": "2020-08-17T04:44:55+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -1545,16 +1545,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.2.0",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "3170448f5769fe19f456173d833734e0ff1b84df"
+                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/3170448f5769fe19f456173d833734e0ff1b84df",
-                "reference": "3170448f5769fe19f456173d833734e0ff1b84df",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d870572532cd70bc3fab58f2e23ad423c8404c44",
+                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44",
                 "shasum": ""
             },
             "require": {
@@ -1593,7 +1593,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-07-20T20:05:34+00:00"
+            "time": "2020-08-15T11:14:08+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
