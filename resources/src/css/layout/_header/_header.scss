@@ -3,6 +3,7 @@
   background-color: #fff; // for IE11
   background-color: _var-background-color();
   @include _transition(background-color);
+  overflow: hidden;
 
   &__content {
     @include _padding(.25, 0);
