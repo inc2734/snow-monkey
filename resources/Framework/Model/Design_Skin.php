@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 11.0.3
  */
 
 namespace Framework\Model;
@@ -161,7 +161,7 @@ class Design_Skin {
 	 */
 	protected function _get_plugin_data() {
 		$plugin_data = get_file_data(
-			dirname( $this->file ),
+			$this->file,
 			[
 				'label' => 'Plugin Name',
 			],
