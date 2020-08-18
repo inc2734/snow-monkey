@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.2
+ * @version 11.0.5
  */
 
 use Framework\Helper;
@@ -43,7 +43,7 @@ wp_reset_postdata();
 			<div class="c-container">
 				<div <?php post_class(); ?>>
 					<div class="c-entry__body">
-						<?php Helper::get_template_part( 'template-parts/content/entry/content/content' ); ?>
+						<?php Helper::get_template_part( 'template-parts/content/entry/content/content', 'front-page' ); ?>
 					</div>
 				</div>
 			</div>
@@ -52,7 +52,7 @@ wp_reset_postdata();
 
 			<div <?php post_class(); ?>>
 				<div class="c-entry__body">
-					<?php Helper::get_template_part( 'template-parts/content/entry/content/content' ); ?>
+					<?php Helper::get_template_part( 'template-parts/content/entry/content/content', 'front-page' ); ?>
 				</div>
 			</div>
 
