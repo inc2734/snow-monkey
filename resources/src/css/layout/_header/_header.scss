@@ -5,6 +5,10 @@
   @include _transition(background-color);
   overflow: hidden;
 
+  @include _media-min(lg) {
+    overflow: visible;
+  }
+
   &__content {
     @include _padding(.25, 0);
 

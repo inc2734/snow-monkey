@@ -1,4 +1,10 @@
 .#{ $_prefix }l-contents {
+  overflow: hidden;
+
+  @include _media-min(lg) {
+    overflow: visible;
+  }
+
   &__inner {
     @include _margin-bottom(1.5);
 
