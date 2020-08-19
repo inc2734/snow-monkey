@@ -621,16 +621,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "ef86bf47b3fdf97a38201e4339adfa8782991e06"
+                "reference": "7cd3dc55329d4071d0586041fc929fabd9b2adbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/ef86bf47b3fdf97a38201e4339adfa8782991e06",
-                "reference": "ef86bf47b3fdf97a38201e4339adfa8782991e06",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/7cd3dc55329d4071d0586041fc929fabd9b2adbf",
+                "reference": "7cd3dc55329d4071d0586041fc929fabd9b2adbf",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +660,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2020-06-30T05:29:33+00:00"
+            "time": "2020-08-19T00:53:45+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -2023,6 +2023,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
