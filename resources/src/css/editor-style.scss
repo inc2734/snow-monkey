@@ -36,7 +36,8 @@ body {
   }
 }
 
-.is-root-container {
+.is-root-container,
+.wp-block-freeform {
   > * {
     margin-top: 0;
     margin-bottom: 0;
