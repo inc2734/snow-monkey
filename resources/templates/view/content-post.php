@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.0
+ * @version 11.0.6
  */
 
 use Framework\Helper;
@@ -64,7 +64,10 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 		}
 
 		if ( get_option( 'mwt-display-profile-box' ) ) {
-			Helper::get_template_part( 'template-parts/common/profile-box' );
+			$vars = [
+				'_title' => __( 'Bio', 'snow-monkey' ),
+			];
+			Helper::get_template_part( 'template-parts/common/profile-box', null, $vars );
 		}
 		?>
 	</div>

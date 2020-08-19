@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.0.6
  *
  * renamed: template-parts/child-pages.php
  */
@@ -13,6 +13,7 @@ use Framework\Helper;
 $args = wp_parse_args(
 	$args,
 	[
+		'_title'     => __( 'Child pages', 'snow-monkey' ),
 		'_parent_id' => get_the_ID(),
 	]
 );
@@ -25,15 +26,17 @@ if ( ! $child_pages_query->have_posts() ) {
 ?>
 
 <div class="p-child-pages c-entry-aside">
-	<h2 class="p-child-pages__title c-entry-aside__title">
-		<span>
-			<?php
-			$child_pages_title = __( 'Child pages', 'snow-monkey' );
-			$child_pages_title = apply_filters( 'snow_monkey_child_pages_title', $child_pages_title );
-			echo esc_html( $child_pages_title );
-			?>
-		</span>
-	</h2>
+	<?php if ( $args['_title'] ) : ?>
+		<h2 class="p-child-pages__title c-entry-aside__title">
+			<span>
+				<?php
+				$child_pages_title = apply_filters( 'snow_monkey_child_pages_title', $args['_title'] );
+				echo esc_html( $child_pages_title );
+				?>
+			</span>
+		</h2>
+	<?php endif; ?>
+
 	<ul class="c-entries c-entries--rich-media">
 		<?php while ( $child_pages_query->have_posts() ) : ?>
 			<?php $child_pages_query->the_post(); ?>

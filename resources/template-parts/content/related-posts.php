@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.0.6
  *
  * renamed: template-parts/related-posts.php
  */
@@ -14,6 +14,7 @@ use Framework\Helper;
 $args = wp_parse_args(
 	$args,
 	[
+		'_title'          => __( 'Related posts', 'snow-monkey' ),
 		'_code'           => get_option( 'mwt-google-matched-content' ),
 		'_post_id'        => get_the_ID(),
 		'_entries_layout' => get_theme_mod( 'related-posts-layout' ),
@@ -32,14 +33,16 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 ?>
 
 <aside class="p-related-posts c-entry-aside">
-	<h2 class="p-related-posts__title c-entry-aside__title">
-		<span>
-			<?php esc_html_e( 'Related posts', 'snow-monkey' ); ?>
-			<?php if ( $args['_code'] ) : ?>
-				<?php esc_html_e( '(Including some ads)', 'snow-monkey' ); ?>
-			<?php endif; ?>
-		</span>
-	</h2>
+	<?php if ( $args['_title'] ) : ?>
+		<h2 class="p-related-posts__title c-entry-aside__title">
+			<span>
+				<?php echo esc_html( $args['_title'] ); ?>
+				<?php if ( $args['_code'] ) : ?>
+					<?php esc_html_e( '(Including some ads)', 'snow-monkey' ); ?>
+				<?php endif; ?>
+			</span>
+		</h2>
+	<?php endif; ?>
 
 	<?php if ( $args['_code'] ) : ?>
 

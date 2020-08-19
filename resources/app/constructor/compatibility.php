@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 11.0.6
  */
 
 use Framework\Helper;
@@ -61,7 +61,10 @@ add_action(
 			return;
 		}
 
-		Helper::get_template_part( 'template-parts/content/contents-outline' );
+		$vars = [
+			'_title' => __( 'Contents outline', 'snow-monkey' ),
+		];
+		Helper::get_template_part( 'template-parts/content/contents-outline', null, $vars );
 	}
 );
 
@@ -84,7 +87,10 @@ add_action(
 			return;
 		}
 
-		Helper::get_template_part( 'template-parts/content/child-pages' );
+		$vars = [
+			'_title' => __( 'Child pages', 'snow-monkey' ),
+		];
+		Helper::get_template_part( 'template-parts/content/child-pages', null, $vars );
 	}
 );
 

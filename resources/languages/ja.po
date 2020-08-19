@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-07-27 10:30+0900\n"
-"PO-Revision-Date: 2020-07-27 10:30+0900\n"
+"POT-Creation-Date: 2020-08-19 11:28+0900\n"
+"PO-Revision-Date: 2020-08-19 11:28+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,12 +42,12 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:59
-#: template-parts/loop/entry-summary/content/content-rss.php:35
-#: template-parts/loop/entry-summary/content/content.php:31
+#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:62
+#: template-parts/loop/entry-summary/content/content-rss.php:38
+#: template-parts/loop/entry-summary/content/content.php:34
 msgctxt "excerpt_length"
 msgid "55"
-msgstr ""
+msgstr "55"
 
 #: Framework/Helper.php:107
 #: app/customizer/title-tagline/controls/copyright.php:14
@@ -149,6 +149,11 @@ msgstr "シアンブルーグレー"
 #: Framework/Helper.php:307
 msgid "Very dark gray"
 msgstr "濃灰"
+
+#: app/constructor/compatibility.php:65
+#: template-parts/content/contents-outline.php:14
+msgid "Contents outline"
+msgstr "目次"
 
 #: app/customizer/advertisement/controls/google-adsense-auth-code.php:15
 msgid "Google Adsense authentication code"
@@ -1444,11 +1449,11 @@ msgstr "リンクテキスト"
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:36
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:37
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:42
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:43
 msgid "Recent posts"
 msgstr "最近の投稿"
 
@@ -1456,11 +1461,11 @@ msgstr "最近の投稿"
 msgid "Feed URL"
 msgstr "フィード URL"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:34
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:35
 msgid "Snow Monkey: RSS"
 msgstr "Snow Monkey: RSS"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:40
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:41
 msgid "RSS"
 msgstr "RSS"
 
@@ -1468,11 +1473,11 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:36
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:37
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:42
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:43
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
@@ -1511,7 +1516,11 @@ msgstr "検索"
 msgid "Scroll up"
 msgstr "上にスクロール"
 
-#: template-parts/content/child-pages.php:25
+#: template-parts/common/profile-box.php:14 templates/view/content-post.php:68
+msgid "Bio"
+msgstr "この記事を書いた人"
+
+#: template-parts/content/child-pages.php:31
 msgid "Child pages"
 msgstr "このページの子ページ"
 
@@ -1527,19 +1536,19 @@ msgstr "お探しのページは移動したか削除されています。"
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
-#: template-parts/content/prev-next-nav.php:43
+#: template-parts/content/prev-next-nav.php:46
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/content/prev-next-nav.php:45
+#: template-parts/content/prev-next-nav.php:48
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/content/related-posts.php:34
+#: template-parts/content/related-posts.php:37
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/content/related-posts.php:36
+#: template-parts/content/related-posts.php:39
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
@@ -1750,9 +1759,6 @@ msgstr "https://2inc.org"
 
 #~ msgid "Display child pages in page"
 #~ msgstr "固定ページにそのページの子ページ一覧を表示する"
-
-#~ msgid "Display contents outline in posts"
-#~ msgstr "記事に目次を表示する"
 
 #~ msgid "Landing page ( has no side margins )"
 #~ msgstr "ランディングページ ( 左右余白なし ）"
