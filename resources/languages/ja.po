@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-08-19 11:28+0900\n"
-"PO-Revision-Date: 2020-08-19 11:28+0900\n"
+"POT-Creation-Date: 2020-08-20 12:07+0900\n"
+"PO-Revision-Date: 2020-08-20 12:07+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -39,6 +39,8 @@ msgstr "コンテンツの上"
 #: Framework/Helper.php:34
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
+#: app/customizer/design/sections/base-design/controls/h2-style.php:20
+#: app/customizer/design/sections/base-design/controls/h3-style.php:20
 msgid "None"
 msgstr "なし"
 
@@ -154,6 +156,11 @@ msgstr "濃灰"
 #: template-parts/content/contents-outline.php:14
 msgid "Contents outline"
 msgstr "目次"
+
+#: app/constructor/compatibility.php:91
+#: template-parts/content/child-pages.php:16
+msgid "Child pages"
+msgstr "このページの子ページ"
 
 #: app/customizer/advertisement/controls/google-adsense-auth-code.php:15
 msgid "Google Adsense authentication code"
@@ -384,6 +391,19 @@ msgstr "テキスト"
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:102
 msgid "Panels"
 msgstr "パネル"
+
+#: app/customizer/design/sections/base-design/controls/h2-style.php:16
+#: app/customizer/design/sections/base-design/controls/h3-style.php:16
+#, php-format
+msgid "Design of the %1$s in articles"
+msgstr "記事中の %1$s のデザイン"
+
+#: app/customizer/design/sections/base-design/controls/h2-style.php:21
+#: app/customizer/design/sections/base-design/controls/h3-style.php:21
+#: app/customizer/design/sections/header/controls/header-position-lg.php:23
+#: app/customizer/design/sections/header/controls/header-position.php:25
+msgid "Normal"
+msgstr "ノーマル"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
 msgid "Contents left/right margins on PC"
@@ -643,11 +663,6 @@ msgstr "オーバーレイ（上部固定 / スクロール時背景白）"
 #: app/setup/widget-area.php:331
 msgid "Overlay"
 msgstr "オーバレイ"
-
-#: app/customizer/design/sections/header/controls/header-position-lg.php:23
-#: app/customizer/design/sections/header/controls/header-position.php:25
-msgid "Normal"
-msgstr "ノーマル"
 
 #: app/customizer/design/sections/header/controls/header-position.php:17
 msgid "Header position"
@@ -1520,10 +1535,6 @@ msgstr "上にスクロール"
 msgid "Bio"
 msgstr "この記事を書いた人"
 
-#: template-parts/content/child-pages.php:31
-msgid "Child pages"
-msgstr "このページの子ページ"
-
 #: template-parts/content/entry/content/content-404.php:18
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
@@ -1536,6 +1547,11 @@ msgstr "お探しのページは移動したか削除されています。"
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
+#: template-parts/content/entry/footer/footer.php:26
+#: template-parts/content/related-posts.php:17
+msgid "Related posts"
+msgstr "関連記事"
+
 #: template-parts/content/prev-next-nav.php:46
 msgid "Old post"
 msgstr "古い投稿"
@@ -1544,11 +1560,7 @@ msgstr "古い投稿"
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/content/related-posts.php:37
-msgid "Related posts"
-msgstr "関連記事"
-
-#: template-parts/content/related-posts.php:39
+#: template-parts/content/related-posts.php:41
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
@@ -1665,6 +1677,11 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#, fuzzy
+#~| msgid "Top of the article"
+#~ msgid "Design of the h3 in articles"
+#~ msgstr "記事本文の上"
 
 #~ msgid "Async loading of images"
 #~ msgstr "画像の非同期読み込み"

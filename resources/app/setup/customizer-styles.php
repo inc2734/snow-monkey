@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.1.0
  */
 
 use Framework\Helper;
@@ -49,19 +49,45 @@ add_action(
 				}
 
 				$selectors_for_h2 = [];
+				$selectors_for_h3 = [];
 				$selectors_for_thead_th = [];
 				$selectors_for_tbody_th = [];
 
 				foreach ( $selectors as $key => $selector ) {
 					$selectors_for_h2[ $key ] = $selector . ' > h2';
+					$selectors_for_h3[ $key ] = $selector . ' > h3';
 					$selectors_for_thead_th[ $key ] = $selector . ' > table thead th';
 					$selectors_for_tbody_th[ $key ] = $selector . ' > table tbody th';
 				}
 
-				Style::register(
-					$selectors_for_h2,
-					'border-color: ' . $accent_color
-				);
+				// @see src/css/core/mixin/_entry-content.scss
+				$h2_style = get_theme_mod( 'h2-style' );
+				if ( $h2_style ) {
+					if ( 'standard' === $h2_style ) {
+						Style::register(
+							$selectors_for_h2,
+							[
+								'border-left: 1px solid ' . $accent_color,
+								'background-color: #f7f7f7',
+								'padding: .44231rem .44231rem .44231rem .88462rem',
+							]
+						);
+					}
+				}
+
+				// @see src/css/core/mixin/_entry-content.scss
+				$h3_style = get_theme_mod( 'h3-style' );
+				if ( $h3_style ) {
+					if ( 'standard' === $h3_style ) {
+						Style::register(
+							$selectors_for_h3,
+							[
+								'border-bottom: 1px solid #eee',
+								'padding: 0 0 .44231rem',
+							]
+						);
+					}
+				}
 
 				Style::register(
 					$selectors_for_thead_th,

@@ -56,6 +56,23 @@ if ( $accent_color ) {
 	$root_variables[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
 }
 
+$h2_style = get_theme_mod( 'h2-style' );
+if ( $h2_style ) {
+	if ( 'standard' === $h2_style ) {
+		$root_variables[] = '--entry-content-h2-border-left: 1px solid var(--accent-color, #cd162c)';
+		$root_variables[] = '--entry-content-h2-background-color: #f7f7f7';
+		$root_variables[] = '--entry-content-h2-padding: calc(var(--_space, 1.76923rem) * 0.25) calc(var(--_space, 1.76923rem) * 0.25) calc(var(--_space, 1.76923rem) * 0.25) calc(var(--_space, 1.76923rem) * 0.5)';
+	}
+}
+
+$h3_style = get_theme_mod( 'h3-style' );
+if ( $h3_style ) {
+	if ( 'standard' === $h3_style ) {
+		$root_variables[] = '--entry-content-h3-border-bottom: 1px solid #eee';
+		$root_variables[] = '--entry-content-h3-padding: 0 0 calc(var(--_space, 1.76923rem) * 0.25)';
+	}
+}
+
 if ( $root_variables ) {
 	Style::register(
 		':root',
