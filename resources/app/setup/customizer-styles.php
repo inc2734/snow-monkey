@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.0.8
  */
 
 use Framework\Helper;
@@ -101,6 +101,82 @@ add_action(
 				Style::register(
 					$selectors_for_tbody_th,
 					'background-color: ' . Color::lightest( $accent_color )
+				);
+			}
+		);
+	}
+);
+
+/**
+ * Register styles for widget title
+ *
+ * @see src/css/core/mixin/_entry-content.scss
+ */
+add_action(
+	'inc2734_wp_customizer_framework_after_load_styles',
+	function() {
+		Style::placeholder(
+			'widget-title',
+			function( $selectors ) {
+				if ( ! Helper::is_ie() ) {
+					return;
+				}
+
+				$widget_title_style = get_theme_mod( 'widget-title-style' );
+				if ( ! $widget_title_style ) {
+					return;
+				}
+
+				if ( 'standard' !== $widget_title_style ) {
+					return;
+				}
+
+				$selectors_for_title = [];
+				$selectors_for_title_pseudo = [];
+				$selectors_for_title_before = [];
+				$selectors_for_title_after  = [];
+
+				foreach ( $selectors as $key => $selector ) {
+					$selectors_for_title[ $key ] = $selector;
+					$selectors_for_title_pseudo[ $key ] = implode( ',', [ $selector . '::before', $selector . '::after' ] );
+					$selectors_for_title_before[ $key ] = $selector . '::before';
+					$selectors_for_title_after[ $key ]  = $selector . '::after';
+				}
+
+				Style::register(
+					$selectors_for_title,
+					[
+						'display: flex',
+						'flex-direction: row',
+						'align-items: center',
+						'justify-content: center',
+					]
+				);
+
+				Style::register(
+					$selectors_for_title_pseudo,
+					[
+						'display: block',
+						'content: ""',
+						'height: 1px',
+						'background-color: #111',
+						'flex: 1 0 0%',
+						'min-width: 20px',
+					]
+				);
+
+				Style::register(
+					$selectors_for_title_before,
+					[
+						'margin-right: .5em',
+					]
+				);
+
+				Style::register(
+					$selectors_for_title_after,
+					[
+						'margin-left: .5em',
+					]
 				);
 			}
 		);

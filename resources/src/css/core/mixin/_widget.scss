@@ -1,31 +1,33 @@
 /**
  * Widget title
+ *
+ * @see app/setup/customizer-styles.php
  */
 @mixin widget-title() {
   @include _margin(0, 0, .5);
   @include _font-size-line-height($_base-font-size-px);
   font-weight: bold;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  display: var(--widget-title-display);
+  flex-direction: var(--widget-title-flex-direction);
+  align-items: var(--widget-title-align-items);
+  justify-content: var(--widget-title-justify-content);
 
   &::before,
   &::after {
-    display: block;
-    content: '';
-    height: $border-bottom-width;
-    background-color: $_color-black;
-    flex: 1 0 0%;
-    min-width: 20px;
+    display: var(--widget-title-pseudo-display);
+    content: var(--widget-title-pseudo-content);
+    height: var(--widget-title-pseudo-height); // 1px
+    background-color: var(--widget-title-pseudo-background-color); // #111
+    flex: var(--widget-title-pseudo-flex);
+    min-width: var(--widget-title-pseudo-min-width);
   }
 
   &::before {
-    margin-right: .5em;
+    margin-right: var(--widget-title-before-margin-right);
   }
 
   &::after {
-    margin-left: .5em;
+    margin-left: var(--widget-title-after-margin-left);
   }
 }
 

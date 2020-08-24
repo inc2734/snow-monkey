@@ -73,6 +73,24 @@ if ( $h3_style ) {
 	}
 }
 
+$widget_title_style = get_theme_mod( 'widget-title-style' );
+if ( $widget_title_style ) {
+	if ( 'standard' === $widget_title_style ) {
+		$root_variables[] = '--widget-title-display: flex';
+		$root_variables[] = '--widget-title-flex-direction: row';
+		$root_variables[] = '--widget-title-align-items: center';
+		$root_variables[] = '--widget-title-justify-content: center';
+		$root_variables[] = '--widget-title-pseudo-display: block';
+		$root_variables[] = '--widget-title-pseudo-content: ""';
+		$root_variables[] = '--widget-title-pseudo-height: 1px';
+		$root_variables[] = '--widget-title-pseudo-background-color: #111';
+		$root_variables[] = '--widget-title-pseudo-flex: 1 0 0%';
+		$root_variables[] = '--widget-title-pseudo-min-width: 20px';
+		$root_variables[] = '--widget-title-before-margin-right: .5em';
+		$root_variables[] = '--widget-title-after-margin-left: .5em';
+	}
+}
+
 if ( $root_variables ) {
 	Style::register(
 		':root',
