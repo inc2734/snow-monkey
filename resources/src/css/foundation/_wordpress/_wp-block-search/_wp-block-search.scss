@@ -4,7 +4,7 @@
   flex-wrap: nowrap;
 
   &__label {
-    @include _hidden();
+    display: none;
   }
 
   &__input {
