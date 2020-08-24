@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.3
+ * @version 11.0.8
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -87,6 +87,11 @@ add_filter(
 		$wp_page_template = pathinfo( $wp_page_template, PATHINFO_FILENAME );
 		if ( $wp_page_template ) {
 			return $classes . ' l-body--' . $wp_page_template;
+		}
+
+		$page_on_front = get_option( 'page_on_front' );
+		if ( (int) $page_on_front === (int) $post_id ) {
+			return $classes . ' l-body--one-column-full';
 		}
 
 		$_post_type_object = get_post_type_object( get_post_type( $post_id ) );
