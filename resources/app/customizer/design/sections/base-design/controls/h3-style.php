@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.0.8
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,7 +14,7 @@ Framework::control(
 	[
 		// translators: %1$s: heading element
 		'label'    => sprintf( __( 'Design of the %1$s in articles', 'snow-monkey' ), 'h3' ),
-		'priority' => 261,
+		'priority' => 271,
 		'default'  => 'standard',
 		'choices'  => [
 			''         => __( 'None', 'snow-monkey' ),
