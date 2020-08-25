@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.1.0
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -16,6 +16,8 @@ $args = wp_parse_args(
 		'_in_same_term'   => false,
 		'_excluded_terms' => [],
 		'_taxonomy'       => 'category',
+		'_next_label'     => __( 'Old post', 'snow-monkey' ),
+		'_prev_label'     => __( 'New post', 'snow-monkey' ),
 	]
 );
 ?>
@@ -43,9 +45,9 @@ $args = wp_parse_args(
 				<div class="c-prev-next-nav__item-label">
 					<?php if ( 'next' === $key ) : ?>
 						<i class="fas fa-angle-left" aria-hidden="true"></i>
-						<?php esc_html_e( 'Old post', 'snow-monkey' ); ?>
+						<?php echo wp_kses_post( $args['_next_label'] ); ?>
 					<?php else : ?>
-						<?php esc_html_e( 'New post', 'snow-monkey' ); ?>
+						<?php echo wp_kses_post( $args['_prev_label'] ); ?>
 						<i class="fas fa-angle-right" aria-hidden="true"></i>
 					<?php endif; ?>
 				</div>

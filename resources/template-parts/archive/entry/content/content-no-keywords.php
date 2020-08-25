@@ -3,10 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.1.0
  */
 
 use Framework\Helper;
+
+$args = wp_parse_args(
+	$args,
+	[
+		'_message' => __( 'Please enter a search keyword.', 'snow-monkey' ),
+	]
+);
 ?>
 
 <?php do_action( 'snow_monkey_before_archive_entry_content' ); ?>
@@ -14,9 +21,11 @@ use Framework\Helper;
 <div class="c-entry__content p-entry-content">
 	<?php do_action( 'snow_monkey_prepend_archive_entry_content' ); ?>
 
-	<p>
-		<?php esc_html_e( 'Please enter a search keyword.', 'snow-monkey' ); ?>
-	</p>
+	<?php if ( $args['_message'] ) : ?>
+		<p>
+			<?php echo wp_kses_post( $args['_message'] ); ?>
+		</p>
+	<?php endif; ?>
 
 	<?php Helper::get_template_part( 'template-parts/common/search-form', 'no-match' ); ?>
 

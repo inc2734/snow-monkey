@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 11.1.0
  *
  * renamed: template-parts/pings.php
  */
@@ -13,10 +13,20 @@ use Framework\Helper;
 if ( ! pings_open() && empty( $wp_query->comments_by_type['pings'] ) ) {
 	return;
 }
+
+$args = wp_parse_args(
+	$args,
+	[
+		'_title'                 => __( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ),
+		'_no_trackbacks_message' => __( 'No comments.', 'snow-monkey' ),
+	]
+);
 ?>
 
 <aside class="p-trackbacks c-entry-aside">
-	<h2 class="p-trackbacks__title c-entry-aside__title"><?php esc_html_e( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ); ?></h2>
+	<?php if ( $args['_title'] ) : ?>
+		<h2 class="p-trackbacks__title c-entry-aside__title"><?php echo wp_kses_post( $args['_title'] ); ?></h2>
+	<?php endif; ?>
 
 	<?php if ( ! empty( $wp_query->comments_by_type['pings'] ) ) : ?>
 
@@ -38,9 +48,11 @@ if ( ! pings_open() && empty( $wp_query->comments_by_type['pings'] ) ) {
 
 	<?php else : ?>
 
-		<p class="p-trackbacks__notrackbacks">
-			<?php esc_html_e( 'No trackbacks.', 'snow-monkey' ); ?>
-		</p>
+		<?php if ( $args['_no_trackbacks_message'] ) : ?>
+			<p class="p-trackbacks__notrackbacks">
+				<?php echo wp_kses_post( $args['_no_trackbacks_message'] ); ?>
+			</p>
+		<?php endif; ?>
 
 	<?php endif; ?>
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.8.0
+ * @version 11.1.0
  *
  * renamed: template-parts/comments.php
  */
@@ -13,10 +13,20 @@ use Framework\Helper;
 if ( ! comments_open() && empty( $wp_query->comments_by_type['comment'] ) ) {
 	return;
 }
+
+$args = wp_parse_args(
+	$args,
+	[
+		'_title'               => __( 'Comments on this post', 'snow-monkey' ),
+		'_no_comments_message' => __( 'No comments.', 'snow-monkey' ),
+	]
+);
 ?>
 
 <aside class="p-comments c-entry-aside">
-	<h2 class="p-comments__title c-entry-aside__title"><?php esc_html_e( 'Comments on this post', 'snow-monkey' ); ?></h2>
+	<?php if ( $args['_title'] ) : ?>
+		<h2 class="p-comments__title c-entry-aside__title"><?php echo wp_kses_post( $args['_title'] ); ?></h2>
+	<?php endif; ?>
 
 	<?php if ( ! empty( $wp_query->comments_by_type['comment'] ) ) : ?>
 
@@ -25,7 +35,7 @@ if ( ! comments_open() && empty( $wp_query->comments_by_type['comment'] ) ) {
 			wp_list_comments(
 				[
 					'type'     => 'comment',
-					'callback' => function( $comment, $args, $depth ) {
+					'callback' => function( $comment, $callback_args, $depth ) {
 						?>
 						<li <?php comment_class( [ 'p-comments__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php
@@ -33,9 +43,9 @@ if ( ! comments_open() && empty( $wp_query->comments_by_type['comment'] ) ) {
 								'template-parts/discussion/comment',
 								null,
 								[
-									'_comment' => $comment,
-									'_args'    => $args,
-									'_depth'   => $depth,
+									'_comment'   => $comment,
+									'_depth'     => $depth,
+									'_max_depth' => $callback_args['max_depth'],
 								]
 							);
 							?>
@@ -54,9 +64,11 @@ if ( ! comments_open() && empty( $wp_query->comments_by_type['comment'] ) ) {
 
 	<?php else : ?>
 
-		<p class="p-comments__nocomments">
-			<?php esc_html_e( 'No comments.', 'snow-monkey' ); ?>
-		</p>
+		<?php if ( $args['_no_comments_message'] ) : ?>
+			<p class="p-comments__nocomments">
+				<?php echo wp_kses_post( $args['_no_comments_message'] ); ?>
+			</p>
+		<?php endif; ?>
 
 	<?php endif; ?>
 
