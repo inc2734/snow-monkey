@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.9
+ * @version 11.0.10
  */
 
 use Framework\Helper;
@@ -199,8 +199,8 @@ add_filter(
 add_filter(
 	'woocommerce_dropdown_variation_attribute_options_html',
 	function( $html ) {
-		$html = str_replace( '<select id=', '<span class="c-select" aria-selected="false"><select id=', $html );
-		$html = str_replace( '</select>', '</select><span class="c-select__label"></span></span>', $html );
+		$html = str_replace( '<select id=', '<div class="c-select"><select class="c-select__control" style="margin-right: 0" id=', $html );
+		$html = str_replace( '</select>', '</select><span class="c-select__toggle"></span></div>', $html );
 		return $html;
 	}
 );

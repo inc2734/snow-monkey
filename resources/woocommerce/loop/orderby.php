@@ -21,13 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 ?>
 <form class="woocommerce-ordering" method="get">
-	<span class="c-select" aria-selected="false">
-		<select name="orderby" class="orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
+	<span class="c-select">
+		<select name="orderby" class="c-select__control orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
 			<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
 				<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 			<?php endforeach; ?>
 		</select>
-		<span class="c-select__label"></span>
+		<span class="c-select__toggle"></span>
 	</span>
 	<input type="hidden" name="paged" value="1" />
 	<?php wc_query_string_form_fields( null, array( 'orderby', 'submit', 'paged', 'product-page' ) ); ?>
