@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.5.0
+ * @version 11.0.9
  */
 
 use Framework\Helper;
@@ -272,5 +272,21 @@ add_filter(
 			}
 		}
 		return $comment_form;
+	}
+);
+
+add_action(
+	'template_redirect',
+	function() {
+		if ( ! is_user_logged_in() ) {
+			return;
+		}
+
+		if ( ! is_wc_endpoint_url( 'lost-password' ) ) {
+			return;
+		}
+
+		wp_safe_redirect( wc_get_endpoint_url( 'edit-account' ) );
+		exit;
 	}
 );
