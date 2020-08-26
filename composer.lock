@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bc04403c3d2e8816124aadbd5e9b0ce7",
+    "content-hash": "2ef903f894914e245ddcbcbb96341193",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -319,16 +319,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "6.0.3",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "59c8b8f45cd0bfb48bebf0a5f595c15178a77574"
+                "reference": "886d88b75386ec5da0f47b7d78ef6221b7a89270"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/59c8b8f45cd0bfb48bebf0a5f595c15178a77574",
-                "reference": "59c8b8f45cd0bfb48bebf0a5f595c15178a77574",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/886d88b75386ec5da0f47b7d78ef6221b7a89270",
+                "reference": "886d88b75386ec5da0f47b7d78ef6221b7a89270",
                 "shasum": ""
             },
             "require": {
@@ -358,7 +358,7 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
-            "time": "2020-06-01T08:33:55+00:00"
+            "time": "2020-08-26T01:05:31+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
