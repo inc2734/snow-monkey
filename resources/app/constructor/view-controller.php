@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.8
+ * @version 11.1.0
  */
 
 use Framework\Controller\Controller;
@@ -123,6 +123,7 @@ add_filter(
 add_filter(
 	'inc2734_wp_view_controller_get_template_part_args',
 	function( $args ) {
+		$args = apply_filters( "snow_monkey_get_template_part_args_{$args['slug']}", $args );
 		return apply_filters( 'snow_monkey_get_template_part_args', $args );
 	},
 	9
@@ -195,6 +196,7 @@ add_action(
 add_filter(
 	'inc2734_wp_view_controller_pre_template_part_render',
 	function( $html, $slug, $name, $vars ) {
+		$html = apply_filters( "snow_monkey_pre_template_part_render_{$slug}", $html, $name, $vars );
 		return apply_filters( 'snow_monkey_pre_template_part_render', $html, $slug, $name, $vars );
 	},
 	9,
@@ -212,6 +214,7 @@ add_filter(
 add_filter(
 	'inc2734_wp_view_controller_template_part_render',
 	function( $html, $slug, $name, $vars ) {
+		$html = apply_filters( "snow_monkey_template_part_render_{$slug}", $html, $name, $vars );
 		return apply_filters( 'snow_monkey_template_part_render', $html, $slug, $name, $vars );
 	},
 	9,

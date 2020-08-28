@@ -12,6 +12,33 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 	/**
 	 * @test
 	 */
+	public function args_slug() {
+		add_filter(
+			'snow_monkey_get_template_part_args_template',
+			function( $args ) {
+				$args['slug'] = 'template2';
+				$args['name'] = 'name2';
+				$args['vars'] = [ 'key' => 'value2' ];
+				return $args;
+			}
+		);
+
+		add_action(
+			'inc2734_wp_view_controller_get_template_part_pre_render',
+			function( $args ) {
+				$this->assertEquals( 'template2', $args['slug'] );
+				$this->assertEquals( 'name2', $args['name'] );
+				$this->assertEquals( 'value2', $args['vars']['key'] );
+			}
+		);
+
+		add_action( 'snow_monkey_get_template_part_template2-name2', '__return_true' );
+		Framework\Helper::get_template_part( 'template', 'name', [ 'key' => 'value' ] );
+	}
+
+	/**
+	 * @test
+	 */
 	public function args() {
 		add_filter(
 			'snow_monkey_get_template_part_args',
@@ -109,10 +136,25 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 		$this->assertEquals( 'template-name2-template-name', ob_get_clean() );
 
 		add_filter(
+			'snow_monkey_template_part_render_template',
+			function( $html, $name ) {
+				if ( 'name' === $name ) {
+					return '3-template-name';
+				}
+			},
+			10,
+			2
+		);
+
+		ob_start();
+		Inc2734\WP_View_Controller\Helper::get_template_part( 'template', 'name' );
+		$this->assertEquals( '3-template-name', ob_get_clean() );
+
+		add_filter(
 			'snow_monkey_template_part_render',
 			function( $html, $slug, $name ) {
 				if ( 'template' === $slug && 'name' === $name ) {
-					return '3-template-name';
+					return '4-template-name';
 				}
 			},
 			10,
@@ -121,6 +163,6 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 
 		ob_start();
 		Framework\Helper::get_template_part( 'template', 'name' );
-		$this->assertEquals( '3-template-name', ob_get_clean() );
+		$this->assertEquals( '4-template-name', ob_get_clean() );
 	}
 }
