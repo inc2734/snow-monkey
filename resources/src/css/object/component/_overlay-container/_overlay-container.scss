@@ -24,8 +24,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #222;
-    color: #fff;
+    background-color: $_color-black; // For IE11
+    background-color: _var-color-black();
+    color: $_color-white; // For IE11
+    color: _var-color-white();
     text-decoration: none;
   }
 

@@ -21,7 +21,8 @@
 
   a {
     @include _position(absolute, 0, 0, 0, 0);
-    color: #fff;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
     text-decoration: none;
     font-size: 0;
     line-height: 1;

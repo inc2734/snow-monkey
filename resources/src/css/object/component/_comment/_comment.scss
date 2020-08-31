@@ -1,4 +1,4 @@
-$comment-bgcolor: _lightest($_color-gray);
+$comment-bgcolors: [_lightest($_color-gray), _var-lightest-color-gray()];
 
 .#{ $_prefix }c-comment {
   display: flex;
@@ -16,7 +16,9 @@ $comment-bgcolor: _lightest($_color-gray);
     flex: 0 0 60px;
     @include _circle(60px);
     max-width: 60px;
-    border: 2px solid _lighter($_color-gray);
+    border: 2px solid transparent;
+    border-color: _lighter($_color-gray); // For IE11
+    border-color: _var-lighter-color-gray();
 
     @include _media-min(md) {
       margin: 0 20px 0 0;
@@ -32,13 +34,16 @@ $comment-bgcolor: _lightest($_color-gray);
 
   &__body {
     flex: 1 1 auto;
-    background-color: $comment-bgcolor;
     border-radius: $_border-radius; // for IE11
     border-radius: _var-border-radius();
     overflow-wrap: break-word;
     @include _padding(.5);
     max-width: 100%;
     width: 100%;
+
+    @each $comment-bgcolor in $comment-bgcolors {
+      background-color: $comment-bgcolor;
+    }
 
     @include _media-min(md) {
       @include _padding(.75);
@@ -48,7 +53,8 @@ $comment-bgcolor: _lightest($_color-gray);
   &__meta {
     @include _margin(0, 0, .5);
     @include _font-size-line-height($_base-font-size-px - 4);
-    color: $_color-gray;
+    color: $_color-gray; // For IE11
+    color: _var-color-gray();
 
     cite {
       font-style: normal;
@@ -104,7 +110,8 @@ $comment-bgcolor: _lightest($_color-gray);
     background-color: var-color-accent();
     border-radius: $_border-radius; // for IE11
     border-radius: _var-border-radius();
-    color: #fff;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
     @include _font-size-line-height($_base-font-size-px - 2);
     @include _padding(.25rem, 1rem);
   }
@@ -127,7 +134,7 @@ $comment-bgcolor: _lightest($_color-gray);
 
 .#{ $_prefix }c-comment__figure + .#{ $_prefix }c-comment__body {
   @include _top-balloon((
-    background-color: $comment-bgcolor,
+    background-color: $comment-bgcolors,
     border-color: null,
     border-size: null,
     triangle-size: 10px,
@@ -140,7 +147,7 @@ $comment-bgcolor: _lightest($_color-gray);
   }
 
   @include _media-min(md) {
-    @include _balloon-triangle(left, 10px, $comment-bgcolor);
+    @include _balloon-triangle(left, 10px, $comment-bgcolors);
     max-width: calc(100% - 80px);
 
     &::before,
@@ -158,7 +165,7 @@ $comment-bgcolor: _lightest($_color-gray);
   }
 
   @include _media-min(md) {
-    @include _balloon-triangle(right, 10px, $comment-bgcolor);
+    @include _balloon-triangle(right, 10px, $comment-bgcolors);
 
     &::before,
     &::after {

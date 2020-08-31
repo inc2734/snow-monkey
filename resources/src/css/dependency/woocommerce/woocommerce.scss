@@ -137,11 +137,15 @@ $img-path: '../../../img';
 
   ul {
     @include _list-unstyled();
-    border-top: 1px solid _lighter($_color-gray);
+    border-top: 1px solid transparent;
+    border-top-color: _lighter($_color-gray); // For IE11
+    border-top-color: _var-lighter-color-gray();
   }
 
   li {
-    border-bottom: 1px solid _lighter($_color-gray);
+    border-bottom: 1px solid transparent;
+    border-bottom-color: _lighter($_color-gray); // For IE11
+    border-bottom-color: _var-lighter-color-gray();
   }
 
   a {
@@ -165,8 +169,10 @@ $img-path: '../../../img';
 
     thead {
       th {
-        background-color: _lightest($_color-gray);
-        color: $_color-text;
+        background-color: _lightest($_color-gray); // For IE11
+        background-color: _var-lightest-color-gray();
+        color: $_color-text; // For IE11
+        color: _var-color-text();
       }
     }
   }
@@ -210,7 +216,8 @@ $img-path: '../../../img';
   @include _margin-bottom(.5);
 
   .woocommerce-review-link {
-    color: $_color-gray;
+    color: $_color-gray; // For IE11
+    color: _var-color-gray();
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 }
@@ -230,7 +237,8 @@ $img-path: '../../../img';
 
     .reset_variations {
       margin-left: 5px;
-      color: $_color-gray;
+      color: $_color-gray; // For IE11
+      color: _var-color-gray();
       @include _font-size($_base-font-size-px - 4);
       line-height: 1;
     }
@@ -260,17 +268,22 @@ $img-path: '../../../img';
 
   .tabs.wc-tabs {
     &::before {
-      border-bottom-color: _lighter($_color-gray);
+      border-bottom-color: _lighter($_color-gray); // For IE11
+      border-bottom-color: _var-lighter-color-gray();
     }
 
     li {
-      background-color: _lightest($_color-gray);
-      border-color: _lighter($_color-gray);
-      color: $_color-text;
+      background-color: _lightest($_color-gray); // For IE11
+      background-color: _var-lightest-color-gray();
+      border-color: _lighter($_color-gray); // For IE11
+      border-color: _var-lighter-color-gray();
+      color: $_color-text; // For IE11
+      color: _var-color-text();
 
       &::before,
       &::after {
-        border-color: _lighter($_color-gray);
+        border-color: _lighter($_color-gray); // For IE11
+        border-color: _var-lighter-color-gray();
         box-shadow: none;
       }
     }
@@ -284,7 +297,8 @@ $img-path: '../../../img';
 
 // Product meta in single
 .product_meta {
-  color: $_color-gray;
+  color: $_color-gray; // For IE11
+  color: _var-color-gray();
   @include _font-size-line-height($_base-font-size-px - 2);
 
   a {
@@ -301,7 +315,9 @@ $img-path: '../../../img';
 .woocommerce-Reviews .comment-reply-title {
   @include _margin(1, 0, .5);
   display: block;
-  border-bottom: 1px solid _lighter($_color-gray);
+  border-bottom: 1px solid transparent;
+  border-bottom-color: _lighter($_color-gray); // For IE11
+  border-bottom-color: _var-lighter-color-gray();
   @include _font-size-line-height($_base-font-size-px + 2);
   font-weight: bold;
   @include _padding(0, 0, .25);
@@ -330,13 +346,15 @@ $img-path: '../../../img';
 
 // Result count in archive
 .woocommerce-result-count {
-  color: $_color-gray;
+  color: $_color-gray; // For IE11
+  color: _var-color-gray();
   @include _font-size-line-height($_base-font-size-px - 2);
 }
 
 // Product title in loop
 .woocommerce-loop-product__title {
-  color: $_color-gray;
+  color: $_color-gray; // For IE11
+  color: _var-color-gray();
   @include _font-size-line-height($_base-font-size-px);
   font-weight: normal;
 }
@@ -436,7 +454,9 @@ $img-path: '../../../img';
 .woocommerce .widget_shopping_cart {
   .woocommerce-mini-cart__total {
     @include _margin-top(.25);
-    border-top: 1px solid _lighter($_color-gray);
+    border-top: 1px solid transparent;
+    border-top-color: _lighter($_color-gray); // For IE11
+    border-top-color: _var-lighter-color-gray();
     @include _padding-top(.5);
   }
 
@@ -471,13 +491,16 @@ $img-path: '../../../img';
   }
 
   .reviewer {
-    color: $_color-gray;
+    color: $_color-gray; // For IE11
+    color: _var-color-gray();
     @include _font-size-line-height($_base-font-size-px - 4);
   }
 }
 
 // Range widget
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
-  background-color: _light($_color-gray);
-  color: $_color-text;
+  background-color: _light($_color-gray); // For IE11
+  background-color: _var-light-color-gray();
+  color: $_color-text; // For IE11
+  color: _var-color-text();
 }

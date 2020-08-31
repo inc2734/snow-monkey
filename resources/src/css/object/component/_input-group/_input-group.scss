@@ -1,6 +1,7 @@
 .#{ $_prefix }c-input-group {
   &__btn {
-    background-color: #fff;
+    background-color: $_color-white; // For IE11
+    background-color: _var-color-white();
   }
 
   &__field {

@@ -67,7 +67,8 @@
 
       > a {
         position: relative;
-        color: #fff;
+        color: $_color-white; // For IE11
+        color: _var-color-white();
         @include _padding(.5rem, 1rem);
       }
 
@@ -94,7 +95,8 @@
 
       .#{ $_prefix }c-navbar__subitem {
         .#{ $_prefix }c-navbar__toggle {
-          color: #fff;
+          color: $_color-white; // For IE11
+          color: _var-color-white();
           transform: rotate(0);
 
           &[aria-expanded="true"] {

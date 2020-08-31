@@ -65,7 +65,9 @@
     flex: 0 0 60px;
     @include _circle(60px);
     max-width: 60px;
-    border: 2px solid _lighter($_color-gray);
+    border: 2px solid transparent;
+    border-color: _lighter($_color-gray); // For IE11
+    border-color: _var-lighter-color-gray();
 
     > img {
       max-width: 100%;
@@ -92,7 +94,7 @@
     width: 100%;
 
     @include _top-balloon((
-      background-color: _lightest($_color-gray),
+      background-color: [_lightest($_color-gray), _var-lightest-color-gray()],
       border-color: null,
       border-size: null,
       triangle-size: 10px,
@@ -106,7 +108,7 @@
 
     @include _media-min(md) {
       max-width: calc(100% - 80px);
-      @include _balloon-triangle(left, 10px, _lightest($_color-gray));
+      @include _balloon-triangle(left, 10px, [_lightest($_color-gray), _var-lightest-color-gray()]);
     }
   }
 
@@ -132,7 +134,7 @@
       }
 
       @include _media-min(md) {
-        @include _balloon-triangle(right, 10px, _lightest($_color-gray));
+        @include _balloon-triangle(right, 10px, [_lightest($_color-gray), _var-lightest-color-gray()]);
       }
     }
   }
@@ -184,7 +186,8 @@
   }
 
   &--inverse {
-    background-color: _lightest($_color-gray);
+    background-color: _lightest($_color-gray); // For IE11
+    background-color: _var-lightest-color-gray();
   }
 
   & + & {

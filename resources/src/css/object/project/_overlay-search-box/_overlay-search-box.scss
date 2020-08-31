@@ -9,10 +9,12 @@
         border: none;
         border-radius: 0;
         border-bottom: 1px solid rgba(#fff, .7);
-        color: #fff;
+        color: $_color-white; // For IE11
+        color: _var-color-white();
 
         &:focus {
-          border-bottom-color: #fff;
+          border-bottom-color: $_color-white; // For IE11
+          border-bottom-color: _var-color-white();
         }
       }
     }
@@ -20,7 +22,8 @@
     &__btn {
       background-color: transparent;
       border: none;
-      color: #fff;
+      color: $_color-white; // For IE11
+      color: _var-color-white();
     }
   }
 }

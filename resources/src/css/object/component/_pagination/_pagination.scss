@@ -19,19 +19,24 @@
 
   &__item {
     background-color: var-color-accent();
-    color: #fff;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
   }
 
   &__item-link,
   &__item-ellipsis {
-    background-color: _lighter($_color-gray);
-    color: $_color-gray;
+    background-color: _lighter($_color-gray); // For IE11
+    background-color: _var-lighter-color-gray();
+    color: $_color-gray; // For IE11
+    color: _var-color-gray();
   }
 
   &__item-link {
     @include _hover(lg) {
-      background-color: _light($_color-gray);
-      color: #fff;
+      background-color: _light($_color-gray); // For IE11
+      background-color: _var-light-color-gray();
+      color: $_color-white; // For IE11
+      color: _var-color-white();
     }
   }
 

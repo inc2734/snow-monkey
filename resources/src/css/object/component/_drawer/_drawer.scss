@@ -3,7 +3,8 @@
 
   z-index: 100000;
   background-color: var-color-accent();
-  color: #fff;
+  color: $_color-white; // For IE11
+  color: _var-color-white();
   @include _font-size-line-height($drawer-font-size);
 
   > .#{ $_prefix }c-drawer__menu:last-child,
@@ -19,7 +20,8 @@
     transform: translateY(0) translateX(-.15em);
 
     &::before {
-      border-color: #fff;
+      border-color: $_color-white; // For IE11
+      border-color: _var-color-white();
     }
   }
 

@@ -23,7 +23,8 @@
     @include _between-content(.5);
     @include _margin(.5, 0, 0);
     @include _font-size-line-height($_base-font-size-px - 2);
-    color: _light($_color-text);
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
 
     @include _media-min(md) {
       @include _margin-top(1);

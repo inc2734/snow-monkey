@@ -69,11 +69,13 @@
     .#{ $_prefix }c-site-branding,
     .#{ $_prefix }c-hamburger-btn__label,
     [data-has-global-nav] .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar__item:not([data-active-menu="true"]):not(:hover):not(:active):not(:focus) {
-      color: #fff;
+      color: $_color-white; // For IE11
+      color: _var-color-white();
     }
 
     .#{ $_prefix }c-hamburger-btn__bar {
-      background-color: #fff;
+      background-color: $_color-white; // For IE11
+      background-color: _var-color-white();
     }
   }
 

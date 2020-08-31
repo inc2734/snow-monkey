@@ -24,7 +24,8 @@
 
       > a {
         display: inline-block;
-        background-color: _lighter($_color-gray);
+        background-color: _lighter($_color-gray); // For IE11
+        background-color: _var-lighter-color-gray();
         border-radius: 2px;
         color: inherit;
         margin: -.5em;

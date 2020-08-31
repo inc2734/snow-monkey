@@ -1,6 +1,7 @@
 .wpaw-term {
   background-color: var-color-accent();
-  color: #fff;
+  color: $_color-white; // For IE11
+  color: _var-color-white();
   font-weight: bold;
   @include _font-size($_base-font-size-px - 4);
   line-height: 1;

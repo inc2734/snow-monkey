@@ -14,7 +14,8 @@
   &__content {
     display: flex;
     flex: 0 1 auto;
-    color: #fff;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
 
     a {
       color: inherit;

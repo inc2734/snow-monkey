@@ -6,7 +6,8 @@
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  background-color: $_color-black;
+  background-color: $_color-black; // For IE11
+  background-color: _var-color-black();
 
   > img {
     object-fit: contain;

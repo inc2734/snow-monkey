@@ -1,5 +1,7 @@
 .#{ $_prefix }l-footer-widget-area {
-  border-top: 1px solid _lightest($_color-gray);
+  border-top: 1px solid transparent;
+  border-top-color: _lightest($_color-gray); // For IE11
+  border-top-color: _var-lightest-color-gray();
   @include _padding(1, 0);
 
   @include _media-min(lg) {

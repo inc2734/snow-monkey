@@ -172,7 +172,8 @@ body {
     top: -1px;
     left: -1px;
     display: inline-block;
-    color: #fff;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
     background-color: #127db8;
     font-size: 12px;
     line-height: 1;

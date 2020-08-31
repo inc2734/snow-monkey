@@ -21,7 +21,8 @@
     @include _btn();
     @include _form-control-base-border();
     @include _form-control-base-padding();
-    color: $_color-text;
+    color: $_color-text; // For IE11
+    color: _var-color-text();
     flex: none;
     overflow: visible;
     position: relative;

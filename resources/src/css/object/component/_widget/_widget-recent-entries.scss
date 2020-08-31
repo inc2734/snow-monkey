@@ -3,7 +3,8 @@
 
   .post-date {
     display: block;
-    color: _lighter($_color-text);
+    color: _lighter($_color-text); // For IE11
+    color: _var-lighter-color-text();
     @include _font-size-line-height(11px);
   }
 }

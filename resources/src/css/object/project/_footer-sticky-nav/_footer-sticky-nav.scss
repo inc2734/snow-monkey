@@ -1,7 +1,8 @@
 .#{ $_prefix }p-footer-sticky-nav {
   @include _position(fixed, null, 0, 0, 0);
   z-index: 9999;
-  background-color: #fff;
+  background-color: $_color-white; // For IE11
+  background-color: _var-color-white();
   box-shadow: 0 0 2px 0 rgba(#000, .25);
   padding-bottom: constant(safe-area-inset-bottom);
   padding-bottom: env(safe-area-inset-bottom);
@@ -24,7 +25,8 @@
 
   a {
     display: block;
-    color: $_color-gray;
+    color: $_color-gray; // For IE11
+    color: _var-color-gray();
     @include _font-size(10px);
     line-height: 1.2;
     padding: .5em 0;

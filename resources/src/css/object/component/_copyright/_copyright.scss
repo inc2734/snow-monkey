@@ -1,6 +1,8 @@
 .#{ $_prefix }c-copyright {
-  background-color: $_color-black;
-  color: _light($_color-gray);
+  background-color: $_color-black; // For IE11
+  background-color: _var-color-black();
+  color: _light($_color-gray); // For IE11
+  color: _var-light-color-gray();
   @include _font-size-line-height($_base-font-size-px - 2);
   @include _padding(.5, 0);
 

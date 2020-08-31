@@ -3,7 +3,9 @@
   width: 100%;
 
   th, td {
-    border: 1px solid _lighter($_color-gray);
+    border: 1px solid transparent;
+    border-color: _lighter($_color-gray); // For IE11
+    border-color: _var-lighter-color-gray();
     @include _padding(.25, .5);
   }
 
@@ -18,14 +20,16 @@
       border-right-color: var-color-accent-light();
       border-left: 1px solid transparent;
       border-left-color: var-color-accent-light();
-      color: #fff;
+      color: $_color-white; // For IE11
+      color: _var-color-white();
     }
   }
 
   tbody {
     th {
       background-color: var-color-accent-lightest();
-      color: $_color-text;
+      color: $_color-text; // For IE11
+      color: _var-color-text();
       text-align: left;
     }
   }

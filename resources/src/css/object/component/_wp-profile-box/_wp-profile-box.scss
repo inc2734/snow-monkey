@@ -1,9 +1,13 @@
 .wp-profile-box {
-  background-color: _lightest($_color-gray);
-  color: $_color-text;
+  background-color: _lightest($_color-gray); // For IE11
+  background-color: _var-lightest-color-gray();
+  color: $_color-text; // For IE11
+  color: _var-color-text();
 
   &__title {
-    border-bottom: 1px solid _lighter($_color-gray);
+    border-bottom: 1px solid transparent;
+    border-bottom-color: _lighter($_color-gray); // For IE11
+    border-bottom-color: _var-lighter-color-gray();
     @include _font-size($_base-font-size-px + 2);
     line-height: 1;
     @include _padding(.5);
@@ -105,11 +109,13 @@
     background-color: var-color-accent();
     border: 1px solid transparent;
     border-color: var-color-accent();
-    color: #fff;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
   }
 
   &__archives-btn {
-    background-color: #fff;
+    background-color: $_color-white; // For IE11
+    background-color: _var-color-white();
     border: 1px solid transparent;
     border-color: var-color-accent();
     color: var-color-accent();

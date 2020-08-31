@@ -3,7 +3,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: _lightest($_color-gray);
+  background-color: _lightest($_color-gray); // For IE11
+  background-color: _var-lightest-color-gray();
   @include _font-size-line-height($_base-font-size-px - 2);
   @include _padding(1);
 }

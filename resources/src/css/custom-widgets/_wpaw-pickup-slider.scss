@@ -88,7 +88,9 @@
   &__item-more {
     @include _margin-top(.5);
     @include _padding(.5, 1);
-    border: 1px solid #fff;
+    border: 1px solid transparent;
+    border-color: $_color-white; // For IE11
+    border-color: _var-color-white();
 
     &.#{ $_prefix }c-btn {
       background-color: transparent;
@@ -151,7 +153,8 @@
     }
 
     span {
-      color: #fff;
+      color: $_color-white;
+      color: _var-color-white();
       font-size: 20px;
     }
 
@@ -171,8 +174,12 @@
     &::before {
       left: calc(50% - 5px);
       top: calc(50% - 5px);
-      border-top: 2px solid #fff;
-      border-left: 2px solid #fff;
+      border-top: 2px solid transparent;
+      border-top-color: $_color-white; // For IE11
+      border-top-color: _var-color-white();
+      border-left: 2px solid transparent;
+      border-left-color: $_color-white; // For IE11
+      border-left-color: _var-color-white();
       transform: rotate(-45deg);
     }
   }
@@ -184,8 +191,10 @@
     &::before {
       left: calc(50% - 5px);
       top: calc(50% - 5px);
-      border-top: 2px solid #fff;
-      border-right: 2px solid #fff;
+      border-top: 2px solid transparent;
+      border-top-color: $_color-white; // For IE11
+      border-top-color: _var_color-white();
+      border-right: 2px solid transparent;
       transform: rotate(45deg);
     }
   }

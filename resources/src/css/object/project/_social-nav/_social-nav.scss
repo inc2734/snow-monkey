@@ -1,6 +1,9 @@
 .#{ $_prefix }p-social-nav {
-  background-color: _lightest($_color-gray);
-  border-top: 1px solid _lightest($_color-gray);
+  background-color: _lightest($_color-gray); // For IE11
+  background-color: _var-lightest-color-gray();
+  border-top: 1px solid transparent;
+  border-top-color: _lightest($_color-gray); // For IE11
+  border-top-color: _var-lightest-color-gray();
   @include _padding(1, 0);
 
   &__inner {
@@ -19,7 +22,8 @@
 
   a {
     flex: none;
-    color: $_color-gray;
+    color: $_color-gray; // For IE11
+    color: _var-color-gray();
     display: block;
     line-height: 1;
     overflow: hidden;
