@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-08-20 12:07+0900\n"
-"PO-Revision-Date: 2020-08-20 12:07+0900\n"
+"POT-Creation-Date: 2020-09-01 23:01+0900\n"
+"PO-Revision-Date: 2020-09-01 23:02+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.4\n"
+"X-Generator: Poedit 2.4.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -41,10 +41,11 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 #: app/customizer/design/sections/base-design/controls/h2-style.php:20
 #: app/customizer/design/sections/base-design/controls/h3-style.php:20
+#: app/customizer/design/sections/base-design/controls/widget-title-style.php:19
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:62
+#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:64
 #: template-parts/loop/entry-summary/content/content-rss.php:38
 #: template-parts/loop/entry-summary/content/content.php:34
 msgctxt "excerpt_length"
@@ -400,21 +401,17 @@ msgstr "記事中の %1$s のデザイン"
 
 #: app/customizer/design/sections/base-design/controls/h2-style.php:21
 #: app/customizer/design/sections/base-design/controls/h3-style.php:21
-#: app/customizer/design/sections/header/controls/header-position-lg.php:23
-#: app/customizer/design/sections/header/controls/header-position.php:25
-msgid "Normal"
-msgstr "ノーマル"
-
-#: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
-msgid "Contents left/right margins on PC"
-msgstr "PC 時のコンテンツの左右余白"
-
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
 #: app/customizer/design/sections/base-design/controls/margin-scale.php:20
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
 #: app/customizer/design/sections/base-design/controls/space.php:20
+#: app/customizer/design/sections/base-design/controls/widget-title-style.php:20
 msgid "Standard"
 msgstr "標準"
+
+#: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
+msgid "Contents left/right margins on PC"
+msgstr "PC 時のコンテンツの左右余白"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
 #: app/customizer/design/sections/base-design/controls/margin-scale.php:21
@@ -531,6 +528,10 @@ msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
 #: app/customizer/design/sections/base-design/controls/space.php:16
 msgid "White space size"
 msgstr "余白サイズ"
+
+#: app/customizer/design/sections/base-design/controls/widget-title-style.php:15
+msgid "Design of widget-titles"
+msgstr "ウィジェットタイトルのデザイン"
 
 #: app/customizer/design/sections/base-design/section.php:18
 msgid "Base design settings"
@@ -663,6 +664,11 @@ msgstr "オーバーレイ（上部固定 / スクロール時背景白）"
 #: app/setup/widget-area.php:331
 msgid "Overlay"
 msgstr "オーバレイ"
+
+#: app/customizer/design/sections/header/controls/header-position-lg.php:23
+#: app/customizer/design/sections/header/controls/header-position.php:25
+msgid "Normal"
+msgstr "ノーマル"
 
 #: app/customizer/design/sections/header/controls/header-position.php:17
 msgid "Header position"
@@ -1496,11 +1502,11 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#: template-parts/archive/entry/content/content-no-keywords.php:18
+#: template-parts/archive/entry/content/content-no-keywords.php:14
 msgid "Please enter a search keyword."
 msgstr "検索キーワードを入力してください。"
 
-#: template-parts/archive/entry/content/content-no-match.php:18
+#: template-parts/archive/entry/content/content-no-match.php:14
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -1508,7 +1514,7 @@ msgstr ""
 "ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
 "てみてください。"
 
-#: template-parts/archive/entry/content/content-none.php:17
+#: template-parts/archive/entry/content/content-none.php:14
 msgid "No posts."
 msgstr "投稿がありません。"
 
@@ -1535,15 +1541,15 @@ msgstr "上にスクロール"
 msgid "Bio"
 msgstr "この記事を書いた人"
 
-#: template-parts/content/entry/content/content-404.php:18
+#: template-parts/content/entry/content/content-404.php:14
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: template-parts/content/entry/content/content-404.php:19
+#: template-parts/content/entry/content/content-404.php:15
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: template-parts/content/entry/content/content-404.php:20
+#: template-parts/content/entry/content/content-404.php:16
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
@@ -1552,11 +1558,11 @@ msgstr "この検索ボックスから検索してください。"
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/content/prev-next-nav.php:46
+#: template-parts/content/prev-next-nav.php:19
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/content/prev-next-nav.php:48
+#: template-parts/content/prev-next-nav.php:20
 msgid "New post"
 msgstr "新しい投稿"
 
@@ -1564,80 +1570,69 @@ msgstr "新しい投稿"
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
-#: template-parts/discussion/comment.php:23
+#: template-parts/discussion/comment.php:17
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
-#: template-parts/discussion/comment.php:33
-#: template-parts/discussion/trackback.php:20
+#: template-parts/discussion/comment.php:20
+#: template-parts/discussion/trackback.php:16
 #, php-format
 msgid "%1$s said on %2$s at %3$s"
 msgstr "%1$s が %2$s %3$s にコメント"
 
-#: template-parts/discussion/comment.php:38
+#: template-parts/discussion/comment.php:55
 msgid "Edit this comment"
 msgstr "コメントを編集"
 
-#: template-parts/discussion/comments.php:19
+#: template-parts/discussion/comments.php:20
 msgid "Comments on this post"
 msgstr "この投稿へのコメント"
 
-#: template-parts/discussion/comments.php:58
+#: template-parts/discussion/comments.php:21
+#: template-parts/discussion/pings.php:21
 msgid "No comments."
 msgstr "コメントはありません。"
 
-#: template-parts/discussion/pings.php:19
+#: template-parts/discussion/pings.php:20
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
 
-#: template-parts/discussion/pings.php:42
-msgid "No trackbacks."
-msgstr "トラックバックはありません。"
-
-#: template-parts/discussion/pings.php:51
+#: template-parts/discussion/pings.php:63
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
-#: template-parts/header/hamburger-btn.php:18
+#: template-parts/header/hamburger-btn.php:14
 msgid "MENU"
 msgstr "MENU"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:2
 msgid "Landing page ( with header/footer )"
 msgstr "ランディングページ（ヘッダー・フッターあり）"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:3
 msgid "Landing page ( slim width )"
 msgstr "ランディングページ（スリム幅）"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:4
 msgid "Landing page"
 msgstr "ランディングページ"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:5
 msgid "Left sidebar"
 msgstr "左サイドバー"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:6
 msgid "Full width"
 msgstr "フル幅"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:7
 msgid "One column ( slim width )"
 msgstr "1カラム（スリム幅）"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:8
 msgid "One column"
 msgstr "1カラム"
 
-#. Template Name of the plugin/theme
 #: translation/bundle-template-header.php:9
 msgid "Right sidebar"
 msgstr "右サイドバー"
@@ -1678,10 +1673,8 @@ msgstr "inc2734"
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
 
-#, fuzzy
-#~| msgid "Top of the article"
-#~ msgid "Design of the h3 in articles"
-#~ msgstr "記事本文の上"
+#~ msgid "No trackbacks."
+#~ msgstr "トラックバックはありません。"
 
 #~ msgid "Async loading of images"
 #~ msgstr "画像の非同期読み込み"
