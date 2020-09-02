@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.2.0
  */
 
 use Framework\Controller\Controller;
@@ -105,6 +105,7 @@ add_filter(
 add_filter(
 	'inc2734_wp_view_controller_template_part_root_hierarchy',
 	function( $hierarchy, $slug, $name, $vars ) {
+		$hierarchy = apply_filters( "snow_monkey_template_part_root_hierarchy_{$slug}", $hierarchy, $name, $vars );
 		return apply_filters( 'snow_monkey_template_part_root_hierarchy', $hierarchy, $slug, $name, $vars );
 	},
 	10,

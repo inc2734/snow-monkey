@@ -11,6 +11,8 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 
 	/**
 	 * @test
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function args_slug() {
 		add_filter(
@@ -38,6 +40,8 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 
 	/**
 	 * @test
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function args() {
 		add_filter(
@@ -65,6 +69,54 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 
 	/**
 	 * @test
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
+	 * @group hoge
+	 */
+	public function template_part_root_hierarchy_slug() {
+		$root = untrailingslashit( sys_get_temp_dir() ) . '/template-parts';
+		$file = $root . '/template-name.php';
+		file_exists( $file ) && unlink( $file );
+		is_dir( $root ) && rmdir( $root );
+		mkdir( $root );
+		file_put_contents( $file, 'hierarchy-test' );
+
+		$root2 = untrailingslashit( sys_get_temp_dir() ) . '/template-parts2';
+		$file2 = $root2 . '/template-name.php';
+		file_exists( $file2 ) && unlink( $file2 );
+		is_dir( $root2 ) && rmdir( $root2 );
+		mkdir( $root2 );
+		file_put_contents( $file2, 'hierarchy-test2' );
+
+		add_filter(
+			'snow_monkey_template_part_root_hierarchy_template',
+			function( $hierarchy ) use ( $root, $root2 ) {
+				$hierarchy[] = $root;
+				$hierarchy[] = $root2;
+				return $hierarchy;
+			}
+		);
+
+		ob_start();
+		Framework\Helper::get_template_part( 'template', 'name' );
+		$this->assertEquals( 'hierarchy-test', ob_get_clean() );
+
+		file_exists( $file ) && unlink( $file );
+		ob_start();
+		Framework\Helper::get_template_part( 'template', 'name' );
+		$this->assertEquals( 'hierarchy-test2', ob_get_clean() );
+
+		file_exists( $file2 ) && unlink( $file2 );
+		ob_start();
+		add_action( 'snow_monkey_get_template_part_template-name', '__return_true' );
+		Framework\Helper::get_template_part( 'template', 'name' );
+		$this->assertEquals( '', ob_get_clean() );
+	}
+
+	/**
+	 * @test
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function template_part_root_hierarchy() {
 		$root = untrailingslashit( sys_get_temp_dir() ) . '/template-parts';
@@ -108,6 +160,8 @@ class GetTemplatePartTest extends WP_UnitTestCase {
 
 	/**
 	 * @test
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function defined_html() {
 		add_action(
