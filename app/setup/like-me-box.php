@@ -3,12 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 4.4.0-beta2
+ * @version 11.3.0
  */
 
-use Inc2734\WP_Like_Me_Box\Like_Me_Box;
+use Inc2734\WP_Like_Me_Box\Bootstrap;
 
-new Like_Me_Box();
+new Bootstrap();
 
 add_filter(
 	'inc2734_wp_like_me_box_thumbnail',
