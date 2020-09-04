@@ -3,7 +3,7 @@
 set -e;
 
 themedir=$(pwd)
-if [ ! -e resources/style.css ]; then
+if [ ! -e style.css ]; then
   echo 'Current directory is not a theme.'
   echo $(pwd)
   exit 1

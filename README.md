@@ -17,18 +17,17 @@ Premium WordPress theme by Monkey Wrench
 ## Directory structure
 ```
 themes/snow-monkey
-├─ resources               # The theme root
-│  ├─ app                  # Setup theme
-│  ├─ page-template        # Custom page templates
-│  ├─ templates
-│  │  ├─ layout            # Layout templates
-│  │  ├─ view              # View templates
-│  │  ├─ static            # Static view templates
-│  │  └─ widget            # Templates for WP Awesome Widgets
-│  ├─ style.css            # Theme meta information
-│  ├─ index.php
-│  ├─ functions.php
-│  ├─ ...
+├─ app                  # Setup theme
+├─ page-template        # Custom page templates
+├─ templates
+│  ├─ layout            # Layout templates
+│  ├─ view              # View templates
+│  ├─ static            # Static view templates
+│  └─ widget            # Templates for WP Awesome Widgets
+├─ style.css            # Theme meta information
+├─ index.php
+├─ functions.php
+├─ ...
 ├─ .gitignore
 ```
 

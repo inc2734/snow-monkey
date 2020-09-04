@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.3
+ * @version 11.3.0
  */
 
 namespace Framework\Model;
@@ -89,7 +89,7 @@ class Template_Cache {
 			return sprintf(
 				'<!-- Cached: [slug] => %2$s [name] => %3$s -->
 				%1$s
-				<!-- /Cached: [slug] => %2$ss [name] => %3$s -->',
+				<!-- /Cached: [slug] => %2$s [name] => %3$s -->',
 				file_get_contents( $filepath ),
 				esc_html( $slug ),
 				esc_html( $name )

@@ -5,9 +5,9 @@
  * @license GPL-2.0+
  */
 
-$translation_dir = __DIR__ . '/../resources/translation';
-$wrappers_dir    = __DIR__ . '/../resources/templates/layout/wrapper';
-$headers_dir     = __DIR__ . '/../resources/templates/layout/header';
+$translation_dir = __DIR__ . '/../translation';
+$wrappers_dir    = __DIR__ . '/../templates/layout/wrapper';
+$headers_dir     = __DIR__ . '/../templates/layout/header';
 
 $bundle_file = $translation_dir . '/bundle-template-header.php';
 if ( file_exists( $bundle_file ) ) {

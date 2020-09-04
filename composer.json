@@ -40,16 +40,16 @@
   },
   "config": {
     "process-timeout": 0,
-    "vendor-dir": "resources/vendor"
+    "vendor-dir": "vendor"
   },
   "scripts" :{
     "test": [
-      "resources/vendor/bin/phpcs --config-set installed_paths resources/vendor/phpcompatibility/php-compatibility,resources/vendor/phpcompatibility/phpcompatibility-paragonie,resources/vendor/phpcompatibility/phpcompatibility-wp,resources/vendor/wp-coding-standards/wpcs",
-      "resources/vendor/bin/phpcs -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
-      "resources/vendor/bin/phpmd ./ text .phpmd.ruleset.xml --suffixes php --exclude /resources/vendor/,/tests/",
+      "vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility,vendor/phpcompatibility/phpcompatibility-paragonie,vendor/phpcompatibility/phpcompatibility-wp,vendor/wp-coding-standards/wpcs",
+      "vendor/bin/phpcs -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
+      "vendor/bin/phpmd ./ text .phpmd.ruleset.xml --suffixes php --exclude vendor/,tests/",
       "bash bin/phpunit.sh"
     ],
-    "phpcbf": "resources/vendor/bin/phpcbf -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
+    "phpcbf": "vendor/bin/phpcbf -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
     "server": "bash bin/server.sh",
     "theme-unit-test": "bash bin/theme-unit-test.sh",
     "theme-unit-test-ja": "bash bin/theme-unit-test-ja.sh",
@@ -59,11 +59,6 @@
   "autoload": {
     "psr-4": {
       "Framework\\": "Framework"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Framework\\": "resources/Framework"
     }
   }
 }

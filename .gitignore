@@ -1,10 +1,12 @@
 .DS_Store
 .sass-cache/
+.wp-env.override.json
 npm-debug.log
 node_modules/
-/resources/assets/
+/assets/
 vendor/
 *.sql
+/sql/
 .travis/github_deploy_key
 release/
 snow-monkey.zip
@@ -12,5 +14,5 @@ yarn-error.log
 snow-monkey
 composer-dev.json
 composer-dev.lock
-/resources/translation/
-/resources/cache/
+/translation/
+/cache/
