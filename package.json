@@ -89,7 +89,7 @@
     "translation:name": "php bin/template-header.php",
     "translation": "npm run cleanup:translation && run-p translation:*",
     "build": "npm run packages && run-p js css img translation",
-    "zip:pack": "rsync -a --exclude='.*'--exclude='*.log' --exclude='*.config.js' --exclude='/translation' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/sql' --exclude='/tests' ./ snow-monkey",
+    "zip:pack": "rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/translation' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/sql' --exclude='/tests' ./ snow-monkey",
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run cleanup:zip && npm run zip:pack && cd snow-monkey && composer install --no-dev && cd ../ && npm run zip:archive"
   },
