@@ -1,5 +1,5 @@
 .#{ $_prefix }l-header {
-  z-index: 9999;
+  z-index: 1000;
   background-color: #fff; // for IE11
   background-color: _var-background-color();
   @include _transition(background-color);
