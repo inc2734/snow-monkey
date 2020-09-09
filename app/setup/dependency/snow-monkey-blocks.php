@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.9
+ * @version 11.3.1
  */
 
 use Framework\Helper;
@@ -90,7 +90,7 @@ add_action(
 				$block_handles = array_filter(
 					$styles->queue,
 					function( $handle ) {
-						return 0 === strpos( $handle, 'snow-monkey-blocks/' );
+						return 0 === strpos( $handle, 'snow-monkey-blocks/' ) || 0 === strpos( $handle, 'snow-monkey-blocks-' );
 					}
 				);
 
@@ -100,6 +100,7 @@ add_action(
 					[
 						'snow-monkey-blocks',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks',
+						'spider',
 					]
 				);
 			}
