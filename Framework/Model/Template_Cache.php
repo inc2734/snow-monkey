@@ -3,16 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.0
+ * @version 11.3.1
  */
 
 namespace Framework\Model;
 
-use SplFileInfo;
-use DirectoryIterator;
-use Exception;
-use RuntimeException;
 use Framework\Helper;
+use Framework\Model\Filesystem;
 
 class Template_Cache {
 
@@ -85,16 +82,23 @@ class Template_Cache {
 		$directory = path_join( $this->directory, $sub_directory );
 		$filepath  = trailingslashit( $directory ) . $this->_get_cache_filename( $slug, $name, $vars );
 
-		if ( file_exists( $filepath ) ) {
-			return sprintf(
-				'<!-- Cached: [slug] => %2$s [name] => %3$s -->
-				%1$s
-				<!-- /Cached: [slug] => %2$s [name] => %3$s -->',
-				file_get_contents( $filepath ),
-				esc_html( $slug ),
-				esc_html( $name )
-			);
+		if ( ! file_exists( $filepath ) ) {
+			return null;
 		}
+
+		$cache = Filesystem::get_contents( $filepath );
+		if ( false === $cache ) {
+			return null;
+		}
+
+		return sprintf(
+			'<!-- Cached: [slug] => %2$s [name] => %3$s -->
+			%1$s
+			<!-- /Cached: [slug] => %2$s [name] => %3$s -->',
+			$cache,
+			esc_html( $slug ),
+			esc_html( $name )
+		);
 	}
 
 	/**
@@ -121,7 +125,7 @@ class Template_Cache {
 			}
 
 			if ( is_writable( $directory ) ) {
-				file_put_contents( $filepath, $html, LOCK_EX );
+				Filesystem::put_contents( $filepath, $html );
 			}
 		}
 	}
@@ -149,60 +153,8 @@ class Template_Cache {
 		}
 
 		static::$is_removing = true;
-		$return = $this->_remove_children( $this->directory );
+		$return = Filesystem::rmdir( $this->directory );
 		static::$is_removing = false;
 		return $return;
-	}
-
-	/**
-	 * Remove child caches
-	 *
-	 * @param string $directory
-	 * @return boolean
-	 */
-	protected function _remove_children( $directory ) {
-		$iterator = new DirectoryIterator( $directory );
-
-		try {
-			foreach ( $iterator as $fileinfo ) {
-				$path = $fileinfo->getPathname();
-				if ( $fileinfo->isDot() ) {
-					continue;
-				} elseif ( $fileinfo->isDir() ) {
-					if ( $this->_remove_children( $path ) ) {
-						$this->_remove_file( $path );
-					}
-				} elseif ( $fileinfo->isFile() ) {
-					$this->_remove_file( $path );
-				}
-			}
-		} catch ( Exception $e ) {
-			error_log( $e->getMessage() );
-			return false;
-		}
-
-		return true;
-	}
-
-	/**
-	 * Remove cache file
-	 *
-	 * @param string $file
-	 * @return boolean
-	 */
-	protected function _remove_file( $file ) {
-		$fileinfo = new SplFileInfo( $file );
-
-		if ( $fileinfo->isFile() && is_writable( $file ) ) {
-			if ( ! unlink( $file ) ) {
-				throw new RuntimeException( sprintf( '[Snow Monkey] Can\'t remove file: %1$s.', $file ) );
-			}
-		} elseif ( $fileinfo->isDir() && is_writable( $file ) ) {
-			if ( ! rmdir( $file ) ) {
-				throw new RuntimeException( sprintf( '[Snow Monkey] Can\'t remove directory: %1$s.', $file ) );
-			}
-		}
-
-		return true;
 	}
 }

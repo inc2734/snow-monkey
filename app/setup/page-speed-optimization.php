@@ -3,13 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.1
  *
  * This procceses are beta.
  */
 
 use Inc2734\WP_Page_Speed_Optimization;
 use Framework\Model\Template_Cache;
+use Framework\Model\Filesystem;
 use Framework\Helper;
 
 new WP_Page_Speed_Optimization\Bootstrap();
@@ -116,12 +117,14 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas )
 		add_action(
 			'admin_bar_menu',
 			function( $wp_admin_bar ) {
+				$icon = Filesystem::get_contents( get_template_directory() . '/assets/img/icon.svg' );
+
 				$wp_admin_bar->add_menu(
 					[
 						'id'    => 'sm-remove-caches',
 						'title' => sprintf(
 							'%1$s%2$s',
-							file_get_contents( get_template_directory() . '/assets/img/icon.svg' ),
+							$icon,
 							esc_html__( 'Remove caches', 'snow-monkey' )
 						),
 						'href'  => '?sm-remove-caches=1',

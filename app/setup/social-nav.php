@@ -3,8 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.1
  */
+
+use Framework\Model\Filesystem;
 
 add_filter(
 	'walker_nav_menu_start_el',
@@ -15,9 +17,10 @@ add_filter(
 
 		$get_brand_icon = function( $path ) {
 			if ( file_exists( $path ) ) {
-				$icon = file_get_contents( $path );
-				$icon = str_replace( '<svg ', '<svg class="svg-inline--fa fa-w-14" ', $icon );
-				return $icon;
+				$icon = Filesystem::get_contents( $path );
+				return $icon
+					? str_replace( '<svg ', '<svg class="svg-inline--fa fa-w-14" ', $icon )
+					: '';
 			}
 		};
 
