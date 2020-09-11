@@ -195,6 +195,8 @@
       border-top-color: $_color-white; // For IE11
       border-top-color: _var_color-white();
       border-right: 2px solid transparent;
+      border-right-color: $_color-white; // For IE11
+      border-right-color: _var_color-white();
       transform: rotate(45deg);
     }
   }
