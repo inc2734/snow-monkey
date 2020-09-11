@@ -141,7 +141,7 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas )
 
 	if ( ! is_customize_preview() ) {
 		if ( ! $remove_caches ) {
-			add_action(
+			add_filter(
 				'snow_monkey_pre_template_part_render',
 				function(
 					$html,
