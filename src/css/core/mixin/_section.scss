@@ -22,7 +22,7 @@
   }
 
   &::after {
-    @include _margin(.25, auto, 0);
+    @include _margin(.5, auto, 0);
     content: '';
     display: block;
     width: 60px;
