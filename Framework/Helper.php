@@ -182,7 +182,7 @@ class Helper {
 			return $public_terms;
 		}
 
-		$public_taxonomies = Helper::get_the_public_taxonomy( $post );
+		$public_taxonomies = static::get_the_public_taxonomy( $post );
 		$public_terms = [];
 
 		foreach ( $public_taxonomies as $public_taxonomy ) {
