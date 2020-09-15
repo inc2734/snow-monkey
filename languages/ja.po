@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-09-01 23:01+0900\n"
-"PO-Revision-Date: 2020-09-01 23:02+0900\n"
+"POT-Creation-Date: 2020-09-14 15:16+0900\n"
+"PO-Revision-Date: 2020-09-14 15:16+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -74,82 +74,82 @@ msgstr "Snow Monkey theme by %s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:208
+#: Framework/Helper.php:253
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:213
+#: Framework/Helper.php:258
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:218 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:263 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:223
+#: Framework/Helper.php:268
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:228
+#: Framework/Helper.php:273
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:233
+#: Framework/Helper.php:278
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:238
+#: Framework/Helper.php:283
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:243
+#: Framework/Helper.php:288
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:248
+#: Framework/Helper.php:293
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:253
+#: Framework/Helper.php:298
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:259
+#: Framework/Helper.php:304
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:265
+#: Framework/Helper.php:310
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:271
+#: Framework/Helper.php:316
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:277
+#: Framework/Helper.php:322
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:283
+#: Framework/Helper.php:328
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:289
+#: Framework/Helper.php:334
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:295
+#: Framework/Helper.php:340
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:301
+#: Framework/Helper.php:346
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:307
+#: Framework/Helper.php:352
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -390,6 +390,15 @@ msgstr "テキスト"
 #: app/widget/snow-monkey-recent-posts/_form.php:72
 #: app/widget/snow-monkey-rss/_form.php:57
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:102
+msgid "Text 2"
+msgstr "テキスト2"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:25
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:28
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:26
+#: app/widget/snow-monkey-recent-posts/_form.php:73
+#: app/widget/snow-monkey-rss/_form.php:58
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:103
 msgid "Panels"
 msgstr "パネル"
 
@@ -1158,13 +1167,13 @@ msgstr "シェアカウントのキャッシュ時間（秒）"
 
 #: app/customizer/sns/sections/share-buttons/controls/count-both.php:18
 msgid "Count both http and https"
-msgstr "http と httpsの両方をカウントする"
+msgstr "http と https の両方をカウントする"
 
 #: app/customizer/sns/sections/share-buttons/controls/count-both.php:19
 msgid ""
 "In the case of the http site, only http will be counted regardless of the "
 "setting."
-msgstr "httpサイトの場合、設定に関係なくhttpのみがカウントされます。"
+msgstr "http サイトの場合、設定に関係なく http のみがカウントされます。"
 
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:18
 msgid "Display position"
@@ -1324,7 +1333,7 @@ msgstr "ドロワーサブナビゲーション（モバイル用）"
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/page-speed-optimization.php:125
+#: app/setup/page-speed-optimization.php:128
 msgid "Remove caches"
 msgstr "キャッシュを削除"
 
@@ -1453,20 +1462,20 @@ msgstr "表示する投稿数"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:82
-#: app/widget/snow-monkey-rss/_form.php:67
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:112
+#: app/widget/snow-monkey-recent-posts/_form.php:83
+#: app/widget/snow-monkey-rss/_form.php:68
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:113
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:93
-#: app/widget/snow-monkey-rss/_form.php:78
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:123
+#: app/widget/snow-monkey-recent-posts/_form.php:94
+#: app/widget/snow-monkey-rss/_form.php:79
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:124
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:112
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:142
+#: app/widget/snow-monkey-recent-posts/_form.php:113
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:143
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 

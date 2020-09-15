@@ -17,7 +17,8 @@
   }
 
   &--simple,
-  &--text {
+  &--text,
+  &--text2 {
     &.#{ $_prefix }c-entries {
       margin-right: 0;
       margin-left: 0;
@@ -47,7 +48,8 @@
     }
   }
 
-  &--text {
+  &--text,
+  &--text2 {
     .#{ $_prefix }c-entries__item {
       > a {
         @include _padding(.5, 0);

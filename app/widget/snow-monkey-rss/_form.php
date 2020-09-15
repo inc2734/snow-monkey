@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.6.0
+ * @version 11.4.0
  */
 ?>
 
@@ -54,6 +54,7 @@
 				'rich-media' => __( 'Rich media', 'snow-monkey' ),
 				'simple'     => __( 'Simple', 'snow-monkey' ),
 				'text'       => __( 'Text', 'snow-monkey' ),
+				'text2'      => __( 'Text 2', 'snow-monkey' ),
 				'panel'      => __( 'Panels', 'snow-monkey' ),
 			]
 			?>

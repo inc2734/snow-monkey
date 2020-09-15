@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.4.0
  */
 
 use Framework\Helper;
@@ -15,16 +15,7 @@ $args = wp_parse_args(
 	]
 );
 
-$public_taxonomies = Helper::get_the_public_taxonomy( get_the_ID() );
-$public_terms = [];
-
-foreach ( $public_taxonomies as $public_taxonomy ) {
-	$_terms = get_the_terms( get_the_ID(), $public_taxonomy->name );
-	if ( ! empty( $_terms ) && is_array( $_terms ) && ! is_wp_error( $_terms ) ) {
-		$public_terms = $_terms;
-		break;
-	}
-}
+$public_terms = Helper::get_the_public_terms( get_the_ID() );
 ?>
 
 <div class="c-entry-summary__figure">

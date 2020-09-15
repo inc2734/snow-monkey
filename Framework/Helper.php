@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.4.0
  */
 
 namespace Framework;
@@ -137,6 +137,16 @@ class Helper {
 	 */
 	public static function get_the_public_taxonomy( $post = 0 ) {
 		$post = get_post( $post );
+		if ( ! $post ) {
+			return [];
+		}
+
+		$cache_key         = $post->ID;
+		$cache_group       = 'snow-monkey/public-taxonomies';
+		$public_taxonomies = wp_cache_get( $cache_key, $cache_group );
+		if ( is_array( $public_taxonomies ) ) {
+			return $public_taxonomies;
+		}
 
 		$taxonomies = get_object_taxonomies( get_post_type( $post ), 'object' );
 		$public_taxonomies = [];
@@ -149,7 +159,41 @@ class Helper {
 			$public_taxonomies[ $taxonomy->name ] = $taxonomy;
 		}
 
+		wp_cache_set( $cache_key, $public_taxonomies, $cache_group );
 		return $public_taxonomies;
+	}
+
+	/**
+	 * Return public terms tied to the post
+	 *
+	 * @param int|WP_Post $post
+	 * @return array
+	 */
+	public static function get_the_public_terms( $post = 0 ) {
+		$post = get_post( $post );
+		if ( ! $post ) {
+			return [];
+		}
+
+		$cache_key    = $post->ID;
+		$cache_group  = 'snow-monkey/the-public-terms';
+		$public_terms = wp_cache_get( $cache_key, $cache_group );
+		if ( is_array( $public_terms ) ) {
+			return $public_terms;
+		}
+
+		$public_taxonomies = Helper::get_the_public_taxonomy( $post );
+		$public_terms = [];
+
+		foreach ( $public_taxonomies as $public_taxonomy ) {
+			$_terms = get_the_terms( $post, $public_taxonomy->name );
+			if ( ! empty( $_terms ) && is_array( $_terms ) && ! is_wp_error( $_terms ) ) {
+				$public_terms = array_merge( $public_terms, $_terms );
+			}
+		}
+
+		wp_cache_set( $cache_key, $public_terms, $cache_group );
+		return $public_terms;
 	}
 
 	/**
@@ -159,13 +203,14 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_terms( $taxonomy ) {
-		$terms = wp_cache_get( 'snow-monkey-all-' . $taxonomy );
+		$cache_key = 'snow-monkey-all-' . $taxonomy;
+		$terms = wp_cache_get( $cache_key );
 		if ( is_array( $terms ) ) {
 			return $terms;
 		}
 
 		$terms = get_terms( [ $taxonomy ] );
-		wp_cache_set( 'snow-monkey-all-' . $taxonomy, $terms );
+		wp_cache_set( $cache_key, $terms );
 		if ( is_array( $terms ) ) {
 			return $terms;
 		}

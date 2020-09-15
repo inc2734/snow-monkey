@@ -56,6 +56,10 @@
     @include _media-min(lg) {
       @include _margin(.5, 0, 0);
     }
+
+    .#{ $_prefix }c-meta__item--categories {
+      display: none;
+    }
   }
 
   .#{ $_prefix }c-entries--simple & {
@@ -144,6 +148,36 @@
           @include _margin-right(1);
           width: 8em;
         }
+      }
+    }
+  }
+
+  .#{ $_prefix }c-entries--text2 & {
+    &__figure,
+    &__content {
+      display: none;
+    }
+
+    &__header {
+      margin: 0;
+    }
+
+    &__title {
+      @include _font-size-line-height($_base-font-size-px);
+      font-weight: normal;
+    }
+
+    &__meta {
+      @include _margin(.25, 0, 0);
+      font-weight: normal;
+      text-align: left;
+
+      .#{ $_prefix }c-meta__item--author {
+        display: none;
+      }
+
+      .#{ $_prefix }c-meta__item--categories {
+        display: inline-block;
       }
     }
   }
