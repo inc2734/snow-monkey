@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-09-14 15:16+0900\n"
-"PO-Revision-Date: 2020-09-14 15:16+0900\n"
+"POT-Creation-Date: 2020-09-15 10:03+0900\n"
+"PO-Revision-Date: 2020-09-15 10:03+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -604,25 +604,33 @@ msgstr "[ %1$s ] タクソノミーページ設定"
 msgid "Make footer full width"
 msgstr "フッターを全幅にする"
 
-#: app/customizer/design/sections/footer/controls/footer-layout.php:19
-msgid "Number of columns in the footer widget area"
-msgstr "フッターウィジェットエリアのカラム数"
+#: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:19
+msgid "Number of columns in the footer widget area on PC"
+msgstr "PC 時のフッターウィジェットエリアのカラム数"
 
-#: app/customizer/design/sections/footer/controls/footer-layout.php:23
+#: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:23
+#: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:20
 msgid "1 column"
 msgstr "1カラム"
 
-#: app/customizer/design/sections/footer/controls/footer-layout.php:24
+#: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:24
+#: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:21
 msgid "2 columns"
 msgstr "2カラム"
 
-#: app/customizer/design/sections/footer/controls/footer-layout.php:25
+#: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:25
+#: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:22
 msgid "3 columns"
 msgstr "3カラム"
 
-#: app/customizer/design/sections/footer/controls/footer-layout.php:26
+#: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:26
+#: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:23
 msgid "4 columns"
 msgstr "4カラム"
+
+#: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:16
+msgid "Number of columns in the footer widget area on tablet"
+msgstr "タブレット時のフッターウィジェットエリアのカラム数"
 
 #: app/customizer/design/sections/footer/section.php:20
 #: app/setup/widget-area.php:309

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.4
+ * @version 11.4.0
  */
 
 use Framework\Helper;
@@ -309,7 +309,7 @@ add_action(
 				'name'          => __( 'Footer', 'snow-monkey' ),
 				'id'            => 'footer-widget-area',
 				'description'   => __( 'These widgets are displayed in the footer.', 'snow-monkey' ),
-				'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--lg-1-1"><div id="%1$s" class="c-widget %2$s">',
+				'before_widget' => '<div class="l-footer-widget-area__item c-row__col c-row__col--1-1 c-row__col--md-1-1 c-row__col--lg-1-1"><div id="%1$s" class="c-widget %2$s">',
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
