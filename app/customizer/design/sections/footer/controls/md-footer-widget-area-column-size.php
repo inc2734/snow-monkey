@@ -13,10 +13,10 @@ Framework::control(
 	'select',
 	'md-footer-widget-area-column-size',
 	[
-		'label'    => __( 'Number of columns in the footer widget area on tablet', 'snow-monkey' ),
-		'priority' => 101,
-		'default'  => '1-1',
-		'choices'  => [
+		'label'           => __( 'Number of columns in the footer widget area on tablet', 'snow-monkey' ),
+		'priority'        => 101,
+		'default'         => '1-1',
+		'choices'         => [
 			'1-1' => __( '1 column', 'snow-monkey' ),
 			'1-2' => __( '2 columns', 'snow-monkey' ),
 			'1-3' => __( '3 columns', 'snow-monkey' ),

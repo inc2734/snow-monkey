@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  *
  * renamed: template-parts/global-nav.php
  */
@@ -15,12 +15,15 @@ if ( ! has_nav_menu( 'global-nav' ) ) {
 }
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_vertical' => false,
 	]
 );
 
+$classes   = [];
 $classes[] = 'p-global-nav';
 if ( $args['_vertical'] ) {
 	$classes[] = 'p-global-nav--vertical';

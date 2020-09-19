@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  *
  * renamed: app/customizer/design/sections/base-design/controls/custom-logo-scale.php
  */
@@ -15,10 +15,10 @@ Framework::control(
 	'number',
 	'sm-logo-scale',
 	[
-		'label'       => __( 'Custom logo scale (%) on mobile device', 'snow-monkey' ),
-		'priority'    => 130,
-		'default'     => 25,
-		'input_attrs' => [
+		'label'           => __( 'Custom logo scale (%) on mobile device', 'snow-monkey' ),
+		'priority'        => 130,
+		'default'         => 25,
+		'input_attrs'     => [
 			'min' => 1,
 			'max' => 50,
 		],

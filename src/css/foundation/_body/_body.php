@@ -22,7 +22,7 @@ $get_margin_scale_var = function( $margin_scale ) {
 	}
 };
 
-$root_variables = [];
+$root_variables      = [];
 $container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
 if ( $container_margin_sm ) {
 	$root_variables[] = '--_container-margin-sm: ' . $container_margin_sm;

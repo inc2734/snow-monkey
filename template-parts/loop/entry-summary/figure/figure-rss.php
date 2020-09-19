@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_item' => false,
 	]
@@ -23,7 +25,7 @@ $thumbnail = false;
 
 // note
 $simplepie_thumbnail = $args['_item']->get_item_tags( SIMPLEPIE_NAMESPACE_MEDIARSS, 'thumbnail' );
-$thumbnail_src = ! empty( $simplepie_thumbnail[0]['data'] ) ? $simplepie_thumbnail[0]['data'] : false;
+$thumbnail_src       = ! empty( $simplepie_thumbnail[0]['data'] ) ? $simplepie_thumbnail[0]['data'] : false;
 if ( $thumbnail_src ) {
 	$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
 }

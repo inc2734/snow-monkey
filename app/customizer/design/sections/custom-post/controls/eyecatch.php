@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,7 +14,7 @@ $custom_post_types = Helper::get_custom_post_types();
 
 foreach ( $custom_post_types as $custom_post_type ) {
 	$custom_post_type_object = get_post_type_object( $custom_post_type );
-	$choices = Helper::eyecatch_position_choices();
+	$choices                 = Helper::eyecatch_position_choices();
 
 	Framework::control(
 		'select',

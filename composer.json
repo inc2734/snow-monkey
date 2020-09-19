@@ -9,12 +9,12 @@
     }
   ],
   "require-dev": {
-    "squizlabs/php_codesniffer": "*",
-    "wp-coding-standards/wpcs": "*",
-    "phpmd/phpmd": "2.7.0|>=2.8.1",
-    "phpunit/phpunit": "7.*",
-    "phpcompatibility/phpcompatibility-wp": "*",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3"
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+		"squizlabs/php_codesniffer": "^3.5",
+		"phpcompatibility/php-compatibility": "^9.3",
+		"wp-coding-standards/wpcs": "^2.2",
+		"sirbrillig/phpcs-variable-analysis": "^2.8",
+    "wp-phpunit/wp-phpunit": "^5.4"
   },
   "require": {
     "php": ">=5.6",
@@ -43,18 +43,9 @@
     "vendor-dir": "vendor"
   },
   "scripts" :{
-    "test": [
-      "vendor/bin/phpcs --config-set installed_paths vendor/phpcompatibility/php-compatibility,vendor/phpcompatibility/phpcompatibility-paragonie,vendor/phpcompatibility/phpcompatibility-wp,vendor/wp-coding-standards/wpcs",
-      "vendor/bin/phpcs -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
-      "vendor/bin/phpmd ./ text .phpmd.ruleset.xml --suffixes php --exclude vendor/,tests/",
-      "bash bin/phpunit.sh"
-    ],
-    "phpcbf": "vendor/bin/phpcbf -p -s -v -n . --standard=./.phpcs.xml.dist --extensions=php",
-    "server": "bash bin/server.sh",
-    "theme-unit-test": "bash bin/theme-unit-test.sh",
-    "theme-unit-test-ja": "bash bin/theme-unit-test-ja.sh",
-    "wpphpunit": "bash bin/wpphpunit.sh",
-    "phpunit": "bash bin/phpunit.sh"
+    "format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",
+    "lint": "phpcs --standard=./.phpcs.xml.dist",
+    "server": "bash bin/server.sh"
   },
   "autoload": {
     "psr-4": {

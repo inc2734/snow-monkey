@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -11,14 +11,13 @@ use Inc2734\WP_SEO\Bootstrap;
 new Bootstrap();
 
 /**
- * Google Tag Manager ID
+ * Google Tag Manager ID.
  *
- * @param string $tag_manager_id
  * @return string
  */
 add_filter(
 	'inc2734_wp_seo_google_tag_manager_id',
-	function( $tag_manager_id ) {
+	function() {
 		$for_loggedin = get_option( 'mwt-google-tag-manager-for-loggedin' );
 		if ( $for_loggedin ) {
 			$output = apply_filters( 'snow_monkey_output_google_tag_manager', ! current_user_can( 'manage_options' ) );
@@ -31,14 +30,13 @@ add_filter(
 );
 
 /**
- * Google Analytics Tracking ID
+ * Google Analytics Tracking ID.
  *
- * @param string $tracking_id
  * @return string
  */
 add_filter(
 	'inc2734_wp_seo_google_analytics_tracking_id',
-	function( $tracking_id ) {
+	function() {
 		$for_loggedin = get_option( 'mwt-google-analytics-for-loggedin' );
 		if ( $for_loggedin ) {
 			$output = apply_filters( 'snow_monkey_output_google_analytics', ! current_user_can( 'manage_options' ) );
@@ -51,100 +49,93 @@ add_filter(
 );
 
 /**
- * Google Site Verification
+ * Google Site Verification.
  *
- * @param string $google_site_verification
  * @return string
  */
 add_filter(
 	'inc2734_wp_seo_google_site_verification',
-	function( $google_site_verification ) {
+	function() {
 		return get_option( 'mwt-google-site-verification' );
 	}
 );
 
 /**
- * Default og:image
+ * Default og:image.
  *
- * @param string $default_ogp_image_url
  * @return string
  */
 add_filter(
 	'inc2734_wp_seo_defult_ogp_image_url',
-	function( $default_ogp_image_url ) {
+	function() {
 		return get_option( 'mwt-default-og-image' );
 	}
 );
 
 /**
- * When you want to print ogp meta tags, return true
+ * When you want to print ogp meta tags, return true.
  *
- * @param bool false
  * @return bool
  */
 add_filter(
 	'inc2734_wp_seo_ogp',
-	function( $bool ) {
+	function() {
 		return get_option( 'mwt-ogp' );
 	}
 );
 
 /**
- * fb:app_id
+ * fb:app_id.
  *
- * @param string $app_id
  * @return bool
  */
 add_filter(
 	'inc2734_wp_ogp_app_id',
-	function( $app_id ) {
+	function() {
 		return get_option( 'mwt-fb-app-id' );
 	}
 );
 
 /**
- * twitter:card
+ * twitter:card.
  *
- * @param string $twitter_card
  * @return string
  */
 add_filter(
 	'inc2734_wp_seo_twitter_card',
-	function( $twitter_card ) {
+	function() {
 		return get_option( 'mwt-twitter-card' );
 	}
 );
 
 /**
- * twitter:site
+ * twitter:site.
  *
- * @param string $twitter_site
  * @return string
  */
 add_filter(
 	'inc2734_wp_seo_twitter_site',
-	function( $twitter_site ) {
+	function() {
 		return get_option( 'mwt-twitter-site' );
 	}
 );
 
 /**
- * When you want to print JSON+LD, return true
+ * When you want to print JSON+LD, return true.
  *
- * @param bool false
- * @return bool
+ * @return boolean
  */
 add_filter(
 	'inc2734_wp_seo_use_json_ld',
-	function( $bool ) {
+	function() {
 		return get_option( 'mwt-json-ld' );
 	}
 );
 
 /**
- * meta robots
+ * meta robots.
  *
- * @param array $robots
+ * @param array $robots Array of robots conig.
  * @return array
  */
 add_filter(
@@ -157,7 +148,7 @@ add_filter(
 		}
 
 		$robots_noindex = explode( ',', $robots_noindex );
-		$flipped = array_flip( $robots_noindex );
+		$flipped        = array_flip( $robots_noindex );
 
 		if ( is_category() && isset( $flipped['category'] )
 			|| is_tag() && isset( $flipped['post_tag'] )
@@ -174,9 +165,12 @@ add_filter(
 );
 
 /**
- * meta description
+ * meta description.
  *
  * @see https://github.com/inc2734/snow-monkey/issues/675
+ *
+ * @param string $description The page description.
+ * @return string
  */
 add_filter(
 	'inc2734_wp_seo_description',
@@ -204,9 +198,9 @@ add_filter(
 );
 
 /**
- * meta thumbnail
+ * meta thumbnail.
  *
- * @param string $thumbnail
+ * @param string $thumbnail The thumbnail URL.
  * @return string
  */
 add_filter(
@@ -220,7 +214,7 @@ add_filter(
 );
 
 /**
- * Print Google Tag Manager script in body
+ * Print Google Tag Manager script in body.
  *
  * @return void
  */

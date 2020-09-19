@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.1
+ * @version 11.3.3
  */
 
 namespace Framework\Contract\Helper;
@@ -38,7 +38,7 @@ trait Page_Header {
 	 */
 	protected static function _get_page_header_class_no_cache() {
 		$custom_post_types = \Framework\Helper::get_custom_post_types();
-		$types = array_filter(
+		$types             = array_filter(
 			[
 				'Default'            => is_search() || is_404(),
 				'WooCommerce_Single' => class_exists( '\woocommerce' ) && is_product(),

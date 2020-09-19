@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.3.3
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -11,7 +11,9 @@
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_in_same_term'   => false,
 		'_excluded_terms' => [],
@@ -58,9 +60,15 @@ $args = wp_parse_args(
 				$format = ob_get_clean();
 
 				if ( ! function_exists( 'snow_monkey_prev_next_nav_title' ) ) {
+					/**
+					 * Trim the post title.
+					 *
+					 * @param string $nav_title The post title.
+					 * @return string
+					 */
 					function snow_monkey_prev_next_nav_title( $nav_title ) {
 						// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-						$num_words = 60;
+						$num_words            = 60;
 						$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
 						// phpcs:enable
 						return wp_trim_words( $nav_title, $num_words * $excerpt_length_ratio );

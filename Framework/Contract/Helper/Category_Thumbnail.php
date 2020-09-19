@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 11.3.3
  */
 
 namespace Framework\Contract\Helper;
@@ -13,7 +13,7 @@ trait Category_Thumbnail {
 	/**
 	 * Return term data for category thumbnail
 	 *
-	 * @param array|null $term
+	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return array|false
@@ -53,7 +53,7 @@ trait Category_Thumbnail {
 	/**
 	 * Return true when have category thumbanil
 	 *
-	 * @param array|null $term
+	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return boolean
@@ -66,7 +66,7 @@ trait Category_Thumbnail {
 	/**
 	 * Return category thumbnail url
 	 *
-	 * @param array|null $term
+	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return string
@@ -87,7 +87,7 @@ trait Category_Thumbnail {
 	/**
 	 * Return category header image
 	 *
-	 * @param array|null $term
+	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return string
@@ -116,7 +116,7 @@ trait Category_Thumbnail {
 	/**
 	 * Display category thumbnail
 	 *
-	 * @param array|null $term
+	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return void
@@ -130,5 +130,10 @@ trait Category_Thumbnail {
 		);
 	}
 
+	/**
+	 * Return allowd attributes of img
+	 *
+	 * @return array
+	 */
 	abstract public static function img_allowed_attributes();
 }

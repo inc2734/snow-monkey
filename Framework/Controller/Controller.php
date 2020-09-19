@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 namespace Framework\Controller;
@@ -15,6 +15,9 @@ use Inc2734\WP_View_Controller;
  */
 class Controller extends WP_View_Controller\Bootstrap {
 
+	/**
+	 * constructor
+	 */
 	public function __construct() {
 		parent::__construct();
 

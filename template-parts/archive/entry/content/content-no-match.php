@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_message' => __( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'snow-monkey' ),
 	]

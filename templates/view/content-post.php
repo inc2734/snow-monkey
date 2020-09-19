@@ -3,15 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.6
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
-$eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
+$eyecatch_position              = get_theme_mod( get_post_type() . '-eyecatch' );
 $share_buttons_display_position = get_option( 'mwt-share-buttons-display-position' );
-$share_buttons = get_option( 'mwt-share-buttons-buttons' );
-$google_adsense = get_option( 'mwt-google-adsense' );
+$share_buttons                  = get_option( 'mwt-share-buttons-buttons' );
+$google_adsense                 = get_option( 'mwt-google-adsense' );
 ?>
 
 <article <?php post_class(); ?>>
@@ -23,7 +23,7 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 
 	<div class="c-entry__body">
 		<?php
-		if ( in_array( $share_buttons_display_position, [ 'top', 'both' ] ) && $share_buttons ) {
+		if ( in_array( $share_buttons_display_position, [ 'top', 'both' ], true ) && $share_buttons ) {
 			Helper::get_template_part( 'template-parts/content/share-buttons' );
 		}
 
@@ -48,7 +48,7 @@ $google_adsense = get_option( 'mwt-google-adsense' );
 			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );
 		}
 
-		if ( in_array( $share_buttons_display_position, [ 'bottom', 'both' ] ) && $share_buttons ) {
+		if ( in_array( $share_buttons_display_position, [ 'bottom', 'both' ], true ) && $share_buttons ) {
 			Helper::get_template_part( 'template-parts/content/share-buttons' );
 		}
 

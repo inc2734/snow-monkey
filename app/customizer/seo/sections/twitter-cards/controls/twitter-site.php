@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  *
  * renamed: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-site.php
  */
@@ -21,8 +21,8 @@ Framework::control(
 			__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
 			'<code>@username</code>'
 		),
-		'default' => '@',
-		'type'    => 'option',
+		'default'     => '@',
+		'type'        => 'option',
 	)
 );
 

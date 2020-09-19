@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_message' => __( 'Woops! Page not found.', 'snow-monkey' ) . '<br>' .
 									__( 'The page you are looking for may be moved or deleted.', 'snow-monkey' ) . '<br>' .

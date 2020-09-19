@@ -3,17 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 /**
- * Return the child pages
+ * Return the child pages.
  *
  * @deprecated
  *
- * @var int $post_id
+ * @param int $post_id The post ID.
  * @return array
  */
 function snow_monkey_get_child_pages( $post_id ) {
@@ -27,7 +27,7 @@ function snow_monkey_get_child_pages( $post_id ) {
 }
 
 /**
- * Returns main script handle
+ * Returns main script handle.
  *
  * @deprecated
  *
@@ -44,7 +44,7 @@ function snow_monkey_get_main_script_handle() {
 }
 
 /**
- * Returns main style handle
+ * Returns main style handle.
  *
  * @deprecated
  *
@@ -61,11 +61,11 @@ function snow_monkey_get_main_style_handle() {
 }
 
 /**
- * Returns public post type objects
+ * Returns public post type objects.
  *
  * @deprecated
  *
- * @return array
+ * @return void
  */
 function snow_monkey_get_public_post_types() {
 	_deprecated_function(
@@ -75,11 +75,11 @@ function snow_monkey_get_public_post_types() {
 }
 
 /**
- * Return related posts
+ * Return related posts.
  *
  * @deprecated
  *
- * @param int $post_id
+ * @param int $post_id The post ID.
  * @return array
  */
 function snow_monkey_get_related_posts_query( $post_id ) {
@@ -93,14 +93,13 @@ function snow_monkey_get_related_posts_query( $post_id ) {
 }
 
 /**
- * Returns PHP file list
+ * Returns PHP file list.
  *
  * @deprecated
  *
- * @param string Directory path
- * @return array PHP file list
+ * @return void
  */
-function snow_monkey_glob_recursive( $path ) {
+function snow_monkey_glob_recursive() {
 	_deprecated_function(
 		__FUNCTION__,
 		'Snow Monkey 4.3.0'
@@ -125,14 +124,13 @@ function snow_monkey_the_site_branding_title() {
 }
 
 /**
- * Sets entry content styles
+ * Sets entry content styles.
  *
  * @deprecated
  *
- * @param string|array $selector
  * @return void
  */
-function snow_monkey_entry_content_styles( $selectors ) {
+function snow_monkey_entry_content_styles() {
 	_deprecated_function(
 		__FUNCTION__,
 		'Snow Monkey 5.1.0'
@@ -140,7 +138,7 @@ function snow_monkey_entry_content_styles( $selectors ) {
 }
 
 /**
- * Return output positions of eyecatch
+ * Return output positions of eyecatch.
  *
  * @deprecated
  *

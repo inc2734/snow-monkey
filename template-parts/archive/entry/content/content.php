@@ -3,15 +3,19 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
+global $wp_query;
+
 $_post_type = get_post_type() ? get_post_type() : 'post';
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_entries_layout' => get_theme_mod( $_post_type . '-entries-layout' ),
 		'_force_sm_1col'  => get_theme_mod( $_post_type . '-entries-layout-sm-1col' ),

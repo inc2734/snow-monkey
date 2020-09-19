@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  *
  * renamed: app/customizer/layout/sections/header/controls/header-layout.php
  */
@@ -15,9 +15,9 @@ Framework::control(
 	'select',
 	'header-layout',
 	[
-		'label'     => __( 'Header layout', 'snow-monkey' ),
-		'priority'  => 100,
-		'default'   => 'center',
+		'label'    => __( 'Header layout', 'snow-monkey' ),
+		'priority' => 100,
+		'default'  => 'center',
 		'choices'  => is_customize_preview() ? Helper::get_header_templates() : [],
 	]
 );

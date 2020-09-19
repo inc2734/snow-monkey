@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.5.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,9 +12,9 @@ Framework::control(
 	'checkbox',
 	'header-alignfull',
 	[
-		'label'    => __( 'Make header full width', 'snow-monkey' ),
-		'priority' => 150,
-		'default'  => false,
+		'label'           => __( 'Make header full width', 'snow-monkey' ),
+		'priority'        => 150,
+		'default'         => false,
 		'active_callback' => function() {
 			return 'left' !== get_theme_mod( 'header-layout' );
 		},

@@ -9,7 +9,9 @@
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_thumbnail_size' => 'medium_large',
 	]

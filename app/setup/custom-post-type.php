@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -46,7 +46,10 @@ add_filter(
 add_filter(
 	'snow_monkey_get_template_part_args',
 	function( $args ) {
-		if ( ! is_post_type_archive() && ( ! is_tax() || ! in_array( get_post_type(), Helper::get_custom_post_types() ) ) ) {
+		if (
+			! is_post_type_archive()
+			&& ( ! is_tax() || ! in_array( get_post_type(), Helper::get_custom_post_types(), true ) )
+		) {
 			return $args;
 		}
 

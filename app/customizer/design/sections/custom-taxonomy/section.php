@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -22,7 +22,7 @@ foreach ( $taxonomies as $_taxonomy ) {
 		Framework::section(
 			'design-' . $_term->taxonomy . '-' . $_term->term_id,
 			[
-				'title' => sprintf(
+				'title'           => sprintf(
 					/* translators: 1: Taxonomy name */
 					__( '[ %1$s ] taxonomy pages settings', 'snow-monkey' ),
 					$_term->name

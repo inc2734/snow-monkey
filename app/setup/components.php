@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Awesome_Components\Awesome_Components;
 use Framework\Helper;
 
 /**
- * Activate WP Awesome components
+ * Activate WP Awesome components.
  */
 if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
 	new Awesome_Components();
@@ -36,9 +36,9 @@ if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
 }
 
 /**
- * Awesome_Components の各コンポーネントをカスタマイズ
+ * Customize for components of Awesome_Components.
  *
- * @param array $components
+ * @param array $components Array of components.
  * @return array
  */
 add_filter(
@@ -46,16 +46,16 @@ add_filter(
 	function( $components ) {
 		foreach ( $components as $key => $component ) {
 			if ( 'btn' === $key || 'btn--full' === $key ) {
-				$component = str_replace( 'wpac-btn', 'wpac-btn c-btn', $component );
+				$component          = str_replace( 'wpac-btn', 'wpac-btn c-btn', $component );
 				$components[ $key ] = $component;
 			} elseif ( 0 === strpos( $key, 'columns-' ) ) {
-				$component = str_replace( 'wpac-columns__col-inner', 'wpac-columns__col-inner p-entry-content', $component );
+				$component          = str_replace( 'wpac-columns__col-inner', 'wpac-columns__col-inner p-entry-content', $component );
 				$components[ $key ] = $component;
 			} elseif ( 'section' === $key || 'section--inverse' === $key ) {
-				$component = str_replace( 'wpac-section ', 'c-section wpac-section ', $component );
-				$component = str_replace( 'wpac-section__body', 'wpac-section__body p-entry-content', $component );
-				$component = str_replace( 'wpac-section__body', 'wpac-section__body p-entry-content', $component );
-				$component = str_replace( 'wpac-section__container', 'c-container', $component );
+				$component          = str_replace( 'wpac-section ', 'c-section wpac-section ', $component );
+				$component          = str_replace( 'wpac-section__body', 'wpac-section__body p-entry-content', $component );
+				$component          = str_replace( 'wpac-section__body', 'wpac-section__body p-entry-content', $component );
+				$component          = str_replace( 'wpac-section__container', 'c-container', $component );
 				$components[ $key ] = $component;
 			}
 		}

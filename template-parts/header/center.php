@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  *
  * renamed: template-parts/center-header.php
  */
@@ -19,6 +19,7 @@ $has_header_sub_nav  = has_nav_menu( 'header-sub-nav' );
 $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 
+$class_for_site_branding_col   = [];
 $class_for_site_branding_col[] = ( $has_drawer_nav ) ? 'c-row__col--4-6' : 'c-row__col--1-1';
 $class_for_site_branding_col[] = ( $header_content ) ? 'c-row__col--lg-2-4' : 'c-row__col--lg-1-1';
 $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );

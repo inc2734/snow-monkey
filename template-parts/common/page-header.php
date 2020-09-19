@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  *
  * renamed: template-parts/page-header.php
  */
@@ -11,7 +11,9 @@
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_is_output_page_header_title' => Helper::is_output_page_header_title(),
 		'_page_header_title'           => Helper::get_page_title_from_breadcrumbs(),

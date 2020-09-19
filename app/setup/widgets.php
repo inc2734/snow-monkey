@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -40,7 +40,11 @@ add_action(
 );
 
 /**
- * Add deprecated message in widget description
+ * Add deprecated message in widget description.
+ *
+ * @param array  $widget_options The widget options.
+ * @param string $classname The widget classname.
+ * @return array
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_widget_options',
@@ -50,7 +54,7 @@ add_filter(
 			'Inc2734_WP_Awesome_Widgets_Pickup_Slider',
 			'Inc2734_WP_Awesome_Widgets_Slider',
 		];
-		if ( in_array( $classname, $deprecated_widgets ) ) {
+		if ( in_array( $classname, $deprecated_widgets, true ) ) {
 			$widget_options['description'] = __( 'This widget is deprecated. It may slow down the page when used.', 'snow-monkey' );
 		}
 		return $widget_options;
@@ -60,17 +64,20 @@ add_filter(
 );
 
 /**
- * Add deprecated message in widget form
+ * Add deprecated message in widget form.
+ *
+ * @param $self The widget instance.
+ * @return void
  */
 add_action(
 	'in_widget_form',
-	function( $self, $return, $instance ) {
+	function( $self ) {
 		$deprecated_widgets = [
 			'inc2734_wp_awesome_widgets_carousel_any_posts',
 			'inc2734_wp_awesome_widgets_pickup_slider',
 			'inc2734_wp_awesome_widgets_slider',
 		];
-		if ( in_array( $self->id_base, $deprecated_widgets ) ) {
+		if ( in_array( $self->id_base, $deprecated_widgets, true ) ) {
 			?>
 			<div style="background-color: #ffede6; padding: 1em; margin: 1em 0">
 				<b><?php echo esc_html( $self->widget_options['description'] ); ?></b>
@@ -83,10 +90,10 @@ add_action(
 );
 
 /**
- * Customize the local nav widget html
+ * Customize the local nav widget HTML
  *
- * @param string $content
- * @param array $widget_args
+ * @param string $content The widget HTML.
+ * @param array  $widget_args The widget args.
  * @return string
  */
 add_filter(
@@ -107,17 +114,18 @@ add_filter(
 );
 
 /**
- * Customize the pickup slider widget html
+ * Customize the pickup slider widget HTML.
  *
- * @param string $content
- * @param array $widget_args
+ * @param string $content The widget HTML.
  * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $widget_args ) {
-		if ( ! preg_match( '|id="wpaw-pickup-slider-[^"]+?|', $content )
-		  && ! preg_match( '|id="inc2734_wp_awesome_widgets_pickup_slider-[^"]+?|', $content ) ) {
+	function( $content ) {
+		if (
+			! preg_match( '|id="wpaw-pickup-slider-[^"]+?|', $content )
+			&& ! preg_match( '|id="inc2734_wp_awesome_widgets_pickup_slider-[^"]+?|', $content )
+		) {
 			return $content;
 		}
 
@@ -132,10 +140,10 @@ add_filter(
 );
 
 /**
- * Customize the pickup slider widget html
+ * Customize the pickup slider widget HTML
  *
- * @param string $content
- * @param array $widget_args
+ * @param string $content The widget HTML.
+ * @param array  $widget_args The widget args.
  * @return string
  */
 add_filter(
@@ -159,7 +167,7 @@ add_filter(
 				'posts-page-bottom-widget-area',
 				'archive-top-widget-area',
 			];
-			if ( ! in_array( $widget_args['id'], $content_widget_areas ) ) {
+			if ( ! in_array( $widget_args['id'], $content_widget_areas, true ) ) {
 				$content = str_replace( 'wpaw-pr-box__title', 'c-widget__title', $content );
 			}
 		}
@@ -195,10 +203,10 @@ add_filter(
 );
 
 /**
- * Customize the carousel widget html
+ * Customize the carousel widget HTML.
  *
- * @param string $content
- * @param array $widget_args
+ * @param string $content The widget HTML.
+ * @param array  $widget_args The widget args.
  * @return string
  */
 add_filter(
@@ -227,10 +235,10 @@ add_filter(
 );
 
 /**
- * Customize the carousel widget html
+ * Customize the carousel widget HTML.
  *
- * @param string $content
- * @param array $widget_args
+ * @param string $content The widget HTML.
+ * @param array  $widget_args The widget args.
  * @return string
  */
 add_filter(
@@ -251,10 +259,10 @@ add_filter(
 );
 
 /**
- * Add .alignfull to specific widgets in [data-is-content-widget-area="true"]
+ * Add .alignfull to specific widgets in [data-is-content-widget-area="true"].
  *
- * @param string $content
- * @param array $widget_args
+ * @param string $widget The widget HTML.
+ * @param array  $widget_args The widget args.
  * @return string
  */
 add_filter(
@@ -268,7 +276,7 @@ add_filter(
 			'posts-page-top-widget-area',
 		];
 
-		if ( ! isset( $widget_args['id'] ) || in_array( $widget_args['id'], $content_widget_areas ) ) {
+		if ( ! isset( $widget_args['id'] ) || in_array( $widget_args['id'], $content_widget_areas, true ) ) {
 			if ( false !== strpos( $widget, 'class="wpaw-pickup-slider ' ) ) {
 				return str_replace( 'class="wpaw-pickup-slider ', 'class="wpaw-pickup-slider alignfull ', $widget );
 			}
@@ -293,21 +301,25 @@ add_filter(
 );
 
 /**
- * Update showcase widget background image size
+ * Update showcase widget background image size.
+ *
+ * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_showcase_backgroud_image_size',
-	function( $thumbnail_size ) {
+	function() {
 		return 'xlarge';
 	}
 );
 
 /**
- * Update showcase widget thumbnail image size
+ * Update showcase widget thumbnail image size.
+ *
+ * @return string
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_showcase_image_size',
-	function( $thumbnail_size ) {
+	function() {
 		return 'xlarge';
 	}
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -21,7 +21,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::section(
 		'design-' . $custom_post_type,
 		[
-			'title' => sprintf(
+			'title'           => sprintf(
 				/* translators: 1: Custom post type label */
 				__( '%1$s pages settings', 'snow-monkey' ),
 				$custom_post_type_object->label

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.2.0
+ * @version 11.3.3
  */
 
 use Framework\Controller\Controller;
@@ -11,37 +11,37 @@ use Framework\Controller\Controller;
 new Controller();
 
 /**
- * Update view controller config
+ * Update view controller config.
  *
- * @param array $config
+ * @param array $config Array of the view controller config.
  * @return array
  */
 add_filter(
 	'inc2734_wp_view_controller_config',
 	function() {
 		return [
-			'templates' => [
+			'templates'      => [
 				'',
 			],
 			'page-templates' => [
 				'page-templates',
 			],
-			'layout' => [
+			'layout'         => [
 				'templates/layout/wrapper',
 			],
-			'header' => [
+			'header'         => [
 				'templates/layout/header',
 			],
-			'sidebar' => [
+			'sidebar'        => [
 				'templates/layout/sidebar',
 			],
-			'footer' => [
+			'footer'         => [
 				'templates/layout/footer',
 			],
-			'view' => [
+			'view'           => [
 				'templates/view',
 			],
-			'static' => [
+			'static'         => [
 				'templates/static',
 			],
 		];
@@ -49,9 +49,9 @@ add_filter(
 );
 
 /**
- * If return true, output template debug log
+ * If return true, output template debug log.
  *
- * @param boolean $debug
+ * @param boolean $debug True if logging.
  * @return boolean
  */
 add_filter(
@@ -62,9 +62,9 @@ add_filter(
 );
 
 /**
- * Override inc2734_wp_view_controller_controller
+ * Override inc2734_wp_view_controller_controller.
  *
- * @param string $template
+ * @param string $template The path of the template to include.
  * @return array
  */
 add_filter(
@@ -79,9 +79,9 @@ add_filter(
  * Change root directory of get_template_part().
  * If return empty, root is theme directory (= default get_template_part()).
  *
- * @param string $root
- * @param string $slug
- * @param string $name
+ * @param string $root The template root.
+ * @param string $slug The template slug.
+ * @param string $name The template name.
  * @param array $vars
  */
 add_filter(
@@ -97,10 +97,10 @@ add_filter(
  * Change root directory of get_template_part().
  * If return empty, root is theme directory (= default get_template_part()).
  *
- * @param array $hierarchy
- * @param string $slug
- * @param string $name
- * @param array $vars
+ * @param array $hierarchy Array of template roots.
+ * @param string $slug The template slug.
+ * @param string $name The template name.
+ * @param array  $vars The template $args.
  */
 add_filter(
 	'inc2734_wp_view_controller_template_part_root_hierarchy',
@@ -113,12 +113,12 @@ add_filter(
 );
 
 /**
- * Override inc2734_wp_view_controller_get_template_part_args
+ * Override inc2734_wp_view_controller_get_template_part_args.
  *
- * @param array $args
- *   @param string $slug
- *   @param string $name
- *   @param array $vars
+ * @param array $args Array of template data.
+ *   @param string $slug The template slug.
+ *   @param string $name The template name.
+ *   @param array  $vars The template $args.
  * @return array
  */
 add_filter(
@@ -131,14 +131,14 @@ add_filter(
 );
 
 /**
- * Override inc2734_wp_view_controller_get_template_part_{ $slug }
+ * Override inc2734_wp_view_controller_get_template_part_{ $slug }.
  *
  * @deprecated
  *
- * @param array $args
- *   @param string $slug
- *   @param string $name
- *   @param array $vars
+ * @param array $args Array of template data.
+ *   @param string $slug The template slug.
+ *   @param string $name The template name.
+ *   @param array  $vars The template $args.
  */
 add_action(
 	'inc2734_wp_view_controller_get_template_part_pre_render',
@@ -187,11 +187,11 @@ add_action(
 );
 
 /**
- * Override inc2734_wp_view_controller_pre_template_part_render
+ * Override inc2734_wp_view_controller_pre_template_part_render.
  *
- * @param string $slug
- * @param string $name
- * @param array $vars
+ * @param string $slug The tempalte slug.
+ * @param string $name The tempalte name.
+ * @param array  $vars The tempalte $args.
  * @return array
  */
 add_filter(
@@ -205,11 +205,11 @@ add_filter(
 );
 
 /**
- * Override inc2734_wp_view_controller_template_part_render
+ * Override inc2734_wp_view_controller_template_part_render.
  *
- * @param string $slug
- * @param string $name
- * @param array $vars
+ * @param string $slug The tempalte slug.
+ * @param string $name The template name.
+ * @param array  $vars The template $args.
  * @return array
  */
 add_filter(

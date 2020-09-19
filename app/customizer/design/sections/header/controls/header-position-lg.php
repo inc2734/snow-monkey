@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,10 +12,10 @@ Framework::control(
 	'select',
 	'header-position-lg',
 	[
-		'label'    => __( 'Header position for PC', 'snow-monkey' ),
-		'priority' => 111,
-		'default'  => '',
-		'choices'  => [
+		'label'           => __( 'Header position for PC', 'snow-monkey' ),
+		'priority'        => 111,
+		'default'         => '',
+		'choices'         => [
 			'sticky'                 => __( 'Sticky', 'snow-monkey' ),
 			'sticky-overlay'         => __( 'Overlay (Sticky)', 'snow-monkey' ),
 			'sticky-overlay-colored' => __( 'Overlay (Sticky / When scrolling, whilte background)', 'snow-monkey' ),

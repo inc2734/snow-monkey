@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.1
+ * @version 11.3.3
  */
 
 namespace Framework\Model;
@@ -20,8 +20,16 @@ class Template_Cache {
 	 */
 	protected $directory;
 
+	/**
+	 * True when removing.
+	 *
+	 * @var boolean
+	 */
 	protected static $is_removing = false;
 
+	/**
+	 * Constructor.
+	 */
 	public function __construct() {
 		if ( ! is_writable( get_template_directory() ) ) {
 			return;
@@ -59,8 +67,9 @@ class Template_Cache {
 	}
 
 	/**
-	 * Remove caches when widgets are updated
+	 * Remove caches when widgets are updated.
 	 *
+	 * @param array $instance The current widget instance's settings.
 	 * @return object
 	 */
 	public function _widget_update_callback( $instance ) {
@@ -70,12 +79,12 @@ class Template_Cache {
 	}
 
 	/**
-	 * Get the cache
+	 * Get the cache.
 	 *
-	 * @param string $sub_directory
-	 * @param string $slug
-	 * @param string $name
-	 * @param array $vars
+	 * @param string $sub_directory The directory where the cache is stored.
+	 * @param string $slug The template slug.
+	 * @param string $name The template name.
+	 * @param array  $vars The template $args.
 	 * @return string|null
 	 */
 	public function get( $sub_directory, $slug, $name, $vars ) {
@@ -102,13 +111,13 @@ class Template_Cache {
 	}
 
 	/**
-	 * Save the cache
+	 * Save the cache.
 	 *
-	 * @param string $sub_directory
-	 * @param string $html
-	 * @param string $slug
-	 * @param string $name
-	 * @param array $vars
+	 * @param string $sub_directory The directory where the cache is stored.
+	 * @param string $html The template HTML.
+	 * @param string $slug The template slug.
+	 * @param string $name The template name.
+	 * @param array  $vars The template $args.
 	 * @return string|null
 	 */
 	public function save( $sub_directory, $html, $slug, $name, $vars ) {
@@ -131,11 +140,11 @@ class Template_Cache {
 	}
 
 	/**
-	 * Return cache filename
+	 * Return cache filename.
 	 *
-	 * @param string $slug
-	 * @param string $name
-	 * @param array $vars
+	 * @param string $slug The template slug.
+	 * @param string $name The template name.
+	 * @param array  $vars The template $args.
 	 * @return string
 	 */
 	protected function _get_cache_filename( $slug, $name, $vars ) {
@@ -143,7 +152,7 @@ class Template_Cache {
 	}
 
 	/**
-	 * Remove all caches
+	 * Remove all caches.
 	 *
 	 * @return void
 	 */
@@ -153,7 +162,7 @@ class Template_Cache {
 		}
 
 		static::$is_removing = true;
-		$return = Filesystem::rmdir( $this->directory );
+		$return              = Filesystem::rmdir( $this->directory );
 		static::$is_removing = false;
 		return $return;
 	}

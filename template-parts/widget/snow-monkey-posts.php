@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_vertical'            => false,
 		'_posts_query'         => null,
@@ -41,13 +43,14 @@ $content_widget_areas = [
 $infeed_ads      = get_option( 'mwt-google-infeed-ads' );
 $data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 
+$classnames   = [];
 $classnames[] = 'snow-monkey-posts';
 if ( $args['_classname'] ) {
 	$classnames[] = $args['_classname'];
 }
 
 $title_classname = 'c-widget__title';
-if ( in_array( $args['_widget_area_id'], $content_widget_areas ) ) {
+if ( in_array( $args['_widget_area_id'], $content_widget_areas, true ) ) {
 	$title_classname = 'snow-monkey-posts__title';
 }
 $title_classnames = [
@@ -66,7 +69,7 @@ $more_classnames = [
 ];
 
 $posts_per_page = $args['_posts_query']->get( 'posts_per_page' );
-$loop_count = 0;
+$loop_count     = 0;
 
 $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 ?>

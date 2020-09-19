@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.7
+ * @version 11.3.3
  */
 
 namespace Framework\Contract\Model;
@@ -53,7 +53,7 @@ abstract class Page_Header {
 	/**
 	 * Return page header image html
 	 *
-	 * @return void
+	 * @return string The img tag.
 	 */
 	public static function get_the_image() {
 		$cache_key   = md5( json_encode( get_queried_object() ) );

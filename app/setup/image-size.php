@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.4
+ * @version 11.3.3
  */
 
 add_image_size( 'xlarge', 1920, 1920 );
@@ -15,7 +15,7 @@ add_image_size( 'xlarge', 1920, 1920 );
  */
 add_filter(
 	'max_srcset_image_width',
-	function( $width ) {
+	function() {
 		return 1920;
 	}
 );

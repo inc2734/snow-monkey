@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 11.3.3
  */
 
 namespace Framework\Model\Page_Header;
@@ -32,7 +32,7 @@ class Category_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_image() {
-		$should_display = in_array( get_theme_mod( 'archive-eyecatch' ), static::$image_mods );
+		$should_display = in_array( get_theme_mod( 'archive-eyecatch' ), static::$image_mods, true );
 		return $should_display && static::get_the_image() ? true : false;
 	}
 
@@ -42,6 +42,6 @@ class Category_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_title() {
-		return in_array( get_theme_mod( 'archive-eyecatch' ), static::$title_mods );
+		return in_array( get_theme_mod( 'archive-eyecatch' ), static::$title_mods, true );
 	}
 }

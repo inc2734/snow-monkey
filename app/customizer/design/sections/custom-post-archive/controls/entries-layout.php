@@ -17,10 +17,10 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'select',
 		$custom_post_type . '-entries-layout',
 		[
-			'label'    => __( 'Entries layout', 'snow-monkey' ),
-			'priority' => 110,
-			'default'  => 'rich-media',
-			'choices'  => [
+			'label'           => __( 'Entries layout', 'snow-monkey' ),
+			'priority'        => 110,
+			'default'         => 'rich-media',
+			'choices'         => [
 				'rich-media' => __( 'Rich media', 'snow-monkey' ),
 				'simple'     => __( 'Simple', 'snow-monkey' ),
 				'text'       => __( 'Text', 'snow-monkey' ),

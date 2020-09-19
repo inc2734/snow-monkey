@@ -3,10 +3,32 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
+
+$widget_args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$widget_args,
+	// phpcs:enable
+	[]
+);
+
+if ( ! $widget_args ) {
+	return;
+}
+
+$instance = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$instance,
+	// phpcs:enable
+	[]
+);
+
+if ( ! $instance ) {
+	return;
+}
 
 if ( empty( $instance['taxonomy'] ) ) {
 	return;
@@ -36,7 +58,7 @@ $query_args = [
 	'posts_per_page'      => $instance['posts-per-page'],
 	'ignore_sticky_posts' => $instance['ignore-sticky-posts'],
 	'suppress_filters'    => false,
-	'tax_query'      => [
+	'tax_query'           => [
 		[
 			'taxonomy' => $taxonomy_id,
 			'terms'    => $term_id,
@@ -59,10 +81,10 @@ if ( ! $taxonomy_posts_query->have_posts() ) {
 	return;
 }
 
-$is_multi_cols_pattern = in_array( $instance['layout'], [ 'rich-media', 'panel' ] );
-$force_sm_1col = $instance['force-sm-1col'];
-$force_sm_1col = 0 === $force_sm_1col || 1 === $force_sm_1col ? $force_sm_1col : false;
-$force_sm_1col = false === $force_sm_1col && $is_multi_cols_pattern
+$is_multi_cols_pattern = in_array( $instance['layout'], [ 'rich-media', 'panel' ], true );
+$force_sm_1col         = $instance['force-sm-1col'];
+$force_sm_1col         = 0 === $force_sm_1col || 1 === $force_sm_1col ? $force_sm_1col : false;
+$force_sm_1col         = false === $force_sm_1col && $is_multi_cols_pattern
 	? get_theme_mod( $query_args['post_type'][0] . '-entries-layout-sm-1col' )
 	: $force_sm_1col;
 

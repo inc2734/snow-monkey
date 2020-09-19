@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -14,10 +14,11 @@ use Framework\Helper;
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		if ( ! get_option( 'mwt-google-adsense' ) &&
-				 ! get_option( 'mwt-google-infeed-ads' ) &&
-				 ! get_option( 'mwt-google-matched-content' ) &&
-				 ! get_option( 'mwt-google-adsense-auth-code' )
+		if (
+			! get_option( 'mwt-google-adsense' )
+			&& ! get_option( 'mwt-google-infeed-ads' )
+			&& ! get_option( 'mwt-google-matched-content' )
+			&& ! get_option( 'mwt-google-adsense-auth-code' )
 		) {
 			return;
 		}
@@ -88,12 +89,11 @@ add_action(
  *
  * @param string $tag
  * @param string handle
- * @param string src
  * @return string
  */
 add_filter(
 	'script_loader_tag',
-	function( $tag, $handle, $src ) {
+	function( $tag, $handle ) {
 		if ( 'google-adsense' !== $handle ) {
 			return $tag;
 		}
@@ -101,7 +101,7 @@ add_filter(
 		return str_replace( ' src', ' async src', $tag );
 	},
 	10,
-	3
+	2
 );
 
 /**

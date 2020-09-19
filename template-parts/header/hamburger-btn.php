@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.3.3
  *
  * renamed: template-parts/hamburger-btn.php
  */
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_label' => __( 'MENU', 'snow-monkey' ),
 	]

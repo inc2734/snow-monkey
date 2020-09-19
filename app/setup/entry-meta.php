@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -75,7 +75,7 @@ add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_author
  */
 function snow_monkey_entry_meta_items_categories() {
 	$public_taxonomies = Helper::get_the_public_taxonomy( get_the_ID() );
-	$public_terms = [];
+	$public_terms      = [];
 
 	foreach ( $public_taxonomies as $public_taxonomy ) {
 		$_terms = get_the_terms( get_the_ID(), $public_taxonomy->name );

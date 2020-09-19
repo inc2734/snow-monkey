@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,7 +15,7 @@ if ( ! is_customize_preview() ) {
 Framework::section(
 	'snow-monkey-community',
 	[
-		'title' => sprintf(
+		'title'    => sprintf(
 			/* translators: 1: Monkey icon */
 			__( '%1$s Snow Monkey Community %1$s', 'snow-monkey' ),
 			'🐒'

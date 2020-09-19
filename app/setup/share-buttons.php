@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Share_Buttons\Bootstrap;
@@ -13,12 +13,11 @@ new Bootstrap();
 /**
  * Set Facebook App token
  *
- * @param string $app_token
  * @return string
  */
 add_filter(
 	'inc2734_wp_share_buttons_facebook_app_token',
-	function( $app_token ) {
+	function() {
 		return get_theme_mod( 'facebook-app-token' );
 	}
 );
@@ -43,12 +42,11 @@ add_filter(
 /**
  * Count both http and https
  *
- * @param boolean $bool
  * @return boolean
  */
 add_filter(
 	'inc2734_wp_share_buttons_apply_https_total_count',
-	function( $bool ) {
+	function() {
 		return get_option( 'mwt-share-buttons-count-both' );
 	}
 );

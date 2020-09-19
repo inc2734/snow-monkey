@@ -5,12 +5,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.9.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
-$classes = Helper::get_header_classes();
+$classes            = Helper::get_header_classes();
 $header_position_lg = get_theme_mod( 'header-position-lg' );
 if ( $header_position_lg ) {
 	$classes = array_diff( $classes, [ 'l-header--' . $header_position_lg . '-lg' ] );

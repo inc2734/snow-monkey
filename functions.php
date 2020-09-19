@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -40,6 +40,7 @@ load_theme_textdomain( 'snow-monkey', get_template_directory() . '/languages' );
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
  */
+global $content_width;
 if ( ! isset( $content_width ) ) {
 	$content_width = apply_filters( 'snow_monkey_content_width', 1220 );
 }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 11.3.3
  */
 
 namespace Framework\Contract\Helper;
@@ -31,7 +31,7 @@ trait Homepage_Thumbnail {
 	/**
 	 * Return homepage thumbnail url
 	 *
-	 * @param string $size
+	 * @param string $size The thumbnail size slug.
 	 * @return string
 	 */
 	public static function get_the_homepage_thumbnail_url( $size = 'post-thumbnail' ) {
@@ -45,7 +45,7 @@ trait Homepage_Thumbnail {
 	/**
 	 * Return homepage thumbnail
 	 *
-	 * @param string $size
+	 * @param string $size The thumbnail size slug.
 	 * @return string
 	 */
 	public static function get_the_homepage_thumbnail( $size = 'post-thumbnail' ) {
@@ -59,7 +59,7 @@ trait Homepage_Thumbnail {
 	/**
 	 * Display homepage thumbnail
 	 *
-	 * @param string $size
+	 * @param string $size The thumbnail size slug.
 	 * @return void
 	 */
 	public static function the_homepage_thumbnail( $size = 'post-thumbnail' ) {
@@ -71,5 +71,10 @@ trait Homepage_Thumbnail {
 		);
 	}
 
+	/**
+	 * Return allowed attributes of img.
+	 *
+	 * @return array
+	 */
 	abstract public static function img_allowed_attributes();
 }

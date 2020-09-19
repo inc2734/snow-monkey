@@ -13,11 +13,11 @@ Framework::control(
 	'select',
 	'related-posts-layout',
 	[
-		'transport' => 'postMessage',
-		'label'     => __( 'Related posts layout', 'snow-monkey' ),
-		'priority'  => 140,
-		'default'  => '',
-		'choices'  => [
+		'transport'       => 'postMessage',
+		'label'           => __( 'Related posts layout', 'snow-monkey' ),
+		'priority'        => 140,
+		'default'         => '',
+		'choices'         => [
 			''           => __( 'Default', 'snow-monkey' ),
 			'rich-media' => __( 'Rich media', 'snow-monkey' ),
 			'simple'     => __( 'Simple', 'snow-monkey' ),

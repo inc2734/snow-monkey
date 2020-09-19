@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 if ( is_singular() && ! is_front_page() ) {
-	return $html;
+	return;
 }
 
 $infeed_ads = get_option( 'mwt-google-infeed-ads' );
@@ -19,6 +19,14 @@ if ( ! $infeed_ads ) {
 }
 
 if ( ! function_exists( 'snow_monkey_insert_infeed_ads' ) ) {
+	/**
+	 * Insert infeed ads to entries list.
+	 *
+	 * @param string $html HTML of 'template-parts/archive/entry/content/content'.
+	 * @param array  $post_types Array of post types.
+	 * @param string $entries_layout The entries layout.
+	 * @return string
+	 */
 	function snow_monkey_insert_infeed_ads( $html, $post_types, $entries_layout ) {
 		$infeed_ads = get_option( 'mwt-google-infeed-ads' );
 		if ( ! $infeed_ads ) {
@@ -26,11 +34,11 @@ if ( ! function_exists( 'snow_monkey_insert_infeed_ads' ) ) {
 		}
 
 		$post_types = (array) $post_types;
-		if ( ! in_array( 'post', $post_types ) ) {
+		if ( ! in_array( 'post', $post_types, true ) ) {
 			return $html;
 		}
 
-		if ( ! in_array( $entries_layout, [ 'rich-media', 'panel' ] ) ) {
+		if ( ! in_array( $entries_layout, [ 'rich-media', 'panel' ], true ) ) {
 			return $html;
 		}
 

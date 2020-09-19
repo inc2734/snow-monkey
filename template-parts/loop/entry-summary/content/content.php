@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
 		'_excerpt_length' => null,
@@ -30,7 +32,7 @@ $entry_summary_content_excerpt_length = function( $default_excerpt_length ) use 
 
 	if ( 'rich-media' === $args['_entries_layout'] ) {
 		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-		$num_words = 25;
+		$num_words            = 25;
 		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
 		// phpcs:enable
 		return $num_words / $excerpt_length_ratio;

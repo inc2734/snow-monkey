@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.10
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -48,8 +48,8 @@ add_action(
 add_filter(
 	'woocommerce_output_related_products_args',
 	function( $args ) {
-		$columns = get_option( 'woocommerce_catalog_columns' );
-		$columns = $columns ? $columns : 3;
+		$columns                = get_option( 'woocommerce_catalog_columns' );
+		$columns                = $columns ? $columns : 3;
 		$args['posts_per_page'] = 6;
 		$args['columns']        = $columns;
 		return $args;
@@ -215,9 +215,9 @@ add_filter(
 			return $breadcrumbs;
 		}
 
-		$wc_breadcrumb  = new WC_Breadcrumb();
+		$wc_breadcrumb     = new WC_Breadcrumb();
 		$wc_breadcrumb_arr = $wc_breadcrumb->generate();
-		$wc_breadcrumbs = [];
+		$wc_breadcrumbs    = [];
 		foreach ( $wc_breadcrumb_arr as $value ) {
 			$wc_breadcrumbs[] = [
 				'title' => $value[0],

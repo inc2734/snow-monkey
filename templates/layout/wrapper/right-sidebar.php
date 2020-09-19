@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -59,7 +59,7 @@ use Framework\Helper;
 
 			<div class="c-container">
 				<?php
-				if ( ! is_front_page() && in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ] ) ) {
+				if ( ! is_front_page() && in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ], true ) ) {
 					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>
@@ -70,7 +70,11 @@ use Framework\Helper;
 					<main class="l-contents__main" role="main">
 						<?php do_action( 'snow_monkey_prepend_main' ); ?>
 
-						<?php $args['_view_controller']->view(); ?>
+						<?php
+						// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+						$args['_view_controller']->view();
+						// phpcs:enable
+						?>
 
 						<?php do_action( 'snow_monkey_append_main' ); ?>
 					</main>
@@ -87,7 +91,10 @@ use Framework\Helper;
 				<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 
 				<?php
-				if ( ! is_front_page() && in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ] ) ) {
+				if (
+					! is_front_page()
+					&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ], true )
+				) {
 					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 				}
 				?>

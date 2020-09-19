@@ -3,12 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.6
+ * @version 11.3.3
  */
 
 use Framework\Helper;
 
 if ( ! function_exists( 'wp_body_open' ) ) {
+	/**
+	 * Fire the wp_body_open action.
+	 *
+	 * @see https://developer.wordpress.org/reference/functions/wp_body_open/
+	 */
 	function wp_body_open() {
 		do_action( 'wp_body_open' );
 	}
@@ -113,18 +118,16 @@ add_filter(
  *
  * @param null|null $fallback_slug
  * @param array $relative_dir_paths
- * @param string $slug
- * @param string $name
  * @return string
  */
 add_filter(
 	'inc2734_wp_view_controller_located_template_slug_fallback',
-	function( $fallback_slug, $relative_dir_paths, $slug, $name ) {
+	function( $fallback_slug, $relative_dir_paths ) {
 		if ( $fallback_slug ) {
 			return $fallback_slug;
 		}
 
-		if ( ! in_array( 'templates/layout/wrapper', $relative_dir_paths ) ) {
+		if ( ! in_array( 'templates/layout/wrapper', $relative_dir_paths, true ) ) {
 			return $fallback_slug;
 		}
 
@@ -143,5 +146,5 @@ add_filter(
 		return $fallback_slug;
 	},
 	9,
-	4
+	2
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.8
+ * @version 11.3.3
  */
 
 use Framework\Helper;
@@ -48,14 +48,14 @@ add_action(
 					return;
 				}
 
-				$selectors_for_h2 = [];
-				$selectors_for_h3 = [];
+				$selectors_for_h2       = [];
+				$selectors_for_h3       = [];
 				$selectors_for_thead_th = [];
 				$selectors_for_tbody_th = [];
 
 				foreach ( $selectors as $key => $selector ) {
-					$selectors_for_h2[ $key ] = $selector . ' > h2';
-					$selectors_for_h3[ $key ] = $selector . ' > h3';
+					$selectors_for_h2[ $key ]       = $selector . ' > h2';
+					$selectors_for_h3[ $key ]       = $selector . ' > h3';
 					$selectors_for_thead_th[ $key ] = $selector . ' > table thead th';
 					$selectors_for_tbody_th[ $key ] = $selector . ' > table tbody th';
 				}
@@ -131,13 +131,13 @@ add_action(
 					return;
 				}
 
-				$selectors_for_title = [];
+				$selectors_for_title        = [];
 				$selectors_for_title_pseudo = [];
 				$selectors_for_title_before = [];
 				$selectors_for_title_after  = [];
 
 				foreach ( $selectors as $key => $selector ) {
-					$selectors_for_title[ $key ] = $selector;
+					$selectors_for_title[ $key ]        = $selector;
 					$selectors_for_title_pseudo[ $key ] = implode( ',', [ $selector . '::before', $selector . '::after' ] );
 					$selectors_for_title_before[ $key ] = $selector . '::before';
 					$selectors_for_title_after[ $key ]  = $selector . '::after';

@@ -3,10 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 11.3.3
  */
 
 use Framework\Helper;
+
+global $wp_query;
 
 if ( post_password_required() ) {
 	return;

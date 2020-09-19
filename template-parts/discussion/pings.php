@@ -3,19 +3,23 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.1.0
+ * @version 11.3.3
  *
  * renamed: template-parts/pings.php
  */
 
 use Framework\Helper;
 
+global $wp_query;
+
 if ( ! pings_open() && empty( $wp_query->comments_by_type['pings'] ) ) {
 	return;
 }
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_title'                 => __( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ),
 		'_no_trackbacks_message' => __( 'No comments.', 'snow-monkey' ),

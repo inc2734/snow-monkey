@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.1.0
+ * @version 11.3.3
  */
 
 namespace Framework\Model\Page_Header;
@@ -34,7 +34,7 @@ class WooCommerce_Single_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_image() {
-		$should_display = in_array( get_theme_mod( 'woocommerce-single-eyecatch' ), static::$image_mods );
+		$should_display = in_array( get_theme_mod( 'woocommerce-single-eyecatch' ), static::$image_mods, true );
 		return $should_display && static::get_the_image() ? true : false;
 	}
 
@@ -44,6 +44,6 @@ class WooCommerce_Single_Page_Header extends Base {
 	 * @return boolean
 	 */
 	public static function is_display_title() {
-		return in_array( get_theme_mod( 'woocommerce-single-eyecatch' ), static::$title_mods );
+		return in_array( get_theme_mod( 'woocommerce-single-eyecatch' ), static::$title_mods, true );
 	}
 }

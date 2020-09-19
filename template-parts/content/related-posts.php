@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.6
+ * @version 11.3.3
  *
  * renamed: template-parts/related-posts.php
  */
@@ -12,7 +12,9 @@ use Inc2734\WP_Adsense;
 use Framework\Helper;
 
 $args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
+	// phpcs:enable
 	[
 		'_title'          => __( 'Related posts', 'snow-monkey' ),
 		'_code'           => get_option( 'mwt-google-matched-content' ),

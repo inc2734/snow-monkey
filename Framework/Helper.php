@@ -22,7 +22,7 @@ class Helper {
 	use WP_View_Controller\App\Contract\Template_Tag;
 
 	/**
-	 * Return output positions of eyecatch
+	 * Return output positions of eyecatch.
 	 *
 	 * @return array
 	 */
@@ -36,7 +36,7 @@ class Helper {
 	}
 
 	/**
-	 * Returns page title from Breadcrumbs
+	 * Returns page title from Breadcrumbs.
 	 *
 	 * @return string
 	 */
@@ -48,16 +48,16 @@ class Helper {
 	}
 
 	/**
-	 * Return trimed title
+	 * Return trimed title.
 	 *
-	 * @param string|null $title
+	 * @param string|null $title The post title.
 	 * @return void
 	 */
 	public static function the_title_trimed( $title = null ) {
 		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-		$num_words = 80;
+		$num_words            = 80;
 		$excerpt_length_ratio = 55 / _x( '55', 'excerpt_length' );
-		$num_words = apply_filters( 'snow_monkey_entry_summary_title_num_words', $num_words * $excerpt_length_ratio );
+		$num_words            = apply_filters( 'snow_monkey_entry_summary_title_num_words', $num_words * $excerpt_length_ratio );
 		// phpcs:enable
 		if ( $num_words ) {
 			if ( is_null( $title ) ) {
@@ -78,7 +78,10 @@ class Helper {
 	}
 
 	/**
-	 * Get global variable ( For template part )
+	 * Get global variable ( For template part ).
+	 *
+	 * @param string $name The variable name.
+	 * @param string $default mixed The default value.
 	 */
 	public static function get_var( &$name, $default = null ) {
 		return isset( $name ) ? $name : $default;
@@ -97,7 +100,7 @@ class Helper {
 	}
 
 	/**
-	 * Return copyright text
+	 * Return copyright text.
 	 *
 	 * @return string
 	 */
@@ -130,9 +133,9 @@ class Helper {
 	}
 
 	/**
-	 * Return public taxonomy tied to the post
+	 * Return public taxonomy tied to the post.
 	 *
-	 * @param int|WP_Post $post
+	 * @param int|WP_Post $post The Post object.
 	 * @return array
 	 */
 	public static function get_the_public_taxonomy( $post = 0 ) {
@@ -148,7 +151,7 @@ class Helper {
 			return $public_taxonomies;
 		}
 
-		$taxonomies = get_object_taxonomies( get_post_type( $post ), 'object' );
+		$taxonomies        = get_object_taxonomies( get_post_type( $post ), 'object' );
 		$public_taxonomies = [];
 
 		foreach ( $taxonomies as $taxonomy ) {
@@ -164,9 +167,9 @@ class Helper {
 	}
 
 	/**
-	 * Return public terms tied to the post
+	 * Return public terms tied to the post.
 	 *
-	 * @param int|WP_Post $post
+	 * @param int|WP_Post $post The Post object.
 	 * @return array
 	 */
 	public static function get_the_public_terms( $post = 0 ) {
@@ -183,7 +186,7 @@ class Helper {
 		}
 
 		$public_taxonomies = static::get_the_public_taxonomy( $post );
-		$public_terms = [];
+		$public_terms      = [];
 
 		foreach ( $public_taxonomies as $public_taxonomy ) {
 			$_terms = get_the_terms( $post, $public_taxonomy->name );
@@ -197,14 +200,14 @@ class Helper {
 	}
 
 	/**
-	 * Return specific terms
+	 * Return specific terms.
 	 *
-	 * @param string $taxonomy
+	 * @param string $taxonomy The taxonomy name.
 	 * @return array
 	 */
 	public static function get_terms( $taxonomy ) {
 		$cache_key = 'snow-monkey-all-' . $taxonomy;
-		$terms = wp_cache_get( $cache_key );
+		$terms     = wp_cache_get( $cache_key );
 		if ( is_array( $terms ) ) {
 			return $terms;
 		}
@@ -219,7 +222,7 @@ class Helper {
 	}
 
 	/**
-	 * Return all users
+	 * Return all users.
 	 *
 	 * @return array
 	 */
@@ -359,7 +362,7 @@ class Helper {
 	}
 
 	/**
-	 * Retrun header classes
+	 * Retrun header classes.
 	 *
 	 * @return array
 	 */
@@ -367,7 +370,7 @@ class Helper {
 		$header_layout      = get_theme_mod( 'header-layout' );
 		$header_position    = get_theme_mod( 'header-position' );
 		$header_position_lg = get_theme_mod( 'header-position-lg' );
-		$classes = [ 'l-header', 'l-header--' . $header_layout ];
+		$classes            = [ 'l-header', 'l-header--' . $header_layout ];
 
 		if ( $header_position ) {
 			$classes[] = 'l-header--' . $header_position . '-sm';
@@ -381,7 +384,7 @@ class Helper {
 	}
 
 	/**
-	 * Return true if has the drop-nav
+	 * Return true if has the drop-nav.
 	 *
 	 * @return boolean
 	 */
@@ -389,8 +392,8 @@ class Helper {
 		$return = false;
 
 		if ( has_nav_menu( 'global-nav' ) ) {
-			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ '', 'overlay' ] );
-			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ '', 'overlay' ] );
+			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ '', 'overlay' ], true );
+			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ '', 'overlay' ], true );
 
 			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
 				$return = true;
@@ -413,10 +416,8 @@ class Helper {
 	/**
 	 * get_template_part php files
 	 *
-	 * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
-	 *
-	 * @param string $directory
-	 * @param boolean $exclude_underscore
+	 * @param string  $directory Target directory.
+	 * @param boolean $exclude_underscore Exclude if true.
 	 * @return void
 	 */
 	public static function get_template_parts( $directory, $exclude_underscore = false ) {
@@ -431,7 +432,7 @@ class Helper {
 		$files = static::get_include_files( $directory, $exclude_underscore );
 
 		foreach ( $files['files'] as $file ) {
-			$file = realpath( $file );
+			$file          = realpath( $file );
 			$template_name = str_replace( [ $template_directory . DIRECTORY_SEPARATOR, '.php' ], '', $file );
 			WP_View_Controller\Helper::get_template_part( $template_name );
 		}
@@ -441,6 +442,11 @@ class Helper {
 		}
 	}
 
+	/**
+	 * Return true when IE.
+	 *
+	 * @return boolean
+	 */
 	public static function is_ie() {
 		if ( ! isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
 			return false;

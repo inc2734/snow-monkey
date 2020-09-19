@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.0
+ * @version 11.3.3
  *
  * renamed: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php
  */
@@ -15,11 +15,11 @@ Framework::control(
 	'select',
 	'overlay-widget-area-max-width',
 	[
-		'label'       => __( 'Overlay widget area max width', 'snow-monkey' ),
-		'description' => __( 'You can set max width of overlay widget area', 'snow-monkey' ),
-		'priority'    => 190,
-		'default'     => 'false',
-		'choices'     => [
+		'label'           => __( 'Overlay widget area max width', 'snow-monkey' ),
+		'description'     => __( 'You can set max width of overlay widget area', 'snow-monkey' ),
+		'priority'        => 190,
+		'default'         => 'false',
+		'choices'         => [
 			'false' => __( 'Wide width', 'snow-monkey' ),
 			'true'  => __( 'Slim width', 'snow-monkey' ),
 		],
