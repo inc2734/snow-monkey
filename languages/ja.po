@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-09-15 10:03+0900\n"
-"PO-Revision-Date: 2020-09-15 10:03+0900\n"
+"POT-Creation-Date: 2020-09-19 14:17+0900\n"
+"PO-Revision-Date: 2020-09-19 14:17+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -45,121 +45,121 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:64
-#: template-parts/loop/entry-summary/content/content-rss.php:38
-#: template-parts/loop/entry-summary/content/content.php:34
+#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:72
+#: template-parts/loop/entry-summary/content/content-rss.php:40
+#: template-parts/loop/entry-summary/content/content.php:36
 msgctxt "excerpt_length"
 msgid "55"
 msgstr "55"
 
-#: Framework/Helper.php:107
+#: Framework/Helper.php:110
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:112
+#: Framework/Helper.php:115
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
-#: Framework/Helper.php:117
+#: Framework/Helper.php:120
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
-#: Framework/Helper.php:123
+#: Framework/Helper.php:126
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:253
+#: Framework/Helper.php:256
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:258
+#: Framework/Helper.php:261
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:263 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:266 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:268
+#: Framework/Helper.php:271
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:273
+#: Framework/Helper.php:276
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:278
+#: Framework/Helper.php:281
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:283
+#: Framework/Helper.php:286
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:288
+#: Framework/Helper.php:291
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:293
+#: Framework/Helper.php:296
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:298
+#: Framework/Helper.php:301
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:304
+#: Framework/Helper.php:307
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:310
+#: Framework/Helper.php:313
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:316
+#: Framework/Helper.php:319
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:322
+#: Framework/Helper.php:325
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:328
+#: Framework/Helper.php:331
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:334
+#: Framework/Helper.php:337
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:340
+#: Framework/Helper.php:343
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:346
+#: Framework/Helper.php:349
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:352
+#: Framework/Helper.php:355
 msgid "Very dark gray"
 msgstr "濃灰"
 
-#: app/constructor/compatibility.php:65
-#: template-parts/content/contents-outline.php:14
+#: app/constructor/compatibility.php:70
+#: template-parts/content/contents-outline.php:16
 msgid "Contents outline"
 msgstr "目次"
 
-#: app/constructor/compatibility.php:91
-#: template-parts/content/child-pages.php:16
+#: app/constructor/compatibility.php:96
+#: template-parts/content/child-pages.php:18
 msgid "Child pages"
 msgstr "このページの子ページ"
 
@@ -173,29 +173,33 @@ msgstr "script タグの内容だけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-adsense.php:15
 msgid "Google Adsense"
-msgstr "Google アドセンス"
+msgstr "Google Adsense"
 
 #: app/customizer/advertisement/controls/google-adsense.php:16
 msgid ""
-"When pasting the code of the responsive ad unit or auto ads code, the "
-"advertisement is displayed in the prescribed part of the theme. If you want "
-"to display at arbitrary position, please use widgets etc."
+"When pasting the code of the responsive ad unit, the advertisement is "
+"displayed in the prescribed part of the theme. If you want to display at "
+"arbitrary position, please use widgets etc."
 msgstr ""
-"レスポンシブ広告ユニットもしくは自動広告のコードをペーストすると、テーマの所"
-"定の位置に広告が表示されます。もし任意の位置に広告を表示したい場合は、ウィ"
-"ジェット等を使用してください。"
+"レスポンシブ広告ユニットのコードをペーストすると、テーマの所定の位置に広告が"
+"表示されます。もし任意の位置に広告を表示したい場合は、ウィジェット等を使用し"
+"てください。"
 
 #: app/customizer/advertisement/controls/google-adsense.php:16
-msgid ""
-"Paste only the ins tag for ad units, only the contents of script tag for "
-"auto ads."
-msgstr ""
-"広告ユニットの場合は ins タグだけを、自動広告の場合は script タグの中身だけを"
-"貼り付けてください。"
+msgid "Paste only the ins tag for ad units."
+msgstr "広告ユニットの ins タグだけを貼り付けてください。"
+
+#: app/customizer/advertisement/controls/google-auto-ads.php:15
+msgid "Google Adsense Auto Ads"
+msgstr "Google Adsense 自動広告"
+
+#: app/customizer/advertisement/controls/google-auto-ads.php:16
+msgid "Paste only the value of data-ad-client of script tag."
+msgstr "script タグの data-ad-client の中身だけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-infeed-ads.php:15
-msgid "Google Infeed Ads"
-msgstr "Google インフィード広告"
+msgid "Google Adsense Infeed Ads"
+msgstr "Google Adsense インフィード広告"
 
 #: app/customizer/advertisement/controls/google-infeed-ads.php:16
 msgid ""
@@ -210,8 +214,8 @@ msgid "Paste only the ins tag."
 msgstr "ins タグだけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-matched-content.php:15
-msgid "Google Matched Content"
-msgstr "Google 関連コンテンツ"
+msgid "Google Adsense Matched Content"
+msgstr "Google Adsense 関連コンテンツ"
 
 #: app/customizer/advertisement/controls/google-matched-content.php:16
 msgid ""
@@ -359,18 +363,18 @@ msgstr "記事一覧レイアウト"
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:21
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:22
-#: app/widget/snow-monkey-recent-posts/_form.php:69
-#: app/widget/snow-monkey-rss/_form.php:54
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:99
+#: app/widget/snow-monkey-recent-posts/_form.php:87
+#: app/widget/snow-monkey-rss/_form.php:72
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:126
 msgid "Rich media"
 msgstr "リッチメディア"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:22
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:23
-#: app/widget/snow-monkey-recent-posts/_form.php:70
-#: app/widget/snow-monkey-rss/_form.php:55
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:100
+#: app/widget/snow-monkey-recent-posts/_form.php:88
+#: app/widget/snow-monkey-rss/_form.php:73
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:127
 #: translation/bundle-template-header.php:14
 msgid "Simple"
 msgstr "シンプル"
@@ -378,27 +382,27 @@ msgstr "シンプル"
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:23
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:24
-#: app/widget/snow-monkey-recent-posts/_form.php:71
-#: app/widget/snow-monkey-rss/_form.php:56
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:101
+#: app/widget/snow-monkey-recent-posts/_form.php:89
+#: app/widget/snow-monkey-rss/_form.php:74
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:128
 msgid "Text"
 msgstr "テキスト"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:24
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:25
-#: app/widget/snow-monkey-recent-posts/_form.php:72
-#: app/widget/snow-monkey-rss/_form.php:57
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:102
+#: app/widget/snow-monkey-recent-posts/_form.php:90
+#: app/widget/snow-monkey-rss/_form.php:75
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:129
 msgid "Text 2"
 msgstr "テキスト2"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:25
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:28
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:26
-#: app/widget/snow-monkey-recent-posts/_form.php:73
-#: app/widget/snow-monkey-rss/_form.php:58
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:103
+#: app/widget/snow-monkey-recent-posts/_form.php:91
+#: app/widget/snow-monkey-rss/_form.php:76
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:130
 msgid "Panels"
 msgstr "パネル"
 
@@ -1442,72 +1446,72 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/widgets.php:54
+#: app/setup/widgets.php:58
 msgid "This widget is deprecated. It may slow down the page when used."
 msgstr ""
 "このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"
 "す。"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:12
-#: app/widget/snow-monkey-rss/_form.php:23
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:12
+#: app/widget/snow-monkey-recent-posts/_form.php:30
+#: app/widget/snow-monkey-rss/_form.php:41
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:30
 msgid "Title"
 msgstr "タイトル"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:23
+#: app/widget/snow-monkey-recent-posts/_form.php:41
 msgid "Post type"
 msgstr "投稿タイプ"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:49
-#: app/widget/snow-monkey-rss/_form.php:34
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:79
+#: app/widget/snow-monkey-recent-posts/_form.php:67
+#: app/widget/snow-monkey-rss/_form.php:52
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:106
 msgid "Number of posts"
 msgstr "表示する投稿数"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:61
-#: app/widget/snow-monkey-rss/_form.php:46
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:91
+#: app/widget/snow-monkey-recent-posts/_form.php:79
+#: app/widget/snow-monkey-rss/_form.php:64
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:118
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:83
-#: app/widget/snow-monkey-rss/_form.php:68
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:113
+#: app/widget/snow-monkey-recent-posts/_form.php:101
+#: app/widget/snow-monkey-rss/_form.php:86
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:140
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:94
-#: app/widget/snow-monkey-rss/_form.php:79
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:124
+#: app/widget/snow-monkey-recent-posts/_form.php:112
+#: app/widget/snow-monkey-rss/_form.php:97
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:151
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:113
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:143
+#: app/widget/snow-monkey-recent-posts/_form.php:131
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:170
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:37
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:40
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:43
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:46
 msgid "Recent posts"
 msgstr "最近の投稿"
 
-#: app/widget/snow-monkey-rss/_form.php:12
+#: app/widget/snow-monkey-rss/_form.php:30
 msgid "Feed URL"
 msgstr "フィード URL"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:35
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:38
 msgid "Snow Monkey: RSS"
 msgstr "Snow Monkey: RSS"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:41
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:44
 msgid "RSS"
 msgstr "RSS"
 
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:42
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:60
 msgid "Displayed term"
 msgstr "表示するターム"
 
@@ -1519,11 +1523,11 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#: template-parts/archive/entry/content/content-no-keywords.php:14
+#: template-parts/archive/entry/content/content-no-keywords.php:16
 msgid "Please enter a search keyword."
 msgstr "検索キーワードを入力してください。"
 
-#: template-parts/archive/entry/content/content-no-match.php:14
+#: template-parts/archive/entry/content/content-no-match.php:16
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
@@ -1531,7 +1535,7 @@ msgstr ""
 "ご指定の検索条件に合う投稿がありませんでした。他のキーワードでもう一度検索し"
 "てみてください。"
 
-#: template-parts/archive/entry/content/content-none.php:14
+#: template-parts/archive/entry/content/content-none.php:16
 msgid "No posts."
 msgstr "投稿がありません。"
 
@@ -1554,71 +1558,71 @@ msgstr "検索"
 msgid "Scroll up"
 msgstr "上にスクロール"
 
-#: template-parts/common/profile-box.php:14 templates/view/content-post.php:68
+#: template-parts/common/profile-box.php:16 templates/view/content-post.php:68
 msgid "Bio"
 msgstr "この記事を書いた人"
 
-#: template-parts/content/entry/content/content-404.php:14
+#: template-parts/content/entry/content/content-404.php:16
 msgid "Woops! Page not found."
 msgstr "ページが見つかりませんでした。"
 
-#: template-parts/content/entry/content/content-404.php:15
+#: template-parts/content/entry/content/content-404.php:17
 msgid "The page you are looking for may be moved or deleted."
 msgstr "お探しのページは移動したか削除されています。"
 
-#: template-parts/content/entry/content/content-404.php:16
+#: template-parts/content/entry/content/content-404.php:18
 msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
 #: template-parts/content/entry/footer/footer.php:26
-#: template-parts/content/related-posts.php:17
+#: template-parts/content/related-posts.php:19
 msgid "Related posts"
 msgstr "関連記事"
 
-#: template-parts/content/prev-next-nav.php:19
+#: template-parts/content/prev-next-nav.php:21
 msgid "Old post"
 msgstr "古い投稿"
 
-#: template-parts/content/prev-next-nav.php:20
+#: template-parts/content/prev-next-nav.php:22
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/content/related-posts.php:41
+#: template-parts/content/related-posts.php:43
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
-#: template-parts/discussion/comment.php:17
+#: template-parts/discussion/comment.php:19
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
-#: template-parts/discussion/comment.php:20
-#: template-parts/discussion/trackback.php:16
+#: template-parts/discussion/comment.php:22
+#: template-parts/discussion/trackback.php:18
 #, php-format
 msgid "%1$s said on %2$s at %3$s"
 msgstr "%1$s が %2$s %3$s にコメント"
 
-#: template-parts/discussion/comment.php:55
+#: template-parts/discussion/comment.php:57
 msgid "Edit this comment"
 msgstr "コメントを編集"
 
-#: template-parts/discussion/comments.php:20
+#: template-parts/discussion/comments.php:24
 msgid "Comments on this post"
 msgstr "この投稿へのコメント"
 
-#: template-parts/discussion/comments.php:21
-#: template-parts/discussion/pings.php:21
+#: template-parts/discussion/comments.php:25
+#: template-parts/discussion/pings.php:25
 msgid "No comments."
 msgstr "コメントはありません。"
 
-#: template-parts/discussion/pings.php:20
+#: template-parts/discussion/pings.php:24
 msgid "Trackbacks and Pingbacks on this post"
 msgstr "この投稿へのトラックバック"
 
-#: template-parts/discussion/pings.php:63
+#: template-parts/discussion/pings.php:67
 msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
-#: template-parts/header/hamburger-btn.php:14
+#: template-parts/header/hamburger-btn.php:16
 msgid "MENU"
 msgstr "MENU"
 
@@ -1689,6 +1693,13 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid ""
+#~ "Paste only the ins tag for ad units, only the contents of script tag for "
+#~ "auto ads."
+#~ msgstr ""
+#~ "広告ユニットの場合は ins タグだけを、自動広告の場合は script タグの中身だ"
+#~ "けを貼り付けてください。"
 
 #~ msgid "No trackbacks."
 #~ msgstr "トラックバックはありません。"

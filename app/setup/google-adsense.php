@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.4.0
  */
 
 use Framework\Helper;
@@ -19,6 +19,7 @@ add_action(
 			&& ! get_option( 'mwt-google-infeed-ads' )
 			&& ! get_option( 'mwt-google-matched-content' )
 			&& ! get_option( 'mwt-google-adsense-auth-code' )
+			&& ! get_option( 'mwt-google-auto-ads' )
 		) {
 			return;
 		}
@@ -28,7 +29,6 @@ add_action(
 			return;
 		}
 
-		// @codingStandardsIgnoreStart
 		wp_enqueue_script(
 			'google-adsense',
 			'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
@@ -36,7 +36,6 @@ add_action(
 			null,
 			false
 		);
-		// @codingStandardsIgnoreEnd
 	},
 	1
 );
@@ -60,7 +59,7 @@ add_action(
 );
 
 /**
- * Google Auto Ads
+ * Google Auto Ads (Old version)
  */
 add_action(
 	'wp_enqueue_scripts',
@@ -99,6 +98,27 @@ add_filter(
 		}
 
 		return str_replace( ' src', ' async src', $tag );
+	},
+	10,
+	2
+);
+
+/**
+ * Set data-ad-client for Auto ads.
+ */
+add_filter(
+	'script_loader_tag',
+	function( $tag, $handle ) {
+		if ( 'google-adsense' !== $handle ) {
+			return $tag;
+		}
+
+		$google_auto_ads = get_option( 'mwt-google-auto-ads' );
+		if ( ! $google_auto_ads ) {
+			return $tag;
+		}
+
+		return str_replace( ' src', ' data-ad-client="' . esc_attr( $google_auto_ads ) . '" src', $tag );
 	},
 	10,
 	2
