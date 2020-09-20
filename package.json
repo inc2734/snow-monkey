@@ -39,7 +39,6 @@
     "cli": "wp-env run cli",
     "wp": "wp-env run cli wp",
     "pretest": "wp-env start && wp-env run composer 'install --no-interaction'",
-    "test:lint:js": "wp-scripts lint-js block src/js",
     "test:lint:php": "wp-env run composer run-script lint",
     "test:lint": "run-s test:lint:*",
     "test:unit:php": "wp-env run phpunit 'phpunit -c /var/www/html/wp-content/themes/snow-monkey/.phpunit.xml.dist --verbose'",
