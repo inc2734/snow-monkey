@@ -269,8 +269,8 @@
         flex: 0 1 auto;
 
         > a {
-          @include _padding-top(1);
-          @include _padding-bottom(1);
+          @include _padding-top(.75);
+          @include _padding-bottom(.75);
         }
       }
     }
@@ -353,6 +353,15 @@
           @include _padding(.125, 0);
         }
       }
+    }
+  }
+}
+
+[data-has-global-nav="true"] {
+  .#{ $_prefix }l-2row-header__row,
+  .#{ $_prefix }l-center-header__row {
+    &:last-child {
+      @include _margin-top(.25);
     }
   }
 }
