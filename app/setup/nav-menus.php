@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -102,3 +102,84 @@ add_filter(
 	10,
 	4
 );
+
+/**
+ * Add highlight nsetting to nav menu items.
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		add_action(
+			'wp_nav_menu_item_custom_fields',
+			function( $item_id ) {
+				$highlight = get_post_meta( $item_id, 'sm-nav-menu-item-highlight', true );
+				?>
+				<p class="field-sm-nav-menu-item-highlight description-wide">
+					<label>
+						<input
+							type="checkbox"
+							name="sm-nav-menu-item-highlight[<?php echo esc_attr( $item_id ); ?>]"
+							value="1"
+							<?php checked( 1, $highlight ); ?>
+						/>
+						<?php esc_html_e( 'Highlight this menu item.', 'snow-monkey' ); ?>
+					</label>
+					<?php wp_nonce_field( 'sm-nav-menu-item-highlight', 'sm-nav-menu-item-highlight-nonce' ); ?>
+				</p>
+				<?php
+			},
+			10
+		);
+
+		add_action(
+			'wp_update_nav_menu_item',
+			function( $menu_id, $menu_item_db_id ) {
+				$nonce = filter_input( INPUT_POST, 'sm-nav-menu-item-highlight-nonce' );
+				if ( ! $nonce ) {
+					return;
+				}
+
+				$verify_nonce = wp_verify_nonce( $nonce, 'sm-nav-menu-item-highlight' );
+				if ( ! $verify_nonce ) {
+					return;
+				}
+
+				$highlight = filter_input(
+					INPUT_POST,
+					'sm-nav-menu-item-highlight',
+					FILTER_DEFAULT,
+					[
+						'flags' => FILTER_REQUIRE_ARRAY,
+					]
+				);
+
+				if ( $highlight && isset( $highlight[ $menu_item_db_id ] ) ) {
+					update_post_meta( $menu_item_db_id, 'sm-nav-menu-item-highlight', $highlight[ $menu_item_db_id ] );
+				} else {
+					delete_post_meta( $menu_item_db_id, 'sm-nav-menu-item-highlight' );
+				}
+			},
+			10,
+			2
+		);
+
+		add_filter(
+			'wp_nav_menu_objects',
+			function( $sorted_menu_items ) {
+				foreach ( $sorted_menu_items as $index => $item ) {
+					$highlight = get_post_meta( $item->ID, 'sm-nav-menu-item-highlight', true );
+					if ( ! $highlight ) {
+						continue;
+					}
+
+					$item->classes[]             = 'sm-nav-menu-item-highlight';
+					$item->classes               = array_unique( $item->classes );
+					$sorted_menu_items[ $index ] = $item;
+				}
+				return $sorted_menu_items;
+			},
+			10
+		);
+	}
+);
+

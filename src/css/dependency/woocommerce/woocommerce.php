@@ -65,7 +65,7 @@ if ( Helper::is_ie() ) {
 				'.l-container .l-contents #respond #submit.alt:focus',
 				'.l-container .l-contents .button.alt:focus',
 			],
-			'background-color: ' . Color::darken( $accent_color, 0.05 )
+			'background-color: ' . Color::dark( $accent_color )
 		);
 
 		Style::register(

@@ -56,6 +56,15 @@ if ( $accent_color ) {
 	$root_variables[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
 }
 
+$sub_accent_color = get_theme_mod( 'sub-accent-color' );
+if ( $accent_color ) {
+	$root_variables[] = '--sub-accent-color: ' . $sub_accent_color;
+	$root_variables[] = '--dark-sub-accent-color: ' . Color::dark( $sub_accent_color );
+	$root_variables[] = '--light-sub-accent-color: ' . Color::light( $sub_accent_color );
+	$root_variables[] = '--lighter-sub-accent-color: ' . Color::lighter( $sub_accent_color );
+	$root_variables[] = '--lightest-sub-accent-color: ' . Color::lightest( $sub_accent_color );
+}
+
 $h2_style = get_theme_mod( 'h2-style' );
 if ( $h2_style ) {
 	if ( 'standard' === $h2_style ) {

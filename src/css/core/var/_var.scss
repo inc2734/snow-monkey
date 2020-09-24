@@ -21,3 +21,23 @@
 @function var-color-accent-lightest() {
   @return var(--lightest-accent-color, #{ _lightest($color-accent) });
 }
+
+@function var-color-sub-accent() {
+  @return var(--sub-accent-color);
+}
+
+@function var-color-sub-accent-dark() {
+  @return var(--dark-sub-accent-color);
+}
+
+@function var-color-sub-accent-light() {
+  @return var(--light-sub-accent-color);
+}
+
+@function var-color-sub-accent-lighter() {
+  @return var(--lighter-sub-accent-color);
+}
+
+@function var-color-sub-accent-lightest() {
+  @return var(--lightest-sub-accent-color);
+}

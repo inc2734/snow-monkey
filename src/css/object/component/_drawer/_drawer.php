@@ -21,3 +21,16 @@ Style::register(
 	'.c-drawer',
 	'background-color: ' . $accent_color
 );
+
+$sub_accent_color = get_theme_mod( 'sub-accent-color' );
+if ( ! $sub_accent_color ) {
+	return;
+}
+
+Style::register(
+	[
+		'.c-drawer__item.sm-nav-menu-item-highlight',
+		'.c-drawer__subitem.sm-nav-menu-item-highlight',
+	],
+	'background-color: ' . $sub_accent_color
+);

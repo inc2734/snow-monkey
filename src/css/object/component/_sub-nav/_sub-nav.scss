@@ -15,6 +15,12 @@
           text-decoration: underline;
         }
       }
+
+      &.sm-nav-menu-item-highlight {
+        > a {
+          color: var-color-accent();
+        }
+      }
     }
   }
 }

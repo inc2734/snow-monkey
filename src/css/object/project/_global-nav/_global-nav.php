@@ -6,6 +6,7 @@
  */
 
 use Framework\Helper;
+use Inc2734\WP_Customizer_Framework\Color;
 use Inc2734\WP_Customizer_Framework\Style;
 
 if ( ! Helper::is_ie() ) {
@@ -18,10 +19,13 @@ if ( ! $accent_color ) {
 }
 
 Style::register(
-	[
-		'.p-global-nav .c-navbar__item[data-active-menu="true"] > a',
-	],
+	'.p-global-nav .c-navbar__item[data-active-menu="true"] > a',
 	'color: ' . $accent_color
+);
+
+Style::register(
+	'.p-global-nav .c-navbar__item.sm-nav-menu-item-highlight',
+	'background-color: ' . $accent_color
 );
 
 Style::register(
@@ -47,4 +51,14 @@ Style::register(
 Style::register(
 	'.p-global-nav .c-navbar__submenu',
 	'background-color: ' . $accent_color
+);
+
+$sub_accent_color = get_theme_mod( 'sub-accent-color' );
+if ( ! $sub_accent_color ) {
+	return;
+}
+
+Style::register(
+	'.p-global-nav .c-navbar__subitem.sm-nav-menu-item-highlight',
+	'background-color: ' . $sub_accent_color
 );
