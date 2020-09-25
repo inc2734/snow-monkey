@@ -2,6 +2,7 @@
   z-index: 1000;
   background-color: #fff; // for IE11
   background-color: _var-background-color();
+  color: var-color-header-text();
   @include _transition(background-color);
   overflow: hidden;
 
@@ -15,6 +16,10 @@
     @include _media-min(lg) {
       padding: 0;
     }
+  }
+
+  .#{ $_prefix }c-hamburger-btn__bar {
+    background-color: var-color-header-text();
   }
 
   /**
@@ -66,16 +71,10 @@
   }
 
   @mixin overlay-header-white-text() {
-    .#{ $_prefix }c-site-branding,
-    .#{ $_prefix }c-hamburger-btn__label,
-    [data-has-global-nav] .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar__item {
-      color: $_color-white; // For IE11
-      color: _var-color-white();
-    }
+    color: var-color-overlay-header-text();
 
     .#{ $_prefix }c-hamburger-btn__bar {
-      background-color: $_color-white; // For IE11
-      background-color: _var-color-white();
+      background-color: var-color-overlay-header-text();
     }
   }
 
@@ -98,6 +97,7 @@
    */
   @mixin sticky-overlay-header() {
     @include overlay-header();
+    @include overlay-header-white-text();
     position: fixed;
   }
 
@@ -158,6 +158,7 @@
     @include _position(fixed, 0, 0, null, 0, 10);
     transform: translateY(-100%);
     box-shadow: 0 1px 2px 1px rgba(#000, .05);
+    color: var-color-drop-nav-text();
     @include _transition(transform, visibility);
     transition-timing-function: ease-in;
 

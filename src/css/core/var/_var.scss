@@ -41,3 +41,15 @@
 @function var-color-sub-accent-lightest() {
   @return var(--lightest-sub-accent-color);
 }
+
+@function var-color-header-text() {
+  @return var(--header-text-color, $_color-text);
+}
+
+@function var-color-overlay-header-text() {
+  @return var(--overlay-header-text-color, $_color-white);
+}
+
+@function var-color-drop-nav-text() {
+  @return var(--drop-nav-text-color, $_color-text);
+}

@@ -65,6 +65,13 @@ if ( $accent_color ) {
 	$root_variables[] = '--lightest-sub-accent-color: ' . Color::lightest( $sub_accent_color );
 }
 
+$header_text_color = get_theme_mod( 'header-text-color' );
+if ( $header_text_color ) {
+	$root_variables[] = '--header-text-color: ' . $header_text_color;
+	$root_variables[] = '--overlay-header-text-color: ' . $header_text_color;
+	$root_variables[] = '--drop-nav-text-color: ' . $header_text_color;
+}
+
 $h2_style = get_theme_mod( 'h2-style' );
 if ( $h2_style ) {
 	if ( 'standard' === $h2_style ) {

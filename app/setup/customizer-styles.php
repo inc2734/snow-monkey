@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  */
 
 use Framework\Helper;
@@ -20,6 +20,7 @@ add_action(
 	function() {
 		$includes = [
 			'/assets/css/foundation',
+			'/assets/css/layout',
 			'/assets/css/object/component',
 			'/assets/css/object/project',
 			'/assets/css/custom-widgets',
