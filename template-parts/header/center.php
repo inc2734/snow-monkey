@@ -31,13 +31,13 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
 			<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--between c-row--nowrap">
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--fit u-invisible-lg-up u-invisible-wall">
+					<div class="c-row__col c-row__col--fit u-invisible-lg-up u-invisible-wall" aria-hidden="true">
 						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn', null, [ '_id' => false ] ); ?>
 					</div>
 				<?php endif; ?>
 
 				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--fit u-invisible-md-down u-invisible-wall">
+					<div class="c-row__col c-row__col--fit u-invisible-md-down u-invisible-wall" aria-hidden="true">
 						<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
 					</div>
 				<?php endif; ?>
