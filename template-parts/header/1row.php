@@ -28,16 +28,20 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 			</div>
 		<?php endif; ?>
 
-		<div class="c-row c-row--margin c-row--middle c-row--between c-row--nowrap">
-			<div class="c-row__col c-row__col--auto c-row__col--lg-fit">
+		<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--between c-row--nowrap">
+			<?php do_action( 'snow_monkey_before_header_site_branding_column' ); ?>
+
+			<div class="c-row__col c-row__col--fit">
 				<div class="l-<?php echo esc_attr( $header_type ); ?>__branding">
 					<?php Helper::get_template_part( 'template-parts/header/site-branding' ); ?>
 				</div>
 			</div>
 
+			<?php do_action( 'snow_monkey_after_header_site_branding_column' ); ?>
+
 			<?php if ( $has_global_nav || $header_content ) : ?>
-				<div class="c-row__col c-row__col--fit u-invisible-md-down">
-					<div class="c-row c-row--margin c-row--middle c-row--nowrap">
+				<div class="c-row__col c-row__col--fit u-pull-right u-invisible-md-down">
+					<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--between c-row--nowrap">
 						<?php if ( $has_global_nav ) : ?>
 							<div class="c-row__col c-row__col--auto">
 								<?php
@@ -72,7 +76,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 			<?php endif; ?>
 
 			<?php if ( $has_drawer_nav ) : ?>
-				<div class="c-row__col c-row__col--fit u-pull-right u-invisible-lg-up">
+				<div class="c-row__col c-row__col--fit u-invisible-lg-up">
 					<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 				</div>
 			<?php endif; ?>

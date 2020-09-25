@@ -18,11 +18,6 @@ $has_drawer_nav      = has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub
 $has_header_sub_nav  = has_nav_menu( 'header-sub-nav' );
 $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
-
-$class_for_site_branding_col   = [];
-$class_for_site_branding_col[] = ( $has_drawer_nav ) ? 'c-row__col--4-6' : 'c-row__col--1-1';
-$class_for_site_branding_col[] = ( $header_content ) ? 'c-row__col--lg-2-4' : 'c-row__col--lg-1-1';
-$class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 ?>
 
 <div class="l-<?php echo esc_attr( $header_type ); ?>" data-has-global-nav="<?php echo esc_attr( $data_has_global_nav ); ?>">
@@ -34,36 +29,36 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 		<?php endif; ?>
 
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
-			<div class="c-row c-row--margin-s c-row--middle c-row--between c-row--nowrap">
+			<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--between c-row--nowrap">
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--1-6 u-invisible-lg-up"></div>
-				<?php endif; ?>
-
-				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--1-4 u-invisible-md-down"></div>
-				<?php endif; ?>
-
-				<div class="c-row__col <?php echo esc_attr( $class_for_site_branding_col ); ?> u-text-center">
-					<?php Helper::get_template_part( 'template-parts/header/site-branding' ); ?>
-				</div>
-
-				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--1-6 u-invisible-lg-up">
-						<div class="u-pull-right">
-							<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
-						</div>
+					<div class="c-row__col c-row__col--fit u-invisible-lg-up u-invisible-wall">
+						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn', null, [ '_id' => false ] ); ?>
 					</div>
 				<?php endif; ?>
 
 				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--1-4 u-invisible-md-down">
-						<div class="u-pull-right">
-							<?php
-							if ( get_theme_mod( 'header-content' ) ) {
-								Helper::get_template_part( 'template-parts/header/content', 'lg' );
-							}
-							?>
-						</div>
+					<div class="c-row__col c-row__col--fit u-invisible-md-down u-invisible-wall">
+						<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php do_action( 'snow_monkey_before_header_site_branding_column' ); ?>
+
+				<div class="c-row__col c-row__col--auto u-text-center">
+					<?php Helper::get_template_part( 'template-parts/header/site-branding' ); ?>
+				</div>
+
+				<?php do_action( 'snow_monkey_after_header_site_branding_column' ); ?>
+
+				<?php if ( $header_content ) : ?>
+					<div class="c-row__col c-row__col--fit u-pull-right u-invisible-md-down">
+						<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
+					</div>
+				<?php endif; ?>
+
+				<?php if ( $has_drawer_nav ) : ?>
+					<div class="c-row__col c-row__col--fit u-pull-right u-invisible-lg-up">
+						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 					</div>
 				<?php endif; ?>
 			</div>

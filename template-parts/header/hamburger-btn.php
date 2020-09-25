@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  *
  * renamed: template-parts/hamburger-btn.php
  */
@@ -14,10 +14,19 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_label' => __( 'MENU', 'snow-monkey' ),
+		'_id'    => 'hamburger-btn',
 	]
 );
 ?>
-<button id="hamburger-btn" class="c-hamburger-btn" aria-expanded="false" aria-controls="drawer-nav">
+
+<button
+	<?php if ( $args['_id'] ) : ?>
+		id="<?php echo esc_attr( $args['_id'] ); ?>"
+	<?php endif; ?>
+	class="c-hamburger-btn"
+	aria-expanded="false"
+	aria-controls="drawer-nav"
+>
 	<div class="c-hamburger-btn__bars">
 		<div class="c-hamburger-btn__bar"></div>
 		<div class="c-hamburger-btn__bar"></div>

@@ -310,6 +310,11 @@
       top: 32px;
     }
 
+    .#{ $_prefix }c-container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+
     .#{ $_prefix }c-site-branding {
       @include _padding(0, 1);
 
