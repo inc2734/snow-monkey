@@ -41,6 +41,8 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 						<?php if ( $has_global_nav ) : ?>
 							<div class="c-row__col c-row__col--auto">
 								<?php
+								// The PHP into HTML causes(maybe), erroneous lint warnings to be printed.
+								// phpcs:disable WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned
 								Helper::get_template_part(
 									'template-parts/nav/global',
 									null,
@@ -49,6 +51,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 										'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
 									]
 								);
+								// phpce:enable
 								?>
 							</div>
 						<?php endif; ?>
