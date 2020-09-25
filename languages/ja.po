@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-09-24 11:42+0900\n"
-"PO-Revision-Date: 2020-09-24 11:43+0900\n"
+"POT-Creation-Date: 2020-09-24 15:34+0900\n"
+"PO-Revision-Date: 2020-09-24 15:35+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -42,6 +42,7 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/base-design/controls/h2-style.php:20
 #: app/customizer/design/sections/base-design/controls/h3-style.php:20
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:19
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
 msgid "None"
 msgstr "なし"
 
@@ -62,12 +63,14 @@ msgstr "モンキーレンチ"
 msgid "WordPress"
 msgstr "WordPress"
 
+#. translators: %s: Theme link
 #: Framework/Helper.php:120
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
+#. translators: %s: WordPress link
 #: Framework/Helper.php:126
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
@@ -237,6 +240,7 @@ msgstr "デザインスキン"
 msgid "If set this, please save and reload."
 msgstr "設定したら、保存してリロードしてください。"
 
+#. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/design-skin/section.php:22
 #, php-format
 msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
@@ -267,6 +271,7 @@ msgstr "アーカイブページレイアウト"
 msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
 
+#. translators: 1: User name
 #: app/customizer/design/sections/author/section.php:24
 #, php-format
 msgid "[ %1$s ] author page settings"
@@ -406,6 +411,7 @@ msgstr "テキスト2"
 msgid "Panels"
 msgstr "パネル"
 
+#. translators: %1$s: heading element
 #: app/customizer/design/sections/base-design/controls/h2-style.php:16
 #: app/customizer/design/sections/base-design/controls/h3-style.php:16
 #, php-format
@@ -554,6 +560,7 @@ msgstr "基本デザイン設定"
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
 
+#. translators: 1: Category name
 #: app/customizer/design/sections/category/section.php:24
 #, php-format
 msgid "[ %1$s ] category pages settings"
@@ -580,11 +587,13 @@ msgstr "デフォルト"
 msgid "The view template of the post"
 msgstr "投稿のビューテンプレート"
 
+#. translators: 1: Custom post type name
 #: app/customizer/design/sections/custom-post-archive/section.php:26
 #, php-format
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
 
+#. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post/controls/eyecatch.php:26
 #, php-format
 msgid "Select how to display the eyecatch image in %1$s page."
@@ -594,11 +603,13 @@ msgstr "%1$sページでアイキャッチ画像をどのように表示する�
 msgid "The view template of the page"
 msgstr "固定ページのビューテンプレート"
 
+#. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post/section.php:26
 #, php-format
 msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
 
+#. translators: 1: Taxonomy name
 #: app/customizer/design/sections/custom-taxonomy/section.php:27
 #, php-format
 msgid "[ %1$s ] taxonomy pages settings"
@@ -648,6 +659,18 @@ msgstr "ヘッダーを全幅にする"
 #: app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示"
+
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
+msgid "Global navigation hover effect"
+msgstr "グローバルナビゲーションのホバーエフェクト"
+
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:20
+msgid "Text color reversal"
+msgstr "文字色の反転"
+
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
+msgid "Underline"
+msgstr "下線"
 
 #: app/customizer/design/sections/header/controls/header-content.php:18
 msgid "Header contents"
@@ -723,6 +746,7 @@ msgstr "投稿のページレイアウトと同じ"
 msgid "Pages settings"
 msgstr "固定ページ設定"
 
+#. translators: 1: Tag name
 #: app/customizer/design/sections/post-tag/section.php:24
 #, php-format
 msgid "[ %1$s ] tag pages settings"
@@ -914,6 +938,7 @@ msgstr "Google アナリティクス"
 msgid "Google site verification"
 msgstr "Google site verification"
 
+#. translators: 1: content of google-site-verification, 2: google-site-verification meta tag
 #: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:21
 #, php-format
 msgid "Please enter part %1$s of %2$s"
@@ -943,6 +968,7 @@ msgstr "fb:app_id"
 msgid "If you want to output fb:app_id meta tag, please input."
 msgstr "fb:app_id meta タグを出力させたい場合は入力してください。"
 
+#. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/seo/sections/ogp/controls/fb-app-id.php:20
 #, php-format
 msgid "fb:app_id can be obtained from %1$sfacebook for developers%2$s."
@@ -1050,6 +1076,7 @@ msgstr "使用しない"
 msgid "twitter:site"
 msgstr "twitter:site"
 
+#. translators: 1: @username
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:21
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
@@ -1059,11 +1086,13 @@ msgstr "サイトの Twitter アカウント名。%1$s の形式で入力して�
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
+#. translators: 1: Card validator link
 #: app/customizer/seo/sections/twitter-cards/section.php:24
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
+#. translators: 1: Monkey icon
 #: app/customizer/snow-monkey-community/section.php:20
 #, php-format
 msgid "%1$s Snow Monkey Community %1$s"
@@ -1077,6 +1106,7 @@ msgstr "公式サイト"
 msgid "Informations, manuals, etc."
 msgstr "お知らせ、マニュアルなど。"
 
+#. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:35
 #, php-format
 msgid "%1$sOfficial Web Site%2$s"
@@ -1094,6 +1124,7 @@ msgstr ""
 "情報を共有したり、今後の機能開発等についてディスカッションしたりする場所で"
 "す。ぜひ気軽にご参加ください！"
 
+#. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:50
 #, php-format
 msgid "%1$sOnline Community%2$s"
@@ -1110,6 +1141,7 @@ msgstr ""
 "Snow Monkeyの使用方法やカスタマイズ方法をサポートするオープンなフォーラムで"
 "す。"
 
+#. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:65
 #, php-format
 msgid "%1$sSupport Forum%2$s"
@@ -1123,6 +1155,7 @@ msgstr "SNS"
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
+#. translators: 1: Facebook page slug, 2: Facebook page URL
 #: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:23
 #, php-format
 msgctxt "facebook-page-name"
@@ -1207,6 +1240,7 @@ msgstr ""
 "あなたが Facebook のシェアカウントをカウントする場合は、Facebook App を登録す"
 "る必要があります。"
 
+#. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:20
 #, php-format
 msgid "%1$sAccessToken tools%2$s"
@@ -1216,6 +1250,7 @@ msgstr "%1$sアクセストークンツール%2$s"
 msgid "Twitter settings"
 msgstr "Twitter 設定"
 
+#. translators: 1: Link of OpenShareCount
 #: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:21
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
@@ -1599,6 +1634,8 @@ msgstr "（一部広告含む）"
 msgid "Your comment is awaiting moderation."
 msgstr "あなたのコメントは承認待ちです。"
 
+#. translators: 1: Author, 2: Date, 3: Time
+#. translators: 1: Author, 2: Date, 3, Time
 #: template-parts/discussion/comment.php:22
 #: template-parts/discussion/trackback.php:18
 #, php-format

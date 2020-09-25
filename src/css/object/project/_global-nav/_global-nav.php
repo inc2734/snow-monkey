@@ -19,23 +19,38 @@ if ( ! $accent_color ) {
 }
 
 Style::register(
-	'.p-global-nav .c-navbar__item[data-active-menu="true"] > a',
+	'.p-global-nav--hover-text-color .c-navbar__item[data-active-menu="true"] > a',
 	'color: ' . $accent_color
 );
 
 Style::register(
-	'.p-global-nav .c-navbar__item.sm-nav-menu-item-highlight',
+	[
+		'.p-global-nav--hover-text-color .c-navbar__item:hover > a',
+		'.p-global-nav--hover-text-color .c-navbar__item:active > a',
+		'.p-global-nav--hover-text-color .c-navbar__item:focus > a',
+	],
+	'color: ' . $accent_color,
+	'@media (min-width: 64em)'
+);
+
+Style::register(
+	'.p-global-nav--hover-underline .c-navbar__item[data-active-menu="true"]::after > a',
 	'background-color: ' . $accent_color
 );
 
 Style::register(
 	[
-		'.p-global-nav .c-navbar__item:hover > a',
-		'.p-global-nav .c-navbar__item:active > a',
-		'.p-global-nav .c-navbar__item:focus > a',
+		'.p-global-nav--hover-underline .c-navbar__item:hover::after > a',
+		'.p-global-nav--hover-underline .c-navbar__item:active::after > a',
+		'.p-global-nav--hover-underline .c-navbar__item:focus::after > a',
 	],
-	'color: ' . $accent_color,
+	'background-color: ' . $accent_color,
 	'@media (min-width: 64em)'
+);
+
+Style::register(
+	'.p-global-nav .c-navbar__item.sm-nav-menu-item-highlight',
+	'background-color: ' . $accent_color
 );
 
 Style::register(

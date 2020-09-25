@@ -68,7 +68,7 @@
   @mixin overlay-header-white-text() {
     .#{ $_prefix }c-site-branding,
     .#{ $_prefix }c-hamburger-btn__label,
-    [data-has-global-nav] .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar__item:not([data-active-menu="true"]):not(:hover):not(:active):not(:focus) {
+    [data-has-global-nav] .#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar__item {
       color: $_color-white; // For IE11
       color: _var-color-white();
     }
@@ -309,13 +309,16 @@
       top: 32px;
     }
 
-    .#{ $_prefix }c-container {
-      @include _padding-right(1);
-      @include _padding-left(1);
+    .#{ $_prefix }c-site-branding {
+      @include _padding(0, 1);
+
+      &--has-logo {
+        text-align: center;
+      }
     }
 
-    .#{ $_prefix }c-site-branding--has-logo {
-      text-align: center;
+    .#{ $_prefix }p-header-content {
+      @include _padding(0, 1);
     }
 
     .#{ $_prefix }p-global-nav,
@@ -329,7 +332,7 @@
       .#{ $_prefix }c-navbar {
         &__item > a {
           align-items: flex-start;
-          @include _padding(.5, 0);
+          @include _padding(.5, 1);
         }
 
         &__item > .c-navbar__submenu {
@@ -348,9 +351,14 @@
 
     .#{ $_prefix }p-header-sub-nav {
       .#{ $_prefix }c-navbar {
-        &__item > a {
-          justify-content: flex-start;
-          @include _padding(.125, 0);
+        &__item {
+          margin-right: 0;
+          margin-left: 0;
+
+          > a {
+            justify-content: flex-start;
+            @include _padding(.125, 1);
+          }
         }
       }
     }

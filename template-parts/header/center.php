@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  *
  * renamed: template-parts/center-header.php
  */
@@ -76,7 +76,8 @@ $class_for_site_branding_col   = implode( ' ', $class_for_site_branding_col );
 					'template-parts/nav/global',
 					null,
 					[
-						'_vertical' => get_theme_mod( 'vertical-global-nav' ),
+						'_vertical'          => get_theme_mod( 'vertical-global-nav' ),
+						'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
 					]
 				);
 				?>

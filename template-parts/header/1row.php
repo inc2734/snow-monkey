@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.5.0
  *
  * renamed: template-parts/1row-header.php
  */
@@ -45,7 +45,8 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 									'template-parts/nav/global',
 									null,
 									[
-										'_vertical' => get_theme_mod( 'vertical-global-nav' ),
+										'_vertical'          => get_theme_mod( 'vertical-global-nav' ),
+										'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
 									]
 								);
 								?>

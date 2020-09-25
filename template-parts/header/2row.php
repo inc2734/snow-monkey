@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 11.5.0
  *
  * renamed: template-parts/2row-header.php
  */
@@ -58,7 +58,16 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 
 		<?php if ( $has_global_nav ) : ?>
 			<div class="l-<?php echo esc_attr( $header_type ); ?>__row u-invisible-md-down">
-				<?php Helper::get_template_part( 'template-parts/nav/global' ); ?>
+				<?php
+				Helper::get_template_part(
+					'template-parts/nav/global',
+					null,
+					[
+						'_vertical'          => false,
+						'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
+					]
+				);
+				?>
 			</div>
 		<?php endif; ?>
 	</div>

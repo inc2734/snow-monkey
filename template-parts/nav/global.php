@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  *
  * renamed: template-parts/global-nav.php
  */
@@ -19,7 +19,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_vertical' => false,
+		'_vertical'          => false,
+		'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
 	]
 );
 
@@ -27,6 +28,9 @@ $classes   = [];
 $classes[] = 'p-global-nav';
 if ( $args['_vertical'] ) {
 	$classes[] = 'p-global-nav--vertical';
+}
+if ( $args['_gnav-hover-effect'] ) {
+	$classes[] = 'p-global-nav--hover-' . $args['_gnav-hover-effect'];
 }
 ?>
 
