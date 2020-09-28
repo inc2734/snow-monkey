@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  */
 
 namespace Framework\Contract\Helper;
@@ -127,6 +127,20 @@ trait Page_Header {
 		}
 
 		return $class::get_the_image();
+	}
+
+	/**
+	 * Return page header image caption
+	 *
+	 * @return string
+	 */
+	public static function get_page_header_image_caption() {
+		$class = static::_get_page_header_class();
+		if ( ! $class ) {
+			return;
+		}
+
+		return $class::get_image_caption();
 	}
 
 	/**

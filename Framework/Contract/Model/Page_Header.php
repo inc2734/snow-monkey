@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  */
 
 namespace Framework\Contract\Model;
@@ -30,6 +30,13 @@ abstract class Page_Header {
 	];
 
 	/**
+	 * Page header image
+	 *
+	 * @var string|false
+	 */
+	protected static $image = false;
+
+	/**
 	 * Return page header image url
 	 *
 	 * @return string
@@ -51,17 +58,32 @@ abstract class Page_Header {
 	abstract public static function is_display_title();
 
 	/**
+	 * Return page header image caption
+	 *
+	 * @return string
+	 */
+	public static function get_image_caption() {
+		$image_url = static::get_image_url();
+		if ( ! $image_url ) {
+			return;
+		}
+
+		$image_id = attachment_url_to_postid( $image_url );
+		if ( ! $image_id ) {
+			return;
+		}
+
+		return wp_get_attachment_caption( $image_id );
+	}
+
+	/**
 	 * Return page header image html
 	 *
 	 * @return string The img tag.
 	 */
 	public static function get_the_image() {
-		$cache_key   = md5( json_encode( get_queried_object() ) );
-		$cache_group = 'snow-monkey/page-header/get_the_image';
-		$cache       = wp_cache_get( $cache_key, $cache_group );
-
-		if ( false !== $cache ) {
-			return $cache;
+		if ( false !== static::$image ) {
+			return static::$image;
 		}
 
 		$image = null;
@@ -70,20 +92,16 @@ abstract class Page_Header {
 		if ( $image_url ) {
 			$image_id = attachment_url_to_postid( $image_url );
 			if ( ! $image_id ) {
-				$post = get_post( $image_id );
-				$alt  = $post ? $post->post_excerpt : '';
-
 				$image = sprintf(
-					'<img src="%1$s" alt="%2$s">',
-					esc_url( $image_url ),
-					esc_attr( $alt )
+					'<img src="%1$s" alt="">',
+					esc_url( $image_url )
 				);
 			} else {
 				$image = wp_get_attachment_image( $image_id, static::_get_thumbnail_size() );
 			}
 		}
 
-		wp_cache_set( $cache_key, $image, $cache_group );
+		static::$image = $image;
 		return $image;
 	}
 

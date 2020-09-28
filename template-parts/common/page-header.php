@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  *
  * renamed: template-parts/page-header.php
  */
@@ -15,10 +15,11 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_is_output_page_header_title' => Helper::is_output_page_header_title(),
-		'_page_header_title'           => Helper::get_page_title_from_breadcrumbs(),
-		'_page_header_image'           => Helper::get_page_header_image(),
-		'_display_entry_meta'          => false,
+		'_is_output_page_header_title'       => Helper::is_output_page_header_title(),
+		'_page_header_title'                 => Helper::get_page_title_from_breadcrumbs(),
+		'_page_header_image'                 => Helper::get_page_header_image(),
+		'_display_entry_meta'                => false,
+		'_display_page_header_image_caption' => false,
 	]
 );
 ?>
@@ -38,6 +39,20 @@ $args = wp_parse_args(
 					'img' => Helper::img_allowed_attributes(),
 				]
 			);
+
+			if ( $args['_display_page_header_image_caption'] ) {
+				$page_header_image_caption = Helper::get_page_header_image_caption();
+				$page_header_image_caption = apply_filters( 'snow_monkey_page_header_image_caption', $page_header_image_caption );
+				if ( $page_header_image_caption ) {
+					?>
+					<div class="c-page-header__bgimage-caption">
+						<div class="c-container">
+							<?php echo wp_kses_post( $page_header_image_caption ); ?>
+						</div>
+					</div>
+					<?php
+				}
+			}
 			?>
 		</div>
 	<?php endif; ?>
