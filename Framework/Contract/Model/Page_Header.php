@@ -11,7 +11,7 @@ namespace Framework\Contract\Model;
 abstract class Page_Header {
 
 	/**
-	 * Mods to display page header image
+	 * Mods to display page header image.
 	 *
 	 * @var array
 	 */
@@ -21,7 +21,7 @@ abstract class Page_Header {
 	];
 
 	/**
-	 * Mods to display page header image title
+	 * Mods to display page header image title.
 	 *
 	 * @var array
 	 */
@@ -30,97 +30,116 @@ abstract class Page_Header {
 	];
 
 	/**
-	 * Page header image
+	 * Page header image tag.
 	 *
-	 * @var string|false
+	 * @var string|null
 	 */
-	protected static $image = false;
+	protected static $image = null;
 
 	/**
-	 * Return page header image url
+	 * Page header image ID
 	 *
-	 * @return string
+	 * @var int|null
 	 */
-	abstract public static function get_image_url();
+	protected static $image_id = null;
 
 	/**
-	 * Return true when should display page header image
+	 * Return page header image url.
 	 *
-	 * @return boolean
+	 * @return string|false
 	 */
-	abstract public static function is_display_image();
+	abstract protected static function _get_image_url();
 
 	/**
-	 * Return true when should display page header title
+	 * Return page header image url.
 	 *
-	 * @return boolean
+	 * @return string|false
 	 */
-	abstract public static function is_display_title();
+	public static function get_image_url() {
+		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
+		if ( null !== $url ) {
+			return $url;
+		}
+
+		// @deprecated
+		$url = apply_filters_deprecated(
+			'snow_monkey_page_header_image_url',
+			[ $url ],
+			'Snow Monkey 5.1.0',
+			'snow_monkey_pre_page_header_image_url'
+		);
+
+		return static::_get_image_url();
+	}
 
 	/**
-	 * Return page header image caption
+	 * Return page header title.
+	 *
+	 * @return string|false
+	 */
+	abstract protected static function _get_title();
+
+	/**
+	 * Return page header title.
+	 *
+	 * @return string|false
+	 */
+	public static function get_title() {
+		return apply_filters( 'snow_monkey_page_header_title', static::_get_title() );
+	}
+
+	/**
+	 * Return page header image html.
+	 *
+	 * @return string|false The img tag.
+	 */
+	public static function get_image() {
+		if ( null !== static::$image ) {
+			return static::$image;
+		}
+
+		if ( static::$image_id ) {
+			return wp_get_attachment_image( static::$image_id, static::_get_thumbnail_size() );
+		}
+
+		$image_url = static::get_image_url();
+		if ( $image_url ) {
+			static::$image_id = attachment_url_to_postid( $image_url );
+			static::$image    = static::$image_id
+				? wp_get_attachment_image( static::$image_id, static::_get_thumbnail_size() )
+				: sprintf( '<img src="%1$s" alt="">', esc_url( $image_url ) );
+		} else {
+			static::$image_id = 0;
+			static::$image    = false;
+		}
+
+		return static::$image;
+	}
+
+	/**
+	 * Return page header image caption.
 	 *
 	 * @return string
 	 */
 	public static function get_image_caption() {
-		$image_url = static::get_image_url();
-		if ( ! $image_url ) {
-			return;
-		}
+		$image_caption = false;
 
-		$image_id = attachment_url_to_postid( $image_url );
-		if ( ! $image_id ) {
-			return;
-		}
-
-		return wp_get_attachment_caption( $image_id );
-	}
-
-	/**
-	 * Return page header image html
-	 *
-	 * @return string The img tag.
-	 */
-	public static function get_the_image() {
-		if ( false !== static::$image ) {
-			return static::$image;
-		}
-
-		$image = null;
-
-		$image_url = static::get_image_url();
-		if ( $image_url ) {
-			$image_id = attachment_url_to_postid( $image_url );
-			if ( ! $image_id ) {
-				$image = sprintf(
-					'<img src="%1$s" alt="">',
-					esc_url( $image_url )
-				);
-			} else {
-				$image = wp_get_attachment_image( $image_id, static::_get_thumbnail_size() );
+		if ( null === static::$image_id ) {
+			$image_url = static::get_image_url();
+			if ( $image_url ) {
+				static::$image_id = attachment_url_to_postid( $image_url );
 			}
 		}
 
-		static::$image = $image;
-		return $image;
+		if ( static::$image_id ) {
+			$image_caption = wp_get_attachment_caption( static::$image_id );
+		}
+
+		return apply_filters( 'snow_monkey_page_header_image_caption', wp_get_attachment_caption( $image_id ) );
 	}
 
 	/**
-	 * Display page header image
-	 *
-	 * @return void
-	 */
-	public static function the_image() {
-		echo wp_kses(
-			static::get_the_image(),
-			[
-				'img' => Helper::img_allowed_attributes(),
-			]
-		);
-	}
-
-	/**
-	 * Return thumbnail size of page header image
+	 * Return thumbnail size of page header image.
 	 *
 	 * @return string
 	 */
@@ -129,11 +148,49 @@ abstract class Page_Header {
 	}
 
 	/**
-	 * Return default page header image url
+	 * Return default page header image url.
 	 *
 	 * @return string
 	 */
 	protected static function _get_default_image_url() {
 		return get_theme_mod( 'default-page-header-image' );
+	}
+
+	/**
+	 * Return page header image html
+	 *
+	 * @deprecated
+	 *
+	 * @return string The img tag.
+	 */
+	public static function get_the_image() {
+		_deprecated_function(
+			'\Framework\Contract\Model\Page_Header\get_the_image()',
+			'Snow Monkey 11.5.0',
+			'\Framework\Contract\Model\Page_Header\get_image()'
+		);
+
+		return static::get_image();
+	}
+
+	/**
+	 * Display page header image
+	 *
+	 * @deprecated
+	 *
+	 * @return void
+	 */
+	public static function the_image() {
+		_deprecated_function(
+			'\Framework\Contract\Model\Page_Header\the_image()',
+			'Snow Monkey 11.5.0'
+		);
+
+		echo wp_kses(
+			static::get_image(),
+			[
+				'img' => Helper::img_allowed_attributes(),
+			]
+		);
 	}
 }

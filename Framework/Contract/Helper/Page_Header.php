@@ -11,32 +11,36 @@ namespace Framework\Contract\Helper;
 trait Page_Header {
 
 	/**
-	 * Return page header class
+	 * The page header class.
 	 *
-	 * @return string
+	 * @var string
 	 */
-	protected static function _get_page_header_class() {
-		$cache_key   = md5( json_encode( get_queried_object() ) );
-		$cache_group = 'snow-monkey/page_header_class';
-		$cache       = wp_cache_get( $cache_key, $cache_group );
+	protected static $page_header_class = null;
 
-		if ( false !== $cache && class_exists( $cache ) ) {
-			return $cache;
+	/**
+	 * Return page header class.
+	 *
+	 * @return string|false|null
+	 */
+	public static function get_page_header_class() {
+		if ( null !== static::$page_header_class ) {
+			return static::$page_header_class;
 		}
 
-		$class = static::_get_page_header_class_no_cache();
-		wp_cache_set( $cache_key, $class, $cache_group );
-		return $class;
+		$class = static::_get_page_header_class();
+		if ( class_exists( $class ) ) {
+			static::$page_header_class = $class;
+		}
+
+		return static::$page_header_class;
 	}
 
 	/**
-	 * Return page header class
+	 * Return page header class.
 	 *
-	 * @SuppressWarnings(PHPMD.CyclomaticComplexity)
-	 *
-	 * @return string
+	 * @return string|false
 	 */
-	protected static function _get_page_header_class_no_cache() {
+	protected static function _get_page_header_class() {
 		$custom_post_types = \Framework\Helper::get_custom_post_types();
 		$types             = array_filter(
 			[
@@ -62,9 +66,63 @@ trait Page_Header {
 	}
 
 	/**
-	 * Returns page header image url
+	 * Return whether to display the page header.
 	 *
-	 * @SuppressWarnings(PHPMD.UndefinedVariable)
+	 * @return boolean
+	 */
+	public static function display_page_header() {
+		$class = static::get_page_header_class();
+
+		$return = false;
+
+		if ( $class ) {
+			if ( $class::get_title() ) {
+				$return = true;
+			} elseif ( $class::get_image() ) {
+				$return = true;
+			}
+		}
+
+		return apply_filters( 'snow_monkey_is_output_page_header', $return );
+	}
+
+	/**
+	 * Return whether to display the page header.
+	 *
+	 * @deprecated
+	 *
+	 * @return boolean
+	 */
+	public static function is_output_page_header() {
+		_deprecated_function(
+			'\Framework\Helper::is_output_page_header()',
+			'Snow Monkey 11.5.0',
+			'\Framework\Helper::display_page_header()'
+		);
+
+		return static::display_page_header();
+	}
+
+	/**
+	 * Returns page header image.
+	 *
+	 * @deprecated
+	 *
+	 * @return string
+	 */
+	public static function get_page_header_image() {
+		_deprecated_function(
+			'\Framework\Helper::get_page_header_image()',
+			'Snow Monkey 11.5.0',
+			'\Framework\Helper::get_page_header_class()::get_image()'
+		);
+
+		$class = static::get_page_header_class();
+		return $class::get_image();
+	}
+
+	/**
+	 * Returns page header image url.
 	 *
 	 * @deprecated
 	 *
@@ -72,8 +130,9 @@ trait Page_Header {
 	 */
 	public static function get_page_header_image_url() {
 		_deprecated_function(
-			'\Framework\Contract\Helper::get_page_header_image_url()',
-			'Snow Monkey 5.1.0'
+			'\Framework\Helper::get_page_header_image_url()',
+			'Snow Monkey 5.1.0',
+			'\Framework\Helper::get_page_header_class()::get_image_url()'
 		);
 
 		$image = static::get_page_header_image();
@@ -93,65 +152,15 @@ trait Page_Header {
 	}
 
 	/**
-	 * Returns page header image
-	 *
-	 * @return string
-	 */
-	public static function get_page_header_image() {
-		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
-		if ( null === $url ) {
-			// @deprecated
-			$url = apply_filters( 'snow_monkey_page_header_image_url', $url );
-			if ( has_filter( 'snow_monkey_page_header_image_url' ) ) {
-				_deprecated_hook(
-					'snow_monkey_page_header_image_url',
-					'Snow Monkey 5.1.0'
-				);
-			}
-		}
-
-		if ( false === $url ) {
-			return;
-		}
-
-		if ( $url ) {
-			return sprintf(
-				'<img src="%1$s" alt="">',
-				esc_url( $url )
-			);
-		}
-
-		$class = static::_get_page_header_class();
-		if ( ! $class || ! $class::is_display_image() ) {
-			return;
-		}
-
-		return $class::get_the_image();
-	}
-
-	/**
-	 * Return page header image caption
-	 *
-	 * @return string
-	 */
-	public static function get_page_header_image_caption() {
-		$class = static::_get_page_header_class();
-		if ( ! $class ) {
-			return;
-		}
-
-		return $class::get_image_caption();
-	}
-
-	/**
-	 * Display page header image
+	 * Display page header image.
 	 *
 	 * @deprecated
+
 	 * @return void
 	 */
 	public static function the_page_header_image() {
 		_deprecated_function(
-			'\Framework\Contract\Helper::the_page_header_image()',
+			'\Framework\Helper::the_page_header_image()',
 			'Snow Monkey 5.1.0'
 		);
 
@@ -159,35 +168,29 @@ trait Page_Header {
 	}
 
 	/**
-	 * Return whether to display the page header title
+	 * Return whether to display the page header title.
+	 *
+	 * @deprecated
 	 *
 	 * @return boolean
 	 */
 	public static function is_output_page_header_title() {
+		_deprecated_function(
+			'\Framework\Helper::is_output_page_header_title()',
+			'Snow Monkey 11.5.0'
+		);
+
 		$return = false;
 
 		$class = static::_get_page_header_class();
-		if ( $class && $class::is_display_title() ) {
+		if ( $class && $class::get_title() ) {
 			$return = true;
 		}
 
-		return apply_filters( 'snow_monkey_is_output_page_header_title', $return );
-	}
-
-	/**
-	 * Return whether to display the page header
-	 *
-	 * @return boolean
-	 */
-	public static function is_output_page_header() {
-		$return = false;
-
-		if ( static::is_output_page_header_title() ) {
-			$return = true;
-		} elseif ( static::get_page_header_image() ) {
-			$return = true;
-		}
-
-		return apply_filters( 'snow_monkey_is_output_page_header', $return );
+		return apply_filters_deprecated(
+			'snow_monkey_is_output_page_header_title',
+			[ $return ],
+			'Snow Monkey 11.5.0'
+		);
 	}
 }

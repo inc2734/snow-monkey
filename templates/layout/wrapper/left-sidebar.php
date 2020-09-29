@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  */
 
 use Framework\Helper;
@@ -49,7 +49,7 @@ use Framework\Helper;
 			?>
 
 			<?php
-			if ( Helper::is_output_page_header() ) {
+			if ( Helper::display_page_header() ) {
 				$vars = [
 					'_display_entry_meta' => is_singular( 'post' ),
 				];

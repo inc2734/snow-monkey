@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.1.0
+ * @version 11.5.0
  */
 
 namespace Framework\Model\Page_Header;
@@ -13,31 +13,24 @@ use Framework\Contract\Model\Page_Header as Base;
 class Front_Page_Header extends Base {
 
 	/**
-	 * Return page header image url
+	 * Return page header image url.
 	 *
-	 * @return string
+	 * @return string|false
 	 */
-	public static function get_image_url() {
-		if ( get_theme_mod( 'home-page-display-page-header' ) ) {
-			return Singular_Page_Header::get_image_url();
-		}
+	protected static function _get_image_url() {
+		return get_theme_mod( 'home-page-display-page-header' )
+			? Singular_Page_Header::get_image_url()
+			: false;
 	}
 
 	/**
-	 * Return true when should display page header image
+	 * Return page header title.
 	 *
-	 * @return boolean
+	 * @return string|false
 	 */
-	public static function is_display_image() {
-		return static::get_the_image() ? true : false;
-	}
-
-	/**
-	 * Return true when should display page header title
-	 *
-	 * @return boolean
-	 */
-	public static function is_display_title() {
-		return false;
+	protected static function _get_title() {
+		return get_theme_mod( 'home-page-display-page-header' )
+			? \Framework\Helper::get_page_title_from_breadcrumbs()
+			: false;
 	}
 }
