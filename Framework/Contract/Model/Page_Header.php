@@ -89,6 +89,22 @@ abstract class Page_Header {
 	}
 
 	/**
+	 * Return page header alignment.
+	 *
+	 * @return string|false
+	 */
+	abstract protected static function _get_align();
+
+	/**
+	 * Return page header alignment.
+	 *
+	 * @return string|false
+	 */
+	public static function get_align() {
+		return apply_filters( 'snow_monkey_page_header_align', static::_get_align() );
+	}
+
+	/**
 	 * Return page header image html.
 	 *
 	 * @return string|false The img tag.
@@ -135,7 +151,7 @@ abstract class Page_Header {
 			$image_caption = wp_get_attachment_caption( static::$image_id );
 		}
 
-		return apply_filters( 'snow_monkey_page_header_image_caption', wp_get_attachment_caption( $image_id ) );
+		return apply_filters( 'snow_monkey_page_header_image_caption', $image_caption );
 	}
 
 	/**

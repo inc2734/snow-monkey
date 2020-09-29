@@ -29,4 +29,13 @@ class Default_Page_Header extends Base {
 	protected static function _get_title() {
 		return false;
 	}
+
+	/**
+	 * Return page header alignment.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_align() {
+		return false;
+	}
 }

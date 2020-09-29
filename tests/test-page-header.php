@@ -18,40 +18,59 @@ class Page_Header_Test extends WP_UnitTestCase {
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_search() {
 		$this->go_to( home_url() . '?s=.' );
 		$this->assertEquals( '\Framework\Model\Page_Header\Default_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Default_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_404() {
 		$this->go_to( home_url() . '?p=10000000' );
 		$this->assertEquals( '\Framework\Model\Page_Header\Default_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Default_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_single() {
 		$post_id = $this->factory->post->create( [ 'post_type' => 'post' ] );
 		$this->go_to( get_permalink( $post_id ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_page() {
 		$post_id = $this->factory->post->create( [ 'post_type' => 'page' ] );
 		$this->go_to( get_permalink( $post_id ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_front_page() {
 		$post_id = $this->factory->post->create( [ 'post_type' => 'page' ] );
@@ -59,27 +78,39 @@ class Page_Header_Test extends WP_UnitTestCase {
 		update_option( 'page_on_front', $post_id );
 		$this->go_to( get_permalink( $post_id ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Front_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Front_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_category() {
 		$term_id = $this->factory->category->create();
 		$this->go_to( get_term_link( $term_id, 'category' ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Category_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Category_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_home() {
 		$this->go_to( get_home_url() );
 		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_blog_home() {
 		$front_page_id = $this->factory->post->create( [ 'post_type' => 'page' ] );
@@ -89,29 +120,41 @@ class Page_Header_Test extends WP_UnitTestCase {
 		update_option( 'page_for_posts', $home_page_id );
 		$this->go_to( get_permalink( $home_page_id ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_date() {
 		$post_id = $this->factory->post->create( [ 'post_type' => 'post' ] );
 		$post    = get_post( $post_id );
 		$this->go_to( home_url() . '?year=' . date( 'Y', strtotime( $post->post_date ) ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_tag() {
 		$term_id = $this->factory->tag->create();
 		$this->go_to( get_term_link( $term_id, 'post_tag' ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_post_type_archive() {
 		register_post_type( 'test_post_type', [ 'public' => true, 'has_archive' => true ] );
@@ -122,16 +165,23 @@ class Page_Header_Test extends WP_UnitTestCase {
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_custom_post() {
 		register_post_type( 'test_post_type', [ 'public' => true, 'has_archive' => true ] );
 		$post_id = $this->factory->post->create( [ 'post_type' => 'test_post_type' ] );
 		$this->go_to( get_permalink( $post_id ) );
 		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Singular_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
 	 * @test
+	 * @backupStaticAttributes enabled
+	 * @runInSeparateProcess
+	 * @preserveGlobalState disabled
 	 */
 	public function is_term() {
 		register_post_type( 'test_post_type', [ 'public' => true, 'taxonomies' => [ 'test_tax' ] ] );
@@ -139,18 +189,5 @@ class Page_Header_Test extends WP_UnitTestCase {
 		$term_id = $this->factory->term->create( [ 'taxonomy' => 'test_tax', 'name' => 'test_term' ] );
 		$this->go_to( get_term_link( $term_id, 'test_tax' ) );
 		$this->assertFalse( $this->_get_page_header_class() );
-	}
-
-	/**
-	 * @test
-	 */
-	public function not_found_saved_class() {
-		$this->go_to( get_home_url() );
-
-		$cache_key   = md5( json_encode( get_queried_object() ) );
-		$cache_group = 'snow-monkey/page_header_class';
-		wp_cache_set( $cache_key, 'DUMMY', $cache_group );
-
-		$this->assertEquals( '\Framework\Model\Page_Header\Archive_Page_Header', $this->_get_page_header_class() );
 	}
 }

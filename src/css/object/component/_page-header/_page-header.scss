@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   overflow: hidden;
   @include _padding(2, 0);
@@ -26,6 +25,28 @@
     }
   }
 
+  &[data-align="center"] {
+    justify-content: center;
+
+    .#{ $_prefix }c-page-header__content {
+     align-items: center;
+    }
+  }
+
+  &[data-align="right"] {
+   justify-content: flex-end;
+
+    .#{ $_prefix }c-page-header__content {
+     align-items: flex-end;
+    }
+  }
+
+  .#{ $_prefix }c-container {
+    flex: 1 1 auto;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   &__bgimage {
     @include cover-img();
     @include _position(absolute, 0, 0, 0, 0);
@@ -43,7 +64,6 @@
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     a {
       color: inherit;
@@ -57,9 +77,6 @@
 
   &__meta {
     @include _margin-top(.25);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     @include _font-size-line-height(12px);
     font-weight: bold;
   }

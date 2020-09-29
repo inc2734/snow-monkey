@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 11.5.0
  */
 
 namespace Framework;
@@ -32,6 +32,19 @@ class Helper {
 			'title-on-page-header' => __( 'Title on page header', 'snow-monkey' ),
 			'content-top'          => __( 'Top of contents', 'snow-monkey' ),
 			'none'                 => __( 'None', 'snow-monkey' ),
+		];
+	}
+
+	/**
+	 * Return page header alignment choices.
+	 *
+	 * @return array
+	 */
+	public static function page_header_align_choices() {
+		return [
+			'left'   => __( 'Left', 'snow-monkey' ),
+			'center' => __( 'Center', 'snow-monkey' ),
+			'right'  => __( 'Right', 'snow-monkey' ),
 		];
 	}
 

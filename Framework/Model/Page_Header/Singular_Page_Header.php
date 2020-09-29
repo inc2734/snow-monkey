@@ -43,4 +43,15 @@ class Singular_Page_Header extends Base {
 			? \Framework\Helper::get_page_title_from_breadcrumbs()
 			: false;
 	}
+
+	/**
+	 * Return page header alignment.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_align() {
+		return in_array( get_theme_mod( get_post_type() . '-eyecatch' ), static::$title_mods, true )
+			? get_theme_mod( get_post_type() . '-page-header-align' )
+			: false;
+	}
 }

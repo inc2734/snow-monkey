@@ -19,6 +19,7 @@ $args = wp_parse_args(
 	[
 		'_title'                 => $page_header::get_title(),
 		'_image'                 => $page_header::get_image(),
+		'_align'                 => $page_header::get_align(),
 		'_display_entry_meta'    => false,
 		'_display_image_caption' => false,
 	]
@@ -40,6 +41,7 @@ if ( isset( $args['_is_output_page_header_title'] ) ) {
 
 <div
 	class="c-page-header"
+	data-align="<?php echo esc_attr( $args['_align'] ); ?>"
 	data-has-content="<?php echo esc_attr( $args['_title'] ? 'true' : 'false' ); ?>"
 	data-has-image="<?php echo esc_attr( $args['_image'] ? 'true' : 'false' ); ?>"
 	>
@@ -55,12 +57,17 @@ if ( isset( $args['_is_output_page_header_title'] ) ) {
 			);
 			?>
 
-			<?php if ( $args['_display_image_caption'] && $image_caption = $page_header::get_image_caption() ) : ?>
-				<div class="c-page-header__bgimage-caption">
-					<div class="c-container">
-						<?php echo wp_kses_post( $image_caption ); ?>
+			<?php if ( $args['_display_image_caption'] ) : ?>
+				<?php
+				$image_caption = $page_header::get_image_caption();
+				?>
+				<?php if ( $image_caption ) : ?>
+					<div class="c-page-header__bgimage-caption">
+						<div class="c-container">
+							<?php echo wp_kses_post( $image_caption ); ?>
+						</div>
 					</div>
-				</div>
+				<?php endif; ?>
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>

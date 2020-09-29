@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.0
+ * @version 11.5.0
  */
 
 use Framework\Helper;
@@ -14,7 +14,11 @@ Framework::control(
 	'archive-eyecatch',
 	[
 		'label'       => __( 'Eyecatch image', 'snow-monkey' ),
-		'description' => __( 'Select how to display the eyecatch image in archive page.', 'snow-monkey' ),
+		'description' => sprintf(
+			/* translators: 1: archive */
+			__( 'Select how to display the eyecatch image in %1$s page.', 'snow-monkey' ),
+			__( 'archive', 'snow-monkey' )
+		),
 		'priority'    => 110,
 		'default'     => 'page-header',
 		'choices'     => Helper::eyecatch_position_choices(),

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-09-25 12:04+0900\n"
-"PO-Revision-Date: 2020-09-25 12:05+0900\n"
+"POT-Creation-Date: 2020-09-29 14:46+0900\n"
+"PO-Revision-Date: 2020-09-29 14:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -46,113 +46,125 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:59 template-parts/content/prev-next-nav.php:72
+#: Framework/Helper.php:45 translation/bundle-template-header.php:13
+msgid "Left"
+msgstr "左"
+
+#: Framework/Helper.php:46
+msgid "Center"
+msgstr "中央"
+
+#: Framework/Helper.php:47
+msgid "Right"
+msgstr "右"
+
+#: Framework/Helper.php:72 template-parts/content/prev-next-nav.php:72
 #: template-parts/loop/entry-summary/content/content-rss.php:40
 #: template-parts/loop/entry-summary/content/content.php:36
 msgctxt "excerpt_length"
 msgid "55"
 msgstr "55"
 
-#: Framework/Helper.php:110
+#: Framework/Helper.php:123
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:115
+#: Framework/Helper.php:128
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %s: Theme link
-#: Framework/Helper.php:120
+#: Framework/Helper.php:133
 #: app/customizer/title-tagline/controls/copyright.php:24
 #, php-format
 msgid "Snow Monkey theme by %s"
 msgstr "Snow Monkey theme by %s"
 
 #. translators: %s: WordPress link
-#: Framework/Helper.php:126
+#: Framework/Helper.php:139
 #: app/customizer/title-tagline/controls/copyright.php:30
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:256
+#: Framework/Helper.php:269
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:261
+#: Framework/Helper.php:274
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:266 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:279 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:271
+#: Framework/Helper.php:284
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:276
+#: Framework/Helper.php:289
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:281
+#: Framework/Helper.php:294
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:286
+#: Framework/Helper.php:299
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:291
+#: Framework/Helper.php:304
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:296
+#: Framework/Helper.php:309
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:301
+#: Framework/Helper.php:314
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:307
+#: Framework/Helper.php:320
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:313
+#: Framework/Helper.php:326
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:319
+#: Framework/Helper.php:332
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:325
+#: Framework/Helper.php:338
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:331
+#: Framework/Helper.php:344
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:337
+#: Framework/Helper.php:350
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:343
+#: Framework/Helper.php:356
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:349
+#: Framework/Helper.php:362
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:355
+#: Framework/Helper.php:368
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -251,17 +263,29 @@ msgid "Design"
 msgstr "デザイン"
 
 #: app/customizer/design/sections/archive/controls/eyecatch.php:16
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:23
-#: app/customizer/design/sections/page/controls/eyecatch.php:16
-#: app/customizer/design/sections/post/controls/eyecatch.php:16
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
+#: app/customizer/design/sections/page/controls/eyecatch.php:18
+#: app/customizer/design/sections/post/controls/eyecatch.php:18
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
 msgid "Eyecatch image"
 msgstr "アイキャッチ画像"
 
-#: app/customizer/design/sections/archive/controls/eyecatch.php:17
-msgid "Select how to display the eyecatch image in archive page."
-msgstr ""
-"アーカイブページでアイキャッチ画像をどのように表示するか選択してください。"
+#. translators: 1: archive
+#. translators: 1: Custom post type label
+#. translators: 1: Post type label
+#. translators: 1: WooCommerce product
+#: app/customizer/design/sections/archive/controls/eyecatch.php:19
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:25
+#: app/customizer/design/sections/page/controls/eyecatch.php:21
+#: app/customizer/design/sections/post/controls/eyecatch.php:21
+#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
+#, php-format
+msgid "Select how to display the eyecatch image in %1$s page."
+msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#: app/customizer/design/sections/archive/controls/eyecatch.php:20
+msgid "archive"
+msgstr "アーカイブ"
 
 #: app/customizer/design/sections/archive/controls/layout.php:18
 msgid "Archive page layout"
@@ -593,11 +617,12 @@ msgstr "投稿のビューテンプレート"
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
 
-#. translators: 1: Custom post type label
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:26
-#, php-format
-msgid "Select how to display the eyecatch image in %1$s page."
-msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
+#: app/customizer/design/sections/custom-post/controls/page-header-align.php:20
+#: app/customizer/design/sections/page/controls/page-header-align.php:16
+#: app/customizer/design/sections/post/controls/page-header-align.php:16
+#: app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
+msgid "Page header alignment"
+msgstr "ページヘッダーの行揃え"
 
 #: app/customizer/design/sections/custom-post/controls/view.php:27
 msgid "The view template of the page"
@@ -734,10 +759,6 @@ msgstr "ヘッダー"
 msgid "Posts page settings"
 msgstr "投稿ページ設定"
 
-#: app/customizer/design/sections/page/controls/eyecatch.php:17
-msgid "Select how to display the eyecatch image in page."
-msgstr "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
-
 #: app/customizer/design/sections/page/controls/layout.php:16
 msgid "Page layout"
 msgstr "ページレイアウト"
@@ -755,10 +776,6 @@ msgstr "固定ページ設定"
 #, php-format
 msgid "[ %1$s ] tag pages settings"
 msgstr "[ %1$s ] タグページ設定"
-
-#: app/customizer/design/sections/post/controls/eyecatch.php:17
-msgid "Select how to display the eyecatch image in post."
-msgstr "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
 
 #: app/customizer/design/sections/post/controls/layout.php:18
 msgid "Post page layout"
@@ -788,11 +805,9 @@ msgstr "WooCommerce 一覧ページレイアウト"
 msgid "WooCommerce archive page settings"
 msgstr "WooCommerce 一覧ページ設定"
 
-#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:20
-msgid "Select how to display the eyecatch image in WooCommerce product page."
-msgstr ""
-"WooCommerce 商品ページでアイキャッチ画像をどのように表示するか選択してくださ"
-"い。"
+#: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:23
+msgid "WooCommerce product"
+msgstr "WooCommerce 商品"
 
 #: app/customizer/design/sections/woocommerce-single/controls/layout.php:18
 msgid "WooCommerce product page layout"
@@ -1715,10 +1730,6 @@ msgstr "2行"
 msgid "Center logo"
 msgstr "中央ロゴ"
 
-#: translation/bundle-template-header.php:13
-msgid "Left"
-msgstr "左"
-
 #: woocommerce/loop/orderby.php:25
 msgid "Shop order"
 msgstr "買い物"
@@ -1738,3 +1749,21 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Select how to display the eyecatch image in archive page."
+#~ msgstr ""
+#~ "アーカイブページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#~ msgid "Select how to display the eyecatch image in page."
+#~ msgstr ""
+#~ "固定ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#~ msgid "Select how to display the eyecatch image in post."
+#~ msgstr ""
+#~ "投稿ページでアイキャッチ画像をどのように表示するか選択してください。"
+
+#~ msgid ""
+#~ "Select how to display the eyecatch image in WooCommerce product page."
+#~ msgstr ""
+#~ "WooCommerce 商品ページでアイキャッチ画像をどのように表示するか選択してくだ"
+#~ "さい。"

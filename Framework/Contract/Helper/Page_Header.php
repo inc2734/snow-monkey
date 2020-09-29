@@ -28,7 +28,7 @@ trait Page_Header {
 		}
 
 		$class = static::_get_page_header_class();
-		if ( class_exists( $class ) ) {
+		if ( $class && class_exists( $class ) ) {
 			static::$page_header_class = $class;
 		}
 

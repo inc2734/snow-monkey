@@ -29,8 +29,15 @@ class Front_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return get_theme_mod( 'home-page-display-page-header' )
-			? \Framework\Helper::get_page_title_from_breadcrumbs()
-			: false;
+		return false;
+	}
+
+	/**
+	 * Return page header alignment.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_align() {
+		return false;
 	}
 }
