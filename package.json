@@ -97,7 +97,7 @@
     "translation:name": "php bin/template-header.php",
     "translation": "npm run cleanup:translation && run-p translation:*",
     "build": "npm run packages && run-p js css img translation",
-    "zip:pack": "npm run cleanup:zip-directory && rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/translation' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/sql' --exclude='/tests' --exclude='/trial' ./ snow-monkey",
+    "zip:pack": "npm run cleanup:zip-directory && rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/translation' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/sql' --exclude='/tests' --exclude='/snow-monkey.zip' --exclude='/trial' ./ snow-monkey",
     "zip:archive": "npm run cleanup:zip && zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run zip:pack && cd snow-monkey && composer install --no-dev && cd ../ && npm run zip:archive",
     "trial-zip:pack": "npm run zip:pack && npm run cleanup:trial-zip-directory && rsync -a --exclude='snow-monkey/app/constructor/updater.php' snow-monkey trial",
