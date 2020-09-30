@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.5.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/twitter-settings.php
  */
@@ -19,7 +19,7 @@ Framework::control(
 		'content'  => sprintf(
 			/* translators: 1: Link of OpenShareCount  */
 			__( 'If you want to count of tweet then needs to register to %1$s.', 'snow-monkey' ),
-			'<a href="https://opensharecount.com/" target="_blank">OpenShareCount</a>'
+			'<a href="https://opensharecount.com/" target="_blank" rel="noreferrer">OpenShareCount</a>'
 		),
 	]
 );

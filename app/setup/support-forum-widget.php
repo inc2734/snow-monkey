@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.1
+ * @version 11.5.0
  *
  * renamed: app/setup/suppot-forum-widget.php
  */
@@ -45,7 +45,7 @@ add_action(
 					<div class="rss-widget">
 						<ul id="snow-monkey-support-forum-topics">
 							<?php foreach ( $wp_api_posts as $item ) : ?>
-								<li><a href="<?php echo esc_url( $item->link ); ?>" target="_blank"><?php echo esc_html( $item->title->rendered ); ?></a></li>
+								<li><a href="<?php echo esc_url( $item->link ); ?>" target="_blank" rel="noreferrer"><?php echo esc_html( $item->title->rendered ); ?></a></li>
 							<?php endforeach; ?>
 						</ul>
 					</div>

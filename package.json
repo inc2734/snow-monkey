@@ -50,7 +50,10 @@
     "cleanup:packages": "rimraf assets/packages && mkdir -p assets/packages",
     "cleanup:img": "rimraf assets/img && mkdir -p assets/img",
     "cleanup:translation": "rimraf translation && mkdir -p translation",
-    "cleanup:zip": "rimraf snow-monkey.zip && rimraf snow-monkey",
+    "cleanup:zip-directory": "rimraf snow-monkey",
+    "cleanup:zip": "rimraf snow-monkey.zip",
+    "cleanup:trial-zip-directory": "rimraf trial && mkdir trial",
+    "cleanup:trial-zip": "rimraf trial/snow-monkey.zip",
     "css:style": "node-sass src/css/style.scss assets/css/style.min.css && postcss -r assets/css/style.min.css -c=postcss.config.js",
     "css:editor-style": "node-sass src/css/editor-style.scss assets/css/editor-style.min.css && postcss -r assets/css/editor-style.min.css -c=postcss.config.js",
     "css:admin": "node-sass src/css/admin.scss assets/css/admin.min.css && postcss -r assets/css/admin.min.css -c=postcss.config.js",
@@ -94,9 +97,12 @@
     "translation:name": "php bin/template-header.php",
     "translation": "npm run cleanup:translation && run-p translation:*",
     "build": "npm run packages && run-p js css img translation",
-    "zip:pack": "rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/translation' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/sql' --exclude='/tests' ./ snow-monkey",
-    "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
-    "zip": "npm run cleanup:zip && npm run zip:pack && cd snow-monkey && composer install --no-dev && cd ../ && npm run zip:archive"
+    "zip:pack": "npm run cleanup:zip-directory && rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/translation' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/sql' --exclude='/tests' --exclude='/trial' ./ snow-monkey",
+    "zip:archive": "npm run cleanup:zip && zip -9 -qmr snow-monkey.zip snow-monkey",
+    "zip": "npm run zip:pack && cd snow-monkey && composer install --no-dev && cd ../ && npm run zip:archive",
+    "trial-zip:pack": "npm run zip:pack && npm run cleanup:trial-zip-directory && rsync -a --exclude='snow-monkey/app/constructor/updater.php' snow-monkey trial",
+    "trial-zip:archive": "npm run cleanup:trial-zip && cd trial && zip -9 -qmr snow-monkey.zip snow-monkey",
+    "trial-zip": "npm run trial-zip:pack && cd trial/snow-monkey && composer install --no-dev && composer remove --update-no-dev inc2734/wp-github-theme-updater && cd ../ && npm run trial-zip:archive"
   },
   "dependencies": {
     "smoothscroll-polyfill": "^0.4.4"

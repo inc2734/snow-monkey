@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/facebook-app-token.php
  */
@@ -18,7 +18,7 @@ Framework::control(
 		'description' => __( 'If you want to count of Facebook share count then needs to register Facebook App.', 'snow-monkey' ) . sprintf(
 			/* translators: 1: <a> tag, 2: </a> tag */
 			__( '%1$sAccessToken tools%2$s', 'snow-monkey' ),
-			'<a href="https://developers.facebook.com/tools/accesstoken" target="_blank">',
+			'<a href="https://developers.facebook.com/tools/accesstoken" target="_blank" rel="noreferrer">',
 			'</a>'
 		),
 		'priority'    => 90,

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.5.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -33,7 +33,7 @@ Framework::control(
 		'content'     => sprintf(
 			/* translators: 1: <a> tag, 2: </a> tag */
 			__( '%1$sOfficial Web Site%2$s', 'snow-monkey' ),
-			'<a class="button" href="https://snow-monkey.2inc.org" target="_blank">',
+			'<a class="button" href="https://snow-monkey.2inc.org" target="_blank" rel="noreferrer">',
 			'</a>'
 		),
 	]
@@ -48,7 +48,7 @@ Framework::control(
 		'content'     => sprintf(
 			/* translators: 1: <a> tag, 2: </a> tag */
 			__( '%1$sOnline Community%2$s', 'snow-monkey' ),
-			'<a class="button" href="https://snow-monkey.2inc.org/community/online-community/" target="_blank">',
+			'<a class="button" href="https://snow-monkey.2inc.org/community/online-community/" target="_blank" rel="noreferrer">',
 			'</a>'
 		),
 	]
@@ -63,7 +63,7 @@ Framework::control(
 		'content'     => sprintf(
 			/* translators: 1: <a> tag, 2: </a> tag */
 			__( '%1$sSupport Forum%2$s', 'snow-monkey' ),
-			'<a class="button" href="https://snow-monkey.2inc.org/forums/" target="_blank">',
+			'<a class="button" href="https://snow-monkey.2inc.org/forums/" target="_blank" rel="noreferrer">',
 			'</a>'
 		),
 	]
