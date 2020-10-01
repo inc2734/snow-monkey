@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 11.5.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,7 +15,7 @@ $custom_post_types = Helper::get_custom_post_types();
 foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::control(
 		'select',
-		'page-page-header-align',
+		$custom_post_type . '-page-header-align',
 		[
 			'label'           => __( 'Page header alignment', 'snow-monkey' ),
 			'priority'        => 111,
@@ -36,6 +36,6 @@ $panel = Framework::get_panel( 'design' );
 
 foreach ( $custom_post_types as $custom_post_type ) {
 	$section = Framework::get_section( 'design-' . $custom_post_type );
-	$control = Framework::get_control( $custom_post_type . '-page-header-content' );
+	$control = Framework::get_control( $custom_post_type . '-page-header-align' );
 	$control->join( $section )->join( $panel );
 }
