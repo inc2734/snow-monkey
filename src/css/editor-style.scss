@@ -71,6 +71,9 @@ body {
   margin-right: initial;
   margin-left: initial;
 }
+.block-editor-block-list__layout .wp-block[data-type="core/list"] {
+  margin-left: 1.5em;
+}
 
 // @todo To adjust the Float view in the editor to match the front view.
 [data-align="right"],
@@ -158,21 +161,10 @@ body {
   }
 }
 
-.wp-block-image.wp-block {
-  margin-right: 0;
-  margin-left: 0;
-}
-
 .wp-block-html {
   textarea {
     border-radius: 0;
     padding: 1rem;
-  }
-}
-
-.wp-block-gallery {
-  .blocks-gallery-grid {
-    margin-left: 0;
   }
 }
 
