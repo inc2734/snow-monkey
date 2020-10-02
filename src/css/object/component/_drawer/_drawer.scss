@@ -37,7 +37,11 @@
   }
 
   &__item {
-    @include _padding(.25, 1.25, .25, .5);
+    @include _padding(.25, .5);
+
+    &.menu-item-has-children {
+      @include _padding-right(1.25);
+    }
 
     &.sm-nav-menu-item-highlight {
       background-color: var-color-sub-accent();
@@ -58,10 +62,14 @@
   }
 
   &__subitem {
-    @include _padding(.25, 1.25, .25, .5);
+    @include _padding(.25, .5);
 
     &:last-child {
       @include _margin-bottom(-.25);
+    }
+
+    &.menu-item-has-children {
+      @include _padding-right(1.25);
     }
 
     &.sm-nav-menu-item-highlight {
