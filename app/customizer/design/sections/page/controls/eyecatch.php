@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 11.5.3
  */
 
 use Framework\Helper;
@@ -15,10 +15,10 @@ Framework::control(
 	'select',
 	'page-eyecatch',
 	[
-		'label'       => __( 'Eyecatch image', 'snow-monkey' ),
+		'label'       => __( 'Featured image position', 'snow-monkey' ),
 		'description' => sprintf(
 			/* translators: 1: Post type label */
-			__( 'Select how to display the eyecatch image in %1$s page.', 'snow-monkey' ),
+			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
 			$post_type_object->label
 		),
 		'priority'    => 110,

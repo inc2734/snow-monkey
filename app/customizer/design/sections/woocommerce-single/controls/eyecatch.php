@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 11.5.3
  */
 
 use Framework\Helper;
@@ -16,10 +16,10 @@ Framework::control(
 	'select',
 	'woocommerce-single-eyecatch',
 	[
-		'label'       => __( 'Eyecatch image', 'snow-monkey' ),
+		'label'       => __( 'Featured image position', 'snow-monkey' ),
 		'description' => sprintf(
 			/* translators: 1: WooCommerce product */
-			__( 'Select how to display the eyecatch image in %1$s page.', 'snow-monkey' ),
+			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
 			__( 'WooCommerce product', 'snow-monkey' )
 		),
 		'priority'    => 110,

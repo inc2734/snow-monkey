@@ -17,19 +17,23 @@ foreach ( $custom_post_types as $custom_post_type ) {
 
 	Framework::control(
 		'select',
-		$custom_post_type . '-eyecatch',
+		'archive-' . $custom_post_type . '-eyecatch',
 		[
 			'label'           => __( 'Featured image position', 'snow-monkey' ),
 			'description'     => sprintf(
-				/* translators: 1: Custom post type label */
+				/* translators: 1: archive */
 				__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
-				$custom_post_type_object->label
+				sprintf(
+					/* translators: 1: Custom post type label */
+					__( '%1$s archive', 'snow-monkey' ),
+					$custom_post_type_object->label
+				)
 			),
-			'priority'        => 110,
+			'priority'        => 120,
 			'default'         => 'none',
 			'choices'         => Helper::eyecatch_position_choices(),
 			'active_callback' => function() {
-				return 'content' === Controller::get_view();
+				return 'archive' === Controller::get_view();
 			},
 		]
 	);
@@ -42,7 +46,7 @@ if ( ! is_customize_preview() ) {
 $panel = Framework::get_panel( 'design' );
 
 foreach ( $custom_post_types as $custom_post_type ) {
-	$section = Framework::get_section( 'design-' . $custom_post_type );
-	$control = Framework::get_control( $custom_post_type . '-eyecatch' );
+	$section = Framework::get_section( 'design-' . $custom_post_type . '-archive' );
+	$control = Framework::get_control( 'archive-' . $custom_post_type . '-eyecatch' );
 	$control->join( $section )->join( $panel );
 }

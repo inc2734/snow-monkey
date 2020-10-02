@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-09-30 10:41+0900\n"
-"PO-Revision-Date: 2020-09-30 10:42+0900\n"
+"POT-Creation-Date: 2020-10-02 11:51+0900\n"
+"PO-Revision-Date: 2020-10-02 11:51+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,15 +22,15 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: Framework/Helper.php:31 snow-monkey/Framework/Helper.php:31
+#: Framework/Helper.php:32 snow-monkey/Framework/Helper.php:31
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: Framework/Helper.php:32 snow-monkey/Framework/Helper.php:32
+#: Framework/Helper.php:33 snow-monkey/Framework/Helper.php:32
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: Framework/Helper.php:33
+#: Framework/Helper.php:34
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:22
 #: snow-monkey/Framework/Helper.php:33
@@ -39,7 +39,7 @@ msgstr "ページヘッダーの上にタイトルを表示"
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: Framework/Helper.php:34
+#: Framework/Helper.php:35
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 #: app/customizer/design/sections/base-design/controls/h2-style.php:20
@@ -56,20 +56,20 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:45 snow-monkey/Framework/Helper.php:45
+#: Framework/Helper.php:46 snow-monkey/Framework/Helper.php:45
 #: translation/bundle-template-header.php:13
 msgid "Left"
 msgstr "左"
 
-#: Framework/Helper.php:46 snow-monkey/Framework/Helper.php:46
+#: Framework/Helper.php:47 snow-monkey/Framework/Helper.php:46
 msgid "Center"
 msgstr "中央"
 
-#: Framework/Helper.php:47 snow-monkey/Framework/Helper.php:47
+#: Framework/Helper.php:48 snow-monkey/Framework/Helper.php:47
 msgid "Right"
 msgstr "右"
 
-#: Framework/Helper.php:72 snow-monkey/Framework/Helper.php:72
+#: Framework/Helper.php:73 snow-monkey/Framework/Helper.php:72
 #: snow-monkey/template-parts/content/prev-next-nav.php:72
 #: snow-monkey/template-parts/loop/entry-summary/content/content-rss.php:40
 #: snow-monkey/template-parts/loop/entry-summary/content/content.php:36
@@ -81,124 +81,132 @@ msgid "55"
 msgstr "55"
 
 #. Theme Name of the plugin/theme
-#: Framework/Helper.php:123 app/constructor/trial.php:23
+#: Framework/Helper.php:124 app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
+#: snow-monkey/Framework/Helper.php:123
+#: snow-monkey/app/constructor/trial.php:23
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:14
 msgid "Snow Monkey"
 msgstr "Snow Monkey"
 
-#: Framework/Helper.php:128 app/constructor/trial.php:28
+#: Framework/Helper.php:129 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
-#: snow-monkey/Framework/Helper.php:123
-#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:14
+#: snow-monkey/Framework/Helper.php:128
+#: snow-monkey/app/constructor/trial.php:28
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:19
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:133 app/constructor/trial.php:33
+#: Framework/Helper.php:134 app/constructor/trial.php:33
 #: app/customizer/title-tagline/controls/copyright.php:24
-#: snow-monkey/Framework/Helper.php:128
-#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:19
+#: snow-monkey/Framework/Helper.php:133
+#: snow-monkey/app/constructor/trial.php:33
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:24
 msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %1$s: Theme link, %2$s: Developer link
-#: Framework/Helper.php:138
+#: Framework/Helper.php:139
 #: app/customizer/title-tagline/controls/copyright.php:29
+#: snow-monkey/Framework/Helper.php:138
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:29
 #, php-format
 msgid "%1$s theme by %2$s"
 msgstr "%1$s テーマ by %2$s"
 
 #. translators: %s: WordPress link
-#: Framework/Helper.php:145 app/constructor/trial.php:45
+#: Framework/Helper.php:146 app/constructor/trial.php:45
 #: app/customizer/title-tagline/controls/copyright.php:36
-#: snow-monkey/Framework/Helper.php:139
-#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:30
+#: snow-monkey/Framework/Helper.php:145
+#: snow-monkey/app/constructor/trial.php:45
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:36
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:275 snow-monkey/Framework/Helper.php:269
+#: Framework/Helper.php:276 snow-monkey/Framework/Helper.php:275
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:280 snow-monkey/Framework/Helper.php:274
+#: Framework/Helper.php:281 snow-monkey/Framework/Helper.php:280
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:285 app/customizer/infobar/controls/font-color.php:15
-#: snow-monkey/Framework/Helper.php:279
+#: Framework/Helper.php:286 app/customizer/infobar/controls/font-color.php:15
+#: snow-monkey/Framework/Helper.php:285
 #: snow-monkey/app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:290 snow-monkey/Framework/Helper.php:284
+#: Framework/Helper.php:291 snow-monkey/Framework/Helper.php:290
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:295 snow-monkey/Framework/Helper.php:289
+#: Framework/Helper.php:296 snow-monkey/Framework/Helper.php:295
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:300 snow-monkey/Framework/Helper.php:294
+#: Framework/Helper.php:301 snow-monkey/Framework/Helper.php:300
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:305 snow-monkey/Framework/Helper.php:299
+#: Framework/Helper.php:306 snow-monkey/Framework/Helper.php:305
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:310
+#: Framework/Helper.php:311
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
-#: snow-monkey/Framework/Helper.php:304
+#: snow-monkey/Framework/Helper.php:310
 #: snow-monkey/app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: snow-monkey/app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:315
+#: Framework/Helper.php:316
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
-#: snow-monkey/Framework/Helper.php:309
+#: snow-monkey/Framework/Helper.php:315
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:320 snow-monkey/Framework/Helper.php:314
+#: Framework/Helper.php:321 snow-monkey/Framework/Helper.php:320
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:326 snow-monkey/Framework/Helper.php:320
+#: Framework/Helper.php:327 snow-monkey/Framework/Helper.php:326
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:332 snow-monkey/Framework/Helper.php:326
+#: Framework/Helper.php:333 snow-monkey/Framework/Helper.php:332
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:338 snow-monkey/Framework/Helper.php:332
+#: Framework/Helper.php:339 snow-monkey/Framework/Helper.php:338
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:344 snow-monkey/Framework/Helper.php:338
+#: Framework/Helper.php:345 snow-monkey/Framework/Helper.php:344
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:350 snow-monkey/Framework/Helper.php:344
+#: Framework/Helper.php:351 snow-monkey/Framework/Helper.php:350
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:356 snow-monkey/Framework/Helper.php:350
+#: Framework/Helper.php:357 snow-monkey/Framework/Helper.php:356
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:362 snow-monkey/Framework/Helper.php:356
+#: Framework/Helper.php:363 snow-monkey/Framework/Helper.php:362
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:368 snow-monkey/Framework/Helper.php:362
+#: Framework/Helper.php:369 snow-monkey/Framework/Helper.php:368
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:374 snow-monkey/Framework/Helper.php:368
+#: Framework/Helper.php:375 snow-monkey/Framework/Helper.php:374
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -217,12 +225,12 @@ msgid "Child pages"
 msgstr "このページの子ページ"
 
 #. translators: %1$s: Theme link, %2$s: Developer link
-#: app/constructor/trial.php:38
+#: app/constructor/trial.php:38 snow-monkey/app/constructor/trial.php:38
 #, php-format
 msgid "%1$s theme (Trial version) by %2$s"
 msgstr "%1$s テーマ (試用版) by %2$s"
 
-#: app/constructor/trial.php:72
+#: app/constructor/trial.php:73 snow-monkey/app/constructor/trial.php:73
 #, php-format
 msgid ""
 "You are currently using the %1$sSnow Monkey%2$s theme (trial version). The "
@@ -340,38 +348,26 @@ msgid "Design"
 msgstr "デザイン"
 
 #: app/customizer/design/sections/archive/controls/eyecatch.php:16
+#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:22
 #: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
 #: app/customizer/design/sections/page/controls/eyecatch.php:18
 #: app/customizer/design/sections/post/controls/eyecatch.php:18
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
-#: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:16
-#: snow-monkey/app/customizer/design/sections/custom-post/controls/eyecatch.php:22
-#: snow-monkey/app/customizer/design/sections/page/controls/eyecatch.php:18
-#: snow-monkey/app/customizer/design/sections/post/controls/eyecatch.php:18
-#: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
-msgid "Eyecatch image"
-msgstr "アイキャッチ画像"
+msgid "Featured image position"
+msgstr "アイキャッチ画像の位置"
 
 #. translators: 1: archive
 #. translators: 1: Custom post type label
 #. translators: 1: Post type label
 #. translators: 1: WooCommerce product
-#. translators: 1: archive
-#. translators: 1: Custom post type label
-#. translators: 1: Post type label
-#. translators: 1: WooCommerce product
 #: app/customizer/design/sections/archive/controls/eyecatch.php:19
+#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:25
 #: app/customizer/design/sections/custom-post/controls/eyecatch.php:25
 #: app/customizer/design/sections/page/controls/eyecatch.php:21
 #: app/customizer/design/sections/post/controls/eyecatch.php:21
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
-#: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:19
-#: snow-monkey/app/customizer/design/sections/custom-post/controls/eyecatch.php:25
-#: snow-monkey/app/customizer/design/sections/page/controls/eyecatch.php:21
-#: snow-monkey/app/customizer/design/sections/post/controls/eyecatch.php:21
-#: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
 #, php-format
-msgid "Select how to display the eyecatch image in %1$s page."
+msgid "Select how to display the featured image in %1$s page."
 msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
 
 #: app/customizer/design/sections/archive/controls/eyecatch.php:20
@@ -383,6 +379,19 @@ msgstr "アーカイブ"
 #: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:18
 msgid "Archive page layout"
 msgstr "アーカイブページレイアウト"
+
+#: app/customizer/design/sections/archive/controls/page-header-align.php:16
+#: app/customizer/design/sections/custom-post-archive/controls/page-header-align.php:20
+#: app/customizer/design/sections/custom-post/controls/page-header-align.php:20
+#: app/customizer/design/sections/page/controls/page-header-align.php:16
+#: app/customizer/design/sections/post/controls/page-header-align.php:16
+#: app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
+#: snow-monkey/app/customizer/design/sections/custom-post/controls/page-header-align.php:20
+#: snow-monkey/app/customizer/design/sections/page/controls/page-header-align.php:16
+#: snow-monkey/app/customizer/design/sections/post/controls/page-header-align.php:16
+#: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
+msgid "Page header alignment"
+msgstr "ページヘッダーの行揃え"
 
 #: app/customizer/design/sections/archive/section.php:18
 #: snow-monkey/app/customizer/design/sections/archive/section.php:18
@@ -789,6 +798,8 @@ msgid "Base design settings"
 msgstr "基本デザイン設定"
 
 #: app/customizer/design/sections/category/controls/header-image.php:19
+#: app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:22
 #: snow-monkey/app/customizer/design/sections/category/controls/header-image.php:19
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
@@ -799,6 +810,12 @@ msgstr "アイキャッチ画像"
 #, php-format
 msgid "[ %1$s ] category pages settings"
 msgstr "[ %1$s ] カテゴリーページ設定"
+
+#. translators: 1: Custom post type label
+#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:28
+#, php-format
+msgid "%1$s archive"
+msgstr "%1$sアーカイブ"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:20
 #: app/customizer/design/sections/custom-post/controls/view.php:20
@@ -831,22 +848,11 @@ msgid "The view template of the post"
 msgstr "投稿のビューテンプレート"
 
 #. translators: 1: Custom post type name
-#: app/customizer/design/sections/custom-post-archive/section.php:26
+#: app/customizer/design/sections/custom-post-archive/section.php:27
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/section.php:26
 #, php-format
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
-
-#: app/customizer/design/sections/custom-post/controls/page-header-align.php:20
-#: app/customizer/design/sections/page/controls/page-header-align.php:16
-#: app/customizer/design/sections/post/controls/page-header-align.php:16
-#: app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
-#: snow-monkey/app/customizer/design/sections/custom-post/controls/page-header-align.php:20
-#: snow-monkey/app/customizer/design/sections/page/controls/page-header-align.php:16
-#: snow-monkey/app/customizer/design/sections/post/controls/page-header-align.php:16
-#: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
-msgid "Page header alignment"
-msgstr "ページヘッダーの行揃え"
 
 #: app/customizer/design/sections/custom-post/controls/view.php:27
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:27
@@ -1723,12 +1729,12 @@ msgid "Posts page setting"
 msgstr "投稿ページ設定"
 
 #: app/customizer/title-tagline/controls/copyright.php:47
-#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:41
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:47
 msgid "Copyright"
 msgstr "コピーライト"
 
 #: app/customizer/title-tagline/controls/copyright.php:48
-#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:42
+#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:48
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
@@ -2014,12 +2020,26 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#. translators: %s: Theme link
-#: snow-monkey/Framework/Helper.php:133
-#: snow-monkey/app/customizer/title-tagline/controls/copyright.php:24
+#: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:16
+#: snow-monkey/app/customizer/design/sections/custom-post/controls/eyecatch.php:22
+#: snow-monkey/app/customizer/design/sections/page/controls/eyecatch.php:18
+#: snow-monkey/app/customizer/design/sections/post/controls/eyecatch.php:18
+#: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
+msgid "Eyecatch image"
+msgstr "アイキャッチ画像"
+
+#. translators: 1: archive
+#. translators: 1: Custom post type label
+#. translators: 1: Post type label
+#. translators: 1: WooCommerce product
+#: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:19
+#: snow-monkey/app/customizer/design/sections/custom-post/controls/eyecatch.php:25
+#: snow-monkey/app/customizer/design/sections/page/controls/eyecatch.php:21
+#: snow-monkey/app/customizer/design/sections/post/controls/eyecatch.php:21
+#: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
 #, php-format
-msgid "Snow Monkey theme by %s"
-msgstr "Snow Monkey theme by %s"
+msgid "Select how to display the eyecatch image in %1$s page."
+msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
 
 #: snow-monkey/template-parts/archive/entry/content/content-no-keywords.php:16
 #: template-parts/archive/entry/content/content-no-keywords.php:16
@@ -2216,3 +2236,7 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#, php-format
+#~ msgid "Snow Monkey theme by %s"
+#~ msgstr "Snow Monkey theme by %s"

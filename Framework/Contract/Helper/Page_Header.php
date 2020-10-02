@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 11.5.3
  */
 
 namespace Framework\Contract\Helper;
@@ -42,13 +42,15 @@ trait Page_Header {
 	 */
 	protected static function _get_page_header_class() {
 		$custom_post_types = \Framework\Helper::get_custom_post_types();
-		$types             = array_filter(
+
+		$types = array_filter(
 			[
 				'Default'            => is_search() || is_404(),
 				'WooCommerce_Single' => class_exists( '\woocommerce' ) && is_product(),
 				'Singular'           => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
-				'Category'           => is_category(),
-				'Archive'            => is_home() || ( is_archive() && ! is_post_type_archive() && ! is_tax() ),
+				'Category'           => is_category() || ( is_tax() && is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ),
+				'Tag'                => is_tag() || ( is_tax() && ! is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ),
+				'Archive'            => is_home() || ( is_archive() && ! is_category() && ! is_tag() && ! is_tax() ),
 				'Front'              => is_front_page() && ! is_home(),
 			]
 		);

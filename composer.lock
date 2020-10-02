@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2cf10460e09437a0b17a3bbbcf2c3769",
+    "content-hash": "38ac604d6f012e4b3a31e1838d699f82",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -448,27 +448,28 @@
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "53b0aef4750fb91bb90bea6c61188251d9f8788e"
+                "reference": "e8161d5e4a438479690e3fed84926aae03a8d4ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/53b0aef4750fb91bb90bea6c61188251d9f8788e",
-                "reference": "53b0aef4750fb91bb90bea6c61188251d9f8788e",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/e8161d5e4a438479690e3fed84926aae03a8d4ac",
+                "reference": "e8161d5e4a438479690e3fed84926aae03a8d4ac",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2",
+                "wp-phpunit/wp-phpunit": "^5.4"
             },
             "type": "library",
             "autoload": {
@@ -486,7 +487,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2020-04-07T00:21:03+00:00"
+            "time": "2020-10-02T05:32:34+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",

@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.7.1
+ * @version 11.5.3
  */
 
 use Framework\Helper;
 
 $_post_type        = get_post_type() ? get_post_type() : 'post';
-$eyecatch_position = 'post' === $_post_type ? get_theme_mod( 'archive-eyecatch' ) : false;
+$eyecatch_position = 'post' === $_post_type
+	? get_theme_mod( 'archive-eyecatch' )
+	: get_theme_mod( 'archive-' . $_post_type . '-eyecatch' );
 ?>
 
 <div class="c-entry">
