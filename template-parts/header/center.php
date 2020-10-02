@@ -51,13 +51,13 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 				<?php do_action( 'snow_monkey_after_header_site_branding_column' ); ?>
 
 				<?php if ( $header_content ) : ?>
-					<div class="c-row__col c-row__col--fit u-pull-right u-invisible-md-down">
+					<div class="c-row__col c-row__col--fit u-invisible-md-down">
 						<?php Helper::get_template_part( 'template-parts/header/content', 'lg' ); ?>
 					</div>
 				<?php endif; ?>
 
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--fit u-pull-right u-invisible-lg-up">
+					<div class="c-row__col c-row__col--fit u-invisible-lg-up">
 						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 					</div>
 				<?php endif; ?>

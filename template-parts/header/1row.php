@@ -40,7 +40,7 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 			<?php do_action( 'snow_monkey_after_header_site_branding_column' ); ?>
 
 			<?php if ( $has_global_nav || $header_content ) : ?>
-				<div class="c-row__col c-row__col--fit u-pull-right u-invisible-md-down">
+				<div class="c-row__col c-row__col--fit u-invisible-md-down">
 					<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--between c-row--nowrap">
 						<?php if ( $has_global_nav ) : ?>
 							<div class="c-row__col c-row__col--auto">

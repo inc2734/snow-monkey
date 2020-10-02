@@ -28,7 +28,7 @@ $data_has_global_nav = $has_global_nav ? 'true' : 'false';
 			<?php do_action( 'snow_monkey_after_header_site_branding_column' ); ?>
 
 			<?php if ( $has_drawer_nav ) : ?>
-				<div class="c-row__col c-row__col--fit u-pull-right u-invisible-lg-up">
+				<div class="c-row__col c-row__col--fit u-invisible-lg-up">
 					<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
 				</div>
 			<?php endif; ?>
