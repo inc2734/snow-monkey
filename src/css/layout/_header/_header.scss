@@ -26,17 +26,19 @@
    * Sticky header
    */
   @mixin sticky-header() {
-    position: sticky;
-    top: 0;
-    box-shadow: 0 1px 2px 1px rgba(#000, .05);
+    @supports (position: sticky) {
+      position: sticky;
+      top: 0;
+      box-shadow: 0 1px 2px 1px rgba(#000, .05);
 
-    .admin-bar & {
-      @include _media-min(601px) {
-        top: 46px;
-      }
+      .admin-bar & {
+        @include _media-min(601px) {
+          top: 46px;
+        }
 
-      @include _media-min(783px) {
-        top: 32px;
+        @include _media-min(783px) {
+          top: 32px;
+        }
       }
     }
   }
