@@ -27,15 +27,6 @@ body {
   }
 }
 
-.block-editor-block-list__layout,
-.wp-block-freeform {
-  // @see src/css/foundation/_element/_element.scss
-  [data-type="core/list"] {
-    margin-left: 1.5em;
-    padding-left: 0;
-  }
-}
-
 .is-root-container,
 .wp-block-freeform {
   > * {
