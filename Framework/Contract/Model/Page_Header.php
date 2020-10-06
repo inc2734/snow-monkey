@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.5
+ * @version 11.5.6
  */
 
 namespace Framework\Contract\Model;
@@ -161,6 +161,8 @@ abstract class Page_Header {
 	 * @return int
 	 */
 	protected static function _attachment_url_to_postid( $url ) {
+		$url = preg_replace( '|\?.*$|', '', $url );
+
 		if ( preg_match( '|-scaled\..+$|', $url ) ) {
 			return attachment_url_to_postid( $url );
 		}
