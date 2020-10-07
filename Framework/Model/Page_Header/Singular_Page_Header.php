@@ -22,10 +22,6 @@ class Singular_Page_Header extends Base {
 			return false;
 		}
 
-		if ( null === static::$image_id ) {
-			static::$image_id = get_post_thumbnail_id();
-		}
-
 		if ( static::$image_id ) {
 			return wp_get_attachment_image_url( static::$image_id, static::_get_thumbnail_size() );
 		}

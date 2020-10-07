@@ -110,6 +110,8 @@ abstract class Page_Header {
 	 * @return string|false The img tag.
 	 */
 	public static function get_image() {
+		static::_set_image_id();
+
 		if ( null !== static::$image ) {
 			return static::$image;
 		}
@@ -120,13 +122,11 @@ abstract class Page_Header {
 
 		$image_url = static::get_image_url();
 		if ( $image_url ) {
-			static::$image_id = static::_attachment_url_to_postid( $image_url );
-			static::$image    = static::$image_id
+			static::$image = static::$image_id
 				? wp_get_attachment_image( static::$image_id, static::_get_thumbnail_size() )
 				: sprintf( '<img src="%1$s" alt="">', esc_url( $image_url ) );
 		} else {
-			static::$image_id = 0;
-			static::$image    = false;
+			static::$image = false;
 		}
 
 		return static::$image;
@@ -139,13 +139,6 @@ abstract class Page_Header {
 	 */
 	public static function get_image_caption() {
 		$image_caption = false;
-
-		if ( null === static::$image_id ) {
-			$image_url = static::get_image_url();
-			if ( $image_url ) {
-				static::$image_id = static::_attachment_url_to_postid( $image_url );
-			}
-		}
 
 		if ( static::$image_id ) {
 			$image_caption = wp_get_attachment_caption( static::$image_id );
@@ -179,6 +172,31 @@ abstract class Page_Header {
 		}
 
 		return attachment_url_to_postid( $url );
+	}
+
+	/**
+	 * Generate and set static::$image_id.
+	 *
+	 * @return boolean
+	 */
+	protected static function _set_image_id() {
+		if ( null !== static::$image_id ) {
+			return true;
+		}
+
+		if ( ! is_singular() || ! has_post_thumbnail() ) {
+			$image_url = static::get_image_url();
+			if ( $image_url ) {
+				static::$image_id = static::_attachment_url_to_postid( $image_url );
+				return true;
+			}
+
+			static::$image_id = 0;
+			return false;
+		}
+
+		static::$image_id = get_post_thumbnail_id();
+		return true;
 	}
 
 	/**
