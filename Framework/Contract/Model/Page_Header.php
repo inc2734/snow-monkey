@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.6
+ * @version 11.5.8
  */
 
 namespace Framework\Contract\Model;
@@ -113,10 +113,6 @@ abstract class Page_Header {
 		static::_set_image_id();
 		if ( null !== static::$image ) {
 			return static::$image;
-		}
-
-		if ( static::$image_id ) {
-			return wp_get_attachment_image( static::$image_id, static::_get_thumbnail_size() );
 		}
 
 		$image_url = static::get_image_url();
