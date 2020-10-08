@@ -110,8 +110,7 @@ abstract class Page_Header {
 	 * @return string|false The img tag.
 	 */
 	public static function get_image() {
-		static::_set_image_id(); // @todo これだと snow_monkey_pre_page_header_image_url で同サイト内の画像を指定してもキャプションは変わらない
-
+		static::_set_image_id();
 		if ( null !== static::$image ) {
 			return static::$image;
 		}
