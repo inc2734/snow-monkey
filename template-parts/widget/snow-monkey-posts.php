@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  */
 
 use Framework\Helper;
@@ -13,18 +13,19 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_vertical'            => false,
-		'_posts_query'         => null,
-		'_widget_area_id'      => null,
 		'_classname'           => null,
 		'_entries_layout'      => 'rich-media',
-		'_force_sm_1col'       => false,
-		'_title'               => null,
-		'_item_title_tag'      => 'h3',
-		'_item_thumbnail_size' => 'medium_large',
-		'_link_url'            => null,
-		'_link_text'           => null,
 		'_excerpt_length'      => null,
+		'_force_sm_1col'       => false,
+		'_infeed_ads'          => get_option( 'mwt-google-infeed-ads' ),
+		'_item_thumbnail_size' => 'medium_large',
+		'_item_title_tag'      => 'h3',
+		'_link_text'           => null,
+		'_link_url'            => null,
+		'_posts_query'         => null,
+		'_title'               => null,
+		'_vertical'            => false,
+		'_widget_area_id'      => null,
 	]
 );
 
@@ -39,9 +40,6 @@ $content_widget_areas = [
 	'posts-page-bottom-widget-area',
 	'archive-top-widget-area',
 ];
-
-$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
-$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 
 $classnames   = [];
 $classnames[] = 'snow-monkey-posts';
@@ -81,35 +79,25 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 		</h2>
 	<?php endif; ?>
 
-	<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
-		<?php while ( $args['_posts_query']->have_posts() ) : ?>
-			<?php
-			$args['_posts_query']->the_post();
-			$loop_count ++;
-			if ( $loop_count > $posts_per_page ) {
-				break;
-			}
+	<?php
+	$_post_type   = get_post_type() ? get_post_type() : 'post';
+	$archive_view = get_theme_mod( $_post_type . '-archive-view' );
 
-			$_post_type   = get_post_type();
-			$archive_view = get_theme_mod( $_post_type . '-archive-view' );
-			?>
-			<li class="c-entries__item">
-				<?php
-				Helper::get_template_part(
-					'template-parts/loop/entry-summary',
-					$archive_view ? $archive_view : $_post_type,
-					[
-						'_title_tag'      => $args['_item_title_tag'],
-						'_thumbnail_size' => $args['_item_thumbnail_size'],
-						'_entries_layout' => $args['_entries_layout'],
-						'_excerpt_length' => $args['_excerpt_length'],
-					]
-				);
-				?>
-			</li>
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-	</ul>
+	Helper::get_template_part(
+		'template-parts/common/entries',
+		$archive_view ? $archive_view : $_post_type,
+		[
+			'_entries_layout'      => $args['_entries_layout'],
+			'_excerpt_length'      => $args['_excerpt_length'],
+			'_force_sm_1col'       => $args['_force_sm_1col'],
+			'_infeed_ads'          => $args['_infeed_ads'],
+			'_item_thumbnail_size' => $args['_item_thumbnail_size'],
+			'_item_title_tag'      => $args['_item_title_tag'],
+			'_post_type'           => $_post_type,
+			'_posts_query'         => $args['_posts_query'],
+		]
+	);
+	?>
 
 	<?php if ( $args['_link_url'] && $args['_link_text'] ) : ?>
 		<div class="<?php echo esc_attr( join( ' ', $action_classnames ) ); ?>">

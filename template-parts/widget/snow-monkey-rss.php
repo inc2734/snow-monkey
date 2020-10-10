@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  */
 
 use Framework\Helper;
@@ -13,16 +13,16 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_items'          => false,
-		'_widget_area_id' => null,
 		'_classname'      => null,
 		'_entries_layout' => 'rich-media',
-		'_force_sm_1col'  => false,
-		'_title'          => null,
-		'_item_title_tag' => 'h3',
-		'_link_url'       => null,
-		'_link_text'      => null,
 		'_excerpt_length' => null,
+		'_force_sm_1col'  => false,
+		'_item_title_tag' => 'h3',
+		'_items'          => false,
+		'_link_text'      => null,
+		'_link_url'       => null,
+		'_title'          => null,
+		'_widget_area_id' => null,
 	]
 );
 
@@ -37,9 +37,6 @@ $content_widget_areas = [
 	'posts-page-bottom-widget-area',
 	'archive-top-widget-area',
 ];
-
-$infeed_ads      = get_option( 'mwt-google-infeed-ads' );
-$data_infeed_ads = ( $infeed_ads ) ? 'true' : 'false';
 
 $classnames   = [];
 $classnames[] = 'snow-monkey-posts';
@@ -65,8 +62,6 @@ $more_classnames = [
 	'snow-monkey-posts__more',
 	$args['_classname'] . '__more',
 ];
-
-$force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 ?>
 
 <div class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>">
@@ -76,29 +71,20 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 		</h2>
 	<?php endif; ?>
 
-	<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>" data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>" data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>">
-		<?php foreach ( $args['_items'] as $item ) : ?>
-			<?php
-			if ( ! $item || ! is_a( $item, 'SimplePie_Item' ) ) {
-				continue;
-			}
-			?>
-			<li class="c-entries__item">
-				<?php
-				Helper::get_template_part(
-					'template-parts/loop/entry-summary',
-					'rss',
-					[
-						'_item'           => $item,
-						'_title_tag'      => $args['_item_title_tag'],
-						'_entries_layout' => $args['_entries_layout'],
-						'_excerpt_length' => $args['_excerpt_length'],
-					]
-				);
-				?>
-			</li>
-		<?php endforeach; ?>
-	</ul>
+	<?php
+	Helper::get_template_part(
+		'template-parts/common/entries',
+		'rss',
+		[
+			'_entries_layout' => $args['_entries_layout'],
+			'_excerpt_length' => $args['_excerpt_length'],
+			'_force_sm_1col'  => $args['_force_sm_1col'],
+			'_item_title_tag' => $args['_item_title_tag'],
+			'_items'          => $args['_items'],
+			'_post_type'      => 'rss',
+		]
+	);
+	?>
 
 	<?php if ( $args['_link_url'] && $args['_link_text'] ) : ?>
 		<div class="<?php echo esc_attr( join( ' ', $action_classnames ) ); ?>">

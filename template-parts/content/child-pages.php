@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  *
  * renamed: template-parts/child-pages.php
  */
@@ -39,21 +39,17 @@ if ( ! $child_pages_query->have_posts() ) {
 		</h2>
 	<?php endif; ?>
 
-	<ul class="c-entries c-entries--rich-media">
-		<?php while ( $child_pages_query->have_posts() ) : ?>
-			<?php $child_pages_query->the_post(); ?>
-			<li class="c-entries__item">
-				<?php
-				Helper::get_template_part(
-					'template-parts/loop/entry-summary',
-					'page',
-					[
-						'_entries_layout' => 'rich-media',
-					]
-				);
-				?>
-			</li>
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-	</ul>
+	<?php
+	Helper::get_template_part(
+		'template-parts/common/entries',
+		'page',
+		[
+			'_posts_query'    => $child_pages_query,
+			'_post_type'      => 'page',
+			'_entries_layout' => 'rich-media',
+			'_infeed_ads'     => false,
+			'_force_sm_1col'  => false,
+		]
+	);
+	?>
 </div>

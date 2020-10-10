@@ -3,13 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  *
  * renamed: template-parts/related-posts.php
  */
 
 use Inc2734\WP_Adsense;
 use Framework\Helper;
+
+$_post_type = get_post_type();
 
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
@@ -24,7 +26,7 @@ $args = wp_parse_args(
 );
 
 if ( ! $args['_entries_layout'] ) {
-	$args['_entries_layout'] = get_theme_mod( get_post_type() . '-entries-layout' );
+	$args['_entries_layout'] = get_theme_mod( $_post_type . '-entries-layout' );
 }
 
 $query = Helper::get_related_posts_query( $args['_post_id'] );
@@ -52,23 +54,19 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 
 	<?php else : ?>
 
-		<ul class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>">
-			<?php while ( $query->have_posts() ) : ?>
-				<?php $query->the_post(); ?>
-				<li class="c-entries__item">
-					<?php
-					Helper::get_template_part(
-						'template-parts/loop/entry-summary',
-						get_post_type(),
-						[
-							'_entries_layout' => $args['_entries_layout'],
-						]
-					);
-					?>
-				</li>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-		</ul>
+		<?php
+		Helper::get_template_part(
+			'template-parts/common/entries',
+			$_post_type,
+			[
+				'_posts_query'    => $query,
+				'_post_type'      => $_post_type,
+				'_entries_layout' => $args['_entries_layout'],
+				'_infeed_ads'     => false,
+				'_force_sm_1col'  => false,
+			]
+		);
+		?>
 
 	<?php endif; ?>
 </aside>
