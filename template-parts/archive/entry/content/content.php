@@ -33,9 +33,10 @@ $args = wp_parse_args(
 		'template-parts/archive/archive',
 		$_post_type,
 		[
-			'_post_type'      => $_post_type,
 			'_entries_layout' => $args['_entries_layout'],
 			'_force_sm_1col'  => $args['_force_sm_1col'],
+			'_post_type'      => $_post_type,
+			'_posts_query'    => $wp_query,
 		]
 	);
 	?>

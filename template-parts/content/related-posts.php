@@ -11,26 +11,24 @@
 use Inc2734\WP_Adsense;
 use Framework\Helper;
 
-$_post_type = get_post_type();
+$_post_type             = get_post_type();
+$default_entries_layout = get_theme_mod( 'related-posts-layout' )
+	? get_theme_mod( 'related-posts-layout' )
+	: get_theme_mod( $_post_type . '-entries-layout' );
 
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
 	[
-		'_title'          => __( 'Related posts', 'snow-monkey' ),
 		'_code'           => get_option( 'mwt-google-matched-content' ),
+		'_entries_layout' => $default_entries_layout,
 		'_post_id'        => get_the_ID(),
-		'_entries_layout' => get_theme_mod( 'related-posts-layout' ),
+		'_title'          => __( 'Related posts', 'snow-monkey' ),
 	]
 );
 
-if ( ! $args['_entries_layout'] ) {
-	$args['_entries_layout'] = get_theme_mod( $_post_type . '-entries-layout' );
-}
-
 $query = Helper::get_related_posts_query( $args['_post_id'] );
-
 if ( ! $args['_code'] && ! $query->have_posts() ) {
 	return;
 }
@@ -59,11 +57,11 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 			'template-parts/common/entries',
 			$_post_type,
 			[
-				'_posts_query'    => $query,
-				'_post_type'      => $_post_type,
 				'_entries_layout' => $args['_entries_layout'],
-				'_infeed_ads'     => false,
 				'_force_sm_1col'  => false,
+				'_infeed_ads'     => false,
+				'_post_type'      => $_post_type,
+				'_posts_query'    => $query,
 			]
 		);
 		?>

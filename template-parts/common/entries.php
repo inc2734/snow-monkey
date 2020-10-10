@@ -8,46 +8,20 @@
 
 use Framework\Helper;
 
-global $wp_query;
-
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
 	[
-		'_post_type' => get_post_type() ? get_post_type() : 'post',
-	]
-);
-
-$default_entries_layout = $args['_post_type']
-	? get_theme_mod( $args['_post_type'] . '-entries-layout' )
-	: 'rich-media';
-
-$default_force_sm_1col = $args['_post_type']
-	? get_theme_mod( $args['_post_type'] . '-entries-layout-sm-1col' )
-	: false;
-
-$args = wp_parse_args(
-	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-	$args,
-	// phpcs:enable
-	[
-		'_entries_layout'      => $default_entries_layout,
+		'_entries_layout'      => 'rich-media',
 		'_excerpt_length'      => null,
-		'_force_sm_1col'       => $default_force_sm_1col,
+		'_force_sm_1col'       => false,
 		'_infeed_ads'          => false,
 		'_item_thumbnail_size' => 'medium_large',
 		'_item_title_tag'      => 'h3',
 		'_items'               => false,
-	]
-);
-
-$args = wp_parse_args(
-	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-	$args,
-	// phpcs:enable
-	[
-		'_posts_query' => false === $args['_items'] ? $wp_query : null,
+		'_post_type'           => null,
+		'_posts_query'         => false,
 	]
 );
 

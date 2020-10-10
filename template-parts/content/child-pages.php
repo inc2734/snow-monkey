@@ -15,14 +15,13 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_title'     => __( 'Child pages', 'snow-monkey' ),
 		'_parent_id' => get_the_ID(),
+		'_title'     => __( 'Child pages', 'snow-monkey' ),
 	]
 );
 
-$child_pages_query = Helper::get_child_pages_query( $args['_parent_id'] );
-
-if ( ! $child_pages_query->have_posts() ) {
+$query = Helper::get_child_pages_query( $args['_parent_id'] );
+if ( ! $query->have_posts() ) {
 	return;
 }
 ?>
@@ -44,11 +43,11 @@ if ( ! $child_pages_query->have_posts() ) {
 		'template-parts/common/entries',
 		'page',
 		[
-			'_posts_query'    => $child_pages_query,
-			'_post_type'      => 'page',
 			'_entries_layout' => 'rich-media',
-			'_infeed_ads'     => false,
 			'_force_sm_1col'  => false,
+			'_infeed_ads'     => false,
+			'_post_type'      => 'page',
+			'_posts_query'    => $query,
 		]
 	);
 	?>

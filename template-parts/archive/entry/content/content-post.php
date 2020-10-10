@@ -31,10 +31,11 @@ $args = wp_parse_args(
 		'template-parts/archive/archive',
 		'post',
 		[
-			'_post_type'      => 'post',
 			'_entries_layout' => $args['_entries_layout'],
-			'_infeed_ads'     => get_option( 'mwt-google-infeed-ads' ),
 			'_force_sm_1col'  => $args['_force_sm_1col'],
+			'_infeed_ads'     => get_option( 'mwt-google-infeed-ads' ),
+			'_post_type'      => 'post',
+			'_posts_query'    => $wp_query,
 		]
 	);
 	?>
