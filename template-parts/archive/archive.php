@@ -17,8 +17,6 @@ $args = wp_parse_args(
 	]
 );
 
-$_post_type = get_post_type() ? get_post_type() : 'post';
-
 $default_entries_layout = $args['_post_type']
 	? get_theme_mod( $args['_post_type'] . '-entries-layout' )
 	: 'rich-media';
