@@ -125,7 +125,8 @@ add_filter(
 	'inc2734_wp_view_controller_get_template_part_args',
 	function( $args ) {
 		$args = apply_filters( "snow_monkey_get_template_part_args_{$args['slug']}", $args );
-		return apply_filters( 'snow_monkey_get_template_part_args', $args );
+		$args = apply_filters( 'snow_monkey_get_template_part_args', $args );
+		return $args;
 	},
 	9
 );
