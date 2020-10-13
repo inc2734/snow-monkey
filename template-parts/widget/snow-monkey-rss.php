@@ -14,6 +14,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_classname'      => null,
+		'_context'        => null,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_force_sm_1col'  => false,
@@ -76,6 +77,7 @@ $more_classnames = [
 		'template-parts/common/entries',
 		'rss',
 		[
+			'_context'        => $args['_context'],
 			'_entries_layout' => $args['_entries_layout'],
 			'_excerpt_length' => $args['_excerpt_length'],
 			'_force_sm_1col'  => $args['_force_sm_1col'],

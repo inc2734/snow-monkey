@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
+		'_context'             => null,
 		'_entries_layout'      => 'rich-media',
 		'_excerpt_length'      => null,
 		'_force_sm_1col'       => false,
@@ -47,6 +48,7 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 					'template-parts/loop/entry-summary',
 					$args['_post_type'],
 					[
+						'_context'        => $args['_context'],
 						'_entries_layout' => $args['_entries_layout'],
 						'_excerpt_length' => $args['_excerpt_length'],
 						'_item'           => $item,
@@ -67,6 +69,7 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 					'template-parts/loop/entry-summary',
 					$args['_post_type'],
 					[
+						'_context'        => $args['_context'],
 						'_entries_layout' => $args['_entries_layout'],
 						'_excerpt_length' => $args['_excerpt_length'],
 						'_thumbnail_size' => $args['_item_thumbnail_size'],

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  */
 
 use Framework\Helper;
@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
+		'_context'   => null,
 		'_title_tag' => 'h2',
 		'_item'      => false,
 	]

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  */
 
 use Framework\Helper;
@@ -29,6 +29,15 @@ $instance = wp_parse_args(
 if ( ! $instance ) {
 	return;
 }
+
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_context' => 'snow-monkey/widget/recent-posts',
+	]
+);
 
 $widget_number = explode( '-', $widget_args['widget_id'] );
 if ( 1 < count( $widget_number ) ) {
@@ -75,17 +84,18 @@ Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
 	'recent',
 	[
-		'_posts_query'         => $recent_posts_query,
-		'_widget_area_id'      => $widget_args['id'],
 		'_classname'           => 'snow-monkey-recent-posts',
+		'_context'             => $args['_context'],
 		'_entries_layout'      => $instance['layout'],
-		'_force_sm_1col'       => $force_sm_1col,
-		'_title'               => $instance['title'],
-		'_item_title_tag'      => $instance['item-title-tag'],
-		'_item_thumbnail_size' => $instance['item-thumbnail-size'],
-		'_link_url'            => $instance['link-url'],
-		'_link_text'           => $instance['link-text'],
 		'_excerpt_length'      => null,
+		'_force_sm_1col'       => $force_sm_1col,
+		'_item_thumbnail_size' => $instance['item-thumbnail-size'],
+		'_item_title_tag'      => $instance['item-title-tag'],
+		'_link_text'           => $instance['link-text'],
+		'_link_url'            => $instance['link-url'],
+		'_posts_query'         => $recent_posts_query,
+		'_title'               => $instance['title'],
+		'_widget_area_id'      => $widget_args['id'],
 	]
 );
 echo wp_kses_post( $widget_args['after_widget'] );

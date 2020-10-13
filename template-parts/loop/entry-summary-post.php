@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  */
 
 use Framework\Helper;
@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
+		'_context'        => null,
 		'_title_tag'      => 'h2',
 		'_thumbnail_size' => 'medium_large',
 		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
@@ -28,6 +29,7 @@ $args = wp_parse_args(
 			'template-parts/loop/entry-summary/figure/figure',
 			'post',
 			[
+				'_context'        => $args['_context'],
 				'_thumbnail_size' => $args['_thumbnail_size'],
 			]
 		);
@@ -40,6 +42,7 @@ $args = wp_parse_args(
 					'template-parts/loop/entry-summary/title/title',
 					'post',
 					[
+						'_context'   => $args['_context'],
 						'_title_tag' => $args['_title_tag'],
 					]
 				);
@@ -51,13 +54,22 @@ $args = wp_parse_args(
 				'template-parts/loop/entry-summary/content/content',
 				'post',
 				[
+					'_context'        => $args['_context'],
 					'_entries_layout' => $args['_entries_layout'],
 					'_excerpt_length' => $args['_excerpt_length'],
 				]
 			);
 			?>
 
-			<?php Helper::get_template_part( 'template-parts/loop/entry-summary/meta/meta', 'post' ); ?>
+			<?php
+			Helper::get_template_part(
+				'template-parts/loop/entry-summary/meta/meta',
+				'post',
+				[
+					'_context' => $args['_context'],
+				]
+			);
+			?>
 		</div>
 	</section>
 </a>

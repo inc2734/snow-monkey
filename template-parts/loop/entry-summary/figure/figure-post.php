@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 11.6.0
  */
 
 use Framework\Helper;
@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
+		'_context'        => null,
 		'_thumbnail_size' => 'medium_large',
 	]
 );
@@ -29,7 +30,8 @@ $public_terms = Helper::get_the_public_terms( get_the_ID() );
 			'template-parts/loop/entry-summary/term/term',
 			get_post_type(),
 			[
-				'_terms' => [ $public_terms[0] ],
+				'_context' => $args['_context'],
+				'_terms'   => [ $public_terms[0] ],
 			]
 		);
 	}

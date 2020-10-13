@@ -14,6 +14,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_classname'           => null,
+		'_context'             => null,
 		'_entries_layout'      => 'rich-media',
 		'_excerpt_length'      => null,
 		'_force_sm_1col'       => false,
@@ -87,6 +88,7 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 		'template-parts/common/entries',
 		$archive_view ? $archive_view : $_post_type,
 		[
+			'_context'             => $args['_context'],
 			'_entries_layout'      => $args['_entries_layout'],
 			'_excerpt_length'      => $args['_excerpt_length'],
 			'_force_sm_1col'       => $args['_force_sm_1col'],
