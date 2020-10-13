@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.0
  */
 
 namespace Framework\Model;
@@ -60,7 +60,7 @@ class Design_Skin {
 		$this->plugin = $this->_get_plugin_data();
 
 		add_action( 'wp_loaded', [ $this, '_load_bootstrap' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ] );
+		add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ], 100 );
 		add_filter( 'mce_css', [ $this, '_load_editor_style' ] );
 		add_action( 'enqueue_block_editor_assets', [ $this, '_load_gutenberg_style' ] );
 		add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_script' ] );
@@ -77,9 +77,11 @@ class Design_Skin {
 		}
 
 		$bootstrap_path = dirname( $this->file ) . '/bootstrap.php';
-		if ( file_exists( $bootstrap_path ) ) {
-			include( $bootstrap_path );
+		if ( ! file_exists( $bootstrap_path ) ) {
+			return;
 		}
+
+		include( $bootstrap_path );
 	}
 
 	/**
@@ -94,10 +96,28 @@ class Design_Skin {
 
 		$relative_path = $this->options['style'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
-		$file_url      = plugins_url( $relative_path, $this->file );
-		if ( file_exists( $file_path ) ) {
-			wp_enqueue_style( $this->plugin['slug'], $file_url, [ Helper::get_main_style_handle() ], filemtime( $file_path ) );
+
+		if ( ! file_exists( $file_path ) ) {
+			return;
 		}
+
+		$file_url = plugins_url( $relative_path, $this->file );
+
+		$handles = [];
+		$queue   = wp_styles()->queue;
+		foreach ( $queue as $handle ) {
+			if ( 0 === strpos( $handle, 'snow-monkey' ) ) {
+				$handles[ $handle ] = $handle;
+			}
+		}
+		$dependencies = Helper::generate_style_dependencies( $handles );
+
+		wp_enqueue_style(
+			$this->plugin['slug'],
+			$file_url,
+			$dependencies,
+			filemtime( $file_path )
+		);
 	}
 
 	/**
@@ -113,13 +133,19 @@ class Design_Skin {
 
 		$relative_path = $this->options['editor-style'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
-		$file_url      = plugins_url( $relative_path, $this->file );
-		if ( file_exists( $file_path ) ) {
-			if ( ! empty( $mce_css ) ) {
-				$mce_css .= ',';
-			}
-			$mce_css .= $file_url;
+
+		if ( ! file_exists( $file_path ) ) {
+			return $mce_css;
 		}
+
+		if ( empty( $mce_css ) ) {
+			return $mce_css;
+		}
+
+		$file_url = plugins_url( $relative_path, $this->file );
+		$mce_css .= ',';
+		$mce_css .= $file_url;
+
 		return $mce_css;
 	}
 
@@ -135,10 +161,27 @@ class Design_Skin {
 
 		$relative_path = $this->options['gutenberg-style'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
-		$file_url      = plugins_url( $relative_path, $this->file );
-		if ( file_exists( $file_path ) ) {
-			wp_enqueue_style( $this->plugin['slug'], $file_url, [], filemtime( $file_path ) );
+		if ( ! file_exists( $file_path ) ) {
+			return;
 		}
+
+		$file_url = plugins_url( $relative_path, $this->file );
+
+		$handles = [];
+		$queue   = wp_styles()->queue;
+		foreach ( $queue as $handle ) {
+			if ( 0 === strpos( $handle, 'snow-monkey' ) ) {
+				$handles[ $handle ] = $handle;
+			}
+		}
+		$dependencies = Helper::generate_style_dependencies( $handles );
+
+		wp_enqueue_style(
+			$this->plugin['slug'],
+			$file_url,
+			$dependencies,
+			filemtime( $file_path )
+		);
 	}
 
 	/**
@@ -153,10 +196,19 @@ class Design_Skin {
 
 		$relative_path = $this->options['customize-control-script'];
 		$file_path     = trailingslashit( dirname( $this->file ) ) . $relative_path;
-		$file_url      = plugins_url( $relative_path, $this->file );
-		if ( file_exists( $file_path ) ) {
-			wp_enqueue_script( $this->plugin['slug'] . '-customize-preview', $file_url, [ 'jquery' ], filemtime( $file_path ), true );
+		if ( ! file_exists( $file_path ) ) {
+			return;
 		}
+
+		$file_url = plugins_url( $relative_path, $this->file );
+
+		wp_enqueue_script(
+			$this->plugin['slug'] . '-customize-preview',
+			$file_url,
+			[ 'jquery' ],
+			filemtime( $file_path ),
+			true
+		);
 	}
 
 	/**
