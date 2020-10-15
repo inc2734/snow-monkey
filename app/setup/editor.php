@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.8
+ * @version 11.6.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -85,7 +85,7 @@ add_filter(
 		$wp_page_template = get_post_meta( $post_id, '_wp_page_template', true );
 		$wp_page_template = basename( $wp_page_template );
 		$wp_page_template = pathinfo( $wp_page_template, PATHINFO_FILENAME );
-		if ( $wp_page_template ) {
+		if ( $wp_page_template && 'default' !== $wp_page_template ) {
 			return $classes . ' l-body--' . $wp_page_template;
 		}
 
