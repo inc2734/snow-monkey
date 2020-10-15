@@ -14,6 +14,7 @@
   &__content {
     display: flex;
     flex: 0 1 auto;
+    align-items: center;
     color: $_color-white; // For IE11
     color: _var-color-white();
 

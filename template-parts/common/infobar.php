@@ -23,6 +23,12 @@ $args = wp_parse_args(
 if ( ! $args['_content'] ) {
 	return;
 }
+
+
+$kses_allowed_html      = wp_kses_allowed_html( 'user_description' );
+$kses_allowed_html['i'] = [
+	'class' => true,
+];
 ?>
 <div class="p-infobar">
 	<?php if ( $args['_url'] ) : ?>
@@ -31,7 +37,6 @@ if ( ! $args['_content'] ) {
 			<div class="c-container">
 				<div class="p-infobar__content">
 					<?php
-					$kses_allowed_html = wp_kses_allowed_html( 'user_description' );
 					if ( isset( $kses_allowed_html['a'] ) ) {
 						unset( $kses_allowed_html['a'] );
 					}
@@ -51,8 +56,6 @@ if ( ! $args['_content'] ) {
 			<div class="c-container">
 				<div class="p-infobar__content">
 					<?php
-					$kses_allowed_html = wp_kses_allowed_html( 'user_description' );
-
 					echo wp_kses(
 						$args['_content'],
 						$kses_allowed_html
