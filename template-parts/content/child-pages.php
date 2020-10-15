@@ -15,6 +15,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
+		'_context'   => 'snow-monkey/child-pages',
 		'_parent_id' => get_the_ID(),
 		'_title'     => __( 'Child pages', 'snow-monkey' ),
 	]
@@ -43,6 +44,7 @@ if ( ! $query->have_posts() ) {
 		'template-parts/common/entries',
 		'page',
 		[
+			'_context'        => $args['_context'],
 			'_entries_layout' => 'rich-media',
 			'_force_sm_1col'  => false,
 			'_infeed_ads'     => false,

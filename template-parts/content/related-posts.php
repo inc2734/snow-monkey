@@ -22,6 +22,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_code'           => get_option( 'mwt-google-matched-content' ),
+		'_context'        => 'snow-monkey/related-posts',
 		'_entries_layout' => $default_entries_layout,
 		'_post_id'        => get_the_ID(),
 		'_title'          => __( 'Related posts', 'snow-monkey' ),
@@ -57,6 +58,7 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 			'template-parts/common/entries',
 			$_post_type,
 			[
+				'_context'        => $args['_context'],
 				'_entries_layout' => $args['_entries_layout'],
 				'_force_sm_1col'  => false,
 				'_infeed_ads'     => false,

@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
+		'_context'        => 'archive',
 		'_entries_layout' => 'rich-media',
 		'_force_sm_1col'  => false,
 		'_infeed_ads'     => false,
@@ -32,6 +33,7 @@ if ( ! $args['_posts_query'] ) {
 		'template-parts/common/entries',
 		$args['_post_type'],
 		[
+			'_context'        => $args['_context'],
 			'_entries_layout' => $args['_entries_layout'],
 			'_force_sm_1col'  => $args['_force_sm_1col'],
 			'_infeed_ads'     => $args['_infeed_ads'],
