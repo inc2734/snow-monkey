@@ -842,16 +842,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "731544dd2de2f2423e8265562ef92e5a44e635c3"
+                "reference": "7fa147fec7c00097b6ac8f0f38668e06f6c1de22"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/731544dd2de2f2423e8265562ef92e5a44e635c3",
-                "reference": "731544dd2de2f2423e8265562ef92e5a44e635c3",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/7fa147fec7c00097b6ac8f0f38668e06f6c1de22",
+                "reference": "7fa147fec7c00097b6ac8f0f38668e06f6c1de22",
                 "shasum": ""
             },
             "require": {
@@ -859,12 +859,12 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2",
+                "wp-phpunit/wp-phpunit": "^5.4"
             },
             "type": "library",
             "autoload": {
@@ -884,7 +884,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2020-07-18T13:17:50+00:00"
+            "time": "2020-10-15T05:59:48+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",
