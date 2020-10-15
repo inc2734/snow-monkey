@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 11.6.0
  */
 
 namespace Framework;
@@ -55,11 +55,11 @@ class Helper {
 	 * @return string
 	 */
 	public static function get_page_title_from_breadcrumbs() {
-		$breadcrumbs = new WP_Breadcrumbs\Bootstrap();
-		$breadcrumbs = apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
-		$title_item  = end( $breadcrumbs );
+		$breadcrumbs_items = static::get_breadcrumbs_items();
+		$title_item        = end( $breadcrumbs_items );
 		return array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
 	}
+
 
 	/**
 	 * Return trimed title.
@@ -109,8 +109,14 @@ class Helper {
 	 *   @var string $link
 	 */
 	public static function get_breadcrumbs_items() {
-		$breadcrumbs = new WP_Breadcrumbs\Bootstrap();
-		return apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
+		static $breadcrumbs_items = [];
+		if ( $breadcrumbs_items ) {
+			return $breadcrumbs_items;
+		}
+
+		$breadcrumbs       = new WP_Breadcrumbs\Bootstrap();
+		$breadcrumbs_items = apply_filters( 'snow_monkey_breadcrumbs', $breadcrumbs->get() );
+		return $breadcrumbs_items;
 	}
 
 	/**
