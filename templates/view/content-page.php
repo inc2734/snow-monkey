@@ -3,45 +3,39 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.2.1
+ * @version 11.6.0
  */
 
 use Framework\Helper;
 
-$eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
-?>
+$eyecatch_position    = get_theme_mod( get_post_type() . '-eyecatch' );
+$display_entry_header = 'title-on-page-header' !== $eyecatch_position;
+$display_eyecatch     = 'content-top' === $eyecatch_position;
 
-<article <?php post_class(); ?>>
-	<?php
-	if ( 'title-on-page-header' !== $eyecatch_position ) {
-		Helper::get_template_part( 'template-parts/content/entry/header/header', 'page' );
-	}
-	?>
+// @see templates/view/content.php
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_display_adsense'                     => false,
+		'_display_article_bottom_widget_area'  => true,
+		'_display_article_top_widget_area'     => true,
+		'_display_bottom_share_buttons'        => false,
+		'_display_contents_bottom_widget_area' => true,
+		'_display_comments'                    => false,
+		'_display_entry_footer'                => false,
+		'_display_entry_header'                => $display_entry_header,
+		'_display_eyecatch'                    => $display_eyecatch,
+		'_display_profile_box'                 => false,
+		'_display_tags'                        => false,
+		'_display_top_share_buttons'           => false,
+		'_post_type'                           => 'page',
+	]
+);
 
-	<div class="c-entry__body">
-		<?php
-		if ( 'content-top' === $eyecatch_position && has_post_thumbnail() ) {
-			Helper::get_template_part( 'template-parts/content/eyecatch' );
-		}
-
-		if ( Helper::is_active_sidebar( 'article-top-widget-area' ) ) {
-			Helper::get_template_part( 'template-parts/widget-area/article-top' );
-		}
-
-		Helper::get_template_part( 'template-parts/content/entry/content/content', 'page' );
-
-		if ( Helper::is_active_sidebar( 'article-bottom-widget-area' ) ) {
-			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );
-		}
-		?>
-	</div>
-</article>
-
-<?php
-if ( Helper::is_active_sidebar( 'contents-bottom-widget-area' ) ) {
-	Helper::get_template_part( 'template-parts/widget-area/contents-bottom' );
-}
-
-if ( comments_open() || pings_open() || get_comments_number() ) {
-	comments_template( '', true );
-}
+Helper::get_template_part(
+	'templates/view/content',
+	null,
+	$args
+);

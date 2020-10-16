@@ -3,33 +3,151 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.8
+ * @version 11.6.0
  */
 
 use Framework\Helper;
 
-$eyecatch_position = get_theme_mod( get_post_type() . '-eyecatch' );
+$eyecatch_position    = get_theme_mod( get_post_type() . '-eyecatch' );
+$display_entry_header = 'title-on-page-header' !== $eyecatch_position;
+$display_eyecatch     = 'content-top' === $eyecatch_position;
+
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_display_adsense'                     => false,
+		'_display_article_bottom_widget_area'  => false,
+		'_display_article_top_widget_area'     => false,
+		'_display_bottom_share_buttons'        => false,
+		'_display_contents_bottom_widget_area' => false,
+		'_display_comments'                    => true,
+		'_display_entry_footer'                => false,
+		'_display_entry_header'                => $display_entry_header,
+		'_display_eyecatch'                    => $display_eyecatch,
+		'_display_profile_box'                 => false,
+		'_display_tags'                        => false,
+		'_display_top_share_buttons'           => false,
+		'_post_type'                           => get_post_type(),
+	]
+);
 ?>
 
 <article <?php post_class(); ?>>
 	<?php
-	if ( 'title-on-page-header' !== $eyecatch_position ) {
-		Helper::get_template_part( 'template-parts/content/entry/header/header', get_post_type() );
+	if ( $args['_display_entry_header'] ) {
+		Helper::get_template_part(
+			'template-parts/content/entry/header/header',
+			$args['_post_type']
+		);
 	}
 	?>
 
 	<div class="c-entry__body">
 		<?php
-		if ( 'content-top' === $eyecatch_position && has_post_thumbnail() ) {
+		if ( $args['_display_top_share_buttons'] ) {
+			Helper::get_template_part( 'template-parts/content/share-buttons' );
+		}
+		?>
+
+		<?php
+		if ( $args['_display_adsense'] ) {
+			Helper::get_template_part(
+				'template-parts/common/google-adsense',
+				null,
+				[
+					'_position' => 'content-top',
+				]
+			);
+		}
+		?>
+
+		<?php
+		if ( $args['_display_eyecatch'] ) {
 			Helper::get_template_part( 'template-parts/content/eyecatch' );
 		}
 		?>
 
-		<?php Helper::get_template_part( 'template-parts/content/entry/content/content', get_post_type() ); ?>
+		<?php
+		if ( $args['_display_article_top_widget_area'] ) {
+			Helper::get_template_part( 'template-parts/widget-area/article-top' );
+		}
+		?>
+
+		<?php
+		Helper::get_template_part(
+			'template-parts/content/entry/content/content',
+			$args['_post_type']
+		);
+		?>
+
+		<?php
+		if ( $args['_display_article_bottom_widget_area'] ) {
+			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );
+		}
+		?>
+
+		<?php
+		if ( $args['_display_bottom_share_buttons'] ) {
+			Helper::get_template_part( 'template-parts/content/share-buttons' );
+		}
+		?>
+
+		<?php
+		if ( $args['_display_adsense'] ) {
+			Helper::get_template_part(
+				'template-parts/common/google-adsense',
+				null,
+				[
+					'_position' => 'content-bottom',
+				]
+			);
+		}
+		?>
+
+		<?php
+		if ( $args['_display_tags'] ) {
+			Helper::get_template_part(
+				'template-parts/content/entry-tags',
+				get_post_type(),
+				[
+					'_terms' => get_the_terms( get_the_ID(), 'post_tag' ),
+				]
+			);
+		}
+		?>
+
+		<?php
+		if ( $args['_display_profile_box'] ) {
+			Helper::get_template_part(
+				'template-parts/common/profile-box',
+				null,
+				[
+					'_title' => __( 'Bio', 'snow-monkey' ),
+				]
+			);
+		}
+		?>
 	</div>
+
+	<?php
+	if ( $args['_display_entry_footer'] ) {
+		Helper::get_template_part(
+			'template-parts/content/entry/footer/footer',
+			$args['_post_type']
+		);
+	}
+	?>
 </article>
 
 <?php
-if ( comments_open() || pings_open() || get_comments_number() ) {
+if ( $args['_display_contents_bottom_widget_area'] ) {
+	Helper::get_template_part( 'template-parts/widget-area/contents-bottom' );
+}
+?>
+
+<?php
+if ( $args['_display_comments'] ) {
 	comments_template( '', true );
 }
