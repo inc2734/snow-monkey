@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 11.6.0
  */
 
 namespace Framework\Contract\Helper;
@@ -43,7 +43,7 @@ trait Post_Type_Archive_Thumbnail {
 	 * @param string|null $post_type The post type name.
 	 * @return string
 	 */
-	public static function get_the_post_type_archive__thumbnail( $post_type = null ) {
+	public static function get_the_post_type_archive_thumbnail( $post_type = null ) {
 		$post_type = null === $post_type ? get_post_type() : $post_type;
 
 		if ( ! static::has_post_type_archive_thumbnail( $post_type ) ) {
