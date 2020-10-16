@@ -3,19 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.6.1
  *
  * renamed: template-parts/share-buttons.php
  */
 
 use Framework\Helper;
 
+$share_buttons = get_option( 'mwt-share-buttons-buttons' );
+
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
 	[
-		'_buttons' => explode( ',', get_option( 'mwt-share-buttons-buttons' ) ),
+		'_buttons' => $share_buttons ? explode( ',', $share_buttons ) : [],
 	]
 );
 
