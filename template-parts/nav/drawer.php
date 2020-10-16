@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.6.1
+ * @version 11.6.0
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -16,9 +16,17 @@ $has_drawer_sub_nav = has_nav_menu( 'drawer-sub-nav' );
 if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 	return;
 }
+
+$hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 ?>
 
-<nav id="drawer-nav" class="c-drawer c-drawer--fixed" role="navigation" aria-hidden="true" aria-labelledby="hamburger-btn">
+<nav
+	id="drawer-nav"
+	class="c-drawer c-drawer--fixed <?php echo esc_attr( 'left' === $hamburger_btn_position ? 'c-drawer--inverse' : '' ); ?>"
+	role="navigation"
+	aria-hidden="true"
+	aria-labelledby="hamburger-btn"
+>
 	<div class="c-drawer__inner">
 		<?php do_action( 'snow_monkey_prepend_drawer_nav' ); ?>
 

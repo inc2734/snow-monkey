@@ -3,21 +3,22 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 11.6.0
  *
  * renamed: template-parts/center-header.php
  */
 
 use Framework\Helper;
 
-$header_content      = get_theme_mod( 'header-content' );
-$header_type         = get_theme_mod( 'header-layout' ) . '-header';
-$header_alignfull    = get_theme_mod( 'header-alignfull' );
-$has_global_nav      = has_nav_menu( 'global-nav' );
-$has_drawer_nav      = has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
-$has_header_sub_nav  = has_nav_menu( 'header-sub-nav' );
-$data_has_global_nav = $has_global_nav ? 'true' : 'false';
-$container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
+$header_content         = get_theme_mod( 'header-content' );
+$header_type            = get_theme_mod( 'header-layout' ) . '-header';
+$header_alignfull       = get_theme_mod( 'header-alignfull' );
+$has_global_nav         = has_nav_menu( 'global-nav' );
+$has_drawer_nav         = has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
+$has_header_sub_nav     = has_nav_menu( 'header-sub-nav' );
+$data_has_global_nav    = $has_global_nav ? 'true' : 'false';
+$container_class        = $header_alignfull ? 'c-fluid-container' : 'c-container';
+$hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 ?>
 
 <div class="l-<?php echo esc_attr( $header_type ); ?>" data-has-global-nav="<?php echo esc_attr( $data_has_global_nav ); ?>">
@@ -31,8 +32,17 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 		<div class="l-<?php echo esc_attr( $header_type ); ?>__row">
 			<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--between c-row--nowrap">
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--fit u-invisible-lg-up u-invisible-wall" aria-hidden="true">
-						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn', null, [ '_id' => false ] ); ?>
+					<div
+						class="c-row__col c-row__col--fit u-invisible-lg-up <?php echo esc_attr( 'left' !== $hamburger_btn_position ? 'u-invisible-wall' : '' ); ?>"
+						<?php echo esc_attr( 'left' !== $hamburger_btn_position ? 'aria-hidden="true"' : '' ); ?>
+					>
+						<?php
+						Helper::get_template_part(
+							'template-parts/header/hamburger-btn',
+							null,
+							'left' === $hamburger_btn_position ? [] : [ '_id' => false ]
+						);
+						?>
 					</div>
 				<?php endif; ?>
 
@@ -57,8 +67,17 @@ $container_class     = $header_alignfull ? 'c-fluid-container' : 'c-container';
 				<?php endif; ?>
 
 				<?php if ( $has_drawer_nav ) : ?>
-					<div class="c-row__col c-row__col--fit u-invisible-lg-up">
-						<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
+					<div
+						class="c-row__col c-row__col--fit u-invisible-lg-up <?php echo esc_attr( 'right' !== $hamburger_btn_position ? 'u-invisible-wall' : '' ); ?>"
+						<?php echo esc_attr( 'right' !== $hamburger_btn_position ? 'aria-hidden="true"' : '' ); ?>
+					>
+						<?php
+						Helper::get_template_part(
+							'template-parts/header/hamburger-btn',
+							null,
+							'right' === $hamburger_btn_position ? [] : [ '_id' => false ]
+						);
+						?>
 					</div>
 				<?php endif; ?>
 			</div>

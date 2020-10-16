@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc5e4eac433c7183b41c2561a85002b1",
+    "content-hash": "f6847045e48c3a2016077b96ea3bf88d",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -143,28 +143,28 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "7.2.1",
+            "version": "7.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "39bc327d17ef1439eb4da4d795c0e2dd347fefe5"
+                "reference": "0e0c1500f7aca6efaa739eac6fce4bae6e3902ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/39bc327d17ef1439eb4da4d795c0e2dd347fefe5",
-                "reference": "39bc327d17ef1439eb4da4d795c0e2dd347fefe5",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/0e0c1500f7aca6efaa739eac6fce4bae6e3902ef",
+                "reference": "0e0c1500f7aca6efaa739eac6fce4bae6e3902ef",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2",
+                "wp-phpunit/wp-phpunit": "^5.4"
             },
             "type": "library",
             "autoload": {
@@ -183,7 +183,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2020-08-28T09:49:59+00:00"
+            "time": "2020-10-16T05:38:47+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
