@@ -1,9 +1,12 @@
 .wp-block-buttons {
-  .wp-block-button {
-    margin: 0;
+  @include _margin-right(-.25);
+  @include _margin-left(-.25);
+  @include _margin-bottom(-.5);
 
-    &:not(:first-child) {
-      @include _margin-left(.5);
-    }
+  > .wp-block-button {
+    margin: 0;
+    @include _padding-right(.25);
+    @include _padding-left(.25);
+    @include _padding-bottom(.5);
   }
 }
