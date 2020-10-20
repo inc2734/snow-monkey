@@ -93,30 +93,34 @@
       }
     }
 
-    &[data-popup-mode="click"] {
+    .#{ $_prefix }c-navbar__toggle {
+      @include _transition(transform);
+      z-index: 2; // vs .c-navbar__subitem > a::before
+    }
+
+    .#{ $_prefix }c-navbar__item {
       .#{ $_prefix }c-navbar__toggle {
-        @include _transition(transform);
-      }
+        transform: rotate(90deg);
 
-      .#{ $_prefix }c-navbar__item {
-        .#{ $_prefix }c-navbar__toggle {
-          transform: rotate(90deg);
-
-          &[aria-expanded="true"] {
-            transform: rotate(-90deg);
-          }
+        &[aria-expanded="true"] {
+          transform: rotate(-90deg);
         }
       }
+    }
 
-      .#{ $_prefix }c-navbar__subitem {
-        .#{ $_prefix }c-navbar__toggle {
-          color: $_color-white; // For IE11
-          color: _var-color-white();
-          transform: rotate(0);
+    .#{ $_prefix }c-navbar__subitem {
+      .#{ $_prefix }c-navbar__toggle {
+        color: $_color-white; // For IE11
+        color: _var-color-white();
+        transform: rotate(0);
 
-          &[aria-expanded="true"] {
-            transform: rotate(180deg);
-          }
+        .#{ $_prefix }c-ic-angle-right::before {
+          border-color: $_color-white; // For IE11
+          border-color: _var-color-white();
+        }
+
+        &[aria-expanded="true"] {
+          transform: rotate(180deg);
         }
       }
     }

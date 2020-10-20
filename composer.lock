@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6847045e48c3a2016077b96ea3bf88d",
+    "content-hash": "2d343f9594ad59abaf85a6b5f11ed1ac",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -143,16 +143,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "7.3.0",
+            "version": "7.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "0e0c1500f7aca6efaa739eac6fce4bae6e3902ef"
+                "reference": "11520e7d20fc3e11d962e71359a6a016fbfc1820"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/0e0c1500f7aca6efaa739eac6fce4bae6e3902ef",
-                "reference": "0e0c1500f7aca6efaa739eac6fce4bae6e3902ef",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/11520e7d20fc3e11d962e71359a6a016fbfc1820",
+                "reference": "11520e7d20fc3e11d962e71359a6a016fbfc1820",
                 "shasum": ""
             },
             "require": {
@@ -183,7 +183,7 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
-            "time": "2020-10-16T05:38:47+00:00"
+            "time": "2020-10-20T05:57:08+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
