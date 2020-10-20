@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 11.7.0
  */
 
 use Framework\Helper;
@@ -32,122 +32,9 @@ $args = wp_parse_args(
 		'_post_type'                           => get_post_type(),
 	]
 );
-?>
 
-<article <?php post_class(); ?>>
-	<?php
-	if ( $args['_display_entry_header'] ) {
-		Helper::get_template_part(
-			'template-parts/content/entry/header/header',
-			$args['_post_type']
-		);
-	}
-	?>
-
-	<div class="c-entry__body">
-		<?php
-		if ( $args['_display_top_share_buttons'] ) {
-			Helper::get_template_part( 'template-parts/content/share-buttons' );
-		}
-		?>
-
-		<?php
-		if ( $args['_display_adsense'] ) {
-			Helper::get_template_part(
-				'template-parts/common/google-adsense',
-				null,
-				[
-					'_position' => 'content-top',
-				]
-			);
-		}
-		?>
-
-		<?php
-		if ( $args['_display_eyecatch'] ) {
-			Helper::get_template_part( 'template-parts/content/eyecatch' );
-		}
-		?>
-
-		<?php
-		if ( $args['_display_article_top_widget_area'] ) {
-			Helper::get_template_part( 'template-parts/widget-area/article-top' );
-		}
-		?>
-
-		<?php
-		Helper::get_template_part(
-			'template-parts/content/entry/content/content',
-			$args['_post_type']
-		);
-		?>
-
-		<?php
-		if ( $args['_display_article_bottom_widget_area'] ) {
-			Helper::get_template_part( 'template-parts/widget-area/article-bottom' );
-		}
-		?>
-
-		<?php
-		if ( $args['_display_bottom_share_buttons'] ) {
-			Helper::get_template_part( 'template-parts/content/share-buttons' );
-		}
-		?>
-
-		<?php
-		if ( $args['_display_adsense'] ) {
-			Helper::get_template_part(
-				'template-parts/common/google-adsense',
-				null,
-				[
-					'_position' => 'content-bottom',
-				]
-			);
-		}
-		?>
-
-		<?php
-		if ( $args['_display_tags'] ) {
-			Helper::get_template_part(
-				'template-parts/content/entry-tags',
-				get_post_type(),
-				[
-					'_terms' => get_the_terms( get_the_ID(), 'post_tag' ),
-				]
-			);
-		}
-		?>
-
-		<?php
-		if ( $args['_display_profile_box'] ) {
-			Helper::get_template_part(
-				'template-parts/common/profile-box',
-				null,
-				[
-					'_title' => __( 'Bio', 'snow-monkey' ),
-				]
-			);
-		}
-		?>
-	</div>
-
-	<?php
-	if ( $args['_display_entry_footer'] ) {
-		Helper::get_template_part(
-			'template-parts/content/entry/footer/footer',
-			$args['_post_type']
-		);
-	}
-	?>
-</article>
-
-<?php
-if ( $args['_display_contents_bottom_widget_area'] ) {
-	Helper::get_template_part( 'template-parts/widget-area/contents-bottom' );
-}
-?>
-
-<?php
-if ( $args['_display_comments'] ) {
-	comments_template( '', true );
-}
+Helper::get_template_part(
+	'template-parts/content/entry/entry',
+	null,
+	$args
+);

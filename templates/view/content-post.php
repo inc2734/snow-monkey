@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 11.7.0
  */
 
 use Framework\Helper;
@@ -40,7 +40,7 @@ $args = wp_parse_args(
 );
 
 Helper::get_template_part(
-	'templates/view/content',
+	'template-parts/content/entry/entry',
 	null,
 	$args
 );
