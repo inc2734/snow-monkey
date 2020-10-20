@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-10-16 14:53+0900\n"
-"PO-Revision-Date: 2020-10-16 14:54+0900\n"
+"POT-Creation-Date: 2020-10-20 15:46+0900\n"
+"PO-Revision-Date: 2020-10-20 15:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -57,8 +57,9 @@ msgid "None"
 msgstr "なし"
 
 #: Framework/Helper.php:46
-#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:20
+#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
 #: snow-monkey/Framework/Helper.php:46
+#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
 #: translation/bundle-template-header.php:13
 msgid "Left"
 msgstr "左"
@@ -68,15 +69,16 @@ msgid "Center"
 msgstr "中央"
 
 #: Framework/Helper.php:48
-#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
+#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:20
 #: snow-monkey/Framework/Helper.php:48
+#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:20
 msgid "Right"
 msgstr "右"
 
 #: Framework/Helper.php:73 snow-monkey/Framework/Helper.php:73
 #: snow-monkey/template-parts/content/prev-next-nav.php:72
-#: snow-monkey/template-parts/loop/entry-summary/content/content-rss.php:40
-#: snow-monkey/template-parts/loop/entry-summary/content/content.php:36
+#: snow-monkey/template-parts/loop/entry-summary/content/content-rss.php:41
+#: snow-monkey/template-parts/loop/entry-summary/content/content.php:37
 #: template-parts/content/prev-next-nav.php:72
 #: template-parts/loop/entry-summary/content/content-rss.php:41
 #: template-parts/loop/entry-summary/content/content.php:37
@@ -87,7 +89,7 @@ msgstr "55"
 #. Theme Name of the plugin/theme
 #: Framework/Helper.php:130 app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
-#: snow-monkey/Framework/Helper.php:124
+#: snow-monkey/Framework/Helper.php:130
 #: snow-monkey/app/constructor/trial.php:23
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:14
 msgid "Snow Monkey"
@@ -95,7 +97,7 @@ msgstr "Snow Monkey"
 
 #: Framework/Helper.php:135 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
-#: snow-monkey/Framework/Helper.php:129
+#: snow-monkey/Framework/Helper.php:135
 #: snow-monkey/app/constructor/trial.php:28
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:19
 msgid "Monkey Wrench"
@@ -103,7 +105,7 @@ msgstr "モンキーレンチ"
 
 #: Framework/Helper.php:140 app/constructor/trial.php:33
 #: app/customizer/title-tagline/controls/copyright.php:24
-#: snow-monkey/Framework/Helper.php:134
+#: snow-monkey/Framework/Helper.php:140
 #: snow-monkey/app/constructor/trial.php:33
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:24
 msgid "WordPress"
@@ -112,7 +114,7 @@ msgstr "WordPress"
 #. translators: %1$s: Theme link, %2$s: Developer link
 #: Framework/Helper.php:145
 #: app/customizer/title-tagline/controls/copyright.php:29
-#: snow-monkey/Framework/Helper.php:139
+#: snow-monkey/Framework/Helper.php:145
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:29
 #, php-format
 msgid "%1$s theme by %2$s"
@@ -121,47 +123,47 @@ msgstr "%1$s テーマ by %2$s"
 #. translators: %s: WordPress link
 #: Framework/Helper.php:152 app/constructor/trial.php:45
 #: app/customizer/title-tagline/controls/copyright.php:36
-#: snow-monkey/Framework/Helper.php:146
+#: snow-monkey/Framework/Helper.php:152
 #: snow-monkey/app/constructor/trial.php:45
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:36
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:282 snow-monkey/Framework/Helper.php:276
+#: Framework/Helper.php:282 snow-monkey/Framework/Helper.php:282
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:287 snow-monkey/Framework/Helper.php:281
+#: Framework/Helper.php:287 snow-monkey/Framework/Helper.php:287
 msgid "Black"
 msgstr "ブラック"
 
 #: Framework/Helper.php:292 app/customizer/infobar/controls/font-color.php:15
-#: snow-monkey/Framework/Helper.php:286
+#: snow-monkey/Framework/Helper.php:292
 #: snow-monkey/app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:297 snow-monkey/Framework/Helper.php:291
+#: Framework/Helper.php:297 snow-monkey/Framework/Helper.php:297
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:302 snow-monkey/Framework/Helper.php:296
+#: Framework/Helper.php:302 snow-monkey/Framework/Helper.php:302
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:307 snow-monkey/Framework/Helper.php:301
+#: Framework/Helper.php:307 snow-monkey/Framework/Helper.php:307
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:312 snow-monkey/Framework/Helper.php:306
+#: Framework/Helper.php:312 snow-monkey/Framework/Helper.php:312
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
 #: Framework/Helper.php:317
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
-#: snow-monkey/Framework/Helper.php:311
+#: snow-monkey/Framework/Helper.php:317
 #: snow-monkey/app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: snow-monkey/app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
@@ -169,48 +171,48 @@ msgstr "アクセントカラー"
 
 #: Framework/Helper.php:322
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
-#: snow-monkey/Framework/Helper.php:316
+#: snow-monkey/Framework/Helper.php:322
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:327 snow-monkey/Framework/Helper.php:321
+#: Framework/Helper.php:327 snow-monkey/Framework/Helper.php:327
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:333 snow-monkey/Framework/Helper.php:327
+#: Framework/Helper.php:333 snow-monkey/Framework/Helper.php:333
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:339 snow-monkey/Framework/Helper.php:333
+#: Framework/Helper.php:339 snow-monkey/Framework/Helper.php:339
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:345 snow-monkey/Framework/Helper.php:339
+#: Framework/Helper.php:345 snow-monkey/Framework/Helper.php:345
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:351 snow-monkey/Framework/Helper.php:345
+#: Framework/Helper.php:351 snow-monkey/Framework/Helper.php:351
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:357 snow-monkey/Framework/Helper.php:351
+#: Framework/Helper.php:357 snow-monkey/Framework/Helper.php:357
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:363 snow-monkey/Framework/Helper.php:357
+#: Framework/Helper.php:363 snow-monkey/Framework/Helper.php:363
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:369 snow-monkey/Framework/Helper.php:363
+#: Framework/Helper.php:369 snow-monkey/Framework/Helper.php:369
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:375 snow-monkey/Framework/Helper.php:369
+#: Framework/Helper.php:375 snow-monkey/Framework/Helper.php:375
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:381 snow-monkey/Framework/Helper.php:375
+#: Framework/Helper.php:381 snow-monkey/Framework/Helper.php:381
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -223,7 +225,7 @@ msgstr "目次"
 
 #: app/constructor/compatibility.php:96
 #: snow-monkey/app/constructor/compatibility.php:96
-#: snow-monkey/template-parts/content/child-pages.php:18
+#: snow-monkey/template-parts/content/child-pages.php:20
 #: template-parts/content/child-pages.php:20
 msgid "Child pages"
 msgstr "このページの子ページ"
@@ -974,6 +976,7 @@ msgid "Underline"
 msgstr "下線"
 
 #: app/customizer/design/sections/header/controls/hamburger-btn-position.php:15
+#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:15
 msgid "Hamberger button position"
 msgstr "ハンバーガーボタンの位置"
 
@@ -1290,9 +1293,8 @@ msgid "Tracking ID"
 msgstr "トラッキング ID"
 
 #: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
-#: snow-monkey/app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
-msgid "e.g. UA-1111111-11"
-msgstr "例: UA-1111111-11"
+msgid "e.g. UA-1111111-11 or G-XXXXXXXX"
+msgstr "例: UA-1111111-11 もしくは G-XXXXXXXX"
 
 #: app/customizer/seo/sections/google-analytics/section.php:20
 #: snow-monkey/app/customizer/seo/sections/google-analytics/section.php:20
@@ -2049,6 +2051,10 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
+#: snow-monkey/app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
+msgid "e.g. UA-1111111-11"
+msgstr "例: UA-1111111-11"
+
 #: snow-monkey/template-parts/archive/entry/content/content-no-keywords.php:16
 #: template-parts/archive/entry/content/content-no-keywords.php:16
 msgid "Please enter a search keyword."
@@ -2094,8 +2100,9 @@ msgid "Scroll up"
 msgstr "上にスクロール"
 
 #: snow-monkey/template-parts/common/profile-box.php:16
-#: snow-monkey/templates/view/content-post.php:68
-#: template-parts/common/profile-box.php:16 templates/view/content.php:127
+#: snow-monkey/templates/view/content.php:127
+#: template-parts/common/profile-box.php:16
+#: template-parts/content/entry/entry.php:123
 msgid "Bio"
 msgstr "この記事を書いた人"
 
@@ -2115,7 +2122,7 @@ msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
 #: snow-monkey/template-parts/content/entry/footer/footer.php:26
-#: snow-monkey/template-parts/content/related-posts.php:19
+#: snow-monkey/template-parts/content/related-posts.php:28
 #: template-parts/content/entry/footer/footer.php:26
 #: template-parts/content/related-posts.php:28
 msgid "Related posts"
@@ -2131,7 +2138,7 @@ msgstr "古い投稿"
 msgid "New post"
 msgstr "新しい投稿"
 
-#: snow-monkey/template-parts/content/related-posts.php:43
+#: snow-monkey/template-parts/content/related-posts.php:44
 #: template-parts/content/related-posts.php:44
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"

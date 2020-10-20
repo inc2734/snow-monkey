@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d343f9594ad59abaf85a6b5f11ed1ac",
+    "content-hash": "af90c85709f051689df2292b625560d0",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -797,16 +797,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "4.1.2",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "bfcca0e7448d10f32823c87a5a68b27b34f8dafc"
+                "reference": "3e9a4a1df77491a4d51934e7ffcde1da1df15878"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/bfcca0e7448d10f32823c87a5a68b27b34f8dafc",
-                "reference": "bfcca0e7448d10f32823c87a5a68b27b34f8dafc",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/3e9a4a1df77491a4d51934e7ffcde1da1df15878",
+                "reference": "3e9a4a1df77491a4d51934e7ffcde1da1df15878",
                 "shasum": ""
             },
             "require": {
@@ -814,12 +814,12 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.2",
+                "wp-phpunit/wp-phpunit": "^5.4"
             },
             "type": "library",
             "autoload": {
@@ -838,7 +838,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2020-05-06T23:16:51+00:00"
+            "time": "2020-10-20T06:41:55+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
