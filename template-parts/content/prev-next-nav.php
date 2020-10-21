@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.7.0
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -79,12 +79,18 @@ $args = wp_parse_args(
 				if ( 'next' === $key ) {
 					previous_post_link(
 						'%link',
-						$format
+						$format,
+						$args['_in_same_term'],
+						$args['_excluded_terms'],
+						$args['_taxonomy']
 					);
 				} elseif ( 'prev' === $key ) {
 					next_post_link(
 						'%link',
-						$format
+						$format,
+						$args['_in_same_term'],
+						$args['_excluded_terms'],
+						$args['_taxonomy']
 					);
 				}
 
