@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.8
+ * @version 11.7.1
  */
 
 namespace Framework\Contract\Model;
@@ -151,18 +151,19 @@ abstract class Page_Header {
 	protected static function _attachment_url_to_postid( $url ) {
 		$url = preg_replace( '|\?.*$|', '', $url );
 
-		if ( preg_match( '|-scaled\..+$|', $url ) ) {
+		if ( preg_match( '|-scaled\.[0-9A-Za-z]+$|', $url ) ) {
 			return attachment_url_to_postid( $url );
 		}
 
-		if ( preg_match( '|-\d+x\d+(\..+)$|', $url ) ) {
-			$url = preg_replace( '|-\d+x\d+(\..+)$|', '$1', $url );
+		if ( preg_match( '|-\d+x\d+\.[0-9A-Za-z]+$|', $url ) ) {
+			$url = preg_replace( '|-\d+x\d+(\.[0-9A-Za-z]+)$|', '$1', $url );
 			$id  = attachment_url_to_postid( $url );
+
 			if ( 0 !== $id ) {
 				return $id;
 			}
 
-			$url = preg_replace( '|(\..+)$|', '-scaled$1', $url );
+			$url = preg_replace( '|(\.[0-9A-Za-z]+)$|', '-scaled$1', $url );
 			return attachment_url_to_postid( $url );
 		}
 
