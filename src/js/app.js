@@ -25,7 +25,10 @@ document.addEventListener(
 
     const apply = () => {
       window.removeEventListener('scroll', apply, false);
-      anchorPageScroll(header);
+      setTimeout(
+        () => anchorPageScroll(header),
+        0
+      );
     };
 
     window.addEventListener('scroll', apply, false);
