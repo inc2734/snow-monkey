@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 11.7.0
  */
 
 use Framework\Helper;
@@ -30,6 +30,7 @@ if ( ! $instance ) {
 	return;
 }
 
+$args = isset( $args ) ? $args : [];
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
