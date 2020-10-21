@@ -179,19 +179,14 @@ abstract class Page_Header {
 			return true;
 		}
 
-		if ( ! is_singular() || ! has_post_thumbnail() ) {
-			$image_url = static::get_image_url();
-			if ( $image_url ) {
-				static::$image_id = static::_attachment_url_to_postid( $image_url );
-				return true;
-			}
-
-			static::$image_id = 0;
-			return false;
+		$image_url = static::get_image_url();
+		if ( $image_url ) {
+			static::$image_id = static::_attachment_url_to_postid( $image_url );
+			return true;
 		}
 
-		static::$image_id = get_post_thumbnail_id();
-		return true;
+		static::$image_id = 0;
+		return false;
 	}
 
 	/**
