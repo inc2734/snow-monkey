@@ -30,10 +30,9 @@ if ( ! $instance ) {
 	return;
 }
 
-$args = isset( $args ) ? $args : [];
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-	$args,
+	isset( $args ) ? $args : [],
 	// phpcs:enable
 	[
 		'_context' => 'snow-monkey/widget/recent-posts',
