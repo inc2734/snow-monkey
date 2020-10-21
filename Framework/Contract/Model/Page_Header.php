@@ -155,16 +155,23 @@ abstract class Page_Header {
 			return attachment_url_to_postid( $url );
 		}
 
-		if ( preg_match( '|-\d+x\d+\.[0-9A-Za-z]+$|', $url ) ) {
-			$url = preg_replace( '|-\d+x\d+(\.[0-9A-Za-z]+)$|', '$1', $url );
-			$id  = attachment_url_to_postid( $url );
+		$wp_upload_dir = wp_upload_dir();
 
-			if ( 0 !== $id ) {
-				return $id;
+		if ( preg_match( '|-\d+x\d+\.[0-9A-Za-z]+$|', $url ) ) {
+			$new_url = preg_replace( '|-\d+x\d+(\.[0-9A-Za-z]+)$|', '$1', $url );
+			$path    = str_replace( $wp_upload_dir['url'], $wp_upload_dir['path'], $new_url );
+			if ( file_exists( $path ) ) {
+				$id = attachment_url_to_postid( $new_url );
+				if ( 0 !== $id ) {
+					return $id;
+				}
 			}
 
-			$url = preg_replace( '|(\.[0-9A-Za-z]+)$|', '-scaled$1', $url );
-			return attachment_url_to_postid( $url );
+			$new_url = preg_replace( '|(\.[0-9A-Za-z]+)$|', '-scaled$1', $new_url );
+			$path    = str_replace( $wp_upload_dir['url'], $wp_upload_dir['path'], $new_url );
+			if ( file_exists( $path ) ) {
+				return attachment_url_to_postid( $new_url );
+			}
 		}
 
 		return attachment_url_to_postid( $url );
