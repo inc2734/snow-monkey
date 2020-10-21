@@ -1,7 +1,7 @@
 .smb-container {
   &__body {
-    .block-editor-inner-blocks {
-      .block-editor-block-list__layout {
+    > .block-editor-inner-blocks {
+      > .block-editor-block-list__layout {
         @extend %entry-content;
       }
     }

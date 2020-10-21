@@ -4,17 +4,25 @@
 @import '../../foundation/_placeholder/placeholder';
 
 .smf-item__controls {
-  .block-editor-inner-blocks {
-    .block-editor-block-list__layout {
+  > .block-editor-inner-blocks {
+    > .block-editor-block-list__layout {
       @extend %entry-content;
     }
   }
 }
 
-.snow-monkey-forms-setting-panel {
-  .components-panel__body {
-    .block-editor-inner-blocks {
-      .block-editor-block-list__layout {
+.smf-form {
+  > .block-editor-inner-blocks {
+    > .block-editor-block-list__layout {
+      @extend %entry-content;
+    }
+  }
+}
+
+[data-type="snow-monkey-forms/form--complete"] {
+  > .components-panel__body {
+    > .block-editor-inner-blocks {
+      > .block-editor-block-list__layout {
         @extend %entry-content;
       }
     }
