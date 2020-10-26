@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.7.3
  */
 
 use Framework\Helper;
@@ -14,11 +14,9 @@ use Framework\Helper;
 function snow_monkey_entry_meta_items_published() {
 	?>
 	<li class="c-meta__item c-meta__item--published">
-		<time datetime="<?php the_time( 'c' ); ?>">
-			<i class="far fa-clock" aria-hidden="true"></i>
-			<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
-			<?php the_time( get_option( 'date_format' ) ); ?>
-		</time>
+		<i class="far fa-clock" aria-hidden="true"></i>
+		<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
+		<time datetime="<?php the_time( 'c' ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
 	</li>
 	<?php
 }
@@ -46,11 +44,9 @@ function snow_monkey_entry_meta_items_modified() {
 	}
 	?>
 	<li class="c-meta__item c-meta__item--modified">
-		<time datetime="<?php the_modified_time( 'c' ); ?>">
-			<i class="fas fa-sync-alt" aria-hidden="true"></i>
-			<span class="screen-reader-text"><?php esc_html_e( 'Modified', 'snow-monkey' ); ?></span>
-			<?php the_modified_time( get_option( 'date_format' ) ); ?>
-		</time>
+		<i class="fas fa-sync-alt" aria-hidden="true"></i>
+		<span class="screen-reader-text"><?php esc_html_e( 'Modified', 'snow-monkey' ); ?></span>
+		<time datetime="<?php the_modified_time( 'c' ); ?>"><?php the_modified_time( get_option( 'date_format' ) ); ?></time>
 	</li>
 	<?php
 }
