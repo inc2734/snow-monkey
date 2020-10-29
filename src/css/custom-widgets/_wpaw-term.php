@@ -26,7 +26,7 @@ foreach ( $terms as $_term ) {
 	}
 
 	Style::register(
-		'.wpaw-term--category-' . $_term->term_id,
+		'.wpaw-term.wpaw-term--category-' . $_term->term_id,
 		'background-color: ' . $accent_color
 	);
 }
