@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 11.7.3
  *
  * renamed: app/customizer/layout/sections/woocommerce-archive-page/controls/layout.php
  */
@@ -17,7 +17,7 @@ Framework::control(
 	[
 		'label'   => __( 'WooCommerce archive page layout', 'snow-monkey' ),
 		'default' => 'right-sidebar',
-		'choices'  => is_customize_preview() ? Helper::get_wrapper_templates() : [],
+		'choices' => is_customize_preview() ? Helper::get_wrapper_templates() : [],
 	]
 );
 

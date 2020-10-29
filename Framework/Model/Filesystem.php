@@ -27,7 +27,19 @@ class Filesystem {
 	public static function start() {
 		global $wp_filesystem;
 		static::$_wp_file_system = $wp_filesystem;
+
+		add_filter(
+			'filesystem_method',
+			[ '\Framework\Model\Filesystem', '_filesystem_method' ]
+		);
+
 		WP_Filesystem();
+
+		remove_filter(
+			'filesystem_method',
+			[ '\Framework\Model\Filesystem', '_filesystem_method' ]
+		);
+
 		return $wp_filesystem;
 	}
 
@@ -37,6 +49,15 @@ class Filesystem {
 	public static function end() {
 		global $wp_filesystem;
 		$wp_filesystem = static::$_wp_file_system; // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited
+	}
+
+	/**
+	 * Set WP_Filesystem_Direct to $wp_filesystem.
+	 *
+	 * @return string
+	 */
+	public static function _filesystem_method() {
+		return 'direct';
 	}
 
 	/**
