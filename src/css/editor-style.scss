@@ -160,6 +160,10 @@ body {
 }
 
 .wp-block-buttons {
+  [data-align="center"] & .block-editor-block-list__layout {
+    justify-content: center;
+  }
+
   .block-editor-inner-blocks {
     flex: 1 1 auto;
 
