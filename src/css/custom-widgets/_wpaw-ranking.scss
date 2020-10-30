@@ -36,4 +36,11 @@
       background-color: #976b2f;
     }
   }
+
+  // No thubmnail
+  &__body:first-child {
+    .wpaw-ranking__taxonomy {
+      margin-left: 25px;
+    }
+  }
 }
