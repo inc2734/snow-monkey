@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2020-10-20 15:46+0900\n"
-"PO-Revision-Date: 2020-10-20 15:47+0900\n"
+"POT-Creation-Date: 2020-11-04 11:52+0900\n"
+"PO-Revision-Date: 2020-11-04 11:53+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1038,9 +1038,8 @@ msgid "Normal"
 msgstr "ノーマル"
 
 #: app/customizer/design/sections/header/controls/header-position.php:17
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:17
-msgid "Header position"
-msgstr "ヘッダー位置"
+msgid "Header position for mobile"
+msgstr "モバイル用ヘッダー位置"
 
 #: app/customizer/design/sections/header/controls/header-text-color.php:15
 #: snow-monkey/app/customizer/design/sections/header/controls/header-text-color.php:15
@@ -1293,6 +1292,7 @@ msgid "Tracking ID"
 msgstr "トラッキング ID"
 
 #: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
+#: snow-monkey/app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
 msgid "e.g. UA-1111111-11 or G-XXXXXXXX"
 msgstr "例: UA-1111111-11 もしくは G-XXXXXXXX"
 
@@ -1789,17 +1789,17 @@ msgstr "ホーム"
 msgid "My account"
 msgstr "マイアカウント"
 
-#: app/setup/entry-meta.php:19 app/setup/entry-meta.php:34
-#: snow-monkey/app/setup/entry-meta.php:19
-#: snow-monkey/app/setup/entry-meta.php:34
+#: app/setup/entry-meta.php:18 app/setup/entry-meta.php:32
+#: snow-monkey/app/setup/entry-meta.php:18
+#: snow-monkey/app/setup/entry-meta.php:32
 msgid "Published"
 msgstr "投稿日"
 
-#: app/setup/entry-meta.php:51 snow-monkey/app/setup/entry-meta.php:51
+#: app/setup/entry-meta.php:48 snow-monkey/app/setup/entry-meta.php:48
 msgid "Modified"
 msgstr "更新日"
 
-#: app/setup/entry-meta.php:65 snow-monkey/app/setup/entry-meta.php:65
+#: app/setup/entry-meta.php:61 snow-monkey/app/setup/entry-meta.php:61
 msgid "Author"
 msgstr "著者"
 
@@ -2051,9 +2051,9 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#: snow-monkey/app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
-msgid "e.g. UA-1111111-11"
-msgstr "例: UA-1111111-11"
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:17
+msgid "Header position"
+msgstr "ヘッダー位置"
 
 #: snow-monkey/template-parts/archive/entry/content/content-no-keywords.php:16
 #: template-parts/archive/entry/content/content-no-keywords.php:16
@@ -2100,7 +2100,7 @@ msgid "Scroll up"
 msgstr "上にスクロール"
 
 #: snow-monkey/template-parts/common/profile-box.php:16
-#: snow-monkey/templates/view/content.php:127
+#: snow-monkey/template-parts/content/entry/entry.php:123
 #: template-parts/common/profile-box.php:16
 #: template-parts/content/entry/entry.php:123
 msgid "Bio"
@@ -2251,6 +2251,9 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "e.g. UA-1111111-11"
+#~ msgstr "例: UA-1111111-11"
 
 #~ msgid "Eyecatch image"
 #~ msgstr "アイキャッチ画像"

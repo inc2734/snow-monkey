@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.14
+ * @version 11.7.4
  *
  * renamed: app/customizer/layout/sections/header/controls/header-position.php
  */
@@ -14,7 +14,7 @@ Framework::control(
 	'select',
 	'header-position',
 	[
-		'label'    => __( 'Header position', 'snow-monkey' ),
+		'label'    => __( 'Header position for mobile', 'snow-monkey' ),
 		'priority' => 110,
 		'default'  => 'sticky',
 		'choices'  => [
