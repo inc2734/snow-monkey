@@ -14,6 +14,11 @@
     z-index: 1;
     border-radius: $_border-radius 0 0 $_border-radius; // for IE11
     border-radius: _var-border-radius() 0 0 _var-border-radius();
+
+    // For default block library styles.
+    .wp-block-search & {
+      max-width: none;
+    }
   }
 
   &__button {
@@ -21,6 +26,9 @@
     @include _btn();
     @include _form-control-base-border();
     @include _form-control-base-padding();
+    @include _font-size($_base-font-size-px);
+    display: inline-flex;
+    align-items: center;
     color: $_color-text; // For IE11
     color: _var-color-text();
     flex: none;
@@ -30,6 +38,7 @@
     left: -1px;
     border-radius: 0 $_border-radius $_border-radius 0; // for IE11
     border-radius: 0 _var-border-radius() _var-border-radius() 0;
+    box-shadow: none;
 
     &:hover, &:active, &:focus {
       z-index: 1;
