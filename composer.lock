@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "599525fa5a395099ea1e39aa01b9cff7",
+    "content-hash": "103b7f06967b53d07a5b28dc7a1b092d",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -889,28 +889,28 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.1.0",
+            "version": "12.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "9cc3f2931d92850c52553aef5b9c7734c82d4033"
+                "reference": "2b018414664e398adaad05e0f1bc06bfe14a440a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/9cc3f2931d92850c52553aef5b9c7734c82d4033",
-                "reference": "9cc3f2931d92850c52553aef5b9c7734c82d4033",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/2b018414664e398adaad05e0f1bc06bfe14a440a",
+                "reference": "2b018414664e398adaad05e0f1bc06bfe14a440a",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "sirbrillig/phpcs-variable-analysis": "^2.8",
                 "squizlabs/php_codesniffer": "^3.5",
                 "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.4"
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -929,7 +929,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2020-10-13T02:32:03+00:00"
+            "time": "2020-11-09T00:47:35+00:00"
         }
     ],
     "packages-dev": [
@@ -1204,7 +1204,7 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "5.5.1",
+            "version": "5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
