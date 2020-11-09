@@ -36,6 +36,6 @@ $args = wp_parse_args(
 
 Helper::get_template_part(
 	'template-parts/content/entry/entry',
-	null,
+	$args['_post_type'],
 	$args
 );
