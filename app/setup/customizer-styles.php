@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 11.8.0
  */
 
 use Framework\Helper;
@@ -26,7 +26,7 @@ add_action(
 			'/assets/css/custom-widgets',
 		];
 		foreach ( $includes as $include ) {
-			Helper::get_template_parts( get_template_directory() . $include );
+			Helper::load_files( 'get_template_parts', get_template_directory() . $include );
 		}
 	}
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.7.1
+ * @version 11.8.0
  */
 
 use Framework\Helper;
@@ -32,6 +32,9 @@ add_action(
 add_action(
 	'inc2734_wp_customizer_framework_load_styles',
 	function() {
-		Helper::get_template_parts( get_template_directory() . '/assets/css/dependency/contact-form-7' );
+		Helper::load_files(
+			'get_template_parts',
+			get_template_directory() . '/assets/css/dependency/contact-form-7'
+		);
 	}
 );

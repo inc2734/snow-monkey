@@ -449,28 +449,28 @@
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "0.3.1",
+            "version": "0.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "abb1904b39a7845e08ddc9da1163e039d0a0db73"
+                "reference": "4bff4a0b522112a03ffb4f894c4810bc97bd2b67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/abb1904b39a7845e08ddc9da1163e039d0a0db73",
-                "reference": "abb1904b39a7845e08ddc9da1163e039d0a0db73",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/4bff4a0b522112a03ffb4f894c4810bc97bd2b67",
+                "reference": "4bff4a0b522112a03ffb4f894c4810bc97bd2b67",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "sirbrillig/phpcs-variable-analysis": "^2.8",
                 "squizlabs/php_codesniffer": "^3.5",
                 "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.4"
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -488,7 +488,7 @@
                     "email": "inc@2inc.org"
                 }
             ],
-            "time": "2020-10-02T05:57:53+00:00"
+            "time": "2020-11-12T06:46:19+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",

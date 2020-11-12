@@ -3,11 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 11.8.0
  */
 
 namespace Framework;
 
+use FilesystemIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use Inc2734\WP_Helper;
 use Inc2734\WP_Breadcrumbs;
 use Inc2734\WP_View_Controller;
@@ -21,6 +24,39 @@ class Helper {
 	use Contract\Helper\Post_Type_Archive_Thumbnail;
 	use Contract\Helper\Deprecated;
 	use WP_View_Controller\App\Contract\Template_Tag;
+
+	/**
+	 * Return loading method.
+	 *
+	 * @param string $method Loading method.
+	 * @param string $path   Target directory.
+	 * @return string
+	 */
+	protected static function _get_loading_method( $method, $path ) {
+		return apply_filters( 'snow_monkey_loading_method', $method, $path );
+	}
+
+	/**
+	 * Load files.
+	 *
+	 * @param string  $method             Loading method.
+	 * @param string  $directory          Target directory.
+	 * @param boolean $exclude_underscore Exclude if true.
+	 * @return void
+	 */
+	public static function load_files( $method, $directory, $exclude_underscore = false ) {
+		switch ( Helper::_get_loading_method( $method, $directory ) ) {
+			case 'get_template_parts':
+				Helper::get_template_parts( $directory, $exclude_underscore );
+				break;
+			case 'load_theme_files':
+				Helper::load_theme_files( $directory, $exclude_underscore );
+				break;
+			default:
+				Helper::include_files( $directory, $exclude_underscore );
+		}
+	}
+
 
 	/**
 	 * Return output positions of eyecatch.
@@ -448,23 +484,59 @@ class Helper {
 	 */
 	public static function get_template_parts( $directory, $exclude_underscore = false ) {
 		$directory = realpath( $directory );
-
 		if ( ! is_dir( $directory ) ) {
 			return;
 		}
 
 		$template_directory = realpath( get_template_directory() );
 
-		$files = static::get_include_files( $directory, $exclude_underscore );
+		$iterator = new RecursiveDirectoryIterator( $directory, FilesystemIterator::SKIP_DOTS );
+		$iterator = new RecursiveIteratorIterator( $iterator );
 
-		foreach ( $files['files'] as $file ) {
-			$file          = realpath( $file );
-			$template_name = str_replace( [ $template_directory . DIRECTORY_SEPARATOR, '.php' ], '', $file );
-			WP_View_Controller\Helper::get_template_part( $template_name );
+		$files = [];
+
+		foreach ( $iterator as $file ) {
+			if ( ! $file->isFile() ) {
+				continue;
+			}
+
+			if ( 'php' !== $file->getExtension() ) {
+				continue;
+			}
+
+			if ( $exclude_underscore && 0 === strpos( $file->getBasename(), '_' ) ) {
+				continue;
+			}
+
+			$files[] = realpath( $file->getPathname() );
 		}
 
-		foreach ( $files['directories'] as $directory ) {
-			static::get_template_parts( $directory, $exclude_underscore );
+		if ( ! $files ) {
+			return;
+		}
+
+		usort(
+			$files,
+			function( $a, $b ) {
+				$adeps = substr_count( $a, DIRECTORY_SEPARATOR );
+				$bdeps = substr_count( $b, DIRECTORY_SEPARATOR );
+
+				if ( $adeps === $bdeps ) {
+					return 0;
+				}
+
+				return $adeps > $bdeps ? 1 : -1;
+			}
+		);
+
+		foreach ( $files as $filepath ) {
+			$template_name = str_replace(
+				[ $template_directory . DIRECTORY_SEPARATOR, '.php' ],
+				'',
+				$filepath
+			);
+
+			WP_View_Controller\Helper::get_template_part( $template_name );
 		}
 	}
 

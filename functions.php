@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 11.8.0
  */
 
 use Framework\Helper;
@@ -53,12 +53,12 @@ Helper::include_files( untrailingslashit( __DIR__ ) . '/app/constructor', true )
 /**
  * Loads theme setup files
  */
-Helper::get_template_parts( untrailingslashit( __DIR__ ) . '/app/setup', true );
+Helper::load_files( 'get_template_parts', untrailingslashit( __DIR__ ) . '/app/setup', true );
 
 /**
  * Loads theme widget files
  */
-Helper::get_template_parts( untrailingslashit( __DIR__ ) . '/app/widget', true );
+Helper::load_files( 'get_template_parts', untrailingslashit( __DIR__ ) . '/app/widget', true );
 
 /**
  * Loads customizer
@@ -67,9 +67,13 @@ add_action(
 	'init',
 	function() {
 		do_action( 'snow_monkey_pre_load_customizer' );
-		foreach ( [ '/app/customizer' ] as $include ) {
-			Helper::get_template_parts( untrailingslashit( __DIR__ ) . $include );
-		}
+
+		Helper::load_files(
+			'get_template_parts',
+			untrailingslashit( __DIR__ ) . '/app/customizer',
+			true
+		);
+
 		do_action( 'snow_monkey_post_load_customizer' );
 	},
 	10000
