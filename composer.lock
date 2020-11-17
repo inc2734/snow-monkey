@@ -843,16 +843,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "6.0.1",
+            "version": "6.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "7fa147fec7c00097b6ac8f0f38668e06f6c1de22"
+                "reference": "673d7e175c519c638ec7679f41f9d4e599030b56"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/7fa147fec7c00097b6ac8f0f38668e06f6c1de22",
-                "reference": "7fa147fec7c00097b6ac8f0f38668e06f6c1de22",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/673d7e175c519c638ec7679f41f9d4e599030b56",
+                "reference": "673d7e175c519c638ec7679f41f9d4e599030b56",
                 "shasum": ""
             },
             "require": {
@@ -860,12 +860,12 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
                 "sirbrillig/phpcs-variable-analysis": "^2.8",
                 "squizlabs/php_codesniffer": "^3.5",
                 "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.4"
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -885,7 +885,7 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
-            "time": "2020-10-15T05:59:48+00:00"
+            "time": "2020-11-17T01:24:37+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",
