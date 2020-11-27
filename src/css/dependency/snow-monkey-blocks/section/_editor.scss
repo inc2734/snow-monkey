@@ -1,9 +1,7 @@
-.smb-section {
-  &__body {
-    > .block-editor-inner-blocks {
-      > .block-editor-block-list__layout {
-        @extend %entry-content;
-      }
+.editor-styles-wrapper {
+  .smb-section {
+    &__body {
+      @extend %entry-content;
     }
   }
 }
