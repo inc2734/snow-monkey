@@ -3,17 +3,54 @@
   flex-direction: row;
   flex-wrap: nowrap;
 
+  &__button-outside {
+    .wp-block-search__input {
+      @include _form-control-base-border();
+      @include _form-control-base-padding();
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .wp-block-search__button {
+      left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &__no-button {
+    .wp-block-search__input {
+      @include _form-control-base-border();
+      @include _form-control-base-padding();
+    }
+  }
+
+  &__button-inside.wp-block-search {
+    .wp-block-search__inside-wrapper {
+      @include _form-control-base-border();
+      @include _form-control-base-padding();
+      @include _padding-right(.25);
+
+      .wp-block-search__button {
+        @include _padding(.35, .5);
+      }
+    }
+  }
+
+  &__button-only {
+    .wp-block-search__button {
+      @include _padding(.5);
+    }
+  }
+
   &__label {
     display: none;
   }
 
   &__input {
-    @include _form-control();
     flex: 1 1 0%;
     position: relative;
     z-index: 1;
-    border-radius: $_border-radius 0 0 $_border-radius; // for IE11
-    border-radius: _var-border-radius() 0 0 _var-border-radius();
 
     // For default block library styles.
     .wp-block-search & {
@@ -27,18 +64,18 @@
     @include _form-control-base-border();
     @include _form-control-base-padding();
     @include _font-size($_base-font-size-px);
-    display: inline-flex;
-    align-items: center;
-    color: $_color-text; // For IE11
-    color: _var-color-text();
     flex: none;
-    overflow: visible;
     position: relative;
     z-index: 0;
-    left: -1px;
-    border-radius: 0 $_border-radius $_border-radius 0; // for IE11
-    border-radius: 0 _var-border-radius() _var-border-radius() 0;
+    display: inline-flex;
+    align-items: center;
+    background-color: $_color-white; // For IE11
+    background-color: _var-color-white();
     box-shadow: none;
+    color: $_color-text; // For IE11
+    color: _var-color-text();
+    height: auto;
+    overflow: visible;
 
     &:hover, &:active, &:focus {
       z-index: 1;
