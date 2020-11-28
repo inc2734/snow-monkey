@@ -10,32 +10,33 @@
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 
-  &.is-grid {
-    @include _row();
-    @include _row--margin(.25);
+  &.aligncenter:not(.is-grid) {
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+  }
+}
 
-    &.alignright,
-    &.alignleft {
-      float: none;
-    }
+ul.wp-block-latest-posts.is-grid {
+  @include _row();
+  @include _row--margin(.25);
 
-    > li {
-      margin: 0;
-      width: auto;
-      @include _row__col(1, 1);
-      @include _row__col--margin(.25);
-    }
+  > li {
+    margin: 0;
+    width: auto;
+    @include _row__col(1, 1);
+    @include _row__col--margin(.25);
+  }
 
-    @include _media-min(md) {
-      @include _row--margin(1);
+  @include _media-min(md) {
+    @include _row--margin(1);
 
-      @for $i from 2 through 6 {
-        &.columns-#{ $i } {
-          > li {
-            $width: percentage(1 / $i);
-            @include _row__col--width($width);
-            @include _row__col--margin(1);
-          }
+    @for $i from 2 through 6 {
+      &.columns-#{ $i } {
+        > li {
+          $width: percentage(1 / $i);
+          @include _row__col--width($width);
+          @include _row__col--margin(1);
         }
       }
     }

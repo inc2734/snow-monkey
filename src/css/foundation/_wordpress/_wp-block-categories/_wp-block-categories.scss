@@ -6,15 +6,10 @@
     @include _margin-top(.25);
     margin-left: 1em;
   }
-}
 
-.block-editor-block-list__layout .wp-block-categories {
-  &__list {
-    @include widget-list-base();
-
-    .wp-block-categories__list {
-      @include _margin-top(.25);
-      margin-left: 1em;
-    }
+  &.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
   }
 }

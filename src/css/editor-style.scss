@@ -135,6 +135,47 @@ body {
   }
 }
 
+
+.wp-block-archives[data-type="core/archives"],
+.wp-block-calendar[data-type="core/calendar"],
+.wp-block-categories[data-type="core/categories"],
+.wp-block-latest-comments[data-type="core/latest-comments"],
+.wp-block-rss[data-type="core/rss"] {
+  display: block;
+}
+
+.wp-block-archives[data-type="core/archives"] {
+  &,
+  .wp-block-archives {
+    padding-left: 0;
+  }
+}
+
+.wp-block-categories[data-type="core/categories"] {
+  &,
+  .wp-block-categories__list {
+    padding-left: 0;
+  }
+}
+
+.wp-block-categories__list {
+  @include widget-list-base();
+}
+
+[data-align="center"] > .wp-block-categories__list {
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+}
+
+[data-align="center"] > ul.wp-block-latest-posts {
+  &:not(.is-grid) {
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+  }
+}
+
 .u-hidden,
 .u-hidden-sm,
 .u-hidden-md,

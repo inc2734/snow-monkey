@@ -10,6 +10,12 @@
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 
+  &.aligncenter:not(.is-grid) {
+    margin-right: auto;
+    margin-left: auto;
+    display: table;
+  }
+
   &.is-grid {
     @include _row();
     @include _row--margin(.25);

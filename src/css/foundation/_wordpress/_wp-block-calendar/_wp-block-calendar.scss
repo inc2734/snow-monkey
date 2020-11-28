@@ -1,7 +1,14 @@
 .wp-block-calendar {
   @extend %calendar;
+  display: table;
 
-  table {
+  .wp-calendar-table {
     width: auto !important;
+  }
+
+  .wp-calendar-nav {
+    @include _margin-top(.5);
+    display: flex;
+    justify-content: space-between;
   }
 }
