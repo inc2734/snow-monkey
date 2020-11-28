@@ -2,6 +2,10 @@
   background-color: #fff; // for IE11
   background-color: _var-background-color();
 
+  @media print {
+    display: none;
+  }
+
   .#{ $_prefix }c-navbar {
     justify-content: center;
 
