@@ -6,6 +6,8 @@ on:
   push:
     paths-ignore:
     - '**.md'
+    tags:
+    - "!*"
 
 jobs:
   test:
