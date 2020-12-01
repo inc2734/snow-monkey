@@ -1,6 +1,6 @@
 # Snow Monkey
 
-[![Build Status](https://travis-ci.org/inc2734/snow-monkey.svg?branch=master)](https://travis-ci.org/inc2734/snow-monkey)
+![CI](https://github.com/inc2734/snow-monkey/workflows/CI/badge.svg)
 
 Premium WordPress theme by Monkey Wrench
 
