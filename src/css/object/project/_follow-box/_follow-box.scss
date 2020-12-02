@@ -1,0 +1,61 @@
+.#{ $_prefix }p-follow-box {
+  position: relative;
+
+  &__figure {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    img {
+      position: absolute; // For IE11
+      top: 50%; // For IE11
+      transform: translateY(-50%); // For IE11
+      height: 100%; // For IE11
+      min-width: 100%; // For IE11
+
+      @supports (object-fit: cover) {
+        position: relative;
+        top: auto; // For IE11
+        transform: none; // For IE11
+        object-fit: cover;
+        object-position: 50% 50%;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $_color-black; // For IE11
+      background-color: var-color-black();
+      opacity: .8;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    @include _padding(2, 1);
+    color: #fff;
+  }
+
+  &__title {
+    @include _margin-bottom(.5);
+    display: flex;
+    justify-content: center;
+  }
+
+  &__lead {
+    text-align: center;
+  }
+
+  &__nav {
+    @include _margin-top(1);
+  }
+}

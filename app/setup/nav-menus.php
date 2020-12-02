@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 12.0.0
  */
 
 use Inc2734\WP_Basis\App\Model\Navbar;
@@ -24,6 +24,7 @@ add_action(
 				'global-nav'        => esc_html__( 'Global Navigation (For PC)', 'snow-monkey' ),
 				'drawer-nav'        => esc_html__( 'Drawer Navigation (For Mobile)', 'snow-monkey' ),
 				'social-nav'        => esc_html__( 'Social Navigation', 'snow-monkey' ),
+				'follow-box'        => esc_html__( 'Follow box', 'snow-monkey' ),
 				'header-sub-nav'    => esc_html__( 'Header Sub Navigation', 'snow-monkey' ),
 				'footer-sub-nav'    => esc_html__( 'Footer Sub Navigation', 'snow-monkey' ),
 				'drawer-sub-nav'    => esc_html__( 'Drawer Sub Navigation (For Mobile)', 'snow-monkey' ),

@@ -19,7 +19,6 @@
       margin: .25em .5em;
     }
   }
-
   a {
     flex: none;
     color: $_color-gray; // For IE11
@@ -38,142 +37,142 @@
   }
 
   .fa-amazon {
-    color: #ff9900;
+    color: map-get($social-icon-colors, 'amazon');
   }
 
   .fa-bitbucket {
-    color: #0052cc;
+    color: map-get($social-icon-colors, 'bitbucket');
   }
 
   .fa-paypal {
-    color: #012f87;
-	}
+    color: map-get($social-icon-colors, 'paypal');
+  }
 
   .fa-stripe {
-    color: #635BFF;
+    color: map-get($social-icon-colors, 'stripe');
   }
 
   .fa-codepen {
-    color: #000;
+    color: map-get($social-icon-colors, 'codepen');
   }
 
   .fa-dribbble {
-    color: #ea4c89;
+    color: map-get($social-icon-colors, 'dribbble');
   }
 
   .fa-dropbox {
-    color: #0061ff;
+    color: map-get($social-icon-colors, 'dropbox');
   }
 
   .fa-facebook {
-    color: #0276FB;
+    color: map-get($social-icon-colors, 'facebook');
   }
 
   .fa-flickr {
-    color: #000;
+    color: map-get($social-icon-colors, 'flickr');
   }
 
   .fa-github {
-    color: #171515;
+    color: map-get($social-icon-colors, 'github');
   }
 
   .fa-gitlab {
-    color: #fca121;
+    color: map-get($social-icon-colors, 'gitlab');
   }
 
   .fa-google {
-    color: #4285F4;
+    color: map-get($social-icon-colors, 'google');
   }
 
   .fa-instagram {
-    color: #ef0175;
+    color: map-get($social-icon-colors, 'instagram');
   }
 
   .fa-linkedin {
-    color: #0a66c2;
+    color: map-get($social-icon-colors, 'linkedin');
   }
 
   .fa-medium {
-    color: #000;
+    color: map-get($social-icon-colors, 'medium');
   }
 
   .fa-pinterest {
-    color: #e60023;
+    color: map-get($social-icon-colors, 'pinterest');
   }
 
   .fa-reddit {
-    color: #ff4500;
+    color: map-get($social-icon-colors, 'reddit');
   }
 
   .fa-skype {
-    color: #0078d7;
+    color: map-get($social-icon-colors, 'skype');
   }
 
   .fa-slack {
-    color: #000;
+    color: map-get($social-icon-colors, 'slack');
   }
 
   .fa-slideshare {
-    color: #0277b5;
+    color: map-get($social-icon-colors, 'slideshare');
   }
 
   .fa-snapchat {
-    color: #fffc00;
+    color: map-get($social-icon-colors, 'snapchat');
   }
 
   .fa-stack-overflow {
-    color: #f48023;
+    color: map-get($social-icon-colors, 'stack-overflow');
   }
 
   .fa-tumblr {
-    color: #000;
+    color: map-get($social-icon-colors, 'tumblr');
   }
 
   .fa-vimeo {
-    color: #1ab7ea;
+    color: map-get($social-icon-colors, 'vimeo');
   }
 
   .fa-twitter {
-    color: #1da1f2;
+    color: map-get($social-icon-colors, 'twitter');
   }
 
   .fa-wordpress {
-    color: #0073aa;
+    color: map-get($social-icon-colors, 'wordpress');
   }
 
   .fa-youtube {
-    color: #f00;
+    color: map-get($social-icon-colors, 'youtube');
   }
 
   .fa-spotify {
-    color: #1ed760;
+    color: map-get($social-icon-colors, 'spotify');
   }
 
   .fa-foursquare {
-    color: #2d5be3;
+    color: map-get($social-icon-colors, 'foursquare');
   }
 
   .fa-line {
-    color: #00b900;
+    color: map-get($social-icon-colors, 'line');
   }
 
   .fa-app-store {
-    color: #000;
+    color: map-get($social-icon-colors, 'app-store');
   }
 
   .fa-google-play {
-    color: #000;
+    color: map-get($social-icon-colors, 'google-play');
   }
 
   .fa-twitch {
-    color: #9146ff;
+    color: map-get($social-icon-colors, 'twitch');
   }
 
   .fa-discord {
-    color: #7289da;
+    color: map-get($social-icon-colors, 'discord');
   }
 
   .fa-apple {
-    color: #000;
+    color: map-get($social-icon-colors, 'apple');
   }
 }
