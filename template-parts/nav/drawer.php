@@ -29,6 +29,7 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 >
 	<div class="c-drawer__inner">
 		<?php do_action( 'snow_monkey_prepend_drawer_nav' ); ?>
+		<div class="c-drawer__focus-point" tabindex="-1"></div>
 
 		<?php
 		if ( $has_drawer_nav ) {
