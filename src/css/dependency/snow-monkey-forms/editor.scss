@@ -1,30 +1,5 @@
 @charset 'utf-8';
 
-@import '../../core/core';
-@import '../../foundation/_placeholder/placeholder';
-
-.smf-item__controls {
-  > .block-editor-inner-blocks {
-    > .block-editor-block-list__layout {
-      @extend %entry-content;
-    }
-  }
-}
-
-.smf-form {
-  > .block-editor-inner-blocks {
-    > .block-editor-block-list__layout {
-      @extend %entry-content;
-    }
-  }
-}
-
-[data-type="snow-monkey-forms/form--complete"] {
-  > .components-panel__body {
-    > .block-editor-inner-blocks {
-      > .block-editor-block-list__layout {
-        @extend %entry-content;
-      }
-    }
-  }
+.editor-styles-wrapper {
+  @import 'style';
 }
