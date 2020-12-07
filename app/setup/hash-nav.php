@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 12.0.0
  */
 
 use Framework\Helper;
@@ -24,9 +24,9 @@ add_action(
 	function() {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-hash-nav',
-			get_theme_file_uri( '/assets/js/hash-nav.min.js' ),
+			get_theme_file_uri( '/assets/js/hash-nav.js' ),
 			[],
-			filemtime( get_theme_file_path( '/assets/js/hash-nav.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/hash-nav.js' ) ),
 			true
 		);
 	}

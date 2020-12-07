@@ -44,21 +44,21 @@ add_action(
 	function() {
 		wp_register_script(
 			Helper::get_main_script_handle() . '-footer-sticky-nav',
-			get_theme_file_uri( '/assets/js/footer-sticky-nav.min.js' ),
+			get_theme_file_uri( '/assets/js/footer-sticky-nav.js' ),
 			[],
-			filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.js' ) ),
 			true
 		);
 
 		wp_register_script(
 			Helper::get_main_script_handle() . '-global-nav',
-			get_theme_file_uri( '/assets/js/global-nav.min.js' ),
+			get_theme_file_uri( '/assets/js/global-nav.js' ),
 			Helper::generate_script_dependencies(
 				[
 					Helper::get_main_script_handle() . '-drop-nav',
 				]
 			),
-			filemtime( get_theme_file_path( '/assets/js/global-nav.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/global-nav.js' ) ),
 			true
 		);
 

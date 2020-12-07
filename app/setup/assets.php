@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.2
+ * @version 12.0.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -57,9 +57,9 @@ add_action(
 	function() {
 		wp_enqueue_script(
 			Helper::get_main_script_handle(),
-			get_theme_file_uri( '/assets/js/app.min.js' ),
+			get_theme_file_uri( '/assets/js/app.js' ),
 			[],
-			filemtime( get_theme_file_path( '/assets/js/app.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/app.js' ) ),
 			true
 		);
 
@@ -81,9 +81,9 @@ add_action(
 
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-fix-adminbar',
-			get_theme_file_uri( '/assets/js/fix-adminbar.min.js' ),
+			get_theme_file_uri( '/assets/js/fix-adminbar.js' ),
 			[],
-			filemtime( get_theme_file_path( '/assets/js/fix-adminbar.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/fix-adminbar.js' ) ),
 			true
 		);
 	}
@@ -109,9 +109,9 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 			} else {
 				wp_enqueue_script(
 					Helper::get_main_script_handle() . '-fontawesome',
-					get_theme_file_uri( '/assets/js/fontawesome.min.js' ),
+					get_theme_file_uri( '/assets/js/fontawesome.js' ),
 					[],
-					filemtime( get_theme_file_path( '/assets/js/fontawesome.min.js' ) ),
+					filemtime( get_theme_file_path( '/assets/js/fontawesome.js' ) ),
 					true
 				);
 			}
@@ -143,14 +143,14 @@ add_action(
 	function() {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-customize-preview',
-			get_theme_file_uri( '/assets/js/customize-preview.min.js' ),
+			get_theme_file_uri( '/assets/js/customize-preview.js' ),
 			[
 				'customize-preview',
 				'customize-selective-refresh',
 				'wp-awesome-widgets-customize-preview',
 				Helper::get_main_script_handle(),
 			],
-			filemtime( get_theme_file_path( '/assets/js/customize-preview.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/customize-preview.js' ) ),
 			true
 		);
 	}

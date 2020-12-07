@@ -3,12 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 12.0.0
  */
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
 
-$updater = new Bootstrap(
+new Bootstrap(
 	get_template(),
 	'inc2734',
 	'snow-monkey',

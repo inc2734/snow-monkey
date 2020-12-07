@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 12.0.0
  */
 
 use Framework\Helper;
@@ -394,18 +394,18 @@ add_action(
 	function() {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-widgets',
-			get_theme_file_uri( '/assets/js/widgets.min.js' ),
+			get_theme_file_uri( '/assets/js/widgets.js' ),
 			[],
-			filemtime( get_theme_file_path( '/assets/js/widgets.min.js' ) ),
+			filemtime( get_theme_file_path( '/assets/js/widgets.js' ) ),
 			true
 		);
 
 		if ( Helper::is_active_sidebar( 'sidebar-sticky-widget-area' ) ) {
 			wp_enqueue_script(
 				Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
-				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.min.js' ),
+				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.js' ),
 				[],
-				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.min.js' ) ),
+				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.js' ) ),
 				true
 			);
 		}
