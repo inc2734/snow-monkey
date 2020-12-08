@@ -1,5 +1,5 @@
-.smb-items__item {
-  &__body {
+.smb-items__item--free {
+  > .smb-items__item__body {
     @extend %entry-content;
   }
 }

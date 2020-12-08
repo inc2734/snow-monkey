@@ -22,4 +22,4 @@ Style::register(
 	'color: ' . $accent_color
 );
 
-Style::extend( 'entry-content', [ '.smb-panels__item__body' ] );
+Style::extend( 'entry-content', [ '.smb-panels__item--free > .smb-panels__item__body' ] );

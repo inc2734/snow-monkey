@@ -1,11 +1,13 @@
 .smb-panels {
   &__item {
-    &__body {
-      @extend %entry-content;
-    }
-
     &__link {
       color: var-color-accent();
     }
+  }
+}
+
+.smb-panels__item--free {
+  > .smb-panels__item__body {
+    @extend %entry-content;
   }
 }
