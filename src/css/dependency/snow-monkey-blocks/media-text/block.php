@@ -5,6 +5,11 @@
  * @license GPL-2.0+
  */
 
+use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
+
+if ( ! Helper::is_ie() ) {
+	return;
+}
 
 Style::extend( 'entry-content', [ '.smb-media-text__body' ] );

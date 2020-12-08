@@ -21,3 +21,5 @@ Style::register(
 	'.smb-panels__item__link',
 	'color: ' . $accent_color
 );
+
+Style::extend( 'entry-content', [ '.smb-panels__item__body' ] );

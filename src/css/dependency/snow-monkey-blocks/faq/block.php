@@ -24,3 +24,11 @@ Style::register(
 	],
 	'color: ' . $accent_color
 );
+
+Style::extend(
+	'entry-content',
+	[
+		'.smb-faq__item__question__body',
+		'.smb-faq__item__answer__body'
+	]
+);

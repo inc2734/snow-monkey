@@ -12,4 +12,4 @@ if ( ! Helper::is_ie() ) {
 	return;
 }
 
-Style::extend( 'entry-content', [ '.smb-accordion__item__body' ] );
+Style::extend( 'entry-content', [ '.smb-information__item__body' ] );
