@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 12.0.0
  */
 
 use Inc2734\WP_Adsense;
@@ -66,31 +66,25 @@ if ( ! function_exists( 'snow_monkey_insert_infeed_ads' ) ) {
 }
 
 add_filter(
-	'snow_monkey_template_part_render',
-	function( $html, $slug ) {
-		if ( 'template-parts/archive/entry/content/content' !== $slug ) {
-			return $html;
-		}
-
+	'snow_monkey_template_part_render_template-parts/archive/entry/content/content',
+	function( $html ) {
 		$post_type      = get_post_type() ? get_post_type() : 'post';
 		$post_type      = is_home() ? 'post' : $post_type;
 		$entries_layout = get_theme_mod( $post_type . '-entries-layout' );
 
 		return snow_monkey_insert_infeed_ads( $html, $post_type, $entries_layout );
-	},
-	10,
-	2
+	}
 );
 
 add_filter(
-	'snow_monkey_template_part_render',
-	function( $html, $slug, $name, $vars ) {
-		if ( 'template-parts/widget/snow-monkey-posts' !== $slug ) {
-			return $html;
-		}
-
-		return snow_monkey_insert_infeed_ads( $html, $vars['_posts_query']->get( 'post_type' ), $vars['_entries_layout'] );
+	'snow_monkey_template_part_render_template-parts/widget/snow-monkey-posts',
+	function( $html, $name, $vars ) {
+		return snow_monkey_insert_infeed_ads(
+			$html,
+			$vars['_posts_query']->get( 'post_type' ),
+			$vars['_entries_layout']
+		);
 	},
 	10,
-	4
+	3
 );

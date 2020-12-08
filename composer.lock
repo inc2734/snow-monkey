@@ -231,29 +231,29 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "bd4627d227f4b2e49795e26decd2c0853b7d8249"
+                "reference": "3c5a48b3bfd3239738e47052872e7a5d7af88378"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/bd4627d227f4b2e49795e26decd2c0853b7d8249",
-                "reference": "bd4627d227f4b2e49795e26decd2c0853b7d8249",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/3c5a48b3bfd3239738e47052872e7a5d7af88378",
+                "reference": "3c5a48b3bfd3239738e47052872e7a5d7af88378",
                 "shasum": ""
             },
             "require": {
-                "inc2734/wp-plugin-view-controller": "^1.0.0",
+                "inc2734/wp-plugin-view-controller": "^1.1",
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -272,7 +272,7 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
-            "time": "2020-09-18T01:59:07+00:00"
+            "time": "2020-12-08T06:24:16+00:00"
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
@@ -536,16 +536,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "9.0.6",
+            "version": "9.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "16516eaff6a016cc5dfb0bb4e1588c42b0aded8d"
+                "reference": "fb7e3eb0ed24f54f353f3e532b164d09e89c8ca4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/16516eaff6a016cc5dfb0bb4e1588c42b0aded8d",
-                "reference": "16516eaff6a016cc5dfb0bb4e1588c42b0aded8d",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/fb7e3eb0ed24f54f353f3e532b164d09e89c8ca4",
+                "reference": "fb7e3eb0ed24f54f353f3e532b164d09e89c8ca4",
                 "shasum": ""
             },
             "require": {
@@ -554,10 +554,10 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
                 "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.4"
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -576,7 +576,7 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
-            "time": "2020-11-30T02:22:43+00:00"
+            "time": "2020-12-08T16:31:17+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -624,27 +624,28 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "3.0.5",
+            "version": "3.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "7cd3dc55329d4071d0586041fc929fabd9b2adbf"
+                "reference": "a7cc78be9fb54e847a278d4e901d9d05c2cece37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/7cd3dc55329d4071d0586041fc929fabd9b2adbf",
-                "reference": "7cd3dc55329d4071d0586041fc929fabd9b2adbf",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/a7cc78be9fb54e847a278d4e901d9d05c2cece37",
+                "reference": "a7cc78be9fb54e847a278d4e901d9d05c2cece37",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -663,7 +664,7 @@
                 }
             ],
             "description": "A library for WordPress.",
-            "time": "2020-08-19T00:53:45+00:00"
+            "time": "2020-12-08T10:37:29+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -798,16 +799,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "4.2.0",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "3e9a4a1df77491a4d51934e7ffcde1da1df15878"
+                "reference": "e22d36d72108ebec320481172d172ba7b990ccb9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/3e9a4a1df77491a4d51934e7ffcde1da1df15878",
-                "reference": "3e9a4a1df77491a4d51934e7ffcde1da1df15878",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/e22d36d72108ebec320481172d172ba7b990ccb9",
+                "reference": "e22d36d72108ebec320481172d172ba7b990ccb9",
                 "shasum": ""
             },
             "require": {
@@ -815,12 +816,12 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.6",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
                 "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.4"
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
             "autoload": {
@@ -839,7 +840,7 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
-            "time": "2020-10-20T06:41:55+00:00"
+            "time": "2020-12-08T10:48:12+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
@@ -889,16 +890,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.1.2",
+            "version": "12.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "5299da7a8119d3585a9160de50a8c5353e8176c7"
+                "reference": "3f0b7287661f1db9a6f845363aa13feceb813a3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/5299da7a8119d3585a9160de50a8c5353e8176c7",
-                "reference": "5299da7a8119d3585a9160de50a8c5353e8176c7",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/3f0b7287661f1db9a6f845363aa13feceb813a3f",
+                "reference": "3f0b7287661f1db9a6f845363aa13feceb813a3f",
                 "shasum": ""
             },
             "require": {
@@ -907,9 +908,9 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
                 "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.2",
+                "wp-coding-standards/wpcs": "^2.3",
                 "wp-phpunit/wp-phpunit": "^5.5"
             },
             "type": "library",
@@ -929,28 +930,28 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2020-11-17T17:32:49+00:00"
+            "time": "2020-12-08T17:44:38+00:00"
         }
     ],
     "packages-dev": [
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
-            "version": "v0.7.0",
+            "version": "v0.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Dealerdirect/phpcodesniffer-composer-installer.git",
-                "reference": "e8d808670b8f882188368faaf1144448c169c0b7"
+                "reference": "fe390591e0241955f22eb9ba327d137e501c771c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/e8d808670b8f882188368faaf1144448c169c0b7",
-                "reference": "e8d808670b8f882188368faaf1144448c169c0b7",
+                "url": "https://api.github.com/repos/Dealerdirect/phpcodesniffer-composer-installer/zipball/fe390591e0241955f22eb9ba327d137e501c771c",
+                "reference": "fe390591e0241955f22eb9ba327d137e501c771c",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0 || ^2.0",
                 "php": ">=5.3",
-                "squizlabs/php_codesniffer": "^2 || ^3 || 4.0.x-dev"
+                "squizlabs/php_codesniffer": "^2.0 || ^3.0 || ^4.0"
             },
             "require-dev": {
                 "composer/composer": "*",
@@ -997,7 +998,7 @@
                 "stylecheck",
                 "tests"
             ],
-            "time": "2020-06-25T14:57:39+00:00"
+            "time": "2020-12-07T18:04:37+00:00"
         },
         {
             "name": "phpcompatibility/php-compatibility",
