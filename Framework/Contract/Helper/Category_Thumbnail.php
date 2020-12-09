@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 12.0.0
  */
 
 namespace Framework\Contract\Helper;
@@ -25,7 +25,7 @@ trait Category_Thumbnail {
 			$term = get_queried_object();
 		}
 
-		$cache_key   = md5( json_encode( $term ) );
+		$cache_key   = crc32( json_encode( $term ) );
 		$cache_group = 'snow-monkey/category-thumbnail-id';
 		$cache       = wp_cache_get( $cache_key, $cache_group );
 		if ( false !== $cache ) {

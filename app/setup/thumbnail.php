@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.5
+ * @version 12.0.0
  */
 
 add_filter(
@@ -14,7 +14,7 @@ add_filter(
 		}
 
 		$cache_key   = 'default-thumbnail';
-		$cache_key   = md5( $size . json_encode( $attr ) );
+		$cache_key   = crc32( $size . json_encode( $attr ) );
 		$cache_group = 'snow-monkey/thumbnail';
 		$cache       = wp_cache_get( $cache_key, $cache_group );
 		if ( false !== $cache ) {

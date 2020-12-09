@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.8.0
+ * @version 12.0.0
  */
 
 use Framework\Helper;
@@ -48,17 +48,33 @@ if ( ! isset( $content_width ) ) {
 /**
  * Loads theme constructer files
  */
-Helper::include_files( untrailingslashit( __DIR__ ) . '/app/constructor', true );
+include_once( __DIR__ . '/app/constructor/child-pages.php' );
+include_once( __DIR__ . '/app/constructor/compatibility.php' );
+include_once( __DIR__ . '/app/constructor/customizer.php' );
+include_once( __DIR__ . '/app/constructor/design-skin.php' );
+include_once( __DIR__ . '/app/constructor/detect-page-end.php' );
+include_once( __DIR__ . '/app/constructor/detect-page-start.php' );
+include_once( __DIR__ . '/app/constructor/oembed.php' );
+include_once( __DIR__ . '/app/constructor/related-posts.php' );
+include_once( __DIR__ . '/app/constructor/trial.php' );
+include_once( __DIR__ . '/app/constructor/view-controller.php' );
+include_once( __DIR__ . '/app/constructor/widgets.php' );
+include_once( __DIR__ . '/app/constructor/deprecated/template-tags.php' );
+
+$updater_filepath = __DIR__ . '/app/constructor/updater.php';
+if ( file_exists( $updater_filepath ) ) {
+	include_once( $updater_filepath );
+}
 
 /**
  * Loads theme setup files
  */
-Helper::load_files( 'get_template_parts', untrailingslashit( __DIR__ ) . '/app/setup', true );
+Helper::load_files( 'get_template_parts', __DIR__ . '/app/setup', true );
 
 /**
  * Loads theme widget files
  */
-Helper::load_files( 'get_template_parts', untrailingslashit( __DIR__ ) . '/app/widget', true );
+Helper::load_files( 'get_template_parts', __DIR__ . '/app/widget', true );
 
 /**
  * Loads customizer
@@ -70,7 +86,7 @@ add_action(
 
 		Helper::load_files(
 			'get_template_parts',
-			untrailingslashit( __DIR__ ) . '/app/customizer',
+			__DIR__ . '/app/customizer',
 			true
 		);
 
