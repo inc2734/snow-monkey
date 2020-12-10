@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "43f4f08ba346c79066f6aa2aac2ef808",
+    "content-hash": "f5f59e4df29128ccb612023c7cab7de6",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -1205,16 +1205,16 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "5.5.3",
+            "version": "5.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
-                "reference": "763121e752594664c150643e05c991a0acf3800a"
+                "reference": "7130a214573cc8c12a0f8fe8a74b18b453bce1e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/763121e752594664c150643e05c991a0acf3800a",
-                "reference": "763121e752594664c150643e05c991a0acf3800a",
+                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/7130a214573cc8c12a0f8fe8a74b18b453bce1e9",
+                "reference": "7130a214573cc8c12a0f8fe8a74b18b453bce1e9",
                 "shasum": ""
             },
             "type": "library",
@@ -1244,7 +1244,7 @@
                 "test",
                 "wordpress"
             ],
-            "time": "2020-09-02T15:53:50+00:00"
+            "time": "2020-12-09T18:06:02+00:00"
         }
     ],
     "aliases": [],
