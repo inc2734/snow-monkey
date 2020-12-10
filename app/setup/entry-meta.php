@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.3
+ * @version 12.0.0
  */
 
 use Framework\Helper;
@@ -75,7 +75,7 @@ function snow_monkey_entry_meta_items_categories() {
 
 	foreach ( $public_taxonomies as $public_taxonomy ) {
 		$_terms = get_the_terms( get_the_ID(), $public_taxonomy->name );
-		if ( ! empty( $_terms ) && is_array( $_terms ) && ! is_wp_error( $_terms ) ) {
+		if ( $public_taxonomy->hierarchical && $_terms && is_array( $_terms ) ) {
 			$public_terms = $_terms;
 			break;
 		}
