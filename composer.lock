@@ -890,16 +890,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.1.6",
+            "version": "12.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "30429ef48b9ecbd1da2bba7843054bbadca9f424"
+                "reference": "9502c55bfda1d8b64ffb70ddcf7b7f8daba96007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/30429ef48b9ecbd1da2bba7843054bbadca9f424",
-                "reference": "30429ef48b9ecbd1da2bba7843054bbadca9f424",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/9502c55bfda1d8b64ffb70ddcf7b7f8daba96007",
+                "reference": "9502c55bfda1d8b64ffb70ddcf7b7f8daba96007",
                 "shasum": ""
             },
             "require": {
@@ -911,7 +911,7 @@
                 "sirbrillig/phpcs-variable-analysis": "^2.10",
                 "squizlabs/php_codesniffer": "^3.5",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.5"
+                "wp-phpunit/wp-phpunit": "^5.6"
             },
             "type": "library",
             "autoload": {
@@ -930,7 +930,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2020-12-09T06:03:53+00:00"
+            "time": "2020-12-12T17:04:44+00:00"
         }
     ],
     "packages-dev": [
