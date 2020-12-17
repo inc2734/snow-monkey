@@ -3,6 +3,15 @@ import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-
 
 import { getDrawerNav, getBody } from './module/_helper';
 
+const setNoscroll = (target) => {
+  if ( ! target ) {
+    return;
+  }
+
+  const body = getBody();
+  body.classList.add('u-noscroll');
+};
+
 const applyDrawerHashNav = (link) => link.addEventListener(
   'click',
   (event) => {
@@ -24,21 +33,19 @@ const applyDrawerHashNav = (link) => link.addEventListener(
 
 const applyOverlayWidgetAreaHashNav = (link) => link.addEventListener(
   'click',
-  (event) => {
-    const overlayWidgetArea = document.getElementById('sm-overlay-widget-area');
-    if (! overlayWidgetArea) {
-      return;
-    }
+  (event) => setNoscroll(document.getElementById('sm-overlay-widget-area')),
+  false
+);
 
-    const body = getBody();
-    body.classList.add('u-noscroll');
-  },
+const applyOverlaySearchBoxHashNav = (link) => link.addEventListener(
+  'click',
+  (event) => setNoscroll(document.getElementById('sm-overlay-search-box')),
   false
 );
 
 const applyOverlayContainerClosers = (closer) => closer.addEventListener(
   'click',
-  (event) => {
+  () => {
     const body = getBody();
     body.classList.remove('u-noscroll');
   },
@@ -46,7 +53,8 @@ const applyOverlayContainerClosers = (closer) => closer.addEventListener(
 );
 
 const applyOverlayContainerEsc = (event) => {
-  if ('#sm-overlay-widget-area' === window.location.hash) {
+  const target = document.querySelector('.c-overlay-container:target');
+  if (!! target) {
     if (27 === event.keyCode) {
       const closeBtn = document.querySelector('.c-overlay-container__close-btn');
       if (!! closeBtn) {
@@ -66,6 +74,10 @@ document.addEventListener(
     // #sm-overlay-widget-area
     const overlayWidgetAreaLinks = document.querySelectorAll('a[href="#sm-overlay-widget-area"]');
     forEachHtmlNodes(overlayWidgetAreaLinks, applyOverlayWidgetAreaHashNav);
+
+    // #sm-overlay-search-box
+    const overlaySearchBoxLinks = document.querySelectorAll('a[href="#sm-overlay-search-box"]');
+    forEachHtmlNodes(overlaySearchBoxLinks, applyOverlaySearchBoxHashNav);
 
     // .c-overlay-container
     const overlayContainerClosers = document.querySelectorAll('.c-overlay-container__bg, .c-overlay-container__close-btn');
