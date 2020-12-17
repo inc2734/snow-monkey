@@ -128,10 +128,9 @@ body {
   }
 }
 
-.wp-block-html {
+[data-type="core/html"] {
   textarea {
-    border-radius: 0;
-    padding: 1rem;
+    @include _pre();
   }
 }
 
