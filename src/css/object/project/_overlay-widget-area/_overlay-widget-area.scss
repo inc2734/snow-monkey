@@ -1,4 +1,7 @@
 .#{ $_prefix }p-overlay-widget-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   overflow: auto;
 
   &__inner {
