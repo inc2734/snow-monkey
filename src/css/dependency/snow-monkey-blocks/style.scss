@@ -24,7 +24,7 @@ $img-path: '../../../img';
 	@include _media-max(sm) {
 		@include _row--margin(.5);
 
-		.c-row__col {
+		> .c-row__col {
 			@include _row__col--margin(.5);
 		}
 	}
