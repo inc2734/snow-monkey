@@ -3,15 +3,19 @@ import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-
 
 import { getDrawerNav, getBody } from './module/_helper';
 
-const setNoscroll = (target) => {
-  if ( ! target ) {
-    return;
-  }
+let openOverlayContainerLink;
 
+/**
+ * Set .u-noscroll to body.
+ */
+const setNoscroll = () => {
   const body = getBody();
   body.classList.add('u-noscroll');
 };
 
+/**
+ * Drawer hash nav main proccess.
+ */
 const applyDrawerHashNav = (link) => link.addEventListener(
   'click',
   (event) => {
@@ -31,27 +35,55 @@ const applyDrawerHashNav = (link) => link.addEventListener(
   false
 );
 
+/**
+ * Overlay widget area hash nav main process.
+ */
 const applyOverlayWidgetAreaHashNav = (link) => link.addEventListener(
   'click',
-  (event) => setNoscroll(document.getElementById('sm-overlay-widget-area')),
+  (event) => {
+    const overlayWidgetArea = document.getElementById('sm-overlay-widget-area');
+    if (!! overlayWidgetArea) {
+      setNoscroll();
+      openOverlayContainerLink = link;
+    }
+  },
   false
 );
 
+/**
+ * Overlay search box hash nav main process.
+ */
 const applyOverlaySearchBoxHashNav = (link) => link.addEventListener(
   'click',
-  (event) => setNoscroll(document.getElementById('sm-overlay-search-box')),
+  (event) => {
+    const overlaySearchBox = document.getElementById('sm-overlay-search-box');
+    if (!! overlaySearchBox) {
+      setNoscroll(overlaySearchBox);
+      openOverlayContainerLink = link;
+    }
+  },
   false
 );
 
+/**
+ * Overlay container closing proccess.
+ */
 const applyOverlayContainerClosers = (closer) => closer.addEventListener(
   'click',
   () => {
     const body = getBody();
     body.classList.remove('u-noscroll');
+    if (!! openOverlayContainerLink) {
+      openOverlayContainerLink.focus();
+      openOverlayContainerLink = undefined;
+    }
   },
   false
 );
 
+/**
+ * Overlay container close with ESC key.
+ */
 const applyOverlayContainerEsc = (event) => {
   const target = document.querySelector('.c-overlay-container:target');
   if (!! target) {

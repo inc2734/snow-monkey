@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 12.1.1
  *
  * renamed: template-parts/overlay-search-box.php
  */
@@ -12,11 +12,6 @@ use Framework\Helper;
 ?>
 
 <div id="sm-overlay-search-box" class="p-overlay-search-box c-overlay-container">
-	<a href="#_" class="p-overlay-search-box__bg c-overlay-container__bg"></a>
-	<a href="#_" class="p-overlay-search-box__close-btn c-overlay-container__close-btn">
-		<i class="fas fa-times" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
-	</a>
-
 	<div class="p-overlay-search-box__inner c-overlay-container__inner">
 		<?php
 		ob_start();
@@ -40,4 +35,9 @@ use Framework\Helper;
 		// @codingStandardsIgnoreEnd
 		?>
 	</div>
+
+	<a href="#_" class="p-overlay-search-box__close-btn c-overlay-container__close-btn">
+		<i class="fas fa-times" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
+	</a>
+	<a href="#_" class="p-overlay-search-box__bg c-overlay-container__bg"></a>
 </div>

@@ -12,6 +12,14 @@
     visibility: visible;
   }
 
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+  }
+
   &__bg {
     @include _position(absolute, 0, 0, 0, 0);
     display: block;
@@ -29,12 +37,5 @@
     color: $_color-white; // For IE11
     color: _var-color-white();
     text-decoration: none;
-  }
-
-  &__inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 }
