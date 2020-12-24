@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.1.1
+ * @version 12.1.2
  *
  * renamed: template-parts/overlay-widget-area.php
  */
@@ -16,7 +16,7 @@ if ( ! Helper::is_active_sidebar( 'overlay-widget-area' ) ) {
 ?>
 
 <div id="sm-overlay-widget-area" class="p-overlay-widget-area c-overlay-container">
-	<div class="p-overlay-widget-area__inner">
+	<div class="p-overlay-widget-area__inner c-overlay-container__inner">
 		<div class="l-overlay-widget-area"
 			data-is-slim-widget-area="<?php echo esc_attr( get_theme_mod( 'overlay-widget-area-max-width' ) ); ?>"
 			data-is-content-widget-area="false"
