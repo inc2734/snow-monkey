@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 12.1.3
  *
  * renamed: template-parts/infobar.php
  */
@@ -25,8 +25,9 @@ if ( ! $args['_content'] ) {
 }
 
 
-$kses_allowed_html      = wp_kses_allowed_html( 'user_description' );
-$kses_allowed_html['i'] = [
+$kses_allowed_html                = wp_kses_allowed_html( 'user_description' );
+$kses_allowed_html['a']['target'] = true;
+$kses_allowed_html['i']           = [
 	'class' => true,
 ];
 ?>
