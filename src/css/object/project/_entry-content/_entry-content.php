@@ -17,6 +17,6 @@ if ( is_admin() ) {
 			'.wp-block-freeform',
 		]
 	);
-} else {
+} elseif ( Helper::is_ie() ) {
 	Style::extend( 'entry-content', [ '.p-entry-content' ] );
 }
