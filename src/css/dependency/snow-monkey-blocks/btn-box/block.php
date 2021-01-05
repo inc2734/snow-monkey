@@ -7,7 +7,6 @@
 
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
-use Inc2734\WP_Customizer_Framework\Color;
 
 if ( ! Helper::is_ie() ) {
 	return;
@@ -19,21 +18,9 @@ if ( ! $accent_color ) {
 }
 
 Style::register(
-	'.smb-btn',
-	'background-color: ' . $accent_color
-);
-
-Style::register(
-	'.smb-btn-wrapper.is-style-ghost .smb-btn',
+	'.smb-btn-box.is-style-ghost .smb-btn',
 	[
 		'border-color: ' . $accent_color,
-		'color: ' . $accent_color,
-	]
-);
-
-Style::register(
-	'.smb-btn-wrapper.is-style-text .smb-btn',
-	[
 		'color: ' . $accent_color,
 	]
 );

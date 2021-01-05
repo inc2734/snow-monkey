@@ -3,3 +3,8 @@
     @include container-padding();
   }
 }
+
+.smb-btn-box.is-style-ghost .smb-btn {
+  border-color: var-color-accent();
+  color: var-color-accent();
+}
