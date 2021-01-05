@@ -167,4 +167,8 @@
   [data-icon="apple"] {
     background-color: map-get($social-icon-colors, 'apple');
   }
+
+  [data-icon="tiktok"] {
+    background-color: map-get($social-icon-colors, 'tiktok');
+  }
 }

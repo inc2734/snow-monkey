@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 12.2.0
  */
 
 use Framework\Model\Filesystem;
@@ -367,6 +367,15 @@ add_filter(
 				$item_output
 			);
 			$new_item_output = str_replace( '<a ', '<a data-icon="apple"', $new_item_output );
+		} elseif (
+			preg_match( '|^https?://(www\.)?tiktok\.com|', $item->url )
+		) {
+			$new_item_output = str_replace(
+				$args->link_before,
+				'<i class="fab fa-tiktok"></i>' . $args->link_before,
+				$item_output
+			);
+			$new_item_output = str_replace( '<a ', '<a data-icon="tiktok"', $new_item_output );
 		} else {
 			$new_item_output = str_replace(
 				$args->link_before,
