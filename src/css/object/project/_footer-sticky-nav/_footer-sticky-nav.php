@@ -19,7 +19,7 @@ if ( ! $accent_color ) {
 
 Style::register(
 	[
-		'.p-footer-sticky-nav .c-navbar__item[data-active-menu="true"] > a',
+		'.p-footer-sticky-nav .c-navbar__item[data-active-menu="true"]',
 	],
 	'color: ' . $accent_color
 );

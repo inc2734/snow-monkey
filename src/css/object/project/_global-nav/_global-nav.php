@@ -19,15 +19,15 @@ if ( ! $accent_color ) {
 }
 
 Style::register(
-	'.p-global-nav--hover-text-color .c-navbar__item[data-active-menu="true"] > a',
+	'.p-global-nav--hover-text-color .c-navbar__item[data-active-menu="true"]',
 	'color: ' . $accent_color
 );
 
 Style::register(
 	[
-		'.p-global-nav--hover-text-color .c-navbar__item:hover > a',
-		'.p-global-nav--hover-text-color .c-navbar__item:active > a',
-		'.p-global-nav--hover-text-color .c-navbar__item:focus > a',
+		'.p-global-nav--hover-text-color .c-navbar__item:hover',
+		'.p-global-nav--hover-text-color .c-navbar__item:active',
+		'.p-global-nav--hover-text-color .c-navbar__item:focus',
 	],
 	'color: ' . $accent_color,
 	'@media (min-width: 64em)'

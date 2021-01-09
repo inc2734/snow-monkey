@@ -5,10 +5,11 @@
   .#{ $_prefix }c-navbar {
     &__item {
       @include _margin(0, .25);
+      color: $_color-gray; // For IE11
+      color: _var-color-gray();
 
-      a {
-        color: $_color-gray; // For IE11
-        color: _var-color-gray();
+      > a {
+        color: inherit;
         text-decoration: none;
 
         @include _hover() {
@@ -17,9 +18,7 @@
       }
 
       &.sm-nav-menu-item-highlight {
-        > a {
-          color: var-color-accent();
-        }
+        color: var-color-accent();
       }
     }
   }

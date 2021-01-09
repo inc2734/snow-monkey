@@ -18,6 +18,6 @@ if ( ! $accent_color ) {
 }
 
 Style::register(
-	'.c-sub-nav .c-navbar__item.sm-nav-menu-item-highlight > a',
+	'.c-sub-nav .c-navbar__item.sm-nav-menu-item-highlight',
 	'color: ' . $accent_color
 );

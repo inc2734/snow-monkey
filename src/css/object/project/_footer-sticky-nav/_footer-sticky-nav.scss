@@ -42,20 +42,18 @@
     &__item {
       flex: 1 1 0%;
 
+      > a {
+        color: inherit;
+      }
+
       &[data-active-menu] {
-        > a {
-          color: var-color-accent();
-        }
+        color: var-color-accent();
       }
 
       &.sm-nav-menu-item-highlight {
         background-color: var-color-accent();
         color: $_color-white; // For IE11
         color: _var-color-white();
-
-        > a {
-          color: inherit;
-        }
       }
     }
   }

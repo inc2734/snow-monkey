@@ -28,15 +28,11 @@
 
       &.sm-nav-menu-item-highlight {
         background-color: var-color-accent();
-        color: $_color-white; // For IE11
-        color: _var-color-white();
+        color: $_color-white !important; // For IE11
+        color: _var-color-white() !important;
 
         &::after {
           display: none;
-        }
-
-        > a {
-          color: inherit !important;
         }
 
         @include _hover(lg) {
@@ -68,6 +64,8 @@
 
     &__subitem {
       @include _font-size-line-height($_base-font-size-px - 2);
+      color: $_color-white; // For IE11
+      color: _var-color-white();
 
       &.sm-nav-menu-item-highlight {
         background-color: var-color-sub-accent();
@@ -75,8 +73,7 @@
 
       > a {
         position: relative;
-        color: $_color-white; // For IE11
-        color: _var-color-white();
+        color: inherit;
         @include _padding(.5rem, 1rem);
         @include _transition(background-color, color);
       }
@@ -152,15 +149,11 @@
     .#{ $_prefix }c-navbar {
       &__item {
         &[data-active-menu] {
-          > a {
-            color: var-color-accent();
-          }
+          color: var-color-accent();
         }
 
         @include _hover(lg) {
-          > a {
-            color: var-color-accent();
-          }
+          color: var-color-accent();
         }
       }
     }
