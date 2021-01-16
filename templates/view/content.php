@@ -8,7 +8,8 @@
 
 use Framework\Helper;
 
-$eyecatch_position    = get_theme_mod( get_post_type() . '-eyecatch' );
+$_post_type           = get_post_type();
+$eyecatch_position    = get_theme_mod( $_post_type . '-eyecatch' );
 $display_entry_header = 'title-on-page-header' !== $eyecatch_position;
 $display_eyecatch     = 'content-top' === $eyecatch_position;
 
@@ -29,12 +30,11 @@ $args = wp_parse_args(
 		'_display_profile_box'                 => false,
 		'_display_tags'                        => false,
 		'_display_top_share_buttons'           => false,
-		'_post_type'                           => get_post_type(),
 	]
 );
 
 Helper::get_template_part(
 	'template-parts/content/entry/entry',
-	$args['_post_type'],
+	$_post_type,
 	$args
 );

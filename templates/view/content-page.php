@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.5
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -30,12 +30,11 @@ $args = wp_parse_args(
 		'_display_profile_box'                 => false,
 		'_display_tags'                        => false,
 		'_display_top_share_buttons'           => false,
-		'_post_type'                           => 'page',
 	]
 );
 
 Helper::get_template_part(
 	'template-parts/content/entry/entry',
-	$args['_post_type'],
+	'page',
 	$args
 );

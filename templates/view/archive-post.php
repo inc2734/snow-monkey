@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.5
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -25,12 +25,11 @@ $args = wp_parse_args(
 		'_display_description'             => ! is_paged() && term_description(),
 		'_display_entry_header'            => $display_entry_header,
 		'_display_eyecatch'                => $display_eyecatch,
-		'_post_type'                       => 'post',
 	]
 );
 
 Helper::get_template_part(
 	'template-parts/archive/entry/entry',
-	$args['_post_type'],
+	'post',
 	$args
 );

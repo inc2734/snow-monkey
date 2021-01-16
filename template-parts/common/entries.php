@@ -20,7 +20,6 @@ $args = wp_parse_args(
 		'_item_thumbnail_size' => 'medium_large',
 		'_item_title_tag'      => 'h3',
 		'_items'               => false,
-		'_post_type'           => null,
 		'_posts_query'         => false,
 	]
 );
@@ -45,7 +44,7 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 				<?php
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary',
-					$args['_post_type'],
+					$args['_name'],
 					[
 						'_context'        => $args['_context'],
 						'_entries_layout' => $args['_entries_layout'],
@@ -66,7 +65,7 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 				<?php
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary',
-					$args['_post_type'],
+					$args['_name'],
 					[
 						'_context'        => $args['_context'],
 						'_entries_layout' => $args['_entries_layout'],

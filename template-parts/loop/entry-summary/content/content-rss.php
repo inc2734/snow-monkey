@@ -14,7 +14,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_item'           => false,
-		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
+		'_entries_layout' => get_theme_mod( 'post-entries-layout' ),
 		'_excerpt_length' => null,
 	]
 );

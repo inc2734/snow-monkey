@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.0
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -19,7 +19,6 @@ $args = wp_parse_args(
 		'_display_description'             => false,
 		'_display_entry_header'            => false,
 		'_display_eyecatch'                => false,
-		'_post_type'                       => $_post_type,
 	]
 );
 ?>
@@ -33,7 +32,7 @@ if ( $args['_display_archive_top_widget_area'] ) {
 <div class="c-entry">
 	<?php
 	if ( $args['_display_entry_header'] ) {
-		Helper::get_template_part( 'template-parts/archive/entry/header/header', $args['_post_type'] );
+		Helper::get_template_part( 'template-parts/archive/entry/header/header', $args['_name'] );
 	}
 	?>
 
@@ -53,7 +52,7 @@ if ( $args['_display_archive_top_widget_area'] ) {
 		<?php
 		Helper::get_template_part(
 			'template-parts/archive/entry/content/content',
-			$args['_post_type'],
+			$args['_name'],
 			[
 				'_entries_layout' => get_theme_mod( $_post_type . '-entries-layout' ),
 				'_force_sm_1col'  => get_theme_mod( $_post_type . '-entries-layout-sm-1col' ),

@@ -82,7 +82,6 @@ $more_classnames = [
 			'_force_sm_1col'  => $args['_force_sm_1col'],
 			'_item_title_tag' => $args['_item_title_tag'],
 			'_items'          => $args['_items'],
-			'_post_type'      => 'rss',
 		]
 	);
 	?>

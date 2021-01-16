@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.2.2
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -14,7 +14,6 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_classname'           => null,
-		'_context'             => null,
 		'_entries_layout'      => 'rich-media',
 		'_excerpt_length'      => null,
 		'_force_sm_1col'       => false,
@@ -81,12 +80,9 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 	<?php endif; ?>
 
 	<?php
-	$_post_type   = get_post_type() ? get_post_type() : 'post';
-	$archive_view = get_theme_mod( $_post_type . '-archive-view' );
-
 	Helper::get_template_part(
 		'template-parts/common/entries',
-		$archive_view ? $archive_view : $_post_type,
+		null,
 		[
 			'_context'             => $args['_context'],
 			'_entries_layout'      => $args['_entries_layout'],
@@ -95,7 +91,6 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 			'_infeed_ads'          => $args['_infeed_ads'],
 			'_item_thumbnail_size' => $args['_item_thumbnail_size'],
 			'_item_title_tag'      => $args['_item_title_tag'],
-			'_post_type'           => $archive_view ? $archive_view : $_post_type,
 			'_posts_query'         => $args['_posts_query'],
 		]
 	);

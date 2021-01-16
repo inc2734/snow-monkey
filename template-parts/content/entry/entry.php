@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.0
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -25,7 +25,6 @@ $args = wp_parse_args(
 		'_display_profile_box'                 => false,
 		'_display_tags'                        => false,
 		'_display_top_share_buttons'           => false,
-		'_post_type'                           => get_post_type(),
 	]
 );
 ?>
@@ -35,7 +34,7 @@ $args = wp_parse_args(
 	if ( $args['_display_entry_header'] ) {
 		Helper::get_template_part(
 			'template-parts/content/entry/header/header',
-			$args['_post_type']
+			$args['_name']
 		);
 	}
 	?>
@@ -74,7 +73,7 @@ $args = wp_parse_args(
 		<?php
 		Helper::get_template_part(
 			'template-parts/content/entry/content/content',
-			$args['_post_type']
+			$args['_name']
 		);
 		?>
 
@@ -131,7 +130,7 @@ $args = wp_parse_args(
 	if ( $args['_display_entry_footer'] ) {
 		Helper::get_template_part(
 			'template-parts/content/entry/footer/footer',
-			$args['_post_type']
+			$args['_name']
 		);
 	}
 	?>

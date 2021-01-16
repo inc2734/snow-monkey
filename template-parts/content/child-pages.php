@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 12.2.3
  *
  * renamed: template-parts/child-pages.php
  */
@@ -48,7 +48,6 @@ if ( ! $query->have_posts() ) {
 			'_entries_layout' => 'rich-media',
 			'_force_sm_1col'  => false,
 			'_infeed_ads'     => false,
-			'_post_type'      => 'page',
 			'_posts_query'    => $query,
 		]
 	);

@@ -27,7 +27,7 @@ $public_terms = Helper::get_the_public_terms( get_the_ID() );
 	if ( $public_terms ) {
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/term/term',
-			get_post_type(),
+			'post',
 			[
 				'_context' => $args['_context'],
 				'_terms'   => [ $public_terms[0] ],

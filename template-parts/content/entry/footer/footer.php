@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.1.0
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -17,7 +17,6 @@ $args = wp_parse_args(
 		'_display_like_me_box'   => get_option( 'mwt-facebook-page-name' ),
 		'_display_prev_next_nav' => true,
 		'_display_related_posts' => get_option( 'mwt-display-related-posts' ),
-		'_post_type'             => get_post_type(),
 	]
 );
 ?>
@@ -39,7 +38,7 @@ $args = wp_parse_args(
 	if ( $args['_display_prev_next_nav'] ) {
 		Helper::get_template_part(
 			'template-parts/content/prev-next-nav',
-			$args['_post_type']
+			$args['_name']
 		);
 	}
 	?>
@@ -53,7 +52,7 @@ $args = wp_parse_args(
 			];
 			Helper::get_template_part(
 				'template-parts/content/related-posts',
-				$args['_post_type'],
+				$args['_name'],
 				$vars
 			);
 		}
