@@ -95,7 +95,7 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 			'_infeed_ads'          => $args['_infeed_ads'],
 			'_item_thumbnail_size' => $args['_item_thumbnail_size'],
 			'_item_title_tag'      => $args['_item_title_tag'],
-			'_post_type'           => $_post_type,
+			'_post_type'           => $archive_view ? $archive_view : $_post_type,
 			'_posts_query'         => $args['_posts_query'],
 		]
 	);
