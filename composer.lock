@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f5f59e4df29128ccb612023c7cab7de6",
+    "content-hash": "32548daf68e208eaf80e0aa8eff5e0d5",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -890,16 +890,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.1.7",
+            "version": "12.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "4c8262cdec5ca044a232ef56781e8c14615b7ad0"
+                "reference": "42adb2f17daa6e3da4c4dd5822a71353dcb0078f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/4c8262cdec5ca044a232ef56781e8c14615b7ad0",
-                "reference": "4c8262cdec5ca044a232ef56781e8c14615b7ad0",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/42adb2f17daa6e3da4c4dd5822a71353dcb0078f",
+                "reference": "42adb2f17daa6e3da4c4dd5822a71353dcb0078f",
                 "shasum": ""
             },
             "require": {
@@ -930,7 +930,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2020-12-12T17:04:44+00:00"
+            "time": "2021-01-16T15:23:59+00:00"
         }
     ],
     "packages-dev": [

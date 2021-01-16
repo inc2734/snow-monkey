@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 12.2.3
  */
 
 use Framework\Helper;
@@ -14,7 +14,6 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_classname'      => null,
-		'_context'        => null,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_force_sm_1col'  => false,
