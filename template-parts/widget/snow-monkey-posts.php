@@ -80,9 +80,13 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 	<?php endif; ?>
 
 	<?php
+	$_post_types  = $args['_posts_query']->get( 'post_type' );
+	$_post_type   = isset( $_post_types[0] ) ? $_post_types[0] : null;
+	$archive_view = $_post_type ? get_theme_mod( $_post_type . '-archive-view' ) : null;
+
 	Helper::get_template_part(
 		'template-parts/common/entries',
-		null,
+		$archive_view,
 		[
 			'_context'             => $args['_context'],
 			'_entries_layout'      => $args['_entries_layout'],
