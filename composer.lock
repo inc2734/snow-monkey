@@ -890,16 +890,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.2.0",
+            "version": "12.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "42adb2f17daa6e3da4c4dd5822a71353dcb0078f"
+                "reference": "42cb87d0645641f75b605c839a5cecaa604b57f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/42adb2f17daa6e3da4c4dd5822a71353dcb0078f",
-                "reference": "42adb2f17daa6e3da4c4dd5822a71353dcb0078f",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/42cb87d0645641f75b605c839a5cecaa604b57f6",
+                "reference": "42cb87d0645641f75b605c839a5cecaa604b57f6",
                 "shasum": ""
             },
             "require": {
@@ -930,7 +930,7 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
-            "time": "2021-01-16T15:23:59+00:00"
+            "time": "2021-01-19T06:25:52+00:00"
         }
     ],
     "packages-dev": [
@@ -1060,16 +1060,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.10.1",
+            "version": "v2.10.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "c6716a98fe7bee25d31306e14fb62c3ffa16d70a"
+                "reference": "0775e0c683badad52c03b11c2cd86a9fdecb937a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/c6716a98fe7bee25d31306e14fb62c3ffa16d70a",
-                "reference": "c6716a98fe7bee25d31306e14fb62c3ffa16d70a",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/0775e0c683badad52c03b11c2cd86a9fdecb937a",
+                "reference": "0775e0c683badad52c03b11c2cd86a9fdecb937a",
                 "shasum": ""
             },
             "require": {
@@ -1104,7 +1104,7 @@
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
-            "time": "2020-12-12T18:28:57+00:00"
+            "time": "2021-01-08T16:31:05+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
