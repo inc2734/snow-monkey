@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  * @version 12.2.3
+ *
+ * renamed: template-parts/archive/entry/content/content-search.php
  */
 
 use Framework\Helper;
@@ -15,8 +17,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_entries_layout' => get_theme_mod( 'post-entries-layout' ),
-		'_force_sm_1col'  => get_theme_mod( 'post-entries-layout-sm-1col' ),
+		'_entries_layout' => 'rich-media',
+		'_force_sm_1col'  => false,
 	]
 );
 ?>
@@ -29,11 +31,10 @@ $args = wp_parse_args(
 	<?php
 	Helper::get_template_part(
 		'template-parts/archive/archive',
-		'post',
+		$args['_name'],
 		[
 			'_entries_layout' => $args['_entries_layout'],
 			'_force_sm_1col'  => $args['_force_sm_1col'],
-			'_infeed_ads'     => get_option( 'mwt-google-infeed-ads' ),
 			'_posts_query'    => $wp_query,
 		]
 	);

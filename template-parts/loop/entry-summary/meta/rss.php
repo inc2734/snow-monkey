@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  * @version 12.2.3
+ *
+ * renamed: template-parts/loop/entry-summary/meta/meta-rss.php
  */
 
 use Framework\Helper;
@@ -55,7 +57,8 @@ $feed = $item->get_feed();
 			?>
 		</li>
 		<li class="c-meta__item c-meta__item--published">
-			<?php echo esc_html( $item->get_date( get_option( 'date_format' ) ) ); ?>
+
+			<?php echo esc_html( date_i18n( get_option( 'date_format' ), $item->get_date( 'U' ) ) ); ?>
 		</li>
 	</ul>
 </div>

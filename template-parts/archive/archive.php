@@ -29,7 +29,7 @@ if ( ! $args['_posts_query'] ) {
 <div class="p-archive">
 	<?php
 	Helper::get_template_part(
-		'template-parts/common/entries',
+		'template-parts/common/entries/entries',
 		$args['_name'],
 		[
 			'_context'        => $args['_context'],

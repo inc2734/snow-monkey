@@ -17,8 +17,9 @@ $args = wp_parse_args(
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_force_sm_1col'  => false,
+		'_infeed_ads'     => false,
 		'_item_title_tag' => 'h3',
-		'_items'          => false,
+		'_items'          => [],
 		'_link_text'      => null,
 		'_link_url'       => null,
 		'_title'          => null,
@@ -73,13 +74,14 @@ $more_classnames = [
 
 	<?php
 	Helper::get_template_part(
-		'template-parts/common/entries',
-		'rss',
+		'template-parts/common/entries/rss',
+		null,
 		[
 			'_context'        => $args['_context'],
 			'_entries_layout' => $args['_entries_layout'],
 			'_excerpt_length' => $args['_excerpt_length'],
 			'_force_sm_1col'  => $args['_force_sm_1col'],
+			'_infeed_ads'     => $args['_infeed_ads'],
 			'_item_title_tag' => $args['_item_title_tag'],
 			'_items'          => $args['_items'],
 		]

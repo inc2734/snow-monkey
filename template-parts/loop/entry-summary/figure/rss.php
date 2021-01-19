@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  * @version 12.2.3
+ *
+ * renamed: template-parts/loop/entry-summary/figure/figure-rss.php
  */
 
 use Framework\Helper;
@@ -38,10 +40,6 @@ if ( ! $thumbnail ) {
 		$thumbnail = preg_replace( '|style="[^"]*?"|', '', $thumbnail );
 		$thumbnail = preg_replace( '|class="[^"]*?"|', '', $thumbnail );
 	}
-}
-
-if ( ! $thumbnail ) {
-	return;
 }
 ?>
 

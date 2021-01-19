@@ -9,26 +9,31 @@
 use Framework\Helper;
 
 $_post_type           = get_post_type() ? get_post_type() : 'post';
-$eyecatch_position    = 'post' === $_post_type
-	? get_theme_mod( 'archive-eyecatch' )
-	: get_theme_mod( 'archive-' . $_post_type . '-eyecatch' );
+$eyecatch_position    = get_theme_mod( 'archive-' . $_post_type . '-eyecatch' );
 $display_entry_header = 'title-on-page-header' !== $eyecatch_position;
 $display_eyecatch     = 'content-top' === $eyecatch_position;
+$entries_layout       = get_theme_mod( $_post_type . '-entries-layout' );
+$force_sm_1col        = get_theme_mod( $_post_type . '-entries-layout-sm-1col' );
 
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
 	[
-		'_display_archive_top_widget_area' => false,
-		'_display_description'             => false,
-		'_display_entry_header'            => $display_entry_header,
-		'_display_eyecatch'                => $display_eyecatch,
+		'_display_archive_top_widget_area'       => false,
+		'_display_description'                   => ! is_paged() && term_description(),
+		'_display_entry_header'                  => $display_entry_header,
+		'_display_eyecatch'                      => $display_eyecatch,
+		'_display_posts_page_bottom_widget_area' => false,
+		'_display_posts_page_top_widget_area'    => false,
+		'_entries_layout'                        => $entries_layout,
+		'_force_sm_1col'                         => $force_sm_1col,
+		'_infeed_ads'                            => false,
 	]
 );
 
 Helper::get_template_part(
 	'template-parts/archive/entry/entry',
-	$_post_type,
+	$args['_name'],
 	$args
 );

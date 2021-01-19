@@ -11,7 +11,7 @@
 use Inc2734\WP_Adsense;
 use Framework\Helper;
 
-$_post_type             = get_post_type();
+$_post_type             = get_post_type() ? get_post_type() : 'post';
 $default_entries_layout = get_theme_mod( 'related-posts-layout' )
 	? get_theme_mod( 'related-posts-layout' )
 	: get_theme_mod( $_post_type . '-entries-layout' );
@@ -55,8 +55,8 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 
 		<?php
 		Helper::get_template_part(
-			'template-parts/common/entries',
-			$_post_type,
+			'template-parts/common/entries/entries',
+			$args['_name'],
 			[
 				'_context'        => $args['_context'],
 				'_entries_layout' => $args['_entries_layout'],

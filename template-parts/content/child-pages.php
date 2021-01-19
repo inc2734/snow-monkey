@@ -41,7 +41,7 @@ if ( ! $query->have_posts() ) {
 
 	<?php
 	Helper::get_template_part(
-		'template-parts/common/entries',
+		'template-parts/common/entries/entries',
 		'page',
 		[
 			'_context'        => $args['_context'],

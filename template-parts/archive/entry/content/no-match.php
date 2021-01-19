@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 12.2.3
+ *
+ * renamed: template-parts/archive/entry/content/content-no-match.php
  */
 
 use Framework\Helper;

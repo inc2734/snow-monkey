@@ -33,8 +33,18 @@ $args = wp_parse_args(
 	]
 );
 
+if ( $args['_display_entry_header'] ) {
+	$args = wp_parse_args(
+		$args,
+		[
+			'_display_title_top_widget_area' => true,
+			'_display_entry_meta'            => false,
+		]
+	);
+}
+
 Helper::get_template_part(
 	'template-parts/content/entry/entry',
-	'page',
+	$args['_name'],
 	$args
 );

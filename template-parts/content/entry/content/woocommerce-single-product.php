@@ -3,9 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.8.0
+ * @version 12.2.3
  *
  * renamed: template-parts/content/entry/content/woocommerce.php
+ * renamed: template-parts/content/entry/content/woocommerce-product.php
  */
 ?>
 

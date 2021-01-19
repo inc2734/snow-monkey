@@ -4,6 +4,8 @@
  * @author inc2734
  * @license GPL-2.0+
  * @version 12.2.3
+ *
+ * renamed: template-parts/loop/entry-summary/content/content-rss.php
  */
 
 use Framework\Helper;
@@ -14,7 +16,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_item'           => false,
-		'_entries_layout' => get_theme_mod( 'post-entries-layout' ),
+		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 	]
 );
@@ -28,25 +30,28 @@ $description = $args['_item']->get_description();
 /**
  * Callback for excerpt_length
  *
- * @global array $template_args
+ * @global array $args The template part args.
+ * @param int $number The maximum number of words. Default 55.
  * @return int
  */
-$entry_summary_content_excerpt_length = function() use ( $args ) {
+$entry_summary_content_excerpt_length = function( $number = null ) use ( $args ) {
 	if ( null !== $args['_excerpt_length'] ) {
 		return $args['_excerpt_length'];
 	}
 
-	// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-	$default_excerpt_length = _x( '55', 'excerpt_length' );
-	// phpcs:enable
+	if ( is_null( $number ) ) {
+		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
+		$number = _x( '55', 'excerpt_length' );
+		// phpcs:enable
+	}
 
 	if ( 'rich-media' === $args['_entries_layout'] ) {
 		$num_words            = 25;
-		$excerpt_length_ratio = 55 / $default_excerpt_length;
+		$excerpt_length_ratio = 55 / $number;
 		return $num_words / $excerpt_length_ratio;
 	}
 
-	return $default_excerpt_length;
+	return $number;
 };
 
 $excerpt_length = $entry_summary_content_excerpt_length();

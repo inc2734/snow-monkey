@@ -81,11 +81,12 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 
 	<?php
 	$_post_types  = $args['_posts_query']->get( 'post_type' );
-	$_post_type   = isset( $_post_types[0] ) ? $_post_types[0] : null;
-	$archive_view = $_post_type ? get_theme_mod( $_post_type . '-archive-view' ) : null;
+	$_post_type   = isset( $_post_types[0] ) ? $_post_types[0] : 'post';
+	$archive_view = get_theme_mod( $_post_type . '-archive-view' );
+	$archive_view = $archive_view ? $archive_view : $_post_type;
 
 	Helper::get_template_part(
-		'template-parts/common/entries',
+		'template-parts/common/entries/entries',
 		$archive_view,
 		[
 			'_context'             => $args['_context'],

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 12.2.3
  */
 
 use Framework\Controller\Controller;
@@ -18,5 +18,9 @@ if ( empty( $layout ) ) {
 	$layout = get_theme_mod( 'singular-post-layout' );
 }
 
+$_post_type   = get_post_type();
+$content_view = get_theme_mod( $_post_type . '-view' );
+$content_view = $content_view ? $content_view : $_post_type;
+
 Controller::layout( $layout );
-Controller::render( 'content', get_post_type() );
+Controller::render( 'content', $content_view );

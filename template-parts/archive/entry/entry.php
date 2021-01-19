@@ -8,17 +8,20 @@
 
 use Framework\Helper;
 
-$_post_type = get_post_type() ? get_post_type() : 'post';
-
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
 	[
-		'_display_archive_top_widget_area' => false,
-		'_display_description'             => false,
-		'_display_entry_header'            => false,
-		'_display_eyecatch'                => false,
+		'_display_archive_top_widget_area'       => false,
+		'_display_description'                   => false,
+		'_display_entry_header'                  => false,
+		'_display_eyecatch'                      => false,
+		'_display_posts_page_bottom_widget_area' => false,
+		'_display_posts_page_top_widget_area'    => false,
+		'_entries_layout'                        => 'rich-media',
+		'_force_sm_1col'                         => false,
+		'_infeed_ads'                            => false,
 	]
 );
 ?>
@@ -26,6 +29,12 @@ $args = wp_parse_args(
 <?php
 if ( $args['_display_archive_top_widget_area'] ) {
 	Helper::get_template_part( 'template-parts/widget-area/archive-top' );
+}
+?>
+
+<?php
+if ( $args['_display_posts_page_top_widget_area'] ) {
+	Helper::get_template_part( 'template-parts/widget-area/posts-page-top' );
 }
 ?>
 
@@ -54,11 +63,17 @@ if ( $args['_display_archive_top_widget_area'] ) {
 			'template-parts/archive/entry/content/content',
 			$args['_name'],
 			[
-				'_entries_layout' => get_theme_mod( $_post_type . '-entries-layout' ),
-				'_force_sm_1col'  => get_theme_mod( $_post_type . '-entries-layout-sm-1col' ),
+				'_entries_layout' => $args['_entries_layout'],
+				'_force_sm_1col'  => $args['_force_sm_1col'],
+				'_infeed_ads'     => $args['_infeed_ads'],
 			]
 		);
 		?>
 	</div>
 </div>
+
+<?php
+if ( $args['_display_posts_page_bottom_widget_area'] ) {
+	Helper::get_template_part( 'template-parts/widget-area/posts-page-bottom' );
+}
 

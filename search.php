@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.0.0
+ * @version 12.2.3
  */
 
 use Framework\Controller\Controller;
@@ -22,11 +22,15 @@ query_posts(
 	)
 );
 
+$_post_type   = 'any' !== $_post_type ? $_post_type : 'post';
+$archive_view = get_theme_mod( $_post_type . '-archive-view' );
+$archive_view = $archive_view ? $archive_view : $_post_type;
+
 Controller::layout( get_theme_mod( 'archive-page-layout' ) );
 if ( '' === get_search_query() ) {
 	Controller::render( 'no-keywords' );
 } elseif ( have_posts() ) {
-	Controller::render( 'archive', 'search' );
+	Controller::render( 'search', $archive_view );
 } else {
 	Controller::render( 'no-match' );
 }

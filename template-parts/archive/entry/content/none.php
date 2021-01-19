@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 12.2.3
+ *
+ * renamed: template-parts/archive/entry/content/content-none.php
  */
 
 use Framework\Helper;
@@ -13,7 +15,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_message' => __( 'Please enter a search keyword.', 'snow-monkey' ),
+		'_message' => __( 'No posts.', 'snow-monkey' ),
 	]
 );
 ?>
@@ -28,8 +30,6 @@ $args = wp_parse_args(
 			<?php echo wp_kses_post( $args['_message'] ); ?>
 		</p>
 	<?php endif; ?>
-
-	<?php Helper::get_template_part( 'template-parts/common/search-form', 'no-match' ); ?>
 
 	<?php do_action( 'snow_monkey_append_archive_entry_content' ); ?>
 </div>

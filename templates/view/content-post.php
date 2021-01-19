@@ -8,7 +8,8 @@
 
 use Framework\Helper;
 
-$eyecatch_position            = get_theme_mod( get_post_type() . '-eyecatch' );
+$_post_type                   = get_post_type();
+$eyecatch_position            = get_theme_mod( $_post_type . '-eyecatch' );
 $share_buttons_position       = get_option( 'mwt-share-buttons-display-position' );
 $display_adsense              = ! empty( get_option( 'mwt-google-adsense' ) );
 $display_bottom_share_buttons = in_array( $share_buttons_position, [ 'bottom', 'both' ], true );
@@ -38,8 +39,18 @@ $args = wp_parse_args(
 	]
 );
 
+if ( $args['_display_entry_header'] ) {
+	$args = wp_parse_args(
+		$args,
+		[
+			'_display_title_top_widget_area' => true,
+			'_display_entry_meta'            => true,
+		]
+	);
+}
+
 Helper::get_template_part(
 	'template-parts/content/entry/entry',
-	'post',
+	$args['_name'],
 	$args
 );

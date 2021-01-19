@@ -15,23 +15,26 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_title_tag'      => 'h2',
-		'_thumbnail_size' => 'medium_large',
-		'_entries_layout' => get_theme_mod( get_post_type() . '-entries-layout' ),
+		'_display_meta'   => false,
+		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
+		'_thumbnail_size' => 'medium_large',
+		'_terms'          => [],
+		'_title_tag'      => 'h2',
 	]
 );
 ?>
 
 <a href="<?php the_permalink(); ?>">
-	<section class="c-entry-summary c-entry-summary--<?php echo esc_attr( get_post_type() ); ?>">
+	<section class="c-entry-summary c-entry-summary--<?php echo esc_attr( $args['_name'] ); ?>">
 		<?php
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/figure/figure',
-			get_post_type(),
+			$args['_name'],
 			[
 				'_context'        => $args['_context'],
 				'_thumbnail_size' => $args['_thumbnail_size'],
+				'_terms'          => $args['_terms'],
 			]
 		);
 		?>
@@ -41,10 +44,11 @@ $args = wp_parse_args(
 				<?php
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary/title/title',
-					get_post_type(),
+					$args['_name'],
 					[
-						'_context'   => $args['_context'],
-						'_title_tag' => $args['_title_tag'],
+						'_context'        => $args['_context'],
+						'_entries_layout' => $args['_entries_layout'],
+						'_title_tag'      => $args['_title_tag'],
 					]
 				);
 				?>
@@ -53,7 +57,7 @@ $args = wp_parse_args(
 			<?php
 			Helper::get_template_part(
 				'template-parts/loop/entry-summary/content/content',
-				get_post_type(),
+				$args['_name'],
 				[
 					'_context'        => $args['_context'],
 					'_entries_layout' => $args['_entries_layout'],
@@ -63,15 +67,19 @@ $args = wp_parse_args(
 			?>
 
 			<?php
-			$_post_type_object = get_post_type_object( get_post_type() );
-			if ( $_post_type_object && ! $_post_type_object->hierarchical ) {
-				Helper::get_template_part(
-					'template-parts/loop/entry-summary/meta/meta',
-					get_post_type(),
-					[
-						'_context' => $args['_context'],
-					]
-				);
+			if ( $args['_display_meta'] ) {
+				$_post_type        = get_post_type() ? get_post_type() : 'post';
+				$_post_type_object = get_post_type_object( $_post_type );
+				if ( $_post_type_object && ! $_post_type_object->hierarchical ) {
+					Helper::get_template_part(
+						'template-parts/loop/entry-summary/meta/meta',
+						$args['_name'],
+						[
+							'_context' => $args['_context'],
+							'_terms'   => $args['_terms'],
+						]
+					);
+				}
 			}
 			?>
 		</div>

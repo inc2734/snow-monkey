@@ -14,10 +14,24 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'thumbnail_size' => 'medium_large',
+		'_terms'         => [],
 	]
 );
 ?>
 
 <div class="c-entry-summary__figure">
 	<?php the_post_thumbnail( $args['_thumbnail_size'] ); ?>
+
+	<?php
+	if ( $args['_terms'] ) {
+		Helper::get_template_part(
+			'template-parts/loop/entry-summary/term/term',
+			$args['_name'],
+			[
+				'_context' => $args['_context'],
+				'_terms'   => $args['_terms'],
+			]
+		);
+	}
+	?>
 </div>

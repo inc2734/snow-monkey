@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 12.2.3
+ *
+ * renamed: template-parts/content/entry/content/content-404.php
  */
 
 use Framework\Helper;
