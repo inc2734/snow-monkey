@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.2.3
+ * @version 13.0.0
  *
  * renamed: template-parts/loop/entry-summary-rss.php
  */
