@@ -23,15 +23,13 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_display_archive_top_widget_area'       => true,
-		'_display_description'                   => ! is_paged() && term_description(),
-		'_display_entry_header'                  => $display_entry_header,
-		'_display_eyecatch'                      => $display_eyecatch,
-		'_display_posts_page_bottom_widget_area' => false,
-		'_display_posts_page_top_widget_area'    => false,
-		'_entries_layout'                        => $entries_layout,
-		'_force_sm_1col'                         => $force_sm_1col,
-		'_infeed_ads'                            => get_option( 'mwt-google-infeed-ads' ),
+		'_display_archive_top_widget_area' => true,
+		'_display_description'             => ! is_paged() && term_description(),
+		'_display_entry_header'            => $display_entry_header,
+		'_display_eyecatch'                => $display_eyecatch,
+		'_entries_layout'                  => $entries_layout,
+		'_force_sm_1col'                   => $force_sm_1col,
+		'_infeed_ads'                      => get_option( 'mwt-google-infeed-ads' ),
 	]
 );
 

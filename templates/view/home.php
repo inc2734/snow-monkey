@@ -21,8 +21,6 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_display_archive_top_widget_area'       => false,
-		'_display_description'                   => false,
 		'_display_entry_header'                  => $display_entry_header,
 		'_display_eyecatch'                      => $display_eyecatch,
 		'_display_posts_page_top_widget_area'    => ! is_paged(),
@@ -34,7 +32,7 @@ $args = wp_parse_args(
 );
 
 Helper::get_template_part(
-	'template-parts/archive/entry/entry',
+	'template-parts/archive/entry/home',
 	'post',
 	$args
 );

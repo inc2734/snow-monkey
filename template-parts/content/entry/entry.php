@@ -8,6 +8,8 @@
 
 use Framework\Helper;
 
+$_post_type = get_post_type() ? get_post_type() : 'post';
+
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
@@ -44,7 +46,7 @@ if ( $args['_display_entry_footer'] ) {
 		[
 			'_display_follow_box'    => has_nav_menu( 'follow-box' ),
 			'_display_like_me_box'   => get_option( 'mwt-facebook-page-name' ),
-			'_display_prev_next_nav' => true,
+			'_display_prev_next_nav' => ! get_post_type_object( $_post_type )->hierarchical,
 			'_display_related_posts' => get_option( 'mwt-display-related-posts' ),
 		]
 	);

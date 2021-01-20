@@ -43,6 +43,18 @@ if ( $args['_display_entry_header'] ) {
 	);
 }
 
+if ( $args['_display_entry_footer'] ) {
+	$args = wp_parse_args(
+		$args,
+		[
+			'_display_follow_box'    => has_nav_menu( 'follow-box' ),
+			'_display_like_me_box'   => get_option( 'mwt-facebook-page-name' ),
+			'_display_prev_next_nav' => false,
+			'_display_related_posts' => get_option( 'mwt-display-related-posts' ),
+		]
+	);
+}
+
 Helper::get_template_part(
 	'template-parts/content/entry/entry',
 	$args['_name'],
