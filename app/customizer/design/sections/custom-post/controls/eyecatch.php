@@ -3,12 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 13.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
-use Framework\Controller\Controller;
 
 $custom_post_types = Helper::get_custom_post_types();
 
@@ -19,18 +18,15 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'select',
 		$custom_post_type . '-eyecatch',
 		[
-			'label'           => __( 'Featured image position', 'snow-monkey' ),
-			'description'     => sprintf(
+			'label'       => __( 'Featured image position', 'snow-monkey' ),
+			'description' => sprintf(
 				/* translators: 1: Custom post type label */
 				__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
 				$custom_post_type_object->label
 			),
-			'priority'        => 110,
-			'default'         => 'none',
-			'choices'         => Helper::eyecatch_position_choices(),
-			'active_callback' => function() {
-				return 'content' === Controller::get_view();
-			},
+			'priority'    => 110,
+			'default'     => 'none',
+			'choices'     => Helper::eyecatch_position_choices(),
 		]
 	);
 }

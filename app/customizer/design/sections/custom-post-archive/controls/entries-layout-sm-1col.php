@@ -3,12 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 13.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
-use Framework\Controller\Controller;
 
 $custom_post_types = Helper::get_custom_post_types();
 
@@ -21,13 +20,12 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'priority'          => 131,
 			'default'           => false,
 			'active_callback'   => function() use ( $custom_post_type ) {
-				$is_archive_view       = 'archive' === Controller::get_view();
 				$is_multi_cols_pattern = in_array(
 					get_theme_mod( $custom_post_type . '-entries-layout' ),
 					[ 'rich-media', 'panel' ],
 					true
 				);
-				return $is_archive_view && $is_multi_cols_pattern;
+				return $is_multi_cols_pattern;
 			},
 			'sanitize_callback' => function( $value ) use ( $custom_post_type ) {
 				$is_multi_cols_pattern = in_array(

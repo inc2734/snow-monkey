@@ -3,12 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 13.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
-use Framework\Controller\Controller;
 
 $custom_post_types = Helper::get_custom_post_types();
 
@@ -17,18 +16,15 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'select',
 		$custom_post_type . '-view',
 		[
-			'label'           => __( 'View template', 'snow-monkey' ),
-			'description'     => __( 'Select the view template to use.', 'snow-monkey' ),
-			'priority'        => 100,
-			'default'         => '',
-			'choices'         => [
+			'label'       => __( 'View template', 'snow-monkey' ),
+			'description' => __( 'Select the view template to use.', 'snow-monkey' ),
+			'priority'    => 100,
+			'default'     => '',
+			'choices'     => [
 				''     => __( 'Default', 'snow-monkey' ),
 				'post' => __( 'The view template of the post', 'snow-monkey' ),
 				'page' => __( 'The view template of the page', 'snow-monkey' ),
 			],
-			'active_callback' => function() {
-				return 'content' === Controller::get_view();
-			},
 		]
 	);
 }
