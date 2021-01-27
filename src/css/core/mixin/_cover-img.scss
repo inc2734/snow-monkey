@@ -13,6 +13,8 @@
     @supports(object-fit: cover) {
       top: 0;
       left: 0;
+      min-height: auto;
+      min-width: auto;
       height: 100%;
       width: 100%;
       object-fit: cover;
