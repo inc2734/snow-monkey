@@ -47,6 +47,10 @@
                     "email": "inc@2inc.org"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/inc2734/wp-adsense/issues",
+                "source": "https://github.com/inc2734/wp-adsense/tree/1.0.1"
+            },
             "time": "2020-02-04T04:08:16+00:00"
         },
         {
@@ -91,6 +95,10 @@
                 }
             ],
             "description": "A library to add some awesome components for WordPress.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-awesome-components/issues",
+                "source": "https://github.com/inc2734/wp-awesome-components/tree/1.0.9"
+            },
             "time": "2020-02-04T04:35:04+00:00"
         },
         {
@@ -139,6 +147,10 @@
                 }
             ],
             "description": "A library to add some awesome widgets for WordPress.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.1.3"
+            },
             "time": "2020-12-12T17:44:23+00:00"
         },
         {
@@ -183,6 +195,10 @@
                 }
             ],
             "description": "This library customizes HTML to use sass-basis in WordPress.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-basis/issues",
+                "source": "https://github.com/inc2734/wp-basis/tree/7.5.1"
+            },
             "time": "2021-01-15T14:09:04+00:00"
         },
         {
@@ -227,6 +243,10 @@
                 }
             ],
             "description": "A library for WordPress breadcrumbs.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-breadcrumbs/issues",
+                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.6"
+            },
             "time": "2020-12-02T16:19:41+00:00"
         },
         {
@@ -272,6 +292,10 @@
                 }
             ],
             "description": "A library for WordPress. This adds contents outline of the post.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-contents-outline/issues",
+                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.1.2"
+            },
             "time": "2020-12-08T06:24:16+00:00"
         },
         {
@@ -315,6 +339,10 @@
                     "email": "inc@2inc.org"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/inc2734/wp-custom-css-to-editor/issues",
+                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.1"
+            },
             "time": "2020-02-04T04:45:37+00:00"
         },
         {
@@ -359,6 +387,10 @@
                 }
             ],
             "description": "A library for WordPress Customizer.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-customizer-framework/issues",
+                "source": "https://github.com/inc2734/wp-customizer-framework/tree/7.1.2"
+            },
             "time": "2020-11-30T15:52:08+00:00"
         },
         {
@@ -402,6 +434,10 @@
                 }
             ],
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-github-theme-updater/issues",
+                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.0"
+            },
             "time": "2020-09-01T05:18:00+00:00"
         },
         {
@@ -445,6 +481,10 @@
                     "email": "inc@2inc.org"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/inc2734/wp-google-fonts/issues",
+                "source": "https://github.com/inc2734/wp-google-fonts/tree/baccccck-add_fontweight"
+            },
             "time": "2020-03-03T05:20:40+00:00"
         },
         {
@@ -488,6 +528,10 @@
                     "email": "inc@2inc.org"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/inc2734/wp-helper/issues",
+                "source": "https://github.com/inc2734/wp-helper/tree/0.3.2"
+            },
             "time": "2020-11-12T06:46:19+00:00"
         },
         {
@@ -532,6 +576,10 @@
                 }
             ],
             "description": "A library for WordPress that added Facebook like me box for article.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-like-me-box/issues",
+                "source": "https://github.com/inc2734/wp-like-me-box/tree/2.0.1"
+            },
             "time": "2020-09-04T07:30:38+00:00"
         },
         {
@@ -576,6 +624,10 @@
                 }
             ],
             "description": "A library for WordPress oEmbed Blog Card.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/9.0.7"
+            },
             "time": "2020-12-08T16:31:17+00:00"
         },
         {
@@ -620,6 +672,10 @@
                 }
             ],
             "description": "A library for WordPress OGP.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-ogp/issues",
+                "source": "https://github.com/inc2734/wp-ogp/tree/2.0.2"
+            },
             "time": "2020-02-04T05:26:25+00:00"
         },
         {
@@ -664,6 +720,10 @@
                 }
             ],
             "description": "A library for WordPress.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-page-speed-optimization/issues",
+                "source": "https://github.com/inc2734/wp-page-speed-optimization/tree/3.0.6"
+            },
             "time": "2020-12-08T10:37:29+00:00"
         },
         {
@@ -707,6 +767,10 @@
                     "email": "inc@2inc.org"
                 }
             ],
+            "support": {
+                "issues": "https://github.com/inc2734/wp-plugin-view-controller/issues",
+                "source": "https://github.com/inc2734/wp-plugin-view-controller/tree/1.1.1"
+            },
             "time": "2020-11-17T17:30:37+00:00"
         },
         {
@@ -751,6 +815,10 @@
                 }
             ],
             "description": "A library to add profile box for WordPress.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-profile-box/issues",
+                "source": "https://github.com/inc2734/wp-profile-box/tree/2.4.0"
+            },
             "time": "2020-12-02T17:46:50+00:00"
         },
         {
@@ -795,6 +863,10 @@
                 }
             ],
             "description": "A library to change WordPress gallery to pure css gallery.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-pure-css-gallery/issues",
+                "source": "https://github.com/inc2734/wp-pure-css-gallery/tree/3.0.0"
+            },
             "time": "2020-07-17T06:40:23+00:00"
         },
         {
@@ -840,6 +912,10 @@
                 }
             ],
             "description": "A library for SEO of WordPress.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-seo/issues",
+                "source": "https://github.com/inc2734/wp-seo/tree/4.2.1"
+            },
             "time": "2020-12-08T10:48:12+00:00"
         },
         {
@@ -886,6 +962,10 @@
                 }
             ],
             "description": "A library for WordPress theme that adds social share buttons.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-share-buttons/issues",
+                "source": "https://github.com/inc2734/wp-share-buttons/tree/6.0.4"
+            },
             "time": "2020-12-17T04:45:11+00:00"
         },
         {
@@ -930,6 +1010,10 @@
                 }
             ],
             "description": "A library for WordPress theme view controller.",
+            "support": {
+                "issues": "https://github.com/inc2734/wp-view-controller/issues",
+                "source": "https://github.com/inc2734/wp-view-controller/tree/12.2.1"
+            },
             "time": "2021-01-19T06:25:52+00:00"
         }
     ],
@@ -998,6 +1082,10 @@
                 "stylecheck",
                 "tests"
             ],
+            "support": {
+                "issues": "https://github.com/dealerdirect/phpcodesniffer-composer-installer/issues",
+                "source": "https://github.com/dealerdirect/phpcodesniffer-composer-installer"
+            },
             "time": "2020-12-07T18:04:37+00:00"
         },
         {
@@ -1056,6 +1144,10 @@
                 "phpcs",
                 "standards"
             ],
+            "support": {
+                "issues": "https://github.com/PHPCompatibility/PHPCompatibility/issues",
+                "source": "https://github.com/PHPCompatibility/PHPCompatibility"
+            },
             "time": "2019-12-27T09:44:58+00:00"
         },
         {
@@ -1104,6 +1196,11 @@
                 }
             ],
             "description": "A PHPCS sniff to detect problems with variables.",
+            "support": {
+                "issues": "https://github.com/sirbrillig/phpcs-variable-analysis/issues",
+                "source": "https://github.com/sirbrillig/phpcs-variable-analysis",
+                "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
+            },
             "time": "2021-01-08T16:31:05+00:00"
         },
         {
@@ -1155,6 +1252,11 @@
                 "phpcs",
                 "standards"
             ],
+            "support": {
+                "issues": "https://github.com/squizlabs/PHP_CodeSniffer/issues",
+                "source": "https://github.com/squizlabs/PHP_CodeSniffer",
+                "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
+            },
             "time": "2020-10-23T02:01:07+00:00"
         },
         {
@@ -1201,6 +1303,11 @@
                 "standards",
                 "wordpress"
             ],
+            "support": {
+                "issues": "https://github.com/WordPress/WordPress-Coding-Standards/issues",
+                "source": "https://github.com/WordPress/WordPress-Coding-Standards",
+                "wiki": "https://github.com/WordPress/WordPress-Coding-Standards/wiki"
+            },
             "time": "2020-05-13T23:57:56+00:00"
         },
         {
@@ -1244,6 +1351,11 @@
                 "test",
                 "wordpress"
             ],
+            "support": {
+                "docs": "https://github.com/wp-phpunit/docs",
+                "issues": "https://github.com/wp-phpunit/issues",
+                "source": "https://github.com/wp-phpunit/wp-phpunit"
+            },
             "time": "2020-12-09T18:06:02+00:00"
         }
     ],
@@ -1256,5 +1368,5 @@
         "php": ">=5.6"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
