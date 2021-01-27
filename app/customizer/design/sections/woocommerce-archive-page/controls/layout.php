@@ -15,9 +15,10 @@ Framework::control(
 	'select',
 	'woocommerce-archive-page-layout',
 	[
-		'label'   => __( 'WooCommerce products page layout', 'snow-monkey' ),
-		'default' => 'right-sidebar',
-		'choices' => is_customize_preview() ? Helper::get_wrapper_templates() : [],
+		'label'    => __( 'WooCommerce products page layout', 'snow-monkey' ),
+		'priority' => 100,
+		'default'  => 'right-sidebar',
+		'choices'  => is_customize_preview() ? Helper::get_wrapper_templates() : [],
 	]
 );
 

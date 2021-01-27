@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-01-27 11:14+0900\n"
-"PO-Revision-Date: 2021-01-27 11:14+0900\n"
+"POT-Creation-Date: 2021-01-27 13:41+0900\n"
+"PO-Revision-Date: 2021-01-27 13:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -22,21 +22,21 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
 
-#: Framework/Helper.php:68
+#: Framework/Helper.php:69
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: Framework/Helper.php:69
+#: Framework/Helper.php:70
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: Framework/Helper.php:70
+#: Framework/Helper.php:71
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:22
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: Framework/Helper.php:71
+#: Framework/Helper.php:72
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 #: app/customizer/design/sections/base-design/controls/h2-style.php:20
@@ -46,22 +46,22 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:82
+#: Framework/Helper.php:83
 #: app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
 #: translation/bundle-template-header.php:13
 msgid "Left"
 msgstr "左"
 
-#: Framework/Helper.php:83
+#: Framework/Helper.php:84
 msgid "Center"
 msgstr "中央"
 
-#: Framework/Helper.php:84
+#: Framework/Helper.php:85
 #: app/customizer/design/sections/header/controls/hamburger-btn-position.php:20
 msgid "Right"
 msgstr "右"
 
-#: Framework/Helper.php:109 template-parts/content/prev-next-nav.php:72
+#: Framework/Helper.php:110 template-parts/content/prev-next-nav.php:72
 #: template-parts/loop/entry-summary/content/content.php:38
 #: template-parts/loop/entry-summary/content/rss.php:44
 msgctxt "excerpt_length"
@@ -69,111 +69,111 @@ msgid "55"
 msgstr "55"
 
 #. Theme Name of the plugin/theme
-#: Framework/Helper.php:166 app/constructor/trial.php:23
+#: Framework/Helper.php:167 app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Snow Monkey"
 msgstr "Snow Monkey"
 
-#: Framework/Helper.php:171 app/constructor/trial.php:28
+#: Framework/Helper.php:172 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:176 app/constructor/trial.php:33
+#: Framework/Helper.php:177 app/constructor/trial.php:33
 #: app/customizer/title-tagline/controls/copyright.php:24
 msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %1$s: Theme link, %2$s: Developer link
-#: Framework/Helper.php:181
+#: Framework/Helper.php:182
 #: app/customizer/title-tagline/controls/copyright.php:29
 #, php-format
 msgid "%1$s theme by %2$s"
 msgstr "%1$s テーマ by %2$s"
 
 #. translators: %s: WordPress link
-#: Framework/Helper.php:188 app/constructor/trial.php:45
+#: Framework/Helper.php:189 app/constructor/trial.php:45
 #: app/customizer/title-tagline/controls/copyright.php:36
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:318
+#: Framework/Helper.php:319
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:323
+#: Framework/Helper.php:324
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:328 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:329 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:333
+#: Framework/Helper.php:334
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:338
+#: Framework/Helper.php:339
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:343
+#: Framework/Helper.php:344
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:348
+#: Framework/Helper.php:349
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:353
+#: Framework/Helper.php:354
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:19
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:358
+#: Framework/Helper.php:359
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:363
+#: Framework/Helper.php:364
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:369
+#: Framework/Helper.php:370
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:375
+#: Framework/Helper.php:376
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:381
+#: Framework/Helper.php:382
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:387
+#: Framework/Helper.php:388
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:393
+#: Framework/Helper.php:394
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:399
+#: Framework/Helper.php:400
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:405
+#: Framework/Helper.php:406
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:411
+#: Framework/Helper.php:412
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:417
+#: Framework/Helper.php:418
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -292,10 +292,11 @@ msgid "Design"
 msgstr "デザイン"
 
 #: app/customizer/design/sections/archive/controls/eyecatch.php:16
-#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:22
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:22
+#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:21
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:21
 #: app/customizer/design/sections/page/controls/eyecatch.php:18
 #: app/customizer/design/sections/post/controls/eyecatch.php:18
+#: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:16
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
 msgid "Featured image position"
 msgstr "アイキャッチ画像の位置"
@@ -305,10 +306,11 @@ msgstr "アイキャッチ画像の位置"
 #. translators: 1: Post type label
 #. translators: 1: WooCommerce product
 #: app/customizer/design/sections/archive/controls/eyecatch.php:19
-#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:25
-#: app/customizer/design/sections/custom-post/controls/eyecatch.php:25
+#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:24
+#: app/customizer/design/sections/custom-post/controls/eyecatch.php:24
 #: app/customizer/design/sections/page/controls/eyecatch.php:21
 #: app/customizer/design/sections/post/controls/eyecatch.php:21
+#: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:19
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
 #, php-format
 msgid "Select how to display the featured image in %1$s page."
@@ -323,10 +325,11 @@ msgid "Archive page layout"
 msgstr "アーカイブページレイアウト"
 
 #: app/customizer/design/sections/archive/controls/page-header-align.php:16
-#: app/customizer/design/sections/custom-post-archive/controls/page-header-align.php:20
-#: app/customizer/design/sections/custom-post/controls/page-header-align.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/page-header-align.php:19
+#: app/customizer/design/sections/custom-post/controls/page-header-align.php:19
 #: app/customizer/design/sections/page/controls/page-header-align.php:16
 #: app/customizer/design/sections/post/controls/page-header-align.php:16
+#: app/customizer/design/sections/woocommerce-archive-page/controls/page-header-align.php:16
 #: app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
 msgid "Page header alignment"
 msgstr "ページヘッダーの行揃え"
@@ -420,17 +423,17 @@ msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
 msgid "Make the entries one column on mobile device"
 msgstr "モバイル端末時に記事一覧を1列にする"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:17
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
 msgid "Entries layout"
 msgstr "記事一覧レイアウト"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:21
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:22
 #: app/widget/snow-monkey-recent-posts/_form.php:87
 #: app/widget/snow-monkey-rss/_form.php:72
@@ -439,7 +442,7 @@ msgid "Rich media"
 msgstr "リッチメディア"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:22
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:23
 #: app/widget/snow-monkey-recent-posts/_form.php:88
 #: app/widget/snow-monkey-rss/_form.php:73
@@ -449,7 +452,7 @@ msgid "Simple"
 msgstr "シンプル"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:23
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:24
 #: app/widget/snow-monkey-recent-posts/_form.php:89
 #: app/widget/snow-monkey-rss/_form.php:74
@@ -458,7 +461,7 @@ msgid "Text"
 msgstr "テキスト"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:24
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:25
 #: app/widget/snow-monkey-recent-posts/_form.php:90
 #: app/widget/snow-monkey-rss/_form.php:75
@@ -467,7 +470,7 @@ msgid "Text 2"
 msgstr "テキスト2"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:25
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:28
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:26
 #: app/widget/snow-monkey-recent-posts/_form.php:91
 #: app/widget/snow-monkey-rss/_form.php:76
@@ -623,6 +626,7 @@ msgstr "基本デザイン設定"
 #: app/customizer/design/sections/category/controls/header-image.php:19
 #: app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
 #: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:22
+#: app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:15
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
 
@@ -633,50 +637,50 @@ msgid "[ %1$s ] category pages settings"
 msgstr "[ %1$s ] カテゴリーページ設定"
 
 #. translators: 1: Custom post type label
-#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:28
+#: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
 #, php-format
 msgid "%1$s archive"
 msgstr "%1$sアーカイブ"
 
-#: app/customizer/design/sections/custom-post-archive/controls/view.php:20
-#: app/customizer/design/sections/custom-post/controls/view.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:19
+#: app/customizer/design/sections/custom-post/controls/view.php:19
 msgid "View template"
 msgstr "ビューテンプレート"
 
-#: app/customizer/design/sections/custom-post-archive/controls/view.php:21
-#: app/customizer/design/sections/custom-post/controls/view.php:21
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:20
+#: app/customizer/design/sections/custom-post/controls/view.php:20
 msgid "Select the view template to use."
 msgstr "使用するビューテンプレートを選択してください。"
 
-#: app/customizer/design/sections/custom-post-archive/controls/view.php:25
-#: app/customizer/design/sections/custom-post/controls/view.php:25
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:24
+#: app/customizer/design/sections/custom-post/controls/view.php:24
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:21
 msgid "Default"
 msgstr "デフォルト"
 
-#: app/customizer/design/sections/custom-post-archive/controls/view.php:26
-#: app/customizer/design/sections/custom-post/controls/view.php:26
+#: app/customizer/design/sections/custom-post-archive/controls/view.php:25
+#: app/customizer/design/sections/custom-post/controls/view.php:25
 msgid "The view template of the post"
 msgstr "投稿のビューテンプレート"
 
 #. translators: 1: Custom post type name
-#: app/customizer/design/sections/custom-post-archive/section.php:26
+#: app/customizer/design/sections/custom-post-archive/section.php:27
 #, php-format
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
 
-#: app/customizer/design/sections/custom-post/controls/view.php:27
+#: app/customizer/design/sections/custom-post/controls/view.php:26
 msgid "The view template of the page"
 msgstr "固定ページのビューテンプレート"
 
 #. translators: 1: Custom post type label
-#: app/customizer/design/sections/custom-post/section.php:26
+#: app/customizer/design/sections/custom-post/section.php:27
 #, php-format
 msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
 
 #. translators: 1: Taxonomy name
-#: app/customizer/design/sections/custom-taxonomy/section.php:27
+#: app/customizer/design/sections/custom-taxonomy/section.php:28
 #, php-format
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
@@ -841,6 +845,10 @@ msgstr "記事に関連記事を表示する"
 #: app/customizer/design/sections/post/section.php:18
 msgid "Posts settings"
 msgstr "投稿ページ設定"
+
+#: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:20
+msgid "WooCommerce products"
+msgstr "WooCommerce 商品一覧ページ"
 
 #: app/customizer/design/sections/woocommerce-archive-page/controls/layout.php:18
 msgid "WooCommerce products page layout"

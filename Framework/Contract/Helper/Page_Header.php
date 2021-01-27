@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 13.0.0
  */
 
 namespace Framework\Contract\Helper;
@@ -45,13 +45,14 @@ trait Page_Header {
 
 		$types = array_filter(
 			[
-				'Default'            => is_search() || is_404(),
-				'WooCommerce_Single' => class_exists( '\woocommerce' ) && is_product(),
-				'Singular'           => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
-				'Category'           => is_category() || ( is_tax() && is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ),
-				'Tag'                => is_tag() || ( is_tax() && ! is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ),
-				'Archive'            => is_home() || ( is_archive() && ! is_category() && ! is_tag() && ! is_tax() ),
-				'Front'              => is_front_page() && ! is_home(),
+				'Default'             => is_search() || is_404(),
+				'WooCommerce_Single'  => class_exists( '\woocommerce' ) && is_product(),
+				'WooCommerce_Archive' => class_exists( '\woocommerce' ) && ( is_shop() || is_product_category() || is_product_tag() ),
+				'Singular'            => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
+				'Category'            => is_category() || ( is_tax() && is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ),
+				'Tag'                 => is_tag() || ( is_tax() && ! is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ),
+				'Archive'             => is_home() || ( is_archive() && ! is_category() && ! is_tag() && ! is_tax() ),
+				'Front'               => is_front_page() && ! is_home(),
 			]
 		);
 

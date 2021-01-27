@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.8.0
+ * @version 13.0.0
  */
 
 namespace Framework;
@@ -22,6 +22,7 @@ class Helper {
 	use Contract\Helper\Category_Thumbnail;
 	use Contract\Helper\Homepage_Thumbnail;
 	use Contract\Helper\Post_Type_Archive_Thumbnail;
+	use Contract\Helper\WooCommerce_Archive_Thumbnail;
 	use Contract\Helper\Deprecated;
 	use WP_View_Controller\App\Contract\Template_Tag;
 
