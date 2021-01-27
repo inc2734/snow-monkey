@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.8.0
+ * @version 13.0.0
  */
 
 use Framework\Helper;
@@ -218,14 +218,30 @@ add_filter(
 			return $breadcrumbs;
 		}
 
+		$wc_breadcrumbs = [];
+
+		if ( is_product() || is_product_category() || is_product_tag() ) {
+			$shop_page_id     = wc_get_page_id( 'shop' );
+			$shop_url         = get_permalink( $shop_page_id );
+			$shop_label       = get_the_title( $shop_page_id );
+			$wc_breadcrumbs[] = [
+				'title' => $shop_label,
+				'link'  => $shop_url,
+			];
+		}
+
 		$wc_breadcrumb     = new WC_Breadcrumb();
 		$wc_breadcrumb_arr = $wc_breadcrumb->generate();
-		$wc_breadcrumbs    = [];
 		foreach ( $wc_breadcrumb_arr as $value ) {
 			$wc_breadcrumbs[] = [
 				'title' => $value[0],
 				'link'  => $value[1],
 			];
+		}
+
+		if ( is_product_tag() ) {
+			$_term = get_queried_object();
+			$wc_breadcrumbs[ count( $wc_breadcrumbs ) - 1 ]['title'] = $_term->name;
 		}
 
 		/**
