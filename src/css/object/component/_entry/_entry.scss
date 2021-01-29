@@ -34,14 +34,4 @@
     @include items-gutter();
     @include _margin-top(1.5);
   }
-
-  [data-is-full-template="false"] .#{ $_prefix }l-contents__main > & {
-    @include _margin-top(1.5);
-  }
-
-  [data-has-sidebar="true"] .#{ $_prefix }l-contents__main > & {
-    @include _media-min(lg) {
-      margin-top: 0;
-    }
-  }
 }

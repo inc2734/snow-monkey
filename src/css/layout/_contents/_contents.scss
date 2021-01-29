@@ -5,38 +5,6 @@
     overflow: visible;
   }
 
-  &__inner {
-    @include _margin-bottom(1.5);
-
-    [data-has-sidebar="true"] & {
-      @include _media-min(lg) {
-        @include _margin-top(1.5);
-      }
-    }
-
-    [data-has-sidebar="false"][data-is-full-template="true"] & {
-      margin-bottom: 0;
-    }
-
-    [data-has-sidebar="false"][data-is-full-template="false"] & {
-      &:last-child {
-        [data-is-content-widget-area="true"]:last-child {
-          @include _margin-bottom(-1.5);
-        }
-      }
-    }
-
-    [data-has-sidebar="true"] & {
-      &:last-child {
-        [data-is-content-widget-area="true"]:last-child {
-          @include _media-max(md) {
-            @include _margin-bottom(-1.5);
-          }
-        }
-      }
-    }
-  }
-
   &__sidebar {
     @include items-gutter();
   }
@@ -61,7 +29,6 @@
 
     &__sidebar {
       flex: 1 1 0%;
-      @include _margin(1.5, 0, 0);
 
       @include _media-min(lg) {
         margin: 0;
@@ -102,6 +69,68 @@
       @include _media-min(lg) {
         @include _margin(0, 0, 0, 2);
       }
+    }
+  }
+}
+
+// margin/padding settings
+.#{ $_prefix }l-contents {
+  &__inner {
+    @include _margin-top(1.5);
+    @include _margin-bottom(1.5);
+
+    &:first-child {
+      margin-top: 0;
+      @include _padding-top(1.5);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      @include _padding-bottom(1.5);
+    }
+  }
+
+  // Right sidebar, Left sidebar
+  [data-has-sidebar="true"] & {
+    &__inner {
+      [data-is-content-widget-area="true"]:first-child {
+        @include _media-max(md) {
+          @include _margin-top(-1.5);
+        }
+      }
+
+      [data-is-content-widget-area="true"]:last-child {
+        @include _media-max(md) {
+          @include _margin-bottom(-1.5);
+        }
+      }
+    }
+
+    &__sidebar {
+      @include _media-min(md) {
+        @include _margin-top(1.5 + 1.5);
+      }
+    }
+  }
+
+  // one-column
+  [data-has-sidebar="false"] & {
+    &__inner {
+      [data-is-content-widget-area="true"]:first-child {
+        @include _margin-top(-1.5);
+      }
+
+      [data-is-content-widget-area="true"]:last-child {
+        @include _margin-bottom(-1.5);
+      }
+    }
+  }
+
+  // front-page
+  .home & {
+    &__inner {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }

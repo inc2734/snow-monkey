@@ -1,0 +1,15 @@
+.#{ $_prefix }l-contents__container {
+  > .p-breadcrumbs-wrapper:first-child,
+  > .u-slim-width > .p-breadcrumbs-wrapper:first-child {
+    @include _padding-top(.25);
+    @include _padding-bottom(.25);
+  }
+}
+
+.#{ $_prefix }l-contents__container {
+  > .p-breadcrumbs-wrapper:last-child,
+  > .u-slim-width > .p-breadcrumbs-wrapper:last-child {
+    @include _padding-top(.25);
+    @include _padding-bottom(.25);
+  }
+}

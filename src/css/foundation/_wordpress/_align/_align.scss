@@ -53,7 +53,7 @@
   .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
   [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
   [data-is-content-widget-area="true"] .custom-html-widget > .alignwide,
-  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull
+  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
   [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull {
     @include _media-max(md) {
       @include alignfull();
