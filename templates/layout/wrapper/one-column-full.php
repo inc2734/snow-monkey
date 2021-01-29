@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 13.0.0
  */
 
 use Framework\Helper;
@@ -57,24 +57,26 @@ use Framework\Helper;
 			}
 			?>
 
-			<div class="c-full-container">
-				<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
+			<div class="l-contents__body">
+				<div class="l-contents__full-container c-full-container">
+					<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
 
-				<div class="l-contents__inner">
-					<main class="l-contents__main" role="main">
-						<?php do_action( 'snow_monkey_prepend_main' ); ?>
+					<div class="l-contents__inner">
+						<main class="l-contents__main" role="main">
+							<?php do_action( 'snow_monkey_prepend_main' ); ?>
 
-						<?php
-						// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-						$args['_view_controller']->view();
-						// phpcs:enable
-						?>
+							<?php
+							// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+							$args['_view_controller']->view();
+							// phpcs:enable
+							?>
 
-						<?php do_action( 'snow_monkey_append_main' ); ?>
-					</main>
+							<?php do_action( 'snow_monkey_append_main' ); ?>
+						</main>
+					</div>
+
+					<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 				</div>
-
-				<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 			</div>
 
 			<?php do_action( 'snow_monkey_append_contents' ); ?>

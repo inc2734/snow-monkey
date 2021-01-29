@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 13.0.0
  */
 
 use Framework\Helper;
@@ -57,50 +57,52 @@ use Framework\Helper;
 			}
 			?>
 
-			<div class="c-container">
-				<?php
-				if (
-					! is_front_page()
-					&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ], true )
-				) {
-					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
-				}
-				?>
+			<div class="l-contents__body">
+				<div class="l-contents__container c-container">
+					<?php
+					if (
+						! is_front_page()
+						&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ], true )
+					) {
+						Helper::get_template_part( 'template-parts/common/breadcrumbs' );
+					}
+					?>
 
-				<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
+					<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
 
-				<div class="l-contents__inner">
-					<main class="l-contents__main" role="main">
-						<?php do_action( 'snow_monkey_prepend_main' ); ?>
+					<div class="l-contents__inner">
+						<main class="l-contents__main" role="main">
+							<?php do_action( 'snow_monkey_prepend_main' ); ?>
 
-						<?php
-						// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-						$args['_view_controller']->view();
-						// phpcs:enable
-						?>
+							<?php
+							// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+							$args['_view_controller']->view();
+							// phpcs:enable
+							?>
 
-						<?php do_action( 'snow_monkey_append_main' ); ?>
-					</main>
+							<?php do_action( 'snow_monkey_append_main' ); ?>
+						</main>
 
-					<aside class="l-contents__sidebar" role="complementary">
-						<?php do_action( 'snow_monkey_prepend_sidebar' ); ?>
+						<aside class="l-contents__sidebar" role="complementary">
+							<?php do_action( 'snow_monkey_prepend_sidebar' ); ?>
 
-						<?php Helper::get_sidebar(); ?>
+							<?php Helper::get_sidebar(); ?>
 
-						<?php do_action( 'snow_monkey_append_sidebar' ); ?>
-					</aside>
+							<?php do_action( 'snow_monkey_append_sidebar' ); ?>
+						</aside>
+					</div>
+
+					<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
+
+					<?php
+					if (
+						! is_front_page()
+						&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ], true )
+					) {
+						Helper::get_template_part( 'template-parts/common/breadcrumbs' );
+					}
+					?>
 				</div>
-
-				<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
-
-				<?php
-				if (
-					! is_front_page()
-					&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ], true )
-				) {
-					Helper::get_template_part( 'template-parts/common/breadcrumbs' );
-				}
-				?>
 			</div>
 
 			<?php do_action( 'snow_monkey_append_contents' ); ?>
