@@ -9,6 +9,7 @@
   color: _var-color-text();
   max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
   @include _padding(.5);
+  width: 90vw;
 
   @include _media-min(md) {
     @include _padding(1);

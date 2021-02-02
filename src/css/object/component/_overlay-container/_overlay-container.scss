@@ -4,7 +4,6 @@
   visibility: hidden;
   @include _transition(opacity);
   background-color: rgba(#000, .7);
-  @include _padding(1);
 
   &:target {
     top: 0;
