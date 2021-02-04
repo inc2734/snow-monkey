@@ -86,6 +86,52 @@ $taxonomy_posts_query = new WP_Query(
 	)
 );
 
+// Sticky posts are only reflected when is_home: true, so add your own.
+// @see https://github.com/WordPress/WordPress/blob/6f3a940e64ebef785c225add9e5d6a7d82d32b83/wp-includes/class-wp-query.php#L3143-L3183
+$sticky_posts = get_option( 'sticky_posts' );
+if ( is_array( $sticky_posts ) && ! empty( $sticky_posts ) && ! $query_args['ignore_sticky_posts'] ) {
+	$num_posts     = count( $taxonomy_posts_query->posts );
+	$sticky_offset = 0;
+	// Loop over posts and relocate stickies to the front.
+	for ( $i = 0; $i < $num_posts; $i ++ ) {
+		if ( in_array( $taxonomy_posts_query->posts[ $i ]->ID, $sticky_posts, true ) ) {
+			$sticky_post = $taxonomy_posts_query->posts[ $i ];
+			// Remove sticky from current position.
+			array_splice( $taxonomy_posts_query->posts, $i, 1 );
+			// Move to front, after other stickies.
+			array_splice( $taxonomy_posts_query->posts, $sticky_offset, 0, [ $sticky_post ] );
+			// Increment the sticky offset. The next sticky will be placed at this offset.
+			$sticky_offset ++;
+			// Remove post from sticky posts array.
+			$offset = array_search( $sticky_post->ID, $sticky_posts, true );
+			unset( $sticky_posts[ $offset ] );
+		}
+	}
+
+	// If any posts have been excluded specifically, Ignore those that are sticky.
+	if ( ! empty( $sticky_posts ) && ! empty( $query_args['post__not_in'] ) ) {
+		$sticky_posts = array_diff( $sticky_posts, $query_args['post__not_in'] );
+	}
+
+	// Fetch sticky posts that weren't in the query results.
+	if ( ! empty( $sticky_posts ) ) {
+		$stickies = get_posts(
+			[
+				'post__in'    => $sticky_posts,
+				'post_type'   => $post_types,
+				'post_status' => 'publish',
+				'nopaging'    => true,
+				'tax_query'   => $query_args['tax_query'],
+			]
+		);
+
+		foreach ( $stickies as $sticky_post ) {
+			array_splice( $taxonomy_posts_query->posts, $sticky_offset, 0, [ $sticky_post ] );
+			$sticky_offset ++;
+		}
+	}
+}
+
 if ( ! $taxonomy_posts_query->have_posts() ) {
 	return;
 }
