@@ -126,9 +126,9 @@
     }
   }
 
-  // front-page
-  .home.page & {
-    &__inner {
+  // one-column-full
+  &__full-container {
+    .#{ $_prefix }l-contents__inner {
       padding-top: 0;
       padding-bottom: 0;
     }
