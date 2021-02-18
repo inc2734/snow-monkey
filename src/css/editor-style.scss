@@ -134,6 +134,11 @@ body {
   }
 }
 
+[data-type="core/quote"] {
+  > .block-editor-rich-text__editable {
+    @include _content();
+  }
+}
 
 .wp-block-archives[data-type="core/archives"],
 .wp-block-calendar[data-type="core/calendar"],

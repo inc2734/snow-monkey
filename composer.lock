@@ -155,16 +155,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "7.5.1",
+            "version": "7.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "3239ff3ddd89d11ae7d014ca1efbcdc95b71661e"
+                "reference": "118b9e6001fe30a5ed2d827ec95d2138cb0f58ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/3239ff3ddd89d11ae7d014ca1efbcdc95b71661e",
-                "reference": "3239ff3ddd89d11ae7d014ca1efbcdc95b71661e",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/118b9e6001fe30a5ed2d827ec95d2138cb0f58ed",
+                "reference": "118b9e6001fe30a5ed2d827ec95d2138cb0f58ed",
                 "shasum": ""
             },
             "require": {
@@ -173,10 +173,10 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.8",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
                 "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.5"
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.6"
             },
             "type": "library",
             "autoload": {
@@ -197,9 +197,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/7.5.1"
+                "source": "https://github.com/inc2734/wp-basis/tree/7.5.2"
             },
-            "time": "2021-01-15T14:09:04+00:00"
+            "time": "2021-02-18T05:58:37+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
