@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 13.1.2
  */
 
 use Framework\Helper;
@@ -80,8 +80,13 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 	<?php endif; ?>
 
 	<?php
-	$_post_types  = $args['_posts_query']->get( 'post_type' );
-	$_post_type   = isset( $_post_types[0] ) ? $_post_types[0] : 'post';
+	if ( ! empty( $args['_posts_query']->posts ) ) {
+		$_post_type = get_post_type( $args['_posts_query']->posts[0] );
+	} else {
+		$_post_types = $args['_posts_query']->get( 'post_type' );
+		$_post_type  = isset( $_post_types[0] ) ? $_post_types[0] : 'post';
+	}
+
 	$archive_view = get_theme_mod( $_post_type . '-archive-view' );
 	$archive_view = $archive_view ? $archive_view : $_post_type;
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 13.1.2
  *
  * renamed: template-parts/loop/entry-summary-rss.php
  */
@@ -28,7 +28,7 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 ?>
 
 <a href="<?php echo esc_url( $args['_item']->get_permalink() ); ?>" target="_blank" rel="noopener">
-	<section class="c-entry-summary c-entry-summary--post">
+	<section class="c-entry-summary c-entry-summary--rss c-entry-summary--type-rss">
 		<?php
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/figure/rss',
