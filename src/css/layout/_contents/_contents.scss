@@ -107,8 +107,8 @@
     }
 
     &__sidebar {
-      @include _media-min(md) {
-        @include _margin-top(1.5 + 1.5);
+      @include _media-max(md) {
+        @include _margin-top(1.5);
       }
     }
   }
