@@ -131,6 +131,14 @@
     .#{ $_prefix }l-contents__inner {
       padding-top: 0;
       padding-bottom: 0;
+
+      [data-is-content-widget-area="true"]:first-child {
+        margin-top: 0;
+      }
+
+      [data-is-content-widget-area="true"]:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
