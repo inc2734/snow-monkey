@@ -16,21 +16,28 @@ foreach ( $custom_post_types as $custom_post_type ) {
 
 	Framework::control(
 		'select',
-		'archive-' . $custom_post_type . '-eyecatch',
+		'archive-' . $custom_post_type . '-layout',
 		[
-			'label'       => __( 'Featured image position', 'snow-monkey' ),
+			'label'       => __( 'Page layout', 'snow-monkey' ),
 			'description' => sprintf(
 				/* translators: 1: archive */
-				__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
+				__( 'Select page layout for %1$s page.', 'snow-monkey' ),
 				sprintf(
 					/* translators: 1: Custom post type label */
 					__( '%1$s archive', 'snow-monkey' ),
 					$custom_post_type_object->label
 				)
 			),
-			'priority'    => 130,
-			'default'     => 'none',
-			'choices'     => Helper::eyecatch_position_choices(),
+			'priority'    => 110,
+			'default'     => '',
+			'choices'     => is_customize_preview()
+				? array_merge(
+					[
+						'' => __( 'Same as the post archive page layout', 'snow-monkey' ),
+					],
+					Helper::get_wrapper_templates()
+				)
+				: [],
 		]
 	);
 }
@@ -43,6 +50,6 @@ $panel = Framework::get_panel( 'design' );
 
 foreach ( $custom_post_types as $custom_post_type ) {
 	$section = Framework::get_section( 'design-' . $custom_post_type . '-archive' );
-	$control = Framework::get_control( 'archive-' . $custom_post_type . '-eyecatch' );
+	$control = Framework::get_control( 'archive-' . $custom_post_type . '-layout' );
 	$control->join( $section )->join( $panel );
 }

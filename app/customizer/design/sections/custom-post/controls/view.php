@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 13.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -18,7 +18,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		[
 			'label'       => __( 'View template', 'snow-monkey' ),
 			'description' => __( 'Select the view template to use.', 'snow-monkey' ),
-			'priority'    => 100,
+			'priority'    => 110,
 			'default'     => '',
 			'choices'     => [
 				''     => __( 'Default', 'snow-monkey' ),

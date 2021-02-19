@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 13.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-entries-layout-sm-1col',
 		[
 			'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
-			'priority'          => 131,
+			'priority'          => 141,
 			'default'           => false,
 			'active_callback'   => function() use ( $custom_post_type ) {
 				$is_multi_cols_pattern = in_array(

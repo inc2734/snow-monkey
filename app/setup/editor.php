@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 13.2.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -94,15 +94,10 @@ add_filter(
 			return $classes . ' l-body--one-column-full';
 		}
 
-		$_post_type_object = get_post_type_object( get_post_type( $post_id ) );
+		$_post_type = get_post_type( $post_id );
 
-		if ( ! empty( $_post_type_object->hierarchical ) ) {
-			$layout = get_theme_mod( 'page-layout' );
-		}
-
-		if ( empty( $layout ) ) {
-			$layout = get_theme_mod( 'singular-post-layout' );
-		}
+		$layout = get_theme_mod( $_post_type . '-layout' );
+		$layout = $layout ? $layout : get_theme_mod( 'post-layout' );
 
 		return $classes . ' l-body--' . $layout;
 

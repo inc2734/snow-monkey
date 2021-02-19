@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 13.2.0
  */
 
 use Framework\Helper;
@@ -245,7 +245,7 @@ add_action(
 					return $params;
 				}
 
-				$wp_page_template = get_theme_mod( 'archive-page-layout' );
+				$wp_page_template = get_theme_mod( 'archive-post-layout' );
 				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
 					$params[0]['before_widget'] .= '<div class="c-container">';
 					$params[0]['after_widget']  .= '</div>';
@@ -284,7 +284,7 @@ add_action(
 					return $params;
 				}
 
-				$wp_page_template = get_theme_mod( 'archive-page-layout' );
+				$wp_page_template = get_theme_mod( 'archive-post-layout' );
 				if ( ! $wp_page_template || 'default' === $wp_page_template || false !== strpos( $wp_page_template, 'one-column-full.php' ) ) {
 					$params[0]['before_widget'] .= '<div class="c-container">';
 					$params[0]['after_widget']  .= '</div>';

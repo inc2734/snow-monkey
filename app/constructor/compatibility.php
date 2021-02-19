@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 13.2.0
  */
 
 use Framework\Helper;
@@ -106,7 +106,38 @@ add_filter(
 	'theme_mod_post-entries-layout',
 	function( $mod ) {
 		if ( ! $mod || ! is_string( $mod ) ) {
-			return get_theme_mod( 'archive-layout' );
+			$mod = get_theme_mod( 'archive-layout' );
+			set_theme_mod( 'post-entries-layout', $mod );
+		}
+		return $mod;
+	},
+	9
+);
+
+/**
+ * Backward compatibility for archive-post-layout
+ */
+add_filter(
+	'theme_mod_archive-post-layout',
+	function( $mod ) {
+		if ( ! $mod || ! is_string( $mod ) ) {
+			$mod = get_theme_mod( 'archive-page-layout' );
+			set_theme_mod( 'archive-post-layout', $mod );
+		}
+		return $mod;
+	},
+	9
+);
+
+/**
+ * Backward compatibility for post-layout
+ */
+add_filter(
+	'theme_mod_post-layout',
+	function( $mod ) {
+		if ( ! $mod || ! is_string( $mod ) ) {
+			$mod = get_theme_mod( 'singular-post-layout' );
+			set_theme_mod( 'post-layout', $mod );
 		}
 		return $mod;
 	},

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 13.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-header-image',
 		[
 			'label'           => __( 'Featured Image', 'snow-monkey' ),
-			'priority'        => 110,
+			'priority'        => 120,
 			'active_callback' => function() {
 				return ! is_tax();
 			},
