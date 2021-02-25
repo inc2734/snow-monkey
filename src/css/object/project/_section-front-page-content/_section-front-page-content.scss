@@ -3,25 +3,13 @@
     padding-top: 0 !important;
     padding-bottom: 0 !important;
   }
-
-  [data-has-sidebar="true"] & {
-    @include _media-min(md) {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
-
-    & + * {
-      @include _media-min(lg) {
-        @include _margin-top(1);
-      }
-    }
-  }
 }
 
 [data-has-sidebar="true"] {
-  * + .#{ $_prefix }p-section-front-page-content {
+  .#{ $_prefix }p-section-front-page-content {
     @include _media-min(lg) {
-      @include _margin-top(1);
+      @include _padding-top(1);
+      @include _padding-bottom(1);
     }
   }
 }
