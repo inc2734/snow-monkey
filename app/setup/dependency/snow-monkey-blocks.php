@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 13.2.1
  */
 
 use Framework\Helper;
@@ -15,9 +15,7 @@ if ( ! defined( 'SNOW_MONKEY_BLOCKS_DIR_PATH' ) ) {
 add_filter( 'snow_monkey_blocks_pro', '__return_true' );
 
 /**
- * Enqueue Snow Monkey Blocks style
- *
- * @return void
+ * Enqueue Snow Monkey Blocks assets.
  */
 add_action(
 	'enqueue_block_assets',
@@ -35,10 +33,16 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/style.min.css' ) )
 		);
 
+		$dependencies = Helper::generate_script_dependencies(
+			[
+				'snow-monkey-blocks/spider-slider',
+			]
+		);
+
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-snow-monkey-blocks',
 			get_theme_file_uri( '/assets/js/dependency/snow-monkey-blocks/app.js' ),
-			[ 'snow-monkey-blocks/thumbnail-gallery' ],
+			$dependencies,
 			filemtime( get_theme_file_path( '/assets/js/dependency/snow-monkey-blocks/app.js' ) ),
 			true
 		);
@@ -46,9 +50,7 @@ add_action(
 );
 
 /**
- * Enqueue Snow Monkey Blocks style in the block editor
- *
- * @return void
+ * Enqueue Snow Monkey Blocks style in the block editor.
  */
 add_action(
 	'enqueue_block_editor_assets',
@@ -63,7 +65,7 @@ add_action(
 );
 
 /**
- * Load styles from customizer
+ * Load styles from customizer.
  */
 add_action(
 	'inc2734_wp_customizer_framework_load_styles',
@@ -76,7 +78,7 @@ add_action(
 );
 
 /**
- * Output CSS in head
+ * Output CSS in head.
  */
 add_action(
 	'after_setup_theme',

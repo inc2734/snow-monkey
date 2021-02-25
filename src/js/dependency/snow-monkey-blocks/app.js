@@ -4,11 +4,11 @@ import {
   getScrollOffset,
 } from '../../module/_helper';
 
-document.addEventListener(
-  'DOMContentLoaded',
+window.addEventListener(
+  'load',
   () => {
     const main = (slider) => {
-      const dots = slider.querySelectorAll('.slick-dots > li, .spider__dots[data-thumbnails="true"] > .spider_dot');
+      const dots = slider.querySelectorAll('.slick-dots > li, .spider__dots[data-thumbnails="true"] > .spider__dot');
       const addClickEvent = (dot) => {
         const handleClick = (event) => {
           const sliderRectTop = slider.getBoundingClientRect().top;
