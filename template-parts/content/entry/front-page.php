@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 13.2.3
  */
 
 use Framework\Helper;
@@ -17,9 +17,15 @@ if ( Helper::is_active_sidebar( 'front-page-top-widget-area' ) ) {
 
 <?php
 ob_start();
-the_content();
+$has_do_shortcode = has_filter( 'the_content', 'do_shortcode' );
+if ( $has_do_shortcode ) {
+	remove_filter( 'the_content', 'do_shortcode', $has_do_shortcode );
+	the_content();
+	add_filter( 'the_content', 'do_shortcode', $has_do_shortcode );
+} else {
+	the_content();
+}
 $content = ob_get_clean();
-wp_reset_postdata();
 ?>
 
 <?php if ( $content ) : ?>
