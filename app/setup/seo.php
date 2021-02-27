@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 13.2.1
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -183,7 +183,7 @@ add_filter(
 			return $description;
 		}
 
-		if ( is_front_page() && ! is_home() ) {
+		if ( is_front_page() ) {
 			return get_bloginfo( 'description' );
 		} elseif ( is_page() ) {
 			$ogp = new \Inc2734\WP_OGP\App\Controller\Page();
