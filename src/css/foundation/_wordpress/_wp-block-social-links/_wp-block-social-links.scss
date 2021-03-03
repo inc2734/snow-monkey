@@ -1,9 +1,9 @@
 .wp-block-social-links {
-  > .wp-social-link {
+  > .wp-social-link.wp-social-link.wp-social-link {
     margin: 0;
-  }
 
-  > .wp-social-link:not(:first-child) {
-    @include _margin-left(.5);
+    &:not(:first-child) {
+      @include _margin-left(.5);
+    }
   }
 }
