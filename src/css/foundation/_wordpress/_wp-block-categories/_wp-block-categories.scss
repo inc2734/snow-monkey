@@ -1,4 +1,4 @@
-.wp-block-categories {
+.wp-block-categories{
   @include widget-list-base();
 
   .children {
@@ -11,5 +11,15 @@
     margin-right: auto;
     margin-left: auto;
     display: table;
+  }
+}
+
+.wp-block-categories__list {
+  @include widget-list-base();
+
+  ul {
+    @include widget-list-base();
+    @include _margin-top(.25);
+    margin-left: 1em;
   }
 }

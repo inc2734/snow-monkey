@@ -152,25 +152,7 @@ body {
   display: block;
 }
 
-.wp-block-archives[data-type="core/archives"] {
-  &,
-  .wp-block-archives {
-    padding-left: 0;
-  }
-}
-
-.wp-block-categories[data-type="core/categories"] {
-  &,
-  .wp-block-categories__list {
-    padding-left: 0;
-  }
-}
-
-.wp-block-categories__list {
-  @include widget-list-base();
-}
-
-[data-align="center"] > .wp-block-categories__list {
+[data-align="center"] > .wp-block-categories {
   margin-right: auto;
   margin-left: auto;
   display: table;
