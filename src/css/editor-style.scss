@@ -166,6 +166,12 @@ body {
   }
 }
 
+.wp-block-embed {
+  .components-sandbox {
+    margin-bottom: -8px; // @todo
+  }
+}
+
 .u-hidden,
 .u-hidden-sm,
 .u-hidden-md,
