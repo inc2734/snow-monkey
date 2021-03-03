@@ -1,7 +1,11 @@
 .wp-block-search {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
+
+  &__label {
+    @include _margin-bottom(.25);
+  }
 
   &__button-outside {
     .wp-block-search__input {
@@ -41,10 +45,6 @@
     .wp-block-search__button {
       @include _padding(.5);
     }
-  }
-
-  &__label {
-    display: none;
   }
 
   &__input {
