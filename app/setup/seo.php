@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.1
+ * @version 14.0.0
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -139,10 +139,9 @@ add_filter(
  * @return array
  */
 add_filter(
-	'inc2734_wp_seo_meta_robots',
+	'wp_robots',
 	function( $robots ) {
 		$robots_noindex = get_option( 'mwt-robots-noindex' );
-
 		if ( ! $robots_noindex ) {
 			return $robots;
 		}
@@ -157,7 +156,7 @@ add_filter(
 			|| is_month() && isset( $flipped['month'] )
 			|| is_day() && isset( $flipped['day'] )
 		) {
-			$robots = [ 'noindex' ];
+			$robots['noindex'] = true;
 		}
 
 		return $robots;
