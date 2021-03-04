@@ -10,10 +10,10 @@ use Inc2734\WP_Customizer_Framework\Framework;
 
 Framework::control(
 	'checkbox',
-	'cache-header',
+	'disable-emoji',
 	[
-		'label'    => __( 'Caching header', 'snow-monkey' ),
-		'priority' => 200,
+		'label'    => __( 'Disable emoji', 'snow-monkey' ),
+		'priority' => 190,
 		'default'  => false,
 	]
 );
@@ -23,5 +23,5 @@ if ( ! is_customize_preview() ) {
 }
 
 $section = Framework::get_section( 'page-speed-optimization' );
-$control = Framework::get_control( 'cache-header' );
+$control = Framework::get_control( 'disable-emoji' );
 $control->join( $section );

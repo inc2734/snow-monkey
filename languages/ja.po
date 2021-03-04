@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-02-19 14:41+0900\n"
-"PO-Revision-Date: 2021-02-19 14:42+0900\n"
+"POT-Creation-Date: 2021-03-04 14:20+0900\n"
+"PO-Revision-Date: 2021-03-04 14:20+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -399,6 +399,7 @@ msgstr "%1$sページでアイキャッチ画像をどのように表示する�
 #: app/customizer/design/sections/archive/controls/eyecatch.php:20
 #: app/customizer/design/sections/archive/controls/layout.php:22
 #: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:20
+#: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:22
 msgid "archive"
 msgstr "アーカイブ"
 
@@ -407,10 +408,16 @@ msgstr "アーカイブ"
 #: app/customizer/design/sections/custom-post/controls/layout.php:21
 #: app/customizer/design/sections/page/controls/layout.php:18
 #: app/customizer/design/sections/post/controls/layout.php:20
-#: snow-monkey/app/customizer/design/sections/page/controls/layout.php:16
+#: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:18
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:21
+#: snow-monkey/app/customizer/design/sections/custom-post/controls/layout.php:21
+#: snow-monkey/app/customizer/design/sections/page/controls/layout.php:18
+#: snow-monkey/app/customizer/design/sections/post/controls/layout.php:20
 msgid "Page layout"
 msgstr "ページレイアウト"
 
+#. translators: 1: archive
+#. translators: 1: Post type label
 #. translators: 1: archive
 #. translators: 1: Post type label
 #: app/customizer/design/sections/archive/controls/layout.php:21
@@ -418,6 +425,11 @@ msgstr "ページレイアウト"
 #: app/customizer/design/sections/custom-post/controls/layout.php:24
 #: app/customizer/design/sections/page/controls/layout.php:21
 #: app/customizer/design/sections/post/controls/layout.php:23
+#: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:21
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:24
+#: snow-monkey/app/customizer/design/sections/custom-post/controls/layout.php:24
+#: snow-monkey/app/customizer/design/sections/page/controls/layout.php:21
+#: snow-monkey/app/customizer/design/sections/post/controls/layout.php:23
 #, php-format
 msgid "Select page layout for %1$s page."
 msgstr "%1$sページのページレイアウトを選択してください。"
@@ -865,11 +877,13 @@ msgstr "[ %1$s ] カテゴリーページ設定"
 #: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:27
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:27
 #, php-format
 msgid "%1$s archive"
 msgstr "%1$sアーカイブ"
 
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:36
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:36
 msgid "Same as the post archive page layout"
 msgstr "投稿のアーカイブページレイアウトと同じ"
 
@@ -912,7 +926,8 @@ msgstr "%1$sアーカイブページ設定"
 
 #: app/customizer/design/sections/custom-post/controls/layout.php:32
 #: app/customizer/design/sections/page/controls/layout.php:29
-#: snow-monkey/app/customizer/design/sections/page/controls/layout.php:19
+#: snow-monkey/app/customizer/design/sections/custom-post/controls/layout.php:32
+#: snow-monkey/app/customizer/design/sections/page/controls/layout.php:29
 msgid "Same as the post page layout"
 msgstr "投稿のページレイアウトと同じ"
 
@@ -1213,6 +1228,10 @@ msgstr "メニューをキャッシュ"
 #: snow-monkey/app/customizer/page-speed-optimization/controls/cache-widget-areas.php:15
 msgid "Caching widget areas"
 msgstr "ウィジェットエリアをキャッシュ"
+
+#: app/customizer/page-speed-optimization/controls/disable-emoji.php:15
+msgid "Disable emoji"
+msgstr "絵文字を無効化する"
 
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:15
 #: snow-monkey/app/customizer/page-speed-optimization/controls/http2-server-push.php:15
@@ -2081,14 +2100,6 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
-#: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:18
-msgid "Archive page layout"
-msgstr "アーカイブページレイアウト"
-
-#: snow-monkey/app/customizer/design/sections/post/controls/layout.php:18
-msgid "Post page layout"
-msgstr "投稿のページレイアウト"
-
 #: snow-monkey/template-parts/archive/entry/content/no-keywords.php:18
 #: template-parts/archive/entry/content/no-keywords.php:18
 msgid "Please enter a search keyword."
@@ -2295,6 +2306,12 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Archive page layout"
+#~ msgstr "アーカイブページレイアウト"
+
+#~ msgid "Post page layout"
+#~ msgstr "投稿のページレイアウト"
 
 #~ msgid "WooCommerce archive page layout"
 #~ msgstr "WooCommerce 一覧ページレイアウト"

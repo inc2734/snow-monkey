@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.1
+ * @version 14.0.0
  *
  * This procceses are beta.
  */
@@ -93,17 +93,20 @@ add_action(
 );
 
 /**
- * Emoji assets move to footer
+ * Disable Emoji
+ *
+ * If you don't want to disable emoji, change to footer loading.
  */
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 remove_action( 'wp_print_styles', 'print_emoji_styles' );
-add_action( 'wp_footer', 'print_emoji_detection_script', 7 );
-add_action( 'wp_footer', 'print_emoji_styles' );
+if ( ! get_theme_mod( 'disable-emoji' ) ) {
+	add_action( 'wp_footer', 'print_emoji_detection_script', 7 );
+	add_action( 'wp_footer', 'print_emoji_styles' );
+}
 
 /**
  * Caching template parts
  */
-
 $cache_header       = get_theme_mod( 'cache-header' );
 $cache_footer       = get_theme_mod( 'cache-footer' );
 $cache_nav_menus    = get_theme_mod( 'cache-nav-menus' );

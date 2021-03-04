@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.0
+ * @version 14.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'cache-nav-menus',
 	[
 		'label'    => __( 'Caching nav menus', 'snow-monkey' ),
-		'priority' => 210,
+		'priority' => 220,
 		'default'  => false,
 	]
 );
