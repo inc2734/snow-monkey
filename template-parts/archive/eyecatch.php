@@ -3,18 +3,18 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 14.0.0
  */
 
 use Framework\Helper;
 
 if ( is_category() || is_tag() || is_tax() ) {
-	if ( ! Helper::has_category_thumbnail() ) {
+	if ( ! Helper::has_term_thumbnail() ) {
 		return;
 	}
 	?>
 	<div class="c-eyecatch">
-		<?php Helper::the_category_thumbnail(); ?>
+		<?php Helper::the_term_thumbnail(); ?>
 	</div>
 	<?php
 	return;

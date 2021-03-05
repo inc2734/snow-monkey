@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.0
+ * @version 14.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -28,7 +28,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					$custom_post_type_object->label
 				)
 			),
-			'priority'    => 130,
+			'priority'    => 120,
 			'default'     => 'none',
 			'choices'     => Helper::eyecatch_position_choices(),
 		]

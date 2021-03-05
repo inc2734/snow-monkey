@@ -3,15 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 14.0.0
  */
 
 namespace Framework\Contract\Helper;
 
-trait Category_Thumbnail {
+trait Term_Thumbnail {
 
 	/**
-	 * Return term data for category thumbnail
+	 * Return term data for term thumbnail.
 	 *
 	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
@@ -20,13 +20,13 @@ trait Category_Thumbnail {
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 */
-	public static function get_category_thumbnail_term( $term = null ) {
+	public static function get_term_thumbnail_term( $term = null ) {
 		if ( is_null( $term ) ) {
 			$term = get_queried_object();
 		}
 
 		$cache_key   = crc32( json_encode( $term ) );
-		$cache_group = 'snow-monkey/category-thumbnail-id';
+		$cache_group = 'snow-monkey/term-thumbnail-id';
 		$cache       = wp_cache_get( $cache_key, $cache_group );
 		if ( false !== $cache ) {
 			return $cache;
@@ -51,32 +51,32 @@ trait Category_Thumbnail {
 	}
 
 	/**
-	 * Return true when have category thumbanil
+	 * Return true when have term thumbanil.
 	 *
 	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return boolean
 	 */
-	public static function has_category_thumbnail( $term = null ) {
-		$term = static::get_category_thumbnail_term( $term );
+	public static function has_term_thumbnail( $term = null ) {
+		$term = static::get_term_thumbnail_term( $term );
 		return $term ? true : false;
 	}
 
 	/**
-	 * Return category thumbnail url
+	 * Return term thumbnail url.
 	 *
 	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return string
 	 */
-	public static function get_the_category_thumbnail_url( $term = null ) {
-		if ( ! static::has_category_thumbnail( $term ) ) {
+	public static function get_the_term_thumbnail_url( $term = null ) {
+		if ( ! static::has_term_thumbnail( $term ) ) {
 			return '';
 		}
 
-		$term = static::get_category_thumbnail_term( $term );
+		$term = static::get_term_thumbnail_term( $term );
 		if ( ! $term ) {
 			return '';
 		}
@@ -85,19 +85,19 @@ trait Category_Thumbnail {
 	}
 
 	/**
-	 * Return category header image
+	 * Return term header image.
 	 *
 	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return string
 	 */
-	public static function get_the_category_thumbnail( $term = null ) {
-		if ( ! static::has_category_thumbnail( $term ) ) {
+	public static function get_the_term_thumbnail( $term = null ) {
+		if ( ! static::has_term_thumbnail( $term ) ) {
 			return '';
 		}
 
-		$term = static::get_category_thumbnail_term( $term );
+		$term = static::get_term_thumbnail_term( $term );
 		if ( ! $term ) {
 			return '';
 		}
@@ -114,16 +114,16 @@ trait Category_Thumbnail {
 	}
 
 	/**
-	 * Display category thumbnail
+	 * Display term thumbnail.
 	 *
 	 * @param array|null $term Array of the term data.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return void
 	 */
-	public static function the_category_thumbnail( $term = null ) {
+	public static function the_term_thumbnail( $term = null ) {
 		echo wp_kses(
-			static::get_the_category_thumbnail( $term ),
+			static::get_the_term_thumbnail( $term ),
 			[
 				'img' => static::img_allowed_attributes(),
 			]
@@ -131,7 +131,7 @@ trait Category_Thumbnail {
 	}
 
 	/**
-	 * Return allowd attributes of img
+	 * Return allowd attributes of img.
 	 *
 	 * @return array
 	 */

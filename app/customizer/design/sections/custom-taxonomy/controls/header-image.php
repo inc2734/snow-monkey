@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 14.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,15 +12,22 @@ use Framework\Helper;
 $taxonomies = Helper::get_taxonomies( [ 'hierarchical' => true ] );
 
 foreach ( $taxonomies as $taxonomy ) {
-	$terms = Helper::get_terms( $taxonomy );
+	$taxonomy_object   = get_taxonomy( $taxonomy );
+	$custom_post_types = ! empty( $taxonomy_object->object_type ) ? $taxonomy_object->object_type : [];
+	$terms             = Helper::get_terms( $taxonomy );
 
 	foreach ( $terms as $_term ) {
 		Framework::control(
 			'image',
 			$_term->taxonomy . '-' . $_term->term_id . '-header-image',
 			[
-				'label'    => __( 'Featured Image', 'snow-monkey' ),
-				'priority' => 100,
+				'label'       => __( 'Featured Image', 'snow-monkey' ),
+				'description' => sprintf(
+					// translators: %1$s: Custom post type label */
+					__( 'This setting takes priority over featured image setting of %1$s archive page settings', 'snow-monkey' ),
+					get_post_type_object( $custom_post_types[0] )->label
+				),
+				'priority'    => 100,
 			]
 		);
 	}

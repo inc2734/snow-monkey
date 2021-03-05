@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-03-04 14:20+0900\n"
-"PO-Revision-Date: 2021-03-04 14:20+0900\n"
+"POT-Creation-Date: 2021-03-05 11:37+0900\n"
+"PO-Revision-Date: 2021-03-05 11:39+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -857,14 +857,24 @@ msgstr "基本デザイン設定"
 
 #: app/customizer/design/sections/category/controls/header-image.php:19
 #: app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
-#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:22
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:24
+#: app/customizer/design/sections/post-tag/controls/header-image.php:19
 #: app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:15
+#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:19
+#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:19
 #: snow-monkey/app/customizer/design/sections/category/controls/header-image.php:19
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
 #: snow-monkey/app/customizer/design/sections/custom-taxonomy/controls/header-image.php:22
 #: snow-monkey/app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:15
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
+
+#: app/customizer/design/sections/category/controls/header-image.php:20
+#: app/customizer/design/sections/post-tag/controls/header-image.php:20
+msgid ""
+"This setting takes priority over featured image setting of posts page "
+"settings"
+msgstr "この設定は投稿ページ設定のアイキャッチ画像の設定よりも優先されます"
 
 #. translators: 1: Category name
 #: app/customizer/design/sections/category/section.php:24
@@ -942,6 +952,15 @@ msgstr "固定ページのビューテンプレート"
 #, php-format
 msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
+
+#. translators: %1$s: Custom post type label */
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:27
+#, php-format
+msgid ""
+"This setting takes priority over featured image setting of %1$s archive page "
+"settings"
+msgstr ""
+"この設定は%1$sアーカイブページ設定のアイキャッチ画像の設定よりも優先されます"
 
 #. translators: 1: Taxonomy name
 #: app/customizer/design/sections/custom-taxonomy/section.php:28
@@ -1158,6 +1177,27 @@ msgstr "WooCommerce 商品一覧ページレイアウト"
 #: snow-monkey/app/customizer/design/sections/woocommerce-archive-page/section.php:20
 msgid "WooCommerce products page settings"
 msgstr "WooCommerce 商品一覧ページ設定"
+
+#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:20
+#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:20
+msgid ""
+"This setting takes priority over featured image setting of WooCommerce "
+"products page settings"
+msgstr ""
+"この設定は WooCommerce 製品ページ設定のアイキャッチ画像の設定よりも優先されま"
+"す。"
+
+#. translators: 1: Tag name
+#: app/customizer/design/sections/woocommerce-product-category/section.php:24
+#, php-format
+msgid "[ %1$s ] WooCommerce products category settings"
+msgstr "[ %1$s ] WooCommerce 商品カテゴリー設定"
+
+#. translators: 1: Tag name
+#: app/customizer/design/sections/woocommerce-product-tag/section.php:24
+#, php-format
+msgid "[ %1$s ] WooCommerce products tag settings"
+msgstr "[ %1$s ] WooCommerce 商品タグ設定"
 
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:23
 #: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:23
@@ -1888,7 +1928,7 @@ msgstr "フッター固定ナビゲーション（モバイル用）"
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
-#: app/setup/page-speed-optimization.php:128
+#: app/setup/page-speed-optimization.php:131
 #: snow-monkey/app/setup/page-speed-optimization.php:128
 msgid "Remove caches"
 msgstr "キャッシュを削除"

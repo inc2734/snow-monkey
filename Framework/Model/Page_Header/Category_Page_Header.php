@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 14.0.0
  */
 
 namespace Framework\Model\Page_Header;
@@ -20,19 +20,29 @@ class Category_Page_Header extends Base {
 	 */
 	protected static function _get_image_url() {
 		if ( is_tax() && is_taxonomy_hierarchical( get_queried_object()->taxonomy ) ) {
-			return in_array( get_theme_mod( 'archive-' . get_post_type() . '-eyecatch' ), static::$image_mods, true )
-				? Helper::has_category_thumbnail()
-					? Helper::get_the_category_thumbnail_url()
-					: static::_get_default_image_url()
-				: false;
+			if ( in_array( get_theme_mod( 'archive-' . get_post_type() . '-eyecatch' ), static::$image_mods, true ) ) {
+				if ( Helper::has_term_thumbnail() ) {
+					return Helper::get_the_term_thumbnail_url();
+				} elseif ( Helper::has_post_type_archive_thumbnail() ) {
+					return Helper::get_the_post_type_archive_thumbnail_url();
+				}
+				return static::_get_default_image_url();
+			}
+
+			return false;
 		}
 
 		if ( is_category() ) {
-			return in_array( get_theme_mod( 'archive-eyecatch' ), static::$image_mods, true )
-				? Helper::has_category_thumbnail()
-					? Helper::get_the_category_thumbnail_url()
-					: static::_get_default_image_url()
-				: false;
+			if ( in_array( get_theme_mod( 'archive-eyecatch' ), static::$image_mods, true ) ) {
+				if ( Helper::has_term_thumbnail() ) {
+					return Helper::get_the_term_thumbnail_url();
+				} elseif ( Helper::has_homepage_thumbnail() ) {
+					return Helper::get_the_homepage_thumbnail_url( static::_get_thumbnail_size() );
+				}
+				return static::_get_default_image_url();
+			}
+
+			return false;
 		}
 
 		return false;

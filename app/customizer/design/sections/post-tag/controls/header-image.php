@@ -9,7 +9,7 @@
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$terms = Helper::get_terms( 'category' );
+$terms = Helper::get_terms( 'post_tag' );
 
 foreach ( $terms as $_term ) {
 	Framework::control(

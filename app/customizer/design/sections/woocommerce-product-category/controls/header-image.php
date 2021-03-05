@@ -9,7 +9,7 @@
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$terms = Helper::get_terms( 'category' );
+$terms = Helper::get_terms( 'product_cat' );
 
 foreach ( $terms as $_term ) {
 	Framework::control(
@@ -17,10 +17,10 @@ foreach ( $terms as $_term ) {
 		$_term->taxonomy . '-' . $_term->term_id . '-header-image',
 		[
 			'label'           => __( 'Featured Image', 'snow-monkey' ),
-			'description'     => __( 'This setting takes priority over featured image setting of posts page settings', 'snow-monkey' ),
+			'description'     => __( 'This setting takes priority over featured image setting of WooCommerce products page settings', 'snow-monkey' ),
 			'priority'        => 110,
 			'active_callback' => function() {
-				return 'none' !== get_theme_mod( 'archive-eyecatch' );
+				return 'none' !== get_theme_mod( 'woocommerce-archive-eyecatch' );
 			},
 		]
 	);
