@@ -43,9 +43,12 @@
 
   .#{ $_prefix }c-container {
     flex: 1 1 auto;
-    margin-right: 0; // For IE11
-    margin-left: 0; // For IE11
-    width: 100%; // For IE11
+
+    @media all and (-ms-high-contrast: none) {
+      margin-right: 0; // For IE11
+      margin-left: 0; // For IE11
+      width: 100%; // For IE11
+    }
   }
 
   &__bgimage {

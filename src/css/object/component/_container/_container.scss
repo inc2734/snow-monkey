@@ -17,16 +17,6 @@
     }
   }
 
-  .#{ $_prefix }c-page-header > & {
-    margin-right: 0; // For IE11
-    margin-left: 0; // For IE11
-  }
-
-  .#{ $_prefix }p-infobar__inner > & {
-    margin-right: 0; // For IE11
-    margin-left: 0; // For IE11
-  }
-
   .wpaw-pr-box--chameleon & {
     @include _media-min(lg) {
       padding-right: 0;

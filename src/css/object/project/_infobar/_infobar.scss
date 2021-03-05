@@ -9,6 +9,13 @@
     font-weight: bold;
     text-decoration: none;
     padding: 5px;
+
+    .#{ $_prefix }c-container {
+      @media all and (-ms-high-contrast: none) {
+        margin-right: 0; // For IE11
+        margin-left: 0; // For IE11
+      }
+    }
   }
 
   &__content {
