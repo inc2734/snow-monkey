@@ -60,6 +60,7 @@
     &__submenu {
       background-color: var-color-accent();
       z-index: 1;
+      z-index: 2; // For IE11
     }
 
     &__subitem {
