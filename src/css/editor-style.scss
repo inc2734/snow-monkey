@@ -62,11 +62,11 @@ body {
 }
 
 // @todo Workaround for centering a block when width is specified.
-.block-editor-block-list__layout .wp-block {
+.wp-block {
   margin-right: initial;
   margin-left: initial;
 }
-.block-editor-block-list__layout .wp-block[data-type="core/list"] {
+.wp-block[data-type="core/list"] {
   margin-left: 1.5em;
 }
 

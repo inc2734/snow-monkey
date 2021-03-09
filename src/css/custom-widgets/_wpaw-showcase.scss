@@ -124,7 +124,7 @@
 
   &--format-3 {
     .wpaw-showcase__figure {
-      @include _margin-bottom(-1.5); // equal .wpaw-showcase bottom padding
+      @include _margin-bottom(-1.5, false); // equal .wpaw-showcase bottom padding
 
       @include _media-min(md) {
         @include _margin-top(1);
@@ -176,7 +176,7 @@
       &--format-3 {
         .wpaw-showcase__figure {
           @include _media-min(lg) {
-            @include _margin-bottom(-3); // equal .wpaw-showcase bottom padding
+            @include _margin-bottom(-3, false); // equal .wpaw-showcase bottom padding
           }
         }
       }

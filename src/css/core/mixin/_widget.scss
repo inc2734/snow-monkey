@@ -90,7 +90,7 @@
     animation: widget_children_show .5s;
 
     [data-is-hidden="false"] {
-      @include _margin-bottom(-.25);
+      @include _margin-bottom(-.25, false); // equal widget-children() bottom padding
       border-bottom: none;
     }
   }

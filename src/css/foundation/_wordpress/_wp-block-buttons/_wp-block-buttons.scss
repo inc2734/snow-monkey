@@ -1,7 +1,7 @@
 .wp-block-buttons {
-  @include _margin-right(-.25);
-  @include _margin-left(-.25);
-  @include _margin-bottom(-.5);
+  @include _margin-right(-.25, false); // equal .wp-block-buttons > .wp-block-button right padding
+  @include _margin-left(-.25, false); // equal .wp-block-buttons > .wp-block-button left padding
+  @include _margin-bottom(-.5, false); // equal .wp-block-buttons > .wp-block-button bottom padding
 
   > .wp-block-button {
     margin: 0;
