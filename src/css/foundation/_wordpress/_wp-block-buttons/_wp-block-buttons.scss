@@ -1,12 +1,22 @@
 .wp-block-buttons {
-  @include _margin-right(-.25, false); // equal .wp-block-buttons > .wp-block-button right padding
-  @include _margin-left(-.25, false); // equal .wp-block-buttons > .wp-block-button left padding
-  @include _margin-bottom(-.5, false); // equal .wp-block-buttons > .wp-block-button bottom padding
+  @include _margin-bottom(-.5, false);
+
+  &.is-content-justification-center {
+    > .smb-btn-wrapper {
+      @include _margin-right(.25, false);
+      @include _margin-left(.25, false);
+    }
+  }
+
+  &.is-content-justification-right {
+    > .smb-btn-wrapper {
+      margin-right: 0;
+      @include _margin-left(.5, false);
+    }
+  }
 
   > .wp-block-button {
-    margin: 0;
-    @include _padding-right(.25);
-    @include _padding-left(.25);
+    @include _margin-right(.5, false);
     @include _padding-bottom(.5);
   }
 }
