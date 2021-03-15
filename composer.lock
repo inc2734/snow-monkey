@@ -680,16 +680,16 @@
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "3.0.6",
+            "version": "3.0.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "a7cc78be9fb54e847a278d4e901d9d05c2cece37"
+                "reference": "cc3de0874dca62ce11df5545b2965f1c40352d8d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/a7cc78be9fb54e847a278d4e901d9d05c2cece37",
-                "reference": "a7cc78be9fb54e847a278d4e901d9d05c2cece37",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/cc3de0874dca62ce11df5545b2965f1c40352d8d",
+                "reference": "cc3de0874dca62ce11df5545b2965f1c40352d8d",
                 "shasum": ""
             },
             "require": {
@@ -722,9 +722,9 @@
             "description": "A library for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-page-speed-optimization/issues",
-                "source": "https://github.com/inc2734/wp-page-speed-optimization/tree/3.0.6"
+                "source": "https://github.com/inc2734/wp-page-speed-optimization/tree/3.0.7"
             },
-            "time": "2020-12-08T10:37:29+00:00"
+            "time": "2021-03-15T13:11:34+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -1312,16 +1312,16 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "5.6.2",
+            "version": "5.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
-                "reference": "f6b3fb65bccc0ff70b3bc7cc241935597dbd5562"
+                "reference": "5ab77c1e1328e9bee65f60c246e33b13fc202375"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/f6b3fb65bccc0ff70b3bc7cc241935597dbd5562",
-                "reference": "f6b3fb65bccc0ff70b3bc7cc241935597dbd5562",
+                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/5ab77c1e1328e9bee65f60c246e33b13fc202375",
+                "reference": "5ab77c1e1328e9bee65f60c246e33b13fc202375",
                 "shasum": ""
             },
             "type": "library",
@@ -1356,7 +1356,7 @@
                 "issues": "https://github.com/wp-phpunit/issues",
                 "source": "https://github.com/wp-phpunit/wp-phpunit"
             },
-            "time": "2021-02-04T18:24:14+00:00"
+            "time": "2021-03-10T17:57:07+00:00"
         }
     ],
     "aliases": [],

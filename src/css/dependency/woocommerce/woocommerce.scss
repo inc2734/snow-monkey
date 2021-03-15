@@ -258,6 +258,19 @@ $img-path: '../../../img';
 
 .woocommerce .quantity .qty {
   max-height: 37px;
+  //width: calc(3.631em + #{ _space(1, true) });
+}
+
+.woocommerce .woocommerce-variation-add-to-cart {
+  display: flex;
+
+  > .quantity {
+    flex: 0 1 auto;
+  }
+
+  > .button {
+    flex: 1 0 auto;
+  }
 }
 
 // Tab content in single
