@@ -258,7 +258,8 @@ $img-path: '../../../img';
 
 .woocommerce .quantity .qty {
   max-height: 37px;
-  //width: calc(3.631em + #{ _space(1, true) });
+  padding-right: _space(.25);
+  padding-left: _space(.25);
 }
 
 .woocommerce .woocommerce-variation-add-to-cart {
