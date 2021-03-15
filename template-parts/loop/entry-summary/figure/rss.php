@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 14.0.0
  *
  * renamed: template-parts/loop/entry-summary/figure/figure-rss.php
  */
@@ -30,6 +30,14 @@ $simplepie_thumbnail = $args['_item']->get_item_tags( SIMPLEPIE_NAMESPACE_MEDIAR
 $thumbnail_src       = ! empty( $simplepie_thumbnail[0]['data'] ) ? $simplepie_thumbnail[0]['data'] : false;
 if ( $thumbnail_src ) {
 	$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
+}
+
+// はてなブログ
+if ( ! $thumbnail ) {
+	$thumbnail_src = $args['_item']->get_enclosure()->get_link();
+	if ( $thumbnail_src ) {
+		$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
+	}
 }
 
 // first img
