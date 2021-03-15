@@ -53,8 +53,8 @@ $comment-bgcolors: [_lightest($_color-gray), _var-lightest-color-gray()];
   &__meta {
     @include _margin(0, 0, .5);
     @include _font-size-line-height($_base-font-size-px - 4);
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
 
     cite {
       font-style: normal;

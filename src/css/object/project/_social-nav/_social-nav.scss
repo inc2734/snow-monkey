@@ -21,8 +21,8 @@
   }
   a {
     flex: none;
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
     display: block;
     line-height: 1;
     overflow: hidden;

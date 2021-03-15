@@ -25,8 +25,8 @@
 
   a {
     display: block;
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
     @include _font-size(10px);
     line-height: 1.2;
     padding: .5em 0;

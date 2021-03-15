@@ -4,8 +4,8 @@
   &-text,
   &-dd {
     @include _margin(6px, 0, 0);
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 

@@ -216,8 +216,8 @@ $img-path: '../../../img';
   @include _margin-bottom(.5);
 
   .woocommerce-review-link {
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 }
@@ -237,8 +237,8 @@ $img-path: '../../../img';
 
     .reset_variations {
       margin-left: 5px;
-      color: $_color-gray; // For IE11
-      color: _var-color-gray();
+      color: _light($_color-text); // For IE11
+      color: _var-light-color-text();
       @include _font-size($_base-font-size-px - 4);
       line-height: 1;
     }
@@ -311,8 +311,8 @@ $img-path: '../../../img';
 
 // Product meta in single
 .product_meta {
-  color: $_color-gray; // For IE11
-  color: _var-color-gray();
+  color: _light($_color-text); // For IE11
+  color: _var-light-color-text();
   @include _font-size-line-height($_base-font-size-px - 2);
 
   a {
@@ -360,15 +360,15 @@ $img-path: '../../../img';
 
 // Result count in archive
 .woocommerce-result-count {
-  color: $_color-gray; // For IE11
-  color: _var-color-gray();
+  color: _light($_color-text); // For IE11
+  color: _var-light-color-text();
   @include _font-size-line-height($_base-font-size-px - 2);
 }
 
 // Product title in loop
 .woocommerce-loop-product__title {
-  color: $_color-gray; // For IE11
-  color: _var-color-gray();
+  color: _light($_color-text); // For IE11
+  color: _var-light-color-text();
   @include _font-size-line-height($_base-font-size-px);
   font-weight: normal;
 }
@@ -505,8 +505,8 @@ $img-path: '../../../img';
   }
 
   .reviewer {
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
     @include _font-size-line-height($_base-font-size-px - 4);
   }
 }

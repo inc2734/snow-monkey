@@ -27,8 +27,8 @@
   &__item-ellipsis {
     background-color: _lighter($_color-gray); // For IE11
     background-color: _var-lighter-color-gray();
-    color: $_color-gray; // For IE11
-    color: _var-color-gray();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
   }
 
   &__item-link {
