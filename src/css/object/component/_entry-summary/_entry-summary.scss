@@ -42,8 +42,8 @@
   }
 
   &__content {
-    color: _lighter($_color-text); // For IE11
-    color: _var-lighter-color-text();
+    color: _light($_color-text); // For IE11
+    color: _var-light-color-text();
     @include _font-size-line-height($_base-font-size-px - 4);
   }
 

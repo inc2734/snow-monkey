@@ -5,8 +5,8 @@
   .#{ $_prefix }c-navbar {
     &__item {
       @include _margin(0, .25);
-      color: $_color-gray; // For IE11
-      color: _var-color-gray();
+      color: _light($_color-text); // For IE11
+      color: _var-light-color-text();
 
       > a {
         color: inherit;
