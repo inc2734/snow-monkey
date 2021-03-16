@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 14.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,6 +15,10 @@ if ( ! is_customize_preview() ) {
 }
 
 $taxonomies = Helper::get_taxonomies();
+if ( class_exists( '\woocommerce' ) ) {
+	unset( $taxonomies['product_cat'] );
+	unset( $taxonomies['product_tag'] );
+}
 
 foreach ( $taxonomies as $_taxonomy ) {
 	$terms = Helper::get_terms( $_taxonomy );

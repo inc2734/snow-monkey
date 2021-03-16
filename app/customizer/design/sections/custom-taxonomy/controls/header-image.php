@@ -9,7 +9,11 @@
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$taxonomies = Helper::get_taxonomies( [ 'hierarchical' => true ] );
+$taxonomies = Helper::get_taxonomies();
+if ( class_exists( '\woocommerce' ) ) {
+	unset( $taxonomies['product_cat'] );
+	unset( $taxonomies['product_tag'] );
+}
 
 foreach ( $taxonomies as $taxonomy ) {
 	$taxonomy_object   = get_taxonomy( $taxonomy );
