@@ -3,11 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 14.0.0
  */
 
 namespace Framework\Model\Page_Header;
 
+use Framework\Helper\Page_Header\Singular_Page_Header as Page_Header_Helper;
 use Framework\Contract\Model\Page_Header as Base;
 
 class Singular_Page_Header extends Base {
@@ -18,19 +19,7 @@ class Singular_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url() {
-		if ( ! in_array( get_theme_mod( get_post_type() . '-eyecatch' ), static::$image_mods, true ) ) {
-			return false;
-		}
-
-		if ( null === static::$image_id && has_post_thumbnail() ) {
-			static::$image_id = get_post_thumbnail_id();
-		}
-
-		if ( static::$image_id ) {
-			return wp_get_attachment_image_url( static::$image_id, static::_get_thumbnail_size() );
-		}
-
-		return static::_get_default_image_url();
+		return Page_Header_Helper::get_image_url( get_queried_object() );
 	}
 
 	/**
@@ -39,9 +28,7 @@ class Singular_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return in_array( get_theme_mod( get_post_type() . '-eyecatch' ), static::$title_mods, true )
-			? \Framework\Helper::get_page_title_from_breadcrumbs()
-			: false;
+		return Page_Header_Helper::get_title( get_queried_object() );
 	}
 
 	/**
@@ -50,8 +37,6 @@ class Singular_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		return in_array( get_theme_mod( get_post_type() . '-eyecatch' ), static::$title_mods, true )
-			? get_theme_mod( get_post_type() . '-page-header-align' )
-			: false;
+		return Page_Header_Helper::get_align( get_queried_object() );
 	}
 }

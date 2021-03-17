@@ -3,11 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 14.0.0
  */
 
 namespace Framework\Model\Page_Header;
 
+use Framework\Helper\Page_Header\Default_Page_Header as Page_Header_Helper;
 use Framework\Contract\Model\Page_Header as Base;
 
 class Default_Page_Header extends Base {
@@ -18,7 +19,7 @@ class Default_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url() {
-		return static::_get_default_image_url();
+		return Page_Header_Helper::get_image_url( get_queried_object() );
 	}
 
 	/**
@@ -27,7 +28,7 @@ class Default_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return false;
+		return Page_Header_Helper::get_title( get_queried_object() );
 	}
 
 	/**
@@ -36,6 +37,6 @@ class Default_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		return false;
+		return Page_Header_Helper::get_align( get_queried_object() );
 	}
 }

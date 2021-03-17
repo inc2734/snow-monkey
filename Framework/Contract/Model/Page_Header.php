@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.2
+ * @version 14.0.0
  */
 
 namespace Framework\Contract\Model;
@@ -11,26 +11,9 @@ namespace Framework\Contract\Model;
 abstract class Page_Header {
 
 	/**
-	 * Mods to display page header image.
-	 *
-	 * @var array
-	 */
-	protected static $image_mods = [
-		'page-header',
-		'title-on-page-header',
-	];
-
-	/**
-	 * Mods to display page header image title.
-	 *
-	 * @var array
-	 */
-	protected static $title_mods = [
-		'title-on-page-header',
-	];
-
-	/**
 	 * Page header image tag.
+	 *
+	 * @deprecacted
 	 *
 	 * @var string|null
 	 */
@@ -56,19 +39,6 @@ abstract class Page_Header {
 	 * @return string|false
 	 */
 	public static function get_image_url() {
-		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null );
-		if ( null !== $url ) {
-			return $url;
-		}
-
-		// @deprecated
-		$url = apply_filters_deprecated(
-			'snow_monkey_page_header_image_url',
-			[ $url ],
-			'Snow Monkey 5.1.0',
-			'snow_monkey_pre_page_header_image_url'
-		);
-
 		return static::_get_image_url();
 	}
 
@@ -85,7 +55,7 @@ abstract class Page_Header {
 	 * @return string|false
 	 */
 	public static function get_title() {
-		return apply_filters( 'snow_monkey_page_header_title', static::_get_title() );
+		return static::_get_title();
 	}
 
 	/**
@@ -101,7 +71,7 @@ abstract class Page_Header {
 	 * @return string|false
 	 */
 	public static function get_align() {
-		return apply_filters( 'snow_monkey_page_header_align', static::_get_align() );
+		return static::_get_align();
 	}
 
 	/**
@@ -246,8 +216,6 @@ abstract class Page_Header {
 	 * Display page header image
 	 *
 	 * @deprecated
-	 *
-	 * @return void
 	 */
 	public static function the_image() {
 		_deprecated_function(

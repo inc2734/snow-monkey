@@ -13,7 +13,7 @@ trait Term_Thumbnail {
 	/**
 	 * Return term data for term thumbnail.
 	 *
-	 * @param array|null $term Array of the term data.
+	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return array|false
@@ -43,7 +43,8 @@ trait Term_Thumbnail {
 			$header_image = get_theme_mod( $term->taxonomy . '-' . $ancestor . '-header-image' );
 			if ( $header_image ) {
 				wp_cache_set( $cache_key, $ancestor, $cache_group );
-				return array_merge( $term, [ 'term_id' => $ancestor ] );
+				$term->term_id = $ancestor;
+				return $term;
 			}
 		}
 
@@ -53,7 +54,7 @@ trait Term_Thumbnail {
 	/**
 	 * Return true when have term thumbanil.
 	 *
-	 * @param array|null $term Array of the term data.
+	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return boolean
@@ -66,7 +67,7 @@ trait Term_Thumbnail {
 	/**
 	 * Return term thumbnail url.
 	 *
-	 * @param array|null $term Array of the term data.
+	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return string
@@ -87,7 +88,7 @@ trait Term_Thumbnail {
 	/**
 	 * Return term header image.
 	 *
-	 * @param array|null $term Array of the term data.
+	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return string
@@ -116,7 +117,7 @@ trait Term_Thumbnail {
 	/**
 	 * Display term thumbnail.
 	 *
-	 * @param array|null $term Array of the term data.
+	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
 	 * @return void
