@@ -16,61 +16,47 @@ class Singular_Page_Header extends Base {
 	/**
 	 * Return page header image url.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post $wp_post WP_Post object.
 	 * @return string|false
 	 */
-	protected static function _get_image_url( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post' ) ) {
-			$post_type         = get_post_type( $queried_object );
-			$eyecatch_position = get_theme_mod( $post_type . '-eyecatch' );
-
-			if ( in_array( $eyecatch_position, static::$image_mods, true ) ) {
-				if ( has_post_thumbnail() ) {
-					return wp_get_attachment_image_url( get_post_thumbnail_id(), static::_get_thumbnail_size() );
-				}
-
-				return static::_get_default_image_url();
-			}
+	protected static function _get_image_url( $wp_post ) {
+		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
+			return false;
 		}
 
-		return false;
+		$thumbnail_id = get_post_thumbnail_id( $wp_post );
+
+		return has_post_thumbnail()
+			? wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() )
+			: static::_get_default_image_url();
 	}
 
 	/**
 	 * Return page header title.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post $wp_post WP_Post object.
 	 * @return string|false
 	 */
-	protected static function _get_title( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post' ) ) {
-			$post_type         = get_post_type( $queried_object );
-			$eyecatch_position = get_theme_mod( $post_type . '-eyecatch' );
-
-			if ( in_array( $eyecatch_position, static::$title_mods, true ) ) {
-				return Helper::get_page_title_from_breadcrumbs();
-			}
+	protected static function _get_title( $wp_post ) {
+		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
+			return false;
 		}
 
-		return false;
+		return Helper::get_page_title_from_breadcrumbs();
 	}
 
 	/**
 	 * Return page header alignment.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post $wp_post WP_Post object.
 	 * @return string|false
 	 */
-	protected static function _get_align( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post' ) ) {
-			$post_type         = get_post_type( $queried_object );
-			$eyecatch_position = get_theme_mod( $post_type . '-eyecatch' );
-
-			if ( in_array( $eyecatch_position, static::$title_mods, true ) ) {
-				return get_theme_mod( get_post_type() . '-page-header-align' );
-			}
+	protected static function _get_align( $wp_post ) {
+		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
+			return false;
 		}
 
-		return false;
+		$post_type = get_post_type( $wp_post );
+		return get_theme_mod( $post_type . '-page-header-align' );
 	}
 }

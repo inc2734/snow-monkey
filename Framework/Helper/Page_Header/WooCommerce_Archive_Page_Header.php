@@ -16,68 +16,56 @@ class WooCommerce_Archive_Page_Header extends Base {
 	/**
 	 * Return page header image url.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post_Type $wp_post_type WP_Post_Type object.
 	 * @return string|false
 	 */
-	protected static function _get_image_url( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post_Type' ) ) {
-			$post_type = $queried_object->name;
-
-			if ( 'product' === $post_type ) {
-				$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
-
-				if ( in_array( $eyecatch_position, static::$image_mods, true ) ) {
-					return Helper::has_woocommerce_archive_thumbnail()
-						? Helper::get_the_woocommerce_archive_thumbnail_url()
-						: static::_get_default_image_url();
-				}
-			}
+	protected static function _get_image_url( $wp_post_type ) {
+		if ( ! is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			return false;
 		}
 
-		return false;
+		if ( 'product' !== $wp_post_type->name ) {
+			return false;
+		}
+
+		return Helper::has_woocommerce_archive_thumbnail()
+			? Helper::get_the_woocommerce_archive_thumbnail_url()
+			: static::_get_default_image_url();
 	}
 
 	/**
 	 * Return page header title.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post_Type $wp_post_type WP_Post_Type object.
 	 * @return string|false
 	 */
-	protected static function _get_title( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post_Type' ) ) {
-			$post_type = $queried_object->name;
-
-			if ( 'product' === $post_type ) {
-				$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
-
-				if ( in_array( $eyecatch_position, static::$title_mods, true ) ) {
-					return Helper::get_page_title_from_breadcrumbs();
-				}
-			}
+	protected static function _get_title( $wp_post_type ) {
+		if ( ! is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			return false;
 		}
 
-		return false;
+		if ( 'product' !== $wp_post_type->name ) {
+			return false;
+		}
+
+		return Helper::get_page_title_from_breadcrumbs();
 	}
 
 	/**
 	 * Return page header alignment.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post_Type $wp_post_type WP_Post_Type object.
 	 * @return string|false
 	 */
-	protected static function _get_align( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post_Type' ) ) {
-			$post_type = $queried_object->name;
-
-			if ( 'product' === $post_type ) {
-				$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
-
-				if ( in_array( $eyecatch_position, static::$title_mods, true ) ) {
-					return get_theme_mod( 'woocommerce-archive-page-header-align' );
-				}
-			}
+	protected static function _get_align( $wp_post_type ) {
+		if ( ! is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			return false;
 		}
 
-		return false;
+		if ( 'product' !== $wp_post_type->name ) {
+			return false;
+		}
+
+		return get_theme_mod( 'woocommerce-archive-page-header-align' );
 	}
 }

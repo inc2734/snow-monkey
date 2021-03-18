@@ -16,33 +16,22 @@ class Archive_Page_Header extends Base {
 	/**
 	 * Return page header image url.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post_Type|null $wp_post_type WP_Post_Type object.
 	 * @return string|false
 	 */
-	protected static function _get_image_url( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post_Type' ) ) {
-			$post_type         = $queried_object->name;
-			$eyecatch_position = get_theme_mod( 'archive-' . $post_type . '-eyecatch' );
+	protected static function _get_image_url( $wp_post_type ) {
+		if ( is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			$post_type = $wp_post_type->name;
 
-			return in_array( $eyecatch_position, static::$image_mods, true )
-				? Helper::has_post_type_archive_thumbnail( $post_type )
-					? Helper::get_the_post_type_archive_thumbnail_url( $post_type )
-					: static::_get_default_image_url()
-				: false;
+			return Helper::has_post_type_archive_thumbnail( $post_type )
+				? Helper::get_the_post_type_archive_thumbnail_url( $post_type )
+				: static::_get_default_image_url();
 		}
 
-		if (
-			is_null( $queried_object )
-			|| 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' )
-			|| is_a( $queried_object, '\WP_User' )
-		) {
-			$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
-
-			return in_array( $eyecatch_position, static::$image_mods, true )
-				? Helper::has_homepage_thumbnail()
-					? Helper::get_the_homepage_thumbnail_url( static::_get_thumbnail_size() )
-					: static::_get_default_image_url()
-				: false;
+		if ( is_null( $wp_post_type ) ) {
+			return Helper::has_homepage_thumbnail()
+				? Helper::get_the_homepage_thumbnail_url( static::_get_thumbnail_size() )
+				: static::_get_default_image_url();
 		}
 
 		return false;
@@ -51,29 +40,16 @@ class Archive_Page_Header extends Base {
 	/**
 	 * Return page header title.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post_Type|null $wp_post_type WP_Post_Type object.
 	 * @return string|false
 	 */
-	protected static function _get_title( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post_Type' ) ) {
-			$post_type         = $queried_object->name;
-			$eyecatch_position = get_theme_mod( 'archive-' . $post_type . '-eyecatch' );
-
-			return in_array( $eyecatch_position, static::$title_mods, true )
-				? Helper::get_page_title_from_breadcrumbs()
-				: false;
+	protected static function _get_title( $wp_post_type ) {
+		if ( is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			return Helper::get_page_title_from_breadcrumbs();
 		}
 
-		if (
-			is_null( $queried_object )
-			|| 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' )
-			|| is_a( $queried_object, '\WP_User' )
-		) {
-			$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
-
-			return in_array( $eyecatch_position, static::$title_mods, true )
-				? Helper::get_page_title_from_breadcrumbs()
-				: false;
+		if ( is_null( $wp_post_type ) ) {
+			return Helper::get_page_title_from_breadcrumbs();
 		}
 
 		return false;
@@ -82,29 +58,18 @@ class Archive_Page_Header extends Base {
 	/**
 	 * Return page header alignment.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param WP_Post_Type|null $wp_post_type WP_Post_Type object.
 	 * @return string|false
 	 */
-	protected static function _get_align( $queried_object ) {
-		if ( is_a( $queried_object, '\WP_Post_Type' ) ) {
-			$post_type         = $queried_object->name;
-			$eyecatch_position = get_theme_mod( 'archive-' . $post_type . '-eyecatch' );
+	protected static function _get_align( $wp_post_type ) {
+		if ( is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			$post_type = $wp_post_type->name;
 
-			return in_array( $eyecatch_position, static::$title_mods, true )
-				? get_theme_mod( 'archive-' . get_post_type() . '-page-header-align' )
-				: false;
+			return get_theme_mod( 'archive-' . $post_type . '-page-header-align' );
 		}
 
-		if (
-			is_null( $queried_object )
-			|| 'page' === get_option( 'show_on_front' ) && get_option( 'page_on_front' )
-			|| is_a( $queried_object, '\WP_User' )
-		) {
-			$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
-
-			return in_array( $eyecatch_position, static::$title_mods, true )
-				? get_theme_mod( 'archive-page-header-align' )
-				: false;
+		if ( is_null( $wp_post_type ) ) {
+			return get_theme_mod( 'archive-page-header-align' );
 		}
 
 		return false;

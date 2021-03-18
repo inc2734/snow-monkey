@@ -19,7 +19,12 @@ class WooCommerce_Single_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url() {
-		return Page_Header_Helper::get_image_url( get_queried_object() );
+		$_post             = get_post();
+		$eyecatch_position = get_theme_mod( 'woocommerce-single-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$image_mods, true )
+			? Page_Header_Helper::get_image_url( $_post )
+			: false;
 	}
 
 	/**
@@ -28,7 +33,12 @@ class WooCommerce_Single_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return Page_Header_Helper::get_title( get_queried_object() );
+		$_post             = get_post();
+		$eyecatch_position = get_theme_mod( 'woocommerce-single-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$title_mods, true )
+			? Page_Header_Helper::get_title( $_post )
+			: false;
 	}
 
 	/**
@@ -37,6 +47,11 @@ class WooCommerce_Single_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		return Page_Header_Helper::get_align( get_queried_object() );
+		$_post             = get_post();
+		$eyecatch_position = get_theme_mod( 'woocommerce-single-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$title_mods, true )
+			? Page_Header_Helper::get_align( $_post )
+			: false;
 	}
 }

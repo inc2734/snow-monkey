@@ -9,10 +9,10 @@
 namespace Framework\Model\Page_Header;
 
 use Framework\Helper;
-use Framework\Helper\Page_Header\WooCommerce_Archive_Page_Header as Page_Header_Helper;
+use Framework\Helper\Page_Header\WooCommerce_Term_Page_Header as Page_Header_Helper;
 use Framework\Contract\Model\Page_Header as Base;
 
-class WooCommerce_Archive_Page_Header extends Base {
+class WooCommerce_Term_Page_Header extends Base {
 
 	/**
 	 * Return page header image url.
@@ -20,12 +20,11 @@ class WooCommerce_Archive_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url() {
-		$post_type         = get_post_type();
-		$post_type_object  = get_post_type_object( $post_type );
+		$_term             = get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$image_mods, true )
-			? Page_Header_Helper::get_image_url( $post_type_object )
+			? Page_Header_Helper::get_image_url( $_term )
 			: false;
 	}
 
@@ -35,12 +34,11 @@ class WooCommerce_Archive_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		$post_type         = get_post_type();
-		$post_type_object  = get_post_type_object( $post_type );
+		$_term             = get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$title_mods, true )
-			? Page_Header_Helper::get_title( $post_type_object )
+			? Page_Header_Helper::get_title( $_term )
 			: false;
 	}
 
@@ -50,12 +48,11 @@ class WooCommerce_Archive_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		$post_type         = get_post_type();
-		$post_type_object  = get_post_type_object( $post_type );
+		$_term             = get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$title_mods, true )
-			? Page_Header_Helper::get_align( $post_type_object )
+			? Page_Header_Helper::get_align( $_term )
 			: false;
 	}
 }

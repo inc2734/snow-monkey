@@ -19,7 +19,7 @@ class Default_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url() {
-		return Page_Header_Helper::get_image_url( get_queried_object() );
+		return Page_Header_Helper::get_image_url( null );
 	}
 
 	/**
@@ -28,7 +28,7 @@ class Default_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return Page_Header_Helper::get_title( get_queried_object() );
+		return Page_Header_Helper::get_title( null );
 	}
 
 	/**
@@ -37,6 +37,6 @@ class Default_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		return Page_Header_Helper::get_align( get_queried_object() );
+		return Page_Header_Helper::get_align( null );
 	}
 }

@@ -90,8 +90,8 @@ class Page_Header_Test extends WP_UnitTestCase {
 	public function is_category() {
 		$term_id = $this->factory->category->create();
 		$this->go_to( get_term_link( $term_id, 'category' ) );
-		$this->assertEquals( '\Framework\Model\Page_Header\Category_Page_Header', $this->_get_page_header_class() );
-		$this->assertEquals( '\Framework\Model\Page_Header\Category_Page_Header', \Framework\Helper::get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Term_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Term_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
@@ -146,8 +146,8 @@ class Page_Header_Test extends WP_UnitTestCase {
 	public function is_tag() {
 		$term_id = $this->factory->tag->create();
 		$this->go_to( get_term_link( $term_id, 'post_tag' ) );
-		$this->assertEquals( '\Framework\Model\Page_Header\Tag_Page_Header', $this->_get_page_header_class() );
-		$this->assertEquals( '\Framework\Model\Page_Header\Tag_Page_Header', \Framework\Helper::get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Term_Page_Header', $this->_get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Term_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 
 	/**
@@ -189,7 +189,7 @@ class Page_Header_Test extends WP_UnitTestCase {
 		register_taxonomy( 'test_tax', [ 'test_post_type' ] );
 		$term_id = $this->factory->term->create( [ 'taxonomy' => 'test_tax', 'name' => 'test_term' ] );
 		$this->go_to( get_term_link( $term_id, 'test_tax' ) );
-		$this->assertEquals( '\Framework\Model\Page_Header\Tag_Page_Header', $this->_get_page_header_class()  );
-		$this->assertEquals( '\Framework\Model\Page_Header\Tag_Page_Header', \Framework\Helper::get_page_header_class() );
+		$this->assertEquals( '\Framework\Model\Page_Header\Term_Page_Header', $this->_get_page_header_class()  );
+		$this->assertEquals( '\Framework\Model\Page_Header\Term_Page_Header', \Framework\Helper::get_page_header_class() );
 	}
 }

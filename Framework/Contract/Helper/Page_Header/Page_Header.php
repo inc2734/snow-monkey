@@ -96,11 +96,6 @@ abstract class Page_Header {
 		return apply_filters( 'snow_monkey_page_header_align', static::_get_align( $queried_object ), $queried_object );
 	}
 
-
-
-
-
-
 	/**
 	 * Return thumbnail size of page header image.
 	 *

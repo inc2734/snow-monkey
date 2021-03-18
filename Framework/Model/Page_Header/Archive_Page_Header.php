@@ -20,7 +20,26 @@ class Archive_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url() {
-		return Page_Header_Helper::get_image_url( get_queried_object() );
+		$post_type        = get_post_type();
+		$post_type_object = get_post_type_object( $post_type );
+
+		if ( is_post_type_archive( $post_type ) ) {
+			$eyecatch_position = get_theme_mod( 'archive-' . $post_type . '-eyecatch' );
+
+			return in_array( $eyecatch_position, static::$image_mods, true )
+				? Page_Header_Helper::get_image_url( $post_type_object )
+				: false;
+		}
+
+		if ( is_home() || is_archive() ) {
+			$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
+
+			return in_array( $eyecatch_position, static::$image_mods, true )
+				? Page_Header_Helper::get_image_url( null )
+				: false;
+		}
+
+		return false;
 	}
 
 	/**
@@ -29,7 +48,26 @@ class Archive_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return Page_Header_Helper::get_title( get_queried_object() );
+		$post_type        = get_post_type();
+		$post_type_object = get_post_type_object( $post_type );
+
+		if ( is_post_type_archive( $post_type ) ) {
+			$eyecatch_position = get_theme_mod( 'archive-' . $post_type . '-eyecatch' );
+
+			return in_array( $eyecatch_position, static::$title_mods, true )
+				? Page_Header_Helper::get_title( $post_type_object )
+				: false;
+		}
+
+		if ( is_home() || is_archive() ) {
+			$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
+
+			return in_array( $eyecatch_position, static::$title_mods, true )
+				? Page_Header_Helper::get_title( null )
+				: false;
+		}
+
+		return false;
 	}
 
 	/**
@@ -38,6 +76,25 @@ class Archive_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		return Page_Header_Helper::get_align( get_queried_object() );
+		$post_type        = get_post_type();
+		$post_type_object = get_post_type_object( $post_type );
+
+		if ( is_post_type_archive( $post_type ) ) {
+			$eyecatch_position = get_theme_mod( 'archive-' . $post_type . '-eyecatch' );
+
+			return in_array( $eyecatch_position, static::$title_mods, true )
+				? Page_Header_Helper::get_align( $post_type_object )
+				: false;
+		}
+
+		if ( is_home() || is_archive() ) {
+			$eyecatch_position = get_theme_mod( 'archive-eyecatch' );
+
+			return in_array( $eyecatch_position, static::$title_mods, true )
+				? Page_Header_Helper::get_align( null )
+				: false;
+		}
+
+		return false;
 	}
 }

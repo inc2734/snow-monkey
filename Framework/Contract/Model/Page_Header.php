@@ -11,6 +11,25 @@ namespace Framework\Contract\Model;
 abstract class Page_Header {
 
 	/**
+	 * Mods to display page header image.
+	 *
+	 * @var array
+	 */
+	protected static $image_mods = [
+		'page-header',
+		'title-on-page-header',
+	];
+
+	/**
+	 * Mods to display page header image title.
+	 *
+	 * @var array
+	 */
+	protected static $title_mods = [
+		'title-on-page-header',
+	];
+
+	/**
 	 * Page header image tag.
 	 *
 	 * @deprecacted

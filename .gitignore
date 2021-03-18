@@ -17,3 +17,4 @@ composer-dev.json
 composer-dev.lock
 /translation/
 /cache/
+/uploads/

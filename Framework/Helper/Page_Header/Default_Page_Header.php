@@ -16,12 +16,12 @@ class Default_Page_Header extends Base {
 	/**
 	 * Return page header image url.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param null $null Null.
 	 * @return string|false
 	 */
 	protected static function _get_image_url(
 		// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		$queried_object
+		$null
 		// phpcs:enable
 	) {
 		return static::_get_default_image_url();
@@ -30,12 +30,12 @@ class Default_Page_Header extends Base {
 	/**
 	 * Return page header title.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param null $null Null.
 	 * @return string|false
 	 */
 	protected static function _get_title(
 		// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		$queried_object
+		$null
 		// phpcs:enable
 	) {
 		return false;
@@ -44,12 +44,12 @@ class Default_Page_Header extends Base {
 	/**
 	 * Return page header alignment.
 	 *
-	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param null $null Null.
 	 * @return string|false
 	 */
 	protected static function _get_align(
 		// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
-		$queried_object
+		$null
 		// phpcs:enable
 	) {
 		return false;
