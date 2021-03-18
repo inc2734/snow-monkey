@@ -32,7 +32,7 @@ foreach ( $taxonomies as $_taxonomy ) {
 					__( '[ %1$s ] taxonomy pages settings', 'snow-monkey' ),
 					$_term->name
 				),
-				'priority'        => 130,
+				'priority'        => 131,
 				'active_callback' => function() use ( $_term ) {
 					return 'archive' === Controller::get_view()
 							&& is_tax( $_term->taxonomy, $_term->term_id );

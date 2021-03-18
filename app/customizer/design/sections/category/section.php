@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 14.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -24,7 +24,7 @@ foreach ( $terms as $_term ) {
 				__( '[ %1$s ] category pages settings', 'snow-monkey' ),
 				$_term->name
 			),
-			'priority'        => 130,
+			'priority'        => 131,
 			'active_callback' => function() use ( $_term ) {
 				return is_category( $_term->term_id );
 			},
