@@ -30,7 +30,9 @@ class Front_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		return Page_Header_Helper::get_title( get_post() );
+		return get_theme_mod( 'home-page-display-page-header' )
+			? Page_Header_Helper::get_title( get_post() )
+			: false;
 	}
 
 	/**
@@ -39,6 +41,8 @@ class Front_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		return Page_Header_Helper::get_align( get_post() );
+		return get_theme_mod( 'home-page-display-page-header' )
+			? Page_Header_Helper::get_align( get_post() )
+			: false;
 	}
 }
