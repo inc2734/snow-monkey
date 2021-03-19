@@ -28,6 +28,10 @@
   clear: both;
 }
 
+.alignfull + .alignfull {
+  margin-top: 0;
+}
+
 .#{ $_prefix }c-entry__content > .alignfull,
 .#{ $_prefix }c-entry__content > .alignwide,
 .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,

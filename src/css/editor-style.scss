@@ -24,6 +24,10 @@ body {
   padding: 50px 0;
 }
 
+[data-align="full"] + [data-align="full"] {
+  margin-top: 0;
+}
+
 // @todo 本来不要かも
 .block-editor-block-list__block[data-align="full"] .block-editor-warning {
   @include _media-min(600px) {
