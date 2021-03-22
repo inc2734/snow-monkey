@@ -28,14 +28,22 @@
 
 
       &[aria-haspopup="true"] {
+        &::before {
+          content: '';
+          display: block;
+          @include _triangle-top(16px, 10px, var-color-accent());
+          position: absolute;
+          bottom: -0;
+          left: calc(50% - 8px);
+          visibility: hidden;
+          opacity: 0;
+          @include _transition(opacity);
+        }
+
         @include _hover(lg) {
           &::before {
-            content: '';
-            display: block;
-            @include _triangle-top(16px, 10px, var-color-accent());
-            position: absolute;
-            bottom: -0;
-            left: calc(50% - 8px);
+            visibility: visible;
+            opacity: 1;
           }
         }
       }
