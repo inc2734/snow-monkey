@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 14.0.1
  */
 
 namespace Framework\Helper\Page_Header;
@@ -28,7 +28,7 @@ class WooCommerce_Single_Page_Header extends Base {
 			return false;
 		}
 
-		return has_post_thumbnail()
+		return has_post_thumbnail( $wp_post )
 			? wp_get_attachment_image_url( get_post_thumbnail_id( $wp_post ), static::_get_thumbnail_size() )
 			: static::_get_default_image_url();
 	}
