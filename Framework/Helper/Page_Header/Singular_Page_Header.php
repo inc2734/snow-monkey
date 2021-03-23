@@ -26,7 +26,7 @@ class Singular_Page_Header extends Base {
 
 		$thumbnail_id = get_post_thumbnail_id( $wp_post );
 
-		return has_post_thumbnail()
+		return has_post_thumbnail( $wp_post )
 			? wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() )
 			: static::_get_default_image_url();
 	}
