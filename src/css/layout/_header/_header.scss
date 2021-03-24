@@ -343,16 +343,18 @@
           @include _padding(.5, 1);
         }
 
+        &__item[aria-haspopup="true"]::before {
+          @include _triangle-left(10px, 16px, var(--accent-color, $color-accent));
+          left: auto;
+          bottom: auto;
+          right: -0;
+          top: calc(50% - 5px);
+        }
+
         &__item > .c-navbar__submenu {
           top: 50%;
           left: 100%;
           transform: translateY(-50%);
-
-          &::before {
-            @include _triangle-left(10px, 16px, var-color-accent());
-            top: calc(50% - 8px);
-            left: -10px;
-          }
         }
       }
     }
