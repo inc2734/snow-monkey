@@ -1,3 +1,27 @@
+.l-header:not(.l-header--left) {
+  .#{ $_prefix }p-global-nav {
+    .#{ $_prefix }c-navbar__item[aria-haspopup="true"] {
+      &::before {
+        @include _triangle-top(16px, 10px, var(--accent-color, $color-accent));
+        bottom: -0;
+        left: calc(50% - 8px);
+      }
+    }
+  }
+}
+
+.l-header--left {
+  .#{ $_prefix }p-global-nav {
+    .#{ $_prefix }c-navbar__item[aria-haspopup="true"] {
+      &::before {
+        @include _triangle-left(10px, 16px, var(--accent-color, $color-accent));
+        right: -0;
+        top: calc(50% - 5px);
+      }
+    }
+  }
+}
+
 .#{ $_prefix }p-global-nav {
   &[aria-hidden="true"] {
     visibility: hidden;
@@ -30,10 +54,7 @@
         &::before {
           content: '';
           display: block;
-          @include _triangle-top(16px, 10px, var-color-accent());
           position: absolute;
-          bottom: -0;
-          left: calc(50% - 8px);
           visibility: hidden;
           opacity: 0;
           @include _transition(opacity);
