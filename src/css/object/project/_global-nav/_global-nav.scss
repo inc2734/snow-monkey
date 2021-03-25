@@ -174,7 +174,7 @@
 
   &--hover-underline {
     .#{ $_prefix }c-navbar {
-      &__item {
+      &__item > a {
         &::after {
           position: absolute;
           right: 0;
@@ -184,17 +184,19 @@
           height: 1px;
           @include _transition(background-color);
         }
+      }
 
-        &[data-active-menu] {
-          &::after {
+      &__item {
+        @include _hover(lg) {
+          & > a::after {
             background-color: var-color-accent();
           }
         }
+      }
 
-        @include _hover(lg) {
-          &::after {
-            background-color: var-color-accent();
-          }
+      &__item[data-active-menu] > a {
+        &::after {
+          background-color: var-color-accent();
         }
       }
     }
