@@ -8,7 +8,8 @@
 }
 
 :root {
-  --wp-block-width: var(--_container-max-width, 1280px);
+  --wp-block-width: calc(var(--_container-max-width, 1280px) - 2rem);
+  color: red;
 }
 
 #tinymce {
@@ -36,24 +37,27 @@ body {
   }
 }
 
-// @see src/css/foundation/_wordpress/_align/_align.scss
 .block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
-  > [data-align="full"],
-  > [data-align="wide"],
-  [class*="smb-"] > [data-align="full"],
-  [class*="smb-"] > [data-align="wide"] {
+  > [data-align="full"] {
     clear: both;
-    @include alignfull();
-
-    &.wp-block-image {
-      img {
-        width: 100%;
-        max-width: none;
-      }
-    }
+    margin-right: -1rem;
+    margin-left: -1rem;
+    max-width: none;
   }
 
-  > [data-align="wide"],
+  > [data-align="wide"] {
+    max-width: calc(1280px + 240px); // for IE11
+    max-width: calc(var(--wp-block-width) + 240px);
+  }
+}
+
+// @see src/css/foundation/_wordpress/_align/_align.scss
+.block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
+  [class*="smb-"] > [data-align="full"],
+  [class*="smb-"] > [data-align="wide"] {
+    @include alignfull();
+  }
+
   [class*="smb-"] > [data-align="wide"] {
     @include _media-min(lg) {
       position: relative;
