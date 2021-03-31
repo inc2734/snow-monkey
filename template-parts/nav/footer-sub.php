@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.5.0
+ * @version 14.0.3
  *
  * renamed: template-parts/footer-sub-nav.php
  */
@@ -24,7 +24,7 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 			'container'       => 'div',
 			'container_class' => $container_class,
 			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-			'menu_class'      => 'c-navbar c-navbar--center',
+			'menu_class'      => 'c-navbar',
 			'depth'           => 1,
 			'walker'          => new \Inc2734\WP_Basis\App\Walker\Navbar(),
 		]

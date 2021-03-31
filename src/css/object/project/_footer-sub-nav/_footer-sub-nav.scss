@@ -3,8 +3,17 @@
   border-top-color: _lighter($_color-gray); // For IE11
   border-top-color: _var-lighter-color-gray();
 
-  @include _media-max(md) {
+  .#{ $_prefix }c-navbar {
+    justify-content: flex-start;
     overflow: scroll;
     white-space: nowrap;
+
+    @include _media-min(lg) {
+      justify-content: center;
+    }
+
+    &__item {
+      flex: 0 0 auto;
+    }
   }
 }
