@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 14.0.3
  */
 
 use Framework\Helper;
@@ -39,7 +39,7 @@ function snow_monkey_entry_meta_items_published_no_time() {
  * Modified
  */
 function snow_monkey_entry_meta_items_modified() {
-	if ( get_the_time( 'Ymd' ) === get_the_modified_time( 'Ymd' ) ) {
+	if ( get_the_time( 'Ymd' ) < get_the_modified_time( 'Ymd' ) ) {
 		return;
 	}
 	?>
