@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "37074be83d658ee2429d557a76d3ad3d",
+    "content-hash": "88f69198246b7abe2b0d65116fa9e2b5",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -489,16 +489,16 @@
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "0.3.2",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "4bff4a0b522112a03ffb4f894c4810bc97bd2b67"
+                "reference": "079e2e237c8a70cab7ccc5bbd00330f8077778d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/4bff4a0b522112a03ffb4f894c4810bc97bd2b67",
-                "reference": "4bff4a0b522112a03ffb4f894c4810bc97bd2b67",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/079e2e237c8a70cab7ccc5bbd00330f8077778d5",
+                "reference": "079e2e237c8a70cab7ccc5bbd00330f8077778d5",
                 "shasum": ""
             },
             "require": {
@@ -530,9 +530,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-helper/issues",
-                "source": "https://github.com/inc2734/wp-helper/tree/0.3.2"
+                "source": "https://github.com/inc2734/wp-helper/tree/1.0.0"
             },
-            "time": "2020-11-12T06:46:19+00:00"
+            "time": "2021-04-03T02:10:18+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",

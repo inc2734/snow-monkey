@@ -27,6 +27,43 @@ class Helper {
 	use WP_View_Controller\App\Contract\Template_Tag;
 
 	/**
+	 * get_template_part php files.
+	 *
+	 * @param string|array $directory_or_files Target directory (Full path or directory slug) or file slug list.
+	 * @param boolean      $exclude_underscore Exclude if true.
+	 */
+	public static function get_template_parts( $directory_or_files, $exclude_underscore = false ) {
+		if ( is_array( $directory_or_files ) ) {
+			$files = $directory_or_files;
+			if ( $exclude_underscore ) {
+				$files = array_filter(
+					$files,
+					function( $file_slug ) {
+						return 0 !== strpos( $file_slug, '_' );
+					}
+				);
+			}
+		} else {
+			$directory = $directory_or_files;
+			$files     = static::get_theme_files( $directory, $exclude_underscore );
+			if ( ! $files ) {
+				return $files;
+			}
+
+			$files = array_map(
+				function( $filename ) {
+					return str_replace( '.php', '', $filename );
+				},
+				$files
+			);
+		}
+
+		foreach ( $files as $file_slug ) {
+			WP_View_Controller\Helper::get_template_part( $file_slug );
+		}
+	}
+
+	/**
 	 * Return loading method.
 	 *
 	 * @param string $method Loading method.
@@ -46,15 +83,57 @@ class Helper {
 	 * @return void
 	 */
 	public static function load_files( $method, $directory, $exclude_underscore = false ) {
+		$stylesheet_directory = get_stylesheet_directory();
+
+		if ( -1 !== strpos( $directory, $stylesheet_directory ) ) {
+			$directory_slug = ltrim( str_replace( $stylesheet_directory, '', $directory ), DIRECTORY_SEPARATOR );
+			$save_dir       = $stylesheet_directory . '/assets/load-files-target';
+			$bundle_file    = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.json';
+
+			if ( file_exists( $bundle_file ) ) {
+				$files = json_decode( file_get_contents( $bundle_file ), true );
+			}
+		}
+
 		switch ( Helper::_get_loading_method( $method, $directory ) ) {
 			case 'get_template_parts':
-				Helper::get_template_parts( $directory, $exclude_underscore );
+				if ( ! empty( $files ) ) {
+					$search = [
+						trailingslashit( get_template_directory() ),
+						'.php',
+					];
+					if ( is_child_theme() ) {
+						$search[] = trailingslashit( get_stylesheet_directory() );
+					}
+					$files = array_map(
+						function( $filepath ) use ( $search ) {
+							return str_replace( $search, '', $filepath );
+						},
+						$files
+					);
+				}
+				$directory_or_files = ! empty( $files ) ? $files : $directory;
+				Helper::get_template_parts( $directory_or_files, $exclude_underscore );
 				break;
 			case 'load_theme_files':
-				Helper::load_theme_files( $directory, $exclude_underscore );
+				if ( ! empty( $files ) ) {
+					$search = [ get_template_directory() ];
+					if ( is_child_theme() ) {
+						$search[] = get_stylesheet_directory();
+					}
+					$files = array_map(
+						function( $filepath ) use ( $search ) {
+							return str_replace( $search, '', $filepath );
+						},
+						$files
+					);
+				}
+				$directory_or_files = ! empty( $files ) ? $files : $directory;
+				Helper::load_theme_files( $directory_or_files, $exclude_underscore );
 				break;
 			default:
-				Helper::include_files( $directory, $exclude_underscore );
+				$directory_or_files = ! empty( $files ) ? $files : $directory;
+				Helper::include_files( $directory_or_files, $exclude_underscore );
 		}
 	}
 
@@ -474,71 +553,6 @@ class Helper {
 	 */
 	public static function use_auto_custom_logo_size() {
 		return apply_filters( 'snow_monkey_use_auto_custom_logo_size', true );
-	}
-
-	/**
-	 * get_template_part php files
-	 *
-	 * @param string  $directory Target directory.
-	 * @param boolean $exclude_underscore Exclude if true.
-	 * @return void
-	 */
-	public static function get_template_parts( $directory, $exclude_underscore = false ) {
-		$directory = realpath( $directory );
-		if ( ! is_dir( $directory ) ) {
-			return;
-		}
-
-		$template_directory = realpath( get_template_directory() );
-
-		$iterator = new RecursiveDirectoryIterator( $directory, FilesystemIterator::SKIP_DOTS );
-		$iterator = new RecursiveIteratorIterator( $iterator );
-
-		$files = [];
-
-		foreach ( $iterator as $file ) {
-			if ( ! $file->isFile() ) {
-				continue;
-			}
-
-			if ( 'php' !== $file->getExtension() ) {
-				continue;
-			}
-
-			if ( $exclude_underscore && 0 === strpos( $file->getBasename(), '_' ) ) {
-				continue;
-			}
-
-			$files[] = realpath( $file->getPathname() );
-		}
-
-		if ( ! $files ) {
-			return;
-		}
-
-		usort(
-			$files,
-			function( $a, $b ) {
-				$adeps = substr_count( $a, DIRECTORY_SEPARATOR );
-				$bdeps = substr_count( $b, DIRECTORY_SEPARATOR );
-
-				if ( $adeps === $bdeps ) {
-					return 0;
-				}
-
-				return $adeps > $bdeps ? 1 : -1;
-			}
-		);
-
-		foreach ( $files as $filepath ) {
-			$template_name = str_replace(
-				[ $template_directory . DIRECTORY_SEPARATOR, '.php' ],
-				'',
-				$filepath
-			);
-
-			WP_View_Controller\Helper::get_template_part( $template_name );
-		}
 	}
 
 	/**

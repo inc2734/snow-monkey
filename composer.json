@@ -36,7 +36,7 @@
     "inc2734/wp-adsense": "^1.0",
     "inc2734/wp-custom-css-to-editor": "^0.1",
     "inc2734/wp-google-fonts": "^0.2",
-    "inc2734/wp-helper": "^0.3"
+    "inc2734/wp-helper": "^1.0"
   },
   "config": {
     "process-timeout": 0,
