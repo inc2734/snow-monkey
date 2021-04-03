@@ -11,7 +11,7 @@ require_once( './wp-load.php' );
 
 $theme = wp_get_theme( get_template() );
 if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) {
-	return;
+	throw new Exception( 'generate-load-files-target: This is not the snow monkey theme.' );
 }
 
 /**
@@ -44,7 +44,10 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 		return false;
 	}
 
-	file_put_contents( $bundle_file, json_encode( $files ), FILE_APPEND | LOCK_EX );
+	$byte = file_put_contents( $bundle_file, json_encode( $files ), FILE_APPEND | LOCK_EX );
+	if ( false === $byte ) {
+		throw new Exception( 'generate-load-files-target: Failed to write.' );
+	}
 }
 
 generate_load_files_target( 'app/setup', true );
