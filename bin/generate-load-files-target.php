@@ -15,7 +15,7 @@ if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->t
 }
 
 /**
- * Generate json file for Helper::load_files().
+ * Generate php file for Helper::load_files().
  *
  * @param string  $directory_slug     The directory slug.
  * @param boolean $exclude_underscore Return true if exclude underscore.
@@ -39,7 +39,7 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 		throw new Exception( 'generate-load-files-target: The directory isn\'t writable. ' . print_r( stat( $save_dir ), true ) );
 	}
 
-	$bundle_file = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.json';
+	$bundle_file = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.php';
 	if ( file_exists( $bundle_file ) ) {
 		unlink( $bundle_file );
 	}
@@ -48,8 +48,10 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 		return false;
 	}
 
-	$byte = file_put_contents( $bundle_file, json_encode( $files ), FILE_APPEND | LOCK_EX );
-	if ( false === $byte ) {
+	file_put_contents( $bundle_file, "<?php\n", FILE_APPEND | LOCK_EX );
+	file_put_contents( $bundle_file, 'return ' . var_export( $files, true ) . ";\n", FILE_APPEND | LOCK_EX );
+
+	if ( ! file_exists( $bundle_file ) || ! file_get_contents( $bundle_file ) ) {
 		throw new Exception( 'generate-load-files-target: Failed to write. ' . print_r( stat( $bundle_file ), true ) );
 	}
 	error_log( 'Wrote ' . $bundle_file );

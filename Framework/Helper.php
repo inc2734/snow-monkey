@@ -88,10 +88,10 @@ class Helper {
 		if ( -1 !== strpos( $directory, $stylesheet_directory ) ) {
 			$directory_slug = ltrim( str_replace( $stylesheet_directory, '', $directory ), DIRECTORY_SEPARATOR );
 			$save_dir       = $stylesheet_directory . '/assets/load-files-target';
-			$bundle_file    = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.json';
+			$bundle_file    = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.php';
 
 			if ( file_exists( $bundle_file ) ) {
-				$files = json_decode( file_get_contents( $bundle_file ), true );
+				$files = include( $bundle_file );
 			}
 		}
 
