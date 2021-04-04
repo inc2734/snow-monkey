@@ -35,7 +35,7 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 		wp_mkdir_p( $save_dir );
 	}
 	if ( ! is_writable( $save_dir ) ) {
-		throw new Exception( 'generate-load-files-target: The directory isn\'t writable. ' . print_r( $save_dir, true ) );
+		throw new Exception( 'generate-load-files-target: The directory isn\'t writable. ' . print_r( stat( $save_dir ), true ) );
 	}
 
 	$bundle_file = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.json';
@@ -49,7 +49,7 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 
 	$byte = file_put_contents( $bundle_file, json_encode( $files ), FILE_APPEND | LOCK_EX );
 	if ( false === $byte ) {
-		throw new Exception( 'generate-load-files-target: Failed to write. ' . print_r( $bundle_file, true ) );
+		throw new Exception( 'generate-load-files-target: Failed to write. ' . print_r( stat( $bundle_file ), true ) );
 	}
 }
 
