@@ -80,7 +80,7 @@
     "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' '../../assets/packages' --cwd=node_modules/@fortawesome --parents",
     "packages": "npm run cleanup:packages && run-p packages:*",
     "img": "npm run cleanup:img && cpy '**' '../../assets/img' --cwd=src/img --parents",
-    "pregenerate-load-files-target": "cleanup cleanup:load-files-target && wp-env start && wp-env run composer 'install --no-interaction'",
+    "pregenerate-load-files-target": "npm run cleanup:load-files-target && wp-env start && wp-env run composer 'install --no-interaction'",
     "postgenerate-load-files-target": "wp-env stop",
     "generate-load-files-target": "npm run cli 'php wp-content/themes/snow-monkey/bin/generate-load-files-target.php'",
     "translation:name": "php bin/template-header.php",
