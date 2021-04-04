@@ -19,6 +19,7 @@ if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->t
  *
  * @param string  $directory_slug     The directory slug.
  * @param boolean $exclude_underscore Return true if exclude underscore.
+ * @throws Exception If the write operation fails.
  */
 function generate_load_files_target( $directory_slug, $exclude_underscore = false ) {
 	if ( ! $directory_slug ) {
@@ -51,6 +52,7 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 	if ( false === $byte ) {
 		throw new Exception( 'generate-load-files-target: Failed to write. ' . print_r( stat( $bundle_file ), true ) );
 	}
+	error_log( 'Wrote ' . $bundle_file );
 }
 
 generate_load_files_target( 'app/setup', true );
