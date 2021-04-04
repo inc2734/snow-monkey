@@ -49,7 +49,7 @@
     "cleanup:packages": "rimraf assets/packages && mkdir -p assets/packages",
     "cleanup:img": "rimraf assets/img && mkdir -p assets/img",
     "cleanup:translation": "rimraf translation && mkdir -p translation",
-    "cleanup:load-files-target": "rimraf assets/load-files-target && mkdir -p assets/load-files-target",
+    "cleanup:load-files-target": "rimraf assets/load-files-target",
     "cleanup:zip-directory": "rimraf snow-monkey",
     "cleanup:zip": "rimraf snow-monkey.zip",
     "cleanup:trial-zip-directory": "rimraf trial && mkdir trial",
