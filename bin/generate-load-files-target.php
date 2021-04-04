@@ -9,8 +9,6 @@ use Framework\Helper;
 
 require_once( './wp-load.php' );
 
-switch_theme( 'snow-monkey' );
-
 $theme = wp_get_theme( get_template() );
 if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) {
 	throw new Exception( 'generate-load-files-target: This is not the snow monkey theme. The currently enabled theme is ' . get_stylesheet() . '.' );
