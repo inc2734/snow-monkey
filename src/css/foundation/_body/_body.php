@@ -119,6 +119,16 @@ Style::register(
 	'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px'
 );
 
+if ( 16 !== get_theme_mod( 'base-font-size' ) ) {
+	Style::register(
+		[
+			'.has-regular-font-size',
+			'.has-normal-font-size',
+		],
+		'font-size: 16px'
+	);
+}
+
 $base_font   = get_theme_mod( 'base-font' );
 $font_family = [];
 if ( 'sans-serif' === $base_font ) {
