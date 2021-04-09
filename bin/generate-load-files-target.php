@@ -48,8 +48,30 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 		return false;
 	}
 
-	file_put_contents( $bundle_file, "<?php\n", FILE_APPEND | LOCK_EX );
-	file_put_contents( $bundle_file, 'return ' . var_export( $files, true ) . ";\n", FILE_APPEND | LOCK_EX );
+	$files = array_map(
+		function( $file ) use ( $template_directory ) {
+			return str_replace( $template_directory , '', $file );
+		},
+		$files
+	);
+
+	file_put_contents(
+		$bundle_file,
+		"<?php\n\$template_directory = get_template_directory();\nreturn [\n",
+		FILE_APPEND | LOCK_EX
+	);
+	foreach ( $files as $file ) {
+		file_put_contents(
+			$bundle_file,
+			"\$template_directory . '" . $file . "',\n",
+			FILE_APPEND | LOCK_EX
+		);
+	}
+	file_put_contents(
+		$bundle_file,
+		"];\n",
+		FILE_APPEND | LOCK_EX
+	);
 
 	if ( ! file_exists( $bundle_file ) || ! file_get_contents( $bundle_file ) ) {
 		throw new Exception( 'generate-load-files-target: Failed to write. ' . print_r( stat( $bundle_file ), true ) );

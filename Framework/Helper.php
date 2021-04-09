@@ -97,7 +97,7 @@ class Helper {
 
 		switch ( Helper::_get_loading_method( $method, $directory ) ) {
 			case 'get_template_parts':
-				if ( ! empty( $files ) ) {
+				if ( ! empty( $files ) && is_array( $files ) ) {
 					$search = [
 						trailingslashit( get_template_directory() ),
 						'.php',
@@ -112,11 +112,11 @@ class Helper {
 						$files
 					);
 				}
-				$directory_or_files = ! empty( $files ) ? $files : $directory;
+				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
 				Helper::get_template_parts( $directory_or_files, $exclude_underscore );
 				break;
 			case 'load_theme_files':
-				if ( ! empty( $files ) ) {
+				if ( ! empty( $files ) && is_array( $files ) ) {
 					$search = [ get_template_directory() ];
 					if ( is_child_theme() ) {
 						$search[] = get_stylesheet_directory();
@@ -128,11 +128,11 @@ class Helper {
 						$files
 					);
 				}
-				$directory_or_files = ! empty( $files ) ? $files : $directory;
+				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
 				Helper::load_theme_files( $directory_or_files, $exclude_underscore );
 				break;
 			default:
-				$directory_or_files = ! empty( $files ) ? $files : $directory;
+				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
 				Helper::include_files( $directory_or_files, $exclude_underscore );
 		}
 	}
