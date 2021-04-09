@@ -50,7 +50,7 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 
 	$files = array_map(
 		function( $file ) use ( $template_directory ) {
-			return str_replace( $template_directory , '', $file );
+			return str_replace( $template_directory, '', $file );
 		},
 		$files
 	);
