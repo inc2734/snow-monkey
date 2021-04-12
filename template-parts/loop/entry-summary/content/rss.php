@@ -25,36 +25,8 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 	return;
 }
 
-$description = $args['_item']->get_description();
-
-/**
- * Callback for excerpt_length
- *
- * @global array $args The template part args.
- * @param int $number The maximum number of words. Default 55.
- * @return int
- */
-$entry_summary_content_excerpt_length = function( $number = null ) use ( $args ) {
-	if ( null !== $args['_excerpt_length'] ) {
-		return $args['_excerpt_length'];
-	}
-
-	if ( is_null( $number ) ) {
-		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-		$number = _x( '55', 'excerpt_length' );
-		// phpcs:enable
-	}
-
-	if ( 'rich-media' === $args['_entries_layout'] ) {
-		$num_words            = 25;
-		$excerpt_length_ratio = 55 / $number;
-		return $num_words / $excerpt_length_ratio;
-	}
-
-	return $number;
-};
-
-$excerpt_length = $entry_summary_content_excerpt_length();
+$description    = $args['_item']->get_description();
+$excerpt_length = Helper::entry_summary_content_excerpt_length( $args['_excerpt_length'], $args['_entries_layout'] );
 $excerpt_more   = apply_filters( 'excerpt_more', ' [&hellip;]' );
 $description    = wp_strip_all_tags( wp_trim_words( $description, $excerpt_length, $excerpt_more ) );
 ?>

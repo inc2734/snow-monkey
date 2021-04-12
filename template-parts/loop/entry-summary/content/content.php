@@ -29,23 +29,11 @@ $args = wp_parse_args(
  * @return int
  */
 $entry_summary_content_excerpt_length = function( $number = null ) use ( $args ) {
-	if ( null !== $args['_excerpt_length'] ) {
-		return $args['_excerpt_length'];
-	}
-
-	if ( is_null( $number ) ) {
-		// phpcs:disable WordPress.WP.I18n.MissingArgDomain
-		$number = _x( '55', 'excerpt_length' );
-		// phpcs:enable
-	}
-
-	if ( 'rich-media' === $args['_entries_layout'] ) {
-		$num_words            = 25;
-		$excerpt_length_ratio = 55 / $number;
-		return $num_words / $excerpt_length_ratio;
-	}
-
-	return $number;
+	return Helper::entry_summary_content_excerpt_length(
+		$args['_excerpt_length'],
+		$args['_entries_layout'],
+		$number
+	);
 };
 
 add_filter( 'excerpt_length', $entry_summary_content_excerpt_length, 100 );

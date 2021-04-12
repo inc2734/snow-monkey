@@ -568,4 +568,32 @@ class Helper {
 		$browser = strtolower( $_SERVER['HTTP_USER_AGENT'] );
 		return strstr( $browser, 'trident' ) || strstr( $browser, 'msie' );
 	}
+
+	/**
+	 * Callback for excerpt_length
+	 *
+	 * @param null|int $num_words      Number of words.
+	 * @param string   $entries_layout Layout of entries.
+	 * @param int      $number         The maximum number of words. Default 55.
+	 * @return int
+	 */
+	public static function entry_summary_content_excerpt_length( $num_words, $entries_layout, $number = null ) {
+		if ( null !== $num_words ) {
+			return $num_words;
+		}
+
+		if ( is_null( $number ) ) {
+			// phpcs:disable WordPress.WP.I18n.MissingArgDomain
+			$number = _x( '55', 'excerpt_length' );
+			// phpcs:enable
+		}
+
+		if ( 'rich-media' === $entries_layout ) {
+			$num_words            = 25;
+			$excerpt_length_ratio = 55 / $number;
+			return $num_words / $excerpt_length_ratio;
+		}
+
+		return $number;
+	}
 }
