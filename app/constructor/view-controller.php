@@ -3,12 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 14.0.5
  */
 
 use Framework\Controller\Controller;
-
-new Controller();
 
 /**
  * Update view controller config.
@@ -222,3 +220,5 @@ add_filter(
 	9,
 	4
 );
+
+new Controller();
