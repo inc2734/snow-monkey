@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.4
+ * @version 14.0.5
  */
 
 namespace Framework;
@@ -83,8 +83,9 @@ class Helper {
 	 * @return void
 	 */
 	public static function load_files( $method, $directory, $exclude_underscore = false ) {
-		$template_directory   = get_template_directory();
-		$stylesheet_directory = get_stylesheet_directory();
+		$template_directory   = realpath( get_template_directory() );
+		$stylesheet_directory = realpath( get_stylesheet_directory() );
+		$directory            = realpath( $directory );
 
 		if ( -1 !== strpos( $directory, $template_directory ) ) {
 			$directory_slug = ltrim( str_replace( $template_directory, '', $directory ), DIRECTORY_SEPARATOR );
@@ -99,16 +100,15 @@ class Helper {
 		switch ( Helper::_get_loading_method( $method, $directory ) ) {
 			case 'get_template_parts':
 				if ( ! empty( $files ) && is_array( $files ) ) {
-					$search = [
-						trailingslashit( $template_directory ),
-						'.php',
-					];
+					$search   = [];
+					$search[] = trailingslashit( $template_directory );
+					$search[] = '.php';
 					if ( is_child_theme() ) {
 						$search[] = trailingslashit( $stylesheet_directory );
 					}
 					$files = array_map(
 						function( $filepath ) use ( $search ) {
-							return str_replace( $search, '', $filepath );
+							return str_replace( $search, '', realpath( $filepath ) );
 						},
 						$files
 					);
@@ -118,13 +118,14 @@ class Helper {
 				break;
 			case 'load_theme_files':
 				if ( ! empty( $files ) && is_array( $files ) ) {
-					$search = [ $template_directory ];
+					$search   = [];
+					$search[] = $template_directory;
 					if ( is_child_theme() ) {
 						$search[] = $stylesheet_directory;
 					}
 					$files = array_map(
 						function( $filepath ) use ( $search ) {
-							return str_replace( $search, '', $filepath );
+							return str_replace( $search, '', realpath( $filepath ) );
 						},
 						$files
 					);
@@ -137,7 +138,6 @@ class Helper {
 				Helper::include_files( $directory_or_files, $exclude_underscore );
 		}
 	}
-
 
 	/**
 	 * Return output positions of eyecatch.

@@ -489,16 +489,16 @@
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "1.0.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "079e2e237c8a70cab7ccc5bbd00330f8077778d5"
+                "reference": "b6def15dfda77b84b894409f90456b22fe9bf5a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/079e2e237c8a70cab7ccc5bbd00330f8077778d5",
-                "reference": "079e2e237c8a70cab7ccc5bbd00330f8077778d5",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/b6def15dfda77b84b894409f90456b22fe9bf5a6",
+                "reference": "b6def15dfda77b84b894409f90456b22fe9bf5a6",
                 "shasum": ""
             },
             "require": {
@@ -530,9 +530,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-helper/issues",
-                "source": "https://github.com/inc2734/wp-helper/tree/1.0.0"
+                "source": "https://github.com/inc2734/wp-helper/tree/1.0.1"
             },
-            "time": "2021-04-03T02:10:18+00:00"
+            "time": "2021-04-12T14:02:33+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",
