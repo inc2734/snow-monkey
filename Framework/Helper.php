@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 14.0.4
  */
 
 namespace Framework;
@@ -83,11 +83,12 @@ class Helper {
 	 * @return void
 	 */
 	public static function load_files( $method, $directory, $exclude_underscore = false ) {
+		$template_directory   = get_template_directory();
 		$stylesheet_directory = get_stylesheet_directory();
 
-		if ( -1 !== strpos( $directory, $stylesheet_directory ) ) {
-			$directory_slug = ltrim( str_replace( $stylesheet_directory, '', $directory ), DIRECTORY_SEPARATOR );
-			$save_dir       = $stylesheet_directory . '/assets/load-files-target';
+		if ( -1 !== strpos( $directory, $template_directory ) ) {
+			$directory_slug = ltrim( str_replace( $template_directory, '', $directory ), DIRECTORY_SEPARATOR );
+			$save_dir       = $template_directory . '/assets/load-files-target';
 			$bundle_file    = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.php';
 
 			if ( file_exists( $bundle_file ) ) {
@@ -99,11 +100,11 @@ class Helper {
 			case 'get_template_parts':
 				if ( ! empty( $files ) && is_array( $files ) ) {
 					$search = [
-						trailingslashit( get_template_directory() ),
+						trailingslashit( $template_directory ),
 						'.php',
 					];
 					if ( is_child_theme() ) {
-						$search[] = trailingslashit( get_stylesheet_directory() );
+						$search[] = trailingslashit( $stylesheet_directory );
 					}
 					$files = array_map(
 						function( $filepath ) use ( $search ) {
@@ -117,9 +118,9 @@ class Helper {
 				break;
 			case 'load_theme_files':
 				if ( ! empty( $files ) && is_array( $files ) ) {
-					$search = [ get_template_directory() ];
+					$search = [ $template_directory ];
 					if ( is_child_theme() ) {
-						$search[] = get_stylesheet_directory();
+						$search[] = $stylesheet_directory;
 					}
 					$files = array_map(
 						function( $filepath ) use ( $search ) {
