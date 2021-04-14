@@ -78,10 +78,6 @@ body {
   }
 }
 
-.wp-block[data-type="core/list"] {
-  margin-left: 1.5em;
-}
-
 [data-type="core/html"] {
   textarea {
     @include _pre();
