@@ -3,17 +3,16 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 14.0.7
  */
 
-if ( ! class_exists( 'Inc2734_WP_Awesome_Widgets_Abstract_Widget' ) ) {
+use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
+
+if ( ! class_exists( '\Inc2734\WP_Awesome_Widgets\App\Contract\Widget' ) ) {
 	return;
 }
 
-/**
- * Snow_Monkey_RSS_Widget
- */
-class Snow_Monkey_RSS_Widget extends Inc2734_WP_Awesome_Widgets_Abstract_Widget {
+class Snow_Monkey_RSS_Widget extends Abstract_Widget {
 
 	/**
 	 * @var array
