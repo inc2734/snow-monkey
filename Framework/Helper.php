@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.5
+ * @version 14.0.6
  */
 
 namespace Framework;
@@ -101,10 +101,10 @@ class Helper {
 			case 'get_template_parts':
 				if ( ! empty( $files ) && is_array( $files ) ) {
 					$search   = [];
-					$search[] = trailingslashit( $template_directory );
+					$search[] = realpath( trailingslashit( $template_directory ) );
 					$search[] = '.php';
 					if ( is_child_theme() ) {
-						$search[] = trailingslashit( $stylesheet_directory );
+						$search[] = realpath( trailingslashit( $stylesheet_directory ) );
 					}
 					$files = array_map(
 						function( $filepath ) use ( $search ) {
