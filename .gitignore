@@ -6,7 +6,6 @@ node_modules/
 /assets/
 vendor/
 *.sql
-/sql/
 .travis/github_deploy_key
 release/
 snow-monkey.zip
@@ -15,6 +14,6 @@ snow-monkey
 trial
 composer-dev.json
 composer-dev.lock
-/translation/
+/.translation/
 /cache/
-/uploads/
+/.export/*

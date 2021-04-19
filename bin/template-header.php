@@ -5,7 +5,7 @@
  * @license GPL-2.0+
  */
 
-$translation_dir = __DIR__ . '/../translation';
+$translation_dir = __DIR__ . '/../.translation';
 $wrappers_dir    = __DIR__ . '/../templates/layout/wrapper';
 $headers_dir     = __DIR__ . '/../templates/layout/header';
 
