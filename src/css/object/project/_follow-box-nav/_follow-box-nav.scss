@@ -171,4 +171,8 @@
   [data-icon="tiktok"] {
     background-color: map-get($social-icon-colors, 'tiktok');
   }
+
+  [data-icon="note"] {
+    background-color: map-get($social-icon-colors, 'note');
+  }
 }
