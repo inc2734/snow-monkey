@@ -9,7 +9,7 @@
   &,
   &.is-large,
   &.is-style-large {
-    @include _padding(.75, .5, .5, 1.5);
+    @include _padding(1, .5, .5, 1.5);
   }
 
   @include _media-min(md) {
@@ -20,21 +20,21 @@
     &.is-style-large {
       @include _margin-right(1);
       @include _margin-left(1);
-      @include _padding(1, 1, .75, 2);
+      @include _padding(1.5, 1, .75, 2);
     }
   }
 
   &::before {
     content: '';
-    @include _position(absolute, $_base-font-size-px, null, null, $_base-font-size-px);
+    @include _position(absolute, 1rem, null, null, 1rem);
     display: block;
-    @include _square($_base-font-size-px + 2);
+    @include _square(1.25rem);
     background-image: url(#{ $img-path }/blockquote/icon.svg);
     background-repeat: no-repeat;
     background-size: contain;
 
     @include _media-min(md) {
-      @include _square($_base-font-size-px * 1.5);
+      @include _square(1.5rem);
     }
   }
 

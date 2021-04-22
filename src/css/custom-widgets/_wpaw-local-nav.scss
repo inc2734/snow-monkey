@@ -11,7 +11,7 @@
 
   &__item,
   &__subitem {
-    @include _font-size-line-height($_base-font-size-px);
+    @include _font-size-line-height(1);
 
     > a {
       display: inline-block;

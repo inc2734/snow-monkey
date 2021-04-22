@@ -50,7 +50,7 @@
 
   &__name {
     @include _margin(0, 0, .25);
-    @include _font-size-line-height($_base-font-size-px);
+    @include _font-size-line-height(1);
   }
 
   &__content {

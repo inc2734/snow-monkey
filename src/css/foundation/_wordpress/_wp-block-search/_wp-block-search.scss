@@ -63,7 +63,7 @@
     @include _btn();
     @include _form-control-base-border();
     @include _form-control-base-padding();
-    @include _font-size($_base-font-size-px);
+    @include _font-size(1);
     flex: none;
     position: relative;
     z-index: 0;

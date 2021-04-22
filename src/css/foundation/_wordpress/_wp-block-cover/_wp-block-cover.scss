@@ -7,7 +7,7 @@
   }
 
   .wp-block-cover-text {
-    @include _font-size-line-height($_base-font-size-px * 1.5);
+    @include _font-size-line-height(1.5);
     @include _padding(1);
   }
 }

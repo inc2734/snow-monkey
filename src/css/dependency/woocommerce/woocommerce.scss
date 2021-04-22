@@ -58,7 +58,7 @@ $img-path: '../../../img';
 
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
-  @include _font-size-line-height($_base-font-size-px);
+  @include _font-size-line-height(1);
 }
 
 .woocommerce-input-wrapper,
@@ -120,7 +120,7 @@ $img-path: '../../../img';
   > header > h2,
   > form > h3 {
     @include _margin-bottom(.25);
-    @include _font-size-line-height($_base-font-size-px * 1.25);
+    @include _font-size-line-height(1.25);
   }
 
   > header + .shop_table {
@@ -129,7 +129,7 @@ $img-path: '../../../img';
 }
 
 .woocommerce .woocommerce-MyAccount-content .my_account_orders {
-  @include _font-size-line-height($_base-font-size-px);
+  @include _font-size-line-height(1);
 }
 
 .woocommerce-MyAccount-navigation {
@@ -369,7 +369,7 @@ $img-path: '../../../img';
 .woocommerce-loop-product__title {
   color: _light($_color-text); // For IE11
   color: _var-light-color-text();
-  @include _font-size-line-height($_base-font-size-px);
+  @include _font-size-line-height(1);
   font-weight: normal;
 }
 
@@ -388,7 +388,7 @@ $img-path: '../../../img';
 // Cart total in cart page
 .woocommerce .cart_totals h2 {
   @include _margin-bottom(.25);
-  @include _font-size-line-height($_base-font-size-px * 1.25);
+  @include _font-size-line-height(1.25);
 }
 
 // Headings in checkout page
@@ -397,7 +397,7 @@ $img-path: '../../../img';
 .woocommerce h3[id="order_review_heading"],
 .woocommerce h3[id="ship-to-different-address"] {
   @include _margin-bottom(.25);
-  @include _font-size-line-height($_base-font-size-px * 1.25);
+  @include _font-size-line-height(1.25);
 }
 .woocommerce [id="customer_details"] {
   @include _margin-bottom(1);
@@ -416,7 +416,7 @@ $img-path: '../../../img';
 // My account > edit-address
 .woocommerce-Addresses .woocommerce-Address-title h3 {
   @include _margin-bottom(.25);
-  @include _font-size-line-height($_base-font-size-px * 1.25);
+  @include _font-size-line-height(1.25);
 }
 
 // Product category widget

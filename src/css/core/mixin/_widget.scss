@@ -5,7 +5,7 @@
  */
 @mixin widget-title() {
   @include _margin(0, 0, .5);
-  @include _font-size-line-height($_base-font-size-px);
+  @include _font-size-line-height(1);
   font-weight: bold;
   display: var(--widget-title-display);
   flex-direction: var(--widget-title-flex-direction);

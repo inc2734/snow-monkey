@@ -3,12 +3,8 @@
 }
 
 .wpaw-showcase {
-  @include _padding(1.5, .5);
-
-  @include _media-min(md) {
-    @include _padding-right(1);
-    @include _padding-left(1);
-  }
+  @include _padding-top(1.5);
+  @include _padding-bottom(1.5);
 
   &__inner {
   }

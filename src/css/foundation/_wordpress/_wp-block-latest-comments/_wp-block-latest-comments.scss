@@ -6,7 +6,7 @@
   }
 
   &__comment-meta {
-    @include _font-size-line-height($_base-font-size-px);
+    @include _font-size-line-height(1);
   }
 
   &__comment-date {

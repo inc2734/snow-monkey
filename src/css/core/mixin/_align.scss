@@ -12,15 +12,3 @@
     margin-left: auto;
   }
 }
-
-/*
-@mixin alignwide() {
-  @include _container();
-  @include alignfull();
-  position: relative;
-  right: -50vw;
-  transform: translateX(-50%);
-  max-width: $_container-max-width; // for IE11
-  max-width: _var-container-max-width();
-}
-*/

@@ -76,27 +76,27 @@ $comment-bgcolors: [_lightest($_color-gray), _var-lightest-color-gray()];
     @include _content(.5);
 
     > h2 {
-      @include _font-size-line-height($_base-font-size * $_h2-font-size-scale / 1.5);
+      @include _font-size-line-height($_h2-font-size-scale / 1.5);
     }
 
     > h3 {
-      @include _font-size-line-height($_base-font-size * $_h3-font-size-scale / 1.5);
+      @include _font-size-line-height($_h3-font-size-scale / 1.5);
     }
 
     > h4 {
-      @include _font-size-line-height($_base-font-size * $_h4-font-size-scale / 1.5);
+      @include _font-size-line-height($_h4-font-size-scale / 1.5);
     }
 
     > h5 {
-      @include _font-size-line-height($_base-font-size * $_h5-font-size-scale / 1.5);
+      @include _font-size-line-height($_h5-font-size-scale / 1.5);
     }
 
     > h6 {
-      @include _font-size-line-height($_base-font-size * $_h6-font-size-scale / 1.5);
+      @include _font-size-line-height($_h6-font-size-scale / 1.5);
     }
 
     > h1 {
-      @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.5);
+      @include _font-size-line-height($_h1-font-size-scale / 1.5);
     }
   }
 

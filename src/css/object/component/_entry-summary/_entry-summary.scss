@@ -34,10 +34,10 @@
   }
 
   &__title {
-    @include _font-size-line-height($_base-font-size-px);
+    @include _font-size-line-height(1);
 
     @include _media-min(lg) {
-      @include _font-size-line-height($_base-font-size-px * 1.25);
+      @include _font-size-line-height(1.25);
     }
   }
 
@@ -111,7 +111,7 @@
     }
 
     &__title {
-      @include _font-size-line-height($_base-font-size-px);
+      @include _font-size-line-height(1);
       font-weight: normal;
     }
 
@@ -163,7 +163,7 @@
     }
 
     &__title {
-      @include _font-size-line-height($_base-font-size-px);
+      @include _font-size-line-height(1);
       font-weight: normal;
     }
 

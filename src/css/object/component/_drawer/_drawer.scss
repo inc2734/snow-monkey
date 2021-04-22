@@ -22,7 +22,7 @@
 
   &__toggle {
     top: _space(.25);
-    @include _square(_px2rem(_vertical-rhythm($drawer-font-size)));
+    @include _square(1rem);
     @include _transition(transform);
     transform: rotate(90deg);
 

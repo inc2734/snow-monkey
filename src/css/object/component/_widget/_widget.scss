@@ -9,7 +9,7 @@
     @include _font-size-line-height($_base-font-size-px - 2);
 
     &__title {
-      @include _font-size-line-height($_base-font-size-px);
+      @include _font-size-line-height(1);
     }
   }
 }

@@ -81,10 +81,10 @@
 
   &__item-title {
     position: relative;
-    @include _font-size-line-height($_base-font-size-px);
+    @include _font-size-line-height(1);
 
     @include _media-min(lg) {
-      @include _font-size-line-height($_base-font-size * 1.2);
+      @include _font-size-line-height(1.2);
     }
   }
 }

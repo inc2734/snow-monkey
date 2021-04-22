@@ -1,7 +1,7 @@
 .wp-block-pullquote {
   color: $_color-text; // For IE11
   color: _var-color-text();
-  @include _font-size-line-height($_base-font-size-px * 1.5);
+  @include _font-size-line-height(1.5);
   font-weight: bold;
   @include _padding(1.5, 0);
 
@@ -20,7 +20,7 @@
       max-width: none;
 
       p {
-        @include _font-size-line-height($_base-font-size-px * 1.5);
+        @include _font-size-line-height(1.5);
       }
     }
   }
@@ -36,7 +36,7 @@
     padding: 0;
 
     p {
-      @include _font-size-line-height($_base-font-size-px * 1.5);
+      @include _font-size-line-height(1.5);
     }
   }
 }

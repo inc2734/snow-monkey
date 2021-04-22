@@ -3,16 +3,14 @@
 }
 
 .wpaw-pr-box {
-  @include _padding(1, .5);
-
-  @include _media-min(md) {
-    @include _padding-right(1);
-    @include _padding-left(1);
-  }
+  @include _padding-top(1);
+  @include _padding-bottom(1);
 
   &--chameleon {
-    padding-right: 0;
-    padding-left: 0;
+    #{ $_prefix }c-container {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   &__title {
@@ -76,7 +74,8 @@
 [data-has-sidebar="true"] {
   [data-is-content-widget-area="true"] {
     .wpaw-pr-box {
-      @include _padding(1.5, 0);
+      @include _padding-top(1.5);
+      @include _padding-bottom(1.5);
     }
   }
 }
@@ -84,10 +83,12 @@
 [data-has-sidebar="false"] {
   [data-is-content-widget-area="true"] {
     .wpaw-pr-box {
-      @include _padding(1.5, 0);
+      @include _padding-top(1.5);
+      @include _padding-bottom(1.5);
 
       @include _media-min(lg) {
-        @include _padding(3, 0);
+        @include _padding-top(3);
+        @include _padding-bottom(3);
       }
     }
   }

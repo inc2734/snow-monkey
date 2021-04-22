@@ -71,7 +71,7 @@
   &__item-title {
     position: relative;
     font-weight: bold;
-    @include _font-size-line-height($_base-font-size-px * 1.25);
+    @include _font-size-line-height(1.25);
     text-shadow: rgba($_color-text, .3) 1px 1px 3px;
   }
 
@@ -208,7 +208,7 @@
     .wpaw-pickup-slider {
       &__item-title {
         @include _media-only(md) {
-          @include _font-size-line-height($_base-font-size * 2);
+          @include _font-size-line-height(2);
         }
       }
     }
@@ -221,11 +221,11 @@
     .wpaw-pickup-slider {
       &__item-title {
         @include _media-min(md) {
-          @include _font-size-line-height($_base-font-size * 2);
+          @include _font-size-line-height(2);
         }
 
         @include _media-min(lg) {
-          @include _font-size-line-height($_base-font-size * 3);
+          @include _font-size-line-height(3);
         }
       }
 
