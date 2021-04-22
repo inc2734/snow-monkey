@@ -13,11 +13,11 @@
 
   > .alignleft,
   > .alignright {
-    margin-top: $_between-lines;
+    margin-top: $_half-leading * 1rem;
   }
 }
 
 img.alignleft,
 img.alignright {
-  margin-top: $_between-lines;
+  margin-top: $_half-leading * 1rem;
 }

@@ -27,7 +27,7 @@
   }
 
   &__figure {
-    @include _margin($_between-lines, 1, 0, 0);
+    @include _margin($_half-leading * 1rem, 1, 0, 0);
 
     @include _media-min(md) {
       float: left;

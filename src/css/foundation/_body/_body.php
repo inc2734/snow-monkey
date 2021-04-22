@@ -107,6 +107,11 @@ if ( $widget_title_style ) {
 	}
 }
 
+$base_line_height = get_theme_mod( 'base-line-height' );
+if ( $base_line_height ) {
+	$root_variables[] = '--_half-leading: ' . ( $base_line_height - 1 ) / 2;
+}
+
 if ( $root_variables ) {
 	Style::register(
 		':root',
