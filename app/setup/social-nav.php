@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.2.1
+ * @version 14.2.0
  */
 
 use Framework\Model\Filesystem;
@@ -327,7 +327,9 @@ add_filter(
 		) {
 			$new_item_output = str_replace(
 				$args->link_before,
-				$get_brand_icon( get_template_directory() . '/assets/img/note.svg' ) . $args->link_before,
+				'follow-box' === $args->theme_location
+					? $get_brand_icon( get_template_directory() . '/assets/img/note-white.svg' ) . $args->link_before
+					: $get_brand_icon( get_template_directory() . '/assets/img/note.svg' ) . $args->link_before,
 				$item_output
 			);
 			$new_item_output = str_replace( '<a ', '<a data-icon="note"', $new_item_output );
