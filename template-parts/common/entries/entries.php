@@ -28,9 +28,9 @@ if ( ! $args['_posts_query'] ) {
 }
 
 if ( 'carousel' === $args['_entries_layout'] ) {
-	$slug = 'template-parts/common/entries/list/carousel';
+	$slug = 'template-parts/common/entries/entries/carousel';
 } else {
-	$slug = 'template-parts/common/entries/list/posts';
+	$slug = 'template-parts/common/entries/entries/posts';
 	$args = wp_parse_args(
 		$args,
 		[

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 14.2.0
  *
  * renamed: template-parts/loop/entry-summary/title/title-rss.php
  */
@@ -35,7 +35,7 @@ $title_tag = $args['_title_tag'];
 
 <<?php echo esc_html( $title_tag ); ?> class="c-entry-summary__title">
 	<?php
-	if ( 'rich-media' !== $args['_entries_layout'] ) {
+	if ( ! in_array( $args['_entries_layout'], [ 'rich-media', 'carousel' ], true ) ) {
 		echo esc_html( $title );
 	} else {
 		Helper::the_title_trimed( $title );
