@@ -3,14 +3,9 @@
     @include _margin-bottom(1);
   }
 
-  &__title {
-    letter-spacing: 0;
-  }
-
   &__meta {
     @include _margin-top(.25);
     @include _font-size-line-height(12px);
-    letter-spacing: 0;
 
     a {
       color: inherit;

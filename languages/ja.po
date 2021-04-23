@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-04-23 00:14+0900\n"
-"PO-Revision-Date: 2021-04-23 00:14+0900\n"
+"POT-Creation-Date: 2021-04-23 09:47+0900\n"
+"PO-Revision-Date: 2021-04-23 09:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -498,6 +498,10 @@ msgstr "M PLUS 1p"
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:24
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
+
+#: app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
+msgid "Base letter spacing (rem)"
+msgstr "基本の文字間（rem）"
 
 #: app/customizer/design/sections/base-design/controls/base-line-height.php:15
 msgid "Base line height"
