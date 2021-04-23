@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-04-23 09:47+0900\n"
-"PO-Revision-Date: 2021-04-23 09:47+0900\n"
+"POT-Creation-Date: 2021-04-23 09:59+0900\n"
+"PO-Revision-Date: 2021-04-23 10:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -19,8 +19,76 @@ msgstr ""
 "esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
 "_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ./.translation\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
+
+#: .translation/bundle-template-header.php:2
+msgid "Landing page ( with header/footer )"
+msgstr "ランディングページ（ヘッダー・フッターあり）"
+
+#: .translation/bundle-template-header.php:3
+msgid "Landing page ( slim width )"
+msgstr "ランディングページ（スリム幅）"
+
+#: .translation/bundle-template-header.php:4
+msgid "Landing page"
+msgstr "ランディングページ"
+
+#: .translation/bundle-template-header.php:5
+msgid "Left sidebar"
+msgstr "左サイドバー"
+
+#: .translation/bundle-template-header.php:6
+msgid "Full width"
+msgstr "フル幅"
+
+#: .translation/bundle-template-header.php:7
+msgid "One column ( slim width )"
+msgstr "1カラム（スリム幅）"
+
+#: .translation/bundle-template-header.php:8
+msgid "One column"
+msgstr "1カラム"
+
+#: .translation/bundle-template-header.php:9
+msgid "Right sidebar"
+msgstr "右サイドバー"
+
+#: .translation/bundle-template-header.php:10
+msgid "One row"
+msgstr "1行"
+
+#: .translation/bundle-template-header.php:11
+msgid "Two rows"
+msgstr "2行"
+
+#: .translation/bundle-template-header.php:12
+msgid "Center logo"
+msgstr "中央ロゴ"
+
+#: .translation/bundle-template-header.php:13 Framework/Helper.php:163
+#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
+#: snow-monkey/Framework/Helper.php:163
+#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
+msgid "Left"
+msgstr "左"
+
+#: .translation/bundle-template-header.php:14
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:22
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:23
+#: app/widget/snow-monkey-recent-posts/_form.php:88
+#: app/widget/snow-monkey-rss/_form.php:73
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:127
+#: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:22
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
+#: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:23
+#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:88
+#: snow-monkey/app/widget/snow-monkey-rss/_form.php:73
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:127
+msgid "Simple"
+msgstr "シンプル"
 
 #: Framework/Helper.php:149 snow-monkey/Framework/Helper.php:149
 msgid "Page header"
@@ -55,13 +123,6 @@ msgstr "コンテンツの上"
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
 msgid "None"
 msgstr "なし"
-
-#: Framework/Helper.php:163
-#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
-#: snow-monkey/Framework/Helper.php:163
-#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
-msgid "Left"
-msgstr "左"
 
 #: Framework/Helper.php:164 snow-monkey/Framework/Helper.php:164
 msgid "Center"
@@ -597,21 +658,6 @@ msgstr "記事一覧レイアウト"
 msgid "Rich media"
 msgstr "リッチメディア"
 
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:22
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:23
-#: app/widget/snow-monkey-recent-posts/_form.php:88
-#: app/widget/snow-monkey-rss/_form.php:73
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:127
-#: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:22
-#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
-#: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:23
-#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:88
-#: snow-monkey/app/widget/snow-monkey-rss/_form.php:73
-#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:127
-msgid "Simple"
-msgstr "シンプル"
-
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:23
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:24
@@ -1038,7 +1084,7 @@ msgstr "ヘッダーを全幅にする"
 #: app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
 #: snow-monkey/app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
 msgid "Display header content on mobile too."
-msgstr "モバイルでもヘッダーコンテンツを表示"
+msgstr "モバイルでもヘッダーコンテンツを表示する。"
 
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
@@ -1198,7 +1244,7 @@ msgid ""
 "products page settings"
 msgstr ""
 "この設定は WooCommerce 製品ページ設定のアイキャッチ画像の設定よりも優先されま"
-"す。"
+"す"
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/woocommerce-product-category/section.php:24
@@ -2320,39 +2366,6 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
-
-#~ msgid "Landing page ( with header/footer )"
-#~ msgstr "ランディングページ（ヘッダー・フッターあり）"
-
-#~ msgid "Landing page ( slim width )"
-#~ msgstr "ランディングページ（スリム幅）"
-
-#~ msgid "Landing page"
-#~ msgstr "ランディングページ"
-
-#~ msgid "Left sidebar"
-#~ msgstr "左サイドバー"
-
-#~ msgid "Full width"
-#~ msgstr "フル幅"
-
-#~ msgid "One column ( slim width )"
-#~ msgstr "1カラム（スリム幅）"
-
-#~ msgid "One column"
-#~ msgstr "1カラム"
-
-#~ msgid "Right sidebar"
-#~ msgstr "右サイドバー"
-
-#~ msgid "One row"
-#~ msgstr "1行"
-
-#~ msgid "Two rows"
-#~ msgstr "2行"
-
-#~ msgid "Center logo"
-#~ msgstr "中央ロゴ"
 
 #~ msgid "Archive page layout"
 #~ msgstr "アーカイブページレイアウト"
