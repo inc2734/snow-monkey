@@ -124,7 +124,7 @@ Style::register(
 	[
 		'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px',
 		'letter-spacing: ' . get_theme_mod( 'base-letter-spacing' ) . 'rem',
-	],
+	]
 );
 
 if ( 16 !== get_theme_mod( 'base-font-size' ) ) {
