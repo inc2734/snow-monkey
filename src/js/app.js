@@ -32,6 +32,16 @@ document.addEventListener(
     };
 
     window.addEventListener('scroll', apply, false);
+
+    new Spider( '.c-entries-carousel' );
+  },
+  false
+);
+
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    new Spider( '.c-entries-carousel' );
   },
   false
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 14.2.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -58,7 +58,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle(),
 			get_theme_file_uri( '/assets/js/app.js' ),
-			[],
+			[ 'spider' ],
 			filemtime( get_theme_file_path( '/assets/js/app.js' ) ),
 			true
 		);
@@ -118,6 +118,33 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 		}
 	);
 }
+
+/**
+ * Enqueue spider.
+ */
+add_action(
+	'wp_enqueue_scripts',
+	function() {
+		if ( ! wp_style_is( 'spider', 'registered' ) ) {
+			wp_enqueue_style(
+				'spider',
+				get_theme_file_uri( '/assets/packages/spider/dist/css/spider.css' ),
+				[],
+				filemtime( get_theme_file_path( '/assets/packages/spider/dist/css/spider.css' ) )
+			);
+		}
+
+		if ( ! wp_script_is( 'spider', 'registered' ) ) {
+			wp_enqueue_script(
+				'spider',
+				get_theme_file_uri( '/assets/packages/spider/dist/js/spider.js' ),
+				[],
+				filemtime( get_theme_file_path( '/assets/packages/spider/dist/js/spider.js' ) ),
+				true
+			);
+		}
+	}
+);
 
 /**
  * Enqueue script for comment

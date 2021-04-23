@@ -1,0 +1,30 @@
+.#{ $_prefix }c-entries-carousel {
+  &__item {
+    > a {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .spider__slide {
+    align-items: flex-start;
+
+    @include _media-min(md) {
+      $gap: _space(1, true, true);
+      max-width: calc(1 / 3 * 100% - #{ $gap } / 1.5);
+
+      &:not(:first-child) {
+        margin-left: $gap;
+      }
+    }
+
+    .#{ $_prefix }c-entries-carousel__item {
+      flex: 1 0 100%;
+    }
+  }
+
+  .spider__dots {
+    @include _margin-top(1);
+  }
+}

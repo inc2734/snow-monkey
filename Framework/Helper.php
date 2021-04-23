@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.8
+ * @version 14.2.0
  */
 
 namespace Framework;
@@ -589,7 +589,7 @@ class Helper {
 			// phpcs:enable
 		}
 
-		if ( 'rich-media' === $entries_layout ) {
+		if ( in_array( $entries_layout, [ 'rich-media', 'carousel' ], true ) ) {
 			$num_words            = 25;
 			$excerpt_length_ratio = 55 / $number;
 			return $num_words / $excerpt_length_ratio;

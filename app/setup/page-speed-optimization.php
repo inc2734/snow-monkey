@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 14.2.0
  *
  * This procceses are beta.
  */
@@ -71,6 +71,7 @@ add_action(
 						'jquery.background-parallax-scroll',
 						'slick-carousel',
 						'slick-carousel-theme',
+						'spider',
 					]
 				);
 			}

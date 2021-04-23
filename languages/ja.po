@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-04-23 09:59+0900\n"
-"PO-Revision-Date: 2021-04-23 10:00+0900\n"
+"POT-Creation-Date: 2021-04-23 19:51+0900\n"
+"PO-Revision-Date: 2021-04-23 19:52+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -644,11 +644,17 @@ msgid "Entries layout"
 msgstr "記事一覧レイアウト"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:21
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:29
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:31
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:22
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:30
 #: app/widget/snow-monkey-recent-posts/_form.php:87
+#: app/widget/snow-monkey-recent-posts/_form.php:95
 #: app/widget/snow-monkey-rss/_form.php:72
+#: app/widget/snow-monkey-rss/_form.php:80
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:126
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:134
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:21
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:22
@@ -702,6 +708,17 @@ msgstr "テキスト2"
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:130
 msgid "Panels"
 msgstr "パネル"
+
+#. translators: %1$s: entries layout
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:28
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:29
+#: app/widget/snow-monkey-recent-posts/_form.php:94
+#: app/widget/snow-monkey-rss/_form.php:79
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:133
+#, php-format
+msgid "Carousel (%1$s)"
+msgstr "カルーセル（%1$s）"
 
 #. translators: %1$s: heading element
 #: app/customizer/design/sections/base-design/controls/h2-style.php:16
@@ -1990,7 +2007,7 @@ msgstr "フッター固定ナビゲーション（モバイル用）"
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
-#: app/setup/page-speed-optimization.php:131
+#: app/setup/page-speed-optimization.php:132
 #: snow-monkey/app/setup/page-speed-optimization.php:131
 msgid "Remove caches"
 msgstr "キャッシュを削除"
@@ -2137,26 +2154,26 @@ msgstr "表示する投稿数"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:101
-#: app/widget/snow-monkey-rss/_form.php:86
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:140
+#: app/widget/snow-monkey-recent-posts/_form.php:106
+#: app/widget/snow-monkey-rss/_form.php:91
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:145
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:101
 #: snow-monkey/app/widget/snow-monkey-rss/_form.php:86
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:140
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:112
-#: app/widget/snow-monkey-rss/_form.php:97
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:151
+#: app/widget/snow-monkey-recent-posts/_form.php:117
+#: app/widget/snow-monkey-rss/_form.php:102
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:156
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:112
 #: snow-monkey/app/widget/snow-monkey-rss/_form.php:97
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:151
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:131
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:170
+#: app/widget/snow-monkey-recent-posts/_form.php:136
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:175
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:131
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:170
 msgid "Ignore sticky posts"

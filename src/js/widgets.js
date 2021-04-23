@@ -6,5 +6,6 @@ document.addEventListener(
   () => {
     const submenus = document.querySelectorAll('.c-widget .children, .c-widget .sub-menu');
     forEachHtmlNodes(submenus, widgetItemExpander);
-  }
+  },
+	false
 );
