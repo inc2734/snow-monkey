@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.0
+ * @version 14.2.0
  */
 
 use Framework\Helper;
@@ -160,6 +160,9 @@ Helper::get_template_part(
 		'_posts_query'         => $taxonomy_posts_query,
 		'_title'               => $instance['title'],
 		'_widget_area_id'      => $widget_args['id'],
+		'_arrows'              => $instance['arrows'],
+		'_dots'                => $instance['dots'],
+		'_interval'            => $instance['interval'],
 	]
 );
 echo wp_kses_post( $widget_args['after_widget'] );

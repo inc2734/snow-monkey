@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.7
+ * @version 14.2.0
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -28,6 +28,9 @@ class Snow_Monkey_Recent_Posts_Widget extends Abstract_Widget {
 		'link-url'            => null,
 		'ignore-sticky-posts' => 1,
 		'force-sm-1col'       => null,
+		'arrows'              => false,
+		'dots'                => true,
+		'interval'            => 0,
 	];
 
 	/**

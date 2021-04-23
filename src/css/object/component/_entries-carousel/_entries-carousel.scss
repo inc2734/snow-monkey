@@ -11,7 +11,7 @@
     align-items: flex-start;
 
     @include _media-min(md) {
-      $gap: _space(1, true, true);
+      $gap: _space(1, true);
       max-width: calc(1 / 3 * 100% - #{ $gap } / 1.5);
 
       &:not(:first-child) {
@@ -25,6 +25,6 @@
   }
 
   .spider__dots {
-    @include _margin-top(1);
+    @include _margin-top(.5);
   }
 }

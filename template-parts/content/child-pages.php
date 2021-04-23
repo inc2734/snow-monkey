@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.1.0
+ * @version 14.2.0
  *
  * renamed: template-parts/child-pages.php
  */
@@ -22,6 +22,9 @@ $args = wp_parse_args(
 		'_force_sm_1col'       => false,
 		'_item_thumbnail_size' => 'medium_large',
 		'_item_title_tag'      => 'h3',
+		'_arrows'              => false,
+		'_dots'                => true,
+		'_interval'            => 0,
 	]
 );
 
@@ -55,6 +58,9 @@ if ( ! $query->have_posts() ) {
 			'_item_thumbnail_size' => $args['_item_thumbnail_size'],
 			'_item_title_tag'      => $args['_item_title_tag'],
 			'_posts_query'         => $query,
+			'_arrows'              => $args['_arrows'],
+			'_dots'                => $args['_dots'],
+			'_interval'            => $args['_interval'],
 		]
 	);
 	?>

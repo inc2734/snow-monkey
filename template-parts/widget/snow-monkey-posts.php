@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.1.2
+ * @version 14.2.0
  */
 
 use Framework\Helper;
@@ -26,6 +26,9 @@ $args = wp_parse_args(
 		'_title'               => null,
 		'_vertical'            => false,
 		'_widget_area_id'      => null,
+		'_arrows'              => false,
+		'_dots'                => true,
+		'_interval'            => 0,
 	]
 );
 
@@ -102,6 +105,9 @@ $force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 			'_item_thumbnail_size' => $args['_item_thumbnail_size'],
 			'_item_title_tag'      => $args['_item_title_tag'],
 			'_posts_query'         => $args['_posts_query'],
+			'_arrows'              => $args['_arrows'],
+			'_dots'                => $args['_dots'],
+			'_interval'            => $args['_interval'],
 		]
 	);
 	?>

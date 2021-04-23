@@ -29,6 +29,14 @@ if ( ! $args['_posts_query'] ) {
 
 if ( 'carousel' === $args['_entries_layout'] ) {
 	$slug = 'template-parts/common/entries/entries/carousel';
+	$args = wp_parse_args(
+		$args,
+		[
+			'_arrows'   => false,
+			'_dots'     => true,
+			'_interval' => 0,
+		]
+	);
 } else {
 	$slug = 'template-parts/common/entries/entries/posts';
 	$args = wp_parse_args(

@@ -17,6 +17,9 @@ $args = wp_parse_args(
 		'_excerpt_length' => null,
 		'_item_title_tag' => 'h3',
 		'_items'          => [],
+		'_arrows'         => false,
+		'_dots'           => true,
+		'_interval'       => 0,
 	]
 );
 
@@ -24,7 +27,8 @@ if ( ! $args['_items'] ) {
 	return;
 }
 ?>
-<div class="c-entries-carousel">
+
+<div class="c-entries-carousel" data-interval="<?php echo esc_attr( $args['_interval'] * 1000 ); ?>">
 	<div class="spider">
 		<div class="spider__canvas">
 			<?php $i = 0; ?>
@@ -49,11 +53,18 @@ if ( ! $args['_items'] ) {
 				<?php $i ++; ?>
 			<?php endforeach; ?>
 		</div>
+
+		<?php if ( $args['_arrows'] ) : ?>
+			<button class="spider__arrow" data-direction="prev">Prev</button>
+    	<button class="spider__arrow" data-direction="next">Next</button>
+		<?php endif; ?>
 	</div>
 
-	<div class="spider__dots" data-thumbnails="false">
-		<?php for ( $j = 0; $j < $i; $j ++ ) : ?>
-			<button class="spider__dot" data-id="<?php echo esc_attr( $j ); ?>"><?php echo esc_html( $j ); ?></button>
-		<?php endfor; ?>
-	</div>
+	<?php if ( $args['_dots'] ) : ?>
+		<div class="spider__dots" data-thumbnails="false">
+			<?php for ( $j = 0; $j < $i; $j ++ ) : ?>
+				<button class="spider__dot" data-id="<?php echo esc_attr( $j ); ?>"><?php echo esc_html( $j ); ?></button>
+			<?php endfor; ?>
+		</div>
+	<?php endif; ?>
 </div>

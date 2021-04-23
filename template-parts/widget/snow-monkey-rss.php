@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 14.2.0
  */
 
 use Framework\Helper;
@@ -24,6 +24,9 @@ $args = wp_parse_args(
 		'_link_url'       => null,
 		'_title'          => null,
 		'_widget_area_id' => null,
+		'_arrows'         => false,
+		'_dots'           => true,
+		'_interval'       => 0,
 	]
 );
 
@@ -84,6 +87,9 @@ $more_classnames = [
 			'_infeed_ads'     => $args['_infeed_ads'],
 			'_item_title_tag' => $args['_item_title_tag'],
 			'_items'          => $args['_items'],
+			'_arrows'         => $args['_arrows'],
+			'_dots'           => $args['_dots'],
+			'_interval'       => $args['_interval'],
 		]
 	);
 	?>
