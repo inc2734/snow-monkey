@@ -1,14 +1,14 @@
 .gallery {
   @include _clearfix();
-  @include _margin-right(-.5, false); // equal .gallery-item bottom padding
-  @include _margin-left(-.5, false); // equal .gallery-item bottom padding
+  @include _margin-right(-.5); // equal .gallery-item right padding
+  @include _margin-left(-.5); // equal .gallery-item left padding
   @include _margin-bottom(-1);
 
   &-item {
     float: left;
     display: block;
-    @include _padding-right(.5);
-    @include _padding-left(.5);
+    @include _padding-right(.5, true);
+    @include _padding-left(.5, true);
     @include _margin-bottom(1);
 
     @for $i from 2 through 9 {
