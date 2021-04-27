@@ -5,3 +5,14 @@
     }
   }
 }
+
+[data-align="full"],
+[data-align="wide"] {
+  & > .smb-section > .#{ $_prefix }c-container,
+  & > .smb-section > .smb-section__inner > .#{ $_prefix }c-container {
+    padding-right: 0;
+    padding-left: 0;
+    max-width: calc(1280px - 2rem); // for IE11
+    max-width: var(--wp-block-width);
+  }
+}
