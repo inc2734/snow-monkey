@@ -2,7 +2,7 @@
   &__title {
     @include section-title();
 
-    & + .#{ $_prefix }c-entries {
+    & + * {
       @include section-body();
     }
   }
