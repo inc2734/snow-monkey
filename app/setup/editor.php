@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.0
+ * @version 14.2.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -85,13 +85,21 @@ add_filter(
 		$wp_page_template = get_post_meta( $post_id, '_wp_page_template', true );
 		$wp_page_template = basename( $wp_page_template );
 		$wp_page_template = pathinfo( $wp_page_template, PATHINFO_FILENAME );
+		$page_on_front    = get_option( 'page_on_front' );
+		$is_home_page     = (int) $page_on_front === (int) $post_id;
+
 		if ( $wp_page_template && 'default' !== $wp_page_template ) {
+			if ( $is_home_page && 'one-column-full' === $wp_page_template ) {
+				return $classes . ' l-body--one-column';
+			}
+
 			return $classes . ' l-body--' . $wp_page_template;
 		}
 
-		$page_on_front = get_option( 'page_on_front' );
-		if ( (int) $page_on_front === (int) $post_id ) {
-			return $classes . ' l-body--one-column-full';
+		if ( $is_home_page ) {
+			return get_theme_mod( 'home-page-container' )
+				? $classes . ' l-body--one-column'
+				: $classes . ' l-body--one-column-full';
 		}
 
 		$_post_type = get_post_type( $post_id );
