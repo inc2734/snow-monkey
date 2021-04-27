@@ -36,20 +36,6 @@ body {
   }
 }
 
-.block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
-  > [data-align="full"] {
-    clear: both;
-    margin-right: -1rem;
-    margin-left: -1rem;
-    max-width: none;
-  }
-
-  > [data-align="wide"] {
-    max-width: calc(1280px + 240px); // for IE11
-    max-width: calc(var(--wp-block-width) + 240px);
-  }
-}
-
 // @see src/css/foundation/_wordpress/_align/_align.scss
 .block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
   [class*="smb-"] > [data-align="full"],

@@ -17,6 +17,7 @@
 
   > .wp-block-button {
     @include _margin-right(.5);
+    margin-bottom: 0;
     @include _padding-bottom(.5, true);
   }
 }
