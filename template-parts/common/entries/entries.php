@@ -19,6 +19,8 @@ $args = wp_parse_args(
 		'_excerpt_length'      => null,
 		'_item_thumbnail_size' => 'medium_large',
 		'_item_title_tag'      => 'h3',
+		'_display_item_meta'   => 'post' === $args['_name'] ? true : false,
+		'_display_item_terms'  => 'post' === $args['_name'] ? true : false,
 		'_posts_query'         => false,
 	]
 );

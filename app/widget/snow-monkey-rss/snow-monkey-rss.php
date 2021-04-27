@@ -26,9 +26,9 @@ class Snow_Monkey_RSS_Widget extends Abstract_Widget {
 		'link-text'      => null,
 		'link-url'       => null,
 		'force-sm-1col'  => 0,
-		'arrows'              => false,
-		'dots'                => true,
-		'interval'            => 0,
+		'arrows'         => false,
+		'dots'           => true,
+		'interval'       => 0,
 	];
 
 	/**

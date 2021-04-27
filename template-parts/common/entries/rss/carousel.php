@@ -56,7 +56,7 @@ if ( ! $args['_items'] ) {
 
 		<?php if ( $args['_arrows'] ) : ?>
 			<button class="spider__arrow" data-direction="prev">Prev</button>
-    	<button class="spider__arrow" data-direction="next">Next</button>
+			<button class="spider__arrow" data-direction="next">Next</button>
 		<?php endif; ?>
 	</div>
 

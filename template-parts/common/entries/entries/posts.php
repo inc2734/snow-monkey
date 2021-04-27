@@ -19,6 +19,8 @@ $args = wp_parse_args(
 		'_infeed_ads'          => false,
 		'_item_thumbnail_size' => 'medium_large',
 		'_item_title_tag'      => 'h3',
+		'_display_item_meta'   => 'post' === $args['_name'] ? true : false,
+		'_display_item_terms'  => 'post' === $args['_name'] ? true : false,
 		'_posts_query'         => false,
 	]
 );
@@ -40,6 +42,8 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 		<?php $args['_posts_query']->the_post(); ?>
 		<li class="c-entries__item">
 			<?php
+			$_terms = $args['_display_item_terms'] ? Helper::get_the_public_terms( get_the_ID() ) : [];
+
 			Helper::get_template_part(
 				'template-parts/loop/entry-summary',
 				$args['_name'],
@@ -48,7 +52,9 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 					'_entries_layout' => $args['_entries_layout'],
 					'_excerpt_length' => $args['_excerpt_length'],
 					'_thumbnail_size' => $args['_item_thumbnail_size'],
+					'_terms'          => $_terms ? [ $_terms[0] ] : [],
 					'_title_tag'      => $args['_item_title_tag'],
+					'_display_meta'   => $args['_display_item_meta'],
 				]
 			);
 			?>

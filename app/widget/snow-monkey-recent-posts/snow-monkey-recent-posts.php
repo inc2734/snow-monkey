@@ -24,6 +24,8 @@ class Snow_Monkey_Recent_Posts_Widget extends Abstract_Widget {
 		'layout'              => 'rich-media',
 		'item-title-tag'      => 'h3',
 		'item-thumbnail-size' => 'medium_large',
+		'display-item-meta'   => null,
+		'display-item-terms'  => null,
 		'link-text'           => null,
 		'link-url'            => null,
 		'ignore-sticky-posts' => 1,

@@ -155,6 +155,8 @@ Helper::get_template_part(
 		'_force_sm_1col'       => $force_sm_1col,
 		'_item_thumbnail_size' => $instance['item-thumbnail-size'],
 		'_item_title_tag'      => $instance['item-title-tag'],
+		'_display_item_meta'   => $instance['display-item-meta'],
+		'_display_item_terms'  => $instance['display-item-terms'],
 		'_link_text'           => $instance['link-text'],
 		'_link_url'            => $instance['link-url'],
 		'_posts_query'         => $taxonomy_posts_query,
