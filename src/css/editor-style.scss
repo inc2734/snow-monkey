@@ -104,6 +104,15 @@ body {
   }
 }
 
+// Cancels the default style
+[data-align="full"] .wp-block-group {
+  &.has-background > .wp-block-group__inner-container > [data-align="full"] {
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+  }
+}
+
 .u-hidden,
 .u-hidden-sm,
 .u-hidden-md,

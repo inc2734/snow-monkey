@@ -4,6 +4,8 @@
 @import 'foundation/_placeholder/placeholder';
 @import 'adminbar';
 
+$editor-gutter: 1.5rem;
+
 .wp-block {
   margin: 0;
   max-width: none;
@@ -73,13 +75,18 @@
   }
 }
 
-.editor-styles-wrapper .block-editor-block-list__layout.is-root-container {
+.editor-styles-wrapper .block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
   > .wp-block[data-align="full"],
   > .block-editor-block-list__block[data-align="full"] {
     clear: both;
     margin-right: 0;
     margin-left: 0;
     max-width: none;
+
+    > * {
+      padding-right: $editor-gutter;
+      padding-left: $editor-gutter;
+    }
   }
 
   > .wp-block[data-align="wide"],
@@ -89,25 +96,33 @@
   }
 }
 
-.l-body--one-column,
-.l-body--one-column-slim,
-.l-body--blank-slim,
-.l-body--right-sidebar,
-.l-body--left-sidebar {
-  .block-editor-writing-flow {
-    padding-right: 1rem;
-    padding-left: 1rem;
+.editor-styles-wrapper .block-editor-writing-flow .c-container {
+  padding-right: 0;
+  padding-left: 0;
+  max-width: none;
+
+  > * {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: calc(1280px - 2rem); // for IE11
+    max-width: var(--wp-block-width);
   }
 }
 
 .l-body--one-column,
 .l-body--one-column-slim,
-.l-body--blank-slim {
-  .editor-styles-wrapper .block-editor-block-list__layout.is-root-container {
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+  .block-editor-writing-flow {
+    padding-right: $editor-gutter;
+    padding-left: $editor-gutter;
+  }
+
+  .editor-styles-wrapper .block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
     > .wp-block[data-align="full"],
     > .block-editor-block-list__block[data-align="full"] {
-      margin-right: -1rem;
-      margin-left: -1rem;
+      margin-right: $editor-gutter * -1;
+      margin-left: $editor-gutter * -1;
     }
   }
 }
