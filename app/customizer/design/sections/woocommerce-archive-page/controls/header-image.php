@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 14.2.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,11 +12,8 @@ Framework::control(
 	'image',
 	'woocommerce-archive-header-image',
 	[
-		'label'           => __( 'Featured Image', 'snow-monkey' ),
-		'priority'        => 110,
-		'active_callback' => function() {
-			return 'none' !== get_theme_mod( 'woocommerce-archive-eyecatch' );
-		},
+		'label'    => __( 'Featured Image', 'snow-monkey' ),
+		'priority' => 110,
 	]
 );
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 14.2.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,11 +16,8 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'image',
 		$custom_post_type . '-header-image',
 		[
-			'label'           => __( 'Featured Image', 'snow-monkey' ),
-			'priority'        => 130,
-			'active_callback' => function() use ( $custom_post_type ) {
-				return 'none' !== get_theme_mod( 'archive-' . $custom_post_type . '-eyecatch' );
-			},
+			'label'    => __( 'Featured Image', 'snow-monkey' ),
+			'priority' => 130,
 		]
 	);
 }
