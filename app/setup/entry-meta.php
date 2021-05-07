@@ -39,7 +39,7 @@ function snow_monkey_entry_meta_items_published_no_time() {
  * Modified
  */
 function snow_monkey_entry_meta_items_modified() {
-	if ( get_the_time( 'Ymd' ) > get_the_modified_time( 'Ymd' ) ) {
+	if ( get_the_time( 'Ymd' ) >= get_the_modified_time( 'Ymd' ) ) {
 		return;
 	}
 	?>
