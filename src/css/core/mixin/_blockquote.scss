@@ -18,8 +18,6 @@
     &,
     &.is-large,
     &.is-style-large {
-      @include _margin-right(1);
-      @include _margin-left(1);
       @include _padding(1.5, 1, .75, 2);
     }
   }
