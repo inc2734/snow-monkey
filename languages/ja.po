@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-04-23 19:51+0900\n"
-"PO-Revision-Date: 2021-04-23 19:52+0900\n"
+"POT-Creation-Date: 2021-05-13 09:55+0900\n"
+"PO-Revision-Date: 2021-05-13 09:55+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 2.4.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -68,7 +68,7 @@ msgid "Center logo"
 msgstr "中央ロゴ"
 
 #: .translation/bundle-template-header.php:13 Framework/Helper.php:163
-#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
+#: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
 #: snow-monkey/Framework/Helper.php:163
 #: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:19
 msgid "Left"
@@ -113,6 +113,7 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/base-design/controls/h2-style.php:20
 #: app/customizer/design/sections/base-design/controls/h3-style.php:20
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:19
+#: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
 #: snow-monkey/Framework/Helper.php:152
 #: snow-monkey/app/customizer/design-skin/controls/design-skin.php:21
@@ -129,7 +130,7 @@ msgid "Center"
 msgstr "中央"
 
 #: Framework/Helper.php:165
-#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:20
+#: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
 #: snow-monkey/Framework/Helper.php:165
 #: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:20
 msgid "Right"
@@ -561,10 +562,12 @@ msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
 #: app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
+#: snow-monkey/app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
 msgid "Base letter spacing (rem)"
 msgstr "基本の文字間（rem）"
 
 #: app/customizer/design/sections/base-design/controls/base-line-height.php:15
+#: snow-monkey/app/customizer/design/sections/base-design/controls/base-line-height.php:15
 msgid "Base line height"
 msgstr "基本の line-height"
 
@@ -614,11 +617,6 @@ msgstr "デフォルトページヘッダー画像"
 msgid "Default thumbnail"
 msgstr "デフォルトアイキャッチ画像"
 
-#: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php:16
-#: snow-monkey/app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php:16
-msgid "Display the search box in drawer navigation"
-msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
-
 #: app/customizer/design/sections/base-design/controls/display-page-top.php:15
 #: snow-monkey/app/customizer/design/sections/base-design/controls/display-page-top.php:15
 msgid "Display the page top button"
@@ -656,11 +654,17 @@ msgstr "記事一覧レイアウト"
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:126
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:134
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:21
+#: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:29
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:31
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:22
+#: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:30
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:87
+#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:95
 #: snow-monkey/app/widget/snow-monkey-rss/_form.php:72
+#: snow-monkey/app/widget/snow-monkey-rss/_form.php:80
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:126
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:134
 msgid "Rich media"
 msgstr "リッチメディア"
 
@@ -716,6 +720,12 @@ msgstr "パネル"
 #: app/widget/snow-monkey-recent-posts/_form.php:94
 #: app/widget/snow-monkey-rss/_form.php:79
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:133
+#: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:28
+#: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
+#: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:29
+#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:94
+#: snow-monkey/app/widget/snow-monkey-rss/_form.php:79
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:133
 #, php-format
 msgid "Carousel (%1$s)"
 msgstr "カルーセル（%1$s）"
@@ -986,6 +996,7 @@ msgstr "使用するビューテンプレートを選択してください。"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:24
 #: app/customizer/design/sections/custom-post/controls/view.php:24
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:21
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/view.php:24
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:24
@@ -1042,6 +1053,38 @@ msgstr ""
 #, php-format
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
+
+#: app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:18
+#: snow-monkey/app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php:16
+msgid "Display the search box in drawer navigation"
+msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
+msgid "Drawer nav type"
+msgstr "ドロワーナビタイプ"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:20
+msgid "Overall"
+msgstr "オーバーオール"
+
+#: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:17
+#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:15
+msgid "Hamberger button position"
+msgstr "ハンバーガーボタンの位置"
+
+#: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:15
+msgid "Drawer nav highlight type"
+msgstr "ドロワーナビの強調タイプ"
+
+#: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:20
+#: app/customizer/infobar/controls/background-color.php:15
+#: snow-monkey/app/customizer/infobar/controls/background-color.php:15
+msgid "Background color"
+msgstr "背景色"
+
+#: app/customizer/design/sections/drawer-nav/section.php:18
+msgid "Drawer nav"
+msgstr "ドロワーナビ"
 
 #: app/customizer/design/sections/footer/controls/alignfull.php:15
 #: snow-monkey/app/customizer/design/sections/footer/controls/alignfull.php:15
@@ -1117,11 +1160,6 @@ msgstr "文字色の反転"
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
 msgid "Underline"
 msgstr "下線"
-
-#: app/customizer/design/sections/header/controls/hamburger-btn-position.php:15
-#: snow-monkey/app/customizer/design/sections/header/controls/hamburger-btn-position.php:15
-msgid "Hamberger button position"
-msgstr "ハンバーガーボタンの位置"
 
 #: app/customizer/design/sections/header/controls/header-content.php:18
 #: snow-monkey/app/customizer/design/sections/header/controls/header-content.php:18
@@ -1291,11 +1329,6 @@ msgstr "WooCommerce 商品ページレイアウト"
 #: snow-monkey/app/customizer/design/sections/woocommerce-single/section.php:20
 msgid "WooCommerce product page settings"
 msgstr "WooCommerce 商品ページ設定"
-
-#: app/customizer/infobar/controls/background-color.php:15
-#: snow-monkey/app/customizer/infobar/controls/background-color.php:15
-msgid "Background color"
-msgstr "背景色"
 
 #: app/customizer/infobar/controls/content.php:16
 #: snow-monkey/app/customizer/infobar/controls/content.php:16
@@ -2008,7 +2041,7 @@ msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
 #: app/setup/page-speed-optimization.php:132
-#: snow-monkey/app/setup/page-speed-optimization.php:131
+#: snow-monkey/app/setup/page-speed-optimization.php:132
 msgid "Remove caches"
 msgstr "キャッシュを削除"
 
@@ -2157,35 +2190,35 @@ msgstr "レイアウト"
 #: app/widget/snow-monkey-recent-posts/_form.php:106
 #: app/widget/snow-monkey-rss/_form.php:91
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:145
-#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:101
-#: snow-monkey/app/widget/snow-monkey-rss/_form.php:86
-#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:140
+#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:106
+#: snow-monkey/app/widget/snow-monkey-rss/_form.php:91
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:145
 msgid "Link URL"
 msgstr "リンク URL"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:117
 #: app/widget/snow-monkey-rss/_form.php:102
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:156
-#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:112
-#: snow-monkey/app/widget/snow-monkey-rss/_form.php:97
-#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:151
+#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:117
+#: snow-monkey/app/widget/snow-monkey-rss/_form.php:102
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:156
 msgid "Link text"
 msgstr "リンクテキスト"
 
 #: app/widget/snow-monkey-recent-posts/_form.php:136
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:175
-#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:131
-#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:170
+#: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:136
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:175
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:39
-#: snow-monkey/app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:39
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:44
+#: snow-monkey/app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:44
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:45
-#: snow-monkey/app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:45
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:50
+#: snow-monkey/app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:50
 msgid "Recent posts"
 msgstr "最近の投稿"
 
@@ -2194,13 +2227,13 @@ msgstr "最近の投稿"
 msgid "Feed URL"
 msgstr "フィード URL"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:37
-#: snow-monkey/app/widget/snow-monkey-rss/snow-monkey-rss.php:37
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:40
+#: snow-monkey/app/widget/snow-monkey-rss/snow-monkey-rss.php:40
 msgid "Snow Monkey: RSS"
 msgstr "Snow Monkey: RSS"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:43
-#: snow-monkey/app/widget/snow-monkey-rss/snow-monkey-rss.php:43
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:46
+#: snow-monkey/app/widget/snow-monkey-rss/snow-monkey-rss.php:46
 msgid "RSS"
 msgstr "RSS"
 
@@ -2209,13 +2242,13 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:39
-#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:39
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:44
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:44
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:45
-#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:45
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:50
+#: snow-monkey/app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:50
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 

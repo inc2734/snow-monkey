@@ -27,10 +27,15 @@ if ( ! $sub_accent_color ) {
 	return;
 }
 
+$drawer_nav_highlight_type = get_theme_mod( 'drawer-nav-highlight-type' );
+if ( 'background-color' !== $drawer_nav_highlight_type ) {
+	return;
+}
+
 Style::register(
 	[
-		'.c-drawer__item.sm-nav-menu-item-highlight',
-		'.c-drawer__subitem.sm-nav-menu-item-highlight',
+		'.c-drawer--highlight-type-background-color .c-drawer__item.sm-nav-menu-item-highlight',
+		'.c-drawer--highlight-type-background-color .c-drawer__subitem.sm-nav-menu-item-highlight',
 	],
 	'background-color: ' . $sub_accent_color
 );

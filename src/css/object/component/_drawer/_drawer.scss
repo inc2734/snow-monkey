@@ -3,8 +3,7 @@
 
   z-index: 100000;
   background-color: var-color-accent();
-  color: $_color-white; // For IE11
-  color: _var-color-white();
+  color: $_color-white;
   @include _font-size-line-height($drawer-font-size);
 
   a {
@@ -42,18 +41,6 @@
     &.menu-item-has-children {
       @include _padding-right(1.25);
     }
-
-    &.sm-nav-menu-item-highlight {
-      background-color: var-color-sub-accent();
-
-      &:first-child {
-        @include _margin-top(-.25);
-      }
-
-      &:last-child {
-        @include _margin-bottom(-.25);
-      }
-    }
   }
 
   &__submenu[aria-hidden="false"] {
@@ -71,10 +58,6 @@
     &.menu-item-has-children {
       @include _padding-right(1.25);
     }
-
-    &.sm-nav-menu-item-highlight {
-      background-color: var-color-sub-accent();
-    }
   }
 
   &__sub-nav {
@@ -86,6 +69,48 @@
 
     .#{ $_prefix }c-drawer__submenu {
       @include _margin-right(-.25);
+    }
+  }
+
+  &__controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    @include _padding(.25, 0);
+    @include _padding-right(.125);
+    text-align: right;
+
+    &--left {
+      padding-right: 0;
+      @include _padding-left(.5);
+      text-align: initial;
+    }
+  }
+
+  .#{ $_prefix }c-hamburger-btn__bar {
+    background-color: #fff;
+  }
+}
+
+.#{ $_prefix }c-drawer--highlight-type-background-color {
+  .#{ $_prefix }c-drawer__item {
+    &.sm-nav-menu-item-highlight {
+      background-color: var-color-sub-accent();
+
+      &:first-child {
+        @include _margin-top(-.25);
+      }
+
+      &:last-child {
+        @include _margin-bottom(-.25);
+      }
+    }
+  }
+
+  .#{ $_prefix }c-drawer__subitem {
+    &.sm-nav-menu-item-highlight {
+      background-color: var-color-sub-accent();
     }
   }
 }
@@ -107,4 +132,33 @@
   padding-right: env(safe-area-inset-right);
   width: calc(#{ $_base-line-height * 10 } + constant(safe-area-inset-right));
   width: calc(#{ $_base-line-height * 10 } + env(safe-area-inset-right));
+}
+
+[id="drawer-nav"].#{ $_prefix }c-drawer--overall {
+	right: 0;
+	left: 0;
+	width: 100%;
+	max-width: none;
+	transition: opacity .2s, visibility .2s;
+	opacity: 0;
+  padding-top: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+  overflow: auto;
+
+  &[aria-hidden="false"] {
+    opacity: 1;
+  }
+
+  & > * {
+    flex: 1 1 100%;
+  }
+
+  .#{ $_prefix }c-drawer__inner {
+    margin: auto;
+    height: auto;
+    overflow: none;
+  }
 }

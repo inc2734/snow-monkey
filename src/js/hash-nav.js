@@ -13,22 +13,33 @@ const setNoscroll = () => {
   body.classList.add('u-noscroll');
 };
 
+const _drawer = {
+  attributes: {
+    ariaHidden: true,
+  },
+};
+
 /**
  * Drawer hash nav main proccess.
  */
 const applyDrawerHashNav = (link) => link.addEventListener(
   'click',
   (event) => {
+    event.stopPropagation();
+    event.currentTarget.blur();
+
     const drawer = getDrawerNav();
     if (! drawer) {
-      return;
+      return false;
     }
 
-    event.stopPropagation();
-
-    'false' === drawer.getAttribute('aria-hidden')
-      ? BasisDrawer.close(drawer)
-      : BasisDrawer.open(drawer);
+    if (false === _drawer.attributes.ariaHidden) {
+      _drawer.attributes.ariaHidden = true;
+      BasisDrawer.close(drawer);
+    } else {
+      _drawer.attributes.ariaHidden = false;
+      BasisDrawer.open(drawer);
+    }
 
     return false;
   },
