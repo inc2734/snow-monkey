@@ -4,11 +4,25 @@
 @import 'foundation/_placeholder/placeholder';
 @import 'adminbar';
 
-$editor-gutter: 1.5rem;
+$editor-gutter: 1rem;
+
+@mixin content-alignment {
+  margin-right: auto;
+  margin-left: auto;
+  width: calc(100% - #{ $editor-gutter } * 2);
+  max-width: 1280px; // for IE11
+  max-width: var(--wp-block-width);
+}
 
 .wp-block {
   margin: 0;
   max-width: none;
+  @include content-alignment();
+
+  .wp-block {
+    width: auto;
+    max-width: none;
+  }
 }
 
 // @todo To adjust the Float view in the editor to match the front view.
@@ -41,8 +55,6 @@ $editor-gutter: 1.5rem;
 .is-root-container > .wp-block {
   margin-right: auto;
   margin-left: auto;
-  max-width: calc(1280px - 2rem); // for IE11
-  max-width: var(--wp-block-width);
 }
 
 .wp-block[data-align="wide"] {
@@ -81,16 +93,13 @@ $editor-gutter: 1.5rem;
     clear: both;
     margin-right: 0;
     margin-left: 0;
+    width: auto;
     max-width: none;
-
-    > * {
-      padding-right: $editor-gutter;
-      padding-left: $editor-gutter;
-    }
   }
 
   > .wp-block[data-align="wide"],
   > .block-editor-block-list__block[data-align="wide"] {
+    width: auto;
     max-width: calc(1280px + 240px); // for IE11
     max-width: calc(var(--wp-block-width) + 240px);
   }
@@ -100,28 +109,7 @@ $editor-gutter: 1.5rem;
   max-width: none;
 
   > * {
-    margin-right: auto;
-    margin-left: auto;
-    max-width: calc(1280px - 2rem); // for IE11
-    max-width: var(--wp-block-width);
-  }
-}
-
-.l-body--one-column,
-.l-body--one-column-slim,
-.l-body--right-sidebar,
-.l-body--left-sidebar {
-  .block-editor-writing-flow {
-    padding-right: $editor-gutter;
-    padding-left: $editor-gutter;
-  }
-
-  .editor-styles-wrapper .block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
-    > .wp-block[data-align="full"],
-    > .block-editor-block-list__block[data-align="full"] {
-      margin-right: $editor-gutter * -1;
-      margin-left: $editor-gutter * -1;
-    }
+    @include content-alignment();
   }
 }
 
@@ -130,6 +118,10 @@ $editor-gutter: 1.5rem;
 .l-body--blank-content {
   .editor-styles-wrapper {
     --wp-block-width: 100%;
+  }
+
+  .wp-block {
+    width: auto;
   }
 }
 
