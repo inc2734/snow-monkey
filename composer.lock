@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "518d5e727ff86e108dbaf3f3f3d54372",
+    "content-hash": "e0ea1a4102bcca138d0007e68b7c5310",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -584,16 +584,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "9.0.7",
+            "version": "9.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "fb7e3eb0ed24f54f353f3e532b164d09e89c8ca4"
+                "reference": "9684a4f1ad6d78ba75553f374a70ae624c5e1817"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/fb7e3eb0ed24f54f353f3e532b164d09e89c8ca4",
-                "reference": "fb7e3eb0ed24f54f353f3e532b164d09e89c8ca4",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/9684a4f1ad6d78ba75553f374a70ae624c5e1817",
+                "reference": "9684a4f1ad6d78ba75553f374a70ae624c5e1817",
                 "shasum": ""
             },
             "require": {
@@ -626,9 +626,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/9.0.7"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/9.1.0"
             },
-            "time": "2020-12-08T16:31:17+00:00"
+            "time": "2021-05-13T04:46:48+00:00"
         },
         {
             "name": "inc2734/wp-ogp",

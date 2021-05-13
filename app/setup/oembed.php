@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.2
+ * @version 14.3.0
  */
 
 use Inc2734\WP_OEmbed_Blog_Card\Bootstrap;
@@ -29,5 +29,12 @@ add_filter(
 			'class="wp-oembed-blog-card-url-template wp-oembed-blog-card"',
 			$html
 		);
+	}
+);
+
+add_filter(
+	'inc2734_wp_oembed_blog_card_cache_directory',
+	function( $directory ) {
+		return apply_filters( 'snow_monkey_oembed_blog_card_cache_directory', $directory );
 	}
 );

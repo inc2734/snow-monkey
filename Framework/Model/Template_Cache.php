@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 14.3.0
  */
 
 namespace Framework\Model;
@@ -35,7 +35,8 @@ class Template_Cache {
 			return;
 		}
 
-		$this->directory = path_join( get_template_directory(), 'cache' );
+		$basedir         = apply_filters( 'snow_monkey_template_cache_directory', get_template_directory() );
+		$this->directory = path_join( $basedir, 'cache' );
 
 		if ( ! file_exists( $this->directory ) ) {
 			wp_mkdir_p( $this->directory );
