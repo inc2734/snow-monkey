@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.0
+ * @version 14.3.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,7 +12,7 @@ Framework::control(
 	'select',
 	'drawer-nav-highlight-type',
 	[
-		'label'    => __( 'Drawer nav highlight type', 'snow-monkey' ),
+		'label'    => __( 'Drawer navigation highlight type', 'snow-monkey' ),
 		'priority' => 120,
 		'default'  => 'background-color',
 		'choices'  => [

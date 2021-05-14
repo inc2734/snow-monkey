@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-05-13 09:55+0900\n"
-"PO-Revision-Date: 2021-05-13 09:55+0900\n"
+"POT-Creation-Date: 2021-05-14 09:26+0900\n"
+"PO-Revision-Date: 2021-05-14 09:27+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1060,8 +1060,8 @@ msgid "Display the search box in drawer navigation"
 msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
-msgid "Drawer nav type"
-msgstr "ドロワーナビタイプ"
+msgid "Drawer navigation type"
+msgstr "ドロワーナビゲーションのタイプ"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:20
 msgid "Overall"
@@ -1073,8 +1073,8 @@ msgid "Hamberger button position"
 msgstr "ハンバーガーボタンの位置"
 
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:15
-msgid "Drawer nav highlight type"
-msgstr "ドロワーナビの強調タイプ"
+msgid "Drawer navigation highlight type"
+msgstr "ドロワーナビゲーションの強調タイプ"
 
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:20
 #: app/customizer/infobar/controls/background-color.php:15
@@ -1083,8 +1083,8 @@ msgid "Background color"
 msgstr "背景色"
 
 #: app/customizer/design/sections/drawer-nav/section.php:18
-msgid "Drawer nav"
-msgstr "ドロワーナビ"
+msgid "Drawer navigation"
+msgstr "ドロワーナビゲーション"
 
 #: app/customizer/design/sections/footer/controls/alignfull.php:15
 #: snow-monkey/app/customizer/design/sections/footer/controls/alignfull.php:15
