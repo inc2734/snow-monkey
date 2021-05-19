@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0ea1a4102bcca138d0007e68b7c5310",
+    "content-hash": "1de73d8cb948ab85a80ea7911a54a7c9",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -155,16 +155,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "7.7.2",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "8d7fb0b41090feb5f0f00a6cccb4d7749ad70af4"
+                "reference": "6a572483954d2a82681486538d2c9cc9e740c06b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/8d7fb0b41090feb5f0f00a6cccb4d7749ad70af4",
-                "reference": "8d7fb0b41090feb5f0f00a6cccb4d7749ad70af4",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/6a572483954d2a82681486538d2c9cc9e740c06b",
+                "reference": "6a572483954d2a82681486538d2c9cc9e740c06b",
                 "shasum": ""
             },
             "require": {
@@ -197,9 +197,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/7.7.2"
+                "source": "https://github.com/inc2734/wp-basis/tree/8.0.0"
             },
-            "time": "2021-04-29T05:16:20+00:00"
+            "time": "2021-05-19T08:07:49+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -1312,7 +1312,7 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "5.7.1",
+            "version": "5.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",

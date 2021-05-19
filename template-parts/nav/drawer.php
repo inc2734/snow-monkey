@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.0
+ * @version 14.3.1
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -89,3 +89,4 @@ $classes                   = array_filter(
 		<?php do_action( 'snow_monkey_append_drawer_nav' ); ?>
 	</div>
 </nav>
+<div class="c-drawer-close-zone" aria-hidden="true" aria-controls="drawer-nav"></div>

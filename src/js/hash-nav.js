@@ -1,5 +1,5 @@
 import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
-import BasisDrawer from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer';
+//import { drawers } from '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/js/_drawer';
 
 import { getDrawerNav, getBody } from './module/_helper';
 
@@ -13,38 +13,22 @@ const setNoscroll = () => {
   body.classList.add('u-noscroll');
 };
 
-const _drawer = {
-  attributes: {
-    ariaHidden: true,
-  },
-};
-
 /**
  * Drawer hash nav main proccess.
  */
-const applyDrawerHashNav = (link) => link.addEventListener(
-  'click',
-  (event) => {
-    event.stopPropagation();
-    event.currentTarget.blur();
+const applyDrawerHashNav = (link) => {
+  const drawer = getDrawerNav();
+  if (! drawer) {
+    return;
+  }
 
-    const drawer = getDrawerNav();
-    if (! drawer) {
-      return false;
-    }
+  const id = drawer.getAttribute('id');
+  if (! id) {
+    return;
+  }
 
-    if (false === _drawer.attributes.ariaHidden) {
-      _drawer.attributes.ariaHidden = true;
-      BasisDrawer.close(drawer);
-    } else {
-      _drawer.attributes.ariaHidden = false;
-      BasisDrawer.open(drawer);
-    }
-
-    return false;
-  },
-  false
-);
+  link.setAttribute('data-basis-drawer-toggle-btn', id);
+}
 
 /**
  * Overlay widget area hash nav main process.

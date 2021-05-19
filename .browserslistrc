@@ -1,1 +1,2 @@
 extends @wordpress/browserslist-config
+IE 11
