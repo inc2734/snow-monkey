@@ -39,12 +39,14 @@
     @include _padding(.25, .5);
 
     &.menu-item-has-children {
-      @include _padding-right(1.25);
+      > a {
+        @include _padding-right(1);
+      }
     }
   }
 
   &__submenu[aria-hidden="false"] {
-    @include _margin(0, -1.25, -.25, 0);
+    @include _margin(0, -.5, -.25, 0);
     @include _padding(.25, 0);
   }
 
@@ -56,7 +58,9 @@
     }
 
     &.menu-item-has-children {
-      @include _padding-right(1.25);
+      > a {
+        @include _padding-right(1);
+      }
     }
   }
 
@@ -77,13 +81,13 @@
     top: 0;
     right: 0;
     left: 0;
-    @include _padding(.25, 0);
-    @include _padding-right(.125);
+    @include _container-padding();
+    @include _padding-top(.25);
+    @include _padding-bottom(.25);
     text-align: right;
 
     &--left {
       padding-right: 0;
-      @include _padding-left(.5);
       text-align: initial;
     }
   }
@@ -160,5 +164,66 @@
     margin: auto;
     height: auto;
     overflow: none;
+  }
+
+  .#{ $_prefix }c-drawer__submenu {
+    margin-right: $_container-margin * -1; // for IE11
+    margin-right: calc((#{ _var-container-margin-sm() } + constant(safe-area-inset-right)) * -1);
+    margin-right: calc((#{ _var-container-margin-sm() } + env(safe-area-inset-right)) * -1);
+
+    @supports (-ms-ime-align: auto) {
+      margin-right: calc(#{ _var-container-margin-sm() } * -1); // for Edge
+    }
+
+    @include _media-min(md) {
+      margin-right: $_container-margin * 2 * -1; // for IE11
+      margin-right: calc((#{ _var-container-margin() } + constant(safe-area-inset-right)) * -1);
+      margin-right: calc((#{ _var-container-margin() } + env(safe-area-inset-right)) * -1);
+
+      @supports (-ms-ime-align: auto) {
+        margin-right: calc(#{ _var-container-margin() } * -1); // for Edge
+      }
+    }
+  }
+
+  .#{ $_prefix }c-drawer__item {
+    @include _container-padding();
+
+    &.menu-item-has-children {
+      // @include _padding-right(1.25);
+    }
+  }
+
+  .#{ $_prefix }c-drawer__subitem {
+    @include _padding-right(.5);
+    @include _padding-left(.5);
+
+    &.menu-item-has-children {
+      // @include _padding-right(1.25);
+    }
+
+    .#{ $_prefix }c-drawer__submenu {
+      @include _margin-right(-.5, false);
+    }
+  }
+
+  .#{ $_prefix }c-drawer__toggle {
+    right: calc(#{ $_container-margin } + 5px); // for IE11
+    right: calc(#{ _var-container-margin-sm() } + 5px + constant(safe-area-inset-right));
+    right: calc(#{ _var-container-margin-sm() } + 5px + env(safe-area-inset-right));
+
+    @supports (-ms-ime-align: auto) {
+      right: calc(#{ _var-container-margin-sm() } + 5px); // for Edge
+    }
+
+    @include _media-min(md) {
+      right: calc(#{ $_container-margin * 2 } + 5px); // for IE11
+      right: calc(#{ _var-container-margin() } + 5px + constant(safe-area-inset-right));
+      right: calc(#{ _var-container-margin() } + 5px + env(safe-area-inset-right));
+
+      @supports (-ms-ime-align: auto) {
+        right: calc(#{ _var-container-margin() } + 5px); // for Edge
+      }
+    }
   }
 }
