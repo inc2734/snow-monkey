@@ -46,7 +46,7 @@
   }
 
   &__submenu[aria-hidden="false"] {
-    @include _margin(0, -.5, -.25, 0);
+    @include _margin(0, -.5, -.25, 0, false);
     @include _padding(.25, 0);
   }
 
@@ -54,7 +54,7 @@
     @include _padding(.25, .5);
 
     &:last-child {
-      @include _margin-bottom(-.25);
+      @include _margin-bottom(-.25, false);
     }
 
     &.menu-item-has-children {
@@ -72,7 +72,7 @@
     }
 
     .#{ $_prefix }c-drawer__submenu {
-      @include _margin-right(-.25);
+      @include _margin-right(-.25, false);
     }
   }
 
@@ -103,11 +103,11 @@
       background-color: var-color-sub-accent();
 
       &:first-child {
-        @include _margin-top(-.25);
+        @include _margin-top(-.25, false);
       }
 
       &:last-child {
-        @include _margin-bottom(-.25);
+        @include _margin-bottom(-.25, false);
       }
     }
   }
