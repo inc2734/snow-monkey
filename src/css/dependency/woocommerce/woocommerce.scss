@@ -180,7 +180,8 @@ $img-path: '../../../img';
 
 // Buttons
 .#{ $_prefix }l-container .#{ $_prefix }l-contents #respond #submit,
-.#{ $_prefix }l-container .#{ $_prefix }l-contents .button {
+.#{ $_prefix }l-container .#{ $_prefix }l-contents .button,
+.wc-block-components-product-button .wc-block-components-product-button__button {
   @include _transition(all);
   border-radius: $_border-radius; // for IE11
   border-radius: _var-border-radius();
@@ -365,12 +366,38 @@ $img-path: '../../../img';
   @include _font-size-line-height($_base-font-size-px - 2);
 }
 
-// Product title in loop
-.woocommerce-loop-product__title {
+// Product title in loop, Product title in the all product block
+.woocommerce-loop-product__title,
+.wc-block-grid .wc-block-grid__product-title {
   color: _light($_color-text); // For IE11
   color: _var-light-color-text();
   @include _font-size-line-height(1);
   font-weight: normal;
+  padding: .5em 0;
+  margin: 0;
+}
+.wc-block-grid .wc-block-grid__product-title > a {
+  color: inherit;
+  text-decoration: none;
+}
+
+// Product image in the all product block
+.wc-block-grid .wc-block-grid__product-image {
+  margin: 0 0 1em
+}
+
+// Product price in the all product block
+.wc-block-grid .price {
+  font-weight: bold;
+}
+
+// Cart button in the all product block
+.wc-block-grid .wc-block-components-product-button .wc-block-components-product-button__button {
+  color: #515151;
+  background-color: #ebe9eb;
+  padding: .618em 1em;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 // Star rating in loop
