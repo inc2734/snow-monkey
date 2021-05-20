@@ -181,7 +181,7 @@ $img-path: '../../../img';
 // Buttons
 .#{ $_prefix }l-container .#{ $_prefix }l-contents #respond #submit,
 .#{ $_prefix }l-container .#{ $_prefix }l-contents .button,
-.wc-block-components-product-button .wc-block-components-product-button__button {
+.wc-block-grid .wp-block-button .wp-block-button__link {
   @include _transition(all);
   border-radius: $_border-radius; // for IE11
   border-radius: _var-border-radius();
@@ -381,6 +381,17 @@ $img-path: '../../../img';
   text-decoration: none;
 }
 
+// Some product blocks
+.wc-block-grid__product {
+  text-align: initial;
+}
+
+// Block link in the some product blocks
+.wc-block-grid__product-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 // Product image in the all product block
 .wc-block-grid .wc-block-grid__product-image {
   margin: 0 0 1em
@@ -392,7 +403,7 @@ $img-path: '../../../img';
 }
 
 // Cart button in the all product block
-.wc-block-grid .wc-block-components-product-button .wc-block-components-product-button__button {
+.wc-block-grid .wp-block-button .wp-block-button__link {
   color: #515151;
   background-color: #ebe9eb;
   padding: .618em 1em;
@@ -400,9 +411,15 @@ $img-path: '../../../img';
   font-weight: bold;
 }
 
-// Star rating in loop
-.woocommerce .star-rating span::before {
+// Star rating in loop, Star rating in some product blocks
+.woocommerce .star-rating span::before,
+.wc-block-grid__product-rating .star-rating span:before,
+.wc-block-grid__product-rating .wc-block-grid__product-rating__stars span:before {
   color: #f2b611;
+}
+.wc-block-grid__product-rating .star-rating,
+.wc-block-grid__product-rating .wc-block-grid__product-rating__stars {
+  width: auto;
 }
 
 // Price in loop and single

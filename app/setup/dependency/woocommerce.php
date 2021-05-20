@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 14.3.1
  */
 
 use Framework\Helper;
@@ -58,8 +58,6 @@ add_filter(
 
 /**
  * Enqueue Woocommerce style
- *
- * @return void
  */
 add_action(
 	'wp_enqueue_scripts',
@@ -69,6 +67,17 @@ add_action(
 			get_theme_file_uri( '/assets/css/dependency/woocommerce/woocommerce.min.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/woocommerce.min.css' ) )
+		);
+	}
+);
+
+add_action(
+	'after_setup_theme',
+	function() {
+		add_editor_style(
+			[
+				'assets/css/dependency/woocommerce/woocommerce.min.css',
+			]
 		);
 	}
 );
