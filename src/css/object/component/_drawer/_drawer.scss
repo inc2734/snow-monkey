@@ -188,22 +188,26 @@
 
   .#{ $_prefix }c-drawer__item {
     @include _container-padding();
-
-    &.menu-item-has-children {
-      // @include _padding-right(1.25);
-    }
   }
 
   .#{ $_prefix }c-drawer__subitem {
-    @include _padding-right(.5);
     @include _padding-left(.5);
+    padding-right: $_container-margin; // for IE11
+    padding-right: calc((#{ _var-container-margin-sm() } + constant(safe-area-inset-right)));
+    padding-right: calc((#{ _var-container-margin-sm() } + env(safe-area-inset-right)));
 
-    &.menu-item-has-children {
-      // @include _padding-right(1.25);
+    @supports (-ms-ime-align: auto) {
+      padding-right: calc(#{ _var-container-margin-sm() }); // for Edge
     }
 
-    .#{ $_prefix }c-drawer__submenu {
-      @include _margin-right(-.5, false);
+    @include _media-min(md) {
+      padding-right: $_container-margin * 2 * -1; // for IE11
+      padding-right: calc((#{ _var-container-margin() } + constant(safe-area-inset-right)));
+      padding-right: calc((#{ _var-container-margin() } + env(safe-area-inset-right)));
+
+      @supports (-ms-ime-align: auto) {
+        padding-right: calc(#{ _var-container-margin() }); // for Edge
+      }
     }
   }
 
