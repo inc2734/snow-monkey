@@ -381,6 +381,13 @@ $img-path: '../../../img';
   text-decoration: none;
 }
 
+// The select box for sort in the Some product blocks
+.wc-block-grid {
+  .wc-block-sort-select {
+    text-align: right;
+  }
+}
+
 // Some product blocks
 .wc-block-grid__product {
   text-align: initial;
@@ -394,7 +401,11 @@ $img-path: '../../../img';
 
 // Product image in the all product block
 .wc-block-grid .wc-block-grid__product-image {
-  margin: 0 0 1em
+  margin: 0 0 1em;
+
+  img {
+    border: 1px solid #f2f2f2;
+  }
 }
 
 // Product price in the all product block
