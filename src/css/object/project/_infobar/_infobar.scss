@@ -1,11 +1,9 @@
 .#{ $_prefix }p-infobar {
-  $infobar-background-color: _var-color-accent();
-
   &__inner {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: $infobar-background-color;
+    background-color: var-color-accent();
     font-weight: bold;
     text-decoration: none;
     padding: 5px;

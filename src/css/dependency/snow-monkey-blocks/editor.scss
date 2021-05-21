@@ -6,6 +6,8 @@ $img-path: '../../../img';
 
 @import 'accordion/editor';
 @import 'box/editor';
+@import 'btn-box/editor';
+@import 'btn/editor';
 @import 'container/editor';
 @import 'faq/editor';
 @import 'information/editor';
@@ -13,5 +15,8 @@ $img-path: '../../../img';
 @import 'limited-datetime/editor';
 @import 'media-text/editor';
 @import 'panels/editor';
+@import 'section-break-the-grid/editor';
+@import 'section-side-heading/editor';
+@import 'section-with-image/editor';
 @import 'section/editor';
 @import 'step/editor';
