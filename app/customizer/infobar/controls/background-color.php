@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 14.3.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'infobar-background-color',
 	[
 		'label'    => __( 'Background color', 'snow-monkey' ),
-		'default'  => '#cd162c',
+		'default'  => get_theme_mod( 'accent-color' ),
 		'priority' => 130,
 	]
 );

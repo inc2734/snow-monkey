@@ -9,10 +9,6 @@ use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
 use Inc2734\WP_Customizer_Framework\Color;
 
-if ( ! Helper::is_ie() ) {
-	return;
-}
-
 $infobar_font_color       = get_theme_mod( 'infobar-font-color' );
 $infobar_background_color = get_theme_mod( 'infobar-background-color' );
 
