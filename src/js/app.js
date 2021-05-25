@@ -23,12 +23,17 @@ document.addEventListener(
       return;
     }
 
-    const apply = () => {
+    const apply = (event) => {
+      event.preventDefault;
+
       window.removeEventListener('scroll', apply, false);
+      anchorPageScroll();
       setTimeout(
-        () => anchorPageScroll(header),
-        0
+        () => anchorPageScroll(),
+        1000
       );
+
+      return false;
     };
 
     window.addEventListener('scroll', apply, false);
