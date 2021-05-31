@@ -27,46 +27,51 @@ document.addEventListener(
     }
 
     const dropNav = getDropNavWrapper();
-    const headerCssPosition = getStyle(header, 'position');
-    const isNormalHeaderPosition = 'absolute' !== headerCssPosition && 'sticky' !== headerCssPosition && 'fixed' !== headerCssPosition && ! dropNav;
-    if (
-      isNormalHeaderPosition
-      || header.offsetWidth < window.innerWidth
-    ) {
-      return;
-    }
+    const adminbar = getAdminbar();
 
-    const apply = () => {
+    const showHeaderWithScroll = () => {
+      window.removeEventListener('scroll', showHeaderWithScroll, false);
+      header.removeAttribute('aria-hidden');
+    };
+
+    const hideHeaderWithLocationHash = () => {
       const targetOffsetTop = Math.floor(getTargetOffsetTop());
-      let pageYOffset = Math.floor(window.pageYOffset);
-      let adminbarHeight = 0;
+      const pageYOffset = Math.floor(window.pageYOffset);
 
       // If there is a control bar, shift it by that amount.
-      const adminbar = getAdminbar();
       if (!! adminbar) {
-        adminbarHeight = Math.floor(adminbar.offsetHeight);
+        const adminbarHeight = Math.floor(adminbar.offsetHeight);
         const adminbarOffsetTop = Math.floor(adminbar.getBoundingClientRect().top + window.pageYOffset);
         const adminbarOffsetBottom = Math.floor(adminbarOffsetTop + adminbarHeight);
         const isOverlap = targetOffsetTop >= adminbarOffsetTop && targetOffsetTop < adminbarOffsetBottom;
         if (isOverlap) {
           window.scrollTo(0, pageYOffset - adminbarHeight);
-          pageYOffset = Math.floor(window.pageYOffset);
         }
       }
 
-      if (1 < Math.abs(targetOffsetTop - pageYOffset - adminbarHeight)) {
-        setTimeout(
-          () => {
-            window.removeEventListener('scroll', apply, false);
-            header.removeAttribute('aria-hidden');
-          },
-          500
-        );
-      } else {
-        header.setAttribute('aria-hidden', 'true');
+      const headerCssPosition = getStyle(header, 'position');
+      const isNormalHeaderPosition = 'absolute' !== headerCssPosition
+                                  && 'sticky' !== headerCssPosition
+                                  && 'fixed' !== headerCssPosition && ! dropNav;
+      if (
+        isNormalHeaderPosition
+        || header.offsetWidth < window.innerWidth
+      ) {
+        window.removeEventListener('scroll', hideHeaderWithLocationHash, false);
+        header.removeAttribute('aria-hidden');
+        return;
       }
+
+      window.removeEventListener('scroll', hideHeaderWithLocationHash, false);
+      header.setAttribute('aria-hidden', 'true');
+      setTimeout(
+        () => {
+          window.addEventListener('scroll', showHeaderWithScroll, false);
+        },
+        500
+      );
     };
-    window.addEventListener('scroll', apply, false);
+    window.addEventListener('scroll', hideHeaderWithLocationHash, false);
   },
   false
 );
