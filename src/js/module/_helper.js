@@ -265,3 +265,22 @@ export function isPassiveSupported() {
 
   return passiveSupported;
 }
+
+/**
+ * Return hash target offsetTop.
+ *
+ * @return int
+ */
+export function getTargetOffsetTop() {
+  const hash = window.location.hash;
+  if (! hash) {
+    return 0;
+  }
+
+  const target = document.querySelector(hash);
+  if (! target) {
+    return 0;
+  }
+
+  return window.pageYOffset + target.getBoundingClientRect().top;
+}

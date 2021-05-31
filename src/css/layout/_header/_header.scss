@@ -3,11 +3,20 @@
   background-color: #fff; // for IE11
   background-color: _var-background-color();
   color: var-color-header-text();
-  @include _transition(background-color);
+  @include _transition(background-color, visibility, opacity);
   overflow: hidden;
 
   @include _media-min(lg) {
     overflow: visible;
+  }
+
+  &[aria-hidden="true"],
+  &[aria-hidden="true"] .#{ $_prefix }p-drop-nav {
+    visibility: hidden;
+    opacity: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
   }
 
   &__content {
