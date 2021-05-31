@@ -4,16 +4,6 @@
 @import 'foundation/_placeholder/placeholder';
 @import 'adminbar';
 
-$editor-gutter: 1rem;
-
-@mixin content-alignment {
-  margin-right: auto;
-  margin-left: auto;
-  width: calc(100% - #{ $editor-gutter } * 2);
-  max-width: 1280px; // for IE11
-  max-width: var(--wp-block-width);
-}
-
 .wp-block {
   margin: 0;
   max-width: none;
@@ -107,7 +97,8 @@ $editor-gutter: 1rem;
 
 .editor-styles-wrapper .block-editor-writing-flow .c-container {
   max-width: none;
-
+}
+.editor-styles-wrapper .c-container {
   > * {
     @include content-alignment();
   }
