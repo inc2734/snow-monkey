@@ -12,13 +12,15 @@
     &::after {
       background-color: var-color-accent();
     }
-  }
 
-  &__lede {
-    @extend %section-lede;
+    & + .smb-section__lede-wrapper,
+    & + .smb-section__lede {
+      @extend %section-lede;
+    }
   }
 
   &__title,
+  &__lede-wrapper,
   &__lede {
     & + .smb-section__body {
       @extend %section-body;
