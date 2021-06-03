@@ -351,6 +351,7 @@ $img-path: '../../../img';
 // Archive
 .related.products,
 .woocommerce ul.products {
+  clear: both;
   @include _margin-top(1.5);
 }
 
