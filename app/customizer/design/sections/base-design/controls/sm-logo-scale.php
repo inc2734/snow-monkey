@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 14.3.4
  *
  * renamed: app/customizer/design/sections/base-design/controls/custom-logo-scale.php
  */
@@ -32,7 +32,7 @@ Framework::control(
 				return false;
 			}
 
-			preg_match( '/height="(\d+?)"/', $custom_logo, $reg );
+			preg_match( '/height="(\d+(\.\d+)?)"/', $custom_logo, $reg );
 			if ( ! isset( $reg[1] ) ) {
 				return false;
 			}
