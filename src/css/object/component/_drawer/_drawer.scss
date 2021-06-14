@@ -40,7 +40,7 @@
 
     &.menu-item-has-children {
       > a {
-        @include _padding-right(1);
+        @include _margin-right(1);
       }
     }
   }
@@ -59,7 +59,7 @@
 
     &.menu-item-has-children {
       > a {
-        @include _padding-right(1);
+        @include _margin-right(1);
       }
     }
   }
