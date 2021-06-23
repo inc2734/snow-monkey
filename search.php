@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.5
+ * @version 15.0.0
  */
 
 use Framework\Controller\Controller;
@@ -22,8 +22,8 @@ query_posts(
 	)
 );
 
-$_post_type = 'any' !== $_post_type ? $_post_type : 'post';
-$_post_type = is_array( $_post_type ) ? $_post_type[0] : $_post_type;
+$_post_type = 'any' !== $_post_type ? $_post_type : 'any';
+$_post_type = ! is_array( $_post_type ) ? $_post_type : 'any';
 
 $layout = get_theme_mod( 'archive-' . $_post_type . '-layout' );
 $layout = $layout ? $layout : get_theme_mod( 'archive-post-layout' );

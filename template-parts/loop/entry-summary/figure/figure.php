@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 15.0.0
  */
 
 use Framework\Helper;
@@ -20,7 +20,13 @@ $args = wp_parse_args(
 ?>
 
 <div class="c-entry-summary__figure">
-	<?php the_post_thumbnail( $args['_thumbnail_size'] ); ?>
+	<?php
+	if ( 'attachment' === get_post_type() ) {
+		echo wp_get_attachment_image( get_the_ID(), 'full' );
+	} else {
+		the_post_thumbnail( $args['_thumbnail_size'] );
+	}
+	?>
 
 	<?php
 	if ( $args['_terms'] ) {
