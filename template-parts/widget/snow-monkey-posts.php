@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.0.0
  */
 
 use Framework\Helper;
@@ -70,11 +70,6 @@ $more_classnames = [
 	'snow-monkey-posts__more',
 	$args['_classname'] . '__more',
 ];
-
-$posts_per_page = $args['_posts_query']->get( 'posts_per_page' );
-$loop_count     = 0;
-
-$force_sm_1col = $args['_force_sm_1col'] ? 'true' : 'false';
 ?>
 
 <div class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>">
