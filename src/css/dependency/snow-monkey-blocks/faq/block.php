@@ -17,12 +17,19 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
+$styles = [
 	[
-		'.smb-faq__item__question__label',
-		'.smb-faq__item__answer__label',
+		'selectors'  => [
+			'.smb-faq__item__question__label',
+			'.smb-faq__item__answer__label',
+		],
+		'properties' => [ 'color: ' . $accent_color ],
 	],
-	'color: ' . $accent_color
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-snow-monkey-blocks',
+	$styles
 );
 
 Style::extend(

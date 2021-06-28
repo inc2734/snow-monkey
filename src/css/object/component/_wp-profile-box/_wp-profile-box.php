@@ -17,18 +17,24 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.wp-profile-box__detail-btn',
+$styles = [
 	[
-		'background-color: ' . $accent_color,
-		'border-color: ' . $accent_color,
-	]
-);
+		'selectors'  => [ '.wp-profile-box__detail-btn' ],
+		'properties' => [
+			'background-color: ' . $accent_color,
+			'border-color: ' . $accent_color,
+		],
+	],
+	[
+		'selectors'  => [ '.wp-profile-box__archives-btn' ],
+		'properties' => [
+			'border-color: ' . $accent_color,
+			'color: ' . $accent_color,
+		],
+	],
+];
 
-Style::register(
-	'.wp-profile-box__archives-btn',
-	[
-		'border-color: ' . $accent_color,
-		'color: ' . $accent_color,
-	]
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

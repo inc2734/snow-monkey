@@ -17,30 +17,37 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
+$styles = [
 	[
-		'.wpaw-local-nav__item > a:hover',
-		'.wpaw-local-nav__subitem > a:hover',
-		'.wpaw-local-nav__item > a:active',
-		'.wpaw-local-nav__subitem > a:active',
-		'.wpaw-local-nav__item > a:focus',
-		'.wpaw-local-nav__subitem > a:focus',
+		'selectors'   => [
+			'.wpaw-local-nav__item > a:hover',
+			'.wpaw-local-nav__subitem > a:hover',
+			'.wpaw-local-nav__item > a:active',
+			'.wpaw-local-nav__subitem > a:active',
+			'.wpaw-local-nav__item > a:focus',
+			'.wpaw-local-nav__subitem > a:focus',
+		],
+		'properties'  => [
+			'color: ' . $accent_color,
+		],
+		'media_query' => '@media (min-width: 64em)',
 	],
-	'color: ' . $accent_color,
-	'@media (min-width: 64em)'
-);
-
-Style::register(
-	'.wpaw-local-nav__subitem__icon',
-	'color:' . $accent_color
-);
-
-Style::register(
 	[
-		'.wpaw-local-nav--vertical .wpaw-local-nav__subitem .wpaw-local-nav__subitem > a:hover',
-		'.wpaw-local-nav--vertical .wpaw-local-nav__subitem .wpaw-local-nav__subitem > a:active',
-		'.wpaw-local-nav--vertical .wpaw-local-nav__subitem .wpaw-local-nav__subitem > a:focus',
+		'selectors'  => [ '.wpaw-local-nav__subitem__icon' ],
+		'properties' => [ 'color:' . $accent_color ],
 	],
-	'color: ' . $accent_color,
-	'@media (min-width: 64em)'
+	[
+		'selectors'   => [
+			'.wpaw-local-nav--vertical .wpaw-local-nav__subitem .wpaw-local-nav__subitem > a:hover',
+			'.wpaw-local-nav--vertical .wpaw-local-nav__subitem .wpaw-local-nav__subitem > a:active',
+			'.wpaw-local-nav--vertical .wpaw-local-nav__subitem .wpaw-local-nav__subitem > a:focus',
+		],
+		'properties'  => [ 'color:' . $accent_color ],
+		'media_query' => '@media (min-width: 64em)',
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-custom-widgets',
+	$styles
 );

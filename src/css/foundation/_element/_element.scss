@@ -6,13 +6,13 @@ a {
   color: var-color-accent();
 }
 
-// @see src/css/editor-style.scss
 ol,
 ul {
   margin-left: 0;
   padding-left: 1.5em;
 }
 
+// @see src/css/editor-style.scss
 h1 {
   @include _font-size-line-height($_h1-font-size-scale / 1.5);
 
@@ -25,6 +25,7 @@ h1 {
   }
 }
 
+// @see src/css/editor-style.scss
 h2 {
   @include _font-size-line-height($_h2-font-size-scale / 1.25);
 
@@ -33,6 +34,7 @@ h2 {
   }
 }
 
+// @see src/css/editor-style.scss
 h3 {
   @include _font-size-line-height($_h3-font-size-scale / 1.25);
 
@@ -41,6 +43,7 @@ h3 {
   }
 }
 
+// @see src/css/editor-style.scss
 h4 {
   @include _font-size-line-height($_h4-font-size-scale / 1.25);
 

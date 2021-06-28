@@ -17,10 +17,17 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.smb-btn-box.is-style-ghost .smb-btn',
+$styles = [
 	[
-		'border-color: ' . $accent_color,
-		'color: ' . $accent_color,
-	]
+		'selectors'  => [ '.smb-btn-box.is-style-ghost .smb-btn' ],
+		'properties' => [
+			'border-color: ' . $accent_color,
+			'color: ' . $accent_color,
+		],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-snow-monkey-blocks',
+	$styles
 );

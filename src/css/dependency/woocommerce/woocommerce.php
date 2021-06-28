@@ -17,18 +17,22 @@ if ( ! Helper::is_ie() ) {
 	return;
 }
 
+$styles = [];
+
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
-	Style::register(
-		[
+	$styles[] = [
+		'selectors'  => [
 			'.l-container .l-contents .store-notice',
 			'.l-container .l-contents .demo_store',
 		],
-		'background-color: ' . $accent_color
-	);
+		'properties' => [
+			'background-color: ' . $accent_color,
+		],
+	];
 
-	Style::register(
-		[
+	$styles[] = [
+		'selectors'  => [
 			'.l-container .l-contents #respond #submit.alt',
 			'.l-container .l-contents .button.alt',
 			'.l-container .l-contents #respond #submit.alt.disabled',
@@ -56,11 +60,13 @@ if ( $accent_color ) {
 			'.l-container .l-contents .button.alt:disabled[disabled]:active',
 			'.l-container .l-contents .button.alt:disabled[disabled]:focus',
 		],
-		'background-color: ' . $accent_color
-	);
+		'properties' => [
+			'background-color: ' . $accent_color,
+		],
+	];
 
-	Style::register(
-		[
+	$styles[] = [
+		'selectors'  => [
 			'.l-container .l-contents #respond #submit.alt:hover',
 			'.l-container .l-contents .button.alt:hover',
 			'.l-container .l-contents #respond #submit.alt:active',
@@ -68,25 +74,44 @@ if ( $accent_color ) {
 			'.l-container .l-contents #respond #submit.alt:focus',
 			'.l-container .l-contents .button.alt:focus',
 		],
-		'background-color: ' . Color::dark( $accent_color )
-	);
+		'properties' => [
+			'background-color: ' . Color::dark( $accent_color ),
+		],
+	];
 
-	Style::register(
-		[
+	$styles[] = [
+		'selectors'  => [
 			'.l-container .l-contents .widget_price_filter .ui-slider .ui-slider-handle',
 			'.l-container .l-contents .widget_price_filter .ui-slider .ui-slider-range',
 		],
-		'background-color: ' . $accent_color
-	);
+		'properties' => [
+			'background-color: ' . $accent_color,
+		],
+	];
 
-	Style::register(
-		[
+	$styles[] = [
+		'selectors'  => [
 			'.woocommerce-error',
 			'.woocommerce-info',
 			'.woocommerce-message',
 		],
-		'border-top-color: ' . $accent_color
+		'properties' => [
+			'border-top-color: ' . $accent_color,
+		],
+	];
+}
+
+if ( $styles ) {
+	Style::attach(
+		Helper::get_main_style_handle(),
+		$styles
 	);
 }
 
-Style::extend( 'entry-content', [ '.woocommerce-Tabs-panel', '.related.products' ] );
+Style::extend(
+	'entry-content',
+	[
+		'.woocommerce-Tabs-panel',
+		'.related.products'
+	]
+);

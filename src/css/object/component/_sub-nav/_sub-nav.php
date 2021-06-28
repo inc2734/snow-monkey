@@ -17,7 +17,14 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.c-sub-nav .c-navbar__item.sm-nav-menu-item-highlight',
-	'color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.c-sub-nav .c-navbar__item.sm-nav-menu-item-highlight' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

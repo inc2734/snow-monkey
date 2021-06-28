@@ -17,7 +17,14 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.wpaw-pr-box__title::after',
-	'background-color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.wpaw-pr-box__title::after' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-custom-widgets',
+	$styles
 );

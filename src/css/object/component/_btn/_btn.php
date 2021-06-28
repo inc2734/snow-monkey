@@ -18,7 +18,14 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.c-btn',
-	'background-color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.c-btn' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

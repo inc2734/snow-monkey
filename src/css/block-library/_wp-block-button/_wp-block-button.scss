@@ -1,7 +1,8 @@
 .wp-block-button {
   margin: 0;
 
-  .wp-block-button__link {
+  &__link {
+    color: #fff;
     font-size: inherit;
     line-height: 1;
     @include _padding(.5, 1.25);

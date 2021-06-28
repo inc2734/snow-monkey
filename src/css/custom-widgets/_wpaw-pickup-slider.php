@@ -18,20 +18,26 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
+$styles = [
 	[
-		'.wpaw-pickup-slider__item-more:hover',
-		'.wpaw-pickup-slider__item-more:active',
-		'.wpaw-pickup-slider__item-more:focus',
+		'selectors'   => [
+			'.wpaw-pickup-slider__item-more:hover',
+			'.wpaw-pickup-slider__item-more:active',
+			'.wpaw-pickup-slider__item-more:focus',
+		],
+		'properties'  => [
+			'background-color: ' . $accent_color,
+			'border-color: ' . $accent_color,
+		],
+		'media_query' => '@media (min-width: 64em)',
 	],
 	[
-		'background-color: ' . $accent_color,
-		'border-color: ' . $accent_color,
+		'selectors'  => [ '.wpaw-pickup-slider .slick-arrow' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
 	],
-	'@media (min-width: 64em)'
-);
+];
 
-Style::register(
-	'.wpaw-pickup-slider .slick-arrow',
-	'background-color: ' . $accent_color
+Style::attach(
+	Helper::get_main_style_handle() . '-custom-widgets',
+	$styles
 );

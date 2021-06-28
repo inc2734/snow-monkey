@@ -13,6 +13,11 @@
   &__post-full-content {
     @include _margin-top(.25);
     @extend %entry-content;
+
+    // For editor
+    > div:not([class]) {
+      @extend %entry-content;
+    }
   }
 
   &.aligncenter:not(.is-grid) {

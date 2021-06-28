@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.0.0
  *
  * This procceses are beta.
  */
@@ -63,6 +63,7 @@ add_action(
 						Helper::get_main_style_handle(),
 						Helper::get_main_script_handle() . '-wpac',
 						Helper::get_main_script_handle() . '-custom-widgets',
+						Helper::get_main_script_handle() . '-block-library',
 						'wp-pure-css-gallery',
 						'wp-oembed-blog-card',
 						'wp-share-buttons',

@@ -8,18 +8,20 @@
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
 
+$styles = [];
+
 if ( Helper::is_ie() ) {
 	$accent_color = get_theme_mod( 'accent-color' );
 	if ( $accent_color ) {
-		Style::register(
-			'a',
-			'color: ' . get_theme_mod( 'accent-color' )
-		);
+		$styles[] = [
+			'selectors'  => [ 'a' ],
+			'properties' => [ 'color: ' . get_theme_mod( 'accent-color' ) ],
+		];
 	}
 }
 
-Style::register(
-	[
+$styles[] = [
+	'selectors'  => [
 		'input[type="email"]',
 		'input[type="number"]',
 		'input[type="password"]',
@@ -29,5 +31,14 @@ Style::register(
 		'input[type="url"]',
 		'textarea',
 	],
-	'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px'
-);
+	'properties' => [
+		'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px',
+	],
+];
+
+if ( $styles ) {
+	Style::attach(
+		Helper::get_main_style_handle(),
+		$styles
+	);
+}

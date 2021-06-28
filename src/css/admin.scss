@@ -42,7 +42,8 @@
   overflow: hidden;
 }
 .edit-post-visual-editor__post-title-wrapper,
-.is-root-container > .wp-block {
+.is-root-container > .wp-block,
+.is-root-container > div:not([class]) > .wp-block {
   margin-right: auto;
   margin-left: auto;
 }

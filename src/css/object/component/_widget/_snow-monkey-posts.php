@@ -18,12 +18,18 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.snow-monkey-posts__more',
-	'background-color: ' . $accent_color
-);
+$styles = [
+	[
+		'selectors'  => [ '.snow-monkey-posts__more' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.snow-monkey-posts__title::after' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
 
-Style::register(
-	'.snow-monkey-posts__title::after',
-	'background-color: ' . $accent_color
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

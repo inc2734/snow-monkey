@@ -12,11 +12,18 @@ if ( ! Helper::is_ie() ) {
 	return;
 }
 
+$styles = [];
+
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
-	Style::register(
-		'.smb-step__item__link',
-		'color: ' . $accent_color
+	$styles[] = [
+		'selectors'  => [ '.smb-step__item__link' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	];
+
+	Style::attach(
+		Helper::get_main_style_handle() . '-snow-monkey-blocks',
+		$styles
 	);
 }
 

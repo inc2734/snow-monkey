@@ -11,9 +11,16 @@ use Framework\Helper;
 if ( Helper::is_ie() ) {
 	$accent_color = get_theme_mod( 'accent-color' );
 	if ( $accent_color ) {
-		Style::register(
-			'.c-entry-summary__term',
-			'background-color: ' . $accent_color
+		$styles = [
+			[
+				'selectors'  => [ '.c-entry-summary__term' ],
+				'properties' => [ 'background-color: ' . $accent_color ],
+			],
+		];
+
+		Style::attach(
+			Helper::get_main_style_handle(),
+			$styles
 		);
 	}
 }
@@ -34,8 +41,15 @@ foreach ( $terms as $_term ) {
 		continue;
 	}
 
-	Style::register(
-		'.c-entry-summary__term--' . $_term->taxonomy . '-' . $_term->term_id,
-		'background-color: ' . $accent_color
+	$styles = [
+		[
+			'selectors'  => [ '.c-entry-summary__term--' . $_term->taxonomy . '-' . $_term->term_id ],
+			'properties' => [ 'background-color: ' . $accent_color ],
+		],
+	];
+
+	Style::attach(
+		Helper::get_main_style_handle(),
+		$styles
 	);
 }

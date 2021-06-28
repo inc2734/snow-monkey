@@ -18,54 +18,54 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.p-global-nav--hover-text-color .c-navbar__item[data-active-menu="true"]',
-	'color: ' . $accent_color
-);
-
-Style::register(
+$styles = [
 	[
-		'.p-global-nav--hover-text-color .c-navbar__item:hover',
-		'.p-global-nav--hover-text-color .c-navbar__item:active',
-		'.p-global-nav--hover-text-color .c-navbar__item:focus',
+		'selectors'  => [ '.p-global-nav--hover-text-color .c-navbar__item[data-active-menu="true"]' ],
+		'properties' => [ 'color: ' . $accent_color ],
 	],
-	'color: ' . $accent_color,
-	'@media (min-width: 64em)'
-);
-
-Style::register(
-	'.p-global-nav--hover-underline .c-navbar__item[data-active-menu="true"]::after > a',
-	'background-color: ' . $accent_color
-);
-
-Style::register(
 	[
-		'.p-global-nav--hover-underline .c-navbar__item:hover::after > a',
-		'.p-global-nav--hover-underline .c-navbar__item:active::after > a',
-		'.p-global-nav--hover-underline .c-navbar__item:focus::after > a',
+		'selectors'   => [
+			'.p-global-nav--hover-text-color .c-navbar__item:hover',
+			'.p-global-nav--hover-text-color .c-navbar__item:active',
+			'.p-global-nav--hover-text-color .c-navbar__item:focus',
+		],
+		'properties'  => [ 'color: ' . $accent_color ],
+		'media_query' => '@media (min-width: 64em)',
 	],
-	'background-color: ' . $accent_color,
-	'@media (min-width: 64em)'
-);
+	[
+		'selectors'  => [ '.p-global-nav--hover-underline .c-navbar__item[data-active-menu="true"]::after > a' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+	[
+		'selectors'   => [
+			'.p-global-nav--hover-underline .c-navbar__item:hover::after > a',
+			'.p-global-nav--hover-underline .c-navbar__item:active::after > a',
+			'.p-global-nav--hover-underline .c-navbar__item:focus::after > a',
+		],
+		'properties'  => [ 'background-color: ' . $accent_color ],
+		'media_query' => '@media (min-width: 64em)',
+	],
+	[
+		'selectors'  => [ '.p-global-nav .c-navbar__item.sm-nav-menu-item-highlight' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.p-global-nav .c-navbar__item > .c-navbar__submenu::before' ],
+		'properties' => [ 'border-bottom-color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.l-header--left .p-global-nav .c-navbar__item > .c-navbar__submenu::before' ],
+		'properties' => [ 'border-right-color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.p-global-nav .c-navbar__submenu' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
 
-Style::register(
-	'.p-global-nav .c-navbar__item.sm-nav-menu-item-highlight',
-	'background-color: ' . $accent_color
-);
-
-Style::register(
-	'.p-global-nav .c-navbar__item > .c-navbar__submenu::before',
-	'border-bottom-color: ' . $accent_color
-);
-
-Style::register(
-	'.l-header--left .p-global-nav .c-navbar__item > .c-navbar__submenu::before',
-	'border-right-color: ' . $accent_color
-);
-
-Style::register(
-	'.p-global-nav .c-navbar__submenu',
-	'background-color: ' . $accent_color
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );
 
 $sub_accent_color = get_theme_mod( 'sub-accent-color' );
@@ -73,7 +73,14 @@ if ( ! $sub_accent_color ) {
 	return;
 }
 
-Style::register(
-	'.p-global-nav .c-navbar__subitem.sm-nav-menu-item-highlight',
-	'background-color: ' . $sub_accent_color
+$styles = [
+	[
+		'selectors'  => [ '.p-global-nav .c-navbar__subitem.sm-nav-menu-item-highlight' ],
+		'properties' => [ 'background-color: ' . $sub_accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

@@ -1,0 +1,5 @@
+.wp-block-legacy-widget {
+  &__edit-form-title {
+    @extend %widget-title;
+  }
+}

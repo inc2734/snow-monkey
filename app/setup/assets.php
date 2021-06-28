@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.0.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -42,9 +42,15 @@ add_action(
 			filemtime( get_theme_file_path( '/assets/css/style.min.css' ) )
 		);
 
+		wp_enqueue_style(
+			Helper::get_main_style_handle() . '-block-library',
+			get_theme_file_uri( '/assets/css/block-library.min.css' ),
+			[ 'wp-block-library' ],
+			filemtime( get_theme_file_path( '/assets/css/block-library.min.css' ) )
+		);
+
 		do_action( 'snow_monkey_enqueued_main_style' );
-	},
-	11
+	}
 );
 
 /**

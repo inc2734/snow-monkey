@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.1
+ * @version 15.0.0
  */
 
 use Framework\Helper;
@@ -20,11 +20,7 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
 add_action(
 	'enqueue_block_assets',
 	function() {
-		if ( is_admin() ) {
-			$dependencies = [];
-		} else {
-			$dependencies = [ Helper::get_main_style_handle() ];
-		}
+		$dependencies = [ Helper::get_main_style_handle() ];
 
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',

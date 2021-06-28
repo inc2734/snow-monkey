@@ -17,9 +17,16 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.c-drawer',
-	'background-color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.c-drawer' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );
 
 $sub_accent_color = get_theme_mod( 'sub-accent-color' );
@@ -32,10 +39,17 @@ if ( 'background-color' !== $drawer_nav_highlight_type ) {
 	return;
 }
 
-Style::register(
+$styles = [
 	[
-		'.c-drawer--highlight-type-background-color .c-drawer__item.sm-nav-menu-item-highlight',
-		'.c-drawer--highlight-type-background-color .c-drawer__subitem.sm-nav-menu-item-highlight',
+		'selectors'  => [
+			'.c-drawer--highlight-type-background-color .c-drawer__item.sm-nav-menu-item-highlight',
+			'.c-drawer--highlight-type-background-color .c-drawer__subitem.sm-nav-menu-item-highlight',
+		],
+		'properties' => [ 'background-color: ' . $sub_accent_color ],
 	],
-	'background-color: ' . $sub_accent_color
+];
+
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

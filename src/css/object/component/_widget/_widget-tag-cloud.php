@@ -17,7 +17,14 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.tag-cloud-link::before',
-	'color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.tag-cloud-link::before' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

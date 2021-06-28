@@ -1,5 +1,6 @@
 .wp-block-calendar {
   @extend %calendar;
+  @include calendar();
   display: table;
 
   .wp-calendar-table {

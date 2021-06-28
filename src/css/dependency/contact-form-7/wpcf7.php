@@ -18,7 +18,14 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.wpcf7-submit',
-	'background-color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.wpcf7-submit' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-wpcf7',
+	$styles
 );

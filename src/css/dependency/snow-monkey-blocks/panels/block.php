@@ -17,9 +17,19 @@ if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.smb-panels__item__link',
-	'color: ' . $accent_color
+$styles = [
+	[
+		'selectors'  => [ '.smb-panels__item__link' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-snow-monkey-blocks',
+	$styles
 );
 
-Style::extend( 'entry-content', [ '.smb-panels__item--free > .smb-panels__item__body' ] );
+Style::extend(
+	'entry-content',
+	[ '.smb-panels__item--free > .smb-panels__item__body' ]
+);

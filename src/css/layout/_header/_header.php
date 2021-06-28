@@ -24,37 +24,40 @@ if ( ! $header_text_color ) {
 	$drop_nav_text_color       = $header_text_color;
 }
 
-Style::register(
-	'.l-header',
-	'color: ' . $header_text_color
-);
-
-Style::register(
-	'.c-hamburger-btn__bar',
-	'background-color: ' . $header_text_color
-);
-
-Style::register(
+$styles = [
 	[
-		'.l-header--overlay-lg',
-		'.l-header--sticky-overlay-lg',
-		'[data-scrolled="false"] .l-header--sticky-overlay-colored-lg',
+		'selectors'  => [ '.l-header' ],
+		'properties' => [ 'color: ' . $header_text_color ],
 	],
-	'color: ' . $overlay_header_text_color,
-	'@media (min-width: 64em)'
-);
-
-Style::register(
 	[
-		'.l-header--overlay-sm',
-		'.l-header--sticky-overlay-sm',
-		'[data-scrolled="false"] .l-header--sticky-overlay-colored-sm',
+		'selectors'  => [ '.c-hamburger-btn__bar' ],
+		'properties' => [ 'background-color: ' . $header_text_color ],
 	],
-	'color: ' . $overlay_header_text_color,
-	'@media (max-width: 63.9375em)'
-);
+	[
+		'selectors'   => [
+			'.l-header--overlay-lg',
+			'.l-header--sticky-overlay-lg',
+			'[data-scrolled="false"] .l-header--sticky-overlay-colored-lg',
+		],
+		'properties'  => [ 'color: ' . $overlay_header_text_color ],
+		'media_query' => '@media (min-width: 64em)',
+	],
+	[
+		'selectors'   => [
+			'.l-header--overlay-sm',
+			'.l-header--sticky-overlay-sm',
+			'[data-scrolled="false"] .l-header--sticky-overlay-colored-sm',
+		],
+		'properties'  => [ 'color: ' . $overlay_header_text_color ],
+		'media_query' => '@media (min-width: 64em)',
+	],
+	[
+		'selectors'  => [ '.l-header__drop' ],
+		'properties' => [ 'color: ' . $drop_nav_text_color ],
+	],
+];
 
-Style::register(
-	'.l-header__drop',
-	'color: ' . $drop_nav_text_color
+Style::attach(
+	Helper::get_main_style_handle(),
+	$styles
 );

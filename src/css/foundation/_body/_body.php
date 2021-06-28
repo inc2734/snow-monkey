@@ -112,29 +112,33 @@ if ( $base_line_height ) {
 	$root_variables[] = '--_half-leading: ' . ( $base_line_height - 1 ) / 2;
 }
 
+$styles = [];
+
 if ( $root_variables ) {
-	Style::register(
-		':root',
-		$root_variables
-	);
+	$styles[] = [
+		'selectors'  => [ ':root' ],
+		'properties' => $root_variables,
+	];
 }
 
-Style::register(
-	'html',
-	[
+$styles[] = [
+	'selectors'  => [ 'html' ],
+	'properties' => [
 		'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px',
 		'letter-spacing: ' . get_theme_mod( 'base-letter-spacing' ) . 'rem',
-	]
-);
+	],
+];
 
 if ( 16 !== get_theme_mod( 'base-font-size' ) ) {
-	Style::register(
-		[
+	$styles[] = [
+		'selectors'  => [
 			'.has-regular-font-size',
 			'.has-normal-font-size',
 		],
-		'font-size: 16px'
-	);
+		'properties' => [
+			'font-size: 16px',
+		],
+	];
 }
 
 $base_font   = get_theme_mod( 'base-font' );
@@ -161,7 +165,17 @@ if ( 'sans-serif' === $base_font ) {
 	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ] );
 }
 
-Style::register(
-	[ '.l-body', '.block-editor-block-list__block' ],
-	'font-family: ' . implode( ',', $font_family )
+$styles[] = [
+	'selectors'  => [
+		'.l-body',
+		'.block-editor-block-list__block',
+	],
+	'properties' => [
+		'font-family: ' . implode( ',', $font_family ),
+	],
+];
+
+Style::attach(
+	\Framework\Helper::get_main_style_handle(),
+	$styles
 );

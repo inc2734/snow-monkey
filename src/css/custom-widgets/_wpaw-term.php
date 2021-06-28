@@ -8,13 +8,15 @@
 use Inc2734\WP_Customizer_Framework\Style;
 use Framework\Helper;
 
+$styles = [];
+
 if ( Helper::is_ie() ) {
 	$accent_color = get_theme_mod( 'accent-color' );
 	if ( $accent_color ) {
-		Style::register(
-			'.wpaw-term',
-			'background-color: ' . $accent_color
-		);
+		$styles[] = [
+			'selectors'  => [ '.wpaw-term' ],
+			'properties' => [ 'background-color: ' . $accent_color ],
+		];
 	}
 }
 
@@ -25,8 +27,15 @@ foreach ( $terms as $_term ) {
 		continue;
 	}
 
-	Style::register(
-		'.wpaw-term.wpaw-term--category-' . $_term->term_id,
-		'background-color: ' . $accent_color
+	$styles[] = [
+		'selectors'  => [ '.wpaw-term.wpaw-term--category-' . $_term->term_id ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	];
+}
+
+if ( $styles ) {
+	Style::attach(
+		Helper::get_main_style_handle() . '-custom-widgets',
+		$styles
 	);
 }

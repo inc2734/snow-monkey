@@ -1,6 +1,9 @@
 @charset 'utf-8';
 
-@import 'style';
+/**
+ * Core
+ */
+@import 'core/core';
 
 .is-root-container,
 .wp-block-freeform {
@@ -11,17 +14,12 @@
   --wp-block-width: calc(var(--_container-max-width, 1280px) - 2rem);
 }
 
-#tinymce {
-  margin: 10px;
-  padding: 0;
-}
-
 .mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
   height: 100%;
 }
 
-body {
-  padding: 0 0 2em;
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin: 2em auto 28px;
 }
 
 [data-align="full"] + [data-align="full"] {
@@ -147,3 +145,72 @@ body {
 .u-hidden-lg-up::after { content: '.u-hidden-lg-up'; }
 .u-hidden-xl::after { content: '.u-hidden-xl'; }
 .u-hidden-xl-up::after { content: '.u-hidden-xl-up'; }
+
+.editor-styles-wrapper {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*
+  h1 {
+    @include _font-size-line-height($_h1-font-size-scale / 1.5);
+
+    @include _media-min(md) {
+      @include _font-size-line-height($_h1-font-size-scale / 1.25);
+    }
+
+    @include _media-min(lg) {
+      @include _font-size-line-height($_h1-font-size-scale);
+    }
+  }
+
+  h2 {
+    @include _font-size-line-height($_h2-font-size-scale / 1.25);
+
+    @include _media-min(lg) {
+      @include _font-size-line-height($_h2-font-size-scale);
+    }
+  }
+
+  h3 {
+    @include _font-size-line-height($_h3-font-size-scale / 1.25);
+
+    @include _media-min(lg) {
+      @include _font-size-line-height($_h3-font-size-scale);
+    }
+  }
+
+  h4 {
+    @include _font-size-line-height($_h4-font-size-scale / 1.25);
+
+    @include _media-min(lg) {
+      @include _font-size-line-height($_h4-font-size-scale);
+    }
+  }
+  */
+
+  /**
+  * Foundation
+  */
+  @import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
+  @import 'foundation/foundation';
+
+  /**
+  * Layout
+  */
+  @import 'layout/layout';
+
+  /**
+  * Object - Component
+  */
+  @import 'object/component/component';
+
+  /**
+  * Object - Project
+  */
+  @import 'object/project/project';
+
+  /**
+  * Object - utility
+  */
+  @import 'object/utility/utility';
+}

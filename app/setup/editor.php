@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.0.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -16,22 +16,60 @@ new WP_Custom_CSS_To_Editor\Bootstrap();
 
 /**
  * Support editor styles
- *
- * @return void
  */
+add_filter(
+	'tiny_mce_before_init',
+	function( $mce_init ) {
+		if ( ! isset( $mce_init['content_style'] ) ) {
+			$mce_init['content_style'] = '';
+		}
+
+		$response = file_get_contents( get_template_directory() . '/assets/css/classic-editor-style.min.css' );
+		if ( $response ) {
+			$response = str_replace( [ "\n", "\r" ], '', $response );
+			$response = str_replace( '"', '\\"', $response );
+
+			$mce_init['content_style'] .= $response;
+		}
+
+		return $mce_init;
+	}
+);
+
 add_action(
-	'after_setup_theme',
+	'enqueue_block_editor_assets',
 	function() {
-		add_theme_support( 'editor-styles' );
-		$stylesheet = [ 'assets/css/editor-style.min.css' ];
-		add_editor_style( $stylesheet );
+		$dependencies = Helper::generate_style_dependencies(
+			[
+				'wp-block-library',
+				'wp-share-buttons',
+				'wp-like-me-box',
+				'wp-oembed-blog-card',
+				'wp-pure-css-gallery',
+				'wp-awesome-widgets',
+				'slick-carousel',
+				'slick-carousel-theme',
+			]
+		);
+
+		wp_enqueue_style(
+			Helper::get_main_style_handle(),
+			get_theme_file_uri( '/assets/css/editor-style.min.css' ),
+			$dependencies,
+			filemtime( get_theme_file_path( '/assets/css/editor-style.min.css' ) )
+		);
+
+		wp_enqueue_style(
+			Helper::get_main_style_handle() . '-block-library',
+			get_theme_file_uri( '/assets/css/editor-block-library.min.css' ),
+			[ 'wp-block-library' ],
+			filemtime( get_theme_file_path( '/assets/css/editor-block-library.min.css' ) )
+		);
 	}
 );
 
 /**
  * Support align-wide
- *
- * @var void
  */
 add_action(
 	'after_setup_theme',
@@ -42,8 +80,6 @@ add_action(
 
 /**
  * Deregister wp-block-library-theme
- *
- * @var void
  */
 add_action(
 	'enqueue_block_editor_assets',
@@ -55,8 +91,6 @@ add_action(
 
 /**
  * Color palette
- *
- * @var void
  */
 add_action(
 	'after_setup_theme',

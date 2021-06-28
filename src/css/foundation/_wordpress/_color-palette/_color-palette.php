@@ -15,16 +15,22 @@ foreach ( $color_palette as $color ) {
 		continue;
 	}
 
-	Style::register(
-		'.has-' . $color['slug'] . '-background-color',
-		'background-color: ' . $color['color'] . '!important'
-	);
-
-	Style::register(
+	$styles = [
 		[
-			'.has-' . $color['slug'] . '-color',
-			'.wp-block-button__link.has-' . $color['slug'] . '-color',
+			'selectors'  => [ '.has-' . $color['slug'] . '-background-color' ],
+			'properties' => [ 'background-color: ' . $color['color'] . '!important' ],
 		],
-		'color: ' . $color['color'] . '!important'
+		[
+			'selectors'  => [
+				'.has-' . $color['slug'] . '-color',
+				'.wp-block-button__link.has-' . $color['slug'] . '-color',
+			],
+			'properties' => [ 'color: ' . $color['color'] . '!important' ],
+		],
+	];
+
+	Style::attach(
+		Helper::get_main_style_handle(),
+		$styles
 	);
 }

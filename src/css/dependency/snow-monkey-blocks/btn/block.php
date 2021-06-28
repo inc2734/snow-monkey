@@ -13,27 +13,40 @@ if ( ! Helper::is_ie() ) {
 	return;
 }
 
+Style::attach(
+	Helper::get_main_style_handle() . '-snow-monkey-blocks',
+	[
+		[
+			'selectors'  => '.smb-btn',
+			'properties' => [ 'border-radius: 100% !important' ],
+		],
+	]
+);
+
 $accent_color = get_theme_mod( 'accent-color' );
 if ( ! $accent_color ) {
 	return;
 }
 
-Style::register(
-	'.smb-btn',
-	'background-color: ' . $accent_color
-);
-
-Style::register(
-	'.smb-btn-wrapper.is-style-ghost .smb-btn',
+$styles = [
 	[
-		'border-color: ' . $accent_color,
-		'color: ' . $accent_color,
-	]
-);
-
-Style::register(
-	'.smb-btn-wrapper.is-style-text .smb-btn',
+		'selectors'  => [ '.smb-btn' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
 	[
-		'color: ' . $accent_color,
-	]
+		'selectors'  => [ '.smb-btn-wrapper.is-style-ghost .smb-btn' ],
+		'properties' => [
+			'border-color: ' . $accent_color,
+			'color: ' . $accent_color,
+		],
+	],
+	[
+		'selectors'  => [ '.smb-btn-wrapper.is-style-text .smb-btn' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-snow-monkey-blocks',
+	$styles
 );

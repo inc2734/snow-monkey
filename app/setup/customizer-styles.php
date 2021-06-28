@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.8.0
+ * @version 15.0.0
  */
 
 use Framework\Helper;
@@ -12,8 +12,6 @@ use Inc2734\WP_Customizer_Framework\Color;
 
 /**
  * Load PHP files for styles
- *
- * @return void
  */
 add_action(
 	'inc2734_wp_customizer_framework_load_styles',
@@ -61,18 +59,20 @@ add_action(
 					$selectors_for_tbody_th[ $key ] = $selector . ' > table tbody th';
 				}
 
+				$styles = [];
+
 				// @see src/css/core/mixin/_entry-content.scss
 				$h2_style = get_theme_mod( 'h2-style' );
 				if ( $h2_style ) {
 					if ( 'standard' === $h2_style ) {
-						Style::register(
-							$selectors_for_h2,
-							[
+						$styles[] = [
+							'selectors'  => $selectors_for_h2,
+							'properties' => [
 								'border-left: 1px solid ' . $accent_color,
 								'background-color: #f7f7f7',
 								'padding: .44231rem .44231rem .44231rem .88462rem',
-							]
-						);
+							],
+						];
 					}
 				}
 
@@ -80,29 +80,33 @@ add_action(
 				$h3_style = get_theme_mod( 'h3-style' );
 				if ( $h3_style ) {
 					if ( 'standard' === $h3_style ) {
-						Style::register(
-							$selectors_for_h3,
-							[
+						$styles[] = [
+							'selectors'  => $selectors_for_h3,
+							'properties' => [
 								'border-bottom: 1px solid #eee',
 								'padding: 0 0 .44231rem',
-							]
-						);
+							],
+						];
 					}
 				}
 
-				Style::register(
-					$selectors_for_thead_th,
-					[
+				$styles[] = [
+					'selectors'  => $selectors_for_thead_th,
+					'properties' => [
 						'background-color: ' . $accent_color,
 						'border-right-color: ' . Color::light( $accent_color ),
 						'border-left-color: ' . Color::light( $accent_color ),
-					]
-				);
+					],
+				];
 
-				Style::register(
-					$selectors_for_tbody_th,
-					'background-color: ' . Color::lightest( $accent_color )
-				);
+				$styles[] = [
+					'selectors'  => $selectors_for_tbody_th,
+					'properties' => [
+						'background-color: ' . Color::lightest( $accent_color ),
+					],
+				];
+
+				Style::attach( Helper::get_main_style_handle(), $styles );
 			}
 		);
 	}
@@ -144,40 +148,44 @@ add_action(
 					$selectors_for_title_after[ $key ]  = $selector . '::after';
 				}
 
-				Style::register(
-					$selectors_for_title,
+				$styles = [
 					[
-						'display: flex',
-						'flex-direction: row',
-						'align-items: center',
-						'justify-content: center',
-					]
-				);
+						'selectors'  => $selectors_for_title,
+						'properties' => [
+							'display: flex',
+							'flex-direction: row',
+							'align-items: center',
+							'justify-content: center',
+						],
+					],
+					[
+						'selectors'  => $selectors_for_title_pseudo,
+						'properties' => [
+							'display: block',
+							'content: ""',
+							'height: 1px',
+							'background-color: #111',
+							'flex: 1 0 0%',
+							'min-width: 20px',
+						],
+					],
+					[
+						'selectors'  => $selectors_for_title_before,
+						'properties' => [
+							'margin-right: .5em',
+						],
+					],
+					[
+						'selectors'  => $selectors_for_title_after,
+						'properties' => [
+							'margin-left: .5em',
+						],
+					],
+				];
 
-				Style::register(
-					$selectors_for_title_pseudo,
-					[
-						'display: block',
-						'content: ""',
-						'height: 1px',
-						'background-color: #111',
-						'flex: 1 0 0%',
-						'min-width: 20px',
-					]
-				);
-
-				Style::register(
-					$selectors_for_title_before,
-					[
-						'margin-right: .5em',
-					]
-				);
-
-				Style::register(
-					$selectors_for_title_after,
-					[
-						'margin-left: .5em',
-					]
+				Style::attach(
+					Helper::get_main_style_handle(),
+					$styles
 				);
 			}
 		);
