@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "12.1.5",
+            "version": "12.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "502bbf80cf8fe380099fc3c9a088a768c738b2c7"
+                "reference": "ac897d560c7d89ef1a3b3d7dec6d469863416053"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/502bbf80cf8fe380099fc3c9a088a768c738b2c7",
-                "reference": "502bbf80cf8fe380099fc3c9a088a768c738b2c7",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/ac897d560c7d89ef1a3b3d7dec6d469863416053",
+                "reference": "ac897d560c7d89ef1a3b3d7dec6d469863416053",
                 "shasum": ""
             },
             "require": {
@@ -149,22 +149,22 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.1.5"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.1.6"
             },
-            "time": "2021-04-14T08:11:22+00:00"
+            "time": "2021-06-29T04:48:21+00:00"
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "8.0.0",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "6a572483954d2a82681486538d2c9cc9e740c06b"
+                "reference": "6d313a2be0b458e1f995d7d790ad5854c016d769"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/6a572483954d2a82681486538d2c9cc9e740c06b",
-                "reference": "6a572483954d2a82681486538d2c9cc9e740c06b",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/6d313a2be0b458e1f995d7d790ad5854c016d769",
+                "reference": "6d313a2be0b458e1f995d7d790ad5854c016d769",
                 "shasum": ""
             },
             "require": {
@@ -197,9 +197,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/8.0.0"
+                "source": "https://github.com/inc2734/wp-basis/tree/8.0.1"
             },
-            "time": "2021-05-19T08:07:49+00:00"
+            "time": "2021-06-29T05:05:34+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",

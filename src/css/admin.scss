@@ -151,3 +151,7 @@
     }
   }
 }
+
+.wp-block[data-type="core/widget-area"] .block-editor-block-list__layout {
+  @include _content(1);
+}

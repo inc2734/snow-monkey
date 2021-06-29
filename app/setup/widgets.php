@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 15.0.0
  */
 
 use Framework\Helper;
@@ -321,5 +321,35 @@ add_filter(
 	'inc2734_wp_awesome_widgets_showcase_image_size',
 	function() {
 		return 'xlarge';
+	}
+);
+
+/**
+ * Hides custom widgets from the block widget editor.
+ *
+ * @param array $widget_types Legacy widget settings.
+ * @return array
+ */
+add_filter(
+	'widget_types_to_hide_from_legacy_widget_block',
+	function( $widget_types ) {
+		$widget_types[] = 'inc2734_wp_awesome_widgets_any_posts';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_carousel_any_posts';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_contents_outline';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_google_adsense';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_local_nav';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_pickup_slider';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_pr_box';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_profile_box';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_ranking';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_recent_posts';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_showcase';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_site_branding';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_slider';
+		$widget_types[] = 'inc2734_wp_awesome_widgets_taxonomy_posts';
+		$widget_types[] = 'snow_monkey_recent_posts_widget';
+		$widget_types[] = 'snow_monkey_rss_widget';
+		$widget_types[] = 'snow_monkey_taxonomy_posts_widget';
+		return $widget_types;
 	}
 );
