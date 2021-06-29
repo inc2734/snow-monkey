@@ -6,10 +6,6 @@
   @include _padding(.75, 1, .5);
   visibility: hidden;
 
-  .wpco-wrapper[aria-hidden="false"] & {
-    visibility: visible;
-  }
-
   &__title {
     @include _margin(0, 0, .25);
     @include _font-size-line-height(1);
@@ -69,4 +65,8 @@
     li li li li > a { padding-left: 4.5em; }
     li li li li li > a { padding-left: 6em; }
   }
+}
+
+.wpco-wrapper[aria-hidden="false"] .wpco {
+  visibility: visible;
 }

@@ -1,7 +1,5 @@
-.#{ $_prefix }l-front-page-widget-area {
-  [data-has-sidebar="true"] & {
-    @include _media-min(lg) {
-      @include items-gutter();
-    }
+[data-has-sidebar="true"] .#{ $_prefix }l-front-page-widget-area {
+  @include _media-min(lg) {
+    @include items-gutter();
   }
 }

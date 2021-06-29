@@ -14,16 +14,16 @@
       text-decoration: underline;
     }
   }
+}
 
-  body:not([style*="margin-bottom"]) .#{ $_prefix }l-footer & {
-    padding-bottom: calc(#{ _space(.5) } + constant(safe-area-inset-bottom)); // for IE11
-    padding-bottom: calc(#{ _space(.5) } + env(safe-area-inset-bottom)); // for IE11
+body:not([style*="margin-bottom"]) .#{ $_prefix }l-footer .#{ $_prefix }c-copyright {
+  padding-bottom: calc(#{ _space(.5) } + constant(safe-area-inset-bottom)); // for IE11
+  padding-bottom: calc(#{ _space(.5) } + env(safe-area-inset-bottom)); // for IE11
 
-    padding-bottom: calc(#{ _var-space() } * .5 + constant(safe-area-inset-bottom));
-    padding-bottom: calc(#{ _var-space() } * .5 + env(safe-area-inset-bottom));
+  padding-bottom: calc(#{ _var-space() } * .5 + constant(safe-area-inset-bottom));
+  padding-bottom: calc(#{ _var-space() } * .5 + env(safe-area-inset-bottom));
 
-    @supports (-ms-ime-align: auto) {
-      padding-bottom: calc(#{ _var-space() } * .5); // for Edge
-    }
+  @supports (-ms-ime-align: auto) {
+    padding-bottom: calc(#{ _var-space() } * .5); // for Edge
   }
 }

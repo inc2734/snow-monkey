@@ -4,13 +4,13 @@
   &__title {
     @extend %widget-title;
   }
+}
 
-  [data-is-slim-widget-area="true"] & {
-    @include _font-size-line-height($_base-font-size-px - 2);
+[data-is-slim-widget-area="true"] .#{ $_prefix }c-widget {
+  @include _font-size-line-height($_base-font-size-px - 2);
 
-    &__title {
-      @include _font-size-line-height(1);
-    }
+  &__title {
+    @include _font-size-line-height(1);
   }
 }
 

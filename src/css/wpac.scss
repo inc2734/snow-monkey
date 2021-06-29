@@ -190,10 +190,11 @@
     background-color: _var-lightest-color-gray();
   }
 
-  & + & {
+  & + .wpac-section {
     margin-top: 0 !important;
   }
 }
+
 [data-has-sidebar="false"] {
   .wpac-section {
     @include alignfull();

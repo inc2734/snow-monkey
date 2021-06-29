@@ -86,16 +86,16 @@
       }
     }
   }
+}
 
-  // @see src/css/admin.scss
-  [data-has-sidebar="true"] &,
-  [data-is-slim-width="true"] & {
-    &--rich-media,
-    &--panel {
-      .#{ $_prefix }c-entries__item {
-        @include _media-min(lg) {
-          @include _lattice__col--width(1 / 2 * 100%);
-        }
+// @see src/css/admin.scss
+[data-has-sidebar="true"] .#{ $_prefix }c-entries,
+[data-is-slim-width="true"] .#{ $_prefix }c-entries {
+  &--rich-media,
+  &--panel {
+    .#{ $_prefix }c-entries__item {
+      @include _media-min(lg) {
+        @include _lattice__col--width(1 / 2 * 100%);
       }
     }
   }

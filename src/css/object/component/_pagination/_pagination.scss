@@ -39,13 +39,13 @@
       color: _var-color-white();
     }
   }
+}
 
-  .#{ $_prefix }p-archive &,
-  .#{ $_prefix }p-archive + & {
-    @include _margin-top(1);
+.#{ $_prefix }p-archive .#{ $_prefix }c-pagination,
+.#{ $_prefix }p-archive + .#{ $_prefix }c-pagination {
+  @include _margin-top(1);
 
-    @include _media-min(lg) {
-      @include _margin-top(1.5);
-    }
+  @include _media-min(lg) {
+    @include _margin-top(1.5);
   }
 }

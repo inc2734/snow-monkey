@@ -51,11 +51,6 @@
     flex: 1 1 0%;
     position: relative;
     z-index: 1;
-
-    // For default block library styles.
-    .wp-block-search & {
-      max-width: none;
-    }
   }
 
   &__button {
@@ -81,4 +76,9 @@
       z-index: 1;
     }
   }
+}
+
+// For default block library styles.
+.wp-block-search .wp-block-search__input {
+  max-width: none;
 }

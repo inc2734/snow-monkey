@@ -115,19 +115,19 @@ $comment-bgcolors: [_lightest($_color-gray), _var-lightest-color-gray()];
     @include _font-size-line-height($_base-font-size-px - 2);
     @include _padding(.25rem, 1rem);
   }
+}
 
-  .bypostauthor & {
-    align-items: flex-end;
+.bypostauthor .#{ $_prefix }c-comment {
+  align-items: flex-end;
 
+  @include _media-min(md) {
+    align-items: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  &__figure {
     @include _media-min(md) {
-      align-items: flex-start;
-      flex-direction: row-reverse;
-    }
-
-    &__figure {
-      @include _media-min(md) {
-        margin: 0 0 0 20px;
-      }
+      margin: 0 0 0 20px;
     }
   }
 }

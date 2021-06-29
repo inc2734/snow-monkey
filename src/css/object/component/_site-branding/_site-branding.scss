@@ -7,21 +7,9 @@
       @include _font-size-line-height(1.5);
     }
 
-    .l-center-header & {
-      @include _media-min(lg) {
-        @include _font-size-line-height(2);
-      }
-    }
-
     > a {
       color: inherit;
       text-decoration: none;
-    }
-
-    .custom-logo {
-      .l-center-header & {
-        max-width: none;
-      }
     }
   }
 
@@ -29,5 +17,17 @@
     margin-top: 2px;
     @include _font-size(13px);
     line-height: 1;
+  }
+}
+
+.l-center-header .#{ $_prefix }c-site-branding__title {
+  @include _media-min(lg) {
+    @include _font-size-line-height(2);
+  }
+}
+
+.custom-logo {
+  .l-center-header .#{ $_prefix }c-site-branding__title {
+    max-width: none;
   }
 }

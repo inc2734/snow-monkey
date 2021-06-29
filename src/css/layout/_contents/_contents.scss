@@ -8,72 +8,77 @@
   &__sidebar {
     @include items-gutter();
   }
+}
 
-  [data-has-sidebar="true"] & {
-    &__inner {
-      @include _media-min(lg) {
-        display: flex;
-        flex-wrap: nowrap;
-      }
-    }
-
-    &__main {
-      flex: 1 1 0%;
-
-      @include _media-min(lg) {
-        flex: none;
-        width: calc(100% - 336px - #{ _space(2) }); // for IE11
-        width: calc(100% - 336px - #{ _var-space() } * 2 * #{ _var-margin-scale() });
-      }
-    }
-
-    &__sidebar {
-      flex: 1 1 0%;
-
-      @include _media-min(lg) {
-        margin: 0;
-        flex: none;
-        width: 336px;
-      }
+/**
+ * Right/Left sidebar
+ */
+[data-has-sidebar="true"] .#{ $_prefix }l-contents {
+  &__inner {
+    @include _media-min(lg) {
+      display: flex;
+      flex-wrap: nowrap;
     }
   }
 
-  /**
-   * Right sidebar
-   */
-  .#{ $_prefix }l-body--right-sidebar & {
-    &__inner {
-      @include _media-min(lg) {
-        flex-direction: row;
-      }
-    }
+  &__main {
+    flex: 1 1 0%;
 
-    &__main {
-      @include _media-min(lg) {
-        @include _margin(0, 2, 0, 0);
-      }
+    @include _media-min(lg) {
+      flex: none;
+      width: calc(100% - 336px - #{ _space(2) }); // for IE11
+      width: calc(100% - 336px - #{ _var-space() } * 2 * #{ _var-margin-scale() });
     }
   }
 
-  /**
-   * Left sidebar
-   */
-  .#{ $_prefix }l-body--left-sidebar & {
-    &__inner {
-      @include _media-min(lg) {
-        flex-direction: row-reverse;
-      }
-    }
+  &__sidebar {
+    flex: 1 1 0%;
 
-    &__main {
-      @include _media-min(lg) {
-        @include _margin(0, 0, 0, 2);
-      }
+    @include _media-min(lg) {
+      margin: 0;
+      flex: none;
+      width: 336px;
     }
   }
 }
 
-// margin/padding settings
+/**
+ * Right sidebar
+ */
+.#{ $_prefix }l-body--right-sidebar .#{ $_prefix }l-contents {
+  &__inner {
+    @include _media-min(lg) {
+      flex-direction: row;
+    }
+  }
+
+  &__main {
+    @include _media-min(lg) {
+      @include _margin(0, 2, 0, 0);
+    }
+  }
+}
+
+/**
+ * Left sidebar
+ */
+.#{ $_prefix }l-body--left-sidebar .#{ $_prefix }l-contents {
+  &__inner {
+    @include _media-min(lg) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  &__main {
+    @include _media-min(lg) {
+      @include _margin(0, 0, 0, 2);
+    }
+  }
+}
+
+/**
+ * margin/padding settings
+ */
 .#{ $_prefix }l-contents {
   &__inner {
     @include _margin-top(1.5);
@@ -87,42 +92,6 @@
     &:last-child {
       margin-bottom: 0;
       @include _padding-bottom(1.5);
-    }
-  }
-
-  // Right sidebar, Left sidebar
-  [data-has-sidebar="true"] & {
-    &__inner {
-      [data-is-content-widget-area="true"]:first-child {
-        @include _media-max(md) {
-          @include _margin-top(-1.5);
-        }
-      }
-
-      [data-is-content-widget-area="true"]:last-child {
-        @include _media-max(md) {
-          @include _margin-bottom(-1.5);
-        }
-      }
-    }
-
-    &__sidebar {
-      @include _media-max(md) {
-        @include _margin-top(1.5);
-      }
-    }
-  }
-
-  // one-column
-  [data-has-sidebar="false"] & {
-    &__inner {
-      [data-is-content-widget-area="true"]:first-child {
-        @include _margin-top(-1.5);
-      }
-
-      [data-is-content-widget-area="true"]:last-child {
-        @include _margin-bottom(-1.5);
-      }
     }
   }
 
@@ -143,6 +112,45 @@
   }
 }
 
+// Right/Left sidebar
+[data-has-sidebar="true"] .#{ $_prefix }l-contents {
+  &__inner {
+    [data-is-content-widget-area="true"]:first-child {
+      @include _media-max(md) {
+        @include _margin-top(-1.5);
+      }
+    }
+
+    [data-is-content-widget-area="true"]:last-child {
+      @include _media-max(md) {
+        @include _margin-bottom(-1.5);
+      }
+    }
+  }
+
+  &__sidebar {
+    @include _media-max(md) {
+      @include _margin-top(1.5);
+    }
+  }
+}
+
+// one-column
+[data-has-sidebar="false"] .#{ $_prefix }l-contents {
+  &__inner {
+    [data-is-content-widget-area="true"]:first-child {
+      @include _margin-top(-1.5);
+    }
+
+    [data-is-content-widget-area="true"]:last-child {
+      @include _margin-bottom(-1.5);
+    }
+  }
+}
+
+/**
+ * Attachment
+ */
 .single-attachment .#{ $_prefix }l-contents {
   display: flex;
   align-items: center;

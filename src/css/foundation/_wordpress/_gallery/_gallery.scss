@@ -10,26 +10,26 @@
     @include _padding-right(.5, true);
     @include _padding-left(.5, true);
     @include _margin-bottom(1);
-
-    @for $i from 2 through 9 {
-      .gallery-columns-#{ $i } & {
-        width: percentage(1 / $i);
-
-        &:nth-child(#{ $i }n + 1) {
-          clear: both;
-        }
-      }
-    }
   }
 
   &-caption {
     display: block;
+  }
+}
 
-    .gallery-columns-6 &,
-    .gallery-columns-7 &,
-    .gallery-columns-8 &,
-    .gallery-columns-9 & {
-      display: none;
+@for $i from 2 through 9 {
+  .gallery-columns-#{ $i } .gallery-item {
+    width: percentage(1 / $i);
+
+    &:nth-child(#{ $i }n + 1) {
+      clear: both;
     }
   }
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
 }
