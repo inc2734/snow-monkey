@@ -149,6 +149,7 @@
 .editor-styles-wrapper {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @include _font-size-line-height($_base-font-size-px);
 
   /*
   h1 {
