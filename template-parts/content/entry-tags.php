@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 15.0.0
  *
  * renamed: template-parts/entry-tags.php
  */
@@ -26,7 +26,7 @@ if ( ! $args['_terms'] || ! is_array( $args['_terms'] ) ) {
 
 <div class="c-entry-tags">
 	<?php foreach ( $args['_terms'] as $_term ) : ?>
-		<a class="tag-cloud-link" href="<?php echo esc_url( get_term_link( $_term ) ); ?>">
+		<a class="tag-cloud-link tag-cloud-link-<?php echo esc_attr( $_term->term_id ); ?>" href="<?php echo esc_url( get_term_link( $_term ) ); ?>">
 			<?php echo esc_html( $_term->name ); ?>
 		</a>
 	<?php endforeach; ?>
