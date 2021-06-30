@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 15.0.0
  */
 
 use Framework\Helper;
@@ -133,7 +133,7 @@ add_filter(
 add_filter(
 	'inc2734_wp_adsense_the_adsense_code',
 	function( $code ) {
-		if ( ! is_customize_preview() ) {
+		if ( ! is_customize_preview() && ! is_preview() ) {
 			return $code;
 		}
 
