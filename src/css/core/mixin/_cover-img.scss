@@ -2,7 +2,12 @@
   position: relative;
   overflow: hidden;
 
-  > img {
+  > picture {
+    @include _position(absolute, 0, 0, 0, 0);
+  }
+
+  > img,
+  > picture > img {
     @include _position(absolute, 50%, 0, 0, 50%);
     width: auto;
     height: auto;
