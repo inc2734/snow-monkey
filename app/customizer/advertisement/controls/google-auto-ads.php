@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 15.0.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'mwt-google-auto-ads',
 	[
 		'label'             => __( 'Google Adsense Auto Ads', 'snow-monkey' ),
-		'description'       => __( 'Paste only the value of data-ad-client of script tag.', 'snow-monkey' ),
+		'description'       => __( 'Paste only the value of data-ad-client of script tag.', 'snow-monkey' ) . __( 'Authentication can also be performed by setting this option.', 'snow-monkey' ),
 		'type'              => 'option',
 		'priority'          => 105,
 		'sanitize_callback' => function( $value ) {

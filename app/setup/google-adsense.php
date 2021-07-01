@@ -18,7 +18,6 @@ add_action(
 			! get_option( 'mwt-google-adsense' )
 			&& ! get_option( 'mwt-google-infeed-ads' )
 			&& ! get_option( 'mwt-google-matched-content' )
-			&& ! get_option( 'mwt-google-adsense-auth-code' )
 			&& ! get_option( 'mwt-google-auto-ads' )
 		) {
 			return;
@@ -31,31 +30,13 @@ add_action(
 
 		wp_enqueue_script(
 			'google-adsense',
-			'//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+			'https//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
 			[],
 			null,
 			false
 		);
 	},
 	1
-);
-
-/**
- * Google Adsense auth code
- */
-add_action(
-	'wp_enqueue_scripts',
-	function() {
-		if ( ! get_option( 'mwt-google-adsense-auth-code' ) ) {
-			return;
-		}
-
-		wp_add_inline_script(
-			'google-adsense',
-			get_option( 'mwt-google-adsense-auth-code' ),
-			'after'
-		);
-	}
 );
 
 /**
