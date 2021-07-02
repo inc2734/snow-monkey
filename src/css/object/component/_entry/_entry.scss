@@ -30,3 +30,12 @@
     @include _margin-top(1.5);
   }
 }
+
+[data-has-sidebar="false"] .c-entry__content {
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+
+  > * {
+    @include content-alignment();
+  }
+}

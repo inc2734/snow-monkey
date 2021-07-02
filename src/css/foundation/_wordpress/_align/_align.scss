@@ -32,78 +32,10 @@
   margin-top: 0;
 }
 
-[data-has-sidebar="true"] {
-  .#{ $_prefix }c-entry__content > .alignfull,
-  .#{ $_prefix }c-entry__content > .alignwide,
-  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
-  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
-  [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
-  [data-is-content-widget-area="true"] .custom-html-widget > .alignwide,
-  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
-  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull {
-    clear: both;
-
-    @include _media-max(md) {
-      @include alignfull();
-    }
-  }
+.alignfull {
+  @include alignfull();
 }
 
-[data-has-sidebar="false"] {
-  .#{ $_prefix }c-entry__content > .alignfull,
-  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
-  [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
-  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
-  [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull {
-    @include alignfull();
-  }
-
-  .#{ $_prefix }c-entry__content > .alignwide,
-  .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
-  [data-is-content-widget-area="true"] .custom-html-widget > .alignwide {
-    @include alignfull();
-
-    @include _media-min(lg) {
-      position: relative;
-      right: -50vw; // for IE
-      right: calc(-50vw + #{ var-body-margin-left() } / 2);
-      transform: translateX(-50%);
-      max-width: $_container-max-width; // for IE11
-      max-width: _var-container-max-width();
-    }
-  }
-}
-
-[data-has-sidebar="false"] {
-  &[data-header-layout="left"] {
-    .#{ $_prefix }c-entry__content > .alignfull,
-    .#{ $_prefix }c-entry__content > .alignwide,
-    .#{ $_prefix }c-entry__content [class*="smb-"] > .alignfull,
-    .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
-    [data-is-content-widget-area="true"] .custom-html-widget > .alignfull,
-    [data-is-content-widget-area="true"] .custom-html-widget > .alignwide,
-    [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .alignfull,
-    [data-is-content-widget-area="true"] [class*="widget_inc2734_wp_awesome_widgets_"] > .#{ $_prefix }c-container > .alignfull  {
-      @include _media-min(lg) {
-        --body-margin-left: 280px;
-
-        @media all and (-ms-high-contrast: none) {
-          $body-margin-left: 280px;
-          margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-          margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-        }
-      }
-
-      @media all and (-ms-high-contrast: none) {
-        .#{ $_prefix }c-entry__content > .alignwide,
-        .#{ $_prefix }c-entry__content [class*="smb-"] > .alignwide,
-        [data-is-content-widget-area="true"] .custom-html-widget > .alignwide {
-          @include _media-min(lg) {
-            $body-margin-left: 280px;
-            right: calc(-50vw + #{ $body-margin-left } / 2); // for IE
-          }
-        }
-      }
-    }
-  }
+.alignwide {
+  @include alignwide();
 }
