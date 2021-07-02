@@ -15,6 +15,11 @@
   }
 }
 
+.block-editor-block-list__block .block-list-appender {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 // @todo To adjust the Float view in the editor to match the front view.
 .wp-block[data-align="right"],
 .wp-block[data-align="left"] {
