@@ -32,13 +32,6 @@ add_action(
 	}
 );
 
-add_action(
-	'after_setup_theme',
-	function() {
-		add_editor_style( [ '/assets/css/custom-widgets.min.css' ] );
-	}
-);
-
 /**
  * Add deprecated message in widget description.
  *

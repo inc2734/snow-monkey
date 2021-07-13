@@ -49,10 +49,6 @@
       @include _left(0);
       color: var-color-accent();
     }
-
-    > a {
-      padding-left: 1.25rem;
-    }
   }
 
   &--vertical {
@@ -84,13 +80,16 @@
   &--horizontal {
     .wpaw-local-nav__item {
       overflow: hidden;
+    }
 
-      > a + .wpaw-local-nav__sublist {
-        margin-left: -2rem;
-      }
+    .wpaw-local-nav__sublist {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: _space(1);
 
-      .wpaw-local-nav__subitem {
-        margin-left: 2rem;
+      > .wpaw-local-nav__subitem {
+        flex: 0 0 auto;
       }
     }
   }

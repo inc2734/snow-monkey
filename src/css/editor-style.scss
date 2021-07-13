@@ -92,6 +92,17 @@
   }
 }
 
+.wp-block-widget-area__inner-blocks > .block-editor-block-list__layout {
+  > [data-type="core/heading"] {
+    // @todo Because ::after is used in the block editor.
+    // @include widget-title();
+
+    @include _margin(0, 0, .5);
+    @include _font-size-line-height(1);
+    font-weight: bold;
+  }
+}
+
 .u-hidden,
 .u-hidden-sm,
 .u-hidden-md,
@@ -135,28 +146,33 @@
   padding-left: 0;
 
   /**
-  * Foundation
-  */
+   * Foundation
+   */
   @import '../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
   @import 'foundation/foundation';
 
   /**
-  * Layout
-  */
+   * Layout
+   */
   @import 'layout/layout';
 
   /**
-  * Object - Component
-  */
+   * Object - Component
+   */
   @import 'object/component/component';
 
   /**
-  * Object - Project
-  */
+   * Object - Project
+   */
   @import 'object/project/project';
 
   /**
-  * Object - utility
-  */
+   * Object - utility
+   */
   @import 'object/utility/utility';
+
+  /**
+   * Custom widgets
+   */
+  @import 'custom-widgets';
 }

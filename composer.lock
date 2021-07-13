@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "12.1.6",
+            "version": "12.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "ac897d560c7d89ef1a3b3d7dec6d469863416053"
+                "reference": "e6fd08831eb0aff950fbb55108229df943ee446a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/ac897d560c7d89ef1a3b3d7dec6d469863416053",
-                "reference": "ac897d560c7d89ef1a3b3d7dec6d469863416053",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/e6fd08831eb0aff950fbb55108229df943ee446a",
+                "reference": "e6fd08831eb0aff950fbb55108229df943ee446a",
                 "shasum": ""
             },
             "require": {
@@ -149,9 +149,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.1.6"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.2.0"
             },
-            "time": "2021-06-29T04:48:21+00:00"
+            "time": "2021-07-13T01:51:03+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -1152,16 +1152,16 @@
         },
         {
             "name": "sirbrillig/phpcs-variable-analysis",
-            "version": "v2.11.1",
+            "version": "v2.11.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sirbrillig/phpcs-variable-analysis.git",
-                "reference": "9df9ade5961a3505d0d24b0e6be2ab82e335f753"
+                "reference": "3fad28475bfbdbf8aa5c440f8a8f89824983d85e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/9df9ade5961a3505d0d24b0e6be2ab82e335f753",
-                "reference": "9df9ade5961a3505d0d24b0e6be2ab82e335f753",
+                "url": "https://api.github.com/repos/sirbrillig/phpcs-variable-analysis/zipball/3fad28475bfbdbf8aa5c440f8a8f89824983d85e",
+                "reference": "3fad28475bfbdbf8aa5c440f8a8f89824983d85e",
                 "shasum": ""
             },
             "require": {
@@ -1201,7 +1201,7 @@
                 "source": "https://github.com/sirbrillig/phpcs-variable-analysis",
                 "wiki": "https://github.com/sirbrillig/phpcs-variable-analysis/wiki"
             },
-            "time": "2021-06-18T20:54:59+00:00"
+            "time": "2021-07-06T23:45:17+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
