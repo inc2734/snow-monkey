@@ -47,8 +47,6 @@ add_action(
 				'wp-oembed-blog-card',
 				'wp-pure-css-gallery',
 				'wp-awesome-widgets',
-				'slick-carousel',
-				'slick-carousel-theme',
 			]
 		);
 
