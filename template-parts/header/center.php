@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 15.0.0
  *
  * renamed: template-parts/center-header.php
  */
@@ -34,7 +34,9 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 				<?php if ( $has_drawer_nav ) : ?>
 					<div
 						class="c-row__col c-row__col--fit u-invisible-lg-up <?php echo esc_attr( 'left' !== $hamburger_btn_position ? 'u-invisible-wall' : '' ); ?>"
-						<?php echo esc_attr( 'left' !== $hamburger_btn_position ? 'aria-hidden="true"' : '' ); ?>
+						<?php if ( 'left' !== $hamburger_btn_position ) : ?>
+							aria-hidden="true"
+						<?php endif; ?>
 					>
 						<?php
 						Helper::get_template_part(
