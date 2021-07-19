@@ -1,12 +1,7 @@
 .#{ $_prefix }c-hamburger-btn {
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  padding: 0;
-  vertical-align: middle;
+  line-height: 1;
 
   &__bars {
-    display: block;
     margin: 3px auto;
   }
 

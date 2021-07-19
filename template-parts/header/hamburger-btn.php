@@ -27,15 +27,15 @@ $args = wp_parse_args(
 	aria-expanded="false"
 	aria-controls="drawer-nav"
 >
-	<div class="c-hamburger-btn__bars">
-		<div class="c-hamburger-btn__bar"></div>
-		<div class="c-hamburger-btn__bar"></div>
-		<div class="c-hamburger-btn__bar"></div>
-	</div>
+	<span class="c-hamburger-btn__bars">
+		<span class="c-hamburger-btn__bar"></span>
+		<span class="c-hamburger-btn__bar"></span>
+		<span class="c-hamburger-btn__bar"></span>
+	</span>
 
 	<?php if ( $args['_label'] ) : ?>
-		<div class="c-hamburger-btn__label">
+		<span class="c-hamburger-btn__label">
 			<?php echo wp_kses_post( $args['_label'] ); ?>
-		</div>
+		</span>
 	<?php endif; ?>
 </button>
