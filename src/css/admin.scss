@@ -4,7 +4,8 @@
 @import 'foundation/_placeholder/placeholder';
 @import 'adminbar';
 
-.wp-block {
+.wp-block,
+.edit-post-text-editor__body textarea.editor-post-text-editor {
   margin: 0;
   max-width: none;
   @include content-alignment();
