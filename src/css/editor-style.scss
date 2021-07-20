@@ -92,17 +92,6 @@
   }
 }
 
-.wp-block-widget-area__inner-blocks > .block-editor-block-list__layout {
-  > [data-type="core/heading"] {
-    // @todo Because ::after is used in the block editor.
-    // @include widget-title();
-
-    @include _margin(0, 0, .5);
-    @include _font-size-line-height(1);
-    font-weight: bold;
-  }
-}
-
 .u-hidden,
 .u-hidden-sm,
 .u-hidden-md,
@@ -138,7 +127,8 @@
 .u-hidden-xl::after { content: '.u-hidden-xl'; }
 .u-hidden-xl-up::after { content: '.u-hidden-xl-up'; }
 
-.editor-styles-wrapper {
+.editor-styles-wrapper,
+.customize-control-sidebar_block_editor {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include _font-size-line-height($_base-font-size-px);
@@ -175,4 +165,32 @@
    * Custom widgets
    */
   @import 'custom-widgets';
+}
+
+.wp-block-widget-area__inner-blocks,
+.customize-control-sidebar_block_editor {
+  .block-editor-block-list__layout {
+    > [data-type="core/heading"] {
+      // @todo Because ::after is used in the block editor.
+      // @include widget-title();
+
+      @include _margin(1, 0, .5);
+      @include _font-size-line-height(1);
+      font-weight: bold;
+    }
+  }
+}
+
+.wp-block[data-type="core/widget-area"] .block-editor-block-list__layout {
+  @include _content(1);
+}
+
+.customize-control-sidebar_block_editor {
+  --wp-block-width: 100% !important;
+
+  .wp-block {
+    @include _media-min(601px) {
+      width: auto;
+    }
+  }
 }

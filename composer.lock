@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "12.2.0",
+            "version": "12.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "e6fd08831eb0aff950fbb55108229df943ee446a"
+                "reference": "6af12554a44704d96db6f46534215372f855df18"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/e6fd08831eb0aff950fbb55108229df943ee446a",
-                "reference": "e6fd08831eb0aff950fbb55108229df943ee446a",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/6af12554a44704d96db6f46534215372f855df18",
+                "reference": "6af12554a44704d96db6f46534215372f855df18",
                 "shasum": ""
             },
             "require": {
@@ -149,9 +149,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.2.0"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.2.1"
             },
-            "time": "2021-07-13T01:51:03+00:00"
+            "time": "2021-07-20T15:38:50+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -300,28 +300,28 @@
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-custom-css-to-editor.git",
-                "reference": "957086e47fb929dd40599457580426c5a3e06b8b"
+                "reference": "70b43e77d2feecb0617fae0a4233dbcd3ff4a0b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/957086e47fb929dd40599457580426c5a3e06b8b",
-                "reference": "957086e47fb929dd40599457580426c5a3e06b8b",
+                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/70b43e77d2feecb0617fae0a4233dbcd3ff4a0b7",
+                "reference": "70b43e77d2feecb0617fae0a4233dbcd3ff4a0b7",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.10",
+                "squizlabs/php_codesniffer": "^3.5",
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.6"
             },
             "type": "library",
             "autoload": {
@@ -341,9 +341,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-custom-css-to-editor/issues",
-                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.1"
+                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.2"
             },
-            "time": "2020-02-04T04:45:37+00:00"
+            "time": "2021-07-20T15:58:04+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
