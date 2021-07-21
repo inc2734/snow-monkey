@@ -30,7 +30,7 @@ add_action(
 
 		wp_enqueue_script(
 			'google-adsense',
-			'https//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
+			'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
 			[],
 			null,
 			false
