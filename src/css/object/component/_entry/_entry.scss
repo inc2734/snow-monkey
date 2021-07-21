@@ -31,7 +31,7 @@
   }
 }
 
-[data-has-sidebar="false"]:not([data-header-layout="left"]) .c-entry__content {
+[data-has-sidebar="false"][data-is-full-template="false"]:not([data-header-layout="left"]) .c-entry__content {
   margin-right: calc(50% - 50vw);
   margin-left: calc(50% - 50vw);
 

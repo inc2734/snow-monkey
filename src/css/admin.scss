@@ -85,7 +85,7 @@
 }
 
 // @see src/css/foundation/_wordpress/_align/_align.scss
-.editor-styles-wrapper .block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
+.editor-styles-wrapper.block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
   > .wp-block[data-align="full"],
   > .block-editor-block-list__block[data-align="full"] {
     @include alignfull();
