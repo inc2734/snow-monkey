@@ -293,26 +293,24 @@
  */
 [data-header-layout="left"] {
   @include _media-min(lg) {
-    $body-margin-left: 280px; // for IE
+    $body-margin-left: 280px; // for IE11
     --body-margin-left: #{ $body-margin-left };
 
-    margin-left: $body-margin-left; // for IE
+    margin-left: $body-margin-left; // for IE11
     margin-left: var-body-margin-left();
 
     .#{ $_prefix }p-footer-sticky-nav,
     .#{ $_prefix }p-footer-cta {
-      left: $body-margin-left; // for IE
+      left: $body-margin-left; // for IE11
       left: var-body-margin-left();
     }
   }
 }
 .#{ $_prefix }l-header--left {
   @include _media-min(lg) {
-    $body-margin-left: 280px; // for IE
-    --body-margin-left: #{ $body-margin-left };
-
+    $body-margin-left: 280px; // for IE11
     @include _position(fixed, 0, 0, 0, 0);
-    width: $body-margin-left; // for IE
+    width: $body-margin-left; // for IE11
     width: var-body-margin-left();
     @include _padding-top(1);
 

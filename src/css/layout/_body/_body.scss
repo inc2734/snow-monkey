@@ -1,22 +1,4 @@
 .#{ $_prefix }l-body {
   visibility: visible;
   overflow-x: hidden;
-
-  &--one-column-full,
-  &--blank,
-  &--blank-content {
-    --wp-block-width: 100%;
-  }
-
-  &--one-column-slim,
-  &--blank-slim {
-    --wp-block-width: 46rem;
-  }
-
-  &--right-sidebar,
-  &--left-sidebar {
-    $container_margin: _space(1, true);
-    $sidebar_margin: _space(1, true, true);
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
-  }
 }

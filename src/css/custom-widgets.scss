@@ -16,3 +16,30 @@
 @import 'custom-widgets/wpaw-slider';
 @import 'custom-widgets/wpaw-taxonomy-posts';
 @import 'custom-widgets/wpaw-term';
+
+[data-has-sidebar="false"] {
+  [data-is-content-widget-area="true"] {
+    .wpaw-pickup-slider.alignfull,
+    .wpaw-showcase.alignfull,
+    .wpaw-pr-box.alignfull,
+    .wpaw-slider.alignfull {
+      margin-right: calc(50% - 50vw) !important;
+      margin-left: calc(50% - 50vw) !important;
+    }
+  }
+
+  &[data-header-layout="left"] {
+    .wpaw-pickup-slider.alignfull,
+    .wpaw-showcase.alignfull,
+    .wpaw-pr-box.alignfull,
+    .wpaw-slider.alignfull {
+      @include _media-min(lg) {
+        $body-margin-left: 280px;
+        margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
+        margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
+        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+        margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+      }
+    }
+  }
+}

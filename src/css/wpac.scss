@@ -203,13 +203,11 @@
   &[data-header-layout="left"] {
     .wpac-section {
       @include _media-min(lg) {
-        --body-margin-left: 280px;
-
-        @media all and (-ms-high-contrast: none) {
-          $body-margin-left: 280px;
-          margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-          margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE
-        }
+        $body-margin-left: 280px;
+        margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
+        margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
+        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+        margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
       }
     }
   }
