@@ -1,4 +1,6 @@
 .#{ $_prefix }c-container {
+  width: 100%;
+
   &.#{ $_prefix }u-slim-width {
     @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
       padding-right: 0;
