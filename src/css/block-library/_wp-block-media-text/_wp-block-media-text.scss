@@ -1,14 +1,14 @@
 .wp-block-media-text {
   &:not(.is-stacked-on-mobile) {
     &:not(.has-media-on-the-right) {
-      .wp-block-media-text__media {
-        @include _padding-right(1);
+      .wp-block-media-text__content {
+        @include _margin-left(1);
       }
     }
 
     &.has-media-on-the-right {
-      .wp-block-media-text__media {
-        @include _padding-left(1);
+      .wp-block-media-text__content {
+        @include _margin-right(1);
       }
     }
   }
@@ -21,9 +21,9 @@
         }
       }
 
-      .wp-block-media-text__media {
+      .wp-block-media-text__content {
         @include _media-min(601px) {
-          @include _padding-right(1);
+          @include _margin-left(1);
         }
       }
     }
@@ -35,9 +35,9 @@
         }
       }
 
-      .wp-block-media-text__media {
+      .wp-block-media-text__content {
         @include _media-min(601px) {
-          @include _padding-left(1);
+          @include _margin-right(1);
         }
       }
     }

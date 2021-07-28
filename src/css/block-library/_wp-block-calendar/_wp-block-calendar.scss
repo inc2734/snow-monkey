@@ -2,6 +2,7 @@
   @extend %calendar;
   @include calendar();
   display: table;
+  width: auto !important;
 
   .wp-calendar-table {
     width: auto !important;

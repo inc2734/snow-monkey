@@ -1,7 +1,8 @@
 .wp-block-button {
   margin: 0;
 
-  &__link {
+  &__link,
+  &.is-style-outline &__link {
     color: #fff;
     font-size: inherit;
     line-height: 1;

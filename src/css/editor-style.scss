@@ -135,6 +135,11 @@
   padding-right: 0;
   padding-left: 0;
 
+  ol,
+  ul {
+    box-sizing: border-box;
+  }
+
   /**
    * Foundation
    */
