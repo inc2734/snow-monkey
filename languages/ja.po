@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-07-01 14:07+0900\n"
-"PO-Revision-Date: 2021-07-01 14:07+0900\n"
+"POT-Creation-Date: 2021-07-29 11:24+0900\n"
+"PO-Revision-Date: 2021-07-29 11:24+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1611,6 +1611,10 @@ msgstr "キャッシュを削除"
 msgid "Recent topics of Snow Monkey support forum"
 msgstr "Snow Monkey サポートフォーラムの最近のトピック"
 
+#: app/setup/update-info-widget.php:14
+msgid "Updates related to Snow Monkey"
+msgstr "Snow Monkey 関連の更新情報"
+
 #: app/setup/widget-area.php:21
 msgid "Sidebar"
 msgstr "サイドバー"
@@ -1704,7 +1708,7 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/widgets.php:58
+#: app/setup/widgets.php:51
 msgid "This widget is deprecated. It may slow down the page when used."
 msgstr ""
 "このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"
