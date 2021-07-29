@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 15.0.0
  *
  * renamed: template-parts/page-header.php
  */
@@ -18,7 +18,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_title'                 => $page_header::get_title(),
-		'_image'                 => $page_header::get_image(),
+		'_image'                 => $page_header::get_image( apply_filters( 'snow_monkey_page_header_thumbnail_size', 'xlarge' ) ),
 		'_align'                 => $page_header::get_align(),
 		'_display_entry_meta'    => false,
 		'_display_image_caption' => false,

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.0.0
  */
 
 namespace Framework\Model\Page_Header;
@@ -15,11 +15,12 @@ use Framework\Contract\Model\Page_Header as Base;
 class Term_Page_Header extends Base {
 
 	/**
-	 * Return page header image url.
+	 * Return page header image html.
 	 *
+	 * @param string $size The image size.
 	 * @return string|false
 	 */
-	protected static function _get_image_url() {
+	protected static function _get_image( $size = 'large' ) {
 		$term      = get_queried_object();
 		$taxonomy  = get_taxonomy( $term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
@@ -29,7 +30,27 @@ class Term_Page_Header extends Base {
 			: get_theme_mod( 'archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$image_mods, true )
-			? Page_Header_Helper::get_image_url( $term )
+			? Page_Header_Helper::get_image( $term, $size )
+			: false;
+	}
+
+	/**
+	 * Return page header image url.
+	 *
+	 * @param string $size The image size.
+	 * @return string|false
+	 */
+	protected static function _get_image_url( $size = 'large' ) {
+		$term      = get_queried_object();
+		$taxonomy  = get_taxonomy( $term->taxonomy );
+		$post_type = $taxonomy->object_type[0];
+
+		$eyecatch_position = is_tax()
+			? get_theme_mod( 'archive-' . $post_type . '-eyecatch' )
+			: get_theme_mod( 'archive-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$image_mods, true )
+			? Page_Header_Helper::get_image_url( $term, $size )
 			: false;
 	}
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.0.0
  */
 
 namespace Framework\Contract\Helper\Page_Header;
@@ -30,21 +30,64 @@ abstract class Page_Header {
 	];
 
 	/**
-	 * Return page header image url.
+	 * Return page header image html.
 	 *
 	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param string                                    $size           The image size.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image_url( $queried_object );
+	abstract protected static function _get_image( $queried_object, $size = 'large' );
+
+	/**
+	 * Return page header image html.
+	 *
+	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param string                                    $size           The image size.
+	 * @return string|false
+	 */
+	public static function get_image( $queried_object, $size = 'large' ) {
+		$url = static::_get_pre_page_header_image_url( $queried_object, $size );
+		if ( null !== $url ) {
+			return sprintf( '<img src="%1$s" alt="">', esc_url( $url ) );
+		}
+
+		return static::_get_image( $queried_object, $size );
+	}
 
 	/**
 	 * Return page header image url.
 	 *
 	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param string                                    $size           The image size.
 	 * @return string|false
 	 */
-	public static function get_image_url( $queried_object ) {
-		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null, $queried_object );
+	abstract protected static function _get_image_url( $queried_object, $size = 'large' );
+
+	/**
+	 * Return page header image url.
+	 *
+	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param string                                    $size           The image size.
+	 * @return string|false
+	 */
+	public static function get_image_url( $queried_object, $size = 'large' ) {
+		$url = static::_get_pre_page_header_image_url( $queried_object, $size );
+		if ( null !== $url ) {
+			return $url;
+		}
+
+		return static::_get_image_url( $queried_object, $size );
+	}
+
+	/**
+	 * Return filtered page header image url.
+	 *
+	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @param string                                    $size           The image size.
+	 * @return string|null
+	 */
+	protected static function _get_pre_page_header_image_url( $queried_object, $size = 'large' ) {
+		$url = apply_filters( 'snow_monkey_pre_page_header_image_url', null, $queried_object, $size );
 		if ( null !== $url ) {
 			return $url;
 		}
@@ -57,7 +100,7 @@ abstract class Page_Header {
 			'snow_monkey_pre_page_header_image_url'
 		);
 
-		return static::_get_image_url( $queried_object );
+		return $url;
 	}
 
 	/**
@@ -99,18 +142,42 @@ abstract class Page_Header {
 	/**
 	 * Return thumbnail size of page header image.
 	 *
+	 * @deprecated
+	 *
 	 * @return string
 	 */
 	protected static function _get_thumbnail_size() {
+		_deprecated_function(
+			'\Framework\Contract\Helper\Page_Header\Page_Header::_get_thumbnail_size()',
+			'Snow Monkey 15.0.0'
+		);
+
 		return apply_filters( 'snow_monkey_page_header_thumbnail_size', 'xlarge' );
+	}
+
+	/**
+	 * Return default page header image html.
+	 *
+	 * @param string $size The image size.
+	 * @return string
+	 */
+	protected static function _get_default_image( $size = 'large' ) {
+		$default_header_image = get_theme_mod( 'default-page-header-image' );
+		return $default_header_image && is_int( $default_header_image )
+			? wp_get_attachment_image( $default_header_image, $size )
+			: sprintf( '<img src="%1$s" alt="">', esc_url( $default_header_image ) );
 	}
 
 	/**
 	 * Return default page header image url.
 	 *
+	 * @param string $size The image size.
 	 * @return string
 	 */
-	protected static function _get_default_image_url() {
-		return get_theme_mod( 'default-page-header-image' );
+	protected static function _get_default_image_url( $size = 'large' ) {
+		$default_header_image = get_theme_mod( 'default-page-header-image' );
+		return $default_header_image && is_int( $default_header_image )
+			? wp_get_attachment_image_url( $default_header_image, $size )
+			: $default_header_image;
 	}
 }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.0.0
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -207,6 +207,9 @@ add_filter(
 	function( $thumbnail ) {
 		if ( ! $thumbnail && is_singular() ) {
 			$thumbnail = get_theme_mod( 'default-thumbnail' );
+			return $thumbnail && is_int( $thumbnail )
+				? wp_get_attachment_image_url( $thumbnail, 'full' )
+				: $thumbnail;
 		}
 		return $thumbnail;
 	}

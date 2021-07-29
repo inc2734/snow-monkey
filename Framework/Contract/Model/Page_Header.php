@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.0.0
  */
 
 namespace Framework\Contract\Model;
@@ -30,15 +30,6 @@ abstract class Page_Header {
 	];
 
 	/**
-	 * Page header image tag.
-	 *
-	 * @deprecacted
-	 *
-	 * @var string|null
-	 */
-	protected static $image = null;
-
-	/**
 	 * Page header image ID
 	 *
 	 * @var int|null
@@ -48,17 +39,19 @@ abstract class Page_Header {
 	/**
 	 * Return page header image url.
 	 *
+	 * @param string $size The image size.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image_url();
+	abstract protected static function _get_image_url( $size = 'large' );
 
 	/**
 	 * Return page header image url.
 	 *
+	 * @param string $size The image size.
 	 * @return string|false
 	 */
-	public static function get_image_url() {
-		return static::_get_image_url();
+	public static function get_image_url( $size = 'large' ) {
+		return static::_get_image_url( $size );
 	}
 
 	/**
@@ -96,24 +89,19 @@ abstract class Page_Header {
 	/**
 	 * Return page header image html.
 	 *
-	 * @return string|false The img tag.
+	 * @param string $size The image size.
+	 * @return string|false
 	 */
-	public static function get_image() {
-		static::_set_image_id();
-		if ( null !== static::$image ) {
-			return static::$image;
-		}
+	abstract protected static function _get_image( $size = 'large' );
 
-		$image_url = static::get_image_url();
-		if ( $image_url ) {
-			static::$image = static::$image_id
-				? wp_get_attachment_image( static::$image_id, static::_get_thumbnail_size() )
-				: sprintf( '<img src="%1$s" alt="">', esc_url( $image_url ) );
-		} else {
-			static::$image = false;
-		}
-
-		return static::$image;
+	/**
+	 * Return page header image html.
+	 *
+	 * @param string $size The image size.
+	 * @return string|false
+	 */
+	public static function get_image( $size = 'large' ) {
+		return static::_get_image( $size );
 	}
 
 	/**
@@ -122,6 +110,8 @@ abstract class Page_Header {
 	 * @return string
 	 */
 	public static function get_image_caption() {
+		static::_set_image_id();
+
 		$image_caption = false;
 
 		if ( static::$image_id ) {
@@ -199,19 +189,30 @@ abstract class Page_Header {
 	/**
 	 * Return thumbnail size of page header image.
 	 *
+	 * @deprecated
+	 *
 	 * @return string
 	 */
 	protected static function _get_thumbnail_size() {
+		_deprecated_function(
+			'\Framework\Contract\Model\Page_Header::get_the_image()',
+			'Snow Monkey 15.0.0'
+		);
+
 		return apply_filters( 'snow_monkey_page_header_thumbnail_size', 'xlarge' );
 	}
 
 	/**
 	 * Return default page header image url.
 	 *
+	 * @param string $size The image size.
 	 * @return string
 	 */
-	protected static function _get_default_image_url() {
-		return get_theme_mod( 'default-page-header-image' );
+	protected static function _get_default_image_url( $size = 'large' ) {
+		$default_header_image = get_theme_mod( 'default-page-header-image' );
+		return $default_header_image && is_int( $default_header_image )
+			? wp_get_attachment_image( $default_header_image, $size )
+			: sprintf( '<img src="%1$s" alt="">', esc_url( $default_header_image ) );
 	}
 
 	/**
@@ -223,9 +224,9 @@ abstract class Page_Header {
 	 */
 	public static function get_the_image() {
 		_deprecated_function(
-			'\Framework\Contract\Model\Page_Header\get_the_image()',
+			'\Framework\Contract\Model\Page_Header::get_the_image()',
 			'Snow Monkey 11.5.0',
-			'\Framework\Contract\Model\Page_Header\get_image()'
+			'\Framework\Contract\Model\Page_Header::get_image()'
 		);
 
 		return static::get_image();
@@ -238,7 +239,7 @@ abstract class Page_Header {
 	 */
 	public static function the_image() {
 		_deprecated_function(
-			'\Framework\Contract\Model\Page_Header\the_image()',
+			'\Framework\Contract\Model\Page_Header::the_image()',
 			'Snow Monkey 11.5.0'
 		);
 

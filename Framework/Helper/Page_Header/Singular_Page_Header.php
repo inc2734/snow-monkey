@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.0.0
  */
 
 namespace Framework\Helper\Page_Header;
@@ -14,12 +14,13 @@ use Framework\Contract\Helper\Page_Header\Page_Header as Base;
 class Singular_Page_Header extends Base {
 
 	/**
-	 * Return page header image url.
+	 * Return page header image html.
 	 *
 	 * @param WP_Post $wp_post WP_Post object.
+	 * @param string  $size    The image size.
 	 * @return string|false
 	 */
-	protected static function _get_image_url( $wp_post ) {
+	protected static function _get_image( $wp_post, $size = 'large' ) {
 		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
 			return false;
 		}
@@ -27,8 +28,27 @@ class Singular_Page_Header extends Base {
 		$thumbnail_id = get_post_thumbnail_id( $wp_post );
 
 		return has_post_thumbnail( $wp_post )
-			? wp_get_attachment_image_url( $thumbnail_id, static::_get_thumbnail_size() )
-			: static::_get_default_image_url();
+			? wp_get_attachment_image( $thumbnail_id, $size )
+			: static::_get_default_image( $size );
+	}
+
+	/**
+	 * Return page header image url.
+	 *
+	 * @param WP_Post $wp_post WP_Post object.
+	 * @param string  $size    The image size.
+	 * @return string|false
+	 */
+	protected static function _get_image_url( $wp_post, $size = 'large' ) {
+		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
+			return false;
+		}
+
+		$thumbnail_id = get_post_thumbnail_id( $wp_post );
+
+		return has_post_thumbnail( $wp_post )
+			? wp_get_attachment_image_url( $thumbnail_id, $size )
+			: static::_get_default_image_url( $size );
 	}
 
 	/**

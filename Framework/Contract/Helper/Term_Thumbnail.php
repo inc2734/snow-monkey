@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.0.0
  */
 
 namespace Framework\Contract\Helper;
@@ -70,9 +70,10 @@ trait Term_Thumbnail {
 	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
+	 * @param string       $size The image size.
 	 * @return string
 	 */
-	public static function get_the_term_thumbnail_url( $term = null ) {
+	public static function get_the_term_thumbnail_url( $term = null, $size = 'large' ) {
 		if ( ! static::has_term_thumbnail( $term ) ) {
 			return '';
 		}
@@ -82,7 +83,10 @@ trait Term_Thumbnail {
 			return '';
 		}
 
-		return get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-header-image' );
+		$header_image = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-header-image' );
+		return $header_image && is_int( $header_image )
+			? wp_get_attachment_image_url( $header_image, $size )
+			: $header_image;
 	}
 
 	/**
@@ -91,9 +95,10 @@ trait Term_Thumbnail {
 	 * @param WP_Term|null $term WP_Term object.
 	 *    @var int term_id
 	 *    @var string taxonomy
+	 * @param string       $size The image size.
 	 * @return string
 	 */
-	public static function get_the_term_thumbnail( $term = null ) {
+	public static function get_the_term_thumbnail( $term = null, $size = 'large' ) {
 		if ( ! static::has_term_thumbnail( $term ) ) {
 			return '';
 		}
@@ -108,10 +113,9 @@ trait Term_Thumbnail {
 			return '';
 		}
 
-		return sprintf(
-			'<img src="%1$s" alt="">',
-			esc_url( $header_image )
-		);
+		return $header_image && is_int( $header_image )
+			? wp_get_attachment_image( $header_image, $size )
+			: sprintf( '<img src="%1$s" alt="">', esc_url( $header_image ) );
 	}
 
 	/**

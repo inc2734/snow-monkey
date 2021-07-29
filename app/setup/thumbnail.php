@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 15.0.0
  */
 
 add_filter(
@@ -26,7 +26,10 @@ add_filter(
 			return $html;
 		}
 
-		$image_id = attachment_url_to_postid( $default_thumbnail );
+		$image_id = $default_thumbnail && is_int( $default_thumbnail )
+			? $default_thumbnail
+			: attachment_url_to_postid( $default_thumbnail );
+
 		if ( ! $image_id ) {
 			return $html;
 		}
