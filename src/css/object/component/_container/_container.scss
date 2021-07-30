@@ -2,14 +2,9 @@
   width: 100%;
 
   @include _media-min(lg) {
-    max-width: 1280px !important; // For IE11
-    max-width: _var-container-max-width() !important;
-  }
-
-  &.#{ $_prefix }u-slim-width {
-    @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
-      padding-right: 0;
-      padding-left: 0;
+    &.#{ $_prefix }c-container {
+      max-width: 1280px; // For IE11
+      max-width: _var-container-max-width();
     }
   }
 }
