@@ -8,7 +8,11 @@
 
 namespace Framework\Contract\Helper;
 
+use Framework\Contract\Helper\Trait_Helper;
+
 trait Post_Type_Archive_Thumbnail {
+
+	use Trait_Helper;
 
 	/**
 	 * Return true when have post type archive thumbanil.

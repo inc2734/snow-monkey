@@ -8,7 +8,11 @@
 
 namespace Framework\Contract\Helper;
 
+use Framework\Contract\Helper\Trait_Helper;
+
 trait Term_Thumbnail {
+
+	use Trait_Helper;
 
 	/**
 	 * Return term data for term thumbnail.

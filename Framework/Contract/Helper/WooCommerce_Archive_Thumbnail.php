@@ -8,7 +8,11 @@
 
 namespace Framework\Contract\Helper;
 
+use Framework\Contract\Helper\Trait_Helper;
+
 trait WooCommerce_Archive_Thumbnail {
+
+	use Trait_Helper;
 
 	/**
 	 * Return true when have WooCommerce archive thumbanil.
