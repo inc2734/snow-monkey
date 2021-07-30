@@ -90,4 +90,23 @@ class WooCommerce_Single_Page_Header extends Base {
 
 		return get_theme_mod( 'woocommerce-single-page-header-align' );
 	}
+	/**
+	 * Return page header image caption.
+	 *
+	 * @param WP_Post $wp_post WP_Post object.
+	 * @return string|false
+	 */
+	protected static function _get_image_caption( $wp_post ) {
+		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
+			return false;
+		}
+
+		if ( 'product' !== get_post_type( $wp_post ) ) {
+			return false;
+		}
+
+		return has_post_thumbnail( $wp_post )
+			? wp_get_attachment_image_caption( get_post_thumbnail_id( $wp_post ) )
+			: static::_get_default_image_caption();
+	}
 }

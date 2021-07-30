@@ -136,6 +136,34 @@ trait Term_Thumbnail {
 	}
 
 	/**
+	 * Return term header image caption.
+	 *
+	 * @param WP_Term|null $term WP_Term object.
+	 *    @var int term_id
+	 *    @var string taxonomy
+	 * @return string
+	 */
+	public static function get_the_term_thumbnail_caption( $term ) {
+		if ( ! static::has_term_thumbnail( $term ) ) {
+			return '';
+		}
+
+		$term = static::get_term_thumbnail_term( $term );
+		if ( ! $term ) {
+			return '';
+		}
+
+		$header_image = get_theme_mod( $term->taxonomy . '-' . $term->term_id . '-header-image' );
+		if ( ! $header_image ) {
+			return '';
+		}
+
+		return $header_image && is_int( $header_image )
+			? wp_get_attachment_caption( $header_image )
+			: wp_get_attachment_caption( static::_attachment_url_to_postid( $header_image ) );
+	}
+
+	/**
 	 * Return allowd attributes of img.
 	 *
 	 * @return array

@@ -71,4 +71,18 @@ class WooCommerce_Term_Page_Header extends Base {
 			? Page_Header_Helper::get_align( $_term )
 			: false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_image_caption() {
+		$_term             = get_queried_object();
+		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$image_mods, true )
+			? Page_Header_Helper::get_image_caption( $_term )
+			: false;
+	}
 }

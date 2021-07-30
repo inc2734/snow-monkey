@@ -79,4 +79,22 @@ class Singular_Page_Header extends Base {
 		$post_type = get_post_type( $wp_post );
 		return get_theme_mod( $post_type . '-page-header-align' );
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @param WP_Post $wp_post WP_Post object.
+	 * @return string|false
+	 */
+	protected static function _get_image_caption( $wp_post ) {
+		if ( ! is_a( $wp_post, '\WP_Post' ) ) {
+			return false;
+		}
+
+		$thumbnail_id = get_post_thumbnail_id( $wp_post );
+
+		return has_post_thumbnail( $wp_post )
+			? wp_get_attachment_caption( $thumbnail_id )
+			: static::_get_default_image_caption();
+	}
 }

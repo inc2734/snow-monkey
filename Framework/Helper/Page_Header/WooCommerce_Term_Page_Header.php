@@ -94,4 +94,28 @@ class WooCommerce_Term_Page_Header extends Base {
 			? get_theme_mod( 'woocommerce-archive-page-header-align' )
 			: false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @param WP_Term $wp_term WP_Term object.
+	 * @return string|false
+	 */
+	protected static function _get_image_caption( $wp_term ) {
+		if ( ! is_a( $wp_term, '\WP_Term' ) ) {
+			return false;
+		}
+
+		if ( ! in_array( $wp_term->taxonomy, [ 'product_cat', 'product_tag' ], true ) ) {
+			return false;
+		}
+
+		if ( Helper::has_term_thumbnail( $wp_term ) ) {
+			return Helper::get_the_term_thumbnail_caption( $wp_term );
+		} elseif ( Helper::has_woocommerce_archive_thumbnail() ) {
+			return Helper::get_the_woocommerce_archive_thumbnail_caption();
+		}
+
+		return static::_get_default_image_caption();
+	}
 }

@@ -72,4 +72,18 @@ class Default_Page_Header extends Base {
 	) {
 		return false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @param null $null Null.
+	 * @return string|false
+	 */
+	protected static function _get_image_caption(
+		// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UnusedVariable
+		$null
+		// phpcs:enable
+	) {
+		return static::_get_default_image_caption();
+	}
 }

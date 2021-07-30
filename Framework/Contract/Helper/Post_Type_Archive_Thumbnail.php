@@ -84,6 +84,29 @@ trait Post_Type_Archive_Thumbnail {
 	}
 
 	/**
+	 * Display post type archive thumbnail caption.
+	 *
+	 * @param string|null $post_type The post type name.
+	 * @return string|false
+	 */
+	public static function get_the_post_type_archive_thumbnail_caption( $post_type = null ) {
+		$post_type = null === $post_type ? get_post_type() : $post_type;
+
+		if ( ! static::has_post_type_archive_thumbnail( $post_type ) ) {
+			return '';
+		}
+
+		$header_image = get_theme_mod( $post_type . '-header-image' );
+		if ( ! $header_image ) {
+			return '';
+		}
+
+		return $header_image && is_int( $header_image )
+			? wp_get_attachment_caption( $header_image )
+			: wp_get_attachment_caption( static::_attachment_url_to_postid( $header_image ) );
+	}
+
+	/**
 	 * Return allowd attributes of img
 	 *
 	 * @return array

@@ -58,4 +58,15 @@ class Front_Page_Header extends Base {
 			? Page_Header_Helper::get_align( get_post() )
 			: false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_image_caption() {
+		return get_theme_mod( 'home-page-display-page-header' )
+			? Page_Header_Helper::get_image_caption( get_post() )
+			: false;
+	}
 }

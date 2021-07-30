@@ -50,4 +50,13 @@ class Default_Page_Header extends Base {
 	protected static function _get_align() {
 		return Page_Header_Helper::get_align( null );
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_image_caption() {
+		return Page_Header_Helper::get_image_caption( null );
+	}
 }

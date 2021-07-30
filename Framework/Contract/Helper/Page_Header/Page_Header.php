@@ -140,6 +140,24 @@ abstract class Page_Header {
 	}
 
 	/**
+	 * Return page header image caption.
+	 *
+	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @return string|false
+	 */
+	abstract protected static function _get_image_caption( $queried_object );
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
+	 * @return string|false
+	 */
+	public static function get_image_caption( $queried_object ) {
+		return apply_filters( 'snow_monkey_page_header_image_caption', static::_get_image_caption( $queried_object ), $queried_object );
+	}
+
+	/**
 	 * Return thumbnail size of page header image.
 	 *
 	 * @deprecated
@@ -163,7 +181,11 @@ abstract class Page_Header {
 	 */
 	protected static function _get_default_image( $size = 'large' ) {
 		$default_header_image = get_theme_mod( 'default-page-header-image' );
-		return $default_header_image && is_int( $default_header_image )
+		if ( ! $default_header_image ) {
+			return;
+		}
+
+		return is_int( $default_header_image )
 			? wp_get_attachment_image( $default_header_image, $size )
 			: sprintf( '<img src="%1$s" alt="">', esc_url( $default_header_image ) );
 	}
@@ -176,8 +198,69 @@ abstract class Page_Header {
 	 */
 	protected static function _get_default_image_url( $size = 'large' ) {
 		$default_header_image = get_theme_mod( 'default-page-header-image' );
-		return $default_header_image && is_int( $default_header_image )
+		if ( ! $default_header_image ) {
+			return;
+		}
+
+		return is_int( $default_header_image )
 			? wp_get_attachment_image_url( $default_header_image, $size )
 			: $default_header_image;
+	}
+
+	/**
+	 * Return default page header image caption.
+	 *
+	 * @return string
+	 */
+	protected static function _get_default_image_caption() {
+		$default_header_image = get_theme_mod( 'default-page-header-image' );
+		if ( ! $default_header_image ) {
+			return;
+		}
+
+		return is_int( $default_header_image )
+			? wp_get_attachment_caption( $default_header_image )
+			: wp_get_attachment_caption( static::_attachment_url_to_postid( $default_header_image ) );
+	}
+
+	/**
+	 * Tries to convert an attachment URL into a post ID.
+	 *
+	 * @param string $url The URL to resolve.
+	 * @return int
+	 */
+	protected static function _attachment_url_to_postid( $url ) {
+		$url = preg_replace( '|\?.*$|', '', $url );
+
+		if ( preg_match( '|-scaled\.[0-9A-Za-z]+$|', $url ) ) {
+			return attachment_url_to_postid( $url );
+		}
+
+		$wp_upload_dir = wp_upload_dir();
+
+		if ( preg_match( '|-\d+x\d+\.[0-9A-Za-z]+$|', $url ) ) {
+			$new_url = preg_replace( '|-\d+x\d+(\.[0-9A-Za-z]+)$|', '$1', $url );
+			$path    = str_replace( $wp_upload_dir['baseurl'], $wp_upload_dir['basedir'], $new_url );
+			if ( file_exists( $path ) ) {
+				$id = attachment_url_to_postid( $new_url );
+				if ( 0 !== $id ) {
+					return $id;
+				}
+			}
+
+			$new_url = preg_replace( '|(\.[0-9A-Za-z]+)$|', '-scaled$1', $new_url );
+			$path    = str_replace( $wp_upload_dir['baseurl'], $wp_upload_dir['basedir'], $new_url );
+			if ( file_exists( $path ) ) {
+				return attachment_url_to_postid( $new_url );
+			}
+		}
+
+		$new_url = preg_replace( '|(\.[0-9A-Za-z]+)$|', '-scaled$1', $url );
+		$path    = str_replace( $wp_upload_dir['baseurl'], $wp_upload_dir['basedir'], $new_url );
+		if ( file_exists( $path ) ) {
+			return attachment_url_to_postid( $new_url );
+		}
+
+		return attachment_url_to_postid( $url );
 	}
 }

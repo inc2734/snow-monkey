@@ -70,4 +70,18 @@ class WooCommerce_Single_Page_Header extends Base {
 			? Page_Header_Helper::get_align( $_post )
 			: false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_image_caption() {
+		$_post             = get_post();
+		$eyecatch_position = get_theme_mod( 'woocommerce-single-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$image_mods, true )
+			? Page_Header_Helper::get_image_caption( $_post )
+			: false;
+	}
 }

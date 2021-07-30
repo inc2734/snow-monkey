@@ -75,4 +75,19 @@ class WooCommerce_Archive_Page_Header extends Base {
 			? Page_Header_Helper::get_align( $post_type_object )
 			: false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @return string|false
+	 */
+	protected static function _get_image_caption() {
+		$post_type         = get_post_type();
+		$post_type_object  = get_post_type_object( $post_type );
+		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
+
+		return in_array( $eyecatch_position, static::$image_mods, true )
+			? Page_Header_Helper::get_image_caption( $post_type_object )
+			: false;
+	}
 }

@@ -100,4 +100,28 @@ class Archive_Page_Header extends Base {
 
 		return false;
 	}
+
+	/**
+	 * Return page header image caption.
+	 *
+	 * @param WP_Post_Type|null $wp_post_type WP_Post_Type object.
+	 * @return string|false
+	 */
+	protected static function _get_image_caption( $wp_post_type ) {
+		if ( is_a( $wp_post_type, '\WP_Post_Type' ) ) {
+			$post_type = $wp_post_type->name;
+
+			return Helper::has_post_type_archive_thumbnail( $post_type )
+				? Helper::get_the_post_type_archive_thumbnail_caption( $post_type )
+				: static::_get_default_image_caption();
+		}
+
+		if ( is_null( $wp_post_type ) ) {
+			return Helper::has_homepage_thumbnail()
+				? Helper::get_the_homepage_thumbnail_caption()
+				: static::_get_default_image_caption();
+		}
+
+		return false;
+	}
 }

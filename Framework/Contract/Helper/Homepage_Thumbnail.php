@@ -34,7 +34,7 @@ trait Homepage_Thumbnail {
 	 * @param string $size The thumbnail size slug.
 	 * @return string
 	 */
-	public static function get_the_homepage_thumbnail_url( $size = 'post-thumbnail' ) {
+	public static function get_the_homepage_thumbnail_url( $size = 'large' ) {
 		if ( ! static::has_homepage_thumbnail() ) {
 			return '';
 		}
@@ -48,7 +48,7 @@ trait Homepage_Thumbnail {
 	 * @param string $size The thumbnail size slug.
 	 * @return string
 	 */
-	public static function get_the_homepage_thumbnail( $size = 'post-thumbnail' ) {
+	public static function get_the_homepage_thumbnail( $size = 'large' ) {
 		if ( ! static::has_homepage_thumbnail() ) {
 			return '';
 		}
@@ -62,13 +62,26 @@ trait Homepage_Thumbnail {
 	 * @param string $size The thumbnail size slug.
 	 * @return void
 	 */
-	public static function the_homepage_thumbnail( $size = 'post-thumbnail' ) {
+	public static function the_homepage_thumbnail( $size = 'large' ) {
 		echo wp_kses(
 			static::get_the_homepage_thumbnail( $size ),
 			[
 				'img' => static::img_allowed_attributes(),
 			]
 		);
+	}
+
+	/**
+	 * Return homepage thumbnail caption.
+	 *
+	 * @return string
+	 */
+	public static function get_the_homepage_thumbnail_caption() {
+		if ( ! static::has_homepage_thumbnail() ) {
+			return '';
+		}
+
+		return wp_get_attachment_caption( get_post_thumbnail_id( get_option( 'page_for_posts' ) ) );
 	}
 
 	/**

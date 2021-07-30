@@ -40,7 +40,6 @@ trait WooCommerce_Archive_Thumbnail {
 	 * Return WooCommerce archive header image.
 	 *
 	 * @param string $size The image size.
-	 *
 	 * @return string
 	 */
 	public static function get_the_woocommerce_archive_thumbnail( $size = 'large' ) {
@@ -70,6 +69,26 @@ trait WooCommerce_Archive_Thumbnail {
 				'img' => static::img_allowed_attributes(),
 			]
 		);
+	}
+
+	/**
+	 * Return WooCommerce archive header image caption.
+	 *
+	 * @return string
+	 */
+	public static function get_the_woocommerce_archive_thumbnail_caption() {
+		if ( ! static::has_woocommerce_archive_thumbnail() ) {
+			return '';
+		}
+
+		$header_image = get_theme_mod( 'woocommerce-archive-header-image' );
+		if ( ! $header_image ) {
+			return '';
+		}
+
+		return $header_image && is_int( $header_image )
+			? wp_get_attachment_caption( $header_image )
+			: wp_get_attachment_caption( static::_attachment_url_to_postid( $header_image ) );
 	}
 
 	/**
