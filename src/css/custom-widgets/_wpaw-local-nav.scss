@@ -49,6 +49,10 @@
       @include _left(0);
       color: var-color-accent();
     }
+
+    > a {
+      padding-left: 1.25rem;
+    }
   }
 
   &--vertical {
@@ -86,10 +90,14 @@
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      gap: _space(1);
+      gap: 0 _space(1);
 
       > .wpaw-local-nav__subitem {
         flex: 0 0 auto;
+
+        @supports(gap: 1px) {
+          margin-left: 0;
+        }
       }
     }
   }
