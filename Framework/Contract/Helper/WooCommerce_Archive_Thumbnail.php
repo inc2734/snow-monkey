@@ -12,8 +12,6 @@ use Framework\Contract\Helper\Trait_Helper;
 
 trait WooCommerce_Archive_Thumbnail {
 
-	use Trait_Helper;
-
 	/**
 	 * Return true when have WooCommerce archive thumbanil.
 	 *
@@ -92,7 +90,7 @@ trait WooCommerce_Archive_Thumbnail {
 
 		return $header_image && is_int( $header_image )
 			? wp_get_attachment_caption( $header_image )
-			: wp_get_attachment_caption( static::_attachment_url_to_postid( $header_image ) );
+			: wp_get_attachment_caption( Trait_Helper::_attachment_url_to_postid( $header_image ) );
 	}
 
 	/**

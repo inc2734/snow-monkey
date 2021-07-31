@@ -12,8 +12,6 @@ use Framework\Contract\Helper\Trait_Helper;
 
 abstract class Page_Header {
 
-	use Trait_Helper;
-
 	/**
 	 * Mods to display page header image.
 	 *
@@ -224,6 +222,6 @@ abstract class Page_Header {
 
 		return is_int( $default_header_image )
 			? wp_get_attachment_caption( $default_header_image )
-			: wp_get_attachment_caption( static::_attachment_url_to_postid( $default_header_image ) );
+			: wp_get_attachment_caption( Trait_Helper::_attachment_url_to_postid( $default_header_image ) );
 	}
 }

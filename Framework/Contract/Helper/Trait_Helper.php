@@ -8,7 +8,7 @@
 
 namespace Framework\Contract\Helper;
 
-trait Trait_Helper {
+class Trait_Helper {
 
 	/**
 	 * Tries to convert an attachment URL into a post ID.
