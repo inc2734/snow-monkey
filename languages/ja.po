@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-07-29 11:24+0900\n"
-"PO-Revision-Date: 2021-07-29 11:24+0900\n"
+"POT-Creation-Date: 2021-08-02 15:41+0900\n"
+"PO-Revision-Date: 2021-08-02 15:46+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -69,6 +69,7 @@ msgstr "中央ロゴ"
 
 #: .translation/bundle-template-header.php:13 Framework/Helper.php:163
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
+#: app/customizer/infobar/controls/align.php:19
 msgid "Left"
 msgstr "左"
 
@@ -107,12 +108,13 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:164
+#: Framework/Helper.php:164 app/customizer/infobar/controls/align.php:20
 msgid "Center"
 msgstr "中央"
 
 #: Framework/Helper.php:165
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
+#: app/customizer/infobar/controls/align.php:21
 msgid "Right"
 msgstr "右"
 
@@ -1012,6 +1014,10 @@ msgstr "WooCommerce 商品ページレイアウト"
 #: app/customizer/design/sections/woocommerce-single/section.php:20
 msgid "WooCommerce product page settings"
 msgstr "WooCommerce 商品ページ設定"
+
+#: app/customizer/infobar/controls/align.php:15
+msgid "Infobar text alignment"
+msgstr "お知らせバーのテキスト配置"
 
 #: app/customizer/infobar/controls/content.php:16
 msgid "Infobar content"
