@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.0.2
  */
 
 use Framework\Helper;
@@ -14,6 +14,10 @@ use Framework\Helper;
 add_action(
 	'wp_enqueue_scripts',
 	function() {
+		if ( filter_input( INPUT_GET, 'legacy-widget-preview', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY ) ) {
+			return;
+		}
+
 		if (
 			! get_option( 'mwt-google-adsense' )
 			&& ! get_option( 'mwt-google-infeed-ads' )
