@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 7.7.0
+ * @version 15.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -32,7 +32,15 @@ $control->partial(
 		'container_inclusive' => true,
 		'render_callback'     => function() {
 			if ( get_theme_mod( 'infobar-content' ) ) {
-				Helper::get_template_part( 'template-parts/common/infobar' );
+				Helper::get_template_part(
+					'template-parts/common/infobar',
+					null,
+					[
+						'_content' => get_theme_mod( 'infobar-content' ),
+						'_url'     => get_theme_mod( 'infobar-url' ),
+						'_align'   => get_theme_mod( 'infobar-align' ),
+					]
+				);
 			}
 		},
 	]

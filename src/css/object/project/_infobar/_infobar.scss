@@ -1,8 +1,21 @@
 .#{ $_prefix }p-infobar {
+  &--center {
+    .#{ $_prefix }c-container {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &--right {
+    .#{ $_prefix }c-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
   &__inner {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     background-color: var-color-accent();
     font-weight: bold;
     text-decoration: none;

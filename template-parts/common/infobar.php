@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.1.3
+ * @version 15.1.0
  *
  * renamed: template-parts/infobar.php
  */
@@ -15,8 +15,9 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_content' => get_theme_mod( 'infobar-content' ),
-		'_url'     => get_theme_mod( 'infobar-url' ),
+		'_content' => '',
+		'_url'     => '',
+		'_align'   => 'left',
 	]
 );
 
@@ -30,8 +31,13 @@ $kses_allowed_html['a']['target'] = true;
 $kses_allowed_html['i']           = [
 	'class' => true,
 ];
+
+$classes = [
+	'p-infobar',
+	'p-infobar--' . $args['_align'],
+];
 ?>
-<div class="p-infobar">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<?php if ( $args['_url'] ) : ?>
 
 		<a class="p-infobar__inner" href="<?php echo esc_url( $args['_url'] ); ?>">
