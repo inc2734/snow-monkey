@@ -5,7 +5,7 @@ import {
   getAdminbar,
   setStyle,
   getStyle,
-  hasClass,
+  getTargetOffsetTop,
 } from './module/_helper';
 
 const apply = (header, adminbar) => {
@@ -56,6 +56,26 @@ document.addEventListener(
     }
 
     apply(header, adminbar);
+
+     // If there is a control bar, shift it by that amount.
+    const correctScrollPosition = () => {
+      removeEventListener('scroll', correctScrollPosition, false);
+
+      const targetOffsetTop = Math.floor(getTargetOffsetTop());
+
+      if (! adminbar) {
+        return;
+      }
+
+      const adminbarHeight = Math.floor(adminbar.offsetHeight);
+      const adminbarOffsetTop = Math.floor(adminbar.getBoundingClientRect().top + window.pageYOffset);
+      const adminbarOffsetBottom = Math.floor(adminbarOffsetTop + adminbarHeight);
+      const isOverlap = targetOffsetTop >= adminbarOffsetTop && targetOffsetTop < adminbarOffsetBottom;
+      if (isOverlap) {
+        window.scrollTo(0, pageYOffset - adminbarHeight);
+      }
+    };
+    addEventListener('scroll', correctScrollPosition, false);
   },
   false
 );
