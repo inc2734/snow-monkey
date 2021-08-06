@@ -3,18 +3,18 @@
  */
 
 .alignleft {
-  float: left;
-  @include _margin-right(1);
+  float: left !important;
+  margin-right: _space(1, true, true) !important;
 }
 
 .alignright {
-  float: right;
-  @include _margin-left(1);
+  float: right !important;
+  margin-left: _space(1, true, true) !important;
 }
 
 .alignleft,
 .alignright {
-  max-width: calc(5 * (100vw / 12));
+  max-width: calc(5 * (100vw / 12)) !important;
 
   &:first-child + * {
     margin-top: 0;
@@ -22,10 +22,10 @@
 }
 
 .aligncenter {
-  margin-right: auto;
-  margin-left: auto;
-  display: block;
-  clear: both;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  display: block !important;
+  clear: both !important;
 }
 
 .alignfull + .alignfull {

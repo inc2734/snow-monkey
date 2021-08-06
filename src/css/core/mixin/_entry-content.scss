@@ -1,6 +1,12 @@
 @mixin entry-content($coefficient: 1) {
   @include _content($coefficient);
 
+  > * {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   > h2 + h3,
   > h3 + h4,
   > h4 + h5,
