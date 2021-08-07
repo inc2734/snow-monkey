@@ -3,11 +3,23 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 15.1.2
  */
 
 use Inc2734\WP_Adsense;
 use Framework\Helper;
+
+if ( filter_input( INPUT_GET, 'legacy-widget-preview', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY ) ) {
+	return;
+}
+
+if ( is_404() ) {
+	return;
+}
+
+if ( is_customize_preview() || is_preview() ) {
+	return;
+}
 
 if ( is_singular() && ! is_front_page() ) {
 	return;

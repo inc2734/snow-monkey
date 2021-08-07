@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.1.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -55,7 +55,13 @@ $control->partial(
 			if ( get_option( 'mwt-display-related-posts' ) ) {
 				$related_posts_query = Helper::get_related_posts_query( get_the_ID() );
 				if ( get_option( 'mwt-google-matched-content' ) || $related_posts_query->have_posts() ) {
-					Helper::get_template_part( 'template-parts/content/related-posts' );
+					Helper::get_template_part(
+						'template-parts/content/related-posts',
+						null,
+						[
+							'_code' => get_option( 'mwt-google-matched-content' ),
+						]
+					);
 				}
 			}
 		},

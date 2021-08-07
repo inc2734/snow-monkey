@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.6
+ * @version 15.1.2
  */
 
 use Framework\Helper;
@@ -50,6 +50,7 @@ $args = wp_parse_args(
 			$vars = [
 				'_title'       => __( 'Related posts', 'snow-monkey' ),
 				'_posts_query' => $related_posts_query,
+				'_code'        => get_option( 'mwt-google-matched-content' ),
 			];
 			Helper::get_template_part(
 				'template-parts/content/related-posts',

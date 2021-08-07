@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.6
+ * @version 15.1.2
  *
  * renamed: template-parts/related-posts.php
  */
@@ -21,7 +21,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_code'           => get_option( 'mwt-google-matched-content' ),
+		'_code'           => null,
 		'_context'        => 'snow-monkey/related-posts',
 		'_entries_layout' => $default_entries_layout,
 		'_post_id'        => get_the_ID(),

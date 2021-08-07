@@ -3,10 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.2
+ * @version 15.1.2
  */
 
 use Framework\Helper;
+
+if ( filter_input( INPUT_GET, 'legacy-widget-preview', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY ) ) {
+	return;
+}
 
 /**
  * Enqueue script for Google Adsense
@@ -14,10 +18,6 @@ use Framework\Helper;
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		if ( filter_input( INPUT_GET, 'legacy-widget-preview', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY ) ) {
-			return;
-		}
-
 		if (
 			! get_option( 'mwt-google-adsense' )
 			&& ! get_option( 'mwt-google-infeed-ads' )
@@ -27,8 +27,12 @@ add_action(
 			return;
 		}
 
+		if ( is_404() ) {
+			return;
+		}
+
 		// @see https://github.com/inc2734/snow-monkey/issues/616
-		if ( is_customize_preview() ) {
+		if ( is_customize_preview() || is_preview() ) {
 			return;
 		}
 
@@ -118,6 +122,10 @@ add_filter(
 add_filter(
 	'inc2734_wp_adsense_the_adsense_code',
 	function( $code ) {
+		if ( is_404() ) {
+			return;
+		}
+
 		if ( ! is_customize_preview() && ! is_preview() ) {
 			return $code;
 		}
