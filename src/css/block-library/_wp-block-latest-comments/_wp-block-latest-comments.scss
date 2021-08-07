@@ -1,5 +1,6 @@
 .wp-block-latest-comments {
   @include widget-list-base();
+  margin-left: auto;
 
   &__comment {
     line-height: inherit;
@@ -19,10 +20,8 @@
       @include _font-size-line-height($_base-font-size-px - 2);
     }
   }
+}
 
-  &.aligncenter {
-    margin-right: auto;
-    margin-left: auto;
-    display: table;
-  }
+ol.wp-block-latest-comments {
+  margin-left: auto;
 }

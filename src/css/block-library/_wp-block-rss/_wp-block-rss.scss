@@ -1,5 +1,6 @@
 .wp-block-rss {
   @include widget-list-base();
+  margin-left: auto;
 
   &__item-publish-date,
   &__item-author {
@@ -10,37 +11,24 @@
     @include _font-size-line-height($_base-font-size-px - 2);
   }
 
-  &.aligncenter:not(.is-grid) {
-    margin-right: auto;
-    margin-left: auto;
-    display: table;
-  }
-
   &.is-grid {
-    @include _row();
-    @include _row--margin(.25);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: _space(.25, true, true);
 
-    &.alignright,
-    &.alignleft {
-      float: none;
-    }
-
-    > .wp-block-rss__item {
+    .wp-block-rss__item {
       margin: 0;
       width: auto;
-      @include _row__col(1, 1);
-      @include _row__col--margin(.25);
     }
 
-    @include _media-min(md) {
-      @include _row--margin(1);
+    @include _media-min(600px) {
+      gap: _space(1, true, true);
 
       @for $i from 2 through 6 {
         &.columns-#{ $i } {
+          grid-template-columns: repeat(#{ $i }, 1fr);
+
           > .wp-block-rss__item {
-            $width: percentage(1 / $i);
-            @include _row__col--width($width);
-            @include _row__col--margin(1);
           }
         }
       }

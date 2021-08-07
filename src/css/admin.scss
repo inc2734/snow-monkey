@@ -24,9 +24,10 @@
 // @todo To adjust the Float view in the editor to match the front view.
 .wp-block[data-align="right"],
 .wp-block[data-align="left"] {
-  .block-editor-block-list__block {
+  > .block-editor-block-list__block {
     margin-top: 0;
     margin-bottom: 0;
+    max-width: calc(5 * (100vw / 12));
   }
 }
 
@@ -34,9 +35,29 @@
   clear: both;
   text-align: initial;
 
-  > * {
+  > .block-editor-block-list__block {
     margin-right: auto;
     margin-left: auto;
+    width: auto;
+  }
+
+  // @see src/css/foundation/wordpress/_align/_align.scss
+  > .wp-block-archives,
+  > .wp-block-calendar,
+  > .wp-block-categories,
+  > .wp-block-embed,
+  > .wp-block-file,
+  > .wp-block-image,
+  > .wp-block-latest-comments,
+  > .wp-block-search,
+  > .wp-block-site-logo,
+  > .wp-block-table,
+  > .wp-block-tag-cloud {
+    display: table;
+  }
+
+  .wp-block-search .wp-block-search__inside-wrapper {
+    margin: 0;
   }
 }
 
@@ -56,6 +77,29 @@
 
 .wp-block[data-align="wide"] {
   max-width: none;
+}
+
+.customize-control-sidebar_block_editor,
+.editor-styles-wrapper {
+  .wp-block-site-logo {
+    @include content-alignment();
+  }
+}
+.wp-block[data-align="right"],
+.wp-block[data-align="left"] {
+  .wp-block-site-logo {
+    width: auto;
+  }
+}
+.wp-block[data-align="right"] {
+  .wp-block-site-logo {
+    margin-left: 2em; // Default core margin.
+  }
+}
+.wp-block[data-align="left"] {
+  .wp-block-site-logo {
+    margin-right: 2em; // Default core margin.
+  }
 }
 
 .edit-post-visual-editor__post-title-wrapper .editor-post-title__input {

@@ -10,20 +10,6 @@
       box-shadow: none;
     }
   }
-
-  > .alignleft,
-  > .alignright {
-    margin-top: 0;
-    @include _margin-bottom(1);
-  }
-
-  .alignleft {
-    @include _margin-right(1);
-  }
-
-  .alignright {
-    @include _margin-left(1);
-  }
 }
 
 figure.wp-block-image,

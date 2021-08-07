@@ -1,5 +1,6 @@
 .wp-block-latest-posts {
   @include widget-list-base();
+  margin-left: auto;
 
   &__post-date {
     @include _font-size-line-height($_base-font-size-px - 4);
@@ -19,34 +20,28 @@
       @extend %entry-content;
     }
   }
-
-  &.aligncenter:not(.is-grid) {
-    margin-right: auto;
-    margin-left: auto;
-    display: table;
-  }
 }
 
-ul.wp-block-latest-posts.is-grid {
-  @include _row();
-  @include _row--margin(.25);
+ul.wp-block-latest-posts {
+  &.is-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: _space(.25, true, true);
 
-  > li {
-    margin: 0;
-    width: auto;
-    @include _row__col(1, 1);
-    @include _row__col--margin(.25);
-  }
+    .wp-block-rss__item {
+      margin: 0;
+      width: auto;
+    }
 
-  @include _media-min(md) {
-    @include _row--margin(1);
+    @include _media-min(600px) {
+      gap: _space(1, true, true);
 
-    @for $i from 2 through 6 {
-      &.columns-#{ $i } {
-        > li {
-          $width: percentage(1 / $i);
-          @include _row__col--width($width);
-          @include _row__col--margin(1);
+      @for $i from 2 through 6 {
+        &.columns-#{ $i } {
+          grid-template-columns: repeat(#{ $i }, 1fr);
+
+          > .wp-block-rss__item {
+          }
         }
       }
     }

@@ -1,9 +1,6 @@
 .wp-block-search {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-
   &__label {
+    display: inline-block;
     @include _margin-bottom(.25);
   }
 
