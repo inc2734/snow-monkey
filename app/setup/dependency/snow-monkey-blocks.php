@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.2.1
  */
 
 use Framework\Helper;
@@ -18,7 +18,7 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
  * Enqueue Snow Monkey Blocks assets.
  */
 add_action(
-	'enqueue_block_assets',
+	'wp_enqueue_scripts',
 	function() {
 		$dependencies = [ Helper::get_main_style_handle() ];
 
@@ -51,10 +51,12 @@ add_action(
 add_action(
 	'enqueue_block_editor_assets',
 	function() {
+		$dependencies = [ Helper::get_main_style_handle() ];
+
 		wp_enqueue_style(
-			Helper::get_main_style_handle() . '-snow-monkey-blocks-editor',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.min.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-blocks' ],
+			$dependencies,
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.min.css' ) )
 		);
 	}

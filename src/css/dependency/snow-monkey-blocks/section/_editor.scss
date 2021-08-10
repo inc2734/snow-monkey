@@ -1,8 +1,4 @@
 .editor-styles-wrapper,
 .customize-control-sidebar_block_editor {
-  .smb-section {
-    &__body {
-      @extend %entry-content;
-    }
-  }
+  @import 'block';
 }

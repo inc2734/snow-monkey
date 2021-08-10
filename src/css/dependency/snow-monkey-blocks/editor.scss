@@ -1,6 +1,5 @@
 @charset 'utf-8';
 
-$img-path: '../../../img';
 @import '../../core/core';
 @import '../../foundation/_placeholder/placeholder';
 
@@ -20,3 +19,13 @@ $img-path: '../../../img';
 @import 'section-side-heading/editor';
 @import 'section-with-image/editor';
 @import 'step/editor';
+
+.c-row[data-columns]:not([data-columns="1"]) {
+	@include _media-max(sm) {
+		@include _row--margin(.5);
+
+		> .c-row__col {
+			@include _row__col--margin(.5);
+		}
+	}
+}
