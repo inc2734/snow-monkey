@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.1.3
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -68,7 +68,13 @@ add_filter(
 add_filter(
 	'inc2734_wp_seo_defult_ogp_image_url',
 	function() {
-		return get_option( 'mwt-default-og-image' );
+		$default_ogp_image = get_option( 'mwt-default-og-image' );
+		if ( $default_ogp_image ) {
+			$default_ogp_image = preg_match( '|^\d+$|', $default_ogp_image )
+				? wp_get_attachment_image_url( $default_ogp_image, 'full' )
+				: $default_ogp_image;
+		}
+		return $default_ogp_image;
 	}
 );
 
@@ -207,7 +213,7 @@ add_filter(
 	function( $thumbnail ) {
 		if ( ! $thumbnail && is_singular() ) {
 			$thumbnail = get_theme_mod( 'default-thumbnail' );
-			return $thumbnail && is_int( $thumbnail )
+			return $thumbnail && preg_match( '|^\d+$|', $thumbnail )
 				? wp_get_attachment_image_url( $thumbnail, 'full' )
 				: $thumbnail;
 		}

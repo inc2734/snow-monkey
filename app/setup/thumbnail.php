@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.1.3
  */
 
 add_filter(
@@ -26,7 +26,7 @@ add_filter(
 			return $html;
 		}
 
-		$image_id = $default_thumbnail && is_int( $default_thumbnail )
+		$image_id = $default_thumbnail && preg_match( '|^\d+$|', $default_thumbnail )
 			? $default_thumbnail
 			: attachment_url_to_postid( $default_thumbnail );
 

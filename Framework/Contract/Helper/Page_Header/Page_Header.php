@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.1.3
  */
 
 namespace Framework\Contract\Helper\Page_Header;
@@ -187,7 +187,7 @@ abstract class Page_Header {
 			return;
 		}
 
-		return is_int( $default_header_image )
+		return preg_match( '|^\d+$|', $default_header_image )
 			? wp_get_attachment_image( $default_header_image, $size )
 			: sprintf( '<img src="%1$s" alt="">', esc_url( $default_header_image ) );
 	}
@@ -204,7 +204,7 @@ abstract class Page_Header {
 			return;
 		}
 
-		return is_int( $default_header_image )
+		return preg_match( '|^\d+$|', $default_header_image )
 			? wp_get_attachment_image_url( $default_header_image, $size )
 			: $default_header_image;
 	}
@@ -220,7 +220,7 @@ abstract class Page_Header {
 			return;
 		}
 
-		return is_int( $default_header_image )
+		return preg_match( '|^\d+$|', $default_header_image )
 			? wp_get_attachment_caption( $default_header_image )
 			: wp_get_attachment_caption( Trait_Helper::_attachment_url_to_postid( $default_header_image ) );
 	}

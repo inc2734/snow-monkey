@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.1.3
  */
 
 namespace Framework\Contract\Model;
@@ -144,7 +144,7 @@ abstract class Page_Header {
 	 */
 	protected static function _get_default_image_url( $size = 'large' ) {
 		$default_header_image = get_theme_mod( 'default-page-header-image' );
-		return $default_header_image && is_int( $default_header_image )
+		return $default_header_image && preg_match( '|^\d+$|', $default_header_image )
 			? wp_get_attachment_image( $default_header_image, $size )
 			: sprintf( '<img src="%1$s" alt="">', esc_url( $default_header_image ) );
 	}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.1.3
  */
 
 namespace Framework\Contract\Helper;
@@ -33,7 +33,7 @@ trait WooCommerce_Archive_Thumbnail {
 		}
 
 		$header_image = get_theme_mod( 'woocommerce-archive-header-image' );
-		return $header_image && is_int( $header_image )
+		return $header_image && preg_match( '|^\d+$|', $header_image )
 			? wp_get_attachment_image_url( $header_image, $size )
 			: $header_image;
 	}
@@ -54,7 +54,7 @@ trait WooCommerce_Archive_Thumbnail {
 			return '';
 		}
 
-		return $header_image && is_int( $header_image )
+		return $header_image && preg_match( '|^\d+$|', $header_image )
 			? wp_get_attachment_image( $header_image, $size )
 			: sprintf( '<img src="%1$s" alt="">', esc_url( $header_image ) );
 	}
@@ -88,7 +88,7 @@ trait WooCommerce_Archive_Thumbnail {
 			return '';
 		}
 
-		return $header_image && is_int( $header_image )
+		return $header_image && preg_match( '|^\d+$|', $header_image )
 			? wp_get_attachment_caption( $header_image )
 			: wp_get_attachment_caption( Trait_Helper::_attachment_url_to_postid( $header_image ) );
 	}
