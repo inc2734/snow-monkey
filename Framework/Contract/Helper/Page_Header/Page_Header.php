@@ -222,6 +222,6 @@ abstract class Page_Header {
 
 		return preg_match( '|^\d+$|', $default_header_image )
 			? wp_get_attachment_caption( $default_header_image )
-			: wp_get_attachment_caption( Trait_Helper::_attachment_url_to_postid( $default_header_image ) );
+			: wp_get_attachment_caption( Trait_Helper::attachment_url_to_postid( $default_header_image ) );
 	}
 }

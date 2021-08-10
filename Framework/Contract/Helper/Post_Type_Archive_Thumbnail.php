@@ -105,7 +105,7 @@ trait Post_Type_Archive_Thumbnail {
 
 		return $header_image && preg_match( '|^\d+$|', $header_image )
 			? wp_get_attachment_caption( $header_image )
-			: wp_get_attachment_caption( Trait_Helper::_attachment_url_to_postid( $header_image ) );
+			: wp_get_attachment_caption( Trait_Helper::attachment_url_to_postid( $header_image ) );
 	}
 
 	/**

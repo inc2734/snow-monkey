@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.1.3
  */
 
 namespace Framework\Contract\Helper;
@@ -16,7 +16,7 @@ class Trait_Helper {
 	 * @param string $url The URL to resolve.
 	 * @return int
 	 */
-	protected static function _attachment_url_to_postid( $url ) {
+	public static function attachment_url_to_postid( $url ) {
 		$url = preg_replace( '|\?.*$|', '', $url );
 
 		if ( preg_match( '|-scaled\.[0-9A-Za-z]+$|', $url ) ) {
