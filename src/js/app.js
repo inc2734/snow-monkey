@@ -13,7 +13,8 @@ import {
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    scrollChecker(getHtml());
+    const html = getHtml();
+    scrollChecker(html);
 
     const hash = window.location.hash;
     if (! hash) {
@@ -42,7 +43,7 @@ document.addEventListener(
                                   && 'fixed' !== headerCssPosition && ! dropNav;
       if (
         isNormalHeaderPosition
-        || header.offsetWidth < window.innerWidth
+        || header.offsetWidth < html.offsetWidth
       ) {
         window.removeEventListener('scroll', hideHeaderWithLocationHash, false);
         header.removeAttribute('aria-hidden');

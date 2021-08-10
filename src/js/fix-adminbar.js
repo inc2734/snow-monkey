@@ -6,6 +6,7 @@ import {
   setStyle,
   getStyle,
   getTargetOffsetTop,
+  getHtml,
 } from './module/_helper';
 
 const apply = (header, adminbar) => {
@@ -28,10 +29,12 @@ const apply = (header, adminbar) => {
     }
   };
 
+  const html = getHtml();
+
   const init = () => {
     const headerPsition   = getStyle(header, 'position');
     const adminbarPsition = getStyle(adminbar, 'position');
-    if ('fixed' !== adminbarPsition && 'fixed' === headerPsition && header.scrollHeight < window.innerHeight) {
+    if ('fixed' !== adminbarPsition && 'fixed' === headerPsition && header.scrollHeight < html.offsetHeight) {
       window.addEventListener('scroll', fixHeaderPosition, false);
     } else {
       window.removeEventListener('scroll', fixHeaderPosition, false);
