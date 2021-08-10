@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.1
+ * @version 15.2.0
  */
 
 use Framework\Helper;
@@ -318,3 +318,8 @@ add_action(
 		exit;
 	}
 );
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );

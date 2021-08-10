@@ -306,8 +306,17 @@ $img-path: '../../../img';
 }
 
 .woocommerce-Tabs-panel,
-.related.products {
+.related.products,
+.page-description {
   @extend %entry-content;
+}
+
+.page-description {
+  @include _margin-bottom(1);
+
+  @include _media-min(lg) {
+    @include _margin-bottom(1.25);
+  }
 }
 
 // Product meta in single

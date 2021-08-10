@@ -112,6 +112,7 @@ Style::extend(
 	'entry-content',
 	[
 		'.woocommerce-Tabs-panel',
-		'.related.products'
+		'.related.products',
+		'.page-description',
 	]
 );

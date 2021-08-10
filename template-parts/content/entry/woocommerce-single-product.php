@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.1.0
+ * @version 15.2.0
  */
 
 use Framework\Helper;
@@ -37,6 +37,16 @@ if ( $args['_display_entry_footer'] ) {
 ?>
 
 <article <?php post_class(); ?>>
+	<?php
+	/**
+	 * woocommerce_before_main_content hook.
+	 *
+	 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
+	 * @hooked woocommerce_breadcrumb - 20
+	 */
+	do_action( 'woocommerce_before_main_content' );
+	?>
+
 	<div class="c-entry__body">
 		<?php
 		if ( $args['_display_top_share_buttons'] ) {
@@ -76,6 +86,15 @@ if ( $args['_display_entry_footer'] ) {
 		}
 		?>
 	</div>
+
+	<?php
+	/**
+	 * woocommerce_after_main_content hook.
+	 *
+	 * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
+	 */
+	do_action( 'woocommerce_after_main_content' );
+	?>
 
 	<?php
 	if ( $args['_display_entry_footer'] ) {
