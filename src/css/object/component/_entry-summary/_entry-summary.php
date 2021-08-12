@@ -24,8 +24,13 @@ if ( Helper::is_ie() ) {
 		);
 	}
 }
+$terms = Helper::get_terms(
+	[
+		'taxonomy'   => 'category',
+		'hide_empty' => false,
+	]
+);
 
-$terms = Helper::get_terms( 'category' );
 foreach ( $terms as $_term ) {
 	$accent_color = get_theme_mod( $_term->taxonomy . '-' . $_term->term_id . '-accent-color' );
 

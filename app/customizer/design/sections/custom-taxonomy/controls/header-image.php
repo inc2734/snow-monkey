@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.3.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -18,7 +18,12 @@ if ( class_exists( '\woocommerce' ) ) {
 foreach ( $taxonomies as $taxonomy ) {
 	$taxonomy_object   = get_taxonomy( $taxonomy );
 	$custom_post_types = ! empty( $taxonomy_object->object_type ) ? $taxonomy_object->object_type : [];
-	$terms             = Helper::get_terms( $taxonomy );
+	$terms             = Helper::get_terms(
+		[
+			'taxonomy'   => $taxonomy,
+			'hide_empty' => false,
+		]
+	);
 
 	foreach ( $terms as $_term ) {
 		Framework::control(
@@ -44,7 +49,12 @@ if ( ! is_customize_preview() ) {
 $panel = Framework::get_panel( 'design' );
 
 foreach ( $taxonomies as $taxonomy ) {
-	$terms = Helper::get_terms( $taxonomy );
+	$terms = Helper::get_terms(
+		[
+			'taxonomy'   => $taxonomy,
+			'hide_empty' => false,
+		]
+	);
 
 	foreach ( $terms as $_term ) {
 		$section = Framework::get_section( 'design-' . $_term->taxonomy . '-' . $_term->term_id );

@@ -3,13 +3,18 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.3
+ * @version 15.3.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$terms = Helper::get_terms( 'product_cat' );
+$terms = Helper::get_terms(
+	[
+		'taxonomy'   => 'product_cat',
+		'hide_empty' => false,
+	]
+);
 
 foreach ( $terms as $_term ) {
 	Framework::control(

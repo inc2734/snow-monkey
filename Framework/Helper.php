@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.3.0
  */
 
 namespace Framework;
@@ -345,17 +345,29 @@ class Helper {
 	/**
 	 * Return specific terms.
 	 *
-	 * @param string $taxonomy The taxonomy name.
+	 * @param array|string $args Array or string of arguments.
 	 * @return array
 	 */
-	public static function get_terms( $taxonomy ) {
-		$cache_key = 'snow-monkey-all-' . $taxonomy;
+	public static function get_terms( $args = array() ) {
+		if ( ! is_array( $args ) ) {
+			$taxonomy         = $args;
+			$args             = [];
+			$args['taxonomy'] = [ $taxonomy ];
+		}
+
+		if ( ! isset( $args['taxonomy'] ) ) {
+			return [];
+		}
+
+		$taxonomies = $args['taxonomy'];
+
+		$cache_key = 'snow-monkey-all-' . md5( json_encode( $taxonomies ) );
 		$terms     = wp_cache_get( $cache_key );
 		if ( is_array( $terms ) ) {
 			return $terms;
 		}
 
-		$terms = get_terms( [ $taxonomy ] );
+		$terms = get_terms( $args );
 		wp_cache_set( $cache_key, $terms );
 		if ( is_array( $terms ) ) {
 			return $terms;

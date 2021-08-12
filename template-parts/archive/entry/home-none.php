@@ -13,17 +13,17 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_display_archive_top_widget_area' => false,
-		'_display_description'             => false,
-		'_display_entry_header'            => false,
-		'_display_eyecatch'                => false,
+		'_display_entry_header'                  => false,
+		'_display_eyecatch'                      => false,
+		'_display_posts_page_bottom_widget_area' => false,
+		'_display_posts_page_top_widget_area'    => false,
 	]
 );
 ?>
 
 <?php
-if ( $args['_display_archive_top_widget_area'] ) {
-	Helper::get_template_part( 'template-parts/widget-area/archive-top' );
+if ( $args['_display_posts_page_top_widget_area'] ) {
+	Helper::get_template_part( 'template-parts/widget-area/posts-page-top' );
 }
 ?>
 
@@ -41,12 +41,12 @@ if ( $args['_display_archive_top_widget_area'] ) {
 		}
 		?>
 
-		<?php if ( $args['_display_description'] ) : ?>
-			<div class="p-term-description p-entry-content">
-				<?php echo wp_kses_post( term_description() ); ?>
-			</div>
-		<?php endif; ?>
-
 		<?php Helper::get_template_part( 'template-parts/archive/entry/content/none' ); ?>
 	</div>
 </div>
+
+<?php
+if ( $args['_display_posts_page_bottom_widget_area'] ) {
+	Helper::get_template_part( 'template-parts/widget-area/posts-page-bottom' );
+}
+

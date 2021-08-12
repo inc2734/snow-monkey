@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.3.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -21,7 +21,12 @@ if ( class_exists( '\woocommerce' ) ) {
 }
 
 foreach ( $taxonomies as $_taxonomy ) {
-	$terms = Helper::get_terms( $_taxonomy );
+	$terms = Helper::get_terms(
+		[
+			'taxonomy'   => $_taxonomy,
+			'hide_empty' => false,
+		]
+	);
 
 	foreach ( $terms as $_term ) {
 		Framework::section(
