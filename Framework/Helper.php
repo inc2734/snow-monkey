@@ -361,7 +361,7 @@ class Helper {
 
 		$taxonomies = $args['taxonomy'];
 
-		$cache_key = 'snow-monkey-all-' . md5( json_encode( $taxonomies ) );
+		$cache_key = 'snow-monkey-all-' . crc32( json_encode( $taxonomies ) );
 		$terms     = wp_cache_get( $cache_key );
 		if ( is_array( $terms ) ) {
 			return $terms;
