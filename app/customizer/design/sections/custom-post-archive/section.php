@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 15.3.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -37,7 +37,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					}
 				}
 
-				return 'archive' === Controller::get_view()
+				return in_array( Controller::get_view(), [ 'archive', 'none' ], true )
 						&& (
 							is_post_type_archive( $custom_post_type )
 							|| (
