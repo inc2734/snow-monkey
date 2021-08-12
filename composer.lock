@@ -203,16 +203,16 @@
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "3.1.6",
+            "version": "3.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "a7bb2b8a11a9444ad8dcb159f3c82b54932d2a4c"
+                "reference": "3c3f24b681164e669aece87428c224adfae2327d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/a7bb2b8a11a9444ad8dcb159f3c82b54932d2a4c",
-                "reference": "a7bb2b8a11a9444ad8dcb159f3c82b54932d2a4c",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/3c3f24b681164e669aece87428c224adfae2327d",
+                "reference": "3c3f24b681164e669aece87428c224adfae2327d",
                 "shasum": ""
             },
             "require": {
@@ -245,9 +245,9 @@
             "description": "A library for WordPress breadcrumbs.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-breadcrumbs/issues",
-                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.6"
+                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.7"
             },
-            "time": "2020-12-02T16:19:41+00:00"
+            "time": "2021-08-12T10:01:25+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
