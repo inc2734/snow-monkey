@@ -18,7 +18,7 @@ Framework::section(
 		'title'           => __( 'Posts page settings', 'snow-monkey' ),
 		'priority'        => 130,
 		'active_callback' => function() {
-			return is_home() && ! is_front_page();
+			return is_home();
 		},
 	]
 );
