@@ -10,3 +10,7 @@
 .smb-btn-wrapper.is-style-text .smb-btn {
   color: var-color-accent();
 }
+
+.u-aligncenter-wrapper > .smb-btn-wrapper {
+  display: table;
+}
