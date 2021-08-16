@@ -6,7 +6,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.1
+ * @version 15.3.2
  */
 
 use Framework\Controller\Controller;
@@ -20,5 +20,5 @@ if ( is_front_page() ) {
 	$content_view = get_theme_mod( $_post_type . '-view' );
 	$content_view = $content_view ? $content_view : $_post_type;
 
-	Controller::render( 'full', $content_view );
+	Controller::render( 'content', $content_view );
 }

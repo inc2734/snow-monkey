@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 15.3.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -29,7 +29,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			),
 			'priority'        => 130,
 			'active_callback' => function() use ( $custom_post_type ) {
-				return 'content' === Controller::get_view()
+				return in_array( Controller::get_view(), [ 'content', 'full' ], true )
 						&& is_singular( $custom_post_type );
 			},
 		]

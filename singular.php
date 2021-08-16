@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.1
+ * @version 15.3.2
  */
 
 use Framework\Helper;
@@ -14,12 +14,12 @@ $_post_type = get_post_type();
 $layout = get_theme_mod( $_post_type . '-layout' );
 $layout = $layout ? $layout : get_theme_mod( 'post-layout' );
 
-if ( Helper::locate_template( 'page-templates/' . $layout . '.php' ) ) {
-	Helper::get_template_part( 'page-templates/' . $layout );
-} else {
-	$content_view = get_theme_mod( $_post_type . '-view' );
-	$content_view = $content_view ? $content_view : $_post_type;
+$is_blank = false !== strpos( $layout, 'blank' );
+$slug     = $is_blank ? 'full' : 'content';
 
-	Controller::layout( $layout );
-	Controller::render( 'content', $content_view );
-}
+$content_view = get_theme_mod( $_post_type . '-view' );
+$content_view = $content_view ? $content_view : $_post_type;
+$slug         = in_array( $content_view, [ 'post', 'page' ], true ) ? 'content' : $slug;
+
+Controller::layout( $layout );
+Controller::render( $slug, $content_view );
