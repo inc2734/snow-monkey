@@ -6,7 +6,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 15.3.1
  */
 
 use Framework\Controller\Controller;
@@ -15,5 +15,10 @@ Controller::layout( 'one-column-slim' );
 if ( is_front_page() ) {
 	Controller::render( 'front-page' );
 } else {
-	Controller::render( 'content', get_post_type() );
+	$_post_type = get_post_type();
+
+	$content_view = get_theme_mod( $_post_type . '-view' );
+	$content_view = $content_view ? $content_view : $_post_type;
+
+	Controller::render( 'content', $content_view );
 }
