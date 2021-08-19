@@ -122,11 +122,15 @@ add_filter(
 			}
 		}
 
-		return str_replace(
+		$tag = str_replace(
 			' src',
 			' data-ad-client="' . esc_attr( $ad_client ) . '" crossorigin="anonymous" src',
 			$tag
 		);
+
+		$tag = preg_replace( '|src=\'([^\']+)\'|ms', 'src=\'$1?client=' . esc_attr( $ad_client ) . '\'', $tag );
+
+		return $tag;
 	},
 	10,
 	2
