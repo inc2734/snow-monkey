@@ -6,7 +6,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.2
+ * @version 15.3.5
  */
 
 use Framework\Controller\Controller;
@@ -14,6 +14,12 @@ use Framework\Controller\Controller;
 Controller::layout( 'one-column-full' );
 if ( is_front_page() ) {
 	Controller::render( 'front-page' );
+} elseif ( is_home() ) {
+	if ( have_posts() ) {
+		Controller::render( 'home' );
+	} else {
+		Controller::render( 'home-none' );
+	}
 } else {
 	$_post_type = get_post_type();
 
