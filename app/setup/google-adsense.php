@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.2
+ * @version 15.3.5
  */
 
 use Framework\Helper;
@@ -102,12 +102,31 @@ add_filter(
 			return $tag;
 		}
 
-		$google_auto_ads = get_option( 'mwt-google-auto-ads' );
-		if ( ! $google_auto_ads ) {
-			return $tag;
+		$ad_client = get_option( 'mwt-google-auto-ads' );
+		if ( ! $ad_client ) {
+			foreach (
+				[
+					get_option( 'mwt-google-adsense' ),
+					get_option( 'mwt-google-infeed-ads' ),
+					get_option( 'mwt-google-matched-content' ),
+				] as $code
+			) {
+				if ( preg_match( '|data-ad-client="([^\"]*?)"|ms', $code, $match ) ) {
+					$ad_client = $match[1];
+					break;
+				}
+			}
+
+			if ( ! $ad_client ) {
+				return $tag;
+			}
 		}
 
-		return str_replace( ' src', ' data-ad-client="' . esc_attr( $google_auto_ads ) . '" src', $tag );
+		return str_replace(
+			' src',
+			' data-ad-client="' . esc_attr( $ad_client ) . '" crossorigin="anonymous" src',
+			$tag
+		);
 	},
 	10,
 	2
