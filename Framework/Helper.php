@@ -3,17 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 15.4.0
  */
 
 namespace Framework;
 
-use FilesystemIterator;
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
 use Inc2734\WP_Helper;
 use Inc2734\WP_Breadcrumbs;
 use Inc2734\WP_View_Controller;
+use Framework\Model\Setup_Loader;
 
 class Helper {
 
@@ -64,17 +62,6 @@ class Helper {
 	}
 
 	/**
-	 * Return loading method.
-	 *
-	 * @param string $method Loading method.
-	 * @param string $path   Target directory.
-	 * @return string
-	 */
-	protected static function _get_loading_method( $method, $path ) {
-		return apply_filters( 'snow_monkey_loading_method', $method, $path );
-	}
-
-	/**
 	 * Load files.
 	 *
 	 * @param string  $method             Loading method.
@@ -83,60 +70,8 @@ class Helper {
 	 * @return void
 	 */
 	public static function load_files( $method, $directory, $exclude_underscore = false ) {
-		$template_directory   = realpath( get_template_directory() );
-		$stylesheet_directory = realpath( get_stylesheet_directory() );
-		$directory            = realpath( $directory );
-
-		if ( -1 !== strpos( $directory, $template_directory ) ) {
-			$directory_slug = ltrim( str_replace( $template_directory, '', $directory ), DIRECTORY_SEPARATOR );
-			$save_dir       = $template_directory . '/assets/load-files-target';
-			$bundle_file    = $save_dir . DIRECTORY_SEPARATOR . sha1( $directory_slug ) . '.php';
-
-			if ( file_exists( $bundle_file ) ) {
-				$files = include( $bundle_file );
-			}
-		}
-
-		switch ( Helper::_get_loading_method( $method, $directory ) ) {
-			case 'get_template_parts':
-				if ( ! empty( $files ) && is_array( $files ) ) {
-					$search   = [];
-					$search[] = realpath( $template_directory );
-					$search[] = '.php';
-					if ( is_child_theme() ) {
-						$search[] = realpath( $stylesheet_directory );
-					}
-					$files = array_map(
-						function( $filepath ) use ( $search ) {
-							return ltrim( str_replace( $search, '', realpath( $filepath ) ), '/\\' );
-						},
-						$files
-					);
-				}
-				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
-				Helper::get_template_parts( $directory_or_files, $exclude_underscore );
-				break;
-			case 'load_theme_files':
-				if ( ! empty( $files ) && is_array( $files ) ) {
-					$search   = [];
-					$search[] = $template_directory;
-					if ( is_child_theme() ) {
-						$search[] = $stylesheet_directory;
-					}
-					$files = array_map(
-						function( $filepath ) use ( $search ) {
-							return str_replace( $search, '', realpath( $filepath ) );
-						},
-						$files
-					);
-				}
-				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
-				Helper::load_theme_files( $directory_or_files, $exclude_underscore );
-				break;
-			default:
-				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
-				Helper::include_files( $directory_or_files, $exclude_underscore );
-		}
+		$setup_loader = new Setup_Loader();
+		$setup_loader->load( $method, $directory, $exclude_underscore );
 	}
 
 	/**

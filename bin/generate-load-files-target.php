@@ -76,7 +76,7 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 	if ( ! file_exists( $bundle_file ) || ! file_get_contents( $bundle_file ) ) {
 		throw new Exception( 'generate-load-files-target: Failed to write. ' . print_r( stat( $bundle_file ), true ) );
 	}
-	error_log( 'Wrote ' . $bundle_file );
+	error_log( 'Wrote ' . $bundle_file . PHP_EOL );
 }
 
 generate_load_files_target( 'app/setup', true );

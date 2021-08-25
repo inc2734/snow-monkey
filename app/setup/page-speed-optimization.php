@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.4.0
  *
  * This procceses are beta.
  */
@@ -113,8 +113,9 @@ $cache_header       = get_theme_mod( 'cache-header' );
 $cache_footer       = get_theme_mod( 'cache-footer' );
 $cache_nav_menus    = get_theme_mod( 'cache-nav-menus' );
 $cache_widget_areas = get_theme_mod( 'cache-widget-areas' );
+$cache_setup_files  = 'concat' === get_theme_mod( 'setup-files-loading-method' );
 
-if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas ) {
+if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas || $cache_setup_files ) {
 	$template_cache = new Template_Cache();
 	$remove_caches  = filter_input( INPUT_GET, 'sm-remove-caches' );
 
@@ -198,18 +199,22 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas )
 				) {
 					if ( $cache_header && false !== strpos( $slug, 'templates/layout/header' ) ) {
 						$template_cache->save( 'header', $html, $slug, $name, $vars );
+						$template_cache->get( 'header', $html, $slug, $name, $vars );
 					}
 
 					if ( $cache_footer && false !== strpos( $slug, 'templates/layout/footer' ) ) {
 						$template_cache->save( 'footer', $html, $slug, $name, $vars );
+						$template_cache->get( 'footer', $html, $slug, $name, $vars );
 					}
 
 					if ( $cache_nav_menus && false !== strpos( $slug, 'template-parts/nav' ) ) {
 						$template_cache->save( 'nav', $html, $slug, $name, $vars );
+						$template_cache->get( 'nav', $html, $slug, $name, $vars );
 					}
 
 					if ( $cache_widget_areas && false !== strpos( $slug, 'template-parts/widget-area' ) ) {
 						$template_cache->save( 'widget-area', $html, $slug, $name, $vars );
+						$template_cache->get( 'widget-area', $html, $slug, $name, $vars );
 					}
 
 					return $html;
@@ -220,3 +225,19 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas )
 		}
 	}
 }
+
+/**
+ * Change setup files loading method.
+ */
+add_filter(
+	'snow_monkey_loading_method',
+	function( $type, $path, $directory_slug ) {
+		$setup_files_loading_method = get_theme_mod( 'setup-files-loading-method' );
+		if ( 'concat' === $setup_files_loading_method && 'app/widget' === $directory_slug ) {
+			return $type;
+		}
+		return $setup_files_loading_method;
+	},
+	10,
+	3
+);

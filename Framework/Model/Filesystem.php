@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 15.4.0
  */
 
 namespace Framework\Model;
@@ -64,9 +64,13 @@ class Filesystem {
 	 * Read the contents of $filepath.
 	 *
 	 * @param string $filepath The file path.
-	 * @return string
+	 * @return string|false
 	 */
 	public static function get_contents( $filepath ) {
+		if ( ! file_exists( $filepath ) ) {
+			return false;
+		}
+
 		$filesystem = static::start();
 		if ( $filesystem ) {
 			$contents = $filesystem->get_contents( $filepath );
@@ -80,14 +84,23 @@ class Filesystem {
 	 *
 	 * @param string $filepath The file path.
 	 * @param string $contents Writing Content.
-	 * @return void
+	 * @return boolean
+	 * @throws \RuntimeException If the file fails to write.
 	 */
 	public static function put_contents( $filepath, $contents ) {
+		$result = false;
+
 		$filesystem = static::start();
 		if ( $filesystem ) {
-			$filesystem->put_contents( $filepath, $contents );
+			$result = $filesystem->put_contents( $filepath, $contents );
 		}
 		static::end();
+
+		if ( ! $result ) {
+			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to write to %1$s.', $filepath ) );
+		}
+
+		return $result;
 	}
 
 	/**
@@ -95,14 +108,46 @@ class Filesystem {
 	 *
 	 * @param string $filepath Path of the directory to be deleted.
 	 * @return boolean
+	 * @throws \RuntimeException If the file deletion fails.
 	 */
 	public static function rmdir( $filepath ) {
-		$return     = false;
+		$result = false;
+
 		$filesystem = static::start();
 		if ( $filesystem ) {
-			$return = $filesystem->rmdir( $filepath, true );
+			$result = $filesystem->rmdir( $filepath, true );
 		}
 		static::end();
-		return $return;
+
+		if ( ! $result ) {
+			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to remove to %1$s.', $filepath ) );
+		}
+
+		return $result;
+	}
+
+	/**
+	 * Recursive directory creation based on full path.
+	 *
+	 * @param string $target Full path to attempt to create.
+	 * @return boolean Whether the path was created. True if path already exists.
+	 * @throws \RuntimeException If the creation of the directory fails.
+	 */
+	public static function mkdir( $target ) {
+		if ( is_writable( $target ) ) {
+			return true;
+		}
+
+		$result = false;
+
+		if ( ! file_exists( $target ) && is_writable( dirname( $target ) ) ) {
+			$result = wp_mkdir_p( $target );
+		}
+
+		if ( ! $result ) {
+			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to mkdir to %1$s.', $target ) );
+		}
+
+		return $result;
 	}
 }

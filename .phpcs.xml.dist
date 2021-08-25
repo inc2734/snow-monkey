@@ -45,5 +45,6 @@
   <exclude-pattern>*/tests/*</exclude-pattern>
   <exclude-pattern>*/languages/*</exclude-pattern>
   <exclude-pattern>*/assets/*</exclude-pattern>
+  <exclude-pattern>*/cache/*</exclude-pattern>
   <exclude-pattern>*/woocommerce/*</exclude-pattern>
 </ruleset>

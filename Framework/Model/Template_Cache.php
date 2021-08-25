@@ -3,13 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.0
+ * @version 15.4.0
  */
 
 namespace Framework\Model;
 
 use Framework\Helper;
 use Framework\Model\Filesystem;
+use Framework\Model\Cache;
 
 class Template_Cache {
 
@@ -31,15 +32,9 @@ class Template_Cache {
 	 * Constructor.
 	 */
 	public function __construct() {
-		if ( ! is_writable( get_template_directory() ) ) {
+		$this->directory = Cache::get_base_directory();
+		if ( ! $this->directory ) {
 			return;
-		}
-
-		$basedir         = apply_filters( 'snow_monkey_template_cache_directory', get_template_directory() );
-		$this->directory = path_join( $basedir, 'cache' );
-
-		if ( ! file_exists( $this->directory ) ) {
-			wp_mkdir_p( $this->directory );
 		}
 
 		add_action( 'customize_save_after', [ $this, 'remove' ] );
@@ -89,26 +84,7 @@ class Template_Cache {
 	 * @return string|null
 	 */
 	public function get( $sub_directory, $slug, $name, $vars ) {
-		$directory = path_join( $this->directory, $sub_directory );
-		$filepath  = trailingslashit( $directory ) . $this->_get_cache_filename( $slug, $name, $vars );
-
-		if ( ! file_exists( $filepath ) ) {
-			return null;
-		}
-
-		$cache = Filesystem::get_contents( $filepath );
-		if ( false === $cache ) {
-			return null;
-		}
-
-		return sprintf(
-			'<!-- Cached: [slug] => %2$s [name] => %3$s -->
-			%1$s
-			<!-- /Cached: [slug] => %2$s [name] => %3$s -->',
-			$cache,
-			esc_html( $slug ),
-			esc_html( $name )
-		);
+		return Cache::get( $sub_directory, $slug, $name, $vars );
 	}
 
 	/**
@@ -119,37 +95,10 @@ class Template_Cache {
 	 * @param string $slug The template slug.
 	 * @param string $name The template name.
 	 * @param array  $vars The template $args.
-	 * @return string|null
+	 * @return boolean
 	 */
 	public function save( $sub_directory, $html, $slug, $name, $vars ) {
-		$directory = path_join( $this->directory, $sub_directory );
-		$filepath  = trailingslashit( $directory ) . $this->_get_cache_filename( $slug, $name, $vars );
-
-		if ( file_exists( $filepath ) ) {
-			return;
-		}
-
-		if ( is_writable( $this->directory ) ) {
-			if ( ! file_exists( $directory ) ) {
-				wp_mkdir_p( $directory );
-			}
-
-			if ( is_writable( $directory ) ) {
-				Filesystem::put_contents( $filepath, $html );
-			}
-		}
-	}
-
-	/**
-	 * Return cache filename.
-	 *
-	 * @param string $slug The template slug.
-	 * @param string $name The template name.
-	 * @param array  $vars The template $args.
-	 * @return string
-	 */
-	protected function _get_cache_filename( $slug, $name, $vars ) {
-		return sha1( $slug . '-' . $name . '-' . json_encode( $vars ) ) . '.html';
+		return Cache::save( $sub_directory, $html, $slug, $name, $vars );
 	}
 
 	/**
