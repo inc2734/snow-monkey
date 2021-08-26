@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.1
+ * @version 15.4.2
  */
 
 use Framework\Helper;
@@ -45,7 +45,7 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 			$_terms = [];
 			if ( $args['_display_item_terms'] ) {
 				$_terms = Helper::get_the_public_terms( get_the_ID() );
-				if ( $args['_posts_query']->is_tax ) {
+				if ( $args['_posts_query']->is_tax() || $args['_posts_query']->is_category() || $args['_posts_query']->is_tag() ) {
 					$tax_query = $args['_posts_query']->get( 'tax_query' );
 					$term      = $tax_query
 						? get_term( $tax_query[0]['terms'], $tax_query[0]['taxonomy'] )
