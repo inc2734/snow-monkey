@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.4.1
  */
 
 use Framework\Helper;
@@ -42,7 +42,27 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 		<?php $args['_posts_query']->the_post(); ?>
 		<li class="c-entries__item">
 			<?php
-			$_terms = $args['_display_item_terms'] ? Helper::get_the_public_terms( get_the_ID() ) : [];
+			$_terms = [];
+			if ( $args['_display_item_terms'] ) {
+				$_terms = Helper::get_the_public_terms( get_the_ID() );
+				if ( $args['_posts_query']->is_tax ) {
+					$tax_query = $args['_posts_query']->get( 'tax_query' );
+					$term      = $tax_query
+						? get_term( $tax_query[0]['terms'], $tax_query[0]['taxonomy'] )
+						: $args['_posts_query']->get_queried_object();
+
+					$is_term             = ! is_wp_error( $term ) && ! is_null( $term );
+					$is_the_public_therm = false;
+					foreach ( $_terms as $_term ) {
+						if ( $term->term_taxonomy_id === $_term->term_taxonomy_id ) {
+							$is_the_public_therm = true;
+							break;
+						}
+					}
+
+					$_terms = $is_term && $is_the_public_therm ? [ $term ] : $_terms;
+				}
+			}
 
 			Helper::get_template_part(
 				'template-parts/loop/entry-summary',
