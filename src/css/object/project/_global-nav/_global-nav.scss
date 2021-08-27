@@ -4,6 +4,20 @@
   }
 
   .#{ $_prefix }c-navbar {
+    &[data-popup-mode="click"] {
+      .#{ $_prefix }c-navbar__item {
+        &[aria-haspopup="true"] {
+          &::before {
+            display: none;
+          }
+        }
+      }
+
+      .#{ $_prefix }c-navbar__subitem:first-child > a::before {
+        display: none;
+      }
+    }
+
     &__item {
       > a {
         flex-direction: column;
@@ -97,23 +111,28 @@
         }
       }
 
-      .#{ $_prefix }c-navbar__subitem:first-child > a:before {
+      .#{ $_prefix }c-navbar__subitem:first-child > a::before {
         content: '';
         @include _position(absolute, -20px, -20px, -20px, -20px);
       }
     }
 
     .#{ $_prefix }c-navbar__toggle {
-      @include _transition(transform);
       z-index: 2; // vs .c-navbar__subitem > a::before
     }
 
     .#{ $_prefix }c-navbar__item {
       .#{ $_prefix }c-navbar__toggle {
-        transform: rotate(90deg);
+        > .#{ $_prefix }c-ic-angle-right {
+          @include _transition(transform);
+          transform-origin: calc(50% + .1em) 50%;
+          transform: translateY(0) rotate(90deg);
+        }
 
         &[aria-expanded="true"] {
-          transform: rotate(-90deg);
+          > .#{ $_prefix }c-ic-angle-right {
+            transform: translateY(0) rotate(-90deg);
+          }
         }
       }
     }
@@ -122,15 +141,20 @@
       .#{ $_prefix }c-navbar__toggle {
         color: $_color-white; // For IE11
         color: _var-color-white();
-        transform: rotate(0);
 
-        .#{ $_prefix }c-ic-angle-right::before {
-          border-color: $_color-white; // For IE11
-          border-color: _var-color-white();
+        > .#{ $_prefix }c-ic-angle-right {
+          transform: rotate(0);
+
+          &::before {
+            border-color: $_color-white; // For IE11
+            border-color: _var-color-white();
+          }
         }
 
         &[aria-expanded="true"] {
-          transform: rotate(180deg);
+          > .#{ $_prefix }c-ic-angle-right {
+            transform: rotate(180deg);
+          }
         }
       }
     }
