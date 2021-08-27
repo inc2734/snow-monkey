@@ -57,7 +57,7 @@ add_action(
 					<?php
 					echo sprintf(
 						// translators: %1$s: a start tag, %2$s: a end tag
-						esc_html(
+						esc_html__(
 							'If you are using Snow Monkey and have any questions, try searching in %1$sthe support forum%2$s. If the search does not help, please start a new topic.',
 							'snow-monkey'
 						),
@@ -70,7 +70,7 @@ add_action(
 					<?php
 					echo sprintf(
 						// translators: %1$s: a start tag, %2$s: a end tag
-						esc_html(
+						esc_html__(
 							'You must have a %1$sSnow Monkey subscription%2$s to start a topic.',
 							'snow-monkey'
 						),
