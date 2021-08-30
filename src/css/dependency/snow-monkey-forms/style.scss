@@ -8,3 +8,15 @@
 .smf-item__controls {
   @extend %entry-content;
 }
+
+.smf-action .smf-button-control__control--accent-color {
+  background-color:  var-color-accent();
+  background-image: none;
+  color: _var-color-white();
+  border: none;
+  @include _transition(filter);
+
+  @include _hover(lg) {
+    filter: brightness(90%);
+  }
+}

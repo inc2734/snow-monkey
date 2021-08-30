@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.8.0
+ * @version 15.6.0
  */
 
 use Framework\Helper;
@@ -14,8 +14,6 @@ if ( ! defined( 'SNOW_MONKEY_FORMS_PATH' ) ) {
 
 /**
  * Enqueue Snow Monkey Blocks style
- *
- * @return void
  */
 add_action(
 	'wp_enqueue_scripts',
@@ -87,4 +85,27 @@ add_action(
 			}
 		);
 	}
+);
+
+/**
+ * Use accent colors for buttons.
+ */
+add_filter(
+	'render_block',
+	function( $block_content, $block ) {
+		if (
+			'snow-monkey-forms/snow-monkey-form' !== $block['blockName']
+			|| ! get_theme_mod( 'snow-monkey-forms-btn' )
+		) {
+			return $block_content;
+		}
+
+		return str_replace(
+			'smf-button-control__control',
+			'smf-button-control__control smf-button-control__control--accent-color',
+			$block_content
+		);
+	},
+	10,
+	2
 );
