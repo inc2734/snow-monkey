@@ -44,6 +44,7 @@ document.addEventListener(
     const hideHeaderWithLocationHash = () => {
       const pageYOffset = Math.floor(window.pageYOffset);
 
+      const dropNav = getDropNavWrapper();
       const headerCssPosition = getStyle(header, 'position');
       const isNormalHeaderPosition = 'absolute' !== headerCssPosition
                                   && 'sticky' !== headerCssPosition
@@ -62,12 +63,7 @@ document.addEventListener(
       }
 
       window.removeEventListener('scroll', hideHeaderWithLocationHash, false);
-      setTimeout(
-        () => {
-          window.addEventListener('scroll', showHeaderWithScroll, false);
-        },
-        500
-      );
+      window.addEventListener('scroll', showHeaderWithScroll, false);
     };
     window.addEventListener('scroll', hideHeaderWithLocationHash, false);
   },
