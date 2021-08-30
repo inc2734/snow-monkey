@@ -61,6 +61,20 @@ export function getDropNavWrapper() {
 }
 
 /**
+ * Return .p-drop-nav
+ *
+ * @return object|null
+ */
+export function getDropNav() {
+  const dropNav = document.getElementsByClassName('p-drop-nav');
+  if (1 > dropNav.length) {
+    return;
+  }
+
+  return dropNav[0];
+}
+
+/**
  * Return .l-contents
  *
  * @return object|null
