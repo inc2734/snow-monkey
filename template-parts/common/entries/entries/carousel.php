@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.2
+ * @version 15.6.1
  */
 
 use Framework\Helper;
@@ -43,7 +43,10 @@ if ( ! $args['_posts_query'] ) {
 						<?php
 						$_terms = [];
 						if ( $args['_display_item_terms'] ) {
-							$_terms = Helper::get_the_public_terms( get_the_ID() );
+							$_terms              = Helper::get_the_public_terms( get_the_ID() );
+							$_hierarchical_terms = array_filter( $_terms, function( $_term ) {
+								return get_taxonomy( $_term->taxonomy )->hierarchical;
+							} );
 							if ( $args['_posts_query']->is_tax() || $args['_posts_query']->is_category() || $args['_posts_query']->is_tag() ) {
 								$tax_query = $args['_posts_query']->get( 'tax_query' );
 								$term      = $tax_query
@@ -52,7 +55,7 @@ if ( ! $args['_posts_query'] ) {
 
 								$is_term             = ! is_wp_error( $term ) && ! is_null( $term );
 								$is_the_public_therm = false;
-								foreach ( $_terms as $_term ) {
+								foreach ( $_hierarchical_terms as $_term ) {
 									if ( $term->term_taxonomy_id === $_term->term_taxonomy_id ) {
 										$is_the_public_therm = true;
 										break;
