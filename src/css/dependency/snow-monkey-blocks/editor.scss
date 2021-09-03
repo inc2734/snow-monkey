@@ -19,6 +19,7 @@
 @import 'section-side-heading/editor';
 @import 'section-with-image/editor';
 @import 'step/editor';
+@import 'tabs/editor';
 
 .c-row[data-columns]:not([data-columns="1"]) {
 	@include _media-max(sm) {

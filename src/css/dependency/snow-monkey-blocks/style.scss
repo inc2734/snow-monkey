@@ -19,6 +19,7 @@
 @import 'section-with-image/block';
 @import 'section/block';
 @import 'step/block';
+@import 'tabs/block';
 
 .c-row[data-columns]:not([data-columns="1"]) {
 	@include _media-max(sm) {
