@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 15.6.1
  *
  * This procceses are beta.
  */
@@ -113,7 +113,10 @@ $cache_header       = get_theme_mod( 'cache-header' );
 $cache_footer       = get_theme_mod( 'cache-footer' );
 $cache_nav_menus    = get_theme_mod( 'cache-nav-menus' );
 $cache_widget_areas = get_theme_mod( 'cache-widget-areas' );
-$cache_setup_files  = 'concat' === get_theme_mod( 'setup-files-loading-method' );
+
+$setup_files_loading_method = get_theme_mod( 'setup-files-loading-method' );
+$setup_files_loading_method = false === $setup_files_loading_method ? 'get_template_parts' : $setup_files_loading_method;
+$cache_setup_files          = 'concat' === $setup_files_loading_method;
 
 if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas || $cache_setup_files ) {
 	$template_cache = new Template_Cache();
@@ -233,6 +236,7 @@ add_filter(
 	'snow_monkey_loading_method',
 	function( $type, $path, $directory_slug ) {
 		$setup_files_loading_method = get_theme_mod( 'setup-files-loading-method' );
+		$setup_files_loading_method = false === $setup_files_loading_method ? 'get_template_parts' : $setup_files_loading_method;
 		if ( 'concat' === $setup_files_loading_method && 'app/widget' === $directory_slug ) {
 			return $type;
 		}
