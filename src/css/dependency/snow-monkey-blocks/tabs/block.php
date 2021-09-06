@@ -12,6 +12,7 @@ if ( ! Helper::is_ie() ) {
 	return;
 }
 
+$styles       = [];
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
 	$styles[] = [
