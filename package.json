@@ -10,7 +10,7 @@
     "@inc2734/add-custom-event": "^0.5.0",
     "@inc2734/dispatch-custom-resize-event": "^0.4.0",
     "@inc2734/for-each-html-nodes": "^0.4.0",
-    "@inc2734/smooth-scroll": "^1.0.6",
+    "@inc2734/smooth-scroll": "^1.0.7",
     "@inc2734/spider": "0.0.21",
     "@wordpress/browserslist-config": "^4.1.0",
     "@wordpress/env": "^4.1.0",
