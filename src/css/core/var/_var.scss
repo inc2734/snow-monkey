@@ -53,3 +53,7 @@
 @function var-color-drop-nav-text() {
   @return var(--drop-nav-text-color, $_color-text);
 }
+
+@function var-font-family() {
+  @return var(--font-family);
+}

@@ -1,3 +1,9 @@
+.smb-tabs {
+  &__tab {
+    font-family: var-font-family();
+  }
+}
+
 .smb-tabs.is-style-line {
   > .smb-tabs__tabs {
     .smb-tabs__tab::after {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 15.6.2
  */
 
 namespace Framework;
@@ -543,5 +543,31 @@ class Helper {
 		}
 
 		return $number;
+	}
+
+	/**
+	 * Return font-family selected in the customizer.
+	 *
+	 * @return string
+	 */
+	public static function get_font_family() {
+		$base_font   = get_theme_mod( 'base-font' );
+		$font_family = [];
+
+		if ( 'sans-serif' === $base_font ) {
+			$font_family = [ 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"ヒラギノ角ゴ W3"', 'sans-serif' ];
+		} elseif ( 'serif' === $base_font ) {
+			$font_family = [ 'serif' ];
+		} elseif ( 'noto-sans-jp' === $base_font ) {
+			$font_family = [ '"Noto Sans JP"', 'sans-serif' ];
+		} elseif ( 'noto-serif-jp' === $base_font ) {
+			$font_family = [ '"Noto Serif JP"', 'serif' ];
+		} elseif ( 'm-plus-1p' === $base_font ) {
+			$font_family = [ '"M PLUS 1p"', 'sans-serif' ];
+		} elseif ( 'm-plus-rounded-1c' === $base_font ) {
+			$font_family = [ '"M PLUS Rounded 1c"', 'sans-serif' ];
+		}
+
+		return implode( ',', $font_family );
 	}
 }

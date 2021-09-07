@@ -2,5 +2,6 @@
   overflow-wrap: break-word;
   background-color: #fff; // for IE11
   background-color: _var-background-color();
+  font-family: var-font-family();
   font-variant-ligatures: none;
 }
