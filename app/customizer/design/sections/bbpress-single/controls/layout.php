@@ -15,8 +15,15 @@ Framework::control(
 	[
 		'label'    => __( 'bbPress single page layout', 'snow-monkey' ),
 		'priority' => 100,
-		'default'  => 'right-sidebar',
-		'choices'  => is_customize_preview() ? Helper::get_wrapper_templates() : [],
+		'default'  => '',
+		'choices'  => is_customize_preview()
+			? array_merge(
+				[
+					'' => __( 'Same as the page layout', 'snow-monkey' ),
+				],
+				Helper::get_wrapper_templates()
+			)
+			: [],
 	]
 );
 

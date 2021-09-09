@@ -8,5 +8,9 @@
 
 use Framework\Controller\Controller;
 
-Controller::layout( get_theme_mod( 'bbpress-single-layout' ) );
+$layout = get_theme_mod( 'bbpress-single-layout' );
+$layout = $layout ? $layout : get_theme_mod( 'page-layout' );
+$layout = $layout ? $layout : get_theme_mod( 'post-layout' );
+
+Controller::layout( $layout );
 Controller::render( 'bbpress-single' );

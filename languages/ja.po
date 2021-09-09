@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-09-10 02:49+0900\n"
-"PO-Revision-Date: 2021-09-10 02:50+0900\n"
+"POT-Creation-Date: 2021-09-10 03:53+0900\n"
+"PO-Revision-Date: 2021-09-10 03:53+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -731,6 +731,11 @@ msgstr "アイキャッチ画像"
 #: app/customizer/design/sections/bbpress-archive-page/controls/layout.php:16
 msgid "bbPress archive page layout"
 msgstr "bbPress アーカイブページレイアウト"
+
+#: app/customizer/design/sections/bbpress-archive-page/controls/layout.php:22
+#: app/customizer/design/sections/bbpress-single/controls/layout.php:22
+msgid "Same as the page layout"
+msgstr "固定ページレイアウトと同じ"
 
 #: app/customizer/design/sections/bbpress-archive-page/section.php:19
 msgid "bbPress archive page settings"
