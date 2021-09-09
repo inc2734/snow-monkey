@@ -9,8 +9,8 @@
   @extend %entry-content;
 }
 
-.smf-action .smf-button-control__control--accent-color {
-  background-color:  var-color-accent();
+.snow-monkey-form--button-has-accent-color .smf-button-control__control {
+  background-color: var-color-accent();
   background-image: none;
   color: _var-color-white();
   border: none;

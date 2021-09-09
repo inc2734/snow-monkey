@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.6.0
+ * @version 15.6.4
  */
 
 use Framework\Helper;
@@ -101,8 +101,8 @@ add_filter(
 		}
 
 		return str_replace(
-			'smf-button-control__control',
-			'smf-button-control__control smf-button-control__control--accent-color',
+			'class="snow-monkey-form"',
+			'class="snow-monkey-form snow-monkey-form--button-has-accent-color"',
 			$block_content
 		);
 	},

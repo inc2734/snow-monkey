@@ -25,7 +25,7 @@ $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
 	$styles = [
 		[
-			'selectors'  => [ '.smf-action .smf-button-control__control--accent-color' ],
+			'selectors'  => [ '.snow-monkey-form--button-has-accent-color .smf-button-control__control' ],
 			'properties' => [ 'background-color: ' . $accent_color ],
 		],
 	];
