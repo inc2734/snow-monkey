@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 15.6.4
  */
 
 namespace Framework\Model;
@@ -139,13 +139,16 @@ class Setup_Loader {
 			$_data = preg_replace( '|^<\?php|', '', $_data );
 
 			preg_match_all( '|^use [^;]+;|m', $_data, $matches );
+			$uses = [];
 			if ( $matches[0] ) {
-				$uses = [];
 				foreach ( $matches[0] as $match ) {
 					$uses[] = $match;
 					$_data  = str_replace( $match, '', $_data );
 				}
-				$_data = implode( "\n", $uses ) . "\n\n" . "call_user_func( function() {\n" . $_data . "} );\n";
+			}
+			$_data = "call_user_func( function() {\n" . $_data . "} );\n";
+			if ( $uses ) {
+				$_data = implode( "\n", $uses ) . "\n\n" . $_data;
 			}
 
 			if ( preg_match( '|^(namespace [^;]+);|ms', $_data, $match ) ) {
