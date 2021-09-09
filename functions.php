@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 15.6.3
  */
 
 use Framework\Helper;
@@ -65,6 +65,24 @@ $updater_filepath = __DIR__ . '/app/constructor/updater.php';
 if ( file_exists( $updater_filepath ) ) {
 	include_once( $updater_filepath );
 }
+
+/**
+ * Change setup files loading method.
+ *
+ * @param string $type           Loading method type.
+ * @param string $path           Full path of the file.
+ * @param string $directory_slug Directory slug of the file.
+ * @return striing
+ */
+function snow_monkey_loading_method_callback( $type, $path, $directory_slug ) {
+	$setup_files_loading_method = get_theme_mod( 'setup-files-loading-method' );
+	$setup_files_loading_method = false === $setup_files_loading_method ? 'get_template_parts' : $setup_files_loading_method;
+	if ( 'concat' === $setup_files_loading_method && 'app/widget' === $directory_slug ) {
+		return $type;
+	}
+	return $setup_files_loading_method;
+};
+add_filter( 'snow_monkey_loading_method', 'snow_monkey_loading_method_callback', 10, 3 );
 
 /**
  * Loads theme setup files

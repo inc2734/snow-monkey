@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.6.1
+ * @version 15.6.4
  *
  * This procceses are beta.
  */
@@ -228,20 +228,3 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 		}
 	}
 }
-
-/**
- * Change setup files loading method.
- */
-add_filter(
-	'snow_monkey_loading_method',
-	function( $type, $path, $directory_slug ) {
-		$setup_files_loading_method = get_theme_mod( 'setup-files-loading-method' );
-		$setup_files_loading_method = false === $setup_files_loading_method ? 'get_template_parts' : $setup_files_loading_method;
-		if ( 'concat' === $setup_files_loading_method && 'app/widget' === $directory_slug ) {
-			return $type;
-		}
-		return $setup_files_loading_method;
-	},
-	10,
-	3
-);
