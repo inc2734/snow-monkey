@@ -14,13 +14,13 @@ unset( $eyecatch_position_choices['content-top'] );
 
 Framework::control(
 	'select',
-	'woocommerce-archive-eyecatch',
+	'bbpress-archive-eyecatch',
 	[
 		'label'       => __( 'Featured image position', 'snow-monkey' ),
 		'description' => sprintf(
-			/* translators: 1: WooCommerce product */
+			/* translators: 1: bbPress archive */
 			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
-			__( 'WooCommerce products', 'snow-monkey' )
+			__( 'bbPress archive', 'snow-monkey' )
 		),
 		'priority'    => 120,
 		'default'     => 'none',
@@ -33,6 +33,6 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = Framework::get_panel( 'design' );
-$section = Framework::get_section( 'design-woocommerce-archive-page' );
-$control = Framework::get_control( 'woocommerce-archive-eyecatch' );
+$section = Framework::get_section( 'design-bbpress-archive-page' );
+$control = Framework::get_control( 'bbpress-archive-eyecatch' );
 $control->join( $section )->join( $panel );

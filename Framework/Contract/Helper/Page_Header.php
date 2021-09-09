@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 15.7.0
  */
 
 namespace Framework\Contract\Helper;
@@ -49,6 +49,8 @@ trait Page_Header {
 				'WooCommerce_Single'  => class_exists( '\woocommerce' ) && is_product(),
 				'WooCommerce_Term'    => class_exists( '\woocommerce' ) && ( is_product_category() || is_product_tag() ),
 				'WooCommerce_Archive' => class_exists( '\woocommerce' ) && ( is_shop() || is_product_category() || is_product_tag() ),
+				'BbPress_Single'      => class_exists( '\bbPress' ) && \Framework\Helper::is_bbpress_single(),
+				'BbPress_Archive'     => class_exists( '\bbPress' ) && ( \Framework\Helper::is_bbpress_archive() || \Framework\Helper::is_bbpress_mypage() ),
 				'Singular'            => is_singular( array_merge( [ 'post' ], $custom_post_types ) ) || is_page() && ! is_front_page(),
 				'Term'                => is_category() || is_tag() || is_tax(),
 				'Archive'             => is_home() || ( is_archive() && ! is_category() && ! is_tag() && ! is_tax() ),

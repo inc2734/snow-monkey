@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.6.3
+ * @version 15.7.0
  */
 
 namespace Framework;
@@ -21,6 +21,7 @@ class Helper {
 	use Contract\Helper\Homepage_Thumbnail;
 	use Contract\Helper\Post_Type_Archive_Thumbnail;
 	use Contract\Helper\WooCommerce_Archive_Thumbnail;
+	use Contract\Helper\BbPress_Archive_Thumbnail;
 	use Contract\Helper\Deprecated;
 	use WP_View_Controller\App\Contract\Template_Tag;
 
@@ -569,5 +570,64 @@ class Helper {
 		}
 
 		return implode( ',', $font_family );
+	}
+
+	/**
+	 * bbPress is mypage or not.
+	 *
+	 * @return boolean
+	 */
+	public static function is_bbpress_mypage() {
+		if ( ! class_exists( '\bbPress' ) ) {
+			return false;
+		}
+
+		return bbp_is_single_view()
+			|| bbp_is_single_user_edit()
+			|| bbp_is_single_user()
+			|| bbp_is_user_home()
+			|| bbp_is_user_home_edit()
+			|| bbp_is_favorites()
+			|| bbp_is_subscriptions()
+			|| bbp_is_topics_created()
+			|| bbp_is_replies_created();
+	}
+
+	/**
+	 * bbPress is single or not.
+	 *
+	 * @return boolean
+	 */
+	public static function is_bbpress_single() {
+		if ( ! class_exists( '\bbPress' ) ) {
+			return false;
+		}
+
+		return bbp_is_single_topic()
+			|| bbp_is_single_reply()
+			|| bbp_is_topic_edit()
+			|| bbp_is_topic_merge()
+			|| bbp_is_topic_split()
+			|| bbp_is_reply_edit()
+			|| bbp_is_reply_move();
+	}
+
+	/**
+	 * bbPress is archive or not.
+	 *
+	 * @return boolean
+	 */
+	public static function is_bbpress_archive() {
+		if ( ! class_exists( '\bbPress' ) ) {
+			return false;
+		}
+
+		return bbp_is_topic_tag()
+			|| bbp_is_topic_tag_edit()
+			|| bbp_is_forum_archive()
+			|| bbp_is_topic_archive()
+			|| bbp_is_single_forum()
+			|| bbp_is_search()
+			|| bbp_is_search_results();
 	}
 }
