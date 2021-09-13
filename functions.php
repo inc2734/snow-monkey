@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.6.3
+ * @version 15.8.0
  */
 
 use Framework\Helper;
@@ -83,6 +83,21 @@ function snow_monkey_loading_method_callback( $type, $path, $directory_slug ) {
 	return $setup_files_loading_method;
 };
 add_filter( 'snow_monkey_loading_method', 'snow_monkey_loading_method_callback', 10, 3 );
+
+/**
+ * If return false, do not expand get_template_part().
+ * The various hooks that extend get_template_part added by this library will no longer be available.
+ *
+ * @return boolean
+ */
+add_filter(
+	'inc2734_wp_view_controller_expand_get_template_part',
+	function() {
+		// Since the default value by WP Customizer Framework is not reflected here, it should be written in plain text.
+		return get_theme_mod( 'expand-get-template-part', true );
+	},
+	9
+);
 
 /**
  * Loads theme setup files

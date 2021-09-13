@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.5
+ * @version 15.8.0
  */
 
 use Framework\Controller\Controller;
@@ -47,19 +47,6 @@ add_filter(
 );
 
 /**
- * If return true, output template debug log.
- *
- * @param boolean $debug True if logging.
- * @return boolean
- */
-add_filter(
-	'inc2734_wp_view_controller_debug',
-	function( $debug ) {
-		return apply_filters( 'snow_monkey_debug', $debug );
-	}
-);
-
-/**
  * Override inc2734_wp_view_controller_controller.
  *
  * @param string $template The path of the template to include.
@@ -71,6 +58,38 @@ add_filter(
 		return apply_filters( 'snow_monkey_controller', $template );
 	},
 	9
+);
+
+/**
+ * Override inc2734_wp_view_controller_get_template_part_args.
+ *
+ * @param array $args Array of template data.
+ *   @param string $slug The template slug.
+ *   @param string $name The template name.
+ *   @param array  $vars The template $args.
+ * @return array
+ */
+add_filter(
+	'inc2734_wp_view_controller_get_template_part_args',
+	function( $args ) {
+		$args = apply_filters( "snow_monkey_get_template_part_args_{$args['slug']}", $args );
+		$args = apply_filters( 'snow_monkey_get_template_part_args', $args );
+		return $args;
+	},
+	9
+);
+
+/**
+ * If return true, output template debug log.
+ *
+ * @param boolean $debug True if logging.
+ * @return boolean
+ */
+add_filter(
+	'inc2734_wp_view_controller_debug',
+	function( $debug ) {
+		return apply_filters( 'snow_monkey_debug', $debug );
+	}
 );
 
 /**
@@ -108,25 +127,6 @@ add_filter(
 	},
 	10,
 	4
-);
-
-/**
- * Override inc2734_wp_view_controller_get_template_part_args.
- *
- * @param array $args Array of template data.
- *   @param string $slug The template slug.
- *   @param string $name The template name.
- *   @param array  $vars The template $args.
- * @return array
- */
-add_filter(
-	'inc2734_wp_view_controller_get_template_part_args',
-	function( $args ) {
-		$args = apply_filters( "snow_monkey_get_template_part_args_{$args['slug']}", $args );
-		$args = apply_filters( 'snow_monkey_get_template_part_args', $args );
-		return $args;
-	},
-	9
 );
 
 /**
