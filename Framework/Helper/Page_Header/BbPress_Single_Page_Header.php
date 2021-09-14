@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 15.8.0
  */
 
 namespace Framework\Helper\Page_Header;
@@ -29,9 +29,13 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		return has_post_thumbnail( $wp_post )
-			? wp_get_attachment_image( get_post_thumbnail_id( $wp_post ), $size )
-			: static::_get_default_image( $size );
+		if ( has_post_thumbnail( $wp_post ) ) {
+			return wp_get_attachment_image( get_post_thumbnail_id( $wp_post ), $size );
+		} elseif ( Helper::has_bbpress_archive_thumbnail() ) {
+			return Helper::get_the_bbpress_archive_thumbnail( $size );
+		}
+
+		return static::_get_default_image( $size );
 	}
 
 	/**
@@ -50,9 +54,13 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		return has_post_thumbnail( $wp_post )
-			? wp_get_attachment_image_url( get_post_thumbnail_id( $wp_post ), $size )
-			: static::_get_default_image_url( $size );
+		if ( has_post_thumbnail( $wp_post ) ) {
+			return wp_get_attachment_image_url( get_post_thumbnail_id( $wp_post ), $size );
+		} elseif ( Helper::has_bbpress_archive_thumbnail() ) {
+			return Helper::get_the_bbpress_archive_thumbnail_url( $size );
+		}
+
+		return static::_get_default_image_url( $size );
 	}
 
 	/**

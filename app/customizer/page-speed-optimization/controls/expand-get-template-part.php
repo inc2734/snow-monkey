@@ -15,7 +15,7 @@ Framework::control(
 		'label'       => __( 'Extends get_template_part()', 'snow-monkey' ),
 		'description' => __( 'When disabled, customization by code may not be reflected. For details, please refer to the manual on the official website.', 'snow-monkey' ),
 		'default'     => true,
-		'priority'    => 250,
+		'priority'    => 240,
 	]
 );
 

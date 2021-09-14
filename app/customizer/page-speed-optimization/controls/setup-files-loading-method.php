@@ -15,7 +15,7 @@ Framework::control(
 		'label'       => __( 'Setup files loading method.', 'snow-monkey' ),
 		'description' => __( 'You can select the method of loading the setup files. Depending on the method you select, customization by code may not be reflected. For details, please refer to the manual on the official website.', 'snow-monkey' ),
 		'default'     => 'get_template_parts',
-		'priority'    => 240,
+		'priority'    => 250,
 		'choices'     => [
 			'get_template_parts' => __( 'get_template_parts (Default)', 'snow-monkey' ),
 			'load_theme_files'   => __( 'load_theme_files', 'snow-monkey' ),
