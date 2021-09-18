@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.0
+ * @version 15.8.1
  */
 
 namespace Framework\Helper\Page_Header;
@@ -96,7 +96,7 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		return get_theme_mod( 'woocommerce-single-page-header-align' );
+		return get_theme_mod( 'bbpress-single-page-header-align' );
 	}
 	/**
 	 * Return page header image caption.
