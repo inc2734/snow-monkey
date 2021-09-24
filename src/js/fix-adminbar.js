@@ -75,7 +75,7 @@ document.addEventListener(
       const adminbarOffsetBottom = Math.floor(adminbarOffsetTop + adminbarHeight);
       const isOverlap = targetOffsetTop >= adminbarOffsetTop && targetOffsetTop < adminbarOffsetBottom;
       if (isOverlap) {
-        window.scrollTo(0, pageYOffset - adminbarHeight);
+        window.scrollTo(0, window.pageYOffset - adminbarHeight);
       }
     };
     addEventListener('scroll', correctScrollPosition, false);

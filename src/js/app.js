@@ -30,10 +30,13 @@ document.addEventListener(
       return;
     }
 
-    const targetOffsetTop = Math.floor(getTargetOffsetTop());
-    const headerOffsetBottom = Math.floor(header.getBoundingClientRect().top + header.offsetHeight);
-    if (targetOffsetTop < headerOffsetBottom) {
-      return;
+    let targetOffsetTop = getTargetOffsetTop();
+    if (false !== targetOffsetTop) {
+      const targetOffsetTop = Math.floor(targetOffsetTop);
+      const headerOffsetBottom = Math.floor(header.getBoundingClientRect().top + header.offsetHeight);
+      if (targetOffsetTop < headerOffsetBottom) {
+        return;
+      }
     }
 
     const showHeaderWithScroll = () => {

@@ -269,17 +269,17 @@ export function isPassiveSupported() {
 /**
  * Return hash target offsetTop.
  *
- * @return int
+ * @return int|false
  */
 export function getTargetOffsetTop() {
   const hash = window.location.hash;
   if (! hash) {
-    return 0;
+    return false;
   }
 
   const target = document.querySelector(hash);
   if (! target) {
-    return 0;
+    return false;
   }
 
   return window.pageYOffset + target.getBoundingClientRect().top;
