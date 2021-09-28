@@ -72,7 +72,7 @@ if ( file_exists( $updater_filepath ) ) {
  * @param string $type           Loading method type.
  * @param string $path           Full path of the file.
  * @param string $directory_slug Directory slug of the file.
- * @return striing
+ * @return string
  */
 function snow_monkey_loading_method_callback( $type, $path, $directory_slug ) {
 	$setup_files_loading_method = get_theme_mod( 'setup-files-loading-method' );
