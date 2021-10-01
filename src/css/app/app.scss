@@ -1,0 +1,48 @@
+@charset 'utf-8';
+
+@import 'adminbar';
+
+/**
+ * Core
+ */
+@import 'core/core';
+
+/**
+ * Foundation
+ */
+@import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
+@import 'foundation/foundation';
+
+/**
+ * Layout
+ */
+@import 'layout/layout';
+
+/**
+ * Object - Component
+ */
+@import 'object/component/component';
+
+/**
+ * Object - Project
+ */
+@import 'object/project/project';
+
+/**
+ * Object - utility
+ */
+@import 'object/utility/utility';
+
+#page-start {
+  margin-bottom: -1px;
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+}
+
+#page-end {
+  margin-top: -1px;
+  height: 1px;
+  width: 1px;
+  visibility: hidden;
+}

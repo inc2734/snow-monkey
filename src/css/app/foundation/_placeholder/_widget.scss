@@ -1,0 +1,17 @@
+%widget-title {
+  @include widget-title();
+}
+
+%widget-title-theme {
+  @include widget-title-theme();
+}
+
+%widget-core-list-base {
+  ul {
+    @include widget-list-base();
+  }
+
+  a {
+    @include widget-link-base();
+  }
+}

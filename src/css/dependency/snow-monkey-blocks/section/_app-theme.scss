@@ -1,0 +1,9 @@
+.smb-section {
+  &__title {
+    @extend %section-title-theme;
+  }
+
+  &__body {
+    @extend %entry-content-theme;
+  }
+}

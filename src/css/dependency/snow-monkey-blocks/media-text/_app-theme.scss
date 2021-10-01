@@ -1,0 +1,5 @@
+.smb-media-text {
+  &__body {
+    @extend %entry-content-theme;
+  }
+}

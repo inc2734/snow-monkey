@@ -1,0 +1,193 @@
+@charset 'utf-8';
+
+@import '../app/core/core';
+@import '../app/foundation/_placeholder/placeholder';
+@import '../app/adminbar';
+
+.wp-block,
+.edit-post-text-editor__body textarea.editor-post-text-editor,
+.components-placeholder.wp-block-shortcode {
+  margin: 0;
+  max-width: none;
+  @include content-alignment();
+
+  .wp-block {
+    width: auto;
+    max-width: none;
+  }
+}
+
+.block-editor-block-list__block .block-list-appender {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+// @todo To adjust the Float view in the editor to match the front view.
+.wp-block[data-align="right"],
+.wp-block[data-align="left"] {
+  > .block-editor-block-list__block {
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: calc(5 * (100vw / 12));
+  }
+}
+
+.wp-block[data-align="center"] {
+  clear: both;
+  text-align: initial;
+
+  > .block-editor-block-list__block {
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+  }
+
+  // @see src/css/foundation/wordpress/_align/_align.scss
+  > .wp-block-archives,
+  > .wp-block-calendar,
+  > .wp-block-categories,
+  > .wp-block-embed,
+  > .wp-block-file,
+  > .wp-block-image,
+  > .wp-block-latest-comments,
+  > .wp-block-search,
+  > .wp-block-site-logo,
+  > .wp-block-table,
+  > .wp-block-tag-cloud {
+    display: table;
+  }
+
+  .wp-block-search .wp-block-search__inside-wrapper {
+    margin: 0;
+  }
+}
+
+.block-editor-block-list__block {
+  margin: 0;
+}
+
+.block-editor-writing-flow {
+  overflow: hidden;
+}
+.edit-post-visual-editor__post-title-wrapper,
+.is-root-container > .wp-block,
+.is-root-container > div:not([class]) > .wp-block {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.wp-block[data-align="wide"] {
+  max-width: none;
+}
+
+.customize-control-sidebar_block_editor,
+.editor-styles-wrapper {
+  .wp-block-site-logo {
+    @include content-alignment();
+  }
+}
+.wp-block[data-align="right"],
+.wp-block[data-align="left"] {
+  .wp-block-site-logo {
+    width: auto;
+  }
+}
+.wp-block[data-align="right"] {
+  .wp-block-site-logo {
+    margin-left: 2em; // Default core margin.
+  }
+}
+.wp-block[data-align="left"] {
+  .wp-block-site-logo {
+    margin-right: 2em; // Default core margin.
+  }
+}
+
+.edit-post-visual-editor__post-title-wrapper .editor-post-title__input {
+  @include _font-size-line-height($_h2-font-size-scale);
+  font-weight: bold;
+  font-family: $_font-family;
+  @include _padding(.25, 0);
+}
+
+.block-editor-block-switcher {
+  overflow: hidden;
+}
+
+.block-editor-editor-skeleton__content {
+  max-width: 100%;
+}
+
+.block-editor-editor-skeleton__content {
+  overflow-x: hidden;
+}
+
+// サイドバーの横幅分 alignfull, alignwide から引く
+.edit-post-layout.is-mode-visual.is-sidebar-opened {
+  @include _media-min(782px) {
+    --body-margin-left: 280px;
+  }
+}
+
+// @see src/css/foundation/_wordpress/_align/_align.scss
+.editor-styles-wrapper.block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
+  > .wp-block[data-align="full"],
+  > .block-editor-block-list__block[data-align="full"] {
+    @include alignfull();
+  }
+
+  > .wp-block[data-align="wide"],
+  > .block-editor-block-list__block[data-align="wide"] {
+    @include alignwide();
+  }
+}
+
+// @see src/css/layout/body/_body.scss
+.l-body--one-column-full,
+.l-body--blank,
+.l-body--blank-content {
+  .editor-styles-wrapper {
+    --wp-block-width: 100%;
+  }
+
+  .wp-block {
+    width: auto;
+  }
+}
+
+// @see src/css/layout/body/_body.scss
+.l-body--one-column-slim,
+.l-body--blank-slim {
+  .editor-styles-wrapper {
+    --wp-block-width: 46rem;
+  }
+}
+
+// @see src/css/layout/body/_body.scss
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+  .editor-styles-wrapper {
+    $container_margin: _space(1, true);
+    $sidebar_margin: _space(1, true, true);
+    --wp-block-width: calc(var(--_container-max-width, 1280px) - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
+  }
+}
+
+// @see src/css/object/component/_entries.scss
+.l-body--one-column-slim,
+.l-body--blank-slim,
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+  .editor-styles-wrapper {
+    .#{ $_prefix }c-entries {
+      &--rich-media,
+      &--panel {
+        .#{ $_prefix }c-entries__item {
+          @include _media-min(lg) {
+            @include _lattice__col--width(1 / 2 * 100%);
+          }
+        }
+      }
+    }
+  }
+}

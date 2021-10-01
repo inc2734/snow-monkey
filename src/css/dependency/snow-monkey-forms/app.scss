@@ -1,0 +1,22 @@
+@charset 'utf-8';
+
+@import '../../app/core/core';
+@import '../../app/foundation/_placeholder/placeholder';
+
+.smf-complete-content,
+.smf-system-error-content,
+.smf-item__controls {
+  @extend %entry-content;
+}
+
+.snow-monkey-form--button-has-accent-color .smf-button-control__control {
+  background-color: var-color-accent();
+  background-image: none;
+  color: _var-color-white();
+  border: none;
+  @include _transition(filter);
+
+  @include _hover(lg) {
+    filter: brightness(90%);
+  }
+}

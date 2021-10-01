@@ -1,0 +1,45 @@
+@charset 'utf-8';
+
+@import '../app/core/core';
+
+@import '_wpaw-any-posts/app';
+@import '_wpaw-carousel/app';
+@import '_wpaw-local-nav/app';
+@import '_wpaw-pickup-slider/app';
+@import '_wpaw-posts-list/app';
+@import '_wpaw-pr-box/app';
+@import '_wpaw-profile-box/app';
+@import '_wpaw-ranking/app';
+@import '_wpaw-recent-posts/app';
+@import '_wpaw-showcase/app';
+@import '_wpaw-site-branding/app';
+@import '_wpaw-slider/app';
+@import '_wpaw-taxonomy-posts/app';
+@import '_wpaw-term/app';
+
+[data-has-sidebar="false"] {
+  [data-is-content-widget-area="true"] {
+    .wpaw-pickup-slider.alignfull,
+    .wpaw-showcase.alignfull,
+    .wpaw-pr-box.alignfull,
+    .wpaw-slider.alignfull {
+      margin-right: calc(50% - 50vw) !important;
+      margin-left: calc(50% - 50vw) !important;
+    }
+  }
+
+  &[data-header-layout="left"] {
+    .wpaw-pickup-slider.alignfull,
+    .wpaw-showcase.alignfull,
+    .wpaw-pr-box.alignfull,
+    .wpaw-slider.alignfull {
+      @include _media-min(lg) {
+        $body-margin-left: 280px;
+        margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
+        margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
+        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+        margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+      }
+    }
+  }
+}

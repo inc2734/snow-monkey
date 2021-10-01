@@ -1,0 +1,19 @@
+.#{ $_prefix }p-footer-sub-nav {
+  padding: 0;
+
+  .#{ $_prefix }c-navbar {
+    @include _padding(.25, 0);
+    justify-content: flex-start;
+    overflow: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+
+    @include _media-min(lg) {
+      justify-content: center;
+    }
+
+    &__item {
+      flex: 0 0 auto;
+    }
+  }
+}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.2.1
+ * @version 15.8.2
  */
 
 use Framework\Helper;
@@ -20,14 +20,30 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		$dependencies = [ Helper::get_main_style_handle() ];
-
-		wp_enqueue_style(
+		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
-			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/style.min.css' ),
-			$dependencies,
-			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/style.min.css' ) )
+			false,
+			[
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+			]
 		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app.css' ),
+			[ Helper::get_main_style_handle() ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app.css' ) )
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app-theme.css' ),
+			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-core' ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-blocks' );
 
 		$dependencies = Helper::generate_script_dependencies(
 			[
@@ -51,14 +67,30 @@ add_action(
 add_action(
 	'enqueue_block_editor_assets',
 	function() {
-		$dependencies = [ Helper::get_main_style_handle() ];
-
-		wp_enqueue_style(
+		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
-			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.min.css' ),
-			$dependencies,
-			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.min.css' ) )
+			false,
+			[
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+			]
 		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.css' ),
+			[ Helper::get_main_style_handle() ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.css' ) )
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ),
+			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-core' ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-blocks' );
 	}
 );
 
@@ -103,6 +135,8 @@ add_action(
 					[
 						'snow-monkey-blocks',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks',
+						Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+						Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 						'spider',
 					]
 				);

@@ -1,0 +1,52 @@
+@mixin entry-content($coefficient: 1) {
+  @include _content($coefficient);
+
+  > * {
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  > h2 + h3,
+  > h3 + h4,
+  > h4 + h5,
+  > h5 + h6 {
+    margin-top: 0;
+  }
+
+  > table {
+    @extend %table;
+  }
+
+  > ul,
+  > ol {
+    > li {
+      & + li {
+        @include _margin-top(.25);
+      }
+    }
+  }
+
+  > blockquote:not([class~="wp-block-quote"]) {
+    @extend %blockquote;
+  }
+}
+
+@mixin entry-content-theme() {
+  // @see app/setup/customizer-styles.php
+  > h2 {
+    border-left: var(--entry-content-h2-border-left);
+    background-color: var(--entry-content-h2-background-color);
+    padding: var(--entry-content-h2-padding);
+  }
+
+  // @see app/setup/customizer-styles.php
+  > h3 {
+    border-bottom: var(--entry-content-h3-border-bottom);
+    padding: var(--entry-content-h3-padding);
+  }
+
+  > blockquote:not([class~="wp-block-quote"]) {
+    @extend %blockquote-theme;
+  }
+}

@@ -1,0 +1,174 @@
+@charset 'utf-8';
+
+/**
+ * Core
+ */
+@import '../app/core/core';
+
+.is-root-container,
+.wp-block-freeform {
+  @extend %entry-content;
+}
+
+:root {
+  --wp-block-width: calc(var(--_container-max-width, 1280px));
+}
+
+.mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
+  height: 100%;
+}
+
+.edit-post-visual-editor__post-title-wrapper .editor-post-title {
+  margin: 2em auto 28px;
+}
+
+[data-align="full"] + [data-align="full"] {
+  margin-top: 0;
+}
+
+// @todo 本来不要かも
+.block-editor-block-list__block[data-align="full"] .block-editor-warning {
+  @include _media-min(600px) {
+    padding-right: 36px;
+    padding-left: 36px;
+  }
+}
+
+.wp-block-image {
+  > div {
+    > div {
+      max-width: none !important;
+      max-height: none !important;
+    }
+  }
+}
+
+[data-type="core/html"] {
+  textarea {
+    @include _pre();
+  }
+}
+
+[data-type="core/quote"] {
+  > .block-editor-rich-text__editable {
+    @include _content();
+  }
+}
+
+.wp-block-embed {
+  .components-sandbox {
+    margin-bottom: -8px; // @todo
+  }
+}
+
+// Cancels the default style
+[data-align="full"] .wp-block-group {
+  &.has-background > .wp-block-group__inner-container > [data-align="full"] {
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+  }
+}
+
+.u-hidden,
+.u-hidden-sm,
+.u-hidden-md,
+.u-hidden-md-up,
+.u-hidden-lg,
+.u-hidden-lg-up,
+.u-hidden-xl,
+.u-hidden-xl-up {
+  @include _visible();
+  outline: 1px dashed rgba(#127db8, .8);
+
+  &::after {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    display: inline-block;
+    color: $_color-white; // For IE11
+    color: _var-color-white();
+    background-color: #127db8;
+    font-size: 12px;
+    line-height: 1;
+    padding: 4px 4px;
+    opacity: .8;
+  }
+}
+
+.u-hidden::after { content: '.u-hidden'; }
+.u-hidden-sm::after { content: '.u-hidden-sm'; }
+.u-hidden-md::after { content: '.u-hidden-md'; }
+.u-hidden-md-up::after { content: '.u-hidden-md-up'; }
+.u-hidden-lg::after { content: '.u-hidden-lg'; }
+.u-hidden-lg-up::after { content: '.u-hidden-lg-up'; }
+.u-hidden-xl::after { content: '.u-hidden-xl'; }
+.u-hidden-xl-up::after { content: '.u-hidden-xl-up'; }
+
+.editor-styles-wrapper,
+.customize-control-sidebar_block_editor {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include _font-size-line-height($_base-font-size-px);
+  padding-right: 0;
+  padding-left: 0;
+
+  ol,
+  ul {
+    box-sizing: border-box;
+  }
+
+  /**
+   * Foundation
+   */
+  @import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
+  @import '../app/foundation/foundation';
+
+  /**
+   * Layout
+   */
+  @import '../app/layout/layout';
+
+  /**
+   * Object - Component
+   */
+  @import '../app/object/component/component';
+
+  /**
+   * Object - Project
+   */
+  @import '../app/object/project/project';
+
+  /**
+   * Object - utility
+   */
+  @import '../app/object/utility/utility';
+}
+
+.wp-block-widget-area__inner-blocks,
+.customize-control-sidebar_block_editor {
+  .block-editor-block-list__layout {
+    [data-type="core/heading"] {
+      // @todo Because ::after is used in the block editor.
+      // @include widget-title();
+
+      @include _margin(1, 0, .5);
+      @include _font-size-line-height(1);
+      font-weight: bold;
+    }
+  }
+}
+
+.wp-block[data-type="core/widget-area"] .wp-block-widget-area__inner-blocks > .block-editor-block-list__layout {
+  @include _content(1);
+}
+
+.customize-control-sidebar_block_editor {
+  --wp-block-width: 100% !important;
+
+  .wp-block {
+    @include _media-min(601px) {
+      width: auto;
+    }
+  }
+}

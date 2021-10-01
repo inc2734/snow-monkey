@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.8.2
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -35,19 +35,55 @@ add_action(
 			]
 		);
 
-		wp_enqueue_style(
+		wp_register_style(
 			Helper::get_main_style_handle(),
-			get_theme_file_uri( '/assets/css/style.min.css' ),
-			$dependencies,
-			filemtime( get_theme_file_path( '/assets/css/style.min.css' ) )
+			false,
+			[
+				Helper::get_main_style_handle() . '-core',
+				Helper::get_main_style_handle() . '-theme',
+			]
 		);
 
-		wp_enqueue_style(
-			Helper::get_main_style_handle() . '-block-library',
-			get_theme_file_uri( '/assets/css/block-library.min.css' ),
-			[ 'wp-block-library' ],
-			filemtime( get_theme_file_path( '/assets/css/block-library.min.css' ) )
+		wp_register_style(
+			Helper::get_main_style_handle() . '-core',
+			get_theme_file_uri( '/assets/css/app/app.css' ),
+			$dependencies,
+			filemtime( get_theme_file_path( '/assets/css/app/app.css' ) )
 		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-theme',
+			get_theme_file_uri( '/assets/css/app/app-theme.css' ),
+			[ Helper::get_main_style_handle() . '-core' ],
+			filemtime( get_theme_file_path( '/assets/css/app/app-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() );
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-block-library',
+			false,
+			[
+				Helper::get_main_style_handle() . '-block-library-core',
+				Helper::get_main_style_handle() . '-block-library-theme',
+			]
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-block-library-core',
+			get_theme_file_uri( '/assets/css/block-library/app.css' ),
+			[ 'wp-block-library' ],
+			filemtime( get_theme_file_path( '/assets/css/block-library/app.css' ) )
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-block-library-theme',
+			get_theme_file_uri( '/assets/css/block-library/app-theme.css' ),
+			[ Helper::get_main_style_handle() . '-block-library-core' ],
+			filemtime( get_theme_file_path( '/assets/css/block-library/app-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() . '-block-library' );
 
 		do_action( 'snow_monkey_enqueued_main_style' );
 	}
@@ -217,9 +253,9 @@ add_action(
 	function() {
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-admin',
-			get_theme_file_uri( '/assets/css/admin.min.css' ),
+			get_theme_file_uri( '/assets/css/admin/app.css' ),
 			[],
-			filemtime( get_theme_file_path( '/assets/css/admin.min.css' ) )
+			filemtime( get_theme_file_path( '/assets/css/admin/app.css' ) )
 		);
 	}
 );

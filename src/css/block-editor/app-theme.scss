@@ -1,0 +1,30 @@
+@charset 'utf-8';
+
+/**
+ * Core
+ */
+@import '../app/core/core';
+
+/**
+ * Foundation
+ */
+@import '../app/foundation/_placeholder/placeholder';
+
+.is-root-container,
+.wp-block-freeform {
+  @extend %entry-content-theme;
+}
+
+.editor-styles-wrapper,
+.customize-control-sidebar_block_editor {
+
+  /**
+   * Object - Component
+   */
+  @import '../app/object/component/component-theme';
+
+  /**
+   * Object - Project
+   */
+  @import '../app/object/project/project-theme';
+}

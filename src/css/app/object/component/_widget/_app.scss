@@ -1,0 +1,65 @@
+.#{ $_prefix }c-widget {
+  word-break: break-word;
+
+  &__title,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    @extend %widget-title;
+  }
+
+  .wp-block-group__inner-container {
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      @extend %widget-title;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
+
+[data-is-slim-widget-area="true"] .#{ $_prefix }c-widget {
+  @include _font-size-line-height($_base-font-size-px - 2);
+
+  &__title,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    @include _font-size-line-height(1);
+  }
+
+  &.widget_block {
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      @include _margin-bottom(-.5);
+    }
+  }
+}
+
+.widgettitle {
+  @extend %widget-title;
+}
+
+@import '_children-expander/app';
+@import '_snow-monkey-posts/app';
+@import '_widget-archive/app';
+@import '_widget-calendar/app';
+@import '_widget-categories/app';
+@import '_widget-meta/app';
+@import '_widget-nav-menu/app';
+@import '_widget-pages/app';
+@import '_widget-recent-comments/app';
+@import '_widget-recent-entries/app';
+@import '_widget-tag-cloud/app';
+@import '_widget-text/app';

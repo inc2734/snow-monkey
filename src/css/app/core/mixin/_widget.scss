@@ -1,0 +1,105 @@
+/**
+ * Widget title
+ *
+ * @see app/setup/customizer-styles.php
+ */
+@mixin widget-title() {
+  @include _margin(0, 0, .5);
+  font-weight: bold;
+}
+
+/**
+ * Widget title
+ *
+ * @see app/setup/customizer-styles.php
+ */
+@mixin widget-title-theme() {
+  @include _font-size-line-height(1);
+  display: var(--widget-title-display);
+  flex-direction: var(--widget-title-flex-direction);
+  align-items: var(--widget-title-align-items);
+  justify-content: var(--widget-title-justify-content);
+
+  &::before,
+  &::after {
+    display: var(--widget-title-pseudo-display);
+    content: var(--widget-title-pseudo-content);
+    height: var(--widget-title-pseudo-height); // 1px
+    background-color: var(--widget-title-pseudo-background-color); // #111
+    flex: var(--widget-title-pseudo-flex);
+    min-width: var(--widget-title-pseudo-min-width);
+  }
+
+  &::before {
+    margin-right: var(--widget-title-before-margin-right);
+  }
+
+  &::after {
+    margin-left: var(--widget-title-after-margin-left);
+  }
+}
+
+/**
+ * Unstyled list base style
+ */
+@mixin widget-list-base() {
+  @include _list-unstyled();
+
+  > li + li {
+    @include _margin(.25, 0, 0);
+  }
+}
+
+/**
+ * Text link base style
+ */
+@mixin widget-link-base() {
+  color: inherit;
+  text-decoration: none;
+
+  @include _hover(lg) {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * Item has children expander
+ */
+@mixin widget-has-children-expander() {
+  position: relative;
+}
+
+/**
+ * Children
+ */
+@mixin widget-children() {
+  @keyframes widget_children_show {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  display: none;
+  border-top: 1px solid transparent;
+  border-top-color: _lighter($_color-gray); // For IE11
+  border-top-color: _var-lighter-color-gray();
+  border-bottom: 1px solid transparent;
+  border-bottom-color: _lighter($_color-gray); // For IE11
+  border-bottom-color: _var-lighter-color-gray();
+  @include _margin(.25, 0, 0, 0, false);
+  @include _padding(.25, 0);
+
+  &[data-is-hidden="false"] {
+    @include _margin-bottom(.25);
+    display: block;
+    animation: widget_children_show .5s;
+
+    [data-is-hidden="false"] {
+      @include _margin-bottom(-.25, false); // equal widget-children() bottom padding
+      border-bottom: none;
+    }
+  }
+}

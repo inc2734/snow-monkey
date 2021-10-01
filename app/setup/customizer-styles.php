@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.8.2
  */
 
 use Framework\Helper;
@@ -17,10 +17,8 @@ add_action(
 	'inc2734_wp_customizer_framework_load_styles',
 	function() {
 		$includes = [
-			'/assets/css/foundation',
-			'/assets/css/layout',
-			'/assets/css/object/component',
-			'/assets/css/object/project',
+			'/assets/css/app',
+			'/assets/css/block-library',
 			'/assets/css/custom-widgets',
 		];
 		foreach ( $includes as $include ) {
@@ -47,16 +45,54 @@ add_action(
 					return;
 				}
 
-				$selectors_for_h2       = [];
-				$selectors_for_h3       = [];
 				$selectors_for_thead_th = [];
 				$selectors_for_tbody_th = [];
 
 				foreach ( $selectors as $key => $selector ) {
-					$selectors_for_h2[ $key ]       = $selector . ' > h2';
-					$selectors_for_h3[ $key ]       = $selector . ' > h3';
 					$selectors_for_thead_th[ $key ] = $selector . ' > table thead th';
 					$selectors_for_tbody_th[ $key ] = $selector . ' > table tbody th';
+				}
+
+				$styles = [];
+
+				$styles[] = [
+					'selectors'  => $selectors_for_thead_th,
+					'properties' => [
+						'background-color: ' . $accent_color,
+						'border-right-color: ' . Color::light( $accent_color ),
+						'border-left-color: ' . Color::light( $accent_color ),
+					],
+				];
+
+				$styles[] = [
+					'selectors'  => $selectors_for_tbody_th,
+					'properties' => [
+						'background-color: ' . Color::lightest( $accent_color ),
+					],
+				];
+
+				Style::attach( Helper::get_main_style_handle() . '-core', $styles );
+			}
+		);
+
+		Style::placeholder(
+			'entry-content-theme',
+			function( $selectors ) {
+				if ( ! Helper::is_ie() ) {
+					return;
+				}
+
+				$accent_color = get_theme_mod( 'accent-color' );
+				if ( ! $accent_color ) {
+					return;
+				}
+
+				$selectors_for_h2 = [];
+				$selectors_for_h3 = [];
+
+				foreach ( $selectors as $key => $selector ) {
+					$selectors_for_h2[ $key ] = $selector . ' > h2';
+					$selectors_for_h3[ $key ] = $selector . ' > h3';
 				}
 
 				$styles = [];
@@ -90,23 +126,7 @@ add_action(
 					}
 				}
 
-				$styles[] = [
-					'selectors'  => $selectors_for_thead_th,
-					'properties' => [
-						'background-color: ' . $accent_color,
-						'border-right-color: ' . Color::light( $accent_color ),
-						'border-left-color: ' . Color::light( $accent_color ),
-					],
-				];
-
-				$styles[] = [
-					'selectors'  => $selectors_for_tbody_th,
-					'properties' => [
-						'background-color: ' . Color::lightest( $accent_color ),
-					],
-				];
-
-				Style::attach( Helper::get_main_style_handle(), $styles );
+				Style::attach( Helper::get_main_style_handle() . '-theme', $styles );
 			}
 		);
 	}
@@ -121,7 +141,7 @@ add_action(
 	'inc2734_wp_customizer_framework_after_load_styles',
 	function() {
 		Style::placeholder(
-			'widget-title',
+			'widget-title-theme',
 			function( $selectors ) {
 				if ( ! Helper::is_ie() ) {
 					return;
@@ -184,7 +204,7 @@ add_action(
 				];
 
 				Style::attach(
-					Helper::get_main_style_handle(),
+					Helper::get_main_style_handle() . '-theme',
 					$styles
 				);
 			}

@@ -1,0 +1,7 @@
+.smb-step {
+  &__item {
+    &__summary {
+      @extend %entry-content-theme;
+    }
+  }
+}

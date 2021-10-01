@@ -1,0 +1,5 @@
+.wp-block-media-text {
+  &__content {
+    @extend %entry-content-theme;
+  }
+}

@@ -1,0 +1,5 @@
+.snow-monkey-posts {
+  &__title {
+    @include section-title-theme();
+  }
+}

@@ -1,0 +1,67 @@
+.wpco {
+  background-color: _lightest($_color-gray); // For IE11
+  background-color: _var-lightest-color-gray();
+  color: $_color-text; // For IE11
+  color: _var-color-text();
+  @include _padding(.75, 1, .5);
+  visibility: hidden;
+
+  &__title {
+    @include _margin(0, 0, .25);
+    @include _font-size-line-height(1);
+  }
+
+  .contents-outline {
+    ol {
+      @include _list-unstyled();
+      counter-reset: wpco;
+      border-top: 1px solid transparent;
+      border-top-color: _lighter($_color-gray); // For IE11
+      border-top-color: _var-lighter-color-gray();
+    }
+
+    li {
+      &:not(:first-child) {
+        border-top: 1px solid transparent;
+        border-top-color: _lighter($_color-gray); // For IE11
+        border-top-color: _var-lighter-color-gray();
+      }
+
+      ol {
+        margin-top: -1px;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      color: inherit;
+      @include _padding(.25, 0);
+      text-decoration: none;
+      @include _transition(opacity);
+
+      @include _hover(lg) {
+        opacity: .8;
+      }
+
+      &::before {
+        @include _square(24px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 0 0 auto;
+        @include _margin(2px, .5, 0, 0);
+        counter-increment: wpco;
+        content: counter(wpco);
+      }
+    }
+
+    li li > a { padding-left: 1.5em; }
+    li li li > a { padding-left: 3em; }
+    li li li li > a { padding-left: 4.5em; }
+    li li li li li > a { padding-left: 6em; }
+  }
+}
+
+.wpco-wrapper[aria-hidden="false"] .wpco {
+  visibility: visible;
+}

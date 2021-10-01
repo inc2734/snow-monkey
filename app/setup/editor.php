@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 15.8.2
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -24,7 +24,8 @@ add_filter(
 			$mce_init['content_style'] = '';
 		}
 
-		$response = file_get_contents( get_template_directory() . '/assets/css/classic-editor-style.min.css' );
+		$response  = file_get_contents( get_template_directory() . '/assets/css/classic-editor/app.css' );
+		$response .= file_get_contents( get_template_directory() . '/assets/css/classic-editor/app-theme.css' );
 		if ( $response ) {
 			$response = str_replace( [ "\n", "\r" ], '', $response );
 			$response = str_replace( '"', '\\"', $response );
@@ -50,19 +51,55 @@ add_action(
 			]
 		);
 
-		wp_enqueue_style(
+		wp_register_style(
 			Helper::get_main_style_handle(),
-			get_theme_file_uri( '/assets/css/editor-style.min.css' ),
-			$dependencies,
-			filemtime( get_theme_file_path( '/assets/css/editor-style.min.css' ) )
+			false,
+			[
+				Helper::get_main_style_handle() . '-core',
+				Helper::get_main_style_handle() . '-theme',
+			]
 		);
 
-		wp_enqueue_style(
-			Helper::get_main_style_handle() . '-block-library',
-			get_theme_file_uri( '/assets/css/editor-block-library.min.css' ),
-			[ 'wp-block-library' ],
-			filemtime( get_theme_file_path( '/assets/css/editor-block-library.min.css' ) )
+		wp_register_style(
+			Helper::get_main_style_handle() . '-core',
+			get_theme_file_uri( '/assets/css/block-editor/app.css' ),
+			$dependencies,
+			filemtime( get_theme_file_path( '/assets/css/block-editor/app.css' ) )
 		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-theme',
+			get_theme_file_uri( '/assets/css/block-editor/app-theme.css' ),
+			$dependencies,
+			filemtime( get_theme_file_path( '/assets/css/block-editor/app-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() );
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-block-library',
+			false,
+			[
+				Helper::get_main_style_handle() . '-block-library-core',
+				Helper::get_main_style_handle() . '-block-library-theme',
+			]
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-block-library-core',
+			get_theme_file_uri( '/assets/css/block-library/editor.css' ),
+			[ 'wp-block-library' ],
+			filemtime( get_theme_file_path( '/assets/css/block-library/editor.css' ) )
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-block-library-theme',
+			get_theme_file_uri( '/assets/css/block-library/editor-theme.css' ),
+			[ Helper::get_main_style_handle() . '-block-library-core' ],
+			filemtime( get_theme_file_path( '/assets/css/block-library/editor-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() . '-block-library' );
 	}
 );
 

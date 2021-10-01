@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.2.0
+ * @version 15.8.2
  */
 
 use Framework\Helper;
@@ -62,12 +62,30 @@ add_filter(
 add_action(
 	'wp_enqueue_scripts',
 	function() {
-		wp_enqueue_style(
+		wp_register_style(
 			Helper::get_main_style_handle() . '-woocommerce',
-			get_theme_file_uri( '/assets/css/dependency/woocommerce/woocommerce.min.css' ),
-			[ Helper::get_main_style_handle() ],
-			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/woocommerce.min.css' ) )
+			false,
+			[
+				Helper::get_main_style_handle() . '-woocommerce-core',
+				Helper::get_main_style_handle() . '-woocommerce-theme',
+			]
 		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-woocommerce-core',
+			get_theme_file_uri( '/assets/css/dependency/woocommerce/app.css' ),
+			[ Helper::get_main_style_handle() ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/app.css' ) )
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-woocommerce-theme',
+			get_theme_file_uri( '/assets/css/dependency/woocommerce/app-theme.css' ),
+			[ Helper::get_main_style_handle() . '-woocommerce-core' ],
+			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/app-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() . '-woocommerce' );
 	}
 );
 
@@ -76,7 +94,8 @@ add_action(
 	function() {
 		add_editor_style(
 			[
-				'assets/css/dependency/woocommerce/woocommerce.min.css',
+				'assets/css/dependency/woocommerce/app.css',
+				'assets/css/dependency/woocommerce/app-theme.css',
 			]
 		);
 	}
@@ -109,10 +128,14 @@ add_action(
 					$handles,
 					[
 						Helper::get_main_style_handle() . '-woocommerce',
+						Helper::get_main_style_handle() . '-woocommerce-core',
+						Helper::get_main_style_handle() . '-woocommerce-theme',
 						'wc-block-style',
 						'woocommerce-layout',
 						'woocommerce-smallscreen',
 						'woocommerce-general',
+						'wc-blocks-style',
+						'wc-blocks-vendors-style',
 					]
 				);
 			}

@@ -1,0 +1,6 @@
+.#{ $_prefix }c-copyright {
+  background-color: $_color-black; // For IE11
+  background-color: _var-color-black();
+  color: _light($_color-gray); // For IE11
+  color: _var-light-color-gray();
+}

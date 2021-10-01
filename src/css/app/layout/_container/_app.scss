@@ -1,0 +1,10 @@
+@import '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis-layout/src/css/layout/container';
+
+.#{ $_prefix }l-container {
+  position: relative;
+
+  @media all and (-ms-high-contrast: none) {
+    display: block !important; // for IE
+    overflow: hidden; // for IE
+  }
+}

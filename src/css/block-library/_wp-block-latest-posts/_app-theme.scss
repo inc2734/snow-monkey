@@ -1,0 +1,10 @@
+.wp-block-latest-posts {
+  &__post-full-content {
+    @extend %entry-content-theme;
+
+    // For editor
+    > div:not([class]) {
+      @extend %entry-content-theme;
+    }
+  }
+}

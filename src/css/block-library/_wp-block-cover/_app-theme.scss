@@ -1,0 +1,5 @@
+.wp-block-cover {
+  &__inner-container {
+    @extend %entry-content-theme;
+  }
+}

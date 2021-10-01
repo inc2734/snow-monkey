@@ -1,0 +1,26 @@
+@charset 'utf-8';
+
+@import '../../app/core/core';
+
+.wpcf7:not(:last-child) {
+  @include _margin-bottom(1.5);
+}
+
+.wpcf7-form {
+  @include _content();
+}
+
+.wpcf7-text,
+.wpcf7-textarea {
+  @include _form-control();
+  vertical-align: top;
+}
+
+.wpcf7-submit {
+  @include btn();
+  background-color: var-color-accent();
+}
+
+span.wpcf7-not-valid-tip {
+  color: $_color-red;
+}

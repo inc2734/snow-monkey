@@ -1,0 +1,9 @@
+.smb-faq {
+  &__item {
+    &__answer {
+      &__body {
+        @extend %entry-content-theme;
+      }
+    }
+  }
+}

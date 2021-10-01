@@ -1,0 +1,32 @@
+@charset 'utf-8';
+
+@import '../../app/core/core';
+@import '../../app/foundation/_placeholder/placeholder';
+
+@import 'accordion/app';
+@import 'box/app';
+@import 'btn-box/app';
+@import 'btn/app';
+@import 'child-pages/app';
+@import 'container/app';
+@import 'faq/app';
+@import 'information/app';
+@import 'items/app';
+@import 'media-text/app';
+@import 'panels/app';
+@import 'section-break-the-grid/app';
+@import 'section-side-heading/app';
+@import 'section-with-image/app';
+@import 'section/app';
+@import 'step/app';
+@import 'tabs/app';
+
+.c-row[data-columns]:not([data-columns="1"]) {
+	@include _media-max(sm) {
+		@include _row--margin(.5);
+
+		> .c-row__col {
+			@include _row__col--margin(.5);
+		}
+	}
+}

@@ -1,0 +1,10 @@
+@charset 'utf-8';
+
+@import '../../app/core/core';
+@import '../../app/foundation/_placeholder/placeholder';
+
+.smf-complete-content,
+.smf-system-error-content,
+.smf-item__controls {
+  @extend %entry-content-theme;
+}

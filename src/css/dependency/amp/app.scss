@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+@import '../../app/core/core';
+@import '../../app/foundation/_placeholder/placeholder';
+
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+.wp-oembed-blog-card__favicon {
+  display: none;
+}
+
+.amp-wp-article-content {
+  @include _content();
+}

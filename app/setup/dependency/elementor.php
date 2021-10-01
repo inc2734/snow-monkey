@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 15.8.2
  */
 
 use Framework\Helper;
@@ -22,9 +22,9 @@ add_action(
 	function() {
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-elementor',
-			get_theme_file_uri( '/assets/css/dependency/elementor/elementor.min.css' ),
+			get_theme_file_uri( '/assets/css/dependency/elementor/app.css' ),
 			[ Helper::get_main_style_handle() ],
-			filemtime( get_theme_file_path( '/assets/css/dependency/elementor/elementor.min.css' ) )
+			filemtime( get_theme_file_path( '/assets/css/dependency/elementor/app.css' ) )
 		);
 	}
 );

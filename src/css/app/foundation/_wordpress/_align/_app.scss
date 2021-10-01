@@ -1,0 +1,64 @@
+/*
+ * @see src/css/block-editor/app.scss
+ */
+
+.alignleft,
+.u-alignleft-wrapper > * {
+  float: left;
+  @include _margin-right(1);
+}
+
+.alignright,
+.u-alignright-wrapper > * {
+  float: right;
+  @include _margin-left(1);
+}
+
+.alignleft,
+.alignright,
+.u-alignleft-wrapper > *,
+.u-alignright-wrapper > * {
+  max-width: calc(5 * (100vw / 12));
+
+  &:first-child + * {
+    margin-top: 0;
+  }
+}
+
+.aligncenter,
+.u-aligncenter-wrapper > * {
+  margin-right: auto;
+  margin-left: auto;
+  clear: both;
+  width: auto;
+
+  &.wp-block-archives,
+  &.wp-block-calendar,
+  &.wp-block-categories,
+  &.wp-block-embed,
+  &.wp-block-file,
+  &.wp-block-image,
+  &.wp-block-latest-comments,
+  &.wp-block-search,
+  &.wp-block-site-logo,
+  &.wp-block-table,
+  &.wp-block-tag-cloud {
+    display: table;
+  }
+
+  &.wp-block-table {
+    width: auto !important;
+  }
+}
+
+.alignfull + .alignfull {
+  margin-top: 0;
+}
+
+.alignfull {
+  @include alignfull();
+}
+
+.alignwide {
+  @include alignwide();
+}

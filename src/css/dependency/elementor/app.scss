@@ -1,0 +1,8 @@
+@charset 'utf-8';
+
+@import '../../app/core/core';
+
+.elementor-text-editor,
+.elementor-tab-content {
+  @include _content();
+}

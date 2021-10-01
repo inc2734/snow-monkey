@@ -1,0 +1,5 @@
+.#{ $_prefix }c-section {
+  &__title {
+    @extend %widget-title-theme;
+  }
+}

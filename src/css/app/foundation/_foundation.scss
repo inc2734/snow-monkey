@@ -1,0 +1,26 @@
+:root {
+  --_background-color: #fff;
+  --wp-block-width: calc(var(--_container-max-width, 1280px));
+
+  --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
+  --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
+
+  @supports (-ms-ime-align: auto) {
+    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2);
+  }
+
+  @include _media-min(md) {
+    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
+    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
+
+    @supports (-ms-ime-align: auto) {
+      --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2);
+    }
+  }
+}
+
+@import '_body/app';
+@import '_element/app';
+@import '_packages/_slick/app';
+@import '_wordpress/app';
+@import '_placeholder/placeholder';

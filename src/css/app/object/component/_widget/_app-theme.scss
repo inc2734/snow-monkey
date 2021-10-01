@@ -1,0 +1,27 @@
+.#{ $_prefix }c-widget {
+  &__title,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6 {
+    @extend %widget-title-theme;
+  }
+
+  .wp-block-group__inner-container {
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6 {
+      @extend %widget-title-theme;
+    }
+  }
+}
+
+.widgettitle {
+  @extend %widget-title-theme;
+}
+
+@import '_snow-monkey-posts/app-theme';
+@import '_widget-text/app-theme';

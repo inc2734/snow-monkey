@@ -1,0 +1,57 @@
+$_base-font-size-px: 16px !default;
+$_half-leading: .4 !default;
+$_container-max-width: 1280px !default;
+$_transition-duration: .2s !default;
+$_base-margin-bottom: 1 !default;
+$_h2-font-size-scale: 1.5 !default;
+$_h2-margin-top: $_base-margin-bottom * 2 !default;
+$_h2-margin-bottom: $_base-margin-bottom * 1.25 !default;
+$_h3-margin-top: $_base-margin-bottom * 1.75 !default;
+$_h3-margin-bottom: $_base-margin-bottom * .75 !default;
+$_h4-margin-bottom: $_base-margin-bottom * .5 !default;
+$_border-radius: 6px !default;
+$color-accent: #cd162c !default;
+$one-column-slim-max-width: 46rem !default;
+$border-bottom-width: 1px !default;
+$editor-gutter: 1rem;
+$_font-family: system-ui, -apple-system, BlinkMacSystemFont, "ヒラギノ角ゴ W3", sans-serif !default;
+$img-path: '../../img' !default;
+$social-icon-colors: (
+  amazon: #ff9900,
+  bitbucket: #0052cc,
+  paypal: #012f87,
+  stripe: #635BFF,
+  codepen: #000,
+  dribbble: #ea4c89,
+  dropbox: #0061ff,
+  facebook: #0276FB,
+  flickr: #000,
+  github: #171515,
+  gitlab: #fca121,
+  google: #4285F4,
+  instagram: #ef0175,
+  linkedin: #0a66c2,
+  medium: #000,
+  pinterest: #e60023,
+  reddit: #ff4500,
+  skype: #0078d7,
+  slack: #000,
+  slideshare: #0277b5,
+  snapchat: #fffc00,
+  stack-overflow: #f48023,
+  tumblr: #000,
+  vimeo: #1ab7ea,
+  twitter: #1da1f2,
+  wordpress: #0073aa,
+  youtube: #f00,
+  spotify: #1ed760,
+  foursquare: #2d5be3,
+  line: #06c755,
+  app-store: #000,
+  google-play: #000,
+  twitch: #9146ff,
+  discord: #7289da,
+  apple: #000,
+  tiktok: #000,
+  note: #40C9B4,
+);

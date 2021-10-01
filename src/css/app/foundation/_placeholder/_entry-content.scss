@@ -1,0 +1,11 @@
+%entry-content {
+  @include entry-content();
+}
+
+%entry-content--sub {
+  @include entry-content(.75);
+}
+
+%entry-content-theme {
+  @include entry-content-theme();
+}

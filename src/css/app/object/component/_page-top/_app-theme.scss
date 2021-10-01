@@ -1,0 +1,12 @@
+.#{ $_prefix }c-page-top {
+  background-color: var-color-accent();
+
+  @include _hover(lg) {
+    filter: brightness(90%);
+  }
+
+  a {
+    color: $_color-white; // For IE11
+    color: _var-color-white();
+  }
+}

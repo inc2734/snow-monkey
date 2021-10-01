@@ -1,0 +1,5 @@
+.smb-tab-panel {
+  &__body {
+    @extend %entry-content-theme;
+  }
+}

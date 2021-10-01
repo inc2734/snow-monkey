@@ -1,0 +1,7 @@
+.smb-section-break-the-grid {
+  &__title {
+    &::after {
+      margin-left: 0;
+    }
+  }
+}

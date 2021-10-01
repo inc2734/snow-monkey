@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+/**
+ * Core
+ */
+@import 'core/core';
+
+/**
+ * Foundation
+ */
+@import 'foundation/_placeholder/placeholder';
+
+/**
+ * Object - Component
+ */
+@import 'object/component/component-theme';
+
+/**
+ * Object - Project
+ */
+@import 'object/project/project-theme';

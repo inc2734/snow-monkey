@@ -1,0 +1,4 @@
+.#{ $_prefix }p-social-nav {
+  background-color: _lightest($_color-gray); // For IE11
+  background-color: _var-lightest-color-gray();
+}
