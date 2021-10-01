@@ -3,12 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 15.8.2
  *
  * renamed: template-parts/1row-header.php
  */
 
 use Framework\Helper;
+
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_title_tag' => 'div',
+	]
+);
 
 $header_content         = get_theme_mod( 'header-content' );
 $header_type            = get_theme_mod( 'header-layout' ) . '-header';
@@ -48,7 +57,15 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 
 			<div class="c-row__col c-row__col--auto">
 				<div class="l-<?php echo esc_attr( $header_type ); ?>__branding">
-					<?php Helper::get_template_part( 'template-parts/header/site-branding' ); ?>
+					<?php
+					Helper::get_template_part(
+						'template-parts/header/site-branding',
+						null,
+						[
+							'_title_tag' => $args['_title_tag'],
+						]
+					);
+					?>
 				</div>
 			</div>
 

@@ -5,10 +5,19 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.0
+ * @version 15.8.2
  */
 
 use Framework\Helper;
+
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_title_tag' => 'div',
+	]
+);
 
 $classes = Helper::get_header_classes();
 ?>
@@ -29,7 +38,15 @@ $classes = Helper::get_header_classes();
 	?>
 
 	<div class="l-header__content">
-		<?php Helper::get_template_part( 'template-parts/header/2row' ); ?>
+		<?php
+		Helper::get_template_part(
+			'template-parts/header/2row',
+			null,
+			[
+				'_title_tag' => $args['_title_tag'],
+			]
+		);
+		?>
 	</div>
 
 	<?php if ( Helper::has_drop_nav() ) : ?>

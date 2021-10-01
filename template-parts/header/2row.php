@@ -3,12 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 15.8.2
  *
  * renamed: template-parts/2row-header.php
  */
 
 use Framework\Helper;
+
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_title_tag' => 'div',
+	]
+);
 
 $header_content         = get_theme_mod( 'header-content' );
 $header_type            = get_theme_mod( 'header-layout' ) . '-header';
@@ -48,7 +57,15 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 				<?php do_action( 'snow_monkey_before_header_site_branding_column' ); ?>
 
 				<div class="c-row__col c-row__col--auto">
-					<?php Helper::get_template_part( 'template-parts/header/site-branding' ); ?>
+					<?php
+					Helper::get_template_part(
+						'template-parts/header/site-branding',
+						null,
+						[
+							'_title_tag' => $args['_title_tag'],
+						]
+					);
+					?>
 				</div>
 
 				<?php do_action( 'snow_monkey_after_header_site_branding_column' ); ?>
