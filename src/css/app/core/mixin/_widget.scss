@@ -45,8 +45,8 @@
 @mixin widget-list-base() {
   @include _list-unstyled();
 
-  > li + li {
-    @include _margin(.25, 0, 0);
+  > *:not(:first-child) {
+    @include _margin-top(.25);
   }
 }
 
@@ -73,6 +73,22 @@
  * Children
  */
 @mixin widget-children() {
+  @include _margin-top(.25);
+  @include _margin-left(.5);
+
+  > *:not(:first-child) {
+    @include _margin-top(.25);
+  }
+
+  ul {
+    @include _margin-left(.5);
+  }
+}
+
+/**
+ * Children - Theme
+ */
+@mixin widget-children-theme() {
   @keyframes widget_children_show {
     from {
       opacity: 0;
@@ -101,5 +117,9 @@
       @include _margin-bottom(-.25, false); // equal widget-children() bottom padding
       border-bottom: none;
     }
+  }
+
+  ul {
+    margin-left: 0;
   }
 }

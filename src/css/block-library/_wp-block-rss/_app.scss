@@ -1,5 +1,5 @@
 .wp-block-rss {
-  @include widget-list-base();
+  @extend %widget-list-base;
   margin-left: auto;
 
   &__item-publish-date,

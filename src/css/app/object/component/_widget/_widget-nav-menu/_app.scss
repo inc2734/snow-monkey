@@ -1,11 +1,13 @@
 .widget_nav_menu {
-  @extend %widget-core-list-base;
+  ul {
+    @extend %widget-list-base;
+  }
 
   .menu-item {
-    @include widget-has-children-expander();
+    @extend %widget-has-children-expander;
   }
 
   .sub-menu {
-    @include widget-children();
+    @extend %widget-children;
   }
 }

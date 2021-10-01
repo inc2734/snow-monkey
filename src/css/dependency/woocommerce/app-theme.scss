@@ -9,3 +9,10 @@ $img-path: '../../../img';
 .page-description {
   @extend %entry-content-theme;
 }
+
+// Product category widget
+.widget_product_categories {
+  .children {
+    @extend %widget-children-theme;
+  }
+}

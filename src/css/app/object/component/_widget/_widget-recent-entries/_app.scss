@@ -1,5 +1,7 @@
 .widget_recent_entries {
-  @extend %widget-core-list-base;
+  ul {
+    @extend %widget-list-base;
+  }
 
   .post-date {
     display: block;

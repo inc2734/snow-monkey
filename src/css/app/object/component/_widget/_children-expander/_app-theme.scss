@@ -1,0 +1,25 @@
+.children-expander {
+  position: absolute;
+  top: -1px;
+  right: 0;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include _square($_base-line-height);
+  transform: rotate(90deg);
+  @include _transition(transform);
+
+  &[data-is-expanded="true"] {
+    transform: rotate(-90deg);
+    right: .05rem;
+  }
+
+  > .#{ $_prefix }c-ic-angle-right {
+    transform: none;
+  }
+}

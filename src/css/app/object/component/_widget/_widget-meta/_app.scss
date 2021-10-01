@@ -1,3 +1,5 @@
 .widget_meta {
-  @extend %widget-core-list-base;
+  ul {
+    @extend %widget-list-base;
+  }
 }

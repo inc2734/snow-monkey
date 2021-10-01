@@ -486,20 +486,22 @@ $img-path: '../../../img';
 
 // Product category widget
 .widget_product_categories {
-  @extend %widget-core-list-base;
+  ul {
+    @extend %widget-list-base;
+  }
 
   .cat-item {
-    @include widget-has-children-expander();
+    @extend %widget-has-children-expander;
   }
 
   .children {
-    @include widget-children();
+    @extend %widget-children;
   }
 }
 
 // Product search widget
 .woocommerce .product_list_widget {
-  @include widget-list-base();
+  @extend %widget-list-base;
 
   > li {
     > a {
@@ -557,11 +559,12 @@ $img-path: '../../../img';
 
 // Product list widget
 .widget_recently_viewed_products {
-  @extend %widget-core-list-base;
+  ul {
+    @extend %widget-list-base;
+  }
 
   .product-title {
-    color: $_color-text; // for IE11
-    color: _var-color-text();
+    color: inherit;
     @include _transition(opacity);
 
     @include _hover(lg) {

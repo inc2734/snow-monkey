@@ -20,11 +20,23 @@ if ( ! $accent_color ) {
 $styles = [
 	[
 		'selectors'  => [ '.c-pagination__item' ],
-		'properties' => [ 'background-color: ' . $accent_color ],
+		'properties' => [ 'color: ' . $accent_color ],
 	],
 ];
 
 Style::attach(
 	Helper::get_main_style_handle() . '-core',
+	$styles
+);
+
+$styles = [
+	[
+		'selectors'  => [ '.c-pagination__item' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+];
+
+Style::attach(
+	Helper::get_main_style_handle() . '-theme',
 	$styles
 );

@@ -6,12 +6,22 @@
   @include widget-title-theme();
 }
 
-%widget-core-list-base {
-  ul {
-    @include widget-list-base();
-  }
+%widget-list-base {
+  @include widget-list-base();
 
   a {
     @include widget-link-base();
   }
+}
+
+%widget-has-children-expander {
+  @include widget-has-children-expander();
+}
+
+%widget-children {
+  @include widget-children();
+}
+
+%widget-children-theme {
+  @include widget-children-theme();
 }

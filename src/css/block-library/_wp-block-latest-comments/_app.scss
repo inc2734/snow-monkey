@@ -1,5 +1,5 @@
 .wp-block-latest-comments {
-  @include widget-list-base();
+  @extend %widget-list-base;
   margin-left: auto;
 
   &__comment {

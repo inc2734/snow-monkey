@@ -1,5 +1,6 @@
 .wpaw-posts-list {
-  @include widget-list-base();
+  @extend %widget-list-base;
+  margin-left: auto;
 
   &__item {
     &:not(:first-child) {

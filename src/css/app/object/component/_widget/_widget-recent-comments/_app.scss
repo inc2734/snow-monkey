@@ -1,3 +1,5 @@
 .widget_recent_comments {
-  @extend %widget-core-list-base;
+  ul {
+    @extend %widget-list-base;
+  }
 }

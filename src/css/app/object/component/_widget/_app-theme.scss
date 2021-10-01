@@ -23,5 +23,9 @@
   @extend %widget-title-theme;
 }
 
+@import '_children-expander/app-theme';
 @import '_snow-monkey-posts/app-theme';
+@import '_widget-categories/app-theme';
+@import '_widget-nav-menu/app-theme';
+@import '_widget-pages/app-theme';
 @import '_widget-text/app-theme';
