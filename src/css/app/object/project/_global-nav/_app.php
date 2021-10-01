@@ -20,10 +20,6 @@ if ( ! $accent_color ) {
 
 $styles = [
 	[
-		'selectors'  => [ '.p-global-nav--hover-text-color .c-navbar__item[data-active-menu="true"]' ],
-		'properties' => [ 'color: ' . $accent_color ],
-	],
-	[
 		'selectors'   => [
 			'.p-global-nav--hover-text-color .c-navbar__item:hover',
 			'.p-global-nav--hover-text-color .c-navbar__item:active',
@@ -33,10 +29,6 @@ $styles = [
 		'media_query' => '@media (min-width: 64em)',
 	],
 	[
-		'selectors'  => [ '.p-global-nav--hover-underline .c-navbar__item[data-active-menu="true"]::after > a' ],
-		'properties' => [ 'background-color: ' . $accent_color ],
-	],
-	[
 		'selectors'   => [
 			'.p-global-nav--hover-underline .c-navbar__item:hover::after > a',
 			'.p-global-nav--hover-underline .c-navbar__item:active::after > a',
@@ -44,6 +36,22 @@ $styles = [
 		],
 		'properties'  => [ 'background-color: ' . $accent_color ],
 		'media_query' => '@media (min-width: 64em)',
+	],
+	[
+		'selectors'  => [ '.p-global-nav--current-same-hover-effect.p-global-nav--hover-text-color .c-navbar__item[data-active-menu]' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.p-global-nav--current-same-hover-effect.p-global-nav--hover-underline .c-navbar__item[data-active-menu] > a::after' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.p-global-nav--current-text-color .c-navbar__item[data-active-menu]' ],
+		'properties' => [ 'color: ' . $accent_color ],
+	],
+	[
+		'selectors'  => [ '.p-global-nav--current-underline .c-navbar__item[data-active-menu] > a::after' ],
+		'properties' => [ 'background-color: ' . $accent_color ],
 	],
 	[
 		'selectors'  => [ '.p-global-nav .c-navbar__item.sm-nav-menu-item-highlight' ],

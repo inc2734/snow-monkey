@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-09-13 15:20+0900\n"
-"PO-Revision-Date: 2021-09-13 15:21+0900\n"
+"POT-Creation-Date: 2021-10-01 15:41+0900\n"
+"PO-Revision-Date: 2021-10-01 15:41+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -116,6 +116,7 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/base-design/controls/h3-style.php:20
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:19
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
+#: app/customizer/design/sections/header/controls/gnav-current-effect.php:23
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
 #: snow-monkey/Framework/Helper.php:88
 #: snow-monkey/app/customizer/design-skin/controls/design-skin.php:21
@@ -1211,20 +1212,30 @@ msgstr "ヘッダーを全幅にする"
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示する。"
 
-#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
-#: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
-msgid "Global navigation hover effect"
-msgstr "グローバルナビゲーションのホバーエフェクト"
+#: app/customizer/design/sections/header/controls/gnav-current-effect.php:16
+msgid "Global navigation current view effect"
+msgstr "グローバルナビゲーションのカレント表示エフェクト"
 
+#: app/customizer/design/sections/header/controls/gnav-current-effect.php:20
+msgid "Same as hover effect"
+msgstr "ホバーエフェクトと同じ"
+
+#: app/customizer/design/sections/header/controls/gnav-current-effect.php:21
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:20
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:20
 msgid "Text color reversal"
 msgstr "文字色の反転"
 
+#: app/customizer/design/sections/header/controls/gnav-current-effect.php:22
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
 msgid "Underline"
 msgstr "下線"
+
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
+#: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
+msgid "Global navigation hover effect"
+msgstr "グローバルナビゲーションのホバーエフェクト"
 
 #: app/customizer/design/sections/header/controls/header-content.php:18
 #: snow-monkey/app/customizer/design/sections/header/controls/header-content.php:18
@@ -1456,10 +1467,12 @@ msgid "Disable emoji"
 msgstr "絵文字を無効化する"
 
 #: app/customizer/page-speed-optimization/controls/expand-get-template-part.php:15
+#: snow-monkey/app/customizer/page-speed-optimization/controls/expand-get-template-part.php:15
 msgid "Extends get_template_part()"
 msgstr "get_template_part() を拡張する"
 
 #: app/customizer/page-speed-optimization/controls/expand-get-template-part.php:16
+#: snow-monkey/app/customizer/page-speed-optimization/controls/expand-get-template-part.php:16
 msgid ""
 "When disabled, customization by code may not be reflected. For details, "
 "please refer to the manual on the official website."
@@ -1514,22 +1527,22 @@ msgstr ""
 "覧ください。"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:20
-#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:22
+#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:20
 msgid "get_template_parts (Default)"
 msgstr "get_template_parts（デフォルト）"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:21
-#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:23
+#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:21
 msgid "load_theme_files"
 msgstr "load_theme_files"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:22
-#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:24
+#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:22
 msgid "concat"
 msgstr "concat"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:23
-#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:25
+#: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:23
 msgid "include"
 msgstr "include"
 
@@ -2094,22 +2107,22 @@ msgstr "コピーライト"
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/setup/dependency/woocommerce.php:133
+#: app/setup/dependency/woocommerce.php:156
 #: snow-monkey/app/setup/dependency/woocommerce.php:133
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
-#: app/setup/dependency/woocommerce.php:134
+#: app/setup/dependency/woocommerce.php:157
 #: snow-monkey/app/setup/dependency/woocommerce.php:134
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
-#: app/setup/dependency/woocommerce.php:264
+#: app/setup/dependency/woocommerce.php:287
 #: snow-monkey/app/setup/dependency/woocommerce.php:264
 msgid "Home"
 msgstr "ホーム"
 
-#: app/setup/dependency/woocommerce.php:270
+#: app/setup/dependency/woocommerce.php:293
 #: snow-monkey/app/setup/dependency/woocommerce.php:270
 msgid "My account"
 msgstr "マイアカウント"
@@ -2168,7 +2181,7 @@ msgstr "フッター固定ナビゲーション（モバイル用）"
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
-#: app/setup/page-speed-optimization.php:137
+#: app/setup/page-speed-optimization.php:143
 #: snow-monkey/app/setup/page-speed-optimization.php:137
 msgid "Remove caches"
 msgstr "キャッシュを削除"
@@ -2302,7 +2315,7 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/widgets.php:51 snow-monkey/app/setup/widgets.php:51
+#: app/setup/widgets.php:102 snow-monkey/app/setup/widgets.php:51
 msgid "This widget is deprecated. It may slow down the page when used."
 msgstr ""
 "このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"

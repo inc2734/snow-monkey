@@ -1,5 +1,3 @@
-import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
-
 const vlocations = {};
 
 const createVlocation = (homeUrl) => {

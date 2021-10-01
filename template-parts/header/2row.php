@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 15.9.0
  *
  * renamed: template-parts/2row-header.php
  */
@@ -99,8 +99,9 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 					'template-parts/nav/global',
 					null,
 					[
-						'_vertical'          => false,
-						'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
+						'_vertical'            => false,
+						'_gnav-hover-effect'   => get_theme_mod( 'gnav-hover-effect' ),
+						'_gnav-current-effect' => get_theme_mod( 'gnav-current-effect' ),
 					]
 				);
 				?>

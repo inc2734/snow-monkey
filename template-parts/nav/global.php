@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.0
+ * @version 15.9.0
  *
  * renamed: template-parts/global-nav.php
  */
@@ -19,9 +19,10 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_gnav-hover-effect' => get_theme_mod( 'gnav-hover-effect' ),
-		'_popup-mode'        => 'hover',
-		'_vertical'          => false,
+		'_popup-mode'          => 'hover',
+		'_vertical'            => false,
+		'_gnav-hover-effect'   => get_theme_mod( 'gnav-hover-effect' ),
+		'_gnav-current-effect' => get_theme_mod( 'gnav-current-effect' ),
 	]
 );
 
@@ -32,6 +33,9 @@ if ( $args['_vertical'] ) {
 }
 if ( $args['_gnav-hover-effect'] ) {
 	$classes[] = 'p-global-nav--hover-' . $args['_gnav-hover-effect'];
+}
+if ( $args['_gnav-current-effect'] ) {
+	$classes[] = 'p-global-nav--current-' . $args['_gnav-current-effect'];
 }
 
 $items_wrap = 'click' === $args['_popup-mode']
