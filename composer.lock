@@ -347,16 +347,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "10.0.0",
+            "version": "10.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "d1b8c843400b66c3d3703a71f75f20c27983c755"
+                "reference": "b0ce0db6b935d0cc435aa94d848ed1d74459836f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/d1b8c843400b66c3d3703a71f75f20c27983c755",
-                "reference": "d1b8c843400b66c3d3703a71f75f20c27983c755",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/b0ce0db6b935d0cc435aa94d848ed1d74459836f",
+                "reference": "b0ce0db6b935d0cc435aa94d848ed1d74459836f",
                 "shasum": ""
             },
             "require": {
@@ -389,9 +389,9 @@
             "description": "A library for WordPress Customizer.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-customizer-framework/issues",
-                "source": "https://github.com/inc2734/wp-customizer-framework/tree/10.0.0"
+                "source": "https://github.com/inc2734/wp-customizer-framework/tree/10.0.1"
             },
-            "time": "2021-07-29T13:40:15+00:00"
+            "time": "2021-10-01T01:10:59+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
