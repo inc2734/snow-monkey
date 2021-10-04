@@ -33,7 +33,7 @@ if ( $accent_color ) {
 	];
 
 	Style::attach(
-		Helper::get_main_style_handle() . '-snow-monkey-forms-core',
+		Helper::get_main_style_handle() . '-snow-monkey-forms-app',
 		$styles
 	);
 }

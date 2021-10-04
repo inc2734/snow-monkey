@@ -103,7 +103,7 @@ if ( $accent_color ) {
 
 if ( $styles ) {
 	Style::attach(
-		Helper::get_main_style_handle() . '-woocommerce-core',
+		Helper::get_main_style_handle() . '-woocommerce-app',
 		$styles
 	);
 }

@@ -38,6 +38,6 @@ $styles = [
 ];
 
 Style::attach(
-	Helper::get_main_style_handle() . '-custom-widgets-core',
+	Helper::get_main_style_handle() . '-custom-widgets-app',
 	$styles
 );

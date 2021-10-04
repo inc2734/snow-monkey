@@ -19,7 +19,7 @@ if ( Helper::is_ie() ) {
 		];
 
 		Style::attach(
-			Helper::get_main_style_handle() . '-core',
+			Helper::get_main_style_handle() . '-app',
 			$styles
 		);
 	}
@@ -54,7 +54,7 @@ foreach ( $terms as $_term ) {
 	];
 
 	Style::attach(
-		Helper::get_main_style_handle() . '-core',
+		Helper::get_main_style_handle() . '-app',
 		$styles
 	);
 }

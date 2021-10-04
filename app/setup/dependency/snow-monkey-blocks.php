@@ -24,13 +24,13 @@ add_action(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
 			false,
 			[
-				Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app.css' ) )
@@ -39,7 +39,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-core' ],
+			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-app' ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app-theme.css' ) )
 		);
 
@@ -71,13 +71,13 @@ add_action(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
 			false,
 			[
-				Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.css' ) )
@@ -86,7 +86,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-core' ],
+			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-app' ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ) )
 		);
 
@@ -135,7 +135,7 @@ add_action(
 					[
 						'snow-monkey-blocks',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks',
-						Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+						Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 						'spider',
 					]

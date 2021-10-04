@@ -55,13 +55,13 @@ add_action(
 			Helper::get_main_style_handle(),
 			false,
 			[
-				Helper::get_main_style_handle() . '-core',
+				Helper::get_main_style_handle() . '-app',
 				Helper::get_main_style_handle() . '-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-core',
+			Helper::get_main_style_handle() . '-app',
 			get_theme_file_uri( '/assets/css/block-editor/app.css' ),
 			$dependencies,
 			filemtime( get_theme_file_path( '/assets/css/block-editor/app.css' ) )
@@ -80,13 +80,13 @@ add_action(
 			Helper::get_main_style_handle() . '-block-library',
 			false,
 			[
-				Helper::get_main_style_handle() . '-block-library-core',
+				Helper::get_main_style_handle() . '-block-library-app',
 				Helper::get_main_style_handle() . '-block-library-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-block-library-core',
+			Helper::get_main_style_handle() . '-block-library-app',
 			get_theme_file_uri( '/assets/css/block-library/editor.css' ),
 			[ 'wp-block-library' ],
 			filemtime( get_theme_file_path( '/assets/css/block-library/editor.css' ) )
@@ -95,7 +95,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library-theme',
 			get_theme_file_uri( '/assets/css/block-library/editor-theme.css' ),
-			[ Helper::get_main_style_handle() . '-block-library-core' ],
+			[ Helper::get_main_style_handle() . '-block-library-app' ],
 			filemtime( get_theme_file_path( '/assets/css/block-library/editor-theme.css' ) )
 		);
 

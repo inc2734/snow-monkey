@@ -66,13 +66,13 @@ add_action(
 			Helper::get_main_style_handle() . '-woocommerce',
 			false,
 			[
-				Helper::get_main_style_handle() . '-woocommerce-core',
+				Helper::get_main_style_handle() . '-woocommerce-app',
 				Helper::get_main_style_handle() . '-woocommerce-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-woocommerce-core',
+			Helper::get_main_style_handle() . '-woocommerce-app',
 			get_theme_file_uri( '/assets/css/dependency/woocommerce/app.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/app.css' ) )
@@ -81,7 +81,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-woocommerce-theme',
 			get_theme_file_uri( '/assets/css/dependency/woocommerce/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-woocommerce-core' ],
+			[ Helper::get_main_style_handle() . '-woocommerce-app' ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/app-theme.css' ) )
 		);
 
@@ -128,7 +128,7 @@ add_action(
 					$handles,
 					[
 						Helper::get_main_style_handle() . '-woocommerce',
-						Helper::get_main_style_handle() . '-woocommerce-core',
+						Helper::get_main_style_handle() . '-woocommerce-app',
 						Helper::get_main_style_handle() . '-woocommerce-theme',
 						'wc-block-style',
 						'woocommerce-layout',

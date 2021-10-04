@@ -32,7 +32,7 @@ if ( $font_family ) {
 
 if ( $styles ) {
 	Style::attach(
-		Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+		Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 		$styles
 	);
 }

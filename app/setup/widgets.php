@@ -27,13 +27,13 @@ add_action(
 			Helper::get_main_style_handle() . '-custom-widgets',
 			false,
 			[
-				Helper::get_main_style_handle() . '-custom-widgets-core',
+				Helper::get_main_style_handle() . '-custom-widgets-app',
 				Helper::get_main_style_handle() . '-custom-widgets-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-custom-widgets-core',
+			Helper::get_main_style_handle() . '-custom-widgets-app',
 			get_theme_file_uri( '/assets/css/custom-widgets/app.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app.css' ) )
@@ -42,7 +42,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-theme',
 			get_theme_file_uri( '/assets/css/custom-widgets/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-custom-widgets-core' ],
+			[ Helper::get_main_style_handle() . '-custom-widgets-app' ],
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app-theme.css' ) )
 		);
 
@@ -60,13 +60,13 @@ add_action(
 			Helper::get_main_style_handle() . '-custom-widgets',
 			false,
 			[
-				Helper::get_main_style_handle() . '-custom-widgets-core',
+				Helper::get_main_style_handle() . '-custom-widgets-app',
 				Helper::get_main_style_handle() . '-custom-widgets-theme',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-custom-widgets-core',
+			Helper::get_main_style_handle() . '-custom-widgets-app',
 			get_theme_file_uri( '/assets/css/custom-widgets/app.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app.css' ) )
@@ -75,7 +75,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-theme',
 			get_theme_file_uri( '/assets/css/custom-widgets/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-custom-widgets-core' ],
+			[ Helper::get_main_style_handle() . '-custom-widgets-app' ],
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app-theme.css' ) )
 		);
 

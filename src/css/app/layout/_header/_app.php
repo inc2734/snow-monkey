@@ -58,6 +58,6 @@ $styles = [
 ];
 
 Style::attach(
-	Helper::get_main_style_handle() . '-core',
+	Helper::get_main_style_handle() . '-app',
 	$styles
 );

@@ -14,7 +14,7 @@ if ( ! Helper::is_ie() ) {
 }
 
 Style::attach(
-	Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+	Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 	[
 		[
 			'selectors'  => '.smb-btn',
@@ -47,6 +47,6 @@ $styles = [
 ];
 
 Style::attach(
-	Helper::get_main_style_handle() . '-snow-monkey-blocks-core',
+	Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 	$styles
 );

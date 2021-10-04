@@ -41,7 +41,7 @@ foreach ( $terms as $_term ) {
 
 if ( $styles ) {
 	Style::attach(
-		Helper::get_main_style_handle() . '-custom-widgets-core',
+		Helper::get_main_style_handle() . '-custom-widgets-app',
 		$styles
 	);
 }
