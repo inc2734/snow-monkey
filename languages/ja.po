@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-10-01 15:41+0900\n"
-"PO-Revision-Date: 2021-10-01 15:41+0900\n"
+"POT-Creation-Date: 2021-10-04 14:39+0900\n"
+"PO-Revision-Date: 2021-10-04 14:39+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -112,9 +112,9 @@ msgstr "コンテンツの上"
 #: Framework/Helper.php:88
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
-#: app/customizer/design/sections/base-design/controls/h2-style.php:20
-#: app/customizer/design/sections/base-design/controls/h3-style.php:20
-#: app/customizer/design/sections/base-design/controls/widget-title-style.php:19
+#: app/customizer/design/sections/base-design/controls/h2-style.php:21
+#: app/customizer/design/sections/base-design/controls/h3-style.php:21
+#: app/customizer/design/sections/base-design/controls/widget-title-style.php:21
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:23
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
@@ -752,21 +752,19 @@ msgid "Carousel (%1$s)"
 msgstr "カルーセル（%1$s）"
 
 #. translators: %1$s: heading element
-#: app/customizer/design/sections/base-design/controls/h2-style.php:16
-#: app/customizer/design/sections/base-design/controls/h3-style.php:16
+#: app/customizer/design/sections/base-design/controls/h2-style.php:17
+#: app/customizer/design/sections/base-design/controls/h3-style.php:17
 #: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:16
 #: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:16
 #, php-format
 msgid "Design of the %1$s in articles"
 msgstr "記事中の %1$s のデザイン"
 
-#: app/customizer/design/sections/base-design/controls/h2-style.php:21
-#: app/customizer/design/sections/base-design/controls/h3-style.php:21
+#: app/customizer/design/sections/base-design/controls/h2-style.php:22
+#: app/customizer/design/sections/base-design/controls/h3-style.php:22
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
-#: app/customizer/design/sections/base-design/controls/margin-scale.php:20
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
-#: app/customizer/design/sections/base-design/controls/space.php:20
-#: app/customizer/design/sections/base-design/controls/widget-title-style.php:20
+#: app/customizer/design/sections/base-design/controls/widget-title-style.php:22
 #: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
@@ -783,9 +781,7 @@ msgid "Contents left/right margins on PC"
 msgstr "PC 時のコンテンツの左右余白"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
-#: app/customizer/design/sections/base-design/controls/margin-scale.php:21
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
-#: app/customizer/design/sections/base-design/controls/space.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/margin-scale.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
@@ -885,6 +881,11 @@ msgstr "Black 900"
 msgid "White space size between elements"
 msgstr "要素間の余白サイズ"
 
+#: app/customizer/design/sections/base-design/controls/margin-scale.php:17
+#: app/customizer/design/sections/base-design/controls/space.php:17
+msgid "Default: "
+msgstr "デフォルト："
+
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:19
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:19
 msgid "Extra-Light 200"
@@ -944,7 +945,7 @@ msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
 msgid "White space size"
 msgstr "余白サイズ"
 
-#: app/customizer/design/sections/base-design/controls/widget-title-style.php:15
+#: app/customizer/design/sections/base-design/controls/widget-title-style.php:17
 #: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:15
 msgid "Design of widget-titles"
 msgstr "ウィジェットタイトルのデザイン"

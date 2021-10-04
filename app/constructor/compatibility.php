@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.0
+ * @version 15.9.0
  */
 
 use Framework\Helper;
@@ -178,4 +178,36 @@ add_filter(
 	},
 	9,
 	2
+);
+
+/**
+ * Backward compatibility for margin-scale
+ */
+add_filter(
+	'theme_mod_margin-scale',
+	function( $mod ) {
+		if ( '' === $mod ) {
+			return 1;
+		} elseif ( 'l' === $mod ) {
+			return 1.5;
+		}
+		return $mod;
+	},
+	9
+);
+
+/**
+ * Backward compatibility for space
+ */
+add_filter(
+	'theme_mod_space',
+	function( $mod ) {
+		if ( '' === $mod ) {
+			return 1.8;
+		} elseif ( 'l' === $mod ) {
+			return 2.7;
+		}
+		return $mod;
+	},
+	9
 );

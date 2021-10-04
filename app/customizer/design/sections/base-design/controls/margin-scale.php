@@ -3,22 +3,24 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.0
+ * @version 15.9.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
 Framework::control(
-	'select',
+	'number',
 	'margin-scale',
 	[
-		'label'    => __( 'White space size between elements', 'snow-monkey' ),
-		'priority' => 160,
-		'default'  => '',
-		'choices'  => [
-			''  => __( 'Standard', 'snow-monkey' ),
-			'l' => __( 'Wide', 'snow-monkey' ),
+		'label'       => __( 'White space size between elements', 'snow-monkey' ),
+		'description' => __( 'Default: ', 'snow-monkey' ) . '1',
+		'priority'    => 160,
+		'default'     => 1,
+		'input_attrs' => [
+			'min'  => .5,
+			'max'  => 2,
+			'step' => 0.1,
 		],
 	]
 );

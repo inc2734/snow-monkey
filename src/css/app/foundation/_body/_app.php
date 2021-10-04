@@ -10,7 +10,9 @@ use Inc2734\WP_Customizer_Framework\Color;
 use Inc2734\WP_Customizer_Framework\Style;
 
 $get_container_margin_var = function( $container_margin ) {
-	if ( 'm' === $container_margin ) {
+	if ( preg_match( '|^\d+(\.\d+)?$|', $container_margin ) ) {
+		return $container_margin . 'rem';
+	} elseif ( 'm' === $container_margin ) {
 		return '1.76923rem';
 	} elseif ( 'l' === $container_margin ) {
 		return '2.65386rem';
@@ -18,66 +20,68 @@ $get_container_margin_var = function( $container_margin ) {
 };
 
 $get_margin_scale_var = function( $margin_scale ) {
-	if ( 'l' === $margin_scale ) {
+	if ( preg_match( '|^\d+(\.\d+)?$|', $margin_scale ) ) {
+		return $margin_scale;
+	} elseif ( 'l' === $margin_scale ) {
 		return 1.5;
 	}
 };
 
-$root_variables_core  = [];
+$root_variables_app   = [];
 $root_variables_theme = [];
 
 $container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
 if ( $container_margin_sm ) {
-	$root_variables_core[] = '--_container-margin-sm: ' . $container_margin_sm;
+	$root_variables_app[] = '--_container-margin-sm: ' . $container_margin_sm;
 }
 $container_margin = $get_container_margin_var( get_theme_mod( 'lg-container-margin' ) );
 if ( $container_margin ) {
-	$root_variables_core[] = '--_container-margin: ' . $container_margin;
+	$root_variables_app[] = '--_container-margin: ' . $container_margin;
 }
 
 $container_max_width = get_theme_mod( 'container-max-width' );
 if ( $container_max_width ) {
-	$root_variables_core[] = '--_container-max-width: ' . $container_max_width . 'px';
+	$root_variables_app[] = '--_container-max-width: ' . $container_max_width . 'px';
 }
 
 $margin_scale = $get_margin_scale_var( get_theme_mod( 'margin-scale' ) );
 if ( $margin_scale ) {
-	$root_variables_core[] = '--_margin-scale: ' . $margin_scale;
+	$root_variables_app[] = '--_margin-scale: ' . $margin_scale;
 }
 
 $space = $get_container_margin_var( get_theme_mod( 'space' ) );
 if ( $space ) {
-	$root_variables_core[] = '--_space: ' . $space;
+	$root_variables_app[] = '--_space: ' . $space;
 }
 
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
-	$root_variables_core[] = '--accent-color: ' . $accent_color;
-	$root_variables_core[] = '--dark-accent-color: ' . Color::dark( $accent_color );
-	$root_variables_core[] = '--light-accent-color: ' . Color::light( $accent_color );
-	$root_variables_core[] = '--lighter-accent-color: ' . Color::lighter( $accent_color );
-	$root_variables_core[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
+	$root_variables_app[] = '--accent-color: ' . $accent_color;
+	$root_variables_app[] = '--dark-accent-color: ' . Color::dark( $accent_color );
+	$root_variables_app[] = '--light-accent-color: ' . Color::light( $accent_color );
+	$root_variables_app[] = '--lighter-accent-color: ' . Color::lighter( $accent_color );
+	$root_variables_app[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
 }
 
 $sub_accent_color = get_theme_mod( 'sub-accent-color' );
 if ( $accent_color ) {
-	$root_variables_core[] = '--sub-accent-color: ' . $sub_accent_color;
-	$root_variables_core[] = '--dark-sub-accent-color: ' . Color::dark( $sub_accent_color );
-	$root_variables_core[] = '--light-sub-accent-color: ' . Color::light( $sub_accent_color );
-	$root_variables_core[] = '--lighter-sub-accent-color: ' . Color::lighter( $sub_accent_color );
-	$root_variables_core[] = '--lightest-sub-accent-color: ' . Color::lightest( $sub_accent_color );
+	$root_variables_app[] = '--sub-accent-color: ' . $sub_accent_color;
+	$root_variables_app[] = '--dark-sub-accent-color: ' . Color::dark( $sub_accent_color );
+	$root_variables_app[] = '--light-sub-accent-color: ' . Color::light( $sub_accent_color );
+	$root_variables_app[] = '--lighter-sub-accent-color: ' . Color::lighter( $sub_accent_color );
+	$root_variables_app[] = '--lightest-sub-accent-color: ' . Color::lightest( $sub_accent_color );
 }
 
 $header_text_color = get_theme_mod( 'header-text-color' );
 if ( $header_text_color ) {
-	$root_variables_core[] = '--header-text-color: ' . $header_text_color;
-	$root_variables_core[] = '--overlay-header-text-color: ' . $header_text_color;
-	$root_variables_core[] = '--drop-nav-text-color: ' . $header_text_color;
+	$root_variables_app[] = '--header-text-color: ' . $header_text_color;
+	$root_variables_app[] = '--overlay-header-text-color: ' . $header_text_color;
+	$root_variables_app[] = '--drop-nav-text-color: ' . $header_text_color;
 }
 
 $base_line_height = get_theme_mod( 'base-line-height' );
 if ( $base_line_height ) {
-	$root_variables_core[] = '--_half-leading: ' . ( $base_line_height - 1 ) / 2;
+	$root_variables_app[] = '--_half-leading: ' . ( $base_line_height - 1 ) / 2;
 }
 
 $base_font = get_theme_mod( 'base-font' );
@@ -94,15 +98,15 @@ if ( 'noto-sans-jp' === $base_font ) {
 	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ], 5 );
 	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ] );
 }
-$font_family           = Helper::get_font_family();
-$root_variables_core[] = '--font-family: ' . $font_family;
+$font_family          = Helper::get_font_family();
+$root_variables_app[] = '--font-family: ' . $font_family;
 
 $styles_core = [];
 
-if ( $root_variables_core ) {
+if ( $root_variables_app ) {
 	$styles_core[] = [
 		'selectors'  => [ ':root' ],
-		'properties' => $root_variables_core,
+		'properties' => $root_variables_app,
 	];
 }
 
