@@ -82,10 +82,10 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 generate_load_files_target( 'app/setup', true );
 generate_load_files_target( 'app/widget', true );
 generate_load_files_target( 'app/customizer', true );
-generate_load_files_target( 'assets/css/foundation' );
-generate_load_files_target( 'assets/css/layout' );
-generate_load_files_target( 'assets/css/object/component' );
-generate_load_files_target( 'assets/css/object/project' );
+generate_load_files_target( 'assets/css/app/foundation' );
+generate_load_files_target( 'assets/css/app/layout' );
+generate_load_files_target( 'assets/css/app/object/component' );
+generate_load_files_target( 'assets/css/app/object/project' );
 generate_load_files_target( 'assets/css/custom-widgets' );
 generate_load_files_target( 'assets/css/dependency/contact-form-7' );
 generate_load_files_target( 'assets/css/dependency/snow-monkey-blocks' );
