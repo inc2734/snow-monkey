@@ -103,6 +103,21 @@ class Helper {
 	}
 
 	/**
+	 * Return header position choices.
+	 *
+	 * @return array
+	 */
+	public static function header_position_choices() {
+		return [
+			'sticky'                 => __( 'Sticky', 'snow-monkey' ),
+			'sticky-overlay'         => __( 'Overlay (Sticky)', 'snow-monkey' ),
+			'sticky-overlay-colored' => __( 'Overlay (Sticky / When scrolling, whilte background)', 'snow-monkey' ),
+			'overlay'                => __( 'Overlay', 'snow-monkey' ),
+			''                       => __( 'Normal', 'snow-monkey' ),
+		];
+	}
+
+	/**
 	 * Returns page title from Breadcrumbs.
 	 *
 	 * @return string
@@ -461,7 +476,20 @@ class Helper {
 		$header_layout      = get_theme_mod( 'header-layout' );
 		$header_position    = get_theme_mod( 'header-position' );
 		$header_position_lg = get_theme_mod( 'header-position-lg' );
-		$classes            = [ 'l-header', 'l-header--' . $header_layout ];
+
+		if ( is_front_page() && is_page() ) {
+			$home_page_header_position = get_theme_mod( 'home-page-header-position' );
+			if ( 'inherit' !== $home_page_header_position ) {
+				$header_position = $home_page_header_position;
+			}
+
+			$home_page_header_position_lg = get_theme_mod( 'home-page-header-position-lg' );
+			if ( 'inherit' !== $home_page_header_position_lg ) {
+				$header_position_lg = $home_page_header_position_lg;
+			}
+		}
+
+		$classes = [ 'l-header', 'l-header--' . $header_layout ];
 
 		if ( $header_position ) {
 			$classes[] = 'l-header--' . $header_position . '-sm';

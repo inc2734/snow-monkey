@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-10-04 14:39+0900\n"
-"PO-Revision-Date: 2021-10-04 14:39+0900\n"
+"POT-Creation-Date: 2021-10-08 15:11+0900\n"
+"PO-Revision-Date: 2021-10-08 15:11+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -70,6 +70,8 @@ msgstr "中央ロゴ"
 #: .translation/bundle-template-header.php:13 Framework/Helper.php:99
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
 #: app/customizer/infobar/controls/align.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:764
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5187
 #: snow-monkey/Framework/Helper.php:99
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
 #: snow-monkey/app/customizer/infobar/controls/align.php:19
@@ -83,6 +85,9 @@ msgstr "左"
 #: app/widget/snow-monkey-recent-posts/_form.php:88
 #: app/widget/snow-monkey-rss/_form.php:73
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:127
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3010
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5656
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6537
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:22
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:23
@@ -103,6 +108,8 @@ msgstr "ページヘッダーの上にタイトルを表示"
 #: Framework/Helper.php:87
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3106
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3994
 #: snow-monkey/Framework/Helper.php:87
 #: snow-monkey/app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/display-position.php:22
@@ -118,18 +125,28 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:23
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1425
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2829
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3110
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3376
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5145
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6366
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7214
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7792
 #: snow-monkey/Framework/Helper.php:88
 #: snow-monkey/app/customizer/design-skin/controls/design-skin.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
-#: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:20
-#: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:20
-#: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:19
+#: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:21
+#: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:21
+#: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:21
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
+#: snow-monkey/app/customizer/design/sections/header/controls/gnav-current-effect.php:23
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
 msgid "None"
 msgstr "なし"
 
 #: Framework/Helper.php:100 app/customizer/infobar/controls/align.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:765
 #: snow-monkey/Framework/Helper.php:100
 #: snow-monkey/app/customizer/infobar/controls/align.php:20
 msgid "Center"
@@ -138,13 +155,57 @@ msgstr "中央"
 #: Framework/Helper.php:101
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
 #: app/customizer/infobar/controls/align.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:766
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5188
 #: snow-monkey/Framework/Helper.php:101
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
 #: snow-monkey/app/customizer/infobar/controls/align.php:21
 msgid "Right"
 msgstr "右"
 
-#: Framework/Helper.php:126 Framework/Helper.php:536
+#: Framework/Helper.php:112
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7618
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7661
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:19
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:21
+msgid "Sticky"
+msgstr "上部固定"
+
+#: Framework/Helper.php:113
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7619
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7662
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:20
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:22
+msgid "Overlay (Sticky)"
+msgstr "オーバレイ（上部固定）"
+
+#: Framework/Helper.php:114
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7620
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7663
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:21
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:23
+msgid "Overlay (Sticky / When scrolling, whilte background)"
+msgstr "オーバーレイ（上部固定 / スクロール時背景白）"
+
+#: Framework/Helper.php:115 app/setup/widget-area.php:331
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2546
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7621
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7664
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:22
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:24
+#: snow-monkey/app/setup/widget-area.php:331
+msgid "Overlay"
+msgstr "オーバレイ"
+
+#: Framework/Helper.php:116
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7622
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7665
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:23
+#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:25
+msgid "Normal"
+msgstr "ノーマル"
+
+#: Framework/Helper.php:141 Framework/Helper.php:564
 #: snow-monkey/Framework/Helper.php:126 snow-monkey/Framework/Helper.php:536
 #: snow-monkey/template-parts/content/prev-next-nav.php:72
 #: template-parts/content/prev-next-nav.php:72
@@ -153,24 +214,27 @@ msgid "55"
 msgstr "55"
 
 #. Theme Name of the plugin/theme
-#: Framework/Helper.php:183 app/constructor/trial.php:23
+#: Framework/Helper.php:198 app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1460
 #: snow-monkey/Framework/Helper.php:183
 #: snow-monkey/app/constructor/trial.php:23
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:14
 msgid "Snow Monkey"
 msgstr "Snow Monkey"
 
-#: Framework/Helper.php:188 app/constructor/trial.php:28
+#: Framework/Helper.php:203 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1465
 #: snow-monkey/Framework/Helper.php:188
 #: snow-monkey/app/constructor/trial.php:28
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:19
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:193 app/constructor/trial.php:33
+#: Framework/Helper.php:208 app/constructor/trial.php:33
 #: app/customizer/title-tagline/controls/copyright.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1470
 #: snow-monkey/Framework/Helper.php:193
 #: snow-monkey/app/constructor/trial.php:33
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:24
@@ -178,8 +242,9 @@ msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %1$s: Theme link, %2$s: Developer link
-#: Framework/Helper.php:198
+#: Framework/Helper.php:213
 #: app/customizer/title-tagline/controls/copyright.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1475
 #: snow-monkey/Framework/Helper.php:198
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:29
 #, php-format
@@ -187,8 +252,9 @@ msgid "%1$s theme by %2$s"
 msgstr "%1$s テーマ by %2$s"
 
 #. translators: %s: WordPress link
-#: Framework/Helper.php:205 app/constructor/trial.php:45
+#: Framework/Helper.php:220 app/constructor/trial.php:45
 #: app/customizer/title-tagline/controls/copyright.php:36
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1482
 #: snow-monkey/Framework/Helper.php:205
 #: snow-monkey/app/constructor/trial.php:45
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:36
@@ -196,89 +262,93 @@ msgstr "%1$s テーマ by %2$s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:347 snow-monkey/Framework/Helper.php:347
+#: Framework/Helper.php:362 snow-monkey/Framework/Helper.php:347
 msgid "White"
 msgstr "ホワイト"
 
-#: Framework/Helper.php:352 snow-monkey/Framework/Helper.php:352
+#: Framework/Helper.php:367 snow-monkey/Framework/Helper.php:352
 msgid "Black"
 msgstr "ブラック"
 
-#: Framework/Helper.php:357 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:372 app/customizer/infobar/controls/font-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:634
 #: snow-monkey/Framework/Helper.php:357
 #: snow-monkey/app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:362 snow-monkey/Framework/Helper.php:362
+#: Framework/Helper.php:377 snow-monkey/Framework/Helper.php:362
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:367 snow-monkey/Framework/Helper.php:367
+#: Framework/Helper.php:382 snow-monkey/Framework/Helper.php:367
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:372 snow-monkey/Framework/Helper.php:372
+#: Framework/Helper.php:387 snow-monkey/Framework/Helper.php:372
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:377 snow-monkey/Framework/Helper.php:377
+#: Framework/Helper.php:392 snow-monkey/Framework/Helper.php:377
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:382
+#: Framework/Helper.php:397
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4223
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6015
 #: snow-monkey/Framework/Helper.php:382
 #: snow-monkey/app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: snow-monkey/app/customizer/design/sections/category/controls/accent-color.php:24
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:387
+#: Framework/Helper.php:402
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6814
 #: snow-monkey/Framework/Helper.php:387
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:392 snow-monkey/Framework/Helper.php:392
+#: Framework/Helper.php:407 snow-monkey/Framework/Helper.php:392
 msgid "Pale pink"
 msgstr "ピンク"
 
-#: Framework/Helper.php:398 snow-monkey/Framework/Helper.php:398
+#: Framework/Helper.php:413 snow-monkey/Framework/Helper.php:398
 msgid "Vivid red"
 msgstr "レッド"
 
-#: Framework/Helper.php:404 snow-monkey/Framework/Helper.php:404
+#: Framework/Helper.php:419 snow-monkey/Framework/Helper.php:404
 msgid "Luminous vivid orange"
 msgstr "オレンジ"
 
-#: Framework/Helper.php:410 snow-monkey/Framework/Helper.php:410
+#: Framework/Helper.php:425 snow-monkey/Framework/Helper.php:410
 msgid "Luminous vivid amber"
 msgstr "琥珀"
 
-#: Framework/Helper.php:416 snow-monkey/Framework/Helper.php:416
+#: Framework/Helper.php:431 snow-monkey/Framework/Helper.php:416
 msgid "Light green cyan"
 msgstr "薄いグリーンシアン"
 
-#: Framework/Helper.php:422 snow-monkey/Framework/Helper.php:422
+#: Framework/Helper.php:437 snow-monkey/Framework/Helper.php:422
 msgid "Vivid green cyan"
 msgstr "鮮やかなグリーンシアン"
 
-#: Framework/Helper.php:428 snow-monkey/Framework/Helper.php:428
+#: Framework/Helper.php:443 snow-monkey/Framework/Helper.php:428
 msgid "Pale cyan blue"
 msgstr "淡いシアンブルー"
 
-#: Framework/Helper.php:434 snow-monkey/Framework/Helper.php:434
+#: Framework/Helper.php:449 snow-monkey/Framework/Helper.php:434
 msgid "Vivid cyan blue"
 msgstr "鮮やかなシアンブルー"
 
-#: Framework/Helper.php:440 snow-monkey/Framework/Helper.php:440
+#: Framework/Helper.php:455 snow-monkey/Framework/Helper.php:440
 msgid "Cyan bluish gray"
 msgstr "シアンブルーグレー"
 
-#: Framework/Helper.php:446 snow-monkey/Framework/Helper.php:446
+#: Framework/Helper.php:461 snow-monkey/Framework/Helper.php:446
 msgid "Very dark gray"
 msgstr "濃灰"
 
@@ -317,11 +387,13 @@ msgstr ""
 "定記事の閲覧などのサービスが受けられます。ご契約は%3$sこちら%4$s。"
 
 #: app/customizer/advertisement/controls/google-adsense.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:517
 #: snow-monkey/app/customizer/advertisement/controls/google-adsense.php:15
 msgid "Google Adsense"
 msgstr "Google Adsense"
 
 #: app/customizer/advertisement/controls/google-adsense.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:518
 #: snow-monkey/app/customizer/advertisement/controls/google-adsense.php:16
 msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
@@ -333,31 +405,37 @@ msgstr ""
 "てください。"
 
 #: app/customizer/advertisement/controls/google-adsense.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:518
 #: snow-monkey/app/customizer/advertisement/controls/google-adsense.php:16
 msgid "Paste only the ins tag for ad units."
 msgstr "広告ユニットの ins タグだけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-auto-ads.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1012
 #: snow-monkey/app/customizer/advertisement/controls/google-auto-ads.php:15
 msgid "Google Adsense Auto Ads"
 msgstr "Google Adsense 自動広告"
 
 #: app/customizer/advertisement/controls/google-auto-ads.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1013
 #: snow-monkey/app/customizer/advertisement/controls/google-auto-ads.php:16
 msgid "Paste only the value of data-ad-client of script tag."
 msgstr "script タグの data-ad-client の中身だけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-auto-ads.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1013
 #: snow-monkey/app/customizer/advertisement/controls/google-auto-ads.php:16
 msgid "Authentication can also be performed by setting this option."
 msgstr "この項目を設定して認証を実行することもできます。"
 
 #: app/customizer/advertisement/controls/google-infeed-ads.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1539
 #: snow-monkey/app/customizer/advertisement/controls/google-infeed-ads.php:15
 msgid "Google Adsense Infeed Ads"
 msgstr "Google Adsense インフィード広告"
 
 #: app/customizer/advertisement/controls/google-infeed-ads.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1540
 #: snow-monkey/app/customizer/advertisement/controls/google-infeed-ads.php:16
 msgid ""
 "When pasting the code of the infeed ads, the advertisement is displayed in "
@@ -367,17 +445,21 @@ msgstr ""
 
 #: app/customizer/advertisement/controls/google-infeed-ads.php:16
 #: app/customizer/advertisement/controls/google-matched-content.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1540
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1584
 #: snow-monkey/app/customizer/advertisement/controls/google-infeed-ads.php:16
 #: snow-monkey/app/customizer/advertisement/controls/google-matched-content.php:16
 msgid "Paste only the ins tag."
 msgstr "ins タグだけを貼り付けてください。"
 
 #: app/customizer/advertisement/controls/google-matched-content.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1583
 #: snow-monkey/app/customizer/advertisement/controls/google-matched-content.php:15
 msgid "Google Adsense Matched Content"
 msgstr "Google Adsense 関連コンテンツ"
 
 #: app/customizer/advertisement/controls/google-matched-content.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1584
 #: snow-monkey/app/customizer/advertisement/controls/google-matched-content.php:16
 msgid ""
 "When pasting the code of the matched content, related posts are replaced "
@@ -386,30 +468,36 @@ msgstr ""
 "関連コンテンツのコードをペーストすると、関連記事が広告に差し替えられます。"
 
 #: app/customizer/advertisement/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:180
 #: snow-monkey/app/customizer/advertisement/section.php:18
 msgid "Advertisement"
 msgstr "広告"
 
 #: app/customizer/design-skin/controls/design-skin.php:15
 #: app/customizer/design-skin/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:145
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1419
 #: snow-monkey/app/customizer/design-skin/controls/design-skin.php:15
 #: snow-monkey/app/customizer/design-skin/section.php:18
 msgid "Design skin"
 msgstr "デザインスキン"
 
 #: app/customizer/design-skin/controls/design-skin.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1420
 #: snow-monkey/app/customizer/design-skin/controls/design-skin.php:16
 msgid "If set this, please save and reload."
 msgstr "設定したら、保存してリロードしてください。"
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/design-skin/section.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:149
 #: snow-monkey/app/customizer/design-skin/section.php:22
 #, php-format
 msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
 msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダウンロードできます。"
 
 #: app/customizer/design/panel.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:209
 #: snow-monkey/app/customizer/design/panel.php:18
 msgid "Design"
 msgstr "デザイン"
@@ -423,6 +511,15 @@ msgstr "デザイン"
 #: app/customizer/design/sections/post/controls/eyecatch.php:18
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:19
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3726
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5596
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5909
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6147
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6317
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6772
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7023
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7343
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7492
 #: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:16
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/eyecatch.php:19
 #: snow-monkey/app/customizer/design/sections/bbpress-single/controls/eyecatch.php:19
@@ -443,6 +540,12 @@ msgstr "アイキャッチ画像の位置"
 #. translators: 1: Post type label
 #. translators: 1: WooCommerce product
 #. translators: 1: archive
+#. translators: 1: Custom post type label
+#. translators: 1: bbPress single
+#. translators: 1: bbPress archive
+#. translators: 1: WooCommerce product
+#. translators: 1: Post type label
+#. translators: 1: archive
 #. translators: 1: bbPress archive
 #. translators: 1: bbPress single
 #. translators: 1: archive
@@ -458,6 +561,15 @@ msgstr "アイキャッチ画像の位置"
 #: app/customizer/design/sections/post/controls/eyecatch.php:21
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:22
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3729
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5599
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5912
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6150
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6320
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6775
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7026
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7346
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7495
 #: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:19
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/eyecatch.php:22
 #: snow-monkey/app/customizer/design/sections/bbpress-single/controls/eyecatch.php:22
@@ -473,6 +585,8 @@ msgstr "%1$sページでアイキャッチ画像をどのように表示する�
 
 #: app/customizer/design/sections/archive/controls/eyecatch.php:20
 #: app/customizer/design/sections/archive/controls/layout.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3730
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3776
 #: snow-monkey/app/customizer/design/sections/archive/controls/eyecatch.php:20
 #: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:22
 msgid "archive"
@@ -483,6 +597,11 @@ msgstr "アーカイブ"
 #: app/customizer/design/sections/custom-post/controls/layout.php:21
 #: app/customizer/design/sections/page/controls/layout.php:18
 #: app/customizer/design/sections/post/controls/layout.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3772
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5488
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5849
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7297
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7831
 #: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:18
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:21
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/layout.php:21
@@ -495,11 +614,18 @@ msgstr "ページレイアウト"
 #. translators: 1: Post type label
 #. translators: 1: archive
 #. translators: 1: Post type label
+#. translators: 1: archive
+#. translators: 1: Post type label
 #: app/customizer/design/sections/archive/controls/layout.php:21
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:24
 #: app/customizer/design/sections/custom-post/controls/layout.php:24
 #: app/customizer/design/sections/page/controls/layout.php:21
 #: app/customizer/design/sections/post/controls/layout.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3775
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5491
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5852
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7300
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7834
 #: snow-monkey/app/customizer/design/sections/archive/controls/layout.php:21
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:24
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/layout.php:24
@@ -518,6 +644,15 @@ msgstr "%1$sページのページレイアウトを選択してください。"
 #: app/customizer/design/sections/post/controls/page-header-align.php:16
 #: app/customizer/design/sections/woocommerce-archive-page/controls/page-header-align.php:16
 #: app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3816
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5437
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5798
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6056
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6191
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6686
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6902
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7251
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7387
 #: snow-monkey/app/customizer/design/sections/archive/controls/page-header-align.php:16
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/page-header-align.php:16
 #: snow-monkey/app/customizer/design/sections/bbpress-single/controls/page-header-align.php:16
@@ -531,73 +666,87 @@ msgid "Page header alignment"
 msgstr "ページヘッダーの行揃え"
 
 #: app/customizer/design/sections/archive/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2497
 #: snow-monkey/app/customizer/design/sections/archive/section.php:18
 msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
 
 #. translators: 1: User name
 #: app/customizer/design/sections/author/section.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2249
 #: snow-monkey/app/customizer/design/sections/author/section.php:24
 #, php-format
 msgid "[ %1$s ] author page settings"
 msgstr "[ %1$s ] 著者ページ設定"
 
 #: app/customizer/design/sections/base-design/controls/base-font-size.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3688
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font-size.php:15
 msgid "Base font size(px)"
 msgstr "基本の文字サイズ（px）"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4259
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:15
 msgid "Base font"
 msgstr "基本フォント"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4263
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:19
 msgid "Sans serif"
 msgstr "サンセリフ（ゴシック体）"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4264
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:20
 msgid "Serif"
 msgstr "セリフ（明朝体）"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4265
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:21
 msgid "Noto Sans JP"
 msgstr "Noto Sans JP"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4266
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:22
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4267
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:23
 msgid "M PLUS 1p"
 msgstr "M PLUS 1p"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4268
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-font.php:24
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
 #: app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2781
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
 msgid "Base letter spacing (rem)"
 msgstr "基本の文字間（rem）"
 
 #: app/customizer/design/sections/base-design/controls/base-line-height.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3150
 #: snow-monkey/app/customizer/design/sections/base-design/controls/base-line-height.php:15
 msgid "Base line height"
 msgstr "基本の line-height"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3102
 #: snow-monkey/app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:17
 msgid "Breadcrumbs display position"
 msgstr "パンくずリストの表示位置"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3107
 #: snow-monkey/app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:22
 msgid "Top of contents ( Fit to content width )"
 msgstr "コンテンツの上（コンテンツ幅に合わせる）"
@@ -605,6 +754,9 @@ msgstr "コンテンツの上（コンテンツ幅に合わせる）"
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:23
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:23
 #: app/setup/widget-area.php:109
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2324
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3108
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3995
 #: snow-monkey/app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:23
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/display-position.php:23
 #: snow-monkey/app/setup/widget-area.php:109
@@ -612,44 +764,53 @@ msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3109
 #: snow-monkey/app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:24
 msgid "Bottom of contents ( Fit to content width )"
 msgstr "コンテンツの下（コンテンツ幅に合わせる）"
 
 #: app/customizer/design/sections/base-design/controls/container-max-width.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3287
 #: snow-monkey/app/customizer/design/sections/base-design/controls/container-max-width.php:17
 msgid "Contents max width"
 msgstr "コンテンツの最大幅"
 
 #. translators: %1$s: min width, %2$s: max width
 #: app/customizer/design/sections/base-design/controls/container-max-width.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3290
 #: snow-monkey/app/customizer/design/sections/base-design/controls/container-max-width.php:20
 #, php-format
 msgid "You can set max width of contents area (%1$s - %2$s)"
 msgstr "コンテンツエリアの最大幅を設定することができます（%1$s〜%2$s）"
 
 #: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3334
 #: snow-monkey/app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
 
 #: app/customizer/design/sections/base-design/controls/default-thumbnail.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3467
 #: snow-monkey/app/customizer/design/sections/base-design/controls/default-thumbnail.php:15
 msgid "Default thumbnail"
 msgstr "デフォルトアイキャッチ画像"
 
 #: app/customizer/design/sections/base-design/controls/display-page-top.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2745
 #: snow-monkey/app/customizer/design/sections/base-design/controls/display-page-top.php:15
 msgid "Display the page top button"
 msgstr "ページ上部へ戻るボタンを表示"
 
 #: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3234
 #: snow-monkey/app/customizer/design/sections/base-design/controls/display-site-branding-description.php:16
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3561
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4999
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
 msgid "Make the entries one column on mobile device"
@@ -657,6 +818,8 @@ msgstr "モバイル端末時に記事一覧を1列にする"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:17
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3005
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5651
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:17
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
 msgid "Entries layout"
@@ -674,6 +837,12 @@ msgstr "記事一覧レイアウト"
 #: app/widget/snow-monkey-rss/_form.php:80
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:126
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:134
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3009
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3017
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5655
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5663
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6536
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6544
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:29
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
@@ -695,6 +864,9 @@ msgstr "リッチメディア"
 #: app/widget/snow-monkey-recent-posts/_form.php:89
 #: app/widget/snow-monkey-rss/_form.php:74
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:128
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3011
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5657
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6538
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:23
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:24
@@ -710,6 +882,9 @@ msgstr "テキスト"
 #: app/widget/snow-monkey-recent-posts/_form.php:90
 #: app/widget/snow-monkey-rss/_form.php:75
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:129
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3012
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5658
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6539
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:24
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:25
@@ -725,6 +900,9 @@ msgstr "テキスト2"
 #: app/widget/snow-monkey-recent-posts/_form.php:91
 #: app/widget/snow-monkey-rss/_form.php:76
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:130
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3013
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5659
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6540
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:25
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:26
@@ -741,6 +919,9 @@ msgstr "パネル"
 #: app/widget/snow-monkey-recent-posts/_form.php:94
 #: app/widget/snow-monkey-rss/_form.php:79
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:133
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3016
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5662
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6543
 #: snow-monkey/app/customizer/design/sections/base-design/controls/entries-layout.php:28
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:29
@@ -754,8 +935,10 @@ msgstr "カルーセル（%1$s）"
 #. translators: %1$s: heading element
 #: app/customizer/design/sections/base-design/controls/h2-style.php:17
 #: app/customizer/design/sections/base-design/controls/h3-style.php:17
-#: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:16
-#: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2825
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3372
+#: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:17
+#: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:17
 #, php-format
 msgid "Design of the %1$s in articles"
 msgstr "記事中の %1$s のデザイン"
@@ -765,31 +948,36 @@ msgstr "記事中の %1$s のデザイン"
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:22
-#: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:21
-#: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2830
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3197
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3377
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6367
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6648
+#: snow-monkey/app/customizer/design/sections/base-design/controls/h2-style.php:22
+#: snow-monkey/app/customizer/design/sections/base-design/controls/h3-style.php:22
 #: snow-monkey/app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
-#: snow-monkey/app/customizer/design/sections/base-design/controls/margin-scale.php:20
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
-#: snow-monkey/app/customizer/design/sections/base-design/controls/space.php:20
-#: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:20
+#: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:22
 msgid "Standard"
 msgstr "標準"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3193
 #: snow-monkey/app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
 msgid "Contents left/right margins on PC"
 msgstr "PC 時のコンテンツの左右余白"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3198
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6649
 #: snow-monkey/app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
-#: snow-monkey/app/customizer/design/sections/base-design/controls/margin-scale.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
-#: snow-monkey/app/customizer/design/sections/base-design/controls/space.php:21
 msgid "Wide"
 msgstr "広め"
 
 #: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3504
 #: snow-monkey/app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
 msgid "Custom logo scale (%) on PC"
 msgstr "PC 時のカスタムロゴの拡大率（%）"
@@ -798,6 +986,10 @@ msgstr "PC 時のカスタムロゴの拡大率（%）"
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:15
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:15
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2952
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3416
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4595
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4846
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:15
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:15
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:15
@@ -808,6 +1000,9 @@ msgstr "フォントの太さ"
 #: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:19
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:19
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2956
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3420
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4850
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:19
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:19
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:19
@@ -818,6 +1013,10 @@ msgstr "Thin 100"
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:20
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:20
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2957
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3421
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4600
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4851
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:20
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:20
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:20
@@ -829,6 +1028,10 @@ msgstr "Light 300"
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:21
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:21
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2958
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3422
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4601
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4852
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:21
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:21
@@ -840,6 +1043,10 @@ msgstr "Regular 400"
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:22
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:22
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2959
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3423
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4602
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4853
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:22
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:22
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:22
@@ -851,6 +1058,10 @@ msgstr "Medium 500"
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:23
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:23
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2960
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3424
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4604
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4854
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:23
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:23
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:23
@@ -860,6 +1071,8 @@ msgstr "Bold 700"
 
 #: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:24
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2961
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3425
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:24
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:24
 msgid "Extra-Bold 800"
@@ -869,6 +1082,10 @@ msgstr "Extra-Bold 800"
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:25
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:24
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2962
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3426
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4605
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4855
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:25
 #: snow-monkey/app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:25
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:24
@@ -877,46 +1094,58 @@ msgid "Black 900"
 msgstr "Black 900"
 
 #: app/customizer/design/sections/base-design/controls/margin-scale.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2910
 #: snow-monkey/app/customizer/design/sections/base-design/controls/margin-scale.php:16
 msgid "White space size between elements"
 msgstr "要素間の余白サイズ"
 
 #: app/customizer/design/sections/base-design/controls/margin-scale.php:17
 #: app/customizer/design/sections/base-design/controls/space.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2911
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3608
+#: snow-monkey/app/customizer/design/sections/base-design/controls/margin-scale.php:17
+#: snow-monkey/app/customizer/design/sections/base-design/controls/space.php:17
 msgid "Default: "
 msgstr "デフォルト："
 
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4599
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:19
 msgid "Extra-Light 200"
 msgstr "Extra-Light 200"
 
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4603
 #: snow-monkey/app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:23
 msgid "Semi-Bold 600"
 msgstr "Semi-Bold 600"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4950
 #: snow-monkey/app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:18
 msgid "Overlay widget area max width"
 msgstr "オーバーレイウィジェットエリアの最大幅"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4951
 #: snow-monkey/app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:19
 msgid "You can set max width of overlay widget area"
 msgstr "オーバーレイウィジェットエリアの最大幅を設定することができます"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4955
 #: snow-monkey/app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:23
 msgid "Wide width"
 msgstr "ワイド幅"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4956
 #: snow-monkey/app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:24
 msgid "Slim width"
 msgstr "スリム幅"
 
 #: app/customizer/design/sections/base-design/controls/protected-more.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6491
 #: snow-monkey/app/customizer/design/sections/base-design/controls/protected-more.php:15
 msgid ""
 "If the post using more tag and password protect at the same time, display "
@@ -926,36 +1155,43 @@ msgstr ""
 "ツを表示する"
 
 #: app/customizer/design/sections/base-design/controls/pure-css-gallery.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6606
 #: snow-monkey/app/customizer/design/sections/base-design/controls/pure-css-gallery.php:15
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
 
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6644
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sm-container-margin.php:16
 msgid "Contents left/right margins on mobile device"
 msgstr "モバイル端末時のコンテンツの左右余白"
 
 #: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7431
 #: snow-monkey/app/customizer/design/sections/base-design/controls/sm-logo-scale.php:18
 msgid "Custom logo scale (%) on mobile device"
 msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
 
 #: app/customizer/design/sections/base-design/controls/space.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3607
 #: snow-monkey/app/customizer/design/sections/base-design/controls/space.php:16
 msgid "White space size"
 msgstr "余白サイズ"
 
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:17
-#: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6362
+#: snow-monkey/app/customizer/design/sections/base-design/controls/widget-title-style.php:17
 msgid "Design of widget-titles"
 msgstr "ウィジェットタイトルのデザイン"
 
 #: app/customizer/design/sections/base-design/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2393
 #: snow-monkey/app/customizer/design/sections/base-design/section.php:18
 msgid "Base design settings"
 msgstr "基本デザイン設定"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6321
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/eyecatch.php:23
 msgid "bbPress archive"
 msgstr "bbPress アーカイブ"
@@ -968,6 +1204,14 @@ msgstr "bbPress アーカイブ"
 #: app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:15
 #: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:24
 #: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4906
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5329
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5550
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5965
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6277
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6860
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6983
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7075
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/header-image.php:15
 #: snow-monkey/app/customizer/design/sections/category/controls/header-image.php:24
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
@@ -980,39 +1224,48 @@ msgid "Featured Image"
 msgstr "アイキャッチ画像"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/layout.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6233
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/layout.php:16
 msgid "bbPress archive page layout"
 msgstr "bbPress アーカイブページレイアウト"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/layout.php:22
 #: app/customizer/design/sections/bbpress-single/controls/layout.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6104
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6239
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/controls/layout.php:22
 #: snow-monkey/app/customizer/design/sections/bbpress-single/controls/layout.php:22
 msgid "Same as the page layout"
 msgstr "固定ページレイアウトと同じ"
 
 #: app/customizer/design/sections/bbpress-archive-page/section.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2461
 #: snow-monkey/app/customizer/design/sections/bbpress-archive-page/section.php:19
 msgid "bbPress archive page settings"
 msgstr "bbPress アーカイブページ設定"
 
 #: app/customizer/design/sections/bbpress-single/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6151
 #: snow-monkey/app/customizer/design/sections/bbpress-single/controls/eyecatch.php:23
 msgid "bbPress single"
 msgstr "bbPress 個別"
 
 #: app/customizer/design/sections/bbpress-single/controls/layout.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6098
 #: snow-monkey/app/customizer/design/sections/bbpress-single/controls/layout.php:16
 msgid "bbPress single page layout"
 msgstr "bbPress 個別ページレイアウト"
 
 #: app/customizer/design/sections/bbpress-single/section.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2581
 #: snow-monkey/app/customizer/design/sections/bbpress-single/section.php:19
 msgid "bbPress single page settings"
 msgstr "bbPress 個別ページ設定"
 
 #: app/customizer/design/sections/category/controls/header-image.php:25
 #: app/customizer/design/sections/post-tag/controls/header-image.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5966
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7076
 #: snow-monkey/app/customizer/design/sections/category/controls/header-image.php:25
 #: snow-monkey/app/customizer/design/sections/post-tag/controls/header-image.php:25
 msgid ""
@@ -1022,6 +1275,7 @@ msgstr "この設定は投稿ページ設定のアイキャッチ画像の設定
 
 #. translators: 1: Category name
 #: app/customizer/design/sections/category/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2358
 #: snow-monkey/app/customizer/design/sections/category/section.php:29
 #, php-format
 msgid "[ %1$s ] category pages settings"
@@ -1030,6 +1284,8 @@ msgstr "[ %1$s ] カテゴリーページ設定"
 #. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5494
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5602
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:27
 #, php-format
@@ -1037,12 +1293,15 @@ msgid "%1$s archive"
 msgstr "%1$sアーカイブ"
 
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:36
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5503
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/layout.php:36
 msgid "Same as the post archive page layout"
 msgstr "投稿のアーカイブページレイアウトと同じ"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:19
 #: app/customizer/design/sections/custom-post/controls/view.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5387
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5708
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/view.php:19
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:19
 msgid "View template"
@@ -1050,6 +1309,8 @@ msgstr "ビューテンプレート"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:20
 #: app/customizer/design/sections/custom-post/controls/view.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5388
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5709
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/view.php:20
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:20
 msgid "Select the view template to use."
@@ -1059,6 +1320,10 @@ msgstr "使用するビューテンプレートを選択してください。"
 #: app/customizer/design/sections/custom-post/controls/view.php:24
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5227
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5392
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5713
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6535
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/view.php:24
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:24
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
@@ -1068,6 +1333,8 @@ msgstr "デフォルト"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:25
 #: app/customizer/design/sections/custom-post/controls/view.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5393
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5714
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/controls/view.php:25
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:25
 msgid "The view template of the post"
@@ -1075,6 +1342,7 @@ msgstr "投稿のビューテンプレート"
 
 #. translators: 1: Custom post type name
 #: app/customizer/design/sections/custom-post-archive/section.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1769
 #: snow-monkey/app/customizer/design/sections/custom-post-archive/section.php:27
 #, php-format
 msgid "%1$s archive page settings"
@@ -1082,18 +1350,22 @@ msgstr "%1$sアーカイブページ設定"
 
 #: app/customizer/design/sections/custom-post/controls/layout.php:32
 #: app/customizer/design/sections/page/controls/layout.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5860
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7842
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/layout.php:32
 #: snow-monkey/app/customizer/design/sections/page/controls/layout.php:29
 msgid "Same as the post page layout"
 msgstr "投稿のページレイアウトと同じ"
 
 #: app/customizer/design/sections/custom-post/controls/view.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5715
 #: snow-monkey/app/customizer/design/sections/custom-post/controls/view.php:26
 msgid "The view template of the page"
 msgstr "固定ページのビューテンプレート"
 
 #. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post/section.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2543
 #: snow-monkey/app/customizer/design/sections/custom-post/section.php:27
 #, php-format
 msgid "%1$s pages settings"
@@ -1101,6 +1373,7 @@ msgstr "%1$sページ設定"
 
 #. translators: %1$s: Custom post type label */
 #: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:41
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5332
 #: snow-monkey/app/customizer/design/sections/custom-taxonomy/controls/header-image.php:41
 #, php-format
 msgid ""
@@ -1111,60 +1384,73 @@ msgstr ""
 
 #. translators: 1: Taxonomy name
 #: app/customizer/design/sections/custom-taxonomy/section.php:40
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1844
 #: snow-monkey/app/customizer/design/sections/custom-taxonomy/section.php:40
 #, php-format
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
 
 #: app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5266
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:18
 msgid "Display the search box in drawer navigation"
 msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5223
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
 msgid "Drawer navigation type"
 msgstr "ドロワーナビゲーションのタイプ"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5228
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:20
 msgid "Overall"
 msgstr "オーバーオール"
 
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5183
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:17
 msgid "Hamberger button position"
 msgstr "ハンバーガーボタンの位置"
 
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5141
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/highlight-type.php:15
 msgid "Drawer navigation highlight type"
 msgstr "ドロワーナビゲーションの強調タイプ"
 
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:20
 #: app/customizer/infobar/controls/background-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:725
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5146
 #: snow-monkey/app/customizer/design/sections/drawer-nav/controls/highlight-type.php:20
 #: snow-monkey/app/customizer/infobar/controls/background-color.php:15
 msgid "Background color"
 msgstr "背景色"
 
 #: app/customizer/design/sections/drawer-nav/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1989
 #: snow-monkey/app/customizer/design/sections/drawer-nav/section.php:18
 msgid "Drawer navigation"
 msgstr "ドロワーナビゲーション"
 
 #: app/customizer/design/sections/footer/controls/alignfull.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5105
 #: snow-monkey/app/customizer/design/sections/footer/controls/alignfull.php:15
 msgid "Make footer full width"
 msgstr "フッターを全幅にする"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5060
 #: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:19
 msgid "Number of columns in the footer widget area on PC"
 msgstr "PC 時のフッターウィジェットエリアのカラム数"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:23
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5064
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6412
 #: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:23
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:20
 msgid "1 column"
@@ -1172,6 +1458,8 @@ msgstr "1カラム"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:24
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5065
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6413
 #: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:24
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:21
 msgid "2 columns"
@@ -1179,6 +1467,8 @@ msgstr "2カラム"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:25
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5066
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6414
 #: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:25
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:22
 msgid "3 columns"
@@ -1186,189 +1476,190 @@ msgstr "3カラム"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:26
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5067
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6415
 #: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:26
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:23
 msgid "4 columns"
 msgstr "4カラム"
 
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6408
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:16
 msgid "Number of columns in the footer widget area on tablet"
 msgstr "タブレット時のフッターウィジェットエリアのカラム数"
 
 #: app/customizer/design/sections/footer/section.php:20
 #: app/setup/widget-area.php:309
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2524
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2057
 #: snow-monkey/app/customizer/design/sections/footer/section.php:20
 #: snow-monkey/app/setup/widget-area.php:309
 msgid "Footer"
 msgstr "フッター"
 
 #: app/customizer/design/sections/header/controls/alignfull.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5754
 #: snow-monkey/app/customizer/design/sections/header/controls/alignfull.php:15
 msgid "Make header full width"
 msgstr "ヘッダーを全幅にする"
 
 #: app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6455
 #: snow-monkey/app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示する。"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7207
+#: snow-monkey/app/customizer/design/sections/header/controls/gnav-current-effect.php:16
 msgid "Global navigation current view effect"
 msgstr "グローバルナビゲーションのカレント表示エフェクト"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7211
+#: snow-monkey/app/customizer/design/sections/header/controls/gnav-current-effect.php:20
 msgid "Same as hover effect"
 msgstr "ホバーエフェクトと同じ"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:21
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7212
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7790
+#: snow-monkey/app/customizer/design/sections/header/controls/gnav-current-effect.php:21
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:20
 msgid "Text color reversal"
 msgstr "文字色の反転"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:22
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7213
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7791
+#: snow-monkey/app/customizer/design/sections/header/controls/gnav-current-effect.php:22
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
 msgid "Underline"
 msgstr "下線"
 
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7786
 #: snow-monkey/app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
 msgid "Global navigation hover effect"
 msgstr "グローバルナビゲーションのホバーエフェクト"
 
 #: app/customizer/design/sections/header/controls/header-content.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7748
 #: snow-monkey/app/customizer/design/sections/header/controls/header-content.php:18
 msgid "Header contents"
 msgstr "ヘッダーコンテンツ"
 
 #: app/customizer/design/sections/header/controls/header-content.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7749
 #: snow-monkey/app/customizer/design/sections/header/controls/header-content.php:19
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
 #: app/customizer/design/sections/header/controls/header-layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7707
 #: snow-monkey/app/customizer/design/sections/header/controls/header-layout.php:18
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
-#: app/customizer/design/sections/header/controls/header-position-lg.php:15
+#: app/customizer/design/sections/header/controls/header-position-lg.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7657
 #: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:15
 msgid "Header position for PC"
 msgstr "PC 用ヘッダー位置"
 
-#: app/customizer/design/sections/header/controls/header-position-lg.php:19
-#: app/customizer/design/sections/header/controls/header-position.php:21
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:19
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:21
-msgid "Sticky"
-msgstr "上部固定"
-
-#: app/customizer/design/sections/header/controls/header-position-lg.php:20
-#: app/customizer/design/sections/header/controls/header-position.php:22
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:20
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:22
-msgid "Overlay (Sticky)"
-msgstr "オーバレイ（上部固定）"
-
-#: app/customizer/design/sections/header/controls/header-position-lg.php:21
-#: app/customizer/design/sections/header/controls/header-position.php:23
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:21
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:23
-msgid "Overlay (Sticky / When scrolling, whilte background)"
-msgstr "オーバーレイ（上部固定 / スクロール時背景白）"
-
-#: app/customizer/design/sections/header/controls/header-position-lg.php:22
-#: app/customizer/design/sections/header/controls/header-position.php:24
-#: app/setup/widget-area.php:331
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:22
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:24
-#: snow-monkey/app/setup/widget-area.php:331
-msgid "Overlay"
-msgstr "オーバレイ"
-
-#: app/customizer/design/sections/header/controls/header-position-lg.php:23
-#: app/customizer/design/sections/header/controls/header-position.php:25
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position-lg.php:23
-#: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:25
-msgid "Normal"
-msgstr "ノーマル"
-
-#: app/customizer/design/sections/header/controls/header-position.php:17
+#: app/customizer/design/sections/header/controls/header-position.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7614
 #: snow-monkey/app/customizer/design/sections/header/controls/header-position.php:17
 msgid "Header position for mobile"
 msgstr "モバイル用ヘッダー位置"
 
 #: app/customizer/design/sections/header/controls/header-text-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7576
 #: snow-monkey/app/customizer/design/sections/header/controls/header-text-color.php:15
 msgid "Header text color"
 msgstr "ヘッダーの文字色"
 
 #: app/customizer/design/sections/header/controls/vertical-global-nav.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7536
 #: snow-monkey/app/customizer/design/sections/header/controls/vertical-global-nav.php:17
 msgid "Make global navigation vertical"
 msgstr "グローバルナビゲーションを縦書きにする"
 
 #: app/customizer/design/sections/header/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2286
 #: snow-monkey/app/customizer/design/sections/header/section.php:20
 msgid "Header"
 msgstr "ヘッダー"
 
 #: app/customizer/design/sections/home/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1690
 #: snow-monkey/app/customizer/design/sections/home/section.php:18
 msgid "Posts page settings"
 msgstr "投稿ページ設定"
 
 #: app/customizer/design/sections/page/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2117
 #: snow-monkey/app/customizer/design/sections/page/section.php:18
 msgid "Pages settings"
 msgstr "固定ページ設定"
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/post-tag/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1892
 #: snow-monkey/app/customizer/design/sections/post-tag/section.php:29
 #, php-format
 msgid "[ %1$s ] tag pages settings"
 msgstr "[ %1$s ] タグページ設定"
 
 #: app/customizer/design/sections/post/controls/profile-box.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7157
 #: snow-monkey/app/customizer/design/sections/post/controls/profile-box.php:17
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6531
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts-layout.php:17
 msgid "Related posts layout"
 msgstr "関連記事のレイアウト"
 
 #: app/customizer/design/sections/post/controls/related-posts.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7117
 #: snow-monkey/app/customizer/design/sections/post/controls/related-posts.php:16
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
 
 #: app/customizer/design/sections/post/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1658
 #: snow-monkey/app/customizer/design/sections/post/section.php:18
 msgid "Posts settings"
 msgstr "投稿ページ設定"
 
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7027
 #: snow-monkey/app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:23
 msgid "WooCommerce products"
 msgstr "WooCommerce 商品一覧ページ"
 
 #: app/customizer/design/sections/woocommerce-archive-page/controls/layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6946
 #: snow-monkey/app/customizer/design/sections/woocommerce-archive-page/controls/layout.php:18
 msgid "WooCommerce products page layout"
 msgstr "WooCommerce 商品一覧ページレイアウト"
 
 #: app/customizer/design/sections/woocommerce-archive-page/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2020
 #: snow-monkey/app/customizer/design/sections/woocommerce-archive-page/section.php:20
 msgid "WooCommerce products page settings"
 msgstr "WooCommerce 商品一覧ページ設定"
 
 #: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:25
 #: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4907
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6861
 #: snow-monkey/app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:25
 #: snow-monkey/app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:25
 msgid ""
@@ -1380,6 +1671,7 @@ msgstr ""
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/woocommerce-product-category/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2660
 #: snow-monkey/app/customizer/design/sections/woocommerce-product-category/section.php:29
 #, php-format
 msgid "[ %1$s ] WooCommerce products category settings"
@@ -1387,52 +1679,62 @@ msgstr "[ %1$s ] WooCommerce 商品カテゴリー設定"
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/woocommerce-product-tag/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2710
 #: snow-monkey/app/customizer/design/sections/woocommerce-product-tag/section.php:29
 #, php-format
 msgid "[ %1$s ] WooCommerce products tag settings"
 msgstr "[ %1$s ] WooCommerce 商品タグ設定"
 
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6776
 #: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:23
 msgid "WooCommerce product"
 msgstr "WooCommerce 商品"
 
 #: app/customizer/design/sections/woocommerce-single/controls/layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6730
 #: snow-monkey/app/customizer/design/sections/woocommerce-single/controls/layout.php:18
 msgid "WooCommerce product page layout"
 msgstr "WooCommerce 商品ページレイアウト"
 
 #: app/customizer/design/sections/woocommerce-single/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2424
 #: snow-monkey/app/customizer/design/sections/woocommerce-single/section.php:20
 msgid "WooCommerce product page settings"
 msgstr "WooCommerce 商品ページ設定"
 
 #: app/customizer/infobar/controls/align.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:760
 #: snow-monkey/app/customizer/infobar/controls/align.php:15
 msgid "Infobar text alignment"
 msgstr "お知らせバーのテキスト配置"
 
 #: app/customizer/infobar/controls/content.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:671
 #: snow-monkey/app/customizer/infobar/controls/content.php:16
 msgid "Infobar content"
 msgstr "お知らせバーコンテンツ"
 
 #: app/customizer/infobar/controls/url.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:600
 #: snow-monkey/app/customizer/infobar/controls/url.php:15
 msgid "Infobar link URL"
 msgstr "お知らせバーリンク URL"
 
 #: app/customizer/infobar/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:329
 #: snow-monkey/app/customizer/infobar/section.php:18
 msgid "Infobar"
 msgstr "お知らせバー"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:464
 #: snow-monkey/app/customizer/page-speed-optimization/controls/browser-cache.php:17
 msgid "Use browser cache"
 msgstr "ブラウザキャッシュを使用する"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:465
 #: snow-monkey/app/customizer/page-speed-optimization/controls/browser-cache.php:18
 msgid ""
 "The server must support htaccess, IfModule and mod_expires. If you get the "
@@ -1443,36 +1745,43 @@ msgstr ""
 "た文字を削除してください。"
 
 #: app/customizer/page-speed-optimization/controls/cache-footer.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:425
 #: snow-monkey/app/customizer/page-speed-optimization/controls/cache-footer.php:15
 msgid "Caching footer"
 msgstr "フッターをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/cache-header.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:390
 #: snow-monkey/app/customizer/page-speed-optimization/controls/cache-header.php:15
 msgid "Caching header"
 msgstr "ヘッダーをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/cache-nav-menus.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:355
 #: snow-monkey/app/customizer/page-speed-optimization/controls/cache-nav-menus.php:15
 msgid "Caching nav menus"
 msgstr "メニューをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/cache-widget-areas.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:800
 #: snow-monkey/app/customizer/page-speed-optimization/controls/cache-widget-areas.php:15
 msgid "Caching widget areas"
 msgstr "ウィジェットエリアをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/disable-emoji.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:565
 #: snow-monkey/app/customizer/page-speed-optimization/controls/disable-emoji.php:15
 msgid "Disable emoji"
 msgstr "絵文字を無効化する"
 
 #: app/customizer/page-speed-optimization/controls/expand-get-template-part.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:870
 #: snow-monkey/app/customizer/page-speed-optimization/controls/expand-get-template-part.php:15
 msgid "Extends get_template_part()"
 msgstr "get_template_part() を拡張する"
 
 #: app/customizer/page-speed-optimization/controls/expand-get-template-part.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:871
 #: snow-monkey/app/customizer/page-speed-optimization/controls/expand-get-template-part.php:16
 msgid ""
 "When disabled, customization by code may not be reflected. For details, "
@@ -1482,16 +1791,19 @@ msgstr ""
 "公式サイトのマニュアルをご覧ください。"
 
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:906
 #: snow-monkey/app/customizer/page-speed-optimization/controls/http2-server-push.php:15
 msgid "Use HTTP2 Server Push"
 msgstr "HTTP2 Server Push を使用する"
 
 #: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:941
 #: snow-monkey/app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:15
 msgid "Optimize the jQuery loading"
 msgstr "jQuery の 読み込みを最適化する"
 
 #: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:942
 #: snow-monkey/app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:16
 msgid ""
 "Load jQuery and other scripts as defer + head as much as possible. Depending "
@@ -1502,21 +1814,25 @@ msgstr ""
 "す。"
 
 #: app/customizer/page-speed-optimization/controls/link-prefetching.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:977
 #: snow-monkey/app/customizer/page-speed-optimization/controls/link-prefetching.php:15
 msgid "Use link prefetching"
 msgstr "リンクの先読み機能（prefetch）を使用する"
 
 #: app/customizer/page-speed-optimization/controls/output-head-style.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:835
 #: snow-monkey/app/customizer/page-speed-optimization/controls/output-head-style.php:15
 msgid "Output CSS in head"
 msgstr "CSS を head に出力する"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1051
 #: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:15
 msgid "Setup files loading method."
 msgstr "設定ファイルの読み込み方式"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1052
 #: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:16
 msgid ""
 "You can select the method of loading the setup files. Depending on the "
@@ -1528,163 +1844,197 @@ msgstr ""
 "覧ください。"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1056
 #: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:20
 msgid "get_template_parts (Default)"
 msgstr "get_template_parts（デフォルト）"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1057
 #: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:21
 msgid "load_theme_files"
 msgstr "load_theme_files"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1058
 #: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:22
 msgid "concat"
 msgstr "concat"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1059
 #: snow-monkey/app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:23
 msgid "include"
 msgstr "include"
 
 #: app/customizer/page-speed-optimization/controls/use-lightweight-fontawesome.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1093
 #: snow-monkey/app/customizer/page-speed-optimization/controls/use-lightweight-fontawesome.php:15
 msgid "Use lightweight FontAwesome"
 msgstr "軽量な FontAwesome を使用する"
 
 #: app/customizer/page-speed-optimization/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:238
 #: snow-monkey/app/customizer/page-speed-optimization/section.php:18
 msgid "Page speed optimization"
 msgstr "ページ速度最適化"
 
 #: app/customizer/page-speed-optimization/section.php:19
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:239
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4438
 #: snow-monkey/app/customizer/page-speed-optimization/section.php:19
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:18
 msgid "This feature is a beta version."
 msgstr "この機能はベータ版です。"
 
-#: app/customizer/seo/panel.php:18 snow-monkey/app/customizer/seo/panel.php:18
+#: app/customizer/seo/panel.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:268
+#: snow-monkey/app/customizer/seo/panel.php:18
 msgid "SEO"
 msgstr "SEO"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3056
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:18
 msgid "noindex settings"
 msgstr "noindex の設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3060
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:22
 msgid "Set category pages to noindex"
 msgstr "カテゴリーページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3061
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:23
 msgid "Set tag pages to noindex"
 msgstr "タグページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3062
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:24
 msgid "Set author pages to noindex"
 msgstr "著者ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3063
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:25
 msgid "Set year pages to noindex"
 msgstr "年ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3064
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:26
 msgid "Set month pages to noindex"
 msgstr "月ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3065
 #: snow-monkey/app/customizer/seo/sections/crawler/controls/robots-noindex.php:27
 msgid "Set day pages to noindex"
 msgstr "日ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2151
 #: snow-monkey/app/customizer/seo/sections/crawler/section.php:20
 msgid "Crawler"
 msgstr "クローラー"
 
 #: app/customizer/seo/sections/google-analytics/controls/for-logged-in.php:17
 #: app/customizer/seo/sections/google-tag-manager/controls/for-logged-in.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2871
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4809
 #: snow-monkey/app/customizer/seo/sections/google-analytics/controls/for-logged-in.php:17
 #: snow-monkey/app/customizer/seo/sections/google-tag-manager/controls/for-logged-in.php:17
 msgid "Don't output tags to logged-in users"
 msgstr "ログイン中のユーザーにはタグを出力しない"
 
 #: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3651
 #: snow-monkey/app/customizer/seo/sections/google-analytics/controls/tracking-id.php:17
 msgid "Tracking ID"
 msgstr "トラッキング ID"
 
 #: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3652
 #: snow-monkey/app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
 msgid "e.g. UA-1111111-11 or G-XXXXXXXX"
 msgstr "例: UA-1111111-11 もしくは G-XXXXXXXX"
 
 #: app/customizer/seo/sections/google-analytics/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2213
 #: snow-monkey/app/customizer/seo/sections/google-analytics/section.php:20
 msgid "Google Analytics"
 msgstr "Google アナリティクス"
 
 #: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4306
 #: snow-monkey/app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:18
 msgid "Google site verification"
 msgstr "Google site verification"
 
 #. translators: 1: content of google-site-verification, 2: google-site-verification meta tag
 #: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4309
 #: snow-monkey/app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:21
 #, php-format
 msgid "Please enter part %1$s of %2$s"
 msgstr "%2$sの%1$sの部分を入力してください"
 
 #: app/customizer/seo/sections/google-search-console/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2182
 #: snow-monkey/app/customizer/seo/sections/google-search-console/section.php:20
 msgid "Google Search Console"
 msgstr "Google サーチコンソール"
 
 #: app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4770
 #: snow-monkey/app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:17
 msgid "Tag Manager ID"
 msgstr "タグマネージャ ID"
 
 #: app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4771
 #: snow-monkey/app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:18
 msgid "e.g. GTM-X11X1XX"
 msgstr "例: GTM-X11X1XX"
 
 #: app/customizer/seo/sections/google-tag-manager/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2088
 #: snow-monkey/app/customizer/seo/sections/google-tag-manager/section.php:20
 msgid "Google Tag Manager"
 msgstr "Google タグマネージャ"
 
 #: app/customizer/seo/sections/ogp/controls/fb-app-id.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4726
 #: snow-monkey/app/customizer/seo/sections/ogp/controls/fb-app-id.php:17
 msgid "fb:app_id"
 msgstr "fb:app_id"
 
 #: app/customizer/seo/sections/ogp/controls/fb-app-id.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4727
 #: snow-monkey/app/customizer/seo/sections/ogp/controls/fb-app-id.php:18
 msgid "If you want to output fb:app_id meta tag, please input."
 msgstr "fb:app_id meta タグを出力させたい場合は入力してください。"
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/seo/sections/ogp/controls/fb-app-id.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4729
 #: snow-monkey/app/customizer/seo/sections/ogp/controls/fb-app-id.php:20
 #, php-format
 msgid "fb:app_id can be obtained from %1$sfacebook for developers%2$s."
 msgstr "fb:app_id は %1$sfacebook for developers%2$s から取得できます。"
 
 #: app/customizer/seo/sections/ogp/controls/og-image.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4687
 #: snow-monkey/app/customizer/seo/sections/ogp/controls/og-image.php:17
 msgid "Default OGP image"
 msgstr "デフォルト OGP 画像"
 
 #: app/customizer/seo/sections/ogp/controls/og-image.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4688
 #: snow-monkey/app/customizer/seo/sections/ogp/controls/og-image.php:18
 msgid ""
 "If a featured image is set in an article, that the featured image is used, "
@@ -1694,26 +2044,31 @@ msgstr ""
 "されていない場合はこの画像が使用されます。"
 
 #: app/customizer/seo/sections/ogp/controls/ogp.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4648
 #: snow-monkey/app/customizer/seo/sections/ogp/controls/ogp.php:17
 msgid "Output OGP meta tag"
 msgstr "OGP メタタグを出力する"
 
 #: app/customizer/seo/sections/ogp/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1629
 #: snow-monkey/app/customizer/seo/sections/ogp/section.php:20
 msgid "OGP"
 msgstr "OGP"
 
 #: app/customizer/seo/sections/seo-meta/controls/auto-description.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4558
 #: snow-monkey/app/customizer/seo/sections/seo-meta/controls/auto-description.php:17
 msgid "Automatically output meta description"
 msgstr "Meta description を自動的に出力する"
 
 #: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4520
 #: snow-monkey/app/customizer/seo/sections/seo-meta/controls/description-introduction.php:17
 msgid "Meta description"
 msgstr "Meta description"
 
 #: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4522
 #: snow-monkey/app/customizer/seo/sections/seo-meta/controls/description-introduction.php:19
 msgid ""
 "The meta description is normally output only when \"meta description\" in "
@@ -1723,6 +2078,7 @@ msgstr ""
 "にのみ出力されます。"
 
 #: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4522
 #: snow-monkey/app/customizer/seo/sections/seo-meta/controls/description-introduction.php:19
 msgid ""
 "When \"Automatically output meta description\" is enabled, even if \"meta "
@@ -1734,89 +2090,106 @@ msgstr ""
 "（アーカイブページを除く）"
 
 #: app/customizer/seo/sections/seo-meta/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1960
 #: snow-monkey/app/customizer/seo/sections/seo-meta/section.php:20
 msgid "Meta"
 msgstr "Meta"
 
 #: app/customizer/seo/sections/structured-data/controls/json-ld.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4481
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/json-ld.php:17
 msgid "Output structred data (JSON+LD)"
 msgstr "構造化データ（JSON+LD）を出力する"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4437
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:17
 msgid "Date for the search engine"
 msgstr "検索エンジンに伝える日付"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4442
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:22
 msgid "Published date"
 msgstr "公開日"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4442
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:22
 msgid "(Display published date and modifiled date)"
 msgstr "（公開日と更新日を表示）"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4443
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:23
 msgid "Only modified date"
 msgstr "更新日のみ"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4443
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:23
 msgid "(Only modified date displayed when updating post)"
 msgstr "（記事を更新したときは更新日だけを表示）"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4444
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:24
 msgid "Prioritize display of modified date"
 msgstr "更新日の表示を優先する"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4444
 #: snow-monkey/app/customizer/seo/sections/structured-data/controls/post-date.php:24
 msgid "(Display modifiled date and published date)"
 msgstr "（更新日と公開日を表示）"
 
 #: app/customizer/seo/sections/structured-data/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1929
 #: snow-monkey/app/customizer/seo/sections/structured-data/section.php:20
 msgid "Structured data"
 msgstr "構造化データ"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4392
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:17
 msgid "twitter:card"
 msgstr "twitter:card"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4393
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:18
 msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4398
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:23
 msgid "Do not use"
 msgstr "使用しない"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4348
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:17
 msgid "twitter:site"
 msgstr "twitter:site"
 
 #. translators: 1: @username
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4352
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:21
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
 #: app/customizer/seo/sections/twitter-cards/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1724
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/section.php:20
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
 #. translators: 1: Card validator link
 #: app/customizer/seo/sections/twitter-cards/section.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1728
 #: snow-monkey/app/customizer/seo/sections/twitter-cards/section.php:24
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
@@ -1824,34 +2197,40 @@ msgstr "Twitterカードを使用するにはURLのアプリケーションが�
 
 #. translators: 1: Monkey icon
 #: app/customizer/snow-monkey-community/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:54
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:20
 #, php-format
 msgid "%1$s Snow Monkey Community %1$s"
 msgstr "%1$s Snow Monkey コミュニティ %1$s"
 
 #: app/customizer/snow-monkey-community/section.php:31
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:65
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:31
 msgid "Official Web Site"
 msgstr "公式サイト"
 
 #: app/customizer/snow-monkey-community/section.php:32
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:66
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:32
 msgid "Informations, manuals, etc."
 msgstr "お知らせ、マニュアルなど。"
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:35
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:69
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:35
 #, php-format
 msgid "%1$sOfficial Web Site%2$s"
 msgstr "%1$s公式サイト%2$s"
 
 #: app/customizer/snow-monkey-community/section.php:46
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:80
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:46
 msgid "Online Community"
 msgstr "オンラインコミュニティ"
 
 #: app/customizer/snow-monkey-community/section.php:47
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:81
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:47
 msgid ""
 "It is a place to share information and discuss about future function "
@@ -1862,17 +2241,20 @@ msgstr ""
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:50
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:84
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:50
 #, php-format
 msgid "%1$sOnline Community%2$s"
 msgstr "%1$sオンラインコミュニティ%2$s"
 
 #: app/customizer/snow-monkey-community/section.php:61
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:95
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:61
 msgid "Support Forum"
 msgstr "サポートフォーラム"
 
 #: app/customizer/snow-monkey-community/section.php:62
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:96
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:62
 msgid ""
 "This is an open forum that supports the Snow Monkey usage and customization."
@@ -1882,32 +2264,39 @@ msgstr ""
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:65
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:99
 #: snow-monkey/app/customizer/snow-monkey-community/section.php:65
 #, php-format
 msgid "%1$sSupport Forum%2$s"
 msgstr "%1$sサポートフォーラム%2$s"
 
 #: app/customizer/snow-monkey-forms/controls/snow-monkey-forms-btn.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1128
 #: snow-monkey/app/customizer/snow-monkey-forms/controls/snow-monkey-forms-btn.php:15
 msgid "Use accent colors for buttons."
 msgstr "ボタンにアクセントカラーを使用します。"
 
 #: app/customizer/snow-monkey-forms/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:297
 #: snow-monkey/app/customizer/snow-monkey-forms/section.php:18
 msgid "Snow Monkey Forms"
 msgstr "Snow Monkey Forms"
 
-#: app/customizer/sns/panel.php:18 snow-monkey/app/customizer/sns/panel.php:18
+#: app/customizer/sns/panel.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:23
+#: snow-monkey/app/customizer/sns/panel.php:18
 msgid "SNS"
 msgstr "SNS"
 
 #: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4172
 #: snow-monkey/app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:20
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
 #. translators: 1: Facebook page slug, 2: Facebook page URL
 #: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4175
 #: snow-monkey/app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:23
 #, php-format
 msgctxt "facebook-page-name"
@@ -1915,71 +2304,85 @@ msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
 #: app/customizer/sns/sections/like-me-box/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2317
 #: snow-monkey/app/customizer/sns/sections/like-me-box/section.php:20
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4119
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:18
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4123
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:22
 msgid "Facebook"
 msgstr "Facebook"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4124
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:23
 msgid "Twitter"
 msgstr "Twitter"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4125
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:24
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4126
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:25
 msgid "Feedly"
 msgstr "Feedly"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4127
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:26
 msgid "LINE"
 msgstr "LINE"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4128
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:27
 msgid "Pocket"
 msgstr "Pocket"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:28
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4129
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:28
 msgid "Pinterest"
 msgstr "Pinterest"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4130
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:29
 msgid "Feed"
 msgstr "フィード"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:30
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4131
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/buttons.php:30
 msgid "Copy"
 msgstr "コピー"
 
 #: app/customizer/sns/sections/share-buttons/controls/cache-seconds.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4076
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/cache-seconds.php:17
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 
 #: app/customizer/sns/sections/share-buttons/controls/count-both.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4034
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/count-both.php:18
 msgid "Count both http and https"
 msgstr "http と https の両方をカウントする"
 
 #: app/customizer/sns/sections/share-buttons/controls/count-both.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4035
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/count-both.php:19
 msgid ""
 "In the case of the http site, only http will be counted regardless of the "
@@ -1987,21 +2390,25 @@ msgid ""
 msgstr "http サイトの場合、設定に関係なく http のみがカウントされます。"
 
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3990
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/display-position.php:18
 msgid "Display position"
 msgstr "表示する場所"
 
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3996
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/display-position.php:24
 msgid "Both"
 msgstr "両方"
 
 #: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3946
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:17
 msgid "Facebook settings"
 msgstr "Facebook 設定"
 
 #: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3947
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:18
 msgid ""
 "If you want to count of Facebook share count then needs to register Facebook "
@@ -2012,69 +2419,82 @@ msgstr ""
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3949
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:20
 #, php-format
 msgid "%1$sAccessToken tools%2$s"
 msgstr "%1$sアクセストークンツール%2$s"
 
 #: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3904
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:17
 msgid "Twitter settings"
 msgstr "Twitter 設定"
 
 #. translators: 1: Link of OpenShareCount
 #: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3908
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:21
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3859
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/type.php:18
 msgid "Type"
 msgstr "種類"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3863
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/type.php:22
 msgid "Balloon"
 msgstr "バルーン"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3864
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/type.php:23
 msgid "Horizontal"
 msgstr "水平"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3865
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/type.php:24
 msgid "Icon"
 msgstr "アイコン"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3866
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/type.php:25
 msgid "Block"
 msgstr "ブロック"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3867
 #: snow-monkey/app/customizer/sns/sections/share-buttons/controls/type.php:26
 msgid "Official"
 msgstr "公式"
 
 #: app/customizer/sns/sections/share-buttons/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2619
 #: snow-monkey/app/customizer/sns/sections/share-buttons/section.php:20
 msgid "Share buttons"
 msgstr "シェアボタン"
 
 #: app/customizer/static-front-page/controls/home-page-container.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1163
 #: snow-monkey/app/customizer/static-front-page/controls/home-page-container.php:15
 msgid "Add side padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに左右余白を追加する"
 
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1210
 #: snow-monkey/app/customizer/static-front-page/controls/home-page-content-padding.php:15
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
 
 #: app/customizer/static-front-page/controls/home-page-display-page-header.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1256
 #: snow-monkey/app/customizer/static-front-page/controls/home-page-display-page-header.php:15
 msgid ""
 "Display page header on homepage (You need to set the default page header or "
@@ -2083,116 +2503,167 @@ msgstr ""
 "ホームページにページヘッダーを表示する（デフォルトページヘッダーまたはアイ"
 "キャッチ画像を設定する必要があります）"
 
+#: app/customizer/static-front-page/controls/home-page-header-position-lg.php:16
+msgid "Overwrite header position for PC"
+msgstr "PC 用ヘッダー位置を上書きする"
+
+#: app/customizer/static-front-page/controls/home-page-header-position-lg.php:21
+#: app/customizer/static-front-page/controls/home-page-header-position.php:21
+msgid "Do not overwrite"
+msgstr "上書きしない"
+
+#: app/customizer/static-front-page/controls/home-page-header-position.php:16
+msgid "Overwrite header position for mobile"
+msgstr "モバイル用ヘッダー位置を上書きする"
+
 #: app/customizer/static-front-page/controls/home-page-setting-label.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1304
 #: snow-monkey/app/customizer/static-front-page/controls/home-page-setting-label.php:15
 msgid "Front page setting"
 msgstr "ホームページ設定"
 
 #: app/customizer/static-front-page/controls/posts-page-display-title.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1342
 #: snow-monkey/app/customizer/static-front-page/controls/posts-page-display-title.php:15
 msgid "Display posts page title"
 msgstr "投稿ページのタイトルを表示"
 
 #: app/customizer/static-front-page/controls/posts-page-setting-label.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1381
 #: snow-monkey/app/customizer/static-front-page/controls/posts-page-setting-label.php:15
 msgid "Posts page setting"
 msgstr "投稿ページ設定"
 
 #: app/customizer/title-tagline/controls/copyright.php:47
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1493
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:47
 msgid "Copyright"
 msgstr "コピーライト"
 
 #: app/customizer/title-tagline/controls/copyright.php:48
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1494
 #: snow-monkey/app/customizer/title-tagline/controls/copyright.php:48
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
 #: app/setup/dependency/woocommerce.php:156
-#: snow-monkey/app/setup/dependency/woocommerce.php:133
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4787
+#: snow-monkey/app/setup/dependency/woocommerce.php:156
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
 #: app/setup/dependency/woocommerce.php:157
-#: snow-monkey/app/setup/dependency/woocommerce.php:134
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4788
+#: snow-monkey/app/setup/dependency/woocommerce.php:157
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
 #: app/setup/dependency/woocommerce.php:287
-#: snow-monkey/app/setup/dependency/woocommerce.php:264
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4918
+#: snow-monkey/app/setup/dependency/woocommerce.php:287
 msgid "Home"
 msgstr "ホーム"
 
 #: app/setup/dependency/woocommerce.php:293
-#: snow-monkey/app/setup/dependency/woocommerce.php:270
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4924
+#: snow-monkey/app/setup/dependency/woocommerce.php:293
 msgid "My account"
 msgstr "マイアカウント"
 
 #: app/setup/entry-meta.php:18 app/setup/entry-meta.php:32
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4115
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4129
 #: snow-monkey/app/setup/entry-meta.php:18
 #: snow-monkey/app/setup/entry-meta.php:32
 msgid "Published"
 msgstr "投稿日"
 
-#: app/setup/entry-meta.php:48 snow-monkey/app/setup/entry-meta.php:48
+#: app/setup/entry-meta.php:48
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4145
+#: snow-monkey/app/setup/entry-meta.php:48
 msgid "Modified"
 msgstr "更新日"
 
-#: app/setup/entry-meta.php:61 snow-monkey/app/setup/entry-meta.php:61
+#: app/setup/entry-meta.php:61
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4158
+#: snow-monkey/app/setup/entry-meta.php:61
 msgid "Author"
 msgstr "著者"
 
-#: app/setup/image-size.php:35 snow-monkey/app/setup/image-size.php:35
+#: app/setup/image-size.php:35
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:366
+#: snow-monkey/app/setup/image-size.php:35
 msgid "xLarge"
 msgstr "xLarge"
 
-#: app/setup/nav-menus.php:24 snow-monkey/app/setup/nav-menus.php:24
+#: app/setup/nav-menus.php:24
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:530
+#: snow-monkey/app/setup/nav-menus.php:24
 msgid "Global Navigation (For PC)"
 msgstr "グローバルナビゲーション（PC用）"
 
-#: app/setup/nav-menus.php:25 snow-monkey/app/setup/nav-menus.php:25
+#: app/setup/nav-menus.php:25
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:531
+#: snow-monkey/app/setup/nav-menus.php:25
 msgid "Drawer Navigation (For Mobile)"
 msgstr "ドロワーナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:26 snow-monkey/app/setup/nav-menus.php:26
+#: app/setup/nav-menus.php:26
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:532
+#: snow-monkey/app/setup/nav-menus.php:26
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
-#: app/setup/nav-menus.php:27 snow-monkey/app/setup/nav-menus.php:27
+#: app/setup/nav-menus.php:27
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:533
+#: snow-monkey/app/setup/nav-menus.php:27
 msgid "Follow box"
 msgstr "フォローボックス"
 
-#: app/setup/nav-menus.php:28 snow-monkey/app/setup/nav-menus.php:28
+#: app/setup/nav-menus.php:28
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:534
+#: snow-monkey/app/setup/nav-menus.php:28
 msgid "Header Sub Navigation"
 msgstr "ヘッダーサブナビゲーション"
 
-#: app/setup/nav-menus.php:29 snow-monkey/app/setup/nav-menus.php:29
+#: app/setup/nav-menus.php:29
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:535
+#: snow-monkey/app/setup/nav-menus.php:29
 msgid "Footer Sub Navigation"
 msgstr "フッターサブナビゲーション"
 
-#: app/setup/nav-menus.php:30 snow-monkey/app/setup/nav-menus.php:30
+#: app/setup/nav-menus.php:30
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:536
+#: snow-monkey/app/setup/nav-menus.php:30
 msgid "Drawer Sub Navigation (For Mobile)"
 msgstr "ドロワーサブナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:31 snow-monkey/app/setup/nav-menus.php:31
+#: app/setup/nav-menus.php:31
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:537
+#: snow-monkey/app/setup/nav-menus.php:31
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:126 snow-monkey/app/setup/nav-menus.php:126
+#: app/setup/nav-menus.php:126
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:632
+#: snow-monkey/app/setup/nav-menus.php:126
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
 #: app/setup/page-speed-optimization.php:143
-#: snow-monkey/app/setup/page-speed-optimization.php:137
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:894
+#: snow-monkey/app/setup/page-speed-optimization.php:143
 msgid "Remove caches"
 msgstr "キャッシュを削除"
 
 #: app/setup/support-forum-widget.php:15
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:1979
 #: snow-monkey/app/setup/support-forum-widget.php:15
 msgid "Recent topics of Snow Monkey support forum"
 msgstr "Snow Monkey サポートフォーラムの最近のトピック"
 
 #: app/setup/support-forum-widget.php:61
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2025
 #: snow-monkey/app/setup/support-forum-widget.php:61
 #, php-format
 msgid ""
@@ -2205,6 +2676,7 @@ msgstr ""
 "を立ててください。"
 
 #: app/setup/support-forum-widget.php:74
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2038
 #: snow-monkey/app/setup/support-forum-widget.php:74
 #, php-format
 msgid "You must have a %1$sSnow Monkey subscription%2$s to start a topic."
@@ -2213,86 +2685,123 @@ msgstr ""
 "があります。"
 
 #: app/setup/update-info-widget.php:14
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2165
 #: snow-monkey/app/setup/update-info-widget.php:14
 msgid "Updates related to Snow Monkey"
 msgstr "Snow Monkey 関連の更新情報"
 
-#: app/setup/widget-area.php:21 snow-monkey/app/setup/widget-area.php:21
+#: app/setup/widget-area.php:21
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2236
+#: snow-monkey/app/setup/widget-area.php:21
 msgid "Sidebar"
 msgstr "サイドバー"
 
 #: app/setup/widget-area.php:22 app/setup/widget-area.php:44
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2237
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2259
 #: snow-monkey/app/setup/widget-area.php:22
 #: snow-monkey/app/setup/widget-area.php:44
 msgid "These widgets are displayed in the sidebar on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:43 snow-monkey/app/setup/widget-area.php:43
+#: app/setup/widget-area.php:43
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2258
+#: snow-monkey/app/setup/widget-area.php:43
 msgid "Sticky sidebar"
 msgstr "追尾サイドバー"
 
-#: app/setup/widget-area.php:65 snow-monkey/app/setup/widget-area.php:65
+#: app/setup/widget-area.php:65
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2280
+#: snow-monkey/app/setup/widget-area.php:65
 msgid "Top of the page title"
 msgstr "ページタイトルの上"
 
-#: app/setup/widget-area.php:66 snow-monkey/app/setup/widget-area.php:66
+#: app/setup/widget-area.php:66
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2281
+#: snow-monkey/app/setup/widget-area.php:66
 msgid "These widgets are displayed on the page title on the posts and pages."
 msgstr ""
 "これらのウィジェットは投稿と固定ページのページタイトルの上に表示されます。"
 
-#: app/setup/widget-area.php:87 snow-monkey/app/setup/widget-area.php:87
+#: app/setup/widget-area.php:87
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2302
+#: snow-monkey/app/setup/widget-area.php:87
 msgid "Top of the archive page"
 msgstr "アーカイブページ上部"
 
-#: app/setup/widget-area.php:88 snow-monkey/app/setup/widget-area.php:88
+#: app/setup/widget-area.php:88
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2303
+#: snow-monkey/app/setup/widget-area.php:88
 msgid "These widgets are displayed top of the contents on archive page."
 msgstr "これらのウィジェットはアーカイブページの上部に表示されます。"
 
-#: app/setup/widget-area.php:110 snow-monkey/app/setup/widget-area.php:110
+#: app/setup/widget-area.php:110
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2325
+#: snow-monkey/app/setup/widget-area.php:110
 msgid "These widgets are displayed bottom of the contents on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページのコンテンツ下部に表示されます。"
 
-#: app/setup/widget-area.php:131 snow-monkey/app/setup/widget-area.php:131
+#: app/setup/widget-area.php:131
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2346
+#: snow-monkey/app/setup/widget-area.php:131
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
-#: app/setup/widget-area.php:133 snow-monkey/app/setup/widget-area.php:133
+#: app/setup/widget-area.php:133
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2348
+#: snow-monkey/app/setup/widget-area.php:133
 msgid "These widgets are displayed in the sidebar on archive page."
 msgstr "これらのウィジェットはアーカイブページのサイドバーに表示されます。"
 
-#: app/setup/widget-area.php:153 snow-monkey/app/setup/widget-area.php:153
+#: app/setup/widget-area.php:153
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2368
+#: snow-monkey/app/setup/widget-area.php:153
 msgid "Homepage (Top of page)"
 msgstr "ホームページ上部"
 
 #: app/setup/widget-area.php:155 app/setup/widget-area.php:194
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2370
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2409
 #: snow-monkey/app/setup/widget-area.php:155
 #: snow-monkey/app/setup/widget-area.php:194
 msgid "These widgets are displayed in the homepage."
 msgstr "これらのウィジェットはホームページに表示されます。"
 
-#: app/setup/widget-area.php:192 snow-monkey/app/setup/widget-area.php:192
+#: app/setup/widget-area.php:192
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2407
+#: snow-monkey/app/setup/widget-area.php:192
 msgid "Homepage (Bottom of page)"
 msgstr "ホームページ下部"
 
-#: app/setup/widget-area.php:231 snow-monkey/app/setup/widget-area.php:231
+#: app/setup/widget-area.php:231
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2446
+#: snow-monkey/app/setup/widget-area.php:231
 msgid "Posts page (Top of page)"
 msgstr "投稿ページ上部"
 
 #: app/setup/widget-area.php:233 app/setup/widget-area.php:272
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2448
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2487
 #: snow-monkey/app/setup/widget-area.php:233
 #: snow-monkey/app/setup/widget-area.php:272
 msgid "These widgets are displayed in the posts page."
 msgstr "これらのウィジェットは投稿ページに表示されます。"
 
-#: app/setup/widget-area.php:270 snow-monkey/app/setup/widget-area.php:270
+#: app/setup/widget-area.php:270
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2485
+#: snow-monkey/app/setup/widget-area.php:270
 msgid "Posts page (Bottom of page)"
 msgstr "投稿ページ下部"
 
-#: app/setup/widget-area.php:311 snow-monkey/app/setup/widget-area.php:311
+#: app/setup/widget-area.php:311
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2526
+#: snow-monkey/app/setup/widget-area.php:311
 msgid "These widgets are displayed in the footer."
 msgstr "これらのウィジェットはフッターに表示されます。"
 
-#: app/setup/widget-area.php:333 snow-monkey/app/setup/widget-area.php:333
+#: app/setup/widget-area.php:333
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2548
+#: snow-monkey/app/setup/widget-area.php:333
 msgid ""
 "These widgets are displayed in the overlay that opens with clicking #sm-"
 "overlay-widget-area."
@@ -2300,23 +2809,33 @@ msgstr ""
 "これらのウィジェットは #sm-overlay-widget-area をクリックすると開くオーバレイ"
 "に表示されます。"
 
-#: app/setup/widget-area.php:353 snow-monkey/app/setup/widget-area.php:353
+#: app/setup/widget-area.php:353
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2568
+#: snow-monkey/app/setup/widget-area.php:353
 msgid "Top of the article"
 msgstr "記事本文の上"
 
-#: app/setup/widget-area.php:354 snow-monkey/app/setup/widget-area.php:354
+#: app/setup/widget-area.php:354
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2569
+#: snow-monkey/app/setup/widget-area.php:354
 msgid "These widgets are displayed top of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の上に表示されます。"
 
-#: app/setup/widget-area.php:375 snow-monkey/app/setup/widget-area.php:375
+#: app/setup/widget-area.php:375
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2590
+#: snow-monkey/app/setup/widget-area.php:375
 msgid "Bottom of the article"
 msgstr "記事本文の下"
 
-#: app/setup/widget-area.php:376 snow-monkey/app/setup/widget-area.php:376
+#: app/setup/widget-area.php:376
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2591
+#: snow-monkey/app/setup/widget-area.php:376
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/widgets.php:102 snow-monkey/app/setup/widgets.php:51
+#: app/setup/widgets.php:102
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3761
+#: snow-monkey/app/setup/widgets.php:102
 msgid "This widget is deprecated. It may slow down the page when used."
 msgstr ""
 "このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"

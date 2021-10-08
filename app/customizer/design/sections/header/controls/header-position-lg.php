@@ -3,10 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 15.10.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+use Framework\Helper;
 
 Framework::control(
 	'select',
@@ -15,13 +16,7 @@ Framework::control(
 		'label'           => __( 'Header position for PC', 'snow-monkey' ),
 		'priority'        => 111,
 		'default'         => '',
-		'choices'         => [
-			'sticky'                 => __( 'Sticky', 'snow-monkey' ),
-			'sticky-overlay'         => __( 'Overlay (Sticky)', 'snow-monkey' ),
-			'sticky-overlay-colored' => __( 'Overlay (Sticky / When scrolling, whilte background)', 'snow-monkey' ),
-			'overlay'                => __( 'Overlay', 'snow-monkey' ),
-			''                       => __( 'Normal', 'snow-monkey' ),
-		],
+		'choices'         => Helper::header_position_choices(),
 		'active_callback' => function() {
 			return 'left' !== get_theme_mod( 'header-layout' );
 		},
