@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.2
+ * @version 15.10.1
  *
  * renamed: template-parts/related-posts.php
  */
@@ -24,6 +24,7 @@ $args = wp_parse_args(
 		'_code'           => null,
 		'_context'        => 'snow-monkey/related-posts',
 		'_entries_layout' => $default_entries_layout,
+		'_item_title_tag' => 'h3',
 		'_post_id'        => get_the_ID(),
 		'_posts_query'    => null,
 		'_title'          => __( 'Related posts', 'snow-monkey' ),
@@ -66,6 +67,7 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 				'_entries_layout' => $args['_entries_layout'],
 				'_force_sm_1col'  => false,
 				'_infeed_ads'     => false,
+				'_item_title_tag' => $args['_item_title_tag'],
 				'_posts_query'    => $query,
 			]
 		);
