@@ -18,25 +18,34 @@
 
   &--simple,
   &--text,
-  &--text2 {
+  &--text2,
+  &--large-image {
+    display: block;
+
     &.#{ $_prefix }c-entries {
       margin-right: 0;
       margin-left: 0;
       margin-bottom: 0;
     }
 
-    display: block;
+    .#{ $_prefix }c-entries__item {
+      margin: 0;
+      padding: 0;
+      max-width: none;
+    }
+  }
+
+  &--simple,
+  &--text,
+  &--text2 {
     border-top: 1px solid transparent;
     border-top-color: _lighter($_color-gray); // For IE11
     border-top-color: _var-lighter-color-gray();
 
     .#{ $_prefix }c-entries__item {
-      margin: 0;
-      max-width: none;
       border-bottom: 1px solid transparent;
       border-bottom-color: _lighter($_color-gray); // For IE11
       border-bottom-color: _var-lighter-color-gray();
-      padding: 0;
     }
   }
 
@@ -53,6 +62,16 @@
     .#{ $_prefix }c-entries__item {
       > a {
         @include _padding(.5, 0);
+      }
+    }
+  }
+
+  &--large-image {
+    @include items-gutter(1);
+
+    .#{ $_prefix }c-entries__item {
+      > a {
+        color: $_color-white;
       }
     }
   }

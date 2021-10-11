@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.2
+ * @version 15.10.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -18,17 +18,18 @@ Framework::control(
 		'priority'        => 140,
 		'default'         => '',
 		'choices'         => [
-			''           => __( 'Default', 'snow-monkey' ),
-			'rich-media' => __( 'Rich media', 'snow-monkey' ),
-			'simple'     => __( 'Simple', 'snow-monkey' ),
-			'text'       => __( 'Text', 'snow-monkey' ),
-			'text2'      => __( 'Text 2', 'snow-monkey' ),
-			'panel'      => __( 'Panels', 'snow-monkey' ),
-			'carousel'   => sprintf(
+			''            => __( 'Default', 'snow-monkey' ),
+			'rich-media'  => __( 'Rich media', 'snow-monkey' ),
+			'simple'      => __( 'Simple', 'snow-monkey' ),
+			'text'        => __( 'Text', 'snow-monkey' ),
+			'text2'       => __( 'Text 2', 'snow-monkey' ),
+			'panel'       => __( 'Panels', 'snow-monkey' ),
+			'carousel'    => sprintf(
 				// translators: %1$s: entries layout
 				__( 'Carousel (%1$s)', 'snow-monkey' ),
 				__( 'Rich media', 'snow-monkey' )
 			),
+			'large-image' => __( 'Large image', 'snow-monkey' ),
 		],
 		'active_callback' => function() {
 			return get_option( 'mwt-display-related-posts' );

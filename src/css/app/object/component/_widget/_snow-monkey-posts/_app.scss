@@ -52,4 +52,12 @@
       }
     }
   }
+
+  .#{ $_prefix }c-entries--large-image {
+    .#{ $_prefix }c-entry-summary__figure {
+      &::before {
+        padding: 100% * 4 / 3 0 0;
+      }
+    }
+  }
 }

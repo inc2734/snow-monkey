@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 15.10.0
  */
 
 // phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
@@ -84,16 +84,17 @@ if ( ! $instance ) {
 		>
 			<?php
 			$layouts = [
-				'rich-media' => __( 'Rich media', 'snow-monkey' ),
-				'simple'     => __( 'Simple', 'snow-monkey' ),
-				'text'       => __( 'Text', 'snow-monkey' ),
-				'text2'      => __( 'Text 2', 'snow-monkey' ),
-				'panel'      => __( 'Panels', 'snow-monkey' ),
-				'carousel'   => sprintf(
+				'rich-media'  => __( 'Rich media', 'snow-monkey' ),
+				'simple'      => __( 'Simple', 'snow-monkey' ),
+				'text'        => __( 'Text', 'snow-monkey' ),
+				'text2'       => __( 'Text 2', 'snow-monkey' ),
+				'panel'       => __( 'Panels', 'snow-monkey' ),
+				'carousel'    => sprintf(
 					// translators: %1$s: entries layout
 					__( 'Carousel (%1$s)', 'snow-monkey' ),
 					__( 'Rich media', 'snow-monkey' )
 				),
+				'large-image' => __( 'Large image', 'snow-monkey' ),
 			]
 			?>
 			<?php foreach ( $layouts as $value => $label ) : ?>

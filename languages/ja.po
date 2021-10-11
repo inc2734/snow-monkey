@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-10-08 15:11+0900\n"
-"PO-Revision-Date: 2021-10-08 15:11+0900\n"
+"POT-Creation-Date: 2021-10-11 10:53+0900\n"
+"PO-Revision-Date: 2021-10-11 10:53+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -931,6 +931,15 @@ msgstr "パネル"
 #, php-format
 msgid "Carousel (%1$s)"
 msgstr "カルーセル（%1$s）"
+
+#: app/customizer/design/sections/base-design/controls/entries-layout.php:31
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:33
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:32
+#: app/widget/snow-monkey-recent-posts/_form.php:97
+#: app/widget/snow-monkey-rss/_form.php:82
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:136
+msgid "Large image"
+msgstr "大きな画像"
 
 #. translators: %1$s: heading element
 #: app/customizer/design/sections/base-design/controls/h2-style.php:17
@@ -2873,26 +2882,26 @@ msgstr "表示する投稿数"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:106
-#: app/widget/snow-monkey-rss/_form.php:91
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:145
+#: app/widget/snow-monkey-recent-posts/_form.php:107
+#: app/widget/snow-monkey-rss/_form.php:92
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:146
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:106
 #: snow-monkey/app/widget/snow-monkey-rss/_form.php:91
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:145
 msgid "Link URL"
 msgstr "リンク URL"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:117
-#: app/widget/snow-monkey-rss/_form.php:102
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:156
+#: app/widget/snow-monkey-recent-posts/_form.php:118
+#: app/widget/snow-monkey-rss/_form.php:103
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:157
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:117
 #: snow-monkey/app/widget/snow-monkey-rss/_form.php:102
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:156
 msgid "Link text"
 msgstr "リンクテキスト"
 
-#: app/widget/snow-monkey-recent-posts/_form.php:136
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:175
+#: app/widget/snow-monkey-recent-posts/_form.php:137
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:176
 #: snow-monkey/app/widget/snow-monkey-recent-posts/_form.php:136
 #: snow-monkey/app/widget/snow-monkey-taxonomy-posts/_form.php:175
 msgid "Ignore sticky posts"

@@ -183,6 +183,52 @@
   }
 }
 
+.#{ $_prefix }c-entries--large-image .#{ $_prefix }c-entry-summary {
+  position: relative;
+
+  &__figure {
+    margin: 0;
+
+    &::before {
+      @include _media-max(sm) {
+        padding: 100% * 4 / 3 0 0;
+      }
+    }
+  }
+
+  &__figure .#{ $_prefix }c-entry-summary__term,
+  &__content {
+    display: none;
+  }
+
+  &__body {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include _padding(.5);
+    overflow: hidden;
+
+    @include _media-min(md) {
+      @include _padding(1);
+    }
+  }
+
+  &__header {
+    margin: 0;
+  }
+
+  &__meta {
+    @include _margin(.25, 0, 0);
+    font-weight: normal;
+    text-align: left;
+
+    .#{ $_prefix }c-meta__item--categories {
+      display: inline-block;
+    }
+  }
+}
+
 .#{ $_prefix }c-entries--panel .#{ $_prefix }c-entry-summary {
   flex: 0 1 100%;
   display: flex;
