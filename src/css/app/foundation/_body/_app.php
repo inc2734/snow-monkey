@@ -142,7 +142,7 @@ if ( Helper::is_ie() ) {
 			[
 				'selectors'  => [
 					'.l-body',
-					'.block-editor-block-list__block',
+					'.is-root-container',
 				],
 				'properties' => [ 'font-family: ' . $font_family ],
 			],
