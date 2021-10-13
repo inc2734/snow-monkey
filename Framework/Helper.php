@@ -409,46 +409,41 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_font_sizes() {
-		$settings   = \WP_Theme_JSON_Resolver::get_core_data()->get_settings();
-		$font_sizes = isset( $settings['typography']['fontSizes']['core'] )
-			? $settings['typography']['fontSizes']['core']
-			: [];
-
 		return apply_filters(
 			'snow_monkey_editor_font_sizes',
 			[
 				[
-					'name' => _x( 'Small', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'name' => _x( 'Small', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-small',
 					'size' => '14px',
 				],
 				[
-					'name' => _x( 'Normal', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'name' => _x( 'Normal', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-normal',
 					'size' => '16px',
 				],
 				[
-					'name' => _x( 'Medium', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'name' => _x( 'Medium', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-medium',
 					'size' => '20px',
 				],
 				[
-					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-large',
 					'size' => '28px',
 				],
 				[
-					'name' => _x( 'large', 'editor-font-sizes', 'snow-monkey' ) . ' +', // 小 標準 中 大 特大
+					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' +',
 					'slug' => 'sm-xlarge',
 					'size' => '44px',
 				],
 				[
-					'name' => _x( 'large', 'editor-font-sizes', 'snow-monkey' ) . ' ++', // 小 標準 中 大 特大
+					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' ++',
 					'slug' => 'sm-xxlarge',
 					'size' => '76px',
 				],
 				[
-					'name' => _x( 'large', 'editor-font-sizes', 'snow-monkey' ) . ' +++', // 小 標準 中 大 特大
+					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' +++',
 					'slug' => 'sm-xxxlarge',
 					'size' => '140px',
 				],
