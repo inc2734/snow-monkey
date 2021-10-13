@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 15.11.0
  */
 
 namespace Framework;
@@ -348,120 +348,109 @@ class Helper {
 	}
 
 	/**
-	 * Return editor color palette settings
-	 *
-	 * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+	 * Return editor color palette settings.
 	 *
 	 * @return array
 	 */
 	public static function get_color_palette() {
+		$settings      = \WP_Theme_JSON_Resolver::get_core_data()->get_settings();
+		$color_palette = isset( $settings['color']['palette'] )
+			? $settings['color']['palette']['core']
+			: [];
+
 		return apply_filters(
 			'snow_monkey_editor_color_palette',
+			array_merge(
+				[
+					[
+						'name'  => __( 'Text color', 'snow-monkey' ),
+						'slug'  => 'text-color',
+						'color' => '#333',
+					],
+					[
+						'name'  => __( 'Dark gray', 'snow-monkey' ),
+						'slug'  => 'dark-gray',
+						'color' => '#999',
+					],
+					[
+						'name'  => __( 'Gray', 'snow-monkey' ),
+						'slug'  => 'gray',
+						'color' => '#ccc',
+					],
+					[
+						'name'  => __( 'Light gray', 'snow-monkey' ),
+						'slug'  => 'very-light-gray',
+						'color' => '#eee',
+					],
+					[
+						'name'  => __( 'Lightest gray', 'snow-monkey' ),
+						'slug'  => 'lightest-grey',
+						'color' => '#f7f7f7',
+					],
+					[
+						'name'  => __( 'Accent color', 'snow-monkey' ),
+						'slug'  => 'accent-color',
+						'color' => get_theme_mod( 'accent-color', '#cd162c' ), // On after_setup_theme, default value not set yet.
+					],
+					[
+						'name'  => __( 'Sub accent color', 'snow-monkey' ),
+						'slug'  => 'sub-accent-color',
+						'color' => get_theme_mod( 'sub-accent-color', '#707593' ), // On after_setup_theme, default value not set yet.
+					],
+				],
+				$color_palette
+			)
+		);
+	}
+
+	/**
+	 * Return editor font size settings.
+	 *
+	 * @return array
+	 */
+	public static function get_font_sizes() {
+		$settings   = \WP_Theme_JSON_Resolver::get_core_data()->get_settings();
+		$font_sizes = isset( $settings['typography']['fontSizes']['core'] )
+			? $settings['typography']['fontSizes']['core']
+			: [];
+
+		return apply_filters(
+			'snow_monkey_editor_font_sizes',
 			[
 				[
-					'name'  => __( 'White', 'snow-monkey' ),
-					'slug'  => 'white',
-					'color' => '#fff',
+					'name' => _x( 'Small', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'slug' => 'sm-small',
+					'size' => '14px',
 				],
 				[
-					'name'  => __( 'Black', 'snow-monkey' ),
-					'slug'  => 'black',
-					'color' => '#000',
+					'name' => _x( 'Normal', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'slug' => 'sm-normal',
+					'size' => '16px',
 				],
 				[
-					'name'  => __( 'Text color', 'snow-monkey' ),
-					'slug'  => 'text-color',
-					'color' => '#333',
+					'name' => _x( 'Medium', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'slug' => 'sm-medium',
+					'size' => '20px',
 				],
 				[
-					'name'  => __( 'Dark gray', 'snow-monkey' ),
-					'slug'  => 'dark-gray',
-					'color' => '#999',
+					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ), // 小 標準 中 大 特大
+					'slug' => 'sm-large',
+					'size' => '28px',
 				],
 				[
-					'name'  => __( 'Gray', 'snow-monkey' ),
-					'slug'  => 'gray',
-					'color' => '#ccc',
+					'name' => _x( 'large', 'editor-font-sizes', 'snow-monkey' ) . ' +', // 小 標準 中 大 特大
+					'slug' => 'sm-xlarge',
+					'size' => '44px',
 				],
 				[
-					'name'  => __( 'Light gray', 'snow-monkey' ),
-					'slug'  => 'very-light-gray',
-					'color' => '#eee',
+					'name' => _x( 'large', 'editor-font-sizes', 'snow-monkey' ) . ' ++', // 小 標準 中 大 特大
+					'slug' => 'sm-xxlarge',
+					'size' => '76px',
 				],
 				[
-					'name'  => __( 'Lightest gray', 'snow-monkey' ),
-					'slug'  => 'lightest-grey',
-					'color' => '#f7f7f7',
-				],
-				[
-					'name'  => __( 'Accent color', 'snow-monkey' ),
-					'slug'  => 'accent-color',
-					'color' => get_theme_mod( 'accent-color', '#cd162c' ), // On after_setup_theme, default value not set yet.
-				],
-				[
-					'name'  => __( 'Sub accent color', 'snow-monkey' ),
-					'slug'  => 'sub-accent-color',
-					'color' => get_theme_mod( 'sub-accent-color', '#707593' ), // On after_setup_theme, default value not set yet.
-				],
-				[
-					'name'     => __( 'Pale pink', 'snow-monkey' ),
-					'slug'     => 'pale-pink',
-					'color'    => '#f78da7',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Vivid red', 'snow-monkey' ),
-					'slug'     => 'vivid-red',
-					'color'    => '#cf2e2e',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Luminous vivid orange', 'snow-monkey' ),
-					'slug'     => 'luminous-vivid-orange',
-					'color'    => '#ff6900',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Luminous vivid amber', 'snow-monkey' ),
-					'slug'     => 'luminous-vivid-amber',
-					'color'    => '#fcb900',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Light green cyan', 'snow-monkey' ),
-					'slug'     => 'light-green-cyan',
-					'color'    => '#7bdcb5',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Vivid green cyan', 'snow-monkey' ),
-					'slug'     => 'vivid-green-cyan',
-					'color'    => '#00d084',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Pale cyan blue', 'snow-monkey' ),
-					'slug'     => 'pale-cyan-blue',
-					'color'    => '#8ed1fc',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Vivid cyan blue', 'snow-monkey' ),
-					'slug'     => 'vivid-cyan-blue',
-					'color'    => '#0693e3',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Cyan bluish gray', 'snow-monkey' ),
-					'slug'     => 'cyan-bluish-gray',
-					'color'    => '#abb8c3',
-					'_builtin' => true,
-				],
-				[
-					'name'     => __( 'Very dark gray', 'snow-monkey' ),
-					'slug'     => 'very-dark-gray',
-					'color'    => '#313131',
-					'_builtin' => true,
+					'name' => _x( 'large', 'editor-font-sizes', 'snow-monkey' ) . ' +++', // 小 標準 中 大 特大
+					'slug' => 'sm-xxxlarge',
+					'size' => '140px',
 				],
 			]
 		);
