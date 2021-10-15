@@ -1,6 +1,7 @@
 .editor-styles-wrapper,
 .customize-control-sidebar_block_editor {
-  [data-align="full"] > .smb-spider-slider--shifted {
+  [data-align="full"] > .smb-spider-slider--shifted,
+  [data-align="wide"] > .smb-spider-slider--shifted {
     @supports (--var: 1) {
       .spider {
         --spider-reference-width: calc(100% - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));

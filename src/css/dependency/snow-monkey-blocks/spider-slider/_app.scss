@@ -1,5 +1,7 @@
 .smb-spider-slider--shifted.alignfull,
-[data-align="full"] > .smb-spider-slider--shifted {
+.smb-spider-slider--shifted.alignwide,
+[data-align="full"] > .smb-spider-slider--shifted,
+[data-align="wide"] > .smb-spider-slider--shifted {
   &:not([data-sm-slide-to-show]) {
     @include _media-only(sm) {
       .#{ $_prefix }c-container {
