@@ -179,6 +179,7 @@
 
   &__title {
     @extend %section-title;
+    text-align: center;
 
     & + .wpac-section__body {
       @extend %section-body;

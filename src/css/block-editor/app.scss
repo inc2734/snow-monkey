@@ -11,10 +11,6 @@
   @extend %entry-content;
 }
 
-:root {
-  --wp-block-width: calc(var(--_container-max-width, 1280px));
-}
-
 .mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
   height: 100%;
 }

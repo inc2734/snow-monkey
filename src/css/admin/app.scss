@@ -4,6 +4,14 @@
 @import '../app/foundation/_placeholder/placeholder';
 @import '../app/adminbar';
 
+:root {
+  --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2);
+
+  @include _media-min(md) {
+    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2);
+  }
+}
+
 .wp-block,
 .edit-post-text-editor__body textarea.editor-post-text-editor,
 .components-placeholder.wp-block-shortcode {
@@ -130,7 +138,7 @@
 }
 
 // @see src/css/foundation/_wordpress/_align/_align.scss
-.editor-styles-wrapper.block-editor-writing-flow .block-editor-block-list__layout.is-root-container {
+.editor-styles-wrapper .block-editor-block-list__layout.is-root-container {
   > .wp-block[data-align="full"],
   > .block-editor-block-list__block[data-align="full"] {
     @include alignfull();

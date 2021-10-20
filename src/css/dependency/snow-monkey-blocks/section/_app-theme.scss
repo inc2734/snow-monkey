@@ -1,9 +1,80 @@
 .smb-section {
+  &__contents-wrapper {
+    &--left {
+      > .smb-section__header > .smb-section__title {
+        &::after {
+          margin-right: auto;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &--center {
+      > .smb-section__header > .smb-section__title {
+        &::after {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    }
+
+    &--right {
+      > .smb-section__header > .smb-section__title {
+        &::after {
+          margin-right: 0;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
   &__title {
     @extend %section-title-theme;
   }
 
   &__body {
     @extend %entry-content-theme;
+  }
+
+  // @deprecated
+  &--left {
+    > .smb-section__inner {
+      > .#{$_prefix}c-container {
+        > .smb-section__title {
+          &::after {
+            margin-right: auto;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // @deprecated
+  &--center {
+    > .smb-section__inner {
+      > .#{$_prefix}c-container {
+        > .smb-section__title {
+          &::after {
+            margin-right: auto;
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+
+  // @deprecated
+  &--right {
+    > .smb-section__inner {
+      > .#{$_prefix}c-container {
+        > .smb-section__title {
+          &::after {
+            margin-right: 0;
+            margin-left: auto;
+          }
+        }
+      }
+    }
   }
 }

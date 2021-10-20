@@ -19,9 +19,16 @@
     }
   }
 
+  // @deprecated
   &__title,
   &__lede-wrapper,
   &__lede {
+    & + .smb-section__body {
+      @extend %section-body;
+    }
+  }
+
+  &__header {
     & + .smb-section__body {
       @extend %section-body;
     }
@@ -33,7 +40,7 @@
 
   &.alignfull,
   &.alignwide {
-    .smb-section__inner {
+    > .smb-section__inner {
       > .#{ $_prefix }c-container.#{ $_prefix }u-slim-width {
         @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
           padding-right: 0;

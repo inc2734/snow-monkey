@@ -24,20 +24,40 @@ $editor-font-sizes: (
   'sm-medium': 20px,
   'sm-large': 28px,
   'sm-xlarge': 44px,
+  'sm-xxlarge': 52px,
+  'sm-xxxlarge': 60px,
+);
+
+$editor-font-sizes-md: (
+  'sm-small': 14px,
+  'sm-normal': 16px,
+  'sm-medium': 20px,
+  'sm-large': 28px,
+  'sm-xlarge': 44px,
+  'sm-xxlarge': 76px,
+  'sm-xxxlarge': 96px,
+);
+
+$editor-font-sizes-lg: (
+  'sm-small': 14px,
+  'sm-normal': 16px,
+  'sm-medium': 20px,
+  'sm-large': 28px,
+  'sm-xlarge': 44px,
   'sm-xxlarge': 76px,
   'sm-xxxlarge': 140px,
 );
+
 @each $slug, $size in $editor-font-sizes {
   .has-#{ $slug }-font-size {
-    $index: index(map-keys($editor-font-sizes), $slug);
-    $prev-index: $index - 2;
-    @if false != $index and null != $index and 2 < $index and 20px < $size {
-      $prev: nth(map-values($editor-font-sizes), $prev-index);
-      @include _media-max(md) {
-        @include _font-size-line-height($prev + $index * 2);
-      }
+    @include _font-size-line-height($size);
+
+    @include _media-min(md) {
+      @include _font-size-line-height(map-get($editor-font-sizes-md, $slug));
     }
 
-    @include _font-size-line-height($size);
+    @include _media-min(lg) {
+      @include _font-size-line-height(map-get($editor-font-sizes-lg, $slug));
+    }
   }
 }

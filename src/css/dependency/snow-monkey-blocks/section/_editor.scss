@@ -1,4 +1,18 @@
 .editor-styles-wrapper,
 .customize-control-sidebar_block_editor {
   @import 'app';
+
+  [data-align="full"],
+  [data-align="wide"] {
+    > .smb-section {
+      > .smb-section__inner {
+        > .#{ $_prefix }c-container.#{ $_prefix }u-slim-width {
+          @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
+            padding-right: 0;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
 }

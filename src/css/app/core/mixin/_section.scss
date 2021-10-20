@@ -15,7 +15,6 @@
 
 @mixin section-title() {
   @include _font-size-line-height(1.5);
-  text-align: center;
 
   @include _media-min(lg) {
     @include _font-size-line-height(2);
