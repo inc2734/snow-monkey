@@ -7,8 +7,8 @@
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section-with-bgimage {"lgImageID":0,"lgImageMediaType":"image","contentsAlignment":"left","textColor":"#ffffff","contentJustification":"left","titleTagName":"none","height":"full"} -->
-<div class="wp-block-snow-monkey-blocks-section-with-bgimage smb-section smb-section-with-bgimage smb-section--left smb-section--full" style="color:#ffffff">
+<!-- wp:snow-monkey-blocks/section-with-bgimage {"lgImageID":0,"lgImageMediaType":"image","contentsAlignment":"left","textColor":"#ffffff","contentJustification":"left","titleTagName":"none","height":"full","align":"full"} -->
+<div class="wp-block-snow-monkey-blocks-section-with-bgimage alignfull smb-section smb-section-with-bgimage smb-section--left smb-section--full" style="color:#ffffff">
 	<div class="smb-section-with-bgimage__bgimage smb-section-with-bgimage__bgimage--lg">
 		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/people-walking-towards-eiffel-tower-at-night.jpg" alt="" class="wp-image-0" style="opacity:1"/>
 	</div>

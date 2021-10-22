@@ -7,10 +7,10 @@
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section-break-the-grid {"titleTagName":"none","imageMediaType":"image","imagePosition":"top","contentSize":"m","contentPadding":"s","removeContentOutsidePadding":true} -->
-<div class="wp-block-snow-monkey-blocks-section-break-the-grid smb-section smb-section-break-the-grid smb-section-break-the-grid--top">
+<!-- wp:snow-monkey-blocks/section-break-the-grid {"imagePosition":"top","contentSize":"m","contentPadding":"s","removeContentOutsidePadding":true,"titleTagName":"none","containerAlign":"full","align":"full"} -->
+<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--top">
 	<div class="smb-section__inner">
-		<div class="c-container">
+		<div class="c-container alignfull">
 			<div class="smb-section__contents-wrapper smb-section-break-the-grid__contents-wrapper">
 				<div class="c-row">
 					<div class="c-row__col c-row__col--1-1">
