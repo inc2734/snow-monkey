@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-10-13 13:23+0900\n"
-"PO-Revision-Date: 2021-10-13 13:23+0900\n"
+"POT-Creation-Date: 2021-10-22 16:33+0900\n"
+"PO-Revision-Date: 2021-10-22 16:34+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -2056,6 +2056,16 @@ msgstr "コピーライト"
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1494
 msgid "HTML usable"
 msgstr "HTML 使用可"
+
+#: app/setup/block-patterns.php:21
+msgid "Headers"
+msgstr "ヘッダー"
+
+#: app/setup/block-patterns.php:37 app/setup/block-patterns.php:46
+#: app/setup/block-patterns.php:55
+#, php-format
+msgid "Header %1$s"
+msgstr "ヘッダー %1$s"
 
 #: app/setup/dependency/woocommerce.php:156
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4787

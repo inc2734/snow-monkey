@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.11.0
+ * @version 15.12.0
  */
 
 namespace Framework;
@@ -641,5 +641,22 @@ class Helper {
 			|| bbp_is_single_forum()
 			|| bbp_is_search()
 			|| bbp_is_search_results();
+	}
+
+	/**
+	 * Return block pattern html
+	 *
+	 * @param string $slug Block pattern slug.
+	 * @return string
+	 */
+	public static function render_block_pattern( $slug ) {
+		$path = realpath( get_template_directory() . '/block-patterns/' . $slug . '/pattern.php' );
+		if ( ! file_exists( $path ) ) {
+			return '';
+		}
+
+		ob_start();
+		include( $path );
+		return preg_replace( '/(\t|\r\n|\r|\n)/ms', '', ob_get_clean() );
 	}
 }
