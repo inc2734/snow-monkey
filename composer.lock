@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "12.3.1",
+            "version": "12.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "f0c1072b9801ff179b6ea5e56c7503eac847e187"
+                "reference": "0afd7a24bb186bd12b09894d6e83fda525d9edc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/f0c1072b9801ff179b6ea5e56c7503eac847e187",
-                "reference": "f0c1072b9801ff179b6ea5e56c7503eac847e187",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/0afd7a24bb186bd12b09894d6e83fda525d9edc5",
+                "reference": "0afd7a24bb186bd12b09894d6e83fda525d9edc5",
                 "shasum": ""
             },
             "require": {
@@ -149,9 +149,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.3.1"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.3.2"
             },
-            "time": "2021-10-04T02:32:03+00:00"
+            "time": "2021-10-25T01:20:45+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -1205,16 +1205,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.6.0",
+            "version": "3.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/squizlabs/PHP_CodeSniffer.git",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625"
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
-                "reference": "ffced0d2c8fa8e6cdc4d695a743271fab6c38625",
+                "url": "https://api.github.com/repos/squizlabs/PHP_CodeSniffer/zipball/f268ca40d54617c6e06757f83f699775c9b3ff2e",
+                "reference": "f268ca40d54617c6e06757f83f699775c9b3ff2e",
                 "shasum": ""
             },
             "require": {
@@ -1257,7 +1257,7 @@
                 "source": "https://github.com/squizlabs/PHP_CodeSniffer",
                 "wiki": "https://github.com/squizlabs/PHP_CodeSniffer/wiki"
             },
-            "time": "2021-04-09T00:54:41+00:00"
+            "time": "2021-10-11T04:00:11+00:00"
         },
         {
             "name": "wp-coding-standards/wpcs",
