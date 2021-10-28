@@ -60,5 +60,35 @@ add_action(
 				'content'    => Helper::render_block_pattern( 'header-3' ),
 			]
 		);
+
+		register_block_pattern(
+			'snow-monkey/header-4',
+			[
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 4 ),
+				'categories' => [ 'sm-headers' ],
+				'content'    => Helper::render_block_pattern( 'header-4' ),
+			]
+		);
+
+		register_block_pattern(
+			'snow-monkey/header-5',
+			[
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 5 ),
+				'categories' => [ 'sm-headers' ],
+				'content'    => Helper::render_block_pattern( 'header-5' ),
+			]
+		);
+
+		register_block_pattern(
+			'snow-monkey/header-6',
+			[
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 6 ),
+				'categories' => [ 'sm-headers' ],
+				'content'    => Helper::render_block_pattern( 'header-6' ),
+			]
+		);
 	}
 );

@@ -144,3 +144,32 @@ add_action(
 		);
 	}
 );
+
+/**
+ * Register block styles.
+ */
+add_action(
+	'init',
+	function() {
+		/**
+		 * I really wanted to run it only when snow-monkey-blocks-theme is enqueued,
+		 * but enqueue_block_editor_assets doesn't do it.
+		 */
+		$blocks = [
+			'snow-monkey-blocks/section',
+			'snow-monkey-blocks/section-with-bgimage',
+			'snow-monkey-blocks/section-with-bgvideo',
+			'snow-monkey-blocks/section-side-heading',
+			'snow-monkey-blocks/section-break-the-grid',
+		];
+		foreach ( $blocks as $block ) {
+			register_block_style(
+				$block,
+				[
+					'name'  => 'smb-section-undecorated-title',
+					'label' => __( 'Undecorated title', 'snow-monkey' ),
+				]
+			);
+		}
+	}
+);

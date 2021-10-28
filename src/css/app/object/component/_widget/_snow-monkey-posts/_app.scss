@@ -1,6 +1,7 @@
 .snow-monkey-posts {
   &__title {
     @include section-title();
+    text-align: center;
 
     & + * {
       @include section-body();

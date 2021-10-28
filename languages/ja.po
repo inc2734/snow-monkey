@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-10-22 16:33+0900\n"
-"PO-Revision-Date: 2021-10-22 16:34+0900\n"
+"POT-Creation-Date: 2021-10-27 14:36+0900\n"
+"PO-Revision-Date: 2021-10-27 14:37+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -2061,11 +2061,17 @@ msgstr "HTML 使用可"
 msgid "Headers"
 msgstr "ヘッダー"
 
-#: app/setup/block-patterns.php:37 app/setup/block-patterns.php:46
-#: app/setup/block-patterns.php:55
+#. translators: %1$s: number
+#: app/setup/block-patterns.php:38 app/setup/block-patterns.php:48
+#: app/setup/block-patterns.php:58 app/setup/block-patterns.php:68
+#: app/setup/block-patterns.php:78
 #, php-format
 msgid "Header %1$s"
 msgstr "ヘッダー %1$s"
+
+#: app/setup/dependency/snow-monkey-blocks.php:170
+msgid "Undecorated title"
+msgstr "装飾無しのタイトル"
 
 #: app/setup/dependency/woocommerce.php:156
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4787

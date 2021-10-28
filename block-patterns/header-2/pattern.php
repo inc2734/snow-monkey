@@ -7,24 +7,23 @@
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section-break-the-grid {"imagePosition":"top","contentSize":"m","contentPadding":"s","removeContentOutsidePadding":true,"titleTagName":"none","containerAlign":"full","align":"full"} -->
-<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--top">
+<!-- wp:snow-monkey-blocks/section-break-the-grid {"imagePosition":"top","contentSize":"0","contentHorizontalPosition":"20","contentPadding":"s","removeContentOutsidePadding":true,"contentsAlignment":"left","containerAlign":"full","align":"full","className":"is-style-smb-section-undecorated-title"} -->
+<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--top smb-section--left is-style-smb-section-undecorated-title">
 	<div class="smb-section__inner">
 		<div class="c-container alignfull">
 			<div class="smb-section__contents-wrapper smb-section-break-the-grid__contents-wrapper">
 				<div class="c-row">
 					<div class="c-row__col c-row__col--1-1">
-						<div class="smb-section-break-the-grid__content smb-section-break-the-grid__content--w-m smb-section-break-the-grid__content--p-s smb-section-break-the-grid__content--horizontal-s smb-section-break-the-grid__content--remove-outside-p">
-							<div class="smb-section__body smb-section-break-the-grid__body">
-								<!-- wp:paragraph {"fontSize":"sm-xxlarge"} -->
-								<p class="has-sm-xxlarge-font-size"><strong>Lorem ipsum dolor<br>Sed do eiusmod</strong></p>
-								<!-- /wp:paragraph -->
+						<div class="smb-section-break-the-grid__content smb-section-break-the-grid__content--w-0 smb-section-break-the-grid__content--p-s smb-section-break-the-grid__content--horizontal-20 smb-section-break-the-grid__content--left smb-section-break-the-grid__content--remove-outside-p">
+							<div class="smb-section__header smb-section-break-the-grid__header">
+								<h2 class="smb-section__title smb-section-break-the-grid__title"><span class="sme-font-size has-sm-xxlarge-font-size">Lorem ipsum dolor<br>Sed do eiusmod</span></h2>
 							</div>
+							<div class="smb-section__body smb-section-break-the-grid__body"></div>
 						</div>
 					</div>
 					<div class="c-row__col c-row__col--1-1">
-						<div class="smb-section-break-the-grid__figure smb-section-break-the-grid__figure--w-l">
-							<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/man-sitting-at-table-with-coffee-cup-using-digital-tablet.jpg" alt="" class="wp-image-0"/>
+						<div class="smb-section-break-the-grid__figure smb-section-break-the-grid__figure--w-40">
+							<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/swing-ocean-sea2875.jpg" alt="" class="wp-image-0"/>
 						</div>
 					</div>
 				</div>

@@ -78,3 +78,19 @@
     }
   }
 }
+
+.smb-section.is-style-smb-section-undecorated-title {
+  > .smb-section__inner {
+    > .c-container {
+      > .smb-section__contents-wrapper {
+        > .smb-section__header {
+          > .smb-section__title {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
