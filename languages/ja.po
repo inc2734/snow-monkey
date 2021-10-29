@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-10-27 14:36+0900\n"
-"PO-Revision-Date: 2021-10-27 14:37+0900\n"
+"POT-Creation-Date: 2021-10-29 13:05+0900\n"
+"PO-Revision-Date: 2021-10-29 13:05+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -69,6 +69,7 @@ msgstr "中央ロゴ"
 
 #: .translation/bundle-template-header.php:13 Framework/Helper.php:99
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
+#: app/customizer/design/sections/header/controls/gnav-alignment.php:22
 #: app/customizer/infobar/controls/align.php:19
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:764
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5187
@@ -124,13 +125,16 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:100 app/customizer/infobar/controls/align.php:20
+#: Framework/Helper.php:100
+#: app/customizer/design/sections/header/controls/gnav-alignment.php:21
+#: app/customizer/infobar/controls/align.php:20
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:765
 msgid "Center"
 msgstr "中央"
 
 #: Framework/Helper.php:101
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
+#: app/customizer/design/sections/header/controls/gnav-alignment.php:20
 #: app/customizer/infobar/controls/align.php:21
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:766
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5188
@@ -1180,6 +1184,10 @@ msgstr "ヘッダーを全幅にする"
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示する。"
 
+#: app/customizer/design/sections/header/controls/gnav-alignment.php:16
+msgid "Global navigation alignment"
+msgstr "グローバルナビゲーションの配置"
+
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:16
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7207
 msgid "Global navigation current view effect"
@@ -2064,7 +2072,7 @@ msgstr "ヘッダー"
 #. translators: %1$s: number
 #: app/setup/block-patterns.php:38 app/setup/block-patterns.php:48
 #: app/setup/block-patterns.php:58 app/setup/block-patterns.php:68
-#: app/setup/block-patterns.php:78
+#: app/setup/block-patterns.php:78 app/setup/block-patterns.php:88
 #, php-format
 msgid "Header %1$s"
 msgstr "ヘッダー %1$s"

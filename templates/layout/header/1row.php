@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 15.12.0
  */
 
 use Framework\Helper;
@@ -15,7 +15,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_title_tag' => 'div',
+		'_title_tag'      => 'div',
+		'_gnav_alignment' => get_theme_mod( 'gnav-alignment' ),
 	]
 );
 
@@ -43,7 +44,8 @@ $classes = Helper::get_header_classes();
 			'template-parts/header/1row',
 			null,
 			[
-				'_title_tag' => $args['_title_tag'],
+				'_title_tag'      => $args['_title_tag'],
+				'_gnav_alignment' => $args['_gnav_alignment'],
 			]
 		);
 		?>

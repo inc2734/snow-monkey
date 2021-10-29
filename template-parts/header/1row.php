@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.9.0
+ * @version 15.12.0
  *
  * renamed: template-parts/1row-header.php
  */
@@ -15,7 +15,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_title_tag' => 'div',
+		'_title_tag'      => 'div',
+		'_gnav_alignment' => 'right',
 	]
 );
 
@@ -28,6 +29,23 @@ $has_header_sub_nav     = has_nav_menu( 'header-sub-nav' );
 $data_has_global_nav    = $has_global_nav ? 'true' : 'false';
 $container_class        = $header_alignfull ? 'c-fluid-container' : 'c-container';
 $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
+
+$row_classes = [ 'c-row', 'c-row--margin-s', 'c-row--lg-margin', 'c-row--middle', 'c-row--nowrap' ];
+if ( 'center' === $args['_gnav_alignment'] ) {
+	$row_classes[] = 'c-row--between';
+}
+
+$site_branding_column_classes = [ 'c-row__col' ];
+if ( 'right' === $args['_gnav_alignment'] ) {
+	$site_branding_column_classes[] = 'c-row__col--auto';
+} elseif ( 'center' === $args['_gnav_alignment'] || 'left' === $args['_gnav_alignment'] ) {
+	$site_branding_column_classes[] = 'c-row__col--fit';
+}
+
+$header_content_column_classes = [ 'c-row__col', 'c-row__col--fit', 'u-invisible-md-down' ];
+if ( 'left' === $args['_gnav_alignment'] ) {
+	$header_content_column_classes[] = 'c-row__col--put-right';
+}
 ?>
 
 <div class="l-<?php echo esc_attr( $header_type ); ?>" data-has-global-nav="<?php echo esc_attr( $data_has_global_nav ); ?>">
@@ -38,7 +56,7 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 			</div>
 		<?php endif; ?>
 
-		<div class="c-row c-row--margin-s c-row--lg-margin c-row--middle c-row--nowrap">
+		<div class="<?php echo esc_attr( implode( ' ', $row_classes ) ); ?>">
 			<?php if ( $has_drawer_nav && 'left' === $hamburger_btn_position ) : ?>
 				<div class="c-row__col c-row__col--fit u-invisible-lg-up">
 					<?php
@@ -55,7 +73,7 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 
 			<?php do_action( 'snow_monkey_before_header_site_branding_column' ); ?>
 
-			<div class="c-row__col c-row__col--auto">
+			<div class="<?php echo esc_attr( implode( ' ', $site_branding_column_classes ) ); ?>">
 				<div class="l-<?php echo esc_attr( $header_type ); ?>__branding">
 					<?php
 					Helper::get_template_part(
@@ -91,7 +109,7 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 			<?php endif; ?>
 
 			<?php if ( $header_content ) : ?>
-				<div class="c-row__col c-row__col--fit u-invisible-md-down">
+				<div class="<?php echo esc_attr( implode( ' ', $header_content_column_classes ) ); ?>">
 					<div class="l-<?php echo esc_attr( $header_type ); ?>__content">
 						<?php
 						if ( get_theme_mod( 'header-content' ) ) {
