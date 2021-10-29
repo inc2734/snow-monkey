@@ -27,7 +27,7 @@
 					</div>
 					<div class="c-row__col c-row__col--1-2">
 						<div class="smb-section-break-the-grid__figure smb-section-break-the-grid__figure--w-60">
-							<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/StockSnap_LGG8NAT9JY.jpg" alt="" width="1920" height="1280" class="wp-image-0"/>
+							<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_lgg8nat9jy.jpg" alt="" width="1920" height="1280" class="wp-image-0"/>
 						</div>
 					</div>
 				</div>

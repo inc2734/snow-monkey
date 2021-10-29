@@ -11,7 +11,7 @@
 <div class="wp-block-snow-monkey-blocks-section-with-bgimage alignfull smb-section smb-section-with-bgimage smb-section--left smb-section--full is-items-alignment-bottom is-style-smb-section-undecorated-title" style="color:#fff">
 	<div class="smb-section-with-bgimage__bgimage smb-section-with-bgimage__bgimage--lg">
 		<div class="smb-section-with-bgimage__mask" style="background-color:#000000"></div>
-		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/StockSnap_YDXJ69TOAL.jpg" alt="" class="wp-image-0" style="opacity:0.7"/>
+		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_ydxj69toal.jpg" alt="" class="wp-image-0" style="opacity:0.7"/>
 	</div>
 	<div class="smb-section__inner">
 		<div class="c-container alignfull">

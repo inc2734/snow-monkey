@@ -10,7 +10,7 @@
 <!-- wp:snow-monkey-blocks/section-with-bgimage {"lgImageMediaType":"image","contentsAlignment":"left","textColor":"#ffffff","contentJustification":"left","height":"full","containerAlign":"full","align":"full","className":"is-style-smb-section-undecorated-title"} -->
 <div class="wp-block-snow-monkey-blocks-section-with-bgimage alignfull smb-section smb-section-with-bgimage smb-section--left smb-section--full is-style-smb-section-undecorated-title" style="color:#ffffff">
 	<div class="smb-section-with-bgimage__bgimage smb-section-with-bgimage__bgimage--lg">
-		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/StockSnap_LGG8NAT9JY.jpg" alt="" class="wp-image-0" style="opacity:1"/>
+		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_lgg8nat9jy.jpg" alt="" class="wp-image-0" style="opacity:1"/>
 	</div>
 	<div class="smb-section__inner is-content-justification-left">
 		<div class="c-container alignfull">
