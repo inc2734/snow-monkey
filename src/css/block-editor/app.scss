@@ -9,6 +9,10 @@
 .wp-block-freeform {
   @include body();
   @extend %entry-content;
+
+  [data-align="full"] + [data-align="full"] {
+    margin-top: 0;
+  }
 }
 
 .mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
@@ -17,10 +21,6 @@
 
 .edit-post-visual-editor__post-title-wrapper .editor-post-title {
   margin: 2em auto 28px;
-}
-
-[data-align="full"] + [data-align="full"] {
-  margin-top: 0;
 }
 
 // @todo 本来不要かも
