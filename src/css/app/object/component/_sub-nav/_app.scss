@@ -3,10 +3,19 @@
   @include _padding(.25, 0);
 
   .#{ $_prefix }c-navbar {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0 _space(.5, true, true);
+
     &__item {
-      @include _margin(0, .25);
+      flex: 0 0 auto;
       color: _light($_color-text); // For IE11
       color: _var-light-color-text();
+      @include _margin(0, .25);
+
+      @supports (gap: 1px) {
+        margin: 0;
+      }
 
       > a {
         color: inherit;
@@ -19,6 +28,38 @@
 
       &.sm-nav-menu-item-highlight {
         color: var-color-accent();
+      }
+    }
+  }
+}
+
+.#{ $_prefix }c-sub-nav--left {
+  @include _media-min(lg) {
+    .#{ $_prefix }c-navbar {
+      justify-content: flex-start;
+
+      &__item:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+.#{ $_prefix }c-sub-nav--center {
+  @include _media-min(lg) {
+    .#{ $_prefix }c-navbar {
+      justify-content: center;
+    }
+  }
+}
+
+.#{ $_prefix }c-sub-nav--right {
+  @include _media-min(lg) {
+    .#{ $_prefix }c-navbar {
+      justify-content: flex-end;
+
+      &__item:last-child {
+        margin-right: 0;
       }
     }
   }

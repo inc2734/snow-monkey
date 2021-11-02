@@ -8,4 +8,4 @@
 
 use Framework\Helper;
 
-Helper::get_footer_template( 'footer' );
+Helper::get_footer_template( get_theme_mod( 'footer-layout' ) );

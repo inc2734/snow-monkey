@@ -3,10 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
- *
- * renamed: app/customizer/layout/sections/footer/controls/footer-layout.php
- * renamed: app/customizer/design/sections/footer/controls/footer-layout.php
+ * @version 15.13.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +14,7 @@ Framework::control(
 	'footer-widget-area-column-size',
 	[
 		'label'           => __( 'Number of columns in the footer widget area on PC', 'snow-monkey' ),
-		'priority'        => 100,
+		'priority'        => 110,
 		'default'         => '1-4',
 		'choices'         => [
 			'1-1' => __( '1 column', 'snow-monkey' ),

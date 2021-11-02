@@ -8,8 +8,9 @@
 $translation_dir = __DIR__ . '/../.translation';
 $wrappers_dir    = __DIR__ . '/../templates/layout/wrapper';
 $headers_dir     = __DIR__ . '/../templates/layout/header';
+$footers_dir     = __DIR__ . '/../templates/layout/footer';
 
-$bundle_file = $translation_dir . '/bundle-template-header.php';
+$bundle_file = $translation_dir . '/bundle-template.php';
 if ( file_exists( $bundle_file ) ) {
 	unlink( $bundle_file );
 }
@@ -29,6 +30,17 @@ foreach ( $wrappers as $wrapper ) {
 $headers = glob( $headers_dir . '/*.php' );
 foreach ( $headers as $header ) {
 	$data = file_get_contents( $header );
+	if ( ! preg_match( '|Name:(.*)$|mi', $data, $matches ) ) {
+		continue;
+	}
+	$name = trim( $matches[1] );
+
+	file_put_contents( $bundle_file, "__( '{$name}', 'snow-monkey' );\n", FILE_APPEND | LOCK_EX );
+}
+
+$footers = glob( $footers_dir . '/*.php' );
+foreach ( $footers as $footer ) {
+	$data = file_get_contents( $footer );
 	if ( ! preg_match( '|Name:(.*)$|mi', $data, $matches ) ) {
 		continue;
 	}

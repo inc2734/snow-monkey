@@ -1,23 +1,28 @@
 .#{ $_prefix }p-social-nav {
-  @include _padding(1, 0);
+  color: _light($_color-text); // For IE11
+  color: _var-light-color-text();
+  @include _padding(.5, 0);
 
   &__inner {
-    display: flex;
-    justify-content: center;
   }
 
   .#{ $_prefix }c-navbar {
     flex-wrap: wrap;
+    gap: 1rem;
 
     &__item {
       flex: 0 0 auto;
       margin: .25em .5em;
+
+      @supports (gap: 1px) {
+        margin: 0; // For IE11
+      }
     }
   }
+
   a {
     flex: none;
-    color: _light($_color-text); // For IE11
-    color: _var-light-color-text();
+    color: inherit;
     display: block;
     line-height: 1;
     overflow: hidden;

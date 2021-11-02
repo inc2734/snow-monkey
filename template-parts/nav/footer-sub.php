@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.3
+ * @version 15.13.0
  *
  * renamed: template-parts/footer-sub-nav.php
  */
@@ -12,16 +12,44 @@ if ( ! has_nav_menu( 'footer-sub-nav' ) ) {
 	return;
 }
 
-$footer_alignfull = get_theme_mod( 'footer-alignfull' );
-$container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_container'             => true,
+		'_content-justification' => 'right',
+	]
+);
+
+if ( $args['_container'] ) {
+	$args = wp_parse_args(
+		$args,
+		[
+			'_container-fluid' => false,
+		]
+	);
+}
+
+$sub_nav_classes = [ 'p-footer-sub-nav', 'c-sub-nav' ];
+if ( $args['_content-justification'] ) {
+	$sub_nav_classes[] = 'c-sub-nav--' . $args['_content-justification'];
+}
+
+$container       = false;
+$container_class = false;
+if ( $args['_container'] ) {
+	$container       = 'div';
+	$container_class = $args['_container-fluid'] ? 'c-fluid-container' : 'c-container';
+}
 ?>
 
-<div class="p-footer-sub-nav c-sub-nav" role="navigation">
+<div class="<?php echo esc_attr( implode( ' ', $sub_nav_classes ) ); ?>" role="navigation">
 	<?php
 	wp_nav_menu(
 		[
 			'theme_location'  => 'footer-sub-nav',
-			'container'       => 'div',
+			'container'       => $container,
 			'container_class' => $container_class,
 			'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
 			'menu_class'      => 'c-navbar',
