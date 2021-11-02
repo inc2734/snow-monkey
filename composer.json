@@ -20,7 +20,7 @@
     "php": ">=5.6",
     "inc2734/wp-breadcrumbs": "^3.1",
     "inc2734/wp-oembed-blog-card": "^9.1",
-    "inc2734/wp-view-controller": "^12.3",
+    "inc2734/wp-view-controller": "^12.4",
     "inc2734/wp-basis": "^9.0",
     "inc2734/wp-customizer-framework": "^10.0",
     "inc2734/wp-github-theme-updater": "^3.1",
