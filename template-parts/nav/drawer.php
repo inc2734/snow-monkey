@@ -27,6 +27,15 @@ $args = wp_parse_args(
 	]
 );
 
+if ( $args['_display-hamburger-btn'] ) {
+	$args = wp_parse_args(
+		$args,
+		[
+			'_hamburger-btn-id' => 'hamburger-btn',
+		]
+	);
+}
+
 $has_drawer_nav = has_nav_menu( $args['_theme-location'] );
 
 if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
@@ -47,11 +56,11 @@ $classes                   = array_filter(
 ?>
 
 <nav
-	id="drawer-nav"
+	id="<?php echo esc_attr( $args['_theme-location'] ); ?>"
 	class="<?php echo esc_attr( join( ' ', $classes ) ); ?>"
 	role="navigation"
 	aria-hidden="true"
-	aria-labelledby="hamburger-btn"
+	aria-labelledby="<?php echo esc_attr( $args['_hamburger-btn-id'] ); ?>"
 >
 	<div class="c-drawer__inner">
 		<div class="c-drawer__focus-point" tabindex="-1"></div>
@@ -69,7 +78,16 @@ $classes                   = array_filter(
 			?>
 			<div class="<?php echo esc_attr( join( ' ', $classes ) ); ?>">
 				<div class="c-drawer__control">
-					<?php Helper::get_template_part( 'template-parts/header/hamburger-btn' ); ?>
+					<?php
+					Helper::get_template_part(
+						'template-parts/header/hamburger-btn',
+						null,
+						[
+							'_id'       => $args['_hamburger-btn-id'],
+							'_controls' => $args['_theme-location'],
+						]
+					);
+					?>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -103,4 +121,4 @@ $classes                   = array_filter(
 		<?php do_action( 'snow_monkey_append_drawer_nav' ); ?>
 	</div>
 </nav>
-<div class="c-drawer-close-zone" aria-hidden="true" aria-controls="drawer-nav"></div>
+<div class="c-drawer-close-zone" aria-hidden="true" aria-controls="<?php echo esc_attr( $args['_theme-location'] ); ?>"></div>
