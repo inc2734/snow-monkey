@@ -3,28 +3,42 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.1
+ * @version 15.14.0
  *
  * renamed: template-parts/drawer-nav.php
  */
 
 use Framework\Helper;
 
-$has_drawer_nav     = has_nav_menu( 'drawer-nav' );
+
 $has_drawer_sub_nav = has_nav_menu( 'drawer-sub-nav' );
+$drawer_nav_type    = get_theme_mod( 'drawer-nav-type' );
+
+$args = wp_parse_args(
+	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+	$args,
+	// phpcs:enable
+	[
+		'_theme-location'                => 'drawer-nav',
+		'_inverse'                       => get_theme_mod( 'hamburger-btn-position' ),
+		'_display-hamburger-btn'         => 'overall' === $drawer_nav_type,
+		'_display-drawer-sub-nav'        => $has_drawer_sub_nav,
+		'_display-drawer-nav-search-box' => get_theme_mod( 'display-drawer-nav-search-box' ),
+	]
+);
+
+$has_drawer_nav = has_nav_menu( $args['_theme-location'] );
 
 if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 	return;
 }
 
-$hamburger_btn_position    = get_theme_mod( 'hamburger-btn-position' );
-$drawer_nav_type           = get_theme_mod( 'drawer-nav-type' );
 $drawer_nav_highlight_type = get_theme_mod( 'drawer-nav-highlight-type' );
 $classes                   = array_filter(
 	[
 		'c-drawer',
 		'c-drawer--fixed',
-		'left' === $hamburger_btn_position ? 'c-drawer--inverse' : '',
+		'left' === $args['_inverse'] ? 'c-drawer--inverse' : '',
 		$drawer_nav_type ? 'c-drawer--' . $drawer_nav_type : '',
 		$drawer_nav_highlight_type ? 'c-drawer--highlight-type-' . $drawer_nav_highlight_type : '',
 	],
@@ -43,12 +57,12 @@ $classes                   = array_filter(
 		<div class="c-drawer__focus-point" tabindex="-1"></div>
 		<?php do_action( 'snow_monkey_prepend_drawer_nav' ); ?>
 
-		<?php if ( 'overall' === $drawer_nav_type ) : ?>
+		<?php if ( $args['_display-hamburger-btn'] ) : ?>
 			<?php
 			$classes = array_filter(
 				[
 					'c-drawer__controls',
-					'left' === $hamburger_btn_position ? 'c-drawer__controls--left' : '',
+					'left' === $args['_inverse'] ? 'c-drawer__controls--left' : '',
 				],
 				'strlen'
 			);
@@ -64,7 +78,7 @@ $classes                   = array_filter(
 		if ( $has_drawer_nav ) {
 			wp_nav_menu(
 				[
-					'theme_location' => 'drawer-nav',
+					'theme_location' => $args['_theme-location'],
 					'container'      => false,
 					'menu_class'     => 'c-drawer__menu',
 					'depth'          => 0,
@@ -73,12 +87,12 @@ $classes                   = array_filter(
 			);
 		}
 
-		if ( $has_drawer_sub_nav ) {
+		if ( $args['_display-drawer-sub-nav'] ) {
 			Helper::get_template_part( 'template-parts/nav/drawer-sub' );
 		}
 		?>
 
-		<?php if ( get_theme_mod( 'display-drawer-nav-search-box' ) ) : ?>
+		<?php if ( $args['_display-drawer-nav-search-box'] ) : ?>
 			<ul class="c-drawer__menu">
 				<li class="c-drawer__item">
 					<?php Helper::get_template_part( 'template-parts/common/search-form', 'drawer' ); ?>
