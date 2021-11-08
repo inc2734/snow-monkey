@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.14.0
+ * @version 15.14.2
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -20,7 +20,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	[
 		'_theme-location'                => 'drawer-nav',
-		'_inverse'                       => get_theme_mod( 'hamburger-btn-position' ),
+		'_inverse'                       => 'left' === get_theme_mod( 'hamburger-btn-position' ),
 		'_display-hamburger-btn'         => 'overall' === $drawer_nav_type,
 		'_display-drawer-sub-nav'        => $has_drawer_sub_nav,
 		'_display-drawer-nav-search-box' => get_theme_mod( 'display-drawer-nav-search-box' ),
@@ -47,7 +47,7 @@ $classes                   = array_filter(
 	[
 		'c-drawer',
 		'c-drawer--fixed',
-		'left' === $args['_inverse'] ? 'c-drawer--inverse' : '',
+		$args['_inverse'] ? 'c-drawer--inverse' : '',
 		$drawer_nav_type ? 'c-drawer--' . $drawer_nav_type : '',
 		$drawer_nav_highlight_type ? 'c-drawer--highlight-type-' . $drawer_nav_highlight_type : '',
 	],
@@ -71,7 +71,7 @@ $classes                   = array_filter(
 			$classes = array_filter(
 				[
 					'c-drawer__controls',
-					'left' === $args['_inverse'] ? 'c-drawer__controls--left' : '',
+					$args['_inverse'] ? 'c-drawer__controls--left' : '',
 				],
 				'strlen'
 			);

@@ -74,10 +74,6 @@
   }
 
   &__controls {
-    position: absolute;
-    top: 0;
-    right: _space(.5, true, false);
-    left: _space(.5, true, false);
     @include _padding-top(.25);
     @include _padding-bottom(.25);
     text-align: right;
@@ -168,6 +164,13 @@
     margin: auto;
     height: auto;
     overflow: hidden;
+  }
+
+  .#{ $_prefix }c-drawer__controls {
+    position: absolute;
+    top: 0;
+    right: _space(.5, true, false);
+    left: _space(.5, true, false);
   }
 
   .#{ $_prefix }c-drawer__toggle {
