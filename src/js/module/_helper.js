@@ -184,10 +184,8 @@ export function getScrollOffset(option = {}) {
   if (header) {
     const position = getStyle(header, 'position');
   	if ('fixed' === position || 'sticky' === position) {
-      const headerHeight = header.offsetWidth < window.innerWidth
-        ? 0
-        : header.offsetHeight;
-
+      const maybeLeftHeaderLayout = header.offsetWidth < document.documentElement.clientWidth;
+      const headerHeight = maybeLeftHeaderLayout ? 0 : header.offsetHeight;
   		return headerHeight + adminbarHeight;
   	}
 
