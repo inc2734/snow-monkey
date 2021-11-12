@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.14.2
+ * @version 15.14.4
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -24,17 +24,9 @@ $args = wp_parse_args(
 		'_display-hamburger-btn'         => 'overall' === $drawer_nav_type,
 		'_display-drawer-sub-nav'        => $has_drawer_sub_nav,
 		'_display-drawer-nav-search-box' => get_theme_mod( 'display-drawer-nav-search-box' ),
+		'_hamburger-btn-id'              => 'hamburger-btn',
 	]
 );
-
-if ( $args['_display-hamburger-btn'] ) {
-	$args = wp_parse_args(
-		$args,
-		[
-			'_hamburger-btn-id' => 'hamburger-btn',
-		]
-	);
-}
 
 $has_drawer_nav = has_nav_menu( $args['_theme-location'] );
 
