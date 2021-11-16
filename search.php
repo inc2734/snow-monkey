@@ -28,8 +28,10 @@ $_post_type = ! is_array( $_post_type ) ? $_post_type : 'any';
 $layout = get_theme_mod( 'archive-' . $_post_type . '-layout' );
 $layout = $layout ? $layout : get_theme_mod( 'archive-post-layout' );
 
+$queried_object = get_queried_object();
+
 Controller::layout( $layout );
-if ( ! get_search_query() && ! get_queried_object() ) {
+if ( ! get_search_query() && ( ! $queried_object || is_a( $queried_object, 'WP_Post_Type' ) ) ) {
 	Controller::render( 'no-keywords' );
 } elseif ( have_posts() ) {
 	$archive_view = get_theme_mod( $_post_type . '-archive-view' );
