@@ -8,6 +8,7 @@
 
 /**
  * Customize for search result.
+ *
  * @param array $title {
  *     The document title parts.
  *     @type string $title   Title of the viewed page.
