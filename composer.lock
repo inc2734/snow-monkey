@@ -203,16 +203,16 @@
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "3.1.7",
+            "version": "3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "3c3f24b681164e669aece87428c224adfae2327d"
+                "reference": "830c88c333ec2f998e59c5106336964e9fbed024"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/3c3f24b681164e669aece87428c224adfae2327d",
-                "reference": "3c3f24b681164e669aece87428c224adfae2327d",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/830c88c333ec2f998e59c5106336964e9fbed024",
+                "reference": "830c88c333ec2f998e59c5106336964e9fbed024",
                 "shasum": ""
             },
             "require": {
@@ -245,9 +245,9 @@
             "description": "A library for WordPress breadcrumbs.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-breadcrumbs/issues",
-                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.7"
+                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.8"
             },
-            "time": "2021-08-12T10:01:25+00:00"
+            "time": "2021-11-16T00:58:13+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
@@ -1312,16 +1312,16 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "5.8.1",
+            "version": "5.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
-                "reference": "0b89ad32feae22f3a39e63e44117d6e56bdeed69"
+                "reference": "0cefcc49fd8a7e8c2f8d755e314532441618aee5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/0b89ad32feae22f3a39e63e44117d6e56bdeed69",
-                "reference": "0b89ad32feae22f3a39e63e44117d6e56bdeed69",
+                "url": "https://api.github.com/repos/wp-phpunit/wp-phpunit/zipball/0cefcc49fd8a7e8c2f8d755e314532441618aee5",
+                "reference": "0cefcc49fd8a7e8c2f8d755e314532441618aee5",
                 "shasum": ""
             },
             "type": "library",
@@ -1356,7 +1356,7 @@
                 "issues": "https://github.com/wp-phpunit/issues",
                 "source": "https://github.com/wp-phpunit/wp-phpunit"
             },
-            "time": "2021-09-09T19:11:29+00:00"
+            "time": "2021-11-10T19:49:29+00:00"
         }
     ],
     "aliases": [],

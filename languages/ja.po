@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-11-02 11:05+0900\n"
-"PO-Revision-Date: 2021-11-02 11:05+0900\n"
+"POT-Creation-Date: 2021-11-16 10:00+0900\n"
+"PO-Revision-Date: 2021-11-16 10:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1455,12 +1455,13 @@ msgid "Make footer full width"
 msgstr "フッターを全幅にする"
 
 #: app/customizer/design/sections/footer/controls/footer-layout.php:16
+#: snow-monkey/app/customizer/design/sections/footer/controls/footer-layout.php:16
 msgid "Footer layout"
 msgstr "フッターレイアウト"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:16
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5060
-#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:19
+#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:16
 msgid "Number of columns in the footer widget area on PC"
 msgstr "PC 時のフッターウィジェットエリアのカラム数"
 
@@ -1468,7 +1469,7 @@ msgstr "PC 時のフッターウィジェットエリアのカラム数"
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:20
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5064
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6412
-#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:23
+#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:20
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:20
 msgid "1 column"
 msgstr "1カラム"
@@ -1477,7 +1478,7 @@ msgstr "1カラム"
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:21
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5065
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6413
-#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:24
+#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:21
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:21
 msgid "2 columns"
 msgstr "2カラム"
@@ -1486,7 +1487,7 @@ msgstr "2カラム"
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:22
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5066
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6414
-#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:25
+#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:22
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:22
 msgid "3 columns"
 msgstr "3カラム"
@@ -1495,7 +1496,7 @@ msgstr "3カラム"
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:23
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5067
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6415
-#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:26
+#: snow-monkey/app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:23
 #: snow-monkey/app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:23
 msgid "4 columns"
 msgstr "4カラム"
@@ -2618,6 +2619,10 @@ msgstr "ホーム"
 #: snow-monkey/app/setup/dependency/woocommerce.php:293
 msgid "My account"
 msgstr "マイアカウント"
+
+#: app/setup/document-title.php:22
+msgid "Search results"
+msgstr "検索結果"
 
 #: app/setup/entry-meta.php:18 app/setup/entry-meta.php:32
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4115
