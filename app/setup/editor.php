@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.11.0
+ * @version 15.15.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -20,6 +20,10 @@ new WP_Custom_CSS_To_Editor\Bootstrap();
 add_filter(
 	'tiny_mce_before_init',
 	function( $mce_init ) {
+		if ( ! empty( $mce_init['classic_block_editor'] ) ) {
+			return $mce_init;
+		}
+
 		if ( ! isset( $mce_init['content_style'] ) ) {
 			$mce_init['content_style'] = '';
 		}
