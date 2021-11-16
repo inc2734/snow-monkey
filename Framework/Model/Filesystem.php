@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 15.15.1
  */
 
 namespace Framework\Model;
@@ -135,6 +135,10 @@ class Filesystem {
 	 */
 	public static function mkdir( $target ) {
 		if ( is_writable( $target ) ) {
+			return true;
+		}
+
+		if ( file_exists( $target ) ) {
 			return true;
 		}
 
