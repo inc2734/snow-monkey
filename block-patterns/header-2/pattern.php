@@ -7,7 +7,7 @@
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section-break-the-grid {"imagePosition":"top","contentSize":"0","contentHorizontalPosition":"20","contentPadding":"s","removeContentOutsidePadding":true,"contentsAlignment":"left","containerAlign":"full","align":"full","className":"is-style-smb-section-undecorated-title"} -->
+<!-- wp:snow-monkey-blocks/section-break-the-grid {"imagePosition":"top","imageSizeSlug":"xlarge","contentSize":"0","contentHorizontalPosition":"20","contentPadding":"s","removeContentOutsidePadding":true,"contentsAlignment":"left","containerAlign":"full","align":"full","className":"is-style-smb-section-undecorated-title"} -->
 <div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--top smb-section--left is-style-smb-section-undecorated-title">
 	<div class="smb-section__inner">
 		<div class="c-container alignfull">
@@ -23,7 +23,7 @@
 					</div>
 					<div class="c-row__col c-row__col--1-1">
 						<div class="smb-section-break-the-grid__figure smb-section-break-the-grid__figure--w-40">
-							<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/swing-ocean-sea2875.jpg" alt="" class="wp-image-0"/>
+							<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/swing-ocean-sea2875.jpg" alt="" width="1920" height="1280" class="wp-image-0"/>
 						</div>
 					</div>
 				</div>

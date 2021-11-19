@@ -26,6 +26,7 @@
     .wpaw-slider.alignfull {
       margin-right: calc(50% - 50vw) !important;
       margin-left: calc(50% - 50vw) !important;
+      max-width: none !important;
     }
   }
 
@@ -40,6 +41,7 @@
         margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
         margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
         margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+        max-width: none !important;
       }
     }
   }

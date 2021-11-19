@@ -7,7 +7,7 @@
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section-break-the-grid {"imageMediaType":"image","textColor":"#ffffff","imageSize":"60","contentSize":"50","mobileOrder":"nowrap","containerAlign":"full","backgroundColor":"#000000","align":"full","className":"is-style-smb-section-undecorated-title"} -->
+<!-- wp:snow-monkey-blocks/section-break-the-grid {"imageMediaType":"image","textColor":"#ffffff","imageSize":"60","imageSizeSlug":"xlarge","contentSize":"50","mobileOrder":"nowrap","containerAlign":"full","backgroundColor":"#000000","align":"full","className":"is-style-smb-section-undecorated-title"} -->
 <div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--right smb-section-break-the-grid--mobile-nowrap is-style-smb-section-undecorated-title" style="color:#ffffff">
 	<div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0">
 		<div class="smb-section__background" style="background-color:#000000"></div>
