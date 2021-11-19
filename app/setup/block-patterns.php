@@ -36,37 +36,37 @@ add_action(
 		}
 
 		$block_patterns = [
-			'snow-monkey/header-1' => [
+			'snow-monkey/header-1'          => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 1 ),
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-1' ),
 			],
-			'snow-monkey/header-2' => [
+			'snow-monkey/header-2'          => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 2 ),
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-2' ),
 			],
-			'snow-monkey/header-3' => [
+			'snow-monkey/header-3'          => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 3 ),
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-3' ),
 			],
-			'snow-monkey/header-4' => [
+			'snow-monkey/header-4'          => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 4 ),
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-4' ),
 			],
-			'snow-monkey/header-5' => [
+			'snow-monkey/header-5'          => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 5 ),
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-5' ),
 			],
-			'snow-monkey/header-6' => [
+			'snow-monkey/header-6'          => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 6 ),
 				'categories' => [ 'sm-headers' ],
