@@ -130,6 +130,11 @@
   overflow-x: hidden;
 }
 
+.components-checkbox-control .components-base-control__field {
+  display: flex;
+  align-items: center;
+}
+
 // サイドバーの横幅分 alignfull, alignwide から引く
 .edit-post-layout.is-mode-visual.is-sidebar-opened {
   @include _media-min(782px) {
