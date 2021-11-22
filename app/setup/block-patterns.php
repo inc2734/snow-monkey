@@ -24,6 +24,10 @@ add_action(
 				'name'  => 'sm-text-with-image',
 				'label' => __( 'Text with image', 'snow-monkey' ),
 			],
+			[
+				'name'  => 'sm-gallery',
+				'label' => __( 'Gallery', 'snow-monkey' ),
+			],
 		];
 
 		foreach ( $block_pattern_categories as $block_pattern_categorie ) {
@@ -89,6 +93,12 @@ add_action(
 				'title'      => sprintf( __( 'Text with image %1$s', 'snow-monkey' ), 3 ),
 				'categories' => [ 'sm-text-with-image' ],
 				'content'    => Helper::render_block_pattern( 'text-with-image-3' ),
+			],
+			'snow-monkey/gallery-1'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Gallery %1$s', 'snow-monkey' ), 1 ),
+				'categories' => [ 'sm-gallery' ],
+				'content'    => Helper::render_block_pattern( 'gallery-1' ),
 			],
 		];
 
