@@ -1,7 +1,7 @@
 .smb-section {
   &__contents-wrapper {
     &--left {
-      > .smb-section__header > .smb-section__title {
+      > .smb-section__header .smb-section__title {
         &::after {
           margin-right: auto;
           margin-left: 0;
@@ -10,7 +10,7 @@
     }
 
     &--center {
-      > .smb-section__header > .smb-section__title {
+      > .smb-section__header .smb-section__title {
         &::after {
           margin-right: auto;
           margin-left: auto;
@@ -19,7 +19,7 @@
     }
 
     &--right {
-      > .smb-section__header > .smb-section__title {
+      > .smb-section__header .smb-section__title {
         &::after {
           margin-right: 0;
           margin-left: auto;
@@ -84,7 +84,7 @@
     > .c-container {
       > .smb-section__contents-wrapper {
         > .smb-section__header {
-          > .smb-section__title {
+          .smb-section__title {
             &::after {
               display: none;
             }
