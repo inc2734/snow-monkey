@@ -37,6 +37,8 @@
   > h2 {
     border-left: var(--entry-content-h2-border-left);
     background-color: var(--entry-content-h2-background-color);
+    color: $_color-text; // For IE11
+    color: _var-color-text();
     padding: var(--entry-content-h2-padding);
   }
 
