@@ -30,5 +30,11 @@ Style::attach(
 );
 
 foreach ( [ 'entry-content', 'entry-content-theme' ] as $placeholder ) {
-	Style::extend( $placeholder, [ '.smb-panels__item--free > .smb-panels__item__body' ] );
+	Style::extend(
+		$placeholder,
+		[
+			'.smb-panels__item--free > .smb-panels__item__body',
+			'.smb-panels__item--block-link > .smb-panels__item__body',
+		]
+	);
 }
