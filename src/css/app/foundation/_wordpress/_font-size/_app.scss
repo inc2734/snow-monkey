@@ -48,16 +48,24 @@ $editor-font-sizes-lg: (
   'sm-xxxlarge': 140px,
 );
 
+// @see src/css/dependency/snow-monkey-blocks/section
 @each $slug, $size in $editor-font-sizes {
   .has-#{ $slug }-font-size {
     @include _font-size-line-height($size);
 
-    @include _media-min(md) {
-      @include _font-size-line-height(map-get($editor-font-sizes-md, $slug));
+    $size-md: map-get($editor-font-sizes-md, $slug);
+    $size-lg: map-get($editor-font-sizes-lg, $slug);
+
+    @if $size != $size-md {
+      @include _media-min(md) {
+        @include _font-size-line-height($size-md);
+      }
     }
 
-    @include _media-min(lg) {
-      @include _font-size-line-height(map-get($editor-font-sizes-lg, $slug));
+    @if $size != $size-lg and $size-md != $size-lg {
+      @include _media-min(lg) {
+        @include _font-size-line-height($size-lg);
+      }
     }
   }
 }

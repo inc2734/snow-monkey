@@ -50,3 +50,42 @@
     }
   }
 }
+
+.smb-section__background-text__text {
+  $editor-font-sizes: (
+    'sm-small': 10px,
+    'sm-normal': 12px,
+    'sm-medium': 14px,
+    'sm-large': 16px,
+    'sm-xlarge': 18px,
+    'sm-xxlarge': 20px,
+    'sm-xxxlarge': 40px,
+  );
+
+  $editor-font-sizes-md: (
+    'sm-small': 14px,
+    'sm-normal': 16px,
+    'sm-medium': 20px,
+    'sm-large': 28px,
+    'sm-xlarge': 36px,
+    'sm-xxlarge': 42px,
+    'sm-xxxlarge': 84px,
+  );
+
+  // @see src/css/dependency/snow-monkey-blocks/section
+  @each $slug, $size in $editor-font-sizes {
+    &.has-#{ $slug }-font-size {
+      @include _media-only(sm) {
+        @include _font-size-line-height($size);
+      }
+
+      $size-md: map-get($editor-font-sizes-md, $slug);
+
+      @if $size != $size-md {
+        @include _media-only(md) {
+          @include _font-size-line-height($size-md);
+        }
+      }
+    }
+  }
+}
