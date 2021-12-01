@@ -7,10 +7,10 @@
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section {"textColor":"#ffffff","contentsAlignment":"left","containerAlign":"contents-full","disableContainerPadding":true,"backgroundVerticalPosition":-34,"isBackgroundNoOver":true,"backgroundColor":"#cd162c","align":"full","className":"is-style-smb-section-undecorated-title"} -->
+<!-- wp:snow-monkey-blocks/section {"textColor":"#ffffff","contentsAlignment":"left","containerAlign":"contents-full","disableContainerPadding":true,"backgroundHorizontalPosition":-20,"backgroundVerticalPosition":-30,"isBackgroundNoOver":true,"backgroundColor":"#cd162c","align":"full","className":"is-style-smb-section-undecorated-title"} -->
 <div class="wp-block-snow-monkey-blocks-section alignfull smb-section smb-section--left smb-section--fit is-style-smb-section-undecorated-title" style="color:#ffffff">
 	<div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0">
-		<div class="smb-section__background" style="background-color:#cd162c;bottom:34%"></div>
+		<div class="smb-section__background" style="background-color:#cd162c;right:20%;bottom:30%"></div>
 	</div>
 	<div class="smb-section__inner">
 		<div class="c-container alignfull c-container--no-padding">
