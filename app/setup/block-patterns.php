@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.16.0
+ * @version 15.17.0
  */
 
 use Framework\Helper;
@@ -19,6 +19,10 @@ add_action(
 			[
 				'name'  => 'sm-headers',
 				'label' => __( 'Headers', 'snow-monkey' ),
+			],
+			[
+				'name'  => 'sm-features',
+				'label' => __( 'Features', 'snow-monkey' ),
 			],
 			[
 				'name'  => 'sm-text-with-image',
@@ -76,6 +80,24 @@ add_action(
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-6' ),
 			],
+			'snow-monkey/header-7'          => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 7 ),
+				'categories' => [ 'sm-headers' ],
+				'content'    => Helper::render_block_pattern( 'header-7' ),
+			],
+			'snow-monkey/feature-1'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Feature %1$s', 'snow-monkey' ), 1 ),
+				'categories' => [ 'sm-features' ],
+				'content'    => Helper::render_block_pattern( 'feature-1' ),
+			],
+			'snow-monkey/feature-2'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Feature %1$s', 'snow-monkey' ), 2 ),
+				'categories' => [ 'sm-features' ],
+				'content'    => Helper::render_block_pattern( 'feature-2' ),
+			],
 			'snow-monkey/text-with-image-1' => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Text with image %1$s', 'snow-monkey' ), 1 ),
@@ -99,6 +121,12 @@ add_action(
 				'title'      => sprintf( __( 'Gallery %1$s', 'snow-monkey' ), 1 ),
 				'categories' => [ 'sm-gallery' ],
 				'content'    => Helper::render_block_pattern( 'gallery-1' ),
+			],
+			'snow-monkey/gallery-2'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Gallery %1$s', 'snow-monkey' ), 2 ),
+				'categories' => [ 'sm-gallery' ],
+				'content'    => Helper::render_block_pattern( 'gallery-2' ),
 			],
 		];
 

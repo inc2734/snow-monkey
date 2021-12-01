@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-11-22 11:48+0900\n"
-"PO-Revision-Date: 2021-11-22 11:48+0900\n"
+"POT-Creation-Date: 2021-11-30 20:50+0900\n"
+"PO-Revision-Date: 2021-11-30 20:50+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1669,30 +1669,41 @@ msgid "Headers"
 msgstr "ヘッダー"
 
 #: app/setup/block-patterns.php:25
+msgid "Features"
+msgstr "特徴"
+
+#: app/setup/block-patterns.php:29
 msgid "Text with image"
 msgstr "テキストと画像"
 
-#: app/setup/block-patterns.php:29
+#: app/setup/block-patterns.php:33
 msgid "Gallery"
 msgstr "ギャラリー"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:45 app/setup/block-patterns.php:51
-#: app/setup/block-patterns.php:57 app/setup/block-patterns.php:63
-#: app/setup/block-patterns.php:69 app/setup/block-patterns.php:75
+#: app/setup/block-patterns.php:49 app/setup/block-patterns.php:55
+#: app/setup/block-patterns.php:61 app/setup/block-patterns.php:67
+#: app/setup/block-patterns.php:73 app/setup/block-patterns.php:79
+#: app/setup/block-patterns.php:85
 #, php-format
 msgid "Header %1$s"
 msgstr "ヘッダー %1$s"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:81 app/setup/block-patterns.php:87
-#: app/setup/block-patterns.php:93
+#: app/setup/block-patterns.php:91 app/setup/block-patterns.php:97
+#, php-format
+msgid "Feature %1$s"
+msgstr "特徴 %1$s"
+
+#. translators: %1$s: number
+#: app/setup/block-patterns.php:103 app/setup/block-patterns.php:109
+#: app/setup/block-patterns.php:115
 #, php-format
 msgid "Text with image %1$s"
 msgstr "テキストと画像 %1$s"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:99
+#: app/setup/block-patterns.php:121
 #, php-format
 msgid "Gallery %1$s"
 msgstr "ギャラリー %1$s"
