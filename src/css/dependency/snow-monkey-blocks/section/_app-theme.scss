@@ -89,6 +89,10 @@
               display: none;
             }
           }
+
+          .smb-section__title + .smb-section__lede-wrapper {
+            @include _margin-top(.5);
+          }
         }
       }
     }

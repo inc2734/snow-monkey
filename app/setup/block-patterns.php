@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.17.0
+ * @version 15.18.0
  */
 
 use Framework\Helper;
@@ -31,6 +31,10 @@ add_action(
 			[
 				'name'  => 'sm-gallery',
 				'label' => __( 'Gallery', 'snow-monkey' ),
+			],
+			[
+				'name'  => 'sm-columns',
+				'label' => __( 'Columns', 'snow-monkey' ),
 			],
 		];
 
@@ -86,6 +90,12 @@ add_action(
 				'categories' => [ 'sm-headers' ],
 				'content'    => Helper::render_block_pattern( 'header-7' ),
 			],
+			'snow-monkey/header-8'          => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Header %1$s', 'snow-monkey' ), 8 ),
+				'categories' => [ 'sm-headers' ],
+				'content'    => Helper::render_block_pattern( 'header-8' ),
+			],
 			'snow-monkey/feature-1'         => [
 				// translators: %1$s: number
 				'title'      => sprintf( __( 'Feature %1$s', 'snow-monkey' ), 1 ),
@@ -97,6 +107,12 @@ add_action(
 				'title'      => sprintf( __( 'Feature %1$s', 'snow-monkey' ), 2 ),
 				'categories' => [ 'sm-features' ],
 				'content'    => Helper::render_block_pattern( 'feature-2' ),
+			],
+			'snow-monkey/feature-3'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Feature %1$s', 'snow-monkey' ), 3 ),
+				'categories' => [ 'sm-features' ],
+				'content'    => Helper::render_block_pattern( 'feature-3' ),
 			],
 			'snow-monkey/text-with-image-1' => [
 				// translators: %1$s: number
@@ -127,6 +143,18 @@ add_action(
 				'title'      => sprintf( __( 'Gallery %1$s', 'snow-monkey' ), 2 ),
 				'categories' => [ 'sm-gallery' ],
 				'content'    => Helper::render_block_pattern( 'gallery-2' ),
+			],
+			'snow-monkey/gallery-3'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Gallery %1$s', 'snow-monkey' ), 3 ),
+				'categories' => [ 'sm-gallery' ],
+				'content'    => Helper::render_block_pattern( 'gallery-3' ),
+			],
+			'snow-monkey/columns-1'         => [
+				// translators: %1$s: number
+				'title'      => sprintf( __( 'Columns %1$s', 'snow-monkey' ), 1 ),
+				'categories' => [ 'sm-columns' ],
+				'content'    => Helper::render_block_pattern( 'columns-1' ),
 			],
 		];
 
