@@ -104,6 +104,9 @@
 
 .editor-styles-wrapper,
 .customize-control-sidebar_block_editor {
+  @include body();
+  color: $_color-text; // for IE11
+  color: _var-color-text();
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @include _font-size-line-height($_base-font-size-px);

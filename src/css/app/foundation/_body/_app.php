@@ -142,7 +142,8 @@ if ( Helper::is_ie() ) {
 			[
 				'selectors'  => [
 					'.l-body',
-					'.is-root-container',
+					'.editor-styles-wrapper',
+					'.customize-control-sidebar_block_editor',
 				],
 				'properties' => [ 'font-family: ' . $font_family ],
 			],
