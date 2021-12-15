@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.12.0
+ * @version 16.0.0
  */
 
 namespace Framework;
@@ -355,7 +355,7 @@ class Helper {
 	public static function get_color_palette() {
 		$settings      = \WP_Theme_JSON_Resolver::get_core_data()->get_settings();
 		$color_palette = isset( $settings['color']['palette'] )
-			? $settings['color']['palette']['core']
+			? $settings['color']['palette']['default']
 			: [];
 
 		return apply_filters(
