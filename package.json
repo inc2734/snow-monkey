@@ -61,8 +61,8 @@
     "cleanup:load-files-target": "rimraf assets/load-files-target && mkdir -p assets/load-files-target",
     "cleanup:zip-directory": "rimraf snow-monkey",
     "cleanup:zip": "rimraf snow-monkey.zip",
-    "cleanup:trial-zip-directory": "rimraf trial && mkdir trial",
-    "cleanup:trial-zip": "rimraf trial/snow-monkey.zip",
+    "cleanup:trial-zip-directory": "rimraf snow-monkey",
+    "cleanup:trial-zip": "rimraf snow-monkey.zip",
     "css:app:app": "node-sass src/css/app/app.scss assets/css/app/app.css && postcss -r assets/css/app/app.css -c=postcss.config.js",
     "css:app:app-theme": "node-sass src/css/app/app-theme.scss assets/css/app/app-theme.css && postcss -r assets/css/app/app-theme.css -c=postcss.config.js",
     "css:app": "run-p css:app:*",
@@ -113,15 +113,15 @@
     "pregenerate-load-files-target": "npm run cleanup:load-files-target && chmod 777 assets/load-files-target && wp-env start && npm run wp 'theme activate snow-monkey' && wp-env run composer 'install --no-interaction'",
     "postgenerate-load-files-target": "chmod 755 assets/load-files-target",
     "generate-load-files-target": "npm run cli 'php wp-content/themes/snow-monkey/bin/generate-load-files-target.php'",
-    "translation:name": "php bin/template.php",
+    "translation:name": "npm run cli 'php wp-content/themes/snow-monkey/bin/template.php'",
     "translation": "npm run cleanup:translation && run-p translation:*",
     "build": "npm run packages && run-p js css img translation && npm run generate-load-files-target",
     "zip:pack": "npm run cleanup:zip-directory && rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/tests' --exclude='/snow-monkey.zip' --exclude='/trial' ./ snow-monkey",
-    "zip:archive": "npm run cleanup:zip && zip -9 -qmr snow-monkey.zip snow-monkey",
-    "zip": "npm run zip:pack && cd snow-monkey && composer install --no-dev && cd ../ && npm run zip:archive",
-    "trial-zip:pack": "npm run zip:pack && npm run cleanup:trial-zip-directory && rsync -a --exclude='snow-monkey/app/constructor/updater.php' snow-monkey trial",
-    "trial-zip:archive": "npm run cleanup:trial-zip && cd trial && zip -9 -qmr snow-monkey.zip snow-monkey",
-    "trial-zip": "npm run trial-zip:pack && cd trial/snow-monkey && composer install --no-dev && composer remove --update-no-dev inc2734/wp-github-theme-updater && cd ../ && npm run trial-zip:archive"
+    "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
+    "zip": "npm run cleanup:zip && npm run zip:pack && wp-env start && wp-env run composer 'install --no-dev -d snow-monkey' && npm run zip:archive",
+    "trial-zip:pack": "npm run zip:pack && rimraf snow-monkey/app/constructor/updater.php",
+    "trial-zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
+    "trial-zip": "npm run cleanup:trial-zip && npm run trial-zip:pack && wp-env start && wp-env run composer 'install --no-dev -d snow-monkey' && wp-env run composer 'remove --update-no-dev -d snow-monkey inc2734/wp-github-theme-updater' && npm run trial-zip:archive"
   },
   "dependencies": {
     "smoothscroll-polyfill": "^0.4.4"
