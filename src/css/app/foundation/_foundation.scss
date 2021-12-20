@@ -1,21 +1,15 @@
 :root {
   --_background-color: #fff;
-  --wp-block-width: calc(var(--_container-max-width, 1280px));
+  --wp-block-width: calc(#{ _var-container-max-width() });
 
-  --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
-  --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
-
-  @supports (-ms-ime-align: auto) {
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2);
-  }
+  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2);
+  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
+  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
 
   @include _media-min(md) {
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
-
-    @supports (-ms-ime-align: auto) {
-      --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2);
-    }
+    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2);
+    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
+    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
   }
 }
 

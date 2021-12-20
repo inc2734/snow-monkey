@@ -2,9 +2,4 @@
 
 .#{ $_prefix }l-container {
   position: relative;
-
-  @media all and (-ms-high-contrast: none) {
-    display: block !important; // for IE
-    overflow: hidden; // for IE
-  }
 }

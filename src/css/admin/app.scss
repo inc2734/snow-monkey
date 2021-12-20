@@ -5,10 +5,10 @@
 @import '../app/adminbar';
 
 :root {
-  --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin-sm() } * 2);
+  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2);
 
   @include _media-min(md) {
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - #{ _var-container-margin() } * 2);
+    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2);
   }
 }
 
@@ -182,7 +182,7 @@
   .editor-styles-wrapper {
     $container_margin: _space(1, true);
     $sidebar_margin: _space(1, true, true);
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
+    --wp-block-width: calc(#{ _var-container-max-width() } - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
   }
 }
 

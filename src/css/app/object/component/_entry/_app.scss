@@ -80,7 +80,7 @@
   .#{ $_prefix }c-entry__content {
     $container_margin: _space(1, true);
     $sidebar_margin: _space(1, true, true);
-    --wp-block-width: calc(var(--_container-max-width, 1280px) - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
+    --wp-block-width: calc(#{ _var-container-max-width() } - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
 
     > * {
       width: auto;

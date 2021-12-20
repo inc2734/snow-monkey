@@ -6,7 +6,6 @@
   }
 
   a {
-    color: $_color-white; // For IE11
     color: _var-color-white();
   }
 }
