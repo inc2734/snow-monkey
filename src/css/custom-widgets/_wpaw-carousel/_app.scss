@@ -19,7 +19,6 @@
   }
 
   &__item {
-    color: $_color-text; // for IE11
     color: _var-color-text();
     text-decoration: none;
 

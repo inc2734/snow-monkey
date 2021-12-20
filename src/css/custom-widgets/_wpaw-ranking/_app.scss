@@ -15,10 +15,8 @@
       align-items: center;
       justify-content: center;
       @include _square(20px);
-      color: $_color-white; // For IE11
       color: _var-color-white();
       line-height: 1;
-      background-color: $_color-black; // For IE11
       background-color: _var-color-black();
       font-size: 12px;
       font-weight: bold;

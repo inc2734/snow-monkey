@@ -8,7 +8,6 @@
 
   &[data-has-image="true"] {
     min-height: 300px;
-    height: 1px; // For IE11
     @include _padding(1, 0);
 
     @include _media-min(md) {
@@ -20,7 +19,6 @@
     }
 
     .#{ $_prefix }c-page-header__content {
-      color: $_color-white; // For IE11
       color: _var-color-white();
     }
   }
@@ -43,12 +41,6 @@
 
   .#{ $_prefix }c-container {
     flex: 1 1 auto;
-
-    @media all and (-ms-high-contrast: none) {
-      margin-right: 0; // For IE11
-      margin-left: 0; // For IE11
-      width: 100%; // For IE11
-    }
   }
 
   &__bgimage {
@@ -58,7 +50,6 @@
 
   &__bgimage-caption {
     @include _position(absolute, null, 0, 0, 0, 1);
-    color: $_color-white; // For IE11
     color: _var-color-white();
     @include _padding(.25, 0);
   }

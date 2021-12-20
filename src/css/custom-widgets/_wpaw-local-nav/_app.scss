@@ -1,7 +1,5 @@
 .wpaw-local-nav {
-  border-top: $border-bottom-width solid transparent;
-  border-top-color: $_color-black; // For IE11
-  border-top-color: _var-color-black();
+  border-top: $border-bottom-width solid _var-color-black();
   @include _padding(.25, 0, 0);
 
   &__list,
@@ -31,9 +29,7 @@
 
       & + .wpaw-local-nav__sublist {
         @include _margin-top(.25);
-        border-top: 1px solid transparent;
-        border-top-color: _lighter($_color-gray); // For IE11
-        border-top-color: _var-lighter-color-gray();
+        border-top: 1px solid _var-lighter-color-gray();
         @include _padding-top(.25);
       }
     }
@@ -59,9 +55,7 @@
     .wpaw-local-nav__subitem {
       .wpaw-local-nav__sublist {
         @include _margin-top(.5);
-        border-top: 1px solid transparent;
-        border-top-color: _lighter($_color-gray); // For IE11
-        border-top-color: _var-lighter-color-gray();
+        border-top: 1px solid _var-lighter-color-gray();
         @include _padding-top(.25);
       }
 

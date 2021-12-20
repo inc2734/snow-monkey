@@ -4,7 +4,6 @@
   &__figure {
     @include cover-img();
     @include _margin(0, 0, .5);
-    background-color: _lighter($_color-gray); // For IE11
     background-color: _var-lighter-color-gray();
 
     &::before {
@@ -21,7 +20,6 @@
   &__term {
     display: inline-block;
     background-color: var-color-accent();
-    color: $_color-white; // For IE11
     color: _var-color-white();
     font-weight: bold;
     @include _font-size($_base-font-size-px - 4);
@@ -42,7 +40,6 @@
   }
 
   &__content {
-    color: _light($_color-text); // For IE11
     color: _var-light-color-text();
     @include _font-size-line-height($_base-font-size-px - 4);
   }
@@ -87,7 +84,6 @@
 
   &__content {
     display: none;
-    color: $_color-text; // for IE11
     color: _var-color-text();
     @include _font-size-line-height($_base-font-size-px - 2);
 

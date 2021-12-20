@@ -72,7 +72,7 @@
     'sm-xxxlarge': 84px,
   );
 
-  // @see src/css/dependency/snow-monkey-blocks/section
+  // @see src/css/app/foundation/_wordpress/_font-size
   @each $slug, $size in $editor-font-sizes {
     &.has-#{ $slug }-font-size {
       @include _media-only(sm) {

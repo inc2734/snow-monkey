@@ -99,12 +99,8 @@
   }
 
   display: none;
-  border-top: 1px solid transparent;
-  border-top-color: _lighter($_color-gray); // For IE11
-  border-top-color: _var-lighter-color-gray();
-  border-bottom: 1px solid transparent;
-  border-bottom-color: _lighter($_color-gray); // For IE11
-  border-bottom-color: _var-lighter-color-gray();
+  border-top: 1px solid _var-lighter-color-gray();
+  border-bottom: 1px solid _var-lighter-color-gray();
   @include _margin(.25, 0, 0, 0, false);
   @include _padding(.25, 0);
 

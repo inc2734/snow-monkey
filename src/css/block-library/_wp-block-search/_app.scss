@@ -61,10 +61,8 @@
     z-index: 0;
     display: inline-flex;
     align-items: center;
-    background-color: $_color-white; // For IE11
     background-color: _var-color-white();
     box-shadow: none;
-    color: $_color-text; // For IE11
     color: _var-color-text();
     height: auto;
     overflow: visible;

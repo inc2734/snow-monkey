@@ -18,7 +18,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; // For IE11
 
     .wpaw-pickup-slider__figure {
       @include _position(absolute, 0, -2em, 0, -2em);
@@ -46,7 +45,6 @@
     transition: opacity .5s ease-in 1s;
     opacity: 0;
     visibility: hidden;
-    overflow: hidden; // For IE11
   }
 
   &__item-content {
@@ -88,9 +86,7 @@
   &__item-more {
     @include _margin-top(.5);
     @include _padding(.5, 1);
-    border: 1px solid transparent;
-    border-color: $_color-white; // For IE11
-    border-color: _var-color-white();
+    border: 1px solid _var-color-white();
 
     &.#{ $_prefix }c-btn {
       background-color: transparent;
@@ -174,12 +170,8 @@
     &::before {
       left: calc(50% - 5px);
       top: calc(50% - 5px);
-      border-top: 2px solid transparent;
-      border-top-color: $_color-white; // For IE11
-      border-top-color: _var-color-white();
-      border-left: 2px solid transparent;
-      border-left-color: $_color-white; // For IE11
-      border-left-color: _var-color-white();
+      border-top: 2px solid _var-color-white();
+      border-left: 2px solid _var-color-white();
       transform: rotate(-45deg);
     }
   }
@@ -191,12 +183,8 @@
     &::before {
       left: calc(50% - 5px);
       top: calc(50% - 5px);
-      border-top: 2px solid transparent;
-      border-top-color: $_color-white; // For IE11
-      border-top-color: _var_color-white();
-      border-right: 2px solid transparent;
-      border-right-color: $_color-white; // For IE11
-      border-right-color: _var_color-white();
+      border-top: 2px solid _var_color-white();
+      border-right: 2px solid _var_color-white();
       transform: rotate(45deg);
     }
   }

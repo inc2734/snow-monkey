@@ -83,7 +83,6 @@
     top: -1px;
     left: -1px;
     display: inline-block;
-    color: $_color-white; // For IE11
     color: _var-color-white();
     background-color: #127db8;
     font-size: 12px;
@@ -105,7 +104,6 @@
 .editor-styles-wrapper,
 .customize-control-sidebar_block_editor {
   @include body();
-  color: $_color-text; // for IE11
   color: _var-color-text();
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

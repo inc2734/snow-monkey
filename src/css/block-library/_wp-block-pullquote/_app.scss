@@ -1,17 +1,12 @@
 .wp-block-pullquote {
-  color: $_color-text; // For IE11
   color: _var-color-text();
   @include _font-size-line-height(1.5);
   font-weight: bold;
   @include _padding(1.5, 0);
 
   &:not(.is-style-solid-color) {
-    border-top: 4px solid transparent;
-    border-top-color: _light($_color-text); // For IE11
-    border-top-color: _var-light-color-text();
-    border-bottom: 4px solid transparent;
-    border-bottom-color: _light($_color-text); // For IE11
-    border-bottom-color: _var-light-color-text();
+    border-top: 4px solid _var-light-color-text();
+    border-bottom: 4px solid _var-light-color-text();
   }
 
   &.is-style-solid-color {

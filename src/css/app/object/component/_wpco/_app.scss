@@ -1,7 +1,5 @@
 .wpco {
-  background-color: _lightest($_color-gray); // For IE11
   background-color: _var-lightest-color-gray();
-  color: $_color-text; // For IE11
   color: _var-color-text();
   @include _padding(.75, 1, .5);
   visibility: hidden;
@@ -16,14 +14,12 @@
       @include _list-unstyled();
       counter-reset: wpco;
       border-top: 1px solid transparent;
-      border-top-color: _lighter($_color-gray); // For IE11
       border-top-color: _var-lighter-color-gray();
     }
 
     li {
       &:not(:first-child) {
         border-top: 1px solid transparent;
-        border-top-color: _lighter($_color-gray); // For IE11
         border-top-color: _var-lighter-color-gray();
       }
 

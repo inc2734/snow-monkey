@@ -10,16 +10,6 @@ use Inc2734\WP_Customizer_Framework\Style;
 
 $styles = [];
 
-if ( Helper::is_ie() ) {
-	$accent_color = get_theme_mod( 'accent-color' );
-	if ( $accent_color ) {
-		$styles[] = [
-			'selectors'  => [ 'a' ],
-			'properties' => [ 'color: ' . get_theme_mod( 'accent-color' ) ],
-		];
-	}
-}
-
 $styles[] = [
 	'selectors'  => [
 		'input[type="email"]',

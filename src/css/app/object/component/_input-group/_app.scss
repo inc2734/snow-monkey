@@ -1,12 +1,10 @@
 .#{ $_prefix }c-input-group {
   &__btn {
-    background-color: $_color-white; // For IE11
     background-color: _var-color-white();
   }
 
   &__field {
     > input[type="search"] {
-      border-radius: $_border-radius 0 0 $_border-radius; // for IE11
       border-radius: _var-border-radius() 0 0 _var-border-radius();
     }
   }

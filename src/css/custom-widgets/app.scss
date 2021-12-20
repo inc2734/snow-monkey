@@ -37,10 +37,8 @@
     .wpaw-slider.alignfull {
       @include _media-min(lg) {
         $body-margin-left: 280px;
-        margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
-        margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
-        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
         margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
         max-width: none !important;
       }
     }

@@ -5,7 +5,6 @@
 }
 
 .wp-block-separator {
-  background-color: _light($_color-gray); // For IE11
   background-color: _var-color-light-gray();
   height: 1px;
   box-shadow: none;

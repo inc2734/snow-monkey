@@ -48,7 +48,7 @@
           visibility: hidden;
           opacity: 0;
           @include _transition(opacity);
-          @include _triangle-top(16px, 10px, var(--accent-color, $color-accent));
+          @include _triangle-top(16px, 10px, #{ var-color-accent() });
           bottom: -0;
           left: calc(50% - 8px);
         }
@@ -63,7 +63,6 @@
 
       &.sm-nav-menu-item-highlight {
         background-color: var-color-accent();
-        color: $_color-white !important; // For IE11
         color: _var-color-white() !important;
 
         &::after {
@@ -86,12 +85,10 @@
     &__submenu {
       background-color: var-color-accent();
       z-index: 1;
-      z-index: 2; // For IE11
     }
 
     &__subitem {
       @include _font-size-line-height($_base-font-size-px - 2);
-      color: $_color-white; // For IE11
       color: _var-color-white();
 
       &.sm-nav-menu-item-highlight {
@@ -139,14 +136,12 @@
 
     .#{ $_prefix }c-navbar__subitem {
       .#{ $_prefix }c-navbar__toggle {
-        color: $_color-white; // For IE11
         color: _var-color-white();
 
         > .#{ $_prefix }c-ic-angle-right {
           transform: rotate(0);
 
           &::before {
-            border-color: $_color-white; // For IE11
             border-color: _var-color-white();
           }
         }

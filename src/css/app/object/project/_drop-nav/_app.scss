@@ -1,5 +1,4 @@
 .#{ $_prefix }p-drop-nav {
-  background-color: #fff; // for IE11
   background-color: _var-background-color();
 
   @media print {

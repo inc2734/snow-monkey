@@ -27,7 +27,6 @@
 
       @include _media-min(lg) {
         flex: none;
-        width: calc(100% - 336px - #{ _space(2) }); // for IE11
         width: calc(100% - 336px - #{ _var-space() } * 2 * #{ _var-margin-scale() });
       }
     }
@@ -174,8 +173,6 @@
       [data-is-content-widget-area="true"] {
         @include _media-min(lg) {
           $body-margin-left: 280px;
-          margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE11
-          margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2); // for IE11
           margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
           margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
         }

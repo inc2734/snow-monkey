@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3aa11eaeee5e67d82d01fe90dbcdb16f",
+    "content-hash": "bb3faeb786a081aa4bd433aa6d5f18bb",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "12.3.3",
+            "version": "13.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "e705d1880bbbde0ff2e9aff5581aee6262cabf49"
+                "reference": "152b004aab1cd76a276310315dc4c62186211077"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/e705d1880bbbde0ff2e9aff5581aee6262cabf49",
-                "reference": "e705d1880bbbde0ff2e9aff5581aee6262cabf49",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/152b004aab1cd76a276310315dc4c62186211077",
+                "reference": "152b004aab1cd76a276310315dc4c62186211077",
                 "shasum": ""
             },
             "require": {
@@ -125,10 +125,11 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -149,22 +150,22 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/12.3.3"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/13.0.0"
             },
-            "time": "2021-10-25T01:32:51+00:00"
+            "time": "2021-12-20T07:11:11+00:00"
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "9.0.7",
+            "version": "10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "2d4cfb39aa335cd3957ba676c37de59eeb0539f2"
+                "reference": "d2b493ccf38ea663ed2e292d2cdf5060e048e3c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/2d4cfb39aa335cd3957ba676c37de59eeb0539f2",
-                "reference": "2d4cfb39aa335cd3957ba676c37de59eeb0539f2",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/d2b493ccf38ea663ed2e292d2cdf5060e048e3c1",
+                "reference": "d2b493ccf38ea663ed2e292d2cdf5060e048e3c1",
                 "shasum": ""
             },
             "require": {
@@ -173,10 +174,11 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -197,9 +199,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/9.0.7"
+                "source": "https://github.com/inc2734/wp-basis/tree/10.0.0"
             },
-            "time": "2021-11-08T01:15:36+00:00"
+            "time": "2021-12-20T05:26:20+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -536,16 +538,16 @@
         },
         {
             "name": "inc2734/wp-like-me-box",
-            "version": "2.0.2",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-like-me-box.git",
-                "reference": "c11aab6466a652054abe59d1ec640bd5bc9d544f"
+                "reference": "d5f36741a0995e12c1e776447a834857d130c080"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/c11aab6466a652054abe59d1ec640bd5bc9d544f",
-                "reference": "c11aab6466a652054abe59d1ec640bd5bc9d544f",
+                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/d5f36741a0995e12c1e776447a834857d130c080",
+                "reference": "d5f36741a0995e12c1e776447a834857d130c080",
                 "shasum": ""
             },
             "require": {
@@ -554,10 +556,11 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -578,22 +581,22 @@
             "description": "A library for WordPress that added Facebook like me box for article.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-like-me-box/issues",
-                "source": "https://github.com/inc2734/wp-like-me-box/tree/2.0.2"
+                "source": "https://github.com/inc2734/wp-like-me-box/tree/3.0.0"
             },
-            "time": "2021-10-04T02:13:27+00:00"
+            "time": "2021-12-20T07:30:40+00:00"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "9.1.1",
+            "version": "10.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "92a26d74bdd452a6334e1d9b72c61612292291e7"
+                "reference": "f929095514d2bb0bcb739364ce03d35c903fa052"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/92a26d74bdd452a6334e1d9b72c61612292291e7",
-                "reference": "92a26d74bdd452a6334e1d9b72c61612292291e7",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/f929095514d2bb0bcb739364ce03d35c903fa052",
+                "reference": "f929095514d2bb0bcb739364ce03d35c903fa052",
                 "shasum": ""
             },
             "require": {
@@ -602,10 +605,11 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -626,9 +630,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/9.1.1"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/10.0.0"
             },
-            "time": "2021-10-04T01:53:33+00:00"
+            "time": "2021-12-20T08:01:45+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -920,16 +924,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "6.0.6",
+            "version": "7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "12e567e0f17d3314c968201c9cf5e9377be7e370"
+                "reference": "03fc12a225485c31d81053f6315ca00728da1000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/12e567e0f17d3314c968201c9cf5e9377be7e370",
-                "reference": "12e567e0f17d3314c968201c9cf5e9377be7e370",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/03fc12a225485c31d81053f6315ca00728da1000",
+                "reference": "03fc12a225485c31d81053f6315ca00728da1000",
                 "shasum": ""
             },
             "require": {
@@ -939,10 +943,11 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -964,9 +969,9 @@
             "description": "A library for WordPress theme that adds social share buttons.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-share-buttons/issues",
-                "source": "https://github.com/inc2734/wp-share-buttons/tree/6.0.6"
+                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.0.0"
             },
-            "time": "2021-10-04T02:20:17+00:00"
+            "time": "2021-12-20T13:44:17+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",

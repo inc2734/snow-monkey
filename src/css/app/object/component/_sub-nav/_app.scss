@@ -9,7 +9,6 @@
 
     &__item {
       flex: 0 0 auto;
-      color: _light($_color-text); // For IE11
       color: _var-light-color-text();
       @include _margin(0, .25);
 

@@ -15,7 +15,7 @@
 
 // @deprecated
 .has-huge-font-size {
-  @include _font-size-line-height(48px);
+  @include _font-size-line-height(42px);
 }
 
 $editor-font-sizes: (
@@ -48,24 +48,29 @@ $editor-font-sizes-lg: (
   'sm-xxxlarge': 140px,
 );
 
+body {
+  @include _media-only(sm) {
+    --wp--preset--font-size--sm-xlarge: calc(36px - (16px - var(--_base-font-size-px)));
+    --wp--preset--font-size--sm-xxlarge: calc(44px - (16px - var(--_base-font-size-px)));
+    --wp--preset--font-size--sm-xxxlarge: calc(52px - (16px - var(--_base-font-size-px)));
+
+    // @todo I really want to reflect the diff from base-font-size.
+    --line-height-sm-xlarge: _line-height(36px);
+    --line-height-sm-xxlarge: _line-height(44px);
+    --line-height-sm-xxlarge: _line-height(52px);
+  }
+
+  @include _media-only(md) {
+    --wp--preset--font-size--sm-xxxlarge: calc(96px - (16px - var(--_base-font-size-px)));
+
+    // @todo I really want to reflect the diff from base-font-size.
+    --line-height-sm-xxlarge: _line-height(96px);
+  }
+}
+
 // @see src/css/dependency/snow-monkey-blocks/section
 @each $slug, $size in $editor-font-sizes {
   .has-#{ $slug }-font-size {
-    @include _font-size-line-height($size);
-
-    $size-md: map-get($editor-font-sizes-md, $slug);
-    $size-lg: map-get($editor-font-sizes-lg, $slug);
-
-    @if $size != $size-md {
-      @include _media-min(md) {
-        @include _font-size-line-height($size-md);
-      }
-    }
-
-    @if $size != $size-lg and $size-md != $size-lg {
-      @include _media-min(lg) {
-        @include _font-size-line-height($size-lg);
-      }
-    }
+    line-height: var(--line-height-#{ $slug });
   }
 }

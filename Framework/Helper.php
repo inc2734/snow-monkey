@@ -353,53 +353,45 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_color_palette() {
-		$settings      = \WP_Theme_JSON_Resolver::get_core_data()->get_settings();
-		$color_palette = isset( $settings['color']['palette'] )
-			? $settings['color']['palette']['default']
-			: [];
-
 		return apply_filters(
 			'snow_monkey_editor_color_palette',
-			array_merge(
+			[
 				[
-					[
-						'name'  => __( 'Text color', 'snow-monkey' ),
-						'slug'  => 'text-color',
-						'color' => '#333',
-					],
-					[
-						'name'  => __( 'Dark gray', 'snow-monkey' ),
-						'slug'  => 'dark-gray',
-						'color' => '#999',
-					],
-					[
-						'name'  => __( 'Gray', 'snow-monkey' ),
-						'slug'  => 'gray',
-						'color' => '#ccc',
-					],
-					[
-						'name'  => __( 'Light gray', 'snow-monkey' ),
-						'slug'  => 'very-light-gray',
-						'color' => '#eee',
-					],
-					[
-						'name'  => __( 'Lightest gray', 'snow-monkey' ),
-						'slug'  => 'lightest-grey',
-						'color' => '#f7f7f7',
-					],
-					[
-						'name'  => __( 'Accent color', 'snow-monkey' ),
-						'slug'  => 'accent-color',
-						'color' => get_theme_mod( 'accent-color', '#cd162c' ), // On after_setup_theme, default value not set yet.
-					],
-					[
-						'name'  => __( 'Sub accent color', 'snow-monkey' ),
-						'slug'  => 'sub-accent-color',
-						'color' => get_theme_mod( 'sub-accent-color', '#707593' ), // On after_setup_theme, default value not set yet.
-					],
+					'name'  => __( 'Text color', 'snow-monkey' ),
+					'slug'  => 'text-color',
+					'color' => '#333',
 				],
-				$color_palette
-			)
+				[
+					'name'  => __( 'Dark gray', 'snow-monkey' ),
+					'slug'  => 'dark-gray',
+					'color' => '#999',
+				],
+				[
+					'name'  => __( 'Gray', 'snow-monkey' ),
+					'slug'  => 'gray',
+					'color' => '#ccc',
+				],
+				[
+					'name'  => __( 'Light gray', 'snow-monkey' ),
+					'slug'  => 'very-light-gray',
+					'color' => '#eee',
+				],
+				[
+					'name'  => __( 'Lightest gray', 'snow-monkey' ),
+					'slug'  => 'lightest-grey',
+					'color' => '#f7f7f7',
+				],
+				[
+					'name'  => __( 'Accent color', 'snow-monkey' ),
+					'slug'  => 'accent-color',
+					'color' => get_theme_mod( 'accent-color', '#cd162c' ), // On after_setup_theme, default value not set yet.
+				],
+				[
+					'name'  => __( 'Sub accent color', 'snow-monkey' ),
+					'slug'  => 'sub-accent-color',
+					'color' => get_theme_mod( 'sub-accent-color', '#707593' ), // On after_setup_theme, default value not set yet.
+				],
+			]
 		);
 	}
 
@@ -409,43 +401,45 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_font_sizes() {
+		$base_font_size = get_theme_mod( 'base-font-size' );
+
 		return apply_filters(
 			'snow_monkey_editor_font_sizes',
 			[
 				[
 					'name' => _x( 'Small', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-small',
-					'size' => '14px',
+					'size' => $base_font_size - 2 . 'px',
 				],
 				[
 					'name' => _x( 'Normal', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-normal',
-					'size' => '16px',
+					'size' => $base_font_size . 'px',
 				],
 				[
 					'name' => _x( 'Medium', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-medium',
-					'size' => '20px',
+					'size' => $base_font_size + 4 . 'px',
 				],
 				[
 					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ),
 					'slug' => 'sm-large',
-					'size' => '28px',
+					'size' => $base_font_size + 12 . 'px',
 				],
 				[
 					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' +',
 					'slug' => 'sm-xlarge',
-					'size' => '44px',
+					'size' => $base_font_size + 28 . 'px',
 				],
 				[
 					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' ++',
 					'slug' => 'sm-xxlarge',
-					'size' => '76px',
+					'size' => $base_font_size + 60 . 'px',
 				],
 				[
 					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' +++',
 					'slug' => 'sm-xxxlarge',
-					'size' => '140px',
+					'size' => $base_font_size + 124 . 'px',
 				],
 			]
 		);

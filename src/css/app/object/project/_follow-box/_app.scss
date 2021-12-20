@@ -9,21 +9,11 @@
     left: 0;
 
     img {
-      position: absolute; // For IE11
-      top: 50%; // For IE11
-      transform: translateY(-50%); // For IE11
-      height: 100%; // For IE11
-      min-width: 100%; // For IE11
-
-      @supports (object-fit: cover) {
-        position: relative;
-        top: auto; // For IE11
-        transform: none; // For IE11
-        object-fit: cover;
-        object-position: 50% 50%;
-        height: 100%;
-        width: 100%;
-      }
+      position: relative;
+      object-fit: cover;
+      object-position: 50% 50%;
+      height: 100%;
+      width: 100%;
     }
 
     &::after {
@@ -33,7 +23,6 @@
       right: 0;
       bottom: 0;
       left: 0;
-      background-color: $_color-black; // For IE11
       background-color: _var-color-black();
       opacity: .6;
     }

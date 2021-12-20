@@ -15,6 +15,5 @@
   margin-right: auto !important;
   margin-left: auto !important;
   width: auto !important;
-  max-width: calc(1280px + 240px) !important; // for IE11
   max-width: calc(var(--wp-block-width) + 240px) !important;
 }

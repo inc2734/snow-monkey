@@ -12,7 +12,6 @@
 
   .#{ $_prefix }c-ic-angle-right {
     &::before {
-      border-color: $_color-white; // For IE11
       border-color: _var-color-white();
     }
   }

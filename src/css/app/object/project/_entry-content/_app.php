@@ -8,19 +8,17 @@
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
 
-if ( is_admin() ) {
-	foreach ( [ 'entry-content', 'entry-content-theme' ] as $placeholder ) {
-		Style::extend(
-			$placeholder,
-			[
-				'',
-				'[data-type="core/heading"]',
-				'.wp-block-freeform',
-			]
-		);
-	}
-} elseif ( Helper::is_ie() ) {
-	foreach ( [ 'entry-content', 'entry-content-theme' ] as $placeholder ) {
-		Style::extend( $placeholder, [ '.p-entry-content' ] );
-	}
+if ( ! is_admin() ) {
+	return;
+}
+
+foreach ( [ 'entry-content', 'entry-content-theme' ] as $placeholder ) {
+	Style::extend(
+		$placeholder,
+		[
+			'',
+			'[data-type="core/heading"]',
+			'.wp-block-freeform',
+		]
+	);
 }

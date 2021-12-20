@@ -99,7 +99,22 @@ if ( 'noto-sans-jp' === $base_font ) {
 	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ] );
 }
 $font_family          = Helper::get_font_family();
-$root_variables_app[] = '--font-family: ' . $font_family;
+$root_variables_app[] = '--font-family: ' . $font_family; // @deprecated
+$root_variables_app[] = '--_base-font-family: var(--font-family)';
+
+$base_font_size = get_theme_mod( 'base-font-size' );
+foreach ( Helper::get_font_sizes() as $font_size ) {
+	if ( false !== strpos( $font_size['size'], 'px' ) ) {
+		$line_height = sprintf(
+			'calc(%1$s / %2$s + var(--_half-leading) * 2)',
+			$base_font_size,
+			str_replace( 'px', '', $font_size['size'] )
+		);
+		$root_variables_app[] = '--line-height-' . $font_size['slug'] . ': ' . $line_height;
+	}
+}
+
+$root_variables_app[] = '--_base-font-size-px: ' . $base_font_size . 'px';
 
 $styles_core = [];
 
@@ -113,43 +128,15 @@ if ( $root_variables_app ) {
 $styles_core[] = [
 	'selectors'  => [ 'html' ],
 	'properties' => [
-		'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px',
+		'font-size: ' . $base_font_size . 'px',
 		'letter-spacing: ' . get_theme_mod( 'base-letter-spacing' ) . 'rem',
 	],
 ];
-
-if ( 16 !== get_theme_mod( 'base-font-size' ) ) {
-	$styles_core[] = [
-		'selectors'  => [
-			'.has-regular-font-size',
-			'.has-normal-font-size',
-		],
-		'properties' => [
-			'font-size: 16px',
-		],
-	];
-}
 
 Style::attach(
 	Helper::get_main_style_handle() . '-app',
 	$styles_core
 );
-
-if ( Helper::is_ie() ) {
-	Style::attach(
-		Helper::get_main_style_handle() . '-app',
-		[
-			[
-				'selectors'  => [
-					'.l-body',
-					'.editor-styles-wrapper',
-					'.customize-control-sidebar_block_editor',
-				],
-				'properties' => [ 'font-family: ' . $font_family ],
-			],
-		]
-	);
-}
 
 $h2_style = get_theme_mod( 'h2-style' );
 if ( $h2_style ) {

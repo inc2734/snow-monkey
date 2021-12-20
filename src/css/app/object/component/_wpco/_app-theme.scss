@@ -3,7 +3,6 @@
     a {
       &::before {
         background-color: var-color-accent();
-        color: $_color-white; // For IE11
         color: _var-color-white();
         font-size: 10px;
         line-height: 1;

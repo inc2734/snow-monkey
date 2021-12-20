@@ -44,9 +44,7 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      background-color: $_color-black; // For IE11
       background-color: _var-color-black();
-      color: $_color-white; // For IE11
       color: _var-color-white();
       font-weight: bold;
       text-decoration: none;
@@ -67,7 +65,6 @@
   &__item-figure {
     @include cover-img();
     @include _position(absolute, 0, 0, 0, 0);
-    background-color: _lighter($_color-gray); // For IE11
     background-color: _var-lighter-color-gray();
     backface-visibility: hidden;
     @include _transition(opacity);

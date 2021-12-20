@@ -114,7 +114,7 @@
 .edit-post-visual-editor__post-title-wrapper .editor-post-title__input {
   @include _font-size-line-height($_h2-font-size-scale);
   font-weight: bold;
-  font-family: $_font-family;
+  font-family: _var-base-font-family();
   @include _padding(.25, 0);
 }
 

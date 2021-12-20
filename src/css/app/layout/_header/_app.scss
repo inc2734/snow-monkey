@@ -1,6 +1,5 @@
 .#{ $_prefix }l-header {
   z-index: 1000;
-  background-color: #fff; // for IE11
   background-color: _var-background-color();
   color: var-color-header-text();
   overflow: hidden;
@@ -71,15 +70,6 @@
   @mixin overlay-header() {
     @include _position(absolute, null, 0, null, 0);
     background-color: transparent;
-
-    // For IE11
-    @media all and (-ms-high-contrast: none) {
-      top: 0;
-
-      .admin-bar & {
-        top: 32px;
-      }
-    }
   }
 
   @mixin overlay-header-white-text() {
@@ -137,7 +127,6 @@
     }
 
     [data-scrolled="true"] & {
-      background-color: #fff; // for IE11
       background-color: _var-background-color();
       box-shadow: 0 1px 2px 1px rgba(#000, .05);
     }
@@ -295,24 +284,20 @@
  */
 [data-header-layout="left"] {
   @include _media-min(lg) {
-    $body-margin-left: 280px; // for IE11
+    $body-margin-left: 280px;
     --body-margin-left: #{ $body-margin-left };
 
-    margin-left: $body-margin-left; // for IE11
     margin-left: var-body-margin-left();
 
     .#{ $_prefix }p-footer-sticky-nav,
     .#{ $_prefix }p-footer-cta {
-      left: $body-margin-left; // for IE11
       left: var-body-margin-left();
     }
   }
 }
 .#{ $_prefix }l-header--left {
   @include _media-min(lg) {
-    $body-margin-left: 280px; // for IE11
     @include _position(fixed, 0, 0, 0, 0);
-    width: $body-margin-left; // for IE11
     width: var-body-margin-left();
     @include _padding-top(1);
 
@@ -352,7 +337,7 @@
         }
 
         &__item[aria-haspopup="true"]::before {
-          @include _triangle-left(10px, 16px, var(--accent-color, $color-accent));
+          @include _triangle-left(10px, 16px, #{ var-color-accent() });
           left: auto;
           bottom: auto;
           right: -0;

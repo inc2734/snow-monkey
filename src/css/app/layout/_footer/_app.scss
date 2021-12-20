@@ -1,7 +1,5 @@
 .#{ $_prefix }l-footer {
-  border-top: 1px solid transparent;
-  border-top-color: _lighter($_color-gray); // For IE11
-  border-top-color: _var-lighter-color-gray();
+  border-top: 1px solid _var-lighter-color-gray();
   overflow: hidden;
 }
 
@@ -10,7 +8,6 @@
  */
 .#{ $_prefix }l-footer--default {
   .#{ $_prefix }p-social-nav {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
     @include _padding(1, 0);
 
@@ -37,7 +34,6 @@
  */
 .#{ $_prefix }l-footer--footer-1 {
   .#{ $_prefix }p-social-nav {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
     @include _padding(1, 0);
 
@@ -55,7 +51,6 @@
   }
 
   .#{ $_prefix }l-footer__footer {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
     @include _padding(1, 0);
   }
@@ -74,9 +69,7 @@
   }
 
   .#{ $_prefix }l-footer__body {
-    border-top: 1px solid transparent;
-    border-top-color: _lighter($_color-gray); // For IE11
-    border-top-color: _var-lighter-color-gray();
+    border-top: 1px solid _var-lighter-color-gray();
   }
 
   .#{ $_prefix }l-footer__widget-area {
@@ -88,7 +81,6 @@
   }
 
   .#{ $_prefix }l-footer__footer {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
     @include _padding(1, 0);
   }
@@ -113,7 +105,6 @@
 
   .#{ $_prefix }l-footer__body {
     border-top: 1px solid transparent;
-    border-top-color: _lighter($_color-gray); // For IE11
     border-top-color: _var-lighter-color-gray();
   }
 
@@ -126,7 +117,6 @@
   }
 
   .#{ $_prefix }l-footer__footer {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
     @include _padding(1, 0);
   }
@@ -150,7 +140,6 @@
   }
 
   .#{ $_prefix }l-footer__footer {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
     @include _padding(1, 0);
   }

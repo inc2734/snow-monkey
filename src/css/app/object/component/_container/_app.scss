@@ -3,7 +3,6 @@
 
   @include _media-min(lg) {
     &.#{ $_prefix }c-container {
-      max-width: 1280px; // For IE11
       max-width: _var-container-max-width();
     }
   }

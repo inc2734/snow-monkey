@@ -11,7 +11,6 @@
 @mixin content-alignment {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1280px; // for IE11
   max-width: var(--wp-block-width);
   width: calc(100% - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
   width: calc(100% - #{ _var-container-margin-sm() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));

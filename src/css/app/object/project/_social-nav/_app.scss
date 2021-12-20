@@ -1,10 +1,6 @@
 .#{ $_prefix }p-social-nav {
-  color: _light($_color-text); // For IE11
   color: _var-light-color-text();
   @include _padding(.5, 0);
-
-  &__inner {
-  }
 
   .#{ $_prefix }c-navbar {
     flex-wrap: wrap;
@@ -13,10 +9,6 @@
     &__item {
       flex: 0 0 auto;
       margin: .25em .5em;
-
-      @supports (gap: 1px) {
-        margin: 0; // For IE11
-      }
     }
   }
 

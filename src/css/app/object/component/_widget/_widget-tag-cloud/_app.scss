@@ -1,13 +1,9 @@
 .tag-cloud-link {
   display: inline-block;
-  background-color: _lightest($_color-gray); // For IE11
   background-color: _var-lightest-color-gray();
   border: 1px solid transparent;
-  border-color: _lighter($_color-gray); // For IE11
   border-color: _var-lighter-color-gray();
-  border-radius: $_border-radius; // for IE11
   border-radius: _var-border-radius();
-  color: $_color-text; // For IE11
   color: _var-color-text();
   font-size: ($_base-font-size-px - 4) !important;
   line-height: 1;
@@ -17,7 +13,6 @@
   vertical-align: top;
 
   @include _hover(lg) {
-    background-color: _lighter($_color-gray); // For IE11
     background-color: _var-lighter-color-gray();
     text-decoration: none;
   }

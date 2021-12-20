@@ -12,7 +12,6 @@
   @include _between-content(.75);
   background-color: $color;
   border: 1px solid darken(desaturate($color, 10%), 10%);
-  border-radius: $_border-radius; // for IE11
   border-radius: _var-border-radius();
   color: darken(desaturate($color, 60%), 60%);
   @include _padding(.5);
@@ -66,7 +65,6 @@
     @include _circle(60px);
     max-width: 60px;
     border: 2px solid transparent;
-    border-color: _lighter($_color-gray); // For IE11
     border-color: _var-lighter-color-gray();
 
     > img {
@@ -86,7 +84,6 @@
   &__body {
     @include _between-content(.75);
     flex: 1 1 auto;
-    border-radius: $_border-radius; // for IE11
     border-radius: _var-border-radius();
     overflow-wrap: break-word;
     @include _padding(.5);
@@ -94,7 +91,7 @@
     width: 100%;
 
     @include _top-balloon((
-      background-color: [_lightest($_color-gray), _var-lightest-color-gray()],
+      background-color: _var-lightest-color-gray(),
       border-color: null,
       border-size: null,
       triangle-size: 10px,
@@ -108,7 +105,7 @@
 
     @include _media-min(md) {
       max-width: calc(100% - 80px);
-      @include _balloon-triangle(left, 10px, [_lightest($_color-gray), _var-lightest-color-gray()]);
+      @include _balloon-triangle(left, 10px, _var-lightest-color-gray());
     }
   }
 
@@ -134,7 +131,7 @@
       }
 
       @include _media-min(md) {
-        @include _balloon-triangle(right, 10px, [_lightest($_color-gray), _var-lightest-color-gray()]);
+        @include _balloon-triangle(right, 10px, _var-lightest-color-gray());
       }
     }
   }
@@ -187,7 +184,6 @@
   }
 
   &--inverse {
-    background-color: _lightest($_color-gray); // For IE11
     background-color: _var-lightest-color-gray();
   }
 
@@ -204,9 +200,6 @@
   &[data-header-layout="left"] {
     .wpac-section {
       @include _media-min(lg) {
-        $body-margin-left: 280px;
-        margin-left: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
-        margin-right: calc(50% - (100vw - #{ $body-margin-left }) / 2) !important; // for IE11
         margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
         margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
       }

@@ -8,22 +8,6 @@
 use Inc2734\WP_Customizer_Framework\Style;
 use Framework\Helper;
 
-if ( Helper::is_ie() ) {
-	$accent_color = get_theme_mod( 'accent-color' );
-	if ( $accent_color ) {
-		$styles = [
-			[
-				'selectors'  => [ '.c-entry-summary__term' ],
-				'properties' => [ 'background-color: ' . $accent_color ],
-			],
-		];
-
-		Style::attach(
-			Helper::get_main_style_handle() . '-app',
-			$styles
-		);
-	}
-}
 $terms = Helper::get_terms(
 	[
 		'taxonomy'   => 'category',

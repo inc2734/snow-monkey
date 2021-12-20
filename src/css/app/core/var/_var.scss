@@ -54,6 +54,7 @@
   @return var(--drop-nav-text-color, $_color-text);
 }
 
+// @deprecated
 @function var-font-family() {
   @return var(--font-family);
 }
