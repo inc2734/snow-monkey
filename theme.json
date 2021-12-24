@@ -2,5 +2,9 @@
   "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
   "version": 2,
   "settings": {
+    "layout": {
+			"contentSize": "var(--wp-block-width)",
+			"wideSize": "calc(var(--wp-block-width) + 240px)"
+    }
   }
 }

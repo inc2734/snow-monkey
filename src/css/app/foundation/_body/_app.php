@@ -105,7 +105,7 @@ $root_variables_app[] = '--_base-font-family: var(--font-family)';
 $base_font_size = get_theme_mod( 'base-font-size' );
 foreach ( Helper::get_font_sizes() as $font_size ) {
 	if ( false !== strpos( $font_size['size'], 'px' ) ) {
-		$line_height = sprintf(
+		$line_height          = sprintf(
 			'calc(%1$s / %2$s + var(--_half-leading) * 2)',
 			$base_font_size,
 			str_replace( 'px', '', $font_size['size'] )

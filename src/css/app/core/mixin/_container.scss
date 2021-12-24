@@ -8,23 +8,17 @@
   }
 }
 
-@mixin content-alignment {
+@mixin content-alignment() {
   margin-right: auto;
   margin-left: auto;
   max-width: var(--wp-block-width);
+  width: calc(100% - #{ _var-container-margin-sm() } * 2);
   width: calc(100% - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
   width: calc(100% - #{ _var-container-margin-sm() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
 
-  @supports (-ms-ime-align: auto) {
-    width: calc(100% - #{ _var-container-margin-sm() } * 2);
-  }
-
   @include _media-min(md) {
+    width: calc(100% - #{ _var-container-margin() } * 2);
     width: calc(100% - #{ _var-container-margin() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
     width: calc(100% - #{ _var-container-margin() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
-
-    @supports (-ms-ime-align: auto) {
-      width: calc(100% - #{ _var-container-margin() } * 2);
-    }
   }
 }
