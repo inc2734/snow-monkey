@@ -5,15 +5,14 @@
   margin: auto;
   background-color: _var-color-white();
   color: _var-color-text();
-  max-width: _strip-unit(map-get($_sizes, lg)) * 1rem;
   @include _padding(.5);
-  width: 90vw;
+  width: min(90vw, #{ _px2rem(map-get($_sizes, lg)) });
 
   @include _media-min(md) {
     @include _padding(1);
   }
 
   &[data-is-slim-widget-area="true"] {
-    max-width: _strip-unit(map-get($_sizes, md)) * 1rem;
+    max-width: _px2rem(map-get($_sizes, md));
   }
 }

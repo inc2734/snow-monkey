@@ -11,7 +11,7 @@
   &__figure {
     margin: 0 0 20px;
     position: relative;
-    flex: 0 0 60px;
+    flex: 0 0 auto;
     @include _circle(60px);
     max-width: 60px;
     border: 2px solid _var-lighter-color-gray();
@@ -33,7 +33,6 @@
     border-radius: _var-border-radius();
     overflow-wrap: break-word;
     @include _padding(.5);
-    max-width: 100%;
     width: 100%;
     background-color: _var-lightest-color-gray();
 

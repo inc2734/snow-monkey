@@ -7,16 +7,7 @@
   @include _padding(2, 0);
 
   &[data-has-image="true"] {
-    min-height: 300px;
-    @include _padding(1, 0);
-
-    @include _media-min(md) {
-      min-height: 400px;
-    }
-
-    @include _media-min(lg) {
-      min-height: 500px;
-    }
+    height: clamp(300px, 62.5vw,500px);
 
     .#{ $_prefix }c-page-header__content {
       color: _var-color-white();

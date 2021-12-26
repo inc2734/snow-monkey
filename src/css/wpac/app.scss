@@ -61,7 +61,7 @@
 
   &__figure {
     position: relative;
-    flex: 0 0 60px;
+    flex: 0 0 auto;
     @include _circle(60px);
     max-width: 60px;
     border: 2px solid transparent;
