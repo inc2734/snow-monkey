@@ -55,16 +55,16 @@ body {
     --wp--preset--font-size--sm-xxxlarge: calc(52px - (16px - var(--_base-font-size-px)));
 
     // @todo I really want to reflect the diff from base-font-size.
-    --line-height-sm-xlarge: _line-height(36px);
-    --line-height-sm-xxlarge: _line-height(44px);
-    --line-height-sm-xxlarge: _line-height(52px);
+    --line-height-sm-xlarge: #{ _line-height(36px) };
+    --line-height-sm-xxlarge: #{ _line-height(44px) };
+    --line-height-sm-xxlarge: #{ _line-height(52px) };
   }
 
   @include _media-only(md) {
     --wp--preset--font-size--sm-xxxlarge: calc(96px - (16px - var(--_base-font-size-px)));
 
     // @todo I really want to reflect the diff from base-font-size.
-    --line-height-sm-xxlarge: _line-height(96px);
+    --line-height-sm-xxlarge: #{ _line-height(96px) };
   }
 }
 
