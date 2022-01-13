@@ -2,8 +2,7 @@
   border-collapse: collapse;
 
   th, td {
-    border: 1px solid transparent;
-    border-color: _var-lighter-color-gray();
+    border: 1px solid _var-lighter-color-gray();
     @include _padding(.25, .5);
   }
 
