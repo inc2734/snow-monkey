@@ -354,7 +354,7 @@ class Helper {
 	 */
 	public static function get_color_palette() {
 		$settings      = \WP_Theme_JSON_Resolver::get_core_data()->get_settings();
-		$color_palette = isset( $settings['color']['palette'] )
+		$color_palette = isset( $settings['color']['palette']['core'] )
 			? $settings['color']['palette']['core']
 			: [];
 
