@@ -3,24 +3,8 @@
 @import '../../app/core/core';
 @import '../../app/foundation/_placeholder/placeholder';
 
-@import 'accordion/editor';
-@import 'box/editor';
-@import 'btn-box/editor';
-@import 'btn/editor';
-@import 'container/editor';
-@import 'faq/editor';
-@import 'information/editor';
-@import 'items/editor';
 @import 'limited-datetime/editor';
-@import 'media-text/editor';
-@import 'panels/editor';
 @import 'section/editor';
-@import 'section-break-the-grid/editor';
-@import 'section-side-heading/editor';
-@import 'section-with-image/editor';
-@import 'spider-contents-slider/editor';
-@import 'step/editor';
-@import 'tabs/editor';
 
 .c-row[data-columns]:not([data-columns="1"]) {
 	@include _media-max(sm) {

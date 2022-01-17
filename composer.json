@@ -41,7 +41,10 @@
   },
   "config": {
     "process-timeout": 0,
-    "vendor-dir": "vendor"
+    "vendor-dir": "vendor",
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
   },
   "scripts" :{
     "format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",

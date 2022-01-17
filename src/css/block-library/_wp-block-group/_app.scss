@@ -1,4 +1,6 @@
 .wp-block-group {
+  @extend %entry-content;
+
   &__inner-container {
     @extend %entry-content;
   }

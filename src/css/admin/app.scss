@@ -15,9 +15,8 @@
 .wp-block,
 .edit-post-text-editor__body textarea.editor-post-text-editor,
 .components-placeholder.wp-block-shortcode {
-  margin: 0;
   max-width: none;
-  @include content-alignment();
+  @include content-width();
 
   .wp-block {
     width: auto;
@@ -30,7 +29,7 @@
   margin-left: 0;
 }
 
-// @todo To adjust the Float view in the editor to match the front view.
+// @todo To adjust the float view in the editor to match the front view.
 .wp-block[data-align="right"],
 .wp-block[data-align="left"] {
   > .block-editor-block-list__block {
@@ -70,18 +69,8 @@
   }
 }
 
-.block-editor-block-list__block {
-  margin: 0;
-}
-
 .block-editor-writing-flow {
   overflow: hidden;
-}
-.edit-post-visual-editor__post-title-wrapper,
-.is-root-container > .wp-block,
-.is-root-container > div:not([class]) > .wp-block {
-  margin-right: auto;
-  margin-left: auto;
 }
 
 .wp-block[data-align="wide"] {

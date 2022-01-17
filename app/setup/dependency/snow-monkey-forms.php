@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 16.0.0
  */
 
 use Framework\Helper;
@@ -16,7 +16,7 @@ if ( ! defined( 'SNOW_MONKEY_FORMS_PATH' ) ) {
  * Enqueue Snow Monkey Blocks style
  */
 add_action(
-	'wp_enqueue_scripts',
+	'enqueue_block_assets',
 	function() {
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-forms',
@@ -39,36 +39,6 @@ add_action(
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/app-theme.css' ),
 			[ Helper::get_main_style_handle() . '-snow-monkey-forms-app' ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/app-theme.css' ) )
-		);
-
-		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-forms' );
-	}
-);
-
-add_action(
-	'enqueue_block_editor_assets',
-	function() {
-		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-forms',
-			false,
-			[
-				Helper::get_main_style_handle() . '-snow-monkey-forms-app',
-				Helper::get_main_style_handle() . '-snow-monkey-forms-theme',
-			]
-		);
-
-		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-forms-app',
-			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/editor.css' ),
-			[ 'snow-monkey-forms' ],
-			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/editor.css' ) )
-		);
-
-		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-forms-theme',
-			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/editor-theme.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-forms-app' ],
-			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/editor-theme.css' ) )
 		);
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-forms' );

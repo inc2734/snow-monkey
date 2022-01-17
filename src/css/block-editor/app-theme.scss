@@ -15,8 +15,7 @@
   @extend %entry-content-theme;
 }
 
-.editor-styles-wrapper,
-.customize-control-sidebar_block_editor {
+html :where(.editor-styles-wrapper, .customize-control-sidebar_block_editor) {
 
   /**
    * Object - Component

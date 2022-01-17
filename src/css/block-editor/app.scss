@@ -101,8 +101,7 @@
 .u-hidden-xl::after { content: '.u-hidden-xl'; }
 .u-hidden-xl-up::after { content: '.u-hidden-xl-up'; }
 
-.editor-styles-wrapper,
-.customize-control-sidebar_block_editor {
+html :where(.editor-styles-wrapper, .customize-control-sidebar_block_editor) {
   @include body();
   color: _var-color-text();
   -webkit-font-smoothing: antialiased;

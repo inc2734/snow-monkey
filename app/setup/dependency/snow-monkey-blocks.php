@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 16.0.0
  */
 
 use Framework\Helper;
@@ -18,7 +18,7 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
  * Enqueue Snow Monkey Blocks assets.
  */
 add_action(
-	'wp_enqueue_scripts',
+	'enqueue_block_assets',
 	function() {
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
@@ -68,29 +68,35 @@ add_action(
 	'enqueue_block_editor_assets',
 	function() {
 		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-blocks',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks/editor',
 			false,
 			[
-				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
-				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme/editor',
 			]
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.css' ),
-			[ Helper::get_main_style_handle() ],
+			[
+				Helper::get_main_style_handle(),
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
+			],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.css' ) )
 		);
 
 		wp_register_style(
-			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme/editor',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-app' ],
+			[
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
+			],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ) )
 		);
 
-		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-blocks' );
+		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-blocks/editor' );
 	}
 );
 
