@@ -32,7 +32,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app.css' ),
-			[ Helper::get_main_style_handle() ],
+			[ 'snow-monkey-blocks' ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app.css' ) )
 		);
 
@@ -81,7 +81,7 @@ add_action(
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.css' ),
 			[
 				Helper::get_main_style_handle(),
-				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app2',
 			],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.css' ) )
 		);
