@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.12.0
+ * @version 16.0.0
  *
  * renamed: template-parts/1row-header.php
  */
@@ -108,7 +108,7 @@ if ( 'left' === $args['_gnav_alignment'] ) {
 				</div>
 			<?php endif; ?>
 
-			<?php if ( $header_content ) : ?>
+			<?php if ( $header_content || 'center' === $args['_gnav_alignment'] ) : ?>
 				<div class="<?php echo esc_attr( implode( ' ', $header_content_column_classes ) ); ?>">
 					<div class="l-<?php echo esc_attr( $header_type ); ?>__content">
 						<?php
