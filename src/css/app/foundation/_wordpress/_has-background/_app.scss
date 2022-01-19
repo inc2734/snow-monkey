@@ -1,9 +1,14 @@
 p,
-ul,
-ol,
 .wp-block-group,
 .wp-block-column {
   &.has-background {
     @include _padding(1);
+  }
+}
+
+ul,
+ol {
+  &.has-background {
+    @include _padding(1, 1, 1, 2);
   }
 }
