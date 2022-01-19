@@ -80,8 +80,7 @@ add_action(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.css' ),
 			[
-				Helper::get_main_style_handle(),
-				Helper::get_main_style_handle() . '-snow-monkey-blocks-app2',
+				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 			],
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.css' ) )
 		);
