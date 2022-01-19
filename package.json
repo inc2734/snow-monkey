@@ -71,7 +71,7 @@
     "css:wpac": "node-sass src/css/wpac -o assets/css/wpac && postcss assets/css/wpac/*.css -r",
     "css:custom-widgets": "node-sass src/css/custom-widgets -o assets/css/custom-widgets && postcss assets/css/custom-widgets/*.css -r",
     "css:dependency:amp": "node-sass src/css/dependency/amp -o assets/css/dependency/amp && postcss assets/css/dependency/amp/*.css -r",
-    "css:dependency:contact-form-7": "node-sass src/css/dependency/elementor -o assets/css/dependency/elementor && postcss assets/css/dependency/contact-form-7/*.css -r",
+    "css:dependency:contact-form-7": "node-sass src/css/dependency/contact-form-7 -o assets/css/dependency/contact-form-7 && postcss assets/css/dependency/contact-form-7/*.css -r",
     "css:dependency:elementor": "node-sass src/css/dependency/elementor -o assets/css/dependency/elementor && postcss assets/css/dependency/elementor/*.css -r",
     "css:dependency:woocommerce": "node-sass src/css/dependency/woocommerce -o assets/css/dependency/woocommerce && postcss assets/css/dependency/woocommerce/*.css -r",
     "css:dependency:snow-monkey-blocks": "node-sass src/css/dependency/snow-monkey-blocks -o assets/css/dependency/snow-monkey-blocks && postcss assets/css/dependency/snow-monkey-blocks/*.css -r",
