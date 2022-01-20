@@ -1,5 +1,3 @@
-import addCustomEvent from '@inc2734/add-custom-event';
-
 /**
  * Return html
  *
@@ -275,7 +273,7 @@ export function getTargetOffsetTop() {
     return false;
   }
 
-  const target = document.querySelector(hash);
+  const target = document.querySelector(decodeURI(hash));
   if (! target) {
     return false;
   }

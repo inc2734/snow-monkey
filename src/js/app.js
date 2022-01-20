@@ -27,12 +27,13 @@ document.addEventListener(
     }
 
     if (header.offsetWidth < html.offsetWidth) {
+      console.log('header.offsetWidth < html.offsetWidth');
       return;
     }
 
     let targetOffsetTop = getTargetOffsetTop();
     if (false !== targetOffsetTop) {
-      const targetOffsetTop = Math.floor(targetOffsetTop);
+      targetOffsetTop = Math.floor(targetOffsetTop);
       const headerOffsetBottom = Math.floor(header.getBoundingClientRect().top + header.offsetHeight);
       if (targetOffsetTop < headerOffsetBottom) {
         return;
@@ -40,11 +41,13 @@ document.addEventListener(
     }
 
     const showHeaderWithScroll = () => {
+      console.log('showHeaderWithScroll');
       window.removeEventListener('scroll', showHeaderWithScroll, false);
       header.removeAttribute('aria-hidden');
     };
 
     const hideHeaderWithLocationHash = () => {
+      console.log('hideHeaderWithLocationHash');
       const pageYOffset = Math.floor(window.pageYOffset);
 
       const dropNav = getDropNavWrapper();
