@@ -1,27 +1,15 @@
 .wp-block-columns {
+  --wp--style--block-gap: #{ _space(1) };
+
   margin-bottom: inherit;
+
+  &:not(.is-not-stacked-on-mobile) {
+    > * + * {
+      margin-top: var(--wp--style--block-gap);
+    }
+  }
 }
 
 .wp-block-column {
   @extend %entry-content;
-
-  @media (max-width: 599px) {
-    &:not(:first-child) {
-      @include _margin-top(1);
-    }
-  }
-
-  @media (min-width: 600px) and (max-width: 781px) {
-    flex-basis: calc(50% - #{ _space(.5) }) !important;
-
-    &:nth-child(even) {
-      @include _margin-left(1);
-    }
-  }
-
-  @media (min-width: 782px) {
-    &:not(:first-child) {
-      @include _margin-left(1);
-    }
-  }
 }
