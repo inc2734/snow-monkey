@@ -62,7 +62,7 @@
     "cleanup:zip-directory": "rimraf snow-monkey",
     "cleanup:zip": "rimraf snow-monkey.zip",
     "cleanup:trial-zip-directory": "rimraf snow-monkey",
-    "cleanup:trial-zip": "rimraf snow-monkey.zip",
+    "cleanup:trial-zip": "rimraf trial && mkdir trial",
     "css:app": "node-sass src/css/app -o assets/css/app && postcss assets/css/app/*.css -r",
     "css:block-editor": "node-sass src/css/block-editor -o assets/css/block-editor && postcss assets/css/block-editor/*.css -r",
     "css:classic-editor": "node-sass src/css/classic-editor -o assets/css/classic-editor && postcss assets/css/classic-editor/*.css -r",
@@ -98,7 +98,7 @@
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run cleanup:zip && npm run zip:pack && wp-env start && wp-env run composer 'install --no-dev -d snow-monkey' && npm run zip:archive",
     "trial-zip:pack": "npm run zip:pack && rimraf snow-monkey/app/constructor/updater.php",
-    "trial-zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
+    "trial-zip:archive": "zip -9 -qmr trial/snow-monkey.zip snow-monkey",
     "trial-zip": "npm run cleanup:trial-zip && npm run trial-zip:pack && wp-env start && wp-env run composer 'install --no-dev -d snow-monkey' && wp-env run composer 'remove --update-no-dev -d snow-monkey inc2734/wp-github-theme-updater' && npm run trial-zip:archive"
   },
   "dependencies": {
