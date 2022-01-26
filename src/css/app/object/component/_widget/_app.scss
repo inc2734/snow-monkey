@@ -2,6 +2,7 @@
   word-break: break-word;
 
   &__title,
+  > .widget-title,
   > h2,
   > h3,
   > h4,
@@ -28,6 +29,7 @@
   @include _font-size-line-height($_base-font-size-px - 2);
 
   &__title,
+  > .widget-title,
   > h2,
   > h3,
   > h4,
@@ -37,7 +39,7 @@
   }
 
   &.widget_block {
-    > h2,
+    > h2:not(.widget-title),
     > h3,
     > h4,
     > h5,
