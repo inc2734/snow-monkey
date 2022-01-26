@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.0
+ * @version 16.0.1
  */
 
 namespace Framework;
@@ -401,7 +401,9 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_font_sizes() {
-		$base_font_size = get_theme_mod( 'base-font-size' );
+		$base_font_size_fallback = 16;
+		$base_font_size          = get_theme_mod( 'base-font-size' );
+		$base_font_size          = $base_font_size ? $base_font_size : $base_font_size_fallback;
 
 		return apply_filters(
 			'snow_monkey_editor_font_sizes',
