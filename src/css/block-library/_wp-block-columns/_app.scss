@@ -3,9 +3,11 @@
 
   margin-bottom: inherit;
 
-  &:not(.is-not-stacked-on-mobile) {
-    > * + * {
-      margin-top: var(--wp--style--block-gap);
+  @include _media-max(599px) {
+    &:not(.is-not-stacked-on-mobile) {
+      > * + * {
+        margin-top: var(--wp--style--block-gap);
+      }
     }
   }
 }
