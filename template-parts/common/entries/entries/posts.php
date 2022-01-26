@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.6.1
+ * @version 16.0.1
  */
 
 use Framework\Helper;
@@ -54,7 +54,7 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 				if ( $args['_posts_query']->is_tax() || $args['_posts_query']->is_category() || $args['_posts_query']->is_tag() ) {
 					$tax_query = $args['_posts_query']->get( 'tax_query' );
 					$term      = $tax_query
-						? get_term( $tax_query[0]['terms'], $tax_query[0]['taxonomy'] )
+						? get_term( $tax_query[0]['terms'][0], $tax_query[0]['taxonomy'] )
 						: $args['_posts_query']->get_queried_object();
 
 					$is_term             = ! is_wp_error( $term ) && ! is_null( $term );
