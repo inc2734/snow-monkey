@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.1
+ * @version 16.0.3
  */
 
 use Framework\Helper;
@@ -43,29 +43,40 @@ if ( ! $args['_posts_query'] ) {
 						<?php
 						$_terms = [];
 						if ( $args['_display_item_terms'] ) {
-							$_terms              = Helper::get_the_public_terms( get_the_ID() );
-							$_hierarchical_terms = array_filter(
-								$_terms,
-								function( $_term ) {
-									return get_taxonomy( $_term->taxonomy )->hierarchical;
-								}
-							);
+							$_terms = Helper::get_the_public_terms( get_the_ID() );
 							if ( $args['_posts_query']->is_tax() || $args['_posts_query']->is_category() || $args['_posts_query']->is_tag() ) {
 								$tax_query = $args['_posts_query']->get( 'tax_query' );
-								$term      = $tax_query
-									? get_term( $tax_query[0]['terms'][0], $tax_query[0]['taxonomy'] )
-									: $args['_posts_query']->get_queried_object();
 
-								$is_term             = ! is_wp_error( $term ) && ! is_null( $term );
-								$is_the_public_therm = false;
-								foreach ( $_hierarchical_terms as $_term ) {
-									if ( $term->term_taxonomy_id === $_term->term_taxonomy_id ) {
-										$is_the_public_therm = true;
-										break;
-									}
+								$term = null;
+								if ( ! empty( $tax_query[0]['terms'] ) && ! empty( $tax_query[0]['taxonomy'] ) ) {
+									$terms = (array) $tax_query[0]['terms'];
+									$term  = get_term( $terms[0], $tax_query[0]['taxonomy'] );
+								} else {
+									$term = $args['_posts_query']->get_queried_object();
 								}
 
-								$_terms = $is_term && $is_the_public_therm ? [ $term ] : $_terms;
+								$is_term = ! is_wp_error( $term ) && ! is_null( $term );
+								if ( $is_term ) {
+									// If there is a taxonomy specification, use it.
+									// However, if the taxonomy does not have a hierarchy, use the taxonomy with a hierarchy.
+									if ( get_taxonomy( $term->taxonomy )->hierarchical ) {
+										$_terms = [ $term ];
+									} else {
+										$_hierarchical_terms = array_filter(
+											$_terms,
+											function( $_term ) {
+												return get_taxonomy( $_term->taxonomy )->hierarchical;
+											}
+										);
+
+										foreach ( $_hierarchical_terms as $_term ) {
+											if ( $term->term_taxonomy_id === $_term->term_taxonomy_id ) {
+												$_terms = [ $term ];
+												break;
+											}
+										}
+									}
+								}
 							}
 						}
 
