@@ -273,7 +273,7 @@ export function getTargetOffsetTop() {
     return false;
   }
 
-  const target = document.querySelector(decodeURI(hash));
+  const target = document.getElementById(decodeURI(hash).replace(/^#/, ''));
   if (! target) {
     return false;
   }

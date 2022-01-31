@@ -27,7 +27,6 @@ document.addEventListener(
     }
 
     if (header.offsetWidth < html.offsetWidth) {
-      console.log('header.offsetWidth < html.offsetWidth');
       return;
     }
 
@@ -41,13 +40,11 @@ document.addEventListener(
     }
 
     const showHeaderWithScroll = () => {
-      console.log('showHeaderWithScroll');
       window.removeEventListener('scroll', showHeaderWithScroll, false);
       header.removeAttribute('aria-hidden');
     };
 
     const hideHeaderWithLocationHash = () => {
-      console.log('hideHeaderWithLocationHash');
       const pageYOffset = Math.floor(window.pageYOffset);
 
       const dropNav = getDropNavWrapper();
