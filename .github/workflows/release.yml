@@ -66,7 +66,7 @@ jobs:
       with:
         tag_name: ${{ github.ref }}
         release_name: ${{ github.ref }}
-        draft: false
+        draft: true
         prerelease: false
 
     - name: Upload Release Asset
@@ -79,3 +79,10 @@ jobs:
         asset_path: ./snow-monkey.zip
         asset_name: snow-monkey.zip
         asset_content_type: application/zip
+
+    - name: Upload to github release
+      uses: eregon/publish-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        release_id: ${{ steps.create_release.outputs.id }}
