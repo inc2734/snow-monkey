@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.13.0
+ * @version 16.0.6
  */
 
 use Framework\Helper;
@@ -16,7 +16,7 @@ $footer_alignfull = get_theme_mod( 'footer-alignfull' );
 <footer class="l-footer l-footer--footer-1" role="contentinfo">
 	<?php do_action( 'snow_monkey_prepend_footer' ); ?>
 
-	<?php if ( has_nav_menu( 'social-nav' ) ) : ?>
+	<?php if ( has_nav_menu( 'social-nav' ) || Helper::is_active_sidebar( 'footer-widget-area' ) || has_nav_menu( 'footer-sub-nav' ) ) : ?>
 		<div class="l-footer__body">
 			<?php if ( has_nav_menu( 'social-nav' ) ) : ?>
 				<div class="l-footer__social-nav">
