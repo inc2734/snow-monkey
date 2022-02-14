@@ -23,7 +23,7 @@
 @import 'step/app';
 @import 'tabs/app';
 
-.c-row[data-columns]:where(:not([data-columns="1"])) {
+.c-row--margin[data-columns]:where(:not([data-columns="1"])) {
 	@include _media-max(sm) {
 		@include _row--margin(.5);
 
