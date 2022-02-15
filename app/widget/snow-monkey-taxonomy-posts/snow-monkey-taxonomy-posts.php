@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 16.1.0
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -18,21 +18,22 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 	 * @var array
 	 */
 	protected $_defaults = [
-		'title'               => '',
-		'taxonomy'            => null,
-		'posts-per-page'      => 12,
-		'layout'              => 'rich-media',
-		'item-title-tag'      => 'h3',
-		'item-thumbnail-size' => 'medium_large',
-		'display-item-meta'   => null,
-		'display-item-terms'  => null,
-		'link-text'           => null,
-		'link-url'            => null,
-		'ignore-sticky-posts' => 1,
-		'force-sm-1col'       => 0,
-		'arrows'              => false,
-		'dots'                => true,
-		'interval'            => 0,
+		'title'                   => '',
+		'taxonomy'                => null,
+		'posts-per-page'          => 12,
+		'layout'                  => 'rich-media',
+		'item-title-tag'          => 'h3',
+		'item-thumbnail-size'     => 'medium_large',
+		'display-item-meta'       => null,
+		'display-item-terms'      => null,
+		'category-label-taxonomy' => null,
+		'link-text'               => null,
+		'link-url'                => null,
+		'ignore-sticky-posts'     => 1,
+		'force-sm-1col'           => 0,
+		'arrows'                  => false,
+		'dots'                    => true,
+		'interval'                => 0,
 	];
 
 	/**

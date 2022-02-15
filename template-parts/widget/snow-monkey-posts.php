@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 16.1.0
  */
 
 use Framework\Helper;
@@ -13,24 +13,25 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_classname'           => null,
-		'_entries_layout'      => 'rich-media',
-		'_excerpt_length'      => null,
-		'_force_sm_1col'       => false,
-		'_infeed_ads'          => get_option( 'mwt-google-infeed-ads' ),
-		'_item_thumbnail_size' => 'medium_large',
-		'_item_title_tag'      => 'h3',
-		'_display_item_meta'   => null,
-		'_display_item_terms'  => null,
-		'_link_text'           => null,
-		'_link_url'            => null,
-		'_posts_query'         => null,
-		'_title'               => null,
-		'_vertical'            => false,
-		'_widget_area_id'      => null,
-		'_arrows'              => false,
-		'_dots'                => true,
-		'_interval'            => 0,
+		'_classname'               => null,
+		'_entries_layout'          => 'rich-media',
+		'_excerpt_length'          => null,
+		'_force_sm_1col'           => false,
+		'_infeed_ads'              => get_option( 'mwt-google-infeed-ads' ),
+		'_item_thumbnail_size'     => 'medium_large',
+		'_item_title_tag'          => 'h3',
+		'_display_item_meta'       => null,
+		'_display_item_terms'      => null,
+		'_category_label_taxonomy' => null,
+		'_link_text'               => null,
+		'_link_url'                => null,
+		'_posts_query'             => null,
+		'_title'                   => null,
+		'_vertical'                => false,
+		'_widget_area_id'          => null,
+		'_arrows'                  => false,
+		'_dots'                    => true,
+		'_interval'                => 0,
 	]
 );
 
@@ -102,19 +103,20 @@ $more_classnames = [
 		'template-parts/common/entries/entries',
 		$archive_view,
 		[
-			'_context'             => $args['_context'],
-			'_entries_layout'      => $args['_entries_layout'],
-			'_excerpt_length'      => $args['_excerpt_length'],
-			'_force_sm_1col'       => $args['_force_sm_1col'],
-			'_infeed_ads'          => $args['_infeed_ads'],
-			'_item_thumbnail_size' => $args['_item_thumbnail_size'],
-			'_item_title_tag'      => $args['_item_title_tag'],
-			'_display_item_meta'   => $args['_display_item_meta'],
-			'_display_item_terms'  => $args['_display_item_terms'],
-			'_posts_query'         => $args['_posts_query'],
-			'_arrows'              => $args['_arrows'],
-			'_dots'                => $args['_dots'],
-			'_interval'            => $args['_interval'],
+			'_context'                 => $args['_context'],
+			'_entries_layout'          => $args['_entries_layout'],
+			'_excerpt_length'          => $args['_excerpt_length'],
+			'_force_sm_1col'           => $args['_force_sm_1col'],
+			'_infeed_ads'              => $args['_infeed_ads'],
+			'_item_thumbnail_size'     => $args['_item_thumbnail_size'],
+			'_item_title_tag'          => $args['_item_title_tag'],
+			'_display_item_meta'       => $args['_display_item_meta'],
+			'_display_item_terms'      => $args['_display_item_terms'],
+			'_category_label_taxonomy' => $args['_category_label_taxonomy'],
+			'_posts_query'             => $args['_posts_query'],
+			'_arrows'                  => $args['_arrows'],
+			'_dots'                    => $args['_dots'],
+			'_interval'                => $args['_interval'],
 		]
 	);
 	?>

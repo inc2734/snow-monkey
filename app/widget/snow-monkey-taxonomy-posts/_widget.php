@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 16.1.0
  */
 
 use Framework\Helper;
@@ -148,23 +148,24 @@ Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
 	'taxonomy',
 	[
-		'_classname'           => 'snow-monkey-taxonomy-posts',
-		'_context'             => $args['_context'],
-		'_entries_layout'      => $instance['layout'],
-		'_excerpt_length'      => null,
-		'_force_sm_1col'       => $force_sm_1col,
-		'_item_thumbnail_size' => $instance['item-thumbnail-size'],
-		'_item_title_tag'      => $instance['item-title-tag'],
-		'_display_item_meta'   => $instance['display-item-meta'],
-		'_display_item_terms'  => $instance['display-item-terms'],
-		'_link_text'           => $instance['link-text'],
-		'_link_url'            => $instance['link-url'],
-		'_posts_query'         => $taxonomy_posts_query,
-		'_title'               => $instance['title'],
-		'_widget_area_id'      => $widget_args['id'],
-		'_arrows'              => $instance['arrows'],
-		'_dots'                => $instance['dots'],
-		'_interval'            => $instance['interval'],
+		'_classname'               => 'snow-monkey-taxonomy-posts',
+		'_context'                 => $args['_context'],
+		'_entries_layout'          => $instance['layout'],
+		'_excerpt_length'          => null,
+		'_force_sm_1col'           => $force_sm_1col,
+		'_item_thumbnail_size'     => $instance['item-thumbnail-size'],
+		'_item_title_tag'          => $instance['item-title-tag'],
+		'_display_item_meta'       => $instance['display-item-meta'],
+		'_display_item_terms'      => $instance['display-item-terms'],
+		'_category_label_taxonomy' => $instance['category-label-taxonomy'],
+		'_link_text'               => $instance['link-text'],
+		'_link_url'                => $instance['link-url'],
+		'_posts_query'             => $taxonomy_posts_query,
+		'_title'                   => $instance['title'],
+		'_widget_area_id'          => $widget_args['id'],
+		'_arrows'                  => $instance['arrows'],
+		'_dots'                    => $instance['dots'],
+		'_interval'                => $instance['interval'],
 	]
 );
 echo wp_kses_post( $widget_args['after_widget'] );

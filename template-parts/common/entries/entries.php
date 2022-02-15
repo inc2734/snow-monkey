@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.10.1
+ * @version 16.1.0
  *
  * renamed: template-parts/common/entries.php
  */
@@ -15,13 +15,14 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_entries_layout'      => 'rich-media',
-		'_excerpt_length'      => null,
-		'_item_thumbnail_size' => 'medium_large',
-		'_item_title_tag'      => 'h2',
-		'_display_item_meta'   => 'post' === $args['_name'] ? true : false,
-		'_display_item_terms'  => 'post' === $args['_name'] ? true : false,
-		'_posts_query'         => false,
+		'_entries_layout'          => 'rich-media',
+		'_excerpt_length'          => null,
+		'_item_thumbnail_size'     => 'medium_large',
+		'_item_title_tag'          => 'h2',
+		'_display_item_meta'       => 'post' === $args['_name'] ? true : false,
+		'_display_item_terms'      => 'post' === $args['_name'] ? true : false,
+		'_category_label_taxonomy' => null,
+		'_posts_query'             => false,
 	]
 );
 

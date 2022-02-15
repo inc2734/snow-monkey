@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.3
+ * @version 16.1.0
  */
 
 use Framework\Helper;
@@ -13,15 +13,16 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	[
-		'_entries_layout'      => 'rich-media',
-		'_excerpt_length'      => null,
-		'_force_sm_1col'       => false,
-		'_infeed_ads'          => false,
-		'_item_thumbnail_size' => 'medium_large',
-		'_item_title_tag'      => 'h3',
-		'_display_item_meta'   => 'post' === $args['_name'] ? true : false,
-		'_display_item_terms'  => 'post' === $args['_name'] ? true : false,
-		'_posts_query'         => false,
+		'_entries_layout'          => 'rich-media',
+		'_excerpt_length'          => null,
+		'_force_sm_1col'           => false,
+		'_infeed_ads'              => false,
+		'_item_thumbnail_size'     => 'medium_large',
+		'_item_title_tag'          => 'h3',
+		'_display_item_meta'       => 'post' === $args['_name'] ? true : false,
+		'_display_item_terms'      => 'post' === $args['_name'] ? true : false,
+		'_category_label_taxonomy' => null,
+		'_posts_query'             => false,
 	]
 );
 
@@ -44,36 +45,35 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 			<?php
 			$_terms = [];
 			if ( $args['_display_item_terms'] ) {
-				$_terms = Helper::get_the_public_terms( get_the_ID() );
+				$public_terms = Helper::get_the_public_terms( get_the_ID() );
 				if ( $args['_posts_query']->is_tax() || $args['_posts_query']->is_category() || $args['_posts_query']->is_tag() ) {
-					$tax_query = $args['_posts_query']->get( 'tax_query' );
-
-					$term = null;
-					if ( ! empty( $tax_query[0]['terms'] ) && ! empty( $tax_query[0]['taxonomy'] ) ) {
-						$terms = (array) $tax_query[0]['terms'];
-						$term  = get_term( $terms[0], $tax_query[0]['taxonomy'] );
+					if ( $args['_category_label_taxonomy'] ) {
+						foreach ( $public_terms as $_term ) {
+							if ( $args['_category_label_taxonomy'] === $_term->taxonomy ) {
+								$_terms = [ $_term ];
+								break;
+							}
+						}
 					} else {
-						$term = $args['_posts_query']->get_queried_object();
-					}
+						$tax_query = $args['_posts_query']->get( 'tax_query' );
 
-					$is_term = ! is_wp_error( $term ) && ! is_null( $term );
-					if ( $is_term ) {
-						// If there is a taxonomy specification, use it.
-						// However, if the taxonomy does not have a hierarchy, use the taxonomy with a hierarchy.
-						if ( get_taxonomy( $term->taxonomy )->hierarchical ) {
-							$_terms = [ $term ];
-						} else {
-							$_hierarchical_terms = array_filter(
-								$_terms,
-								function( $_term ) {
-									return get_taxonomy( $_term->taxonomy )->hierarchical;
-								}
-							);
+						$term = ! empty( $tax_query[0]['terms'] ) && ! empty( $tax_query[0]['taxonomy'] )
+							? get_term( ( (array) $tax_query[0]['terms'] )[0], $tax_query[0]['taxonomy'] )
+							: $args['_posts_query']->get_queried_object();
 
-							foreach ( $_hierarchical_terms as $_term ) {
-								if ( $term->term_taxonomy_id === $_term->term_taxonomy_id ) {
-									$_terms = [ $term ];
-									break;
+						if ( ! is_wp_error( $term ) && ! is_null( $term ) ) {
+							// If there is a taxonomy specification, use it.
+							// However, if the taxonomy does not have a hierarchy, use the taxonomy with a hierarchy.
+							if ( get_taxonomy( $term->taxonomy )->hierarchical ) {
+								$_terms = [ $term ];
+							} else {
+								foreach ( $public_terms as $_term ) {
+									if ( get_taxonomy( $_term->taxonomy )->hierarchical ) {
+										if ( $term->term_taxonomy_id === $_term->term_taxonomy_id ) {
+											$_terms = [ $term ];
+											break;
+										}
+									}
 								}
 							}
 						}
