@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.1.0
+ * @version 16.1.1
  */
 
 use Framework\Helper;
@@ -77,6 +77,8 @@ if ( ! $args['_posts_query'] ) {
 										}
 									}
 								}
+							} else {
+								$_terms = $public_terms;
 							}
 						}
 
