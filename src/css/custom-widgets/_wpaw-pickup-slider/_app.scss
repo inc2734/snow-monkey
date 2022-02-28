@@ -6,7 +6,7 @@
   &__canvas {
     overflow: hidden;
 
-    @include _hover(lg) {
+    @include _hover() {
       .slick-arrow {
         transform: translate(0, -50%);
       }
@@ -97,7 +97,7 @@
       @include _padding(.5, 2);
     }
 
-    @include _hover(lg) {
+    @include _hover() {
       background-color: var-color-accent();
       border-color: var-color-accent();
     }
@@ -144,7 +144,7 @@
       @include _square(50px);
     }
 
-    @include _hover(lg) {
+    @include _hover() {
       filter: brightness(90%);
     }
 

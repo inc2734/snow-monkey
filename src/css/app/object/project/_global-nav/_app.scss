@@ -53,7 +53,7 @@
           left: calc(50% - 8px);
         }
 
-        @include _hover(lg) {
+        @include _hover() {
           &::before {
             visibility: visible;
             opacity: 1;
@@ -69,7 +69,7 @@
           display: none;
         }
 
-        @include _hover(lg) {
+        @include _hover() {
           > a {
             background-color: rgba(#fff, .05);
           }
@@ -102,7 +102,7 @@
         @include _transition(background-color, color);
       }
 
-      @include _hover(lg) {
+      @include _hover() {
         > a {
           background-color: rgba(#fff, .05);
         }
@@ -195,7 +195,7 @@
   &--hover-text-color {
     .#{ $_prefix }c-navbar {
       &__item {
-        @include _hover(lg) {
+        @include _hover() {
           @include effect-text-color();
         }
       }
@@ -217,7 +217,7 @@
           @include _transition(background-color);
         }
 
-        @include _hover(lg) {
+        @include _hover() {
           & > a::after {
             @include effect-underline();
           }

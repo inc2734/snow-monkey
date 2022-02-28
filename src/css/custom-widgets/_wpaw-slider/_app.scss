@@ -68,7 +68,7 @@
         @include _transition(opacity);
       }
 
-      @include _hover(lg) {
+      @include _hover() {
         opacity: 1;
       }
     }

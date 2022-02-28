@@ -9,7 +9,7 @@
   max-width: 100%;
   @include _transition(all);
 
-  @include _hover(lg) {
+  @include _hover() {
     filter: brightness(90%);
   }
 }

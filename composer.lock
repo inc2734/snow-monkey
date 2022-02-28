@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bb3faeb786a081aa4bd433aa6d5f18bb",
+    "content-hash": "e165b15ce8fe2714fc70d271a7ffe28a",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "13.0.2",
+            "version": "14.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "6cdd7a2d419b347a56bc775696e172f470c54058"
+                "reference": "f43ca7b526efabab4ef4143c780c32fea202af37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/6cdd7a2d419b347a56bc775696e172f470c54058",
-                "reference": "6cdd7a2d419b347a56bc775696e172f470c54058",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/f43ca7b526efabab4ef4143c780c32fea202af37",
+                "reference": "f43ca7b526efabab4ef4143c780c32fea202af37",
                 "shasum": ""
             },
             "require": {
@@ -150,22 +150,22 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/13.0.2"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/14.0.0"
             },
-            "time": "2022-01-28T22:56:51+00:00"
+            "time": "2022-02-28T02:33:04+00:00"
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "10.0.3",
+            "version": "11.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "5e6fb163368dbbae3eddc9fe8450299bdb39fcad"
+                "reference": "8e5536600cf2cb120710941ffc3d0be57a5007a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/5e6fb163368dbbae3eddc9fe8450299bdb39fcad",
-                "reference": "5e6fb163368dbbae3eddc9fe8450299bdb39fcad",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/8e5536600cf2cb120710941ffc3d0be57a5007a8",
+                "reference": "8e5536600cf2cb120710941ffc3d0be57a5007a8",
                 "shasum": ""
             },
             "require": {
@@ -199,9 +199,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/10.0.3"
+                "source": "https://github.com/inc2734/wp-basis/tree/11.0.0"
             },
-            "time": "2021-12-25T03:12:33+00:00"
+            "time": "2022-02-28T01:38:09+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -538,16 +538,16 @@
         },
         {
             "name": "inc2734/wp-like-me-box",
-            "version": "3.0.0",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-like-me-box.git",
-                "reference": "d5f36741a0995e12c1e776447a834857d130c080"
+                "reference": "1a6be78a69390d8d713f230f56e8df0b1cdb50a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/d5f36741a0995e12c1e776447a834857d130c080",
-                "reference": "d5f36741a0995e12c1e776447a834857d130c080",
+                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/1a6be78a69390d8d713f230f56e8df0b1cdb50a6",
+                "reference": "1a6be78a69390d8d713f230f56e8df0b1cdb50a6",
                 "shasum": ""
             },
             "require": {
@@ -581,22 +581,22 @@
             "description": "A library for WordPress that added Facebook like me box for article.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-like-me-box/issues",
-                "source": "https://github.com/inc2734/wp-like-me-box/tree/3.0.0"
+                "source": "https://github.com/inc2734/wp-like-me-box/tree/4.0.0"
             },
-            "time": "2021-12-20T07:30:40+00:00"
+            "time": "2022-02-28T01:51:13+00:00"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "10.0.0",
+            "version": "11.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "f929095514d2bb0bcb739364ce03d35c903fa052"
+                "reference": "e36ebbba162fc8456afc9fc2691bbba5335d5203"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/f929095514d2bb0bcb739364ce03d35c903fa052",
-                "reference": "f929095514d2bb0bcb739364ce03d35c903fa052",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/e36ebbba162fc8456afc9fc2691bbba5335d5203",
+                "reference": "e36ebbba162fc8456afc9fc2691bbba5335d5203",
                 "shasum": ""
             },
             "require": {
@@ -630,9 +630,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/10.0.0"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/11.0.1"
             },
-            "time": "2021-12-20T08:01:45+00:00"
+            "time": "2022-02-28T02:34:03+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -3206,12 +3206,12 @@
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Ctype\\": ""
-                },
                 "files": [
                     "bootstrap.php"
-                ]
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [

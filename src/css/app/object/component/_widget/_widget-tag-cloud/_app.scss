@@ -12,7 +12,7 @@
   padding: 4px 8px;
   vertical-align: top;
 
-  @include _hover(lg) {
+  @include _hover() {
     background-color: _var-lighter-color-gray();
     text-decoration: none;
   }

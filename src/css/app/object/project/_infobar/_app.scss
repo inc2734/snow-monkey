@@ -34,7 +34,7 @@
 
 a.#{ $_prefix }p-infobar {
   @include _transition(filter);
-  @include _hover(lg) {
+  @include _hover() {
     filter: brightness(90%);
   }
 }

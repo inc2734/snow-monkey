@@ -11,7 +11,7 @@
   }
 
   &__item-link {
-    @include _hover(lg) {
+    @include _hover() {
       background-color: _var-light-color-gray();
       color: _var-color-white();
     }

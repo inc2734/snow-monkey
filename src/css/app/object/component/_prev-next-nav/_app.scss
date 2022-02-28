@@ -54,7 +54,7 @@
         @include _padding(1);
       }
 
-      @include _hover(lg) {
+      @include _hover() {
         .#{ $_prefix }c-prev-next-nav__item-figure {
           opacity: .5;
         }
