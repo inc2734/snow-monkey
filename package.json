@@ -14,7 +14,7 @@
     "@inc2734/spider": "0.0.30",
     "@wordpress/browserslist-config": "^4.1.1",
     "@wordpress/env": "^4.2.2",
-    "@wordpress/scripts": "<20.0.0",
+    "@wordpress/scripts": "^22.0.1",
     "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
     "browserslist": "^4.19.3",
