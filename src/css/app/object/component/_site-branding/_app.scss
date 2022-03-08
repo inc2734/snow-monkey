@@ -10,6 +10,7 @@
     a {
       color: inherit;
       text-decoration: none;
+      @include _transition(color);
     }
 
     .custom-logo {
@@ -21,6 +22,7 @@
     margin-top: 2px;
     @include _font-size(13px);
     line-height: 1;
+    @include _transition(color);
   }
 }
 
