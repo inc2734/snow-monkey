@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 4.4.0-beta
+ * @version 16.2.0
  */
 
 add_filter(
@@ -15,9 +15,21 @@ add_filter(
 			return $output;
 		}
 
-		$extended = get_extended( $post->post_content );
+		$extended             = get_extended( $post->post_content );
+		$support_inner_blocks = apply_filters( 'snow_monkey_protected_more_support_inner_blocks', false ); // @todo Experimental.
+
 		if ( empty( $extended['extended'] ) ) {
 			return $output;
+		} elseif ( $support_inner_blocks ) {
+			$extended_extended = trim( str_replace( '<!-- /wp:more -->', '', $extended['extended'] ) );
+			$parsed_extended   = parse_blocks( $extended_extended );
+			if ( 0 < count( $parsed_extended ) ) {
+				$last_extended           = end( $parsed_extended );
+				$last_extended_innerhtml = trim( $last_extended['innerHTML'] );
+				if ( 0 === strpos( $last_extended_innerhtml, '</' ) ) {
+					$output = $output . $last_extended['innerHTML'];
+				}
+			}
 		}
 
 		return $extended['main'] . $output;
