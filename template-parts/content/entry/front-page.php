@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 16.1.4
  */
 
 use Framework\Helper;
@@ -30,6 +30,15 @@ $content = ob_get_clean();
 
 <?php if ( $content ) : ?>
 	<?php
+	add_filter(
+		'wp_omit_loading_attr_threshold',
+		function() {
+			$content_media_count = wp_increase_content_media_count();
+			return $content_media_count + 1;
+		}
+	);
+	wp_omit_loading_attr_threshold( true );
+
 	$classes = [ 'c-section', 'p-section-front-page-content' ];
 	if ( ! get_theme_mod( 'home-page-content-padding' ) ) {
 		$classes[] = 'p-section-front-page-content--no-vpadding';
