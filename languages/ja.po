@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2021-12-14 11:14+0900\n"
-"PO-Revision-Date: 2021-12-14 11:14+0900\n"
+"POT-Creation-Date: 2022-03-22 21:13+0900\n"
+"PO-Revision-Date: 2022-03-22 21:13+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -171,7 +171,7 @@ msgstr "オーバレイ"
 msgid "Normal"
 msgstr "ノーマル"
 
-#: Framework/Helper.php:141 Framework/Helper.php:548
+#: Framework/Helper.php:141 Framework/Helper.php:544
 #: template-parts/content/prev-next-nav.php:72
 msgctxt "excerpt_length"
 msgid "55"
@@ -207,54 +207,54 @@ msgstr "%1$s テーマ by %2$s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:366 app/customizer/infobar/controls/font-color.php:15
+#: Framework/Helper.php:360 app/customizer/infobar/controls/font-color.php:15
 msgid "Text color"
 msgstr "テキストカラー"
 
-#: Framework/Helper.php:371
+#: Framework/Helper.php:365
 msgid "Dark gray"
 msgstr "ダークグレー"
 
-#: Framework/Helper.php:376
+#: Framework/Helper.php:370
 msgid "Gray"
 msgstr "灰色"
 
-#: Framework/Helper.php:381
+#: Framework/Helper.php:375
 msgid "Light gray"
 msgstr "ライトグレー"
 
-#: Framework/Helper.php:386
+#: Framework/Helper.php:380
 msgid "Lightest gray"
 msgstr "最も明るいグレー"
 
-#: Framework/Helper.php:391
+#: Framework/Helper.php:385
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
 #: app/customizer/design/sections/category/controls/accent-color.php:24
 msgid "Accent color"
 msgstr "アクセントカラー"
 
-#: Framework/Helper.php:396
+#: Framework/Helper.php:390
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
-#: Framework/Helper.php:416
+#: Framework/Helper.php:412
 msgctxt "editor-font-sizes"
 msgid "Small"
 msgstr "小"
 
-#: Framework/Helper.php:421
+#: Framework/Helper.php:417
 msgctxt "editor-font-sizes"
 msgid "Normal"
 msgstr "標準"
 
-#: Framework/Helper.php:426
+#: Framework/Helper.php:422
 msgctxt "editor-font-sizes"
 msgid "Medium"
 msgstr "中"
 
-#: Framework/Helper.php:431 Framework/Helper.php:436 Framework/Helper.php:441
-#: Framework/Helper.php:446
+#: Framework/Helper.php:427 Framework/Helper.php:432 Framework/Helper.php:437
+#: Framework/Helper.php:442
 msgctxt "editor-font-sizes"
 msgid "Large"
 msgstr "大"
@@ -1083,6 +1083,25 @@ msgstr "お知らせバーのテキスト配置"
 msgid "Infobar content"
 msgstr "お知らせバーコンテンツ"
 
+#: app/customizer/infobar/controls/position.php:15
+msgid "Infobar position"
+msgstr "お知らせバーの位置"
+
+#: app/customizer/infobar/controls/position.php:16
+msgid ""
+"Depending on the \"Header position\" setting, it may not appear in the "
+"specified position."
+msgstr ""
+"「ヘッダー位置」の設定によっては、指定した位置に表示されない場合があります。"
+
+#: app/customizer/infobar/controls/position.php:20
+msgid "Header top"
+msgstr "ヘッダー上部"
+
+#: app/customizer/infobar/controls/position.php:21
+msgid "Header bottom"
+msgstr "ヘッダー下部"
+
 #: app/customizer/infobar/controls/url.php:15
 msgid "Infobar link URL"
 msgstr "お知らせバーリンク URL"
@@ -1688,39 +1707,39 @@ msgstr "カラム"
 #: app/setup/block-patterns.php:53 app/setup/block-patterns.php:59
 #: app/setup/block-patterns.php:65 app/setup/block-patterns.php:71
 #: app/setup/block-patterns.php:77 app/setup/block-patterns.php:83
-#: app/setup/block-patterns.php:89
+#: app/setup/block-patterns.php:89 app/setup/block-patterns.php:95
 #, php-format
 msgid "Header %1$s"
 msgstr "ヘッダー %1$s"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:95 app/setup/block-patterns.php:101
-#: app/setup/block-patterns.php:107
+#: app/setup/block-patterns.php:101 app/setup/block-patterns.php:107
+#: app/setup/block-patterns.php:113
 #, php-format
 msgid "Feature %1$s"
 msgstr "特徴 %1$s"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:113 app/setup/block-patterns.php:119
-#: app/setup/block-patterns.php:125
+#: app/setup/block-patterns.php:119 app/setup/block-patterns.php:125
+#: app/setup/block-patterns.php:131
 #, php-format
 msgid "Text with image %1$s"
 msgstr "テキストと画像 %1$s"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:131 app/setup/block-patterns.php:137
-#: app/setup/block-patterns.php:143
+#: app/setup/block-patterns.php:137 app/setup/block-patterns.php:143
+#: app/setup/block-patterns.php:149
 #, php-format
 msgid "Gallery %1$s"
 msgstr "ギャラリー %1$s"
 
 #. translators: %1$s: number
-#: app/setup/block-patterns.php:149
+#: app/setup/block-patterns.php:155
 #, php-format
 msgid "Columns %1$s"
 msgstr "カラム %1$s"
 
-#: app/setup/dependency/snow-monkey-blocks.php:170
+#: app/setup/dependency/snow-monkey-blocks.php:175
 msgid "Undecorated title"
 msgstr "装飾無しのタイトル"
 
@@ -1988,11 +2007,11 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:44
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:45
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:50
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:51
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
@@ -2183,9 +2202,6 @@ msgstr "https://2inc.org"
 
 #~ msgid "WooCommerce archive page settings"
 #~ msgstr "WooCommerce 一覧ページ設定"
-
-#~ msgid "Header position"
-#~ msgstr "ヘッダー位置"
 
 #~ msgid "e.g. UA-1111111-11"
 #~ msgstr "例: UA-1111111-11"
