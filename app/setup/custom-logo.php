@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.4.0
+ * @version 16.4.0
  */
 
 use Framework\Helper;
@@ -39,18 +39,6 @@ add_action(
 			return;
 		}
 
-		preg_match( '/height="([\d\.]+?)"/', $custom_logo, $reg );
-		if ( ! isset( $reg[1] ) ) {
-			return;
-		}
-		$height = $reg[1];
-
-		preg_match( '/width="([\d\.]+?)"/', $custom_logo, $reg );
-		if ( ! isset( $reg[1] ) ) {
-			return;
-		}
-		$width = $reg[1];
-
 		$sm_logo_scale = get_theme_mod( 'sm-logo-scale' );
 		$sm_logo_scale = $sm_logo_scale / 100;
 
@@ -58,8 +46,8 @@ add_action(
 		$lg_logo_scale = $lg_logo_scale / 100;
 		?>
 <style id="snow-monkey-custom-logo-size">
-.c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { height: <?php echo absint( $height * $sm_logo_scale ); ?>px; width: <?php echo absint( $width * $sm_logo_scale ); ?>px; }
-@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { height: <?php echo absint( $height * $lg_logo_scale ); ?>px; width: <?php echo absint( $width * $lg_logo_scale ); ?>px; } }
+.c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { zoom: <?php echo esc_html( $sm_logo_scale ); ?>; }
+@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { zoom: <?php echo esc_html( $lg_logo_scale ); ?>; }
 </style>
 		<?php
 	},
@@ -113,4 +101,29 @@ add_action(
 		$wp_customize->get_setting( 'custom_logo' )->transport = 'refresh';
 	},
 	11
+);
+
+add_filter(
+	'get_custom_logo',
+	function( $html ) {
+		$sm_custom_logo = get_theme_mod( 'sm-custom-logo' );
+		if ( ! $sm_custom_logo ) {
+			return $html;
+		}
+
+		if ( preg_match( '|^(<a [^>]+?>)(.+?)(</a>)$|', $html, $match ) ) {
+			$src  = wp_get_attachment_image_src( $sm_custom_logo, 'full' );
+			$html = sprintf(
+				'%1$s<picture><source media="(max-width: 1023px)" srcset="%2$s" width="%3$s" height="%4$s">%5$s</picture>%6$s',
+				$match[1],
+				esc_url( $src[0] ),
+				esc_attr( $src[1] ),
+				esc_attr( $src[2] ),
+				$match[2],
+				$match[3]
+			);
+		}
+
+		return $html;
+	}
 );

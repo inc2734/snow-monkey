@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2022-03-30 09:05+0900\n"
-"PO-Revision-Date: 2022-03-30 09:05+0900\n"
+"POT-Creation-Date: 2022-03-30 10:23+0900\n"
+"PO-Revision-Date: 2022-03-30 10:24+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1694,6 +1694,15 @@ msgstr "コピーライト"
 #: app/customizer/title-tagline/controls/copyright.php:48
 msgid "HTML usable"
 msgstr "HTML 使用可"
+
+#: app/customizer/title-tagline/controls/sm-custom-logo.php:17
+msgid "Logo on mobile device"
+msgstr "モバイル端末時のロゴ"
+
+#: app/customizer/title-tagline/controls/sm-custom-logo.php:18
+msgid "If \"Logo\" is not set, \"Logo on mobile device\" is not used."
+msgstr ""
+"「ロゴ」が設定されていない場合、「モバイル端末時のロゴ」は使用されません。"
 
 #: app/setup/block-patterns.php:21
 msgid "Headers"
