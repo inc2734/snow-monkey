@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.3.0
+ * @version 16.4.0
  */
 
 use Framework\Helper;
@@ -33,6 +33,7 @@ $classes = Helper::get_header_classes();
 				[
 					'_content' => get_theme_mod( 'infobar-content' ),
 					'_url'     => get_theme_mod( 'infobar-url' ),
+					'_target'  => get_theme_mod( 'infobar-link-target' ),
 					'_align'   => get_theme_mod( 'infobar-align' ),
 				]
 			);

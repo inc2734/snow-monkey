@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2022-03-22 21:13+0900\n"
-"PO-Revision-Date: 2022-03-22 21:13+0900\n"
+"POT-Creation-Date: 2022-03-30 09:05+0900\n"
+"PO-Revision-Date: 2022-03-30 09:05+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1102,6 +1102,18 @@ msgstr "ヘッダー上部"
 msgid "Header bottom"
 msgstr "ヘッダー下部"
 
+#: app/customizer/infobar/controls/target.php:15
+msgid "Infobar link target"
+msgstr "お知らせバーリンクターゲット"
+
+#: app/customizer/infobar/controls/target.php:19
+msgid "Open in the same window"
+msgstr "同じウィンドウで開く"
+
+#: app/customizer/infobar/controls/target.php:20
+msgid "Open in new window"
+msgstr "新しいウィンドウで開く"
+
 #: app/customizer/infobar/controls/url.php:15
 msgid "Infobar link URL"
 msgstr "お知らせバーリンク URL"
@@ -2145,72 +2157,3 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
-
-#, fuzzy
-#~| msgid "xLarge"
-#~ msgctxt "editor-font-sizes"
-#~ msgid "large"
-#~ msgstr "表示するスライド数（ラージウインドウ）"
-
-#~ msgid "White"
-#~ msgstr "ホワイト"
-
-#~ msgid "Black"
-#~ msgstr "ブラック"
-
-#~ msgid "Pale pink"
-#~ msgstr "ピンク"
-
-#~ msgid "Vivid red"
-#~ msgstr "レッド"
-
-#~ msgid "Luminous vivid orange"
-#~ msgstr "オレンジ"
-
-#~ msgid "Luminous vivid amber"
-#~ msgstr "琥珀"
-
-#~ msgid "Light green cyan"
-#~ msgstr "薄いグリーンシアン"
-
-#~ msgid "Vivid green cyan"
-#~ msgstr "鮮やかなグリーンシアン"
-
-#~ msgid "Pale cyan blue"
-#~ msgstr "淡いシアンブルー"
-
-#~ msgid "Vivid cyan blue"
-#~ msgstr "鮮やかなシアンブルー"
-
-#~ msgid "Cyan bluish gray"
-#~ msgstr "シアンブルーグレー"
-
-#~ msgid "Very dark gray"
-#~ msgstr "濃灰"
-
-#~ msgid "Google Adsense authentication code"
-#~ msgstr "Google AdSense 認証コード"
-
-#~ msgid "Paste only the contents of script tag."
-#~ msgstr "script タグの内容だけを貼り付けてください。"
-
-#~ msgid "Post page layout"
-#~ msgstr "投稿のページレイアウト"
-
-#~ msgid "WooCommerce archive page layout"
-#~ msgstr "WooCommerce 一覧ページレイアウト"
-
-#~ msgid "WooCommerce archive page settings"
-#~ msgstr "WooCommerce 一覧ページ設定"
-
-#~ msgid "e.g. UA-1111111-11"
-#~ msgstr "例: UA-1111111-11"
-
-#, php-format
-#~ msgid "Select how to display the eyecatch image in %1$s page."
-#~ msgstr ""
-#~ "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
-
-#, php-format
-#~ msgid "Snow Monkey theme by %s"
-#~ msgstr "Snow Monkey theme by %s"

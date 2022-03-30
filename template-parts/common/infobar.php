@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.0
+ * @version 16.4.0
  *
  * renamed: template-parts/infobar.php
  */
@@ -17,6 +17,7 @@ $args = wp_parse_args(
 	[
 		'_content' => '',
 		'_url'     => '',
+		'_target'  => '_self',
 		'_align'   => 'left',
 	]
 );
@@ -40,7 +41,7 @@ $classes = [
 <div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<?php if ( $args['_url'] ) : ?>
 
-		<a class="p-infobar__inner" href="<?php echo esc_url( $args['_url'] ); ?>">
+		<a class="p-infobar__inner" href="<?php echo esc_url( $args['_url'] ); ?>" target="<?php echo esc_attr( $args['_target'] ); ?>">
 			<div class="c-container">
 				<div class="p-infobar__content">
 					<?php
