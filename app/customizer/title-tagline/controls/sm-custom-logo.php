@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.0
+ * @version 16.4.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,7 +11,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 $custom_logo_args = get_theme_support( 'custom-logo' );
 
 Framework::control(
-	'cropped_image',
+	'cropped-image',
 	'sm-custom-logo',
 	[
 		'label'       => __( 'Logo on mobile device', 'snow-monkey' ),
