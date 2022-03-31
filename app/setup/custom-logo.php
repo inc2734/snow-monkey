@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.0
+ * @version 16.4.2
  */
 
 use Framework\Helper;
@@ -28,7 +28,7 @@ add_action(
  * Output before wp_enqueue_scripts.
  */
 add_action(
-	'wp_head',
+	'wp_enqueue_scripts',
 	function() {
 		if ( ! Helper::use_auto_custom_logo_size() ) {
 			return;
@@ -41,17 +41,27 @@ add_action(
 
 		$sm_logo_scale = get_theme_mod( 'sm-logo-scale' );
 		$sm_logo_scale = $sm_logo_scale / 100;
-
 		$lg_logo_scale = get_theme_mod( 'lg-logo-scale' );
 		$lg_logo_scale = $lg_logo_scale / 100;
-		?>
-<style id="snow-monkey-custom-logo-size">
-.c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { zoom: <?php echo esc_html( $sm_logo_scale ); ?>; }
-@media (min-width: 64em) { .c-site-branding .custom-logo, .wpaw-site-branding__logo .custom-logo { zoom: <?php echo esc_html( $lg_logo_scale ); ?>; }
-</style>
-		<?php
-	},
-	7
+
+		$custom_logo_id    = get_theme_mod( 'custom_logo' );
+		$custom_logo_src   = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+		$custom_logo_width = $custom_logo_src[1] * $lg_logo_scale;
+
+		$sm_custom_logo_id    = get_theme_mod( 'sm-custom-logo' );
+		$sm_custom_logo_src   = wp_get_attachment_image_src( $sm_custom_logo_id, 'full' );
+		$sm_custom_logo_width = $sm_custom_logo_src
+			? $sm_custom_logo_src[1] * $sm_logo_scale
+			: $custom_logo_src[1] * $sm_logo_scale;
+
+		$data = sprintf(
+			'.c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %1$spx; }
+@media (min-width: 64em) { .c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %2$spx; }',
+			esc_html( absint( $sm_custom_logo_width ) ),
+			esc_html( absint( $custom_logo_width ) )
+		);
+		wp_add_inline_style( Helper::get_main_style_handle(), $data );
+	}
 );
 
 /**
