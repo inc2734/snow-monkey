@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.2
+ * @version 16.4.3
  */
 
 use Framework\Helper;
@@ -61,7 +61,8 @@ add_action(
 			esc_html( absint( $custom_logo_width ) )
 		);
 		wp_add_inline_style( Helper::get_main_style_handle(), $data );
-	}
+	},
+	11
 );
 
 /**
