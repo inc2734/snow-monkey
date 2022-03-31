@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.3
+ * @version 16.4.4
  */
 
 use Framework\Helper;
@@ -44,39 +44,66 @@ add_action(
 		$lg_logo_scale = get_theme_mod( 'lg-logo-scale' );
 		$lg_logo_scale = $lg_logo_scale / 100;
 
-		$custom_logo_id    = get_theme_mod( 'custom_logo' );
-		$custom_logo_src   = wp_get_attachment_image_src( $custom_logo_id, 'full' );
-		$custom_logo_width = $custom_logo_src[1] * $lg_logo_scale;
+		$styles = [];
 
-		$sm_custom_logo_id    = get_theme_mod( 'sm-custom-logo' );
-		$sm_custom_logo_src   = wp_get_attachment_image_src( $sm_custom_logo_id, 'full' );
-		$sm_custom_logo_width = $sm_custom_logo_src
-			? $sm_custom_logo_src[1] * $sm_logo_scale
-			: $custom_logo_src[1] * $sm_logo_scale;
+		$custom_logo_id  = get_theme_mod( 'custom_logo' );
+		$custom_logo_src = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+		// wp_get_attachment_image_src() returns 1 if the image width could not be obtained.
+		if ( ! empty( $custom_logo_src ) && 1 !== $custom_logo_src[1] ) {
+			$custom_logo_width    = $custom_logo_src[1] * $lg_logo_scale;
+			$sm_custom_logo_width = $custom_logo_src[1] * $sm_logo_scale;
+		}
 
-		$data = sprintf(
-			'.c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %1$spx; }
-@media (min-width: 64em) { .c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %2$spx; }',
-			esc_html( absint( $sm_custom_logo_width ) ),
-			esc_html( absint( $custom_logo_width ) )
-		);
-		wp_add_inline_style( Helper::get_main_style_handle(), $data );
+		$sm_custom_logo_id  = get_theme_mod( 'sm-custom-logo' );
+		$sm_custom_logo_src = wp_get_attachment_image_src( $sm_custom_logo_id, 'full' );
+		// wp_get_attachment_image_src() returns 1 if the image width could not be obtained.
+		if ( ! empty( $sm_custom_logo_src ) && 1 !== $sm_custom_logo_src[1] ) {
+			$sm_custom_logo_width = $sm_custom_logo_src[1] * $sm_logo_scale;
+		}
+
+		if ( ! empty( $custom_logo_width ) || ! empty( $sm_custom_logo_width ) ) {
+			if ( ! empty( $sm_custom_logo_width ) ) {
+				$styles[] = sprintf(
+					'.c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %1$spx; }',
+					esc_html( absint( $sm_custom_logo_width ) )
+				);
+			}
+			if ( ! empty( $custom_logo_width ) ) {
+				$styles[] = sprintf(
+					'@media (min-width: 64em) { .c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %1$spx; } }',
+					esc_html( absint( $custom_logo_width ) )
+				);
+			}
+			wp_add_inline_style( Helper::get_main_style_handle(), implode( '', $styles ) );
+		}
 	},
 	11
 );
 
 /**
- * The alt of custom logo uses blog title
+ * Delete if width and height are 1.
+ * wp_get_attachment_image_src() returns 1 if the image width could not be obtained.
  *
- * @see https://developer.wordpress.org/reference/functions/get_custom_logo/
- *
- * @param string $html
- * @param int $blog_id
+ * @param string $html Custom logo html.
  * @return string
  */
 add_filter(
-	'get_custom_logo',
-	function( $html, $blog_id ) {
+	'snow_monkey_template_part_render_template-parts/header/site-branding',
+	function( $html ) {
+		return str_replace( [ 'width="1"', 'height="1"' ], [], $html );
+	}
+);
+
+/**
+ * The alt of custom logo uses blog title.
+ *
+ * @param array $custom_logo_attr Custom logo image attributes.
+ * @param int   $custom_logo_id   Custom logo attachment ID.
+ * @param int   $blog_id          ID of the blog to get the custom logo for.
+ */
+add_filter(
+	'get_custom_logo_image_attributes',
+	function( $custom_logo_attr, $custom_logo_id, $blog_id ) {
 		$switched_blog = false;
 
 		if ( is_multisite() && ! empty( $blog_id ) && get_current_blog_id() !== (int) $blog_id ) {
@@ -84,36 +111,24 @@ add_filter(
 			$switched_blog = true;
 		}
 
-		$html = preg_replace( '|alt="[^"]*?"|', 'alt="' . get_bloginfo( 'name', 'display' ) . '"', $html );
+		$custom_logo_attr['alt'] = get_bloginfo( 'name', 'display' );
 
 		if ( $switched_blog ) {
 			restore_current_blog();
 		}
 
-		return $html;
+		return $custom_logo_attr;
 	},
 	10,
-	2
+	3
 );
 
 /**
- * When replacing the logo with the customizer,
- * the logo part is reloaded but the style of width / height of the logo are not reloaded.
- * So, distorted the logo.
- * Take action by reloading the screen.
+ * Add mobile custom logo.
  *
- * @param WP_Customize_Manager $wp_customize
- * @return void
+ * @param string $html Custom logo html.
+ * @return string
  */
-add_action(
-	'customize_register',
-	function( $wp_customize ) {
-		$wp_customize->selective_refresh->remove_partial( 'custom-logo' );
-		$wp_customize->get_setting( 'custom_logo' )->transport = 'refresh';
-	},
-	11
-);
-
 add_filter(
 	'get_custom_logo',
 	function( $html ) {
@@ -137,4 +152,22 @@ add_filter(
 
 		return $html;
 	}
+);
+
+/**
+ * When replacing the logo with the customizer,
+ * the logo part is reloaded but the style of width / height of the logo are not reloaded.
+ * So, distorted the logo.
+ * Take action by reloading the screen.
+ *
+ * @param WP_Customize_Manager $wp_customize
+ * @return void
+ */
+add_action(
+	'customize_register',
+	function( $wp_customize ) {
+		$wp_customize->selective_refresh->remove_partial( 'custom-logo' );
+		$wp_customize->get_setting( 'custom_logo' )->transport = 'refresh';
+	},
+	11
 );
