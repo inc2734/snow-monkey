@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.4
+ * @version 16.4.5
  */
 
 use Framework\Helper;
@@ -44,7 +44,8 @@ add_action(
 		$lg_logo_scale = get_theme_mod( 'lg-logo-scale' );
 		$lg_logo_scale = $lg_logo_scale / 100;
 
-		$styles = [];
+		$styles_for_main           = [];
+		$styles_for_custom_widgets = [];
 
 		$custom_logo_id  = get_theme_mod( 'custom_logo' );
 		$custom_logo_src = wp_get_attachment_image_src( $custom_logo_id, 'full' );
@@ -63,18 +64,27 @@ add_action(
 
 		if ( ! empty( $custom_logo_width ) || ! empty( $sm_custom_logo_width ) ) {
 			if ( ! empty( $sm_custom_logo_width ) ) {
-				$styles[] = sprintf(
-					'.c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %1$spx; }',
+				$styles_for_main[]           = sprintf(
+					'.c-site-branding__title .custom-logo { width: %1$spx; }',
+					esc_html( absint( $sm_custom_logo_width ) )
+				);
+				$styles_for_custom_widgets[] = sprintf(
+					'.wpaw-site-branding__logo .custom-logo { width: %1$spx; }',
 					esc_html( absint( $sm_custom_logo_width ) )
 				);
 			}
 			if ( ! empty( $custom_logo_width ) ) {
-				$styles[] = sprintf(
-					'@media (min-width: 64em) { .c-site-branding__title .custom-logo, .wpaw-site-branding__logo .custom-logo { width: %1$spx; } }',
+				$styles_for_main[]           = sprintf(
+					'@media (min-width: 64em) { .c-site-branding__title .custom-logo { width: %1$spx; } }',
+					esc_html( absint( $custom_logo_width ) )
+				);
+				$styles_for_custom_widgets[] = sprintf(
+					'@media (min-width: 64em) { .wpaw-site-branding__logo .custom-logo { width: %1$spx; } }',
 					esc_html( absint( $custom_logo_width ) )
 				);
 			}
-			wp_add_inline_style( Helper::get_main_style_handle(), implode( '', $styles ) );
+			wp_add_inline_style( Helper::get_main_style_handle(), implode( '', $styles_for_main ) );
+			wp_add_inline_style( Helper::get_main_style_handle() . '-custom-widgets', implode( '', $styles_for_custom_widgets ) );
 		}
 	},
 	11
