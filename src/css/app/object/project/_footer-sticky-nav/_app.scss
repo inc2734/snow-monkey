@@ -11,12 +11,6 @@
     display: none;
   }
 
-  &[data-clickable="false"] {
-    .#{ $_prefix }c-navbar {
-      opacity: .2;
-    }
-  }
-
   &[aria-hidden="true"] {
     visibility: hidden;
     opacity: 0;

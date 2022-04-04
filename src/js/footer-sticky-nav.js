@@ -27,12 +27,8 @@ document.addEventListener(
     forEachHtmlNodes(links, applyActiveMenu);
 
     const handleResize = () => init(nav);
-    const handleResizeHeightUndo = () => nav.setAttribute('data-clickable', 'true');
-    const handleResizeHeightUpdate = () => nav.setAttribute('data-clickable', 'false');
 
     window.addEventListener('resize', handleResize, false);
-    window.addEventListener('resize:height:undo', handleResizeHeightUndo, false);
-    window.addEventListener('resize:height:ios', handleResizeHeightUpdate, false);
 
     const pageEnd = document.getElementById('page-end');
     if (!! pageEnd && 'undefined' !== typeof IntersectionObserver) {
