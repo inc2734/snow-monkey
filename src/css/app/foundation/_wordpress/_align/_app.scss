@@ -30,7 +30,10 @@
   margin-right: auto;
   margin-left: auto;
   clear: both;
-  width: auto;
+
+  &:not(img) {
+    width: auto;
+  }
 
   &.wp-block-archives,
   &.wp-block-calendar,
@@ -49,6 +52,9 @@
   &.wp-block-table {
     width: auto !important;
   }
+}
+img.aligncenter {
+  display: table;
 }
 
 .alignfull + .alignfull {

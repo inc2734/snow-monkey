@@ -38,10 +38,24 @@
 // @todo To adjust the float view in the editor to match the front view.
 .wp-block[data-align="right"],
 .wp-block[data-align="left"] {
+  float: none !important;
+
   > .block-editor-block-list__block {
     margin-top: 0;
     margin-bottom: 0;
     max-width: calc(5 * (100vw / 12));
+  }
+}
+.wp-block[data-align="right"] {
+  > .block-editor-block-list__block {
+    float: right;
+    @include _margin-left(1);
+  }
+}
+.wp-block[data-align="left"] {
+  > .block-editor-block-list__block {
+    float: left;
+    @include _margin-right(1);
   }
 }
 
