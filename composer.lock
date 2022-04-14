@@ -302,16 +302,16 @@
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-custom-css-to-editor.git",
-                "reference": "6a6e162b2473f21d6d95257762a411c039130975"
+                "reference": "be6ea89b9e784b395896a4133fd446ea5a8cf16e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/6a6e162b2473f21d6d95257762a411c039130975",
-                "reference": "6a6e162b2473f21d6d95257762a411c039130975",
+                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/be6ea89b9e784b395896a4133fd446ea5a8cf16e",
+                "reference": "be6ea89b9e784b395896a4133fd446ea5a8cf16e",
                 "shasum": ""
             },
             "require": {
@@ -320,10 +320,11 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
                 "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -343,9 +344,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-custom-css-to-editor/issues",
-                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.3"
+                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.4"
             },
-            "time": "2021-07-20T17:08:11+00:00"
+            "time": "2022-04-14T04:42:32+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
@@ -3421,7 +3422,7 @@
         },
         {
             "name": "wp-phpunit/wp-phpunit",
-            "version": "5.9.2",
+            "version": "5.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-phpunit/wp-phpunit.git",
@@ -3538,5 +3539,5 @@
         "php": ">=5.6"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
