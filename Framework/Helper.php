@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.1
+ * @version 16.5.0
  */
 
 namespace Framework;
@@ -575,6 +575,10 @@ class Helper {
 			$font_family = [ '"M PLUS 1p"', 'sans-serif' ];
 		} elseif ( 'm-plus-rounded-1c' === $base_font ) {
 			$font_family = [ '"M PLUS Rounded 1c"', 'sans-serif' ];
+		} elseif ( 'biz-udpgothic' === $base_font ) {
+			$font_family = [ '"BIZ UDPGothic"', 'sans-serif' ];
+		} elseif ( 'biz-udpmincho' === $base_font ) {
+			$font_family = [ '"BIZ UDPMincho"', 'sans-serif' ];
 		}
 
 		return implode( ',', $font_family );

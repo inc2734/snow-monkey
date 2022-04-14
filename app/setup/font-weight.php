@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.0
+ * @version 16.5.0
  */
 
 use Framework\Helper;
@@ -24,6 +24,12 @@ add_filter(
 			return $new_weight ? $new_weight : $weight;
 		} elseif ( 'm-plus-rounded-1c' === $base_font ) {
 			$new_weight = get_theme_mod( 'm-plus-rounded-1c-font-weight' );
+			return $new_weight ? $new_weight : $weight;
+		} elseif ( 'biz-udpgothic' === $base_font ) {
+			$new_weight = get_theme_mod( 'biz-udpgothic-font-weight' );
+			return $new_weight ? $new_weight : $weight;
+		} elseif ( 'biz-udpmincho' === $base_font ) {
+			$new_weight = get_theme_mod( 'biz-udpmincho-font-weight' );
 			return $new_weight ? $new_weight : $weight;
 		}
 

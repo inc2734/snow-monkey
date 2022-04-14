@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.3.0
+ * @version 16.5.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -22,6 +22,8 @@ Framework::control(
 			'noto-serif-jp'     => __( 'Noto Serif JP', 'snow-monkey' ),
 			'm-plus-1p'         => __( 'M PLUS 1p', 'snow-monkey' ),
 			'm-plus-rounded-1c' => __( 'M PLUS Rounded 1c', 'snow-monkey' ),
+			'biz-udpgothic'     => __( 'BIZ UDPGothic', 'snow-monkey' ),
+			'biz-udpmincho'     => __( 'BIZ UDPMincho', 'snow-monkey' ),
 		],
 	]
 );

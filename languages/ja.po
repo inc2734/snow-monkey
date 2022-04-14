@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2022-03-30 10:23+0900\n"
-"PO-Revision-Date: 2022-03-30 10:24+0900\n"
+"POT-Creation-Date: 2022-04-14 14:40+0900\n"
+"PO-Revision-Date: 2022-04-14 14:40+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -479,6 +479,14 @@ msgstr "M PLUS 1p"
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
+#: app/customizer/design/sections/base-design/controls/base-font.php:25
+msgid "BIZ UDPGothic"
+msgstr "BIZ UDPGothic"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:26
+msgid "BIZ UDPMincho"
+msgstr "BIZ UDPMincho"
+
 #: app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
 msgid "Base letter spacing (rem)"
 msgstr "基本の文字間（rem）"
@@ -486,6 +494,32 @@ msgstr "基本の文字間（rem）"
 #: app/customizer/design/sections/base-design/controls/base-line-height.php:15
 msgid "Base line height"
 msgstr "基本の line-height"
+
+#: app/customizer/design/sections/base-design/controls/biz-udpgothic-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/biz-udpmincho-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:15
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:15
+msgid "Font weight"
+msgstr "フォントの太さ"
+
+#: app/customizer/design/sections/base-design/controls/biz-udpgothic-font-weight.php:19
+#: app/customizer/design/sections/base-design/controls/biz-udpmincho-font-weight.php:19
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:21
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:21
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:21
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:21
+msgid "Regular 400"
+msgstr "Regular 400"
+
+#: app/customizer/design/sections/base-design/controls/biz-udpgothic-font-weight.php:20
+#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:23
+#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:23
+#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:23
+#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:24
+msgid "Bold 700"
+msgstr "Bold 700"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:17
 msgid "Breadcrumbs display position"
@@ -631,13 +665,6 @@ msgstr "広め"
 msgid "Custom logo scale (%) on PC"
 msgstr "PC 時のカスタムロゴの拡大率（%）"
 
-#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:15
-#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:15
-#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:15
-#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:15
-msgid "Font weight"
-msgstr "フォントの太さ"
-
 #: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:19
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:19
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:19
@@ -651,26 +678,12 @@ msgstr "Thin 100"
 msgid "Light 300"
 msgstr "Light 300"
 
-#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:21
-#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:21
-#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:21
-#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:21
-msgid "Regular 400"
-msgstr "Regular 400"
-
 #: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:22
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:22
 #: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:22
 #: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:22
 msgid "Medium 500"
 msgstr "Medium 500"
-
-#: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:23
-#: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:23
-#: app/customizer/design/sections/base-design/controls/noto-sans-jp-font-weight.php:23
-#: app/customizer/design/sections/base-design/controls/noto-serif-jp-font-weight.php:24
-msgid "Bold 700"
-msgstr "Bold 700"
 
 #: app/customizer/design/sections/base-design/controls/m-plus-1p-font-weight.php:24
 #: app/customizer/design/sections/base-design/controls/m-plus-rounded-1c-font-weight.php:24

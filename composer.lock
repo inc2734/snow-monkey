@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "269065e84c73a00ba32361bae554a671",
+    "content-hash": "63f2e7b794bf7f6572158badcd5f6b5d",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -446,28 +446,29 @@
         },
         {
             "name": "inc2734/wp-google-fonts",
-            "version": "0.2.0",
+            "version": "0.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-google-fonts.git",
-                "reference": "77455d4ec1531327f5d64e038f297e0e58e6dfda"
+                "reference": "c3b473018f3da637957c4006c90b4cba12759bf5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/77455d4ec1531327f5d64e038f297e0e58e6dfda",
-                "reference": "77455d4ec1531327f5d64e038f297e0e58e6dfda",
+                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/c3b473018f3da637957c4006c90b4cba12759bf5",
+                "reference": "c3b473018f3da637957c4006c90b4cba12759bf5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.4.3",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "phpmd/phpmd": "2.*",
-                "phpunit/phpunit": "7.*",
-                "squizlabs/php_codesniffer": "*",
-                "wp-coding-standards/wpcs": "*"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "phpcompatibility/php-compatibility": "^9.3",
+                "sirbrillig/phpcs-variable-analysis": "^2.11",
+                "squizlabs/php_codesniffer": "^3.6",
+                "wp-coding-standards/wpcs": "^2.3",
+                "wp-phpunit/wp-phpunit": "^5.8",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -487,9 +488,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-google-fonts/issues",
-                "source": "https://github.com/inc2734/wp-google-fonts/tree/baccccck-add_fontweight"
+                "source": "https://github.com/inc2734/wp-google-fonts/tree/0.3.0"
             },
-            "time": "2020-03-03T05:20:40+00:00"
+            "time": "2022-04-14T05:38:07+00:00"
         },
         {
             "name": "inc2734/wp-helper",

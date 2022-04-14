@@ -97,6 +97,12 @@ if ( 'noto-sans-jp' === $base_font ) {
 } elseif ( 'm-plus-rounded-1c' === $base_font ) {
 	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ], 5 );
 	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ] );
+} elseif ( 'biz-udpgothic' === $base_font ) {
+	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ], 5 );
+	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ] );
+} elseif ( 'biz-udpmincho' === $base_font ) {
+	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ], 5 );
+	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ] );
 }
 $font_family          = Helper::get_font_family();
 $root_variables_app[] = '--font-family: ' . $font_family; // @deprecated
