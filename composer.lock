@@ -302,16 +302,16 @@
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-custom-css-to-editor.git",
-                "reference": "be6ea89b9e784b395896a4133fd446ea5a8cf16e"
+                "reference": "4e8ef059fafe2692659c11af09d12998acb85758"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/be6ea89b9e784b395896a4133fd446ea5a8cf16e",
-                "reference": "be6ea89b9e784b395896a4133fd446ea5a8cf16e",
+                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/4e8ef059fafe2692659c11af09d12998acb85758",
+                "reference": "4e8ef059fafe2692659c11af09d12998acb85758",
                 "shasum": ""
             },
             "require": {
@@ -344,9 +344,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-custom-css-to-editor/issues",
-                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.4"
+                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.5"
             },
-            "time": "2022-04-14T04:42:32+00:00"
+            "time": "2022-04-15T01:39:33+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
