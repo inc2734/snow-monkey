@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 16.5.1
  *
  * This procceses are beta.
  */
@@ -171,24 +171,32 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 					$template_cache
 				) {
 					if ( $cache_header && false !== strpos( $slug, 'templates/layout/header' ) ) {
-						return $template_cache->get( 'header', $slug, $name, $vars );
+						if ( file_exists( $template_cache->get_cache_filepath( 'header', $slug, $name, $vars ) ) ) {
+							return $template_cache->get( 'header', $slug, $name, $vars );
+						}
 					}
 
 					if ( $cache_footer && false !== strpos( $slug, 'templates/layout/footer' ) ) {
-						return $template_cache->get( 'footer', $slug, $name, $vars );
+						if ( file_exists( $template_cache->get_cache_filepath( 'footer', $slug, $name, $vars ) ) ) {
+							return $template_cache->get( 'footer', $slug, $name, $vars );
+						}
 					}
 
 					if ( $cache_nav_menus && false !== strpos( $slug, 'template-parts/nav' ) ) {
-						return $template_cache->get( 'nav', $slug, $name, $vars );
+						if ( file_exists( $template_cache->get_cache_filepath( 'nav', $slug, $name, $vars ) ) ) {
+							return $template_cache->get( 'nav', $slug, $name, $vars );
+						}
 					}
 
 					if ( $cache_widget_areas && false !== strpos( $slug, 'template-parts/widget-area' ) ) {
-						return $template_cache->get( 'widget-area', $slug, $name, $vars );
+						if ( file_exists( $template_cache->get_cache_filepath( 'widget-area', $slug, $name, $vars ) ) ) {
+							return $template_cache->get( 'widget-area', $slug, $name, $vars );
+						}
 					}
 
 					return $html;
 				},
-				10,
+				10000,
 				4
 			);
 
@@ -207,28 +215,32 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 					$template_cache
 				) {
 					if ( $cache_header && false !== strpos( $slug, 'templates/layout/header' ) ) {
-						$template_cache->save( 'header', $html, $slug, $name, $vars );
-						$template_cache->get( 'header', $html, $slug, $name, $vars );
+						if ( ! file_exists( $template_cache->get_cache_filepath( 'header', $slug, $name, $vars ) ) ) {
+							$template_cache->save( 'header', $html, $slug, $name, $vars );
+						}
 					}
 
 					if ( $cache_footer && false !== strpos( $slug, 'templates/layout/footer' ) ) {
-						$template_cache->save( 'footer', $html, $slug, $name, $vars );
-						$template_cache->get( 'footer', $html, $slug, $name, $vars );
+						if ( ! file_exists( $template_cache->get_cache_filepath( 'footer', $slug, $name, $vars ) ) ) {
+							$template_cache->save( 'footer', $html, $slug, $name, $vars );
+						}
 					}
 
 					if ( $cache_nav_menus && false !== strpos( $slug, 'template-parts/nav' ) ) {
-						$template_cache->save( 'nav', $html, $slug, $name, $vars );
-						$template_cache->get( 'nav', $html, $slug, $name, $vars );
+						if ( ! file_exists( $template_cache->get_cache_filepath( 'nav', $slug, $name, $vars ) ) ) {
+							$template_cache->save( 'nav', $html, $slug, $name, $vars );
+						}
 					}
 
 					if ( $cache_widget_areas && false !== strpos( $slug, 'template-parts/widget-area' ) ) {
-						$template_cache->save( 'widget-area', $html, $slug, $name, $vars );
-						$template_cache->get( 'widget-area', $html, $slug, $name, $vars );
+						if ( ! file_exists( $template_cache->get_cache_filepath( 'widget-area', $slug, $name, $vars ) ) ) {
+							$template_cache->save( 'widget-area', $html, $slug, $name, $vars );
+						}
 					}
 
 					return $html;
 				},
-				10,
+				10000,
 				4
 			);
 		}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 16.5.1
  */
 
 namespace Framework\Model;
@@ -99,6 +99,19 @@ class Template_Cache {
 	 */
 	public function save( $sub_directory, $html, $slug, $name, $vars ) {
 		return Cache::save( $sub_directory, $html, $slug, $name, $vars );
+	}
+
+	/**
+	 * Return the cache filepath.
+	 *
+	 * @param string $sub_directory The directory where the cache is stored.
+	 * @param string $slug The template slug.
+	 * @param string $name The template name.
+	 * @param array  $vars The template $args.
+	 * @return string
+	 */
+	public function get_cache_filepath( $sub_directory, $slug, $name, $vars ) {
+		return Cache::get_cache_filepath( $sub_directory, $slug, $name, $vars );
 	}
 
 	/**

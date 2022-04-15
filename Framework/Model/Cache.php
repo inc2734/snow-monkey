@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 16.5.1
  */
 
 namespace Framework\Model;
@@ -60,11 +60,7 @@ class Cache {
 	 * @return string
 	 */
 	public static function load( $directory, $slug, $name = '', $vars = [], $ext = 'html' ) {
-		$base_directory  = static::get_base_directory();
-		$cache_flename   = static::get_filename( $slug, $name, $vars, $ext );
-		$cache_directory = $directory ? path_join( $base_directory, $directory ) : $base_directory;
-		$cache_filepath  = trailingslashit( $cache_directory ) . $cache_flename;
-
+		$cache_filepath = static::get_cache_filepath( $directory, $slug, $name, $vars, $ext );
 		if ( ! file_exists( $cache_filepath ) ) {
 			return false;
 		}
@@ -85,12 +81,8 @@ class Cache {
 	 * @return string
 	 */
 	public static function get( $directory, $slug, $name = '', $vars = [], $ext = 'html' ) {
-		$base_directory  = static::get_base_directory();
-		$cache_flename   = static::get_filename( $slug, $name, $vars, $ext );
-		$cache_directory = $directory ? path_join( $base_directory, $directory ) : $base_directory;
-		$cache_filepath  = trailingslashit( $cache_directory ) . $cache_flename;
-
-		$cache = Filesystem::get_contents( $cache_filepath );
+		$cache_filepath = static::get_cache_filepath( $directory, $slug, $name, $vars, $ext );
+		$cache          = Filesystem::get_contents( $cache_filepath );
 		if ( false === $cache ) {
 			return null;
 		}
@@ -117,15 +109,12 @@ class Cache {
 	 * @return boolean
 	 */
 	public static function save( $directory, $data, $slug, $name = '', $vars = [], $ext = 'html' ) {
-		$base_directory  = static::get_base_directory();
-		$cache_flename   = static::get_filename( $slug, $name, $vars, $ext );
-		$cache_directory = $directory ? path_join( $base_directory, $directory ) : $base_directory;
-		$cache_filepath  = trailingslashit( $cache_directory ) . $cache_flename;
-
+		$cache_filepath = static::get_cache_filepath( $directory, $slug, $name, $vars, $ext );
 		if ( file_exists( $cache_filepath ) ) {
 			return true;
 		}
 
+		$cache_directory = static::get_cache_directory( $directory );
 		if ( ! file_exists( $cache_directory ) ) {
 			Filesystem::mkdir( $cache_directory );
 		}
@@ -133,5 +122,34 @@ class Cache {
 		return is_writable( $cache_directory )
 			? Filesystem::put_contents( $cache_filepath, $data )
 			: false;
+	}
+
+	/**
+	 * Return the cache filepath.
+	 *
+	 * @param string $directory The directory where the cache is stored.
+	 * @param string $slug      The template slug.
+	 * @param string $name      The template name.
+	 * @param array  $vars      The template $args.
+	 * @param string $ext       Cache file extention.
+	 * @return string
+	 */
+	public static function get_cache_filepath( $directory, $slug, $name = '', $vars = [], $ext = 'html' ) {
+		$cache_flename   = static::get_filename( $slug, $name, $vars, $ext );
+		$cache_directory = static::get_cache_directory( $directory );
+		$cache_filepath  = trailingslashit( $cache_directory ) . $cache_flename;
+		return $cache_filepath;
+	}
+
+	/**
+	 * Return cache directory.
+	 *
+	 * @param string $directory The directory where the cache is stored.
+	 * @return string
+	 */
+	public static function get_cache_directory( $directory ) {
+		$base_directory  = static::get_base_directory();
+		$cache_directory = $directory ? path_join( $base_directory, $directory ) : $base_directory;
+		return $cache_directory;
 	}
 }
