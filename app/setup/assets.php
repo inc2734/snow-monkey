@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 17.0.0
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -142,7 +142,7 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 		function() {
 			if ( ! get_theme_mod( 'use-lightweight-fontawesome' ) ) {
 				wp_enqueue_script(
-					'fontawesome5',
+					'fontawesome6',
 					get_theme_file_uri( '/assets/packages/fontawesome-free/js/all.min.js' ),
 					[],
 					filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/js/all.min.js' ) ),

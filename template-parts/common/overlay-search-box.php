@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.1.1
+ * @version 17.0.0
  *
  * renamed: template-parts/overlay-search-box.php
  */
@@ -20,7 +20,7 @@ use Framework\Helper;
 
 		$form = str_replace(
 			'<button class="c-input-group__btn">' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '</button>',
-			'<button class="c-input-group__btn"><i class="fas fa-search" aria-label="' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '"></i></button>',
+			'<button class="c-input-group__btn"><i class="fa-solid fa-magnifying-glass" aria-label="' . esc_html_x( 'Search', 'search-form', 'snow-monkey' ) . '"></i></button>',
 			$form
 		);
 
@@ -37,7 +37,7 @@ use Framework\Helper;
 	</div>
 
 	<a href="#_" class="p-overlay-search-box__close-btn c-overlay-container__close-btn">
-		<i class="fas fa-times" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
+		<i class="fa-solid fa-xmark" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
 	</a>
 	<a href="#_" class="p-overlay-search-box__bg c-overlay-container__bg"></a>
 </div>

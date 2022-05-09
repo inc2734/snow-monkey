@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.5
+ * @version 17.0.0
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ use Framework\Helper;
 function snow_monkey_entry_meta_items_published() {
 	?>
 	<li class="c-meta__item c-meta__item--published">
-		<i class="far fa-clock" aria-hidden="true"></i>
+		<i class="fa-regular fa-clock" aria-hidden="true"></i>
 		<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
 		<time datetime="<?php the_time( 'c' ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time>
 	</li>
@@ -28,7 +28,7 @@ add_action( 'snow_monkey_entry_meta_items', 'snow_monkey_entry_meta_items_publis
 function snow_monkey_entry_meta_items_published_no_time() {
 	?>
 	<li class="c-meta__item c-meta__item--published">
-		<i class="far fa-clock" aria-hidden="true"></i>
+		<i class="fa-regular fa-clock" aria-hidden="true"></i>
 		<span class="screen-reader-text"><?php esc_html_e( 'Published', 'snow-monkey' ); ?></span>
 		<?php the_time( get_option( 'date_format' ) ); ?>
 	</li>
@@ -44,7 +44,7 @@ function snow_monkey_entry_meta_items_modified() {
 	}
 	?>
 	<li class="c-meta__item c-meta__item--modified">
-		<i class="fas fa-sync-alt" aria-hidden="true"></i>
+		<i class="fa-solid fa-rotate" aria-hidden="true"></i>
 		<span class="screen-reader-text"><?php esc_html_e( 'Modified', 'snow-monkey' ); ?></span>
 		<time datetime="<?php the_modified_time( 'c' ); ?>"><?php the_modified_time( get_option( 'date_format' ) ); ?></time>
 	</li>
@@ -88,7 +88,7 @@ function snow_monkey_entry_meta_items_categories() {
 	<?php foreach ( $public_terms as $public_term ) : ?>
 		<li class="c-meta__item c-meta__item--categories">
 			<span class="screen-reader-text"><?php echo esc_html( $public_taxonomy->label ); ?></span>
-			<i class="fas fa-folder" aria-hidden="true"></i>
+			<i class="fa-solid fa-folder" aria-hidden="true"></i>
 			<a href="<?php echo esc_url( get_term_link( $public_term ) ); ?>"><?php echo esc_html( $public_term->name ); ?></a>
 		</li>
 	<?php endforeach; ?>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.1.0
+ * @version 17.0.0
  *
  * renamed: template-parts/entry-meta.php
  */
@@ -28,7 +28,7 @@ if ( false !== $args['_terms'] && is_array( $args['_terms'] ) ) {
 	<?php if ( false !== $args['_terms'] && is_array( $args['_terms'] ) ) : ?>
 		<?php foreach ( $args['_terms'] as $_term ) : ?>
 			<li class="c-meta__item c-meta__item--<?php echo esc_attr( $_term->taxonomy ); ?>">
-				<i class="fas fa-folder" aria-hidden="true"></i>
+				<i class="fa-solid fa-folder" aria-hidden="true"></i>
 				<a href="<?php echo esc_url( get_term_link( $_term ) ); ?>"><?php echo esc_html( $_term->name ); ?></a>
 			</li>
 		<?php endforeach; ?>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.1.2
+ * @version 17.0.0
  *
  * renamed: template-parts/overlay-widget-area.php
  */
@@ -27,7 +27,7 @@ if ( ! Helper::is_active_sidebar( 'overlay-widget-area' ) ) {
 	</div>
 
 	<a href="#_" class="p-overlay-widget-area__close-btn c-overlay-container__close-btn">
-		<i class="fas fa-times" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
+		<i class="fa-solid fa-xmark" aria-label="<?php esc_html_e( 'Close', 'snow-monkey' ); ?>"></i>
 	</a>
 	<a href="#_" class="p-overlay-widget-area__bg c-overlay-container__bg"></a>
 </div>

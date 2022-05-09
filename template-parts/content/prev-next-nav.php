@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.7.0
+ * @version 17.0.0
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -46,11 +46,11 @@ $args = wp_parse_args(
 				</div>
 				<div class="c-prev-next-nav__item-label">
 					<?php if ( 'next' === $key ) : ?>
-						<i class="fas fa-angle-left" aria-hidden="true"></i>
+						<i class="fa-solid fa-angle-left" aria-hidden="true"></i>
 						<?php echo wp_kses_post( $args['_next_label'] ); ?>
 					<?php else : ?>
 						<?php echo wp_kses_post( $args['_prev_label'] ); ?>
-						<i class="fas fa-angle-right" aria-hidden="true"></i>
+						<i class="fa-solid fa-angle-right" aria-hidden="true"></i>
 					<?php endif; ?>
 				</div>
 				<div class="c-prev-next-nav__item-title">

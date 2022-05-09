@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 17.0.0
  */
 
 use Framework\Helper;
@@ -149,7 +149,7 @@ add_filter(
 
 		return str_replace(
 			'<li class="wpaw-local-nav__subitem">',
-			'<li class="wpaw-local-nav__subitem"><span class="wpaw-local-nav__subitem__icon"><i class="fas fa-angle-right"></i></span>',
+			'<li class="wpaw-local-nav__subitem"><span class="wpaw-local-nav__subitem__icon"><i class="fa-solid fa-angle-right"></i></span>',
 			$content
 		);
 	},
