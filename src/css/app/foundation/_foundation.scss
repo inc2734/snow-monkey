@@ -1,6 +1,7 @@
 :root {
   --_background-color: #fff;
   --wp-block-width: calc(#{ _var-container-max-width() });
+  --wp--style--block-gap: #{ _space(1, true, true) };
 
   --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2);
   --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));

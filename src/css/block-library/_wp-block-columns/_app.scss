@@ -1,15 +1,6 @@
 .wp-block-columns {
-  --wp--style--block-gap: #{ _space(1) };
-
   margin-bottom: inherit;
-
-  @include _media-max(599px) {
-    &:not(.is-not-stacked-on-mobile) {
-      > * + * {
-        margin-top: var(--wp--style--block-gap);
-      }
-    }
-  }
+  gap: var(--wp--style--block-gap) !important;
 }
 
 .wp-block-column {

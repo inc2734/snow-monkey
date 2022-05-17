@@ -3,8 +3,8 @@
   "version": 2,
   "settings": {
     "layout": {
-			"contentSize": "var(--wp-block-width)",
-			"wideSize": "calc(var(--wp-block-width) + 240px)"
+      "contentSize": "var(--wp-block-width)",
+      "wideSize": "calc(var(--wp-block-width) + 240px)"
     }
   }
 }

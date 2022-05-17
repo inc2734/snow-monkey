@@ -1,5 +1,6 @@
 .wp-block-buttons {
-  gap: _space(.5);
+  --wp--style--block-gap: #{ _space(.5, true, true) };
+  gap: var(--wp--style--block-gap) !important;
 
   > .wp-block-button {
     margin-bottom: 0;

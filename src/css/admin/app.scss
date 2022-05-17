@@ -6,6 +6,7 @@
 
 :root {
   --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2);
+  --wp--style--block-gap: #{ _space(1, true, true) };
 
   @include _media-min(md) {
     --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2);

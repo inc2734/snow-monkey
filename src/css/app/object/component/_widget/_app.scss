@@ -39,7 +39,7 @@
   }
 
   &.widget_block {
-    > h2:not(.widget-title),
+    > h2:not(.widget-title):not(.c-widget__title),
     > h3,
     > h4,
     > h5,
