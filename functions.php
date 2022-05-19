@@ -9,8 +9,8 @@
 use Framework\Helper;
 
 /**
-* Uses composer autoloader
-*/
+ * Uses composer autoloader
+ */
 require_once( get_template_directory() . '/vendor/autoload.php' );
 
 /**
