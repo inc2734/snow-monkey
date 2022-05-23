@@ -2,31 +2,27 @@
  * @see src/css/block-editor/app.scss
  */
 
-.alignleft,
-.u-alignleft-wrapper > * {
+.alignleft.alignleft {
   float: left;
   @include _margin-right(1);
 }
 
-.alignright,
-.u-alignright-wrapper > * {
+.alignright.alignright {
   float: right;
   @include _margin-left(1);
 }
 
 .alignleft,
-.alignright,
-.u-alignleft-wrapper > *,
-.u-alignright-wrapper > * {
-  max-width: calc(5 * (100vw / 12));
+.alignright {
+  max-width: 50%;
+  width: fit-content !important;
 
   &:first-child + * {
     margin-top: 0;
   }
 }
 
-.aligncenter,
-.u-aligncenter-wrapper > * {
+.aligncenter {
   margin-right: auto;
   margin-left: auto;
   clear: both;
