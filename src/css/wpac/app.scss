@@ -200,8 +200,8 @@
   &[data-header-layout="left"] {
     .wpac-section {
       @include _media-min(lg) {
-        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
-        margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2) !important;
+        margin-right: calc(50% - ((100vw - #{ var-body-margin-left() } - #{ var-scrollbar-width() }) / 2));
+        margin-left: calc(50% - ((100vw - #{ var-body-margin-left() } - #{ var-scrollbar-width() }) / 2));
       }
     }
   }

@@ -54,6 +54,10 @@
   @return var(--drop-nav-text-color, $_color-text);
 }
 
+@function var-scrollbar-width() {
+  @return var(--scrollbar-width, 0px);
+}
+
 // @deprecated
 @function var-font-family() {
   @return var(--font-family);

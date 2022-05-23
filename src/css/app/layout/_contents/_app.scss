@@ -163,8 +163,8 @@
     }
 
     [data-is-content-widget-area="true"] {
-      margin-right: calc(50% - 50vw);
-      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw + (#{ var-scrollbar-width() } / 2));
+      margin-left: calc(50% - 50vw + (#{ var-scrollbar-width() } / 2));
     }
   }
 
@@ -172,9 +172,8 @@
     .#{ $_prefix }l-contents {
       [data-is-content-widget-area="true"] {
         @include _media-min(lg) {
-          $body-margin-left: 280px;
-          margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
-          margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
+          margin-right: 0;
+          margin-left: 0;
         }
       }
     }

@@ -8,8 +8,13 @@ module.exports = {
       sort: true,
     }),
     require('postcss-mq-optimize'),
-    require('cssnano')({
-      preset: 'default',
-    })
+		require( 'cssnano' )( {
+			preset: [
+				'default',
+				{
+					calc: false,
+				},
+			],
+		} ),
   ]
 }

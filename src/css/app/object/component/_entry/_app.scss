@@ -40,8 +40,8 @@
   &[data-header-layout="left"] {
     .#{ $_prefix }c-entry__content {
       @include _media-min(lg) {
-        margin-left: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
-        margin-right: calc(50% - (100vw - #{ var-body-margin-left() }) / 2);
+        margin-right: 0;
+        margin-left: 0;
       }
     }
   }
@@ -70,8 +70,8 @@
 // One column
 [data-has-sidebar="false"] {
   .#{ $_prefix }c-entry__content {
-    margin-right: calc(50% - 50vw);
-    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw + (#{ var-scrollbar-width() } / 2));
+    margin-left: calc(50% - 50vw + (#{ var-scrollbar-width() } / 2));
   }
 }
 

@@ -80,3 +80,17 @@ document.addEventListener(
   },
   false
 );
+
+document.addEventListener(
+  'DOMContentLoaded',
+  () => {
+    const resizeObserver = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        entry.target.style.setProperty('--scrollbar-width', `${ window.innerWidth - entry.target.clientWidth }px`);
+      }
+    });
+    const target = getHtml();
+    resizeObserver.observe(target);
+  },
+  false
+);
