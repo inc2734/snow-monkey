@@ -1,7 +1,7 @@
 @mixin blockquote {
   &,
   &.is-large,
-  &.is-style-large {
+  &.is-style-large:not(.is-style-plain) {
     @include _padding(.5, .5, .5, 1);
   }
 
@@ -20,7 +20,7 @@
 
   &,
   &.is-large,
-  &.is-style-large {
+  &.is-style-large:not(.is-style-plain) {
     @include _padding(1, .5, .5, 1.5);
   }
 
@@ -29,7 +29,7 @@
 
     &,
     &.is-large,
-    &.is-style-large {
+    &.is-style-large:not(.is-style-plain) {
       @include _padding(1.5, 1, .75, 2);
     }
   }
