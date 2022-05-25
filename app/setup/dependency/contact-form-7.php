@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 17.0.1
  */
 
 use Framework\Helper;
@@ -25,16 +25,6 @@ add_action(
 			get_theme_file_uri( '/assets/css/dependency/contact-form-7/app.css' ),
 			[ Helper::get_main_style_handle() ],
 			filemtime( get_theme_file_path( '/assets/css/dependency/contact-form-7/app.css' ) )
-		);
-	}
-);
-
-add_action(
-	'inc2734_wp_customizer_framework_load_styles',
-	function() {
-		Helper::load_files(
-			'get_template_parts',
-			get_template_directory() . '/assets/css/dependency/contact-form-7'
 		);
 	}
 );

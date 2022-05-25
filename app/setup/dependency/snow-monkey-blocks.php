@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.0
+ * @version 17.0.1
  */
 
 use Framework\Helper;
@@ -96,19 +96,6 @@ add_action(
 		);
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-blocks/editor' );
-	}
-);
-
-/**
- * Load styles from customizer.
- */
-add_action(
-	'inc2734_wp_customizer_framework_load_styles',
-	function() {
-		Helper::load_files(
-			'get_template_parts',
-			get_template_directory() . '/assets/css/dependency/snow-monkey-blocks'
-		);
 	}
 );
 

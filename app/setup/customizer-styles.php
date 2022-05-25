@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.0
+ * @version 17.0.1
  */
 
 use Framework\Helper;
@@ -17,8 +17,9 @@ add_action(
 	'inc2734_wp_customizer_framework_load_styles',
 	function() {
 		$includes = [
-			'/assets/css/app',
-			'/assets/css/block-library',
+			'/assets/css/app/foundation',
+			'/assets/css/app/object/component',
+			'/assets/css/app/object/project',
 			'/assets/css/custom-widgets',
 		];
 		foreach ( $includes as $include ) {
