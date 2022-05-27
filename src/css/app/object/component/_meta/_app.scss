@@ -1,6 +1,7 @@
 .#{ $_prefix }c-meta {
   &__item {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     white-space: nowrap;
 
     &:not(:last-child) {
@@ -8,7 +9,10 @@
     }
 
     &--author {
+      white-space: initial;
+
       img {
+        flex: 0 0 auto;
         @include _circle(24px);
         margin-right: 5px;
       }

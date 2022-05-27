@@ -48,10 +48,19 @@
     @include _margin(.25, 0, 0);
     @include _font-size-line-height(10px);
     font-weight: bold;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     @include _media-min(lg) {
       @include _margin(.5, 0, 0);
+    }
+
+    .#{ $_prefix }c-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
     }
 
     .#{ $_prefix }c-meta__item--categories {
@@ -93,7 +102,7 @@
   }
 
   &__meta {
-    text-align: left;
+    justify-content: flex-start;
   }
 }
 
@@ -116,11 +125,9 @@
     margin: 1px 0 0;
     @include _font-size-line-height($_base-font-size-px - 2);
     font-weight: normal;
-    text-align: left;
+    justify-content: flex-start;
 
     .#{ $_prefix }c-meta__item {
-      display: block;
-
       &:not(.#{ $_prefix }c-meta__item--published) {
         display: none;
       }
@@ -167,15 +174,7 @@
   &__meta {
     @include _margin(.25, 0, 0);
     font-weight: normal;
-    text-align: left;
-
-    .#{ $_prefix }c-meta__item--author {
-      display: none;
-    }
-
-    .#{ $_prefix }c-meta__item--categories {
-      display: inline-block;
-    }
+    justify-content: flex-start;
   }
 }
 
@@ -217,7 +216,7 @@
   &__meta {
     @include _margin(.25, 0, 0);
     font-weight: normal;
-    text-align: left;
+    justify-content: flex-start;
 
     .#{ $_prefix }c-meta__item--categories {
       display: inline-block;
