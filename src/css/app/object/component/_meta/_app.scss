@@ -1,4 +1,8 @@
 .#{ $_prefix }c-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
   &__item {
     display: inline-flex;
     align-items: center;
@@ -8,13 +12,17 @@
       margin-right: .75em;
     }
 
+    img,
+    svg {
+      flex: 0 0 auto;
+      margin-right: 5px;
+    }
+
     &--author {
       white-space: initial;
 
       img {
-        flex: 0 0 auto;
         @include _circle(24px);
-        margin-right: 5px;
       }
     }
   }
