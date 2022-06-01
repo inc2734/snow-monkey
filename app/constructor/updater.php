@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 17.0.4
  */
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
@@ -41,7 +41,14 @@ add_filter(
  */
 add_filter(
 	'inc2734_github_theme_updater_request_url_inc2734/snow-monkey',
-	function() {
-		return 'https://snow-monkey.2inc.org/github-api/response.json';
-	}
+	function( $url, $user_name, $repository, $version ) {
+		return ! $version
+			? 'https://snow-monkey.2inc.org/github-api/response.json'
+			: sprintf(
+				'https://snow-monkey.2inc.org/github-api/packages/%1$s/response.json',
+				$version
+			);
+	},
+	10,
+	4
 );
