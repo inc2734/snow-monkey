@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 17.0.5
  */
 
 use Framework\Controller\Controller;
@@ -13,6 +13,7 @@ if ( is_post_type_archive() ) {
 	$_post_type = $_post_type ? $_post_type : get_query_var( 'post_type' );
 } elseif ( is_tax() ) {
 	$term       = get_queried_object();
+	$term       = is_object( $term ) ? clone $term : $term;
 	$taxonomy   = get_taxonomy( $term->taxonomy );
 	$_post_type = $taxonomy->object_type[0];
 }

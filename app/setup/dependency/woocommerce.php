@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.1
+ * @version 17.0.5
  */
 
 use Framework\Helper;
@@ -263,6 +263,7 @@ add_filter(
 
 		if ( is_product_tag() ) {
 			$_term = get_queried_object();
+			$_term = is_object( $_term ) ? clone $_term : $_term;
 			$wc_breadcrumbs[ count( $wc_breadcrumbs ) - 1 ]['title'] = $_term->name;
 		}
 

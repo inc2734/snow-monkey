@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 17.0.5
  */
 
 namespace Framework\Model\Page_Header;
@@ -22,6 +22,7 @@ class WooCommerce_Term_Page_Header extends Base {
 	 */
 	protected static function _get_image( $size = 'large' ) {
 		$_term             = get_queried_object();
+		$_term             = is_object( $_term ) ? clone $_term : $_term;
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$image_mods, true )
@@ -36,7 +37,7 @@ class WooCommerce_Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url( $size = 'large' ) {
-		$_term             = get_queried_object();
+		$_term             = clone get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$image_mods, true )
@@ -50,7 +51,7 @@ class WooCommerce_Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		$_term             = get_queried_object();
+		$_term             = clone get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$title_mods, true )
@@ -64,7 +65,7 @@ class WooCommerce_Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		$_term             = get_queried_object();
+		$_term             = clone get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$title_mods, true )
@@ -78,7 +79,7 @@ class WooCommerce_Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_caption() {
-		$_term             = get_queried_object();
+		$_term             = clone get_queried_object();
 		$eyecatch_position = get_theme_mod( 'woocommerce-archive-eyecatch' );
 
 		return in_array( $eyecatch_position, static::$image_mods, true )

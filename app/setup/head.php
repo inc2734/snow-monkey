@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.4
+ * @version 17.0.5
  */
 
 /**
@@ -34,8 +34,14 @@ add_action(
 	function() {
 		?>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
-		<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
-			<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+		<?php if ( is_singular() ) : ?>
+			<?php
+			$queried_object = get_queried_object();
+			$queried_object = is_object( $queried_object ) ? clone $queried_object : $queried_object;
+			?>
+			<?php if ( pings_open( $queried_object ) ) : ?>
+				<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+			<?php endif; ?>
 		<?php endif; ?>
 		<?php
 	},

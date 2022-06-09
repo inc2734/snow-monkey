@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 17.0.5
  */
 
 namespace Framework\Contract\Helper;
@@ -25,6 +25,7 @@ trait Term_Thumbnail {
 	public static function get_term_thumbnail_term( $term = null ) {
 		if ( is_null( $term ) ) {
 			$term = get_queried_object();
+			$term = is_object( $term ) ? clone $term : $term;
 		}
 
 		$cache_key   = crc32( json_encode( $term ) );
@@ -44,7 +45,7 @@ trait Term_Thumbnail {
 		foreach ( $ancestors as $ancestor ) {
 			$header_image = get_theme_mod( $term->taxonomy . '-' . $ancestor . '-header-image' );
 			if ( $header_image ) {
-				wp_cache_set( $cache_key, $ancestor, $cache_group );
+				wp_cache_set( $cache_key, get_term( $ancestor, $term->taxonomy ), $cache_group );
 				$term->term_id = $ancestor;
 				return $term;
 			}

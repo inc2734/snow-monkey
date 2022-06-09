@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.15.0
+ * @version 17.0.5
  */
 
 use Framework\Controller\Controller;
@@ -29,6 +29,7 @@ $layout = get_theme_mod( 'archive-' . $_post_type . '-layout' );
 $layout = $layout ? $layout : get_theme_mod( 'archive-post-layout' );
 
 $queried_object = get_queried_object();
+$queried_object = is_object( $queried_object ) ? clone $queried_object : $queried_object;
 
 Controller::layout( $layout );
 if ( ! get_search_query() && ( ! $queried_object || is_a( $queried_object, 'WP_Post_Type' ) ) ) {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 17.0.5
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -30,6 +30,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'priority'        => 130,
 			'active_callback' => function() use ( $custom_post_type ) {
 				$queried_object = get_queried_object();
+				$queried_object = is_object( $queried_object ) ? clone $queried_object : $queried_object;
 				if ( is_a( $queried_object, 'WP_Term' ) ) {
 					$taxonomy = get_taxonomy( $queried_object->taxonomy );
 					if ( $taxonomy ) {

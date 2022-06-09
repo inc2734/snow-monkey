@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 17.0.5
  */
 
 namespace Framework\Model\Page_Header;
@@ -22,6 +22,7 @@ class Term_Page_Header extends Base {
 	 */
 	protected static function _get_image( $size = 'large' ) {
 		$term      = get_queried_object();
+		$term      = is_object( $term ) ? clone $term : $term;
 		$taxonomy  = get_taxonomy( $term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
 
@@ -41,7 +42,7 @@ class Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_url( $size = 'large' ) {
-		$term      = get_queried_object();
+		$term      = clone get_queried_object();
 		$taxonomy  = get_taxonomy( $term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
 
@@ -60,7 +61,7 @@ class Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_title() {
-		$term      = get_queried_object();
+		$term      = clone get_queried_object();
 		$taxonomy  = get_taxonomy( $term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
 
@@ -79,7 +80,7 @@ class Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_align() {
-		$term      = get_queried_object();
+		$term      = clone get_queried_object();
 		$taxonomy  = get_taxonomy( $term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
 
@@ -98,7 +99,7 @@ class Term_Page_Header extends Base {
 	 * @return string|false
 	 */
 	protected static function _get_image_caption() {
-		$term      = get_queried_object();
+		$term      = clone get_queried_object();
 		$taxonomy  = get_taxonomy( $term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
 
