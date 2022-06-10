@@ -5,17 +5,22 @@
 .alignleft.alignleft {
   float: left;
   @include _margin-right(1);
+  @include _margin-bottom(1);
 }
 
 .alignright.alignright {
   float: right;
   @include _margin-left(1);
+  @include _margin-bottom(1);
 }
 
 .alignleft,
 .alignright {
   max-width: 50%;
-  width: fit-content !important;
+
+  &:not([width]) {
+    width: fit-content !important;
+  }
 
   &:first-child + * {
     margin-top: 0;

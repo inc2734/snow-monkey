@@ -24,7 +24,7 @@
   &__content {
     @include _clearfix();
 
-    > * {
+    > *:where(:not([width])) {
       @include content-alignment();
     }
   }
