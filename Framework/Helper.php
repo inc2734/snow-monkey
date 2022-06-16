@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.5.0
+ * @version 17.0.6
  */
 
 namespace Framework;
@@ -125,7 +125,7 @@ class Helper {
 	public static function get_page_title_from_breadcrumbs() {
 		$breadcrumbs_items = static::get_breadcrumbs_items();
 		$title_item        = end( $breadcrumbs_items );
-		return array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
+		return is_array( $title_item ) && array_key_exists( 'title', $title_item ) ? $title_item['title'] : '';
 	}
 
 
