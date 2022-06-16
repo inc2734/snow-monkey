@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2022-04-14 14:40+0900\n"
-"PO-Revision-Date: 2022-04-14 14:40+0900\n"
+"POT-Creation-Date: 2022-06-16 10:10+0900\n"
+"PO-Revision-Date: 2022-06-16 10:10+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1773,23 +1773,23 @@ msgstr "ギャラリー %1$s"
 msgid "Columns %1$s"
 msgstr "カラム %1$s"
 
-#: app/setup/dependency/snow-monkey-blocks.php:175
+#: app/setup/dependency/snow-monkey-blocks.php:162
 msgid "Undecorated title"
 msgstr "装飾無しのタイトル"
 
-#: app/setup/dependency/woocommerce.php:156
+#: app/setup/dependency/woocommerce.php:146
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
-#: app/setup/dependency/woocommerce.php:157
+#: app/setup/dependency/woocommerce.php:147
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
-#: app/setup/dependency/woocommerce.php:287
+#: app/setup/dependency/woocommerce.php:278
 msgid "Home"
 msgstr "ホーム"
 
-#: app/setup/dependency/woocommerce.php:293
+#: app/setup/dependency/woocommerce.php:284
 msgid "My account"
 msgstr "マイアカウント"
 
@@ -1813,39 +1813,43 @@ msgstr "著者"
 msgid "xLarge"
 msgstr "xLarge"
 
-#: app/setup/nav-menus.php:24
+#: app/setup/nav-menus.php:22
 msgid "Global Navigation (For PC)"
 msgstr "グローバルナビゲーション（PC用）"
 
-#: app/setup/nav-menus.php:25
+#: app/setup/nav-menus.php:23
+msgid "Drop Navigation (For PC)"
+msgstr "ドロップナビゲーション（PC用）"
+
+#: app/setup/nav-menus.php:24
 msgid "Drawer Navigation (For Mobile)"
 msgstr "ドロワーナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:26
+#: app/setup/nav-menus.php:25
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
-#: app/setup/nav-menus.php:27
+#: app/setup/nav-menus.php:26
 msgid "Follow box"
 msgstr "フォローボックス"
 
-#: app/setup/nav-menus.php:28
+#: app/setup/nav-menus.php:27
 msgid "Header Sub Navigation"
 msgstr "ヘッダーサブナビゲーション"
 
-#: app/setup/nav-menus.php:29
+#: app/setup/nav-menus.php:28
 msgid "Footer Sub Navigation"
 msgstr "フッターサブナビゲーション"
 
-#: app/setup/nav-menus.php:30
+#: app/setup/nav-menus.php:29
 msgid "Drawer Sub Navigation (For Mobile)"
 msgstr "ドロワーサブナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:31
+#: app/setup/nav-menus.php:30
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:126
+#: app/setup/nav-menus.php:125
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 

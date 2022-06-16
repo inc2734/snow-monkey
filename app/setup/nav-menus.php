@@ -3,11 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 17.1.0
  */
 
-use Inc2734\WP_Basis\App\Model\Navbar;
-use Inc2734\WP_Basis\App\Model\Drawer;
 use Framework\Helper;
 
 /**
@@ -22,6 +20,7 @@ add_action(
 		register_nav_menus(
 			[
 				'global-nav'        => esc_html__( 'Global Navigation (For PC)', 'snow-monkey' ),
+				'drop-nav'          => esc_html__( 'Drop Navigation (For PC)', 'snow-monkey' ),
 				'drawer-nav'        => esc_html__( 'Drawer Navigation (For Mobile)', 'snow-monkey' ),
 				'social-nav'        => esc_html__( 'Social Navigation', 'snow-monkey' ),
 				'follow-box'        => esc_html__( 'Follow box', 'snow-monkey' ),
