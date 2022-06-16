@@ -50,10 +50,22 @@ $navbar_args = 'click' === $args['_popup-mode']
 $theme_location = ! empty( $args['_context'] ) && 'snow-monkey/nav/drop' === $args['_context'] && has_nav_menu( 'drop-nav' )
 	? 'drop-nav'
 	: 'global-nav';
+
+$display_site_branding = ! empty( $args['_context'] ) && 'snow-monkey/nav/drop' === $args['_context'] && get_theme_mod( 'display-site-branding-in-drop-nav' );
 ?>
 
 <nav class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" role="navigation">
 	<?php
+	if ( $display_site_branding ) {
+		Helper::get_template_part(
+			'template-parts/header/site-branding',
+			null,
+			[
+				'_title_tag' => 'div',
+			]
+		);
+	}
+
 	wp_nav_menu(
 		[
 			'theme_location' => $theme_location,

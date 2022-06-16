@@ -5,6 +5,24 @@
     display: none;
   }
 
+  .#{ $_prefix }p-global-nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  .#{ $_prefix }c-site-branding {
+    @include _margin-right(.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include _padding-top(.25);
+    @include _padding-bottom(.25);
+
+    &__description {
+      display: none;
+    }
+  }
+
   .#{ $_prefix }c-navbar {
     justify-content: center;
 
