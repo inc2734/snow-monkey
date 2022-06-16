@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.1.4
+ * @version 17.0.6
  */
 
 use Framework\Helper;
@@ -16,14 +16,22 @@ if ( Helper::is_active_sidebar( 'front-page-top-widget-area' ) ) {
 ?>
 
 <?php
-ob_start();
 $has_do_shortcode = has_filter( 'the_content', 'do_shortcode' );
+$has_do_blocks    = has_filter( 'the_content', 'do_blocks' );
+
+ob_start();
 if ( $has_do_shortcode ) {
 	remove_filter( 'the_content', 'do_shortcode', $has_do_shortcode );
-	the_content();
+}
+if ( $has_do_blocks ) {
+	remove_filter( 'the_content', 'do_blocks', $has_do_blocks );
+}
+the_content();
+if ( $has_do_shortcode ) {
 	add_filter( 'the_content', 'do_shortcode', $has_do_shortcode );
-} else {
-	the_content();
+}
+if ( $has_do_blocks ) {
+	add_filter( 'the_content', 'do_blocks', $has_do_blocks );
 }
 $content = ob_get_clean();
 ?>
