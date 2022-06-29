@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2022-06-16 10:35+0900\n"
-"PO-Revision-Date: 2022-06-16 10:35+0900\n"
+"POT-Creation-Date: 2022-06-29 13:02+0900\n"
+"PO-Revision-Date: 2022-06-29 13:02+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -455,35 +455,47 @@ msgstr "基本の文字サイズ（px）"
 msgid "Base font"
 msgstr "基本フォント"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:19
+#: app/customizer/design/sections/base-design/controls/base-font.php:16
+msgid ""
+"For all other options except \"Sans serif\" and \"Serif\", downloading of "
+"the font file will occur when selecting the option. Please wait a while as "
+"the download will take some time. The font files will be downloaded to wp-"
+"content/wp-google-fonts."
+msgstr ""
+"「Sans serif」「Serif」以外の設定の場合、設定を選択すると、フォントファイルの"
+"ダウンロードがおこなわれます。ダウンロードには時間がかかりますのでしばらくお"
+"待ちください。フォントファイルは wp-content/wp-google-fonts にダウンロードさ"
+"れます。"
+
+#: app/customizer/design/sections/base-design/controls/base-font.php:20
 msgid "Sans serif"
 msgstr "サンセリフ（ゴシック体）"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:20
+#: app/customizer/design/sections/base-design/controls/base-font.php:21
 msgid "Serif"
 msgstr "セリフ（明朝体）"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:21
+#: app/customizer/design/sections/base-design/controls/base-font.php:22
 msgid "Noto Sans JP"
 msgstr "Noto Sans JP"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:22
+#: app/customizer/design/sections/base-design/controls/base-font.php:23
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:23
+#: app/customizer/design/sections/base-design/controls/base-font.php:24
 msgid "M PLUS 1p"
 msgstr "M PLUS 1p"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:24
+#: app/customizer/design/sections/base-design/controls/base-font.php:25
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:25
+#: app/customizer/design/sections/base-design/controls/base-font.php:26
 msgid "BIZ UDPGothic"
 msgstr "BIZ UDPGothic"
 
-#: app/customizer/design/sections/base-design/controls/base-font.php:26
+#: app/customizer/design/sections/base-design/controls/base-font.php:27
 msgid "BIZ UDPMincho"
 msgstr "BIZ UDPMincho"
 
@@ -2187,3 +2199,6 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "For all other options except \"Sans serif\" and \"Serif\","
+#~ msgstr "“Sans serif\" と \"Serif\" 以外の設定の場合、"
