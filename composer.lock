@@ -449,16 +449,16 @@
         },
         {
             "name": "inc2734/wp-google-fonts",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-google-fonts.git",
-                "reference": "4871a1a4984b131a3509d05e12a29a227da8fc34"
+                "reference": "3e404d60bbebd7912a7541ffce45d8250cd36df8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/4871a1a4984b131a3509d05e12a29a227da8fc34",
-                "reference": "4871a1a4984b131a3509d05e12a29a227da8fc34",
+                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/3e404d60bbebd7912a7541ffce45d8250cd36df8",
+                "reference": "3e404d60bbebd7912a7541ffce45d8250cd36df8",
                 "shasum": ""
             },
             "require": {
@@ -491,9 +491,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-google-fonts/issues",
-                "source": "https://github.com/inc2734/wp-google-fonts/tree/0.4.2"
+                "source": "https://github.com/inc2734/wp-google-fonts/tree/0.4.3"
             },
-            "time": "2022-06-29T06:03:58+00:00"
+            "time": "2022-07-01T02:15:37+00:00"
         },
         {
             "name": "inc2734/wp-helper",

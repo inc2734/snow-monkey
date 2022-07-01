@@ -48,3 +48,39 @@ themes/snow-monkey
 
 ### FLOCSS
 * Source: https://github.com/hiloki/flocss
+
+### Noto Sans Japanese
+* Font License: SIL Open Font License (OFL)
+* Font License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Source: https://fonts.google.com/noto/specimen/Noto+Sans+JP
+* Fonts files are stored in `wp-content/uploads/inc2734-wp-google-fonts`.
+
+### Noto Serif Japanese
+* Font License: SIL Open Font License (OFL)
+* Font License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Source: https://fonts.google.com/noto/specimen/Noto+Serif+JP
+* Fonts files are stored in `wp-content/uploads/inc2734-wp-google-fonts`.
+
+### M PLUS 1p
+* Font License: SIL Open Font License (OFL)
+* Font License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Source: https://fonts.google.com/specimen/M+PLUS+1p
+* Fonts files are stored in `wp-content/uploads/inc2734-wp-google-fonts`.
+
+### M PLUS Rounded 1c
+* Font License: SIL Open Font License (OFL)
+* Font License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Source: https://fonts.google.com/specimen/M+PLUS+Rounded+1c
+* Fonts files are stored in `wp-content/uploads/inc2734-wp-google-fonts`.
+
+### BIZ UDPGothic
+* Font License: SIL Open Font License (OFL)
+* Font License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Source: https://fonts.google.com/specimen/BIZ+UDPGothic
+* Fonts files are stored in `wp-content/uploads/inc2734-wp-google-fonts`.
+
+### BIZ UDPMincho
+* Font License: SIL Open Font License (OFL)
+* Font License URI: https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+* Source: https://fonts.google.com/specimen/BIZ+UDPMincho
+* Fonts files are stored in `wp-content/uploads/inc2734-wp-google-fonts`.
