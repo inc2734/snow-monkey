@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc1672613b22acdd61131c02c97940f6",
+    "content-hash": "d4cff231cdd9b91a489428d3891b44e1",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -449,16 +449,16 @@
         },
         {
             "name": "inc2734/wp-google-fonts",
-            "version": "0.4.3",
+            "version": "0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-google-fonts.git",
-                "reference": "3e404d60bbebd7912a7541ffce45d8250cd36df8"
+                "reference": "364e4433de37627fe33f180a1fbfc24dfcc5e2ad"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/3e404d60bbebd7912a7541ffce45d8250cd36df8",
-                "reference": "3e404d60bbebd7912a7541ffce45d8250cd36df8",
+                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/364e4433de37627fe33f180a1fbfc24dfcc5e2ad",
+                "reference": "364e4433de37627fe33f180a1fbfc24dfcc5e2ad",
                 "shasum": ""
             },
             "require": {
@@ -491,9 +491,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-google-fonts/issues",
-                "source": "https://github.com/inc2734/wp-google-fonts/tree/0.4.3"
+                "source": "https://github.com/inc2734/wp-google-fonts/tree/0.5.0"
             },
-            "time": "2022-07-01T02:15:37+00:00"
+            "time": "2022-07-07T07:28:32+00:00"
         },
         {
             "name": "inc2734/wp-helper",
