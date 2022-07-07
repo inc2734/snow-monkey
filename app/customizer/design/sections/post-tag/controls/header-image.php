@@ -9,6 +9,10 @@
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
+if ( ! is_customize_preview() ) {
+	return;
+}
+
 $terms = Helper::get_terms(
 	[
 		'taxonomy'   => 'post_tag',
@@ -26,10 +30,6 @@ foreach ( $terms as $_term ) {
 			'priority'    => 110,
 		]
 	);
-}
-
-if ( ! is_customize_preview() ) {
-	return;
 }
 
 $panel = Framework::get_panel( 'design' );
