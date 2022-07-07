@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 17.2.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;

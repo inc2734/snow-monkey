@@ -3,11 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 17.2.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
+
+if ( ! is_customize_preview() ) {
+	return;
+}
 
 $taxonomies = Helper::get_taxonomies();
 if ( class_exists( '\woocommerce' ) ) {
@@ -44,10 +48,6 @@ foreach ( $terms as $_term ) {
 			'priority'    => 100,
 		]
 	);
-}
-
-if ( ! is_customize_preview() ) {
-	return;
 }
 
 $panel = Framework::get_panel( 'design' );
