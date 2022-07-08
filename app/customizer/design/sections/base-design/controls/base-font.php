@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.2.0
+ * @version 17.2.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'base-font',
 	[
 		'label'       => __( 'Base font', 'snow-monkey' ),
-		'description' => __( 'For all other options except "Sans serif" and "Serif", downloading of the font file will occur when selecting the option. Please wait a while as the download will take some time. The font files will be downloaded to wp-content/wp-google-fonts.', 'snow-monkey' ),
+		'description' => __( 'For all other options except "Sans serif" and "Serif", downloading of the font file will occur when selecting the option. Please wait a while as the download will take some time. The font files will be downloaded to wp-content/uploads/inc2734-wp-google-fonts.', 'snow-monkey' ),
 		'priority'    => 120,
 		'default'     => 'sans-serif',
 		'choices'     => [

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2022-06-29 13:02+0900\n"
-"PO-Revision-Date: 2022-06-29 13:02+0900\n"
+"POT-Creation-Date: 2022-07-08 13:52+0900\n"
+"PO-Revision-Date: 2022-07-08 13:53+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -460,12 +460,12 @@ msgid ""
 "For all other options except \"Sans serif\" and \"Serif\", downloading of "
 "the font file will occur when selecting the option. Please wait a while as "
 "the download will take some time. The font files will be downloaded to wp-"
-"content/wp-google-fonts."
+"content/uploads/inc2734-wp-google-fonts."
 msgstr ""
 "「Sans serif」「Serif」以外の設定の場合、設定を選択すると、フォントファイルの"
 "ダウンロードがおこなわれます。ダウンロードには時間がかかりますのでしばらくお"
-"待ちください。フォントファイルは wp-content/wp-google-fonts にダウンロードさ"
-"れます。"
+"待ちください。フォントファイルは wp-content/uploads/inc2734-wp-google-fonts "
+"にダウンロードされます。"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:20
 msgid "Sans serif"
@@ -779,13 +779,13 @@ msgid "bbPress archive"
 msgstr "bbPress アーカイブ"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/header-image.php:15
-#: app/customizer/design/sections/category/controls/header-image.php:24
+#: app/customizer/design/sections/category/controls/header-image.php:28
 #: app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
-#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:38
-#: app/customizer/design/sections/post-tag/controls/header-image.php:24
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:42
+#: app/customizer/design/sections/post-tag/controls/header-image.php:28
 #: app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:15
-#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:24
-#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:24
+#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:28
+#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:28
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
 
@@ -814,8 +814,8 @@ msgstr "bbPress 個別ページレイアウト"
 msgid "bbPress single page settings"
 msgstr "bbPress 個別ページ設定"
 
-#: app/customizer/design/sections/category/controls/header-image.php:25
-#: app/customizer/design/sections/post-tag/controls/header-image.php:25
+#: app/customizer/design/sections/category/controls/header-image.php:29
+#: app/customizer/design/sections/post-tag/controls/header-image.php:29
 msgid ""
 "This setting takes priority over featured image setting of posts page "
 "settings"
@@ -875,7 +875,7 @@ msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
 
 #. translators: %1$s: Custom post type label */
-#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:41
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:45
 #, php-format
 msgid ""
 "This setting takes priority over featured image setting of %1$s archive page "
@@ -1071,8 +1071,8 @@ msgstr "WooCommerce 商品一覧ページレイアウト"
 msgid "WooCommerce products page settings"
 msgstr "WooCommerce 商品一覧ページ設定"
 
-#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:25
-#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:25
+#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:29
+#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:29
 msgid ""
 "This setting takes priority over featured image setting of WooCommerce "
 "products page settings"
