@@ -134,7 +134,6 @@ if ( $root_variables_app ) {
 $styles_core[] = [
 	'selectors'  => [ 'html' ],
 	'properties' => [
-		'font-size: ' . $base_font_size . 'px',
 		'letter-spacing: ' . get_theme_mod( 'base-letter-spacing' ) . 'rem',
 	],
 ];
