@@ -4,20 +4,22 @@ import { activeMenu } from './module/_active-menu';
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    const nav = document.querySelector('.p-global-nav');
-    if (! nav) {
+    const navs = document.querySelectorAll('.p-global-nav');
+    if (1 > navs.length) {
       return;
     }
 
-    const links = nav.getElementsByTagName('a');
+    forEachHtmlNodes(navs, (nav) => {
+      const links = nav.getElementsByTagName('a');
 
-    const applyActiveMenu = (atag) => {
-      const params = {
-        home_url: snow_monkey.home_url,
+      const applyActiveMenu = (atag) => {
+        const params = {
+          home_url: snow_monkey.home_url,
+        };
+        activeMenu(atag, params);
       };
-      activeMenu(atag, params);
-    };
 
-    forEachHtmlNodes(links, applyActiveMenu);
+      forEachHtmlNodes(links, applyActiveMenu);
+    });
   }
 );
