@@ -8,6 +8,7 @@
     @extend %widget-title-theme;
   }
 
+  .wp-widget-group__inner-blocks,
   .wp-block-group__inner-container {
     > h2,
     > h3,
