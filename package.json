@@ -99,7 +99,7 @@
     "translation:name": "wp-env start && npm run cli 'php wp-content/themes/snow-monkey/bin/template.php'",
     "translation": "npm run cleanup:translation && run-p translation:*",
     "build": "npm run packages && run-p js css img translation && npm run generate-load-files-target",
-    "zip:pack": "npm run cleanup:zip-directory && rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/tests' --exclude='/snow-monkey.zip' --exclude='/trial' ./ snow-monkey",
+    "zip:pack": "npm run cleanup:zip-directory && rsync -a --exclude='.*' --exclude='*.log' --exclude='*.config.js' --exclude='error_log' --exclude='/cache' --exclude='/bin' --exclude='/node_modules' --exclude='/vendor' --exclude='/tests' --exclude='/snow-monkey.zip' --exclude='/trial' ./ snow-monkey",
     "zip:archive": "zip -9 -qmr snow-monkey.zip snow-monkey",
     "zip": "npm run cleanup:zip && npm run zip:pack && wp-env start && wp-env run composer 'install --no-dev -d snow-monkey' && npm run zip:archive",
     "trial-zip:pack": "npm run zip:pack && rimraf snow-monkey/app/constructor/updater.php",
