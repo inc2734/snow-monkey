@@ -1,8 +1,8 @@
 {
-	"engines": {
-		"node": ">=10.0.0",
-		"npm": ">=6.9.0 <7"
-	},
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.9.0 <7"
+  },
   "author": "inc2734",
   "license": "GPL-2.0+",
   "devDependencies": {
@@ -14,7 +14,7 @@
     "@inc2734/add-custom-event": "^0.5.0",
     "@inc2734/dispatch-custom-resize-event": "^0.4.0",
     "@inc2734/for-each-html-nodes": "^0.4.0",
-    "@inc2734/smooth-scroll": "^1.0.9",
+    "@inc2734/smooth-scroll": "^1.0.10",
     "@inc2734/spider": "0.0.31",
     "@wordpress/browserslist-config": "^4.1.2",
     "@wordpress/env": "^4.6.0",
