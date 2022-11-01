@@ -7,14 +7,13 @@ module.exports = {
     require('css-mqpacker')({
       sort: true,
     }),
-    require('postcss-mq-optimize'),
-		require( 'cssnano' )( {
-			preset: [
-				'default',
-				{
-					calc: false,
-				},
-			],
-		} ),
+    require( 'cssnano' )( {
+      preset: [
+        'default',
+        {
+          calc: false,
+        },
+      ],
+    } ),
   ]
 }

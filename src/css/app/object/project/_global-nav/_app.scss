@@ -1,4 +1,6 @@
 .#{ $_prefix }p-global-nav {
+  --global-nav-submenu-open-delay: .3s;
+
   &[aria-hidden="true"] {
     visibility: hidden;
   }
@@ -55,6 +57,8 @@
 
         @include _hover() {
           &::before {
+            --_transition-delay: var(--global-nav-submenu-open-delay);
+
             visibility: visible;
             opacity: 1;
           }
@@ -85,6 +89,10 @@
     &__submenu {
       background-color: var-color-accent();
       z-index: 1;
+
+      &[aria-hidden="false"] {
+        --_transition-delay: var(--global-nav-submenu-open-delay);
+      }
     }
 
     &__subitem {

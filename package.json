@@ -31,7 +31,6 @@
     "postcss": "^8.4.18",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",
-    "postcss-mq-optimize": "^1.1.3",
     "rimraf": "^3.0.2"
   },
   "scripts": {
