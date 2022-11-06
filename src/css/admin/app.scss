@@ -81,6 +81,12 @@
   align-items: center;
 }
 
+.has-metaboxes {
+  .editor-styles-wrapper {
+    margin-bottom: 2rem;
+  }
+}
+
 // サイドバーの横幅分 alignfull, alignwide から引く
 .edit-post-layout.is-mode-visual.is-sidebar-opened {
   @include _media-min(782px) {
