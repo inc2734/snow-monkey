@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.15.0
+ * @version 18.1.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -137,6 +137,19 @@ add_action(
 		add_theme_support(
 			'editor-color-palette',
 			Helper::get_color_palette()
+		);
+	}
+);
+
+/**
+ * Gradient presets
+ */
+add_action(
+	'after_setup_theme',
+	function() {
+		add_theme_support(
+			'editor-gradient-presets',
+			Helper::get_gradient_presets()
 		);
 	}
 );

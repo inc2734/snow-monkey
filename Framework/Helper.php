@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.6
+ * @version 18.1.0
  */
 
 namespace Framework;
@@ -393,6 +393,15 @@ class Helper {
 				],
 			]
 		);
+	}
+
+	/**
+	 * Return editor gradient presets settings.
+	 *
+	 * @return array
+	 */
+	public static function get_gradient_presets() {
+		return apply_filters( 'snow_monkey_editor_gradient_presets', [] );
 	}
 
 	/**
