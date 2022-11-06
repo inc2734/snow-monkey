@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.15.1
+ * @version 18.0.1
  */
 
 namespace Framework\Model;
@@ -142,14 +142,25 @@ class Filesystem {
 			return true;
 		}
 
-		$result = false;
-
-		if ( ! file_exists( $target ) && is_writable( dirname( $target ) ) ) {
-			$result = wp_mkdir_p( $target );
+		try {
+			if ( ! is_writable( dirname( $target ) ) ) {
+				throw new \RuntimeException( sprintf( '[Snow Monkey] %1$s is not writable.', dirname( $target ) ) );
+			}
+		} catch ( \Exception $e ) {
+			echo $e->getMessage();
+			return false;
 		}
 
-		if ( ! $result ) {
-			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to mkdir to %1$s.', $target ) );
+		$result = false;
+
+		try {
+			$result = wp_mkdir_p( $target );
+
+			if ( ! $result ) {
+				throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to mkdir to %1$s.', $target ) );
+			}
+		} catch ( \Exception $e ) {
+			echo $e->getMessage();
 		}
 
 		return $result;
