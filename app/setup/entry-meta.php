@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.0
+ * @version 18.2.0
  */
 
 use Framework\Helper;
@@ -87,9 +87,11 @@ function snow_monkey_entry_meta_items_categories() {
 	?>
 	<?php foreach ( $public_terms as $public_term ) : ?>
 		<li class="c-meta__item c-meta__item--categories">
-			<span class="screen-reader-text"><?php echo esc_html( $public_taxonomy->label ); ?></span>
-			<i class="fa-solid fa-folder" aria-hidden="true"></i>
-			<a href="<?php echo esc_url( get_term_link( $public_term ) ); ?>"><?php echo esc_html( $public_term->name ); ?></a>
+			<span class="c-meta__term c-meta__term--<?php echo esc_attr( $public_term->taxonomy . '-' . $public_term->term_id ); ?> c-meta__term--<?php echo esc_attr( $public_term->taxonomy . '-slug-' . urldecode( $public_term->slug ) ); ?>">
+				<span class="screen-reader-text"><?php echo esc_html( $public_taxonomy->label ); ?></span>
+				<i class="fa-solid fa-folder" aria-hidden="true"></i>
+				<a href="<?php echo esc_url( get_term_link( $public_term ) ); ?>"><?php echo esc_html( $public_term->name ); ?></a>
+			</span>
 		</li>
 	<?php endforeach; ?>
 	<?php
