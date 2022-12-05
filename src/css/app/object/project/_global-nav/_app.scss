@@ -167,18 +167,15 @@
     display: flex;
 
     .#{ $_prefix }c-navbar {
-      display: inline-flex;
-
       &__item {
-        display: block;
-
         > a {
-          display: block;
-          writing-mode: vertical-rl;
-          text-align: left;
+          flex-direction: row-reverse;
+          align-items: stretch;
 
-          > span {
-            display: block;
+          * {
+            writing-mode: vertical-rl;
+            min-width: 1.5em; // For Firefox
+            text-align: left;
           }
         }
       }
