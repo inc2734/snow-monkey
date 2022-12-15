@@ -1,35 +1,25 @@
 .#{ $_prefix }c-site-branding {
-  &__title {
-    @include _font-size-line-height(1);
-    font-weight: bold;
+	&__title {
+		@include _set-font-size-level(3);
+		font-weight: bold;
 
-    @include _media-min(md) {
-      @include _font-size-line-height(1.5);
-    }
+		a {
+			color: inherit;
+			text-decoration: none;
+			@include _transition(color);
+		}
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      @include _transition(color);
-    }
+		.custom-logo {
+			max-width: 100%;
+			width: 100%;
+			height: auto;
+		}
+	}
 
-    .custom-logo {
-      max-width: 100%;
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  &__description {
-    margin-top: 2px;
-    @include _font-size(13px);
-    line-height: 1;
-    @include _transition(color);
-  }
-}
-
-.l-center-header .#{ $_prefix }c-site-branding__title {
-  @include _media-min(lg) {
-    @include _font-size-line-height(2);
-  }
+	&__description {
+		margin-top: var(--_margin-2);
+		@include _set-font-size-level(-2);
+		line-height: 1;
+		@include _transition(color);
+	}
 }

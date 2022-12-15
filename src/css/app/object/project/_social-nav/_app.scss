@@ -1,174 +1,174 @@
 .#{ $_prefix }p-social-nav {
-  color: _var-light-color-text();
-  @include _padding(.5, 0);
+	padding-top: var(--_padding-1);
+	padding-bottom: var(--_padding-1);
 
-  .#{ $_prefix }c-navbar {
-    flex-wrap: wrap;
-    gap: 1rem;
+	.#{ $_prefix }c-navbar {
+		flex-wrap: wrap;
+		gap: 1rem;
 
-    &__item {
-      flex: 0 0 auto;
-      margin: .25em .5em;
-    }
-  }
+		&__item {
+			flex: 0 0 auto;
+			margin: .25em .5em;
+		}
+	}
 
-  a {
-    flex: none;
-    color: inherit;
-    display: block;
-    line-height: 1;
-    overflow: hidden;
-    text-decoration: none;
-  }
+	a {
+		flex: none;
+		color: inherit;
+		display: block;
+		line-height: 1;
+		overflow: hidden;
+		text-decoration: none;
+	}
 
-  svg {
-    display: inline-block;
-    height: 1em;
-    width: 0.875em;
-    vertical-align: -0.125em;
-  }
+	svg {
+		display: inline-block;
+		height: 1em;
+		width: 0.875em;
+		vertical-align: -0.125em;
+	}
 
-  .fa-amazon {
-    color: map-get($social-icon-colors, 'amazon');
-  }
+	.fa-amazon {
+		color: map-get($social-icon-colors, 'amazon');
+	}
 
-  .fa-bitbucket {
-    color: map-get($social-icon-colors, 'bitbucket');
-  }
+	.fa-bitbucket {
+		color: map-get($social-icon-colors, 'bitbucket');
+	}
 
-  .fa-paypal {
-    color: map-get($social-icon-colors, 'paypal');
-  }
+	.fa-paypal {
+		color: map-get($social-icon-colors, 'paypal');
+	}
 
-  .fa-stripe {
-    color: map-get($social-icon-colors, 'stripe');
-  }
+	.fa-stripe {
+		color: map-get($social-icon-colors, 'stripe');
+	}
 
-  .fa-codepen {
-    color: map-get($social-icon-colors, 'codepen');
-  }
+	.fa-codepen {
+		color: map-get($social-icon-colors, 'codepen');
+	}
 
-  .fa-dribbble {
-    color: map-get($social-icon-colors, 'dribbble');
-  }
+	.fa-dribbble {
+		color: map-get($social-icon-colors, 'dribbble');
+	}
 
-  .fa-dropbox {
-    color: map-get($social-icon-colors, 'dropbox');
-  }
+	.fa-dropbox {
+		color: map-get($social-icon-colors, 'dropbox');
+	}
 
-  .fa-facebook {
-    color: map-get($social-icon-colors, 'facebook');
-  }
+	.fa-facebook {
+		color: map-get($social-icon-colors, 'facebook');
+	}
 
-  .fa-flickr {
-    color: map-get($social-icon-colors, 'flickr');
-  }
+	.fa-flickr {
+		color: map-get($social-icon-colors, 'flickr');
+	}
 
-  .fa-github {
-    color: map-get($social-icon-colors, 'github');
-  }
+	.fa-github {
+		color: map-get($social-icon-colors, 'github');
+	}
 
-  .fa-gitlab {
-    color: map-get($social-icon-colors, 'gitlab');
-  }
+	.fa-gitlab {
+		color: map-get($social-icon-colors, 'gitlab');
+	}
 
-  .fa-google {
-    color: map-get($social-icon-colors, 'google');
-  }
+	.fa-google {
+		color: map-get($social-icon-colors, 'google');
+	}
 
-  .fa-instagram {
-    color: map-get($social-icon-colors, 'instagram');
-  }
+	.fa-instagram {
+		color: map-get($social-icon-colors, 'instagram');
+	}
 
-  .fa-linkedin {
-    color: map-get($social-icon-colors, 'linkedin');
-  }
+	.fa-linkedin {
+		color: map-get($social-icon-colors, 'linkedin');
+	}
 
-  .fa-medium {
-    color: map-get($social-icon-colors, 'medium');
-  }
+	.fa-medium {
+		color: map-get($social-icon-colors, 'medium');
+	}
 
-  .fa-pinterest {
-    color: map-get($social-icon-colors, 'pinterest');
-  }
+	.fa-pinterest {
+		color: map-get($social-icon-colors, 'pinterest');
+	}
 
-  .fa-reddit {
-    color: map-get($social-icon-colors, 'reddit');
-  }
+	.fa-reddit {
+		color: map-get($social-icon-colors, 'reddit');
+	}
 
-  .fa-skype {
-    color: map-get($social-icon-colors, 'skype');
-  }
+	.fa-skype {
+		color: map-get($social-icon-colors, 'skype');
+	}
 
-  .fa-slack {
-    color: map-get($social-icon-colors, 'slack');
-  }
+	.fa-slack {
+		color: map-get($social-icon-colors, 'slack');
+	}
 
-  .fa-slideshare {
-    color: map-get($social-icon-colors, 'slideshare');
-  }
+	.fa-slideshare {
+		color: map-get($social-icon-colors, 'slideshare');
+	}
 
-  .fa-snapchat {
-    color: map-get($social-icon-colors, 'snapchat');
-  }
+	.fa-snapchat {
+		color: map-get($social-icon-colors, 'snapchat');
+	}
 
-  .fa-stack-overflow {
-    color: map-get($social-icon-colors, 'stack-overflow');
-  }
+	.fa-stack-overflow {
+		color: map-get($social-icon-colors, 'stack-overflow');
+	}
 
-  .fa-tumblr {
-    color: map-get($social-icon-colors, 'tumblr');
-  }
+	.fa-tumblr {
+		color: map-get($social-icon-colors, 'tumblr');
+	}
 
-  .fa-vimeo {
-    color: map-get($social-icon-colors, 'vimeo');
-  }
+	.fa-vimeo {
+		color: map-get($social-icon-colors, 'vimeo');
+	}
 
-  .fa-twitter {
-    color: map-get($social-icon-colors, 'twitter');
-  }
+	.fa-twitter {
+		color: map-get($social-icon-colors, 'twitter');
+	}
 
-  .fa-wordpress {
-    color: map-get($social-icon-colors, 'wordpress');
-  }
+	.fa-wordpress {
+		color: map-get($social-icon-colors, 'wordpress');
+	}
 
-  .fa-youtube {
-    color: map-get($social-icon-colors, 'youtube');
-  }
+	.fa-youtube {
+		color: map-get($social-icon-colors, 'youtube');
+	}
 
-  .fa-spotify {
-    color: map-get($social-icon-colors, 'spotify');
-  }
+	.fa-spotify {
+		color: map-get($social-icon-colors, 'spotify');
+	}
 
-  .fa-foursquare {
-    color: map-get($social-icon-colors, 'foursquare');
-  }
+	.fa-foursquare {
+		color: map-get($social-icon-colors, 'foursquare');
+	}
 
-  .fa-line {
-    color: map-get($social-icon-colors, 'line');
-  }
+	.fa-line {
+		color: map-get($social-icon-colors, 'line');
+	}
 
-  .fa-app-store {
-    color: map-get($social-icon-colors, 'app-store');
-  }
+	.fa-app-store {
+		color: map-get($social-icon-colors, 'app-store');
+	}
 
-  .fa-google-play {
-    color: map-get($social-icon-colors, 'google-play');
-  }
+	.fa-google-play {
+		color: map-get($social-icon-colors, 'google-play');
+	}
 
-  .fa-twitch {
-    color: map-get($social-icon-colors, 'twitch');
-  }
+	.fa-twitch {
+		color: map-get($social-icon-colors, 'twitch');
+	}
 
-  .fa-discord {
-    color: map-get($social-icon-colors, 'discord');
-  }
+	.fa-discord {
+		color: map-get($social-icon-colors, 'discord');
+	}
 
-  .fa-apple {
-    color: map-get($social-icon-colors, 'apple');
-  }
+	.fa-apple {
+		color: map-get($social-icon-colors, 'apple');
+	}
 
-  .fa-tiktok {
-    color: map-get($social-icon-colors, 'tiktok');
-  }
+	.fa-tiktok {
+		color: map-get($social-icon-colors, 'tiktok');
+	}
 }

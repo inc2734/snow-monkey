@@ -1,76 +1,145 @@
 // @deprecated
+body {
+	--wp--preset--font-size--x-large: 42px;
+	--wp--preset--font-size--sm-xsmall: 14px;
+	--wp--preset--font-size--sm-small: 14px;
+	--wp--preset--font-size--sm-normal: 16px;
+	--wp--preset--font-size--sm-medium: 20px;
+	--wp--preset--font-size--sm-large: 28px;
+	--wp--preset--font-size--sm-xlarge: 44px;
+	--wp--preset--font-size--sm-xxlarge: 76px;
+	--wp--preset--font-size--sm-xxxlarge: 140px;
+
+	--line-height-sm-xsmall: calc(16 / 14 + var(--_half-leading) * 2);
+	--line-height-sm-small: calc(16 / 14 + var(--_half-leading) * 2);
+	--line-height-sm-normal: calc(16 / 16 + var(--_half-leading) * 2);
+	--line-height-sm-medium: calc(16 / 20 + var(--_half-leading) * 2);
+	--line-height-sm-large: calc(16 / 28 + var(--_half-leading) * 2);
+	--line-height-sm-xlarge: calc(16 / 44 + var(--_half-leading) * 2);
+	--line-height-sm-xxlarge: calc(16 / 76 + var(--_half-leading) * 2);
+	--line-height-sm-xxxlarge: calc(16 / 140 + var(--_half-leading) * 2);
+
+	@include _media-only(sm) {
+		--wp--preset--font-size--sm-xlarge: calc(36px - (16px - var(--_base-font-size-px)));
+		--wp--preset--font-size--sm-xxlarge: calc(44px - (16px - var(--_base-font-size-px)));
+		--wp--preset--font-size--sm-xxxlarge: calc(52px - (16px - var(--_base-font-size-px)));
+
+		// @todo I really want to reflect the diff from base-font-size.
+		--line-height-sm-xlarge: calc(16 / 44 + var(--_half-leading) * 2);
+		--line-height-sm-xxlarge: calc(.3 + .7 / (1 + 2.75 * 2.75 / 2.5 - 2.75 / 2.5) + var(--_half-leading) * 2);
+		--line-height-sm-xxxlarge: calc(.3 + .7 / (1 + 3.25 * 3.25 / 2.5 - 3.25 / 2.5) + var(--_half-leading) * 2)
+	}
+
+	@include _media-only(md) {
+		--wp--preset--font-size--sm-xxxlarge: calc(96px - (16px - var(--_base-font-size-px)));
+
+		// @todo I really want to reflect the diff from base-font-size.
+		--line-height-sm-xxlarge: calc(.3 + .7 / (1 + 6 * 6 / 2.5 - 6 / 2.5) + var(--_half-leading, 0.4) * 2);
+	}
+}
+
+// @deprecated
 .has-small-font-size {
-  @include _font-size-line-height(13px);
+	font-size: .8125rem;
+	line-height: calc(.3 + .7 / (1 + .8125 * .8125 / 2.5 - .8125 / 2.5) + var(--_half-leading) * 2);
 }
 
 // @deprecated
 .has-medium-font-size {
-  @include _font-size-line-height(20px);
+	font-size: 1.25rem;
+	line-height: calc(.3 + .7 / (1 + 1.25 * 1.25 / 2.5 - 1.25 / 2.5) + var(--_half-leading) * 2);
 }
 
 // @deprecated
 .has-large-font-size {
-  @include _font-size-line-height(36px);
+	font-size: 2.25rem;
+	line-height: calc(.3 + .7 / (1 + 2.25 * 2.25 / 2.5 - 2.25 / 2.5) + var(--_half-leading) * 2);
 }
 
 // @deprecated
 .has-huge-font-size {
-  @include _font-size-line-height(42px);
+	font-size: 2.625rem;
+	line-height: calc(.3 + .7 / (1 + 2.625 * 2.625 / 2.5 - 2.625 / 2.5) + var(--_half-leading) * 2);
 }
 
-$editor-font-sizes: (
-  'sm-small': 14px,
-  'sm-normal': 16px,
-  'sm-medium': 20px,
-  'sm-large': 28px,
-  'sm-xlarge': 36px,
-  'sm-xxlarge': 44px,
-  'sm-xxxlarge': 52px,
-);
-
-$editor-font-sizes-md: (
-  'sm-small': 14px,
-  'sm-normal': 16px,
-  'sm-medium': 20px,
-  'sm-large': 28px,
-  'sm-xlarge': 44px,
-  'sm-xxlarge': 76px,
-  'sm-xxxlarge': 96px,
-);
-
-$editor-font-sizes-lg: (
-  'sm-small': 14px,
-  'sm-normal': 16px,
-  'sm-medium': 20px,
-  'sm-large': 28px,
-  'sm-xlarge': 44px,
-  'sm-xxlarge': 76px,
-  'sm-xxxlarge': 140px,
-);
-
-body {
-  @include _media-only(sm) {
-    --wp--preset--font-size--sm-xlarge: calc(36px - (16px - var(--_base-font-size-px)));
-    --wp--preset--font-size--sm-xxlarge: calc(44px - (16px - var(--_base-font-size-px)));
-    --wp--preset--font-size--sm-xxxlarge: calc(52px - (16px - var(--_base-font-size-px)));
-
-    // @todo I really want to reflect the diff from base-font-size.
-    --line-height-sm-xlarge: #{ _line-height(36px) };
-    --line-height-sm-xxlarge: #{ _line-height(44px) };
-    --line-height-sm-xxlarge: #{ _line-height(52px) };
-  }
-
-  @include _media-only(md) {
-    --wp--preset--font-size--sm-xxxlarge: calc(96px - (16px - var(--_base-font-size-px)));
-
-    // @todo I really want to reflect the diff from base-font-size.
-    --line-height-sm-xxlarge: #{ _line-height(96px) };
-  }
+// @deprecated
+.has-sm-small-font-size {
+	font-size: var(--wp--preset--font-size--sm-small) !important;
+	line-height: var(--line-height-sm-small);
 }
 
-// @see src/css/dependency/snow-monkey-blocks/section
-@each $slug, $size in $editor-font-sizes {
-  .has-#{ $slug }-font-size {
-    line-height: var(--line-height-#{ $slug });
-  }
+// @deprecated
+.has-sm-normal-font-size {
+	font-size: var(--wp--preset--font-size--sm-normal) !important;
+	line-height: var(--line-height-sm-normal);
+}
+
+// @deprecated
+.has-sm-medium-font-size {
+	font-size: var(--wp--preset--font-size--sm-medium) !important;
+	line-height: var(--line-height-sm-medium);
+}
+
+// @deprecated
+.has-sm-large-font-size {
+	font-size: var(--wp--preset--font-size--sm-large) !important;
+	line-height: var(--line-height-sm-large);
+}
+
+// @deprecated
+.has-sm-xlarge-font-size {
+	font-size: var(--wp--preset--font-size--sm-xlarge) !important;
+	line-height: var(--line-height-sm-xlarge);
+}
+
+// @deprecated
+.has-sm-xxlarge-font-size {
+	font-size: var(--wp--preset--font-size--sm-xxlarge) !important;
+	line-height: var(--line-height-sm-xxlarge);
+}
+
+// @deprecated
+.has-sm-xxxlarge-font-size {
+	font-size: var(--wp--preset--font-size--sm-xxxlarge) !important;
+	line-height: var(--line-height-sm-xxxlarge);
+}
+
+.has-sm-xs-font-size {
+	@include _set-font-size-level(-2);
+}
+
+.has-sm-s-font-size {
+	@include _set-font-size-level(-1);
+}
+
+.has-sm-m-font-size {
+	@include _set-font-size-level(0);
+}
+
+.has-sm-l-font-size {
+	@include _set-font-size-level(1);
+}
+
+.has-sm-xl-font-size {
+	@include _set-font-size-level(2);
+}
+
+.has-sm-2-xl-font-size {
+	@include _set-font-size-level(3);
+}
+
+.has-sm-3-xl-font-size {
+	@include _set-font-size-level(4);
+}
+
+.has-sm-4-xl-font-size {
+	@include _set-font-size-level(5);
+}
+
+.has-sm-5-xl-font-size {
+	@include _set-font-size-level(6);
+}
+
+.has-sm-6-xl-font-size {
+	@include _set-font-size-level(7);
 }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -18,12 +18,12 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_display_entry_header'                  => $display_entry_header,
 		'_display_eyecatch'                      => $display_eyecatch,
 		'_display_posts_page_top_widget_area'    => ! is_paged(),
 		'_display_posts_page_bottom_widget_area' => ! is_paged(),
-	]
+	)
 );
 
 Helper::get_template_part(

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.2
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Adsense;
@@ -50,7 +50,7 @@ if ( ! function_exists( 'snow_monkey_insert_infeed_ads' ) ) {
 			return $html;
 		}
 
-		if ( ! in_array( $entries_layout, [ 'rich-media', 'panel' ], true ) ) {
+		if ( ! in_array( $entries_layout, array( 'rich-media', 'panel' ), true ) ) {
 			return $html;
 		}
 

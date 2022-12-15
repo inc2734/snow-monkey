@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 19.0.0-beta1
  */
 
 if ( ! has_nav_menu( 'follow-box' ) ) {
@@ -15,7 +15,7 @@ if ( ! has_nav_menu( 'follow-box' ) ) {
 	<div class="p-follow-box-nav__inner">
 		<?php
 		wp_nav_menu(
-			[
+			array(
 				'theme_location' => 'follow-box',
 				'container'      => false,
 				'items_wrap'     => '<ul id="%1$s" class="%2$s">%3$s</ul>',
@@ -24,7 +24,7 @@ if ( ! has_nav_menu( 'follow-box' ) ) {
 				'link_before'    => '<span class="screen-reader-text">',
 				'link_after'     => '</span>',
 				'walker'         => new \Inc2734\WP_Basis\App\Walker\Navbar(),
-			]
+			)
 		);
 		?>
 	</div>

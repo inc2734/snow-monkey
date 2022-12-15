@@ -1,6 +1,0 @@
-@mixin figcaption() {
-  @include _margin(6px, 0, 0);
-  color: _var-light-color-text();
-  @include _font-size-line-height($_base-font-size-px - 2);
-  text-align: left;
-}

@@ -1,7 +1,7 @@
 .wp-block-group {
-  @extend %entry-content-theme;
+	@extend %entry-content-theme;
 
-  &__inner-container {
-    @extend %entry-content-theme;
-  }
+	&__inner-container {
+		@extend %entry-content-theme;
+	}
 }

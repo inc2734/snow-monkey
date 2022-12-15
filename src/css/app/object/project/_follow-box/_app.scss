@@ -1,50 +1,50 @@
 .#{ $_prefix }p-follow-box {
-  position: relative;
+	position: relative;
 
-  &__figure {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+	&__figure {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 
-    img {
-      position: relative;
-      object-fit: cover;
-      object-position: 50% 50%;
-      height: 100%;
-      width: 100%;
-    }
+		img {
+			position: relative;
+			object-fit: cover;
+			object-position: 50% 50%;
+			height: 100%;
+			width: 100%;
+		}
 
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background-color: _var-color-black();
-      opacity: .6;
-    }
-  }
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-color: var(--wp--preset--color--black);
+			opacity: .6;
+		}
+	}
 
-  &__inner {
-    position: relative;
-    @include _padding(2, 1);
-    color: #fff;
-  }
+	&__inner {
+		position: relative;
+		padding: var(--_padding2) var(--_padding1);
+		color: #fff;
+	}
 
-  &__title {
-    @include _margin-bottom(.5);
-    display: flex;
-    justify-content: center;
-  }
+	&__title {
+		margin-bottom: var(--_margin-1);
+		display: flex;
+		justify-content: center;
+	}
 
-  &__lead {
-    text-align: center;
-  }
+	&__lead {
+		text-align: center;
+	}
 
-  &__nav {
-    @include _margin-top(1);
-  }
+	&__nav {
+		margin-top: var(--_margin1);
+	}
 }

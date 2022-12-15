@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.5
+ * @version 19.0.0-beta1
  *
  * renamed: templates/view/archive-search.php
  */
@@ -23,17 +23,17 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_entries_layout' => $entries_layout,
 		'_force_sm_1col'  => $force_sm_1col,
-	]
+	)
 );
 
 Helper::get_template_part(
 	'template-parts/archive/entry/search',
 	$args['_name'],
-	[
+	array(
 		'_entries_layout' => $args['_entries_layout'],
 		'_force_sm_1col'  => $args['_force_sm_1col'],
-	]
+	)
 );

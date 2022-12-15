@@ -1,19 +1,10 @@
 :root {
+  // @see src/css/admin/app
   --_background-color: #fff;
-  --wp-block-width: calc(#{ _var-container-max-width() });
-  --wp--style--block-gap: #{ _space(1, true, true) };
-
-  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2);
-  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
-  --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin-sm() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
-
-  @include _media-min(md) {
-    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2);
-    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2 + constant(safe-area-inset-right) + constant(safe-area-inset-left));
-    --wp-block-width: calc(#{ _var-container-max-width() } - #{ _var-container-margin() } * 2 + env(safe-area-inset-right) + env(safe-area-inset-left));
-  }
+  --wp--style--block-gap: calc(var(--_space) * var(--_margin-scale));
 }
 
+@import '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/foundation/base';
 @import '_body/app';
 @import '_element/app';
 @import '_packages/_slick/app';

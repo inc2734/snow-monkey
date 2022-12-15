@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 19.0.0-beta1
  */
 
 add_image_size( 'xlarge', 1920, 1920 );
@@ -31,9 +31,9 @@ add_filter(
 	function( $sizes ) {
 		return array_merge(
 			$sizes,
-			[
+			array(
 				'xlarge' => __( 'xLarge', 'snow-monkey' ),
-			]
+			)
 		);
 	}
 );

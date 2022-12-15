@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/1row-header.php
  */
@@ -14,10 +14,10 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title_tag'      => 'div',
 		'_gnav_alignment' => 'right',
-	]
+	)
 );
 
 $header_content         = get_theme_mod( 'header-content' );
@@ -30,19 +30,19 @@ $data_has_global_nav    = $has_global_nav ? 'true' : 'false';
 $container_class        = $header_alignfull ? 'c-fluid-container' : 'c-container';
 $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 
-$row_classes = [ 'c-row', 'c-row--margin-s', 'c-row--lg-margin', 'c-row--middle', 'c-row--nowrap' ];
+$row_classes = array( 'c-row', 'c-row--margin-s', 'c-row--lg-margin', 'c-row--middle', 'c-row--nowrap' );
 if ( 'center' === $args['_gnav_alignment'] ) {
 	$row_classes[] = 'c-row--between';
 }
 
-$site_branding_column_classes = [ 'c-row__col' ];
+$site_branding_column_classes = array( 'c-row__col' );
 if ( 'right' === $args['_gnav_alignment'] ) {
 	$site_branding_column_classes[] = 'c-row__col--auto';
 } elseif ( 'center' === $args['_gnav_alignment'] || 'left' === $args['_gnav_alignment'] ) {
 	$site_branding_column_classes[] = 'c-row__col--fit';
 }
 
-$header_content_column_classes = [ 'c-row__col', 'c-row__col--fit', 'u-invisible-md-down' ];
+$header_content_column_classes = array( 'c-row__col', 'c-row__col--fit', 'u-invisible-md-down' );
 if ( 'left' === $args['_gnav_alignment'] ) {
 	$header_content_column_classes[] = 'c-row__col--put-right';
 }
@@ -63,9 +63,9 @@ if ( 'left' === $args['_gnav_alignment'] ) {
 					Helper::get_template_part(
 						'template-parts/header/hamburger-btn',
 						null,
-						[
+						array(
 							'_id' => false,
-						]
+						)
 					);
 					?>
 				</div>
@@ -79,9 +79,9 @@ if ( 'left' === $args['_gnav_alignment'] ) {
 					Helper::get_template_part(
 						'template-parts/header/site-branding',
 						null,
-						[
+						array(
 							'_title_tag' => $args['_title_tag'],
-						]
+						)
 					);
 					?>
 				</div>
@@ -97,11 +97,11 @@ if ( 'left' === $args['_gnav_alignment'] ) {
 					Helper::get_template_part(
 						'template-parts/nav/global',
 						null,
-						[
+						array(
 							'_vertical'            => get_theme_mod( 'vertical-global-nav' ),
 							'_gnav-hover-effect'   => get_theme_mod( 'gnav-hover-effect' ),
 							'_gnav-current-effect' => get_theme_mod( 'gnav-current-effect' ),
-						]
+						)
 					);
 					// phpce:enable
 					?>
@@ -126,9 +126,9 @@ if ( 'left' === $args['_gnav_alignment'] ) {
 					Helper::get_template_part(
 						'template-parts/header/hamburger-btn',
 						null,
-						[
+						array(
 							'_id' => false,
-						]
+						)
 					);
 					?>
 				</div>

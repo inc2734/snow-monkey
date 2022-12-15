@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -23,7 +23,7 @@ add_action(
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-elementor',
 			get_theme_file_uri( '/assets/css/dependency/elementor/app.css' ),
-			[ Helper::get_main_style_handle() ],
+			array( Helper::get_main_style_handle() ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/elementor/app.css' ) )
 		);
 	}
@@ -35,7 +35,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_style_handle() . '-elementor-preview',
 			get_theme_file_uri( '/assets/js/dependency/elementor/preview.js' ),
-			[ 'jquery' ],
+			array( 'jquery' ),
 			filemtime( get_theme_file_path( '/assets/js/dependency/elementor/preview.js' ) )
 		);
 	}

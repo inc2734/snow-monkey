@@ -1,26 +1,23 @@
-@charset 'utf-8';
-
 @import '../../app/core/core';
 
 .wpcf7:not(:last-child) {
-  @include _margin-bottom(1.5);
+	margin-bottom: var(--_margin2);
 }
 
 .wpcf7-form {
-  @include _content();
+	@include _set-content-level(1);
 }
 
 .wpcf7-text,
 .wpcf7-textarea {
-  @include _form-control();
-  vertical-align: top;
+	@include _form-control();
+	vertical-align: top;
 }
 
 .wpcf7-submit {
-  @include btn();
-  background-color: var-color-accent();
+	@include btn();
 }
 
 span.wpcf7-not-valid-tip {
-  color: $_color-red;
+	color: var(--wp--preset--color--sm-accent);
 }

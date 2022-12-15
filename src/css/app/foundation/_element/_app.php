@@ -8,10 +8,10 @@
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Style;
 
-$styles = [];
+$styles = array();
 
-$styles[] = [
-	'selectors'  => [
+$styles[] = array(
+	'selectors'  => array(
 		'input[type="email"]',
 		'input[type="number"]',
 		'input[type="password"]',
@@ -20,11 +20,11 @@ $styles[] = [
 		'input[type="text"]',
 		'input[type="url"]',
 		'textarea',
-	],
-	'properties' => [
+	),
+	'properties' => array(
 		'font-size: ' . get_theme_mod( 'base-font-size' ) . 'px',
-	],
-];
+	),
+);
 
 if ( $styles ) {
 	Style::attach(

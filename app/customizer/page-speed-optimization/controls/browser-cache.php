@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.2.2
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,13 +13,13 @@ use Framework\Helper;
 Framework::control(
 	'checkbox',
 	'set-browser-cache',
-	[
+	array(
 		'label'       => __( 'Use browser cache', 'snow-monkey' ),
 		'description' => __( 'The server must support htaccess, IfModule and mod_expires. If you get the Internal Server Error (500), delete the characters added to .htaccess.', 'snow-monkey' ),
 		'type'        => 'option',
 		'priority'    => 140,
 		'default'     => false,
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

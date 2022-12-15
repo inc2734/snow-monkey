@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Helper\Page_Header;
@@ -17,19 +17,19 @@ abstract class Page_Header {
 	 *
 	 * @var array
 	 */
-	protected static $image_mods = [
+	protected static $image_mods = array(
 		'page-header',
 		'title-on-page-header',
-	];
+	);
 
 	/**
 	 * Mods to display page header image title.
 	 *
 	 * @var array
 	 */
-	protected static $title_mods = [
+	protected static $title_mods = array(
 		'title-on-page-header',
-	];
+	);
 
 	/**
 	 * Return page header image html.
@@ -97,7 +97,7 @@ abstract class Page_Header {
 		// @deprecated
 		$url = apply_filters_deprecated(
 			'snow_monkey_page_header_image_url',
-			[ $url ],
+			array( $url ),
 			'Snow Monkey 5.1.0',
 			'snow_monkey_pre_page_header_image_url'
 		);

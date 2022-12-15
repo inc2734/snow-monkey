@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.5
+ * @version 19.0.0-beta1
  */
 
 use Framework\Controller\Controller;
@@ -16,9 +16,9 @@ $_post_type = $_post_type ? $_post_type : 'any';
 query_posts(
 	array_merge(
 		$wp_query->query,
-		[
+		array(
 			'post_type' => $_post_type,
-		]
+		)
 	)
 );
 

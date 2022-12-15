@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,10 +12,10 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_display_title_top_widget_area' => false,
 		'_display_entry_meta'            => false,
-	]
+	)
 );
 ?>
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.2.3
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,12 +11,12 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'select',
 	'base-font',
-	[
+	array(
 		'label'       => __( 'Base font', 'snow-monkey' ),
 		'description' => __( 'For all other options except "Sans serif" and "Serif", downloading of the font file will occur when selecting the option. Please wait a while as the download will take some time. The font files will be downloaded to wp-content/uploads/inc2734-wp-google-fonts.', 'snow-monkey' ),
 		'priority'    => 120,
 		'default'     => 'sans-serif',
-		'choices'     => [
+		'choices'     => array(
 			'sans-serif'        => __( 'Sans serif', 'snow-monkey' ),
 			'serif'             => __( 'Serif', 'snow-monkey' ),
 			'noto-sans-jp'      => __( 'Noto Sans JP', 'snow-monkey' ),
@@ -25,8 +25,8 @@ Framework::control(
 			'm-plus-rounded-1c' => __( 'M PLUS Rounded 1c', 'snow-monkey' ),
 			'biz-udpgothic'     => __( 'BIZ UDPGothic', 'snow-monkey' ),
 			'biz-udpmincho'     => __( 'BIZ UDPMincho', 'snow-monkey' ),
-		],
-	]
+		),
+	)
 );
 
 if ( ! is_customize_preview() ) {

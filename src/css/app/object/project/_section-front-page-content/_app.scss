@@ -1,15 +1,15 @@
 .#{ $_prefix }p-section-front-page-content {
-  &--no-vpadding {
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-  }
+	&--no-vpadding {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
 }
 
 [data-has-sidebar="true"] {
-  .#{ $_prefix }p-section-front-page-content {
-    @include _media-min(lg) {
-      @include _padding-top(1);
-      @include _padding-bottom(1);
-    }
-  }
+	.#{ $_prefix }p-section-front-page-content {
+		@include _media-min(lg) {
+			padding-top: var(--_padding1);
+			padding-bottom: var(--_padding1);
+		}
+	}
 }

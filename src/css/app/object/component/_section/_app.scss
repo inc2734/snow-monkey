@@ -1,14 +1,14 @@
 .#{ $_prefix }c-section {
-  @extend %section;
+	@extend %section;
 
-  &__title {
-    @extend %widget-title;
-  }
+	&__title {
+		@extend %widget-title;
+	}
 }
 
 [data-has-sidebar="true"] [data-is-content-widget-area="true"] .#{ $_prefix }c-section {
-  @include _media-min(lg) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
+	@include _media-min(lg) {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 }

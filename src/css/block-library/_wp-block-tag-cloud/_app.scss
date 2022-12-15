@@ -1,0 +1,9 @@
+.wp-block-tag-cloud {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--_margin-2);
+
+	.tag-cloud-link {
+		margin: 0;
+	}
+}

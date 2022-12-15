@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.10.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -27,9 +27,9 @@ add_action(
 			function( $handles ) {
 				return array_merge(
 					$handles,
-					[
+					array(
 						'snow-monkey-bbpress-support',
-					]
+					)
 				);
 			}
 		);

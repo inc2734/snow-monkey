@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.1.3
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ use Framework\Helper;
 <html <?php language_attributes(); ?> data-sticky-footer="true">
 <?php Helper::get_template_part( 'template-parts/common/head' ); ?>
 
-<body <?php body_class( [ 'l-body--blank' ] ); ?> id="body"
+<body <?php body_class( array( 'l-body--blank' ) ); ?> id="body"
 	data-has-sidebar="false"
 	data-is-full-template="true"
 	data-is-slim-width="false"

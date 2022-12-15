@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.13.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/site-branding.php
  */
@@ -14,22 +14,22 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title_tag' => 'div',
 		'_container' => false,
-	]
+	)
 );
 
 if ( $args['_container'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_container-fluid' => false,
-		]
+		)
 	);
 }
 
-$classes = [ 'c-site-branding' ];
+$classes = array( 'c-site-branding' );
 if ( has_custom_logo() ) {
 	$classes[] = 'c-site-branding--has-logo';
 }

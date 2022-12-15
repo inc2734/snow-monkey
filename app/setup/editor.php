@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 18.1.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -31,7 +31,7 @@ add_filter(
 		$response  = file_get_contents( get_template_directory() . '/assets/css/classic-editor/app.css' );
 		$response .= file_get_contents( get_template_directory() . '/assets/css/classic-editor/app-theme.css' );
 		if ( $response ) {
-			$response = str_replace( [ "\n", "\r" ], '', $response );
+			$response = str_replace( array( "\n", "\r" ), '', $response );
 			$response = str_replace( '"', '\\"', $response );
 
 			$mce_init['content_style'] .= $response;
@@ -45,30 +45,64 @@ add_action(
 	'enqueue_block_editor_assets',
 	function() {
 		$dependencies = Helper::generate_style_dependencies(
-			[
+			array(
 				'wp-block-library',
 				'wp-share-buttons',
 				'wp-like-me-box',
 				'wp-oembed-blog-card',
 				'wp-pure-css-gallery',
 				'wp-awesome-widgets',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle(),
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-app',
 				Helper::get_main_style_handle() . '-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-app',
-			get_theme_file_uri( '/assets/css/block-editor/app.css' ),
+			get_theme_file_uri( '/assets/css/block-editor/blank.css' ),
 			$dependencies,
-			filemtime( get_theme_file_path( '/assets/css/block-editor/app.css' ) )
+			filemtime( get_theme_file_path( '/assets/css/block-editor/blank.css' ) )
+		);
+		$css = file_get_contents( get_theme_file_path( '/assets/css/block-editor/app.css' ) );
+		$css = str_replace(
+			array(
+				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) :root',
+			),
+			':root',
+			$css
+		);
+		$css = str_replace(
+			array(
+				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) *',
+			),
+			'*',
+			$css
+		);
+		$css = str_replace(
+			array(
+				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) html',
+			),
+			'html :where(.block-editor-writing-flow.editor-styles-wrapper, .edit-widgets-main-block-list)',
+			$css
+		);
+		$css = str_replace(
+			array(
+				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) body',
+				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) :where(body)',
+			),
+			'html :where(.wp-block-post-content, .wp-block-widget-area__inner-blocks)',
+			$css
+		);
+		wp_add_inline_style(
+			Helper::get_main_style_handle() . '-app',
+			$css
 		);
 
 		wp_register_style(
@@ -83,23 +117,23 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-block-library-app',
 				Helper::get_main_style_handle() . '-block-library-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library-app',
 			get_theme_file_uri( '/assets/css/block-library/editor.css' ),
-			[ 'wp-block-library' ],
+			array( 'wp-block-library' ),
 			filemtime( get_theme_file_path( '/assets/css/block-library/editor.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library-theme',
 			get_theme_file_uri( '/assets/css/block-library/editor-theme.css' ),
-			[ Helper::get_main_style_handle() . '-block-library-app' ],
+			array( Helper::get_main_style_handle() . '-block-library-app' ),
 			filemtime( get_theme_file_path( '/assets/css/block-library/editor-theme.css' ) )
 		);
 
@@ -124,46 +158,7 @@ add_action(
 	'enqueue_block_editor_assets',
 	function() {
 		wp_deregister_style( 'wp-block-library-theme' );
-		wp_register_style( 'wp-block-library-theme', null, [], 1 );
-	}
-);
-
-/**
- * Color palette
- */
-add_action(
-	'after_setup_theme',
-	function() {
-		add_theme_support(
-			'editor-color-palette',
-			Helper::get_color_palette()
-		);
-	}
-);
-
-/**
- * Gradient presets
- */
-add_action(
-	'after_setup_theme',
-	function() {
-		add_theme_support(
-			'editor-gradient-presets',
-			Helper::get_gradient_presets()
-		);
-	}
-);
-
-/**
- * Font sizes
- */
-add_action(
-	'after_setup_theme',
-	function() {
-		add_theme_support(
-			'editor-font-sizes',
-			Helper::get_font_sizes()
-		);
+		wp_register_style( 'wp-block-library-theme', null, array(), 1 );
 	}
 );
 

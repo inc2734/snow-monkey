@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.10.0
+ * @version 19.0.0-beta1
  */
 
 // phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
@@ -17,7 +17,7 @@ $instance = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$instance,
 	// phpcs:enable
-	[]
+	array()
 );
 
 if ( ! $instance ) {
@@ -40,20 +40,20 @@ if ( ! $instance ) {
 	<p>
 		<?php
 		$taxonomies = get_taxonomies(
-			[
+			array(
 				'public'  => true,
 				'show_ui' => true,
-			],
+			),
 			'names'
 		);
 
-		$all_terms = [];
+		$all_terms = array();
 		foreach ( $taxonomies as $_taxonomy ) {
 			$all_terms[ $_taxonomy ] = get_terms(
 				$_taxonomy,
-				[
+				array(
 					'parent' => 0,
-				]
+				)
 			);
 		}
 		?>
@@ -80,9 +80,9 @@ if ( ! $instance ) {
 						function snow_monkey_taxonomy_posts_display_children( $taxonomy_id, $term_id, $saved_term, $hierarchy = 0 ) {
 							$terms = get_terms(
 								$taxonomy_id,
-								[
+								array(
 									'parent' => $term_id,
-								]
+								)
 							);
 							?>
 							<?php foreach ( $terms as $term ) : ?>
@@ -122,7 +122,7 @@ if ( ! $instance ) {
 			class="widefat"
 		>
 			<?php
-			$layouts = [
+			$layouts = array(
 				'rich-media'  => __( 'Rich media', 'snow-monkey' ),
 				'simple'      => __( 'Simple', 'snow-monkey' ),
 				'text'        => __( 'Text', 'snow-monkey' ),
@@ -134,7 +134,7 @@ if ( ! $instance ) {
 					__( 'Rich media', 'snow-monkey' )
 				),
 				'large-image' => __( 'Large image', 'snow-monkey' ),
-			]
+			)
 			?>
 			<?php foreach ( $layouts as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['layout'], true ); ?>><?php echo esc_html( $label ); ?></option>

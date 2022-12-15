@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -25,16 +25,16 @@ if ( ! $taxonomies ) {
 }
 
 $terms = Helper::get_terms(
-	[
+	array(
 		'taxonomy'   => $taxonomies,
 		'hide_empty' => false,
-	]
+	)
 );
 
 foreach ( $terms as $_term ) {
 	Framework::section(
 		'design-' . $_term->taxonomy . '-' . $_term->term_id,
-		[
+		array(
 			'title'           => sprintf(
 				/* translators: 1: Taxonomy name */
 				__( '[ %1$s ] taxonomy pages settings', 'snow-monkey' ),
@@ -42,9 +42,9 @@ foreach ( $terms as $_term ) {
 			),
 			'priority'        => 131,
 			'active_callback' => function() use ( $_term ) {
-				return in_array( Controller::get_view(), [ 'archive', 'none' ], true )
+				return in_array( Controller::get_view(), array( 'archive', 'none' ), true )
 						&& is_tax( $_term->taxonomy, $_term->term_id );
 			},
-		]
+		)
 	);
 }

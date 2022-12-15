@@ -1,49 +1,172 @@
-@charset 'utf-8';
-
-/**
- * Core
- */
 @import '../app/core/core';
 
-.is-root-container,
-.wp-block-freeform {
-  @include body();
-  @extend %entry-content;
+:root {
+	--wp--style--block-gap: calc(var(--_space) * var(--_margin-scale));
+}
+
+/**
+ * _set-font-size-level() uses rem. Therefore, the font size must be specified in the html element.
+ */
+html {
+	font-size: var(--_base-font-size-px);
+}
+
+/**
+ * ## Post editor
+ * - .block-editor-writing-flow.editor-styles-wrapper
+ *  - .edit-post-visual-editor__post-title-wrapper
+ *  - .wp-block-post-content.is-root-container
+ *
+ * ## Block widget editor
+ * - .block-editor-writing-flow
+ *  - .edit-widgets-main-block-list.is-root-container
+ *    - .wp-block-widget-area__inner-blocks.editor-styles-wrapper
+ */
+
+/**
+ * Final selector adjustments are made in app/setup/editor.php.
+ * Here, the selector of the direct parent of the blocks is specified.
+ */
+html :where(.wp-block-post-content, .wp-block-widget-area__inner-blocks) {
+	/**
+	 * Foundation
+	 */
+	@import '../app/foundation/settings';
+	@import '../app/foundation/foundation';
+
+	/**
+	 * Layout
+	 */
+	// @import '../app/layout/layout';
+
+	/**
+	 * Object - Component
+	 */
+	@import '../app/object/component/component';
+
+	/**
+	 * Object - Project
+	 */
+	@import '../app/object/project/project';
+
+	/**
+	 * Object - utility
+	 */
+	@import '../app/object/utility/utility';
+}
+
+:where(.editor-styles-wrapper .is-root-container, .editor-styles-wrapper .wp-block-freeform) {
+	@include entry-content();
+}
+
+.wp-block-widget-area__inner-blocks .block-editor-block-list__layout [data-type="core/heading"],
+[data-type="core/widget-group"] > .widget-title {
+	// @todo Because ::after is used in the block editor.
+	// @include widget-title();
+
+	margin-top: var(--_margin1);
+	margin-bottom: var(--_margin-1);
+	@include _set-font-size-level(1);
+	font-weight: bold;
+}
+
+.wp-block[data-type="core/widget-area"] .wp-block-widget-area__inner-blocks > .block-editor-block-list__layout {
+	@include _set-content-level(1);
 }
 
 .mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
-  height: 100%;
+	height: 100%;
 }
 
-.edit-post-visual-editor__post-title-wrapper .editor-post-title {
-  margin: 2em auto 28px;
+.edit-post-visual-editor__post-title-wrapper .editor-post-title__input {
+	margin: 2em auto 28px;
+	@include _set-font-size-level(3);
+	font-family: var(--_base-font-family);
+	font-weight: bold;
+}
+
+.components-checkbox-control .components-base-control__field {
+	display: flex;
+	align-items: center;
+}
+
+.has-metaboxes {
+	.editor-styles-wrapper {
+		margin-bottom: 2rem;
+	}
+}
+
+// サイドバーの横幅分 alignfull, alignwide から引く
+.edit-post-layout.is-mode-visual.is-sidebar-opened {
+	@include _media-min(782px) {
+		--body-margin-left: 280px;
+	}
 }
 
 .wp-block-image {
-  > div {
-    > div {
-      max-width: none !important;
-      max-height: none !important;
-    }
-  }
+	> div {
+		> div {
+			max-width: none !important;
+			max-height: none !important;
+		}
+	}
 }
 
 [data-type="core/html"] {
-  textarea {
-    @include _pre();
-  }
-}
-
-[data-type="core/quote"] {
-  > .block-editor-rich-text__editable {
-    @include _content();
-  }
+	textarea {
+		@include _pre();
+	}
 }
 
 .wp-block-embed {
-  .components-sandbox {
-    margin-bottom: -8px; // @todo
-  }
+	.components-sandbox {
+		margin-bottom: -8px; // @todo
+	}
+}
+
+// @see src/css/layout/body/_body.scss
+.l-body--one-column-full,
+.l-body--blank,
+.l-body--blank-content {
+	.editor-styles-wrapper {
+		--wp--custom--content-width: none;
+	}
+}
+
+// @see src/css/layout/body/_body.scss
+.l-body--one-column-slim,
+.l-body--blank-slim {
+	.editor-styles-wrapper {
+		--wp--custom--content-max-width: var(--wp--custom--slim-width);
+	}
+}
+
+// @see src/css/layout/body/_body.scss
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+	.editor-styles-wrapper {
+		--wp--custom--content-max-width: calc(var(--_container-max-width) - 336px);
+		--wp--style--global--wide-size: var(--wp--custom--content-width);
+	}
+}
+
+// @see src/css/object/component/_entries.scss
+.l-body--one-column-slim,
+.l-body--blank-slim,
+.l-body--right-sidebar,
+.l-body--left-sidebar {
+	.editor-styles-wrapper {
+		.#{ $_prefix }c-entries {
+			&--rich-media,
+			&--panel {
+				.#{ $_prefix }c-entries__item {
+					@include _media-min(lg) {
+						@include _lattice__col--width(1 / 2 * 100%);
+					}
+				}
+			}
+		}
+	}
 }
 
 .u-hidden,
@@ -54,21 +177,21 @@
 .u-hidden-lg-up,
 .u-hidden-xl,
 .u-hidden-xl-up {
-  @include _visible();
-  outline: 1px dashed rgba(#127db8, .8);
+	@include _visible();
+	outline: 1px dashed rgba(#127db8, .8);
 
-  &::after {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    display: inline-block;
-    color: _var-color-white();
-    background-color: #127db8;
-    font-size: 12px;
-    line-height: 1;
-    padding: 4px 4px;
-    opacity: .8;
-  }
+	&::after {
+		position: absolute;
+		top: -1px;
+		left: -1px;
+		display: inline-block;
+		color: var(--wp--preset--color--white);
+		background-color: #127db8;
+		font-size: 12px;
+		line-height: 1;
+		padding: 4px 4px;
+		opacity: .8;
+	}
 }
 
 .u-hidden::after { content: '.u-hidden'; }
@@ -79,69 +202,3 @@
 .u-hidden-lg-up::after { content: '.u-hidden-lg-up'; }
 .u-hidden-xl::after { content: '.u-hidden-xl'; }
 .u-hidden-xl-up::after { content: '.u-hidden-xl-up'; }
-
-html :where(.editor-styles-wrapper, .customize-control-sidebar_block_editor) {
-  @include body();
-  color: _var-color-text();
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  @include _font-size-line-height($_base-font-size-px);
-  padding-right: 0;
-  padding-left: 0;
-
-  ol,
-  ul {
-    box-sizing: border-box;
-  }
-
-  /**
-   * Foundation
-   */
-  @import '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/basis';
-  @import '../app/foundation/foundation';
-
-  /**
-   * Layout
-   */
-  @import '../app/layout/layout';
-
-  /**
-   * Object - Component
-   */
-  @import '../app/object/component/component';
-
-  /**
-   * Object - Project
-   */
-  @import '../app/object/project/project';
-
-  /**
-   * Object - utility
-   */
-  @import '../app/object/utility/utility';
-}
-
-.wp-block-widget-area__inner-blocks .block-editor-block-list__layout [data-type="core/heading"],
-.customize-control-sidebar_block_editor .block-editor-block-list__layout [data-type="core/heading"],
-[data-type="core/widget-group"] > .widget-title {
-  // @todo Because ::after is used in the block editor.
-  // @include widget-title();
-
-  @include _margin(1, 0, .5);
-  @include _font-size-line-height(1);
-  font-weight: bold;
-}
-
-.wp-block[data-type="core/widget-area"] .wp-block-widget-area__inner-blocks > .block-editor-block-list__layout {
-  @include _content(1);
-}
-
-.customize-control-sidebar_block_editor {
-  --wp-block-width: 100% !important;
-
-  .wp-block {
-    @include _media-min(601px) {
-      width: auto;
-    }
-  }
-}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/layout/sections/header/controls/header-content.php
  */
@@ -14,11 +14,11 @@ use Framework\Helper;
 Framework::control(
 	'textarea',
 	'header-content',
-	[
+	array(
 		'label'       => __( 'Header contents', 'snow-monkey' ),
 		'description' => __( 'Displayed at only PC size.', 'snow-monkey' ),
 		'priority'    => 130,
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

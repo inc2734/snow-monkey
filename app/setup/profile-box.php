@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Profile_Box\Bootstrap;
@@ -36,7 +36,7 @@ add_filter(
 				case 'linkedin':
 					$label = '<i class="fa-brands fa-linkedin"></i>' . $label;
 					break;
-				case 'wordpress':
+				case 'WordPress':
 					$label = '<i class="fa-brands fa-wordpress"></i>' . $label;
 					break;
 				case 'tumblr':

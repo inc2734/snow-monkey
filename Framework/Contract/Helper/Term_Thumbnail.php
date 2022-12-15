@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.5
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Helper;
@@ -132,9 +132,9 @@ trait Term_Thumbnail {
 	public static function the_term_thumbnail( $term = null ) {
 		echo wp_kses(
 			static::get_the_term_thumbnail( $term ),
-			[
+			array(
 				'img' => static::img_allowed_attributes(),
-			]
+			)
 		);
 	}
 

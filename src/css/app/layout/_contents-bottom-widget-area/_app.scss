@@ -1,4 +1,4 @@
 .#{ $_prefix }l-contents-bottom-widget-area {
-  @include _margin-top(1.5);
-  @include items-gutter();
+	margin-top: var(--_margin2);
+	@include _set-content-level(1);
 }

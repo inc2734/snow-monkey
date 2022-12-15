@@ -1,65 +1,64 @@
 .#{ $_prefix }c-sub-nav {
-  @include _font-size-line-height($_base-font-size-px - 4);
-  @include _padding(.25, 0);
+	@include _set-font-size-level(-2);
+	padding: var(--_padding-2) 0;
 
-  .#{ $_prefix }c-navbar {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 0 _space(.5, true, true);
+	.#{ $_prefix }c-navbar {
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		gap: 0 var(--_margin-2);
 
-    &__item {
-      flex: 0 0 auto;
-      color: _var-light-color-text();
-      @include _margin(0, .25);
+		&__item {
+			flex: 0 0 auto;
+			margin: 0 var(--_margin-2);
 
-      @supports (gap: 1px) {
-        margin: 0;
-      }
+			@supports (gap: 1px) {
+				margin: 0;
+			}
 
-      > a {
-        color: inherit;
-        text-decoration: none;
+			> a {
+				color: inherit;
+				text-decoration: none;
 
-        @include _hover() {
-          text-decoration: underline;
-        }
-      }
+				@include _hover() {
+					text-decoration: underline;
+				}
+			}
 
-      &.sm-nav-menu-item-highlight {
-        color: var-color-accent();
-      }
-    }
-  }
+			&.sm-nav-menu-item-highlight {
+				color: var(--wp--preset--color--sm-accent);
+			}
+		}
+	}
 }
 
 .#{ $_prefix }c-sub-nav--left {
-  @include _media-min(lg) {
-    .#{ $_prefix }c-navbar {
-      justify-content: flex-start;
+	@include _media-min(lg) {
+		.#{ $_prefix }c-navbar {
+			justify-content: flex-start;
 
-      &__item:first-child {
-        margin-left: 0;
-      }
-    }
-  }
+			&__item:first-child {
+				margin-left: 0;
+			}
+		}
+	}
 }
 
 .#{ $_prefix }c-sub-nav--center {
-  @include _media-min(lg) {
-    .#{ $_prefix }c-navbar {
-      justify-content: center;
-    }
-  }
+	@include _media-min(lg) {
+		.#{ $_prefix }c-navbar {
+			justify-content: center;
+		}
+	}
 }
 
 .#{ $_prefix }c-sub-nav--right {
-  @include _media-min(lg) {
-    .#{ $_prefix }c-navbar {
-      justify-content: flex-end;
+	@include _media-min(lg) {
+		.#{ $_prefix }c-navbar {
+			justify-content: flex-end;
 
-      &__item:last-child {
-        margin-right: 0;
-      }
-    }
-  }
+			&__item:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }

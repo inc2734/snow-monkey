@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -42,13 +42,13 @@ $copyright = $theme_by . ' ' . $powered_by;
 Framework::control(
 	'text',
 	'mwt-copyright',
-	[
+	array(
 		'transport'   => 'postMessage',
 		'label'       => __( 'Copyright', 'snow-monkey' ),
 		'description' => __( 'HTML usable', 'snow-monkey' ),
 		'default'     => $copyright,
 		'type'        => 'option',
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {
@@ -59,12 +59,12 @@ $section = Framework::get_section( 'title_tagline' );
 $control = Framework::get_control( 'mwt-copyright' );
 $control->join( $section );
 $control->partial(
-	[
+	array(
 		'selector'        => '.c-copyright',
 		'render_callback' => function() {
 			if ( Helper::get_copyright() ) {
 				Helper::get_template_part( 'template-parts/footer/copyright' );
 			}
 		},
-	]
+	)
 );

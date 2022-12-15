@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.6.4
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Model;
@@ -50,7 +50,7 @@ class Setup_Loader {
 				Helper::load_theme_files( $directory_or_files, $exclude_underscore );
 				break;
 			case 'concat':
-				$included = Cache::load( 'concat', $directory_slug, null, [], 'php' );
+				$included = Cache::load( 'concat', $directory_slug, null, array(), 'php' );
 				if ( $included ) {
 					break;
 				}
@@ -66,7 +66,7 @@ class Setup_Loader {
 
 				$result = $this->_concat( $theme_files, $directory_slug );
 				if ( $result ) {
-					Cache::load( 'concat', $directory_slug, null, [], 'php' );
+					Cache::load( 'concat', $directory_slug, null, array(), 'php' );
 				}
 				break;
 			default:
@@ -139,7 +139,7 @@ class Setup_Loader {
 			$_data = preg_replace( '|^<\?php|', '', $_data );
 
 			preg_match_all( '|^use [^;]+;|m', $_data, $matches );
-			$uses = [];
+			$uses = array();
 			if ( $matches[0] ) {
 				foreach ( $matches[0] as $match ) {
 					$uses[] = $match;
@@ -161,7 +161,7 @@ class Setup_Loader {
 		}
 
 		$data = $data ? "<?php\n" . $data : $data;
-		return Cache::save( 'concat', $data, $directory_slug, null, [], 'php' );
+		return Cache::save( 'concat', $data, $directory_slug, null, array(), 'php' );
 	}
 
 	/**

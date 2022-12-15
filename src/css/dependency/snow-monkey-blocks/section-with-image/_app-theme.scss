@@ -1,43 +1,43 @@
 .smb-section-with-image {
-  .smb-section__title {
-    &::after {
-      margin-left: 0;
-    }
-  }
+	.smb-section__title {
+		&::after {
+			margin-left: 0;
+		}
+	}
 
-  // @deprecated
-  &--left:not([class*="smb-section--"]) {
-    > .#{ $_prefix }c-container {
-      > .smb-section__title {
-        &::after {
-          margin-right: auto;
-          margin-left: 0;
-        }
-      }
-    }
-  }
+	// @deprecated
+	&--left:not([class*="smb-section--"]) {
+		> .#{ $_prefix }c-container {
+			> .smb-section__title {
+				&::after {
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
+		}
+	}
 
-  // @deprecated
-  &--center:not([class*="smb-section--"]) {
-    > .#{ $_prefix }c-container {
-      > .smb-section__title {
-        &::after {
-          margin-right: auto;
-          margin-left: auto;
-        }
-      }
-    }
-  }
+	// @deprecated
+	&--center:not([class*="smb-section--"]) {
+		> .#{ $_prefix }c-container {
+			> .smb-section__title {
+				&::after {
+					margin-right: auto;
+					margin-left: auto;
+				}
+			}
+		}
+	}
 
-  // @deprecated
-  &--right:not([class*="smb-section--"]) {
-    > .#{ $_prefix }c-container {
-      > .smb-section__title {
-        &::after {
-          margin-right: 0;
-          margin-left: auto;
-        }
-      }
-    }
-  }
+	// @deprecated
+	&--right:not([class*="smb-section--"]) {
+		> .#{ $_prefix }c-container {
+			> .smb-section__title {
+				&::after {
+					margin-right: 0;
+					margin-left: auto;
+				}
+			}
+		}
+	}
 }

@@ -1,7 +1,7 @@
 .wp-block-quote {
-  @extend %blockquote;
+	@extend %blockquote;
 
-  &__citation {
-    @extend %blockquote__cite;
-  }
+	&__citation {
+		@extend %blockquote__cite;
+	}
 }

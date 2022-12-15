@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/layout/sections/header/section.php
  */
@@ -16,8 +16,8 @@ if ( ! is_customize_preview() ) {
 
 Framework::section(
 	'header',
-	[
+	array(
 		'title'    => __( 'Header', 'snow-monkey' ),
 		'priority' => 110,
-	]
+	)
 );

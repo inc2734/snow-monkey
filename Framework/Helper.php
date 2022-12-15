@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 18.1.0
+ * @version 19.0.0-beta1
  */
 
 namespace Framework;
@@ -81,12 +81,12 @@ class Helper {
 	 * @return array
 	 */
 	public static function eyecatch_position_choices() {
-		return [
+		return array(
 			'page-header'          => __( 'Page header', 'snow-monkey' ),
 			'title-on-page-header' => __( 'Title on page header', 'snow-monkey' ),
 			'content-top'          => __( 'Top of contents', 'snow-monkey' ),
 			'none'                 => __( 'None', 'snow-monkey' ),
-		];
+		);
 	}
 
 	/**
@@ -95,11 +95,11 @@ class Helper {
 	 * @return array
 	 */
 	public static function page_header_align_choices() {
-		return [
+		return array(
 			'left'   => __( 'Left', 'snow-monkey' ),
 			'center' => __( 'Center', 'snow-monkey' ),
 			'right'  => __( 'Right', 'snow-monkey' ),
-		];
+		);
 	}
 
 	/**
@@ -108,13 +108,13 @@ class Helper {
 	 * @return array
 	 */
 	public static function header_position_choices() {
-		return [
+		return array(
 			'sticky'                 => __( 'Sticky', 'snow-monkey' ),
 			'sticky-overlay'         => __( 'Overlay (Sticky)', 'snow-monkey' ),
 			'sticky-overlay-colored' => __( 'Overlay (Sticky / When scrolling, whilte background)', 'snow-monkey' ),
 			'overlay'                => __( 'Overlay', 'snow-monkey' ),
 			''                       => __( 'Normal', 'snow-monkey' ),
-		];
+		);
 	}
 
 	/**
@@ -177,7 +177,7 @@ class Helper {
 	 *   @var string $link
 	 */
 	public static function get_breadcrumbs_items() {
-		static $breadcrumbs_items = [];
+		static $breadcrumbs_items = array();
 		if ( $breadcrumbs_items ) {
 			return $breadcrumbs_items;
 		}
@@ -235,7 +235,7 @@ class Helper {
 	public static function get_the_public_taxonomy( $post = 0 ) {
 		$post = get_post( $post );
 		if ( ! $post ) {
-			return [];
+			return array();
 		}
 
 		$cache_key         = $post->ID;
@@ -246,7 +246,7 @@ class Helper {
 		}
 
 		$taxonomies        = get_object_taxonomies( get_post_type( $post ), 'object' );
-		$public_taxonomies = [];
+		$public_taxonomies = array();
 
 		foreach ( $taxonomies as $taxonomy ) {
 			if ( ! $taxonomy->public ) {
@@ -269,7 +269,7 @@ class Helper {
 	public static function get_the_public_terms( $post = 0 ) {
 		$post = get_post( $post );
 		if ( ! $post ) {
-			return [];
+			return array();
 		}
 
 		$cache_key    = $post->ID;
@@ -280,7 +280,7 @@ class Helper {
 		}
 
 		$public_taxonomies = static::get_the_public_taxonomy( $post );
-		$public_terms      = [];
+		$public_terms      = array();
 
 		foreach ( $public_taxonomies as $public_taxonomy ) {
 			$_terms = get_the_terms( $post, $public_taxonomy->name );
@@ -302,12 +302,12 @@ class Helper {
 	public static function get_terms( $args = array() ) {
 		if ( ! is_array( $args ) ) {
 			$taxonomy         = $args;
-			$args             = [];
-			$args['taxonomy'] = [ $taxonomy ];
+			$args             = array();
+			$args['taxonomy'] = array( $taxonomy );
 		}
 
 		if ( ! isset( $args['taxonomy'] ) ) {
-			return [];
+			return array();
 		}
 
 		$taxonomies = $args['taxonomy'];
@@ -324,7 +324,7 @@ class Helper {
 			return $terms;
 		}
 
-		return [];
+		return array();
 	}
 
 	/**
@@ -344,116 +344,7 @@ class Helper {
 			return $users;
 		}
 
-		return [];
-	}
-
-	/**
-	 * Return editor color palette settings.
-	 *
-	 * @return array
-	 */
-	public static function get_color_palette() {
-		return apply_filters(
-			'snow_monkey_editor_color_palette',
-			[
-				[
-					'name'  => __( 'Text color', 'snow-monkey' ),
-					'slug'  => 'text-color',
-					'color' => '#333',
-				],
-				[
-					'name'  => __( 'Dark gray', 'snow-monkey' ),
-					'slug'  => 'dark-gray',
-					'color' => '#999',
-				],
-				[
-					'name'  => __( 'Gray', 'snow-monkey' ),
-					'slug'  => 'gray',
-					'color' => '#ccc',
-				],
-				[
-					'name'  => __( 'Light gray', 'snow-monkey' ),
-					'slug'  => 'very-light-gray',
-					'color' => '#eee',
-				],
-				[
-					'name'  => __( 'Lightest gray', 'snow-monkey' ),
-					'slug'  => 'lightest-grey',
-					'color' => '#f7f7f7',
-				],
-				[
-					'name'  => __( 'Accent color', 'snow-monkey' ),
-					'slug'  => 'accent-color',
-					'color' => get_theme_mod( 'accent-color', '#cd162c' ), // On after_setup_theme, default value not set yet.
-				],
-				[
-					'name'  => __( 'Sub accent color', 'snow-monkey' ),
-					'slug'  => 'sub-accent-color',
-					'color' => get_theme_mod( 'sub-accent-color', '#707593' ), // On after_setup_theme, default value not set yet.
-				],
-			]
-		);
-	}
-
-	/**
-	 * Return editor gradient presets settings.
-	 *
-	 * @return array
-	 */
-	public static function get_gradient_presets() {
-		return apply_filters( 'snow_monkey_editor_gradient_presets', [] );
-	}
-
-	/**
-	 * Return editor font size settings.
-	 *
-	 * @return array
-	 */
-	public static function get_font_sizes() {
-		$base_font_size_fallback = 16;
-		$base_font_size          = get_theme_mod( 'base-font-size' );
-		$base_font_size          = $base_font_size ? $base_font_size : $base_font_size_fallback;
-
-		return apply_filters(
-			'snow_monkey_editor_font_sizes',
-			[
-				[
-					'name' => _x( 'Small', 'editor-font-sizes', 'snow-monkey' ),
-					'slug' => 'sm-small',
-					'size' => $base_font_size - 2 . 'px',
-				],
-				[
-					'name' => _x( 'Normal', 'editor-font-sizes', 'snow-monkey' ),
-					'slug' => 'sm-normal',
-					'size' => $base_font_size . 'px',
-				],
-				[
-					'name' => _x( 'Medium', 'editor-font-sizes', 'snow-monkey' ),
-					'slug' => 'sm-medium',
-					'size' => $base_font_size + 4 . 'px',
-				],
-				[
-					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ),
-					'slug' => 'sm-large',
-					'size' => $base_font_size + 12 . 'px',
-				],
-				[
-					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' +',
-					'slug' => 'sm-xlarge',
-					'size' => $base_font_size + 28 . 'px',
-				],
-				[
-					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' ++',
-					'slug' => 'sm-xxlarge',
-					'size' => $base_font_size + 60 . 'px',
-				],
-				[
-					'name' => _x( 'Large', 'editor-font-sizes', 'snow-monkey' ) . ' +++',
-					'slug' => 'sm-xxxlarge',
-					'size' => $base_font_size + 124 . 'px',
-				],
-			]
-		);
+		return array();
 	}
 
 	/**
@@ -478,7 +369,7 @@ class Helper {
 			}
 		}
 
-		$classes = [ 'l-header', 'l-header--' . $header_layout ];
+		$classes = array( 'l-header', 'l-header--' . $header_layout );
 
 		if ( $header_position ) {
 			$classes[] = 'l-header--' . $header_position . '-sm';
@@ -500,8 +391,8 @@ class Helper {
 		$return = false;
 
 		if ( has_nav_menu( 'global-nav' ) ) {
-			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), [ '', 'overlay' ], true );
-			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), [ '', 'overlay' ], true );
+			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), array( '', 'overlay' ), true );
+			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), array( '', 'overlay' ), true );
 
 			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
 				$return = true;
@@ -554,7 +445,7 @@ class Helper {
 			// phpcs:enable
 		}
 
-		if ( in_array( $entries_layout, [ 'rich-media', 'carousel' ], true ) ) {
+		if ( in_array( $entries_layout, array( 'rich-media', 'carousel' ), true ) ) {
 			$num_words            = 25;
 			$excerpt_length_ratio = 55 / $number;
 			return $num_words / $excerpt_length_ratio;
@@ -570,24 +461,24 @@ class Helper {
 	 */
 	public static function get_font_family() {
 		$base_font   = get_theme_mod( 'base-font' );
-		$font_family = [];
+		$font_family = array();
 
 		if ( 'sans-serif' === $base_font ) {
-			$font_family = [ 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"ヒラギノ角ゴ W3"', 'sans-serif' ];
+			$font_family = array( 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"ヒラギノ角ゴ W3"', 'sans-serif' );
 		} elseif ( 'serif' === $base_font ) {
-			$font_family = [ 'serif' ];
+			$font_family = array( 'serif' );
 		} elseif ( 'noto-sans-jp' === $base_font ) {
-			$font_family = [ '"Noto Sans JP"', 'sans-serif' ];
+			$font_family = array( '"Noto Sans JP"', 'sans-serif' );
 		} elseif ( 'noto-serif-jp' === $base_font ) {
-			$font_family = [ '"Noto Serif JP"', 'serif' ];
+			$font_family = array( '"Noto Serif JP"', 'serif' );
 		} elseif ( 'm-plus-1p' === $base_font ) {
-			$font_family = [ '"M PLUS 1p"', 'sans-serif' ];
+			$font_family = array( '"M PLUS 1p"', 'sans-serif' );
 		} elseif ( 'm-plus-rounded-1c' === $base_font ) {
-			$font_family = [ '"M PLUS Rounded 1c"', 'sans-serif' ];
+			$font_family = array( '"M PLUS Rounded 1c"', 'sans-serif' );
 		} elseif ( 'biz-udpgothic' === $base_font ) {
-			$font_family = [ '"BIZ UDPGothic"', 'sans-serif' ];
+			$font_family = array( '"BIZ UDPGothic"', 'sans-serif' );
 		} elseif ( 'biz-udpmincho' === $base_font ) {
-			$font_family = [ '"BIZ UDPMincho"', 'sans-serif' ];
+			$font_family = array( '"BIZ UDPMincho"', 'sans-serif' );
 		}
 
 		return implode( ',', $font_family );

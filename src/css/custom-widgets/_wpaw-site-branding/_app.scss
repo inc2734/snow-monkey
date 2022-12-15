@@ -1,22 +1,22 @@
 .wpaw-site-branding {
-  &__logo {
-    text-align: center;
+	&__logo {
+		text-align: center;
 
-    a {
-      color: inherit;
-      text-decoration: none;
-      font-weight: bold;
-    }
+		a {
+			color: inherit;
+			text-decoration: none;
+			font-weight: bold;
+		}
 
-    .custom-logo {
-      height: auto;
-      max-width: 100%;
-      width: 100%;
-    }
-  }
+		.custom-logo {
+			height: auto;
+			max-width: 100%;
+			width: 100%;
+		}
+	}
 
-  &__description {
-    @include _margin(.75, 0, 0);
-    @include _between-content(.5);
-  }
+	&__description {
+		margin-top: var(--_margin-1);
+		@include _set-between-content-level(-1);
+	}
 }

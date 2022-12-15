@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.5.1
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Model;
@@ -37,16 +37,16 @@ class Template_Cache {
 			return;
 		}
 
-		add_action( 'customize_save_after', [ $this, 'remove' ] );
-		add_action( 'wp_update_nav_menu', [ $this, 'remove' ] );
-		add_filter( 'widget_update_callback', [ $this, '_widget_update_callback' ] );
+		add_action( 'customize_save_after', array( $this, 'remove' ) );
+		add_action( 'wp_update_nav_menu', array( $this, 'remove' ) );
+		add_filter( 'widget_update_callback', array( $this, '_widget_update_callback' ) );
 
-		add_action( 'save_post', [ $this, '_save_post' ] );
+		add_action( 'save_post', array( $this, '_save_post' ) );
 
-		add_action( 'comment_post', [ $this, 'remove' ] );
-		add_action( 'wp_set_comment_status', [ $this, 'remove' ] );
+		add_action( 'comment_post', array( $this, 'remove' ) );
+		add_action( 'wp_set_comment_status', array( $this, 'remove' ) );
 
-		add_action( 'edited_terms', [ $this, 'remove' ] );
+		add_action( 'edited_terms', array( $this, 'remove' ) );
 	}
 
 	/**

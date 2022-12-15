@@ -1,4 +1,33 @@
 .#{ $_prefix }l-body {
-  visibility: visible;
-  overflow-x: hidden;
+	visibility: visible;
+	overflow-x: hidden;
+}
+
+// Blank / One column full
+[data-is-full-template="true"] {
+	.#{ $_prefix }p-entry-content {
+		&:not([data-home-page-container="true"]) {
+			--wp--style--global--content-size: none;
+			--wp--style--global--wide-size: none;
+		}
+	}
+}
+
+// One column slim / Blank slim
+[data-has-sidebar="false"][data-is-slim-width="true"] {
+	--wp--custom--content-max-width: var(--wp--custom--slim-width);
+}
+
+// One column
+[data-has-sidebar="false"]:not([data-header-layout="left"]) {
+	.#{ $_prefix }p-entry-content {
+		margin-right: calc(50% - 50vw + var(--scrollbar-width) / 2);
+		margin-left: calc(50% - 50vw + var(--scrollbar-width)/ 2);
+	}
+}
+
+// Right / Left sidebar
+[data-has-sidebar="true"] {
+	--wp--style--global--content-size: none;
+	--wp--style--global--wide-size: none;
 }

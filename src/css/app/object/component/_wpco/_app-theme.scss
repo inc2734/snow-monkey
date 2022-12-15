@@ -1,12 +1,12 @@
 .wpco {
-  .contents-outline {
-    a {
-      &::before {
-        background-color: var-color-accent();
-        color: _var-color-white();
-        font-size: 10px;
-        line-height: 1;
-      }
-    }
-  }
+	.contents-outline {
+		a {
+			&::before {
+				background-color: var(--wp--preset--color--sm-accent);
+				color: var(--wp--preset--color--sm-text-alt);
+				font-size: 10px;
+				line-height: 1;
+			}
+		}
+	}
 }

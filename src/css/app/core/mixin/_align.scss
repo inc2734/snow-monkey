@@ -1,19 +1,17 @@
 @mixin alignfull() {
-  clear: both !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-  width: auto !important;
-  max-width: 100% !important;
+	clear: both !important;
+	margin: 0 !important;
+	width: auto !important;
 
-  table {
-    margin-right: auto;
-    margin-left: auto;
-  }
+	table {
+		margin-right: auto;
+		margin-left: auto;
+	}
 }
 
 @mixin alignwide() {
-  margin-right: auto !important;
-  margin-left: auto !important;
-  width: auto !important;
-  max-width: calc(var(--wp-block-width) + 240px) !important;
+	margin-right: auto !important;
+	margin-left: auto !important;
+	width: auto !important;
+	max-width: var(--wp--style--global--wide-size) !important;
 }

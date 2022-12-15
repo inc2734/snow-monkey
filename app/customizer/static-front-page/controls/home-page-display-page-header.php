@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.3.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,7 +11,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'checkbox',
 	'home-page-display-page-header',
-	[
+	array(
 		'label'           => __( 'Display page header on homepage (You need to set the default page header or featured image)', 'snow-monkey' ),
 		'default'         => false,
 		'priority'        => 130,
@@ -28,7 +28,7 @@ Framework::control(
 
 			return $active;
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

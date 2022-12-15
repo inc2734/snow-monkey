@@ -1,14 +1,14 @@
 .smb-panels {
-  &__item {
-    &__link {
-      color: var-color-accent();
-    }
-  }
+	&__item {
+		&__link {
+			color: var(--wp--preset--color--sm-accent);
+		}
+	}
 }
 
 .smb-panels__item--free,
 .smb-panels__item--block-link {
-  > .smb-panels__item__body {
-    @extend %entry-content;
-  }
+	> .smb-panels__item__body {
+		@extend %entry-content;
+	}
 }

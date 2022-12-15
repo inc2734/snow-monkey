@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.10.1
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/related-posts.php
  */
@@ -20,7 +20,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_code'           => null,
 		'_context'        => 'snow-monkey/related-posts',
 		'_entries_layout' => $default_entries_layout,
@@ -28,7 +28,7 @@ $args = wp_parse_args(
 		'_post_id'        => get_the_ID(),
 		'_posts_query'    => null,
 		'_title'          => __( 'Related posts', 'snow-monkey' ),
-	]
+	)
 );
 
 $query = $args['_posts_query']
@@ -62,14 +62,14 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 		Helper::get_template_part(
 			'template-parts/common/entries/entries',
 			$args['_name'],
-			[
+			array(
 				'_context'        => $args['_context'],
 				'_entries_layout' => $args['_entries_layout'],
 				'_force_sm_1col'  => false,
 				'_infeed_ads'     => false,
 				'_item_title_tag' => $args['_item_title_tag'],
 				'_posts_query'    => $query,
-			]
+			)
 		);
 		?>
 

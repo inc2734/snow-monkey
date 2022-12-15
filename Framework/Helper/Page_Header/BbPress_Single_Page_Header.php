@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.1
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Helper\Page_Header;
@@ -25,7 +25,7 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( get_post_type( $wp_post ), [ 'topic', 'reply' ], true ) ) {
+		if ( ! in_array( get_post_type( $wp_post ), array( 'topic', 'reply' ), true ) ) {
 			return false;
 		}
 
@@ -50,7 +50,7 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( get_post_type( $wp_post ), [ 'topic', 'reply' ], true ) ) {
+		if ( ! in_array( get_post_type( $wp_post ), array( 'topic', 'reply' ), true ) ) {
 			return false;
 		}
 
@@ -74,7 +74,7 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( get_post_type( $wp_post ), [ 'topic', 'reply' ], true ) ) {
+		if ( ! in_array( get_post_type( $wp_post ), array( 'topic', 'reply' ), true ) ) {
 			return false;
 		}
 
@@ -92,7 +92,7 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( get_post_type( $wp_post ), [ 'topic', 'reply' ], true ) ) {
+		if ( ! in_array( get_post_type( $wp_post ), array( 'topic', 'reply' ), true ) ) {
 			return false;
 		}
 
@@ -109,7 +109,7 @@ class BbPress_Single_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( get_post_type( $wp_post ), [ 'topic', 'reply' ], true ) ) {
+		if ( ! in_array( get_post_type( $wp_post ), array( 'topic', 'reply' ), true ) ) {
 			return false;
 		}
 

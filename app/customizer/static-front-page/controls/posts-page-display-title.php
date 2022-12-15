@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 10.0.7
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,7 +11,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'checkbox',
 	'posts-page-display-title',
-	[
+	array(
 		'label'           => __( 'Display posts page title', 'snow-monkey' ),
 		'default'         => true,
 		'priority'        => 210,
@@ -19,7 +19,7 @@ Framework::control(
 			$page_on_front = get_option( 'page_on_front' );
 			return 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -25,7 +25,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-hash-nav',
 			get_theme_file_uri( '/assets/js/hash-nav.js' ),
-			[],
+			array(),
 			filemtime( get_theme_file_path( '/assets/js/hash-nav.js' ) ),
 			true
 		);

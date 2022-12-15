@@ -1,57 +1,60 @@
 .#{ $_prefix }c-widget {
-  word-break: break-word;
+	word-break: break-word;
 
-  &__title,
-  > .widget-title,
-  > h2,
-  > h3,
-  > h4,
-  > h5,
-  > h6 {
-    @extend %widget-title;
-  }
+	&__title,
+	> .widget-title,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		@extend %widget-title;
+	}
 
-  .wp-widget-group__inner-blocks,
-  .wp-block-group__inner-container {
-    > h2,
-    > h3,
-    > h4,
-    > h5,
-    > h6 {
-      @extend %widget-title;
-      border: none;
-      background-color: transparent;
-      padding: 0;
-    }
-  }
+	.wp-widget-group__inner-blocks,
+	.wp-block-group,
+	.wp-block-group__inner-container {
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6 {
+			@extend %widget-title;
+			border: none;
+			background-color: transparent;
+			padding: 0;
+		}
+	}
 }
 
 [data-is-slim-widget-area="true"] .#{ $_prefix }c-widget {
-  @include _font-size-line-height($_base-font-size-px - 2);
+	@include _set-font-size-level(-1);
 
-  &__title,
-  > .widget-title,
-  > h2,
-  > h3,
-  > h4,
-  > h5,
-  > h6 {
-    @include _font-size-line-height(1);
-  }
+	&__title,
+	> .widget-title,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		@include _set-font-size-level(0);
+	}
 
-  &.widget_block {
-    > h2:not(.widget-title):not(.c-widget__title),
-    > h3,
-    > h4,
-    > h5,
-    > h6 {
-      @include _margin-bottom(-.5);
-    }
-  }
+	.wp-widget-group__inner-blocks,
+	.wp-block-group,
+	.wp-block-group__inner-container {
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6 {
+			@include _set-font-size-level(0);
+		}
+	}
 }
 
 .widgettitle {
-  @extend %widget-title;
+	@extend %widget-title;
 }
 
 @import '_children-expander/app';

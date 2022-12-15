@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Helper;
@@ -65,9 +65,9 @@ trait Homepage_Thumbnail {
 	public static function the_homepage_thumbnail( $size = 'large' ) {
 		echo wp_kses(
 			static::get_the_homepage_thumbnail( $size ),
-			[
+			array(
 				'img' => static::img_allowed_attributes(),
-			]
+			)
 		);
 	}
 

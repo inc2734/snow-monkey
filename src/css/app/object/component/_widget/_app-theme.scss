@@ -1,32 +1,31 @@
 .#{ $_prefix }c-widget {
-  &__title,
-  > h2,
-  > h3,
-  > h4,
-  > h5,
-  > h6 {
-    @extend %widget-title-theme;
-  }
+	&__title,
+	> h2,
+	> h3,
+	> h4,
+	> h5,
+	> h6 {
+		@extend %widget-title-theme;
+	}
 
-  .wp-widget-group__inner-blocks,
-  .wp-block-group__inner-container {
-    > h2,
-    > h3,
-    > h4,
-    > h5,
-    > h6 {
-      @extend %widget-title-theme;
-    }
-  }
+	.wp-widget-group__inner-blocks,
+	.wp-block-group,
+	.wp-block-group__inner-container {
+		> h2,
+		> h3,
+		> h4,
+		> h5,
+		> h6 {
+			@extend %widget-title-theme;
+		}
+	}
 }
 
 .widgettitle {
-  @extend %widget-title-theme;
+	@extend %widget-title-theme;
 }
 
 @import '_children-expander/app-theme';
 @import '_snow-monkey-posts/app-theme';
-@import '_widget-categories/app-theme';
 @import '_widget-nav-menu/app-theme';
-@import '_widget-pages/app-theme';
 @import '_widget-text/app-theme';

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 18.0.1
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Model;
@@ -30,14 +30,14 @@ class Filesystem {
 
 		add_filter(
 			'filesystem_method',
-			[ '\Framework\Model\Filesystem', '_filesystem_method' ]
+			array( '\Framework\Model\Filesystem', '_filesystem_method' )
 		);
 
 		WP_Filesystem();
 
 		remove_filter(
 			'filesystem_method',
-			[ '\Framework\Model\Filesystem', '_filesystem_method' ]
+			array( '\Framework\Model\Filesystem', '_filesystem_method' )
 		);
 
 		return $wp_filesystem;

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.2.2
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Google_Fonts;
@@ -41,7 +41,7 @@ add_action(
 	'wp_enqueue_scripts',
 	function() {
 		$dependencies = Helper::generate_style_dependencies(
-			[
+			array(
 				'wp-block-library',
 				'wp-share-buttons',
 				'wp-like-me-box',
@@ -50,16 +50,16 @@ add_action(
 				'wp-awesome-widgets',
 				'slick-carousel',
 				'slick-carousel-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle(),
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-app',
 				Helper::get_main_style_handle() . '-theme',
-			]
+			)
 		);
 
 		wp_register_style(
@@ -72,7 +72,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-theme',
 			get_theme_file_uri( '/assets/css/app/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-app' ],
+			array( Helper::get_main_style_handle() . '-app' ),
 			filemtime( get_theme_file_path( '/assets/css/app/app-theme.css' ) )
 		);
 
@@ -81,23 +81,23 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-block-library-app',
 				Helper::get_main_style_handle() . '-block-library-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library-app',
 			get_theme_file_uri( '/assets/css/block-library/app.css' ),
-			[ 'wp-block-library' ],
+			array( 'wp-block-library' ),
 			filemtime( get_theme_file_path( '/assets/css/block-library/app.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library-theme',
 			get_theme_file_uri( '/assets/css/block-library/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-block-library-app' ],
+			array( Helper::get_main_style_handle() . '-block-library-app' ),
 			filemtime( get_theme_file_path( '/assets/css/block-library/app-theme.css' ) )
 		);
 
@@ -118,7 +118,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle(),
 			get_theme_file_uri( '/assets/js/app.js' ),
-			[ 'spider' ],
+			array( 'spider' ),
 			filemtime( get_theme_file_path( '/assets/js/app.js' ) ),
 			true
 		);
@@ -142,7 +142,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-fix-adminbar',
 			get_theme_file_uri( '/assets/js/fix-adminbar.js' ),
-			[],
+			array(),
 			filemtime( get_theme_file_path( '/assets/js/fix-adminbar.js' ) ),
 			true
 		);
@@ -154,7 +154,7 @@ add_action(
  *
  * @return void
  */
-foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
+foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts' ) as $action_hook ) {
 	add_action(
 		$action_hook,
 		function() {
@@ -162,7 +162,7 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 				wp_enqueue_script(
 					'fontawesome6',
 					get_theme_file_uri( '/assets/packages/fontawesome-free/js/all.min.js' ),
-					[],
+					array(),
 					filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/js/all.min.js' ) ),
 					true
 				);
@@ -170,7 +170,7 @@ foreach ( [ 'wp_enqueue_scripts', 'admin_enqueue_scripts' ] as $action_hook ) {
 				wp_enqueue_script(
 					Helper::get_main_script_handle() . '-fontawesome',
 					get_theme_file_uri( '/assets/js/fontawesome.js' ),
-					[],
+					array(),
 					filemtime( get_theme_file_path( '/assets/js/fontawesome.js' ) ),
 					true
 				);
@@ -189,7 +189,7 @@ add_action(
 			wp_enqueue_style(
 				'spider',
 				get_theme_file_uri( '/assets/packages/spider/dist/css/spider.css' ),
-				[],
+				array(),
 				filemtime( get_theme_file_path( '/assets/packages/spider/dist/css/spider.css' ) )
 			);
 		}
@@ -198,7 +198,7 @@ add_action(
 			wp_enqueue_script(
 				'spider',
 				get_theme_file_uri( '/assets/packages/spider/dist/js/spider.js' ),
-				[],
+				array(),
 				filemtime( get_theme_file_path( '/assets/packages/spider/dist/js/spider.js' ) ),
 				true
 			);
@@ -231,12 +231,12 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-customize-preview',
 			get_theme_file_uri( '/assets/js/customize-preview.js' ),
-			[
+			array(
 				'customize-preview',
 				'customize-selective-refresh',
 				'wp-awesome-widgets-customize-preview',
 				Helper::get_main_script_handle(),
-			],
+			),
 			filemtime( get_theme_file_path( '/assets/js/customize-preview.js' ) ),
 			true
 		);
@@ -254,9 +254,9 @@ add_action(
 		wp_localize_script(
 			Helper::get_main_script_handle(),
 			'snow_monkey',
-			[
+			array(
 				'home_url' => home_url(),
-			]
+			)
 		);
 	}
 );
@@ -272,7 +272,7 @@ add_action(
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-admin',
 			get_theme_file_uri( '/assets/css/admin/app.css' ),
-			[],
+			array(),
 			filemtime( get_theme_file_path( '/assets/css/admin/app.css' ) )
 		);
 	}

@@ -1,64 +1,111 @@
+// @deprecated
 @function var-body-margin-left() {
-  @return var(--body-margin-left, 0px);
+	@warn 'var-body-margin-left() is deprecated.';
+
+	@return var(--body-margin-left, 0px);
 }
 
+// @deprecated
 @function var-color-accent() {
-  @return var(--accent-color, #{ $color-accent });
+	@warn 'var-color-accent() is deprecated.';
+
+	@return var(--accent-color, #{ $color-accent });
 }
 
+// @deprecated
 @function var-color-accent-dark() {
-  @return var(--dark-accent-color, #{ _dark($color-accent) });
+	@warn 'var-color-accent-dark() is deprecated.';
+
+	@return var(--dark-accent-color, #{ _dark($color-accent) });
 }
 
+// @deprecated
 @function var-color-accent-light() {
-  @return var(--light-accent-color, #{ _light($color-accent) });
+	@warn 'var-color-accent-light() is deprecated.';
+
+	@return var(--light-accent-color, #{ _light($color-accent) });
 }
 
+// @deprecated
 @function var-color-accent-lighter() {
-  @return var(--lighter-accent-color, #{ _lighter($color-accent) });
+	@warn 'var-color-accent-lighter() is deprecated.';
+
+	@return var(--lighter-accent-color, #{ _lighter($color-accent) });
 }
 
+// @deprecated
 @function var-color-accent-lightest() {
-  @return var(--lightest-accent-color, #{ _lightest($color-accent) });
+	@warn 'var-color-accent-lightest() is deprecated.';
+
+	@return var(--lightest-accent-color, #{ _lightest($color-accent) });
 }
 
+// @deprecated
 @function var-color-sub-accent() {
-  @return var(--sub-accent-color);
+	@warn 'var-color-sub-accent() is deprecated.';
+
+	@return var(--sub-accent-color);
 }
 
+// @deprecated
 @function var-color-sub-accent-dark() {
-  @return var(--dark-sub-accent-color);
+	@warn 'var-color-sub-accent-dark() is deprecated.';
+
+	@return var(--dark-sub-accent-color);
 }
 
+// @deprecated
 @function var-color-sub-accent-light() {
-  @return var(--light-sub-accent-color);
+	@warn 'var-color-sub-accent-light() is deprecated.';
+
+	@return var(--light-sub-accent-color);
 }
 
+// @deprecated
 @function var-color-sub-accent-lighter() {
-  @return var(--lighter-sub-accent-color);
+	@warn 'var-color-sub-accent-lighter() is deprecated.';
+
+	@return var(--lighter-sub-accent-color);
 }
 
+// @deprecated
 @function var-color-sub-accent-lightest() {
-  @return var(--lightest-sub-accent-color);
+	@warn 'var-color-sub-accent-lightest() is deprecated.';
+
+	@return var(--lightest-sub-accent-color);
 }
 
+// @deprecated
 @function var-color-header-text() {
-  @return var(--header-text-color, $_color-text);
+	@warn 'var-color-header-text() is deprecated.';
+
+	@return var(--header-text-color, $_color-text);
 }
 
+// @deprecated
 @function var-color-overlay-header-text() {
-  @return var(--overlay-header-text-color, $_color-white);
+	@warn 'var-color-overlay-header-text() is deprecated.';
+
+	@return var(--overlay-header-text-color, $_color-white);
 }
 
+// @deprecated
 @function var-color-drop-nav-text() {
-  @return var(--drop-nav-text-color, $_color-text);
+	@warn 'var-color-drop-nav-text() is deprecated.';
+
+	@return var(--drop-nav-text-color, $_color-text);
 }
 
+// @deprecated
 @function var-scrollbar-width() {
-  @return var(--scrollbar-width, 0px);
+	@warn 'var-scrollbar-width() is deprecated.';
+
+	@return var(--scrollbar-width, 0px);
 }
 
 // @deprecated
 @function var-font-family() {
-  @return var(--font-family);
+	@warn 'var-font-family() is deprecated.';
+
+	@return var(--font-family);
 }

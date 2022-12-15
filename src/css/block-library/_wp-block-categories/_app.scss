@@ -1,20 +1,16 @@
-.wp-block-categories{
-  @extend %widget-list-base;
-  margin-left: auto;
+.wp-block-categories {
+	@extend %widget-list-base;
+	margin-left: auto;
 
-  .children {
-    @extend %widget-list-base;
-    @include _margin-top(.25);
-    @include _margin-left(.5);
-  }
+	.children {
+		@extend %widget-list-base;
+	}
 }
 
 .wp-block-categories__list {
-  @extend %widget-list-base;
+	@extend %widget-list-base;
 
-  ul {
-    @extend %widget-list-base;
-    @include _margin-top(.25);
-    @include _margin-left(.5);
-  }
+	ul {
+		@extend %widget-list-base;
+	}
 }

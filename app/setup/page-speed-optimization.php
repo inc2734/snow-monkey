@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.5.1
+ * @version 19.0.0-beta1
  *
  * This procceses are beta.
  */
@@ -58,7 +58,7 @@ add_action(
 			function( $handles ) {
 				return array_merge(
 					$handles,
-					[
+					array(
 						'wp-block-library',
 						Helper::get_main_style_handle(),
 						Helper::get_main_style_handle() . '-app',
@@ -79,7 +79,7 @@ add_action(
 						'slick-carousel',
 						'slick-carousel-theme',
 						'spider',
-					]
+					)
 				);
 			}
 		);
@@ -135,7 +135,7 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 				$icon = Filesystem::get_contents( get_template_directory() . '/assets/img/icon.svg' );
 
 				$wp_admin_bar->add_menu(
-					[
+					array(
 						'id'    => 'sm-remove-caches',
 						'title' => sprintf(
 							'%1$s%2$s',
@@ -143,7 +143,7 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 							esc_html__( 'Remove caches', 'snow-monkey' )
 						),
 						'href'  => '?sm-remove-caches=1',
-					]
+					)
 				);
 			},
 			1000

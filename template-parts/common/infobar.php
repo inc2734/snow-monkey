@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/infobar.php
  */
@@ -14,12 +14,12 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_content' => '',
 		'_url'     => '',
 		'_target'  => '_self',
 		'_align'   => 'left',
-	]
+	)
 );
 
 if ( ! $args['_content'] ) {
@@ -29,14 +29,14 @@ if ( ! $args['_content'] ) {
 
 $kses_allowed_html                = wp_kses_allowed_html( 'user_description' );
 $kses_allowed_html['a']['target'] = true;
-$kses_allowed_html['i']           = [
+$kses_allowed_html['i']           = array(
 	'class' => true,
-];
+);
 
-$classes = [
+$classes = array(
 	'p-infobar',
 	'p-infobar--' . $args['_align'],
-];
+);
 ?>
 <div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<?php if ( $args['_url'] ) : ?>

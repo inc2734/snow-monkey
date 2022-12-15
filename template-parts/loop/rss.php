@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.1.2
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/loop/entry-summary-rss.php
  */
@@ -14,12 +14,12 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title_tag'      => 'h2',
 		'_item'           => false,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
-	]
+	)
 );
 
 if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
@@ -33,10 +33,10 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/figure/rss',
 			null,
-			[
+			array(
 				'_context' => $args['_context'],
 				'_item'    => $args['_item'],
-			]
+			)
 		);
 		?>
 
@@ -46,12 +46,12 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary/title/rss',
 					null,
-					[
+					array(
 						'_context'        => $args['_context'],
 						'_entries_layout' => $args['_entries_layout'],
 						'_title_tag'      => $args['_title_tag'],
 						'_item'           => $args['_item'],
-					]
+					)
 				);
 				?>
 			</header>
@@ -60,12 +60,12 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 			Helper::get_template_part(
 				'template-parts/loop/entry-summary/content/rss',
 				null,
-				[
+				array(
 					'_context'        => $args['_context'],
 					'_item'           => $args['_item'],
 					'_entries_layout' => $args['_entries_layout'],
 					'_excerpt_length' => $args['_excerpt_length'],
-				]
+				)
 			);
 			?>
 
@@ -73,10 +73,10 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 			Helper::get_template_part(
 				'template-parts/loop/entry-summary/meta/rss',
 				null,
-				[
+				array(
 					'_context' => $args['_context'],
 					'_item'    => $args['_item'],
-				]
+				)
 			);
 			?>
 		</div>

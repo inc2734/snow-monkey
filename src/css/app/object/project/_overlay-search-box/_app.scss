@@ -1,25 +1,25 @@
 .#{ $_prefix }p-overlay-search-box {
-  .#{ $_prefix }c-input-group {
-    width: min(80vw, 480px);
+	.#{ $_prefix }c-input-group {
+		width: min(80vw, 480px);
 
-    &__field {
-      > input {
-        background-color: transparent;
-        border: none;
-        border-radius: 0;
-        border-bottom: 1px solid rgba(#fff, .7);
-        color: _var-color-white();
+		&__field {
+			> input {
+				background-color: transparent;
+				border: none;
+				border-radius: 0;
+				border-bottom: 1px solid rgba(#fff, .7);
+				color: var(--wp--preset--color--white);
 
-        &:focus {
-          border-bottom-color: _var-color-white();
-        }
-      }
-    }
+				&:focus {
+					border-bottom-color: var(--wp--preset--color--white);
+				}
+			}
+		}
 
-    &__btn {
-      background-color: transparent;
-      border: none;
-      color: _var-color-white();
-    }
-  }
+		&__btn {
+			background-color: transparent;
+			border: none;
+			color: var(--wp--preset--color--white);
+		}
+	}
 }

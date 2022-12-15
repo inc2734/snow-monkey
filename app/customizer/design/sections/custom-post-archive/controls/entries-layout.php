@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.10.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,11 +15,11 @@ foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::control(
 		'select',
 		$custom_post_type . '-entries-layout',
-		[
+		array(
 			'label'    => __( 'Entries layout', 'snow-monkey' ),
 			'priority' => 140,
 			'default'  => 'rich-media',
-			'choices'  => [
+			'choices'  => array(
 				'rich-media'  => __( 'Rich media', 'snow-monkey' ),
 				'simple'      => __( 'Simple', 'snow-monkey' ),
 				'text'        => __( 'Text', 'snow-monkey' ),
@@ -31,8 +31,8 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					__( 'Rich media', 'snow-monkey' )
 				),
 				'large-image' => __( 'Large image', 'snow-monkey' ),
-			],
-		]
+			),
+		)
 	);
 }
 

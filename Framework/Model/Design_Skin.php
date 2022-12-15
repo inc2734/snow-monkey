@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.0
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Model;
@@ -44,26 +44,26 @@ class Design_Skin {
 	 * @param string $file Design skin main file path.
 	 * @param array  $options Options.
 	 */
-	public function __construct( $file, $options = [] ) {
+	public function __construct( $file, $options = array() ) {
 		$this->file = $file;
 
 		$this->options = shortcode_atts(
-			[
+			array(
 				'style'                    => 'design-skin.css',
 				'editor-style'             => 'editor-style.css',
 				'gutenberg-style'          => 'gutenberg.css',
 				'customize-control-script' => 'customize-control.js',
-			],
+			),
 			$options
 		);
 
 		$this->plugin = $this->_get_plugin_data();
 
-		add_action( 'wp_loaded', [ $this, '_load_bootstrap' ] );
-		add_action( 'wp_enqueue_scripts', [ $this, '_load_style' ], 100 );
-		add_filter( 'mce_css', [ $this, '_load_editor_style' ] );
-		add_action( 'enqueue_block_editor_assets', [ $this, '_load_gutenberg_style' ] );
-		add_action( 'customize_controls_enqueue_scripts', [ $this, '_load_customize_script' ] );
+		add_action( 'wp_loaded', array( $this, '_load_bootstrap' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, '_load_style' ), 100 );
+		add_filter( 'mce_css', array( $this, '_load_editor_style' ) );
+		add_action( 'enqueue_block_editor_assets', array( $this, '_load_gutenberg_style' ) );
+		add_action( 'customize_controls_enqueue_scripts', array( $this, '_load_customize_script' ) );
 	}
 
 	/**
@@ -103,7 +103,7 @@ class Design_Skin {
 
 		$file_url = plugins_url( $relative_path, $this->file );
 
-		$handles = [];
+		$handles = array();
 		$queue   = wp_styles()->queue;
 		foreach ( $queue as $handle ) {
 			if ( 0 === strpos( $handle, 'snow-monkey' ) ) {
@@ -167,7 +167,7 @@ class Design_Skin {
 
 		$file_url = plugins_url( $relative_path, $this->file );
 
-		$handles = [];
+		$handles = array();
 		$queue   = wp_styles()->queue;
 		foreach ( $queue as $handle ) {
 			if ( 0 === strpos( $handle, 'snow-monkey' ) ) {
@@ -205,7 +205,7 @@ class Design_Skin {
 		wp_enqueue_script(
 			$this->plugin['slug'] . '-customize-preview',
 			$file_url,
-			[ 'jquery' ],
+			array( 'jquery' ),
 			filemtime( $file_path ),
 			true
 		);
@@ -219,17 +219,17 @@ class Design_Skin {
 	protected function _get_plugin_data() {
 		$plugin_data = get_file_data(
 			$this->file,
-			[
+			array(
 				'label' => 'Plugin Name',
-			],
+			),
 			'plugin'
 		);
 
 		$plugin_data = array_merge(
 			$plugin_data,
-			[
+			array(
 				'slug' => basename( $this->file, '.php' ),
-			]
+			)
 		);
 
 		return $plugin_data;

@@ -1,10 +1,198 @@
 {
-  "$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
-  "version": 2,
-  "settings": {
-    "layout": {
-      "contentSize": "var(--wp-block-width)",
-      "wideSize": "calc(var(--wp-block-width) + 240px)"
-    }
-  }
+	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
+	"version": 2,
+	"settings": {
+		"border": {
+			"color": true,
+			"radius": true,
+			"style": true,
+			"width": true
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "sm-accent",
+					"color": "var(--accent-color)",
+					"name": "Accent"
+				},
+				{
+					"slug": "sm-sub-accent",
+					"color": "var(--sub-accent-color)",
+					"name": "Sub accent"
+				},
+				{
+					"slug": "sm-text",
+					"color": "var(--_color-text)",
+					"name": "Text"
+				},
+				{
+					"slug": "sm-text-alt",
+					"color": "var(--_color-white)",
+					"name": "Text (Alt)"
+				},
+				{
+					"slug": "sm-lightest-gray",
+					"color": "var(--_lightest-color-gray)",
+					"name": "Lightest gray"
+				},
+				{
+					"slug": "sm-lighter-gray",
+					"color": "var(--_lighter-color-gray)",
+					"name": "Lighter gray"
+				},
+				{
+					"slug": "sm-light-gray",
+					"color": "var(--_light-color-gray)",
+					"name": "Light gray"
+				},
+				{
+					"slug": "sm-gray",
+					"color": "var(--_color-gray)",
+					"name": "Gray"
+				},
+				{
+					"slug": "sm-dark-gray",
+					"color": "var(--_dark-color-gray)",
+					"name": "Dark gray"
+				},
+				{
+					"slug": "sm-darker-gray",
+					"color": "var(--_darker-color-gray)",
+					"name": "Darker gray"
+				},
+				{
+					"slug": "sm-darkest-gray",
+					"color": "var(--_darkest-color-gray)",
+					"name": "Darkest ray"
+				}
+			]
+		},
+		"spacing": {
+			"blockGap": true
+		},
+		"typography": {
+			"dropCap": false,
+			"customFontSize": false,
+			"textTransform": true,
+			"lineHeight": false,
+			"fontSizes": [
+				{
+					"slug": "sm-xs",
+					"size": "0.8rem",
+					"name": "XS"
+				},
+				{
+					"slug": "sm-s",
+					"size": "0.88rem",
+					"name": "S"
+				},
+				{
+					"slug": "sm-m",
+					"size": "1rem",
+					"name": "M"
+				},
+				{
+					"slug": "sm-l",
+					"size": "1.14rem",
+					"name": "L"
+				},
+				{
+					"slug": "sm-xl",
+					"size": "1.33rem",
+					"name": "XL"
+				},
+				{
+					"slug": "sm-2xl",
+					"size": "1.6rem",
+					"name": "2XL"
+				},
+				{
+					"slug": "sm-3xl",
+					"size": "2rem",
+					"name": "3XL"
+				},
+				{
+					"slug": "sm-4xl",
+					"size": "2.66rem",
+					"name": "4XL"
+				},
+				{
+					"slug": "sm-5xl",
+					"size": "4rem",
+					"name": "5XL"
+				},
+				{
+					"slug": "sm-6xl",
+					"size": "8rem",
+					"name": "6XL"
+				}
+			]
+		},
+		"custom": {
+			"slim-width": "46rem",
+			"content-max-width": "var(--_container-max-width)",
+			"content-width": "min(100% - var(--_container-margin) * 2, var(--wp--custom--content-max-width))"
+		},
+		"layout": {
+			"wideSize": "calc(var(--wp--custom--content-width) + 240px)",
+			"contentSize": "var(--wp--custom--content-width)"
+		}
+	},
+	"styles": {
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--sm-accent)",
+					"text": "var(--wp--preset--color--sm-text-alt)"
+				},
+				"border": {
+					"radius": "var(--_border-radius)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "calc(var(--_padding-1) * .5)",
+						"right": "var(--_padding-1)",
+						"bottom": "calc(var(--_padding-1) * .5)",
+						"left": "var(--_padding-1)"
+					}
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--accent-color)"
+				}
+			}
+		},
+		"blocks": {
+			"core/search": {
+				"elements": {
+					"button": {
+						"border": {
+							"width": "1px"
+						},
+						"color": {
+							"background": "var(--wp--preset--color--sm-text-alt)",
+							"text": "var(--wp--preset--color--sm-text)"
+						},
+						"spacing": {
+							"padding": {
+								"top": "var(--_padding-2)",
+								"right": "var(--_padding-2)",
+								"bottom": "var(--_padding-2)",
+								"left": "var(--_padding-2)"
+							}
+						}
+					}
+				}
+			},
+			"core/social-links": {
+				"spacing": {
+					"blockGap": "var(--_margin-1)"
+				}
+			}
+		},
+		"spacing": {
+			"blockGap": "var(--_margin1)"
+		}
+	}
 }

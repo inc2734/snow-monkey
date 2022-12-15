@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,9 +12,9 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
-		'_terms' => [],
-	]
+	array(
+		'_terms' => array(),
+	)
 );
 ?>
 
@@ -40,10 +40,10 @@ $args = wp_parse_args(
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary/term/term',
 					$args['_name'],
-					[
+					array(
 						'_context' => $args['_context'],
 						'_terms'   => $args['_terms'],
-					]
+					)
 				);
 				?>
 			</li>

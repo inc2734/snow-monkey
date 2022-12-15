@@ -1,18 +1,14 @@
 .#{ $_prefix }l-overlay-widget-area {
-  @include items-gutter();
+	@include _set-content-level(1);
 
-  position: relative;
-  margin: auto;
-  background-color: _var-color-white();
-  color: _var-color-text();
-  @include _padding(.5);
-  width: min(90vw, #{ _px2rem(map-get($_sizes, lg)) });
+	position: relative;
+	margin: auto;
+	background-color: var(--wp--preset--color--sm-text-alt);
+	color: var(--wp--preset--color--sm-text);
+	padding: var(--_padding1);
+	width: min(90vw, #{ _px2rem(map-get($_sizes, lg)) });
 
-  @include _media-min(md) {
-    @include _padding(1);
-  }
-
-  &[data-is-slim-widget-area="true"] {
-    max-width: _px2rem(map-get($_sizes, md));
-  }
+	&[data-is-slim-widget-area="true"] {
+		max-width: _px2rem(map-get($_sizes, md));
+	}
 }

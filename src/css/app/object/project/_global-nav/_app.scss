@@ -1,257 +1,261 @@
 .#{ $_prefix }p-global-nav {
-  --global-nav-submenu-open-delay: .3s;
+	--global-nav-submenu-open-delay: .3s;
 
-  &[aria-hidden="true"] {
-    visibility: hidden;
-  }
+	&[aria-hidden="true"] {
+		visibility: hidden;
+	}
 
-  .#{ $_prefix }c-navbar {
-    &[data-popup-mode="click"] {
-      .#{ $_prefix }c-navbar__item {
-        &[aria-haspopup="true"] {
-          &::before {
-            display: none;
-          }
-        }
-      }
+	.#{ $_prefix }c-navbar {
+		&[data-popup-mode="click"] {
+			.#{ $_prefix }c-navbar__item {
+				&[aria-haspopup="true"] {
+					&::before {
+						display: none;
+					}
+				}
+			}
 
-      .#{ $_prefix }c-navbar__subitem:first-child > a::before {
-        display: none;
-      }
-    }
+			.#{ $_prefix }c-navbar__subitem:first-child > a::before {
+				display: none;
+			}
+		}
 
-    &__item {
-      > a {
-        flex-direction: column;
-        color: inherit;
-        @include _font-size-line-height($_base-font-size-px - 2);
-        font-weight: bold;
-        @include _padding(.75);
-        @include _transition(background-color, color);
+		&__item {
+			> a {
+				flex-direction: column;
+				color: inherit;
+				@include _set-font-size-level(-1);
+				font-weight: bold;
+				padding: var(--_padding-1);
+				@include _transition(background-color, color);
 
-        > span {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-        }
+				> span {
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+				}
 
-        > small {
-          display: block;
-          @include _font-size-line-height($_base-font-size-px - 6);
-          font-weight: normal;
-        }
-      }
+				> small {
+					display: block;
+					@include _set-font-size-level(-2);
+					font-weight: normal;
+				}
+			}
 
-      &[aria-haspopup="true"] {
-        &::before {
-          content: '';
-          display: block;
-          position: absolute;
-          visibility: hidden;
-          opacity: 0;
-          @include _transition(opacity);
-          @include _triangle-top(16px, 10px, #{ var-color-accent() });
-          bottom: -0;
-          left: calc(50% - 8px);
-        }
+			&[aria-haspopup="true"] {
+				&::before {
+					content: '';
+					display: block;
+					position: absolute;
+					visibility: hidden;
+					opacity: 0;
+					@include _transition(opacity);
+					@include _triangle-top(16px, 10px, var(--wp--preset--color--sm-accent));
+					bottom: -0;
+					left: calc(50% - 8px);
+				}
 
-        @include _hover() {
-          &::before {
-            --_transition-delay: var(--global-nav-submenu-open-delay);
+				@include _hover() {
+					&::before {
+						--_transition-delay: var(--global-nav-submenu-open-delay);
 
-            visibility: visible;
-            opacity: 1;
-          }
-        }
-      }
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
 
-      &.sm-nav-menu-item-highlight {
-        background-color: var-color-accent();
-        color: _var-color-white() !important;
+			&.sm-nav-menu-item-highlight {
+				background-color: var(--wp--preset--color--sm-accent);
+				color: var(--wp--preset--color--sm-text-alt) !important;
 
-        &::after {
-          display: none;
-        }
+				&::after {
+					display: none;
+				}
 
-        @include _hover() {
-          > a {
-            background-color: rgba(#fff, .05);
-          }
-        }
-      }
+				@include _hover() {
+					> a {
+						background-color: rgba(#fff, .05);
+					}
+				}
+			}
 
-      > .#{ $_prefix }c-navbar__submenu {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
+			> .#{ $_prefix }c-navbar__submenu {
+				left: 50%;
+				transform: translateX(-50%);
+			}
+		}
 
-    &__submenu {
-      background-color: var-color-accent();
-      z-index: 1;
+		&__submenu {
+			background-color: var(--wp--preset--color--sm-accent);
+			z-index: 1;
 
-      &[aria-hidden="false"] {
-        --_transition-delay: var(--global-nav-submenu-open-delay);
-      }
-    }
+			&[aria-hidden="false"] {
+				--_transition-delay: var(--global-nav-submenu-open-delay);
+			}
+		}
 
-    &__subitem {
-      @include _font-size-line-height($_base-font-size-px - 2);
-      color: _var-color-white();
+		&__subitem {
+			@include _set-font-size-level(-1);
+			color: var(--wp--preset--color--sm-text-alt);
 
-      &.sm-nav-menu-item-highlight {
-        background-color: var-color-sub-accent();
-      }
+			&.sm-nav-menu-item-highlight {
+				background-color: var(--wp--preset--color--sm-accent);
+			}
 
-      > a {
-        position: relative;
-        color: inherit;
-        @include _padding(.5rem, 1rem);
-        @include _transition(background-color, color);
-      }
+			> a {
+				position: relative;
+				color: inherit;
+				padding: var(--_padding-2) var(--_padding-1);
+				@include _transition(background-color, color);
+			}
 
-      @include _hover() {
-        > a {
-          background-color: rgba(#fff, .05);
-        }
-      }
+			@include _hover() {
+				> a {
+					background-color: rgba(#fff, .05);
+				}
+			}
 
-      .#{ $_prefix }c-navbar__subitem:first-child > a::before {
-        content: '';
-        @include _position(absolute, -20px, -20px, -20px, -20px);
-      }
-    }
+			.#{ $_prefix }c-navbar__subitem:first-child > a::before {
+				content: '';
+				position: absolute;
+				top: -20px;
+				right: -20px;
+				bottom: -20px;
+				left: -20px;
+			}
+		}
 
-    .#{ $_prefix }c-navbar__toggle {
-      z-index: 2; // vs .c-navbar__subitem > a::before
-    }
+		.#{ $_prefix }c-navbar__toggle {
+			z-index: 2; // vs .c-navbar__subitem > a::before
+		}
 
-    .#{ $_prefix }c-navbar__item {
-      .#{ $_prefix }c-navbar__toggle {
-        > .#{ $_prefix }c-ic-angle-right {
-          @include _transition(transform);
-          transform-origin: calc(50% + .1em) 50%;
-          transform: translateY(0) rotate(90deg);
-        }
+		.#{ $_prefix }c-navbar__item {
+			.#{ $_prefix }c-navbar__toggle {
+				> .#{ $_prefix }c-ic-angle-right {
+					@include _transition(transform);
+					transform-origin: calc(50% + .1em) 50%;
+					transform: translateY(0) rotate(90deg);
+				}
 
-        &[aria-expanded="true"] {
-          > .#{ $_prefix }c-ic-angle-right {
-            transform: translateY(0) rotate(-90deg);
-          }
-        }
-      }
-    }
+				&[aria-expanded="true"] {
+					> .#{ $_prefix }c-ic-angle-right {
+						transform: translateY(0) rotate(-90deg);
+					}
+				}
+			}
+		}
 
-    .#{ $_prefix }c-navbar__subitem {
-      .#{ $_prefix }c-navbar__toggle {
-        color: _var-color-white();
+		.#{ $_prefix }c-navbar__subitem {
+			.#{ $_prefix }c-navbar__toggle {
+				color: var(--wp--preset--color--sm-text-alt);
 
-        > .#{ $_prefix }c-ic-angle-right {
-          transform: rotate(0);
+				> .#{ $_prefix }c-ic-angle-right {
+					transform: rotate(0);
 
-          &::before {
-            border-color: _var-color-white();
-          }
-        }
+					&::before {
+						border-color: var(--wp--preset--color--sm-text-alt);
+					}
+				}
 
-        &[aria-expanded="true"] {
-          > .#{ $_prefix }c-ic-angle-right {
-            transform: rotate(180deg);
-          }
-        }
-      }
-    }
-  }
+				&[aria-expanded="true"] {
+					> .#{ $_prefix }c-ic-angle-right {
+						transform: rotate(180deg);
+					}
+				}
+			}
+		}
+	}
 
-  &--vertical {
-    display: flex;
+	&--vertical {
+		display: flex;
 
-    .#{ $_prefix }c-navbar {
-      &__item {
-        > a {
-          flex-direction: row-reverse;
-          align-items: stretch;
+		.#{ $_prefix }c-navbar {
+			&__item {
+				> a {
+					flex-direction: row-reverse;
+					align-items: stretch;
 
-          * {
-            writing-mode: vertical-rl;
-            min-width: 1.5em; // For Firefox
-            text-align: left;
-          }
-        }
-      }
-    }
-  }
+					* {
+						writing-mode: vertical-rl;
+						min-width: 1.5em; // For Firefox
+						text-align: left;
+					}
+				}
+			}
+		}
+	}
 
-  @mixin effect-text-color() {
-    color: var-color-accent();
-  }
+	@mixin effect-text-color() {
+		color: var(--wp--preset--color--sm-accent);
+	}
 
-  @mixin effect-underline() {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    content: '';
-    height: 1px;
-    @include _transition(background-color);
-    background-color: var-color-accent();
-  }
+	@mixin effect-underline() {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		content: '';
+		height: 1px;
+		@include _transition(background-color);
+		background-color: var(--wp--preset--color--sm-accent);
+	}
 
-  &--hover-text-color {
-    .#{ $_prefix }c-navbar {
-      &__item {
-        @include _hover() {
-          @include effect-text-color();
-        }
-      }
-    }
+	&--hover-text-color {
+		.#{ $_prefix }c-navbar {
+			&__item {
+				@include _hover() {
+					@include effect-text-color();
+				}
+			}
+		}
 
-    &.#{ $_prefix }p-global-nav--current-same-hover-effect {
-      .#{ $_prefix }c-navbar {
-        &__item[data-active-menu] {
-          @include effect-text-color();
-        }
-      }
-    }
-  }
+		&.#{ $_prefix }p-global-nav--current-same-hover-effect {
+			.#{ $_prefix }c-navbar {
+				&__item[data-active-menu] {
+					@include effect-text-color();
+				}
+			}
+		}
+	}
 
-  &--hover-underline {
-    .#{ $_prefix }c-navbar {
-      &__item {
-        > a::after {
-          @include _transition(background-color);
-        }
+	&--hover-underline {
+		.#{ $_prefix }c-navbar {
+			&__item {
+				> a::after {
+					@include _transition(background-color);
+				}
 
-        @include _hover() {
-          & > a::after {
-            @include effect-underline();
-          }
-        }
-      }
-    }
+				@include _hover() {
+					& > a::after {
+						@include effect-underline();
+					}
+				}
+			}
+		}
 
-    &.#{ $_prefix }p-global-nav--current-same-hover-effect {
-      .#{ $_prefix }c-navbar {
-        &__item[data-active-menu] > a::after {
-          @include effect-underline();
-        }
-      }
-    }
-  }
+		&.#{ $_prefix }p-global-nav--current-same-hover-effect {
+			.#{ $_prefix }c-navbar {
+				&__item[data-active-menu] > a::after {
+					@include effect-underline();
+				}
+			}
+		}
+	}
 
-  &--current-text-color {
-    .#{ $_prefix }c-navbar {
-      &__item[data-active-menu] {
-        @include effect-text-color();
-      }
-    }
-  }
+	&--current-text-color {
+		.#{ $_prefix }c-navbar {
+			&__item[data-active-menu] {
+				@include effect-text-color();
+			}
+		}
+	}
 
-  &--current-underline {
-    .#{ $_prefix }c-navbar {
-      &__item[data-active-menu] > a::after {
-        @include effect-underline();
-      }
-    }
-  }
+	&--current-underline {
+		.#{ $_prefix }c-navbar {
+			&__item[data-active-menu] > a::after {
+				@include effect-underline();
+			}
+		}
+	}
 }

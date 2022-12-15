@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  */
 
 /**
@@ -43,7 +43,7 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function() {
-		add_theme_support( 'html5', [ 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ] );
+		add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
 	}
 );
 

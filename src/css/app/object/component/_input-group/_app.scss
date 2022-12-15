@@ -1,11 +1,11 @@
 .#{ $_prefix }c-input-group {
-  &__btn {
-    background-color: _var-color-white();
-  }
+	&__btn {
+		background-color: var(--wp--preset--color--sm-text-alt);
+	}
 
-  &__field {
-    > input[type="search"] {
-      border-radius: _var-border-radius() 0 0 _var-border-radius();
-    }
-  }
+	&__field {
+		> input[type="search"] {
+			border-radius: var(--_border-radius) 0 0 var(--_border-radius);
+		}
+	}
 }

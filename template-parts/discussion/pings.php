@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/pings.php
  */
@@ -20,10 +20,10 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title'                 => __( 'Trackbacks and Pingbacks on this post', 'snow-monkey' ),
 		'_no_trackbacks_message' => __( 'No comments.', 'snow-monkey' ),
-	]
+	)
 );
 ?>
 
@@ -37,15 +37,15 @@ $args = wp_parse_args(
 		<ol class="p-trackbacks__list">
 			<?php
 			wp_list_comments(
-				[
+				array(
 					'type'     => 'pings',
 					'callback' => function() {
 						?>
-						<li <?php comment_class( [ 'c-trackbacks__item' ] ); ?> id="li-comment-<?php comment_ID(); ?>">
+						<li <?php comment_class( array( 'c-trackbacks__item' ) ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php Helper::get_template_part( 'template-parts/discussion/trackback' ); ?>
 						<?php
 					},
-				]
+				)
 			);
 		?>
 		</ol>

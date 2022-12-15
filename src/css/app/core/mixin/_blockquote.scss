@@ -1,58 +1,45 @@
 @mixin blockquote {
-  &,
-  &.is-large,
-  &.is-style-large:not(.is-style-plain) {
-    @include _padding(.5, .5, .5, 1);
-  }
+	&,
+	&.is-large,
+	&.is-style-large:not(.is-style-plain) {
+		padding: var(--_padding-1) var(--_padding-1) var(--_padding-1) var(--_padding1);
+	}
 
-  cite {
-    @extend %blockquote__cite;
-  }
+	cite {
+		@extend %blockquote__cite;
+	}
 }
 
 @mixin blockquote-theme {
-  position: relative;
-  background-image: url(#{ $img-path }/blockquote/top.svg), url(#{ $img-path }/blockquote/bottom.svg);
-  background-repeat: no-repeat;
-  background-position: 0 0, 100% 100%;
-  background-size: 35px;
-  border: none;
+	position: relative;
+	background-image: url(#{ $img-path }/blockquote/top.svg), url(#{ $img-path }/blockquote/bottom.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0, 100% 100%;
+	background-size: 70px;
+	border: none;
 
-  &,
-  &.is-large,
-  &.is-style-large:not(.is-style-plain) {
-    @include _padding(1, .5, .5, 1.5);
-  }
+	&,
+	&.is-large,
+	&.is-style-large:not(.is-style-plain) {
+		padding: var(--_padding2) var(--_padding1) var(--_padding1) var(--_padding2);;
+	}
 
-  @include _media-min(md) {
-    background-size: 70px;
-
-    &,
-    &.is-large,
-    &.is-style-large:not(.is-style-plain) {
-      @include _padding(1.5, 1, .75, 2);
-    }
-  }
-
-  &::before {
-    content: '';
-    @include _position(absolute, 1rem, null, null, 1rem);
-    display: block;
-    @include _square(1.25rem);
-    background-image: url(#{ $img-path }/blockquote/icon.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @include _media-min(md) {
-      @include _square(1.5rem);
-    }
-  }
+	&::before {
+		content: '';
+		position: absolute;
+		top: 1rem;
+		left: 1rem;
+		display: block;
+		@include _square(1.5rem);
+		background-image: url(#{ $img-path }/blockquote/icon.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
 }
 
 @mixin blockquote__cite {
-  @include _margin-top(.5);
-  display: block;
-  @include _font-size-line-height($_base-font-size-px - 2);
-  color: _var-light-color-text();
-  font-style: italic;
+	margin-top: var(--_margin-1);
+	display: block;
+	@include _set-font-size-level(-1);
+	font-style: italic;
 }

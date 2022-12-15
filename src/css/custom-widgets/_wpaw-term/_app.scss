@@ -1,8 +1,7 @@
 .wpaw-term {
-  background-color: var-color-accent();
-  color: _var-color-white();
-  font-weight: bold;
-  @include _font-size($_base-font-size-px - 4);
-  line-height: 1;
-  @include _padding(.25, .5);
+	background-color: var(--wp--preset--color--sm-accent);
+	color: var(--wp--preset--color--sm-text-alt);
+	font-weight: bold;
+	@include _set-font-size-level(-2);
+	padding: calc(var(--_padding-2) * .5) var(--_padding-2);
 }

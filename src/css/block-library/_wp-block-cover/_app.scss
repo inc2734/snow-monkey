@@ -1,12 +1,5 @@
 .wp-block-cover {
-  color: _var-color-white();
-
-  &__inner-container {
-    @extend %entry-content;
-  }
-
-  .wp-block-cover-text {
-    @include _font-size-line-height(1.5);
-    @include _padding(1);
-  }
+	&__inner-container {
+		@extend %entry-content;
+	}
 }

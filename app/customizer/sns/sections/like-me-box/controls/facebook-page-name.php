@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php
  */
@@ -14,7 +14,7 @@ use Framework\Helper;
 Framework::control(
 	'text',
 	'mwt-facebook-page-name',
-	[
+	array(
 		'transport'   => 'postMessage',
 		'type'        => 'option',
 		'label'       => __( 'Facebook page name', 'snow-monkey' ),
@@ -24,7 +24,7 @@ Framework::control(
 			'<code>xxxxx</code>',
 			'<code>https://www.facebook.com/xxxxx</code>'
 		),
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {
@@ -36,7 +36,7 @@ $section = Framework::get_section( 'like-me-box' );
 $control = Framework::get_control( 'mwt-facebook-page-name' );
 $control->join( $section )->join( $panel );
 $control->partial(
-	[
+	array(
 		'selector'            => '.wp-like-me-box',
 		'container_inclusive' => true,
 		'render_callback'     => function() {
@@ -44,5 +44,5 @@ $control->partial(
 				Helper::get_template_part( 'template-parts/common/like-me-box' );
 			}
 		},
-	]
+	)
 );

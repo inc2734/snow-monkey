@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.5
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -21,7 +21,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 
 	Framework::section(
 		'design-' . $custom_post_type . '-archive',
-		[
+		array(
 			'title'           => sprintf(
 				/* translators: 1: Custom post type name */
 				__( '%1$s archive page settings', 'snow-monkey' ),
@@ -38,7 +38,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					}
 				}
 
-				return in_array( Controller::get_view(), [ 'archive', 'none' ], true )
+				return in_array( Controller::get_view(), array( 'archive', 'none' ), true )
 						&& (
 							is_post_type_archive( $custom_post_type )
 							|| (
@@ -48,6 +48,6 @@ foreach ( $custom_post_types as $custom_post_type ) {
 							)
 						);
 			},
-		]
+		)
 	);
 }

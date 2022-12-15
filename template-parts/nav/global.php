@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.1.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/global-nav.php
  */
@@ -19,15 +19,15 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_popup-mode'          => 'hover',
 		'_vertical'            => false,
 		'_gnav-hover-effect'   => get_theme_mod( 'gnav-hover-effect' ),
 		'_gnav-current-effect' => get_theme_mod( 'gnav-current-effect' ),
-	]
+	)
 );
 
-$classes   = [];
+$classes   = array();
 $classes[] = 'p-global-nav';
 if ( $args['_vertical'] ) {
 	$classes[] = 'p-global-nav--vertical';
@@ -44,8 +44,8 @@ $items_wrap = 'click' === $args['_popup-mode']
 	: '<ul id="%1$s" class="%2$s">%3$s</ul>';
 
 $navbar_args = 'click' === $args['_popup-mode']
-	? [ 'popup-mode' => 'click' ]
-	: [];
+	? array( 'popup-mode' => 'click' )
+	: array();
 
 $theme_location = ! empty( $args['_context'] ) && 'snow-monkey/nav/drop' === $args['_context'] && has_nav_menu( 'drop-nav' )
 	? 'drop-nav'
@@ -60,21 +60,21 @@ $display_site_branding = ! empty( $args['_context'] ) && 'snow-monkey/nav/drop' 
 		Helper::get_template_part(
 			'template-parts/header/site-branding',
 			null,
-			[
+			array(
 				'_title_tag' => 'div',
-			]
+			)
 		);
 	}
 
 	wp_nav_menu(
-		[
+		array(
 			'theme_location' => $theme_location,
 			'container'      => false,
 			'items_wrap'     => $items_wrap,
 			'menu_class'     => 'c-navbar',
 			'depth'          => 0,
 			'walker'         => new Navbar( $navbar_args ),
-		]
+		)
 	);
 	?>
 </nav>

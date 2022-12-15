@@ -1,27 +1,27 @@
 %widget-title {
-  @include widget-title();
+	@include widget-title();
 }
 
 %widget-title-theme {
-  @include widget-title-theme();
+	@include widget-title-theme();
 }
 
 %widget-list-base {
-  @include widget-list-base();
+	@include widget-list-base();
 
-  a {
-    @include widget-link-base();
-  }
+	a {
+		@include widget-link-base();
+	}
 }
 
 %widget-has-children-expander {
-  @include widget-has-children-expander();
+	@include widget-has-children-expander();
 }
 
 %widget-children {
-  @include widget-children();
+	@include widget-children();
 }
 
 %widget-children-theme {
-  @include widget-children-theme();
+	@include widget-children-theme();
 }

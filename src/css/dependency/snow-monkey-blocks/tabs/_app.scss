@@ -1,19 +1,19 @@
 .smb-tabs {
-  &__tab {
-    font-family: _var-base-font-family();
-  }
+	&__tab {
+		font-family: var(--_base-font-family);
+	}
 }
 
 .smb-tabs.is-style-line {
-  > .smb-tabs__tabs {
-    .smb-tabs__tab::after {
-      background-color: var-color-accent();
-    }
-  }
+	> .smb-tabs__tabs {
+		.smb-tabs__tab::after {
+			background-color: var(--wp--preset--color--sm-accent);
+		}
+	}
 }
 
 .smb-tab-panel {
-  &__body {
-    @extend %entry-content;
-  }
+	&__body {
+		@extend %entry-content;
+	}
 }

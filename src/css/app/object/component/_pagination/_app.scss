@@ -1,37 +1,33 @@
 .#{ $_prefix }c-pagination {
-  text-align: center;
-  font-size: 0;
+	text-align: center;
+	font-size: 0;
 
-  &__item,
-  &__item-link,
-  &__item-ellipsis {
-    margin: 0 2px;
-    display: inline-flex;
-    font-size: 14px;
-    line-height: 1;
-    height: 40px;
-    width: 40px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    vertical-align: top;
-  }
+	&__item,
+	&__item-link,
+	&__item-ellipsis {
+		margin: 0 2px;
+		display: inline-flex;
+		font-size: 14px;
+		line-height: 1;
+		height: 40px;
+		width: 40px;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		vertical-align: top;
+	}
 
-  &__item {
-    color: var-color-accent();
-  }
+	&__item {
+		color: var(--wp--preset--color--sm-accent);
+	}
 
-  &__item-link,
-  &__item-ellipsis {
-    color: inherit;
-  }
+	&__item-link,
+	&__item-ellipsis {
+		color: inherit;
+	}
 }
 
 .#{ $_prefix }p-archive .#{ $_prefix }c-pagination,
 .#{ $_prefix }p-archive + .#{ $_prefix }c-pagination {
-  @include _margin-top(1);
-
-  @include _media-min(lg) {
-    @include _margin-top(1.5);
-  }
+	margin-top: var(--_margin2);
 }

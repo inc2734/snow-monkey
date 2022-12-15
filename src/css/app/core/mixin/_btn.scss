@@ -1,15 +1,14 @@
 @mixin btn() {
-  @include _btn();
-  line-height: 1.5;
-  background-color: var-color-accent();
-  border: none;
-  border-radius: _var-border-radius();
-  color: _var-color-white();
-  @include _padding(.35, 1.25);
-  max-width: 100%;
-  @include _transition(all);
+	@include _btn();
+	background-color: var(--wp--preset--color--sm-accent);
+	border: none;
+	border-radius: var(--_border-radius);
+	color: var(--wp--preset--color--sm-text-alt);
+	padding: calc(var(--_padding-1) * .75) var(--_padding-1);
+	max-width: 100%;
+	@include _transition(all);
 
-  @include _hover() {
-    filter: brightness(90%);
-  }
+	@include _hover() {
+		filter: brightness(90%);
+	}
 }

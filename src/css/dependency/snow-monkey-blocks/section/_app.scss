@@ -2,93 +2,118 @@
 @import '../../../app/foundation/_placeholder/placeholder';
 
 .smb-section {
-  @extend %section;
+	@extend %section;
 
-  &__subtitle {
-    @extend %section-subtitle;
-    color: var-color-accent();
-  }
+	&__subtitle {
+		@extend %section-subtitle;
+		color: var(--wp--preset--color--sm-accent);
+	}
 
-  &__title {
-    @extend %section-title;
+	&__title {
+		@extend %section-title;
 
-    &::after {
-      background-color: var-color-accent();
-    }
+		&::after {
+			background-color: var(--wp--preset--color--sm-accent);
+		}
 
-    & + .smb-section__lede-wrapper,
-    & + .smb-section__lede {
-      @extend %section-lede;
-    }
-  }
+		& + .smb-section__lede-wrapper,
+		& + .smb-section__lede {
+			@extend %section-lede;
+		}
+	}
 
-  // @deprecated
-  &__title,
-  &__lede-wrapper,
-  &__lede {
-    & + .smb-section__body {
-      @extend %section-body;
-    }
-  }
+	// @deprecated
+	&__title,
+	&__lede-wrapper,
+	&__lede {
+		& + .smb-section__body {
+			@extend %section-body;
+		}
+	}
 
-  &__header {
-    & + .smb-section__body {
-      @extend %section-body;
-    }
-  }
+	&__header {
+		& + .smb-section__body {
+			@extend %section-body;
+		}
+	}
 
-  &__body {
-    @extend %entry-content;
-  }
-
-  &.alignfull,
-  &.alignwide {
-    > .smb-section__inner {
-      > .#{ $_prefix }c-container.#{ $_prefix }u-slim-width {
-        @include _media-min(_rem2px($one-column-slim-max-width) + 1px) {
-          padding-right: 0;
-          padding-left: 0;
-        }
-      }
-    }
-  }
+	&__body {
+		@extend %entry-content;
+	}
 }
 
-.smb-section__background-text__text {
-  $editor-font-sizes: (
-    'sm-small': 10px,
-    'sm-normal': 12px,
-    'sm-medium': 14px,
-    'sm-large': 16px,
-    'sm-xlarge': 18px,
-    'sm-xxlarge': 20px,
-    'sm-xxxlarge': 40px,
-  );
+// @deprecated
+@include _media-only(md) {
+	.smb-section__background-text__text.has-sm-small-font-size{
+		font-size: .875rem;
+		line-height: calc(.3 + .7 / (1 + .875 * .875 / 2.5 - .875 / 2.5) + var(--_half-leading) * 2);
+	}
 
-  $editor-font-sizes-md: (
-    'sm-small': 14px,
-    'sm-normal': 16px,
-    'sm-medium': 20px,
-    'sm-large': 28px,
-    'sm-xlarge': 36px,
-    'sm-xxlarge': 42px,
-    'sm-xxxlarge': 84px,
-  );
+	.smb-section__background-text__text.has-sm-normal-font-size{
+		font-size: 1rem;
+		line-height: calc(.3 + .7 / (1 + 1 * 1 / 2.5 - 1 / 2.5) + var(--_half-leading) * 2);
+	}
 
-  // @see src/css/app/foundation/_wordpress/_font-size
-  @each $slug, $size in $editor-font-sizes {
-    &.has-#{ $slug }-font-size {
-      @include _media-only(sm) {
-        @include _font-size-line-height($size);
-      }
+	.smb-section__background-text__text.has-sm-medium-font-size{
+		font-size: 1.25rem;
+		line-height: calc(.3 + .7 / (1 + 1.25 * 1.25 / 2.5 - 1.25 / 2.5) + var(--_half-leading) * 2);
+	}
 
-      $size-md: map-get($editor-font-sizes-md, $slug);
+	.smb-section__background-text__text.has-sm-large-font-size{
+		font-size: 1.75rem;
+		line-height: calc(.3 + .7 / (1 + 1.75 * 1.75 / 2.5 - 1.75 / 2.5) + var(--_half-leading) * 2);
+	}
 
-      @if $size != $size-md {
-        @include _media-only(md) {
-          @include _font-size-line-height($size-md);
-        }
-      }
-    }
-  }
+	.smb-section__background-text__text.has-sm-xlarge-font-size{
+		font-size: 2.25rem;
+		line-height: calc(.3 + .7 / (1 + 2.25 * 2.25 / 2.5 - 2.25 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-xxlarge-font-size{
+		font-size: 2.625rem;
+		line-height: calc(.3 + .7 / (1 + 2.625 * 2.625 / 2.5 - 2.625 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-xxxlarge-font-size{
+		font-size: 5.25rem;
+		line-height: calc(.3 + .7 / (1 + 5.25 * 5.25 / 2.5 - 5.25 / 2.5) + var(--_half-leading) * 2);
+	}
+}
+
+// @deprecated
+@include _media-only(sm) {
+	.smb-section__background-text__text.has-sm-small-font-size{
+		font-size: .625rem;
+		line-height: calc(.3 + .7 / (1 + .625 * .625 / 2.5 - .625 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-normal-font-size{
+		font-size: .75rem;
+		line-height: calc(.3 + .7 / (1 + .75 * .75 / 2.5 - .75 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-medium-font-size{
+		font-size: .875rem;
+		line-height: calc(.3 + .7 / (1 + .875 * .875 / 2.5 - .875 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-large-font-size{
+		font-size: 1rem;
+		line-height: calc(.3 + .7 / (1 + 1 * 1 / 2.5 - 1 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-xlarge-font-size{
+		font-size: 1.125rem;
+		line-height: calc(.3 + .7 / (1 + 1.125 * 1.125 / 2.5 - 1.125 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-xxlarge-font-size{
+		font-size: 1.25rem;
+		line-height: calc(.3 + .7 / (1 + 1.25 * 1.25 / 2.5 - 1.25 / 2.5) + var(--_half-leading) * 2);
+	}
+
+	.smb-section__background-text__text.has-sm-xxxlarge-font-size{
+		font-size: 2.5rem;
+		line-height: calc(.3 + .7 / (1 + 2.5 * 2.5 / 2.5 - 2.5 / 2.5) + var(--_half-leading) * 2);
+	}
 }

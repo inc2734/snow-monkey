@@ -1,19 +1,18 @@
 .#{ $_prefix }c-pagination {
-  &__item {
-    background-color: var-color-accent();
-    color: _var-color-white();
-  }
+	&__item {
+		background-color: var(--wp--preset--color--sm-accent);
+		color: var(--wp--preset--color--sm-text-alt);
+	}
 
-  &__item-link,
-  &__item-ellipsis {
-    background-color: _var-lighter-color-gray();
-    color: _var-light-color-text();
-  }
+	&__item-link,
+	&__item-ellipsis {
+		background-color: var(--wp--preset--color--sm-lighter-gray);
+	}
 
-  &__item-link {
-    @include _hover() {
-      background-color: _var-light-color-gray();
-      color: _var-color-white();
-    }
-  }
+	&__item-link {
+		@include _hover() {
+			background-color: var(--wp--preset--color--sm-light-gray);
+			color: var(--wp--preset--color--sm-text-alt);
+		}
+	}
 }

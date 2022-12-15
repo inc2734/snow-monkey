@@ -1,117 +1,105 @@
 .wp-profile-box {
-  background-color: _var-lightest-color-gray();
-  color: _var-color-text();
+	background-color: var(--wp--preset--color--sm-lightest-gray);
+	color: var(--wp--preset--color--sm-text);
 
-  &__title {
-    border-bottom: 1px solid transparent;
-    border-bottom-color: _var-lighter-color-gray();
-    @include _font-size($_base-font-size-px + 2);
-    line-height: 1;
-    @include _padding(.5);
+	&__title {
+		border-bottom: 1px solid transparent;
+		border-bottom-color: var(--wp--preset--color--sm-lighter-gray);
+		@include _set-font-size-level(2);
+		padding: var(--_padding-1);
 
-    @include _media-min(md) {
-      @include _padding(.5, 1);
-    }
-  }
+		@include _media-min(md) {
+			padding: var(--_padding-1) var(--_padding1);
+		}
+	}
 
-  &__container {
-    overflow: hidden;
-    @include _padding(.5);
+	&__container {
+		overflow: hidden;
+		padding: var(--_padding-1);
 
-    @include _media-min(md) {
-      @include _padding(.5, 1);
-    }
-  }
+		@include _media-min(md) {
+			padding: var(--_padding-1) var(--_padding1);
+		}
+	}
 
-  &__figure {
-    @include _margin($_half-leading * 1rem, 1, 0, 0);
+	&__figure {
+		margin: calc(var(--_half-leading) * 1rem) var(--_margin1) 0 0;
 
-    @include _media-min(md) {
-      float: left;
-    }
+		@include _media-min(md) {
+			float: left;
+		}
 
-    img {
-      border-radius: 100%;
-      height: auto;
-      width: 48px;
+		img {
+			border-radius: 100%;
+			height: auto;
+			width: 48px;
 
-      @include _media-min(md) {
-        width: 96px;
-      }
-    }
-  }
+			@include _media-min(md) {
+				width: 96px;
+			}
+		}
+	}
 
-  &__body {
-    overflow: hidden;
-  }
+	&__body {
+		overflow: hidden;
+	}
 
-  &__name {
-    @include _margin(0, 0, .25);
-    @include _font-size-line-height(1);
-  }
+	&__name {
+		margin-bottom: var(--_margin-2);
+		@include _set-font-size-level(0);
+	}
 
-  &__content {
-    @include items-gutter(.5);
-    @include _font-size-line-height($_base-font-size-px - 2);
-  }
+	&__content {
+		@include _set-content-level(-1);
+		@include _set-font-size-level(-1);
+	}
 
-  &__sns-accounts {
-    @include _margin(.25, 0, 0);
-    @include _list-unstyled();
-    overflow: hidden;
-  }
+	&__sns-accounts {
+		margin-top: var(--_margin-2);
+		@include _list-unstyled();
+		overflow: hidden;
+	}
 
-  &__sns-accounts-item {
-    margin-right: .5em;
-    display: inline-block;
-    @include _font-size-line-height($_base-font-size-px - 4);
-    font-weight: bold;
+	&__sns-accounts-item {
+		margin-right: .5em;
+		display: inline-block;
+		@include _set-font-size-level(-2);
+		font-weight: bold;
 
-    a {
-      color: inherit;
-      text-decoration: none;
+		a {
+			color: inherit;
+			text-decoration: none;
 
-      @include _hover() {
-        text-decoration: underline;
-      }
+			@include _hover() {
+				text-decoration: underline;
+			}
 
-      svg {
-        margin-right: 3px;
-      }
-    }
-  }
+			svg {
+				margin-right: 3px;
+			}
+		}
+	}
 
-  &__buttons {
-    @include _margin(.5, 0, 0);
-    padding-bottom: 1px;
-  }
+	&__buttons {
+		margin-top: var(--_margin-1);
+		padding-bottom: 1px;
+	}
 
-  &__detail-btn, &__archives-btn {
-    @include _btn();
-    border-radius: _var-border-radius();
-    @include _font-size($_base-font-size-px - 2);
-    @include _padding(.25, .5);
-    @include _transition(opacity);
-    backface-visibility: hidden;
-    vertical-align: top;
+	&__detail-btn,
+	&__archives-btn {
+		@include btn();
+	}
 
-    @include _hover() {
-      opacity: .9;
-    }
-  }
+	&__detail-btn {
+		margin-right: .5em;
+		border: 1px solid transparent;
+		border-color: var(--wp--preset--color--sm-accent);
+	}
 
-  &__detail-btn {
-    margin-right: .5em;
-    background-color: var-color-accent();
-    border: 1px solid transparent;
-    border-color: var-color-accent();
-    color: _var-color-white();
-  }
-
-  &__archives-btn {
-    background-color: _var-color-white();
-    border: 1px solid transparent;
-    border-color: var-color-accent();
-    color: var-color-accent();
-  }
+	&__archives-btn {
+		background-color: var(--wp--preset--color--sm-text-alt);
+		border: 1px solid transparent;
+		border-color: var(--wp--preset--color--sm-accent);
+		color: var(--wp--preset--color--sm-accent);
+	}
 }

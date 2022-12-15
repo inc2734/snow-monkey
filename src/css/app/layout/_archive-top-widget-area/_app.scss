@@ -1,9 +1,9 @@
 .#{ $_prefix }l-archive-top-widget-area {
-  @include _margin-bottom(1.5);
+	margin-bottom: var(--_margin2);
 }
 
 [data-has-sidebar="true"] .#{ $_prefix }l-archive-top-widget-area {
-  @include _media-min(lg) {
-    @include items-gutter();
-  }
+	@include _media-min(lg) {
+		@include _set-content-level(1);
+	}
 }

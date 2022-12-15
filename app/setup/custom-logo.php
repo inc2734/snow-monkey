@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.5
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -44,8 +44,8 @@ add_action(
 		$lg_logo_scale = get_theme_mod( 'lg-logo-scale' );
 		$lg_logo_scale = $lg_logo_scale / 100;
 
-		$styles_for_main           = [];
-		$styles_for_custom_widgets = [];
+		$styles_for_main           = array();
+		$styles_for_custom_widgets = array();
 
 		$custom_logo_id  = get_theme_mod( 'custom_logo' );
 		$custom_logo_src = wp_get_attachment_image_src( $custom_logo_id, 'full' );
@@ -100,7 +100,7 @@ add_action(
 add_filter(
 	'snow_monkey_template_part_render_template-parts/header/site-branding',
 	function( $html ) {
-		return str_replace( [ 'width="1"', 'height="1"' ], [], $html );
+		return str_replace( array( 'width="1"', 'height="1"' ), array(), $html );
 	}
 );
 

@@ -1,40 +1,40 @@
 .#{ $_prefix }p-infobar {
-  &--center {
-    .#{ $_prefix }c-container {
-      display: flex;
-      justify-content: center;
-    }
-  }
+	&--center {
+		.#{ $_prefix }c-container {
+			display: flex;
+			justify-content: center;
+		}
+	}
 
-  &--right {
-    .#{ $_prefix }c-container {
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
+	&--right {
+		.#{ $_prefix }c-container {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
 
-  &__inner {
-    display: flex;
-    flex-direction: row;
-    background-color: var-color-accent();
-    font-weight: bold;
-    text-decoration: none;
-    padding: 5px;
-  }
+	&__inner {
+		display: flex;
+		flex-direction: row;
+		background-color: var(--wp--preset--color--sm-accent);
+		font-weight: bold;
+		text-decoration: none;
+		padding: 5px;
+	}
 
-  &__content {
-    flex: 0 1 auto;
-    color: _var-color-white();
+	&__content {
+		flex: 0 1 auto;
+		color: var(--wp--preset--color--sm-text-alt);
 
-    a {
-      color: inherit;
-    }
-  }
+		a {
+			color: inherit;
+		}
+	}
 }
 
 a.#{ $_prefix }p-infobar {
-  @include _transition(filter);
-  @include _hover() {
-    filter: brightness(90%);
-  }
+	@include _transition(filter);
+	@include _hover() {
+		filter: brightness(90%);
+	}
 }

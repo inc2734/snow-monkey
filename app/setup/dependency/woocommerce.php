@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.5
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -22,16 +22,16 @@ add_action(
 	function() {
 		add_theme_support(
 			'woocommerce',
-			[
-				'product_grid' => [
+			array(
+				'product_grid' => array(
 					'default_rows'    => 3,
 					'min_rows'        => 2,
 					'max_rows'        => 8,
 					'default_columns' => 3,
 					'min_columns'     => 2,
 					'max_columns'     => 4,
-				],
-			]
+				),
+			)
 		);
 
 		add_theme_support( 'wc-product-gallery-zoom' );
@@ -65,23 +65,23 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-woocommerce',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-woocommerce-app',
 				Helper::get_main_style_handle() . '-woocommerce-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-woocommerce-app',
 			get_theme_file_uri( '/assets/css/dependency/woocommerce/app.css' ),
-			[ Helper::get_main_style_handle() ],
+			array( Helper::get_main_style_handle() ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/app.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-woocommerce-theme',
 			get_theme_file_uri( '/assets/css/dependency/woocommerce/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-woocommerce-app' ],
+			array( Helper::get_main_style_handle() . '-woocommerce-app' ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/woocommerce/app-theme.css' ) )
 		);
 
@@ -93,10 +93,10 @@ add_action(
 	'after_setup_theme',
 	function() {
 		add_editor_style(
-			[
+			array(
 				'assets/css/dependency/woocommerce/app.css',
 				'assets/css/dependency/woocommerce/app-theme.css',
-			]
+			)
 		);
 	}
 );
@@ -116,7 +116,7 @@ add_action(
 			function( $handles ) {
 				return array_merge(
 					$handles,
-					[
+					array(
 						Helper::get_main_style_handle() . '-woocommerce',
 						Helper::get_main_style_handle() . '-woocommerce-app',
 						Helper::get_main_style_handle() . '-woocommerce-theme',
@@ -126,7 +126,7 @@ add_action(
 						'woocommerce-general',
 						'wc-blocks-style',
 						'wc-blocks-vendors-style',
-					]
+					)
 				);
 			}
 		);
@@ -142,7 +142,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'WooCommerce sidebar', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed in the sidebar on WooCommerce.', 'snow-monkey' ),
 				'id'            => 'woocommerce-sidebar-widget-area',
@@ -150,7 +150,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -196,10 +196,10 @@ add_filter(
 	'snow_monkey_view',
 	function( $view ) {
 		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
-			return [
+			return array(
 				'slug' => 'templates/view/woocommerce',
 				'name' => 'content',
-			];
+			);
 		}
 		return $view;
 	},
@@ -240,25 +240,25 @@ add_filter(
 			return $breadcrumbs;
 		}
 
-		$wc_breadcrumbs = [];
+		$wc_breadcrumbs = array();
 
 		if ( is_product() || is_product_category() || is_product_tag() ) {
 			$shop_page_id     = wc_get_page_id( 'shop' );
 			$shop_url         = get_permalink( $shop_page_id );
 			$shop_label       = get_the_title( $shop_page_id );
-			$wc_breadcrumbs[] = [
+			$wc_breadcrumbs[] = array(
 				'title' => $shop_label,
 				'link'  => $shop_url,
-			];
+			);
 		}
 
 		$wc_breadcrumb     = new WC_Breadcrumb();
 		$wc_breadcrumb_arr = $wc_breadcrumb->generate();
 		foreach ( $wc_breadcrumb_arr as $value ) {
-			$wc_breadcrumbs[] = [
+			$wc_breadcrumbs[] = array(
 				'title' => $value[0],
 				'link'  => $value[1],
-			];
+			);
 		}
 
 		if ( is_product_tag() ) {
@@ -287,9 +287,9 @@ add_filter(
 		}
 
 		return array_merge(
-			[
+			array(
 				$breadcrumbs[0],
-			],
+			),
 			$wc_breadcrumbs
 		);
 	}

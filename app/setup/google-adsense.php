@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.5
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -39,7 +39,7 @@ add_action(
 		wp_enqueue_script(
 			'google-adsense',
 			'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-			[],
+			array(),
 			null,
 			false
 		);
@@ -105,11 +105,11 @@ add_filter(
 		$ad_client = get_option( 'mwt-google-auto-ads' );
 		if ( ! $ad_client ) {
 			foreach (
-				[
+				array(
 					get_option( 'mwt-google-adsense' ),
 					get_option( 'mwt-google-infeed-ads' ),
 					get_option( 'mwt-google-matched-content' ),
-				] as $code
+				) as $code
 			) {
 				if ( preg_match( '|data-ad-client="([^\"]*?)"|ms', $code, $match ) ) {
 					$ad_client = $match[1];
@@ -166,9 +166,9 @@ add_filter(
  */
 function snow_monkey_sidebar_add_google_adsense() {
 	if ( get_option( 'mwt-google-adsense' ) ) {
-		$vars = [
+		$vars = array(
 			'_position' => 'sidebar-top',
-		];
+		);
 		Helper::get_template_part( 'template-parts/common/google-adsense', null, $vars );
 	}
 }

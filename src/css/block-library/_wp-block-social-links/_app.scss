@@ -1,8 +1,5 @@
 .wp-block-social-links {
-  --wp--style--block-gap: #{ _space(.5, true, true) };
-  gap: var(--wp--style--block-gap) !important;
-
-  > .wp-social-link.wp-social-link.wp-social-link {
-    margin: 0;
-  }
+	> .wp-social-link.wp-social-link.wp-social-link {
+		margin: 0;
+	}
 }

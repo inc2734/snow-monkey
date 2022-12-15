@@ -9,10 +9,10 @@ use Inc2734\WP_Customizer_Framework\Style;
 use Framework\Helper;
 
 $terms = Helper::get_terms(
-	[
+	array(
 		'taxonomy'   => 'category',
 		'hide_empty' => false,
-	]
+	)
 );
 
 foreach ( $terms as $_term ) {
@@ -30,12 +30,12 @@ foreach ( $terms as $_term ) {
 		continue;
 	}
 
-	$styles = [
-		[
-			'selectors'  => [ '.c-entry-summary__term--' . $_term->taxonomy . '-' . $_term->term_id ],
-			'properties' => [ 'background-color: ' . $accent_color ],
-		],
-	];
+	$styles = array(
+		array(
+			'selectors'  => array( '.c-entry-summary__term--' . $_term->taxonomy . '-' . $_term->term_id ),
+			'properties' => array( 'background-color: ' . $accent_color ),
+		),
+	);
 
 	Style::attach(
 		Helper::get_main_style_handle() . '-app',

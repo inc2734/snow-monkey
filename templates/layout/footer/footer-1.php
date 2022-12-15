@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.0.6
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -24,9 +24,9 @@ $footer_alignfull = get_theme_mod( 'footer-alignfull' );
 					Helper::get_template_part(
 						'template-parts/nav/social',
 						null,
-						[
+						array(
 							'_container-fluid' => $footer_alignfull,
-						]
+						)
 					);
 					?>
 				</div>
@@ -38,9 +38,9 @@ $footer_alignfull = get_theme_mod( 'footer-alignfull' );
 					Helper::get_template_part(
 						'template-parts/widget-area/footer',
 						null,
-						[
+						array(
 							'_container-fluid' => $footer_alignfull,
-						]
+						)
 					);
 					?>
 				</div>
@@ -52,10 +52,10 @@ $footer_alignfull = get_theme_mod( 'footer-alignfull' );
 					Helper::get_template_part(
 						'template-parts/nav/footer-sub',
 						null,
-						[
+						array(
 							'_container-fluid'       => $footer_alignfull,
 							'_content-justification' => 'center',
-						]
+						)
 					);
 					?>
 				</div>
@@ -69,10 +69,10 @@ $footer_alignfull = get_theme_mod( 'footer-alignfull' );
 			Helper::get_template_part(
 				'template-parts/footer/copyright',
 				null,
-				[
+				array(
 					'_container-fluid' => $footer_alignfull,
 					'_inverse'         => false,
-				]
+				)
 			);
 			?>
 		</div>

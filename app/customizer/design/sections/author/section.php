@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -18,7 +18,7 @@ $users = Helper::get_users();
 foreach ( $users as $user ) {
 	Framework::section(
 		'design-author-' . $user->ID,
-		[
+		array(
 			'title'           => sprintf(
 				/* translators: 1: User name */
 				__( '[ %1$s ] author page settings', 'snow-monkey' ),
@@ -28,6 +28,6 @@ foreach ( $users as $user ) {
 			'active_callback' => function() use ( $user ) {
 				return is_author( $user->ID );
 			},
-		]
+		)
 	);
 }

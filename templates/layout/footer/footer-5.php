@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.13.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -27,9 +27,9 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 							Helper::get_template_part(
 								'template-parts/widget-area/footer',
 								null,
-								[
+								array(
 									'_container' => false,
-								]
+								)
 							);
 							?>
 						</div>
@@ -41,9 +41,9 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 						Helper::get_template_part(
 							'template-parts/header/site-branding',
 							null,
-							[
+							array(
 								'_title_tag' => 'div',
-							]
+							)
 						);
 						?>
 					</div>
@@ -54,9 +54,9 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 							Helper::get_template_part(
 								'template-parts/nav/social',
 								null,
-								[
+								array(
 									'_container' => false,
-								]
+								)
 							);
 							?>
 						</div>
@@ -77,10 +77,10 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 								Helper::get_template_part(
 									'template-parts/footer/copyright',
 									null,
-									[
+									array(
 										'_container' => false,
 										'_inverse'   => false,
-									]
+									)
 								);
 								?>
 							</div>
@@ -93,10 +93,10 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 								Helper::get_template_part(
 									'template-parts/nav/footer-sub',
 									null,
-									[
+									array(
 										'_container' => false,
 										'_content-justification' => 'left',
-									]
+									)
 								);
 								?>
 							</div>

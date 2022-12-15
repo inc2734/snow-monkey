@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,7 +15,7 @@ unset( $eyecatch_position_choices['content-top'] );
 Framework::control(
 	'select',
 	'bbpress-archive-eyecatch',
-	[
+	array(
 		'label'       => __( 'Featured image position', 'snow-monkey' ),
 		'description' => sprintf(
 			/* translators: 1: bbPress archive */
@@ -25,7 +25,7 @@ Framework::control(
 		'priority'    => 120,
 		'default'     => 'none',
 		'choices'     => $eyecatch_position_choices,
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

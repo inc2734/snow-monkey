@@ -1,61 +1,7 @@
-input, textarea, keygen, select, button {
-  font-size: 100%;
-}
-
-a {
-  color: var-color-accent();
-}
-
-ol,
-ul {
-  margin-left: 0;
-  padding-left: 1.5em;
-}
-
-// @see src/css/block-editor/app.scss
-h1 {
-  @include _font-size-line-height($_h1-font-size-scale / 1.5);
-
-  @include _media-min(md) {
-    @include _font-size-line-height($_h1-font-size-scale / 1.25);
-  }
-
-  @include _media-min(lg) {
-    @include _font-size-line-height($_h1-font-size-scale);
-  }
-}
-
-// @see src/css/block-editor/app.scss
-h2 {
-  @include _font-size-line-height($_h2-font-size-scale / 1.25);
-
-  @include _media-min(lg) {
-    @include _font-size-line-height($_h2-font-size-scale);
-  }
-}
-
-// @see src/css/block-editor/app.scss
-h3 {
-  @include _font-size-line-height($_h3-font-size-scale / 1.25);
-
-  @include _media-min(lg) {
-    @include _font-size-line-height($_h3-font-size-scale);
-  }
-}
-
-// @see src/css/block-editor/app.scss
-h4 {
-  @include _font-size-line-height($_h4-font-size-scale / 1.25);
-
-  @include _media-min(lg) {
-    @include _font-size-line-height($_h4-font-size-scale);
-  }
-}
-
 iframe {
-  max-width: 100%;
+	max-width: 100%;
 }
 
 fieldset {
-  padding: 0;
+	padding: 0;
 }

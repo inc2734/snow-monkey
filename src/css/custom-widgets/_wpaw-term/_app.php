@@ -8,13 +8,13 @@
 use Inc2734\WP_Customizer_Framework\Style;
 use Framework\Helper;
 
-$styles = [];
+$styles = array();
 
 $terms = Helper::get_terms(
-	[
+	array(
 		'taxonomy'   => 'category',
 		'hide_empty' => false,
-	]
+	)
 );
 
 foreach ( $terms as $_term ) {
@@ -23,10 +23,10 @@ foreach ( $terms as $_term ) {
 		continue;
 	}
 
-	$styles[] = [
-		'selectors'  => [ '.wpaw-term.wpaw-term--category-' . $_term->term_id ],
-		'properties' => [ 'background-color: ' . $accent_color ],
-	];
+	$styles[] = array(
+		'selectors'  => array( '.wpaw-term.wpaw-term--category-' . $_term->term_id ),
+		'properties' => array( 'background-color: ' . $accent_color ),
+	);
 }
 
 if ( $styles ) {

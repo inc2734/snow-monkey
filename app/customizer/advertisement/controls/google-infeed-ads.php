@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,7 +11,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'textarea',
 	'mwt-google-infeed-ads',
-	[
+	array(
 		'label'             => __( 'Google Adsense Infeed Ads', 'snow-monkey' ),
 		'description'       => __( 'When pasting the code of the infeed ads, the advertisement is displayed in posts list.', 'snow-monkey' ) . __( 'Paste only the ins tag.', 'snow-monkey' ),
 		'type'              => 'option',
@@ -24,7 +24,7 @@ Framework::control(
 			$value = strip_tags( $value, '<ins>' );
 			return $value;
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

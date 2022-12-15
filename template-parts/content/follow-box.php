@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 12.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -16,10 +16,10 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title' => __( 'Follow us on SNS', 'snow-monkey' ),
 		'_lead'  => __( 'We will deliver up-to-date information for you', 'snow-monkey' ),
-	]
+	)
 );
 ?>
 

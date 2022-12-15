@@ -1,53 +1,49 @@
-@mixin entry-content($coefficient: 1) {
-  @include _content($coefficient);
+@mixin entry-content($level: 1) {
+	@include _set-content-level($level);
 
-  > * {
-    position: relative;
-    margin-right: auto;
-    margin-left: auto;
-  }
+	> * {
+		position: relative;
+	}
 
-  > h2 + h3,
-  > h3 + h4,
-  > h4 + h5,
-  > h5 + h6 {
-    margin-top: 0;
-  }
+	& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+		margin-left: auto !important;
+		margin-right: auto !important;
+	}
 
-  > table {
-    @extend %table;
-  }
+	> table {
+		@extend %table;
+	}
 
-  > ul,
-  > ol {
-    > li {
-      & + li {
-        @include _margin-top(.25);
-      }
-    }
-  }
+	> ul,
+	> ol {
+		> li {
+			& + li {
+				margin-top: var(--_margin-2);
+			}
+		}
+	}
 
-  > blockquote:not([class~="wp-block-quote"]) {
-    @extend %blockquote;
-  }
+	> blockquote:not([class~="wp-block-quote"]) {
+		@extend %blockquote;
+	}
 }
 
 @mixin entry-content-theme() {
-  // @see app/setup/customizer-styles.php
-  > h2 {
-    border-left: var(--entry-content-h2-border-left);
-    background-color: var(--entry-content-h2-background-color);
-    color: _var-color-text();
-    padding: var(--entry-content-h2-padding);
-  }
+	// @see app/setup/customizer-styles.php
+	> h2 {
+		border-left: var(--entry-content-h2-border-left);
+		background-color: var(--entry-content-h2-background-color);
+		color: var(--wp--preset--color--sm-text);
+		padding: var(--entry-content-h2-padding);
+	}
 
-  // @see app/setup/customizer-styles.php
-  > h3 {
-    border-bottom: var(--entry-content-h3-border-bottom);
-    padding: var(--entry-content-h3-padding);
-  }
+	// @see app/setup/customizer-styles.php
+	> h3 {
+		border-bottom: var(--entry-content-h3-border-bottom);
+		padding: var(--entry-content-h3-padding);
+	}
 
-  > blockquote:not([class~="wp-block-quote"]) {
-    @extend %blockquote-theme;
-  }
+	> blockquote:not([class~="wp-block-quote"]) {
+		@extend %blockquote-theme;
+	}
 }

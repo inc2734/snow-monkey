@@ -1,38 +1,38 @@
 .#{ $_prefix }p-drop-nav {
-  background-color: _var-background-color();
+	background-color: var(--_background-color);
 
-  @media print {
-    display: none;
-  }
+	@media print {
+		display: none;
+	}
 
-  .#{ $_prefix }p-global-nav {
-    display: flex;
-    justify-content: center;
-  }
+	.#{ $_prefix }p-global-nav {
+		display: flex;
+		justify-content: center;
+	}
 
-  .#{ $_prefix }c-site-branding {
-    @include _margin-right(.5);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include _padding-top(.25);
-    @include _padding-bottom(.25);
+	.#{ $_prefix }c-site-branding {
+		margin-right: var(--_margin-1);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-top: var(--_padding-2);
+		padding-bottom: var(--_padding-2);
 
-    &__description {
-      display: none;
-    }
-  }
+		&__description {
+			display: none;
+		}
+	}
 
-  .#{ $_prefix }c-navbar {
-    justify-content: center;
+	.#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar {
+		justify-content: center;
 
-    &__item {
-      flex: 0 1 auto;
+		&__item {
+			flex: 0 1 auto;
 
-      > a {
-        @include _padding-top(.5);
-        @include _padding-bottom(.5);
-      }
-    }
-  }
+			> a {
+				padding-top: var(--_padding-1);
+				padding-bottom: var(--_padding-1);
+			}
+		}
+	}
 }

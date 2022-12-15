@@ -1,46 +1,57 @@
 .#{ $_prefix }c-overlay-container {
-  @include _position(fixed, 100%, 0, 0, 0, 0);
-  opacity: 0;
-  visibility: hidden;
-  @include _transition(opacity);
-  background-color: rgba(#000, .7);
+	position: fixed;
+	top: 100%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 0;
+	opacity: 0;
+	visibility: hidden;
+	@include _transition(opacity);
+	background-color: rgba(#000, .7);
 
-  &:target {
-    top: 0;
-    z-index: 100000;
-    opacity: 1;
-    visibility: visible;
-  }
+	&:target {
+		top: 0;
+		z-index: 100000;
+		opacity: 1;
+		visibility: visible;
+	}
 
-  &__inner {
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: fit-content;
-    overflow: auto;
+	&__inner {
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		width: fit-content;
+		overflow: auto;
 
-    > * {
-      position: relative;
-      z-index: 1;
-    }
-  }
+		> * {
+			position: relative;
+			z-index: 1;
+		}
+	}
 
-  &__bg {
-    @include _position(absolute, 0, 0, 0, 0);
-    display: block;
-  }
+	&__bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: block;
+	}
 
-  &__close-btn {
-    @include _position(fixed, 0, 0);
-    z-index: 2;
-    @include _square(60px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: _var-color-black();
-    color: _var-color-white();
-    text-decoration: none;
-  }
+	&__close-btn {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		@include _square(60px);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: var(--wp--preset--color--sm-text);
+		color: var(--wp--preset--color--sm-text-alt);
+		text-decoration: none;
+	}
 }

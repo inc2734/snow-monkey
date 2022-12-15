@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/comment.php
  */
@@ -12,7 +12,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_comment'                  => false,
 		'_depth'                    => 0,
 		'_max_depth'                => 0,
@@ -24,7 +24,7 @@ $args = wp_parse_args(
 			get_comment_date(),
 			get_comment_time()
 		),
-	]
+	)
 );
 
 $_comment = get_comment( $args['_comment'] );
@@ -63,10 +63,10 @@ $avatar = get_avatar( $_comment, '96' );
 		</div>
 
 		<?php
-		$comment_reply_link_args = [
+		$comment_reply_link_args = array(
 			'depth'     => $args['_depth'],
 			'max_depth' => $args['_max_depth'],
-		];
+		);
 		$comment_reply_link      = get_comment_reply_link( $comment_reply_link_args );
 		?>
 		<?php if ( ! empty( $comment_reply_link ) ) : ?>

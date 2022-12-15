@@ -3,27 +3,27 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
 $terms = Helper::get_terms(
-	[
+	array(
 		'taxonomy'   => 'category',
 		'hide_empty' => false,
-	]
+	)
 );
 
 foreach ( $terms as $_term ) {
 	Framework::control(
 		'color',
 		$_term->taxonomy . '-' . $_term->term_id . '-accent-color',
-		[
+		array(
 			'label'    => __( 'Accent color', 'snow-monkey' ),
 			'priority' => 100,
-		]
+		)
 	);
 }
 

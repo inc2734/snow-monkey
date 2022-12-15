@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.2
+ * @version 19.0.0-beta1
  */
 
 if ( ! defined( 'SNOW_MONKEY_MEGA_MENU_PATH' ) ) {
@@ -25,9 +25,9 @@ add_action(
 			function( $handles ) {
 				return array_merge(
 					$handles,
-					[
+					array(
 						'snow-monkey-mega-menu',
-					]
+					)
 				);
 			}
 		);

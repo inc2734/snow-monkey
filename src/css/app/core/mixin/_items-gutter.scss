@@ -1,5 +1,0 @@
-@mixin items-gutter($coefficient: 1) {
-  > *:not(:first-child) {
-    @include _margin-top($_base-margin-bottom * $coefficient);
-  }
-}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.1.2
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -14,14 +14,14 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_display_meta'   => true,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_thumbnail_size' => 'medium_large',
-		'_terms'          => $_terms ? [ $_terms[0] ] : [],
+		'_terms'          => $_terms ? array( $_terms[0] ) : array(),
 		'_title_tag'      => 'h2',
-	]
+	)
 );
 ?>
 
@@ -31,11 +31,11 @@ $args = wp_parse_args(
 		Helper::get_template_part(
 			'template-parts/loop/entry-summary/figure/figure',
 			$args['_name'],
-			[
+			array(
 				'_context'        => $args['_context'],
 				'_thumbnail_size' => $args['_thumbnail_size'],
 				'_terms'          => $args['_terms'],
-			]
+			)
 		);
 		?>
 
@@ -45,11 +45,11 @@ $args = wp_parse_args(
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary/title/title',
 					$args['_name'],
-					[
+					array(
 						'_context'        => $args['_context'],
 						'_entries_layout' => $args['_entries_layout'],
 						'_title_tag'      => $args['_title_tag'],
-					]
+					)
 				);
 				?>
 			</header>
@@ -58,11 +58,11 @@ $args = wp_parse_args(
 			Helper::get_template_part(
 				'template-parts/loop/entry-summary/content/content',
 				$args['_name'],
-				[
+				array(
 					'_context'        => $args['_context'],
 					'_entries_layout' => $args['_entries_layout'],
 					'_excerpt_length' => $args['_excerpt_length'],
-				]
+				)
 			);
 			?>
 
@@ -74,10 +74,10 @@ $args = wp_parse_args(
 					Helper::get_template_part(
 						'template-parts/loop/entry-summary/meta/meta',
 						$args['_name'],
-						[
+						array(
 							'_context' => $args['_context'],
 							'_terms'   => $args['_terms'],
-						]
+						)
 					);
 				}
 			}

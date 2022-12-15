@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Awesome_Components\Awesome_Components;
@@ -21,7 +21,7 @@ if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
 			wp_enqueue_style(
 				Helper::get_main_style_handle() . '-wpac',
 				get_theme_file_uri( '/assets/css/wpac/app.css' ),
-				[ Helper::get_main_style_handle() ],
+				array( Helper::get_main_style_handle() ),
 				filemtime( get_theme_file_path( '/assets/css/wpac/app.css' ) )
 			);
 		}
@@ -30,7 +30,7 @@ if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
 	add_action(
 		'after_setup_theme',
 		function() {
-			add_editor_style( [ '/assets/css/wpac/app.css' ] );
+			add_editor_style( array( '/assets/css/wpac/app.css' ) );
 		}
 	);
 }

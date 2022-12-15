@@ -1,89 +1,38 @@
 .#{ $_prefix }c-entry {
-  &__header {
-    @include _margin-bottom(1);
-  }
+	&__header {
+		margin-bottom: var(--_margin1);
+	}
 
-  &__meta {
-    @include _margin-top(.25);
-    @include _font-size-line-height(12px);
+	&__meta {
+		margin-top: var(--_margin-2);
+		@include _set-font-size-level(-1);
 
-    a {
-      color: inherit;
-      text-decoration: none;
+		a {
+			color: inherit;
+			text-decoration: none;
 
-      @include _hover() {
-        text-decoration: underline;
-      }
-    }
-  }
+			@include _hover() {
+				text-decoration: underline;
+			}
+		}
+	}
 
-  &__body {
-    @include items-gutter();
-  }
+	&__body {
+		@include _set-content-level(1);
+	}
 
-  &__content {
-    @include _clearfix();
+	&__content {
+		@include _clearfix();
 
-    > *:where(:not([width])) {
-      @include content-alignment();
-    }
-  }
+		@at-root {
+			:where(#{ & } > :where(:not(.alignleft):not(.alignright):not(.alignfull))) {
+				max-width: var(--wp--style--global--content-size);
+			}
+		}
+	}
 
-  &__footer {
-    @include items-gutter();
-    @include _margin-top(1.5);
-  }
-}
-
-// All one column templates
-[data-has-sidebar="false"] {
-  &[data-header-layout="left"] {
-    .#{ $_prefix }c-entry__content {
-      @include _media-min(lg) {
-        margin-right: 0;
-        margin-left: 0;
-      }
-    }
-  }
-}
-
-// Blank / One column full
-[data-is-full-template="true"] {
-  .#{ $_prefix }c-entry__content {
-    &:not([data-home-page-container="true"]) {
-      --wp-block-width: 100%;
-
-      > * {
-        width: auto;
-      }
-    }
-  }
-}
-
-// One column slim / Blank slim
-[data-has-sidebar="false"][data-is-slim-width="true"] {
-  .#{ $_prefix }c-entry__content {
-    --wp-block-width: 46rem;
-  }
-}
-
-// One column
-[data-has-sidebar="false"] {
-  .#{ $_prefix }c-entry__content {
-    margin-right: calc(50% - 50vw + (#{ var-scrollbar-width() } / 2));
-    margin-left: calc(50% - 50vw + (#{ var-scrollbar-width() } / 2));
-  }
-}
-
-// Right / Left sidebar
-[data-has-sidebar="true"] {
-  .#{ $_prefix }c-entry__content {
-    $container_margin: _space(1, true);
-    $sidebar_margin: _space(1, true, true);
-    --wp-block-width: calc(#{ _var-container-max-width() } - 336px - #{ $sidebar_margin } - #{ $container_margin } * 2);
-
-    > * {
-      width: auto;
-    }
-  }
+	&__footer {
+		margin-top: var(--_margin2);
+		@include _set-content-level(1);
+	}
 }

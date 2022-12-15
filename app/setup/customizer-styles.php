@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.1
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -16,12 +16,12 @@ use Inc2734\WP_Customizer_Framework\Color;
 add_action(
 	'inc2734_wp_customizer_framework_load_styles',
 	function() {
-		$includes = [
+		$includes = array(
 			'/assets/css/app/foundation',
 			'/assets/css/app/object/component',
 			'/assets/css/app/object/project',
 			'/assets/css/custom-widgets',
-		];
+		);
 		foreach ( $includes as $include ) {
 			Helper::load_files( 'get_template_parts', get_template_directory() . $include );
 		}

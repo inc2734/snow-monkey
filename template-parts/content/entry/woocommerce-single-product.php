@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.2.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_display_article_bottom_widget_area'  => false,
 		'_display_article_top_widget_area'     => false,
 		'_display_bottom_share_buttons'        => false,
@@ -20,18 +20,18 @@ $args = wp_parse_args(
 		'_display_entry_footer'                => false,
 		'_display_profile_box'                 => false,
 		'_display_top_share_buttons'           => false,
-	]
+	)
 );
 
 if ( $args['_display_entry_footer'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_display_follow_box'    => has_nav_menu( 'follow-box' ),
 			'_display_like_me_box'   => get_option( 'mwt-facebook-page-name' ),
 			'_display_prev_next_nav' => false,
 			'_display_related_posts' => get_option( 'mwt-display-related-posts' ),
-		]
+		)
 	);
 }
 ?>
@@ -79,9 +79,9 @@ if ( $args['_display_entry_footer'] ) {
 			Helper::get_template_part(
 				'template-parts/common/profile-box',
 				null,
-				[
+				array(
 					'_title' => __( 'Bio', 'snow-monkey' ),
-				]
+				)
 			);
 		}
 		?>
@@ -101,12 +101,12 @@ if ( $args['_display_entry_footer'] ) {
 		Helper::get_template_part(
 			'template-parts/content/entry/footer/footer',
 			'woocommerce-single-product',
-			[
+			array(
 				'_display_follow_box'    => $args['_display_follow_box'],
 				'_display_like_me_box'   => $args['_display_like_me_box'],
 				'_display_prev_next_nav' => $args['_display_prev_next_nav'],
 				'_display_related_posts' => $args['_display_related_posts'],
-			]
+			)
 		);
 	}
 	?>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 19.0.0-beta1
  */
 
 if ( ! has_nav_menu( 'drawer-sub-nav' ) ) {
@@ -14,13 +14,13 @@ if ( ! has_nav_menu( 'drawer-sub-nav' ) ) {
 <div class="p-drawer-sub-nav c-drawer__sub-nav">
 	<?php
 	wp_nav_menu(
-		[
+		array(
 			'theme_location' => 'drawer-sub-nav',
 			'container'      => false,
 			'menu_class'     => 'c-drawer__menu',
 			'depth'          => 1,
 			'walker'         => new \Inc2734\WP_Basis\App\Walker\Drawer(),
-		]
+		)
 	);
 	?>
 </div>

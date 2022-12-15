@@ -1,7 +1,7 @@
 .smb-accordion {
-  &__item {
-    &__body {
-      @extend %entry-content;
-    }
-  }
+	&__item {
+		&__body {
+			@extend %entry-content;
+		}
+	}
 }

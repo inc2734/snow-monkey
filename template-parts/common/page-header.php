@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/page-header.php
  */
@@ -16,13 +16,13 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title'                 => $page_header::get_title(),
 		'_image'                 => $page_header::get_image( apply_filters( 'snow_monkey_page_header_thumbnail_size', 'xlarge' ) ),
 		'_align'                 => $page_header::get_align(),
 		'_display_entry_meta'    => false,
 		'_display_image_caption' => false,
-	]
+	)
 );
 
 // Migrate from less than v11.5 to more than v11.5
@@ -51,9 +51,9 @@ if ( isset( $args['_is_output_page_header_title'] ) ) {
 			<?php
 			echo wp_kses(
 				$args['_image'],
-				[
+				array(
 					'img' => Helper::img_allowed_attributes(),
-				]
+				)
 			);
 			?>
 

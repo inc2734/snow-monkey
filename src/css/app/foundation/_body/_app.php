@@ -27,16 +27,18 @@ $get_margin_scale_var = function( $margin_scale ) {
 	}
 };
 
-$root_variables_app   = [];
-$root_variables_theme = [];
+$root_variables_app   = array();
+$root_variables_theme = array();
+
+$root_variables_app_media_min_md = array();
 
 $container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
 if ( $container_margin_sm ) {
-	$root_variables_app[] = '--_container-margin-sm: ' . $container_margin_sm;
+	$root_variables_app[] = '--_container-margin: ' . $container_margin_sm;
 }
 $container_margin = $get_container_margin_var( get_theme_mod( 'lg-container-margin' ) );
 if ( $container_margin ) {
-	$root_variables_app[] = '--_container-margin: ' . $container_margin;
+	$root_variables_app_media_min_md[] = '--_container-margin: ' . $container_margin;
 }
 
 $container_max_width = get_theme_mod( 'container-max-width' );
@@ -49,9 +51,11 @@ if ( $margin_scale ) {
 	$root_variables_app[] = '--_margin-scale: ' . $margin_scale;
 }
 
-$space = $get_container_margin_var( get_theme_mod( 'space' ) );
+$space_unitless = get_theme_mod( 'space' );
+$space          = $get_container_margin_var( $space_unitless );
 if ( $space ) {
 	$root_variables_app[] = '--_space: ' . $space;
+	$root_variables_app[] = '--_space-unitless: ' . $space_unitless;
 }
 
 $accent_color = get_theme_mod( 'accent-color' );
@@ -86,57 +90,65 @@ if ( $base_line_height ) {
 
 $base_font = get_theme_mod( 'base-font' );
 if ( 'noto-sans-jp' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_sans_jp' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_sans_jp' ] );
+	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_sans_jp' ), 5 );
+	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_sans_jp' ) );
 } elseif ( 'noto-serif-jp' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ] );
+	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ), 5 );
+	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ) );
 } elseif ( 'm-plus-1p' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ] );
+	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ), 5 );
+	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ) );
 } elseif ( 'm-plus-rounded-1c' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ] );
+	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ), 5 );
+	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ) );
 } elseif ( 'biz-udpgothic' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ] );
+	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ), 5 );
+	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ) );
 } elseif ( 'biz-udpmincho' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ], 5 );
-	add_action( 'enqueue_block_editor_assets', [ '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ] );
+	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ), 5 );
+	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ) );
 }
 $font_family          = Helper::get_font_family();
 $root_variables_app[] = '--font-family: ' . $font_family; // @deprecated
 $root_variables_app[] = '--_base-font-family: var(--font-family)';
 
 $base_font_size = get_theme_mod( 'base-font-size' );
-foreach ( Helper::get_font_sizes() as $font_size ) {
-	if ( false !== strpos( $font_size['size'], 'px' ) ) {
-		$line_height          = sprintf(
-			'calc(%1$s / %2$s + var(--_half-leading) * 2)',
-			$base_font_size,
-			str_replace( 'px', '', $font_size['size'] )
-		);
-		$root_variables_app[] = '--line-height-' . $font_size['slug'] . ': ' . $line_height;
-	}
-}
+// foreach ( Helper::get_font_sizes() as $font_size ) {
+// 	if ( false !== strpos( $font_size['size'], 'px' ) ) {
+// 		$line_height          = sprintf(
+// 			'calc(%1$s / %2$s + var(--_half-leading) * 2)',
+// 			$base_font_size,
+// 			str_replace( 'px', '', $font_size['size'] )
+// 		);
+// 		$root_variables_app[] = '--line-height-' . $font_size['slug'] . ': ' . $line_height;
+// 	}
+// }
 
 $root_variables_app[] = '--_base-font-size-px: ' . $base_font_size . 'px';
 
-$styles_core = [];
+$styles_core = array();
 
 if ( $root_variables_app ) {
-	$styles_core[] = [
-		'selectors'  => [ ':root' ],
+	$styles_core[] = array(
+		'selectors'  => array( ':root' ),
 		'properties' => $root_variables_app,
-	];
+	);
 }
 
-$styles_core[] = [
-	'selectors'  => [ 'html' ],
-	'properties' => [
+if ( $root_variables_app_media_min_md ) {
+	$styles_core[] = array(
+		'selectors'   => array( ':root' ),
+		'properties'  => $root_variables_app_media_min_md,
+		'media_query' => '@media (min-width: 640px)', // Optional
+	);
+}
+
+$styles_core[] = array(
+	'selectors'  => array( 'html' ),
+	'properties' => array(
 		'letter-spacing: ' . get_theme_mod( 'base-letter-spacing' ) . 'rem',
-	],
-];
+	),
+);
 
 Style::attach(
 	Helper::get_main_style_handle() . '-app',
@@ -148,7 +160,7 @@ if ( $h2_style ) {
 	if ( 'standard' === $h2_style ) {
 		$root_variables_theme[] = '--entry-content-h2-border-left: 1px solid var(--accent-color, #cd162c)';
 		$root_variables_theme[] = '--entry-content-h2-background-color: #f7f7f7';
-		$root_variables_theme[] = '--entry-content-h2-padding: calc(var(--_space, 1.76923rem) * 0.25) calc(var(--_space, 1.76923rem) * 0.25) calc(var(--_space, 1.76923rem) * 0.25) calc(var(--_space, 1.76923rem) * 0.5)';
+		$root_variables_theme[] = '--entry-content-h2-padding: calc(var(--_space) * 0.25) calc(var(--_space) * 0.25) calc(var(--_space) * 0.25) calc(var(--_space) * 0.5)';
 	}
 }
 
@@ -156,7 +168,7 @@ $h3_style = get_theme_mod( 'h3-style' );
 if ( $h3_style ) {
 	if ( 'standard' === $h3_style ) {
 		$root_variables_theme[] = '--entry-content-h3-border-bottom: 1px solid #eee';
-		$root_variables_theme[] = '--entry-content-h3-padding: 0 0 calc(var(--_space, 1.76923rem) * 0.25)';
+		$root_variables_theme[] = '--entry-content-h3-padding: 0 0 calc(var(--_space) * 0.25)';
 	}
 }
 
@@ -178,13 +190,13 @@ if ( $widget_title_style ) {
 	}
 }
 
-$styles_theme = [];
+$styles_theme = array();
 
 if ( $root_variables_theme ) {
-	$styles_theme[] = [
-		'selectors'  => [ ':root' ],
+	$styles_theme[] = array(
+		'selectors'  => array( ':root' ),
 		'properties' => $root_variables_theme,
-	];
+	);
 }
 
 Style::attach(

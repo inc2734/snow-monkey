@@ -1,11 +1,9 @@
 .wp-block-group {
-  gap: var(--wp--style--block-gap) !important;
-
-  &__inner-container {
-    @extend %entry-content;
-  }
+	&__inner-container {
+		@extend %entry-content;
+	}
 }
 
 :where(.wp-block-group) {
-  @extend %entry-content;
+	@extend %entry-content;
 }

@@ -1,11 +1,11 @@
 %blockquote {
-  @include blockquote();
+	@include blockquote();
 }
 
 %blockquote-theme {
-  @include blockquote-theme();
+	@include blockquote-theme();
 }
 
 %blockquote__cite {
-  @include blockquote__cite();
+	@include blockquote__cite();
 }

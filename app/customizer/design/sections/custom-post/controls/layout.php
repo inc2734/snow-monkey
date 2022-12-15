@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::control(
 		'select',
 		$custom_post_type . '-layout',
-		[
+		array(
 			'label'       => __( 'Page layout', 'snow-monkey' ),
 			'description' => sprintf(
 				/* translators: 1: Post type label */
@@ -28,13 +28,13 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'default'     => '',
 			'choices'     => is_customize_preview()
 				? array_merge(
-					[
+					array(
 						'' => __( 'Same as the post page layout', 'snow-monkey' ),
-					],
+					),
 					Helper::get_wrapper_templates()
 				)
-				: [],
-		]
+				: array(),
+		)
 	);
 }
 

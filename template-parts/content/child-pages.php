@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/child-pages.php
  */
@@ -14,7 +14,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_context'             => 'snow-monkey/child-pages',
 		'_parent_id'           => get_the_ID(),
 		'_title'               => __( 'Child pages', 'snow-monkey' ),
@@ -25,7 +25,7 @@ $args = wp_parse_args(
 		'_arrows'              => false,
 		'_dots'                => true,
 		'_interval'            => 0,
-	]
+	)
 );
 
 $query = Helper::get_child_pages_query( $args['_parent_id'] );
@@ -50,7 +50,7 @@ if ( ! $query->have_posts() ) {
 	Helper::get_template_part(
 		'template-parts/common/entries/entries',
 		'page',
-		[
+		array(
 			'_context'             => $args['_context'],
 			'_entries_layout'      => $args['_entries_layout'],
 			'_force_sm_1col'       => $args['_force_sm_1col'],
@@ -61,7 +61,7 @@ if ( ! $query->have_posts() ) {
 			'_arrows'              => $args['_arrows'],
 			'_dots'                => $args['_dots'],
 			'_interval'            => $args['_interval'],
-		]
+		)
 	);
 	?>
 </div>

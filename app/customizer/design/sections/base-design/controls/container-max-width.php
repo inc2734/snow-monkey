@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/layout/sections/base-layout/controls/container-max-width.php
  */
@@ -13,7 +13,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'number',
 	'container-max-width',
-	[
+	array(
 		'label'       => __( 'Contents max width', 'snow-monkey' ),
 		'description' => sprintf(
 			// translators: %1$s: min width, %2$s: max width
@@ -23,12 +23,12 @@ Framework::control(
 		),
 		'priority'    => 140,
 		'default'     => '1280',
-		'input_attrs' => [
+		'input_attrs' => array(
 			'step' => 1,
 			'min'  => 1024,
 			'max'  => 1600,
-		],
-	]
+		),
+	)
 );
 
 if ( ! is_customize_preview() ) {

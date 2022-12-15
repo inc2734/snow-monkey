@@ -1,17 +1,9 @@
 .#{ $_prefix }c-entry-aside {
-  @include _margin(1, 0, 0);
+	margin-top: var(--_margin2);
 
-  @include _media-min(lg) {
-    @include _margin(2, 0, 0);
-  }
-
-  &__title {
-    @include _margin(0, 0, .5);
-    @include _font-size-line-height(1.25);
-    font-weight: bold;
-
-    @include _media-min(lg) {
-      @include _margin(0, 0, 1);
-    }
-  }
+	&__title {
+		margin-bottom: var(--_margin1);
+		@include _set-font-size-level(2);
+		font-weight: bold;
+	}
 }

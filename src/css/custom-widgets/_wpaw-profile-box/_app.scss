@@ -1,17 +1,17 @@
 [data-has-sidebar="true"] [data-is-slim-widget-area="true"] {
-  .wpaw-profile-box {
-    .wp-profile-box {
-      &__figure {
-        @include _media-min(lg) {
-          float: none;
-        }
+	.wpaw-profile-box {
+		.wp-profile-box {
+			&__figure {
+				@include _media-min(lg) {
+					float: none;
+				}
 
-        img {
-          @include _media-min(lg) {
-            width: 48px;
-          }
-        }
-      }
-    }
-  }
+				img {
+					@include _media-min(lg) {
+						width: 48px;
+					}
+				}
+			}
+		}
+	}
 }

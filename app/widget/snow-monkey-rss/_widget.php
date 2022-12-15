@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ $widget_args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$widget_args,
 	// phpcs:enable
-	[]
+	array()
 );
 
 if ( ! $widget_args ) {
@@ -23,7 +23,7 @@ $instance = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$instance,
 	// phpcs:enable
-	[]
+	array()
 );
 
 if ( ! $instance ) {
@@ -32,11 +32,11 @@ if ( ! $instance ) {
 
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-	isset( $args ) ? $args : [],
+	isset( $args ) ? $args : array(),
 	// phpcs:enable
-	[
+	array(
 		'_context' => 'snow-monkey/widget/rss',
-	]
+	)
 );
 
 $widget_number = explode( '-', $widget_args['widget_id'] );
@@ -52,7 +52,7 @@ if ( is_wp_error( $rss ) || ! $rss->get_item_quantity() ) {
 	return;
 }
 
-$is_multi_cols_pattern = in_array( $instance['layout'], [ 'rich-media', 'panel' ], true );
+$is_multi_cols_pattern = in_array( $instance['layout'], array( 'rich-media', 'panel' ), true );
 $force_sm_1col         = $instance['force-sm-1col'];
 $force_sm_1col         = 0 === $force_sm_1col || 1 === $force_sm_1col ? $force_sm_1col : false;
 $force_sm_1col         = false === $force_sm_1col && $is_multi_cols_pattern
@@ -63,7 +63,7 @@ echo wp_kses_post( $widget_args['before_widget'] );
 Helper::get_template_part(
 	'template-parts/widget/snow-monkey-rss',
 	null,
-	[
+	array(
 		'_classname'      => 'snow-monkey-rss',
 		'_context'        => $args['_context'],
 		'_entries_layout' => $instance['layout'],
@@ -78,6 +78,6 @@ Helper::get_template_part(
 		'_arrows'         => $instance['arrows'],
 		'_dots'           => $instance['dots'],
 		'_interval'       => $instance['interval'],
-	]
+	)
 );
 echo wp_kses_post( $widget_args['after_widget'] );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,15 +12,15 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_item_title_tag' => 'h3',
-		'_items'          => [],
+		'_items'          => array(),
 		'_arrows'         => false,
 		'_dots'           => true,
 		'_interval'       => 0,
-	]
+	)
 );
 
 if ( ! $args['_items'] ) {
@@ -39,13 +39,13 @@ if ( ! $args['_items'] ) {
 						Helper::get_template_part(
 							'template-parts/loop/rss',
 							null,
-							[
+							array(
 								'_context'        => $args['_context'],
 								'_entries_layout' => $args['_entries_layout'],
 								'_excerpt_length' => $args['_excerpt_length'],
 								'_item'           => $item,
 								'_title_tag'      => $args['_item_title_tag'],
-							]
+							)
 						);
 						?>
 					</div>

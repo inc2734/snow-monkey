@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.2.5
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_entries_layout'          => 'rich-media',
 		'_excerpt_length'          => null,
 		'_force_sm_1col'           => false,
@@ -25,7 +25,7 @@ $args = wp_parse_args(
 		'_arrows'                  => false,
 		'_dots'                    => true,
 		'_interval'                => 0,
-	]
+	)
 );
 
 if ( ! $args['_posts_query'] ) {
@@ -46,7 +46,7 @@ $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $q
 				<div class="spider__slide" data-id="<?php echo esc_attr( $i ); ?>">
 					<div class="c-entries-carousel__item">
 						<?php
-						$_terms = [];
+						$_terms = array();
 
 						if ( $args['_display_item_terms'] ) {
 							$public_terms = Helper::get_the_public_terms( get_the_ID() );
@@ -57,7 +57,7 @@ $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $q
 								if ( $args['_category_label_taxonomy'] ) {
 									foreach ( $public_terms as $public_term ) {
 										if ( $args['_category_label_taxonomy'] === $public_term->taxonomy ) {
-											$_terms = [ $public_term ];
+											$_terms = array( $public_term );
 											break;
 										}
 									}
@@ -65,7 +65,7 @@ $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $q
 								} else {
 									// If the return value of `get_queried_object()` is `WP_Term`, use it.
 									if ( $is_hierarchical_taxonomy_query ) {
-										$_terms = [ $queried_object ];
+										$_terms = array( $queried_object );
 									} else {
 										$_terms = $public_terms;
 									}
@@ -80,15 +80,15 @@ $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $q
 						Helper::get_template_part(
 							'template-parts/loop/entry-summary',
 							$args['_name'],
-							[
+							array(
 								'_context'        => $args['_context'],
 								'_entries_layout' => $args['_entries_layout'],
 								'_excerpt_length' => $args['_excerpt_length'],
 								'_thumbnail_size' => $args['_item_thumbnail_size'],
-								'_terms'          => $_terms ? [ $_terms[0] ] : [],
+								'_terms'          => $_terms ? array( $_terms[0] ) : array(),
 								'_title_tag'      => $args['_item_title_tag'],
 								'_display_meta'   => $args['_display_item_meta'],
-							]
+							)
 						);
 						?>
 					</div>

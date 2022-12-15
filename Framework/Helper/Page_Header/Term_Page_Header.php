@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Helper\Page_Header;
@@ -32,7 +32,7 @@ class Term_Page_Header extends Base {
 			return Helper::get_the_term_thumbnail( $wp_term, $size );
 		}
 
-		if ( ! in_array( $taxonomy->name, [ 'category', 'post_tag' ], true ) ) {
+		if ( ! in_array( $taxonomy->name, array( 'category', 'post_tag' ), true ) ) {
 			return Helper::has_post_type_archive_thumbnail( $post_type )
 				? Helper::get_the_post_type_archive_thumbnail( $post_type, $size )
 				: static::_get_default_image( $size );
@@ -62,7 +62,7 @@ class Term_Page_Header extends Base {
 			return Helper::get_the_term_thumbnail_url( $wp_term, $size );
 		}
 
-		if ( ! in_array( $taxonomy->name, [ 'category', 'post_tag' ], true ) ) {
+		if ( ! in_array( $taxonomy->name, array( 'category', 'post_tag' ), true ) ) {
 			return Helper::has_post_type_archive_thumbnail( $post_type )
 				? Helper::get_the_post_type_archive_thumbnail_url( $post_type, $size )
 				: static::_get_default_image_url( $size );
@@ -101,7 +101,7 @@ class Term_Page_Header extends Base {
 		$taxonomy  = get_taxonomy( $wp_term->taxonomy );
 		$post_type = $taxonomy->object_type[0];
 
-		return ! in_array( $taxonomy->name, [ 'category', 'post_tag' ], true )
+		return ! in_array( $taxonomy->name, array( 'category', 'post_tag' ), true )
 			? get_theme_mod( 'archive-' . $post_type . '-page-header-align' )
 			: get_theme_mod( 'archive-page-header-align' );
 	}
@@ -124,7 +124,7 @@ class Term_Page_Header extends Base {
 			return Helper::get_the_term_thumbnail_caption( $wp_term );
 		}
 
-		if ( ! in_array( $taxonomy->name, [ 'category', 'post_tag' ], true ) ) {
+		if ( ! in_array( $taxonomy->name, array( 'category', 'post_tag' ), true ) ) {
 			return Helper::has_post_type_archive_thumbnail( $post_type )
 				? Helper::get_the_post_type_archive_thumbnail_caption( $post_type )
 				: static::_get_default_image_caption();

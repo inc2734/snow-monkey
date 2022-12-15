@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.2
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/simple-header.php
  */
@@ -14,9 +14,9 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_title_tag' => 'div',
-	]
+	)
 );
 
 $header_content         = get_theme_mod( 'header-content' );
@@ -37,9 +37,9 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 						Helper::get_template_part(
 							'template-parts/header/hamburger-btn',
 							null,
-							[
+							array(
 								'_id' => false,
-							]
+							)
 						);
 						?>
 					</div>
@@ -52,9 +52,9 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 					Helper::get_template_part(
 						'template-parts/header/site-branding',
 						null,
-						[
+						array(
 							'_title_tag' => $args['_title_tag'],
-						]
+						)
 					);
 					?>
 				</div>
@@ -73,9 +73,9 @@ $hamburger_btn_position = get_theme_mod( 'hamburger-btn-position' );
 						Helper::get_template_part(
 							'template-parts/header/hamburger-btn',
 							null,
-							[
+							array(
 								'_id' => false,
-							]
+							)
 						);
 						?>
 					</div>

@@ -2,102 +2,102 @@
 @import '../../../app/foundation/_placeholder/placeholder';
 
 .smb-section {
-  &__contents-wrapper {
-    &--left {
-      > .smb-section__header .smb-section__title {
-        &::after {
-          margin-right: auto;
-          margin-left: 0;
-        }
-      }
-    }
+	&__contents-wrapper {
+		&--left {
+			> .smb-section__header .smb-section__title {
+				&::after {
+					margin-right: auto;
+					margin-left: 0;
+				}
+			}
+		}
 
-    &--center {
-      > .smb-section__header .smb-section__title {
-        &::after {
-          margin-right: auto;
-          margin-left: auto;
-        }
-      }
-    }
+		&--center {
+			> .smb-section__header .smb-section__title {
+				&::after {
+					margin-right: auto;
+					margin-left: auto;
+				}
+			}
+		}
 
-    &--right {
-      > .smb-section__header .smb-section__title {
-        &::after {
-          margin-right: 0;
-          margin-left: auto;
-        }
-      }
-    }
-  }
+		&--right {
+			> .smb-section__header .smb-section__title {
+				&::after {
+					margin-right: 0;
+					margin-left: auto;
+				}
+			}
+		}
+	}
 
-  &__title {
-    @extend %section-title-theme;
-  }
+	&__title {
+		@extend %section-title-theme;
+	}
 
-  &__body {
-    @extend %entry-content-theme;
-  }
+	&__body {
+		@extend %entry-content-theme;
+	}
 
-  // @deprecated
-  &--left {
-    > .smb-section__inner {
-      > .#{$_prefix}c-container {
-        > .smb-section__title {
-          &::after {
-            margin-right: auto;
-            margin-left: 0;
-          }
-        }
-      }
-    }
-  }
+	// @deprecated
+	&--left {
+		> .smb-section__inner {
+			> .#{$_prefix}c-container {
+				> .smb-section__title {
+					&::after {
+						margin-right: auto;
+						margin-left: 0;
+					}
+				}
+			}
+		}
+	}
 
-  // @deprecated
-  &--center {
-    > .smb-section__inner {
-      > .#{$_prefix}c-container {
-        > .smb-section__title {
-          &::after {
-            margin-right: auto;
-            margin-left: auto;
-          }
-        }
-      }
-    }
-  }
+	// @deprecated
+	&--center {
+		> .smb-section__inner {
+			> .#{$_prefix}c-container {
+				> .smb-section__title {
+					&::after {
+						margin-right: auto;
+						margin-left: auto;
+					}
+				}
+			}
+		}
+	}
 
-  // @deprecated
-  &--right {
-    > .smb-section__inner {
-      > .#{$_prefix}c-container {
-        > .smb-section__title {
-          &::after {
-            margin-right: 0;
-            margin-left: auto;
-          }
-        }
-      }
-    }
-  }
+	// @deprecated
+	&--right {
+		> .smb-section__inner {
+			> .#{$_prefix}c-container {
+				> .smb-section__title {
+					&::after {
+						margin-right: 0;
+						margin-left: auto;
+					}
+				}
+			}
+		}
+	}
 }
 
 .smb-section.is-style-smb-section-undecorated-title {
-  > .smb-section__inner {
-    > .c-container {
-      > .smb-section__contents-wrapper {
-        > .smb-section__header {
-          .smb-section__title {
-            &::after {
-              display: none;
-            }
-          }
+	> .smb-section__inner {
+		> .c-container {
+			> .smb-section__contents-wrapper {
+				> .smb-section__header {
+					.smb-section__title {
+						&::after {
+							display: none;
+						}
+					}
 
-          .smb-section__title + .smb-section__lede-wrapper {
-            @include _margin-top(.5);
-          }
-        }
-      }
-    }
-  }
+					.smb-section__title + .smb-section__lede-wrapper {
+						margin-top: var(--_margin-1);
+					}
+				}
+			}
+		}
+	}
 }

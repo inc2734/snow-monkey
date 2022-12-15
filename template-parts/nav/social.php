@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.13.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/social-nav.php
  */
@@ -16,17 +16,17 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_container' => true,
-	]
+	)
 );
 
 if ( $args['_container'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_container-fluid' => false,
-		]
+		)
 	);
 }
 
@@ -42,7 +42,7 @@ if ( $args['_container'] ) {
 	<div class="p-social-nav__inner">
 		<?php
 		wp_nav_menu(
-			[
+			array(
 				'theme_location'  => 'social-nav',
 				'container'       => $container,
 				'container_class' => $container_class,
@@ -52,7 +52,7 @@ if ( $args['_container'] ) {
 				'link_before'     => '<span class="screen-reader-text">',
 				'link_after'      => '</span>',
 				'walker'          => new \Inc2734\WP_Basis\App\Walker\Navbar(),
-			]
+			)
 		);
 		?>
 	</div>

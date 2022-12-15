@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/like-me-box.php
  */
@@ -14,9 +14,9 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_facebook_page_name' => get_option( 'mwt-facebook-page-name' ),
-	]
+	)
 );
 
 if ( ! $args['_facebook_page_name'] ) {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.1
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,7 +11,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'checkbox',
 	'home-page-content-padding',
-	[
+	array(
 		'label'           => __( 'Add vertical padding to content area of homepage', 'snow-monkey' ),
 		'default'         => true,
 		'priority'        => 120,
@@ -21,7 +21,7 @@ Framework::control(
 
 			return $use_static_frontpage;
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {
@@ -32,7 +32,7 @@ $section = Framework::get_section( 'static_front_page' );
 $control = Framework::get_control( 'home-page-content-padding' );
 $control->join( $section );
 $control->partial(
-	[
+	array(
 		'selector' => '.p-section-front-page-content',
-	]
+	)
 );

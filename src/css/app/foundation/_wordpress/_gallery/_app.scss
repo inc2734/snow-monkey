@@ -1,35 +1,35 @@
 .gallery {
-  @include _clearfix();
-  @include _margin-right(-.5); // equal .gallery-item right padding
-  @include _margin-left(-.5); // equal .gallery-item left padding
-  @include _margin-bottom(-1);
+	@include _clearfix();
+	margin-right: calc(-1 * var(--_margin-1));
+	margin-left: calc(-1 * var(--_margin-1));
+	margin-bottom: calc(-1 * var(--_margin1));
 
-  &-item {
-    float: left;
-    display: block;
-    @include _padding-right(.5, true);
-    @include _padding-left(.5, true);
-    @include _margin-bottom(1);
-  }
+	&-item {
+		float: left;
+		display: block;
+		margin-bottom: var(--_margin1);
+		padding-right: var(--_margin-1);
+		padding-left: var(--_margin-1);
+	}
 
-  &-caption {
-    display: block;
-  }
+	&-caption {
+		display: block;
+	}
 }
 
 @for $i from 2 through 9 {
-  .gallery-columns-#{ $i } .gallery-item {
-    width: percentage(1 / $i);
+	.gallery-columns-#{ $i } .gallery-item {
+		width: percentage(1 / $i);
 
-    &:nth-child(#{ $i }n + 1) {
-      clear: both;
-    }
-  }
+		&:nth-child(#{ $i }n + 1) {
+			clear: both;
+		}
+	}
 }
 
 .gallery-columns-6 .gallery-caption,
 .gallery-columns-7 .gallery-caption,
 .gallery-columns-8 .gallery-caption,
 .gallery-columns-9 .gallery-caption {
-  display: none;
+	display: none;
 }

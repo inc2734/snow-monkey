@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/seo-sns/sections/google-search-console/controls/google-site-verification.php
  */
@@ -13,7 +13,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'text',
 	'mwt-google-site-verification',
-	[
+	array(
 		'type'        => 'option',
 		'label'       => __( 'Google site verification', 'snow-monkey' ),
 		'description' => sprintf(
@@ -22,7 +22,7 @@ Framework::control(
 			'<code>xxxx</code>',
 			'<code>&lt;meta name="google-site-verification" content="xxxxx" /&gt;</code>'
 		),
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

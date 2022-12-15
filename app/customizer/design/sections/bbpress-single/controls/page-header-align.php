@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'select',
 	'bbpress-single-page-header-align',
-	[
+	array(
 		'label'           => __( 'Page header alignment', 'snow-monkey' ),
 		'priority'        => 111,
 		'default'         => 'center',
@@ -20,7 +20,7 @@ Framework::control(
 		'active_callback' => function() {
 			return 'title-on-page-header' === get_theme_mod( 'bbpress-single-eyecatch' );
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.5.1
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Model;
@@ -35,7 +35,7 @@ class Cache {
 	 * @param string $ext  Cache file extention.
 	 * @return string
 	 */
-	public static function get_filename( $slug, $name = '', $vars = [], $ext = 'html' ) {
+	public static function get_filename( $slug, $name = '', $vars = array(), $ext = 'html' ) {
 		$base = $slug;
 
 		if ( $name ) {
@@ -59,7 +59,7 @@ class Cache {
 	 * @param string $ext       Cache file extention.
 	 * @return string
 	 */
-	public static function load( $directory, $slug, $name = '', $vars = [], $ext = 'html' ) {
+	public static function load( $directory, $slug, $name = '', $vars = array(), $ext = 'html' ) {
 		$cache_filepath = static::get_cache_filepath( $directory, $slug, $name, $vars, $ext );
 		if ( ! file_exists( $cache_filepath ) ) {
 			return false;
@@ -80,7 +80,7 @@ class Cache {
 	 * @param string $ext       Cache file extention.
 	 * @return string
 	 */
-	public static function get( $directory, $slug, $name = '', $vars = [], $ext = 'html' ) {
+	public static function get( $directory, $slug, $name = '', $vars = array(), $ext = 'html' ) {
 		$cache_filepath = static::get_cache_filepath( $directory, $slug, $name, $vars, $ext );
 		$cache          = Filesystem::get_contents( $cache_filepath );
 		if ( false === $cache ) {
@@ -108,7 +108,7 @@ class Cache {
 	 * @param string $ext       Cache file extention.
 	 * @return boolean
 	 */
-	public static function save( $directory, $data, $slug, $name = '', $vars = [], $ext = 'html' ) {
+	public static function save( $directory, $data, $slug, $name = '', $vars = array(), $ext = 'html' ) {
 		$cache_filepath = static::get_cache_filepath( $directory, $slug, $name, $vars, $ext );
 		if ( file_exists( $cache_filepath ) ) {
 			return true;
@@ -134,7 +134,7 @@ class Cache {
 	 * @param string $ext       Cache file extention.
 	 * @return string
 	 */
-	public static function get_cache_filepath( $directory, $slug, $name = '', $vars = [], $ext = 'html' ) {
+	public static function get_cache_filepath( $directory, $slug, $name = '', $vars = array(), $ext = 'html' ) {
 		$cache_flename   = static::get_filename( $slug, $name, $vars, $ext );
 		$cache_directory = static::get_cache_directory( $directory );
 		$cache_filepath  = trailingslashit( $cache_directory ) . $cache_flename;

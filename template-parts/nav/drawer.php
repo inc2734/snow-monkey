@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.14.4
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -18,14 +18,14 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_theme-location'                => 'drawer-nav',
 		'_inverse'                       => 'left' === get_theme_mod( 'hamburger-btn-position' ),
 		'_display-hamburger-btn'         => 'overall' === $drawer_nav_type,
 		'_display-drawer-sub-nav'        => $has_drawer_sub_nav,
 		'_display-drawer-nav-search-box' => get_theme_mod( 'display-drawer-nav-search-box' ),
 		'_hamburger-btn-id'              => 'hamburger-btn',
-	]
+	)
 );
 
 $has_drawer_nav = has_nav_menu( $args['_theme-location'] );
@@ -36,13 +36,13 @@ if ( ! $has_drawer_nav && ! $has_drawer_sub_nav ) {
 
 $drawer_nav_highlight_type = get_theme_mod( 'drawer-nav-highlight-type' );
 $classes                   = array_filter(
-	[
+	array(
 		'c-drawer',
 		'c-drawer--fixed',
 		$args['_inverse'] ? 'c-drawer--inverse' : '',
 		$drawer_nav_type ? 'c-drawer--' . $drawer_nav_type : '',
 		$drawer_nav_highlight_type ? 'c-drawer--highlight-type-' . $drawer_nav_highlight_type : '',
-	],
+	),
 	'strlen'
 );
 ?>
@@ -61,10 +61,10 @@ $classes                   = array_filter(
 		<?php if ( $args['_display-hamburger-btn'] ) : ?>
 			<?php
 			$classes = array_filter(
-				[
+				array(
 					'c-drawer__controls',
 					$args['_inverse'] ? 'c-drawer__controls--left' : '',
-				],
+				),
 				'strlen'
 			);
 			?>
@@ -74,10 +74,10 @@ $classes                   = array_filter(
 					Helper::get_template_part(
 						'template-parts/header/hamburger-btn',
 						null,
-						[
+						array(
 							'_id'       => $args['_hamburger-btn-id'],
 							'_controls' => $args['_theme-location'],
-						]
+						)
 					);
 					?>
 				</div>
@@ -87,13 +87,13 @@ $classes                   = array_filter(
 		<?php
 		if ( $has_drawer_nav ) {
 			wp_nav_menu(
-				[
+				array(
 					'theme_location' => $args['_theme-location'],
 					'container'      => false,
 					'menu_class'     => 'c-drawer__menu',
 					'depth'          => 0,
 					'walker'         => new \Inc2734\WP_Basis\App\Walker\Drawer(),
-				]
+				)
 			);
 		}
 

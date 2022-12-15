@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::control(
 		'select',
 		$custom_post_type . '-eyecatch',
-		[
+		array(
 			'label'       => __( 'Featured image position', 'snow-monkey' ),
 			'description' => sprintf(
 				/* translators: 1: Custom post type label */
@@ -27,7 +27,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'priority'    => 120,
 			'default'     => 'none',
 			'choices'     => Helper::eyecatch_position_choices(),
-		]
+		)
 	);
 }
 

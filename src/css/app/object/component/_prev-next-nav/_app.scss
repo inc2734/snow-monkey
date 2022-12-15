@@ -1,87 +1,83 @@
 .#{ $_prefix }c-prev-next-nav {
-  @include _margin(1, 0, 0);
-  position: relative;
+	margin-top: var(--_margin1);
+	position: relative;
 
-  @include _media-min(md) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
+	@include _media-min(md) {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
 
-  &__item {
-    position: relative;
-    display: flex;
-    overflow: hidden;
+	&__item {
+		position: relative;
+		display: flex;
+		overflow: hidden;
 
-    @include _media-min(md) {
-      flex: 0 1 auto;
-      width: 50%;
-    }
+		@include _media-min(md) {
+			flex: 0 1 auto;
+			width: 50%;
+		}
 
-    &:not(:first-child) {
-      @include _margin-top(.5);
+		&:not(:first-child) {
+			margin-top: var(--_margin-1);
 
-      @include _media-min(md) {
-        margin-top: 0;
-      }
-    }
+			@include _media-min(md) {
+				margin-top: 0;
+			}
+		}
 
-    &--prev {
-      @include _media-min(md) {
-        @include _margin(0, 0, 0, .5);
-      }
-    }
+		&--prev {
+			@include _media-min(md) {
+				margin-left: var(--_margin-1);
+			}
+		}
 
-    &--next {
-      @include _media-min(md) {
-        @include _margin(0, .5, 0, 0);
-      }
-    }
+		&--next {
+			@include _media-min(md) {
+				margin-right: var(--_margin-1);
+			}
+		}
 
-    > a {
-      position: relative;
-      flex: 1 1 0%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      background-color: _var-color-black();
-      color: _var-color-white();
-      font-weight: bold;
-      text-decoration: none;
-      @include _padding(.5);
+		> a {
+			position: relative;
+			flex: 1 1 0%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			background-color: var(--wp--preset--color--black);
+			color: var(--wp--preset--color--white);
+			font-weight: bold;
+			text-decoration: none;
+			padding: var(--_padding1);
 
-      @include _media-min(md) {
-        @include _padding(1);
-      }
+			@include _hover() {
+				.#{ $_prefix }c-prev-next-nav__item-figure {
+					opacity: .5;
+				}
+			}
+		}
+	}
 
-      @include _hover() {
-        .#{ $_prefix }c-prev-next-nav__item-figure {
-          opacity: .5;
-        }
-      }
-    }
-  }
+	&__item-figure {
+		@include cover-img();
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: var(--wp--preset--color--sm-lighter-gray);
+		backface-visibility: hidden;
+		@include _transition(opacity);
+		opacity: .6;
+	}
 
-  &__item-figure {
-    @include cover-img();
-    @include _position(absolute, 0, 0, 0, 0);
-    background-color: _var-lighter-color-gray();
-    backface-visibility: hidden;
-    @include _transition(opacity);
-    opacity: .6;
-  }
+	&__item-label {
+		position: relative;
+		@include _set-font-size-level(-2);
+	}
 
-  &__item-label {
-    position: relative;
-    @include _font-size-line-height($_base-font-size-px - 4);
-  }
-
-  &__item-title {
-    position: relative;
-    @include _font-size-line-height(1);
-
-    @include _media-min(lg) {
-      @include _font-size-line-height(1.2);
-    }
-  }
+	&__item-title {
+		position: relative;
+		@include _set-font-size-level(1);
+	}
 }

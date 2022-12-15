@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -26,23 +26,23 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-custom-widgets-app',
 				Helper::get_main_style_handle() . '-custom-widgets-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-app',
 			get_theme_file_uri( '/assets/css/custom-widgets/app.css' ),
-			[ Helper::get_main_style_handle() ],
+			array( Helper::get_main_style_handle() ),
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-theme',
 			get_theme_file_uri( '/assets/css/custom-widgets/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-custom-widgets-app' ],
+			array( Helper::get_main_style_handle() . '-custom-widgets-app' ),
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app-theme.css' ) )
 		);
 
@@ -59,23 +59,23 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-custom-widgets-app',
 				Helper::get_main_style_handle() . '-custom-widgets-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-app',
 			get_theme_file_uri( '/assets/css/custom-widgets/app.css' ),
-			[ Helper::get_main_style_handle() ],
+			array( Helper::get_main_style_handle() ),
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-theme',
 			get_theme_file_uri( '/assets/css/custom-widgets/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-custom-widgets-app' ],
+			array( Helper::get_main_style_handle() . '-custom-widgets-app' ),
 			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app-theme.css' ) )
 		);
 
@@ -93,11 +93,11 @@ add_action(
 add_filter(
 	'inc2734_wp_awesome_widgets_widget_options',
 	function( $widget_options, $classname ) {
-		$deprecated_widgets = [
+		$deprecated_widgets = array(
 			'Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts',
 			'Inc2734_WP_Awesome_Widgets_Pickup_Slider',
 			'Inc2734_WP_Awesome_Widgets_Slider',
-		];
+		);
 		if ( in_array( $classname, $deprecated_widgets, true ) ) {
 			$widget_options['description'] = __( 'This widget is deprecated. It may slow down the page when used.', 'snow-monkey' );
 		}
@@ -116,11 +116,11 @@ add_filter(
 add_action(
 	'in_widget_form',
 	function( $self ) {
-		$deprecated_widgets = [
+		$deprecated_widgets = array(
 			'inc2734_wp_awesome_widgets_carousel_any_posts',
 			'inc2734_wp_awesome_widgets_pickup_slider',
 			'inc2734_wp_awesome_widgets_slider',
-		];
+		);
 		if ( in_array( $self->id_base, $deprecated_widgets, true ) ) {
 			?>
 			<div style="background-color: #ffede6; padding: 1em; margin: 1em 0">
@@ -204,13 +204,13 @@ add_filter(
 		);
 
 		if ( ! empty( $instance['title'] ) ) {
-			$content_widget_areas = [
+			$content_widget_areas = array(
 				'front-page-top-widget-area',
 				'front-page-bottom-widget-area',
 				'posts-page-top-widget-area',
 				'posts-page-bottom-widget-area',
 				'archive-top-widget-area',
-			];
+			);
 			if ( ! in_array( $widget_args['id'], $content_widget_areas, true ) ) {
 				$content = str_replace( 'wpaw-pr-box__title', 'c-widget__title', $content );
 			}
@@ -312,13 +312,13 @@ add_filter(
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
 	function( $widget, $widget_args ) {
-		$content_widget_areas = [
+		$content_widget_areas = array(
 			'archive-top-widget-area',
 			'front-page-top-widget-area',
 			'front-page-bottom-widget-area',
 			'posts-page-bottom-widget-area',
 			'posts-page-top-widget-area',
-		];
+		);
 
 		if ( ! isset( $widget_args['id'] ) || in_array( $widget_args['id'], $content_widget_areas, true ) ) {
 			if (

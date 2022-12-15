@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.12.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/layout/sections/header/controls/vertial-global-nav.php
  */
@@ -13,7 +13,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'checkbox',
 	'vertical-global-nav',
-	[
+	array(
 		'label'           => __( 'Make global navigation vertical', 'snow-monkey' ),
 		'priority'        => 105,
 		'default'         => false,
@@ -21,7 +21,7 @@ Framework::control(
 			return '2row' !== get_theme_mod( 'header-layout' )
 					&& 'left' !== get_theme_mod( 'header-layout' );
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

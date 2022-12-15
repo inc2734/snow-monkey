@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/layout/sections/woocommerce-single/section.php
  */
@@ -16,7 +16,7 @@ if ( ! is_customize_preview() ) {
 
 Framework::section(
 	'design-woocommerce-single',
-	[
+	array(
 		'title'           => __( 'WooCommerce product page settings', 'snow-monkey' ),
 		'priority'        => 130,
 		'active_callback' => function() {
@@ -25,5 +25,5 @@ Framework::section(
 			}
 			return is_product();
 		},
-	]
+	)
 );

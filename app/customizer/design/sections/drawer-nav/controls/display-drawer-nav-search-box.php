@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.3.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php
  */
@@ -13,7 +13,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'checkbox',
 	'display-drawer-nav-search-box',
-	[
+	array(
 		'transport'       => 'postMessage',
 		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
 		'priority'        => 130,
@@ -21,7 +21,7 @@ Framework::control(
 		'active_callback' => function() {
 			return has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

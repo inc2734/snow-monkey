@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Helper;
@@ -67,9 +67,9 @@ trait WooCommerce_Archive_Thumbnail {
 	public static function the_woocommerce_archive_thumbnail() {
 		echo wp_kses(
 			static::get_the_woocommerce_archive_thumbnail(),
-			[
+			array(
 				'img' => static::img_allowed_attributes(),
-			]
+			)
 		);
 	}
 

@@ -1,18 +1,13 @@
 .#{ $_prefix }c-breadcrumbs {
-  color: _var-light-color-text();
-  @include _font-size-line-height(11px);
+	@include _set-font-size-level(-2);
 
-  &__item:nth-child(n + 2)::before {
-    color: _var-light-color-text();
-  }
+	a {
+		color: inherit;
+		text-decoration: none;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-
-    @include _hover() {
-      text-decoration: underline;
-    }
-  }
+		@include _hover() {
+			text-decoration: underline;
+		}
+	}
 }
 

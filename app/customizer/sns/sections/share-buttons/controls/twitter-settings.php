@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/twitter-settings.php
  */
@@ -13,7 +13,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'content',
 	'share-buttons-twitter-settings',
-	[
+	array(
 		'label'    => __( 'Twitter settings', 'snow-monkey' ),
 		'priority' => 80,
 		'content'  => sprintf(
@@ -21,7 +21,7 @@ Framework::control(
 			__( 'If you want to count of tweet then needs to register to %1$s.', 'snow-monkey' ),
 			'<a href="https://opensharecount.com/" target="_blank" rel="noreferrer">OpenShareCount</a>'
 		),
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

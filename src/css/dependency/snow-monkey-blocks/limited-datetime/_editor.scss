@@ -1,6 +1,5 @@
-.editor-styles-wrapper,
-.customize-control-sidebar_block_editor {
-  .smb-limited-datetime {
-    @extend %entry-content;
-  }
+.editor-styles-wrapper {
+	.smb-limited-datetime {
+		@extend %entry-content;
+	}
 }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.13.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/footer-sub-nav.php
  */
@@ -16,22 +16,22 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_container'             => true,
 		'_content-justification' => 'right',
-	]
+	)
 );
 
 if ( $args['_container'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_container-fluid' => false,
-		]
+		)
 	);
 }
 
-$sub_nav_classes = [ 'p-footer-sub-nav', 'c-sub-nav' ];
+$sub_nav_classes = array( 'p-footer-sub-nav', 'c-sub-nav' );
 if ( $args['_content-justification'] ) {
 	$sub_nav_classes[] = 'c-sub-nav--' . $args['_content-justification'];
 }
@@ -47,7 +47,7 @@ if ( $args['_container'] ) {
 <div class="<?php echo esc_attr( implode( ' ', $sub_nav_classes ) ); ?>" role="navigation">
 	<?php
 	wp_nav_menu(
-		[
+		array(
 			'theme_location'  => 'footer-sub-nav',
 			'container'       => $container,
 			'container_class' => $container_class,
@@ -55,7 +55,7 @@ if ( $args['_container'] ) {
 			'menu_class'      => 'c-navbar',
 			'depth'           => 1,
 			'walker'          => new \Inc2734\WP_Basis\App\Walker\Navbar(),
-		]
+		)
 	);
 	?>
 </div>

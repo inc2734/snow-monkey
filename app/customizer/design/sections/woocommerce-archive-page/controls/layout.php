@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/layout/sections/woocommerce-archive-page/controls/layout.php
  */
@@ -14,12 +14,12 @@ use Framework\Helper;
 Framework::control(
 	'select',
 	'woocommerce-archive-page-layout',
-	[
+	array(
 		'label'    => __( 'WooCommerce products page layout', 'snow-monkey' ),
 		'priority' => 100,
 		'default'  => 'right-sidebar',
-		'choices'  => is_customize_preview() ? Helper::get_wrapper_templates() : [],
-	]
+		'choices'  => is_customize_preview() ? Helper::get_wrapper_templates() : array(),
+	)
 );
 
 if ( ! is_customize_preview() ) {

@@ -1,18 +1,8 @@
-@charset 'utf-8';
-
-$img-path: '../../../img';
 @import '../../app/core/core';
 @import '../../app/foundation/_placeholder/placeholder';
 
 .woocommerce-Tabs-panel,
 .related.products,
 .page-description {
-  @extend %entry-content-theme;
-}
-
-// Product category widget
-.widget_product_categories {
-  .children {
-    @extend %widget-children-theme;
-  }
+	@extend %entry-content-theme;
 }

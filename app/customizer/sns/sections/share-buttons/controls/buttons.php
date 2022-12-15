@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php
  */
@@ -13,12 +13,12 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'multiple-checkbox',
 	'mwt-share-buttons-buttons',
-	[
+	array(
 		'type'     => 'option',
 		'label'    => __( 'Display buttons', 'snow-monkey' ),
 		'priority' => 100,
 		'default'  => '',
-		'choices'  => [
+		'choices'  => array(
 			'facebook'  => __( 'Facebook', 'snow-monkey' ),
 			'twitter'   => __( 'Twitter', 'snow-monkey' ),
 			'hatena'    => __( 'Hatena Bookmark', 'snow-monkey' ),
@@ -28,8 +28,8 @@ Framework::control(
 			'pinterest' => __( 'Pinterest', 'snow-monkey' ),
 			'feed'      => __( 'Feed', 'snow-monkey' ),
 			'copy'      => __( 'Copy', 'snow-monkey' ),
-		],
-	]
+		),
+	)
 );
 
 if ( ! is_customize_preview() ) {

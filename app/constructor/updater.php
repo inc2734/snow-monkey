@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.4
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
@@ -12,9 +12,9 @@ new Bootstrap(
 	get_template(),
 	'inc2734',
 	'snow-monkey',
-	[
+	array(
 		'homepage' => 'https://snow-monkey.2inc.org/category/update-info/',
-	]
+	)
 );
 
 /**

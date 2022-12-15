@@ -9,12 +9,8 @@
     }
   ],
   "require-dev": {
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-		"squizlabs/php_codesniffer": "^3.6",
-		"phpcompatibility/php-compatibility": "^9.3",
-		"wp-coding-standards/wpcs": "^2.3",
-		"sirbrillig/phpcs-variable-analysis": "^2.11",
-    "wp-phpunit/wp-phpunit": "^5.8",
+    "wp-coding-standards/wpcs": "^2.3",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
     "yoast/phpunit-polyfills": "^1.0"
   },
   "require": {
@@ -22,7 +18,7 @@
     "inc2734/wp-adsense": "^1.0",
     "inc2734/wp-awesome-components": "^1.0",
     "inc2734/wp-awesome-widgets": "^14.0",
-    "inc2734/wp-basis": "^11.1",
+    "inc2734/wp-basis": "^12.0",
     "inc2734/wp-breadcrumbs": "^3.1",
     "inc2734/wp-contents-outline": "^5.2",
     "inc2734/wp-custom-css-to-editor": "^0.1",
@@ -47,8 +43,8 @@
     }
   },
   "scripts" :{
-    "format": "phpcbf --standard=./.phpcs.xml.dist --report-summary --report-source",
-    "lint": "phpcs --standard=./.phpcs.xml.dist",
+    "lint": "./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "format": "./vendor/squizlabs/php_codesniffer/bin/phpcbf",
     "server": "bash bin/server.sh"
   },
   "autoload": {

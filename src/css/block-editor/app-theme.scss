@@ -1,5 +1,3 @@
-@charset 'utf-8';
-
 /**
  * Core
  */
@@ -12,18 +10,18 @@
 
 .is-root-container,
 .wp-block-freeform {
-  @extend %entry-content-theme;
+	@extend %entry-content-theme;
 }
 
-html :where(.editor-styles-wrapper, .customize-control-sidebar_block_editor) {
+html :where(.editor-styles-wrapper) {
 
-  /**
-   * Object - Component
-   */
-  @import '../app/object/component/component-theme';
+	/**
+	 * Object - Component
+	 */
+	@import '../app/object/component/component-theme';
 
-  /**
-   * Object - Project
-   */
-  @import '../app/object/project/project-theme';
+	/**
+	 * Object - Project
+	 */
+	@import '../app/object/project/project-theme';
 }

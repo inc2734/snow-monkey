@@ -1,11 +1,10 @@
 .widget_recent_entries {
-  ul {
-    @extend %widget-list-base;
-  }
+	ul {
+		@extend %widget-list-base;
+	}
 
-  .post-date {
-    display: block;
-    color: _var-light-color-text();
-    @include _font-size-line-height(11px);
-  }
+	.post-date {
+		display: block;
+		@include _set-font-size-level(-2);
+	}
 }

@@ -1,77 +1,77 @@
 .#{ $_prefix }p-comments {
-  &__list {
-    @include _list-unstyled();
-    @include _margin(0, 0, 1);
-  }
+	&__list {
+		@include _list-unstyled();
+		margin-bottom: var(--_margin1);
+	}
 
-  .children {
-    @include _list-unstyled();
-    @include _margin(1, 0, 0);
-    @include _padding(0, 0, 0, 1);
-  }
+	.children {
+		@include _list-unstyled();
+		margin-top: var(--_margin1);
+		padding-left: var(--_padding1);
+	}
 
-  &__item {
-    @include _margin(1, 0, 0);
+	&__item {
+		margin-top: var(--_margin1);
 
-    &:first-child {
-      margin-top: 0;
-    }
-  }
+		&:first-child {
+			margin-top: 0;
+		}
+	}
 
-  &__respond {
-    @include _margin(1, 0, 0);
-  }
+	&__respond {
+		padding-top: var(--_padding1);
+	}
 
-  &__form {
-    .required {
-      color: $_color-red;
-    }
+	&__form {
+		.required {
+			color: var(--_color-red);
+		}
 
-    label {
-      display: block;
-      margin-bottom: 4px;
-    }
+		label {
+			display: block;
+			margin-bottom: 4px;
+		}
 
-    .comment-reply-title {
-      @include _margin(0, 0, .5);
-    }
+		.comment-reply-title {
+			margin-bottom: var(--_margin-1);
+		}
 
-    .comment-form {
-      @include _between-content(.5);
+		.comment-form {
+			@include _set-between-content-level(1);
 
-      .logged-in-as {
-        display: none;
-      }
-    }
+			.logged-in-as {
+				display: none;
+			}
+		}
 
-    .comment-form-comment {
-      > label {
-        display: none;
-      }
-    }
+		.comment-form-comment {
+			> label {
+				display: none;
+			}
+		}
 
-    .comment-form-cookies-consent {
-      overflow: hidden;
+		.comment-form-cookies-consent {
+			overflow: hidden;
 
-      [id="wp-comment-cookies-consent"] {
-        margin: .35em .5em 0 0;
-        float: left;
-      }
+			[id="wp-comment-cookies-consent"] {
+				margin: .35em .5em 0 0;
+				float: left;
+			}
 
-      [for="wp-comment-cookies-consent"] {
-        margin-bottom: 0;
-        overflow: hidden;
-      }
-    }
+			[for="wp-comment-cookies-consent"] {
+				margin-bottom: 0;
+				overflow: hidden;
+			}
+		}
 
-    .#{ $_prefix }c-form-control {
-      display: block;
-      width: 100%;
-      max-height: 100px;
-    }
+		.#{ $_prefix }c-form-control {
+			display: block;
+			width: 100%;
+			max-height: 100px;
+		}
 
-    .form-submit {
-      @include _margin(.5, 0, 0);
-    }
-  }
+		.form-submit {
+			margin-top: var(--_margin-1);
+		}
+	}
 }

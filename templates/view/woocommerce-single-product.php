@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.1.0
+ * @version 19.0.0-beta1
  *
  * renamed: templates/view/woocommerce-content-product.php
  */
@@ -15,7 +15,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_display_article_bottom_widget_area'  => false,
 		'_display_article_top_widget_area'     => false,
 		'_display_bottom_share_buttons'        => false,
@@ -23,18 +23,18 @@ $args = wp_parse_args(
 		'_display_entry_footer'                => false,
 		'_display_profile_box'                 => false,
 		'_display_top_share_buttons'           => false,
-	]
+	)
 );
 
 if ( $args['_display_entry_footer'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_display_follow_box'    => has_nav_menu( 'follow-box' ),
 			'_display_like_me_box'   => get_option( 'mwt-facebook-page-name' ),
 			'_display_prev_next_nav' => false,
 			'_display_related_posts' => get_option( 'mwt-display-related-posts' ),
-		]
+		)
 	);
 }
 

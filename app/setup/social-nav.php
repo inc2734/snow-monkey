@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Model\Filesystem;
@@ -11,7 +11,7 @@ use Framework\Model\Filesystem;
 add_filter(
 	'walker_nav_menu_start_el',
 	function( $item_output, $item, $depth, $args ) {
-		if ( ! in_array( $args->theme_location, [ 'social-nav', 'follow-box' ], true ) ) {
+		if ( ! in_array( $args->theme_location, array( 'social-nav', 'follow-box' ), true ) ) {
 			return $item_output;
 		}
 
@@ -260,7 +260,7 @@ add_filter(
 			);
 			$new_item_output = str_replace( '<a ', '<a data-icon="twitter"', $new_item_output );
 		} elseif (
-			preg_match( '|^https?://([^\.]+?\.)*?wordpress\.([^\./]+?)(\.[^\./]+?.)?|', $item->url )
+			preg_match( '|^https?://([^\.]+?\.)*?WordPress\.([^\./]+?)(\.[^\./]+?.)?|', $item->url )
 		) {
 			$new_item_output = str_replace(
 				$args->link_before,

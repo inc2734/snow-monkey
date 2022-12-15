@@ -14,8 +14,8 @@ if ( ! is_customize_preview() ) {
 
 Framework::section(
 	'base-design',
-	[
+	array(
 		'title'    => __( 'Base design settings', 'snow-monkey' ),
 		'priority' => 100,
-	]
+	)
 );

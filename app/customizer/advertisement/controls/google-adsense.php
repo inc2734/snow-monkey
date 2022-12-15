@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -11,7 +11,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'textarea',
 	'mwt-google-adsense',
-	[
+	array(
 		'label'             => __( 'Google Adsense', 'snow-monkey' ),
 		'description'       => __( 'When pasting the code of the responsive ad unit, the advertisement is displayed in the prescribed part of the theme. If you want to display at arbitrary position, please use widgets etc.', 'snow-monkey' ) . __( 'Paste only the ins tag for ad units.', 'snow-monkey' ),
 		'type'              => 'option',
@@ -28,7 +28,7 @@ Framework::control(
 				return $value;
 			}
 		},
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

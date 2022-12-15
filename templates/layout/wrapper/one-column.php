@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.4.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ use Framework\Helper;
 <html <?php language_attributes(); ?> data-sticky-footer="true" data-scrolled="false">
 <?php Helper::get_template_part( 'template-parts/common/head' ); ?>
 
-<body <?php body_class( [ 'l-body--one-column' ] ); ?> id="body"
+<body <?php body_class( array( 'l-body--one-column' ) ); ?> id="body"
 	data-has-sidebar="false"
 	data-is-full-template="false"
 	data-is-slim-width="false"
@@ -50,12 +50,12 @@ use Framework\Helper;
 					Helper::get_template_part(
 						'template-parts/common/infobar',
 						null,
-						[
+						array(
 							'_content' => get_theme_mod( 'infobar-content' ),
 							'_url'     => get_theme_mod( 'infobar-url' ),
 							'_target'  => get_theme_mod( 'infobar-link-target' ),
 							'_align'   => get_theme_mod( 'infobar-align' ),
-						]
+						)
 					);
 					?>
 				</div>
@@ -63,9 +63,9 @@ use Framework\Helper;
 
 			<?php
 			if ( Helper::display_page_header() ) {
-				$vars = [
+				$vars = array(
 					'_display_entry_meta' => is_singular( 'post' ),
-				];
+				);
 				Helper::get_template_part( 'template-parts/common/page-header', null, $vars );
 			}
 			?>
@@ -75,7 +75,7 @@ use Framework\Helper;
 					<?php
 					if (
 						! is_front_page()
-						&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'default', 'content-width' ], true )
+						&& in_array( get_theme_mod( 'breadcrumbs-position' ), array( 'default', 'content-width' ), true )
 					) {
 						Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 					}
@@ -102,7 +102,7 @@ use Framework\Helper;
 					<?php
 					if (
 						! is_front_page()
-						&& in_array( get_theme_mod( 'breadcrumbs-position' ), [ 'bottom', 'bottom-content-width' ], true )
+						&& in_array( get_theme_mod( 'breadcrumbs-position' ), array( 'bottom', 'bottom-content-width' ), true )
 					) {
 						Helper::get_template_part( 'template-parts/common/breadcrumbs' );
 					}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.10.0
+ * @version 19.0.0-beta1
  */
 
 // phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
@@ -17,7 +17,7 @@ $instance = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$instance,
 	// phpcs:enable
-	[]
+	array()
 );
 
 if ( ! $instance ) {
@@ -46,11 +46,11 @@ if ( ! $instance ) {
 		>
 			<?php
 			$post_types = get_post_types(
-				[
+				array(
 					'public'       => true,
 					'show_ui'      => true,
 					'hierarchical' => false,
-				],
+				),
 				'objects'
 			);
 			unset( $post_types['attachment'] );
@@ -83,7 +83,7 @@ if ( ! $instance ) {
 			class="widefat"
 		>
 			<?php
-			$layouts = [
+			$layouts = array(
 				'rich-media'  => __( 'Rich media', 'snow-monkey' ),
 				'simple'      => __( 'Simple', 'snow-monkey' ),
 				'text'        => __( 'Text', 'snow-monkey' ),
@@ -95,7 +95,7 @@ if ( ! $instance ) {
 					__( 'Rich media', 'snow-monkey' )
 				),
 				'large-image' => __( 'Large image', 'snow-monkey' ),
-			]
+			)
 			?>
 			<?php foreach ( $layouts as $value => $label ) : ?>
 				<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $value, $instance['layout'], true ); ?>><?php echo esc_html( $label ); ?></option>

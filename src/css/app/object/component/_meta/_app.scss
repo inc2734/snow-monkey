@@ -1,29 +1,29 @@
 .#{ $_prefix }c-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 
-  &__item {
-    display: inline-flex;
-    align-items: center;
-    white-space: nowrap;
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		white-space: nowrap;
 
-    &:not(:last-child) {
-      margin-right: .75em;
-    }
+		&:not(:last-child) {
+			margin-right: .75em;
+		}
 
-    img,
-    svg {
-      flex: 0 0 auto;
-      margin-right: 5px;
-    }
+		img,
+		svg {
+			flex: 0 0 auto;
+			margin-right: 5px;
+		}
 
-    &--author {
-      white-space: initial;
+		&--author {
+			white-space: initial;
 
-      img {
-        @include _circle(24px);
-      }
-    }
-  }
+			img {
+				@include _circle(24px);
+			}
+		}
+	}
 }

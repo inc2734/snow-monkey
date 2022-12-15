@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/prev-next-nav.php
  */
@@ -14,18 +14,18 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_in_same_term'   => false,
-		'_excluded_terms' => [],
+		'_excluded_terms' => array(),
 		'_taxonomy'       => 'category',
 		'_next_label'     => __( 'Old post', 'snow-monkey' ),
 		'_prev_label'     => __( 'New post', 'snow-monkey' ),
-	]
+	)
 );
 ?>
 
 <div class="c-prev-next-nav">
-	<?php foreach ( [ 'next', 'prev' ] as $key ) : ?>
+	<?php foreach ( array( 'next', 'prev' ) as $key ) : ?>
 		<div class="c-prev-next-nav__item c-prev-next-nav__item--<?php echo esc_attr( $key ); ?>">
 			<?php
 			if ( 'next' === $key ) {

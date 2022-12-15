@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.6.1
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/share-buttons.php
  */
@@ -16,9 +16,9 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
-		'_buttons' => $share_buttons ? explode( ',', $share_buttons ) : [],
-	]
+	array(
+		'_buttons' => $share_buttons ? explode( ',', $share_buttons ) : array(),
+	)
 );
 
 if ( ! $args['_buttons'] ) {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.5.3
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ $post_type_object = get_post_type_object( 'post' );
 Framework::control(
 	'select',
 	'post-eyecatch',
-	[
+	array(
 		'label'       => __( 'Featured image position', 'snow-monkey' ),
 		'description' => sprintf(
 			/* translators: 1: Post type label */
@@ -24,7 +24,7 @@ Framework::control(
 		'priority'    => 110,
 		'default'     => 'page-header',
 		'choices'     => Helper::eyecatch_position_choices(),
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

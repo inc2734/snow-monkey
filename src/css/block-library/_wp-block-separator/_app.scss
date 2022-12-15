@@ -1,11 +1,11 @@
 [data-type="core/separator"]:not(:first-child) {
-  > .wp-block-separator {
-    @include _margin-top(1);
-  }
+	> .wp-block-separator {
+		margin-top: var(--_margin1);
+	}
 }
 
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 100px;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 100px;
 }

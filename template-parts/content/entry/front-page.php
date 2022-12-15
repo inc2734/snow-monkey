@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.6
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -47,7 +47,7 @@ $content = ob_get_clean();
 	);
 	wp_omit_loading_attr_threshold( true );
 
-	$classes = [ 'c-section', 'p-section-front-page-content' ];
+	$classes = array( 'c-section', 'p-section-front-page-content' );
 	if ( ! get_theme_mod( 'home-page-content-padding' ) ) {
 		$classes[] = 'p-section-front-page-content--no-vpadding';
 	}

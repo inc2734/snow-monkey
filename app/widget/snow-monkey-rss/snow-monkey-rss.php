@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.2.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -17,7 +17,7 @@ class Snow_Monkey_RSS_Widget extends Abstract_Widget {
 	/**
 	 * @var array
 	 */
-	protected $_defaults = [
+	protected $_defaults = array(
 		'feed-url'       => null,
 		'title'          => '',
 		'posts-per-page' => 12,
@@ -29,7 +29,7 @@ class Snow_Monkey_RSS_Widget extends Abstract_Widget {
 		'arrows'         => false,
 		'dots'           => true,
 		'interval'       => 0,
-	];
+	);
 
 	/**
 	 * Constructor
@@ -38,9 +38,9 @@ class Snow_Monkey_RSS_Widget extends Abstract_Widget {
 		parent::__construct(
 			false,
 			__( 'Snow Monkey: RSS', 'snow-monkey' ),
-			[
+			array(
 				'customize_selective_refresh' => true,
-			]
+			)
 		);
 
 		$this->_defaults['title'] = __( 'RSS', 'snow-monkey' );

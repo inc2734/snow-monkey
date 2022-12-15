@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.3.0
+ * @version 19.0.0-beta1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,16 +14,16 @@ if ( ! is_customize_preview() ) {
 }
 
 $terms = Helper::get_terms(
-	[
+	array(
 		'taxonomy'   => 'post_tag',
 		'hide_empty' => false,
-	]
+	)
 );
 
 foreach ( $terms as $_term ) {
 	Framework::section(
 		'design-' . $_term->taxonomy . '-' . $_term->term_id,
-		[
+		array(
 			'title'           => sprintf(
 				/* translators: 1: Tag name */
 				__( '[ %1$s ] tag pages settings', 'snow-monkey' ),
@@ -33,6 +33,6 @@ foreach ( $terms as $_term ) {
 			'active_callback' => function() use ( $_term ) {
 				return is_tag( $_term->term_id );
 			},
-		]
+		)
 	);
 }

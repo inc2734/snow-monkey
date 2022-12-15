@@ -1,64 +1,54 @@
 .snow-monkey-posts {
-  &__title {
-    @include section-title();
-    text-align: center;
+	&__title {
+		@include section-title();
+		text-align: center;
 
-    & + * {
-      @include section-body();
-    }
-  }
+		& + * {
+			@include section-body();
+		}
+	}
 
-  &__action {
-    @include _margin(1, 0, 0);
-    text-align: center;
+	&__action {
+		margin-top: var(--_margin2);
+		text-align: center;
+	}
 
-    @include _media-min(lg) {
-      @include _margin(1.5, 0, 0);
-    }
-  }
-
-  &__more {
-    @extend .#{ $_prefix }c-btn;
-    font-weight: bold;
-    width: auto;
-  }
+	&__more {
+		@extend .#{ $_prefix }c-btn;
+		font-weight: bold;
+		width: auto;
+	}
 }
 
 [data-is-slim-widget-area="true"] .snow-monkey-posts {
-  .#{ $_prefix }c-entries--rich-media,
-  .#{ $_prefix }c-entries--panel {
-    .#{ $_prefix }c-entries__item {
-      @include _media-min(lg) {
-        @include _row__col(1, 1);
-      }
-    }
-  }
+	.#{ $_prefix }c-entries--rich-media,
+	.#{ $_prefix }c-entries--panel {
+		.#{ $_prefix }c-entries__item {
+			@include _media-min(lg) {
+				@include _row__col(1, 1);
+			}
+		}
+	}
 
-  .#{ $_prefix }c-entries--simple {
-    .#{ $_prefix }c-entry-summary__term {
-      @include _media-min(lg) {
-        display: none;
-      }
-    }
+	.#{ $_prefix }c-entries--simple {
+		.#{ $_prefix }c-entry-summary__term {
+			@include _media-min(lg) {
+				display: none;
+			}
+		}
 
-    .#{ $_prefix }c-entry-summary__figure {
-      @include _media-min(lg) {
-        @include _margin-right(.5);
-      }
-    }
+		.#{ $_prefix }c-entry-summary__figure {
+			@include _media-min(lg) {
+				margin-right: var(--_margin-1);
+			}
+		}
+	}
 
-    .#{ $_prefix }c-entry-summary__title {
-      @include _media-min(lg) {
-        @include _font-size-line-height(1);
-      }
-    }
-  }
-
-  .#{ $_prefix }c-entries--large-image {
-    .#{ $_prefix }c-entry-summary__figure {
-      &::before {
-        padding: 100% * 4 / 3 0 0;
-      }
-    }
-  }
+	.#{ $_prefix }c-entries--large-image {
+		.#{ $_prefix }c-entry-summary__figure {
+			&::before {
+				padding: 100% * 4 / 3 0 0;
+			}
+		}
+	}
 }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -15,7 +15,7 @@ if ( ! is_customize_preview() ) {
 
 Framework::section(
 	'design-bbpress-archive-page',
-	[
+	array(
 		'title'           => __( 'bbPress archive page settings', 'snow-monkey' ),
 		'priority'        => 130,
 		'active_callback' => function() {
@@ -25,5 +25,5 @@ Framework::section(
 
 			return Helper::is_bbpress_archive() || Helper::is_bbpress_mypage();
 		},
-	]
+	)
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 19.0.0-beta1
  *
  * renamed: template-parts/loop/entry-summary/figure/figure-rss.php
  */
@@ -14,9 +14,9 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_item' => false,
-	]
+	)
 );
 
 if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {

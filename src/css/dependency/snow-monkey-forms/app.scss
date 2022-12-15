@@ -1,28 +1,26 @@
-@charset 'utf-8';
-
 @import '../../app/core/core';
 @import '../../app/foundation/_placeholder/placeholder';
 
 .smf-complete-content,
 .smf-system-error-content,
 .smf-item__controls {
-  @extend %entry-content;
+	@extend %entry-content;
 }
 
 .snow-monkey-form--button-has-accent-color .smf-button-control__control {
-  background-color: var-color-accent();
-  background-image: none;
-  color: _var-color-white();
-  border: none;
-  @include _transition(filter);
+	background-color: var(--wp--preset--color--sm-accent);
+	background-image: none;
+	color: var(--wp--preset--color--sm-text-alt);
+	border: none;
+	@include _transition(filter);
 
-  @include _hover() {
-    filter: brightness(90%);
-  }
+	@include _hover() {
+		filter: brightness(90%);
+	}
 }
 
 // @todo WordPress 5.9 iframed content hack.
 // https://github.com/WordPress/gutenberg/blob/f2161e246b9fdd9a2a56e7552b0b28050f1a5302/packages/block-editor/src/components/iframe/index.js#L70-L74
 html :where(.editor-styles-wrapper) {
-  display: block;
+	display: block;
 }

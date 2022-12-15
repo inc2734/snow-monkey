@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Controller\Controller;
@@ -17,32 +17,32 @@ use Framework\Controller\Controller;
 add_filter(
 	'inc2734_wp_view_controller_config',
 	function() {
-		return [
-			'templates'      => [
+		return array(
+			'templates'      => array(
 				'',
-			],
-			'page-templates' => [
+			),
+			'page-templates' => array(
 				'page-templates',
-			],
-			'layout'         => [
+			),
+			'layout'         => array(
 				'templates/layout/wrapper',
-			],
-			'header'         => [
+			),
+			'header'         => array(
 				'templates/layout/header',
-			],
-			'sidebar'        => [
+			),
+			'sidebar'        => array(
 				'templates/layout/sidebar',
-			],
-			'footer'         => [
+			),
+			'footer'         => array(
 				'templates/layout/footer',
-			],
-			'view'           => [
+			),
+			'view'           => array(
 				'templates/view',
-			],
-			'static'         => [
+			),
+			'static'         => array(
 				'templates/static',
-			],
-		];
+			),
+		);
 	}
 );
 

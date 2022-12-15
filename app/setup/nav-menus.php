@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.1.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -18,7 +18,7 @@ add_action(
 	'after_setup_theme',
 	function() {
 		register_nav_menus(
-			[
+			array(
 				'global-nav'        => esc_html__( 'Global Navigation (For PC)', 'snow-monkey' ),
 				'drop-nav'          => esc_html__( 'Drop Navigation (For PC)', 'snow-monkey' ),
 				'drawer-nav'        => esc_html__( 'Drawer Navigation (For Mobile)', 'snow-monkey' ),
@@ -28,7 +28,7 @@ add_action(
 				'footer-sub-nav'    => esc_html__( 'Footer Sub Navigation', 'snow-monkey' ),
 				'drawer-sub-nav'    => esc_html__( 'Drawer Sub Navigation (For Mobile)', 'snow-monkey' ),
 				'footer-sticky-nav' => esc_html__( 'Footer Sticky Navigation (For Mobile)', 'snow-monkey' ),
-			]
+			)
 		);
 	}
 );
@@ -44,7 +44,7 @@ add_action(
 		wp_register_script(
 			Helper::get_main_script_handle() . '-footer-sticky-nav',
 			get_theme_file_uri( '/assets/js/footer-sticky-nav.js' ),
-			[],
+			array(),
 			filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.js' ) ),
 			true
 		);
@@ -53,9 +53,9 @@ add_action(
 			Helper::get_main_script_handle() . '-global-nav',
 			get_theme_file_uri( '/assets/js/global-nav.js' ),
 			Helper::generate_script_dependencies(
-				[
+				array(
 					Helper::get_main_script_handle() . '-drop-nav',
-				]
+				)
 			),
 			filemtime( get_theme_file_path( '/assets/js/global-nav.js' ) ),
 			true
@@ -148,9 +148,9 @@ add_action(
 					INPUT_POST,
 					'sm-nav-menu-item-highlight',
 					FILTER_DEFAULT,
-					[
+					array(
 						'flags' => FILTER_REQUIRE_ARRAY,
-					]
+					)
 				);
 
 				if ( $highlight && isset( $highlight[ $menu_item_db_id ] ) ) {

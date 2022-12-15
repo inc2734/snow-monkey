@@ -1,13 +1,9 @@
 .widget_pages {
-  ul {
-    @extend %widget-list-base;
-  }
+	ul {
+		@extend %widget-list-base;
+	}
 
-  .page_item {
-    @extend %widget-has-children-expander;
-  }
-
-  .children {
-    @extend %widget-children;
-  }
+	.page_item {
+		@extend %widget-has-children-expander;
+	}
 }

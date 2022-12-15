@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.1.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_classname'               => null,
 		'_entries_layout'          => 'rich-media',
 		'_excerpt_length'          => null,
@@ -32,22 +32,22 @@ $args = wp_parse_args(
 		'_arrows'                  => false,
 		'_dots'                    => true,
 		'_interval'                => 0,
-	]
+	)
 );
 
 if ( ! $args['_posts_query'] ) {
 	return;
 }
 
-$content_widget_areas = [
+$content_widget_areas = array(
 	'front-page-top-widget-area',
 	'front-page-bottom-widget-area',
 	'posts-page-top-widget-area',
 	'posts-page-bottom-widget-area',
 	'archive-top-widget-area',
-];
+);
 
-$classnames   = [];
+$classnames   = array();
 $classnames[] = 'snow-monkey-posts';
 if ( $args['_classname'] ) {
 	$classnames[] = $args['_classname'];
@@ -57,20 +57,20 @@ $title_classname = 'c-widget__title';
 if ( in_array( $args['_widget_area_id'], $content_widget_areas, true ) ) {
 	$title_classname = 'snow-monkey-posts__title';
 }
-$title_classnames = [
+$title_classnames = array(
 	$title_classname,
 	$args['_classname'] . '__title',
-];
+);
 
-$action_classnames = [
+$action_classnames = array(
 	'snow-monkey-posts__action',
 	$args['_classname'] . '__action',
-];
+);
 
-$more_classnames = [
+$more_classnames = array(
 	'snow-monkey-posts__more',
 	$args['_classname'] . '__more',
-];
+);
 ?>
 
 <div class="<?php echo esc_attr( join( ' ', $classnames ) ); ?>">
@@ -102,7 +102,7 @@ $more_classnames = [
 	Helper::get_template_part(
 		'template-parts/common/entries/entries',
 		$archive_view,
-		[
+		array(
 			'_context'                 => $args['_context'],
 			'_entries_layout'          => $args['_entries_layout'],
 			'_excerpt_length'          => $args['_excerpt_length'],
@@ -117,7 +117,7 @@ $more_classnames = [
 			'_arrows'                  => $args['_arrows'],
 			'_dots'                    => $args['_dots'],
 			'_interval'                => $args['_interval'],
-		]
+		)
 	);
 	?>
 

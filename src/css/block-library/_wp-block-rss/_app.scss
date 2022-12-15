@@ -1,37 +1,37 @@
 .wp-block-rss {
-  @extend %widget-list-base;
-  margin-left: auto;
+	@extend %widget-list-base;
+	margin-left: auto;
 
-  &__item-publish-date,
-  &__item-author {
-    @include _font-size-line-height($_base-font-size-px - 4);
-  }
+	&__item-publish-date,
+	&__item-author {
+		@include _set-font-size-level(-2);
+	}
 
-  &__item-excerpt {
-    @include _font-size-line-height($_base-font-size-px - 2);
-  }
+	&__item-excerpt {
+		@include _set-font-size-level(-1);
+	}
 
-  &.is-grid {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: _space(.25, true, true);
+	&.is-grid {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: var(--_margin-2);
 
-    .wp-block-rss__item {
-      margin: 0;
-      width: auto;
-    }
+		.wp-block-rss__item {
+			margin: 0;
+			width: auto;
+		}
 
-    @include _media-min(600px) {
-      gap: _space(1, true, true);
+		@include _media-min(600px) {
+			gap: var(--_margin1);
 
-      @for $i from 2 through 6 {
-        &.columns-#{ $i } {
-          grid-template-columns: repeat(#{ $i }, 1fr);
+			@for $i from 2 through 6 {
+				&.columns-#{ $i } {
+					grid-template-columns: repeat(#{ $i }, 1fr);
 
-          > .wp-block-rss__item {
-          }
-        }
-      }
-    }
-  }
+					> .wp-block-rss__item {
+					}
+				}
+			}
+		}
+	}
 }

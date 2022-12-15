@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Helper\Page_Header;
@@ -25,7 +25,7 @@ class WooCommerce_Term_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( $wp_term->taxonomy, [ 'product_cat', 'product_tag' ], true ) ) {
+		if ( ! in_array( $wp_term->taxonomy, array( 'product_cat', 'product_tag' ), true ) ) {
 			return false;
 		}
 
@@ -50,7 +50,7 @@ class WooCommerce_Term_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( $wp_term->taxonomy, [ 'product_cat', 'product_tag' ], true ) ) {
+		if ( ! in_array( $wp_term->taxonomy, array( 'product_cat', 'product_tag' ), true ) ) {
 			return false;
 		}
 
@@ -74,7 +74,7 @@ class WooCommerce_Term_Page_Header extends Base {
 			return false;
 		}
 
-		return in_array( $wp_term->taxonomy, [ 'product_cat', 'product_tag' ], true )
+		return in_array( $wp_term->taxonomy, array( 'product_cat', 'product_tag' ), true )
 			? Helper::get_page_title_from_breadcrumbs()
 			: false;
 	}
@@ -90,7 +90,7 @@ class WooCommerce_Term_Page_Header extends Base {
 			return false;
 		}
 
-		return in_array( $wp_term->taxonomy, [ 'product_cat', 'product_tag' ], true )
+		return in_array( $wp_term->taxonomy, array( 'product_cat', 'product_tag' ), true )
 			? get_theme_mod( 'woocommerce-archive-page-header-align' )
 			: false;
 	}
@@ -106,7 +106,7 @@ class WooCommerce_Term_Page_Header extends Base {
 			return false;
 		}
 
-		if ( ! in_array( $wp_term->taxonomy, [ 'product_cat', 'product_tag' ], true ) ) {
+		if ( ! in_array( $wp_term->taxonomy, array( 'product_cat', 'product_tag' ), true ) ) {
 			return false;
 		}
 

@@ -1,69 +1,79 @@
 .#{ $_prefix }c-page-header {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow: hidden;
-  @include _padding(2, 0);
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow: hidden;
+	padding-top: var(--_padding2);
+	padding-bottom: var(--_padding2);
 
-  &[data-has-image="true"] {
-    height: clamp(300px, 62.5vw,500px);
+	&[data-has-image="true"] {
+		height: clamp(300px, 62.5vw, 500px);
 
-    .#{ $_prefix }c-page-header__content {
-      color: _var-color-white();
-    }
-  }
+		.#{ $_prefix }c-page-header__content {
+			color: var(--wp--preset--color--white);
+		}
+	}
 
-  &[data-align="center"] {
-    justify-content: center;
+	&[data-align="center"] {
+		justify-content: center;
 
-    .#{ $_prefix }c-page-header__content {
-     align-items: center;
-    }
-  }
+		.#{ $_prefix }c-page-header__content {
+		align-items: center;
+		}
+	}
 
-  &[data-align="right"] {
-   justify-content: flex-end;
+	&[data-align="right"] {
+	justify-content: flex-end;
 
-    .#{ $_prefix }c-page-header__content {
-     align-items: flex-end;
-    }
-  }
+		.#{ $_prefix }c-page-header__content {
+		align-items: flex-end;
+		}
+	}
 
-  .#{ $_prefix }c-container {
-    flex: 1 1 auto;
-  }
+	.#{ $_prefix }c-container {
+		flex: 1 1 auto;
+	}
 
-  &__bgimage {
-    @include cover-img();
-    @include _position(absolute, 0, 0, 0, 0);
-  }
+	&__bgimage {
+		@include cover-img();
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
 
-  &__bgimage-caption {
-    @include _position(absolute, null, 0, 0, 0, 1);
-    color: _var-color-white();
-    @include _padding(.25, 0);
-  }
+	&__bgimage-caption {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 1;
+		color: var(--wp--preset--color--white);
+		padding-top: var(--_padding-2);
+		padding-bottom: var(--_padding-2);
+	}
 
-  &__content {
-    position: relative;
-    flex: 1 1 auto;
-    display: flex;
-    flex-direction: column;
+	&__content {
+		position: relative;
+		flex: 1 1 auto;
+		display: flex;
+		flex-direction: column;
 
-    a {
-      color: inherit;
-      text-decoration: none;
+		a {
+			color: inherit;
+			text-decoration: none;
 
-      @include _hover() {
-        text-decoration: underline;
-      }
-    }
-  }
+			@include _hover() {
+				text-decoration: underline;
+			}
+		}
+	}
 
-  &__meta {
-    @include _margin-top(.25);
-    @include _font-size-line-height(12px);
-    font-weight: bold;
-  }
+	&__meta {
+		margin-top: var(--_margin-2);
+		@include _set-font-size-level(-1);
+		font-weight: bold;
+	}
 }

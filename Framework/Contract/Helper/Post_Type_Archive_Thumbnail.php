@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Helper;
@@ -79,9 +79,9 @@ trait Post_Type_Archive_Thumbnail {
 
 		echo wp_kses(
 			static::get_the_post_type_archive_thumbnail( $post_type, $size ),
-			[
+			array(
 				'img' => static::img_allowed_attributes(),
-			]
+			)
 		);
 	}
 

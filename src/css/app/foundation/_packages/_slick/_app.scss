@@ -1,31 +1,31 @@
 .slick-arrow.slick-prev::before {
-  content: '\2190';
+	content: "\2190";
 }
 
-[dir='rtl'] .slick-arrow.slick-prev::before {
-  content: '\2192';
+[dir="rtl"] .slick-arrow.slick-prev::before {
+	content: "\2192";
 }
 
 .slick-arrow.slick-next::before {
-  content: '\2192';
+	content: "\2192";
 }
 
-[dir='rtl'] .slick-arrow.slick-next::before {
-  content: '\2190';
+[dir="rtl"] .slick-arrow.slick-next::before {
+	content: "\2190";
 }
 
 .slick-dotted > .slick-dots > li > button::before {
-  content: '\2022';
+	content: "\2022";
 }
 
 /**
  * @see https://github.com/kenwheeler/slick/issues/1868
  */
 .slick-slider {
-  overflow: hidden;
+	overflow: hidden;
 
-  .slick-list {
-    margin-right: -1px;
-    margin-left: -1px;
-  }
+	.slick-list {
+		margin-right: -1px;
+		margin-left: -1px;
+	}
 }

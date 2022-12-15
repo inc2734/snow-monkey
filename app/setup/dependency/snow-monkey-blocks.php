@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.1
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -23,32 +23,32 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app.css' ),
-			[ 'snow-monkey-blocks' ],
+			array( 'snow-monkey-blocks' ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-blocks-app' ],
+			array( Helper::get_main_style_handle() . '-snow-monkey-blocks-app' ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/app-theme.css' ) )
 		);
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-snow-monkey-blocks' );
 
 		$dependencies = Helper::generate_script_dependencies(
-			[
+			array(
 				'snow-monkey-blocks/spider-slider',
-			]
+			)
 		);
 
 		wp_enqueue_script(
@@ -70,28 +70,28 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks/editor',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme/editor',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor.css' ),
-			[
+			array(
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
-			],
+			),
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks-theme/editor',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ),
-			[
+			array(
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-app/editor',
 				Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
-			],
+			),
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-blocks/editor-theme.css' ) )
 		);
 
@@ -124,13 +124,13 @@ add_action(
 				return array_merge(
 					$handles,
 					$block_handles,
-					[
+					array(
 						'snow-monkey-blocks',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks-app',
 						Helper::get_main_style_handle() . '-snow-monkey-blocks-theme',
 						'spider',
-					]
+					)
 				);
 			}
 		);
@@ -147,20 +147,20 @@ add_action(
 		 * I really wanted to run it only when snow-monkey-blocks-theme is enqueued,
 		 * but enqueue_block_editor_assets doesn't do it.
 		 */
-		$blocks = [
+		$blocks = array(
 			'snow-monkey-blocks/section',
 			'snow-monkey-blocks/section-with-bgimage',
 			'snow-monkey-blocks/section-with-bgvideo',
 			'snow-monkey-blocks/section-side-heading',
 			'snow-monkey-blocks/section-break-the-grid',
-		];
+		);
 		foreach ( $blocks as $block ) {
 			register_block_style(
 				$block,
-				[
+				array(
 					'name'  => 'smb-section-undecorated-title',
 					'label' => __( 'Undecorated title', 'snow-monkey' ),
-				]
+				)
 			);
 		}
 	}

@@ -1,27 +1,27 @@
 .smb-section-side-heading {
-  &__title {
-    &::after {
-      margin-left: 0;
-    }
-  }
+	&__title {
+		&::after {
+			margin-left: 0;
+		}
+	}
 }
 
 .smb-section-side-heading.is-style-smb-section-undecorated-title {
-  > .smb-section__inner {
-    > .c-container {
-      > .smb-section__contents-wrapper {
-        > .#{ $_prefix }c-row {
-          > .#{ $_prefix }c-row__col {
-            > .smb-section__header {
-              .smb-section__title {
-                &::after {
-                  display: none;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+	> .smb-section__inner {
+		> .c-container {
+			> .smb-section__contents-wrapper {
+				> .#{ $_prefix }c-row {
+					> .#{ $_prefix }c-row__col {
+						> .smb-section__header {
+							.smb-section__title {
+								&::after {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

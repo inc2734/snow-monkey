@@ -1,9 +1,6 @@
-@charset 'utf-8';
-
 @import '../app/core/core';
 @import '../app/foundation/_placeholder/_placeholder';
 
-@import '_wpaw-any-posts/app';
 @import '_wpaw-carousel/app';
 @import '_wpaw-local-nav/app';
 @import '_wpaw-pickup-slider/app';
@@ -11,26 +8,24 @@
 @import '_wpaw-pr-box/app';
 @import '_wpaw-profile-box/app';
 @import '_wpaw-ranking/app';
-@import '_wpaw-recent-posts/app';
 @import '_wpaw-showcase/app';
 @import '_wpaw-site-branding/app';
 @import '_wpaw-slider/app';
-@import '_wpaw-taxonomy-posts/app';
 @import '_wpaw-term/app';
 
 [data-has-sidebar="false"] {
-  [data-is-content-widget-area="true"] {
-    .alignfull > .c-container {
-      padding-right: 0;
-      padding-left: 0;
-      max-width: none;
-      width: auto;
-    }
-  }
+	[data-is-content-widget-area="true"] {
+		.alignfull > .c-container {
+			padding-right: 0;
+			padding-left: 0;
+			max-width: none;
+			width: auto;
+		}
+	}
 }
 
 // @todo WordPress 5.9 iframed content hack.
 // https://github.com/WordPress/gutenberg/blob/f2161e246b9fdd9a2a56e7552b0b28050f1a5302/packages/block-editor/src/components/iframe/index.js#L70-L74
 html :where(.editor-styles-wrapper) {
-  display: block;
+	display: block;
 }

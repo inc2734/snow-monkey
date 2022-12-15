@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ use Inc2734\WP_Customizer_Framework\Framework;
 Framework::control(
 	'select',
 	'archive-eyecatch',
-	[
+	array(
 		'label'       => __( 'Featured image position', 'snow-monkey' ),
 		'description' => sprintf(
 			/* translators: 1: archive */
@@ -22,7 +22,7 @@ Framework::control(
 		'priority'    => 110,
 		'default'     => 'page-header',
 		'choices'     => Helper::eyecatch_position_choices(),
-	]
+	)
 );
 
 if ( ! is_customize_preview() ) {

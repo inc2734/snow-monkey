@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.2.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -17,7 +17,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Sidebar', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed in the sidebar on posts and pages.', 'snow-monkey' ),
 				'id'            => 'sidebar-widget-area',
@@ -25,7 +25,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -39,7 +39,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed in the sidebar on posts and pages.', 'snow-monkey' ),
 				'id'            => 'sidebar-sticky-widget-area',
@@ -47,7 +47,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -61,7 +61,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Top of the page title', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed on the page title on the posts and pages.', 'snow-monkey' ),
 				'id'            => 'title-top-widget-area',
@@ -69,7 +69,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -83,7 +83,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Top of the archive page', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed top of the contents on archive page.', 'snow-monkey' ),
 				'id'            => 'archive-top-widget-area',
@@ -91,7 +91,7 @@ add_action(
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-section__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -105,7 +105,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Bottom of contents', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed bottom of the contents on posts and pages.', 'snow-monkey' ),
 				'id'            => 'contents-bottom-widget-area',
@@ -113,7 +113,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -127,7 +127,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Archive sidebar', 'snow-monkey' ),
 				'id'            => 'archive-sidebar-widget-area',
 				'description'   => __( 'These widgets are displayed in the sidebar on archive page.', 'snow-monkey' ),
@@ -135,7 +135,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -149,7 +149,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Homepage (Top of page)', 'snow-monkey' ),
 				'id'            => 'front-page-top-widget-area',
 				'description'   => __( 'These widgets are displayed in the homepage.', 'snow-monkey' ),
@@ -157,7 +157,7 @@ add_action(
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-section__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 
 		add_filter(
@@ -188,7 +188,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Homepage (Bottom of page)', 'snow-monkey' ),
 				'id'            => 'front-page-bottom-widget-area',
 				'description'   => __( 'These widgets are displayed in the homepage.', 'snow-monkey' ),
@@ -196,7 +196,7 @@ add_action(
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-section__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 
 		add_filter(
@@ -227,7 +227,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Posts page (Top of page)', 'snow-monkey' ),
 				'id'            => 'posts-page-top-widget-area',
 				'description'   => __( 'These widgets are displayed in the posts page.', 'snow-monkey' ),
@@ -235,7 +235,7 @@ add_action(
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-section__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 
 		add_filter(
@@ -266,7 +266,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Posts page (Bottom of page)', 'snow-monkey' ),
 				'id'            => 'posts-page-bottom-widget-area',
 				'description'   => __( 'These widgets are displayed in the posts page.', 'snow-monkey' ),
@@ -274,7 +274,7 @@ add_action(
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-section__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 
 		add_filter(
@@ -305,7 +305,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Footer', 'snow-monkey' ),
 				'id'            => 'footer-widget-area',
 				'description'   => __( 'These widgets are displayed in the footer.', 'snow-monkey' ),
@@ -313,7 +313,7 @@ add_action(
 				'after_widget'  => '</div></div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -327,7 +327,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Overlay', 'snow-monkey' ),
 				'id'            => 'overlay-widget-area',
 				'description'   => __( 'These widgets are displayed in the overlay that opens with clicking #sm-overlay-widget-area.', 'snow-monkey' ),
@@ -335,7 +335,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -349,7 +349,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Top of the article', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed top of the article on posts and pages.', 'snow-monkey' ),
 				'id'            => 'article-top-widget-area',
@@ -357,7 +357,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -371,7 +371,7 @@ add_action(
 	'widgets_init',
 	function() {
 		register_sidebar(
-			[
+			array(
 				'name'          => __( 'Bottom of the article', 'snow-monkey' ),
 				'description'   => __( 'These widgets are displayed bottom of the article on posts and pages.', 'snow-monkey' ),
 				'id'            => 'article-bottom-widget-area',
@@ -379,7 +379,7 @@ add_action(
 				'after_widget'  => '</div>',
 				'before_title'  => '<h2 class="c-widget__title">',
 				'after_title'   => '</h2>',
-			]
+			)
 		);
 	}
 );
@@ -395,7 +395,7 @@ add_action(
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-widgets',
 			get_theme_file_uri( '/assets/js/widgets.js' ),
-			[],
+			array(),
 			filemtime( get_theme_file_path( '/assets/js/widgets.js' ) ),
 			true
 		);
@@ -404,7 +404,7 @@ add_action(
 			wp_enqueue_script(
 				Helper::get_main_script_handle() . '-sidebar-sticky-widget-area',
 				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.js' ),
-				[],
+				array(),
 				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.js' ) ),
 				true
 			);

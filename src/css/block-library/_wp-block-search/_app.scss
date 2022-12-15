@@ -1,79 +1,70 @@
 .wp-block-search {
-  &__label {
-    display: inline-block;
-    @include _margin-bottom(.25);
-  }
+	&__label {
+		display: inline-block;
+		margin-bottom: var(--_margin-2);
+	}
 
-  &__button-outside {
-    .wp-block-search__input {
-      @include _form-control-base-border();
-      @include _form-control-base-padding();
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
+	&__button-outside {
+		.wp-block-search__input {
+			@include _form-control-base-border();
+			@include _form-control-base-padding();
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+		}
 
-    .wp-block-search__button {
-      left: -1px;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
+		.wp-block-search__button {
+			left: -1px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
 
-  &__no-button {
-    .wp-block-search__input {
-      @include _form-control-base-border();
-      @include _form-control-base-padding();
-    }
-  }
+	&__no-button {
+		.wp-block-search__input {
+			@include _form-control-base-border();
+			@include _form-control-base-padding();
+		}
+	}
 
-  &__button-inside.wp-block-search {
-    .wp-block-search__inside-wrapper {
-      @include _form-control-base-border();
-      @include _form-control-base-padding();
-      @include _padding-right(.25);
+	&__button-inside.wp-block-search {
+		.wp-block-search__inside-wrapper {
+			@include _form-control-base-border();
+			@include _form-control-base-padding();
+			padding-right: var(--_padding-2);
+		}
+	}
 
-      .wp-block-search__button {
-        @include _padding(.35, .5);
-      }
-    }
-  }
+	&__button-only {
+		.wp-block-search__button {
+			padding: var(--_padding-1);
+		}
+	}
 
-  &__button-only {
-    .wp-block-search__button {
-      @include _padding(.5);
-    }
-  }
+	&__input {
+		flex: 1 1 0%;
+		position: relative;
+		z-index: 1;
+	}
 
-  &__input {
-    flex: 1 1 0%;
-    position: relative;
-    z-index: 1;
-  }
+	&__button {
+		margin-left: 0 !important;
+		@include _form-control-base-border();
+		flex: none;
+		position: relative;
+		z-index: 0;
+		display: inline-flex;
+		align-items: center;
+		box-shadow: none;
+		height: auto;
+		overflow: visible;
 
-  &__button {
-    margin-left: 0 !important;
-    @include _btn();
-    @include _form-control-base-border();
-    @include _form-control-base-padding();
-    @include _font-size(1);
-    flex: none;
-    position: relative;
-    z-index: 0;
-    display: inline-flex;
-    align-items: center;
-    background-color: _var-color-white();
-    box-shadow: none;
-    color: _var-color-text();
-    height: auto;
-    overflow: visible;
-
-    &:hover, &:active, &:focus {
-      z-index: 1;
-    }
-  }
+		&:hover, &:active, &:focus {
+			z-index: 1;
+		}
+	}
 }
 
 // For default block library styles.
 .wp-block-search .wp-block-search__input {
-  max-width: none;
+	max-width: none;
 }

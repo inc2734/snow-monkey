@@ -1,13 +1,13 @@
 .widget_nav_menu {
-  ul {
-    @extend %widget-list-base;
-  }
+	ul {
+		@extend %widget-list-base;
+	}
 
-  .menu-item {
-    @extend %widget-has-children-expander;
-  }
+	.menu-item {
+		@extend %widget-has-children-expander;
+	}
 
-  .sub-menu {
-    @extend %widget-children;
-  }
+	.sub-menu {
+		@extend %widget-children;
+	}
 }

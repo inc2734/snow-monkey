@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Model;
@@ -15,19 +15,19 @@ abstract class Page_Header {
 	 *
 	 * @var array
 	 */
-	protected static $image_mods = [
+	protected static $image_mods = array(
 		'page-header',
 		'title-on-page-header',
-	];
+	);
 
 	/**
 	 * Mods to display page header image title.
 	 *
 	 * @var array
 	 */
-	protected static $title_mods = [
+	protected static $title_mods = array(
 		'title-on-page-header',
-	];
+	);
 
 	/**
 	 * Page header image ID
@@ -179,9 +179,9 @@ abstract class Page_Header {
 
 		echo wp_kses(
 			static::get_image(),
-			[
+			array(
 				'img' => Helper::img_allowed_attributes(),
-			]
+			)
 		);
 	}
 }

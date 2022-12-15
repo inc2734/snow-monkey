@@ -1,3 +1,11 @@
 .children-expander {
-  display: none;
+	display: none;
+}
+
+.cat-item {
+	@extend %widget-has-children-expander;
+}
+
+.cat-item .children {
+	@extend %widget-children;
 }

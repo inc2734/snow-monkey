@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.1
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -21,23 +21,23 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-forms',
 			false,
-			[
+			array(
 				Helper::get_main_style_handle() . '-snow-monkey-forms-app',
 				Helper::get_main_style_handle() . '-snow-monkey-forms-theme',
-			]
+			)
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-forms-app',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/app.css' ),
-			[ 'snow-monkey-forms' ],
+			array( 'snow-monkey-forms' ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/app.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-forms-theme',
 			get_theme_file_uri( '/assets/css/dependency/snow-monkey-forms/app-theme.css' ),
-			[ Helper::get_main_style_handle() . '-snow-monkey-forms-app' ],
+			array( Helper::get_main_style_handle() . '-snow-monkey-forms-app' ),
 			filemtime( get_theme_file_path( '/assets/css/dependency/snow-monkey-forms/app-theme.css' ) )
 		);
 
@@ -70,12 +70,12 @@ add_action(
 				return array_merge(
 					$handles,
 					$block_handles,
-					[
+					array(
 						'snow-monkey-forms',
 						Helper::get_main_style_handle() . '-snow-monkey-forms',
 						Helper::get_main_style_handle() . '-snow-monkey-forms-app',
 						Helper::get_main_style_handle() . '-snow-monkey-forms-theme',
-					]
+					)
 				);
 			}
 		);

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 14.0.0
+ * @version 19.0.0-beta1
  */
 
 namespace Framework\Contract\Helper;
@@ -80,7 +80,7 @@ trait Deprecated {
 	 * @return boolean
 	 */
 	public static function should_infobar_in_header() {
-		return in_array( get_theme_mod( 'header-position' ), [ 'overlay', 'sticky-overlay' ], true );
+		return in_array( get_theme_mod( 'header-position' ), array( 'overlay', 'sticky-overlay' ), true );
 	}
 
 	/**
@@ -186,7 +186,7 @@ trait Deprecated {
 
 		return apply_filters_deprecated(
 			'snow_monkey_is_output_page_header_title',
-			[ $return ],
+			array( $return ),
 			'Snow Monkey 11.5.0'
 		);
 	}

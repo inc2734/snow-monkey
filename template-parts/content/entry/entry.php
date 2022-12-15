@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.0.0
+ * @version 19.0.0-beta1
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
-	[
+	array(
 		'_display_adsense'                     => false,
 		'_display_article_bottom_widget_area'  => false,
 		'_display_article_top_widget_area'     => false,
@@ -27,28 +27,28 @@ $args = wp_parse_args(
 		'_display_profile_box'                 => false,
 		'_display_tags'                        => false,
 		'_display_top_share_buttons'           => false,
-	]
+	)
 );
 
 if ( $args['_display_entry_header'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_display_title_top_widget_area' => false,
 			'_display_entry_meta'            => false,
-		]
+		)
 	);
 }
 
 if ( $args['_display_entry_footer'] ) {
 	$args = wp_parse_args(
 		$args,
-		[
+		array(
 			'_display_follow_box'    => has_nav_menu( 'follow-box' ),
 			'_display_like_me_box'   => get_option( 'mwt-facebook-page-name' ),
 			'_display_prev_next_nav' => ! get_post_type_object( $_post_type )->hierarchical,
 			'_display_related_posts' => get_option( 'mwt-display-related-posts' ),
-		]
+		)
 	);
 }
 ?>
@@ -59,10 +59,10 @@ if ( $args['_display_entry_footer'] ) {
 		Helper::get_template_part(
 			'template-parts/content/entry/header/header',
 			$args['_name'],
-			[
+			array(
 				'_display_title_top_widget_area' => $args['_display_title_top_widget_area'],
 				'_display_entry_meta'            => $args['_display_entry_meta'],
-			]
+			)
 		);
 	}
 	?>
@@ -79,9 +79,9 @@ if ( $args['_display_entry_footer'] ) {
 			Helper::get_template_part(
 				'template-parts/common/google-adsense',
 				null,
-				[
+				array(
 					'_position' => 'content-top',
-				]
+				)
 			);
 		}
 		?>
@@ -122,9 +122,9 @@ if ( $args['_display_entry_footer'] ) {
 			Helper::get_template_part(
 				'template-parts/common/google-adsense',
 				null,
-				[
+				array(
 					'_position' => 'content-bottom',
-				]
+				)
 			);
 		}
 		?>
@@ -134,9 +134,9 @@ if ( $args['_display_entry_footer'] ) {
 			Helper::get_template_part(
 				'template-parts/content/entry-tags',
 				$args['_name'],
-				[
+				array(
 					'_terms' => get_the_terms( get_the_ID(), 'post_tag' ),
-				]
+				)
 			);
 		}
 		?>
@@ -146,9 +146,9 @@ if ( $args['_display_entry_footer'] ) {
 			Helper::get_template_part(
 				'template-parts/common/profile-box',
 				null,
-				[
+				array(
 					'_title' => __( 'Bio', 'snow-monkey' ),
-				]
+				)
 			);
 		}
 		?>
@@ -159,12 +159,12 @@ if ( $args['_display_entry_footer'] ) {
 		Helper::get_template_part(
 			'template-parts/content/entry/footer/footer',
 			$args['_name'],
-			[
+			array(
 				'_display_follow_box'    => $args['_display_follow_box'],
 				'_display_like_me_box'   => $args['_display_like_me_box'],
 				'_display_prev_next_nav' => $args['_display_prev_next_nav'],
 				'_display_related_posts' => $args['_display_related_posts'],
-			]
+			)
 		);
 	}
 	?>

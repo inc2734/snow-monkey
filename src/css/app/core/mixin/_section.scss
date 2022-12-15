@@ -1,49 +1,33 @@
 @mixin section() {
-  @include _section();
-  @include _padding(1.5, 0);
-
-  @include _media-min(lg) {
-    @include _padding(3, 0);
-  }
+	@include _section();
+	padding: var(--_padding3) 0;
 }
 
 @mixin section-subtitle() {
-  @include _margin-bottom(.25);
-  color: var-color-accent();
-  font-weight: bold;
+	margin-bottom: var(--_margin-2);
+	color: var(--wp--preset--color--sm-accent);
+	font-weight: bold;
 }
 
 @mixin section-title() {
-  @include _font-size-line-height(1.5);
-
-  @include _media-min(lg) {
-    @include _font-size-line-height(2);
-  }
+	@include _set-font-size-level(4);
 }
 
 @mixin section-title-theme() {
-  &::after {
-    @include _margin(.5, auto, 0);
-    content: '';
-    display: block;
-    width: 60px;
-    height: 1px;
-    background-color: var-color-accent();
-  }
+	&::after {
+		margin: var(--_margin-1) auto 0;
+		content: '';
+		display: block;
+		width: 60px;
+		height: 1px;
+		background-color: var(--wp--preset--color--sm-accent);
+	}
 }
 
 @mixin section-lede() {
-  @include _margin-top(.5);
-
-  @include _media-min(lg) {
-    @include _margin-top(1);
-  }
+	margin-top: var(--_margin1);
 }
 
 @mixin section-body() {
-  @include _margin-top(1);
-
-  @include _media-min(lg) {
-    @include _margin-top(1.5);
-  }
+	margin-top: var(--_margin2);
 }

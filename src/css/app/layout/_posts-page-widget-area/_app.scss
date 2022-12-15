@@ -1,15 +1,15 @@
 .#{ $_prefix }l-posts-page-widget-area {
-  &--top {
-    @include _margin-bottom(1.5);
-  }
+	&--top {
+		margin-bottom: var(--_margin2);
+	}
 
-  &--bottom {
-    @include _margin-top(1.5);
-  }
+	&--bottom {
+		margin-top: var(--_margin2);
+	}
 }
 
 [data-has-sidebar="true"] .#{ $_prefix }l-posts-page-widget-area {
-  @include _media-min(lg) {
-    @include items-gutter();
-  }
+	@include _media-min(lg) {
+		@include _set-content-level(1);
+	}
 }

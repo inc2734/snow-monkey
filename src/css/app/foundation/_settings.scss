@@ -1,0 +1,97 @@
+@import '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/foundation/settings';
+
+:root {
+	--body-margin-left: 0px;
+	--accent-color: #{ $color-accent };
+	--dark-accent-color: #{ _dark($color-accent) };
+	--light-accent-color: #{ _light($color-accent) };
+	--lighter-accent-color: #{ _lighter($color-accent) };
+	--lightest-accent-color: #{ _lightest($color-accent) };
+	--header-text-color: var(--_color-text);
+	--overlay-header-text-color: var(--_color-white);
+	--drop-nav-text-color: var(--_color-text);
+	--scrollbar-width: 0px;
+
+	--wp--style--gallery-gap-default: var(--_margin-2);
+}
+
+// @deprecated
+body {
+	--wp--preset--color--text-color: #333;
+	--wp--preset--color--dark-gray: #999;
+	--wp--preset--color--gray: #ccc;
+	--wp--preset--color--very-light-gray: #eee;
+	--wp--preset--color--lightest-grey: #f7f7f7;
+	--wp--preset--color--accent-color: #1e73be;
+	--wp--preset--color--sub-accent-color: #707593;
+}
+
+// @deprecated
+.has-text-color-color {
+	color: var(--wp--preset--color--text-color) !important;
+}
+
+// @deprecated
+.has-dark-gray-color {
+	color: var(--wp--preset--color--dark-gray) !important;
+}
+
+// @deprecated
+.has-gray-color {
+	color: var(--wp--preset--color-gray) !important;
+}
+
+// @deprecated
+.has-very-light-gray-color {
+	color: var(--wp--preset--color-very-light-gray) !important;
+}
+
+// @deprecated
+.has-lightest-gray-color {
+	color: var(--wp--preset--color-lightest-gray) !important;
+}
+
+// @deprecated
+.has-accent-color-color {
+	color: var(--wp--preset--color-accent-color) !important;
+}
+
+// @deprecated
+.has-sub-accent-color-color {
+	color: var(--wp--preset--color-sub-accent-color) !important;
+}
+
+// @deprecated
+.has-text-color-background-color {
+	background-color: var(--wp--preset--color--text-color) !important;
+}
+
+// @deprecated
+.has-dark-gray-background-color {
+	background-color: var(--wp--preset--color--dark-gray) !important;
+}
+
+// @deprecated
+.has-gray-background-color {
+	background-color: var(--wp--preset--color-gray) !important;
+}
+
+// @deprecated
+.has-very-light-gray-background-color {
+	background-color: var(--wp--preset--color-very-light-gray) !important;
+}
+
+// @deprecated
+.has-lightest-gray-background-color {
+	background-color: var(--wp--preset--color-lightest-gray) !important;
+}
+
+// @deprecated
+.has-accent-color-background-color {
+	background-color: var(--wp--preset--color-accent-color) !important;
+}
+
+// @deprecated
+.has-sub-accent-color-background-color {
+	background-color: var(--wp--preset--color-sub-accent-color) !important;
+}

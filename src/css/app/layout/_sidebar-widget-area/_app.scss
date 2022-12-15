@@ -1,3 +1,3 @@
 .#{ $_prefix }l-sidebar-widget-area {
-  @include items-gutter();
+	@include _set-content-level(1);
 }
