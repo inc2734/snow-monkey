@@ -146,7 +146,7 @@
 					"text": "var(--wp--preset--color--sm-text-alt)"
 				},
 				"border": {
-					"radius": "var(--_border-radius)"
+					"radius": "var(--_global--border-radius)"
 				},
 				"spacing": {
 					"padding": {

@@ -110,7 +110,7 @@ if ( 'noto-sans-jp' === $base_font ) {
 }
 $font_family          = Helper::get_font_family();
 $root_variables_app[] = '--font-family: ' . $font_family; // @deprecated
-$root_variables_app[] = '--_base-font-family: var(--font-family)';
+$root_variables_app[] = '--_global--font-family: var(--font-family)';
 
 $base_font_size = get_theme_mod( 'base-font-size' );
 // foreach ( Helper::get_font_sizes() as $font_size ) {
@@ -124,7 +124,7 @@ $base_font_size = get_theme_mod( 'base-font-size' );
 // 	}
 // }
 
-$root_variables_app[] = '--_base-font-size-px: ' . $base_font_size . 'px';
+$root_variables_app[] = '--_global--font-size-px: ' . $base_font_size . 'px';
 
 $styles_core = array();
 

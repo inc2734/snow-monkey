@@ -1,13 +1,25 @@
 .#{ $_prefix }c-entries {
+	--entries--gap: var(--_margin1);
+	--entries--item-width: 50%;
+
 	@include _list-unstyled();
-	@include _lattice();
+
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: calc(-1 * var(--entries--gap));
+	margin-right: calc(-1 * var(--entries--gap) * .5);
+	margin-left: calc(-1 * var(--entries--gap) * .5);
+
+	@include _media-min(lg) {
+		--entries--item-width: 33.33333%;
+	}
 
 	&__item {
-		@include _lattice__col(1, 2);
-
-		@include _media-min(lg) {
-			@include _lattice__col--width(1 / 3 * 100%);
-		}
+		flex: 0 1 var(--entries--item-width);
+		max-width: var(--entries--item-width);
+		margin-bottom: var(--entries--gap);
+		padding-right: calc(var(--entries--gap) * .5);
+		padding-left: calc(var(--entries--gap) * .5);
 
 		> a {
 			display: block;
@@ -23,15 +35,17 @@
 		display: block;
 
 		&.#{ $_prefix }c-entries {
+			--entries--item-width: none;
+
 			margin-right: 0;
 			margin-left: 0;
 			margin-bottom: 0;
 		}
 
 		.#{ $_prefix }c-entries__item {
-			margin: 0;
-			padding: 0;
-			max-width: none;
+			margin-bottom: 0;
+			padding-right: 0;
+			padding-left: 0;
 		}
 	}
 
@@ -48,18 +62,20 @@
 	&--simple {
 		.#{ $_prefix }c-entries__item {
 			> a {
-				padding-top: var(--_padding1);
-				padding-bottom: var(--_padding1);
+				padding-top: var(--entries--gap);
+				padding-bottom: var(--entries--gap);
 			}
 		}
 	}
 
 	&--text,
 	&--text2 {
+		--entries--gap: var(--_padding-1);
+
 		.#{ $_prefix }c-entries__item {
 			> a {
-				padding-top: var(--_padding-1);
-				padding-bottom: var(--_padding-1);
+				padding-top: var(--entries--gap);
+				padding-bottom: var(--entries--gap);
 			}
 		}
 	}
@@ -96,10 +112,8 @@
 	&--panel {
 		&[data-has-infeed-ads="true"],
 		&[data-force-sm-1col="true"] {
-			.#{ $_prefix }c-entries__item {
-				@include _media-max(sm) {
-					@include _lattice__col--width(100%);
-				}
+			@include _media-max(sm) {
+				--entries--item-width: 100%;
 			}
 		}
 	}
@@ -110,10 +124,8 @@
 [data-is-slim-width="true"] .#{ $_prefix }c-entries {
 	&--rich-media,
 	&--panel {
-		.#{ $_prefix }c-entries__item {
-			@include _media-min(lg) {
-				@include _lattice__col--width(1 / 2 * 100%);
-			}
+		@include _media-min(lg) {
+			--entries--item-width: 50%;
 		}
 	}
 }

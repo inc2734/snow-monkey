@@ -1,4 +1,6 @@
 @mixin btn() {
+	--_border-radius: var(--_global--border-radius);
+
 	@include _btn();
 	background-color: var(--wp--preset--color--sm-accent);
 	border: none;

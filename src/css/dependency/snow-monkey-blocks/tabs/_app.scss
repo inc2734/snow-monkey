@@ -1,15 +1,5 @@
 .smb-tabs {
-	&__tab {
-		font-family: var(--_base-font-family);
-	}
-}
-
-.smb-tabs.is-style-line {
-	> .smb-tabs__tabs {
-		.smb-tabs__tab::after {
-			background-color: var(--wp--preset--color--sm-accent);
-		}
-	}
+	--smb-tabs--style--line--accent-color: var(--wp--preset--color--sm-accent);
 }
 
 .smb-tab-panel {

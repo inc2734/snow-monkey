@@ -2,38 +2,14 @@
 @import '../../../app/foundation/_placeholder/placeholder';
 
 .smb-section {
-	@extend %section;
+	--smb-section--subtitle-color: var(--wp--preset--color--sm-accent);
 
 	&__subtitle {
-		@extend %section-subtitle;
-		color: var(--wp--preset--color--sm-accent);
 	}
 
 	&__title {
-		@extend %section-title;
-
 		&::after {
 			background-color: var(--wp--preset--color--sm-accent);
-		}
-
-		& + .smb-section__lede-wrapper,
-		& + .smb-section__lede {
-			@extend %section-lede;
-		}
-	}
-
-	// @deprecated
-	&__title,
-	&__lede-wrapper,
-	&__lede {
-		& + .smb-section__body {
-			@extend %section-body;
-		}
-	}
-
-	&__header {
-		& + .smb-section__body {
-			@extend %section-body;
 		}
 	}
 

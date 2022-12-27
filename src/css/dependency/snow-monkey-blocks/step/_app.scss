@@ -3,9 +3,5 @@
 		&__summary {
 			@extend %entry-content;
 		}
-
-		&__link {
-			color: var(--wp--preset--color--sm-accent);
-		}
 	}
 }

@@ -1,4 +1,6 @@
 .#{ $_prefix }c-comment {
+	--_border-radius: var(--_global--border-radius);
+
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;

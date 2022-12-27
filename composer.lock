@@ -156,16 +156,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "12.0.2",
+            "version": "12.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "2041b6bc9b8a487a877481aa34accc153b43f04b"
+                "reference": "0b9510d39f22ac30ef14d7463a65a96d8ea88ae6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/2041b6bc9b8a487a877481aa34accc153b43f04b",
-                "reference": "2041b6bc9b8a487a877481aa34accc153b43f04b",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/0b9510d39f22ac30ef14d7463a65a96d8ea88ae6",
+                "reference": "0b9510d39f22ac30ef14d7463a65a96d8ea88ae6",
                 "shasum": ""
             },
             "require": {
@@ -195,9 +195,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/12.0.2"
+                "source": "https://github.com/inc2734/wp-basis/tree/12.0.3"
             },
-            "time": "2022-12-14T13:23:37+00:00"
+            "time": "2022-12-23T06:09:16+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -1390,16 +1390,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.20",
+            "version": "9.2.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "af7463c955007de36db0c5e26d03e2f933c2e980"
+                "reference": "e4bf60d2220b4baaa0572986b5d69870226b06df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/af7463c955007de36db0c5e26d03e2f933c2e980",
-                "reference": "af7463c955007de36db0c5e26d03e2f933c2e980",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/e4bf60d2220b4baaa0572986b5d69870226b06df",
+                "reference": "e4bf60d2220b4baaa0572986b5d69870226b06df",
                 "shasum": ""
             },
             "require": {
@@ -1455,7 +1455,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.20"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.22"
             },
             "funding": [
                 {
@@ -1463,7 +1463,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-13T07:49:28+00:00"
+            "time": "2022-12-18T16:40:55+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",

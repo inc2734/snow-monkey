@@ -5,6 +5,8 @@
  * Alert
  */
 .wpac-alert {
+  --_border-radius: var(--_global--border-radius);
+
 	$color: #fff9e6;
 	@include _alert();
 	@include _set-between-content-level(1);
@@ -139,12 +141,22 @@
  * Columns
  */
 .wpac-columns {
+	--wpac-columns--item-width: 100%;
+
 	&__row {
-		@include _lattice();
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: calc(-1 * var(--_margin1));
+		margin-right: calc(-1 * var(--_margin1) * .5);
+		margin-left: calc(-1 * var(--_margin1) * .5);
 	}
 
 	&__col {
-		@include _lattice__col();
+		flex: 0 1 var(--wpac-columns--item-width);
+		max-width: var(--wpac-columns--item-width);
+		margin-bottom: var(--_margin1);
+		padding-right: calc(var(--_margin1) * .5);
+		padding-left: calc(var(--_margin1) * .5);
 
 		@each $size, $screen-min in $_sizes {
 			@include _media-min($screen-min) {
@@ -152,8 +164,8 @@
 
 				@for $max_columns from 1 through 5 {
 					@for $i from 1 through $max_columns {
-						&#{$prefix}-#{ $i }-#{ $max_columns } {
-							@include _lattice__col--width($i / $max_columns * 100%);
+						&#{ $prefix }-#{ $i }-#{ $max_columns } {
+							--wpac-columns--item-width: #{ $i / $max_columns * 100% };
 						}
 					}
 				}

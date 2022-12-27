@@ -1,7 +1,6 @@
 :root {
   // @see src/css/admin/app
-  --_background-color: #fff;
-  --wp--style--block-gap: calc(var(--_space) * var(--_margin-scale));
+  --_global--background-color: #fff;
 }
 
 @import '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/foundation/base';

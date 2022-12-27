@@ -1,5 +1,5 @@
 .#{ $_prefix }p-drop-nav {
-	background-color: var(--_background-color);
+	background-color: var(--_global--background-color);
 
 	@media print {
 		display: none;
