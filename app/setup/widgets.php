@@ -67,16 +67,16 @@ add_action(
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-app',
-			get_theme_file_uri( '/assets/css/custom-widgets/app.css' ),
+			get_theme_file_uri( '/assets/css/custom-widgets/editor.css' ),
 			array( Helper::get_main_style_handle() ),
-			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app.css' ) )
+			filemtime( get_theme_file_path( '/assets/css/custom-widgets/editor.css' ) )
 		);
 
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets-theme',
-			get_theme_file_uri( '/assets/css/custom-widgets/app-theme.css' ),
+			get_theme_file_uri( '/assets/css/custom-widgets/editor-theme.css' ),
 			array( Helper::get_main_style_handle() . '-custom-widgets-app' ),
-			filemtime( get_theme_file_path( '/assets/css/custom-widgets/app-theme.css' ) )
+			filemtime( get_theme_file_path( '/assets/css/custom-widgets/editor-theme.css' ) )
 		);
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-custom-widgets' );

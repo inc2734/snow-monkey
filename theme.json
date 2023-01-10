@@ -68,7 +68,44 @@
 			]
 		},
 		"spacing": {
-			"blockGap": true
+			"blockGap": true,
+			"spacingSizes": [
+				{
+					"name": "-2",
+					"slug": "20",
+					"size": "var(--_s-2)"
+				},
+				{
+					"name": "-1",
+					"slug": "30",
+					"size": "var(--_s-1)"
+				},
+				{
+					"name": "1",
+					"slug": "40",
+					"size": "var(--_s1)"
+				},
+				{
+					"name": "2",
+					"slug": "50",
+					"size": "var(--_s2)"
+				},
+				{
+					"name": "3",
+					"slug": "60",
+					"size": "var(--_s3)"
+				},
+				{
+					"name": "4",
+					"slug": "70",
+					"size": "var(--_s4)"
+				},
+				{
+					"name": "5",
+					"slug": "80",
+					"size": "var(--_s5)"
+				}
+			]
 		},
 		"typography": {
 			"dropCap": false,
@@ -159,11 +196,30 @@
 			},
 			"link": {
 				"color": {
-					"text": "var(--accent-color)"
+					"text": "var(--wp--preset--color--sm-accent)"
 				}
 			}
 		},
 		"blocks": {
+			"core/code": {
+				"color": {
+					"background": "var(--wp--preset--color--sm-lightest-gray)"
+				},
+				"border": {
+					"width": "1px",
+					"style": "solid",
+					"color": "var(--wp--preset--color--sm-lighter-gray)",
+					"radius": "var(--_global--border-radius)"
+				},
+				"spacing": {
+					"padding": {
+						"top": "var(--_padding1)",
+						"right": "var(--_padding1)",
+						"bottom": "var(--_padding1)",
+						"left": "var(--_padding1)"
+					}
+				}
+			},
 			"core/search": {
 				"elements": {
 					"button": {
@@ -185,14 +241,53 @@
 					}
 				}
 			},
+			"core/pullquote": {
+				"border": {
+					"top": {
+						"width": "4px",
+						"style": "solid",
+						"color": "currentColor"
+					},
+					"bottom": {
+						"width": "4px",
+						"style": "solid",
+						"color": "currentColor"
+					}
+				},
+				"spacing": {
+					"padding": {
+						"top": "var(--_padding2)",
+						"bottom": "var(--_padding2)"
+					}
+				},
+				"typography": {
+					"fontStyle": "italic",
+					"fontWeight": "bold"
+				}
+			},
 			"core/social-links": {
 				"spacing": {
 					"blockGap": "var(--_margin-1)"
 				}
+			},
+			"core/social-link": {
+				"spacing": {
+					"margin": {
+						"top": "0",
+						"right": "0",
+						"bottom": "0",
+						"left": "0"
+					}
+				}
+			},
+			"core/table": {
+				"border": {
+					"color": "var(--wp--preset--color--sm-lighter-gray)"
+				}
 			}
 		},
 		"spacing": {
-			"blockGap": "var(--_margin1)"
+			"blockGap": "var(--wp--style--block-gap, var(--_margin1))"
 		}
 	}
 }

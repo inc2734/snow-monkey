@@ -54,6 +54,7 @@ add_action(
 				'wp-awesome-widgets',
 			)
 		);
+		$dependencies = array( 'wp-block-library' );
 
 		wp_register_style(
 			Helper::get_main_style_handle(),
@@ -73,31 +74,31 @@ add_action(
 		$css = file_get_contents( get_theme_file_path( '/assets/css/block-editor/app.css' ) );
 		$css = str_replace(
 			array(
-				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) :root',
+				'html :where(.editor-styles-wrapper) :root',
 			),
 			':root',
 			$css
 		);
 		$css = str_replace(
 			array(
-				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) *',
+				'html :where(.editor-styles-wrapper) *',
 			),
 			'*',
 			$css
 		);
 		$css = str_replace(
 			array(
-				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) html',
+				'html :where(.editor-styles-wrapper) html',
 			),
-			'html :where(.block-editor-writing-flow.editor-styles-wrapper, .edit-widgets-main-block-list)',
+			'html',
 			$css
 		);
 		$css = str_replace(
 			array(
-				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) body',
-				'html :where(.wp-block-post-content,.wp-block-widget-area__inner-blocks) :where(body)',
+				'html :where(.editor-styles-wrapper) body',
+				'html :where(.editor-styles-wrapper) :where(body)',
 			),
-			'html :where(.wp-block-post-content, .wp-block-widget-area__inner-blocks)',
+			'html :where(.editor-styles-wrapper)',
 			$css
 		);
 		wp_add_inline_style(
@@ -108,7 +109,7 @@ add_action(
 		wp_register_style(
 			Helper::get_main_style_handle() . '-theme',
 			get_theme_file_uri( '/assets/css/block-editor/app-theme.css' ),
-			$dependencies,
+			array( Helper::get_main_style_handle() . '-app' ),
 			filemtime( get_theme_file_path( '/assets/css/block-editor/app-theme.css' ) )
 		);
 

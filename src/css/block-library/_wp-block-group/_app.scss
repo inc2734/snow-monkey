@@ -1,9 +1,7 @@
-.wp-block-group {
-	&__inner-container {
-		@extend %entry-content;
-	}
+:where(.wp-block-group) {
+	@extend %entry-content;
 }
 
-:where(.wp-block-group) {
+:where(.wp-block-group__inner-container) {
 	@extend %entry-content;
 }

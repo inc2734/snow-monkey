@@ -14,13 +14,11 @@
 		@extend %table;
 	}
 
-	> ul,
-	> ol {
-		> li {
-			& + li {
-				margin-top: var(--_margin-2);
-			}
-		}
+	> ul li + li,
+	> ol li + li,
+	> ul * > li:first-child,
+	> ol * > li:first-child {
+		margin-top: var(--_margin-2);
 	}
 
 	> blockquote:not([class~="wp-block-quote"]) {

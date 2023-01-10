@@ -1,0 +1,5 @@
+// @todo WordPress 5.9 iframed content hack.
+// https://github.com/WordPress/gutenberg/blob/f2161e246b9fdd9a2a56e7552b0b28050f1a5302/packages/block-editor/src/components/iframe/index.js#L70-L74
+html :where(.editor-styles-wrapper) {
+	display: block;
+}

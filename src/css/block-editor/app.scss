@@ -21,13 +21,22 @@ html {
  * - .block-editor-writing-flow
  *  - .edit-widgets-main-block-list.is-root-container
  *    - .wp-block-widget-area__inner-blocks.editor-styles-wrapper
+ *
+ * ## Block preview
+ * - html.block-editor-block-preview__content-iframe
+ *	- body.block-editor-iframe__body.editor-styles-wrapper
  */
 
 /**
  * Final selector adjustments are made in app/setup/editor.php.
  * Here, the selector of the direct parent of the blocks is specified.
  */
-html :where(.wp-block-post-content, .wp-block-widget-area__inner-blocks) {
+html :where(.editor-styles-wrapper) {
+	ul,
+	ol {
+		padding-left: var(--_list-item-indent);
+	}
+
 	/**
 	 * Foundation
 	 */
@@ -55,8 +64,14 @@ html :where(.wp-block-post-content, .wp-block-widget-area__inner-blocks) {
 	@import '../app/object/utility/utility';
 }
 
-:where(.editor-styles-wrapper .is-root-container, .editor-styles-wrapper .wp-block-freeform) {
+.editor-styles-wrapper .is-root-container,
+.editor-styles-wrapper .wp-block-freeform {
 	@include entry-content();
+}
+
+.components-resizable-box__container {
+	height: auto !important;
+	max-width: 100% !important;
 }
 
 .wp-block-widget-area__inner-blocks .block-editor-block-list__layout [data-type="core/heading"],
@@ -146,7 +161,6 @@ html :where(.wp-block-post-content, .wp-block-widget-area__inner-blocks) {
 .l-body--left-sidebar {
 	.editor-styles-wrapper {
 		--wp--custom--content-max-width: calc(var(--_container-max-width) - 336px);
-		--wp--style--global--wide-size: var(--wp--custom--content-width);
 	}
 }
 

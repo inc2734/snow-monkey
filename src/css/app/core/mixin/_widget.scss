@@ -45,7 +45,7 @@
 @mixin widget-list-base() {
 	@include _list-unstyled();
 
-	> *:not(:first-child) {
+	> li + li {
 		margin-top: var(--_margin-2);
 	}
 }
@@ -75,10 +75,6 @@
 @mixin widget-children() {
 	margin-top: var(--_margin-2);
 	margin-left: var(--_margin-1);
-
-	> *:not(:first-child) {
-		margin-top: var(--_margin-2);
-	}
 
 	ul {
 		margin-left: var(--_margin-1);
@@ -117,5 +113,9 @@
 
 	ul {
 		margin-left: 0;
+	}
+
+	> li:first-child {
+		margin-top: 0;
 	}
 }

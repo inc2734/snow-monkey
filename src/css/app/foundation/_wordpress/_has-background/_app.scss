@@ -1,14 +1,8 @@
-p,
-.wp-block-group,
-.wp-block-column {
-	&.has-background {
-		padding: var(--_padding1);
-	}
+.has-background {
+	padding: var(--_padding1);
 }
 
-ul,
-ol {
-	&.has-background {
-		padding: var(--_padding1) var(--_padding1) var(--_padding1) var(--_padding2);
-	}
+ul.has-background,
+ol.has-background {
+	padding: var(--_padding1) var(--_padding1) var(--_padding1) var(--_padding2);
 }

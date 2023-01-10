@@ -1,9 +1,7 @@
 .#{ $_prefix }p-related-posts {
 	.#{ $_prefix }c-entries--rich-media {
-		.#{ $_prefix }c-entries__item {
-			@include _media-min(lg) {
-				@include _row__col(1, 4);
-			}
+		@include _media-min(lg) {
+			--entries--item-width: 25%;
 		}
 
 		.#{ $_prefix }c-entry-summary {
