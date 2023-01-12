@@ -188,9 +188,9 @@ add_action(
 		if ( ! wp_style_is( 'spider', 'registered' ) ) {
 			wp_enqueue_style(
 				'spider',
-				get_theme_file_uri( '/assets/packages/spider/dist/css/spider.css' ),
+				get_theme_file_uri( '/assets/css/app/spider.css' ),
 				array(),
-				filemtime( get_theme_file_path( '/assets/packages/spider/dist/css/spider.css' ) )
+				filemtime( get_theme_file_path( '/assets/css/app/spider.css' ) )
 			);
 		}
 

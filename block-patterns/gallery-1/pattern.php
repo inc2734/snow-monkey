@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.15.0
+ * @version 19.0.0-beta1
  */
 ?>
 
@@ -27,27 +27,27 @@
 							<div class="spider__canvas">
 								<div class="spider__slide" data-id="0">
 									<div class="smb-spider-slider__figure-wrapper">
-										<img class="spider__figure" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_ydxj69toal.jpg" alt="" data-image-id="0"/>
+										<img class="spider__figure wp-image-0" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_ydxj69toal.jpg" alt="" data-image-id="0"/>
 									</div>
 								</div>
 								<div class="spider__slide" data-id="1">
 									<div class="smb-spider-slider__figure-wrapper">
-										<img class="spider__figure" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_lgg8nat9jy.jpg" alt="" data-image-id="0"/>
+										<img class="spider__figure wp-image-0" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_lgg8nat9jy.jpg" alt="" data-image-id="0"/>
 									</div>
 								</div>
 								<div class="spider__slide" data-id="2">
 									<div class="smb-spider-slider__figure-wrapper">
-										<img class="spider__figure" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/smartphone-mobile-laptop36.jpg" alt="" data-image-id="0"/>
+										<img class="spider__figure wp-image-0" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/smartphone-mobile-laptop36.jpg" alt="" data-image-id="0"/>
 									</div>
 								</div>
 								<div class="spider__slide" data-id="3">
 									<div class="smb-spider-slider__figure-wrapper">
-										<img class="spider__figure" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/man-guy-photographer1579.jpg" alt="" data-image-id="0"/>
+										<img class="spider__figure wp-image-0" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/man-guy-photographer1579.jpg" alt="" data-image-id="0"/>
 									</div>
 								</div>
 								<div class="spider__slide" data-id="4">
 									<div class="smb-spider-slider__figure-wrapper">
-										<img class="spider__figure" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/building-windows-balconies330.jpg" alt="" data-image-id="0"/>
+										<img class="spider__figure wp-image-0" src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/building-windows-balconies330.jpg" alt="" data-image-id="0"/>
 									</div>
 								</div>
 							</div>

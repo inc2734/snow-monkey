@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.18.0
+ * @version 19.0.0-beta1
  */
 ?>
 
@@ -18,9 +18,9 @@
 						<div class="c-row" data-columns="1" data-md-columns="2" data-lg-columns="3">
 							<!-- wp:snow-monkey-blocks/items-banner {"imageSize":"vstandard","contentPosition":"bottom left"} -->
 							<div class="wp-block-snow-monkey-blocks-items-banner c-row__col">
-								<div class="smb-items__banner smb-items__banner--vstandard">
+								<div class="smb-items__banner smb-items__banner--vstandard" style="--smb-items--banner--mask-opacity:1">
 									<div class="smb-items__banner__figure">
-										<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_wrn48fo5mr.jpg" alt="" class="wp-image-0" style="opacity:1"/>
+										<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_wrn48fo5mr.jpg" alt="" class="wp-image-0"/>
 									</div>
 									<div class="smb-items__banner__body" data-content-position="bottom-left">
 										<div class="smb-items__banner__body-inner">
@@ -37,9 +37,9 @@
 
 							<!-- wp:snow-monkey-blocks/items-banner {"imageSize":"vstandard","contentPosition":"bottom left"} -->
 							<div class="wp-block-snow-monkey-blocks-items-banner c-row__col">
-								<div class="smb-items__banner smb-items__banner--vstandard">
+								<div class="smb-items__banner smb-items__banner--vstandard" style="--smb-items--banner--mask-opacity:1">
 									<div class="smb-items__banner__figure">
-										<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/beach-sand-coast2756.jpg" alt="" class="wp-image-0" style="opacity:1"/>
+										<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/beach-sand-coast2756.jpg" alt="" class="wp-image-0"/>
 									</div>
 									<div class="smb-items__banner__body" data-content-position="bottom-left">
 										<div class="smb-items__banner__body-inner">
@@ -56,9 +56,9 @@
 
 							<!-- wp:snow-monkey-blocks/items-banner {"imageSize":"vstandard","contentPosition":"bottom left"} -->
 							<div class="wp-block-snow-monkey-blocks-items-banner c-row__col">
-								<div class="smb-items__banner smb-items__banner--vstandard">
+								<div class="smb-items__banner smb-items__banner--vstandard" style="--smb-items--banner--mask-opacity:1">
 									<div class="smb-items__banner__figure">
-										<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/swing-ocean-sea2875.jpg" alt="" class="wp-image-0" style="opacity:1"/>
+										<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/swing-ocean-sea2875.jpg" alt="" class="wp-image-0"/>
 									</div>
 									<div class="smb-items__banner__body" data-content-position="bottom-left">
 										<div class="smb-items__banner__body-inner">

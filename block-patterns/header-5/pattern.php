@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.12.0
+ * @version 19.0.0-beta1
  */
 ?>
 
 <!-- wp:snow-monkey-blocks/section-break-the-grid {"imageMediaType":"image","textColor":"#ffffff","imageSize":"60","imageSizeSlug":"xlarge","contentSize":"50","mobileOrder":"nowrap","containerAlign":"full","backgroundColor":"#000000","align":"full","className":"is-style-smb-section-undecorated-title"} -->
-<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--right smb-section-break-the-grid--mobile-nowrap is-style-smb-section-undecorated-title" style="color:#ffffff">
+<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--right smb-section-break-the-grid--mobile-nowrap is-style-smb-section-undecorated-title" style="--smb-section--color:#ffffff;--smb-section-break-the-grid--shadow-transform:translate(5%, 5%);--smb-section--background-color:#000000">
 	<div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0">
-		<div class="smb-section__background" style="background-color:#000000"></div>
+		<div class="smb-section__background"></div>
 	</div>
 	<div class="smb-section__inner">
 		<div class="c-container alignfull">
@@ -19,10 +19,9 @@
 					<div class="c-row__col c-row__col--1-2">
 						<div class="smb-section-break-the-grid__content smb-section-break-the-grid__content--w-50 smb-section-break-the-grid__content--horizontal-10">
 							<div class="smb-section__header smb-section-break-the-grid__header">
-								<h2 class="smb-section__title smb-section-break-the-grid__title"><span class="sme-font-size has-sm-xxxlarge-font-size"><strong>LOREM</strong><br><strong>IPSUM</strong><br><strong>DOLOR</strong></span></h2>
+								<h2 class="smb-section__title smb-section-break-the-grid__title"><span class="sme-font-size has-sm-6-xl-font-size">LOREM<br>IPSUM<br>DOLOR</span></h2>
 							</div>
-							<div class="smb-section__body smb-section-break-the-grid__body">
-							</div>
+							<div class="smb-section__body smb-section-break-the-grid__body"></div>
 						</div>
 					</div>
 					<div class="c-row__col c-row__col--1-2">

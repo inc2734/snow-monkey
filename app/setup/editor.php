@@ -139,6 +139,17 @@ add_action(
 		);
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-block-library' );
+
+		// @todo WordPress 5.9 iframed content hack.
+		// https://github.com/WordPress/gutenberg/blob/f2161e246b9fdd9a2a56e7552b0b28050f1a5302/packages/block-editor/src/components/iframe/index.js#L70-L74
+		if ( ! wp_style_is( 'spider', 'registered' ) ) {
+			wp_enqueue_style(
+				'spider',
+				get_theme_file_uri( '/assets/css/block-editor/spider.css' ),
+				array(),
+				filemtime( get_theme_file_path( '/assets/css/block-editor/spider.css' ) )
+			);
+		}
 	}
 );
 

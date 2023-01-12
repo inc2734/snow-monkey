@@ -3,15 +3,15 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.17.0
+ * @version 19.0.0-beta1
  */
 ?>
 
 <!-- wp:snow-monkey-blocks/section-with-bgimage {"lgImageMediaType":"image","maskColor":"#000000","maskOpacity":0.7,"textColor":"#ffffff","align":"full","className":"is-style-smb-section-undecorated-title"} -->
-<div class="wp-block-snow-monkey-blocks-section-with-bgimage alignfull smb-section smb-section-with-bgimage smb-section--fit is-style-smb-section-undecorated-title" style="color:#ffffff">
+<div class="wp-block-snow-monkey-blocks-section-with-bgimage alignfull smb-section smb-section-with-bgimage smb-section--fit is-style-smb-section-undecorated-title" style="--smb-section--color:#ffffff;--smb-section-with-bgimage--mask-color:#000000;--smb-section-with-bgimage--mask-opacity:0.7">
 	<div class="smb-section-with-bgimage__bgimage smb-section-with-bgimage__bgimage--lg">
-		<div class="smb-section-with-bgimage__mask" style="background-color:#000000"></div>
-		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_ydxj69toal.jpg" alt="" class="wp-image-0" style="opacity:0.7"/>
+		<div class="smb-section-with-bgimage__mask"></div>
+		<img src="<?php echo esc_url( SNOW_MONKEY_BLOCKS_DIR_URL ); ?>/dist/img/photos/stocksnap_ydxj69toal.jpg" alt="" class="wp-image-0"/>
 	</div>
 	<div class="smb-section__inner">
 		<div class="c-container">
@@ -28,7 +28,7 @@
 								<div class="smb-items__item smb-items__item--free">
 									<div class="smb-items__item__body">
 										<!-- wp:paragraph {"align":"center"} -->
-										<p class="has-text-align-center"><strong><span class="sme-font-size has-sm-medium-font-size"><strong><span class="sme-font-size has-sm-medium-font-size">Lorem</span>　<br><span class="sme-font-size has-sm-xlarge-font-size">97</span>%</strong></span></strong></p>
+										<p class="has-text-align-center"><strong>Lorem　<br><span class="sme-font-size has-sm-4-xl-font-size">97</span>%</strong></p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
@@ -44,7 +44,7 @@
 								<div class="smb-items__item smb-items__item--free">
 									<div class="smb-items__item__body">
 										<!-- wp:paragraph {"align":"center"} -->
-										<p class="has-text-align-center"><strong><span class="sme-font-size has-sm-medium-font-size">Ipsum</span>　<br><span class="sme-font-size has-sm-xlarge-font-size">100</span>%</strong></p>
+										<p class="has-text-align-center"><strong>Ipsum<br><span class="sme-font-size has-sm-4-xl-font-size">100</span>%</strong></p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
@@ -60,7 +60,7 @@
 								<div class="smb-items__item smb-items__item--free">
 									<div class="smb-items__item__body">
 										<!-- wp:paragraph {"align":"center"} -->
-										<p class="has-text-align-center"><strong><span class="sme-font-size has-sm-medium-font-size"><strong><span class="sme-font-size has-sm-medium-font-size">Dolor</span>　<br><span class="sme-font-size has-sm-xlarge-font-size">96</span>%</strong></span></strong></p>
+										<p class="has-text-align-center"><strong>Dolor<br><span class="sme-font-size has-sm-4-xl-font-size">96</span>%</strong></p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->

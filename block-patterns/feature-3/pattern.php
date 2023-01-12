@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.18.0
+ * @version 19.0.0-beta1
  */
 ?>
 
@@ -20,8 +20,8 @@
 							<div class="wp-block-snow-monkey-blocks-items-item-free c-row__col">
 								<div class="smb-items__item smb-items__item--free">
 									<div class="smb-items__item__body">
-										<!-- wp:paragraph {"fontSize":"sm-large"} -->
-										<p class="has-sm-large-font-size"><strong>Lorem ipsum</strong></p>
+										<!-- wp:paragraph {"fontSize":"sm-3xl"} -->
+										<p class="has-sm-3-xl-font-size"><strong>Lorem ipsum</strong></p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
@@ -32,7 +32,7 @@
 										<div class="wp-block-snow-monkey-blocks-buttons smb-buttons">
 											<!-- wp:snow-monkey-blocks/btn {"modifier":"full","borderRadius":0,"backgroundColor":"#000000","className":"is-style-default"} -->
 											<div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper smb-btn-wrapper--full is-style-default">
-												<a class="smb-btn smb-btn--full" href="#" style="background-color:#000000;border-radius:0px"><span class="smb-btn__label">Button</span></a>
+												<a class="smb-btn smb-btn--full" href="#" style="--smb-btn--background-color:#000000;--smb-btn--border-radius:0px"><span class="smb-btn__label">Button</span></a>
 											</div>
 											<!-- /wp:snow-monkey-blocks/btn -->
 										</div>
@@ -46,8 +46,8 @@
 							<div class="wp-block-snow-monkey-blocks-items-item-free c-row__col">
 								<div class="smb-items__item smb-items__item--free">
 									<div class="smb-items__item__body">
-										<!-- wp:paragraph {"fontSize":"sm-large"} -->
-										<p class="has-sm-large-font-size"><strong>Duis aute irure</strong></p>
+										<!-- wp:paragraph {"fontSize":"sm-3xl"} -->
+										<p class="has-sm-3-xl-font-size"><strong>Duis aute irure</strong></p>
 										<!-- /wp:paragraph -->
 
 										<!-- wp:paragraph -->
@@ -58,7 +58,7 @@
 										<div class="wp-block-snow-monkey-blocks-buttons smb-buttons">
 											<!-- wp:snow-monkey-blocks/btn {"modifier":"full","borderRadius":0,"backgroundColor":"#000000","textColor":"#ffffff","className":"is-style-default"} -->
 											<div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper smb-btn-wrapper--full is-style-default">
-												<a class="smb-btn smb-btn--full" href="#" style="background-color:#000000;border-radius:0px"><span class="smb-btn__label" style="color:#ffffff">Button</span></a>
+												<a class="smb-btn smb-btn--full" href="#" style="--smb-btn--background-color:#000000;--smb-btn--border-radius:0px;--smb-btn--color:#ffffff"><span class="smb-btn__label">Button</span></a>
 											</div>
 											<!-- /wp:snow-monkey-blocks/btn -->
 										</div>

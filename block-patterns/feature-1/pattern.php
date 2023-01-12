@@ -3,17 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.17.0
+ * @version 19.0.0-beta1
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section {"contentsAlignment":"left","backgroundText":{"text":"LOREM IPSUM","color":"#ccc","fontSize":"140px","fontSizeSlug":"sm-xxxlarge","lineHeight":"","opacity":0.2,"position":{"top":"3vw","right":"0px","bottom":null,"left":null}},"align":"full","className":"is-style-smb-section-undecorated-title"} -->
-<div class="wp-block-snow-monkey-blocks-section alignfull smb-section smb-section--left smb-section--fit is-style-smb-section-undecorated-title">
+<!-- wp:snow-monkey-blocks/section {"contentsAlignment":"left","backgroundText":{"text":"LOREM IPSUM","color":"var(--_light-color-gray)","fontSize":"8rem","fontSizeSlug":"sm-6xl","lineHeight":"","opacity":0.2,"position":{"top":"3vw","right":"0px","bottom":null,"left":null}},"align":"full","className":"is-style-smb-section-undecorated-title"} -->
+<div class="wp-block-snow-monkey-blocks-section alignfull smb-section smb-section--left smb-section--fit is-style-smb-section-undecorated-title" style="--smb-section--background-text-color:var(--_light-color-gray);--smb-section--background-text-opacity:0.2;--smb-section--background-text-top:3vw;--smb-section--background-text-right:0px">
 	<div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0">
 		<div class="smb-section__background-text" aria-hidden="true">
 			<div class="c-container">
 				<div class="smb-section__background-text__inner">
-					<div class="smb-section__background-text__text has-sm-xxxlarge-font-size" style="color:#ccc;opacity:0.2;top:3vw;right:0px">LOREM IPSUM</div>
+					<div class="smb-section__background-text__text has-sm-6-xl-font-size">LOREM IPSUM</div>
 				</div>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 									</div>
 									<div class="smb-items__item__body">
 										<div class="smb-items__item__title">Sed do eiusmod</div>
-										<div class="smb-items__item__content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+										<div class="smb-items__item__content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 									</div>
 								</div>
 							</div>
@@ -81,7 +81,7 @@
 									</div>
 									<div class="smb-items__item__body">
 										<div class="smb-items__item__title">Sed do eiusmod</div>
-										<div class="smb-items__item__content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+										<div class="smb-items__item__content">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
 									</div>
 								</div>
 							</div>

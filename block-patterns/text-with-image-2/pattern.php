@@ -3,13 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.16.0
+ * @version 19.0.0-beta1
  */
 ?>
 
-<!-- wp:snow-monkey-blocks/section-break-the-grid {"imageMediaType":"image","textColor":"#ffffff","imageSize":"","imageMatchHeight":true,"imageSizeSlug":"xlarge","contentSize":"-10","contentHorizontalPosition":"","contentPadding":"m","mobileOrder":"nowrap","containerAlign":"","fixedBackgroundColor":"#000000","align":"full","className":"is-style-smb-section-undecorated-title"} -->
-<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--right smb-section-break-the-grid--mobile-nowrap smb-section-break-the-grid--match-height is-style-smb-section-undecorated-title" style="color:#ffffff">
-	<div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0;background-color:#000000"></div>
+<!-- wp:snow-monkey-blocks/section-break-the-grid {"imageMediaType":"image","textColor":"#ffffff","imageSize":"","imageMatchHeight":true,"imageSizeSlug":"xlarge","contentSize":"-10","contentHorizontalPosition":"","contentPadding":"m","mobileOrder":"nowrap","fixedBackgroundColor":"#000000","align":"full","className":"is-style-smb-section-undecorated-title"} -->
+<div class="wp-block-snow-monkey-blocks-section-break-the-grid alignfull smb-section smb-section-break-the-grid smb-section-break-the-grid--right smb-section-break-the-grid--mobile-nowrap smb-section-break-the-grid--match-height is-style-smb-section-undecorated-title" style="--smb-section--color:#ffffff;--smb-section-break-the-grid--shadow-transform:translate(5%, 5%);--smb-section--fixed-background-color:#000000">
+	<div class="smb-section__fixed-background" style="padding-top:0;padding-bottom:0"></div>
 	<div class="smb-section__inner">
 		<div class="c-container">
 			<div class="smb-section__contents-wrapper smb-section-break-the-grid__contents-wrapper">
@@ -26,8 +26,10 @@
 
 								<!-- wp:snow-monkey-blocks/buttons -->
 								<div class="wp-block-snow-monkey-blocks-buttons smb-buttons">
-									<!-- wp:snow-monkey-blocks/btn {"backgroundColor":"#ffffff","textColor":"#ffffff","className":"is-style-ghost"} -->
-									<div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper is-style-ghost"><a class="smb-btn" href="" style="background-color:#ffffff;border-color:#ffffff"><span class="smb-btn__label" style="color:#ffffff">Lorem</span></a></div>
+									<!-- wp:snow-monkey-blocks/btn {"textColor":"#ffffff","className":"is-style-ghost"} -->
+									<div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper is-style-ghost">
+										<a class="smb-btn" href="" style="--smb-btn--color:#ffffff"><span class="smb-btn__label">Lorem</span></a>
+									</div>
 									<!-- /wp:snow-monkey-blocks/btn -->
 								</div>
 								<!-- /wp:snow-monkey-blocks/buttons -->
