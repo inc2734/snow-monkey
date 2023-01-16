@@ -35,4 +35,10 @@
 			}
 		}
 	}
+
+	&--has-site-branding {
+		.#{ $_prefix }p-global-nav {
+			justify-content: space-between;
+		}
+	}
 }

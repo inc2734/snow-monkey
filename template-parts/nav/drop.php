@@ -11,9 +11,16 @@ use Framework\Helper;
 if ( ! Helper::has_drop_nav() ) {
 	return;
 }
+
+$classes   = array();
+$classes[] = 'p-drop-nav';
+$display_site_branding = get_theme_mod( 'display-site-branding-in-drop-nav' );
+if ( $display_site_branding ) {
+	$classes[] = 'p-drop-nav--has-site-branding';
+}
 ?>
 
-<div class="p-drop-nav">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>">
 	<div class="c-container">
 		<?php
 		Helper::get_template_part(

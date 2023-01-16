@@ -15,6 +15,15 @@
 		}
 	}
 
+	&__logo {
+		picture {
+			img {
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+
 	&__description {
 		margin-top: var(--_margin-1);
 		@include _set-between-content-level(-1);

@@ -207,189 +207,211 @@
  * 1row header
  */
 .#{ $_prefix }l-1row-header {
-  &__branding,
-  &__content {
-    @include _media-min(lg) {
+	&__branding,
+	&__content {
+		@include _media-min(lg) {
 			padding-top: var(--_padding-2);
 			padding-bottom: var(--_padding-2);
-    }
-  }
+		}
+	}
 
-  .#{ $_prefix }p-global-nav {
-    &--vertical {
-      justify-content: flex-end;
-    }
+	.#{ $_prefix }p-global-nav {
+		&--vertical {
+			justify-content: flex-end;
+		}
 
-    .#{ $_prefix }c-navbar {
-      &__item {
-        flex: 0 1 auto;
-      }
-    }
-  }
+		.#{ $_prefix }c-navbar {
+			&__item {
+				flex: 0 1 auto;
+			}
+		}
+	}
 }
 
 /**
- * 2rows header
- */
+* 2rows header
+*/
 .#{ $_prefix }l-2row-header {
-  &__row {
-    &:nth-child(1) {
-      @include _media-min(lg) {
+	&__row {
+		&:nth-child(1) {
+			@include _media-min(lg) {
 				padding-top: var(--_padding-2);
 				padding-bottom: var(--_padding-2);
-      }
-    }
-  }
+			}
+		}
+	}
 
-  .#{ $_prefix }p-global-nav {
-    .#{ $_prefix }c-navbar {
-      &__item {
-        > a {
+	.#{ $_prefix }p-global-nav {
+		.#{ $_prefix }c-navbar {
+			&__item {
+				> a {
 					padding-top: var(--_padding-1);
 					padding-bottom: var(--_padding-1);
-        }
-      }
-    }
-  }
+				}
+			}
+		}
+	}
 }
 
 /**
- * centered header
- */
+* centered header
+*/
 .#{ $_prefix }l-center-header {
-  &__row:nth-child(1) {
-    @include _media-min(lg) {
+	&__row:nth-child(1) {
+		@include _media-min(lg) {
 			padding-top: var(--_padding-1);
 			padding-bottom: var(--_padding-1);
-    }
+		}
 
-    .#{ $_prefix }l-center-header[data-has-global-nav="true"] & {
-      @include _media-min(lg) {
+		.#{ $_prefix }l-center-header[data-has-global-nav="true"] & {
+			@include _media-min(lg) {
 				margin-top: var(--_margin1);
 				margin-bottom: var(--_margin-2);
-        padding: 0;
-      }
-    }
-  }
+				padding: 0;
+			}
+		}
+	}
 
-  .#{ $_prefix }p-global-nav {
-    &--vertical {
-      justify-content: center;
-    }
+	.#{ $_prefix }c-row__col.#{ $_prefix }u-text-center {
+		display: flex;
+		flex-direction: column;
 
-    .#{ $_prefix }c-navbar {
-      justify-content: center;
+		> * {
+			margin-right: auto;
+			margin-left: auto;
+		}
+	}
 
-      &__item {
-        flex: 0 1 auto;
+	.#{ $_prefix }c-site-branding--has-logo img {
+		margin-right: auto;
+		margin-left: auto;
+	}
 
-        > a {
+	.#{ $_prefix }p-global-nav {
+		&--vertical {
+			justify-content: center;
+		}
+
+		.#{ $_prefix }c-navbar {
+			justify-content: center;
+
+			&__item {
+				flex: 0 1 auto;
+
+				> a {
 					padding-top: var(--_padding-1);
 					padding-bottom: var(--_padding-1);
-        }
-      }
-    }
-  }
+				}
+			}
+		}
+	}
 }
 
 /**
- * Left
- */
+* Left
+*/
 [data-header-layout="left"] {
-  @include _media-min(lg) {
-    $body-margin-left: 280px;
-    --body-margin-left: #{ $body-margin-left };
+	@include _media-min(lg) {
+		$body-margin-left: 280px;
+		--body-margin-left: #{ $body-margin-left };
 
-    margin-left: var(--body-margin-left);
+		margin-left: var(--body-margin-left);
 
-    .#{ $_prefix }p-footer-sticky-nav,
-    .#{ $_prefix }p-footer-cta {
-      left: var(--body-margin-left);
-    }
-  }
+		.#{ $_prefix }p-footer-sticky-nav,
+		.#{ $_prefix }p-footer-cta {
+			left: var(--body-margin-left);
+		}
+	}
 }
 .#{ $_prefix }l-header--left {
-  @include _media-min(lg) {
+	@include _media-min(lg) {
 		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-    width: var(--body-margin-left);
+		width: var(--body-margin-left);
 		padding-top: var(--_padding1);
 
-    .admin-bar & {
-      top: 32px;
-    }
+		.admin-bar & {
+			top: 32px;
+		}
 
-    .#{ $_prefix }c-container {
-      padding-right: 0;
-      padding-left: 0;
-    }
+		.#{ $_prefix }c-container {
+			padding-right: 0;
+			padding-left: 0;
+		}
 
-    .#{ $_prefix }c-site-branding {
+		.#{ $_prefix }c-site-branding {
 			padding: 0 var(--_padding1);
 
-      &--has-logo {
-        text-align: center;
-      }
-    }
+			&--has-logo {
+				text-align: center;
 
-    .#{ $_prefix }p-header-content {
+				picture {
+					img {
+						margin-right: auto;
+						margin-left: auto;
+					}
+				}
+			}
+		}
+
+		.#{ $_prefix }p-header-content {
 			padding: 0 var(--_padding1);
-    }
+		}
 
-    .#{ $_prefix }p-global-nav,
-    .#{ $_prefix }p-header-sub-nav {
-      .#{ $_prefix }c-navbar {
-        flex-direction: column;
-      }
-    }
+		.#{ $_prefix }p-global-nav,
+		.#{ $_prefix }p-header-sub-nav {
+			.#{ $_prefix }c-navbar {
+				flex-direction: column;
+			}
+		}
 
-    .#{ $_prefix }p-global-nav {
-      .#{ $_prefix }c-navbar {
-        &__item > a {
-          align-items: flex-start;
+		.#{ $_prefix }p-global-nav {
+			.#{ $_prefix }c-navbar {
+				&__item > a {
+					align-items: flex-start;
 					padding: var(--_padding-1) var(--_padding1);
-        }
+				}
 
-        &__item[aria-haspopup="true"]::before {
-          @include _triangle-left(10px, 16px, var(--wp--preset--color--sm-accent));
-          left: auto;
-          bottom: auto;
-          right: -0;
-          top: calc(50% - 5px);
-        }
+				&__item[aria-haspopup="true"]::before {
+					@include _triangle-left(10px, 16px, var(--wp--preset--color--sm-accent));
+					left: auto;
+					bottom: auto;
+					right: -0;
+					top: calc(50% - 5px);
+				}
 
-        &__item > .c-navbar__submenu {
-          top: 50%;
-          left: 100%;
-          transform: translateY(-50%);
-        }
-      }
-    }
+				&__item > .c-navbar__submenu {
+					top: 50%;
+					left: 100%;
+					transform: translateY(-50%);
+				}
+			}
+		}
 
-    .#{ $_prefix }p-header-sub-nav {
-      .#{ $_prefix }c-navbar {
-        &__item {
-          margin-right: 0;
-          margin-left: 0;
+		.#{ $_prefix }p-header-sub-nav {
+			.#{ $_prefix }c-navbar {
+				&__item {
+					margin-right: 0;
+					margin-left: 0;
 
-          > a {
-            justify-content: flex-start;
+					> a {
+						justify-content: flex-start;
 						padding: var(--_padding-2) var(--_padding1);
-          }
-        }
-      }
-    }
-  }
+					}
+				}
+			}
+		}
+	}
 }
 
 [data-has-global-nav="true"] {
-  .#{ $_prefix }l-2row-header__row,
-  .#{ $_prefix }l-center-header__row {
-    &:last-child {
+	.#{ $_prefix }l-2row-header__row,
+	.#{ $_prefix }l-center-header__row {
+		&:last-child {
 			margin-top: var(--_margin-2);
-    }
-  }
+		}
+	}
 }
