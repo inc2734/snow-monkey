@@ -16,29 +16,20 @@
 [data-has-sidebar="true"] {
 	.#{ $_prefix }l-contents {
 		&__inner {
-			@include _media-min(lg) {
-				display: flex;
-				flex-wrap: nowrap;
-			}
+			display: flex;
+			flex-wrap: wrap;
+			gap: var(--_margin2);
 		}
 
 		&__main {
-			flex: 1 1 0%;
-
-			@include _media-min(lg) {
-				flex: none;
-				width: calc(100% - 336px - var(--_margin2));
-			}
+			flex: 1 1 auto;
+			width: var(--wp--custom--slim-width);
 		}
 
 		&__sidebar {
-			flex: 1 1 0%;
-
-			@include _media-min(lg) {
-				margin: 0;
-				flex: none;
-				width: 336px;
-			}
+			margin: 0;
+			flex: 1 1 auto;
+			width: 336px;
 		}
 	}
 }
@@ -49,15 +40,7 @@
 .#{ $_prefix }l-body--right-sidebar {
 	.#{ $_prefix }l-contents {
 		&__inner {
-			@include _media-min(lg) {
-				flex-direction: row;
-			}
-		}
-
-		&__main {
-			@include _media-min(lg) {
-				margin-right: var(--_margin2);
-			}
+			flex-direction: row;
 		}
 	}
 }
@@ -68,15 +51,7 @@
 .#{ $_prefix }l-body--left-sidebar {
 	.#{ $_prefix }l-contents {
 		&__inner {
-			@include _media-min(lg) {
-				flex-direction: row-reverse;
-			}
-		}
-
-		&__main {
-			@include _media-min(lg) {
-				margin-left: var(--_margin2);
-			}
+			flex-direction: row-reverse;
 		}
 	}
 }

@@ -12,8 +12,8 @@ if ( ! Helper::has_drop_nav() ) {
 	return;
 }
 
-$classes   = array();
-$classes[] = 'p-drop-nav';
+$classes               = array();
+$classes[]             = 'p-drop-nav';
 $display_site_branding = get_theme_mod( 'display-site-branding-in-drop-nav' );
 if ( $display_site_branding ) {
 	$classes[] = 'p-drop-nav--has-site-branding';
