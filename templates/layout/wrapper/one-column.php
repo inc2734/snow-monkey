@@ -19,7 +19,9 @@ use Framework\Helper;
 	data-is-full-template="false"
 	data-is-slim-width="false"
 	data-header-layout="<?php echo esc_attr( get_theme_mod( 'header-layout' ) ); ?>"
-	data-infobar-position="<?php echo esc_attr( get_theme_mod( 'infobar-position' ) ); ?>"
+	<?php if ( get_theme_mod( 'infobar-content' ) ) : ?>
+		data-infobar-position="<?php echo esc_attr( get_theme_mod( 'infobar-position' ) ); ?>"
+	<?php endif; ?>
 	ontouchstart=""
 	>
 
