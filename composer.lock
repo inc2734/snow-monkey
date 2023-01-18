@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "14.0.4",
+            "version": "14.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "bba1cafd7e46fc21bb9d2bfacb46d6a03bdb71c4"
+                "reference": "b720306a2e5b09cfd97ffd5086c6af5e6ed906d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/bba1cafd7e46fc21bb9d2bfacb46d6a03bdb71c4",
-                "reference": "bba1cafd7e46fc21bb9d2bfacb46d6a03bdb71c4",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/b720306a2e5b09cfd97ffd5086c6af5e6ed906d9",
+                "reference": "b720306a2e5b09cfd97ffd5086c6af5e6ed906d9",
                 "shasum": ""
             },
             "require": {
@@ -123,12 +123,8 @@
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.11",
-                "squizlabs/php_codesniffer": "^3.6",
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.8",
                 "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
@@ -150,9 +146,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/14.0.4"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/14.0.5"
             },
-            "time": "2023-01-10T05:01:27+00:00"
+            "time": "2023-01-18T17:41:32+00:00"
         },
         {
             "name": "inc2734/wp-basis",
