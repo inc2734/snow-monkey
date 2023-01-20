@@ -64,6 +64,10 @@ html :where(.editor-styles-wrapper) {
 	@import '../app/object/utility/utility';
 }
 
+.is-root-container {
+	overflow: hidden;
+}
+
 .editor-styles-wrapper .is-root-container,
 .editor-styles-wrapper .wp-block-freeform {
 	@include entry-content();
