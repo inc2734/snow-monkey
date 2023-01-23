@@ -6,8 +6,8 @@
 	}
 
 	& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
-		margin-left: auto !important;
-		margin-right: auto !important;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	> table {
@@ -23,6 +23,16 @@
 
 	> blockquote:not([class~="wp-block-quote"]) {
 		@extend %blockquote;
+	}
+
+	> .alignright.alignright {
+		margin-right: var(--_container-margin);
+		margin-right: calc(var(--_container-margin) + env(safe-area-inset-left));
+	}
+
+	> .alignleft.alignleft {
+		margin-left: var(--_container-margin);
+		margin-left: calc(var(--_container-margin) + env(safe-area-inset-left));
 	}
 }
 

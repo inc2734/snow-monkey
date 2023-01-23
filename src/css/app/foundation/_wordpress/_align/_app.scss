@@ -23,7 +23,7 @@
 	max-width: 50%;
 
 	&:not([width]) {
-		width: fit-content !important;
+		width: fit-content;
 	}
 
 	&:first-child + * {

@@ -47,7 +47,7 @@
 	}
 
 	&__button {
-		margin-left: 0 !important;
+		margin-left: 0;
 		@include _form-control-base-border();
 		flex: none;
 		position: relative;
