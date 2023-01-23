@@ -26,9 +26,9 @@
 
 								<!-- wp:snow-monkey-blocks/buttons -->
 								<div class="wp-block-snow-monkey-blocks-buttons smb-buttons">
-									<!-- wp:snow-monkey-blocks/btn {"textColor":"#ffffff","className":"is-style-ghost"} -->
+									<!-- wp:snow-monkey-blocks/btn {"textColor":"#ffffff","backgroundColor":"#ffffff","className":"is-style-ghost"} -->
 									<div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper is-style-ghost">
-										<a class="smb-btn" href="" style="--smb-btn--color:#ffffff"><span class="smb-btn__label">Lorem</span></a>
+										<a class="smb-btn" href="#" style="--smb-btn--background-color:#ffffff;--smb-btn--color:#ffffff"><span class="smb-btn__label">Lorem</span></a>
 									</div>
 									<!-- /wp:snow-monkey-blocks/btn -->
 								</div>

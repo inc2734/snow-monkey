@@ -30,9 +30,9 @@
 
 							<!-- wp:snow-monkey-blocks/buttons {"contentJustification":"center"} -->
 							<div class="wp-block-snow-monkey-blocks-buttons smb-buttons is-content-justification-center">
-								<!-- wp:snow-monkey-blocks/btn {"borderRadius":0,"textColor":"#ffffff","className":"is-style-ghost"} -->
+								<!-- wp:snow-monkey-blocks/btn {"borderRadius":0,"backgroundColor":"#ffffff","textColor":"#ffffff","className":"is-style-ghost"} -->
 								<div class="wp-block-snow-monkey-blocks-btn smb-btn-wrapper is-style-ghost">
-									<a class="smb-btn" href="" style="--smb-btn--border-radius:0px;--smb-btn--color:#ffffff"><span class="smb-btn__label">CONSECTETUR</span></a>
+									<a class="smb-btn" href="#" style="--smb-btn--background-color:#ffffff;--smb-btn--border-radius:0px;--smb-btn--color:#ffffff;--smb-btn--style--ghost--border-color:#ffffff"><span class="smb-btn__label">CONSECTETUR</span></a>
 								</div>
 								<!-- /wp:snow-monkey-blocks/btn -->
 							</div>
