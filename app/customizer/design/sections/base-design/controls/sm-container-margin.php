@@ -17,8 +17,8 @@ Framework::control(
 		'priority' => 150,
 		'default'  => '',
 		'choices'  => array(
+			's' => __( 'Narrow', 'snow-monkey' ),
 			''  => __( 'Standard', 'snow-monkey' ),
-			'm' => __( 'Wide', 'snow-monkey' ),
 		),
 	)
 );

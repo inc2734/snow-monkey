@@ -12,10 +12,12 @@ use Inc2734\WP_Customizer_Framework\Style;
 $get_container_margin_var = function( $container_margin ) {
 	if ( preg_match( '|^\d+(\.\d+)?$|', $container_margin ) ) {
 		return $container_margin . 'rem';
+	} elseif ( 's' === $container_margin ) {
+		return 'var(--_s-1)';
 	} elseif ( 'm' === $container_margin ) {
-		return '1.76923rem';
+		return 'var(--_s1)';
 	} elseif ( 'l' === $container_margin ) {
-		return '2.65386rem';
+		return 'var(--_s2)';
 	}
 };
 
