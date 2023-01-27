@@ -22,6 +22,7 @@ body {
 	--wp--preset--color--gray: #ccc;
 	--wp--preset--color--very-light-gray: #eee;
 	--wp--preset--color--lightest-grey: #f7f7f7;
+	--wp--preset--color--lightest-gray: var(--wp--preset--color--lightest-grey);
 	--wp--preset--color--accent-color: #1e73be;
 	--wp--preset--color--sub-accent-color: #707593;
 }
@@ -38,27 +39,28 @@ body {
 
 // @deprecated
 .has-gray-color {
-	color: var(--wp--preset--color-gray) !important;
+	color: var(--wp--preset--color--gray) !important;
 }
 
 // @deprecated
 .has-very-light-gray-color {
-	color: var(--wp--preset--color-very-light-gray) !important;
+	color: var(--wp--preset--color--very-light-gray) !important;
 }
 
 // @deprecated
-.has-lightest-gray-color {
-	color: var(--wp--preset--color-lightest-gray) !important;
+.has-lightest-gray-color,
+.has-lightest-grey-color {
+	color: var(--wp--preset--color--lightest-gray) !important;
 }
 
 // @deprecated
 .has-accent-color-color {
-	color: var(--wp--preset--color-accent-color) !important;
+	color: var(--wp--preset--color--accent-color) !important;
 }
 
 // @deprecated
 .has-sub-accent-color-color {
-	color: var(--wp--preset--color-sub-accent-color) !important;
+	color: var(--wp--preset--color--sub-accent-color) !important;
 }
 
 // @deprecated
@@ -73,25 +75,26 @@ body {
 
 // @deprecated
 .has-gray-background-color {
-	background-color: var(--wp--preset--color-gray) !important;
+	background-color: var(--wp--preset--color--gray) !important;
 }
 
 // @deprecated
 .has-very-light-gray-background-color {
-	background-color: var(--wp--preset--color-very-light-gray) !important;
+	background-color: var(--wp--preset--color--very-light-gray) !important;
 }
 
 // @deprecated
-.has-lightest-gray-background-color {
-	background-color: var(--wp--preset--color-lightest-gray) !important;
+.has-lightest-gray-background-color,
+.has-lightest-grey-background-color {
+	background-color: var(--wp--preset--color--lightest-gray) !important;
 }
 
 // @deprecated
 .has-accent-color-background-color {
-	background-color: var(--wp--preset--color-accent-color) !important;
+	background-color: var(--wp--preset--color--accent-color) !important;
 }
 
 // @deprecated
 .has-sub-accent-color-background-color {
-	background-color: var(--wp--preset--color-sub-accent-color) !important;
+	background-color: var(--wp--preset--color--sub-accent-color) !important;
 }
