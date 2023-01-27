@@ -60,18 +60,22 @@ if ( $space ) {
 	$root_variables_app[] = '--_space-unitless: ' . $space_unitless;
 }
 
+ // @deprecated
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
 	$root_variables_app[] = '--accent-color: ' . $accent_color;
+	$root_variables_app[] = '--wp--preset--color--accent-color: var(--accent-color)';
 	$root_variables_app[] = '--dark-accent-color: ' . Color::dark( $accent_color );
 	$root_variables_app[] = '--light-accent-color: ' . Color::light( $accent_color );
 	$root_variables_app[] = '--lighter-accent-color: ' . Color::lighter( $accent_color );
 	$root_variables_app[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
 }
 
+ // @deprecated
 $sub_accent_color = get_theme_mod( 'sub-accent-color' );
 if ( $accent_color ) {
 	$root_variables_app[] = '--sub-accent-color: ' . $sub_accent_color;
+	$root_variables_app[] = '--wp--preset--color--accent-color: var(--sub-accent-color)';
 	$root_variables_app[] = '--dark-sub-accent-color: ' . Color::dark( $sub_accent_color );
 	$root_variables_app[] = '--light-sub-accent-color: ' . Color::light( $sub_accent_color );
 	$root_variables_app[] = '--lighter-sub-accent-color: ' . Color::lighter( $sub_accent_color );
