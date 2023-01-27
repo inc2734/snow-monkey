@@ -60,7 +60,7 @@ if ( $space ) {
 	$root_variables_app[] = '--_space-unitless: ' . $space_unitless;
 }
 
- // @deprecated
+// @deprecated
 $accent_color = get_theme_mod( 'accent-color' );
 if ( $accent_color ) {
 	$root_variables_app[] = '--accent-color: ' . $accent_color;
@@ -71,7 +71,7 @@ if ( $accent_color ) {
 	$root_variables_app[] = '--lightest-accent-color: ' . Color::lightest( $accent_color );
 }
 
- // @deprecated
+// @deprecated
 $sub_accent_color = get_theme_mod( 'sub-accent-color' );
 if ( $accent_color ) {
 	$root_variables_app[] = '--sub-accent-color: ' . $sub_accent_color;
