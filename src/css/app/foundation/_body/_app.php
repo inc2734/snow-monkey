@@ -32,6 +32,10 @@ $get_margin_scale_var = function( $margin_scale ) {
 $root_variables_app   = array();
 $root_variables_theme = array();
 
+// Colors set in theme.json are output to body, so colors are not reflected even if specified with :root.
+$body_variables_app   = array();
+$body_variables_theme = array();
+
 $root_variables_app_media_min_md = array();
 
 $container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
@@ -118,18 +122,7 @@ $font_family          = Helper::get_font_family();
 $root_variables_app[] = '--font-family: ' . $font_family; // @deprecated
 $root_variables_app[] = '--_global--font-family: var(--font-family)';
 
-$base_font_size = get_theme_mod( 'base-font-size' );
-// foreach ( Helper::get_font_sizes() as $font_size ) {
-// 	if ( false !== strpos( $font_size['size'], 'px' ) ) {
-// 		$line_height          = sprintf(
-// 			'calc(%1$s / %2$s + var(--_half-leading) * 2)',
-// 			$base_font_size,
-// 			str_replace( 'px', '', $font_size['size'] )
-// 		);
-// 		$root_variables_app[] = '--line-height-' . $font_size['slug'] . ': ' . $line_height;
-// 	}
-// }
-
+$base_font_size       = get_theme_mod( 'base-font-size' );
 $root_variables_app[] = '--_global--font-size-px: ' . $base_font_size . 'px';
 
 $styles_core = array();
@@ -164,7 +157,7 @@ Style::attach(
 $h2_style = get_theme_mod( 'h2-style' );
 if ( $h2_style ) {
 	if ( 'standard' === $h2_style ) {
-		$root_variables_theme[] = '--entry-content-h2-border-left: 1px solid var(--wp--preset--color--sm-accent, #cd162c)';
+		$body_variables_theme[] = '--entry-content-h2-border-left: 1px solid var(--wp--preset--color--sm-accent)';
 		$root_variables_theme[] = '--entry-content-h2-background-color: #f7f7f7';
 		$root_variables_theme[] = '--entry-content-h2-padding: calc(var(--_space) * 0.25) calc(var(--_space) * 0.25) calc(var(--_space) * 0.25) calc(var(--_space) * 0.5)';
 	}
@@ -202,6 +195,10 @@ if ( $root_variables_theme ) {
 	$styles_theme[] = array(
 		'selectors'  => array( ':root' ),
 		'properties' => $root_variables_theme,
+	);
+	$styles_theme[] = array(
+		'selectors'  => array( 'body' ),
+		'properties' => $body_variables_theme,
 	);
 }
 

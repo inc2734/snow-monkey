@@ -43,7 +43,8 @@
  * Unstyled list base style
  */
 @mixin widget-list-base() {
-	@include _list-unstyled();
+	list-style: none;
+	padding-left: 0;
 
 	> li + li {
 		margin-top: var(--_margin-2);
