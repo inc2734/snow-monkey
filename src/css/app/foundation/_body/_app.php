@@ -75,7 +75,7 @@ if ( $accent_color ) {
 $sub_accent_color = get_theme_mod( 'sub-accent-color' );
 if ( $accent_color ) {
 	$root_variables_app[] = '--sub-accent-color: ' . $sub_accent_color;
-	$root_variables_app[] = '--wp--preset--color--accent-color: var(--sub-accent-color)';
+	$root_variables_app[] = '--wp--preset--color--sub-accent-color: var(--sub-accent-color)';
 	$root_variables_app[] = '--dark-sub-accent-color: ' . Color::dark( $sub_accent_color );
 	$root_variables_app[] = '--light-sub-accent-color: ' . Color::light( $sub_accent_color );
 	$root_variables_app[] = '--lighter-sub-accent-color: ' . Color::lighter( $sub_accent_color );
@@ -164,7 +164,7 @@ Style::attach(
 $h2_style = get_theme_mod( 'h2-style' );
 if ( $h2_style ) {
 	if ( 'standard' === $h2_style ) {
-		$root_variables_theme[] = '--entry-content-h2-border-left: 1px solid var(--accent-color, #cd162c)';
+		$root_variables_theme[] = '--entry-content-h2-border-left: 1px solid var(--wp--preset--color--sm-accent, #cd162c)';
 		$root_variables_theme[] = '--entry-content-h2-background-color: #f7f7f7';
 		$root_variables_theme[] = '--entry-content-h2-padding: calc(var(--_space) * 0.25) calc(var(--_space) * 0.25) calc(var(--_space) * 0.25) calc(var(--_space) * 0.5)';
 	}
