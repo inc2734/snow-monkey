@@ -1,5 +1,5 @@
 .#{ $_prefix }u-slim-width {
 	margin-right: auto;
 	margin-left: auto;
-	max-width: var(--wp--custom--slim-width);
+	max-width: var(--wp--custom--slim-width) !important;
 }
