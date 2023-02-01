@@ -109,7 +109,7 @@
 		},
 		"typography": {
 			"dropCap": false,
-			"customFontSize": false,
+			"customFontSize": true,
 			"textTransform": true,
 			"lineHeight": false,
 			"fontSizes": [
