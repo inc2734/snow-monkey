@@ -270,16 +270,6 @@
 					"blockGap": "var(--_margin-1)"
 				}
 			},
-			"core/social-link": {
-				"spacing": {
-					"margin": {
-						"top": "0",
-						"right": "0",
-						"bottom": "0",
-						"left": "0"
-					}
-				}
-			},
 			"core/table": {
 				"border": {
 					"color": "var(--wp--preset--color--sm-lighter-gray)"
