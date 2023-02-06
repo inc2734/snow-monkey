@@ -6,17 +6,14 @@
 	border: 1px solid transparent;
 	border-color: var(--wp--preset--color--sm-lighter-gray);
 	border-radius: var(--_border-radius);
-	color: var(--wp--preset--color--sm-text);
 	font-size: var(--wp--preset--font-size--sm-xs) !important;
 	line-height: 1;
 	white-space: nowrap;
-	text-decoration: none;
 	padding: calc(var(--_padding-2) * .5) var(--_padding-2);
 	vertical-align: top;
 
 	@include _hover() {
 		background-color: var(--wp--preset--color--sm-lighter-gray);
-		text-decoration: none;
 	}
 
 	&::before {
@@ -25,6 +22,11 @@
 		color: var(--wp--preset--color--sm-accent);
 		font-weight: bold;
 	}
+}
+
+a.tag-cloud-link {
+	color: var(--wp--preset--color--sm-text);
+	text-decoration: none;
 }
 
 .widget_tag_cloud {
