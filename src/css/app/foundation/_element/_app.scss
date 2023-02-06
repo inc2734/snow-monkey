@@ -5,3 +5,11 @@ iframe {
 fieldset {
 	padding: 0;
 }
+
+code,
+kbd {
+	@include _set-font-size-level(-1);
+	background-color: var(--wp--preset--color--sm-lighter-gray);
+	border-radius: var(--_global--border-radius);
+	padding: 2px 6px;
+}
