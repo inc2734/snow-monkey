@@ -5,7 +5,7 @@
 
 // Blank / One column full
 [data-is-full-template="true"] {
-	.#{ $_prefix }p-entry-content {
+	.#{ $_prefix }c-entry__content {
 		&:not([data-home-page-container="true"]) {
 			--wp--style--global--content-size: none;
 			--wp--style--global--wide-size: none;
@@ -20,7 +20,7 @@
 
 // One column
 [data-has-sidebar="false"]:not([data-header-layout="left"]) {
-	.#{ $_prefix }p-entry-content {
+	.#{ $_prefix }c-entry__content {
 		margin-right: calc(50% - 50vw + var(--scrollbar-width) / 2);
 		margin-left: calc(50% - 50vw + var(--scrollbar-width)/ 2);
 	}
