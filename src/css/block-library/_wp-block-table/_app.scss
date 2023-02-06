@@ -1,6 +1,7 @@
 .wp-block-table {
 	th,
 	td {
+		border: 1px solid var(--wp--preset--color--sm-lighter-gray);
 		padding: var(--_padding-2);
 	}
 
@@ -12,8 +13,12 @@
 		background-color: var(--wp--preset--color--sm-accent);
 
 		th {
-			border: 1px solid rgba(255, 255, 255, .3);
+			border-color: rgba(255, 255, 255, .3);
 			color: var(--wp--preset--color--sm-text-alt);
 		}
 	}
+}
+
+.wp-block-table.is-style-stripes {
+	border-bottom: none;
 }

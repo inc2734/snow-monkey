@@ -1,6 +1,7 @@
 @mixin alignfull() {
 	clear: both !important;
-	margin: 0 !important;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
 	width: auto !important;
 
 	table {

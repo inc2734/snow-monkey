@@ -1,4 +1,4 @@
-.has-background {
+:where(.has-background) {
 	padding: var(--_padding1);
 }
 
