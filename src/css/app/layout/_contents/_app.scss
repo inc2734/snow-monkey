@@ -1,4 +1,7 @@
 .#{ $_prefix }l-contents {
+	--contents--sidebar-width: 336px;
+	--contents--gap: var(--_margin2);
+
 	overflow: hidden;
 
 	@include _media-min(lg) {
@@ -18,7 +21,7 @@
 		&__inner {
 			display: flex;
 			flex-wrap: wrap;
-			gap: var(--_margin2);
+			gap: var(--contents--gap);
 		}
 
 		&__main {
@@ -30,7 +33,7 @@
 		&__sidebar {
 			margin: 0;
 			flex-grow: 1;
-			flex-basis: 336px;
+			flex-basis: var(--contents--sidebar-width);
 			max-width: 100%;
 		}
 	}
@@ -63,8 +66,8 @@
  */
 .#{ $_prefix }l-contents {
 	&__inner {
-		margin-top: var(--_margin2);
-		margin-bottom: var(--_margin2);
+		margin-top: var(--contents--gap);
+		margin-bottom: var(--contents--gap);
 
 		&:first-child {
 			margin-top: 0;
@@ -102,14 +105,14 @@
 		&__inner {
 			[data-is-content-widget-area="true"]:first-child {
 				@include _media-max(md) {
-					margin-top: calc(-1 * var(--_margin2));
+					margin-top: calc(-1 * var(--contents--gap));
 				}
 			}
 		}
 
 		&__sidebar {
 			@include _media-max(md) {
-				margin-top: var(--_margin2);
+				margin-top: var(--contents--gap);
 			}
 		}
 
@@ -126,11 +129,11 @@
 [data-has-sidebar="false"][data-is-full-template="false"] {
 	.#{ $_prefix }l-contents {
 		[data-is-content-widget-area="true"]:first-child {
-			margin-top: calc(-1 * var(--_margin2));
+			margin-top: calc(-1 * var(--contents--gap));
 		}
 
 		[data-is-content-widget-area="true"]:last-child {
-			margin-bottom: calc(-1 * var(--_margin2));
+			margin-bottom: calc(-1 * var(--contents--gap));
 		}
 
 		[data-is-content-widget-area="true"] {
