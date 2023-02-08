@@ -6,7 +6,6 @@
 	z-index: 9999;
 	background-color: var(--wp--preset--color--sm-text-alt);
 	box-shadow: 0 0 2px 0 rgba(#000, .25);
-	padding-bottom: constant(safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
 	@include _transition(opacity);
 

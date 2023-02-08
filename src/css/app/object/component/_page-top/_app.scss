@@ -36,7 +36,6 @@
 	right: 0;
 	bottom: 44px;
 	// @see https://qiita.com/usagimaru/items/761e9a5f3d78b1939df8
-	bottom: calc(constant(safe-area-inset-bottom) + 49px);
 	bottom: calc(env(safe-area-inset-bottom) + 49px);
 	z-index: 99998;
 }

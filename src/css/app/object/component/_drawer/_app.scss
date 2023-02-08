@@ -125,17 +125,14 @@
 }
 
 [id="drawer-nav"] {
-	padding-bottom: constant(safe-area-inset-bottom);
 	padding-bottom: env(safe-area-inset-bottom);
 }
 
 [id="drawer-nav"]:not(.#{ $_prefix }c-drawer--inverse) {
-	padding-left: constant(safe-area-inset-left);
 	padding-left: env(safe-area-inset-left);
 }
 
 [id="drawer-nav"].#{ $_prefix }c-drawer--inverse {
-	padding-right: constant(safe-area-inset-right);
 	padding-right: env(safe-area-inset-right);
 }
 
