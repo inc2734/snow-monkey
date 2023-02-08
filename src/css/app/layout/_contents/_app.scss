@@ -16,10 +16,10 @@
  * Right/Left sidebar
  */
 [data-has-sidebar="true"] {
-	--contents--main-basis: var(--wp--custom--slim-width);
-	--contents--sidebar-basis: 336px;
-
 	.#{ $_prefix }l-contents {
+		--contents--main-basis: var(--wp--custom--has-sidebar-main-basis);
+		--contents--sidebar-basis: var(--wp--custom--has-sidebar-sidebar-basis);
+
 		&__inner {
 			display: flex;
 			flex-wrap: wrap;

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-02-08 14:40+0900\n"
-"PO-Revision-Date: 2023-02-08 14:40+0900\n"
+"POT-Creation-Date: 2023-02-08 14:48+0900\n"
+"PO-Revision-Date: 2023-02-08 14:49+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -647,6 +647,8 @@ msgid "You can set the maximum width of the container."
 msgstr "コンテナーの最大幅を設定することができます。"
 
 #: app/customizer/design/sections/base-design/controls/container-max-width.php:18
+#: app/customizer/design/sections/base-design/controls/has-sidebar-main-basis.php:16
+#: app/customizer/design/sections/base-design/controls/has-sidebar-sidebar-basis.php:16
 #: app/customizer/design/sections/base-design/controls/slim-width.php:16
 msgid "Numeric values only are treated as px."
 msgstr "数値のみは pxとして扱われます。"
@@ -789,6 +791,14 @@ msgstr "記事中の %1$s のデザイン"
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7878
 msgid "Standard"
 msgstr "標準"
+
+#: app/customizer/design/sections/base-design/controls/has-sidebar-main-basis.php:15
+msgid "Recommended width of the main column for templates with sidebars"
+msgstr "サイドバーがあるテンプレートのメインカラムの推奨幅"
+
+#: app/customizer/design/sections/base-design/controls/has-sidebar-sidebar-basis.php:15
+msgid "Recommended width of the sidebar for templates with sidebars"
+msgstr "サイドバーがあるテンプレートのサイドバーの推奨幅"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
 msgid "Container left/right spaces on PC"

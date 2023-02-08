@@ -67,6 +67,26 @@ if ( $slim_width ) {
 	$body_variables_app[] = '--wp--custom--slim-width: ' . $slim_width;
 }
 
+$has_sidebar_main_basis = get_theme_mod( 'has-sidebar-main-basis' );
+if ( $has_sidebar_main_basis ) {
+	// When only numbers are used, px is complemented.
+	if ( preg_match( '|^\d+$|', $has_sidebar_main_basis ) ) {
+		$has_sidebar_main_basis = $has_sidebar_main_basis . 'px';
+	}
+
+	$body_variables_app[] = '--wp--custom--has-sidebar-main-basis: ' . $has_sidebar_main_basis;
+}
+
+$has_sidebar_sidebar_basis = get_theme_mod( 'has-sidebar-sidebar-basis' );
+if ( $has_sidebar_sidebar_basis ) {
+	// When only numbers are used, px is complemented.
+	if ( preg_match( '|^\d+$|', $has_sidebar_sidebar_basis ) ) {
+		$has_sidebar_sidebar_basis = $has_sidebar_sidebar_basis . 'px';
+	}
+
+	$body_variables_app[] = '--wp--custom--has-sidebar-sidebar-basis: ' . $has_sidebar_sidebar_basis;
+}
+
 $margin_scale = $get_margin_scale_var( get_theme_mod( 'margin-scale' ) );
 if ( $margin_scale ) {
 	$root_variables_app[] = '--_margin-scale: ' . $margin_scale;
