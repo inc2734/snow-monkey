@@ -27,14 +27,14 @@
 		&__main {
 			flex-grow: 999;
 			flex-basis: var(--wp--custom--slim-width);
-			max-width: 100%;
+			min-width: 0;
 		}
 
 		&__sidebar {
 			margin: 0;
 			flex-grow: 1;
 			flex-basis: var(--contents--sidebar-width);
-			max-width: 100%;
+			min-width: 0;
 		}
 	}
 }
