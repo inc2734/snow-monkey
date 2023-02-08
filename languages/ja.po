@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-02-08 14:36+0900\n"
-"PO-Revision-Date: 2023-02-08 14:36+0900\n"
+"POT-Creation-Date: 2023-02-08 14:40+0900\n"
+"PO-Revision-Date: 2023-02-08 14:40+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -639,9 +639,12 @@ msgid "Bottom of contents ( Fit to content width )"
 msgstr "コンテンツの下（コンテンツ幅に合わせる）"
 
 #: app/customizer/design/sections/base-design/controls/container-max-width.php:17
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3428
-msgid "Contents max width"
-msgstr "コンテンツの最大幅"
+msgid "Container max width"
+msgstr "コンテナーの最大幅"
+
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:18
+msgid "You can set the maximum width of the container."
+msgstr "コンテナーの最大幅を設定することができます。"
 
 #: app/customizer/design/sections/base-design/controls/container-max-width.php:18
 #: app/customizer/design/sections/base-design/controls/slim-width.php:16
@@ -788,9 +791,8 @@ msgid "Standard"
 msgstr "標準"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3571
-msgid "Contents left/right margins on PC"
-msgstr "PC 時のコンテンツの左右余白"
+msgid "Container left/right spaces on PC"
+msgstr "PC 時のコンテナーの左右スペース"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3576
@@ -914,9 +916,8 @@ msgid "You can set the width when the slim width is specified."
 msgstr "スリム幅を指定した場合の幅を設定することができます。"
 
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:16
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6886
-msgid "Contents left/right margins on mobile device"
-msgstr "モバイル端末時のコンテンツの左右余白"
+msgid "Container left/right spaces on mobile device"
+msgstr "モバイル端末時のコンテナーの左右スペース"
 
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
 msgid "Narrow"
@@ -2479,11 +2480,23 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3428
+msgid "Contents max width"
+msgstr "コンテンツの最大幅"
+
 #. translators: %1$s: min width, %2$s: max width
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3431
 #, php-format
 msgid "You can set max width of contents area (%1$s - %2$s)"
 msgstr "コンテンツエリアの最大幅を設定することができます（%1$s〜%2$s）"
+
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3571
+msgid "Contents left/right margins on PC"
+msgstr "PC 時のコンテンツの左右余白"
+
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6886
+msgid "Contents left/right margins on mobile device"
+msgstr "モバイル端末時のコンテンツの左右余白"
 
 #: template-parts/archive/entry/content/no-keywords.php:18
 msgid "Please enter a search keyword."

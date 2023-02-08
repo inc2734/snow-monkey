@@ -14,8 +14,8 @@ Framework::control(
 	'text',
 	'container-max-width',
 	array(
-		'label'       => __( 'Contents max width', 'snow-monkey' ),
-		'description' => __( 'Numeric values only are treated as px.', 'snow-monkey' ),
+		'label'       => __( 'Container max width', 'snow-monkey' ),
+		'description' => __( 'You can set the maximum width of the container.', 'snow-monkey' ) . __( 'Numeric values only are treated as px.', 'snow-monkey' ),
 		'priority'    => 140,
 	)
 );
