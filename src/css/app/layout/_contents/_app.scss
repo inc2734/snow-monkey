@@ -1,5 +1,4 @@
 .#{ $_prefix }l-contents {
-	--contents--sidebar-width: 336px;
 	--contents--gap: var(--_margin2);
 
 	overflow: hidden;
@@ -17,6 +16,9 @@
  * Right/Left sidebar
  */
 [data-has-sidebar="true"] {
+	--contents--main-basis: var(--wp--custom--slim-width);
+	--contents--sidebar-basis: 336px;
+
 	.#{ $_prefix }l-contents {
 		&__inner {
 			display: flex;
@@ -26,14 +28,14 @@
 
 		&__main {
 			flex-grow: 999;
-			flex-basis: var(--wp--custom--slim-width);
+			flex-basis: var(--contents--main-basis);
 			min-width: 0;
 		}
 
 		&__sidebar {
 			margin: 0;
 			flex-grow: 1;
-			flex-basis: var(--contents--sidebar-width);
+			flex-basis: var(--contents--sidebar-basis);
 			min-width: 0;
 		}
 	}

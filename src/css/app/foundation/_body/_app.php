@@ -49,7 +49,22 @@ if ( $container_margin ) {
 
 $container_max_width = get_theme_mod( 'container-max-width' );
 if ( $container_max_width ) {
-	$root_variables_app[] = '--_container-max-width: ' . $container_max_width . 'px';
+	// When only numbers are used, px is complemented.
+	if ( preg_match( '|^\d+$|', $container_max_width ) ) {
+		$container_max_width = $container_max_width . 'px';
+	}
+
+	$root_variables_app[] = '--_container-max-width: ' . $container_max_width;
+}
+
+$slim_width = get_theme_mod( 'slim-width' );
+if ( $slim_width ) {
+	// When only numbers are used, px is complemented.
+	if ( preg_match( '|^\d+$|', $slim_width ) ) {
+		$slim_width = $slim_width . 'px';
+	}
+
+	$body_variables_app[] = '--wp--custom--slim-width: ' . $slim_width;
 }
 
 $margin_scale = $get_margin_scale_var( get_theme_mod( 'margin-scale' ) );
@@ -139,6 +154,13 @@ if ( $root_variables_app_media_min_md ) {
 		'selectors'   => array( ':root' ),
 		'properties'  => $root_variables_app_media_min_md,
 		'media_query' => '@media (min-width: 640px)', // Optional
+	);
+}
+
+if ( $body_variables_app ) {
+	$styles_core[] = array(
+		'selectors'  => array( 'body' ),
+		'properties' => $body_variables_app,
 	);
 }
 

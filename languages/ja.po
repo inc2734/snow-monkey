@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-01-23 16:39+0900\n"
-"PO-Revision-Date: 2023-01-23 16:39+0900\n"
+"POT-Creation-Date: 2023-02-08 14:36+0900\n"
+"PO-Revision-Date: 2023-02-08 14:36+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -643,12 +643,10 @@ msgstr "コンテンツの下（コンテンツ幅に合わせる）"
 msgid "Contents max width"
 msgstr "コンテンツの最大幅"
 
-#. translators: %1$s: min width, %2$s: max width
-#: app/customizer/design/sections/base-design/controls/container-max-width.php:20
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3431
-#, php-format
-msgid "You can set max width of contents area (%1$s - %2$s)"
-msgstr "コンテンツエリアの最大幅を設定することができます（%1$s〜%2$s）"
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:18
+#: app/customizer/design/sections/base-design/controls/slim-width.php:16
+msgid "Numeric values only are treated as px."
+msgstr "数値のみは pxとして扱われます。"
 
 #: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3475
@@ -892,6 +890,7 @@ msgid "Wide width"
 msgstr "ワイド幅"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:24
+#: app/customizer/design/sections/base-design/controls/slim-width.php:15
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4959
 msgid "Slim width"
 msgstr "スリム幅"
@@ -909,6 +908,10 @@ msgstr ""
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6809
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
+
+#: app/customizer/design/sections/base-design/controls/slim-width.php:16
+msgid "You can set the width when the slim width is specified."
+msgstr "スリム幅を指定した場合の幅を設定することができます。"
 
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:16
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6886
@@ -2475,6 +2478,12 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 #: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:51
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
+
+#. translators: %1$s: min width, %2$s: max width
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3431
+#, php-format
+msgid "You can set max width of contents area (%1$s - %2$s)"
+msgstr "コンテンツエリアの最大幅を設定することができます（%1$s〜%2$s）"
 
 #: template-parts/archive/entry/content/no-keywords.php:18
 msgid "Please enter a search keyword."
