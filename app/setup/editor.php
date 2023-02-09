@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -99,6 +99,13 @@ add_action(
 				'html :where(.editor-styles-wrapper) :where(body)',
 			),
 			'html :where(.editor-styles-wrapper)',
+			$css
+		);
+		$css = str_replace(
+			array(
+				'url(../../fonts/',
+			),
+			'url(' . get_theme_file_uri( '/assets/fonts/' ),
 			$css
 		);
 		wp_add_inline_style(

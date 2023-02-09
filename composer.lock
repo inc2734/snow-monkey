@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d6f2a7be1fe9237702a10b751f9553a0",
+    "content-hash": "ef03fb66daa48a0485ad0619d4523aa2",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -434,54 +434,6 @@
                 "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.1"
             },
             "time": "2022-06-01T01:30:28+00:00"
-        },
-        {
-            "name": "inc2734/wp-google-fonts",
-            "version": "0.5.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/inc2734/wp-google-fonts.git",
-                "reference": "08b616856d516c6f2958d334c1650db21aabdadc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-google-fonts/zipball/08b616856d516c6f2958d334c1650db21aabdadc",
-                "reference": "08b616856d516c6f2958d334c1650db21aabdadc",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.6"
-            },
-            "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.11",
-                "squizlabs/php_codesniffer": "^3.6",
-                "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.8",
-                "yoast/phpunit-polyfills": "^1.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Inc2734\\WP_Google_Fonts\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Takashi Kitajima",
-                    "email": "inc@2inc.org"
-                }
-            ],
-            "support": {
-                "issues": "https://github.com/inc2734/wp-google-fonts/issues",
-                "source": "https://github.com/inc2734/wp-google-fonts/tree/0.5.1"
-            },
-            "time": "2022-07-08T04:40:16+00:00"
         },
         {
             "name": "inc2734/wp-helper",

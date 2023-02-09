@@ -133,26 +133,6 @@ if ( $base_line_height ) {
 	$root_variables_app[] = '--_half-leading: ' . ( $base_line_height - 1 ) / 2;
 }
 
-$base_font = get_theme_mod( 'base-font' );
-if ( 'noto-sans-jp' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_sans_jp' ), 5 );
-	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_sans_jp' ) );
-} elseif ( 'noto-serif-jp' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ), 5 );
-	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_noto_serif_jp' ) );
-} elseif ( 'm-plus-1p' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ), 5 );
-	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_1p' ) );
-} elseif ( 'm-plus-rounded-1c' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ), 5 );
-	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_m_plus_rounded_1c' ) );
-} elseif ( 'biz-udpgothic' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ), 5 );
-	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpgothic' ) );
-} elseif ( 'biz-udpmincho' === $base_font ) {
-	add_action( 'wp_enqueue_scripts', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ), 5 );
-	add_action( 'enqueue_block_editor_assets', array( '\Inc2734\WP_Google_Fonts\Helper', 'enqueue_biz_udpmincho' ) );
-}
 $font_family          = Helper::get_font_family();
 $root_variables_app[] = '--font-family: ' . $font_family; // @deprecated
 $root_variables_app[] = '--_global--font-family: var(--font-family)';

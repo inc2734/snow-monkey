@@ -3,34 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.0
  */
 
-use Inc2734\WP_Google_Fonts;
 use Framework\Helper;
-
-/**
- * Apply Google Fonts asset url
- */
-new WP_Google_Fonts\Bootstrap();
-add_filter(
-	'inc2734_wp_google_fonts_refresh_font',
-	function( $refresh, $css_full_path ) {
-		if ( ! is_customize_preview() ) {
-			return $refresh;
-		}
-
-		$time     = time();
-		$filetime = filemtime( $css_full_path );
-		if ( 60 * 60 <= $time - $filetime ) {
-			return true;
-		}
-
-		return $refresh;
-	},
-	10,
-	2
-);
 
 /**
  * Enqueue main style
