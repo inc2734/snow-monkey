@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.0
  */
 
 namespace Framework\Model;
@@ -111,6 +111,10 @@ class Filesystem {
 	 * @throws \RuntimeException If the file deletion fails.
 	 */
 	public static function rmdir( $filepath ) {
+		if ( ! file_exists( $filepath ) ) {
+			return true;
+		}
+
 		$result = false;
 
 		$filesystem = static::start();
