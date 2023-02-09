@@ -78,11 +78,6 @@ html :where(.editor-styles-wrapper) {
 	@include entry-content();
 }
 
-.components-resizable-box__container {
-	height: auto !important;
-	max-width: 100% !important;
-}
-
 .wp-block-widget-area__inner-blocks .block-editor-block-list__layout [data-type="core/heading"],
 [data-type="core/widget-group"] > .widget-title {
 	// @todo Because ::after is used in the block editor.
