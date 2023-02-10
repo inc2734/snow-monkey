@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.1
  */
 
 namespace Framework;
@@ -478,7 +478,7 @@ class Helper {
 		} elseif ( 'biz-udpgothic' === $base_font ) {
 			$font_family = array( '"BIZ UDPGothic"', 'sans-serif' );
 		} elseif ( 'biz-udpmincho' === $base_font ) {
-			$font_family = array( '"BIZ UDPMincho"', 'sans-serif' );
+			$font_family = array( '"BIZ UDPMincho"', 'serif' );
 		}
 
 		return implode( ',', $font_family );
