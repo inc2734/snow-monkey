@@ -26,13 +26,13 @@
 	}
 
 	> .alignright.alignright {
-		margin-right: var(--_container-margin);
-		margin-right: calc(var(--_container-margin) + env(safe-area-inset-left));
+		margin-right: var(--_global--container-margin);
+		margin-right: calc(var(--_global--container-margin) + env(safe-area-inset-right));
 	}
 
 	> .alignleft.alignleft {
-		margin-left: var(--_container-margin);
-		margin-left: calc(var(--_container-margin) + env(safe-area-inset-left));
+		margin-left: var(--_global--container-margin);
+		margin-left: calc(var(--_global--container-margin) + env(safe-area-inset-left));
 	}
 }
 

@@ -164,7 +164,7 @@ html :where(.editor-styles-wrapper) {
 .l-body--right-sidebar,
 .l-body--left-sidebar {
 	.editor-styles-wrapper {
-		--wp--custom--content-max-width: calc(var(--_container-max-width) - 336px);
+		--wp--custom--content-max-width: calc(var(--_global--container-max-width) - 336px);
 	}
 }
 

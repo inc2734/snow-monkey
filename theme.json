@@ -167,8 +167,8 @@
 		},
 		"custom": {
 			"slim-width": "46rem",
-			"content-max-width": "var(--_container-max-width)",
-			"content-width": "min(100% - var(--_container-margin) * 2 - env(safe-area-inset-right) - env(safe-area-inset-left), var(--wp--custom--content-max-width))",
+			"content-max-width": "var(--_global--container-max-width)",
+			"content-width": "min(100% - var(--_global--container-margin) * 2 - env(safe-area-inset-right) - env(safe-area-inset-left), var(--wp--custom--content-max-width))",
 			"has-sidebar-main-basis": "var(--wp--custom--slim-width)",
 			"has-sidebar-sidebar-basis": "336px"
 		},
