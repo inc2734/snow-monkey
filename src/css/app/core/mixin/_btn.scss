@@ -1,13 +1,22 @@
 @mixin btn() {
-	--_border-radius: var(--_global--border-radius);
+	--btn--border-radius: var(--_global--border-radius);
+	--btn--background-color: var(--wp--preset--color--sm-accent);
+	--btn--border: none;
+	--btn--color: var(--wp--preset--color--sm-text-alt);
+	--btn--padding: var(--_padding-1);
+	--btn--padding-vertical: calc(var(--btn--padding) * .5);
+	--btn--padding-horizontal: var(--btn--padding);
 
-	@include _btn();
-	background-color: var(--wp--preset--color--sm-accent);
-	border: none;
-	border-radius: var(--_border-radius);
-	color: var(--wp--preset--color--sm-text-alt);
-	padding: calc(var(--_padding-1) * .75) var(--_padding-1);
+	display: inline-block;
+	background-color: var(--btn--background-color);
+	border: var(--btn--border);
+	border-radius: var(--btn--border-radius);
+	color: var(--btn--color);
+	line-height: inherit;
+	padding: var(--btn--padding-vertical) var(--btn--padding-horizontal);
 	max-width: 100%;
+	text-decoration: none;
+	white-space: nowrap;
 	@include _transition(all);
 
 	@include _hover() {
