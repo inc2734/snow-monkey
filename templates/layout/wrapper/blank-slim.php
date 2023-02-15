@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.3
  */
 
 use Framework\Helper;
@@ -26,13 +26,11 @@ use Framework\Helper;
 
 	<div class="l-container">
 		<div class="l-contents" role="document">
-			<div class="u-slim-width">
-				<?php
-				// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-				$args['_view_controller']->view();
-				// phpcs:enable
-				?>
-			</div>
+			<?php
+			// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+			$args['_view_controller']->view();
+			// phpcs:enable
+			?>
 		</div>
 	</div>
 

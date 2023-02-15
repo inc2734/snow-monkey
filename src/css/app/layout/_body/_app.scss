@@ -26,8 +26,17 @@
 	}
 }
 
-// Right / Left sidebar
+// Right/Left sidebar
 [data-has-sidebar="true"] {
-	--wp--style--global--content-size: none;
-	--wp--style--global--wide-size: none;
+	.#{ $_prefix }c-entry__content {
+		--wp--style--global--content-size: none;
+	}
+}
+
+// Left header, One column slim / One column
+[data-header-layout="left"][data-has-sidebar="false"][data-is-full-template="false"] {
+	.#{ $_prefix }c-entry__content {
+		margin-right: calc(var(--_container-margin) * -1);
+		margin-left: calc(var(--_container-margin) * -1);
+	}
 }
