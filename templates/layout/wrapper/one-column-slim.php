@@ -104,7 +104,7 @@ use Framework\Helper;
 
 					<?php do_action( 'snow_monkey_after_contents_inner' ); ?>
 
-					<?php if ( ! is_front_page() && 'bottom-content-width' === get_theme_mod( 'breadcrumbs-position' ) ) :?>
+					<?php if ( ! is_front_page() && 'bottom-content-width' === get_theme_mod( 'breadcrumbs-position' ) ) : ?>
 						<div class="u-slim-width">
 							<?php Helper::get_template_part( 'template-parts/common/breadcrumbs' ); ?>
 						</div>
