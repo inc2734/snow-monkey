@@ -29,5 +29,5 @@
 }
 
 .children .cat-item .children:last-child:not(:first-child) {
-  margin-bottom: calc(-1 * var(--_padding-2));
+	margin-bottom: calc(-1 * var(--_padding-2));
 }

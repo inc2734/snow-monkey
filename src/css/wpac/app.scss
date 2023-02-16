@@ -5,7 +5,7 @@
  * Alert
  */
 .wpac-alert {
-  --_border-radius: var(--_global--border-radius);
+	--_border-radius: var(--_global--border-radius);
 
 	$color: #fff9e6;
 	@include _alert();

@@ -195,12 +195,12 @@
  * simple header
  */
 .#{ $_prefix }l-simple-header {
-  &__row {
-    @include _media-min(lg) {
+	&__row {
+		@include _media-min(lg) {
 			padding-top: var(--_padding-1);
 			padding-bottom: var(--_padding-1);
-    }
-  }
+		}
+	}
 }
 
 /**

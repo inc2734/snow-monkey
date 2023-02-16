@@ -174,7 +174,7 @@
 .#{ $_prefix }l-container .#{ $_prefix }l-contents #respond #submit,
 .#{ $_prefix }l-container .#{ $_prefix }l-contents .button,
 .wc-block-grid .wp-block-button .wp-block-button__link {
-  --_border-radius: var(--_global--border-radius);
+	--_border-radius: var(--_global--border-radius);
 
 	@include _transition(all);
 	border-radius: var(--_border-radius);

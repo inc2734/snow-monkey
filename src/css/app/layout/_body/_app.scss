@@ -15,7 +15,13 @@
 
 // One column slim / Blank slim
 [data-has-sidebar="false"][data-is-slim-width="true"] {
-	--wp--custom--content-max-width: var(--wp--custom--slim-width);
+	// --wp--custom--content-max-width: var(--wp--custom--slim-width);
+	--wp--style--global--content-size: var(--wp--custom--slim-width);
+
+	.#{ $_prefix }c-entry > :not(.#{ $_prefix }c-entry__body) {
+		margin-inline: auto;
+		max-width: var(--wp--custom--slim-width);
+	}
 }
 
 // One column
