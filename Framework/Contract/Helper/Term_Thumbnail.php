@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.5
  */
 
 namespace Framework\Contract\Helper;
@@ -165,11 +165,4 @@ trait Term_Thumbnail {
 			? wp_get_attachment_caption( $header_image )
 			: wp_get_attachment_caption( Trait_Helper::attachment_url_to_postid( $header_image ) );
 	}
-
-	/**
-	 * Return allowd attributes of img.
-	 *
-	 * @return array
-	 */
-	abstract public static function img_allowed_attributes();
 }

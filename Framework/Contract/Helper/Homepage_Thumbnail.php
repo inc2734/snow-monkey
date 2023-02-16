@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.5
  */
 
 namespace Framework\Contract\Helper;
@@ -83,11 +83,4 @@ trait Homepage_Thumbnail {
 
 		return wp_get_attachment_caption( get_post_thumbnail_id( get_option( 'page_for_posts' ) ) );
 	}
-
-	/**
-	 * Return allowed attributes of img.
-	 *
-	 * @return array
-	 */
-	abstract public static function img_allowed_attributes();
 }

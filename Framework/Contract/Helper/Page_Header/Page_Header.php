@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.5
  */
 
 namespace Framework\Contract\Helper\Page_Header;
@@ -38,7 +38,9 @@ abstract class Page_Header {
 	 * @param string                                    $size           The image size.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image( $queried_object, $size = 'large' );
+	protected static function _get_image( $queried_object, $size = 'large' ) {
+		return false;
+	}
 
 	/**
 	 * Return page header image html.
@@ -63,7 +65,9 @@ abstract class Page_Header {
 	 * @param string                                    $size           The image size.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image_url( $queried_object, $size = 'large' );
+	protected static function _get_image_url( $queried_object, $size = 'large' ) {
+		return false;
+	}
 
 	/**
 	 * Return page header image url.
@@ -111,7 +115,9 @@ abstract class Page_Header {
 	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
 	 * @return string|false
 	 */
-	abstract protected static function _get_title( $queried_object );
+	protected static function _get_title( $queried_object ) {
+		return false;
+	}
 
 	/**
 	 * Return page header title.
@@ -129,7 +135,9 @@ abstract class Page_Header {
 	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
 	 * @return string|false
 	 */
-	abstract protected static function _get_align( $queried_object );
+	protected static function _get_align( $queried_object ) {
+		return false;
+	}
 
 	/**
 	 * Return page header alignment.
@@ -147,7 +155,9 @@ abstract class Page_Header {
 	 * @param WP_Term|WP_Post_Type|WP_Post|WP_User|null $queried_object The queried object.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image_caption( $queried_object );
+	protected static function _get_image_caption( $queried_object ) {
+		return false;
+	}
 
 	/**
 	 * Return page header image caption.

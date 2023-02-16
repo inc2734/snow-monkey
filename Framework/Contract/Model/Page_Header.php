@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.5
  */
 
 namespace Framework\Contract\Model;
@@ -42,7 +42,9 @@ abstract class Page_Header {
 	 * @param string $size The image size.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image_url( $size = 'large' );
+	protected static function _get_image_url( $size = 'large' ) {
+		return false;
+	}
 
 	/**
 	 * Return page header image url.
@@ -59,7 +61,9 @@ abstract class Page_Header {
 	 *
 	 * @return string|false
 	 */
-	abstract protected static function _get_title();
+	protected static function _get_title() {
+		return false;
+	}
 
 	/**
 	 * Return page header title.
@@ -75,7 +79,9 @@ abstract class Page_Header {
 	 *
 	 * @return string|false
 	 */
-	abstract protected static function _get_align();
+	protected static function _get_align() {
+		return false;
+	}
 
 	/**
 	 * Return page header alignment.
@@ -92,7 +98,9 @@ abstract class Page_Header {
 	 * @param string $size The image size.
 	 * @return string|false
 	 */
-	abstract protected static function _get_image( $size = 'large' );
+	protected static function _get_image( $size = 'large' ) {
+		return false;
+	}
 
 	/**
 	 * Return page header image html.
@@ -109,7 +117,9 @@ abstract class Page_Header {
 	 *
 	 * @return string|false
 	 */
-	abstract protected static function _get_image_caption();
+	protected static function _get_image_caption() {
+		return false;
+	}
 
 	/**
 	 * Return page header image caption.
