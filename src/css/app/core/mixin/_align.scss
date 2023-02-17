@@ -1,6 +1,6 @@
 @mixin alignfull() {
 	clear: both !important;
-	max-width: 100% !important;
+	max-width: none !important;
 }
 
 @mixin alignwide() {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.0.0
+ * @version 19.1.5
  */
 
 use Framework\Helper;
@@ -19,7 +19,7 @@ $require_container = ( ! $wp_page_template || $is_default_page_template || $is_o
 <?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
 <div
-	class="c-entry__content p-entry-content"
+	class="c-entry__content p-entry-content c-fluid-container"
 	data-home-page-container="<?php echo esc_attr( $require_container ? 'true' : 'false' ); ?>"
 >
 	<?php do_action( 'snow_monkey_prepend_entry_content' ); ?>

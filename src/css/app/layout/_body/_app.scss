@@ -5,29 +5,13 @@
 
 // Blank / One column full
 [data-is-full-template="true"] {
-	.#{ $_prefix }c-entry {
-		--wp--style--global--content-size: none;
-		--wp--style--global--wide-size: none;
-	}
+	--wp--style--global--content-size: none;
+	--wp--style--global--wide-size: none;
 }
 
 // One column slim / Blank slim
 [data-has-sidebar="false"][data-is-slim-width="true"] {
 	.#{ $_prefix }l-contents__inner {
-		--wp--style--global--content-size: min(100% - var(--_global--container-margin) * 2 - env(safe-area-inset-right) - env(safe-area-inset-left), var(--wp--custom--slim-width));
-	}
-}
-
-// Right/Left sidebar
-[data-has-sidebar="true"] {
-	.#{ $_prefix }l-contents__container {
-		box-sizing: content-box;
-		margin-inline: auto;
-		padding-inline: var(--_global--container-margin);
-		max-width: var(--wp--style--global--content-size);
-
-		> * {
-			--wp--style--global--content-size: none;
-		}
+		--wp--style--global--content-size: var(--wp--custom--slim-width);
 	}
 }

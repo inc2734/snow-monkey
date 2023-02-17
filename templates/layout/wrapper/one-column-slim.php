@@ -73,7 +73,7 @@ use Framework\Helper;
 			?>
 
 			<div class="l-contents__body">
-				<div class="l-contents__container">
+				<div class="l-contents__container c-fluid-container">
 					<?php
 					if ( ! is_front_page() && 'default' === get_theme_mod( 'breadcrumbs-position' ) ) {
 						Helper::get_template_part( 'template-parts/common/breadcrumbs' );

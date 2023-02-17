@@ -73,7 +73,7 @@ use Framework\Helper;
 			?>
 
 			<div class="l-contents__body">
-				<div class="l-contents__container">
+				<div class="l-contents__container c-container">
 					<?php
 					if (
 						! is_front_page()

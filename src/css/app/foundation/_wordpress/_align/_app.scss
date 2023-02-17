@@ -53,10 +53,6 @@
 .alignfull {
 	@include alignfull();
 
-	&.#{ $_prefix }c-container {
-		max-width: calc(100% - var(--_container-margin-right) - var(--_container-margin-left)) !important;
-	}
-
 	& + .alignfull {
 		margin-top: 0 !important;
 	}
@@ -64,8 +60,11 @@
 
 .alignwide {
 	@include alignwide();
+}
 
-	&.#{ $_prefix }c-container {
-		--wp--style--global--wide-size: min(100% - var(--_container-margin-right) - var(--_container-margin-left), var(--wp--custom--content-wide-width));
+[data-has-sidebar="false"] .#{ $_prefix }c-entry__content {
+	& > .alignfull {
+		margin-right: calc(-1 * var(--_container-margin-right));
+		margin-left: calc(-1 * var(--_container-margin-left));
 	}
 }
