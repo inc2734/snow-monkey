@@ -1,4 +1,20 @@
+:where(.#{ $_prefix }c-entry > *) {
+	margin-inline: auto;
+	max-width: var(--wp--style--global--content-size);
+}
+
+:where(.#{ $_prefix }c-entry__body > *) {
+	margin-inline: auto;
+	max-width: var(--wp--style--global--content-size);
+}
+
+:where(.#{ $_prefix }c-entry__content > :not(.alignleft):not(.alignright):not(.alignfull)) {
+	max-width: var(--wp--style--global--content-size);
+}
+
 .#{ $_prefix }c-entry {
+	max-width: 100%;
+
 	&__header {
 		margin-bottom: var(--_margin1);
 	}
@@ -19,15 +35,17 @@
 
 	&__body {
 		@include _set-content-level(1);
+
+		max-width: 100%;
 	}
 
 	&__content {
 		@include _clearfix();
 
-		@at-root {
-			:where(#{ & } > :where(:not(.alignleft):not(.alignright):not(.alignfull))) {
-				max-width: var(--wp--style--global--content-size);
-			}
+		max-width: 100%;
+
+		&[data-home-page-container="true"] {
+			--wp--style--global--content-size: var(--wp--custom--content-width);
 		}
 	}
 

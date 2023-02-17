@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.5
  */
 
 use Framework\Helper;
@@ -73,7 +73,7 @@ use Framework\Helper;
 			?>
 
 			<div class="l-contents__body">
-				<div class="l-contents__container c-container">
+				<div class="l-contents__container">
 					<?php
 					if ( ! is_front_page() && in_array( get_theme_mod( 'breadcrumbs-position' ), array( 'default', 'content-width' ), true ) ) {
 						Helper::get_template_part( 'template-parts/common/breadcrumbs' );

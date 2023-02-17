@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 19.1.5
  *
  * renamed: template-parts/eyecatch.php
  */
@@ -14,5 +14,5 @@ if ( ! has_post_thumbnail() ) {
 ?>
 
 <div class="c-eyecatch">
-	<?php the_post_thumbnail( 'large' ); ?>
+	<?php the_post_thumbnail( 'xlarge' ); ?>
 </div>

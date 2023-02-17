@@ -332,6 +332,7 @@
 		left: 0;
 		width: var(--body-margin-left);
 		padding-top: var(--_padding1);
+		overflow: hidden auto;
 
 		.admin-bar & {
 			top: 32px;
@@ -340,6 +341,7 @@
 		.#{ $_prefix }c-container {
 			padding-right: 0;
 			padding-left: 0;
+			max-width: none;
 		}
 
 		.#{ $_prefix }c-site-branding {
