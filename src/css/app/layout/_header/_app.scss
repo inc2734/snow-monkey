@@ -332,7 +332,7 @@
 		left: 0;
 		width: var(--body-margin-left);
 		padding-top: var(--_padding1);
-		overflow: hidden auto;
+		// overflow: hidden auto; // @todo The submenu is not visible.
 
 		.admin-bar & {
 			top: 32px;
