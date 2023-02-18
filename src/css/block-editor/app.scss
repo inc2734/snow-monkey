@@ -143,11 +143,25 @@ html :where(.editor-styles-wrapper) {
 	}
 }
 
+.editor-styles-wrapper {
+	--editor-container-margin: var(--_global--container-margin);
+
+	> .edit-post-visual-editor__post-title-wrapper,
+	> .is-root-container {
+		padding-inline: var(--editor-container-margin) !important;
+
+		> .alignfull {
+			margin-inline: calc(-1 * var(--editor-container-margin));
+		}
+	}
+}
+
 // @see src/css/layout/body/_body.scss
 .l-body--one-column-full,
 .l-body--blank,
 .l-body--blank-content {
 	.editor-styles-wrapper {
+		--editor-container-margin: 0px;
 		--wp--custom--content-width: none;
 	}
 }
