@@ -331,8 +331,18 @@
 		bottom: 0;
 		left: 0;
 		width: var(--body-margin-left);
-		padding-top: var(--_padding1);
 		// overflow: hidden auto; // @todo The submenu is not visible.
+
+		.#{ $_prefix }l-header__content {
+			padding-block: var(--_padding1);
+			height: 100%;
+			overflow: hidden auto;
+			scrollbar-width: none;
+
+			&::-webkit-scrollbar{
+				display: none;
+			}
+		}
 
 		.admin-bar & {
 			top: 32px;
@@ -371,7 +381,24 @@
 		}
 
 		.#{ $_prefix }p-global-nav {
+			&--hover-underline .#{ $_prefix }c-navbar__item > a::after,
+			&--current-same-hover-effect .#{ $_prefix }c-navbar__item[data-active-menu] > a::after,
+			&--current-underline .#{ $_prefix }c-navbar__item[data-active-menu] > a::after {
+				top: auto;
+				right: var(--rect-right);
+				bottom: calc(var(--rect-top) + var(--rect-height));
+				left: calc(var(--rect-right) - var(--rect-width));
+			}
+
 			.#{ $_prefix }c-navbar {
+				&__item {
+					--rect-top: '';
+					--rect-right: '';
+					--rect-height: '';
+					--rect-width: '';
+					position: static;
+				}
+
 				&__item > a {
 					align-items: flex-start;
 					padding: var(--_padding-1) var(--_padding1);
@@ -379,14 +406,15 @@
 
 				&__item[aria-haspopup="true"]::before {
 					@include _triangle-left(10px, 16px, var(--wp--preset--color--sm-accent));
-					left: auto;
 					bottom: auto;
-					right: -0;
-					top: calc(50% - 5px);
+					right: auto;
+					left: calc(var(--rect-right) - 10px);
+					top: calc(var(--rect-top) + var(--rect-height) / 2); // = 50%
+					transform: translateY(-50%);
 				}
 
 				&__item > .c-navbar__submenu {
-					top: 50%;
+					top: calc(var(--rect-top) + var(--rect-height) / 2); // = 50%
 					left: 100%;
 					transform: translateY(-50%);
 				}

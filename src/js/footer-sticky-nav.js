@@ -5,70 +5,70 @@ import forEachHtmlNodes from '@inc2734/for-each-html-nodes';
 import { activeMenu } from './module/_active-menu';
 import { getFooterStickyNav, hide, show } from './module/_helper';
 
-const init = (nav) => addCustomEvent(nav, 'initFooterStickyNav');
+const init = ( nav ) => addCustomEvent( nav, 'initFooterStickyNav' );
 
 document.addEventListener(
-  'DOMContentLoaded',
-  () => {
-    const nav = getFooterStickyNav();
-    if (! nav) {
-      return;
-    }
+	'DOMContentLoaded',
+	() => {
+		const nav = getFooterStickyNav();
+		if ( ! nav ) {
+			return;
+		}
 
-    const links = nav.getElementsByTagName('a');
+		const links = nav.getElementsByTagName( 'a' );
 
-    const applyActiveMenu = (atag) => {
-      const params = {
-        home_url: snow_monkey.home_url,
-      };
-      activeMenu(atag, params);
-    };
+		const applyActiveMenu = ( atag ) => {
+			const params = {
+				home_url: snow_monkey.home_url,
+			};
+			activeMenu( atag, params );
+		};
 
-    forEachHtmlNodes(links, applyActiveMenu);
+		forEachHtmlNodes( links, applyActiveMenu );
 
-    const handleResize = () => init(nav);
+		const handleResize = () => init( nav );
 
-    window.addEventListener('resize', handleResize, false);
+		window.addEventListener( 'resize', handleResize, false );
 
-    const pageEnd = document.getElementById('page-end');
-    if (!! pageEnd && 'undefined' !== typeof IntersectionObserver) {
-      const handleLoad = () => {
-        init(nav);
+		const pageEnd = document.getElementById( 'page-end' );
+		if ( !! pageEnd && 'undefined' !== typeof IntersectionObserver ) {
+			const handleLoad = () => {
+				init( nav );
 
-        let hadIsIntersecting = false;
+				let hadIsIntersecting = false;
 
-        const observerCallback = (entries) => {
-          const updateVisibility = (entry) => {
-            const oldAriaHidden = nav.getAttribute('aria-hidden');
-            if (! entry.isIntersecting) {
-              if (hadIsIntersecting && 'false' !== oldAriaHidden) {
-                show(nav);
-                addCustomEvent(nav, 'initFooterStickyNav');
-              }
-            } else {
-              hadIsIntersecting = true;
-              if ('true' !== oldAriaHidden) {
-                hide(nav);
-                addCustomEvent(nav, 'initFooterStickyNav');
-              }
-            }
-          };
+				const observerCallback = ( entries ) => {
+					const updateVisibility = ( entry ) => {
+						const oldAriaHidden = nav.getAttribute( 'aria-hidden' );
+						if ( ! entry.isIntersecting ) {
+							if ( hadIsIntersecting && 'false' !== oldAriaHidden ) {
+								show( nav );
+								addCustomEvent( nav, 'initFooterStickyNav' );
+							}
+						} else {
+							hadIsIntersecting = true;
+							if ( 'true' !== oldAriaHidden ) {
+								hide( nav );
+								addCustomEvent( nav, 'initFooterStickyNav' );
+							}
+						}
+					};
 
-          entries.forEach(updateVisibility);
-        };
+					entries.forEach( updateVisibility );
+				};
 
-        const observerOptions = {
-          root: null,
-          rootMargin: '0px',
-          threshold: 0,
-        };
+				const observerOptions = {
+					root: null,
+					rootMargin: '0px',
+					threshold: 0,
+				};
 
-        const observer = new IntersectionObserver(observerCallback, observerOptions);
-        observer.observe(pageEnd);
-      };
+				const observer = new IntersectionObserver( observerCallback, observerOptions );
+				observer.observe( pageEnd );
+			};
 
-      window.addEventListener('load', handleLoad, false);
-    }
-  },
-  false
+			window.addEventListener( 'load', handleLoad, false );
+		}
+	},
+	false
 );

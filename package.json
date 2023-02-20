@@ -84,6 +84,7 @@
     "css:dependency": "run-p css:dependency:*",
     "css:php": "cpy 'src/css/**/*.php' 'assets/css'",
     "css": "npm run cleanup:css && run-p css:*",
+    "js:format": "wp-scripts format src/js",
     "js:app": "wp-scripts build src/js/app src/js/fix-adminbar src/js/drop-nav src/js/footer-sticky-nav src/js/global-nav src/js/sidebar-sticky-widget-area src/js/widgets src/js/page-top src/js/hash-nav src/js/smooth-scroll src/js/fontawesome src/js/customize-control src/js/customize-preview --output-path=assets/js",
     "js:dependency:elementor": "wp-scripts build src/js/dependency/elementor/preview --output-path=assets/js/dependency/elementor",
     "js:dependency:snow-monkey-blocks": "wp-scripts build src/js/dependency/snow-monkey-blocks/app --output-path=assets/js/dependency/snow-monkey-blocks",

@@ -4,12 +4,12 @@
  * @return object|null
  */
 export function getHtml() {
-  const html = document.getElementsByTagName('html');
-  if (1 > html.length) {
-    return;
-  }
+	const html = document.getElementsByTagName( 'html' );
+	if ( 1 > html.length ) {
+		return;
+	}
 
-  return html[0];
+	return html[ 0 ];
 }
 
 /**
@@ -18,7 +18,7 @@ export function getHtml() {
  * @return object|null
  */
 export function getBody() {
-  return document.getElementById('body');
+	return document.getElementById( 'body' );
 }
 
 /**
@@ -27,7 +27,7 @@ export function getBody() {
  * @return object|null
  */
 export function getFooterStickyNav() {
-  return document.getElementById('footer-sticky-nav');
+	return document.getElementById( 'footer-sticky-nav' );
 }
 
 /**
@@ -36,12 +36,12 @@ export function getFooterStickyNav() {
  * @return object|null
  */
 export function getHeader() {
-  const header = document.getElementsByClassName('l-header');
-  if (1 > header.length) {
-    return;
-  }
+	const header = document.getElementsByClassName( 'l-header' );
+	if ( 1 > header.length ) {
+		return;
+	}
 
-  return header[0];
+	return header[ 0 ];
 }
 
 /**
@@ -50,12 +50,12 @@ export function getHeader() {
  * @return object|null
  */
 export function getDropNavWrapper() {
-  const dropNavWrapper = document.getElementsByClassName('l-header__drop-nav');
-  if (1 > dropNavWrapper.length) {
-    return;
-  }
+	const dropNavWrapper = document.getElementsByClassName( 'l-header__drop-nav' );
+	if ( 1 > dropNavWrapper.length ) {
+		return;
+	}
 
-  return dropNavWrapper[0];
+	return dropNavWrapper[ 0 ];
 }
 
 /**
@@ -64,12 +64,12 @@ export function getDropNavWrapper() {
  * @return object|null
  */
 export function getContents() {
-  const contents = document.getElementsByClassName('l-contents');
-  if (1 > contents.length) {
-    return;
-  }
+	const contents = document.getElementsByClassName( 'l-contents' );
+	if ( 1 > contents.length ) {
+		return;
+	}
 
-  return contents[0];
+	return contents[ 0 ];
 }
 
 /**
@@ -78,12 +78,12 @@ export function getContents() {
  * @return object|null
  */
 export function getContainer() {
-  const container = document.getElementsByClassName('l-container');
-  if (1 > container.length) {
-    return;
-  }
+	const container = document.getElementsByClassName( 'l-container' );
+	if ( 1 > container.length ) {
+		return;
+	}
 
-  return container[0];
+	return container[ 0 ];
 }
 
 /**
@@ -92,7 +92,7 @@ export function getContainer() {
  * @return object|null
  */
 export function getAdminbar() {
-  return document.getElementById('wpadminbar');
+	return document.getElementById( 'wpadminbar' );
 }
 
 /**
@@ -101,7 +101,7 @@ export function getAdminbar() {
  * @return object|null
  */
 export function getDrawerNav() {
-  return document.getElementById('drawer-nav');
+	return document.getElementById( 'drawer-nav' );
 }
 
 /**
@@ -111,12 +111,12 @@ export function getDrawerNav() {
  * @param string CSS property
  * @return string
  */
-export function getStyle(element, property) {
-  if (! element) {
-    return undefined;
-  }
+export function getStyle( element, property ) {
+	if ( ! element ) {
+		return undefined;
+	}
 
-  return window.getComputedStyle(element).getPropertyValue(property);
+	return window.getComputedStyle( element ).getPropertyValue( property );
 }
 
 /**
@@ -125,8 +125,8 @@ export function getStyle(element, property) {
  * @param object element
  * @param string CSS property
  */
-export function setStyle(element, property, value) {
-  element.style[property] = value;
+export function setStyle( element, property, value ) {
+	element.style[ property ] = value;
 }
 
 /**
@@ -135,14 +135,14 @@ export function setStyle(element, property, value) {
  * @return boolean
  */
 export function shouldShowDropNav() {
-  const header = getHeader();
-  const dropNavWrapper = getDropNavWrapper();
+	const header = getHeader();
+	const dropNavWrapper = getDropNavWrapper();
 
-  if (! header || ! dropNavWrapper) {
-    return false;
-  }
+	if ( ! header || ! dropNavWrapper ) {
+		return false;
+	}
 
-  return true;
+	return true;
 }
 
 /**
@@ -150,8 +150,8 @@ export function shouldShowDropNav() {
  *
  * @return boolean
  */
-export function media(query) {
-  return window.matchMedia(`(${query})`).matches;
+export function media( query ) {
+	return window.matchMedia( `(${ query })` ).matches;
 }
 
 /**
@@ -159,8 +159,12 @@ export function media(query) {
  *
  * @return boolean
  */
-export function hasClass(target, className) {
-  return target.classList.contains(className);
+export function hasClass( target, className ) {
+	return target.classList.contains( className );
+}
+
+export function maybeLeftHeaderLayout( header ) {
+	return header.offsetWidth < document.documentElement.clientWidth;
 }
 
 /**
@@ -169,33 +173,28 @@ export function hasClass(target, className) {
  * @param Object
  *    @var boolean forceDropNav Default false.
  */
-export function getScrollOffset(option = {}) {
-  const adminbar = getAdminbar();
-  let adminbarHeight = 0;
-  if (adminbar) {
-    adminbarHeight = 'fixed' === getStyle(adminbar, 'position')
-      ? parseInt(getStyle(getHtml(), 'margin-top'))
-      : adminbarHeight;
-  }
+export function getScrollOffset( option = {} ) {
+	const adminbar = getAdminbar();
+	let adminbarHeight = 0;
+	if ( adminbar ) {
+		adminbarHeight = 'fixed' === getStyle( adminbar, 'position' ) ? parseInt( getStyle( getHtml(), 'margin-top' ) ) : adminbarHeight;
+	}
 
-  const header = getHeader();
-  if (header) {
-    const position = getStyle(header, 'position');
-  	if ('fixed' === position || 'sticky' === position) {
-      const maybeLeftHeaderLayout = header.offsetWidth < document.documentElement.clientWidth;
-      const headerHeight = maybeLeftHeaderLayout ? 0 : header.offsetHeight;
-  		return headerHeight + adminbarHeight;
-  	}
+	const header = getHeader();
+	if ( header ) {
+		const position = getStyle( header, 'position' );
+		if ( 'fixed' === position || 'sticky' === position ) {
+			const headerHeight = maybeLeftHeaderLayout( header ) ? 0 : header.offsetHeight;
+			return headerHeight + adminbarHeight;
+		}
 
-    const dropNav = getDropNavWrapper();
-    if (dropNav) {
-      const dropNavHeight = true === option.forceDropNav || shouldShowDropNav()
-        ? dropNav.offsetHeight
-        : 0;
+		const dropNav = getDropNavWrapper();
+		if ( dropNav ) {
+			const dropNavHeight = true === option.forceDropNav || shouldShowDropNav() ? dropNav.offsetHeight : 0;
 
-      return dropNavHeight + adminbarHeight;
-    }
-  }
+			return dropNavHeight + adminbarHeight;
+		}
+	}
 
 	return adminbarHeight;
 }
@@ -205,8 +204,8 @@ export function getScrollOffset(option = {}) {
  *
  * @param Object element
  */
-export function hide(element) {
-  element.setAttribute('aria-hidden', 'true');
+export function hide( element ) {
+	element.setAttribute( 'aria-hidden', 'true' );
 }
 
 /**
@@ -214,8 +213,8 @@ export function hide(element) {
  *
  * @param Object element
  */
-export function show(element) {
-  element.setAttribute('aria-hidden', 'false');
+export function show( element ) {
+	element.setAttribute( 'aria-hidden', 'false' );
 }
 
 /**
@@ -224,14 +223,14 @@ export function show(element) {
  * @param function callback
  * @param int delay
  */
-export function throttle(callback, delay) {
-  let time = Date.now();
-  return () => {
-    if ((time + delay - Date.now()) < 0) {
-      callback.apply(this, arguments);
-      time = Date.now();
-    }
-  };
+export function throttle( callback, delay ) {
+	let time = Date.now();
+	return () => {
+		if ( time + delay - Date.now() < 0 ) {
+			callback.apply( this, arguments );
+			time = Date.now();
+		}
+	};
 }
 
 /**
@@ -240,26 +239,22 @@ export function throttle(callback, delay) {
  * @return boolean
  */
 export function isPassiveSupported() {
-  let passiveSupported = false;
+	let passiveSupported = false;
 
-  try {
-    const options = Object.defineProperty(
-      {},
-      'passive',
-      {
-        get: () => {
-          passiveSupported = true;
-        }
-      }
-    );
+	try {
+		const options = Object.defineProperty( {}, 'passive', {
+			get: () => {
+				passiveSupported = true;
+			},
+		} );
 
-    window.addEventListener('test', options, options);
-    window.removeEventListener('test', options, options);
-  } catch(err) {
-    passiveSupported = false;
-  }
+		window.addEventListener( 'test', options, options );
+		window.removeEventListener( 'test', options, options );
+	} catch ( err ) {
+		passiveSupported = false;
+	}
 
-  return passiveSupported;
+	return passiveSupported;
 }
 
 /**
@@ -268,15 +263,15 @@ export function isPassiveSupported() {
  * @return int|false
  */
 export function getTargetOffsetTop() {
-  const hash = window.location.hash;
-  if (! hash) {
-    return false;
-  }
+	const hash = window.location.hash;
+	if ( ! hash ) {
+		return false;
+	}
 
-  const target = document.getElementById(decodeURI(hash).replace(/^#/, ''));
-  if (! target) {
-    return false;
-  }
+	const target = document.getElementById( decodeURI( hash ).replace( /^#/, '' ) );
+	if ( ! target ) {
+		return false;
+	}
 
-  return window.pageYOffset + target.getBoundingClientRect().top;
+	return window.pageYOffset + target.getBoundingClientRect().top;
 }
