@@ -3,23 +3,21 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.5
+ * @version 19.1.6
  */
 
 use Framework\Helper;
 
-$wp_page_template         = get_post_meta( get_the_ID(), '_wp_page_template', true );
-$use_home_page_container  = get_theme_mod( 'home-page-container' );
-$is_default_page_template = 'default' === $wp_page_template;
-$is_one_column_full       = false !== strpos( $wp_page_template, 'one-column-full.php' );
-
-$require_container = ( ! $wp_page_template || $is_default_page_template || $is_one_column_full ) && $use_home_page_container;
+$use_home_page_container = get_theme_mod( 'home-page-container' );
+$is_one_column_full      = 'one-column-full' === \Inc2734\WP_View_Controller\Bootstrap::get_layout();
+$require_container       = $use_home_page_container && $is_one_column_full;
 ?>
 
 <?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
 <div
-	class="c-entry__content p-entry-content c-fluid-container"
+	class="c-entry__content p-entry-content
+	<?php echo $require_container ? esc_attr( 'c-container' ) : ''; ?>
 	data-home-page-container="<?php echo esc_attr( $require_container ? 'true' : 'false' ); ?>"
 >
 	<?php do_action( 'snow_monkey_prepend_entry_content' ); ?>

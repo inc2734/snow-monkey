@@ -112,7 +112,10 @@
 	}
 }
 
-// one-column-full
+/**
+ * Blank
+ * One column full
+ */
 [data-has-sidebar="false"][data-is-full-template="true"] {
 	.#{ $_prefix }l-contents {
 		&__inner {
@@ -139,6 +142,11 @@
 
 		[data-is-content-widget-area="true"]:last-child {
 			margin-bottom: calc(-1 * var(--contents--gap));
+		}
+
+		[data-is-content-widget-area="true"] {
+			margin-right: calc(-1 * var(--_container-margin-right));
+			margin-left: calc(-1 * var(--_container-margin-left));
 		}
 	}
 }

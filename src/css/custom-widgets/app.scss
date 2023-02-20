@@ -15,7 +15,7 @@
 
 [data-has-sidebar="false"] {
 	[data-is-content-widget-area="true"] {
-		max-width: 100%;
+		--wp--style--global--content-size: none;
 
 		.alignfull > .c-container {
 			padding-right: 0;

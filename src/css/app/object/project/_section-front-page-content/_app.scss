@@ -15,3 +15,11 @@
 		}
 	}
 }
+
+// One column full
+[data-has-sidebar="false"][data-is-full-template="true"] .#{ $_prefix }l-contents__main {
+	.#{ $_prefix }p-section-front-page-content {
+		--wp--style--global--content-size: var(--wp--custom--content-width);
+		--wp--style--global--wide-size: var(--wp--custom--content-wide-width);
+	}
+}

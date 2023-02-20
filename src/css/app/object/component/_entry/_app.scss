@@ -43,10 +43,6 @@
 		@include _clearfix();
 
 		max-width: 100%;
-
-		&[data-home-page-container="true"] {
-			--wp--style--global--content-size: var(--wp--custom--content-width);
-		}
 	}
 
 	&__footer {
