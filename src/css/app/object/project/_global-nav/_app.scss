@@ -55,15 +55,13 @@
 					bottom: -0;
 					left: calc(50% - 8px);
 				}
+			}
 
-				@include _hover() {
-					&::before {
-						--_transition-delay: var(--global-nav-submenu-open-delay);
+			&[aria-haspopup="true"][data-submenu-visibility="visible"]::before {
+				--_transition-delay: var(--global-nav-submenu-open-delay);
 
-						visibility: visible;
-						opacity: 1;
-					}
-				}
+				visibility: visible;
+				opacity: 1;
 			}
 
 			&.sm-nav-menu-item-highlight {
