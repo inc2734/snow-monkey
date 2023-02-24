@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 19.1.7
  */
 
 use Framework\Helper;
@@ -337,3 +337,19 @@ remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wr
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end' );
+
+// Wrap single gallery and summary.
+add_action(
+	'woocommerce_before_single_product_summary',
+	function() {
+		echo '<div class="p-woocommerce-single-main-content">';
+	},
+	-100000
+);
+add_action(
+	'woocommerce_after_single_product_summary',
+	function() {
+		echo '</div><!-- /.p-woocommerce-single-main-content -->';
+	},
+	-100000
+);
