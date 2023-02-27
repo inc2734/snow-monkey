@@ -20,7 +20,7 @@
     "@wordpress/env": "^5.12.0",
     "@wordpress/scripts": "^25.4.0",
     "autoprefixer": "^10.4.13",
-    "browser-sync": "^2.27.11",
+    "browser-sync": "^2.27.12",
     "browserslist": "^4.21.5",
     "cpy-cli": "^4.2.0",
     "css-mqpacker": "^7.0.0",
