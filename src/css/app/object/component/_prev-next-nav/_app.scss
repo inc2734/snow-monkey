@@ -78,6 +78,6 @@
 
 	&__item-title {
 		position: relative;
-		@include _set-font-size-level(1);
+		@include _set-fluid-font-size-level(1);
 	}
 }

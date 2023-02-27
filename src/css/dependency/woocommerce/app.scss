@@ -118,7 +118,7 @@
 	> header > h2,
 	> form > h3 {
 		margin-bottom: var(--_margin-2);
-		@include _set-font-size-level(1);
+		@include _set-fluid-font-size-level(1);
 	}
 
 	> header + .shop_table {
@@ -183,7 +183,7 @@
 // Product title in single
 .woocommerce .product .product_title {
 	margin-bottom: var(--_margin-1);
-	@include _set-font-size-level(1);
+	@include _set-fluid-font-size-level(1);
 	font-weight: bold;
 }
 
@@ -318,7 +318,7 @@
 	margin-bottom: var(--_margin-1);
 	display: block;
 	border-bottom: 1px solid var(--wp--preset--color--sm-lighter-gray);
-	@include _set-font-size-level(1);
+	@include _set-fluid-font-size-level(1);
 	font-weight: bold;
 	padding-bottom: var(--_padding-1);
 }
@@ -424,7 +424,7 @@
 // Cart total in cart page
 .woocommerce .cart_totals h2 {
 	margin-bottom: var(--_margin-2);
-	@include _set-font-size-level(1);
+	@include _set-fluid-font-size-level(1);
 }
 
 // Headings in checkout page
@@ -433,7 +433,7 @@
 .woocommerce h3[id="order_review_heading"],
 .woocommerce h3[id="ship-to-different-address"] {
 	margin-bottom: var(--_margin-2);
-	@include _set-font-size-level(1);
+	@include _set-fluid-font-size-level(1);
 }
 .woocommerce [id="customer_details"] {
 	margin-bottom: var(--_margin1);
@@ -452,7 +452,7 @@
 // My account > edit-address
 .woocommerce-Addresses .woocommerce-Address-title h3 {
 	margin-bottom: var(--_margin-2);
-	@include _set-font-size-level(1);
+	@include _set-fluid-font-size-level(1);
 }
 
 // Product category widget

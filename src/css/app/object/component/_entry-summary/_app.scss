@@ -35,7 +35,7 @@
 
 	&__title {
 		margin: 0;
-		@include _set-font-size-level(1);
+		@include _set-fluid-font-size-level(1);
 	}
 
 	&__content {

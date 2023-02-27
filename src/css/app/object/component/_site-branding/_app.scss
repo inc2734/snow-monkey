@@ -1,6 +1,6 @@
 .#{ $_prefix }c-site-branding {
 	&__title {
-		@include _set-font-size-level(3);
+		@include _set-fluid-font-size-level(3);
 		font-weight: bold;
 
 		a {

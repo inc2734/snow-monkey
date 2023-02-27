@@ -105,41 +105,61 @@ body {
 }
 
 .has-sm-xs-font-size {
-	@include _set-font-size-level(-2);
+	--wp--preset--font-size--sm-xs: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(-2);
 }
 
 .has-sm-s-font-size {
-	@include _set-font-size-level(-1);
+	--wp--preset--font-size--sm-s: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(-1);
 }
 
 .has-sm-m-font-size {
-	@include _set-font-size-level(0);
+	--wp--preset--font-size--sm-m: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(0);
 }
 
 .has-sm-l-font-size {
-	@include _set-font-size-level(1);
+	--wp--preset--font-size--sm-l: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(1);
 }
 
 .has-sm-xl-font-size {
-	@include _set-font-size-level(2);
+	--wp--preset--font-size--sm-xl: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(2);
 }
 
 .has-sm-2-xl-font-size {
-	@include _set-font-size-level(3);
+	--wp--preset--font-size--sm-2-xl: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(3);
 }
 
 .has-sm-3-xl-font-size {
-	@include _set-font-size-level(4);
+	--wp--preset--font-size--sm-3-xl: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(4);
 }
 
 .has-sm-4-xl-font-size {
-	@include _set-font-size-level(5);
+	--wp--preset--font-size--sm-4-xl: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(5);
 }
 
 .has-sm-5-xl-font-size {
-	@include _set-font-size-level(6);
+	--wp--preset--font-size--sm-5-xl: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(6);
 }
 
 .has-sm-6-xl-font-size {
-	@include _set-font-size-level(7);
+	--wp--preset--font-size--sm-6-xl: var(--_fluid-font-size);
+
+	@include _set-fluid-font-size-level(7);
 }

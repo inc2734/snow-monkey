@@ -38,7 +38,7 @@
 	&__item-title {
 		margin-bottom: var(--_margin-1);
 		font-weight: bold;
-		@include _set-font-size-level(1);
+		@include _set-fluid-font-size-level(1);
 	}
 
 	&__item-summary {
@@ -85,7 +85,7 @@
 	[data-is-content-widget-area="true"] {
 		.wpaw-slider {
 			&__item-title {
-				@include _set-font-size-level(4);
+				@include _set-fluid-font-size-level(4);
 			}
 		}
 	}

@@ -71,7 +71,7 @@
 	&__item-title {
 		position: relative;
 		font-weight: bold;
-		@include _set-font-size-level(1);
+		@include _set-fluid-font-size-level(1);
 		text-shadow: rgba(#333, .3) 1px 1px 3px;
 	}
 
@@ -197,7 +197,7 @@
 	.#{ $_prefix }c-entry__content {
 		.wpaw-pickup-slider {
 			&__item-title {
-				@include _set-font-size-level(4);
+				@include _set-fluid-font-size-level(4);
 			}
 		}
 	}
@@ -208,7 +208,7 @@
 	.#{ $_prefix }c-entry__content {
 		.wpaw-pickup-slider {
 			&__item-title {
-				@include _set-font-size-level(4);
+				@include _set-fluid-font-size-level(4);
 			}
 
 			&__item-meta {

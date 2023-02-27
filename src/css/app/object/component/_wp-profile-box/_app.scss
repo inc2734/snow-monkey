@@ -5,7 +5,7 @@
 	&__title {
 		border-bottom: 1px solid transparent;
 		border-bottom-color: var(--wp--preset--color--sm-lighter-gray);
-		@include _set-font-size-level(2);
+		@include _set-fluid-font-size-level(2);
 		padding: var(--_padding-1);
 
 		@include _media-min(md) {

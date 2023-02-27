@@ -85,7 +85,7 @@ html :where(.editor-styles-wrapper) {
 
 	margin-top: var(--_margin1);
 	margin-bottom: var(--_margin-1);
-	@include _set-font-size-level(1);
+	@include _set-fluid-font-size-level(1);
 	font-weight: bold;
 }
 
@@ -99,7 +99,7 @@ html :where(.editor-styles-wrapper) {
 
 .edit-post-visual-editor__post-title-wrapper .editor-post-title__input {
 	margin: 2em auto 28px;
-	@include _set-font-size-level(3);
+	@include _set-fluid-font-size-level(3);
 	font-family: var(--_global--font-family);
 	font-weight: bold;
 }

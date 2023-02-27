@@ -3,7 +3,7 @@
 
 	&__title {
 		margin-bottom: var(--_margin1);
-		@include _set-font-size-level(2);
+		@include _set-fluid-font-size-level(2);
 		font-weight: bold;
 	}
 }
