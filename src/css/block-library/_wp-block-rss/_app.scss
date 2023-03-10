@@ -10,27 +10,24 @@
 	&__item-excerpt {
 		@include _set-font-size-level(-1);
 	}
+}
 
-	&.is-grid {
-		display: grid;
-		grid-template-columns: repeat(1, 1fr);
-		gap: var(--_margin-2);
+ul.wp-block-rss.is-grid {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: var(--_margin-2);
 
-		.wp-block-rss__item {
-			margin: 0;
-			width: auto;
-		}
+	> li {
+		margin: 0;
+		width: auto;
+	}
 
-		@include _media-min(600px) {
-			gap: var(--_margin1);
+	@include _media-min(600px) {
+		gap: var(--_margin1);
 
-			@for $i from 2 through 6 {
-				&.columns-#{ $i } {
-					grid-template-columns: repeat(#{ $i }, 1fr);
-
-					> .wp-block-rss__item {
-					}
-				}
+		@for $i from 2 through 6 {
+			&.columns-#{ $i } {
+				grid-template-columns: repeat(#{ $i }, 1fr);
 			}
 		}
 	}
