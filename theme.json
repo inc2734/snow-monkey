@@ -280,7 +280,7 @@
 			}
 		},
 		"spacing": {
-			"blockGap": "var(--wp--style--block-gap, var(--_margin1))"
+			"blockGap": "var(--_margin1)"
 		}
 	}
 }
