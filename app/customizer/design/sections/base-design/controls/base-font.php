@@ -3,10 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.0
+ * @version 20.0.0
  */
 
+use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Framework;
+
+$font_family_settings = Helper::get_font_family_settings();
+$choices              = array();
+foreach ( $font_family_settings as $font_family => $font_family_setting ) {
+	$choices[ $font_family ] = $font_family_setting['label'];
+}
 
 Framework::control(
 	'select',
@@ -15,16 +22,7 @@ Framework::control(
 		'label'    => __( 'Base font', 'snow-monkey' ),
 		'priority' => 120,
 		'default'  => 'sans-serif',
-		'choices'  => array(
-			'sans-serif'        => __( 'Sans serif', 'snow-monkey' ),
-			'serif'             => __( 'Serif', 'snow-monkey' ),
-			'noto-sans-jp'      => __( 'Noto Sans JP', 'snow-monkey' ),
-			'noto-serif-jp'     => __( 'Noto Serif JP', 'snow-monkey' ),
-			'm-plus-1p'         => __( 'M PLUS 1p', 'snow-monkey' ),
-			'm-plus-rounded-1c' => __( 'M PLUS Rounded 1c', 'snow-monkey' ),
-			'biz-udpgothic'     => __( 'BIZ UDPGothic', 'snow-monkey' ),
-			'biz-udpmincho'     => __( 'BIZ UDPMincho', 'snow-monkey' ),
-		),
+		'choices'  => $choices,
 	)
 );
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.1
+ * @version 20.0.0
  */
 
 namespace Framework;
@@ -455,32 +455,133 @@ class Helper {
 	}
 
 	/**
+	 * Return font family settings.
+	 *
+	 * @return array
+	 */
+	public static function get_font_family_settings() {
+		return apply_filters(
+			'snow_monkey_font_family_settings',
+			array(
+				'sans-serif'        => array(
+					'label'       => __( 'Sans serif', 'snow-monkey' ),
+					'font-family' => array( 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"ヒラギノ角ゴ W3"', 'sans-serif' ),
+				),
+				'serif'             => array(
+					'label'       => __( 'Serif', 'snow-monkey' ),
+					'font-family' => array( 'serif' ),
+				),
+				'noto-sans-jp'      => array(
+					'label'       => __( 'Noto Sans JP', 'snow-monkey' ),
+					'variation'   => array(
+						'400' => array(
+							'label' => __( 'Regular 400', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/NotoSansJP-Regular.woff2' ),
+						),
+						'700' => array(
+							'label' => __( 'Bold 700', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/NotoSansJP-Bold.woff2' ),
+						),
+					),
+					'default'     => '400,700',
+					'name'        => 'Noto Sans JP',
+					'font-family' => array( '"Noto Sans JP"', 'sans-serif' ),
+				),
+				'noto-serif-jp'     => array(
+					'label'       => __( 'Noto Serif JP', 'snow-monkey' ),
+					'variation'   => array(
+						'400' => array(
+							'label' => __( 'Regular 400', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/NotoSerifJP-Regular.woff2' ),
+						),
+						'700' => array(
+							'label' => __( 'Bold 700', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/NotoSerifJP-Bold.woff2' ),
+						),
+					),
+					'default'     => '400,700',
+					'name'        => 'Noto Serif JP',
+					'font-family' => array( '"Noto Serif JP"', 'serif' ),
+				),
+				'm-plus-1p'         => array(
+					'label'       => __( 'M PLUS 1p', 'snow-monkey' ),
+					'variation'   => array(
+						'400' => array(
+							'label' => __( 'Regular 400', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/MPLUS1p-Regular.woff2' ),
+						),
+						'700' => array(
+							'label' => __( 'Bold 700', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/MPLUS1p-Bold.woff2' ),
+						),
+					),
+					'default'     => '400,700',
+					'name'        => 'M PLUS 1p',
+					'font-family' => array( '"M PLUS 1p"', 'sans-serif' ),
+				),
+				'm-plus-rounded-1c' => array(
+					'label'       => __( 'M PLUS Rounded 1c', 'snow-monkey' ),
+					'variation'   => array(
+						'400' => array(
+							'label' => __( 'Regular 400', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/MPLUSRounded1c-Regular.woff2' ),
+						),
+						'700' => array(
+							'label' => __( 'Bold 700', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/MPLUSRounded1c-Bold.woff2' ),
+						),
+					),
+					'default'     => '400,700',
+					'name'        => 'M PLUS Rounded 1c',
+					'font-family' => array( '"M PLUS Rounded 1c"', 'sans-serif' ),
+				),
+				'biz-udpgothic'     => array(
+					'label'       => __( 'BIZ UDPGothic', 'snow-monkey' ),
+					'variation'   => array(
+						'400' => array(
+							'label' => __( 'Regular 400', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/BIZUDPGothic-Regular.woff2' ),
+						),
+						'700' => array(
+							'label' => __( 'Bold 700', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/BIZUDPGothic-Bold.woff2' ),
+						),
+					),
+					'default'     => '400,700',
+					'name'        => 'BIZ UDPGothic',
+					'font-family' => array( '"BIZ UDPGothic"', 'sans-serif' ),
+				),
+				'biz-udpmincho'     => array(
+					'label'       => __( 'BIZ UDPMincho', 'snow-monkey' ),
+					'variation'   => array(
+						'400' => array(
+							'label' => __( 'Regular 400', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/BIZUDPMincho-Regular.woff2' ),
+						),
+						'700' => array(
+							'label' => __( 'Bold 700', 'snow-monkey' ),
+							'src'   => get_theme_file_uri( '/assets/fonts/BIZUDPMincho-Bold.woff2' ),
+						),
+					),
+					'default'     => '400,700',
+					'name'        => 'BIZ UDPMincho',
+					'font-family' => array( '"BIZ UDPMincho"', 'serif' ),
+				),
+			)
+		);
+	}
+
+	/**
 	 * Return font-family selected in the customizer.
 	 *
 	 * @return string
 	 */
 	public static function get_font_family() {
-		$base_font   = get_theme_mod( 'base-font' );
-		$font_family = array();
-
-		if ( 'sans-serif' === $base_font ) {
-			$font_family = array( 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"ヒラギノ角ゴ W3"', 'sans-serif' );
-		} elseif ( 'serif' === $base_font ) {
-			$font_family = array( 'serif' );
-		} elseif ( 'noto-sans-jp' === $base_font ) {
-			$font_family = array( '"Noto Sans JP"', 'sans-serif' );
-		} elseif ( 'noto-serif-jp' === $base_font ) {
-			$font_family = array( '"Noto Serif JP"', 'serif' );
-		} elseif ( 'm-plus-1p' === $base_font ) {
-			$font_family = array( '"M PLUS 1p"', 'sans-serif' );
-		} elseif ( 'm-plus-rounded-1c' === $base_font ) {
-			$font_family = array( '"M PLUS Rounded 1c"', 'sans-serif' );
-		} elseif ( 'biz-udpgothic' === $base_font ) {
-			$font_family = array( '"BIZ UDPGothic"', 'sans-serif' );
-		} elseif ( 'biz-udpmincho' === $base_font ) {
-			$font_family = array( '"BIZ UDPMincho"', 'serif' );
-		}
-
+		$base_font            = get_theme_mod( 'base-font' );
+		$font_family_settings = static::get_font_family_settings();
+		$font_family          = ! empty( $font_family_settings[ $base_font ]['font-family'] )
+			? $font_family_settings[ $base_font ]['font-family']
+			: array();
 		return implode( ',', $font_family );
 	}
 
