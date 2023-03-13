@@ -68,6 +68,10 @@ html :where(.editor-styles-wrapper) {
 	overflow: hidden;
 }
 
+.wp-block-post-content.is-root-container {
+	padding-bottom: 2rem;
+}
+
 .editor-styles-wrapper .is-root-container,
 .editor-styles-wrapper .wp-block-freeform {
 	@include entry-content();
@@ -108,12 +112,6 @@ html :where(.editor-styles-wrapper) {
 .components-checkbox-control .components-base-control__field {
 	display: flex;
 	align-items: center;
-}
-
-.has-metaboxes {
-	.editor-styles-wrapper {
-		padding-bottom: 2rem;
-	}
 }
 
 // サイドバーの横幅分 alignfull, alignwide から引く
