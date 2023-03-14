@@ -1,0 +1,5 @@
+.smb-alert {
+	&__body {
+		@include entry-content(-1);
+	}
+}
