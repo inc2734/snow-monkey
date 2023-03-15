@@ -16,7 +16,7 @@
 		<div class="c-container">
 			<div class="smb-section__contents-wrapper smb-section__contents-wrapper--center">
 				<div class="smb-section__body">
-					<!-- wp:snow-monkey-blocks/box {"backgroundColor":"#000000","borderWidth":0,"borderRadius":0,"opacity":0.1,"contentPadding":"l"} -->
+					<!-- wp:snow-monkey-blocks/box {"backgroundColor":"#000000","borderWidth":"0px","borderRadius":"0px","opacity":0.1,"contentPadding":"l"} -->
 					<div class="wp-block-snow-monkey-blocks-box smb-box smb-box--p-l" style="--smb-box--border-radius:0px;--smb-box--background-color:#000000;--smb-box--background-opacity:0.1;--smb-box--border-width:0px">
 						<div class="smb-box__background"></div>
 						<div class="smb-box__body">
