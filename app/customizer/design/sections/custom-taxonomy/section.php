@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.0.0-rc1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -42,7 +42,15 @@ foreach ( $terms as $_term ) {
 			),
 			'priority'        => 131,
 			'active_callback' => function() use ( $_term ) {
-				return in_array( Controller::get_view(), array( 'archive', 'none' ), true )
+				$view = Controller::get_view();
+				$view = explode( '/', $view['slug'] );
+				if ( ! $view ) {
+					return false;
+				}
+
+				$view = $view[ count( $view ) - 1 ];
+
+				return in_array( $view, array( 'archive', 'none' ), true )
 						&& is_tax( $_term->taxonomy, $_term->term_id );
 			},
 		)

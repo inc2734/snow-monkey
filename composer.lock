@@ -913,16 +913,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.4.1",
+            "version": "12.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "586e4fa1b0d25d63b4c48270faab447dee5b7e4d"
+                "reference": "2c8ab1e088f6607e3c1e16ef3b5701283c342a1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/586e4fa1b0d25d63b4c48270faab447dee5b7e4d",
-                "reference": "586e4fa1b0d25d63b4c48270faab447dee5b7e4d",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/2c8ab1e088f6607e3c1e16ef3b5701283c342a1e",
+                "reference": "2c8ab1e088f6607e3c1e16ef3b5701283c342a1e",
                 "shasum": ""
             },
             "require": {
@@ -952,9 +952,9 @@
             "description": "A library for WordPress theme view controller.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-view-controller/issues",
-                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.1"
+                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.2"
             },
-            "time": "2023-02-20T09:53:32+00:00"
+            "time": "2023-03-22T10:07:59+00:00"
         }
     ],
     "packages-dev": [
