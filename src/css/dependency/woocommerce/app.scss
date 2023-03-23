@@ -91,6 +91,10 @@
 	height: 36px;
 }
 
+.woocommerce-notices-wrapper:empty + * {
+	margin-top: 0 !important;
+}
+
 .woocommerce-EditAccountForm,
 .woocommerce-address-fields__field-wrapper {
 	.form-row-wide:not(:first-child) {
