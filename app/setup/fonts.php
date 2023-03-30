@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.0.0
+ * @version 20.0.1
  */
 
 use Framework\Helper;
@@ -22,15 +22,14 @@ add_action(
 		}
 
 		$font_family_settings = Helper::get_font_family_settings();
-
-		$font_weights = explode( ',', $font_weights );
+		$font_weights         = explode( ',', $font_weights );
 
 		foreach ( $font_weights as $font_weight ) {
-			if ( empty( $font_family_settings[ $base_font ][ $font_weight ]['src'] ) ) {
+			if ( empty( $font_family_settings[ $base_font ]['variation'][ $font_weight ]['src'] ) ) {
 				continue;
 			}
 
-			$src = $font_family_settings[ $base_font ][ $font_weight ]['src'];
+			$src = $font_family_settings[ $base_font ]['variation'][ $font_weight ]['src'];
 			?>
 			<link rel="preload" href="<?php echo esc_url( $src ); ?>" as="font" type="font/woff2" crossorigin />
 			<?php
@@ -71,6 +70,7 @@ foreach ( array( 'wp_enqueue_scripts', 'enqueue_block_editor_assets' ) as $hook 
 			}
 
 			wp_add_inline_style( Helper::get_main_style_handle(), implode( '', $css_arr ) );
-		}
+		},
+		11
 	);
 }
