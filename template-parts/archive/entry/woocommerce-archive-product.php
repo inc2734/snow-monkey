@@ -58,4 +58,4 @@ if ( $args['_display_archive_top_widget_area'] ) {
 	 */
 	do_action( 'woocommerce_after_main_content' );
 	?>
-</article>
+</div>
