@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 17.0.5
+ * @version 20.0.2
  */
 
 /**
@@ -21,7 +21,7 @@ add_action(
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
 		<?php
 	},
-	0.9
+	0
 );
 
 /**
