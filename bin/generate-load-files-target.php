@@ -50,20 +50,20 @@ function generate_load_files_target( $directory_slug, $exclude_underscore = fals
 
 	$files = array_map(
 		function( $file ) use ( $template_directory ) {
-			return str_replace( $template_directory, '', $file );
+			return str_replace( array( trailingslashit( $template_directory ), '.php' ), '', $file );
 		},
 		$files
 	);
 
 	file_put_contents(
 		$bundle_file,
-		"<?php\n\$template_directory = get_template_directory();\nreturn [\n",
+		"<?php\nreturn [\n",
 		FILE_APPEND | LOCK_EX
 	);
 	foreach ( $files as $file ) {
 		file_put_contents(
 			$bundle_file,
-			"\$template_directory . '" . $file . "',\n",
+			"'" . $file . "',\n",
 			FILE_APPEND | LOCK_EX
 		);
 	}

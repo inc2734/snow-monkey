@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 namespace Framework\Model;
@@ -40,8 +40,7 @@ class Setup_Loader {
 
 		switch ( $this->_get_loading_method( $method, $directory, $directory_slug ) ) {
 			case 'get_template_parts':
-				$slugs              = $this->_file_list_to_slugs( $files, $directory_slug );
-				$directory_or_files = ! empty( $slugs ) ? $slugs : $directory;
+				$directory_or_files = ! empty( $files ) ? $files : $directory;
 				Helper::get_template_parts( $directory_or_files, $exclude_underscore );
 				break;
 			case 'load_theme_files':
@@ -59,7 +58,7 @@ class Setup_Loader {
 					break;
 				}
 
-				$theme_files = $this->_file_list_to_theme_file_path( $files, $directory_slug );
+				$theme_files = $this->_file_list_to_theme_file_path( $files );
 				if ( empty( $theme_files ) || ! is_array( $theme_files ) ) {
 					break;
 				}
@@ -70,46 +69,42 @@ class Setup_Loader {
 				}
 				break;
 			default:
-				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $files : $directory;
+				$directory_or_files = ! empty( $files ) && is_array( $files ) ? $this->_file_list_to_filepath( $files ) : $directory;
 				Helper::include_files( $directory_or_files, $exclude_underscore );
 		}
 	}
 
 	/**
-	 * Convert file list to slugs.
+	 * Convert file list to file paths.
 	 *
 	 * @param array  $files          Array of files path.
 	 * @param string $directory_slug The directory slug.
 	 * @return array
 	 */
-	protected function _file_list_to_slugs( $files, $directory_slug ) {
-		if ( empty( $files ) || ! is_array( $files ) ) {
-			return false;
-		}
-
+	protected function _file_list_to_filepath( $files ) {
 		return array_map(
-			function( $filepath ) use ( $directory_slug ) {
-				return str_replace( '.php', '', substr( $filepath, strpos( $filepath, $directory_slug ) ) );
+			function( $slug ) {
+				return trailingslashit( $this->template_directory ) . $slug . '.php';
 			},
 			$files
 		);
 	}
 
 	/**
-	 * Convert file list to theme fil paths.
+	 * Convert file list to theme file paths.
 	 *
 	 * @param array  $files          Array of files path.
 	 * @param string $directory_slug The directory slug.
 	 * @return array
 	 */
-	protected function _file_list_to_theme_file_path( $files, $directory_slug ) {
+	protected function _file_list_to_theme_file_path( $files ) {
 		if ( empty( $files ) || ! is_array( $files ) ) {
 			return false;
 		}
 
 		return array_map(
-			function( $filepath ) use ( $directory_slug ) {
-				return substr( $filepath, strpos( $filepath, $directory_slug ) );
+			function( $slug ) {
+				return $slug . '.php';
 			},
 			$files
 		);
