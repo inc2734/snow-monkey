@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.0.0
+ * @version 20.1.0
  */
 
 namespace Framework;
@@ -318,6 +318,11 @@ class Helper {
 			return $terms;
 		}
 
+		// @see https://developer.wordpress.org/reference/functions/get_terms/
+		if ( ! isset( $args['number'] ) ) {
+			$args['number'] = apply_filters( 'snow_monkey_get_terms_max_number', 100 );
+		}
+
 		$terms = get_terms( $args );
 		wp_cache_set( $cache_key, $terms );
 		if ( is_array( $terms ) ) {
@@ -336,6 +341,11 @@ class Helper {
 		$users = wp_cache_get( 'snow-monkey-all-users' );
 		if ( is_array( $users ) ) {
 			return $users;
+		}
+
+		// @see https://developer.wordpress.org/reference/functions/get_users/
+		if ( ! isset( $args['number'] ) ) {
+			$args['number'] = apply_filters( 'snow_monkey_get_users_max_number', 100 );
 		}
 
 		$users = get_users();
