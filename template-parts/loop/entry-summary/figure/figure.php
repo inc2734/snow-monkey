@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Framework\Helper;
@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
+		'_entries_id'     => null,
 		'_src'            => false,
 		'_thumbnail_size' => 'medium_large',
 		'_terms'          => array(),
@@ -39,8 +40,9 @@ $args = wp_parse_args(
 			'template-parts/loop/entry-summary/term/term',
 			$args['_name'],
 			array(
-				'_context' => $args['_context'],
-				'_terms'   => $args['_terms'],
+				'_context'    => $args['_context'],
+				'_entries_id' => $args['_entries_id'],
+				'_terms'      => $args['_terms'],
 			)
 		);
 	}

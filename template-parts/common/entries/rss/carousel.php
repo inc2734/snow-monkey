@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Framework\Helper;
@@ -13,6 +13,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
+		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_item_title_tag' => 'h3',
@@ -41,6 +42,7 @@ if ( ! $args['_items'] ) {
 							null,
 							array(
 								'_context'        => $args['_context'],
+								'_entries_id'     => $args['_entries_id'],
 								'_entries_layout' => $args['_entries_layout'],
 								'_excerpt_length' => $args['_excerpt_length'],
 								'_item'           => $item,

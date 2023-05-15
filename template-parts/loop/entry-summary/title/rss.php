@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  *
  * renamed: template-parts/loop/entry-summary/title/title-rss.php
  */
@@ -15,6 +15,7 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
+		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
 		'_title_tag'      => 'h2',
 		'_item'           => false,

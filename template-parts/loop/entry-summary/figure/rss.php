@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  *
  * renamed: template-parts/loop/entry-summary/figure/figure-rss.php
  */
@@ -15,7 +15,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
-		'_item' => false,
+		'_entries_id' => null,
+		'_item'       => false,
 	)
 );
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Framework\Helper;
@@ -13,7 +13,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
-		'_terms' => array(),
+		'_entries_id' => null,
+		'_terms'      => array(),
 	)
 );
 

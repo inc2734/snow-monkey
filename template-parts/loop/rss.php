@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  *
  * renamed: template-parts/loop/entry-summary-rss.php
  */
@@ -17,6 +17,7 @@ $args = wp_parse_args(
 	array(
 		'_title_tag'      => 'h2',
 		'_item'           => false,
+		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 	)
@@ -34,8 +35,9 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 			'template-parts/loop/entry-summary/figure/rss',
 			null,
 			array(
-				'_context' => $args['_context'],
-				'_item'    => $args['_item'],
+				'_context'    => $args['_context'],
+				'_entries_id' => $args['_entries_id'],
+				'_item'       => $args['_item'],
 			)
 		);
 		?>
@@ -48,6 +50,7 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 					null,
 					array(
 						'_context'        => $args['_context'],
+						'_entries_id'     => $args['_entries_id'],
 						'_entries_layout' => $args['_entries_layout'],
 						'_title_tag'      => $args['_title_tag'],
 						'_item'           => $args['_item'],
@@ -63,6 +66,7 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 				array(
 					'_context'        => $args['_context'],
 					'_item'           => $args['_item'],
+					'_entries_id'     => $args['_entries_id'],
 					'_entries_layout' => $args['_entries_layout'],
 					'_excerpt_length' => $args['_excerpt_length'],
 				)
@@ -74,8 +78,9 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 				'template-parts/loop/entry-summary/meta/rss',
 				null,
 				array(
-					'_context' => $args['_context'],
-					'_item'    => $args['_item'],
+					'_context'    => $args['_context'],
+					'_entries_id' => $args['_entries_id'],
+					'_item'       => $args['_item'],
 				)
 			);
 			?>

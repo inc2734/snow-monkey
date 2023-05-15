@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  *
  * renamed: template-parts/loop/entry-summary/meta/meta-rss.php
  */
@@ -15,7 +15,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
-		'_item' => false,
+		'_entries_id' => null,
+		'_item'       => false,
 	)
 );
 
@@ -57,7 +58,6 @@ $feed = $item->get_feed();
 			?>
 		</li>
 		<li class="c-meta__item c-meta__item--published">
-
 			<?php echo esc_html( date_i18n( get_option( 'date_format' ), $item->get_date( 'U' ) ) ); ?>
 		</li>
 	</ul>

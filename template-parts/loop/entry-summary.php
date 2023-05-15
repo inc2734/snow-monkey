@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  *
  * renamed: template-parts/entry-summary.php
  */
@@ -16,6 +16,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	array(
 		'_display_meta'   => false,
+		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 		'_thumbnail_size' => 'medium_large',
@@ -33,6 +34,7 @@ $args = wp_parse_args(
 			$args['_name'],
 			array(
 				'_context'        => $args['_context'],
+				'_entries_id'     => $args['_entries_id'],
 				'_thumbnail_size' => $args['_thumbnail_size'],
 				'_terms'          => $args['_terms'],
 			)
@@ -47,6 +49,7 @@ $args = wp_parse_args(
 					$args['_name'],
 					array(
 						'_context'        => $args['_context'],
+						'_entries_id'     => $args['_entries_id'],
 						'_entries_layout' => $args['_entries_layout'],
 						'_title_tag'      => $args['_title_tag'],
 					)
@@ -60,6 +63,7 @@ $args = wp_parse_args(
 				$args['_name'],
 				array(
 					'_context'        => $args['_context'],
+					'_entries_id'     => $args['_entries_id'],
 					'_entries_layout' => $args['_entries_layout'],
 					'_excerpt_length' => $args['_excerpt_length'],
 				)
@@ -75,8 +79,9 @@ $args = wp_parse_args(
 						'template-parts/loop/entry-summary/meta/meta',
 						$args['_name'],
 						array(
-							'_context' => $args['_context'],
-							'_terms'   => $args['_terms'],
+							'_context'    => $args['_context'],
+							'_entries_id' => $args['_entries_id'],
+							'_terms'      => $args['_terms'],
 						)
 					);
 				}
