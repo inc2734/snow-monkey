@@ -3,10 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+
+if ( ! is_customize_preview() ) {
+	return;
+}
 
 Framework::control(
 	'content',
@@ -20,10 +24,6 @@ Framework::control(
 		},
 	)
 );
-
-if ( ! is_customize_preview() ) {
-	return;
-}
 
 $section = Framework::get_section( 'static_front_page' );
 $control = Framework::get_control( 'home-page-setting-label' );

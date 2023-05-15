@@ -3,12 +3,16 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 20.1.0
  *
  * renamed: app/customizer/seo-sns/sections/google-tag-manager/controls/for-manager-in.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+
+if ( ! is_customize_preview() ) {
+	return;
+}
 
 Framework::control(
 	'text',
@@ -20,10 +24,6 @@ Framework::control(
 		'priority'    => 100,
 	)
 );
-
-if ( ! is_customize_preview() ) {
-	return;
-}
 
 $panel   = Framework::get_panel( 'seo' );
 $section = Framework::get_section( 'google-tag-manager' );

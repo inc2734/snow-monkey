@@ -3,10 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
+
+if ( ! is_customize_preview() ) {
+	return;
+}
 
 $custom_logo_args = get_theme_support( 'custom-logo' );
 
@@ -23,10 +27,6 @@ Framework::control(
 		'flex_width'  => isset( $custom_logo_args[0]['flex-width'] ) ? $custom_logo_args[0]['flex-width'] : null,
 	)
 );
-
-if ( ! is_customize_preview() ) {
-	return;
-}
 
 $section = Framework::get_section( 'title_tagline' );
 $control = Framework::get_control( 'sm-custom-logo' );

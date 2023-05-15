@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -20,6 +20,8 @@ $terms = Helper::get_terms(
 	)
 );
 
+$panel = Framework::get_panel( 'design' );
+
 foreach ( $terms as $_term ) {
 	Framework::control(
 		'image',
@@ -30,11 +32,7 @@ foreach ( $terms as $_term ) {
 			'priority'    => 110,
 		)
 	);
-}
 
-$panel = Framework::get_panel( 'design' );
-
-foreach ( $terms as $_term ) {
 	$section = Framework::get_section( 'design-' . $_term->taxonomy . '-' . $_term->term_id );
 	$control = Framework::get_control( $_term->taxonomy . '-' . $_term->term_id . '-header-image' );
 	$control->join( $section )->join( $panel );

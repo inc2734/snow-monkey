@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.0.0-rc1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -24,35 +24,37 @@ if ( ! $taxonomies ) {
 	return;
 }
 
-$terms = Helper::get_terms(
-	array(
-		'taxonomy'   => $taxonomies,
-		'hide_empty' => false,
-	)
-);
-
-foreach ( $terms as $_term ) {
-	Framework::section(
-		'design-' . $_term->taxonomy . '-' . $_term->term_id,
+foreach ( $taxonomies as $taxonomy ) {
+	$terms = Helper::get_terms(
 		array(
-			'title'           => sprintf(
-				/* translators: 1: Taxonomy name */
-				__( '[ %1$s ] taxonomy pages settings', 'snow-monkey' ),
-				$_term->name
-			),
-			'priority'        => 131,
-			'active_callback' => function() use ( $_term ) {
-				$view = Controller::get_view();
-				$view = explode( '/', $view['slug'] );
-				if ( ! $view ) {
-					return false;
-				}
-
-				$view = $view[ count( $view ) - 1 ];
-
-				return in_array( $view, array( 'archive', 'none' ), true )
-						&& is_tax( $_term->taxonomy, $_term->term_id );
-			},
+			'taxonomy'   => $taxonomy,
+			'hide_empty' => false,
 		)
 	);
+
+	foreach ( $terms as $_term ) {
+		Framework::section(
+			'design-' . $_term->taxonomy . '-' . $_term->term_id,
+			array(
+				'title'           => sprintf(
+					/* translators: 1: Taxonomy name */
+					__( '[ %1$s ] taxonomy pages settings', 'snow-monkey' ),
+					$_term->name
+				),
+				'priority'        => 131,
+				'active_callback' => function() use ( $_term ) {
+					$view = Controller::get_view();
+					$view = explode( '/', $view['slug'] );
+					if ( ! $view ) {
+						return false;
+					}
+
+					$view = $view[ count( $view ) - 1 ];
+
+					return in_array( $view, array( 'archive', 'none' ), true )
+							&& is_tax( $_term->taxonomy, $_term->term_id );
+				},
+			)
+		);
+	}
 }

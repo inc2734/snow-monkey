@@ -14,8 +14,7 @@ use Inc2734\WP_View_Controller;
 use Framework\Model\Setup_Loader;
 
 class Helper {
-
-	use WP_Helper\Contract\Helper;
+	use WP_Helper\Contract\Helper { get_custom_post_types as _get_custom_post_types; } // phpcs:ignore WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis
 	use Contract\Helper\Page_Header;
 	use Contract\Helper\Term_Thumbnail;
 	use Contract\Helper\Homepage_Thumbnail;
@@ -24,6 +23,25 @@ class Helper {
 	use Contract\Helper\BbPress_Archive_Thumbnail;
 	use Contract\Helper\Deprecated;
 	use WP_View_Controller\App\Contract\Template_Tag;
+
+	/**
+	 * Return custom post type names.
+	 * This method only works correctly after the init hook.
+	 *
+	 * @param array $args An array of key => value arguments to match against the post type objects.
+	 * @return array
+	 */
+	public static function get_custom_post_types( $args = array() ) {
+		$cache_key         = 'snow-monkey-all-custom-post-types';
+		$custom_post_types = wp_cache_get( $cache_key );
+		if ( is_array( $custom_post_types ) ) {
+			return $custom_post_types;
+		}
+
+		$custom_post_types = static::_get_custom_post_types( $args );
+		wp_cache_set( $cache_key, $custom_post_types );
+		return $custom_post_types;
+	}
 
 	/**
 	 * get_template_part php files.
