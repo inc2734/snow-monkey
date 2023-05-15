@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-03-11 23:50+0900\n"
-"PO-Revision-Date: 2023-03-11 23:51+0900\n"
+"POT-Creation-Date: 2023-05-16 02:59+0900\n"
+"PO-Revision-Date: 2023-05-16 03:00+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -67,10 +67,13 @@ msgstr "2行"
 msgid "Center logo"
 msgstr "中央ロゴ"
 
-#: .translation/bundle-template.php:13 Framework/Helper.php:99
+#: .translation/bundle-template.php:13 Framework/Helper.php:117
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:22
 #: app/customizer/infobar/controls/align.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:572
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5572
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5938
 msgid "Left"
 msgstr "左"
 
@@ -81,6 +84,9 @@ msgstr "左"
 #: app/widget/snow-monkey-recent-posts/_form.php:88
 #: app/widget/snow-monkey-rss/_form.php:73
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:127
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3607
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5095
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6642
 msgid "Simple"
 msgstr "シンプル"
 
@@ -109,24 +115,30 @@ msgstr "フッター5"
 #: app/customizer/design/sections/custom-post/controls/view.php:24
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4983
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5367
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5530
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6640
 msgid "Default"
 msgstr "デフォルト"
 
-#: Framework/Helper.php:85
+#: Framework/Helper.php:103
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: Framework/Helper.php:86
+#: Framework/Helper.php:104
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: Framework/Helper.php:87
+#: Framework/Helper.php:105
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3316
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8012
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: Framework/Helper.php:88
+#: Framework/Helper.php:106
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 #: app/customizer/design/sections/base-design/controls/h2-style.php:21
@@ -135,117 +147,136 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:23
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:533
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3320
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3716
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3763
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4367
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5612
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5985
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6028
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:100
+#: Framework/Helper.php:118
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:21
 #: app/customizer/infobar/controls/align.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:573
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5937
 msgid "Center"
 msgstr "中央"
 
-#: Framework/Helper.php:101
+#: Framework/Helper.php:119
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:20
 #: app/customizer/infobar/controls/align.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:574
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5573
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5936
 msgid "Right"
 msgstr "右"
 
-#: Framework/Helper.php:112
+#: Framework/Helper.php:130
 msgid "Sticky"
 msgstr "上部固定"
 
-#: Framework/Helper.php:113
+#: Framework/Helper.php:131
 msgid "Overlay (Sticky)"
 msgstr "オーバレイ（上部固定）"
 
-#: Framework/Helper.php:114
+#: Framework/Helper.php:132
 msgid "Overlay (Sticky / When scrolling, whilte background)"
 msgstr "オーバーレイ（上部固定 / スクロール時背景白）"
 
-#: Framework/Helper.php:115 app/setup/widget-area.php:331
+#: Framework/Helper.php:133 app/setup/widget-area.php:331
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4106
 msgid "Overlay"
 msgstr "オーバレイ"
 
-#: Framework/Helper.php:116
+#: Framework/Helper.php:134
 msgid "Normal"
 msgstr "ノーマル"
 
-#: Framework/Helper.php:141 Framework/Helper.php:444
+#: Framework/Helper.php:159 Framework/Helper.php:472
 #: template-parts/content/prev-next-nav.php:72
 msgctxt "excerpt_length"
 msgid "55"
 msgstr "55"
 
 #. Theme Name of the plugin/theme
-#: Framework/Helper.php:198 app/constructor/trial.php:23
+#: Framework/Helper.php:216 app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1714
 msgid "Snow Monkey"
 msgstr "Snow Monkey"
 
-#: Framework/Helper.php:203 app/constructor/trial.php:28
+#: Framework/Helper.php:221 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1719
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:208 app/constructor/trial.php:33
+#: Framework/Helper.php:226 app/constructor/trial.php:33
 #: app/customizer/title-tagline/controls/copyright.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1724
 msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %1$s: Theme link, %2$s: Developer link
-#: Framework/Helper.php:213
+#: Framework/Helper.php:231
 #: app/customizer/title-tagline/controls/copyright.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1729
 #, php-format
 msgid "%1$s theme by %2$s"
 msgstr "%1$s テーマ by %2$s"
 
 #. translators: %s: WordPress link
-#: Framework/Helper.php:220 app/constructor/trial.php:45
+#: Framework/Helper.php:238 app/constructor/trial.php:45
 #: app/customizer/title-tagline/controls/copyright.php:36
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1736
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:467
+#: Framework/Helper.php:495
 msgid "Sans serif"
 msgstr "サンセリフ（ゴシック体）"
 
-#: Framework/Helper.php:471
+#: Framework/Helper.php:499
 msgid "Serif"
 msgstr "セリフ（明朝体）"
 
-#: Framework/Helper.php:475
+#: Framework/Helper.php:503
 msgid "Noto Sans JP"
 msgstr "Noto Sans JP"
 
-#: Framework/Helper.php:478 Framework/Helper.php:494 Framework/Helper.php:510
-#: Framework/Helper.php:526 Framework/Helper.php:542 Framework/Helper.php:558
+#: Framework/Helper.php:506 Framework/Helper.php:522 Framework/Helper.php:538
+#: Framework/Helper.php:554 Framework/Helper.php:570 Framework/Helper.php:586
 msgid "Regular 400"
 msgstr "Regular 400"
 
-#: Framework/Helper.php:482 Framework/Helper.php:498 Framework/Helper.php:514
-#: Framework/Helper.php:530 Framework/Helper.php:546 Framework/Helper.php:562
+#: Framework/Helper.php:510 Framework/Helper.php:526 Framework/Helper.php:542
+#: Framework/Helper.php:558 Framework/Helper.php:574 Framework/Helper.php:590
 msgid "Bold 700"
 msgstr "Bold 700"
 
-#: Framework/Helper.php:491
+#: Framework/Helper.php:519
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
-#: Framework/Helper.php:507
+#: Framework/Helper.php:535
 msgid "M PLUS 1p"
 msgstr "M PLUS 1p"
 
-#: Framework/Helper.php:523
+#: Framework/Helper.php:551
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
-#: Framework/Helper.php:539
+#: Framework/Helper.php:567
 msgid "BIZ UDPGothic"
 msgstr "BIZ UDPGothic"
 
-#: Framework/Helper.php:555
+#: Framework/Helper.php:583
 msgid "BIZ UDPMincho"
 msgstr "BIZ UDPMincho"
 
@@ -279,11 +310,13 @@ msgstr ""
 "ません）。製品版ではアップデートが配信される他、サポートフォーラムの利用や限"
 "定記事の閲覧などのサービスが受けられます。ご契約は%3$sこちら%4$s。"
 
-#: app/customizer/advertisement/controls/google-adsense.php:15
+#: app/customizer/advertisement/controls/google-adsense.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:355
 msgid "Google Adsense"
 msgstr "Google Adsense"
 
-#: app/customizer/advertisement/controls/google-adsense.php:16
+#: app/customizer/advertisement/controls/google-adsense.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:356
 msgid ""
 "When pasting the code of the responsive ad unit, the advertisement is "
 "displayed in the prescribed part of the theme. If you want to display at "
@@ -293,43 +326,53 @@ msgstr ""
 "表示されます。もし任意の位置に広告を表示したい場合は、ウィジェット等を使用し"
 "てください。"
 
-#: app/customizer/advertisement/controls/google-adsense.php:16
+#: app/customizer/advertisement/controls/google-adsense.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:356
 msgid "Paste only the ins tag for ad units."
 msgstr "広告ユニットの ins タグだけを貼り付けてください。"
 
-#: app/customizer/advertisement/controls/google-auto-ads.php:15
+#: app/customizer/advertisement/controls/google-auto-ads.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:403
 msgid "Google Adsense Auto Ads"
 msgstr "Google Adsense 自動広告"
 
-#: app/customizer/advertisement/controls/google-auto-ads.php:16
+#: app/customizer/advertisement/controls/google-auto-ads.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:404
 msgid "Paste only the value of data-ad-client of script tag."
 msgstr "script タグの data-ad-client の中身だけを貼り付けてください。"
 
-#: app/customizer/advertisement/controls/google-auto-ads.php:16
+#: app/customizer/advertisement/controls/google-auto-ads.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:404
 msgid "Authentication can also be performed by setting this option."
 msgstr "この項目を設定して認証を実行することもできます。"
 
-#: app/customizer/advertisement/controls/google-infeed-ads.php:15
+#: app/customizer/advertisement/controls/google-infeed-ads.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:442
 msgid "Google Adsense Infeed Ads"
 msgstr "Google Adsense インフィード広告"
 
-#: app/customizer/advertisement/controls/google-infeed-ads.php:16
+#: app/customizer/advertisement/controls/google-infeed-ads.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:443
 msgid ""
 "When pasting the code of the infeed ads, the advertisement is displayed in "
 "posts list."
 msgstr ""
 "インフィード広告のコードをペーストすると、記事一覧に広告が表示されます。"
 
-#: app/customizer/advertisement/controls/google-infeed-ads.php:16
-#: app/customizer/advertisement/controls/google-matched-content.php:16
+#: app/customizer/advertisement/controls/google-infeed-ads.php:20
+#: app/customizer/advertisement/controls/google-matched-content.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:443
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:487
 msgid "Paste only the ins tag."
 msgstr "ins タグだけを貼り付けてください。"
 
-#: app/customizer/advertisement/controls/google-matched-content.php:15
+#: app/customizer/advertisement/controls/google-matched-content.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:486
 msgid "Google Adsense Matched Content"
 msgstr "Google Adsense 関連コンテンツ"
 
-#: app/customizer/advertisement/controls/google-matched-content.php:16
+#: app/customizer/advertisement/controls/google-matched-content.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:487
 msgid ""
 "When pasting the code of the matched content, related posts are replaced "
 "with advertisements."
@@ -337,25 +380,31 @@ msgstr ""
 "関連コンテンツのコードをペーストすると、関連記事が広告に差し替えられます。"
 
 #: app/customizer/advertisement/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:23
 msgid "Advertisement"
 msgstr "広告"
 
 #: app/customizer/design-skin/controls/design-skin.php:15
 #: app/customizer/design-skin/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:81
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:527
 msgid "Design skin"
 msgstr "デザインスキン"
 
 #: app/customizer/design-skin/controls/design-skin.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:528
 msgid "If set this, please save and reload."
 msgstr "設定したら、保存してリロードしてください。"
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/design-skin/section.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:85
 #, php-format
 msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
 msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダウンロードできます。"
 
 #: app/customizer/design/panel.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:52
 msgid "Design"
 msgstr "デザイン"
 
@@ -368,6 +417,15 @@ msgstr "デザイン"
 #: app/customizer/design/sections/post/controls/eyecatch.php:18
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:19
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2981
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4412
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4582
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4818
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5150
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6309
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6450
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6806
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7071
 msgid "Featured image position"
 msgstr "アイキャッチ画像の位置"
 
@@ -376,6 +434,13 @@ msgstr "アイキャッチ画像の位置"
 #. translators: 1: bbPress single
 #. translators: 1: archive
 #. translators: 1: Custom post type label
+#. translators: 1: Post type label
+#. translators: 1: WooCommerce product
+#. translators: 1: archive
+#. translators: 1: bbPress archive
+#. translators: 1: bbPress single
+#. translators: 1: Custom post type label
+#. translators: 1: archive
 #. translators: 1: Post type label
 #. translators: 1: WooCommerce product
 #: app/customizer/design/sections/archive/controls/eyecatch.php:19
@@ -387,12 +452,23 @@ msgstr "アイキャッチ画像の位置"
 #: app/customizer/design/sections/post/controls/eyecatch.php:21
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:22
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2984
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4415
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4585
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4821
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5153
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6312
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6453
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6809
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7074
 #, php-format
 msgid "Select how to display the featured image in %1$s page."
 msgstr "%1$sページでアイキャッチ画像をどのように表示するか選択してください。"
 
 #: app/customizer/design/sections/archive/controls/eyecatch.php:20
 #: app/customizer/design/sections/archive/controls/layout.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2985
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3031
 msgid "archive"
 msgstr "アーカイブ"
 
@@ -401,9 +477,18 @@ msgstr "アーカイブ"
 #: app/customizer/design/sections/custom-post/controls/layout.php:21
 #: app/customizer/design/sections/page/controls/layout.php:18
 #: app/customizer/design/sections/post/controls/layout.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3027
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4871
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5251
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6355
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6498
 msgid "Page layout"
 msgstr "ページレイアウト"
 
+#. translators: 1: archive
+#. translators: 1: Post type label
+#. translators: 1: archive
+#. translators: 1: Post type label
 #. translators: 1: archive
 #. translators: 1: Post type label
 #: app/customizer/design/sections/archive/controls/layout.php:21
@@ -411,6 +496,11 @@ msgstr "ページレイアウト"
 #: app/customizer/design/sections/custom-post/controls/layout.php:24
 #: app/customizer/design/sections/page/controls/layout.php:21
 #: app/customizer/design/sections/post/controls/layout.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3030
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4874
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5254
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6358
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6501
 #, php-format
 msgid "Select page layout for %1$s page."
 msgstr "%1$sページのページレイアウトを選択してください。"
@@ -424,96 +514,133 @@ msgstr "%1$sページのページレイアウトを選択してください。"
 #: app/customizer/design/sections/post/controls/page-header-align.php:16
 #: app/customizer/design/sections/woocommerce-archive-page/controls/page-header-align.php:16
 #: app/customizer/design/sections/woocommerce-single/controls/page-header-align.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3071
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4537
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4672
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4929
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5313
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6406
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6542
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6926
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7156
 msgid "Page header alignment"
 msgstr "ページヘッダーの行揃え"
 
 #: app/customizer/design/sections/archive/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1837
 msgid "Archive pages settings"
 msgstr "アーカイブページ設定"
 
 #. translators: 1: User name
 #: app/customizer/design/sections/author/section.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1879
 #, php-format
 msgid "[ %1$s ] author page settings"
 msgstr "[ %1$s ] 著者ページ設定"
 
 #: app/customizer/design/sections/base-design/controls/accent-color.php:15
-#: app/customizer/design/sections/category/controls/accent-color.php:24
+#: app/customizer/design/sections/category/controls/accent-color.php:30
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3111
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4722
 msgid "Accent color"
 msgstr "アクセントカラー"
 
 #: app/customizer/design/sections/base-design/controls/base-font-size.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3147
 msgid "Base font size(px)"
 msgstr "基本の文字サイズ（px）"
 
 #: app/customizer/design/sections/base-design/controls/base-font.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3191
 msgid "Base font"
 msgstr "基本フォント"
 
 #: app/customizer/design/sections/base-design/controls/base-letter-spacing.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3228
 msgid "Base letter spacing (rem)"
 msgstr "基本の文字間（rem）"
 
 #: app/customizer/design/sections/base-design/controls/base-line-height.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3269
 msgid "Base line height"
 msgstr "基本の line-height"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3312
 msgid "Breadcrumbs display position"
 msgstr "パンくずリストの表示位置"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3317
 msgid "Top of contents ( Fit to content width )"
 msgstr "コンテンツの上（コンテンツ幅に合わせる）"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:23
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:23
 #: app/setup/widget-area.php:109
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3884
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3318
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8013
 msgid "Bottom of contents"
 msgstr "コンテンツの下"
 
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3319
 msgid "Bottom of contents ( Fit to content width )"
 msgstr "コンテンツの下（コンテンツ幅に合わせる）"
 
-#: app/customizer/design/sections/base-design/controls/container-max-width.php:17
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3362
 msgid "Container max width"
 msgstr "コンテナーの最大幅"
 
-#: app/customizer/design/sections/base-design/controls/container-max-width.php:18
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3363
 msgid "You can set the maximum width of the container."
 msgstr "コンテナーの最大幅を設定することができます。"
 
-#: app/customizer/design/sections/base-design/controls/container-max-width.php:18
-#: app/customizer/design/sections/base-design/controls/has-sidebar-main-basis.php:16
-#: app/customizer/design/sections/base-design/controls/has-sidebar-sidebar-basis.php:16
-#: app/customizer/design/sections/base-design/controls/slim-width.php:16
+#: app/customizer/design/sections/base-design/controls/container-max-width.php:22
+#: app/customizer/design/sections/base-design/controls/has-sidebar-main-basis.php:20
+#: app/customizer/design/sections/base-design/controls/has-sidebar-sidebar-basis.php:20
+#: app/customizer/design/sections/base-design/controls/slim-width.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3363
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3804
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3840
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4142
 msgid "Numeric values only are treated as px."
 msgstr "数値のみは pxとして扱われます。"
 
-#: app/customizer/design/sections/base-design/controls/default-page-header-image.php:15
+#: app/customizer/design/sections/base-design/controls/default-page-header-image.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3398
 msgid "Default page header image"
 msgstr "デフォルトページヘッダー画像"
 
-#: app/customizer/design/sections/base-design/controls/default-thumbnail.php:15
+#: app/customizer/design/sections/base-design/controls/default-thumbnail.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3433
 msgid "Default thumbnail"
 msgstr "デフォルトアイキャッチ画像"
 
 #: app/customizer/design/sections/base-design/controls/display-page-top.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3468
 msgid "Display the page top button"
 msgstr "ページ上部へ戻るボタンを表示"
 
 #: app/customizer/design/sections/base-design/controls/display-site-branding-description.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3505
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3556
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5029
 msgid "Make the entries one column on mobile device"
 msgstr "モバイル端末時に記事一覧を1列にする"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout.php:17
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3602
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5090
 msgid "Entries layout"
 msgstr "記事一覧レイアウト"
 
@@ -529,6 +656,12 @@ msgstr "記事一覧レイアウト"
 #: app/widget/snow-monkey-rss/_form.php:80
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:126
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:134
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3606
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3614
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5094
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5102
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6641
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6649
 msgid "Rich media"
 msgstr "リッチメディア"
 
@@ -538,6 +671,9 @@ msgstr "リッチメディア"
 #: app/widget/snow-monkey-recent-posts/_form.php:89
 #: app/widget/snow-monkey-rss/_form.php:74
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:128
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3608
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5096
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6643
 msgid "Text"
 msgstr "テキスト"
 
@@ -547,6 +683,9 @@ msgstr "テキスト"
 #: app/widget/snow-monkey-recent-posts/_form.php:90
 #: app/widget/snow-monkey-rss/_form.php:75
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:129
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3609
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5097
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6644
 msgid "Text 2"
 msgstr "テキスト2"
 
@@ -556,6 +695,9 @@ msgstr "テキスト2"
 #: app/widget/snow-monkey-recent-posts/_form.php:91
 #: app/widget/snow-monkey-rss/_form.php:76
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:130
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3610
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5098
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6645
 msgid "Panels"
 msgstr "パネル"
 
@@ -566,6 +708,9 @@ msgstr "パネル"
 #: app/widget/snow-monkey-recent-posts/_form.php:94
 #: app/widget/snow-monkey-rss/_form.php:79
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:133
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3613
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5101
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6648
 #, php-format
 msgid "Carousel (%1$s)"
 msgstr "カルーセル（%1$s）"
@@ -576,16 +721,22 @@ msgstr "カルーセル（%1$s）"
 #: app/widget/snow-monkey-recent-posts/_form.php:97
 #: app/widget/snow-monkey-rss/_form.php:82
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:136
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3616
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5104
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6651
 msgid "Large image"
 msgstr "大きな画像"
 
 #: app/customizer/design/sections/base-design/controls/font-weight.php:28
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3665
 msgid "Font weight"
 msgstr "フォントの太さ"
 
 #. translators: %1$s: heading element
 #: app/customizer/design/sections/base-design/controls/h2-style.php:17
 #: app/customizer/design/sections/base-design/controls/h3-style.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3712
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3759
 #, php-format
 msgid "Design of the %1$s in articles"
 msgstr "記事中の %1$s のデザイン"
@@ -595,56 +746,75 @@ msgstr "記事中の %1$s のデザイン"
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:20
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:21
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3717
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3764
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3881
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4184
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4368
 msgid "Standard"
 msgstr "標準"
 
-#: app/customizer/design/sections/base-design/controls/has-sidebar-main-basis.php:15
+#: app/customizer/design/sections/base-design/controls/has-sidebar-main-basis.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3803
 msgid "Recommended width of the main column for templates with sidebars"
 msgstr "サイドバーがあるテンプレートのメインカラムの推奨幅"
 
-#: app/customizer/design/sections/base-design/controls/has-sidebar-sidebar-basis.php:15
+#: app/customizer/design/sections/base-design/controls/has-sidebar-sidebar-basis.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3839
 msgid "Recommended width of the sidebar for templates with sidebars"
 msgstr "サイドバーがあるテンプレートのサイドバーの推奨幅"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3877
 msgid "Container left/right spaces on PC"
 msgstr "PC 時のコンテナーの左右スペース"
 
 #: app/customizer/design/sections/base-design/controls/lg-container-margin.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3882
 msgid "Wide"
 msgstr "広め"
 
 #: app/customizer/design/sections/base-design/controls/lg-logo-scale.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3919
 msgid "Custom logo scale (%) on PC"
 msgstr "PC 時のカスタムロゴの拡大率（%）"
 
 #: app/customizer/design/sections/base-design/controls/margin-scale.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3978
 msgid "White space size between elements"
 msgstr "要素間の余白サイズ"
 
 #: app/customizer/design/sections/base-design/controls/margin-scale.php:17
 #: app/customizer/design/sections/base-design/controls/space.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3979
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4283
 msgid "Default: "
 msgstr "デフォルト："
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4024
 msgid "Overlay widget area max width"
 msgstr "オーバーレイウィジェットエリアの最大幅"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4025
 msgid "You can set max width of overlay widget area"
 msgstr "オーバーレイウィジェットエリアの最大幅を設定することができます"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4029
 msgid "Wide width"
 msgstr "ワイド幅"
 
 #: app/customizer/design/sections/base-design/controls/overlay-widget-area-max-width.php:24
-#: app/customizer/design/sections/base-design/controls/slim-width.php:15
+#: app/customizer/design/sections/base-design/controls/slim-width.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4030
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4141
 msgid "Slim width"
 msgstr "スリム幅"
 
 #: app/customizer/design/sections/base-design/controls/protected-more.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4068
 msgid ""
 "If the post using more tag and password protect at the same time, display "
 "contents before more tag"
@@ -653,83 +823,110 @@ msgstr ""
 "ツを表示する"
 
 #: app/customizer/design/sections/base-design/controls/pure-css-gallery.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4105
 msgid "Use Pure CSS Gallery"
 msgstr "Pure CSS ギャラリーを使用する"
 
-#: app/customizer/design/sections/base-design/controls/slim-width.php:16
+#: app/customizer/design/sections/base-design/controls/slim-width.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4142
 msgid "You can set the width when the slim width is specified."
 msgstr "スリム幅を指定した場合の幅を設定することができます。"
 
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4179
 msgid "Container left/right spaces on mobile device"
 msgstr "モバイル端末時のコンテナーの左右スペース"
 
 #: app/customizer/design/sections/base-design/controls/sm-container-margin.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4183
 msgid "Narrow"
 msgstr "狭め"
 
 #: app/customizer/design/sections/base-design/controls/sm-logo-scale.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4223
 msgid "Custom logo scale (%) on mobile device"
 msgstr "モバイル端末時のカスタムロゴの拡大率（%）"
 
 #: app/customizer/design/sections/base-design/controls/space.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4282
 msgid "White space size"
 msgstr "余白サイズ"
 
 #: app/customizer/design/sections/base-design/controls/sub-accent-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4324
 msgid "Sub accent color"
 msgstr "サブアクセントカラー"
 
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4363
 msgid "Design of widget-titles"
 msgstr "ウィジェットタイトルのデザイン"
 
 #: app/customizer/design/sections/base-design/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1914
 msgid "Base design settings"
 msgstr "基本デザイン設定"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4416
 msgid "bbPress archive"
 msgstr "bbPress アーカイブ"
 
-#: app/customizer/design/sections/bbpress-archive-page/controls/header-image.php:15
-#: app/customizer/design/sections/category/controls/header-image.php:28
-#: app/customizer/design/sections/custom-post-archive/controls/header-image.php:19
-#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:42
-#: app/customizer/design/sections/post-tag/controls/header-image.php:28
-#: app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:15
-#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:28
-#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:28
+#: app/customizer/design/sections/bbpress-archive-page/controls/header-image.php:19
+#: app/customizer/design/sections/category/controls/header-image.php:30
+#: app/customizer/design/sections/custom-post-archive/controls/header-image.php:25
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:44
+#: app/customizer/design/sections/post-tag/controls/header-image.php:30
+#: app/customizer/design/sections/woocommerce-archive-page/controls/header-image.php:19
+#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:30
+#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:30
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4454
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4775
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5205
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5435
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6765
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6848
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6980
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7030
 msgid "Featured Image"
 msgstr "アイキャッチ画像"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/layout.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4491
 msgid "bbPress archive page layout"
 msgstr "bbPress アーカイブページレイアウト"
 
 #: app/customizer/design/sections/bbpress-archive-page/controls/layout.php:22
 #: app/customizer/design/sections/bbpress-single/controls/layout.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4497
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4632
 msgid "Same as the page layout"
 msgstr "固定ページレイアウトと同じ"
 
 #: app/customizer/design/sections/bbpress-archive-page/section.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1945
 msgid "bbPress archive page settings"
 msgstr "bbPress アーカイブページ設定"
 
 #: app/customizer/design/sections/bbpress-single/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4586
 msgid "bbPress single"
 msgstr "bbPress 個別"
 
 #: app/customizer/design/sections/bbpress-single/controls/layout.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4626
 msgid "bbPress single page layout"
 msgstr "bbPress 個別ページレイアウト"
 
 #: app/customizer/design/sections/bbpress-single/section.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1983
 msgid "bbPress single page settings"
 msgstr "bbPress 個別ページ設定"
 
-#: app/customizer/design/sections/category/controls/header-image.php:29
-#: app/customizer/design/sections/post-tag/controls/header-image.php:29
+#: app/customizer/design/sections/category/controls/header-image.php:31
+#: app/customizer/design/sections/post-tag/controls/header-image.php:31
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4776
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6766
 msgid ""
 "This setting takes priority over featured image setting of posts page "
 "settings"
@@ -737,6 +934,7 @@ msgstr "この設定は投稿ページ設定のアイキャッチ画像の設定
 
 #. translators: 1: Category name
 #: app/customizer/design/sections/category/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2031
 #, php-format
 msgid "[ %1$s ] category pages settings"
 msgstr "[ %1$s ] カテゴリーページ設定"
@@ -744,52 +942,67 @@ msgstr "[ %1$s ] カテゴリーページ設定"
 #. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5156
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5257
 #, php-format
 msgid "%1$s archive"
 msgstr "%1$sアーカイブ"
 
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:36
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5266
 msgid "Same as the post archive page layout"
 msgstr "投稿のアーカイブページレイアウトと同じ"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:19
 #: app/customizer/design/sections/custom-post/controls/view.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4978
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5362
 msgid "View template"
 msgstr "ビューテンプレート"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:20
 #: app/customizer/design/sections/custom-post/controls/view.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4979
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5363
 msgid "Select the view template to use."
 msgstr "使用するビューテンプレートを選択してください。"
 
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:25
 #: app/customizer/design/sections/custom-post/controls/view.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4984
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5368
 msgid "The view template of the post"
 msgstr "投稿のビューテンプレート"
 
 #. translators: 1: Custom post type name
 #: app/customizer/design/sections/custom-post-archive/section.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2131
 #, php-format
 msgid "%1$s archive page settings"
 msgstr "%1$sアーカイブページ設定"
 
 #: app/customizer/design/sections/custom-post/controls/layout.php:32
 #: app/customizer/design/sections/page/controls/layout.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4882
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6366
 msgid "Same as the post page layout"
 msgstr "投稿のページレイアウトと同じ"
 
 #: app/customizer/design/sections/custom-post/controls/view.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4985
 msgid "The view template of the page"
 msgstr "固定ページのビューテンプレート"
 
 #. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post/section.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2077
 #, php-format
 msgid "%1$s pages settings"
 msgstr "%1$sページ設定"
 
 #. translators: %1$s: Custom post type label */
-#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:45
+#: app/customizer/design/sections/custom-taxonomy/controls/header-image.php:47
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5438
 #, php-format
 msgid ""
 "This setting takes priority over featured image setting of %1$s archive page "
@@ -798,195 +1011,249 @@ msgstr ""
 "この設定は%1$sアーカイブページ設定のアイキャッチ画像の設定よりも優先されます"
 
 #. translators: 1: Taxonomy name
-#: app/customizer/design/sections/custom-taxonomy/section.php:40
+#: app/customizer/design/sections/custom-taxonomy/section.php:41
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2215
 #, php-format
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
 
 #: app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5487
 msgid "Display the search box in drawer navigation"
 msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5526
 msgid "Drawer navigation type"
 msgstr "ドロワーナビゲーションのタイプ"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5531
 msgid "Overall"
 msgstr "オーバーオール"
 
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5568
 msgid "Hamberger button position"
 msgstr "ハンバーガーボタンの位置"
 
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5608
 msgid "Drawer navigation highlight type"
 msgstr "ドロワーナビゲーションの強調タイプ"
 
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:20
 #: app/customizer/infobar/controls/background-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:608
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5613
 msgid "Background color"
 msgstr "背景色"
 
 #: app/customizer/design/sections/drawer-nav/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2259
 msgid "Drawer navigation"
 msgstr "ドロワーナビゲーション"
 
 #: app/customizer/design/sections/footer/controls/alignfull.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5648
 msgid "Make footer full width"
 msgstr "フッターを全幅にする"
 
 #: app/customizer/design/sections/footer/controls/footer-layout.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5686
 msgid "Footer layout"
 msgstr "フッターレイアウト"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5725
 msgid "Number of columns in the footer widget area on PC"
 msgstr "PC 時のフッターウィジェットエリアのカラム数"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:20
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5729
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5776
 msgid "1 column"
 msgstr "1カラム"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:21
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5730
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5777
 msgid "2 columns"
 msgstr "2カラム"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:22
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5731
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5778
 msgid "3 columns"
 msgstr "3カラム"
 
 #: app/customizer/design/sections/footer/controls/footer-widget-area-column-size.php:23
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5732
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5779
 msgid "4 columns"
 msgstr "4カラム"
 
 #: app/customizer/design/sections/footer/controls/md-footer-widget-area-column-size.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5772
 msgid "Number of columns in the footer widget area on tablet"
 msgstr "タブレット時のフッターウィジェットエリアのカラム数"
 
 #: app/customizer/design/sections/footer/section.php:20
 #: app/setup/widget-area.php:309
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4084
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2290
 msgid "Footer"
 msgstr "フッター"
 
 #: app/customizer/design/sections/header/controls/alignfull.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5817
 msgid "Make header full width"
 msgstr "ヘッダーを全幅にする"
 
 #: app/customizer/design/sections/header/controls/display-header-content-on-mobile.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5858
 msgid "Display header content on mobile too."
 msgstr "モバイルでもヘッダーコンテンツを表示する。"
 
 #: app/customizer/design/sections/header/controls/display-site-branding-in-drop-nav.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5894
 msgid "Display site logo in drop navigation."
 msgstr "ドロップナビゲーションにサイトロゴを表示する"
 
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5932
 msgid "Global navigation alignment"
 msgstr "グローバルナビゲーションの配置"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5978
 msgid "Global navigation current view effect"
 msgstr "グローバルナビゲーションのカレント表示エフェクト"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5982
 msgid "Same as hover effect"
 msgstr "ホバーエフェクトと同じ"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:21
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5983
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6026
 msgid "Text color reversal"
 msgstr "文字色の反転"
 
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:22
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5984
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6027
 msgid "Underline"
 msgstr "下線"
 
 #: app/customizer/design/sections/header/controls/gnav-hover-effect.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6022
 msgid "Global navigation hover effect"
 msgstr "グローバルナビゲーションのホバーエフェクト"
 
-#: app/customizer/design/sections/header/controls/header-content.php:18
+#: app/customizer/design/sections/header/controls/header-content.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6067
 msgid "Header contents"
 msgstr "ヘッダーコンテンツ"
 
-#: app/customizer/design/sections/header/controls/header-content.php:19
+#: app/customizer/design/sections/header/controls/header-content.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6068
 msgid "Displayed at only PC size."
 msgstr "PC サイズでのみ表示されます。"
 
 #: app/customizer/design/sections/header/controls/header-layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6107
 msgid "Header layout"
 msgstr "ヘッダーレイアウト"
 
 #: app/customizer/design/sections/header/controls/header-position-lg.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6146
 msgid "Header position for PC"
 msgstr "PC 用ヘッダー位置"
 
 #: app/customizer/design/sections/header/controls/header-position.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6190
 msgid "Header position for mobile"
 msgstr "モバイル用ヘッダー位置"
 
 #: app/customizer/design/sections/header/controls/header-text-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6227
 msgid "Header text color"
 msgstr "ヘッダーの文字色"
 
 #: app/customizer/design/sections/header/controls/vertical-global-nav.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6265
 msgid "Make global navigation vertical"
 msgstr "グローバルナビゲーションを縦書きにする"
 
 #: app/customizer/design/sections/header/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2321
 msgid "Header"
 msgstr "ヘッダー"
 
 #: app/customizer/design/sections/home/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2350
 msgid "Posts page settings"
 msgstr "投稿ページ設定"
 
 #: app/customizer/design/sections/page/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2382
 msgid "Pages settings"
 msgstr "固定ページ設定"
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/post-tag/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2458
 #, php-format
 msgid "[ %1$s ] tag pages settings"
 msgstr "[ %1$s ] タグページ設定"
 
 #: app/customizer/design/sections/post/controls/profile-box.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6585
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6636
 msgid "Related posts layout"
 msgstr "関連記事のレイアウト"
 
 #: app/customizer/design/sections/post/controls/related-posts.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6714
 msgid "Display related posts in posts"
 msgstr "記事に関連記事を表示する"
 
 #: app/customizer/design/sections/post/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2414
 msgid "Posts settings"
 msgstr "投稿ページ設定"
 
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6810
 msgid "WooCommerce products"
 msgstr "WooCommerce 商品一覧ページ"
 
 #: app/customizer/design/sections/woocommerce-archive-page/controls/layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6887
 msgid "WooCommerce products page layout"
 msgstr "WooCommerce 商品一覧ページレイアウト"
 
 #: app/customizer/design/sections/woocommerce-archive-page/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2495
 msgid "WooCommerce products page settings"
 msgstr "WooCommerce 商品一覧ページ設定"
 
-#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:29
-#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:29
+#: app/customizer/design/sections/woocommerce-product-category/controls/header-image.php:31
+#: app/customizer/design/sections/woocommerce-product-tag/controls/header-image.php:31
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6981
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7031
 msgid ""
 "This setting takes priority over featured image setting of WooCommerce "
 "products page settings"
@@ -996,45 +1263,55 @@ msgstr ""
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/woocommerce-product-category/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2542
 #, php-format
 msgid "[ %1$s ] WooCommerce products category settings"
 msgstr "[ %1$s ] WooCommerce 商品カテゴリー設定"
 
 #. translators: 1: Tag name
 #: app/customizer/design/sections/woocommerce-product-tag/section.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2592
 #, php-format
 msgid "[ %1$s ] WooCommerce products tag settings"
 msgstr "[ %1$s ] WooCommerce 商品タグ設定"
 
 #: app/customizer/design/sections/woocommerce-single/controls/eyecatch.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7075
 msgid "WooCommerce product"
 msgstr "WooCommerce 商品"
 
 #: app/customizer/design/sections/woocommerce-single/controls/layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7117
 msgid "WooCommerce product page layout"
 msgstr "WooCommerce 商品ページレイアウト"
 
 #: app/customizer/design/sections/woocommerce-single/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2632
 msgid "WooCommerce product page settings"
 msgstr "WooCommerce 商品ページ設定"
 
 #: app/customizer/infobar/controls/align.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:568
 msgid "Infobar text alignment"
 msgstr "お知らせバーのテキスト配置"
 
-#: app/customizer/infobar/controls/content.php:16
+#: app/customizer/infobar/controls/content.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:645
 msgid "Infobar content"
 msgstr "お知らせバーコンテンツ"
 
 #: app/customizer/infobar/controls/font-color.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:700
 msgid "Text color"
 msgstr "テキストカラー"
 
 #: app/customizer/infobar/controls/position.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:735
 msgid "Infobar position"
 msgstr "お知らせバーの位置"
 
 #: app/customizer/infobar/controls/position.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:736
 msgid ""
 "Depending on the \"Header position\" setting, it may not appear in the "
 "specified position."
@@ -1042,38 +1319,47 @@ msgstr ""
 "「ヘッダー位置」の設定によっては、指定した位置に表示されない場合があります。"
 
 #: app/customizer/infobar/controls/position.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:740
 msgid "Header top"
 msgstr "ヘッダー上部"
 
 #: app/customizer/infobar/controls/position.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:741
 msgid "Header bottom"
 msgstr "ヘッダー下部"
 
 #: app/customizer/infobar/controls/target.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:775
 msgid "Infobar link target"
 msgstr "お知らせバーリンクターゲット"
 
 #: app/customizer/infobar/controls/target.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:779
 msgid "Open in the same window"
 msgstr "同じウィンドウで開く"
 
 #: app/customizer/infobar/controls/target.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:780
 msgid "Open in new window"
 msgstr "新しいウィンドウで開く"
 
-#: app/customizer/infobar/controls/url.php:15
+#: app/customizer/infobar/controls/url.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:817
 msgid "Infobar link URL"
 msgstr "お知らせバーリンク URL"
 
 #: app/customizer/infobar/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:116
 msgid "Infobar"
 msgstr "お知らせバー"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:855
 msgid "Use browser cache"
 msgstr "ブラウザキャッシュを使用する"
 
 #: app/customizer/page-speed-optimization/controls/browser-cache.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:856
 msgid ""
 "The server must support htaccess, IfModule and mod_expires. If you get the "
 "Internal Server Error (500), delete the characters added to .htaccess."
@@ -1083,30 +1369,45 @@ msgstr ""
 "た文字を削除してください。"
 
 #: app/customizer/page-speed-optimization/controls/cache-footer.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:908
 msgid "Caching footer"
 msgstr "フッターをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/cache-header.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:943
 msgid "Caching header"
 msgstr "ヘッダーをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/cache-nav-menus.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:978
 msgid "Caching nav menus"
 msgstr "メニューをキャッシュ"
 
 #: app/customizer/page-speed-optimization/controls/cache-widget-areas.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1013
 msgid "Caching widget areas"
 msgstr "ウィジェットエリアをキャッシュ"
 
+#: app/customizer/page-speed-optimization/controls/debug-mode.php:15
+msgid "Enable Snow Monkey debug mode"
+msgstr "Snow Monkeyのデバッグモードを有効にする"
+
+#: app/customizer/page-speed-optimization/controls/debug-mode.php:16
+msgid "For details, please refer to the manual on the official website."
+msgstr "詳しくは公式サイトのマニュアルをご覧ください。"
+
 #: app/customizer/page-speed-optimization/controls/disable-emoji.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1048
 msgid "Disable emoji"
 msgstr "絵文字を無効化する"
 
 #: app/customizer/page-speed-optimization/controls/expand-get-template-part.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1083
 msgid "Extends get_template_part()"
 msgstr "get_template_part() を拡張する"
 
 #: app/customizer/page-speed-optimization/controls/expand-get-template-part.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1084
 msgid ""
 "When disabled, customization by code may not be reflected. For details, "
 "please refer to the manual on the official website."
@@ -1115,14 +1416,17 @@ msgstr ""
 "公式サイトのマニュアルをご覧ください。"
 
 #: app/customizer/page-speed-optimization/controls/http2-server-push.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1119
 msgid "Use HTTP2 Server Push"
 msgstr "HTTP2 Server Push を使用する"
 
 #: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1154
 msgid "Optimize the jQuery loading"
 msgstr "jQuery の 読み込みを最適化する"
 
 #: app/customizer/page-speed-optimization/controls/jquery-loading-optimization.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1155
 msgid ""
 "Load jQuery and other scripts as defer + head as much as possible. Depending "
 "on your plugins and child theme, JavaScript error may occur."
@@ -1132,18 +1436,22 @@ msgstr ""
 "す。"
 
 #: app/customizer/page-speed-optimization/controls/link-prefetching.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1190
 msgid "Use link prefetching"
 msgstr "リンクの先読み機能（prefetch）を使用する"
 
 #: app/customizer/page-speed-optimization/controls/output-head-style.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1225
 msgid "Output CSS in head"
 msgstr "CSS を head に出力する"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1260
 msgid "Setup files loading method."
 msgstr "設定ファイルの読み込み方式"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1261
 msgid ""
 "You can select the method of loading the setup files. Depending on the "
 "method you select, customization by code may not be reflected. For details, "
@@ -1154,132 +1462,165 @@ msgstr ""
 "覧ください。"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1265
 msgid "get_template_parts (Default)"
 msgstr "get_template_parts（デフォルト）"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1266
 msgid "load_theme_files"
 msgstr "load_theme_files"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1267
 msgid "concat"
 msgstr "concat"
 
 #: app/customizer/page-speed-optimization/controls/setup-files-loading-method.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1268
 msgid "include"
 msgstr "include"
 
 #: app/customizer/page-speed-optimization/controls/use-lightweight-fontawesome.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1302
 msgid "Use lightweight FontAwesome"
 msgstr "軽量な FontAwesome を使用する"
 
 #: app/customizer/page-speed-optimization/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:145
 msgid "Page speed optimization"
 msgstr "ページ速度最適化"
 
 #: app/customizer/page-speed-optimization/section.php:19
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:146
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7683
 msgid "This feature is a beta version."
 msgstr "この機能はベータ版です。"
 
 #: app/customizer/seo/panel.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:175
 msgid "SEO"
 msgstr "SEO"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7199
 msgid "noindex settings"
 msgstr "noindex の設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7203
 msgid "Set category pages to noindex"
 msgstr "カテゴリーページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7204
 msgid "Set tag pages to noindex"
 msgstr "タグページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7205
 msgid "Set author pages to noindex"
 msgstr "著者ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7206
 msgid "Set year pages to noindex"
 msgstr "年ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7207
 msgid "Set month pages to noindex"
 msgstr "月ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/controls/robots-noindex.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7208
 msgid "Set day pages to noindex"
 msgstr "日ページを noindex に設定"
 
 #: app/customizer/seo/sections/crawler/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2669
 msgid "Crawler"
 msgstr "クローラー"
 
 #: app/customizer/seo/sections/google-analytics/controls/for-logged-in.php:17
 #: app/customizer/seo/sections/google-tag-manager/controls/for-logged-in.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7245
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7366
 msgid "Don't output tags to logged-in users"
 msgstr "ログイン中のユーザーにはタグを出力しない"
 
-#: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:17
+#: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7284
 msgid "Tracking ID"
 msgstr "トラッキング ID"
 
-#: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:18
+#: app/customizer/seo/sections/google-analytics/controls/tracking-id.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7285
 msgid "e.g. UA-1111111-11 or G-XXXXXXXX"
 msgstr "例: UA-1111111-11 もしくは G-XXXXXXXX"
 
 #: app/customizer/seo/sections/google-analytics/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2700
 msgid "Google Analytics"
 msgstr "Google アナリティクス"
 
-#: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:18
+#: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7324
 msgid "Google site verification"
 msgstr "Google site verification"
 
 #. translators: 1: content of google-site-verification, 2: google-site-verification meta tag
-#: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:21
+#: app/customizer/seo/sections/google-search-console/controls/google-site-verification.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7327
 #, php-format
 msgid "Please enter part %1$s of %2$s"
 msgstr "%2$sの%1$sの部分を入力してください"
 
 #: app/customizer/seo/sections/google-search-console/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2731
 msgid "Google Search Console"
 msgstr "Google サーチコンソール"
 
-#: app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:17
+#: app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7405
 msgid "Tag Manager ID"
 msgstr "タグマネージャ ID"
 
-#: app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:18
+#: app/customizer/seo/sections/google-tag-manager/controls/tag-manager-id.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7406
 msgid "e.g. GTM-X11X1XX"
 msgstr "例: GTM-X11X1XX"
 
 #: app/customizer/seo/sections/google-tag-manager/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2762
 msgid "Google Tag Manager"
 msgstr "Google タグマネージャ"
 
-#: app/customizer/seo/sections/ogp/controls/fb-app-id.php:17
+#: app/customizer/seo/sections/ogp/controls/fb-app-id.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7444
 msgid "fb:app_id"
 msgstr "fb:app_id"
 
-#: app/customizer/seo/sections/ogp/controls/fb-app-id.php:18
+#: app/customizer/seo/sections/ogp/controls/fb-app-id.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7445
 msgid "If you want to output fb:app_id meta tag, please input."
 msgstr "fb:app_id meta タグを出力させたい場合は入力してください。"
 
 #. translators: 1: <a> tag, 2: </a> tag
-#: app/customizer/seo/sections/ogp/controls/fb-app-id.php:20
+#: app/customizer/seo/sections/ogp/controls/fb-app-id.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7447
 #, php-format
 msgid "fb:app_id can be obtained from %1$sfacebook for developers%2$s."
 msgstr "fb:app_id は %1$sfacebook for developers%2$s から取得できます。"
 
-#: app/customizer/seo/sections/ogp/controls/og-image.php:17
+#: app/customizer/seo/sections/ogp/controls/og-image.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7488
 msgid "Default OGP image"
 msgstr "デフォルト OGP 画像"
 
-#: app/customizer/seo/sections/ogp/controls/og-image.php:18
+#: app/customizer/seo/sections/ogp/controls/og-image.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7489
 msgid ""
 "If a featured image is set in an article, that the featured image is used, "
 "if not set, this image will be used."
@@ -1288,22 +1629,27 @@ msgstr ""
 "されていない場合はこの画像が使用されます。"
 
 #: app/customizer/seo/sections/ogp/controls/ogp.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7527
 msgid "Output OGP meta tag"
 msgstr "OGP メタタグを出力する"
 
 #: app/customizer/seo/sections/ogp/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2793
 msgid "OGP"
 msgstr "OGP"
 
 #: app/customizer/seo/sections/seo-meta/controls/auto-description.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7566
 msgid "Automatically output meta description"
 msgstr "Meta description を自動的に出力する"
 
-#: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:17
+#: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7605
 msgid "Meta description"
 msgstr "Meta description"
 
-#: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:19
+#: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7607
 msgid ""
 "The meta description is normally output only when \"meta description\" in "
 "the page edit screen is entered."
@@ -1311,7 +1657,8 @@ msgstr ""
 "通常、Meta description はページ編集画面で「Meta description」が入力された場合"
 "にのみ出力されます。"
 
-#: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:19
+#: app/customizer/seo/sections/seo-meta/controls/description-introduction.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7607
 msgid ""
 "When \"Automatically output meta description\" is enabled, even if \"meta "
 "description\" is not entered, meta description is automatically generated "
@@ -1322,102 +1669,125 @@ msgstr ""
 "（アーカイブページを除く）"
 
 #: app/customizer/seo/sections/seo-meta/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2824
 msgid "Meta"
 msgstr "Meta"
 
 #: app/customizer/seo/sections/structured-data/controls/json-ld.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7643
 msgid "Output structred data (JSON+LD)"
 msgstr "構造化データ（JSON+LD）を出力する"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7682
 msgid "Date for the search engine"
 msgstr "検索エンジンに伝える日付"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7687
 msgid "Published date"
 msgstr "公開日"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7687
 msgid "(Display published date and modifiled date)"
 msgstr "（公開日と更新日を表示）"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7688
 msgid "Only modified date"
 msgstr "更新日のみ"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7688
 msgid "(Only modified date displayed when updating post)"
 msgstr "（記事を更新したときは更新日だけを表示）"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7689
 msgid "Prioritize display of modified date"
 msgstr "更新日の表示を優先する"
 
 #: app/customizer/seo/sections/structured-data/controls/post-date.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7689
 msgid "(Display modifiled date and published date)"
 msgstr "（更新日と公開日を表示）"
 
 #: app/customizer/seo/sections/structured-data/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2855
 msgid "Structured data"
 msgstr "構造化データ"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7726
 msgid "twitter:card"
 msgstr "twitter:card"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7727
 msgid "Twitter Cards format"
 msgstr "Twitter Cards のフォーマット"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-cards.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7732
 msgid "Do not use"
 msgstr "使用しない"
 
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7771
 msgid "twitter:site"
 msgstr "twitter:site"
 
 #. translators: 1: @username
 #: app/customizer/seo/sections/twitter-cards/controls/twitter-site.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7775
 #, php-format
 msgid "The Twitter account name of the site. Please enter in the form %1$s."
 msgstr "サイトの Twitter アカウント名。%1$s の形式で入力してください。"
 
 #: app/customizer/seo/sections/twitter-cards/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2886
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
 #. translators: 1: Card validator link
 #: app/customizer/seo/sections/twitter-cards/section.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2890
 #, php-format
 msgid "Application of URL is necessary for using Twitter Cards. %1$s"
 msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
 
 #. translators: 1: Monkey icon
 #: app/customizer/snow-monkey-community/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:206
 #, php-format
 msgid "%1$s Snow Monkey Community %1$s"
 msgstr "%1$s Snow Monkey コミュニティ %1$s"
 
 #: app/customizer/snow-monkey-community/section.php:31
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:217
 msgid "Official Web Site"
 msgstr "公式サイト"
 
 #: app/customizer/snow-monkey-community/section.php:32
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:218
 msgid "Informations, manuals, etc."
 msgstr "お知らせ、マニュアルなど。"
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:35
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:221
 #, php-format
 msgid "%1$sOfficial Web Site%2$s"
 msgstr "%1$s公式サイト%2$s"
 
 #: app/customizer/snow-monkey-community/section.php:46
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:232
 msgid "Online Community"
 msgstr "オンラインコミュニティ"
 
 #: app/customizer/snow-monkey-community/section.php:47
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:233
 msgid ""
 "It is a place to share information and discuss about future function "
 "development etc. Please feel free to join us!"
@@ -1427,15 +1797,18 @@ msgstr ""
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:50
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:236
 #, php-format
 msgid "%1$sOnline Community%2$s"
 msgstr "%1$sオンラインコミュニティ%2$s"
 
 #: app/customizer/snow-monkey-community/section.php:61
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:247
 msgid "Support Forum"
 msgstr "サポートフォーラム"
 
 #: app/customizer/snow-monkey-community/section.php:62
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:248
 msgid ""
 "This is an open forum that supports the Snow Monkey usage and customization."
 msgstr ""
@@ -1444,104 +1817,128 @@ msgstr ""
 
 #. translators: 1: <a> tag, 2: </a> tag
 #: app/customizer/snow-monkey-community/section.php:65
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:251
 #, php-format
 msgid "%1$sSupport Forum%2$s"
 msgstr "%1$sサポートフォーラム%2$s"
 
 #: app/customizer/snow-monkey-forms/controls/snow-monkey-forms-btn.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1337
 msgid "Use accent colors for buttons."
 msgstr "ボタンにアクセントカラーを使用します。"
 
 #: app/customizer/snow-monkey-forms/section.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:297
 msgid "Snow Monkey Forms"
 msgstr "Snow Monkey Forms"
 
 #: app/customizer/sns/panel.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:329
 msgid "SNS"
 msgstr "SNS"
 
-#: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:20
+#: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7819
 msgid "Facebook page name"
 msgstr "Facebook ページ名"
 
 #. translators: 1: Facebook page slug, 2: Facebook page URL
-#: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:23
+#: app/customizer/sns/sections/like-me-box/controls/facebook-page-name.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7822
 #, php-format
 msgctxt "facebook-page-name"
 msgid "Please enter %1$s of %2$s"
 msgstr "%2$sの%1$sを入力してください"
 
 #: app/customizer/sns/sections/like-me-box/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2922
 msgid "Like me box"
 msgstr "いいね！ボックス"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7873
 msgid "Display buttons"
 msgstr "ボタンを表示"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7877
 msgid "Facebook"
 msgstr "Facebook"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7878
 msgid "Twitter"
 msgstr "Twitter"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7879
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7880
 msgid "Feedly"
 msgstr "Feedly"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7881
 msgid "LINE"
 msgstr "LINE"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:27
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7882
 msgid "Pocket"
 msgstr "Pocket"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:28
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7883
 msgid "Pinterest"
 msgstr "Pinterest"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:29
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7884
 msgid "Feed"
 msgstr "フィード"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:30
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7885
 msgid "Copy"
 msgstr "コピー"
 
 #: app/customizer/sns/sections/share-buttons/controls/cache-seconds.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7922
 msgid "Share counts cache time (seconds)"
 msgstr "シェアカウントのキャッシュ時間（秒）"
 
 #: app/customizer/sns/sections/share-buttons/controls/count-both.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7965
 msgid "Count both http and https"
 msgstr "http と https の両方をカウントする"
 
 #: app/customizer/sns/sections/share-buttons/controls/count-both.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7966
 msgid ""
 "In the case of the http site, only http will be counted regardless of the "
 "setting."
 msgstr "http サイトの場合、設定に関係なく http のみがカウントされます。"
 
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8008
 msgid "Display position"
 msgstr "表示する場所"
 
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8014
 msgid "Both"
 msgstr "両方"
 
-#: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:17
+#: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8051
 msgid "Facebook settings"
 msgstr "Facebook 設定"
 
-#: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:18
+#: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8052
 msgid ""
 "If you want to count of Facebook share count then needs to register Facebook "
 "App."
@@ -1550,58 +1947,71 @@ msgstr ""
 "る必要があります。"
 
 #. translators: 1: <a> tag, 2: </a> tag
-#: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:20
+#: app/customizer/sns/sections/share-buttons/controls/facebook-app-token.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8054
 #, php-format
 msgid "%1$sAccessToken tools%2$s"
 msgstr "%1$sアクセストークンツール%2$s"
 
-#: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:17
+#: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8094
 msgid "Twitter settings"
 msgstr "Twitter 設定"
 
 #. translators: 1: Link of OpenShareCount
-#: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:21
+#: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8098
 #, php-format
 msgid "If you want to count of tweet then needs to register to %1$s."
 msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8137
 msgid "Type"
 msgstr "種類"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8141
 msgid "Balloon"
 msgstr "バルーン"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:23
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8142
 msgid "Horizontal"
 msgstr "水平"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:24
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8143
 msgid "Icon"
 msgstr "アイコン"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:25
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8144
 msgid "Block"
 msgstr "ブロック"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:26
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:8145
 msgid "Official"
 msgstr "公式"
 
 #: app/customizer/sns/sections/share-buttons/section.php:20
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2953
 msgid "Share buttons"
 msgstr "シェアボタン"
 
 #: app/customizer/static-front-page/controls/home-page-container.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1372
 msgid "Add side padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに左右余白を追加する"
 
 #: app/customizer/static-front-page/controls/home-page-content-padding.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1416
 msgid "Add vertical padding to content area of homepage"
 msgstr "ホームページのコンテンツエリアに上下余白を追加する"
 
 #: app/customizer/static-front-page/controls/home-page-display-page-header.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1462
 msgid ""
 "Display page header on homepage (You need to set the default page header or "
 "featured image)"
@@ -1610,64 +2020,80 @@ msgstr ""
 "キャッチ画像を設定する必要があります）"
 
 #: app/customizer/static-front-page/controls/home-page-header-position-lg.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1512
 msgid "Overwrite header position for PC"
 msgstr "PC 用ヘッダー位置を上書きする"
 
 #: app/customizer/static-front-page/controls/home-page-header-position-lg.php:21
 #: app/customizer/static-front-page/controls/home-page-header-position.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1517
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1563
 msgid "Do not overwrite"
 msgstr "上書きしない"
 
 #: app/customizer/static-front-page/controls/home-page-header-position.php:16
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1558
 msgid "Overwrite header position for mobile"
 msgstr "モバイル用ヘッダー位置を上書きする"
 
-#: app/customizer/static-front-page/controls/home-page-setting-label.php:15
+#: app/customizer/static-front-page/controls/home-page-setting-label.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1599
 msgid "Front page setting"
 msgstr "ホームページ設定"
 
 #: app/customizer/static-front-page/controls/posts-page-display-title.php:15
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1637
 msgid "Display posts page title"
 msgstr "投稿ページのタイトルを表示"
 
-#: app/customizer/static-front-page/controls/posts-page-setting-label.php:15
+#: app/customizer/static-front-page/controls/posts-page-setting-label.php:19
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1676
 msgid "Posts page setting"
 msgstr "投稿ページ設定"
 
 #: app/customizer/title-tagline/controls/copyright.php:47
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1747
 msgid "Copyright"
 msgstr "コピーライト"
 
 #: app/customizer/title-tagline/controls/copyright.php:48
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1748
 msgid "HTML usable"
 msgstr "HTML 使用可"
 
-#: app/customizer/title-tagline/controls/sm-custom-logo.php:17
+#: app/customizer/title-tagline/controls/sm-custom-logo.php:21
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1795
 msgid "Logo on mobile device"
 msgstr "モバイル端末時のロゴ"
 
-#: app/customizer/title-tagline/controls/sm-custom-logo.php:18
+#: app/customizer/title-tagline/controls/sm-custom-logo.php:22
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1796
 msgid "If \"Logo\" is not set, \"Logo on mobile device\" is not used."
 msgstr ""
 "「ロゴ」が設定されていない場合、「モバイル端末時のロゴ」は使用されません。"
 
 #: app/setup/block-patterns.php:21
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:308
 msgid "Headers"
 msgstr "ヘッダー"
 
 #: app/setup/block-patterns.php:25
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:312
 msgid "Features"
 msgstr "特徴"
 
 #: app/setup/block-patterns.php:29
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:316
 msgid "Text with image"
 msgstr "テキストと画像"
 
 #: app/setup/block-patterns.php:33
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:320
 msgid "Gallery"
 msgstr "ギャラリー"
 
 #: app/setup/block-patterns.php:37
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:324
 msgid "Columns"
 msgstr "カラム"
 
@@ -1676,6 +2102,14 @@ msgstr "カラム"
 #: app/setup/block-patterns.php:65 app/setup/block-patterns.php:71
 #: app/setup/block-patterns.php:77 app/setup/block-patterns.php:83
 #: app/setup/block-patterns.php:89 app/setup/block-patterns.php:95
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:340
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:346
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:352
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:358
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:364
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:370
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:376
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:382
 #, php-format
 msgid "Header %1$s"
 msgstr "ヘッダー %1$s"
@@ -1683,6 +2117,9 @@ msgstr "ヘッダー %1$s"
 #. translators: %1$s: number
 #: app/setup/block-patterns.php:101 app/setup/block-patterns.php:107
 #: app/setup/block-patterns.php:113
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:388
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:394
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:400
 #, php-format
 msgid "Feature %1$s"
 msgstr "特徴 %1$s"
@@ -1690,6 +2127,9 @@ msgstr "特徴 %1$s"
 #. translators: %1$s: number
 #: app/setup/block-patterns.php:119 app/setup/block-patterns.php:125
 #: app/setup/block-patterns.php:131
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:406
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:412
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:418
 #, php-format
 msgid "Text with image %1$s"
 msgstr "テキストと画像 %1$s"
@@ -1697,105 +2137,133 @@ msgstr "テキストと画像 %1$s"
 #. translators: %1$s: number
 #: app/setup/block-patterns.php:137 app/setup/block-patterns.php:143
 #: app/setup/block-patterns.php:149
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:424
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:430
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:436
 #, php-format
 msgid "Gallery %1$s"
 msgstr "ギャラリー %1$s"
 
 #. translators: %1$s: number
 #: app/setup/block-patterns.php:155
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:442
 #, php-format
 msgid "Columns %1$s"
 msgstr "カラム %1$s"
 
 #: app/setup/dependency/snow-monkey-blocks.php:162
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5025
 msgid "Undecorated title"
 msgstr "装飾無しのタイトル"
 
 #: app/setup/dependency/woocommerce.php:146
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5515
 msgid "WooCommerce sidebar"
 msgstr "WooCommerce サイドバー"
 
 #: app/setup/dependency/woocommerce.php:147
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5516
 msgid "These widgets are displayed in the sidebar on WooCommerce."
 msgstr "これらのウィジェットは WooCommerce のサイドバーに表示されます。"
 
 #: app/setup/dependency/woocommerce.php:278
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5647
 msgid "Home"
 msgstr "ホーム"
 
 #: app/setup/dependency/woocommerce.php:284
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5653
 msgid "My account"
 msgstr "マイアカウント"
 
 #: app/setup/document-title.php:23
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:842
 msgid "Search results"
 msgstr "検索結果"
 
 #: app/setup/entry-meta.php:18 app/setup/entry-meta.php:32
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:1147
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:1161
 msgid "Published"
 msgstr "投稿日"
 
 #: app/setup/entry-meta.php:48
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:1177
 msgid "Modified"
 msgstr "更新日"
 
 #: app/setup/entry-meta.php:61
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:1190
 msgid "Author"
 msgstr "著者"
 
 #: app/setup/image-size.php:35
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:1887
 msgid "xLarge"
 msgstr "xLarge"
 
 #: app/setup/nav-menus.php:22
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2047
 msgid "Global Navigation (For PC)"
 msgstr "グローバルナビゲーション（PC用）"
 
 #: app/setup/nav-menus.php:23
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2048
 msgid "Drop Navigation (For PC)"
 msgstr "ドロップナビゲーション（PC用）"
 
 #: app/setup/nav-menus.php:24
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2049
 msgid "Drawer Navigation (For Mobile)"
 msgstr "ドロワーナビゲーション（モバイル用）"
 
 #: app/setup/nav-menus.php:25
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2050
 msgid "Social Navigation"
 msgstr "ソーシャルナビゲーション"
 
 #: app/setup/nav-menus.php:26
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2051
 msgid "Follow box"
 msgstr "フォローボックス"
 
 #: app/setup/nav-menus.php:27
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2052
 msgid "Header Sub Navigation"
 msgstr "ヘッダーサブナビゲーション"
 
 #: app/setup/nav-menus.php:28
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2053
 msgid "Footer Sub Navigation"
 msgstr "フッターサブナビゲーション"
 
 #: app/setup/nav-menus.php:29
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2054
 msgid "Drawer Sub Navigation (For Mobile)"
 msgstr "ドロワーサブナビゲーション（モバイル用）"
 
 #: app/setup/nav-menus.php:30
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2055
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
 #: app/setup/nav-menus.php:125
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2150
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
 #: app/setup/page-speed-optimization.php:143
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2412
 msgid "Remove caches"
 msgstr "キャッシュを削除"
 
 #: app/setup/support-forum-widget.php:15
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3539
 msgid "Recent topics of Snow Monkey support forum"
 msgstr "Snow Monkey サポートフォーラムの最近のトピック"
 
 #: app/setup/support-forum-widget.php:61
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3585
 #, php-format
 msgid ""
 "If you are using Snow Monkey and have any questions, try searching in "
@@ -1807,6 +2275,7 @@ msgstr ""
 "を立ててください。"
 
 #: app/setup/support-forum-widget.php:74
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3598
 #, php-format
 msgid "You must have a %1$sSnow Monkey subscription%2$s to start a topic."
 msgstr ""
@@ -1814,79 +2283,101 @@ msgstr ""
 "があります。"
 
 #: app/setup/update-info-widget.php:14
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3725
 msgid "Updates related to Snow Monkey"
 msgstr "Snow Monkey 関連の更新情報"
 
 #: app/setup/widget-area.php:21
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3796
 msgid "Sidebar"
 msgstr "サイドバー"
 
 #: app/setup/widget-area.php:22 app/setup/widget-area.php:44
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3797
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3819
 msgid "These widgets are displayed in the sidebar on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページのサイドバーに表示されます。"
 
 #: app/setup/widget-area.php:43
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3818
 msgid "Sticky sidebar"
 msgstr "追尾サイドバー"
 
 #: app/setup/widget-area.php:65
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3840
 msgid "Top of the page title"
 msgstr "ページタイトルの上"
 
 #: app/setup/widget-area.php:66
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3841
 msgid "These widgets are displayed on the page title on the posts and pages."
 msgstr ""
 "これらのウィジェットは投稿と固定ページのページタイトルの上に表示されます。"
 
 #: app/setup/widget-area.php:87
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3862
 msgid "Top of the archive page"
 msgstr "アーカイブページ上部"
 
 #: app/setup/widget-area.php:88
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3863
 msgid "These widgets are displayed top of the contents on archive page."
 msgstr "これらのウィジェットはアーカイブページの上部に表示されます。"
 
 #: app/setup/widget-area.php:110
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3885
 msgid "These widgets are displayed bottom of the contents on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページのコンテンツ下部に表示されます。"
 
 #: app/setup/widget-area.php:131
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3906
 msgid "Archive sidebar"
 msgstr "アーカイブページサイドバー"
 
 #: app/setup/widget-area.php:133
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3908
 msgid "These widgets are displayed in the sidebar on archive page."
 msgstr "これらのウィジェットはアーカイブページのサイドバーに表示されます。"
 
 #: app/setup/widget-area.php:153
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3928
 msgid "Homepage (Top of page)"
 msgstr "ホームページ上部"
 
 #: app/setup/widget-area.php:155 app/setup/widget-area.php:194
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3930
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3969
 msgid "These widgets are displayed in the homepage."
 msgstr "これらのウィジェットはホームページに表示されます。"
 
 #: app/setup/widget-area.php:192
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:3967
 msgid "Homepage (Bottom of page)"
 msgstr "ホームページ下部"
 
 #: app/setup/widget-area.php:231
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4006
 msgid "Posts page (Top of page)"
 msgstr "投稿ページ上部"
 
 #: app/setup/widget-area.php:233 app/setup/widget-area.php:272
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4008
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4047
 msgid "These widgets are displayed in the posts page."
 msgstr "これらのウィジェットは投稿ページに表示されます。"
 
 #: app/setup/widget-area.php:270
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4045
 msgid "Posts page (Bottom of page)"
 msgstr "投稿ページ下部"
 
 #: app/setup/widget-area.php:311
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4086
 msgid "These widgets are displayed in the footer."
 msgstr "これらのウィジェットはフッターに表示されます。"
 
 #: app/setup/widget-area.php:333
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4108
 msgid ""
 "These widgets are displayed in the overlay that opens with clicking #sm-"
 "overlay-widget-area."
@@ -1895,22 +2386,27 @@ msgstr ""
 "に表示されます。"
 
 #: app/setup/widget-area.php:353
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4128
 msgid "Top of the article"
 msgstr "記事本文の上"
 
 #: app/setup/widget-area.php:354
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4129
 msgid "These widgets are displayed top of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の上に表示されます。"
 
 #: app/setup/widget-area.php:375
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4150
 msgid "Bottom of the article"
 msgstr "記事本文の下"
 
 #: app/setup/widget-area.php:376
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4151
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
 #: app/setup/widgets.php:102
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:4298
 msgid "This widget is deprecated. It may slow down the page when used."
 msgstr ""
 "このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"
@@ -1956,10 +2452,12 @@ msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
 #: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:44
+#: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:49
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
 #: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:50
+#: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:55
 msgid "Recent posts"
 msgstr "最近の投稿"
 
@@ -1968,10 +2466,12 @@ msgid "Feed URL"
 msgstr "フィード URL"
 
 #: app/widget/snow-monkey-rss/snow-monkey-rss.php:40
+#: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:130
 msgid "Snow Monkey: RSS"
 msgstr "Snow Monkey: RSS"
 
 #: app/widget/snow-monkey-rss/snow-monkey-rss.php:46
+#: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:136
 msgid "RSS"
 msgstr "RSS"
 
@@ -1980,10 +2480,12 @@ msgid "Displayed term"
 msgstr "表示するターム"
 
 #: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:45
+#: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:216
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
 #: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:51
+#: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:222
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 

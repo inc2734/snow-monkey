@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Framework\Controller\Controller;
@@ -219,6 +219,20 @@ add_filter(
 	},
 	9,
 	4
+);
+
+/**
+ * Set inc2734_wp_view_controller_debug.
+ *
+ * @param boolean $debug If true, enable Snow Monkey debug mode.
+ * @return boolean
+ */
+add_filter(
+	'inc2734_wp_view_controller_debug',
+	function( $debug ) {
+		return get_theme_mod( 'debug-mode' ) && get_theme_mod( 'expand-get-template-part' ) && defined( 'WP_DEBUG' ) && WP_DEBUG;
+	},
+	9
 );
 
 new Controller();
