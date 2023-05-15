@@ -913,16 +913,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.4.3",
+            "version": "12.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "6a9f01088cbaf6e95f3ffddafbe15226052083f1"
+                "reference": "a9a0bed099cf950b94e78bd2d71d98d5623b673e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/6a9f01088cbaf6e95f3ffddafbe15226052083f1",
-                "reference": "6a9f01088cbaf6e95f3ffddafbe15226052083f1",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/a9a0bed099cf950b94e78bd2d71d98d5623b673e",
+                "reference": "a9a0bed099cf950b94e78bd2d71d98d5623b673e",
                 "shasum": ""
             },
             "require": {
@@ -952,9 +952,9 @@
             "description": "A library for WordPress theme view controller.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-view-controller/issues",
-                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.3"
+                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.4"
             },
-            "time": "2023-05-11T01:47:53+00:00"
+            "time": "2023-05-15T14:22:07+00:00"
         }
     ],
     "packages-dev": [
@@ -1649,16 +1649,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.7",
+            "version": "9.6.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c993f0d3b0489ffc42ee2fe0bd645af1538a63b2"
+                "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c993f0d3b0489ffc42ee2fe0bd645af1538a63b2",
-                "reference": "c993f0d3b0489ffc42ee2fe0bd645af1538a63b2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/17d621b3aff84d0c8b62539e269e87d8d5baa76e",
+                "reference": "17d621b3aff84d0c8b62539e269e87d8d5baa76e",
                 "shasum": ""
             },
             "require": {
@@ -1732,7 +1732,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.7"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.8"
             },
             "funding": [
                 {
@@ -1748,7 +1748,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-14T08:58:40+00:00"
+            "time": "2023-05-11T05:14:45+00:00"
         },
         {
             "name": "sebastian/cli-parser",
