@@ -68,6 +68,7 @@
 			]
 		},
 		"spacing": {
+			"margin": true,
 			"blockGap": true,
 			"spacingSizes": [
 				{
