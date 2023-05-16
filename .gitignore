@@ -18,3 +18,4 @@ composer-dev.lock
 /cache/
 /.export/*
 error_log
+.phpunit.result.cache
