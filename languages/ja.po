@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-05-16 02:59+0900\n"
-"PO-Revision-Date: 2023-05-16 03:00+0900\n"
+"POT-Creation-Date: 2023-05-18 22:40+0900\n"
+"PO-Revision-Date: 2023-05-18 22:40+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -122,6 +122,75 @@ msgstr "フッター5"
 msgid "Default"
 msgstr "デフォルト"
 
+#: Framework/Controller/Manager.php:55 Framework/Controller/Manager.php:62
+msgid "Snow Monkey settings"
+msgstr "Snow Monkey 設定"
+
+#. Theme Name of the plugin/theme
+#: Framework/Controller/Manager.php:56 Framework/Helper.php:216
+#: app/constructor/trial.php:23
+#: app/customizer/title-tagline/controls/copyright.php:14
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1714
+msgid "Snow Monkey"
+msgstr "Snow Monkey"
+
+#: Framework/Controller/Manager.php:76
+msgid "Reset settings"
+msgstr "設定をリセット"
+
+#: Framework/Controller/Manager.php:89
+msgid "Clear remote patterns caches"
+msgstr "リモートパターンのキャッシュをクリア"
+
+#: Framework/Controller/Manager.php:215
+msgid "Settings"
+msgstr "設定"
+
+#: Framework/Controller/Manager.php:223
+msgid "License key"
+msgstr "ライセンスキー"
+
+#: Framework/Controller/Manager.php:230 Framework/Controller/Manager.php:273
+msgid "Enable"
+msgstr "有効"
+
+#: Framework/Controller/Manager.php:235 Framework/Controller/Manager.php:278
+msgid "Disable"
+msgstr "無効"
+
+#: Framework/Controller/Manager.php:255
+msgid ""
+"If the license key entered is valid, premium block patterns are available."
+msgstr ""
+"入力されたライセンスキーが有効な場合、プレミアムブロックパターンが利用できま"
+"す。"
+
+#: Framework/Controller/Manager.php:256
+msgid ""
+"If the license key is entered, the Xserver register key setting is not saved."
+msgstr "ライセンスキーを入力した場合、XSERVER 登録キーの設定は保存されません。"
+
+#: Framework/Controller/Manager.php:266
+msgid "Xserver register key"
+msgstr "XSERVER 登録キー"
+
+#: Framework/Controller/Manager.php:298
+msgid ""
+"If the Xserver register key entered is valid, premium block patterns are "
+"available."
+msgstr ""
+"入力されたXSERVER 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
+"です。"
+
+#: Framework/Controller/Manager.php:299
+msgid ""
+"If you are using Xserver integration, enter the Xserver register key in the "
+"Xserver register key entry field without entering anything in the license "
+"key entry field."
+msgstr ""
+"XSERVERとの連携を利用している場合は、ライセンスキー入力欄には何も入力せず、"
+"XSERVER 登録キー入力欄にXSERVER登録キーを入力してください。"
+
 #: Framework/Helper.php:103
 msgid "Page header"
 msgstr "ページヘッダー"
@@ -202,13 +271,6 @@ msgstr "ノーマル"
 msgctxt "excerpt_length"
 msgid "55"
 msgstr "55"
-
-#. Theme Name of the plugin/theme
-#: Framework/Helper.php:216 app/constructor/trial.php:23
-#: app/customizer/title-tagline/controls/copyright.php:14
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1714
-msgid "Snow Monkey"
-msgstr "Snow Monkey"
 
 #: Framework/Helper.php:221 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
@@ -2078,78 +2140,21 @@ msgid "Headers"
 msgstr "ヘッダー"
 
 #: app/setup/block-patterns.php:25
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:312
-msgid "Features"
-msgstr "特徴"
+msgid "Sections"
+msgstr "セクション"
 
 #: app/setup/block-patterns.php:29
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:316
-msgid "Text with image"
-msgstr "テキストと画像"
+msgid "Pricing"
+msgstr "価格"
 
 #: app/setup/block-patterns.php:33
+msgid "FAQ"
+msgstr "FAQ"
+
+#: app/setup/block-patterns.php:37
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:320
 msgid "Gallery"
 msgstr "ギャラリー"
-
-#: app/setup/block-patterns.php:37
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:324
-msgid "Columns"
-msgstr "カラム"
-
-#. translators: %1$s: number
-#: app/setup/block-patterns.php:53 app/setup/block-patterns.php:59
-#: app/setup/block-patterns.php:65 app/setup/block-patterns.php:71
-#: app/setup/block-patterns.php:77 app/setup/block-patterns.php:83
-#: app/setup/block-patterns.php:89 app/setup/block-patterns.php:95
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:340
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:346
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:352
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:358
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:364
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:370
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:376
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:382
-#, php-format
-msgid "Header %1$s"
-msgstr "ヘッダー %1$s"
-
-#. translators: %1$s: number
-#: app/setup/block-patterns.php:101 app/setup/block-patterns.php:107
-#: app/setup/block-patterns.php:113
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:388
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:394
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:400
-#, php-format
-msgid "Feature %1$s"
-msgstr "特徴 %1$s"
-
-#. translators: %1$s: number
-#: app/setup/block-patterns.php:119 app/setup/block-patterns.php:125
-#: app/setup/block-patterns.php:131
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:406
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:412
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:418
-#, php-format
-msgid "Text with image %1$s"
-msgstr "テキストと画像 %1$s"
-
-#. translators: %1$s: number
-#: app/setup/block-patterns.php:137 app/setup/block-patterns.php:143
-#: app/setup/block-patterns.php:149
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:424
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:430
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:436
-#, php-format
-msgid "Gallery %1$s"
-msgstr "ギャラリー %1$s"
-
-#. translators: %1$s: number
-#: app/setup/block-patterns.php:155
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:442
-#, php-format
-msgid "Columns %1$s"
-msgstr "カラム %1$s"
 
 #: app/setup/dependency/snow-monkey-blocks.php:162
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5025
@@ -2488,6 +2493,61 @@ msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:222
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
+
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:312
+msgid "Features"
+msgstr "特徴"
+
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:316
+msgid "Text with image"
+msgstr "テキストと画像"
+
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:324
+msgid "Columns"
+msgstr "カラム"
+
+#. translators: %1$s: number
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:340
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:346
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:352
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:358
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:364
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:370
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:376
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:382
+#, php-format
+msgid "Header %1$s"
+msgstr "ヘッダー %1$s"
+
+#. translators: %1$s: number
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:388
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:394
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:400
+#, php-format
+msgid "Feature %1$s"
+msgstr "特徴 %1$s"
+
+#. translators: %1$s: number
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:406
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:412
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:418
+#, php-format
+msgid "Text with image %1$s"
+msgstr "テキストと画像 %1$s"
+
+#. translators: %1$s: number
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:424
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:430
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:436
+#, php-format
+msgid "Gallery %1$s"
+msgstr "ギャラリー %1$s"
+
+#. translators: %1$s: number
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:442
+#, php-format
+msgid "Columns %1$s"
+msgstr "カラム %1$s"
 
 #: template-parts/archive/entry/content/no-keywords.php:18
 msgid "Please enter a search keyword."

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.8.0
+ * @version 20.1.0
  */
 
 use Framework\Helper;
@@ -54,6 +54,7 @@ include_once( __DIR__ . '/app/constructor/customizer.php' );
 include_once( __DIR__ . '/app/constructor/design-skin.php' );
 include_once( __DIR__ . '/app/constructor/detect-page-end.php' );
 include_once( __DIR__ . '/app/constructor/detect-page-start.php' );
+include_once( __DIR__ . '/app/constructor/manager.php' );
 include_once( __DIR__ . '/app/constructor/oembed.php' );
 include_once( __DIR__ . '/app/constructor/related-posts.php' );
 include_once( __DIR__ . '/app/constructor/trial.php' );
