@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,9 +17,10 @@ Framework::control(
 		'priority' => 160,
 		'default'  => 'text-color',
 		'choices'  => array(
-			'text-color' => __( 'Text color reversal', 'snow-monkey' ),
-			'underline'  => __( 'Underline', 'snow-monkey' ),
-			''           => __( 'None', 'snow-monkey' ),
+			'text-color'       => __( 'Text color reversal', 'snow-monkey' ),
+			'underline'        => __( 'Underline', 'snow-monkey' ),
+			'extend-underline' => __( 'Extend underline', 'snow-monkey' ),
+			''                 => __( 'None', 'snow-monkey' ),
 		),
 	)
 );

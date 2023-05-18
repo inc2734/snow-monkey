@@ -382,12 +382,13 @@
 
 		.#{ $_prefix }p-global-nav {
 			&--hover-underline .#{ $_prefix }c-navbar__item > a::after,
+			&--hover-extend-underline .#{ $_prefix }c-navbar__item > a::after,
 			&--current-same-hover-effect .#{ $_prefix }c-navbar__item[data-active-menu] > a::after,
 			&--current-underline .#{ $_prefix }c-navbar__item[data-active-menu] > a::after {
 				top: auto;
-				right: var(--rect-right);
-				bottom: calc(var(--rect-top) + var(--rect-height));
-				left: calc(var(--rect-right) - var(--rect-width));
+				// right: var(--rect-right);
+				// bottom: calc(var(--rect-top) + var(--rect-height));
+				// left: calc(var(--rect-right) - var(--rect-width));
 			}
 
 			.#{ $_prefix }c-navbar {

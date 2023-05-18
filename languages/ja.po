@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-05-18 22:40+0900\n"
-"PO-Revision-Date: 2023-05-18 22:40+0900\n"
+"POT-Creation-Date: 2023-05-19 00:02+0900\n"
+"PO-Revision-Date: 2023-05-19 00:02+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -215,7 +215,7 @@ msgstr "コンテンツの上"
 #: app/customizer/design/sections/base-design/controls/widget-title-style.php:21
 #: app/customizer/design/sections/drawer-nav/controls/highlight-type.php:19
 #: app/customizer/design/sections/header/controls/gnav-current-effect.php:23
-#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:23
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:533
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3320
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3716
@@ -1219,6 +1219,10 @@ msgstr "下線"
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6022
 msgid "Global navigation hover effect"
 msgstr "グローバルナビゲーションのホバーエフェクト"
+
+#: app/customizer/design/sections/header/controls/gnav-hover-effect.php:22
+msgid "Extend underline"
+msgstr "伸びる下線"
 
 #: app/customizer/design/sections/header/controls/header-content.php:22
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6067

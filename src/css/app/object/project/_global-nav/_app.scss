@@ -196,7 +196,9 @@
 		left: 0;
 		content: '';
 		height: 1px;
+		width: auto;
 		@include _transition(background-color);
+		transform: none;
 		background-color: var(--wp--preset--color--sm-accent);
 	}
 
@@ -237,6 +239,33 @@
 			.#{ $_prefix }c-navbar {
 				&__item[data-active-menu] > a::after {
 					@include effect-underline();
+				}
+			}
+		}
+	}
+
+	&--hover-extend-underline {
+		.#{ $_prefix }c-navbar {
+			&__item {
+				position: relative;
+
+				> a::after {
+					@include _extend-underline();
+					background-color: var(--wp--preset--color--sm-accent);
+				}
+
+				@include _hover() {
+					& > a::after {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		&.#{ $_prefix }p-global-nav--current-same-hover-effect {
+			.#{ $_prefix }c-navbar {
+				&__item[data-active-menu] > a::after {
+					width: 100%;
 				}
 			}
 		}

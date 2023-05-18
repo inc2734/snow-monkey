@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Framework\Helper;
@@ -148,16 +148,18 @@ add_filter(
 		}
 
 		if ( preg_match( '|^(<a [^>]+?>)(.+?)(</a>)$|', $html, $match ) ) {
-			$src  = wp_get_attachment_image_src( $sm_custom_logo, 'full' );
-			$html = sprintf(
-				'%1$s<picture><source media="(max-width: 1023px)" srcset="%2$s" width="%3$s" height="%4$s">%5$s</picture>%6$s',
-				$match[1],
-				esc_url( $src[0] ),
-				esc_attr( $src[1] ),
-				esc_attr( $src[2] ),
-				$match[2],
-				$match[3]
-			);
+			$src = wp_get_attachment_image_src( $sm_custom_logo, 'full' );
+			if ( $src ) {
+				$html = sprintf(
+					'%1$s<picture><source media="(max-width: 1023px)" srcset="%2$s" width="%3$s" height="%4$s">%5$s</picture>%6$s',
+					$match[1],
+					esc_url( $src[0] ),
+					esc_attr( $src[1] ),
+					esc_attr( $src[2] ),
+					$match[2],
+					$match[3]
+				);
+			}
 		}
 
 		return $html;
