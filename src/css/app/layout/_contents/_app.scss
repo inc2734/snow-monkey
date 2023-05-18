@@ -11,12 +11,6 @@
 .#{ $_prefix }l-contents {
 	--contents--gap: var(--_margin2);
 
-	overflow: hidden;
-
-	@include _media-min(lg) {
-		overflow: visible;
-	}
-
 	&__inner {
 		max-width: 100%;
 	}

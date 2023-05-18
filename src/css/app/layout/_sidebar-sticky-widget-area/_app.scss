@@ -1,8 +1,6 @@
-.#{ $_prefix }l-sidebar-sticky-widget-area {
+.#{ $_prefix }l-sidebar-sticky-widget-area:last-child {
 	@include _set-content-level(1);
 
-	@include _media-min(lg) {
-		position: sticky;
-		top: 0;
-	}
+	position: sticky;
+	top: 0;
 }
