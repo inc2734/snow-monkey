@@ -14,10 +14,14 @@ Framework::control(
 	array(
 		'label'             => __( 'Display the author for each item in the entries', 'snow-monkey' ),
 		'priority'          => 181,
-		'default'           => true,
+		'default'           => 'text' !== get_theme_mod( 'post-entries-layout' ),
 		'active_callback'   => function() {
 			$is_display_item_author = 'text' !== get_theme_mod( 'post-entries-layout' );
 			return $is_display_item_author;
+		},
+		'sanitize_callback' => function( $value ) {
+			$is_display_item_author = 'text' !== get_theme_mod( 'post-entries-layout' );
+			return $is_display_item_author ? $value : false;
 		},
 	)
 );

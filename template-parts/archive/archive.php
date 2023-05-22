@@ -33,6 +33,15 @@ $args = wp_parse_args(
 		'_display_item_published' => $args['_display_item_meta'],
 	)
 );
+
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false,
+	)
+);
 ?>
 
 <div class="p-archive">
@@ -49,6 +58,7 @@ $args = wp_parse_args(
 			'_display_item_meta'      => $args['_display_item_meta'],
 			'_display_item_author'    => $args['_display_item_author'],
 			'_display_item_published' => $args['_display_item_published'],
+			'_display_item_excerpt'   => $args['_display_item_excerpt'],
 		)
 	);
 	?>

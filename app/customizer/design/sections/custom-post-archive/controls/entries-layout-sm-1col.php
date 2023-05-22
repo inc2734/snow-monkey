@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-entries-layout-sm-1col',
 		array(
 			'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
-			'priority'          => 143,
+			'priority'          => 144,
 			'default'           => false,
 			'active_callback'   => function() use ( $custom_post_type ) {
 				$is_multi_cols_pattern = in_array(

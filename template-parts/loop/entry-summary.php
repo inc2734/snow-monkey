@@ -32,6 +32,15 @@ $args = wp_parse_args(
 		'_display_published' => $args['_display_meta'],
 	)
 );
+
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false,
+	)
+);
 ?>
 
 <a href="<?php the_permalink(); ?>">
@@ -70,10 +79,11 @@ $args = wp_parse_args(
 				'template-parts/loop/entry-summary/content/content',
 				$args['_name'],
 				array(
-					'_context'        => $args['_context'],
-					'_entries_id'     => $args['_entries_id'],
-					'_entries_layout' => $args['_entries_layout'],
-					'_excerpt_length' => $args['_excerpt_length'],
+					'_context'              => $args['_context'],
+					'_entries_id'           => $args['_entries_id'],
+					'_entries_layout'       => $args['_entries_layout'],
+					'_excerpt_length'       => $args['_excerpt_length'],
+					'_display_item_excerpt' => $args['_display_item_excerpt'],
 				)
 			);
 			?>

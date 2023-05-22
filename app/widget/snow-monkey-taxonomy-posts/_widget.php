@@ -160,6 +160,7 @@ Helper::get_template_part(
 		'_display_item_author'     => isset( $instance['display-item-author'] ) ? $instance['display-item-author'] : $instance['display-item-meta'],
 		'_display_item_published'  => isset( $instance['display-item-published'] ) ? $instance['display-item-published'] : $instance['display-item-meta'],
 		'_display_item_terms'      => $instance['display-item-terms'],
+		'_display_item_excerpt'    => $instance['display-item-excerpt'],
 		'_category_label_taxonomy' => $instance['category-label-taxonomy'],
 		'_link_text'               => $instance['link-text'],
 		'_link_url'                => $instance['link-url'],

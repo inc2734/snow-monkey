@@ -23,6 +23,7 @@ $args = wp_parse_args(
 		'_item_title_tag'          => 'h3',
 		'_display_item_meta'       => null,
 		'_display_item_terms'      => null,
+		'_display_item_excerpt'    => null,
 		'_category_label_taxonomy' => null,
 		'_link_text'               => null,
 		'_link_url'                => null,
@@ -108,6 +109,20 @@ $more_classnames = array(
 		$args['_display_item_terms'] = 'post' === $archive_view ? true : false;
 	}
 
+	if ( is_null( $args['_display_item_author'] ) ) {
+		$args['_display_item_author'] = $args['_display_item_meta'];
+	}
+
+	if ( is_null( $args['_display_item_published'] ) ) {
+		$args['_display_item_published'] = $args['_display_item_meta'];
+	}
+
+	if ( is_null( $args['_display_item_excerpt'] ) ) {
+		$args['_display_item_excerpt'] = in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false;
+	}
+
 	Helper::get_template_part(
 		'template-parts/common/entries/entries',
 		$archive_view,
@@ -124,6 +139,7 @@ $more_classnames = array(
 			'_display_item_author'     => $args['_display_item_author'],
 			'_display_item_published'  => $args['_display_item_published'],
 			'_display_item_terms'      => $args['_display_item_terms'],
+			'_display_item_excerpt'    => $args['_display_item_excerpt'],
 			'_category_label_taxonomy' => $args['_category_label_taxonomy'],
 			'_posts_query'             => $args['_posts_query'],
 			'_arrows'                  => $args['_arrows'],

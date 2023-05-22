@@ -28,6 +28,7 @@ class Snow_Monkey_Recent_Posts_Widget extends Abstract_Widget {
 		'display-item-author'    => null,
 		'display-item-published' => null,
 		'display-item-terms'     => null,
+		'display-item-excerpt'   => null,
 		'link-text'              => null,
 		'link-url'               => null,
 		'ignore-sticky-posts'    => 1,

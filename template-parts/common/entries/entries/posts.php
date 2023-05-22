@@ -39,6 +39,15 @@ $args = wp_parse_args(
 	)
 );
 
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false,
+	)
+);
+
 $data_infeed_ads = $args['_infeed_ads'] ? 'true' : 'false';
 $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 
@@ -91,16 +100,17 @@ $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $q
 				'template-parts/loop/entry-summary',
 				$args['_name'],
 				array(
-					'_context'           => $args['_context'],
-					'_entries_id'        => $args['_entries_id'],
-					'_entries_layout'    => $args['_entries_layout'],
-					'_excerpt_length'    => $args['_excerpt_length'],
-					'_thumbnail_size'    => $args['_item_thumbnail_size'],
-					'_display_author'    => $args['_display_item_author'],
-					'_display_published' => $args['_display_item_published'],
-					'_terms'             => $_terms ? array( $_terms[0] ) : array(),
-					'_title_tag'         => $args['_item_title_tag'],
-					'_display_meta'      => $args['_display_item_meta'],
+					'_context'              => $args['_context'],
+					'_entries_id'           => $args['_entries_id'],
+					'_entries_layout'       => $args['_entries_layout'],
+					'_excerpt_length'       => $args['_excerpt_length'],
+					'_thumbnail_size'       => $args['_item_thumbnail_size'],
+					'_display_author'       => $args['_display_item_author'],
+					'_display_published'    => $args['_display_item_published'],
+					'_display_item_excerpt' => $args['_display_item_excerpt'],
+					'_terms'                => $_terms ? array( $_terms[0] ) : array(),
+					'_title_tag'            => $args['_item_title_tag'],
+					'_display_meta'         => $args['_display_item_meta'],
 				)
 			);
 			?>

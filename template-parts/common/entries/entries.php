@@ -39,6 +39,15 @@ $args = wp_parse_args(
 	)
 );
 
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false,
+	)
+);
+
 if ( 'carousel' === $args['_entries_layout'] ) {
 	$slug = 'template-parts/common/entries/entries/carousel';
 	$args = wp_parse_args(

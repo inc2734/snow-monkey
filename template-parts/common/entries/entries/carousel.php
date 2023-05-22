@@ -41,6 +41,15 @@ $args = wp_parse_args(
 	)
 );
 
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false,
+	)
+);
+
 $queried_object                 = $args['_posts_query']->get_queried_object();
 $is_term_query                  = is_a( $queried_object, '\WP_Term' ) && 1 === count( $args['_posts_query']->tax_query->queried_terms ) && 1 === count( array_values( $args['_posts_query']->tax_query->queried_terms )[0]['terms'] );
 $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $queried_object->taxonomy );
@@ -90,16 +99,17 @@ $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $q
 							'template-parts/loop/entry-summary',
 							$args['_name'],
 							array(
-								'_context'           => $args['_context'],
-								'_entries_id'        => $args['_entries_id'],
-								'_entries_layout'    => $args['_entries_layout'],
-								'_excerpt_length'    => $args['_excerpt_length'],
-								'_thumbnail_size'    => $args['_item_thumbnail_size'],
-								'_display_author'    => $args['_display_item_author'],
-								'_display_published' => $args['_display_item_published'],
-								'_terms'             => $_terms ? array( $_terms[0] ) : array(),
-								'_title_tag'         => $args['_item_title_tag'],
-								'_display_meta'      => $args['_display_item_meta'],
+								'_context'              => $args['_context'],
+								'_entries_id'           => $args['_entries_id'],
+								'_entries_layout'       => $args['_entries_layout'],
+								'_excerpt_length'       => $args['_excerpt_length'],
+								'_thumbnail_size'       => $args['_item_thumbnail_size'],
+								'_display_author'       => $args['_display_item_author'],
+								'_display_published'    => $args['_display_item_published'],
+								'_display_item_excerpt' => $args['_display_item_excerpt'],
+								'_terms'                => $_terms ? array( $_terms[0] ) : array(),
+								'_title_tag'            => $args['_item_title_tag'],
+								'_display_meta'         => $args['_display_item_meta'],
 							)
 						);
 						?>

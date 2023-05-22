@@ -13,7 +13,7 @@ Framework::control(
 	'post-entries-layout-sm-1col',
 	array(
 		'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
-		'priority'          => 183,
+		'priority'          => 184,
 		'default'           => false,
 		'active_callback'   => function() {
 			$is_multi_cols_pattern = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'panel' ), true );

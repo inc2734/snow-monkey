@@ -8,19 +8,29 @@
 
 use Framework\Helper;
 
-$_post_type     = get_post_type();
-$entries_layout = get_theme_mod( $_post_type . '-entries-layout' );
-
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
 	// phpcs:enable
 	array(
 		'_entries_id'     => null,
-		'_entries_layout' => $entries_layout,
+		'_entries_layout' => 'rich-media',
 		'_excerpt_length' => null,
 	)
 );
+
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
+			? true
+			: false,
+	)
+);
+
+if ( ! $args['_display_item_excerpt'] ) {
+	return;
+}
 
 /**
  * Callback for excerpt_length

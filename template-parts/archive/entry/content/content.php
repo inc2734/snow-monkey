@@ -25,6 +25,7 @@ $_post_type             = get_post_type() ? get_post_type() : 'post';
 $display_item_author    = get_theme_mod( $_post_type . '-entries-layout-display-item-author' );
 $display_item_published = get_theme_mod( $_post_type . '-entries-layout-display-item-published' );
 $display_item_meta      = $display_item_author || $display_item_published;
+$display_item_excerpt   = get_theme_mod( $_post_type . '-entries-layout-display-item-excerpt' );
 ?>
 
 <?php do_action( 'snow_monkey_before_archive_entry_content' ); ?>
@@ -44,6 +45,7 @@ $display_item_meta      = $display_item_author || $display_item_published;
 			'_display_item_meta'      => $display_item_meta,
 			'_display_item_author'    => $display_item_author,
 			'_display_item_published' => $display_item_published,
+			'_display_item_excerpt'   => $display_item_excerpt,
 		)
 	);
 	?>
