@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Framework\Helper;
@@ -20,6 +20,11 @@ $args = wp_parse_args(
 		'_infeed_ads'     => false,
 	)
 );
+
+$_post_type             = get_post_type() ? get_post_type() : 'post';
+$display_item_author    = get_theme_mod( $_post_type . '-entries-layout-display-item-author' );
+$display_item_published = get_theme_mod( $_post_type . '-entries-layout-display-item-published' );
+$display_item_meta      = $display_item_author || $display_item_published;
 ?>
 
 <?php do_action( 'snow_monkey_before_archive_entry_content' ); ?>
@@ -32,10 +37,13 @@ $args = wp_parse_args(
 		'template-parts/archive/archive',
 		$args['_name'],
 		array(
-			'_entries_layout' => $args['_entries_layout'],
-			'_force_sm_1col'  => $args['_force_sm_1col'],
-			'_infeed_ads'     => $args['_infeed_ads'],
-			'_posts_query'    => $wp_query,
+			'_entries_layout'         => $args['_entries_layout'],
+			'_force_sm_1col'          => $args['_force_sm_1col'],
+			'_infeed_ads'             => $args['_infeed_ads'],
+			'_posts_query'            => $wp_query,
+			'_display_item_meta'      => $display_item_meta,
+			'_display_item_author'    => $display_item_author,
+			'_display_item_published' => $display_item_published,
 		)
 	);
 	?>

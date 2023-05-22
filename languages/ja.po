@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-05-19 00:02+0900\n"
-"PO-Revision-Date: 2023-05-19 00:02+0900\n"
+"POT-Creation-Date: 2023-05-22 19:34+0900\n"
+"PO-Revision-Date: 2023-05-22 19:34+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -691,6 +691,16 @@ msgstr "ページ上部へ戻るボタンを表示"
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3505
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
+
+#: app/customizer/design/sections/base-design/controls/entries-display-item-author.php:15
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-author.php:19
+msgid "Display the author for each item in the entries"
+msgstr "各項目の著者を表示する"
+
+#: app/customizer/design/sections/base-design/controls/entries-display-item-published.php:15
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-published.php:19
+msgid "Display the published date for each item in the entries"
+msgstr "各項目の公開日を表示する"
 
 #: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
@@ -2460,12 +2470,12 @@ msgstr "リンクテキスト"
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:44
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:46
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:49
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:50
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:52
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:55
 msgid "Recent posts"
 msgstr "最近の投稿"
@@ -2488,12 +2498,12 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:45
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:47
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:216
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:51
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:53
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:222
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"

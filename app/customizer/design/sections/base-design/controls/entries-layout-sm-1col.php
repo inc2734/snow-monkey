@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +13,7 @@ Framework::control(
 	'post-entries-layout-sm-1col',
 	array(
 		'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
-		'priority'          => 181,
+		'priority'          => 183,
 		'default'           => false,
 		'active_callback'   => function() {
 			$is_multi_cols_pattern = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'panel' ), true );

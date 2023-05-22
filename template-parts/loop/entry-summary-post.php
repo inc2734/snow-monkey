@@ -24,6 +24,14 @@ $args = wp_parse_args(
 		'_title_tag'      => 'h2',
 	)
 );
+
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_author'    => $args['_display_meta'],
+		'_display_published' => $args['_display_meta'],
+	)
+);
 ?>
 
 <a href="<?php the_permalink(); ?>">
@@ -79,9 +87,11 @@ $args = wp_parse_args(
 						'template-parts/loop/entry-summary/meta/meta',
 						$args['_name'],
 						array(
-							'_context'    => $args['_context'],
-							'_entries_id' => $args['_entries_id'],
-							'_terms'      => $args['_terms'],
+							'_context'           => $args['_context'],
+							'_entries_id'        => $args['_entries_id'],
+							'_display_author'    => $args['_display_author'],
+							'_display_published' => $args['_display_published'],
+							'_terms'             => $args['_terms'],
 						)
 					);
 				}

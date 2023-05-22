@@ -171,10 +171,6 @@
 		font-weight: normal;
 		justify-content: flex-start;
 
-		.#{ $_prefix }c-meta__item--author {
-			display: none;
-		}
-
 		.#{ $_prefix }c-meta__item--categories {
 			display: inline-flex;
 		}

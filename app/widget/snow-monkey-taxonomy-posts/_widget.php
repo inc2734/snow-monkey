@@ -157,6 +157,8 @@ Helper::get_template_part(
 		'_item_thumbnail_size'     => $instance['item-thumbnail-size'],
 		'_item_title_tag'          => $instance['item-title-tag'],
 		'_display_item_meta'       => $instance['display-item-meta'],
+		'_display_item_author'     => isset( $instance['display-item-author'] ) ? $instance['display-item-author'] : $instance['display-item-meta'],
+		'_display_item_published'  => isset( $instance['display-item-published'] ) ? $instance['display-item-published'] : $instance['display-item-meta'],
 		'_display_item_terms'      => $instance['display-item-terms'],
 		'_category_label_taxonomy' => $instance['category-label-taxonomy'],
 		'_link_text'               => $instance['link-text'],

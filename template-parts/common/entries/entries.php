@@ -31,6 +31,14 @@ if ( ! $args['_posts_query'] ) {
 	return;
 }
 
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_author'    => $args['_display_item_meta'],
+		'_display_item_published' => $args['_display_item_meta'],
+	)
+);
+
 if ( 'carousel' === $args['_entries_layout'] ) {
 	$slug = 'template-parts/common/entries/entries/carousel';
 	$args = wp_parse_args(

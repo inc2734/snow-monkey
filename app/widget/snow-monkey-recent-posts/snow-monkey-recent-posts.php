@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.0
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -18,21 +18,23 @@ class Snow_Monkey_Recent_Posts_Widget extends Abstract_Widget {
 	 * @var array
 	 */
 	protected $_defaults = array(
-		'title'               => '',
-		'post-type'           => 'post',
-		'posts-per-page'      => 12,
-		'layout'              => 'rich-media',
-		'item-title-tag'      => 'h3',
-		'item-thumbnail-size' => 'medium_large',
-		'display-item-meta'   => null,
-		'display-item-terms'  => null,
-		'link-text'           => null,
-		'link-url'            => null,
-		'ignore-sticky-posts' => 1,
-		'force-sm-1col'       => null,
-		'arrows'              => false,
-		'dots'                => true,
-		'interval'            => 0,
+		'title'                  => '',
+		'post-type'              => 'post',
+		'posts-per-page'         => 12,
+		'layout'                 => 'rich-media',
+		'item-title-tag'         => 'h3',
+		'item-thumbnail-size'    => 'medium_large',
+		'display-item-meta'      => null,
+		'display-item-author'    => null,
+		'display-item-published' => null,
+		'display-item-terms'     => null,
+		'link-text'              => null,
+		'link-url'               => null,
+		'ignore-sticky-posts'    => 1,
+		'force-sm-1col'          => null,
+		'arrows'                 => false,
+		'dots'                   => true,
+		'interval'               => 0,
 	);
 
 	/**

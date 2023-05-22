@@ -36,6 +36,14 @@ $args = wp_parse_args(
 	)
 );
 
+$args = wp_parse_args(
+	$args,
+	array(
+		'_display_item_author'    => $args['_display_item_meta'],
+		'_display_item_published' => $args['_display_item_meta'],
+	)
+);
+
 if ( ! $args['_posts_query'] ) {
 	return;
 }
@@ -113,6 +121,8 @@ $more_classnames = array(
 			'_item_thumbnail_size'     => $args['_item_thumbnail_size'],
 			'_item_title_tag'          => $args['_item_title_tag'],
 			'_display_item_meta'       => $args['_display_item_meta'],
+			'_display_item_author'     => $args['_display_item_author'],
+			'_display_item_published'  => $args['_display_item_published'],
 			'_display_item_terms'      => $args['_display_item_terms'],
 			'_category_label_taxonomy' => $args['_category_label_taxonomy'],
 			'_posts_query'             => $args['_posts_query'],
