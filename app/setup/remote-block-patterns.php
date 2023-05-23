@@ -78,7 +78,6 @@ function snow_monkey_register_remote_block_patterns() {
 
 	$transient_name = 'snow-monkey-remote-patterns';
 	$transient      = get_transient( $transient_name );
-	$transient = false;
 	if ( false !== $transient ) {
 		$remote_block_patterns = $transient;
 	} else {

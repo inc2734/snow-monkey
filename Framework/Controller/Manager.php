@@ -109,91 +109,34 @@ class Manager {
 			update_option( self::SETTINGS_NAME, self::DEFAULT_SETTINGS );
 		}
 
+		/**
+		 * Post proccess.
+		 */
 		register_setting(
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
 			function( $option ) {
-				if ( isset( $option['license-key'] ) || isset( $option['xserver-register-key'] ) ) {
-					if ( isset( $option['license-key'] ) ) {
-						if ( empty( $option['license-key'] ) ) {
-							delete_transient( 'snow-monkey-license-status' );
-							delete_transient( 'snow-monkey-remote-patterns' );
-						} elseif ( static::get_option( 'license-key' ) !== $option['license-key'] ) {
-							global $wp_version;
+				if ( static::get_option( 'license-key' ) !== $option['license-key'] ) {
+					if ( ! empty( $option['license-key'] ) ) {
+						$status = $this->request_license_validate( $option['license-key'] );
+						set_transient( 'snow-monkey-license-status', $status ? $status : 'false', 60 * 10 );
+					} else {
+						set_transient( 'snow-monkey-license-status', 'false', 60 * 10 );
+					}
+				}
 
-							$response = wp_remote_get(
-								sprintf(
-									'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate/%1$s?repository=snow-monkey',
-									esc_attr( $option['license-key'] )
-								),
-								array(
-									'user-agent' => 'WordPress/' . $wp_version,
-									'timeout'    => 30,
-									'headers'    => array(
-										'Accept-Encoding' => '',
-									),
-								)
-							);
-
-							$status = false;
-							if ( $response && ! is_wp_error( $response ) ) {
-								$response_code = wp_remote_retrieve_response_code( $response );
-								if ( 200 === $response_code ) {
-									$status = wp_remote_retrieve_body( $response );
-								}
-							}
-
-							if ( $status ) {
-								set_transient( 'snow-monkey-license-status', $status, 60 * 10 );
-							} else {
-								delete_transient( 'snow-monkey-license-status' );
-							}
-
-							delete_transient( 'snow-monkey-remote-patterns' );
+				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
+				if ( empty( $option['license-key'] ) ) {
+					if ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
+						if ( ! empty( $option['xserver-register-key'] ) ) {
+							$status = $this->request_license_validate_xserver( $option['xserver-register-key'] );
+							set_transient( 'snow-monkey-xserver-register-status', $status ? $status : 'false', 60 * 10 );
+						} else {
+							set_transient( 'snow-monkey-xserver-register-status', 'false', 60 * 10 );
 						}
 					}
-
-					if ( isset( $option['xserver-register-key'] ) ) {
-						if ( empty( $option['xserver-register-key'] ) || ! empty( $option['license-key'] ) ) {
-							delete_transient( 'snow-monkey-xserver-register-status' );
-							delete_transient( 'snow-monkey-remote-patterns' );
-							$option['xserver-register-key'] = static::DEFAULT_SETTINGS['xserver-register-key'];
-						} elseif ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] || 1 ) {
-							global $wp_version;
-
-							$response = wp_remote_get(
-								sprintf(
-									'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate-xserver/%1$s?repository=snow-monkey',
-									esc_attr( $option['xserver-register-key'] )
-								),
-								array(
-									'user-agent' => 'WordPress/' . $wp_version,
-									'timeout'    => 30,
-									'headers'    => array(
-										'Accept-Encoding' => '',
-									),
-								)
-							);
-
-							$status = false;
-							if ( $response && ! is_wp_error( $response ) ) {
-								$response_code = wp_remote_retrieve_response_code( $response );
-								if ( 200 === $response_code ) {
-									$status = wp_remote_retrieve_body( $response );
-								}
-							}
-
-							if ( $status ) {
-								set_transient( 'snow-monkey-xserver-register-status', $status, 60 * 10 );
-							} else {
-								delete_transient( 'snow-monkey-xserver-register-status' );
-							}
-
-							delete_transient( 'snow-monkey-remote-patterns' );
-						}
-					}
-
-					return $option;
+				} else {
+					$option['xserver-register-key'] = '';
 				}
 
 				if ( isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'] ) {
@@ -222,8 +165,15 @@ class Manager {
 			'license-key',
 			'<label for="license-key">' . esc_html__( 'License key', 'snow-monkey' ) . '</label>',
 			function( $args ) {
-				$transient_name = 'snow-monkey-license-status';
-				$transient      = get_transient( $transient_name );
+				$transient = get_transient( 'snow-monkey-license-status' );
+				if ( ! $transient ) {
+					if ( ! empty( static::get_option( 'license-key' ) ) ) {
+						$transient = $this->request_license_validate( static::get_option( 'license-key' ) );
+						set_transient( 'snow-monkey-license-status', $transient ? $transient : 'false', 60 * 10 );
+					} else {
+						set_transient( 'snow-monkey-license-status', 'false', 60 * 10 );
+					}
+				}
 
 				$button = 'true' === $transient
 					? array(
@@ -265,8 +215,15 @@ class Manager {
 			'xserver-register-key',
 			'<label for="xservser-regiser-key">' . esc_html__( 'Xserver register key', 'snow-monkey' ) . '</label>',
 			function( $args ) {
-				$transient_name = 'snow-monkey-xserver-register-status';
-				$transient      = get_transient( $transient_name );
+				$transient = get_transient( 'snow-monkey-xserver-register-status' );
+				if ( ! $transient ) {
+					if ( ! empty( static::get_option( 'xserver-register-key' ) ) && empty( static::get_option( 'license-key' ) ) ) {
+						$transient = $this->request_license_validate_xserver( static::get_option( 'xserver-register-key' ) );
+						set_transient( 'snow-monkey-xserver-register-status', $transient ? $transient : 'false', 60 * 10 );
+					} else {
+						set_transient( 'snow-monkey-xserver-register-status', 'false', 60 * 10 );
+					}
+				}
 
 				$button = 'true' === $transient
 					? array(
@@ -303,6 +260,62 @@ class Manager {
 			self::MENU_SLUG,
 			self::SETTINGS_NAME
 		);
+	}
+
+	protected function request_license_validate( $license_key ) {
+		global $wp_version;
+
+		$response = wp_remote_get(
+			sprintf(
+				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate/%1$s?repository=snow-monkey',
+				$license_key
+			),
+			array(
+				'user-agent' => 'WordPress/' . $wp_version,
+				'timeout'    => 30,
+				'headers'    => array(
+					'Accept-Encoding' => '',
+				),
+			)
+		);
+
+		$status = false;
+		if ( $response && ! is_wp_error( $response ) ) {
+			$response_code = wp_remote_retrieve_response_code( $response );
+			if ( 200 === $response_code ) {
+				$status = wp_remote_retrieve_body( $response );
+			}
+		}
+
+		return $status;
+	}
+
+	protected function request_license_validate_xserver( $xserver_register_key ) {
+		global $wp_version;
+
+		$response = wp_remote_get(
+			sprintf(
+				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate-xserver/%1$s?repository=snow-monkey',
+				$xserver_register_key
+			),
+			array(
+				'user-agent' => 'WordPress/' . $wp_version,
+				'timeout'    => 30,
+				'headers'    => array(
+					'Accept-Encoding' => '',
+				),
+			)
+		);
+
+		$status = false;
+		if ( $response && ! is_wp_error( $response ) ) {
+			$response_code = wp_remote_retrieve_response_code( $response );
+			if ( 200 === $response_code ) {
+				$status = wp_remote_retrieve_body( $response );
+			}
+		}
+
+		return $status;
 	}
 
 	/**
