@@ -152,6 +152,15 @@ function snow_monkey_register_remote_block_patterns() {
 			continue;
 		}
 
+		$required_plugins = isset( $pattern['requiredPlugins'] ) ? $pattern['requiredPlugins'] : array();
+		foreach ( $required_plugins as $required_plugin ) {
+			// @todo Some plug-ins have different bootstrap file names.
+			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			if ( ! is_plugin_active( $required_plugin . '/' . $required_plugin . '.php' ) ) {
+				continue 2;
+			}
+		}
+
 		$pattern_name = esc_html( $pattern['slug'] );
 		// Some patterns might be already registered as core patterns with the `core` prefix.
 		$is_registered = $registry->is_registered( $pattern_name ) || $registry->is_registered( $pattern_name );
