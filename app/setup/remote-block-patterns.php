@@ -3,8 +3,51 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
+
+/**
+ * Get remote block pattern categories.
+ *
+ * @return array
+ */
+function snow_monkey_get_remote_block_patten_categories() {
+	global $wp_version;
+
+	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/pattern-categories/';
+
+	$response = wp_remote_get(
+		$url,
+		array(
+			'user-agent' => 'WordPress/' . $wp_version,
+			'timeout'    => 30,
+			'headers'    => array(
+				'Accept-Encoding' => '',
+			),
+		)
+	);
+
+	if ( ! $response || is_wp_error( $response ) ) {
+		return array();
+	}
+
+	$response_code = wp_remote_retrieve_response_code( $response );
+	if ( 200 !== $response_code ) {
+		return array();
+	}
+
+	$pattern_categories = json_decode( wp_remote_retrieve_body( $response ), true );
+
+	$new_pattern_categories = array();
+	foreach ( $pattern_categories as $pattern_category ) {
+		$new_pattern_categories[] = array(
+			'name' => $pattern_category['slug'],
+			'label'=> $pattern_category['name'],
+		);
+	}
+
+	return $new_pattern_categories;
+}
 
 /**
  * Get remote block patterns.
@@ -76,6 +119,23 @@ function snow_monkey_register_remote_block_patterns() {
 		}
 	}
 
+	$transient_name = 'snow-monkey-remote-pattern-categories';
+	$transient      = get_transient( $transient_name );
+	if ( false !== $transient ) {
+		$remote_block_pattern_categories = $transient;
+	} else {
+		$remote_block_pattern_categories = snow_monkey_get_remote_block_patten_categories();
+		set_transient( $transient_name, $remote_block_pattern_categories, 60 * 10 );
+	}
+	foreach ( $remote_block_pattern_categories as $remote_block_pattern_category ) {
+		register_block_pattern_category(
+			$remote_block_pattern_category['name'],
+			array(
+				'label' => '[Snow Monkey] ' . $remote_block_pattern_category['label'],
+			)
+		);
+	}
+
 	$transient_name = 'snow-monkey-remote-patterns';
 	$transient      = get_transient( $transient_name );
 	if ( false !== $transient ) {
@@ -100,4 +160,4 @@ function snow_monkey_register_remote_block_patterns() {
 		}
 	}
 }
-add_action( 'init', 'snow_monkey_register_remote_block_patterns' );
+add_action( 'init', 'snow_monkey_register_remote_block_patterns', 9 );
