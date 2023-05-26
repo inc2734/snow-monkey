@@ -10,7 +10,7 @@
   ],
   "require-dev": {
     "wp-coding-standards/wpcs": "^2.3",
-    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
     "yoast/phpunit-polyfills": "^1.0"
   },
   "require": {
