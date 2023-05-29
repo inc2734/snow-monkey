@@ -24,16 +24,6 @@
 	> blockquote:not([class~="wp-block-quote"]) {
 		@extend %blockquote;
 	}
-
-	> .alignright.alignright {
-		margin-right: var(--_global--container-margin);
-		margin-right: calc(var(--_global--container-margin) + env(safe-area-inset-right));
-	}
-
-	> .alignleft.alignleft {
-		margin-left: var(--_global--container-margin);
-		margin-left: calc(var(--_global--container-margin) + env(safe-area-inset-left));
-	}
 }
 
 @mixin entry-content-theme() {
