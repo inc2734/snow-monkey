@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -15,6 +15,7 @@ $args = wp_parse_args(
 	array(
 		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
+		'_entries_gap'    => null,
 		'_excerpt_length' => null,
 		'_item_title_tag' => 'h3',
 		'_items'          => array(),
@@ -27,9 +28,15 @@ $args = wp_parse_args(
 if ( ! $args['_items'] ) {
 	return;
 }
+
+$classes   = array();
+$classes[] = 'c-entries-carousel';
+if ( $args['_entries_gap'] ) {
+	$classes[] = 'c-entries-carousel--gap-' . $args['_entries_gap'];
+}
 ?>
 
-<div class="c-entries-carousel" data-interval="<?php echo esc_attr( $args['_interval'] * 1000 ); ?>">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" data-interval="<?php echo esc_attr( $args['_interval'] * 1000 ); ?>">
 	<div class="spider">
 		<div class="spider__canvas">
 			<?php $i = 0; ?>

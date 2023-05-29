@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -15,6 +15,7 @@ $eyecatch_position    = 'post' === $_post_type
 $display_entry_header = 'title-on-page-header' !== $eyecatch_position;
 $display_eyecatch     = 'content-top' === $eyecatch_position;
 $entries_layout       = get_theme_mod( $_post_type . '-entries-layout' );
+$entries_gap          = get_theme_mod( $_post_type . '-entries-gap' );
 $force_sm_1col        = get_theme_mod( $_post_type . '-entries-layout-sm-1col' );
 
 // @see templates/view/archive.php
@@ -28,6 +29,7 @@ $args = wp_parse_args(
 		'_display_entry_header'            => $display_entry_header,
 		'_display_eyecatch'                => $display_eyecatch,
 		'_entries_layout'                  => $entries_layout,
+		'_entries_gap'                     => $entries_gap,
 		'_force_sm_1col'                   => $force_sm_1col,
 		'_infeed_ads'                      => get_option( 'mwt-google-infeed-ads' ),
 	)

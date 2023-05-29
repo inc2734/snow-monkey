@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -15,6 +15,7 @@ $args = wp_parse_args(
 	array(
 		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
+		'_entries_gap'    => null,
 		'_excerpt_length' => null,
 		'_force_sm_1col'  => false,
 		'_infeed_ads'     => false,
@@ -29,10 +30,19 @@ if ( ! $args['_items'] ) {
 
 $data_infeed_ads = $args['_infeed_ads'] ? 'true' : 'false';
 $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
+
+$classes   = array();
+$classes[] = 'c-entries';
+if ( $args['_entries_layout'] ) {
+	$classes[] = 'c-entries--' . $args['_entries_layout'];
+}
+if ( $args['_entries_gap'] ) {
+	$classes[] = 'c-entries--gap-' . $args['_entries_gap'];
+}
 ?>
 
 <ul
-	class="c-entries c-entries--<?php echo esc_attr( $args['_entries_layout'] ); ?>"
+	class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>"
 	data-has-infeed-ads="<?php echo esc_attr( $data_infeed_ads ); ?>"
 	data-force-sm-1col="<?php echo esc_attr( $force_sm_1col ); ?>"
 >

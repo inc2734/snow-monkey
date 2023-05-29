@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.1
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -22,6 +22,7 @@ class Snow_Monkey_RSS_Widget extends Abstract_Widget {
 		'title'          => '',
 		'posts-per-page' => 12,
 		'layout'         => 'rich-media',
+		'gap'            => null,
 		'item-title-tag' => 'h3',
 		'link-text'      => null,
 		'link-url'       => null,

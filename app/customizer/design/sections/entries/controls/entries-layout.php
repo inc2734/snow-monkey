@@ -3,8 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.1
  *
+ * renamed: app/customizer/design/sections/base-design/controls/entries-layout.php
  * renamed: app/customizer/layout/sections/archive/controls/entries-layout.php
  */
 
@@ -15,7 +16,7 @@ Framework::control(
 	'post-entries-layout',
 	array(
 		'label'    => __( 'Entries layout', 'snow-monkey' ),
-		'priority' => 180,
+		'priority' => 100,
 		'default'  => 'rich-media',
 		'choices'  => array(
 			'rich-media'  => __( 'Rich media', 'snow-monkey' ),
@@ -38,6 +39,6 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = Framework::get_panel( 'design' );
-$section = Framework::get_section( 'base-design' );
+$section = Framework::get_section( 'entries' );
 $control = Framework::get_control( 'post-entries-layout' );
 $control->join( $section )->join( $panel );

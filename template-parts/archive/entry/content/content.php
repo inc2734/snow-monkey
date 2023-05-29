@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -16,6 +16,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	array(
 		'_entries_layout' => 'rich-media',
+		'_entries_gap'    => null,
 		'_force_sm_1col'  => false,
 		'_infeed_ads'     => false,
 	)
@@ -39,6 +40,7 @@ $display_item_excerpt   = get_theme_mod( $_post_type . '-entries-layout-display-
 		$args['_name'],
 		array(
 			'_entries_layout'         => $args['_entries_layout'],
+			'_entries_gap'            => $args['_entries_gap'],
 			'_force_sm_1col'          => $args['_force_sm_1col'],
 			'_infeed_ads'             => $args['_infeed_ads'],
 			'_posts_query'            => $wp_query,

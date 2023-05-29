@@ -14,6 +14,18 @@
 		--entries--item-width: 33.33333%;
 	}
 
+	&--gap-s {
+		--entries--gap: var(--_margin-1);
+	}
+
+	&--gap-m {
+		--entries--gap: var(--_margin1);
+	}
+
+	&--gap-l {
+		--entries--gap: var(--_margin2);
+	}
+
 	&__item {
 		flex: 0 1 var(--entries--item-width);
 		max-width: var(--entries--item-width);

@@ -3,7 +3,9 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
+ *
+ * renamed: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,7 +15,7 @@ Framework::control(
 	'post-entries-layout-sm-1col',
 	array(
 		'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
-		'priority'          => 184,
+		'priority'          => 150,
 		'default'           => false,
 		'active_callback'   => function() {
 			$is_multi_cols_pattern = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'panel' ), true );
@@ -31,6 +33,6 @@ if ( ! is_customize_preview() ) {
 }
 
 $panel   = Framework::get_panel( 'design' );
-$section = Framework::get_section( 'base-design' );
+$section = Framework::get_section( 'entries' );
 $control = Framework::get_control( 'post-entries-layout-sm-1col' );
 $control->join( $section )->join( $panel );

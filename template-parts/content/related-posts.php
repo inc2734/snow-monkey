@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.1
  *
  * renamed: template-parts/related-posts.php
  */
@@ -16,6 +16,10 @@ $default_entries_layout = get_theme_mod( 'related-posts-layout' )
 	? get_theme_mod( 'related-posts-layout' )
 	: get_theme_mod( $_post_type . '-entries-layout' );
 
+$default_entries_gap = get_theme_mod( 'related-posts-gap' )
+	? get_theme_mod( 'related-posts-gap' )
+	: get_theme_mod( $_post_type . '-entries-gap' );
+
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
 	$args,
@@ -24,6 +28,7 @@ $args = wp_parse_args(
 		'_code'           => null,
 		'_context'        => 'snow-monkey/related-posts',
 		'_entries_layout' => $default_entries_layout,
+		'_entries_gap'    => $default_entries_gap,
 		'_item_title_tag' => 'h3',
 		'_post_id'        => get_the_ID(),
 		'_posts_query'    => null,
@@ -65,6 +70,7 @@ if ( ! $args['_code'] && ! $query->have_posts() ) {
 			array(
 				'_context'        => $args['_context'],
 				'_entries_layout' => $args['_entries_layout'],
+				'_entries_gap'    => $args['_entries_gap'],
 				'_force_sm_1col'  => false,
 				'_infeed_ads'     => false,
 				'_item_title_tag' => $args['_item_title_tag'],

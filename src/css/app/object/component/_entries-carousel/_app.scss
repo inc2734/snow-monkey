@@ -1,4 +1,6 @@
 .#{ $_prefix }c-entries-carousel {
+	--entries--carousel--gap: var(--_margin1);
+
 	&__item {
 		> a {
 			display: block;
@@ -7,15 +9,15 @@
 		}
 	}
 
+	.spider__canvas {
+		gap: var(--entries--carousel--gap);
+	}
+
 	.spider__slide {
 		align-items: flex-start;
 
 		@include _media-min(md) {
-			max-width: calc(1 / 3 * 100% - var(--_margin1) / 1.5);
-
-			&:not(:first-child) {
-				margin-left: var(--_margin1);
-			}
+			max-width: calc(1 / 3 * 100% - var(--entries--carousel--gap) / 1.5);
 		}
 
 		.#{ $_prefix }c-entries-carousel__item {

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -14,6 +14,7 @@ $args = wp_parse_args(
 	// phpcs:enable
 	array(
 		'_entries_layout' => 'rich-media',
+		'_entries_gap'    => null,
 		'_force_sm_1col'  => false,
 	)
 );
@@ -29,6 +30,7 @@ $args = wp_parse_args(
 			$args['_name'],
 			array(
 				'_entries_layout' => $args['_entries_layout'],
+				'_entries_gap'    => $args['_entries_gap'],
 				'_force_sm_1col'  => $args['_force_sm_1col'],
 			)
 		);

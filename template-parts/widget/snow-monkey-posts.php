@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -16,6 +16,7 @@ $args = wp_parse_args(
 		'_classname'               => null,
 		'_entries_id'              => null,
 		'_entries_layout'          => 'rich-media',
+		'_entries_gap'             => null,
 		'_excerpt_length'          => null,
 		'_force_sm_1col'           => false,
 		'_infeed_ads'              => get_option( 'mwt-google-infeed-ads' ),
@@ -130,6 +131,7 @@ $more_classnames = array(
 			'_context'                 => $args['_context'],
 			'_entries_id'              => $args['_entries_id'],
 			'_entries_layout'          => $args['_entries_layout'],
+			'_entries_gap'             => $args['_entries_gap'],
 			'_excerpt_length'          => $args['_excerpt_length'],
 			'_force_sm_1col'           => $args['_force_sm_1col'],
 			'_infeed_ads'              => $args['_infeed_ads'],

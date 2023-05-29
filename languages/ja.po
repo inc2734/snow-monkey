@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-05-23 00:37+0900\n"
-"PO-Revision-Date: 2023-05-23 00:40+0900\n"
+"POT-Creation-Date: 2023-05-29 22:20+0900\n"
+"PO-Revision-Date: 2023-05-29 22:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -78,9 +78,9 @@ msgid "Left"
 msgstr "左"
 
 #: .translation/bundle-template.php:14
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:22
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:23
+#: app/customizer/design/sections/entries/controls/entries-layout.php:23
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:27
 #: app/widget/snow-monkey-recent-posts/_form.php:88
 #: app/widget/snow-monkey-rss/_form.php:73
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:127
@@ -111,10 +111,13 @@ msgid "Footer 5"
 msgstr "フッター5"
 
 #: .translation/bundle-template.php:20
+#: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:24
 #: app/customizer/design/sections/custom-post/controls/view.php:24
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:21
+#: app/customizer/design/sections/entries/controls/entries-gap.php:19
+#: app/customizer/design/sections/post/controls/related-posts-gap.php:24
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:25
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4983
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5367
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5530
@@ -142,39 +145,39 @@ msgstr "設定をリセット"
 msgid "Clear remote patterns caches"
 msgstr "リモートパターンのキャッシュをクリア"
 
-#: Framework/Controller/Manager.php:215
+#: Framework/Controller/Manager.php:158
 msgid "Settings"
 msgstr "設定"
 
-#: Framework/Controller/Manager.php:223
+#: Framework/Controller/Manager.php:166
 msgid "License key"
 msgstr "ライセンスキー"
 
-#: Framework/Controller/Manager.php:230 Framework/Controller/Manager.php:273
+#: Framework/Controller/Manager.php:180 Framework/Controller/Manager.php:230
 msgid "Enable"
 msgstr "有効"
 
-#: Framework/Controller/Manager.php:235 Framework/Controller/Manager.php:278
+#: Framework/Controller/Manager.php:185 Framework/Controller/Manager.php:235
 msgid "Disable"
 msgstr "無効"
 
-#: Framework/Controller/Manager.php:255
+#: Framework/Controller/Manager.php:205
 msgid ""
 "If the license key entered is valid, premium block patterns are available."
 msgstr ""
 "入力されたライセンスキーが有効な場合、プレミアムブロックパターンが利用できま"
 "す。"
 
-#: Framework/Controller/Manager.php:256
+#: Framework/Controller/Manager.php:206
 msgid ""
 "If the license key is entered, the Xserver register key setting is not saved."
 msgstr "ライセンスキーを入力した場合、XSERVER 登録キーの設定は保存されません。"
 
-#: Framework/Controller/Manager.php:266
+#: Framework/Controller/Manager.php:216
 msgid "Xserver register key"
 msgstr "XSERVER 登録キー"
 
-#: Framework/Controller/Manager.php:298
+#: Framework/Controller/Manager.php:255
 msgid ""
 "If the Xserver register key entered is valid, premium block patterns are "
 "available."
@@ -182,7 +185,7 @@ msgstr ""
 "入力されたXSERVER 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
 "です。"
 
-#: Framework/Controller/Manager.php:299
+#: Framework/Controller/Manager.php:256
 msgid ""
 "If you are using Xserver integration, enter the Xserver register key in the "
 "Xserver register key entry field without entering anything in the license "
@@ -458,13 +461,6 @@ msgstr "デザインスキン"
 msgid "If set this, please save and reload."
 msgstr "設定したら、保存してリロードしてください。"
 
-#. translators: 1: <a> tag, 2: </a> tag
-#: app/customizer/design-skin/section.php:22
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:85
-#, php-format
-msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
-msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダウンロードできます。"
-
 #: app/customizer/design/panel.php:18
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:52
 msgid "Design"
@@ -692,118 +688,6 @@ msgstr "ページ上部へ戻るボタンを表示"
 msgid "Display site description under the site logo"
 msgstr "サイトの概要をサイトロゴの下に表示する"
 
-#: app/customizer/design/sections/base-design/controls/entries-display-item-author.php:15
-#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-author.php:19
-msgid "Display the author for each item in the entries"
-msgstr "投稿一覧の各項目の著者を表示する"
-
-#: app/customizer/design/sections/base-design/controls/entries-display-item-excerpt.php:15
-#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-excerpt.php:19
-msgid "Display the excerpt for each item in the entries"
-msgstr "投稿一覧の各項目の抜粋を表示する"
-
-#: app/customizer/design/sections/base-design/controls/entries-display-item-published.php:15
-#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-published.php:19
-msgid "Display the published date for each item in the entries"
-msgstr "投稿一覧の各項目の公開日を表示する"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php:15
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3556
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5029
-msgid "Make the entries one column on mobile device"
-msgstr "モバイル端末時に記事一覧を1列にする"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:17
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3602
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5090
-msgid "Entries layout"
-msgstr "記事一覧レイアウト"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:21
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:29
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:31
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:22
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:30
-#: app/widget/snow-monkey-recent-posts/_form.php:87
-#: app/widget/snow-monkey-recent-posts/_form.php:95
-#: app/widget/snow-monkey-rss/_form.php:72
-#: app/widget/snow-monkey-rss/_form.php:80
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:126
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:134
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3606
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3614
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5094
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5102
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6641
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6649
-msgid "Rich media"
-msgstr "リッチメディア"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:23
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:24
-#: app/widget/snow-monkey-recent-posts/_form.php:89
-#: app/widget/snow-monkey-rss/_form.php:74
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:128
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3608
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5096
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6643
-msgid "Text"
-msgstr "テキスト"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:24
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:25
-#: app/widget/snow-monkey-recent-posts/_form.php:90
-#: app/widget/snow-monkey-rss/_form.php:75
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:129
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3609
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5097
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6644
-msgid "Text 2"
-msgstr "テキスト2"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:25
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:26
-#: app/widget/snow-monkey-recent-posts/_form.php:91
-#: app/widget/snow-monkey-rss/_form.php:76
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:130
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3610
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5098
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6645
-msgid "Panels"
-msgstr "パネル"
-
-#. translators: %1$s: entries layout
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:28
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:29
-#: app/widget/snow-monkey-recent-posts/_form.php:94
-#: app/widget/snow-monkey-rss/_form.php:79
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:133
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3613
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5101
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6648
-#, php-format
-msgid "Carousel (%1$s)"
-msgstr "カルーセル（%1$s）"
-
-#: app/customizer/design/sections/base-design/controls/entries-layout.php:31
-#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:33
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:32
-#: app/widget/snow-monkey-recent-posts/_form.php:97
-#: app/widget/snow-monkey-rss/_form.php:82
-#: app/widget/snow-monkey-taxonomy-posts/_form.php:136
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3616
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5104
-#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6651
-msgid "Large image"
-msgstr "大きな画像"
-
 #: app/customizer/design/sections/base-design/controls/font-weight.php:28
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3665
 msgid "Font weight"
@@ -1016,6 +900,141 @@ msgstr "この設定は投稿ページ設定のアイキャッチ画像の設定
 msgid "[ %1$s ] category pages settings"
 msgstr "[ %1$s ] カテゴリーページ設定"
 
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-author.php:19
+#: app/customizer/design/sections/entries/controls/entries-display-item-author.php:17
+msgid "Display the author for each item in the entries"
+msgstr "記事一覧の各項目の著者を表示する"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-excerpt.php:19
+#: app/customizer/design/sections/entries/controls/entries-display-item-excerpt.php:17
+msgid "Display the excerpt for each item in the entries"
+msgstr "記事一覧の各項目の抜粋を表示する"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-published.php:19
+#: app/customizer/design/sections/entries/controls/entries-display-item-published.php:17
+msgid "Display the published date for each item in the entries"
+msgstr "記事一覧の各項目の公開日を表示する"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:23
+#: app/customizer/design/sections/entries/controls/entries-gap.php:15
+msgid "The gap between each item in the entries"
+msgstr "記事一覧の各項目間の間隔"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:28
+#: app/customizer/design/sections/entries/controls/entries-gap.php:20
+#: app/customizer/design/sections/post/controls/related-posts-gap.php:25
+msgid "S"
+msgstr "S"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:29
+#: app/customizer/design/sections/entries/controls/entries-gap.php:21
+#: app/customizer/design/sections/post/controls/related-posts-gap.php:26
+msgid "M"
+msgstr "M"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:30
+#: app/customizer/design/sections/entries/controls/entries-gap.php:22
+#: app/customizer/design/sections/post/controls/related-posts-gap.php:27
+msgid "L"
+msgstr "L"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
+#: app/customizer/design/sections/entries/controls/entries-layout-sm-1col.php:17
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3556
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5029
+msgid "Make the entries one column on mobile device"
+msgstr "モバイル端末時に記事一覧を1列にする"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
+#: app/customizer/design/sections/entries/controls/entries-layout.php:18
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3602
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5090
+msgid "Entries layout"
+msgstr "記事一覧レイアウト"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:23
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:31
+#: app/customizer/design/sections/entries/controls/entries-layout.php:22
+#: app/customizer/design/sections/entries/controls/entries-layout.php:30
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:26
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:34
+#: app/widget/snow-monkey-recent-posts/_form.php:87
+#: app/widget/snow-monkey-recent-posts/_form.php:95
+#: app/widget/snow-monkey-rss/_form.php:72
+#: app/widget/snow-monkey-rss/_form.php:80
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:126
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:134
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3606
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3614
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5094
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5102
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6641
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6649
+msgid "Rich media"
+msgstr "リッチメディア"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
+#: app/customizer/design/sections/entries/controls/entries-layout.php:24
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:28
+#: app/widget/snow-monkey-recent-posts/_form.php:89
+#: app/widget/snow-monkey-rss/_form.php:74
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:128
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3608
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5096
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6643
+msgid "Text"
+msgstr "テキスト"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
+#: app/customizer/design/sections/entries/controls/entries-layout.php:25
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:29
+#: app/widget/snow-monkey-recent-posts/_form.php:90
+#: app/widget/snow-monkey-rss/_form.php:75
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:129
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3609
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5097
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6644
+msgid "Text 2"
+msgstr "テキスト2"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
+#: app/customizer/design/sections/entries/controls/entries-layout.php:26
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:30
+#: app/widget/snow-monkey-recent-posts/_form.php:91
+#: app/widget/snow-monkey-rss/_form.php:76
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:130
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3610
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5098
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6645
+msgid "Panels"
+msgstr "パネル"
+
+#. translators: %1$s: entries layout
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
+#: app/customizer/design/sections/entries/controls/entries-layout.php:29
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:33
+#: app/widget/snow-monkey-recent-posts/_form.php:94
+#: app/widget/snow-monkey-rss/_form.php:79
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:133
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3613
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5101
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6648
+#, php-format
+msgid "Carousel (%1$s)"
+msgstr "カルーセル（%1$s）"
+
+#: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:33
+#: app/customizer/design/sections/entries/controls/entries-layout.php:32
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:36
+#: app/widget/snow-monkey-recent-posts/_form.php:97
+#: app/widget/snow-monkey-rss/_form.php:82
+#: app/widget/snow-monkey-taxonomy-posts/_form.php:136
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:3616
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5104
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6651
+msgid "Large image"
+msgstr "大きな画像"
+
 #. translators: 1: Custom post type label
 #: app/customizer/design/sections/custom-post-archive/controls/eyecatch.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:27
@@ -1130,6 +1149,14 @@ msgstr "背景色"
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:2259
 msgid "Drawer navigation"
 msgstr "ドロワーナビゲーション"
+
+#: app/customizer/design/sections/entries/section.php:18
+msgid "Entries"
+msgstr "記事一覧"
+
+#: app/customizer/design/sections/entries/section.php:19
+msgid "This is the setting for the entries section of \"Posts\"."
+msgstr "「投稿」の記事一覧部分の設定です。"
 
 #: app/customizer/design/sections/footer/controls/alignfull.php:15
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5648
@@ -1301,7 +1328,11 @@ msgstr "[ %1$s ] タグページ設定"
 msgid "Display profile box in posts"
 msgstr "記事にプロフィールボックスを表示する"
 
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:17
+#: app/customizer/design/sections/post/controls/related-posts-gap.php:20
+msgid "The gap between each item in the related posts"
+msgstr "関連記事の各項目間の間隔"
+
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:21
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6636
 msgid "Related posts layout"
 msgstr "関連記事のレイアウト"
@@ -2153,28 +2184,6 @@ msgid "If \"Logo\" is not set, \"Logo on mobile device\" is not used."
 msgstr ""
 "「ロゴ」が設定されていない場合、「モバイル端末時のロゴ」は使用されません。"
 
-#: app/setup/block-patterns.php:21
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:308
-msgid "Headers"
-msgstr "ヘッダー"
-
-#: app/setup/block-patterns.php:25
-msgid "Sections"
-msgstr "セクション"
-
-#: app/setup/block-patterns.php:29
-msgid "Pricing"
-msgstr "価格"
-
-#: app/setup/block-patterns.php:33
-msgid "FAQ"
-msgstr "FAQ"
-
-#: app/setup/block-patterns.php:37
-#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:320
-msgid "Gallery"
-msgstr "ギャラリー"
-
 #: app/setup/dependency/snow-monkey-blocks.php:162
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5025
 msgid "Undecorated title"
@@ -2475,12 +2484,12 @@ msgstr "リンクテキスト"
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:47
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:48
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:49
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:53
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:54
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:55
 msgid "Recent posts"
 msgstr "最近の投稿"
@@ -2489,12 +2498,12 @@ msgstr "最近の投稿"
 msgid "Feed URL"
 msgstr "フィード URL"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:40
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:41
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:130
 msgid "Snow Monkey: RSS"
 msgstr "Snow Monkey: RSS"
 
-#: app/widget/snow-monkey-rss/snow-monkey-rss.php:46
+#: app/widget/snow-monkey-rss/snow-monkey-rss.php:47
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:136
 msgid "RSS"
 msgstr "RSS"
@@ -2503,15 +2512,19 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:48
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:49
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:216
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:54
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:55
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:222
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
+
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:308
+msgid "Headers"
+msgstr "ヘッダー"
 
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:312
 msgid "Features"
@@ -2520,6 +2533,10 @@ msgstr "特徴"
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:316
 msgid "Text with image"
 msgstr "テキストと画像"
+
+#: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:320
+msgid "Gallery"
+msgstr "ギャラリー"
 
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:324
 msgid "Columns"
@@ -2567,6 +2584,12 @@ msgstr "ギャラリー %1$s"
 #, php-format
 msgid "Columns %1$s"
 msgstr "カラム %1$s"
+
+#. translators: 1: <a> tag, 2: </a> tag
+#: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:85
+#, php-format
+msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
+msgstr "デザインスキンは%1$sデザインスキンページ%2$sからダウンロードできます。"
 
 #: template-parts/archive/entry/content/no-keywords.php:18
 msgid "Please enter a search keyword."
@@ -2622,7 +2645,7 @@ msgid "Please search this search box."
 msgstr "この検索ボックスから検索してください。"
 
 #: template-parts/content/entry/footer/footer.php:51
-#: template-parts/content/related-posts.php:30
+#: template-parts/content/related-posts.php:35
 msgid "Related posts"
 msgstr "関連記事"
 
@@ -2642,7 +2665,7 @@ msgstr "古い投稿"
 msgid "New post"
 msgstr "新しい投稿"
 
-#: template-parts/content/related-posts.php:49
+#: template-parts/content/related-posts.php:54
 msgid "(Including some ads)"
 msgstr "（一部広告含む）"
 
@@ -2698,6 +2721,15 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Sections"
+#~ msgstr "セクション"
+
+#~ msgid "Pricing"
+#~ msgstr "価格"
+
+#~ msgid "FAQ"
+#~ msgstr "FAQ"
 
 #~ msgid ""
 #~ "For all other options except \"Sans serif\" and \"Serif\", downloading of "

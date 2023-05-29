@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  *
  * renamed: template-parts/common/entries.php
  */
@@ -17,6 +17,7 @@ $args = wp_parse_args(
 	array(
 		'_entries_id'     => null,
 		'_entries_layout' => 'rich-media',
+		'_entries_gap'    => null,
 		'_excerpt_length' => null,
 		'_item_title_tag' => 'h3',
 		'_items'          => array(),

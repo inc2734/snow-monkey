@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -15,6 +15,7 @@ $args = wp_parse_args(
 	array(
 		'_entries_id'              => null,
 		'_entries_layout'          => 'rich-media',
+		'_entries_gap'             => null,
 		'_excerpt_length'          => null,
 		'_force_sm_1col'           => false,
 		'_item_thumbnail_size'     => 'medium_large',
@@ -53,9 +54,15 @@ $args = wp_parse_args(
 $queried_object                 = $args['_posts_query']->get_queried_object();
 $is_term_query                  = is_a( $queried_object, '\WP_Term' ) && 1 === count( $args['_posts_query']->tax_query->queried_terms ) && 1 === count( array_values( $args['_posts_query']->tax_query->queried_terms )[0]['terms'] );
 $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $queried_object->taxonomy );
+
+$classes   = array();
+$classes[] = 'c-entries-carousel';
+if ( $args['_entries_gap'] ) {
+	$classes[] = 'c-entries-carousel--gap-' . $args['_entries_gap'];
+}
 ?>
 
-<div class="c-entries-carousel" data-interval="<?php echo esc_attr( $args['_interval'] * 1000 ); ?>">
+<div class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" data-interval="<?php echo esc_attr( $args['_interval'] * 1000 ); ?>">
 	<div class="spider">
 		<div class="spider__canvas">
 			<?php $i = 0; ?>

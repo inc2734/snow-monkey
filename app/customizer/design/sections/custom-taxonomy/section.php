@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -41,7 +41,7 @@ foreach ( $taxonomies as $taxonomy ) {
 					__( '[ %1$s ] taxonomy pages settings', 'snow-monkey' ),
 					$_term->name
 				),
-				'priority'        => 131,
+				'priority'        => 140,
 				'active_callback' => function() use ( $_term ) {
 					$view = Controller::get_view();
 					$view = explode( '/', $view['slug'] );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Framework\Helper;
@@ -68,6 +68,7 @@ Helper::get_template_part(
 		'_context'        => $args['_context'],
 		'_entries_id'     => $instance['entries_id'],
 		'_entries_layout' => $instance['layout'],
+		'_entries_gap'    => isset( $instance['gap'] ) ? $instance['gap'] : null,
 		'_excerpt_length' => null,
 		'_force_sm_1col'  => $force_sm_1col,
 		'_item_title_tag' => $instance['item-title-tag'],

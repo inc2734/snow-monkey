@@ -13,9 +13,10 @@ if ( ! is_customize_preview() ) {
 }
 
 Framework::section(
-	'design-skin',
+	'entries',
 	array(
-		'title'    => __( 'Design skin', 'snow-monkey' ),
-		'priority' => 1030,
+		'title'       => __( 'Entries', 'snow-monkey' ),
+		'description' => __( 'This is the setting for the entries section of "Posts".', 'snow-monkey' ),
+		'priority'    => 130,
 	)
 );

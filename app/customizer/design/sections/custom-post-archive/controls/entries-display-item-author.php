@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.1.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-entries-layout-display-item-author',
 		array(
 			'label'             => __( 'Display the author for each item in the entries', 'snow-monkey' ),
-			'priority'          => 141,
+			'priority'          => 142,
 			'default'           => false,
 			'active_callback'   => function() use ( $custom_post_type ) {
 				$is_display_item_author = 'text' !== get_theme_mod( $custom_post_type . '-entries-layout' );
