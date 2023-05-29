@@ -15,15 +15,15 @@
 	}
 
 	&--gap-s {
-		--entries--gap: var(--_margin-1) !important;
+		--entries--gap: var(--_margin-1);
 	}
 
 	&--gap-m {
-		--entries--gap: var(--_margin1) !important;
+		--entries--gap: var(--_margin1);
 	}
 
 	&--gap-l {
-		--entries--gap: var(--_margin2) !important;
+		--entries--gap: var(--_margin2);
 	}
 
 	&__item {
@@ -83,6 +83,18 @@
 	&--text,
 	&--text2 {
 		--entries--gap: var(--_padding-1);
+
+		&.#{ $_prefix }c-entries--gap-s {
+			--entries--gap: var(--_padding-2);
+		}
+
+		&.#{ $_prefix }c-entries--gap-m {
+			--entries--gap: var(--_padding-1);
+		}
+
+		&.#{ $_prefix }c-entries--gap-l {
+			--entries--gap: var(--_padding1);
+		}
 
 		.#{ $_prefix }c-entries__item {
 			> a {

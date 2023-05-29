@@ -2,15 +2,15 @@
 	--entries--carousel--gap: var(--_margin1);
 
 	&--gap-s {
-		--entries--carousel--gap: var(--_margin-1) !important;
+		--entries--carousel--gap: var(--_margin-1);
 	}
 
 	&--gap-m {
-		--entries--carousel--gap: var(--_margin1) !important;
+		--entries--carousel--gap: var(--_margin1);
 	}
 
 	&--gap-l {
-		--entries--carousel--gap: var(--_margin2) !important;
+		--entries--carousel--gap: var(--_margin2);
 	}
 
 	&__item {
