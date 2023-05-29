@@ -15,15 +15,15 @@
 	}
 
 	&--gap-s {
-		--entries--gap: var(--_margin-1);
+		--entries--gap: var(--_margin-1) !important;
 	}
 
 	&--gap-m {
-		--entries--gap: var(--_margin1);
+		--entries--gap: var(--_margin1) !important;
 	}
 
 	&--gap-l {
-		--entries--gap: var(--_margin2);
+		--entries--gap: var(--_margin2) !important;
 	}
 
 	&__item {

@@ -1,6 +1,18 @@
 .#{ $_prefix }c-entries-carousel {
 	--entries--carousel--gap: var(--_margin1);
 
+	&--gap-s {
+		--entries--carousel--gap: var(--_margin-1) !important;
+	}
+
+	&--gap-m {
+		--entries--carousel--gap: var(--_margin1) !important;
+	}
+
+	&--gap-l {
+		--entries--carousel--gap: var(--_margin2) !important;
+	}
+
 	&__item {
 		> a {
 			display: block;
