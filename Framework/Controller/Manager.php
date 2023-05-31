@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.2.0
  */
 
 namespace Framework\Controller;
@@ -116,7 +116,7 @@ class Manager {
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
 			function( $option ) {
-				if ( static::get_option( 'license-key' ) !== $option['license-key'] ) {
+				if ( isset( $option['license-key'] ) && static::get_option( 'license-key' ) !== $option['license-key'] ) {
 					if ( ! empty( $option['license-key'] ) ) {
 						$status = $this->request_license_validate( $option['license-key'] );
 						set_transient( 'snow-monkey-license-status', $status ? $status : 'false', 60 * 10 );
@@ -126,17 +126,19 @@ class Manager {
 				}
 
 				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
-				if ( empty( $option['license-key'] ) ) {
-					if ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
-						if ( ! empty( $option['xserver-register-key'] ) ) {
-							$status = $this->request_license_validate_xserver( $option['xserver-register-key'] );
-							set_transient( 'snow-monkey-xserver-register-status', $status ? $status : 'false', 60 * 10 );
-						} else {
-							set_transient( 'snow-monkey-xserver-register-status', 'false', 60 * 10 );
+				if ( isset( $option['license-key'] ) && isset( $option['xserver-register-key'] ) ) {
+					if ( empty( $option['license-key'] ) ) {
+						if ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
+							if ( ! empty( $option['xserver-register-key'] ) ) {
+								$status = $this->request_license_validate_xserver( $option['xserver-register-key'] );
+								set_transient( 'snow-monkey-xserver-register-status', $status ? $status : 'false', 60 * 10 );
+							} else {
+								set_transient( 'snow-monkey-xserver-register-status', 'false', 60 * 10 );
+							}
 						}
+					} else {
+						$option['xserver-register-key'] = '';
 					}
-				} else {
-					$option['xserver-register-key'] = '';
 				}
 
 				if ( isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'] ) {
