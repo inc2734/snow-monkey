@@ -75,6 +75,7 @@
     "css:admin": "node-sass src/css/admin -o assets/css/admin && postcss assets/css/admin/*.css -r",
     "css:wpac": "node-sass src/css/wpac -o assets/css/wpac && postcss assets/css/wpac/*.css -r",
     "css:custom-widgets": "node-sass src/css/custom-widgets -o assets/css/custom-widgets && postcss assets/css/custom-widgets/*.css -r",
+    "css:wp-oembed-blog-card-variations": "node-sass src/css/wp-oembed-blog-card-variations -o assets/css/wp-oembed-blog-card-variations && postcss assets/css/wp-oembed-blog-card-variations/*.css -r",
     "css:dependency:amp": "node-sass src/css/dependency/amp -o assets/css/dependency/amp && postcss assets/css/dependency/amp/*.css -r",
     "css:dependency:contact-form-7": "node-sass src/css/dependency/contact-form-7 -o assets/css/dependency/contact-form-7 && postcss assets/css/dependency/contact-form-7/*.css -r",
     "css:dependency:elementor": "node-sass src/css/dependency/elementor -o assets/css/dependency/elementor && postcss assets/css/dependency/elementor/*.css -r",

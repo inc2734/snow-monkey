@@ -7,6 +7,7 @@
  */
 
 use Inc2734\WP_OEmbed_Blog_Card\Bootstrap;
+use Framework\Helper;
 
 new Bootstrap();
 
@@ -39,11 +40,20 @@ add_filter(
 	}
 );
 
-add_filter(
-	'inc2734_wp_oembed_blog_card_block_editor_styles',
-	function( $styles ) {
-		$styles[] = get_template_directory_uri() . '/assets/css/app/app.css?ver=' . filemtime( get_template_directory() . '/assets/css/app/app.css' );
-		$styles[] = get_template_directory_uri() . '/assets/css/app/app-theme.css?ver=' . filemtime( get_template_directory() . '/assets/css/app/app-theme.css' );
-		return $styles;
+add_action(
+	'enqueue_block_assets',
+	function() {
+		$variation = get_theme_mod( 'wp-oembed-blog-card-variation' );
+		if ( $variation ) {
+			$slug = 'assets/css/wp-oembed-blog-card-variations/' . $variation . '.css';
+			if ( file_exists( get_theme_file_path( $slug ) ) ) {
+				wp_enqueue_style(
+					'wp-oembed-blog-card-variation',
+					get_theme_file_uri( $slug ),
+					array( Helper::get_main_style_handle() ),
+					filemtime( get_theme_file_path( $slug ) )
+				);
+			}
+		}
 	}
 );

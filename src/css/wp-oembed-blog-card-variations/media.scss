@@ -1,0 +1,20 @@
+.is-provider-wp-oembed-blog-card {
+	--wp-oembed-blog-card--border: 1px solid var(--wp--preset--color--sm-lighter-gray);
+	--wp-oembed-blog-card--figure--basis: min(45%, 280px);
+	--wp-oembed-blog-card--gap: 0px !important;
+
+	.wp-oembed-blog-card {
+		> a,
+		> span {
+			padding: 0;
+		}
+
+		&__figure {
+			align-self: stretch;
+		}
+
+		&__body {
+			padding: var(--wp-oembed-blog-card--padding);
+		}
+	}
+}

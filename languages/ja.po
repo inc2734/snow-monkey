@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-05-29 22:20+0900\n"
-"PO-Revision-Date: 2023-05-29 22:21+0900\n"
+"POT-Creation-Date: 2023-05-31 21:38+0900\n"
+"PO-Revision-Date: 2023-05-31 21:38+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -78,6 +78,7 @@ msgid "Left"
 msgstr "左"
 
 #: .translation/bundle-template.php:14
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: app/customizer/design/sections/entries/controls/entries-layout.php:23
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:27
@@ -111,6 +112,7 @@ msgid "Footer 5"
 msgstr "フッター5"
 
 #: .translation/bundle-template.php:20
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:24
 #: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:24
 #: app/customizer/design/sections/custom-post/controls/view.php:24
@@ -822,6 +824,26 @@ msgstr "サブアクセントカラー"
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4363
 msgid "Design of widget-titles"
 msgstr "ウィジェットタイトルのデザイン"
+
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:20
+msgid "The blog card design"
+msgstr "ブログカードのデザイン"
+
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:25
+msgid "Background color (Accent color)"
+msgstr "背景色（アクセントカラー）"
+
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:26
+msgid "Border (Accent color)"
+msgstr "ボーダー（アクセントカラー）"
+
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:28
+msgid "Dark"
+msgstr "ダーク"
+
+#: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:29
+msgid "Media"
+msgstr "メディア"
 
 #: app/customizer/design/sections/base-design/section.php:18
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:1914
@@ -2776,9 +2798,6 @@ msgstr "https://2inc.org"
 #~ msgid "Contents left/right margins on mobile device"
 #~ msgstr "モバイル端末時のコンテンツの左右余白"
 
-#~ msgid "Dark gray"
-#~ msgstr "ダークグレー"
-
 #~ msgid "Gray"
 #~ msgstr "灰色"
 
@@ -2795,10 +2814,6 @@ msgstr "https://2inc.org"
 #~ msgctxt "editor-font-sizes"
 #~ msgid "Normal"
 #~ msgstr "標準"
-
-#~ msgctxt "editor-font-sizes"
-#~ msgid "Medium"
-#~ msgstr "中"
 
 #~ msgctxt "editor-font-sizes"
 #~ msgid "Large"
