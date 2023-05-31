@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5a48e05dd0de79a61fd8b337cc517ae4",
+    "content-hash": "d21dabc672f3da8c6918caebbadee07e",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -533,23 +533,23 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "11.1.1",
+            "version": "12.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "d033bbc36c71be3d2b47827085d42d10b18f5f75"
+                "reference": "3fa45c4264b8f09a8847cc402bfdcb8929d13d69"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/d033bbc36c71be3d2b47827085d42d10b18f5f75",
-                "reference": "d033bbc36c71be3d2b47827085d42d10b18f5f75",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/3fa45c4264b8f09a8847cc402bfdcb8929d13d69",
+                "reference": "3fa45c4264b8f09a8847cc402bfdcb8929d13d69",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "wp-coding-standards/wpcs": "^2.3",
                 "yoast/phpunit-polyfills": "^1.0"
             },
@@ -572,9 +572,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/11.1.1"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/12.0.1"
             },
-            "time": "2022-12-14T05:50:13+00:00"
+            "time": "2023-05-31T05:11:10+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
