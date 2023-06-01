@@ -1,9 +1,22 @@
-.is-provider-wp-oembed-blog-card {
-	.wp-oembed-blog-card__figure {
+@mixin wp-oembed-blog-card() {
+	&__figure {
 		display: none;
 	}
 
-	.wp-oembed-blog-card__description {
+	&__description {
 		display: none;
 	}
+}
+
+.is-provider-wp-oembed-blog-card,
+.is-provider-wp-oembed-blog-card-handler,
+.wp-block-embed:not([class*="is-provider-"]) {
+	.wp-oembed-blog-card {
+		@include wp-oembed-blog-card();
+	}
+}
+
+// For classic editor made.
+:not(.wp-block-embed__wrapper) > .wp-oembed-blog-card {
+	@include wp-oembed-blog-card();
 }

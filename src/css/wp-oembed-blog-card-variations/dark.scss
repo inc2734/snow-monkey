@@ -1,4 +1,15 @@
-.is-provider-wp-oembed-blog-card {
+@mixin custom-properties() {
 	--wp-oembed-blog-card--background-color: var(--wp--preset--color--sm-text);
 	--wp-oembed-blog-card--color: var(--wp--preset--color--sm-text-alt);
+}
+
+.is-provider-wp-oembed-blog-card,
+.is-provider-wp-oembed-blog-card-handler,
+.wp-block-embed:not([class*="is-provider-"]) {
+	@include custom-properties();
+}
+
+// For classic editor made.
+:not(.wp-block-embed__wrapper) > .wp-oembed-blog-card {
+	@include custom-properties();
 }
