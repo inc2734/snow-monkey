@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.2.1
  */
 
 use Framework\Helper;
@@ -13,22 +13,14 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
-		'_entries_id'     => null,
-		'_entries_layout' => 'rich-media',
-		'_excerpt_length' => null,
+		'_entries_id'      => null,
+		'_entries_layout'  => 'rich-media',
+		'_excerpt_length'  => null,
+		'_display_excerpt' => true,
 	)
 );
 
-$args = wp_parse_args(
-	$args,
-	array(
-		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
-			? true
-			: false,
-	)
-);
-
-if ( ! $args['_display_item_excerpt'] ) {
+if ( ! $args['_display_excerpt'] ) {
 	return;
 }
 

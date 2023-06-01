@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.1
  */
 
 use Framework\Helper;
@@ -79,6 +79,18 @@ $force_sm_1col         = false === $force_sm_1col && $is_multi_cols_pattern
 	? get_theme_mod( $query_args['post_type'][0] . '-entries-layout-sm-1col' )
 	: $force_sm_1col;
 
+$display_item_author = isset( $instance['display-item-author'] )
+	? $instance['display-item-meta'] && $instance['display-item-author']
+	: $instance['display-item-meta'] && ! in_array( $instance['layout'], array( 'text', 'text2' ), true );
+
+$display_item_published = isset( $instance['display-item-published'] )
+	? $instance['display-item-published']
+	: $instance['display-item-meta'];
+
+$display_item_excerpt = isset( $instance['display-item-excerpt'] )
+	? $instance['display-item-excerpt']
+	: in_array( $instance['layout'], array( 'rich-media', 'simple', 'caroucel' ), true );
+
 echo wp_kses_post( $widget_args['before_widget'] );
 Helper::get_template_part(
 	'template-parts/widget/snow-monkey-posts',
@@ -94,10 +106,10 @@ Helper::get_template_part(
 		'_item_thumbnail_size'    => $instance['item-thumbnail-size'],
 		'_item_title_tag'         => $instance['item-title-tag'],
 		'_display_item_meta'      => $instance['display-item-meta'],
-		'_display_item_author'    => isset( $instance['display-item-author'] ) ? $instance['display-item-author'] : $instance['display-item-meta'],
-		'_display_item_published' => isset( $instance['display-item-published'] ) ? $instance['display-item-published'] : $instance['display-item-meta'],
+		'_display_item_author'    => $display_item_author,
+		'_display_item_published' => $display_item_published,
 		'_display_item_terms'     => $instance['display-item-terms'],
-		'_display_item_excerpt'   => $instance['display-item-excerpt'],
+		'_display_item_excerpt'   => $display_item_excerpt,
 		'_link_text'              => $instance['link-text'],
 		'_link_url'               => $instance['link-url'],
 		'_posts_query'            => $recent_posts_query,

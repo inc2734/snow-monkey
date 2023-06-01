@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.1
  */
 
 use Framework\Helper;
@@ -20,8 +20,9 @@ $args = wp_parse_args(
 		'_force_sm_1col'           => false,
 		'_item_thumbnail_size'     => 'medium_large',
 		'_item_title_tag'          => 'h3',
-		'_display_item_meta'       => 'post' === $args['_name'] ? true : false,
+		'_display_item_meta'       => true,
 		'_display_item_terms'      => 'post' === $args['_name'] ? true : false,
+		'_display_item_excerpt'    => false,
 		'_category_label_taxonomy' => null,
 		'_posts_query'             => false,
 		'_arrows'                  => false,
@@ -39,15 +40,6 @@ $args = wp_parse_args(
 	array(
 		'_display_item_author'    => $args['_display_item_meta'],
 		'_display_item_published' => $args['_display_item_meta'],
-	)
-);
-
-$args = wp_parse_args(
-	$args,
-	array(
-		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
-			? true
-			: false,
 	)
 );
 
@@ -111,12 +103,12 @@ if ( $args['_entries_gap'] ) {
 								'_entries_layout'       => $args['_entries_layout'],
 								'_excerpt_length'       => $args['_excerpt_length'],
 								'_thumbnail_size'       => $args['_item_thumbnail_size'],
+								'_display_meta'         => $args['_display_item_meta'],
 								'_display_author'       => $args['_display_item_author'],
 								'_display_published'    => $args['_display_item_published'],
 								'_display_item_excerpt' => $args['_display_item_excerpt'],
 								'_terms'                => $_terms ? array( $_terms[0] ) : array(),
 								'_title_tag'            => $args['_item_title_tag'],
-								'_display_meta'         => $args['_display_item_meta'],
 							)
 						);
 						?>

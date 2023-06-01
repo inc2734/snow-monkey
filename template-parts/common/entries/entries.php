@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.1
  *
  * renamed: template-parts/common/entries.php
  */
@@ -21,7 +21,7 @@ $args = wp_parse_args(
 		'_excerpt_length'          => null,
 		'_item_thumbnail_size'     => 'medium_large',
 		'_item_title_tag'          => 'h2',
-		'_display_item_meta'       => 'post' === $args['_name'] ? true : false,
+		'_display_item_meta'       => true,
 		'_display_item_terms'      => 'post' === $args['_name'] ? true : false,
 		'_category_label_taxonomy' => null,
 		'_posts_query'             => false,
@@ -32,20 +32,17 @@ if ( ! $args['_posts_query'] ) {
 	return;
 }
 
-$args = wp_parse_args(
-	$args,
-	array(
-		'_display_item_author'    => $args['_display_item_meta'],
-		'_display_item_published' => $args['_display_item_meta'],
-	)
-);
+$_post_type             = get_post_type() ? get_post_type() : 'post';
+$display_item_author    = get_theme_mod( $_post_type . '-entries-display-item-author' );
+$display_item_published = get_theme_mod( $_post_type . '-entries-display-item-published' );
+$display_item_excerpt   = get_theme_mod( $_post_type . '-entries-display-item-excerpt' );
 
 $args = wp_parse_args(
 	$args,
 	array(
-		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
-			? true
-			: false,
+		'_display_item_author'    => $args['_display_item_meta'] && $display_item_author,
+		'_display_item_published' => $args['_display_item_meta'] && $display_item_published,
+		'_display_item_excerpt'   => $display_item_excerpt,
 	)
 );
 

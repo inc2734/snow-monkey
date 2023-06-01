@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 20.2.1
  *
  * renamed: template-parts/entry-summary.php
  */
@@ -15,13 +15,14 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
-		'_display_meta'   => false,
-		'_entries_id'     => null,
-		'_entries_layout' => 'rich-media',
-		'_excerpt_length' => null,
-		'_thumbnail_size' => 'medium_large',
-		'_terms'          => array(),
-		'_title_tag'      => 'h2',
+		'_display_meta'         => false,
+		'_display_item_excerpt' => false,
+		'_entries_id'           => null,
+		'_entries_layout'       => 'rich-media',
+		'_excerpt_length'       => null,
+		'_thumbnail_size'       => 'medium_large',
+		'_terms'                => array(),
+		'_title_tag'            => 'h2',
 	)
 );
 
@@ -30,15 +31,6 @@ $args = wp_parse_args(
 	array(
 		'_display_author'    => $args['_display_meta'],
 		'_display_published' => $args['_display_meta'],
-	)
-);
-
-$args = wp_parse_args(
-	$args,
-	array(
-		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
-			? true
-			: false,
 	)
 );
 ?>
@@ -79,11 +71,11 @@ $args = wp_parse_args(
 				'template-parts/loop/entry-summary/content/content',
 				$args['_name'],
 				array(
-					'_context'              => $args['_context'],
-					'_entries_id'           => $args['_entries_id'],
-					'_entries_layout'       => $args['_entries_layout'],
-					'_excerpt_length'       => $args['_excerpt_length'],
-					'_display_item_excerpt' => $args['_display_item_excerpt'],
+					'_context'         => $args['_context'],
+					'_entries_id'      => $args['_entries_id'],
+					'_entries_layout'  => $args['_entries_layout'],
+					'_excerpt_length'  => $args['_excerpt_length'],
+					'_display_excerpt' => $args['_display_item_excerpt'],
 				)
 			);
 			?>

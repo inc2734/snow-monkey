@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.1
  */
 
 use Framework\Helper;
@@ -21,8 +21,9 @@ $args = wp_parse_args(
 		'_infeed_ads'              => false,
 		'_item_thumbnail_size'     => 'medium_large',
 		'_item_title_tag'          => 'h3',
-		'_display_item_meta'       => 'post' === $args['_name'] ? true : false,
+		'_display_item_meta'       => true,
 		'_display_item_terms'      => 'post' === $args['_name'] ? true : false,
+		'_display_item_excerpt'    => false,
 		'_category_label_taxonomy' => null,
 		'_posts_query'             => false,
 	)
@@ -37,15 +38,6 @@ $args = wp_parse_args(
 	array(
 		'_display_item_author'    => $args['_display_item_meta'],
 		'_display_item_published' => $args['_display_item_meta'],
-	)
-);
-
-$args = wp_parse_args(
-	$args,
-	array(
-		'_display_item_excerpt' => in_array( $args['_entries_layout'], array( 'rich-media', 'simple', 'carousel' ), true )
-			? true
-			: false,
 	)
 );
 
