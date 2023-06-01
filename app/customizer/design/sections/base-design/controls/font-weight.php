@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.0.0
+ * @version 20.2.1
  */
 
 use Framework\Helper;
@@ -32,7 +32,7 @@ foreach ( $font_family_settings as $font_family => $font_family_setting ) {
 			'active_callback'   => function() use ( $font_family ) {
 				return get_theme_mod( 'base-font' ) === $font_family;
 			},
-			'sanitize_callback' => function( $value ) {
+			'sanitize_callback' => function( $value ) use ( $font_family_setting ) {
 				return $value ? $value : $font_family_setting['default'];
 			},
 		)

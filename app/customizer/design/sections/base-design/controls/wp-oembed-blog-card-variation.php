@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.0
+ * @version 20.2.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,10 +17,10 @@ Framework::control(
 	'select',
 	'wp-oembed-blog-card-variation',
 	array(
-		'label'           => __( 'The blog card design', 'snow-monkey' ),
-		'priority'        => 290,
-		'default'         => '',
-		'choices'         => array(
+		'label'    => __( 'The blog card design', 'snow-monkey' ),
+		'priority' => 290,
+		'default'  => '',
+		'choices'  => array(
 			''               => __( 'Default', 'snow-monkey' ),
 			'bgcolor-accent' => __( 'Background color (Accent color)', 'snow-monkey' ),
 			'border-accent'  => __( 'Border (Accent color)', 'snow-monkey' ),

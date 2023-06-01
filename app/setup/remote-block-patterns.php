@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.1
  */
 
 /**
@@ -41,8 +41,8 @@ function snow_monkey_get_remote_block_patten_categories() {
 	$new_pattern_categories = array();
 	foreach ( $pattern_categories as $pattern_category ) {
 		$new_pattern_categories[] = array(
-			'name' => $pattern_category['slug'],
-			'label'=> $pattern_category['name'],
+			'name'  => $pattern_category['slug'],
+			'label' => $pattern_category['name'],
 		);
 	}
 

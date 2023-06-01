@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.1
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,10 +17,10 @@ Framework::control(
 	'select',
 	'related-posts-gap',
 	array(
-		'label'    => __( 'The gap between each item in the related posts', 'snow-monkey' ),
-		'priority' => 141,
-		'default'  => '',
-		'choices'  => array(
+		'label'           => __( 'The gap between each item in the related posts', 'snow-monkey' ),
+		'priority'        => 141,
+		'default'         => '',
+		'choices'         => array(
 			''  => __( 'Default', 'snow-monkey' ),
 			's' => __( 'S', 'snow-monkey' ),
 			'm' => __( 'M', 'snow-monkey' ),
