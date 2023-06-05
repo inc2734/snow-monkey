@@ -15,7 +15,7 @@
     "@inc2734/dispatch-custom-resize-event": "^0.4.0",
     "@inc2734/for-each-html-nodes": "^0.4.0",
     "@inc2734/smooth-scroll": "^1.0.10",
-    "@inc2734/spider": "0.0.38",
+    "@inc2734/spider": "0.0.40",
     "@wordpress/browserslist-config": "^5.17.0",
     "@wordpress/env": "^8.0.0",
     "@wordpress/scripts": "^26.5.0",
