@@ -3,14 +3,19 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 20.2.3
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-display-item-author.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 
-$default = ! in_array( get_theme_mod( 'post-entries-layout' ), array( 'text', 'text2' ), true );
+$entries_layout = get_theme_mod( 'post-entries-layout' );
+$default        = ! in_array(
+	$entries_layout ? $entries_layout : 'rich-media',
+	array( 'text', 'text2' ),
+	true
+);
 
 Framework::control(
 	'checkbox',
@@ -22,7 +27,7 @@ Framework::control(
 		'active_callback'   => function() {
 			$is_display_item_author = ! in_array(
 				get_theme_mod( 'post-entries-layout' ),
-				array( 'text', 'text2' ),
+				array( 'text' ),
 				true
 			);
 
@@ -31,11 +36,11 @@ Framework::control(
 		'sanitize_callback' => function( $value ) {
 			$is_display_item_author = ! in_array(
 				get_theme_mod( 'post-entries-layout' ),
-				array( 'text', 'text2' ),
+				array( 'text' ),
 				true
 			);
 
-			return $is_display_item_author ? $value : false;
+			return $is_display_item_author && $value ? true : '';
 		},
 	)
 );

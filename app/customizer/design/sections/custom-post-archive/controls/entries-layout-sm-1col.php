@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -33,7 +33,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					array( 'rich-media', 'panel' ),
 					true
 				);
-				return $is_multi_cols_pattern ? $value : false;
+				return $is_multi_cols_pattern && $value ? $value : '';
 			},
 		)
 	);

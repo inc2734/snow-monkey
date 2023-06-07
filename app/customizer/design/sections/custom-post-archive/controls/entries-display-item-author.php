@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 20.2.3
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -45,7 +45,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					return $is_display_item_author;
 				}
 
-				return $is_display_item_author ? $value : false;
+				return $is_display_item_author && $value ? $value : '';
 			},
 		)
 	);

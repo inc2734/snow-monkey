@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.3
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php
  */
@@ -23,7 +23,7 @@ Framework::control(
 		},
 		'sanitize_callback' => function( $value ) {
 			$is_multi_cols_pattern = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'panel' ), true );
-			return $is_multi_cols_pattern ? $value : false;
+			return $is_multi_cols_pattern && $value ? $value : '';
 		},
 	)
 );

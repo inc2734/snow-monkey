@@ -3,14 +3,19 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 20.2.3
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-display-item-excerpt.php
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 
-$default = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'simple', 'carousel' ), true );
+$entries_layout = get_theme_mod( 'post-entries-layout' );
+$default        = in_array(
+	$entries_layout ? $entries_layout : 'rich-media',
+	array( 'rich-media', 'simple', 'carousel' ),
+	true
+);
 
 Framework::control(
 	'checkbox',
@@ -35,7 +40,7 @@ Framework::control(
 				true
 			);
 
-			return $is_display_item_excerpt ? $value : false;
+			return $is_display_item_excerpt && $value ? $value : '';
 		},
 	)
 );
