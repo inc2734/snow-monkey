@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.2.3
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -71,6 +71,36 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 	) {
 		$new_instance = shortcode_atts( $this->_defaults, $new_instance );
 		return $new_instance;
+	}
+
+	/**
+	 * Render widget.
+	 *
+	 * @param array $widget_args The widget argments.
+	 * @param array $instance    The widget instance.
+	 * @return void
+	 */
+	public function widget( $widget_args, $instance ) {
+		$taxonomy                      = explode( '@', $instance['taxonomy'] )[0];
+		$instance['display-item-meta'] = 'category' === $taxonomy || 'post_tag' === $taxonomy;
+
+		$display_item_author = isset( $instance['display-item-author'] )
+			? $instance['display-item-meta'] && $instance['display-item-author']
+			: $instance['display-item-meta'] && ! in_array( $instance['layout'], array( 'text', 'text2' ), true );
+
+		$display_item_published = isset( $instance['display-item-published'] )
+			? $instance['display-item-published']
+			: $instance['display-item-meta'];
+
+		$display_item_excerpt = isset( $instance['display-item-excerpt'] )
+			? $instance['display-item-excerpt']
+			: in_array( $instance['layout'], array( 'rich-media', 'simple', 'caroucel' ), true );
+
+		$instance['display-item-author']    = $display_item_author;
+		$instance['display-item-published'] = $display_item_published;
+		$instance['display-item-excerpt']   = $display_item_excerpt;
+
+		parent::widget( $widget_args, $instance );
 	}
 }
 
