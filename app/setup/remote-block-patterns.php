@@ -50,28 +50,114 @@ function snow_monkey_get_remote_block_patten_categories() {
 }
 
 /**
- * Get remote block patterns.
+ * Get free remote block patterns.
  *
  * @return array
  */
-function snow_monkey_get_remote_block_pattens() {
+function snow_monkey_get_free_remote_block_pattens() {
 	global $wp_version;
 
-	$license_key          = \Framework\Controller\Manager::get_option( 'license-key' );
+	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/free-patterns/';
+
+	$response = wp_remote_get(
+		$url,
+		array(
+			'user-agent' => 'WordPress/' . $wp_version,
+			'timeout'    => 30,
+			'headers'    => array(
+				'Accept-Encoding' => '',
+			),
+		)
+	);
+
+	if ( ! $response || is_wp_error( $response ) ) {
+		return array();
+	}
+
+	$response_code = wp_remote_retrieve_response_code( $response );
+	if ( 200 !== $response_code ) {
+		return array();
+	}
+
+	$patterns = json_decode( wp_remote_retrieve_body( $response ), true );
+
+	foreach ( $patterns as $key => $pattern ) {
+		$patterns[ $key ]['content'] = str_replace(
+			'https://snow-monkey.2inc.org/wp-content',
+			WP_CONTENT_URL,
+			$pattern['content'],
+		);
+
+		$patterns[ $key ]['viewportWidth'] = 1440;
+	}
+
+	return $patterns;
+}
+
+/**
+ * Get premium remote block patterns.
+ *
+ * @return array
+ */
+function snow_monkey_get_premium_remote_block_pattens() {
+	global $wp_version;
+
+	$license_key = \Framework\Controller\Manager::get_option( 'license-key' );
+
+	$url = sprintf(
+		'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns/%1$s',
+		esc_attr( $license_key )
+	);
+
+	$response = wp_remote_get(
+		$url,
+		array(
+			'user-agent' => 'WordPress/' . $wp_version,
+			'timeout'    => 30,
+			'headers'    => array(
+				'Accept-Encoding' => '',
+			),
+		)
+	);
+
+	if ( ! $response || is_wp_error( $response ) ) {
+		return array();
+	}
+
+	$response_code = wp_remote_retrieve_response_code( $response );
+	if ( 200 !== $response_code ) {
+		return array();
+	}
+
+	$patterns = json_decode( wp_remote_retrieve_body( $response ), true );
+
+	foreach ( $patterns as $key => $pattern ) {
+		$patterns[ $key ]['content'] = str_replace(
+			'https://snow-monkey.2inc.org/wp-content',
+			WP_CONTENT_URL,
+			$pattern['content'],
+		);
+
+		$patterns[ $key ]['viewportWidth'] = 1440;
+	}
+
+	return $patterns;
+}
+
+/**
+ * Get premium remote block patterns for Xserver user.
+ *
+ * @return array
+ */
+function snow_monkey_get_premium_remote_block_pattens_xserver() {
+	global $wp_version;
+
 	$xserver_register_key = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
 
-	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/free-patterns/';
-	if ( $license_key ) {
-		$url = sprintf(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns/%1$s',
-			esc_attr( $license_key )
-		);
-	} elseif ( $xserver_register_key ) {
-		$url = sprintf(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns-xserver/%1$s',
-			esc_attr( $xserver_register_key )
-		);
-	}
+	$url = sprintf(
+		'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns-xserver/%1$s',
+		esc_attr( $xserver_register_key )
+	);
 
 	$response = wp_remote_get(
 		$url,
@@ -119,13 +205,12 @@ function snow_monkey_register_remote_block_patterns() {
 		}
 	}
 
-	$transient_name = 'snow-monkey-remote-pattern-categories';
-	$transient      = get_transient( $transient_name );
+	$transient = get_transient( 'snow-monkey-remote-pattern-categories' );
 	if ( false !== $transient ) {
 		$remote_block_pattern_categories = $transient;
 	} else {
 		$remote_block_pattern_categories = snow_monkey_get_remote_block_patten_categories();
-		set_transient( $transient_name, $remote_block_pattern_categories, 60 * 10 );
+		set_transient( 'snow-monkey-remote-pattern-categories', $remote_block_pattern_categories, 60 * 10 );
 	}
 	foreach ( $remote_block_pattern_categories as $remote_block_pattern_category ) {
 		register_block_pattern_category(
@@ -136,13 +221,31 @@ function snow_monkey_register_remote_block_patterns() {
 		);
 	}
 
-	$transient_name = 'snow-monkey-remote-patterns';
-	$transient      = get_transient( $transient_name );
+	$transient = get_transient( 'snow-monkey-remote-patterns' );
 	if ( false !== $transient ) {
 		$remote_block_patterns = $transient;
 	} else {
-		$remote_block_patterns = snow_monkey_get_remote_block_pattens();
-		set_transient( $transient_name, $remote_block_patterns, 60 * 10 );
+		$license_key           = \Framework\Controller\Manager::get_option( 'license-key' );
+		$xserver_register_key  = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
+		$remote_block_patterns = array();
+
+		if ( $license_key ) {
+			$status = \Framework\Controller\Manager::get_license_status( $license_key );
+			if ( 'true' === $status ) {
+				$remote_block_patterns = snow_monkey_get_premium_remote_block_pattens();
+			}
+		} elseif ( $xserver_register_key ) {
+			$status = \Framework\Controller\Manager::get_xserver_register_status( $xserver_register_key );
+			if ( 'true' === $status ) {
+				$remote_block_patterns = snow_monkey_get_premium_remote_block_pattens_xserver();
+			}
+		}
+
+		if ( ! $remote_block_patterns ) {
+			$remote_block_patterns = snow_monkey_get_free_remote_block_pattens();
+		}
+
+		set_transient( 'snow-monkey-remote-patterns', $remote_block_patterns, 60 * 10 );
 	}
 
 	$registry = WP_Block_Patterns_Registry::get_instance();

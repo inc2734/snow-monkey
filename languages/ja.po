@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-05-31 21:38+0900\n"
-"PO-Revision-Date: 2023-05-31 21:38+0900\n"
+"POT-Creation-Date: 2023-06-09 21:38+0900\n"
+"PO-Revision-Date: 2023-06-09 21:38+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -144,42 +144,42 @@ msgid "Reset settings"
 msgstr "設定をリセット"
 
 #: Framework/Controller/Manager.php:89
-msgid "Clear remote patterns caches"
-msgstr "リモートパターンのキャッシュをクリア"
+msgid "Retrieve patterns from the pattern library"
+msgstr "パターンライブラリーからパターンを再取得する"
 
-#: Framework/Controller/Manager.php:158
+#: Framework/Controller/Manager.php:149
 msgid "Settings"
 msgstr "設定"
 
-#: Framework/Controller/Manager.php:166
+#: Framework/Controller/Manager.php:157
 msgid "License key"
 msgstr "ライセンスキー"
 
-#: Framework/Controller/Manager.php:180 Framework/Controller/Manager.php:230
+#: Framework/Controller/Manager.php:163 Framework/Controller/Manager.php:205
 msgid "Enable"
 msgstr "有効"
 
-#: Framework/Controller/Manager.php:185 Framework/Controller/Manager.php:235
+#: Framework/Controller/Manager.php:168 Framework/Controller/Manager.php:210
 msgid "Disable"
 msgstr "無効"
 
-#: Framework/Controller/Manager.php:205
+#: Framework/Controller/Manager.php:188
 msgid ""
 "If the license key entered is valid, premium block patterns are available."
 msgstr ""
 "入力されたライセンスキーが有効な場合、プレミアムブロックパターンが利用できま"
 "す。"
 
-#: Framework/Controller/Manager.php:206
+#: Framework/Controller/Manager.php:189
 msgid ""
 "If the license key is entered, the Xserver register key setting is not saved."
 msgstr "ライセンスキーを入力した場合、XSERVER 登録キーの設定は保存されません。"
 
-#: Framework/Controller/Manager.php:216
+#: Framework/Controller/Manager.php:199
 msgid "Xserver register key"
 msgstr "XSERVER 登録キー"
 
-#: Framework/Controller/Manager.php:255
+#: Framework/Controller/Manager.php:230
 msgid ""
 "If the Xserver register key entered is valid, premium block patterns are "
 "available."
@@ -187,7 +187,7 @@ msgstr ""
 "入力されたXSERVER 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
 "です。"
 
-#: Framework/Controller/Manager.php:256
+#: Framework/Controller/Manager.php:231
 msgid ""
 "If you are using Xserver integration, enter the Xserver register key in the "
 "Xserver register key entry field without entering anything in the license "
@@ -923,12 +923,12 @@ msgid "[ %1$s ] category pages settings"
 msgstr "[ %1$s ] カテゴリーページ設定"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-author.php:19
-#: app/customizer/design/sections/entries/controls/entries-display-item-author.php:17
+#: app/customizer/design/sections/entries/controls/entries-display-item-author.php:24
 msgid "Display the author for each item in the entries"
 msgstr "記事一覧の各項目の著者を表示する"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-excerpt.php:19
-#: app/customizer/design/sections/entries/controls/entries-display-item-excerpt.php:17
+#: app/customizer/design/sections/entries/controls/entries-display-item-excerpt.php:24
 msgid "Display the excerpt for each item in the entries"
 msgstr "記事一覧の各項目の抜粋を表示する"
 
@@ -2743,6 +2743,9 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid "Clear remote patterns caches"
+#~ msgstr "リモートパターンのキャッシュをクリア"
 
 #~ msgid "Sections"
 #~ msgstr "セクション"

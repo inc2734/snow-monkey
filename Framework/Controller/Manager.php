@@ -86,7 +86,7 @@ class Manager {
 						<?php
 						settings_fields( self::MENU_SLUG );
 						submit_button(
-							esc_html__( 'Clear remote patterns caches', 'snow-monkey' ),
+							esc_html__( 'Retrieve patterns from the pattern library', 'snow-monkey' ),
 							'primary'
 						);
 						?>
@@ -116,39 +116,28 @@ class Manager {
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
 			function( $option ) {
-				if ( isset( $option['license-key'] ) && static::get_option( 'license-key' ) !== $option['license-key'] ) {
-					if ( ! empty( $option['license-key'] ) ) {
-						$status = $this->request_license_validate( $option['license-key'] );
-						set_transient( 'snow-monkey-license-status', $status ? $status : 'false', 60 * 10 );
-					} else {
-						set_transient( 'snow-monkey-license-status', 'false', 60 * 10 );
-					}
-				}
-
-				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
-				if ( isset( $option['license-key'] ) && isset( $option['xserver-register-key'] ) ) {
-					if ( empty( $option['license-key'] ) ) {
-						if ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
-							if ( ! empty( $option['xserver-register-key'] ) ) {
-								$status = $this->request_license_validate_xserver( $option['xserver-register-key'] );
-								set_transient( 'snow-monkey-xserver-register-status', $status ? $status : 'false', 60 * 10 );
-							} else {
-								set_transient( 'snow-monkey-xserver-register-status', 'false', 60 * 10 );
-							}
-						}
-					} else {
-						$option['xserver-register-key'] = '';
-					}
-				}
+				delete_transient( 'snow-monkey-remote-patterns' );
+				delete_transient( 'snow-monkey-remote-patterns' );
 
 				if ( isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'] ) {
-					delete_transient( 'snow-monkey-remote-patterns' );
 					return get_option( self::SETTINGS_NAME );
 				}
 
 				if ( isset( $option['reset'] ) && '1' === $option['reset'] ) {
-					delete_transient( 'snow-monkey-remote-patterns' );
 					return array();
+				}
+
+				if ( isset( $option['license-key'] ) && static::get_option( 'license-key' ) !== $option['license-key'] ) {
+					delete_transient( 'snow-monkey-license-status-' . sha1( $option['license-key'] ) );
+				}
+
+				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
+				if ( isset( $option['license-key'] ) && isset( $option['xserver-register-key'] ) ) {
+					delete_transient( 'snow-monkey-xserver-register-status-' . sha1( $option['license-key'] ) );
+
+					if ( ! empty( $option['license-key'] ) ) {
+						$option['xserver-register-key'] = '';
+					}
 				}
 
 				return $option;
@@ -167,15 +156,7 @@ class Manager {
 			'license-key',
 			'<label for="license-key">' . esc_html__( 'License key', 'snow-monkey' ) . '</label>',
 			function( $args ) {
-				$transient = get_transient( 'snow-monkey-license-status' );
-				if ( ! $transient ) {
-					if ( ! empty( static::get_option( 'license-key' ) ) ) {
-						$transient = $this->request_license_validate( static::get_option( 'license-key' ) );
-						set_transient( 'snow-monkey-license-status', $transient ? $transient : 'false', 60 * 10 );
-					} else {
-						set_transient( 'snow-monkey-license-status', 'false', 60 * 10 );
-					}
-				}
+				$transient = static::get_license_status( static::get_option( 'license-key' ) );
 
 				$button = 'true' === $transient
 					? array(
@@ -217,15 +198,7 @@ class Manager {
 			'xserver-register-key',
 			'<label for="xservser-regiser-key">' . esc_html__( 'Xserver register key', 'snow-monkey' ) . '</label>',
 			function( $args ) {
-				$transient = get_transient( 'snow-monkey-xserver-register-status' );
-				if ( ! $transient ) {
-					if ( ! empty( static::get_option( 'xserver-register-key' ) ) && empty( static::get_option( 'license-key' ) ) ) {
-						$transient = $this->request_license_validate_xserver( static::get_option( 'xserver-register-key' ) );
-						set_transient( 'snow-monkey-xserver-register-status', $transient ? $transient : 'false', 60 * 10 );
-					} else {
-						set_transient( 'snow-monkey-xserver-register-status', 'false', 60 * 10 );
-					}
-				}
+				$transient = static::get_xserver_register_status( static::get_option( 'xserver-register-key' ) );
 
 				$button = 'true' === $transient
 					? array(
@@ -264,7 +237,30 @@ class Manager {
 		);
 	}
 
-	protected function request_license_validate( $license_key ) {
+	/**
+	 * Get license status.
+	 *
+	 * @param string $license_key The license key.
+	 * @return boolean
+	 */
+	public static function get_license_status( $license_key ) {
+		$transient = get_transient( 'snow-monkey-license-status-' . sha1( $license_key ) );
+		if ( false !== $transient ) {
+			return $transient;
+		}
+
+		$status = static::_request_license_validate( $license_key );
+		set_transient( 'snow-monkey-license-status-' . sha1( $license_key ), $status ? $status : 'false', 60 * 10 );
+		return $status;
+	}
+
+	/**
+	 * Validate checker.
+	 *
+	 * @param string $license_key The license key.
+	 * @return boolean
+	 */
+	protected static function _request_license_validate( $license_key ) {
 		global $wp_version;
 
 		$response = wp_remote_get(
@@ -292,7 +288,30 @@ class Manager {
 		return $status;
 	}
 
-	protected function request_license_validate_xserver( $xserver_register_key ) {
+	/**
+	 * Get Xserver register status.
+	 *
+	 * @param string $xserver_register_key The license key.
+	 * @return boolean
+	 */
+	public static function get_xserver_register_status( $xserver_register_key ) {
+		$transient = get_transient( 'snow-monkey-xserver-register-status-' . sha1( $xserver_register_key ) );
+		if ( false !== $transient ) {
+			return $transient;
+		}
+
+		$status = static::_request_license_validate_xserver( $xserver_register_key );
+		set_transient( 'snow-monkey-xserver-register-status-' . sha1( $license_key ), $status ? $status : 'false', 60 * 10 );
+		return $status;
+	}
+
+	/**
+	 * Validate checker.
+	 *
+	 * @param string $license_key The license key.
+	 * @return boolean
+	 */
+	protected static function _request_license_validate_xserver( $xserver_register_key ) {
 		global $wp_version;
 
 		$response = wp_remote_get(
