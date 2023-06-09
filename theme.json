@@ -2,14 +2,8 @@
 	"$schema": "https://raw.githubusercontent.com/WordPress/gutenberg/trunk/schemas/json/theme.json",
 	"version": 2,
 	"settings": {
-		"border": {
-			"color": true,
-			"radius": true,
-			"style": true,
-			"width": true
-		},
+		"appearanceTools": true,
 		"color": {
-			"link": true,
 			"palette": [
 				{
 					"slug": "sm-accent",
@@ -69,8 +63,7 @@
 			]
 		},
 		"spacing": {
-			"margin": true,
-			"blockGap": true,
+			"units": [ "px", "em", "rem", "vh", "vw" ],
 			"spacingSizes": [
 				{
 					"name": "-2",
@@ -111,8 +104,6 @@
 		},
 		"typography": {
 			"dropCap": false,
-			"customFontSize": true,
-			"textTransform": true,
 			"lineHeight": false,
 			"fontSizes": [
 				{
@@ -166,6 +157,9 @@
 					"name": "6XL"
 				}
 			]
+		},
+		"position": {
+			"sticky": false
 		},
 		"custom": {
 			"slim-width": "46rem",
