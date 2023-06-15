@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 20.3.1
  */
 
 /**
@@ -49,15 +49,8 @@ function snow_monkey_get_remote_block_patten_categories() {
 	return $new_pattern_categories;
 }
 
-/**
- * Get free remote block patterns.
- *
- * @return array
- */
-function snow_monkey_get_free_remote_block_pattens() {
+function _snow_monkney_get_remote_block_patterns( $url ) {
 	global $wp_version;
-
-	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/free-patterns/';
 
 	$response = wp_remote_get(
 		$url,
@@ -84,14 +77,38 @@ function snow_monkey_get_free_remote_block_pattens() {
 	foreach ( $patterns as $key => $pattern ) {
 		$patterns[ $key ]['content'] = str_replace(
 			'https://snow-monkey.2inc.org/wp-content',
-			WP_CONTENT_URL,
+			untrailingslashit( WP_CONTENT_URL ),
 			$pattern['content'],
+		);
+
+		$patterns[ $key ]['content'] = preg_replace_callback(
+			'@' . untrailingslashit( preg_quote( WP_CONTENT_URL ) ) . '[^"\']+?\.(?:jpg|jpeg|png|gif|svg)@ims',
+			function ( $matches ) {
+				$file_url  = $matches[0];
+				$file_path = str_replace( WP_CONTENT_URL, WP_CONTENT_DIR, $file_url );
+				if ( ! file_exists( $file_path ) ) {
+					return get_theme_file_uri( 'assets/img/dummy.jpg' );
+				}
+				return $file_url;
+			},
+			$patterns[ $key ]['content']
 		);
 
 		$patterns[ $key ]['viewportWidth'] = 1440;
 	}
 
 	return $patterns;
+}
+
+/**
+ * Get free remote block patterns.
+ *
+ * @return array
+ */
+function snow_monkey_get_free_remote_block_pattens() {
+	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/free-patterns/';
+
+	return _snow_monkney_get_remote_block_patterns( $url );
 }
 
 /**
@@ -100,8 +117,6 @@ function snow_monkey_get_free_remote_block_pattens() {
  * @return array
  */
 function snow_monkey_get_premium_remote_block_pattens() {
-	global $wp_version;
-
 	$license_key = \Framework\Controller\Manager::get_option( 'license-key' );
 
 	$url = sprintf(
@@ -109,39 +124,7 @@ function snow_monkey_get_premium_remote_block_pattens() {
 		esc_attr( $license_key )
 	);
 
-	$response = wp_remote_get(
-		$url,
-		array(
-			'user-agent' => 'WordPress/' . $wp_version,
-			'timeout'    => 30,
-			'headers'    => array(
-				'Accept-Encoding' => '',
-			),
-		)
-	);
-
-	if ( ! $response || is_wp_error( $response ) ) {
-		return array();
-	}
-
-	$response_code = wp_remote_retrieve_response_code( $response );
-	if ( 200 !== $response_code ) {
-		return array();
-	}
-
-	$patterns = json_decode( wp_remote_retrieve_body( $response ), true );
-
-	foreach ( $patterns as $key => $pattern ) {
-		$patterns[ $key ]['content'] = str_replace(
-			'https://snow-monkey.2inc.org/wp-content',
-			WP_CONTENT_URL,
-			$pattern['content'],
-		);
-
-		$patterns[ $key ]['viewportWidth'] = 1440;
-	}
-
-	return $patterns;
+	return _snow_monkney_get_remote_block_patterns( $url );
 }
 
 /**
@@ -150,8 +133,6 @@ function snow_monkey_get_premium_remote_block_pattens() {
  * @return array
  */
 function snow_monkey_get_premium_remote_block_pattens_xserver() {
-	global $wp_version;
-
 	$xserver_register_key = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
 
 	$url = sprintf(
@@ -159,39 +140,7 @@ function snow_monkey_get_premium_remote_block_pattens_xserver() {
 		esc_attr( $xserver_register_key )
 	);
 
-	$response = wp_remote_get(
-		$url,
-		array(
-			'user-agent' => 'WordPress/' . $wp_version,
-			'timeout'    => 30,
-			'headers'    => array(
-				'Accept-Encoding' => '',
-			),
-		)
-	);
-
-	if ( ! $response || is_wp_error( $response ) ) {
-		return array();
-	}
-
-	$response_code = wp_remote_retrieve_response_code( $response );
-	if ( 200 !== $response_code ) {
-		return array();
-	}
-
-	$patterns = json_decode( wp_remote_retrieve_body( $response ), true );
-
-	foreach ( $patterns as $key => $pattern ) {
-		$patterns[ $key ]['content'] = str_replace(
-			'https://snow-monkey.2inc.org/wp-content',
-			WP_CONTENT_URL,
-			$pattern['content'],
-		);
-
-		$patterns[ $key ]['viewportWidth'] = 1440;
-	}
-
-	return $patterns;
+	return _snow_monkney_get_remote_block_patterns( $url );
 }
 
 /**
@@ -222,7 +171,7 @@ function snow_monkey_register_remote_block_patterns() {
 	}
 
 	$transient = get_transient( 'snow-monkey-remote-patterns' );
-	if ( false !== $transient ) {
+	if ( false !== $transient && 0 ) {
 		$remote_block_patterns = $transient;
 	} else {
 		$license_key           = \Framework\Controller\Manager::get_option( 'license-key' );
