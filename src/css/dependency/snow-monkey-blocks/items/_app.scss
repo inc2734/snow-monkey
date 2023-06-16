@@ -3,3 +3,15 @@
 		@extend %entry-content;
 	}
 }
+
+.smb-items--fill {
+	> .#{ $_prefix }c-row {
+		> .#{ $_prefix }c-row__col {
+			> .smb-items__item--free {
+				> .smb-items__item__body {
+					--_margin-bottom: 1;
+				}
+			}
+		}
+	}
+}
