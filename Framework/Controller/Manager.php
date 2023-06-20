@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.0
+ * @version 20.3.2
  */
 
 namespace Framework\Controller;
@@ -250,7 +250,7 @@ class Manager {
 		}
 
 		$status = static::_request_license_validate( $license_key );
-		set_transient( 'snow-monkey-license-status-' . sha1( $license_key ), $status ? $status : 'false', 60 * 10 );
+		set_transient( 'snow-monkey-license-status-' . sha1( $license_key ), $status ? $status : 'false', DAY_IN_SECONDS );
 		return $status;
 	}
 
@@ -301,7 +301,7 @@ class Manager {
 		}
 
 		$status = static::_request_license_validate_xserver( $xserver_register_key );
-		set_transient( 'snow-monkey-xserver-register-status-' . sha1( $license_key ), $status ? $status : 'false', 60 * 10 );
+		set_transient( 'snow-monkey-xserver-register-status-' . sha1( $license_key ), $status ? $status : 'false', DAY_IN_SECONDS );
 		return $status;
 	}
 
