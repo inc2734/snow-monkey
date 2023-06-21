@@ -37,14 +37,19 @@ $body_variables_app   = array();
 $body_variables_theme = array();
 
 $root_variables_app_media_min_md = array();
+$root_variables_app_media_max_md = array();
+$root_variables_app_media_min_lg = array();
 
-$container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
-if ( $container_margin_sm ) {
-	$root_variables_app[] = '--_global--container-margin: ' . $container_margin_sm;
-}
 $container_margin = $get_container_margin_var( get_theme_mod( 'lg-container-margin' ) );
 if ( $container_margin ) {
-	$root_variables_app_media_min_md[] = '--_global--container-margin: ' . $container_margin;
+	$root_variables_app_media_min_lg[] = '--_global--container-margin: ' . $container_margin;
+}
+
+$container_margin_sm = $get_container_margin_var( get_theme_mod( 'sm-container-margin' ) );
+if ( $container_margin && $container_margin_sm ) {
+	$root_variables_app[] = '--_global--container-margin: ' . $container_margin_sm;
+} elseif ( ! $container_margin && $container_margin_sm ) {
+	$root_variables_app_media_max_md[] = '--_global--container-margin: ' . $container_margin_sm;
 }
 
 $container_max_width = get_theme_mod( 'container-max-width' );
@@ -154,6 +159,22 @@ if ( $root_variables_app_media_min_md ) {
 		'selectors'   => array( ':root' ),
 		'properties'  => $root_variables_app_media_min_md,
 		'media_query' => '@media (min-width: 640px)', // Optional
+	);
+}
+
+if ( $root_variables_app_media_max_md ) {
+	$styles_core[] = array(
+		'selectors'   => array( ':root' ),
+		'properties'  => $root_variables_app_media_max_md,
+		'media_query' => '@media not all and (min-width: 1024px)', // Optional
+	);
+}
+
+if ( $root_variables_app_media_min_lg ) {
+	$styles_core[] = array(
+		'selectors'   => array( ':root' ),
+		'properties'  => $root_variables_app_media_min_lg,
+		'media_query' => '@media (min-width: 1024px)', // Optional
 	);
 }
 
