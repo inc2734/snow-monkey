@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.0
+ * @version 20.4.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -157,6 +157,14 @@ add_action(
 				filemtime( get_theme_file_path( '/assets/css/block-editor/spider.css' ) )
 			);
 		}
+
+		$asset = include( SNOW_MONKEY_BLOCKS_DIR_PATH . '/assets/js/editor.asset.php' );
+		wp_enqueue_script(
+			Helper::get_main_style_handle() . '-block-editor',
+			get_theme_file_uri( '/assets/js/editor.js' ),
+			$asset['dependencies'],
+			filemtime( get_theme_file_path( '/assets/js/editor.js' ) )
+		);
 	}
 );
 
