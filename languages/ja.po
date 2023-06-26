@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-06-09 21:38+0900\n"
-"PO-Revision-Date: 2023-06-09 21:38+0900\n"
+"POT-Creation-Date: 2023-06-26 14:13+0900\n"
+"PO-Revision-Date: 2023-06-26 14:14+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -2205,6 +2205,10 @@ msgstr "モバイル端末時のロゴ"
 msgid "If \"Logo\" is not set, \"Logo on mobile device\" is not used."
 msgstr ""
 "「ロゴ」が設定されていない場合、「モバイル端末時のロゴ」は使用されません。"
+
+#: app/setup/blocks.php:19
+msgid "Plain"
+msgstr "プレーン"
 
 #: app/setup/dependency/snow-monkey-blocks.php:162
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5025
