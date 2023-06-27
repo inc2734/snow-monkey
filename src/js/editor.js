@@ -1,8 +1,6 @@
 import { addFilter } from '@wordpress/hooks';
 
 function setDimensionsDefaultControls( settings ) {
-	console.log( settings );
-
 	if ( ! settings?.supports?.spacing?.padding ) {
 		return settings;
 	}
