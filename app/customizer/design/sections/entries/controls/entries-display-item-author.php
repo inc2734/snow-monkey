@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.3
+ * @version 20.4.2
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-display-item-author.php
  */
@@ -40,7 +40,7 @@ Framework::control(
 				true
 			);
 
-			return $is_display_item_author && $value ? true : '';
+			return $is_display_item_author && $value ? $value : '';
 		},
 	)
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.3
+ * @version 20.4.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -29,8 +29,11 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			},
 			'sanitize_callback' => function( $value ) use ( $custom_post_type ) {
 				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
+				if ( 'post' === $archive_view ) {
+					return '';
+				}
 
-				return 'post' === $archive_view && $value ? $value : '';
+				return $value;
 			},
 		)
 	);
