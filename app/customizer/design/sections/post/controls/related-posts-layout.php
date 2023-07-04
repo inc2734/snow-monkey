@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 20.4.2
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,6 @@ Framework::control(
 	'select',
 	'related-posts-layout',
 	array(
-		'transport'       => 'postMessage',
 		'label'           => __( 'Related posts layout', 'snow-monkey' ),
 		'priority'        => 140,
 		'default'         => '',
@@ -36,7 +35,7 @@ Framework::control(
 			'large-image' => __( 'Large image', 'snow-monkey' ),
 		),
 		'active_callback' => function() {
-			return get_option( 'mwt-display-related-posts' );
+			return get_option( 'mwt-display-related-posts' ) ? true : false;
 		},
 	)
 );
@@ -45,26 +44,3 @@ $panel   = Framework::get_panel( 'design' );
 $section = Framework::get_section( 'design-post' );
 $control = Framework::get_control( 'related-posts-layout' );
 $control->join( $section )->join( $panel );
-$control->partial(
-	array(
-		'selector'            => '.p-related-posts',
-		'container_inclusive' => true,
-		'active_callback'     => function() {
-			return get_option( 'mwt-display-related-posts' );
-		},
-		'render_callback'     => function() {
-			if ( get_option( 'mwt-display-related-posts' ) ) {
-				$related_posts_query = Helper::get_related_posts_query( get_the_ID() );
-				if ( get_option( 'mwt-google-matched-content' ) || $related_posts_query->have_posts() ) {
-					Helper::get_template_part(
-						'template-parts/content/related-posts',
-						null,
-						array(
-							'_code' => get_option( 'mwt-google-matched-content' ),
-						)
-					);
-				}
-			}
-		},
-	)
-);
