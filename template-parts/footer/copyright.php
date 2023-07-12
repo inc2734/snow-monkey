@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 24.5.0
+ * @version 24.5.1
  *
  * renamed: template-parts/copyright.php
  */
@@ -47,12 +47,12 @@ if ( $args['_inverse'] ) {
 		$container_class = $args['_container-fluid'] ? 'c-fluid-container' : 'c-container';
 		?>
 		<div class="<?php echo esc_attr( $container_class ); ?>">
-			<?php echo wp_kses_post( apply_filters( 'the_content', $args['_copyright'] ) ); ?>
+			<?php echo wp_kses_post( do_shortcode( $args['_copyright'] ) ); ?>
 		</div>
 
 	<?php else : ?>
 
-		<?php echo wp_kses_post( apply_filters( 'the_content', $args['_copyright'] ) ); ?>
+		<?php echo wp_kses_post( do_shortcode( $args['_copyright'] ) ); ?>
 
 	<?php endif; ?>
 </div>
