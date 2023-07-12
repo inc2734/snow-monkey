@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 24.5.1
+ * @version 20.5.1
  *
  * renamed: template-parts/copyright.php
  */
