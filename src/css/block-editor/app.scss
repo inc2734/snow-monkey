@@ -142,6 +142,11 @@ html :where(.editor-styles-wrapper) {
 	}
 }
 
+.components-resizable-box__container {
+	height: auto !important;
+	max-width: 100% !important;
+}
+
 .editor-styles-wrapper {
 	--editor-container-margin: var(--_global--container-margin);
 
