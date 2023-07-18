@@ -142,9 +142,9 @@ html :where(.editor-styles-wrapper) {
 	}
 }
 
-.components-resizable-box__container {
-	height: auto !important;
-	max-width: 100% !important;
+.block-editor__container img {
+	max-height: 100%;
+	max-width:100%;
 }
 
 .editor-styles-wrapper {
