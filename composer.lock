@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c0fe2d863539e2a08928b015827b1d97",
+    "content-hash": "fca8d930eb898e2fa36e2e749a5dec6f",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -814,21 +814,21 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "5.0.3",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "801dad6e3c619475f3d3230a71a8558275dc0498"
+                "reference": "e0e022f6e8513bb28dd5669c5f12e6f29cbc744c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/801dad6e3c619475f3d3230a71a8558275dc0498",
-                "reference": "801dad6e3c619475f3d3230a71a8558275dc0498",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/e0e022f6e8513bb28dd5669c5f12e6f29cbc744c",
+                "reference": "e0e022f6e8513bb28dd5669c5f12e6f29cbc744c",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-ogp": "^2.0",
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
@@ -854,9 +854,9 @@
             "description": "A library for SEO of WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-seo/issues",
-                "source": "https://github.com/inc2734/wp-seo/tree/5.0.3"
+                "source": "https://github.com/inc2734/wp-seo/tree/5.1.0"
             },
-            "time": "2023-05-26T00:55:38+00:00"
+            "time": "2023-07-21T01:21:00+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
