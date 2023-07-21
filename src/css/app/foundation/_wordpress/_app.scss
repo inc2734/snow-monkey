@@ -9,8 +9,3 @@
 @import '_single-attachment/app';
 @import '_sticky/app';
 @import '_wp-caption/app';
-
-.is-layout-constrained {
-	@extend %entry-content;
-	@extend %entry-content-theme;
-}

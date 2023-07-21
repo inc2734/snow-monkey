@@ -1,9 +1,3 @@
 .smb-tabs {
 	--smb-tabs--style--line--accent-color: var(--wp--preset--color--sm-accent);
 }
-
-.smb-tab-panel {
-	&__body {
-		@extend %entry-content;
-	}
-}

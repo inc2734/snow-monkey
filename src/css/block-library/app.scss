@@ -1,16 +1,14 @@
 @import '../app/core/core';
 @import '../app/foundation/_placeholder/placeholder';
 
+@import '_layout/app';
 @import '_wp-block-archives/app';
 @import '_wp-block-button/app';
 @import '_wp-block-calendar/app';
 @import '_wp-block-categories/app';
-@import '_wp-block-columns/app';
-@import '_wp-block-cover/app';
 @import '_wp-block-file/app';
 @import '_wp-block-heading/app';
 @import '_wp-block-gallery/app';
-@import '_wp-block-group/app';
 @import '_wp-block-latest-comments/app';
 @import '_wp-block-latest-posts/app';
 @import '_wp-block-legacy-widget/app';

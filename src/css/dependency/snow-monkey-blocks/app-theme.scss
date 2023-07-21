@@ -1,24 +1,10 @@
 @import '../../app/core/core';
 @import '../../app/foundation/_placeholder/placeholder';
 
-@import 'accordion/app-theme';
-@import 'alert/app-theme';
-@import 'balloon/app-theme';
-@import 'box/app-theme';
-@import 'container/app-theme';
-@import 'faq/app-theme';
-@import 'hero-header/app-theme';
-@import 'information/app-theme';
-@import 'items/app-theme';
-@import 'media-text/app-theme';
-@import 'panels/app-theme';
 @import 'section/app-theme';
 @import 'section-break-the-grid/app-theme';
 @import 'section-side-heading/app-theme';
 @import 'section-with-image/app-theme';
-@import 'spider-contents-slider/app-theme';
-@import 'step/app-theme';
-@import 'tabs/app-theme';
 
 // @todo WordPress 5.9 iframed content hack.
 // https://github.com/WordPress/gutenberg/blob/f2161e246b9fdd9a2a56e7552b0b28050f1a5302/packages/block-editor/src/components/iframe/index.js#L70-L74
