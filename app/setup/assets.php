@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.0
+ * @version 25.0.0
  */
 
 use Framework\Helper;
@@ -96,7 +96,10 @@ add_action(
 			get_theme_file_uri( '/assets/js/app.js' ),
 			array( 'spider' ),
 			filemtime( get_theme_file_path( '/assets/js/app.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 
 		do_action( 'snow_monkey_enqueued_main_script' );
@@ -120,7 +123,10 @@ add_action(
 			get_theme_file_uri( '/assets/js/fix-adminbar.js' ),
 			array(),
 			filemtime( get_theme_file_path( '/assets/js/fix-adminbar.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 	}
 );
@@ -140,7 +146,10 @@ foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts' ) as $action_hook
 					get_theme_file_uri( '/assets/packages/fontawesome-free/js/all.min.js' ),
 					array(),
 					filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/js/all.min.js' ) ),
-					true
+					array(
+						'strategy'  => 'defer',
+						'in_footer' => false,
+					)
 				);
 			} else {
 				wp_enqueue_script(
@@ -148,7 +157,10 @@ foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts' ) as $action_hook
 					get_theme_file_uri( '/assets/js/fontawesome.js' ),
 					array(),
 					filemtime( get_theme_file_path( '/assets/js/fontawesome.js' ) ),
-					true
+					array(
+						'strategy'  => 'defer',
+						'in_footer' => false,
+					)
 				);
 			}
 		}
@@ -176,7 +188,10 @@ add_action(
 				get_theme_file_uri( '/assets/packages/spider/dist/js/spider.js' ),
 				array(),
 				filemtime( get_theme_file_path( '/assets/packages/spider/dist/js/spider.js' ) ),
-				true
+				array(
+					'strategy'  => 'defer',
+					'in_footer' => false,
+				)
 			);
 		}
 	}
@@ -214,7 +229,10 @@ add_action(
 				Helper::get_main_script_handle(),
 			),
 			filemtime( get_theme_file_path( '/assets/js/customize-preview.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 	}
 );

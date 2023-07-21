@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.0.0
  */
 
 use Framework\Helper;
@@ -397,7 +397,10 @@ add_action(
 			get_theme_file_uri( '/assets/js/widgets.js' ),
 			array(),
 			filemtime( get_theme_file_path( '/assets/js/widgets.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 
 		if ( Helper::is_active_sidebar( 'sidebar-sticky-widget-area' ) ) {
@@ -406,7 +409,10 @@ add_action(
 				get_theme_file_uri( '/assets/js/sidebar-sticky-widget-area.js' ),
 				array(),
 				filemtime( get_theme_file_path( '/assets/js/sidebar-sticky-widget-area.js' ) ),
-				true
+				array(
+					'strategy'  => 'defer',
+					'in_footer' => false,
+				)
 			);
 		}
 	}

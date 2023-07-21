@@ -56,7 +56,10 @@ add_action(
 			get_theme_file_uri( '/assets/js/dependency/snow-monkey-blocks/app.js' ),
 			$dependencies,
 			filemtime( get_theme_file_path( '/assets/js/dependency/snow-monkey-blocks/app.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 	}
 );

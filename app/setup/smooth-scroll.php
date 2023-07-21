@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.0.0
  */
 
 use Framework\Helper;
@@ -21,7 +21,10 @@ add_action(
 			get_theme_file_uri( '/assets/js/smooth-scroll.js' ),
 			array(),
 			filemtime( get_theme_file_path( '/assets/js/smooth-scroll.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 	}
 );

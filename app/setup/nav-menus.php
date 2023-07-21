@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.0.0
  */
 
 use Framework\Helper;
@@ -46,7 +46,10 @@ add_action(
 			get_theme_file_uri( '/assets/js/footer-sticky-nav.js' ),
 			array(),
 			filemtime( get_theme_file_path( '/assets/js/footer-sticky-nav.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 
 		wp_register_script(
@@ -58,7 +61,10 @@ add_action(
 				)
 			),
 			filemtime( get_theme_file_path( '/assets/js/global-nav.js' ) ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 
 		if ( has_nav_menu( 'footer-sticky-nav' ) ) {

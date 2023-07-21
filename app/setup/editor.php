@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.4.1
+ * @version 25.0.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -163,7 +163,11 @@ add_action(
 			Helper::get_main_style_handle() . '-block-editor',
 			get_theme_file_uri( '/assets/js/editor.js' ),
 			$asset['dependencies'],
-			filemtime( get_theme_file_path( '/assets/js/editor.js' ) )
+			filemtime( get_theme_file_path( '/assets/js/editor.js' ) ),
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 	}
 );

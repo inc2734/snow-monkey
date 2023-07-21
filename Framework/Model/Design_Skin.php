@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.0.0
  */
 
 namespace Framework\Model;
@@ -207,7 +207,10 @@ class Design_Skin {
 			$file_url,
 			array( 'jquery' ),
 			filemtime( $file_path ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => false,
+			)
 		);
 	}
 
