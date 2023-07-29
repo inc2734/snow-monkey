@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "14.1.0",
+            "version": "14.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "3dd8b5add9b4df0bd06bf8835a83aae7f868eef1"
+                "reference": "8372a11bebd9279a6d7c866677971b97ac17cbbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/3dd8b5add9b4df0bd06bf8835a83aae7f868eef1",
-                "reference": "3dd8b5add9b4df0bd06bf8835a83aae7f868eef1",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/8372a11bebd9279a6d7c866677971b97ac17cbbb",
+                "reference": "8372a11bebd9279a6d7c866677971b97ac17cbbb",
                 "shasum": ""
             },
             "require": {
@@ -146,9 +146,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/14.1.0"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/14.1.1"
             },
-            "time": "2023-07-20T14:27:19+00:00"
+            "time": "2023-07-29T03:17:21+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -245,29 +245,25 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "5.3.0",
+            "version": "5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "90c0d2eb6c4ace4c09963286edb58f2dd60abd43"
+                "reference": "bf2d37fc1ced41f15478a10613d2344e657a7ca5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/90c0d2eb6c4ace4c09963286edb58f2dd60abd43",
-                "reference": "90c0d2eb6c4ace4c09963286edb58f2dd60abd43",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/bf2d37fc1ced41f15478a10613d2344e657a7ca5",
+                "reference": "bf2d37fc1ced41f15478a10613d2344e657a7ca5",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-plugin-view-controller": "^1.1",
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.11",
-                "squizlabs/php_codesniffer": "^3.6",
                 "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.8",
                 "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
@@ -289,9 +285,9 @@
             "description": "A library for WordPress. This adds contents outline of the post.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-contents-outline/issues",
-                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.3.0"
+                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.3.1"
             },
-            "time": "2023-03-10T13:08:37+00:00"
+            "time": "2023-07-29T01:59:54+00:00"
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
@@ -533,16 +529,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "13.0.1",
+            "version": "13.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "b2a3e32b99d1a5f02f1281a3a0098412c53a4dbf"
+                "reference": "5f8097ed58d9cad9a3af9c55909f0e1a85e284e8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/b2a3e32b99d1a5f02f1281a3a0098412c53a4dbf",
-                "reference": "b2a3e32b99d1a5f02f1281a3a0098412c53a4dbf",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/5f8097ed58d9cad9a3af9c55909f0e1a85e284e8",
+                "reference": "5f8097ed58d9cad9a3af9c55909f0e1a85e284e8",
                 "shasum": ""
             },
             "require": {
@@ -572,9 +568,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.1"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.2"
             },
-            "time": "2023-06-01T16:45:10+00:00"
+            "time": "2023-07-29T02:20:17+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -857,21 +853,21 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "7.0.3",
+            "version": "7.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "feb1ebbd6e8a158729d62486f07739c41f9b5dcf"
+                "reference": "88d7682df8c42897530e41311667bd074633665a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/feb1ebbd6e8a158729d62486f07739c41f9b5dcf",
-                "reference": "feb1ebbd6e8a158729d62486f07739c41f9b5dcf",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/88d7682df8c42897530e41311667bd074633665a",
+                "reference": "88d7682df8c42897530e41311667bd074633665a",
                 "shasum": ""
             },
             "require": {
                 "inc2734/wp-ogp": "^2.0",
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
@@ -898,9 +894,9 @@
             "description": "A library for WordPress theme that adds social share buttons.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-share-buttons/issues",
-                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.0.3"
+                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.0.4"
             },
-            "time": "2023-01-23T13:40:44+00:00"
+            "time": "2023-07-29T03:00:15+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",
