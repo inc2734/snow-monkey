@@ -807,16 +807,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "5.1.0",
+            "version": "5.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "e0e022f6e8513bb28dd5669c5f12e6f29cbc744c"
+                "reference": "eb257b23c275e8a963fe47aa388661e5effec392"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/e0e022f6e8513bb28dd5669c5f12e6f29cbc744c",
-                "reference": "e0e022f6e8513bb28dd5669c5f12e6f29cbc744c",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/eb257b23c275e8a963fe47aa388661e5effec392",
+                "reference": "eb257b23c275e8a963fe47aa388661e5effec392",
                 "shasum": ""
             },
             "require": {
@@ -847,9 +847,9 @@
             "description": "A library for SEO of WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-seo/issues",
-                "source": "https://github.com/inc2734/wp-seo/tree/5.1.0"
+                "source": "https://github.com/inc2734/wp-seo/tree/5.1.1"
             },
-            "time": "2023-07-21T01:21:00+00:00"
+            "time": "2023-07-30T11:51:51+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
