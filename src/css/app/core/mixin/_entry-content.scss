@@ -1,8 +1,10 @@
 @mixin entry-content($level: 1) {
 	@include _set-content-level($level);
 
-	> * {
-		position: relative;
+	@at-root {
+		:where(#{ & } > *) {
+			position: relative;
+		}
 	}
 
 	& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
