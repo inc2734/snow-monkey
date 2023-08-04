@@ -2,7 +2,3 @@
 	clear: both !important;
 	max-width: none !important;
 }
-
-@mixin alignwide() {
-	max-width: var(--wp--style--global--wide-size) !important;
-}

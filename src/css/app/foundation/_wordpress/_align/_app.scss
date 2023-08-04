@@ -56,10 +56,6 @@
 	}
 }
 
-.alignwide {
-	@include alignwide();
-}
-
 [data-has-sidebar="false"] .#{ $_prefix }c-entry__content {
 	& > .alignfull {
 		margin-right: calc(-1 * var(--_container-margin-right));
