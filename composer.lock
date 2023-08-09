@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fca8d930eb898e2fa36e2e749a5dec6f",
+    "content-hash": "2e71cc3b6a1c2705fa6ec3429d18fe06",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -711,28 +711,25 @@
         },
         {
             "name": "inc2734/wp-profile-box",
-            "version": "2.4.0",
+            "version": "2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-profile-box.git",
-                "reference": "a11ccdd1443c9f0eac122e1dbff32ca3f81efc9a"
+                "reference": "bfa8a1b8f2eaa6f01d2e0ce5e8225cbdb61b6718"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/a11ccdd1443c9f0eac122e1dbff32ca3f81efc9a",
-                "reference": "a11ccdd1443c9f0eac122e1dbff32ca3f81efc9a",
+                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/bfa8a1b8f2eaa6f01d2e0ce5e8225cbdb61b6718",
+                "reference": "bfa8a1b8f2eaa6f01d2e0ce5e8225cbdb61b6718",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "phpcompatibility/php-compatibility": "^9.3",
-                "sirbrillig/phpcs-variable-analysis": "^2.8",
-                "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.5"
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+                "wp-coding-standards/wpcs": "^2.3",
+                "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
             "autoload": {
@@ -753,9 +750,9 @@
             "description": "A library to add profile box for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-profile-box/issues",
-                "source": "https://github.com/inc2734/wp-profile-box/tree/2.4.0"
+                "source": "https://github.com/inc2734/wp-profile-box/tree/2.5.0"
             },
-            "time": "2020-12-02T17:46:50+00:00"
+            "time": "2023-08-09T01:37:42+00:00"
         },
         {
             "name": "inc2734/wp-pure-css-gallery",
@@ -853,16 +850,16 @@
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "7.0.4",
+            "version": "7.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "88d7682df8c42897530e41311667bd074633665a"
+                "reference": "833a62f76650c97e2b632d9b98360f92d8582325"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/88d7682df8c42897530e41311667bd074633665a",
-                "reference": "88d7682df8c42897530e41311667bd074633665a",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/833a62f76650c97e2b632d9b98360f92d8582325",
+                "reference": "833a62f76650c97e2b632d9b98360f92d8582325",
                 "shasum": ""
             },
             "require": {
@@ -894,9 +891,9 @@
             "description": "A library for WordPress theme that adds social share buttons.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-share-buttons/issues",
-                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.0.4"
+                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.1.0"
             },
-            "time": "2023-07-29T03:00:15+00:00"
+            "time": "2023-08-09T01:53:26+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",

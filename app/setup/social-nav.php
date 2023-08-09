@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.0.0
  */
 
 use Framework\Model\Filesystem;
@@ -255,10 +255,10 @@ add_filter(
 		) {
 			$new_item_output = str_replace(
 				$args->link_before,
-				'<i class="fa-brands fa-twitter"></i>' . $args->link_before,
+				'<i class="fa-brands fa-x-twitter"></i>' . $args->link_before,
 				$item_output
 			);
-			$new_item_output = str_replace( '<a ', '<a data-icon="twitter"', $new_item_output );
+			$new_item_output = str_replace( '<a ', '<a data-icon="x"', $new_item_output );
 		} elseif (
 			preg_match( '|^https?://([^\.]+?\.)*?WordPress\.([^\./]+?)(\.[^\./]+?.)?|', $item->url )
 		) {

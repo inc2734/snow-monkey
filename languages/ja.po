@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-06-26 14:13+0900\n"
-"PO-Revision-Date: 2023-06-26 14:14+0900\n"
+"POT-Creation-Date: 2023-08-09 11:21+0900\n"
+"PO-Revision-Date: 2023-08-09 11:21+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.3.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -81,7 +81,7 @@ msgstr "左"
 #: app/customizer/design/sections/base-design/controls/wp-oembed-blog-card-variation.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: app/customizer/design/sections/entries/controls/entries-layout.php:23
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:27
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:26
 #: app/widget/snow-monkey-recent-posts/_form.php:88
 #: app/widget/snow-monkey-rss/_form.php:73
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:127
@@ -119,7 +119,7 @@ msgstr "フッター5"
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
 #: app/customizer/design/sections/entries/controls/entries-gap.php:19
 #: app/customizer/design/sections/post/controls/related-posts-gap.php:24
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:25
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:24
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:4983
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5367
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:5530
@@ -978,8 +978,8 @@ msgstr "記事一覧レイアウト"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:31
 #: app/customizer/design/sections/entries/controls/entries-layout.php:22
 #: app/customizer/design/sections/entries/controls/entries-layout.php:30
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:26
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:34
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:25
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:33
 #: app/widget/snow-monkey-recent-posts/_form.php:87
 #: app/widget/snow-monkey-recent-posts/_form.php:95
 #: app/widget/snow-monkey-rss/_form.php:72
@@ -997,7 +997,7 @@ msgstr "リッチメディア"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/entries/controls/entries-layout.php:24
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:28
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:27
 #: app/widget/snow-monkey-recent-posts/_form.php:89
 #: app/widget/snow-monkey-rss/_form.php:74
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:128
@@ -1009,7 +1009,7 @@ msgstr "テキスト"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
 #: app/customizer/design/sections/entries/controls/entries-layout.php:25
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:29
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:28
 #: app/widget/snow-monkey-recent-posts/_form.php:90
 #: app/widget/snow-monkey-rss/_form.php:75
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:129
@@ -1021,7 +1021,7 @@ msgstr "テキスト2"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
 #: app/customizer/design/sections/entries/controls/entries-layout.php:26
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:30
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:29
 #: app/widget/snow-monkey-recent-posts/_form.php:91
 #: app/widget/snow-monkey-rss/_form.php:76
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:130
@@ -1034,7 +1034,7 @@ msgstr "パネル"
 #. translators: %1$s: entries layout
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
 #: app/customizer/design/sections/entries/controls/entries-layout.php:29
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:33
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:32
 #: app/widget/snow-monkey-recent-posts/_form.php:94
 #: app/widget/snow-monkey-rss/_form.php:79
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:133
@@ -1047,7 +1047,7 @@ msgstr "カルーセル（%1$s）"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:33
 #: app/customizer/design/sections/entries/controls/entries-layout.php:32
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:36
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:35
 #: app/widget/snow-monkey-recent-posts/_form.php:97
 #: app/widget/snow-monkey-rss/_form.php:82
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:136
@@ -1354,7 +1354,7 @@ msgstr "記事にプロフィールボックスを表示する"
 msgid "The gap between each item in the related posts"
 msgstr "関連記事の各項目間の間隔"
 
-#: app/customizer/design/sections/post/controls/related-posts-layout.php:21
+#: app/customizer/design/sections/post/controls/related-posts-layout.php:20
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:6636
 msgid "Related posts layout"
 msgstr "関連記事のレイアウト"
@@ -2005,36 +2005,40 @@ msgid "Twitter"
 msgstr "Twitter"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:24
+msgid "X"
+msgstr "X"
+
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:25
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7879
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:25
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:26
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7880
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:26
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:27
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7881
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:27
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:28
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7882
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:28
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:29
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7883
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:29
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:30
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7884
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:30
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:31
 #: cache/concat/9858eb698a335b6d847ab3d8ec1d53f63c9d048c.php:7885
 msgid "Copy"
 msgstr "コピー"
@@ -2210,7 +2214,7 @@ msgstr ""
 msgid "Plain"
 msgstr "プレーン"
 
-#: app/setup/dependency/snow-monkey-blocks.php:162
+#: app/setup/dependency/snow-monkey-blocks.php:127
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:5025
 msgid "Undecorated title"
 msgstr "装飾無しのタイトル"
@@ -2306,7 +2310,7 @@ msgstr "ドロワーサブナビゲーション（モバイル用）"
 msgid "Footer Sticky Navigation (For Mobile)"
 msgstr "フッター固定ナビゲーション（モバイル用）"
 
-#: app/setup/nav-menus.php:125
+#: app/setup/nav-menus.php:131
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2150
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.0.0
  */
 
 use Inc2734\WP_Profile_Box\Bootstrap;
@@ -20,6 +20,9 @@ add_filter(
 					break;
 				case 'twitter':
 					$label = '<i class="fa-brands fa-twitter"></i>' . $label;
+					break;
+				case 'x':
+					$label = '<i class="fa-brands fa-x-twitter"></i>' . $label;
 					break;
 				case 'facebook':
 					$label = '<i class="fa-brands fa-facebook"></i>' . $label;
