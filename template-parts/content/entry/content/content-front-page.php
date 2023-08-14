@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.6
+ * @version 25.0.2
  */
 
 use Framework\Helper;
@@ -16,8 +16,7 @@ $require_container       = $use_home_page_container && $is_one_column_full;
 <?php do_action( 'snow_monkey_before_entry_content' ); ?>
 
 <div
-	class="c-entry__content p-entry-content
-	<?php echo $require_container ? esc_attr( 'c-container' ) : ''; ?>
+	class="c-entry__content p-entry-content <?php echo $require_container ? esc_attr( 'c-container' ) : ''; ?>"
 	data-home-page-container="<?php echo esc_attr( $require_container ? 'true' : 'false' ); ?>"
 >
 	<?php do_action( 'snow_monkey_prepend_entry_content' ); ?>
