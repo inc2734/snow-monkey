@@ -63,7 +63,7 @@
 			]
 		},
 		"spacing": {
-			"units": [ "px", "em", "rem", "vh", "vw" ],
+			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
 			"spacingSizes": [
 				{
 					"name": "-2",
