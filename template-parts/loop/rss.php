@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.1.1
  *
  * renamed: template-parts/loop/entry-summary-rss.php
  */
@@ -43,7 +43,7 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 		?>
 
 		<div class="c-entry-summary__body">
-			<header class="c-entry-summary__header">
+			<div class="c-entry-summary__header">
 				<?php
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary/title/rss',
@@ -57,7 +57,7 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 					)
 				);
 				?>
-			</header>
+			</div>
 
 			<?php
 			Helper::get_template_part(

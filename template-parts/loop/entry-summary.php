@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 25.1.1
  *
  * renamed: template-parts/entry-summary.php
  */
@@ -51,7 +51,7 @@ $args = wp_parse_args(
 		?>
 
 		<div class="c-entry-summary__body">
-			<header class="c-entry-summary__header">
+			<div class="c-entry-summary__header">
 				<?php
 				Helper::get_template_part(
 					'template-parts/loop/entry-summary/title/title',
@@ -64,7 +64,7 @@ $args = wp_parse_args(
 					)
 				);
 				?>
-			</header>
+			</div>
 
 			<?php
 			Helper::get_template_part(
