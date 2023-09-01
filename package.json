@@ -91,7 +91,7 @@
     "js:dependency:snow-monkey-blocks": "wp-scripts build src/js/dependency/snow-monkey-blocks/app --output-path=assets/js/dependency/snow-monkey-blocks",
     "js:dependency": "run-p js:dependency:*",
     "js": "npm run cleanup:js && run-p js:*",
-    "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' 'fontawesome-free/LICENSE.txt' '../../../../assets/packages' --cwd=node_modules/@fortawesome",
+    "packages:fontawesome": "cpy 'fontawesome-free/js/all.min.js' 'fontawesome-free/LICENSE.txt' '../../assets/packages' --cwd=node_modules/@fortawesome",
     "packages:spider": "cpy 'node_modules/@inc2734/spider/**' 'assets/packages/spider'",
     "packages": "npm run cleanup:packages && run-p packages:*",
     "img": "npm run cleanup:img && cpy 'src/img/**' 'assets/img'",
