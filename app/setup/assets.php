@@ -249,7 +249,7 @@ add_action(
 			Helper::get_main_script_handle(),
 			'snow_monkey',
 			array(
-				'home_url' => home_url(),
+				'home_url'                      => home_url(),
 				'children_expander_open_label'  => __( 'Open submenu', 'snow-monkey' ),
 				'children_expander_close_label' => __( 'Close submenu', 'snow-monkey' ),
 			)
