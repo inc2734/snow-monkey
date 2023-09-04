@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.1.3
  */
 
 use Framework\Helper;
@@ -250,6 +250,8 @@ add_action(
 			'snow_monkey',
 			array(
 				'home_url' => home_url(),
+				'children_expander_open_label'  => __( 'Open submenu', 'snow-monkey' ),
+				'children_expander_close_label' => __( 'Close submenu', 'snow-monkey' ),
 			)
 		);
 	}
