@@ -525,16 +525,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "13.0.2",
+            "version": "13.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "5f8097ed58d9cad9a3af9c55909f0e1a85e284e8"
+                "reference": "d35eaffca1b66dfd272032ae0f3c8a06131bd821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/5f8097ed58d9cad9a3af9c55909f0e1a85e284e8",
-                "reference": "5f8097ed58d9cad9a3af9c55909f0e1a85e284e8",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/d35eaffca1b66dfd272032ae0f3c8a06131bd821",
+                "reference": "d35eaffca1b66dfd272032ae0f3c8a06131bd821",
                 "shasum": ""
             },
             "require": {
@@ -564,9 +564,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.2"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.3"
             },
-            "time": "2023-07-29T02:20:17+00:00"
+            "time": "2023-09-13T02:40:53+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -893,16 +893,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.4.4",
+            "version": "12.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "a9a0bed099cf950b94e78bd2d71d98d5623b673e"
+                "reference": "e6f32cf259d61bcc4a21fe57b7830962462ed5c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/a9a0bed099cf950b94e78bd2d71d98d5623b673e",
-                "reference": "a9a0bed099cf950b94e78bd2d71d98d5623b673e",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/e6f32cf259d61bcc4a21fe57b7830962462ed5c7",
+                "reference": "e6f32cf259d61bcc4a21fe57b7830962462ed5c7",
                 "shasum": ""
             },
             "require": {
@@ -932,9 +932,9 @@
             "description": "A library for WordPress theme view controller.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-view-controller/issues",
-                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.4"
+                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.5"
             },
-            "time": "2023-05-15T14:22:07+00:00"
+            "time": "2023-09-14T13:10:12+00:00"
         }
     ],
     "packages-dev": [
@@ -1314,16 +1314,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "9.2.27",
+            "version": "9.2.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "b0a88255cb70d52653d80c890bd7f38740ea50d1"
+                "reference": "7134a5ccaaf0f1c92a4f5501a6c9f98ac4dcc0ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/b0a88255cb70d52653d80c890bd7f38740ea50d1",
-                "reference": "b0a88255cb70d52653d80c890bd7f38740ea50d1",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/7134a5ccaaf0f1c92a4f5501a6c9f98ac4dcc0ef",
+                "reference": "7134a5ccaaf0f1c92a4f5501a6c9f98ac4dcc0ef",
                 "shasum": ""
             },
             "require": {
@@ -1380,7 +1380,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/php-code-coverage/issues",
                 "security": "https://github.com/sebastianbergmann/php-code-coverage/security/policy",
-                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.27"
+                "source": "https://github.com/sebastianbergmann/php-code-coverage/tree/9.2.28"
             },
             "funding": [
                 {
@@ -1388,7 +1388,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-26T13:44:30+00:00"
+            "time": "2023-09-12T14:36:20+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1633,16 +1633,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.11",
+            "version": "9.6.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "810500e92855eba8a7a5319ae913be2da6f957b0"
+                "reference": "a122c2ebd469b751d774aa0f613dc0d67697653f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/810500e92855eba8a7a5319ae913be2da6f957b0",
-                "reference": "810500e92855eba8a7a5319ae913be2da6f957b0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a122c2ebd469b751d774aa0f613dc0d67697653f",
+                "reference": "a122c2ebd469b751d774aa0f613dc0d67697653f",
                 "shasum": ""
             },
             "require": {
@@ -1657,7 +1657,7 @@
                 "phar-io/manifest": "^2.0.3",
                 "phar-io/version": "^3.0.2",
                 "php": ">=7.3",
-                "phpunit/php-code-coverage": "^9.2.13",
+                "phpunit/php-code-coverage": "^9.2.28",
                 "phpunit/php-file-iterator": "^3.0.5",
                 "phpunit/php-invoker": "^3.1.1",
                 "phpunit/php-text-template": "^2.0.3",
@@ -1716,7 +1716,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.11"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.12"
             },
             "funding": [
                 {
@@ -1732,7 +1732,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-08-19T07:10:56+00:00"
+            "time": "2023-09-12T14:39:31+00:00"
         },
         {
             "name": "sebastian/cli-parser",
