@@ -120,10 +120,32 @@ document.addEventListener( 'DOMContentLoaded', () => {
 				} );
 			} );
 
-			const resizeObserver = new ResizeObserver( ( entries ) => {
+			const resizeObserver = new ResizeObserver( () => {
 				setTimeout( () => setItemsVars( items ), 100 );
 			} );
 			resizeObserver.observe( header );
 		}
 	}
+} );
+
+document.addEventListener( 'DOMContentLoaded', () => {
+	const contents = document.querySelector( '.l-contents' );
+	if ( ! contents ) {
+		return;
+	}
+
+	const main = contents.querySelector( '.l-contents__main' );
+	const sidebar = contents.querySelector( '.l-contents__sidebar' );
+	if ( ! main || ! sidebar ) {
+		contents.setAttribute( 'data-with-sidebar', false );
+		return;
+	}
+
+	const resizeObserver = new ResizeObserver( () => {
+		const maybeWithSidebar = main.offsetWidth !== sidebar.offsetWidth || main.getBoundingClientRect().top === sidebar.getBoundingClientRect().top;
+
+		contents.setAttribute( 'data-with-sidebar', maybeWithSidebar );
+		console.log( maybeWithSidebar );
+	} );
+	resizeObserver.observe( contents );
 } );

@@ -18,6 +18,10 @@
 	&__sidebar {
 		@include _set-content-level(1);
 	}
+
+	&[data-with-sidebar="false"] {
+		overflow: hidden;
+	}
 }
 
 /**
