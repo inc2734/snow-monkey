@@ -15,7 +15,7 @@ $_post_type = $_post_type ? $_post_type : 'any';
 
 query_posts(
 	array_merge(
-		$wp_query->query,
+		$wp_query->query ?? array(),
 		array(
 			'post_type' => $_post_type,
 		)
