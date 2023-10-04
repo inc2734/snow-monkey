@@ -145,7 +145,6 @@ document.addEventListener( 'DOMContentLoaded', () => {
 		const maybeWithSidebar = main.offsetWidth !== sidebar.offsetWidth || main.getBoundingClientRect().top === sidebar.getBoundingClientRect().top;
 
 		contents.setAttribute( 'data-with-sidebar', maybeWithSidebar );
-		console.log( maybeWithSidebar );
 	} );
 	resizeObserver.observe( contents );
 } );
