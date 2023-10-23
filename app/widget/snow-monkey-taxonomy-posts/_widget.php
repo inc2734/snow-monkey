@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.3
+ * @version 25.2.0
  */
 
 use Framework\Helper;
@@ -175,6 +175,7 @@ Helper::get_template_part(
 		'_display_item_terms'      => $instance['display-item-terms'],
 		'_display_item_excerpt'    => $display_item_excerpt,
 		'_category_label_taxonomy' => $instance['category-label-taxonomy'],
+		'_use_own_category_label'  => $instance['use-own-category-label'],
 		'_link_text'               => $instance['link-text'],
 		'_link_url'                => $instance['link-url'],
 		'_posts_query'             => $taxonomy_posts_query,

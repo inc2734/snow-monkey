@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.3
+ * @version 25.2.0
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -30,6 +30,7 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 		'display-item-published'  => null,
 		'display-item-terms'      => null,
 		'category-label-taxonomy' => null,
+		'use-own-category-label'  => null,
 		'display-item-excerpt'    => null,
 		'link-text'               => null,
 		'link-url'                => null,

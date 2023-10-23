@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.4.2
+ * @version 25.2.0
  *
  * renamed: template-parts/common/entries.php
  */
@@ -24,6 +24,7 @@ $args = wp_parse_args(
 		'_display_item_meta'       => true,
 		'_display_item_terms'      => 'post' === $args['_name'] ? true : false,
 		'_category_label_taxonomy' => null,
+		'_use_own_category_label'  => null,
 		'_posts_query'             => false,
 	)
 );

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-09-04 19:22+0900\n"
-"PO-Revision-Date: 2023-09-04 19:22+0900\n"
+"POT-Creation-Date: 2023-10-23 15:46+0900\n"
+"PO-Revision-Date: 2023-10-23 15:47+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -914,6 +914,19 @@ msgid ""
 "This setting takes priority over featured image setting of posts page "
 "settings"
 msgstr "この設定は投稿ページ設定のアイキャッチ画像の設定よりも優先されます"
+
+#: app/customizer/design/sections/category/controls/use-own-category-label.php:30
+#: app/customizer/design/sections/custom-taxonomy/controls/use-own-category-label.php:44
+msgid "Use the category label set for itself"
+msgstr "自身に設定されたカテゴリーラベルを使用"
+
+#: app/customizer/design/sections/category/controls/use-own-category-label.php:31
+#: app/customizer/design/sections/custom-taxonomy/controls/use-own-category-label.php:45
+msgid ""
+"By default, category labels are displayed according to the current archive "
+"page"
+msgstr ""
+"デフォルトでは、カテゴリーラベルは現在のアーカイブページに従って表示されます"
 
 #. translators: 1: Category name
 #: app/customizer/design/sections/category/section.php:29
@@ -2741,6 +2754,7 @@ msgid "TrackBack URL"
 msgstr "トラックバック URL"
 
 #: template-parts/header/hamburger-btn.php:16
+#: template-parts/header/hamburger-btn.php:17
 msgid "MENU"
 msgstr "MENU"
 

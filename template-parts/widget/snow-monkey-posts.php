@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 25.2.0
  */
 
 use Framework\Helper;
@@ -26,6 +26,7 @@ $args = wp_parse_args(
 		'_display_item_terms'      => false,
 		'_display_item_excerpt'    => false,
 		'_category_label_taxonomy' => null,
+		'_use_own_category_label'  => null,
 		'_link_text'               => null,
 		'_link_url'                => null,
 		'_posts_query'             => null,
@@ -129,6 +130,7 @@ $more_classnames = array(
 			'_display_item_terms'      => $args['_display_item_terms'],
 			'_display_item_excerpt'    => $args['_display_item_excerpt'],
 			'_category_label_taxonomy' => $args['_category_label_taxonomy'],
+			'_use_own_category_label'  => $args['_use_own_category_label'],
 			'_posts_query'             => $args['_posts_query'],
 			'_arrows'                  => $args['_arrows'],
 			'_dots'                    => $args['_dots'],
