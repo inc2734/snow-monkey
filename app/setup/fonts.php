@@ -69,7 +69,7 @@ foreach ( array( 'wp_enqueue_scripts', 'enqueue_block_editor_assets' ) as $hook 
 				}
 			}
 
-			wp_add_inline_style( Helper::get_main_style_handle(), implode( '', $css_arr ) );
+			wp_add_inline_style( Helper::get_main_style_handle() . '-app', implode( '', $css_arr ) );
 		},
 		11
 	);

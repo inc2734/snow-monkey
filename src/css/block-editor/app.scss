@@ -170,6 +170,10 @@ html :where(.editor-styles-wrapper) {
 	}
 }
 
+[data-rich-text-placeholder] {
+	font-variant-ligatures: initial;
+}
+
 // @see src/css/layout/body/_body.scss
 .l-body--one-column-full,
 .l-body--blank,
