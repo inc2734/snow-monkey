@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.2
+ * @version 25.2.4
  *
  * This procceses are beta.
  */
@@ -108,12 +108,13 @@ add_action(
 add_action(
 	'after_setup_theme',
 	function() {
-		remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-		remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+		if ( get_theme_mod( 'disable-emoji' ) ) {
+			remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+			remove_action( 'wp_print_styles', 'print_emoji_styles' ); // Less than 6.4
 
-		if ( ! get_theme_mod( 'disable-emoji' ) ) {
-			add_action( 'wp_footer', 'print_emoji_detection_script', 7 );
-			add_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' );
+			if ( function_exists( 'wp_enqueue_emoji_styles' ) ) {
+				remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' ); // 6.4 or higher
+			}
 		}
 	}
 );
