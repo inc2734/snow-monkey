@@ -1,54 +1,55 @@
 {
-  "type": "wordpress-theme",
-  "license": "GPL-2.0-or-later",
-  "authors": [
-    {
-      "name": "Takashi Kitajima",
-      "email": "inc@2inc.org",
-      "homepage": "https://2inc.org"
-    }
-  ],
-  "require-dev": {
-    "wp-coding-standards/wpcs": "^2.3",
-    "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-    "yoast/phpunit-polyfills": "^1.0"
-  },
-  "require": {
-    "php": ">=7.4",
-    "inc2734/wp-adsense": "^1.0",
-    "inc2734/wp-awesome-components": "^1.0",
-    "inc2734/wp-awesome-widgets": "^14.1",
-    "inc2734/wp-basis": "^12.1",
-    "inc2734/wp-breadcrumbs": "^3.1",
-    "inc2734/wp-contents-outline": "^5.3",
-    "inc2734/wp-custom-css-to-editor": "^0.1",
-    "inc2734/wp-customizer-framework": "^11.0",
-    "inc2734/wp-github-theme-updater": "^3.1",
-    "inc2734/wp-helper": "^1.0",
-    "inc2734/wp-like-me-box": "^4.0",
-    "inc2734/wp-oembed-blog-card": "^13.0",
-    "inc2734/wp-page-speed-optimization": "^3.0",
-    "inc2734/wp-profile-box": "^2.5",
-    "inc2734/wp-pure-css-gallery": "^3.0",
-    "inc2734/wp-seo": "^5.1",
-    "inc2734/wp-share-buttons": "^7.1",
-    "inc2734/wp-view-controller": "^12.4"
-  },
-  "config": {
-    "process-timeout": 0,
-    "vendor-dir": "vendor",
-    "allow-plugins": {
-      "dealerdirect/phpcodesniffer-composer-installer": true
-    }
-  },
-  "scripts" :{
-    "lint": "phpcs --standard=.phpcs.xml.dist",
-    "format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
-    "server": "bash bin/server.sh"
-  },
-  "autoload": {
-    "psr-4": {
-      "Framework\\": "Framework"
-    }
-  }
+	"name": "inc2734/snow-monkey",
+	"type": "wordpress-theme",
+	"license": "GPL-2.0-or-later",
+	"authors": [
+		{
+			"name": "Takashi Kitajima",
+			"email": "inc@2inc.org",
+			"homepage": "https://2inc.org"
+		}
+	],
+	"require-dev": {
+		"wp-coding-standards/wpcs": "^2.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"yoast/phpunit-polyfills": "^1.0"
+	},
+	"require": {
+		"php": ">=7.4",
+		"inc2734/wp-adsense": "^1.0",
+		"inc2734/wp-awesome-components": "^1.0",
+		"inc2734/wp-awesome-widgets": "^14.1",
+		"inc2734/wp-basis": "^12.1",
+		"inc2734/wp-breadcrumbs": "^3.1",
+		"inc2734/wp-contents-outline": "^5.3",
+		"inc2734/wp-custom-css-to-editor": "^0.1",
+		"inc2734/wp-customizer-framework": "^11.0",
+		"inc2734/wp-github-theme-updater": "^3.1",
+		"inc2734/wp-helper": "^1.0",
+		"inc2734/wp-like-me-box": "^4.0",
+		"inc2734/wp-oembed-blog-card": "^13.0",
+		"inc2734/wp-page-speed-optimization": "^3.0",
+		"inc2734/wp-profile-box": "^2.5",
+		"inc2734/wp-pure-css-gallery": "^3.0",
+		"inc2734/wp-seo": "^5.1",
+		"inc2734/wp-share-buttons": "^7.1",
+		"inc2734/wp-view-controller": "^12.4"
+	},
+	"config": {
+		"process-timeout": 0,
+		"vendor-dir": "vendor",
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	},
+	"scripts" :{
+		"lint": "phpcs --standard=.phpcs.xml.dist",
+		"format": "phpcbf --standard=.phpcs.xml.dist --report-summary --report-source",
+		"server": "bash bin/server.sh"
+	},
+	"autoload": {
+		"psr-4": {
+			"Framework\\": "Framework"
+		}
+	}
 }

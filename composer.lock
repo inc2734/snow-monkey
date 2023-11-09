@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e71cc3b6a1c2705fa6ec3429d18fe06",
+    "content-hash": "045376d5153bdd9b7d0b05c3ae0f0165",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
