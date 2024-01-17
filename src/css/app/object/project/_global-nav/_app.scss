@@ -66,7 +66,7 @@
 
 			&.sm-nav-menu-item-highlight {
 				background-color: var(--wp--preset--color--sm-accent);
-				color: var(--wp--preset--color--sm-text-alt) !important;
+				color: var(--wp--preset--color--white) !important;
 
 				&::after {
 					display: none;
@@ -96,7 +96,7 @@
 
 		&__subitem {
 			@include _set-font-size-level(-1);
-			color: var(--wp--preset--color--sm-text-alt);
+			color: var(--wp--preset--color--white);
 
 			&.sm-nav-menu-item-highlight {
 				background-color: var(--wp--preset--color--sm-accent);
@@ -147,13 +147,13 @@
 
 		.#{ $_prefix }c-navbar__subitem {
 			.#{ $_prefix }c-navbar__toggle {
-				color: var(--wp--preset--color--sm-text-alt);
+				color: var(--wp--preset--color--white);
 
 				> .#{ $_prefix }c-ic-angle-right {
 					transform: rotate(0);
 
 					&::before {
-						border-color: var(--wp--preset--color--sm-text-alt);
+						border-color: var(--wp--preset--color--white);
 					}
 				}
 

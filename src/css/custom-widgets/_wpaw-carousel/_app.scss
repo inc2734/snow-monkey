@@ -19,7 +19,6 @@
 	}
 
 	&__item {
-		color: var(--wp--preset--color--sm-text);
 		text-decoration: none;
 
 		@include _hover() {

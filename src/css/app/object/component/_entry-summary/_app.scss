@@ -23,7 +23,7 @@
 	&__term {
 		display: inline-block;
 		background-color: var(--wp--preset--color--sm-accent);
-		color: var(--wp--preset--color--sm-text-alt);
+		color: var(--wp--preset--color--white);
 		font-weight: bold;
 		@include _set-font-size-level(-2);
 		padding: calc(var(--_padding-2) * .5) var(--_padding-2);
@@ -39,7 +39,6 @@
 	}
 
 	&__content {
-		color: var(--wp--preset--color--sm-text);
 		@include _set-font-size-level(-1);
 	}
 
@@ -88,7 +87,6 @@
 
 	&__content {
 		display: none;
-		color: var(--wp--preset--color--sm-text);
 		@include _set-font-size-level(-1);
 
 		@include _media-min(md) {

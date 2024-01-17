@@ -1,7 +1,7 @@
 .#{ $_prefix }c-pagination {
 	&__item {
 		background-color: var(--wp--preset--color--sm-accent);
-		color: var(--wp--preset--color--sm-text-alt);
+		color: var(--wp--preset--color--white);
 	}
 
 	&__item-link,
@@ -12,7 +12,7 @@
 	&__item-link {
 		@include _hover() {
 			background-color: var(--wp--preset--color--sm-light-gray);
-			color: var(--wp--preset--color--sm-text-alt);
+			color: var(--wp--preset--color--white);
 		}
 	}
 }

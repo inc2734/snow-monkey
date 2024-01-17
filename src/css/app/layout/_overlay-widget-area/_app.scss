@@ -4,7 +4,6 @@
 	position: relative;
 	margin: auto;
 	background-color: var(--wp--preset--color--sm-text-alt);
-	color: var(--wp--preset--color--sm-text);
 	padding: var(--_padding1);
 	width: min(90vw, #{ _px2rem(map-get($_sizes, lg)) });
 

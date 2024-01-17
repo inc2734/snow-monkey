@@ -1,7 +1,7 @@
 .#{ $_prefix }c-drawer {
 	z-index: 100000;
 	background-color: var(--wp--preset--color--sm-accent);
-	color: var(--wp--preset--color--sm-text-alt);
+	color: var(--wp--preset--color--white);
 	@include _set-font-size-level(-1);
 
 	a {
@@ -10,7 +10,7 @@
 
 	.#{ $_prefix }c-ic-angle-right {
 		&::before {
-			border-color: var(--wp--preset--color--sm-text-alt);
+			border-color: var(--wp--preset--color--white);
 		}
 	}
 
