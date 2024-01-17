@@ -32,10 +32,11 @@
 }
 
 #page-top {
+	--page-top-y: 0px;
+	--safe-area-inset-bottom: env(safe-area-inset-bottom);
+
 	position: fixed;
 	right: 0;
-	bottom: 44px;
-	// @see https://qiita.com/usagimaru/items/761e9a5f3d78b1939df8
-	bottom: calc(env(safe-area-inset-bottom) + 49px);
+	bottom: calc(var(--safe-area-inset-bottom) + var(--page-top-y));
 	z-index: 99998;
 }

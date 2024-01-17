@@ -1,7 +1,7 @@
-import { getFooterStickyNav, setStyle, getStyle, hide, show, throttle, isPassiveSupported } from './module/_helper';
+import { getFooterStickyNav, hide, show, throttle, getStyle, isPassiveSupported } from './module/_helper';
 
-window.addEventListener(
-	'load',
+document.addEventListener(
+	'DOMContentLoaded',
 	() => {
 		const pageTop = document.getElementById( 'page-top' );
 		if ( ! pageTop ) {
@@ -11,7 +11,7 @@ window.addEventListener(
 		let ariaHidden = pageTop.getAttribute( 'aria-hidden' );
 
 		const handleScroll = throttle( () => {
-			if ( 500 <= window.pageYOffset ) {
+			if ( 500 <= window.scrollY ) {
 				if ( 'false' !== ariaHidden ) {
 					show( pageTop );
 					ariaHidden = 'false';
@@ -31,15 +31,10 @@ window.addEventListener(
 			return;
 		}
 
-		const defaultPosition = getStyle( pageTop, 'bottom' );
-
-		footerStickyNav.addEventListener( 'initFooterStickyNav', () => {
-			setTimeout( () => {
-				const isOverlapping = parseInt( defaultPosition ) < parseInt( footerStickyNav.offsetHeight );
-				const bottom = isOverlapping ? `${ footerStickyNav.offsetHeight }px` : '';
-				setStyle( pageTop, 'bottom', bottom );
-			}, 100 );
+		const resizeObserver = new ResizeObserver( () => {
+			pageTop.style.setProperty( '--page-top-y', `${ footerStickyNav.offsetHeight - parseInt( getStyle( pageTop, '--safe-area-inset-bottom' ) ) }px` );
 		} );
+		resizeObserver.observe( footerStickyNav );
 	},
 	false
 );
