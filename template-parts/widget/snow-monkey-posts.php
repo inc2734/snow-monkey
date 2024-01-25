@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.0
+ * @version 25.3.0
  */
 
 use Framework\Helper;
@@ -36,6 +36,7 @@ $args = wp_parse_args(
 		'_arrows'                  => false,
 		'_dots'                    => true,
 		'_interval'                => 0,
+		'_autoplayButton'          => false,
 	)
 );
 
@@ -135,6 +136,7 @@ $more_classnames = array(
 			'_arrows'                  => $args['_arrows'],
 			'_dots'                    => $args['_dots'],
 			'_interval'                => $args['_interval'],
+			'_autoplayButton'          => $args['_autoplayButton'],
 		)
 	);
 	?>

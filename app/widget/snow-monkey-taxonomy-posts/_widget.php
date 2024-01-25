@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.0
+ * @version 25.3.0
  */
 
 use Framework\Helper;
@@ -184,6 +184,7 @@ Helper::get_template_part(
 		'_arrows'                  => $instance['arrows'],
 		'_dots'                    => $instance['dots'],
 		'_interval'                => $instance['interval'],
+		'_autoplayButton'          => $instance['autoplayButton'],
 	)
 );
 echo wp_kses_post( $widget_args['after_widget'] );

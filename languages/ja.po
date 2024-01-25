@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2023-10-23 15:46+0900\n"
-"PO-Revision-Date: 2023-10-23 15:47+0900\n"
+"POT-Creation-Date: 2024-01-25 21:19+0900\n"
+"PO-Revision-Date: 2024-01-25 21:19+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -2336,7 +2336,7 @@ msgstr "フッター固定ナビゲーション（モバイル用）"
 msgid "Highlight this menu item."
 msgstr "このメニュー項目を強調する。"
 
-#: app/setup/page-speed-optimization.php:143
+#: app/setup/page-speed-optimization.php:150
 #: cache/concat/5a6a09dc384642bfaf89887c5d6a69d45f573d8f.php:2412
 msgid "Remove caches"
 msgstr "キャッシュを削除"
@@ -2563,12 +2563,12 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:49
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:50
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:216
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:55
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:56
 #: cache/concat/05b7e848be96b8a65dfc8a0fbe5d68e65c7c7f0b.php:222
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
@@ -2661,6 +2661,16 @@ msgstr "投稿がありません。"
 #: template-parts/common/dummy-ad.php:11
 msgid "An advertisement is displayed."
 msgstr "広告が表示されます。"
+
+#: template-parts/common/entries/entries/carousel.php:139
+#: template-parts/common/entries/rss/carousel.php:76
+msgid "Pause autoplay"
+msgstr "自動再生を一時停止"
+
+#: template-parts/common/entries/entries/carousel.php:140
+#: template-parts/common/entries/rss/carousel.php:77
+msgid "Start autoplay"
+msgstr "自動再生を開始"
 
 #: template-parts/common/overlay-search-box.php:22
 #: template-parts/common/overlay-search-box.php:23

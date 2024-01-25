@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.3.0
  */
 
 use Framework\Helper;
@@ -22,6 +22,7 @@ $args = wp_parse_args(
 		'_arrows'         => false,
 		'_dots'           => true,
 		'_interval'       => 0,
+		'_autoplayButton' => false,
 	)
 );
 
@@ -69,11 +70,18 @@ if ( $args['_entries_gap'] ) {
 		<?php endif; ?>
 	</div>
 
-	<?php if ( $args['_dots'] ) : ?>
+	<?php if ( ( 0 < $args['_interval'] && $args['_autoplayButton'] ) || $args['_dots'] ) : ?>
 		<div class="spider__dots" data-thumbnails="false">
-			<?php for ( $j = 0; $j < $i; $j ++ ) : ?>
-				<button class="spider__dot" data-id="<?php echo esc_attr( $j ); ?>"><?php echo esc_html( $j ); ?></button>
-			<?php endfor; ?>
+			<?php if ( $args['_autoplayButton'] ) : ?>
+				<button class="spider__stop" title="<?php esc_html_e( 'Pause autoplay', 'snow-monkey' ); ?>">⏸</button>
+				<button class="spider__start" title="<?php esc_html_e( 'Start autoplay', 'snow-monkey' ); ?>">▶</button>
+			<?php endif; ?>
+
+			<?php if ( $args['_dots'] ) : ?>
+				<?php for ( $j = 0; $j < $i; $j ++ ) : ?>
+					<button class="spider__dot" data-id="<?php echo esc_attr( $j ); ?>"><?php echo esc_html( $j ); ?></button>
+				<?php endfor; ?>
+			<?php endif; ?>
 		</div>
 	<?php endif; ?>
 </div>

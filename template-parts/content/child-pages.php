@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.3.0
  *
  * renamed: template-parts/child-pages.php
  */
@@ -26,6 +26,7 @@ $args = wp_parse_args(
 		'_arrows'              => false,
 		'_dots'                => true,
 		'_interval'            => 0,
+		'_autoplayButton'      => false,
 	)
 );
 
@@ -63,6 +64,7 @@ if ( ! $query->have_posts() ) {
 			'_arrows'              => $args['_arrows'],
 			'_dots'                => $args['_dots'],
 			'_interval'            => $args['_interval'],
+			'_autoplayButton'      => $args['_autoplayButton'],
 		)
 	);
 	?>
