@@ -73,8 +73,43 @@ if ( $args['_entries_gap'] ) {
 	<?php if ( ( 0 < $args['_interval'] && $args['_autoplayButton'] ) || $args['_dots'] ) : ?>
 		<div class="spider__dots" data-thumbnails="false">
 			<?php if ( $args['_autoplayButton'] ) : ?>
-				<button class="spider__stop" title="<?php esc_html_e( 'Pause autoplay', 'snow-monkey' ); ?>">⏸</button>
-				<button class="spider__start" title="<?php esc_html_e( 'Start autoplay', 'snow-monkey' ); ?>">▶</button>
+				<button class="spider__stop">
+					<svg
+						width="12"
+						height="16"
+						viewBox="0 0 12 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						title="<?php esc_html_e( 'Pause autoplay', 'snow-monkey' ); ?>"
+					>
+						<rect
+							width="5"
+							height="16"
+							fill="currentColor"
+						></rect>
+						<rect
+							x="7"
+							width="5"
+							height="16"
+							fill="currentColor"
+						></rect>
+					</svg>
+				</button>
+				<button class="spider__start">
+					<svg
+						width="12"
+						height="16"
+						viewBox="0 0 12 16"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+						title="<?php esc_html_e( 'Start autoplay', 'snow-monkey' ); ?>"
+					>
+						<path
+							d="M12 8L-2.29967e-06 16L-2.29967e-06 0L12 8Z"
+							fill="currentColor"
+						></path>
+					</svg>
+				</button>
 			<?php endif; ?>
 
 			<?php if ( $args['_dots'] ) : ?>
