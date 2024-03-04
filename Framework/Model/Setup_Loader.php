@@ -15,6 +15,20 @@ use Framework\Helper;
 class Setup_Loader {
 
 	/**
+	 * The template directory path.
+	 *
+	 * @var null|string
+	 */
+	protected $template_directory = null;
+
+	/**
+	 * The stylesheet directory path.
+	 *
+	 * @var null|string
+	 */
+	protected $stylesheet_directory = null;
+
+	/**
 	 * Constructor.
 	 */
 	public function __construct() {
