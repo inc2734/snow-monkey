@@ -33,10 +33,10 @@ jobs:
           ${{ runner.os }}-node-
           ${{ runner.os }}-
 
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@v3
+    - name: Use Node.js
+      uses: actions/setup-node@v4
       with:
-        node-version: 16.x
+        node-version-file: 'package.json'
 
     - name: Npm install
       run: npm ci
