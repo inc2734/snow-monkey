@@ -1,6 +1,5 @@
 .#{ $_prefix }l-body {
-	visibility: visible;
-	overflow-x: hidden;
+	overflow-x: clip;
 }
 
 // Blank / One column full
