@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.1
  */
 
 namespace Framework;
@@ -493,7 +493,7 @@ class Helper {
 			array(
 				'sans-serif'        => array(
 					'label'       => __( 'Sans serif', 'snow-monkey' ),
-					'font-family' => array( 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"ヒラギノ角ゴ W3"', 'sans-serif' ),
+					'font-family' => array( '"Helvetica Neue"', 'Arial', '"Hiragino Kaku Gothic ProN"', '"Hiragino Sans"', '"BIZ UDPGothic"', 'Meiryo', 'sans-serif' ),
 				),
 				'serif'             => array(
 					'label'       => __( 'Serif', 'snow-monkey' ),
