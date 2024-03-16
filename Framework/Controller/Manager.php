@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.3.3
+ * @version 25.4.1
  */
 
 namespace Framework\Controller;
@@ -132,7 +132,7 @@ class Manager {
 				}
 
 				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
-				if ( isset( $option['license-key'] ) && isset( $option['xserver-register-key'] ) ) {
+				if ( isset( $option['xserver-register-key'] ) && static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
 					delete_transient( 'snow-monkey-xserver-register-status-' . sha1( $option['license-key'] ) );
 
 					if ( ! empty( $option['license-key'] ) ) {
