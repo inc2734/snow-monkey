@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.1
+ * @version 25.4.2
  */
 
 namespace Framework\Controller;
@@ -116,7 +116,7 @@ class Manager {
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
 			function( $option ) {
-				delete_transient( 'snow-monkey-remote-patterns' );
+				delete_transient( 'snow-monkey-remote-pattern-categories' );
 				delete_transient( 'snow-monkey-remote-patterns' );
 
 				if ( isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'] ) {
@@ -128,12 +128,12 @@ class Manager {
 				}
 
 				if ( isset( $option['license-key'] ) && static::get_option( 'license-key' ) !== $option['license-key'] ) {
-					delete_transient( 'snow-monkey-license-status-' . sha1( $option['license-key'] ) );
+					delete_transient( 'snow-monkey-license-status' );
 				}
 
 				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
 				if ( isset( $option['xserver-register-key'] ) && static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
-					delete_transient( 'snow-monkey-xserver-register-status-' . sha1( $option['license-key'] ) );
+					delete_transient( 'snow-monkey-xserver-register-status' );
 
 					if ( ! empty( $option['license-key'] ) ) {
 						$option['xserver-register-key'] = '';
@@ -244,13 +244,13 @@ class Manager {
 	 * @return boolean
 	 */
 	public static function get_license_status( $license_key ) {
-		$transient = get_transient( 'snow-monkey-license-status-' . sha1( $license_key ) );
+		$transient = get_transient( 'snow-monkey-license-status' );
 		if ( false !== $transient ) {
 			return $transient;
 		}
 
 		$status = static::_request_license_validate( $license_key );
-		set_transient( 'snow-monkey-license-status-' . sha1( $license_key ), $status ? $status : 'false', DAY_IN_SECONDS );
+		set_transient( 'snow-monkey-license-status', $status ? $status : 'false', DAY_IN_SECONDS );
 		return $status;
 	}
 
@@ -295,13 +295,13 @@ class Manager {
 	 * @return boolean
 	 */
 	public static function get_xserver_register_status( $xserver_register_key ) {
-		$transient = get_transient( 'snow-monkey-xserver-register-status-' . sha1( $xserver_register_key ) );
+		$transient = get_transient( 'snow-monkey-xserver-register-status' );
 		if ( false !== $transient ) {
 			return $transient;
 		}
 
 		$status = static::_request_license_validate_xserver( $xserver_register_key );
-		set_transient( 'snow-monkey-xserver-register-status-' . sha1( $xserver_register_key ), $status ? $status : 'false', DAY_IN_SECONDS );
+		set_transient( 'snow-monkey-xserver-register-status', $status ? $status : 'false', DAY_IN_SECONDS );
 		return $status;
 	}
 
