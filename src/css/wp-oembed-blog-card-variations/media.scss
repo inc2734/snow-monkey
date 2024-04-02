@@ -21,7 +21,8 @@
 
 .is-provider-wp-oembed-blog-card,
 .is-provider-wp-oembed-blog-card-handler,
-.wp-block-embed:not([class*="is-provider-"]) {
+.wp-block-embed:not([class*="is-provider-"]):not([data-type="core/embed"]),
+[data-resizable-iframe-connected] > div > .wp-oembed-blog-card {
 	@include custom-properties();
 
 	.wp-oembed-blog-card {
