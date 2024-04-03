@@ -525,16 +525,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "13.0.5",
+            "version": "13.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "6c7f74d291334bd26141f732534cd13a17249e94"
+                "reference": "33479870195d67a00b7be869899dcbc5612e8d66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/6c7f74d291334bd26141f732534cd13a17249e94",
-                "reference": "6c7f74d291334bd26141f732534cd13a17249e94",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/33479870195d67a00b7be869899dcbc5612e8d66",
+                "reference": "33479870195d67a00b7be869899dcbc5612e8d66",
                 "shasum": ""
             },
             "require": {
@@ -565,9 +565,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.5"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.6"
             },
-            "time": "2024-04-02T15:12:02+00:00"
+            "time": "2024-04-03T15:40:16+00:00"
         },
         {
             "name": "inc2734/wp-ogp",

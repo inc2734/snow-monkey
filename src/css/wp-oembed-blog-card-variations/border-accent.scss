@@ -4,14 +4,7 @@
 	--wp-oembed-blog-card--box-shadow--hover: none;
 }
 
-.is-provider-wp-oembed-blog-card,
-.is-provider-wp-oembed-blog-card-handler,
-.wp-block-embed:not([class*="is-provider-"]):not([data-type="core/embed"]),
-[data-resizable-iframe-connected] > div > .wp-oembed-blog-card {
-	@include custom-properties();
-}
-
-// For classic editor made.
-:not(.wp-block-embed__wrapper) > .wp-oembed-blog-card {
+.is-provider-wp-oembed-blog-card .wp-block-embed__wrapper,
+.wp-oembed-blog-card {
 	@include custom-properties();
 }

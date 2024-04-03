@@ -19,19 +19,11 @@
 	}
 }
 
-.is-provider-wp-oembed-blog-card,
-.is-provider-wp-oembed-blog-card-handler,
-.wp-block-embed:not([class*="is-provider-"]):not([data-type="core/embed"]),
-[data-resizable-iframe-connected] > div > .wp-oembed-blog-card {
+.is-provider-wp-oembed-blog-card .wp-block-embed__wrapper,
+.wp-oembed-blog-card {
 	@include custom-properties();
-
-	.wp-oembed-blog-card {
-		@include wp-oembed-blog-card();
-	}
 }
 
-// For classic editor made.
-:not(.wp-block-embed__wrapper) > .wp-oembed-blog-card {
-	@include custom-properties();
+.wp-oembed-blog-card {
 	@include wp-oembed-blog-card();
 }
