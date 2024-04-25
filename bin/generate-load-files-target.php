@@ -7,7 +7,7 @@
 
 use Framework\Helper;
 
-require_once( './wp-load.php' );
+require_once( '../../../wp-load.php' );
 
 $theme = wp_get_theme( get_template() );
 if ( 'snow-monkey' !== $theme->template && 'snow-monkey/resources' !== $theme->template ) {
