@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.2.0
+ * @version 25.4.4
  *
  * renamed: template-parts/archive/entry/content/woocommerce.php
  * renamed: template-parts/archive/entry/content/content-woocommerce-product.php
@@ -35,10 +35,9 @@
 
 					/**
 					* Hook: woocommerce_shop_loop.
-					*
-					* @hooked WC_Structured_Data::generate_product_data() - 10
 					*/
 					do_action( 'woocommerce_shop_loop' );
+
 					wc_get_template_part( 'content', 'product' );
 				}
 			}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 5.0.0
+ * @version 8.6.0
  */
 
 use Framework\Controller\Controller;
