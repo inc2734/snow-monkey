@@ -29,6 +29,18 @@ foreach ( $taxonomies as $taxonomy ) {
 	$taxonomy_object   = get_taxonomy( $taxonomy );
 	$custom_post_types = ! empty( $taxonomy_object->object_type ) ? $taxonomy_object->object_type : array();
 
+	$description = '';
+	if ( $custom_post_types ) {
+		$post_type_object = get_post_type_object( $custom_post_types[0] );
+		if ( ! empty( $post_type_object->label ) ) {
+			$description = sprintf(
+					// translators: %1$s: Custom post type label */
+				__( 'This setting takes priority over featured image setting of %1$s archive page settings', 'snow-monkey' ),
+				$post_type_object->label
+			);
+		}
+	}
+
 	$terms = Helper::get_terms(
 		array(
 			'taxonomy'   => $taxonomy,
@@ -42,11 +54,7 @@ foreach ( $taxonomies as $taxonomy ) {
 			$_term->taxonomy . '-' . $_term->term_id . '-header-image',
 			array(
 				'label'       => __( 'Featured Image', 'snow-monkey' ),
-				'description' => sprintf(
-					// translators: %1$s: Custom post type label */
-					__( 'This setting takes priority over featured image setting of %1$s archive page settings', 'snow-monkey' ),
-					get_post_type_object( $custom_post_types[0] )->label
-				),
+				'description' => $description,
 				'priority'    => 100,
 			)
 		);
