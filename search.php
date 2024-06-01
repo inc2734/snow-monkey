@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Controller\Controller;
@@ -12,17 +12,6 @@ global $wp_query;
 
 $_post_type = $wp_query->get( 'post_type' );
 $_post_type = $_post_type ? $_post_type : 'any';
-
-query_posts(
-	array_merge(
-		$wp_query->query ?? array(),
-		array(
-			'post_type' => $_post_type,
-		)
-	)
-);
-
-$_post_type = 'any' !== $_post_type ? $_post_type : 'any';
 $_post_type = ! is_array( $_post_type ) ? $_post_type : 'any';
 
 $layout = get_theme_mod( 'archive-' . $_post_type . '-layout' );
