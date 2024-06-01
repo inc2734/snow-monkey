@@ -3,18 +3,18 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 25.4.6
  */
 
 add_filter(
 	'post_thumbnail_html',
-	function( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
+	function ( $html, $post_id, $post_thumbnail_id, $size, $attr ) {
 		if ( '' !== $html ) {
 			return $html;
 		}
 
 		$cache_key   = 'default-thumbnail';
-		$cache_key   = crc32( $size . json_encode( $attr ) );
+		$cache_key   = crc32( $size . wp_json_encode( $attr ) );
 		$cache_group = 'snow-monkey/thumbnail';
 		$cache       = wp_cache_get( $cache_key, $cache_group );
 		if ( false !== $cache ) {

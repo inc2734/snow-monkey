@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.4
+ * @version 25.4.6
  *
  * This procceses are beta.
  */
@@ -20,7 +20,7 @@ new WP_Page_Speed_Optimization\Bootstrap();
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'jquery-loading-optimization' ) ) {
 			return;
 		}
@@ -34,7 +34,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'http2-server-push' ) ) {
 			return;
 		}
@@ -48,14 +48,14 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'output-head-style' ) ) {
 			return;
 		}
 
 		add_filter(
 			'inc2734_wp_page_speed_optimization_output_head_styles',
-			function( $handles ) {
+			function ( $handles ) {
 				return array_merge(
 					$handles,
 					array(
@@ -91,7 +91,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'use-link-prefetching' ) ) {
 			return;
 		}
@@ -107,13 +107,13 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( get_theme_mod( 'disable-emoji' ) ) {
 			remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-			remove_action( 'wp_print_styles', 'print_emoji_styles' ); // Less than 6.4
+			remove_action( 'wp_print_styles', 'print_emoji_styles' ); // Less than 6.4.
 
 			if ( function_exists( 'wp_enqueue_emoji_styles' ) ) {
-				remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' ); // 6.4 or higher
+				remove_action( 'wp_enqueue_scripts', 'wp_enqueue_emoji_styles' ); // 6.4 or higher.
 			}
 		}
 	}
@@ -135,10 +135,10 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 	$template_cache = new Template_Cache();
 	$remove_caches  = filter_input( INPUT_GET, 'sm-remove-caches' );
 
-	if ( current_user_can( 'administrator' ) ) {
+	if ( current_user_can( 'customize' ) ) {
 		add_action(
 			'admin_bar_menu',
-			function( $wp_admin_bar ) {
+			function ( $wp_admin_bar ) {
 				$icon = Filesystem::get_contents( get_template_directory() . '/assets/img/icon.svg' );
 
 				$wp_admin_bar->add_menu(
@@ -165,7 +165,7 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 		if ( ! $remove_caches ) {
 			add_filter(
 				'snow_monkey_pre_template_part_render',
-				function(
+				function (
 					$html,
 					$slug,
 					$name,
@@ -209,7 +209,7 @@ if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas |
 
 			add_filter(
 				'snow_monkey_template_part_render',
-				function(
+				function (
 					$html,
 					$slug,
 					$name,

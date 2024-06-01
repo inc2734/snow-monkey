@@ -103,7 +103,7 @@ if ( 'left' === $args['_gnav_alignment'] ) {
 							'_gnav-current-effect' => get_theme_mod( 'gnav-current-effect' ),
 						)
 					);
-					// phpce:enable
+					// phpcs:enable
 					?>
 				</div>
 			<?php endif; ?>

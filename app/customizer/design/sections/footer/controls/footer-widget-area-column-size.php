@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -22,7 +22,7 @@ Framework::control(
 			'1-3' => __( '3 columns', 'snow-monkey' ),
 			'1-4' => __( '4 columns', 'snow-monkey' ),
 		),
-		'active_callback' => function() {
+		'active_callback' => function () {
 			return Helper::is_active_sidebar( 'footer-widget-area' );
 		},
 	)

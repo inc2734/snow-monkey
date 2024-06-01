@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -28,7 +28,7 @@ if ( ! function_exists( 'wp_body_open' ) ) {
  */
 add_filter(
 	'inc2734_wp_view_controller_template_part_render',
-	function( $content, $slug ) {
+	function ( $content, $slug ) {
 		if ( 'templates/view/content' === $slug ) {
 			$content = str_replace( 'class="c-entry__content"', 'class="c-entry__content p-entry-content"', $content );
 		}
@@ -46,7 +46,7 @@ add_filter(
  */
 add_filter(
 	'the_content',
-	function( $content ) {
+	function ( $content ) {
 		$content = str_replace( 'wpac-section ', 'c-section wpac-section ', $content );
 		$content = str_replace( 'wpac-section__body', 'wpac-section__body p-entry-content', $content );
 		$content = str_replace( 'wpac-columns__col-inner', 'wpac-columns__col-inner p-entry-content', $content );
@@ -61,7 +61,7 @@ add_filter(
  */
 add_action(
 	'snow_monkey_after_entry_content',
-	function() {
+	function () {
 		if ( ! apply_filters( 'snow_monkey_display_contents_outline', false ) ) {
 			return;
 		}
@@ -78,7 +78,7 @@ add_action(
  */
 add_action(
 	'snow_monkey_after_entry_content',
-	function() {
+	function () {
 		if ( ! is_singular() ) {
 			return;
 		}
@@ -104,7 +104,7 @@ add_action(
  */
 add_filter(
 	'theme_mod_post-entries-layout',
-	function( $mod ) {
+	function ( $mod ) {
 		if ( ! $mod || ! is_string( $mod ) ) {
 			$mod = get_theme_mod( 'archive-layout' );
 			set_theme_mod( 'post-entries-layout', $mod );
@@ -119,7 +119,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_archive-post-layout',
-	function( $mod ) {
+	function ( $mod ) {
 		if ( ! $mod || ! is_string( $mod ) ) {
 			$mod = get_theme_mod( 'archive-page-layout' );
 			set_theme_mod( 'archive-post-layout', $mod );
@@ -134,7 +134,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_post-layout',
-	function( $mod ) {
+	function ( $mod ) {
 		if ( ! $mod || ! is_string( $mod ) ) {
 			$mod = get_theme_mod( 'singular-post-layout' );
 			set_theme_mod( 'post-layout', $mod );
@@ -153,7 +153,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_located_template_slug_fallback',
-	function( $fallback_slug, $relative_dir_paths ) {
+	function ( $fallback_slug, $relative_dir_paths ) {
 		if ( $fallback_slug ) {
 			return $fallback_slug;
 		}
@@ -185,7 +185,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_margin-scale',
-	function( $mod ) {
+	function ( $mod ) {
 		if ( '' === $mod ) {
 			return 1;
 		} elseif ( 'l' === $mod ) {
@@ -201,7 +201,7 @@ add_filter(
  */
 add_filter(
 	'theme_mod_space',
-	function( $mod ) {
+	function ( $mod ) {
 		if ( '' === $mod ) {
 			return 1.8;
 		} elseif ( 'l' === $mod ) {

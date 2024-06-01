@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.4.0
+ * @version 25.4.6
  */
 
 /**
@@ -11,7 +11,7 @@
  */
 add_filter(
 	'render_block',
-	function( $block_content, $block ) {
+	function ( $block_content, $block ) {
 		if ( 'core/html' === $block['blockName'] ) {
 			if ( preg_match( '|^<iframe src="https://www.google.com/maps/embed?.+</iframe>$|ms', $block_content ) ) {
 				return '<div>' . $block_content . '</div>';

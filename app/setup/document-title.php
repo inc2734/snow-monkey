@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.15.0
+ * @version 25.4.6
  */
 
 /**
@@ -18,7 +18,7 @@
  */
 add_filter(
 	'document_title_parts',
-	function( $title ) {
+	function ( $title ) {
 		if ( is_search() && ! get_search_query() ) {
 			$title['title'] = __( 'Search results', 'snow-monkey' );
 		}

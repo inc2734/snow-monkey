@@ -9,7 +9,7 @@ use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Color;
 use Inc2734\WP_Customizer_Framework\Style;
 
-$get_container_margin_var = function( $container_margin ) {
+$get_container_margin_var = function ( $container_margin ) {
 	if ( preg_match( '|^\d+(\.\d+)?$|', $container_margin ) ) {
 		return $container_margin . 'rem';
 	} elseif ( 's' === $container_margin ) {
@@ -21,7 +21,7 @@ $get_container_margin_var = function( $container_margin ) {
 	}
 };
 
-$get_margin_scale_var = function( $margin_scale ) {
+$get_margin_scale_var = function ( $margin_scale ) {
 	if ( preg_match( '|^\d+(\.\d+)?$|', $margin_scale ) ) {
 		return $margin_scale;
 	} elseif ( 'l' === $margin_scale ) {
@@ -158,7 +158,7 @@ if ( $root_variables_app_media_min_md ) {
 	$styles_core[] = array(
 		'selectors'   => array( ':root' ),
 		'properties'  => $root_variables_app_media_min_md,
-		'media_query' => '@media (min-width: 640px)', // Optional
+		'media_query' => '@media (min-width: 640px)', // Optional.
 	);
 }
 
@@ -166,7 +166,7 @@ if ( $root_variables_app_media_max_md ) {
 	$styles_core[] = array(
 		'selectors'   => array( ':root' ),
 		'properties'  => $root_variables_app_media_max_md,
-		'media_query' => '@media not all and (min-width: 1024px)', // Optional
+		'media_query' => '@media not all and (min-width: 1024px)', // Optional.
 	);
 }
 
@@ -174,7 +174,7 @@ if ( $root_variables_app_media_min_lg ) {
 	$styles_core[] = array(
 		'selectors'   => array( ':root' ),
 		'properties'  => $root_variables_app_media_min_lg,
-		'media_query' => '@media (min-width: 1024px)', // Optional
+		'media_query' => '@media (min-width: 1024px)', // Optional.
 	);
 }
 

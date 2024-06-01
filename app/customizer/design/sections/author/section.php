@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -25,7 +25,7 @@ foreach ( $users as $user ) {
 				get_the_author_meta( 'display_name', $user->ID )
 			),
 			'priority'        => 140,
-			'active_callback' => function() use ( $user ) {
+			'active_callback' => function () use ( $user ) {
 				return is_author( $user->ID );
 			},
 		)

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.7
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -19,7 +19,7 @@ if ( ! class_exists( '\woocommerce' ) ) {
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support(
 			'woocommerce',
 			array(
@@ -47,7 +47,7 @@ add_action(
  */
 add_filter(
 	'woocommerce_output_related_products_args',
-	function( $args ) {
+	function ( $args ) {
 		$columns                = get_option( 'woocommerce_catalog_columns' );
 		$columns                = $columns ? $columns : 3;
 		$args['posts_per_page'] = 6;
@@ -61,7 +61,8 @@ add_filter(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-woocommerce',
 			false,
@@ -91,7 +92,7 @@ add_action(
 
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_editor_style(
 			array(
 				'assets/css/dependency/woocommerce/app.css',
@@ -106,14 +107,14 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'output-head-style' ) ) {
 			return;
 		}
 
 		add_filter(
 			'inc2734_wp_page_speed_optimization_output_head_styles',
-			function( $handles ) {
+			function ( $handles ) {
 				return array_merge(
 					$handles,
 					array(
@@ -140,7 +141,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'WooCommerce sidebar', 'snow-monkey' ),
@@ -158,15 +159,16 @@ add_action(
 /**
  * On WooCommerce pages, the page header do not output
  *
+ * @param boolean $is_output When true, output page header.
  * @return boolean
  */
 add_filter(
 	'snow_monkey_is_output_page_header',
-	function( $return ) {
+	function ( $is_output ) {
 		if ( is_cart() || is_checkout() || is_account_page() ) {
 			return false;
 		}
-		return $return;
+		return $is_output;
 	},
 	9
 );
@@ -178,7 +180,7 @@ add_filter(
  */
 add_filter(
 	'snow_monkey_layout',
-	function( $layout ) {
+	function ( $layout ) {
 		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
 			return 'one-column';
 		}
@@ -194,7 +196,7 @@ add_filter(
  */
 add_filter(
 	'snow_monkey_view',
-	function( $view ) {
+	function ( $view ) {
 		if ( class_exists( '\woocommerce' ) && ( is_cart() || is_checkout() || is_account_page() ) ) {
 			return array(
 				'slug' => 'templates/view/woocommerce',
@@ -213,7 +215,7 @@ add_filter(
  */
 add_filter(
 	'get_product_search_form',
-	function( $html ) {
+	function ( $html ) {
 		$html = str_replace( 'class="woocommerce-product-search"', 'class="woocommerce-product-search c-input-group"', $html );
 		$html = str_replace( '<input type="search"', '<div class="c-input-group__field"><input type="search"', $html );
 		$html = str_replace( '<button', '</div><button class="c-input-group__btn"', $html );
@@ -223,7 +225,7 @@ add_filter(
 
 add_filter(
 	'woocommerce_dropdown_variation_attribute_options_html',
-	function( $html ) {
+	function ( $html ) {
 		$html = str_replace( '<select id=', '<div class="c-select"><select class="c-select__control" style="margin-right: 0" id=', $html );
 		$html = str_replace( '</select>', '</select><span class="c-select__toggle"></span></div>', $html );
 		return $html;
@@ -235,7 +237,7 @@ add_filter(
  */
 add_filter(
 	'snow_monkey_breadcrumbs',
-	function( $breadcrumbs ) {
+	function ( $breadcrumbs ) {
 		if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
 			return $breadcrumbs;
 		}
@@ -303,7 +305,7 @@ add_filter(
  */
 add_filter(
 	'woocommerce_product_review_comment_form_args',
-	function( $comment_form ) {
+	function ( $comment_form ) {
 		foreach ( $comment_form as $key => $form ) {
 			if ( 'fields' !== $key ) {
 				continue;
@@ -319,7 +321,7 @@ add_filter(
 
 add_action(
 	'template_redirect',
-	function() {
+	function () {
 		if ( ! is_user_logged_in() ) {
 			return;
 		}
@@ -341,14 +343,14 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 // Wrap single gallery and summary.
 add_action(
 	'woocommerce_before_single_product_summary',
-	function() {
+	function () {
 		echo '<div class="p-woocommerce-single-main-content">';
 	},
 	-100000
 );
 add_action(
 	'woocommerce_after_single_product_summary',
-	function() {
+	function () {
 		echo '</div><!-- /.p-woocommerce-single-main-content -->';
 	},
 	-100000

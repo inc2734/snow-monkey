@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -20,7 +20,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'priority'        => 131,
 			'default'         => 'center',
 			'choices'         => Helper::page_header_align_choices(),
-			'active_callback' => function() use ( $custom_post_type ) {
+			'active_callback' => function () use ( $custom_post_type ) {
 				return 'title-on-page-header' === get_theme_mod( 'archive-' . $custom_post_type . '-eyecatch' );
 			},
 		)

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.2
+ * @version 25.4.6
  */
 
 namespace Framework\Controller;
@@ -56,7 +56,7 @@ class Manager {
 			__( 'Snow Monkey', 'snow-monkey' ),
 			'manage_options',
 			self::MENU_SLUG,
-			function() {
+			function () {
 				?>
 				<div class="wrap">
 					<h1><?php esc_html_e( 'Snow Monkey settings', 'snow-monkey' ); ?></h1>
@@ -115,7 +115,7 @@ class Manager {
 		register_setting(
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
-			function( $option ) {
+			function ( $option ) {
 				delete_transient( 'snow-monkey-remote-pattern-categories' );
 				delete_transient( 'snow-monkey-remote-patterns' );
 
@@ -131,7 +131,7 @@ class Manager {
 					delete_transient( 'snow-monkey-license-status' );
 				}
 
-				// ライセンスキーが入力されている場合は XSERVER 登録キーは認証しない
+				// XSERVER register key is not validated if a license key is entered.
 				if ( isset( $option['xserver-register-key'] ) && static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
 					delete_transient( 'snow-monkey-xserver-register-status' );
 
@@ -147,7 +147,7 @@ class Manager {
 		add_settings_section(
 			self::SETTINGS_NAME,
 			__( 'Settings', 'snow-monkey' ),
-			function() {
+			function () {
 			},
 			self::MENU_SLUG
 		);
@@ -155,7 +155,7 @@ class Manager {
 		add_settings_field(
 			'license-key',
 			'<label for="license-key">' . esc_html__( 'License key', 'snow-monkey' ) . '</label>',
-			function( $args ) {
+			function () {
 				$transient = static::get_license_status( static::get_option( 'license-key' ) );
 
 				$button = 'true' === $transient
@@ -197,7 +197,7 @@ class Manager {
 		add_settings_field(
 			'xserver-register-key',
 			'<label for="xservser-regiser-key">' . esc_html__( 'Xserver register key', 'snow-monkey' ) . '</label>',
-			function( $args ) {
+			function () {
 				$transient = static::get_xserver_register_status( static::get_option( 'xserver-register-key' ) );
 
 				$button = 'true' === $transient
@@ -308,7 +308,7 @@ class Manager {
 	/**
 	 * Validate checker.
 	 *
-	 * @param string $license_key The license key.
+	 * @param string $xserver_register_key The XSERVER register key.
 	 * @return boolean
 	 */
 	protected static function _request_license_validate_xserver( $xserver_register_key ) {
@@ -369,7 +369,7 @@ class Manager {
 	protected function _is_option_page() {
 		$current_url = admin_url( '/options-general.php?page=' . static::MENU_SLUG );
 		$current_url = preg_replace( '|^(.+)?(/wp-admin/.*?)$|', '$2', $current_url );
-		$request_uri = $_SERVER['REQUEST_URI'];
+		$request_uri = wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$request_uri = preg_replace( '|^(.+)?(/wp-admin/.*?)$|', '$2', $request_uri );
 		return false !== strpos( $request_uri, $current_url );
 	}
@@ -382,7 +382,7 @@ class Manager {
 	protected function _is_options_page() {
 		$current_url = admin_url( '/options.php' );
 		$current_url = preg_replace( '|^(.+)?(/wp-admin/.*?)$|', '$2', $current_url );
-		$request_uri = $_SERVER['REQUEST_URI'];
+		$request_uri = wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
 		$request_uri = preg_replace( '|^(.+)?(/wp-admin/.*?)$|', '$2', $request_uri );
 		return false !== strpos( $request_uri, $current_url );
 	}

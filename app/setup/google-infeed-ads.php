@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Adsense;
@@ -58,8 +58,8 @@ if ( ! function_exists( 'snow_monkey_insert_infeed_ads' ) ) {
 
 		return preg_replace_callback(
 			'|(<li class="c-entries__item)|s',
-			function( $matches ) use ( &$count, $infeed_ads ) {
-				$count ++;
+			function ( $matches ) use ( &$count, $infeed_ads ) {
+				$count++;
 				if ( 0 !== $count % 4 ) {
 					return $matches[0];
 				}
@@ -79,7 +79,7 @@ if ( ! function_exists( 'snow_monkey_insert_infeed_ads' ) ) {
 
 add_filter(
 	'snow_monkey_template_part_render_template-parts/archive/entry/content/content',
-	function( $html ) {
+	function ( $html ) {
 		$post_type      = get_post_type() ? get_post_type() : 'post';
 		$post_type      = is_home() ? 'post' : $post_type;
 		$entries_layout = get_theme_mod( $post_type . '-entries-layout' );
@@ -90,7 +90,7 @@ add_filter(
 
 add_filter(
 	'snow_monkey_template_part_render_template-parts/widget/snow-monkey-posts',
-	function( $html, $name, $vars ) {
+	function ( $html, $name, $vars ) {
 		return snow_monkey_insert_infeed_ads(
 			$html,
 			$vars['_posts_query']->get( 'post_type' ),

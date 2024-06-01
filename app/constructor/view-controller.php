@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.6
  */
 
 use Framework\Controller\Controller;
@@ -16,7 +16,7 @@ use Framework\Controller\Controller;
  */
 add_filter(
 	'inc2734_wp_view_controller_config',
-	function() {
+	function () {
 		return array(
 			'templates'      => array(
 				'',
@@ -54,7 +54,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_controller',
-	function( $template ) {
+	function ( $template ) {
 		return apply_filters( 'snow_monkey_controller', $template );
 	},
 	9
@@ -71,7 +71,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_get_template_part_args',
-	function( $args ) {
+	function ( $args ) {
 		$args = apply_filters( "snow_monkey_get_template_part_args_{$args['slug']}", $args );
 		$args = apply_filters( 'snow_monkey_get_template_part_args', $args );
 		return $args;
@@ -87,7 +87,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_debug',
-	function( $debug ) {
+	function ( $debug ) {
 		return apply_filters( 'snow_monkey_debug', $debug );
 	}
 );
@@ -103,7 +103,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_template_part_root',
-	function( $root, $slug, $name, $vars ) {
+	function ( $root, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_template_part_root', $root, $slug, $name, $vars );
 	},
 	10,
@@ -121,7 +121,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_template_part_root_hierarchy',
-	function( $hierarchy, $slug, $name, $vars ) {
+	function ( $hierarchy, $slug, $name, $vars ) {
 		$hierarchy = apply_filters( "snow_monkey_template_part_root_hierarchy_{$slug}", $hierarchy, $name, $vars );
 		return apply_filters( 'snow_monkey_template_part_root_hierarchy', $hierarchy, $slug, $name, $vars );
 	},
@@ -141,7 +141,7 @@ add_filter(
  */
 add_action(
 	'inc2734_wp_view_controller_get_template_part_pre_render',
-	function( $args ) {
+	function ( $args ) {
 		$target_slug = $args['slug'];
 		$target_name = $args['name'];
 
@@ -151,7 +151,7 @@ add_action(
 		if ( $target_name && has_action( $action_with_name ) ) {
 			add_filter(
 				'inc2734_wp_view_controller_pre_template_part_render',
-				function( $html, $slug, $name, $vars ) use ( $action_with_name, $target_slug, $target_name ) {
+				function ( $html, $slug, $name, $vars ) use ( $action_with_name, $target_slug, $target_name ) {
 					if ( $target_slug === $slug && $target_name === $name ) {
 						ob_start();
 						do_action( $action_with_name, $vars );
@@ -168,7 +168,7 @@ add_action(
 		if ( has_action( $action ) ) {
 			add_filter(
 				'inc2734_wp_view_controller_pre_template_part_render',
-				function( $html, $slug, $name, $vars ) use ( $action, $target_slug ) {
+				function ( $html, $slug, $name, $vars ) use ( $action, $target_slug ) {
 					if ( $target_slug === $slug ) {
 						ob_start();
 						do_action( $action, $name, $vars );
@@ -195,7 +195,7 @@ add_action(
  */
 add_filter(
 	'inc2734_wp_view_controller_pre_template_part_render',
-	function( $html, $slug, $name, $vars ) {
+	function ( $html, $slug, $name, $vars ) {
 		$html = apply_filters( "snow_monkey_pre_template_part_render_{$slug}", $html, $name, $vars );
 		return apply_filters( 'snow_monkey_pre_template_part_render', $html, $slug, $name, $vars );
 	},
@@ -213,7 +213,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_view_controller_template_part_render',
-	function( $html, $slug, $name, $vars ) {
+	function ( $html, $slug, $name, $vars ) {
 		$html = apply_filters( "snow_monkey_template_part_render_{$slug}", $html, $name, $vars );
 		return apply_filters( 'snow_monkey_template_part_render', $html, $slug, $name, $vars );
 	},
@@ -224,12 +224,11 @@ add_filter(
 /**
  * Set inc2734_wp_view_controller_debug.
  *
- * @param boolean $debug If true, enable Snow Monkey debug mode.
  * @return boolean
  */
 add_filter(
 	'inc2734_wp_view_controller_debug',
-	function( $debug ) {
+	function () {
 		return get_theme_mod( 'debug-mode' ) && get_theme_mod( 'expand-get-template-part' ) && defined( 'WP_DEBUG' ) && WP_DEBUG;
 	},
 	9

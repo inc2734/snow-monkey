@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 if ( ! defined( 'SNOW_MONKEY_MEGA_MENU_PATH' ) ) {
@@ -15,14 +15,14 @@ if ( ! defined( 'SNOW_MONKEY_MEGA_MENU_PATH' ) ) {
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'output-head-style' ) ) {
 			return;
 		}
 
 		add_filter(
 			'inc2734_wp_page_speed_optimization_output_head_styles',
-			function( $handles ) {
+			function ( $handles ) {
 				return array_merge(
 					$handles,
 					array(

@@ -19,8 +19,8 @@ $args = wp_parse_args(
 	)
 );
 
-$title = get_the_title();
-if ( ! $title ) {
+$title_content = get_the_title();
+if ( ! $title_content ) {
 	return;
 }
 
@@ -30,9 +30,9 @@ $title_tag = $args['_title_tag'];
 <<?php echo esc_html( $title_tag ); ?> class="c-entry-summary__title">
 	<?php
 	if ( ! in_array( $args['_entries_layout'], array( 'rich-media', 'carousel' ), true ) ) {
-		echo wp_kses_post( $title );
+		echo wp_kses_post( $title_content );
 	} else {
-		Helper::the_title_trimed( $title );
+		Helper::the_title_trimed( $title_content );
 	}
 	?>
 </<?php echo esc_html( $title_tag ); ?>>

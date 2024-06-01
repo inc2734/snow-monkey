@@ -31,7 +31,7 @@ if ( ! $args['_display_excerpt'] ) {
  * @param int $number The maximum number of words. Default 55.
  * @return int
  */
-$entry_summary_content_excerpt_length = function( $number = null ) use ( $args ) {
+$entry_summary_content_excerpt_length = function ( $number = null ) use ( $args ) {
 	return Helper::entry_summary_content_excerpt_length(
 		$args['_excerpt_length'],
 		$args['_entries_layout'],

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -61,7 +61,7 @@ $control->join( $section );
 $control->partial(
 	array(
 		'selector'        => '.c-copyright',
-		'render_callback' => function() {
+		'render_callback' => function () {
 			if ( Helper::get_copyright() ) {
 				Helper::get_template_part( 'template-parts/footer/copyright' );
 			}

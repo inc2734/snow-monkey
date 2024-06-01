@@ -25,7 +25,7 @@ $args = wp_parse_args(
 	)
 );
 
-// Migrate from less than v11.5 to more than v11.5
+// Migrate from less than v11.5 to more than v11.5.
 if ( isset( $args['_page_header_title'] ) ) {
 	$args['_title'] = $args['_page_header_title'];
 }

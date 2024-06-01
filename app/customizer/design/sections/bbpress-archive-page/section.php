@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -18,7 +18,7 @@ Framework::section(
 	array(
 		'title'           => __( 'bbPress archive page settings', 'snow-monkey' ),
 		'priority'        => 140,
-		'active_callback' => function() {
+		'active_callback' => function () {
 			if ( ! class_exists( '\bbPress' ) ) {
 				return false;
 			}

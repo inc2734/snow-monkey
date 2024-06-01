@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,7 +15,7 @@ Framework::control(
 		'label'           => __( 'Add vertical padding to content area of homepage', 'snow-monkey' ),
 		'default'         => true,
 		'priority'        => 120,
-		'active_callback' => function() {
+		'active_callback' => function () {
 			$page_on_front        = get_option( 'page_on_front' );
 			$use_static_frontpage = 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );
 

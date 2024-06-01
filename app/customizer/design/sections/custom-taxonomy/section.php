@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -24,10 +24,10 @@ if ( ! $taxonomies ) {
 	return;
 }
 
-foreach ( $taxonomies as $taxonomy ) {
+foreach ( $taxonomies as $taxonomy_name ) {
 	$terms = Helper::get_terms(
 		array(
-			'taxonomy'   => $taxonomy,
+			'taxonomy'   => $taxonomy_name,
 			'hide_empty' => false,
 		)
 	);
@@ -42,7 +42,7 @@ foreach ( $taxonomies as $taxonomy ) {
 					$_term->name
 				),
 				'priority'        => 140,
-				'active_callback' => function() use ( $_term ) {
+				'active_callback' => function () use ( $_term ) {
 					$view = Controller::get_view();
 					$view = explode( '/', $view['slug'] );
 					if ( ! $view ) {

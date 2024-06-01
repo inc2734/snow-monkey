@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.3
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -15,7 +15,7 @@ use Framework\Helper;
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		$dependencies = Helper::generate_style_dependencies(
 			array(
 				'wp-block-library',
@@ -29,6 +29,7 @@ add_action(
 			)
 		);
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle(),
 			false,
@@ -54,6 +55,7 @@ add_action(
 
 		wp_enqueue_style( Helper::get_main_style_handle() );
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library',
 			false,
@@ -90,7 +92,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_enqueue_script(
 			Helper::get_main_script_handle(),
 			get_theme_file_uri( '/assets/js/app.js' ),
@@ -113,7 +115,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		if ( ! is_user_logged_in() ) {
 			return;
 		}
@@ -139,7 +141,7 @@ add_action(
 foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts' ) as $action_hook ) {
 	add_action(
 		$action_hook,
-		function() {
+		function () {
 			if ( ! get_theme_mod( 'use-lightweight-fontawesome' ) ) {
 				wp_enqueue_script(
 					'fontawesome6',
@@ -172,7 +174,7 @@ foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts' ) as $action_hook
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		if ( ! wp_style_is( 'spider', 'registered' ) ) {
 			wp_enqueue_style(
 				'spider',
@@ -204,7 +206,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
@@ -218,7 +220,7 @@ add_action(
  */
 add_action(
 	'customize_preview_init',
-	function() {
+	function () {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-customize-preview',
 			get_theme_file_uri( '/assets/js/customize-preview.js' ),
@@ -244,7 +246,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_localize_script(
 			Helper::get_main_script_handle(),
 			'snow_monkey',
@@ -264,7 +266,7 @@ add_action(
  */
 add_action(
 	'admin_enqueue_scripts',
-	function() {
+	function () {
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-admin',
 			get_theme_file_uri( '/assets/css/admin/app.css' ),

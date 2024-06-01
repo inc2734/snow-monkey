@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -12,7 +12,7 @@ new \Inc2734\WP_Awesome_Widgets\Bootstrap();
 
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
 );
@@ -22,7 +22,8 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets',
 			false,
@@ -55,7 +56,8 @@ add_action(
  */
 add_action(
 	'enqueue_block_editor_assets',
-	function() {
+	function () {
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets',
 			false,
@@ -92,7 +94,7 @@ add_action(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_widget_options',
-	function( $widget_options, $classname ) {
+	function ( $widget_options, $classname ) {
 		$deprecated_widgets = array(
 			'Inc2734_WP_Awesome_Widgets_Carousel_Any_Posts',
 			'Inc2734_WP_Awesome_Widgets_Pickup_Slider',
@@ -110,21 +112,20 @@ add_filter(
 /**
  * Add deprecated message in widget form.
  *
- * @param $self The widget instance.
- * @return void
+ * @param $me The widget instance.
  */
 add_action(
 	'in_widget_form',
-	function( $self ) {
+	function ( $me ) {
 		$deprecated_widgets = array(
 			'inc2734_wp_awesome_widgets_carousel_any_posts',
 			'inc2734_wp_awesome_widgets_pickup_slider',
 			'inc2734_wp_awesome_widgets_slider',
 		);
-		if ( in_array( $self->id_base, $deprecated_widgets, true ) ) {
+		if ( in_array( $me->id_base, $deprecated_widgets, true ) ) {
 			?>
 			<div style="background-color: #ffede6; padding: 1em; margin: 1em 0">
-				<b><?php echo esc_html( $self->widget_options['description'] ); ?></b>
+				<b><?php echo esc_html( $me->widget_options['description'] ); ?></b>
 			</div>
 			<?php
 		}
@@ -142,7 +143,7 @@ add_action(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $widget_args ) {
+	function ( $content, $widget_args ) {
 		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_local_nav' ) ) {
 			return $content;
 		}
@@ -165,7 +166,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content ) {
+	function ( $content ) {
 		if (
 			! preg_match( '|id="wpaw-pickup-slider-[^"]+?|', $content )
 			&& ! preg_match( '|id="inc2734_wp_awesome_widgets_pickup_slider-[^"]+?|', $content )
@@ -192,7 +193,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $widget_args, $instance ) {
+	function ( $content, $widget_args, $instance ) {
 		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_pr_box' ) ) {
 			return $content;
 		}
@@ -255,7 +256,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $widget_args ) {
+	function ( $content, $widget_args ) {
 		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_showcase' ) ) {
 			return $content;
 		}
@@ -287,7 +288,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $content, $widget_args ) {
+	function ( $content, $widget_args ) {
 		if ( false === strpos( $widget_args['widget_id'], 'inc2734_wp_awesome_widgets_slider' ) ) {
 			return $content;
 		}
@@ -311,7 +312,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_render_widget',
-	function( $widget, $widget_args ) {
+	function ( $widget, $widget_args ) {
 		$content_widget_areas = array(
 			'archive-top-widget-area',
 			'front-page-top-widget-area',
@@ -344,7 +345,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_showcase_backgroud_image_size',
-	function() {
+	function () {
 		return 'xlarge';
 	}
 );
@@ -356,7 +357,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_showcase_image_size',
-	function() {
+	function () {
 		return 'xlarge';
 	}
 );
@@ -369,7 +370,7 @@ add_filter(
  */
 add_filter(
 	'widget_types_to_hide_from_legacy_widget_block',
-	function( $widget_types ) {
+	function ( $widget_types ) {
 		$widget_types[] = 'inc2734_wp_awesome_widgets_any_posts';
 		$widget_types[] = 'inc2734_wp_awesome_widgets_carousel_any_posts';
 		$widget_types[] = 'inc2734_wp_awesome_widgets_contents_outline';

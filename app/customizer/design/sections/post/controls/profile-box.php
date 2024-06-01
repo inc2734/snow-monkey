@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -33,7 +33,7 @@ $control->partial(
 	array(
 		'selector'            => '.wp-profile-box',
 		'container_inclusive' => true,
-		'render_callback'     => function() {
+		'render_callback'     => function () {
 			if ( get_option( 'mwt-display-profile-box' ) ) {
 				Helper::get_template_part( 'template-parts/common/profile-box' );
 			}

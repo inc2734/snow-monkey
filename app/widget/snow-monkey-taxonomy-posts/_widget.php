@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.3.3
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -87,13 +87,13 @@ $taxonomy_posts_query = new WP_Query(
 );
 
 // Sticky posts are only reflected when is_home: true, so add your own.
-// @see https://github.com/WordPress/WordPress/blob/6f3a940e64ebef785c225add9e5d6a7d82d32b83/wp-includes/class-wp-query.php#L3143-L3183
+// @see https://github.com/WordPress/WordPress/blob/6f3a940e64ebef785c225add9e5d6a7d82d32b83/wp-includes/class-wp-query.php#L3143-L3183.
 $sticky_posts = get_option( 'sticky_posts' );
 if ( is_array( $sticky_posts ) && ! empty( $sticky_posts ) && ! $query_args['ignore_sticky_posts'] ) {
 	$num_posts     = count( $taxonomy_posts_query->posts );
 	$sticky_offset = 0;
 	// Loop over posts and relocate stickies to the front.
-	for ( $i = 0; $i < $num_posts; $i ++ ) {
+	for ( $i = 0; $i < $num_posts; $i++ ) {
 		if ( in_array( $taxonomy_posts_query->posts[ $i ]->ID, $sticky_posts, true ) ) {
 			$sticky_post = $taxonomy_posts_query->posts[ $i ];
 			// Remove sticky from current position.
@@ -101,7 +101,7 @@ if ( is_array( $sticky_posts ) && ! empty( $sticky_posts ) && ! $query_args['ign
 			// Move to front, after other stickies.
 			array_splice( $taxonomy_posts_query->posts, $sticky_offset, 0, array( $sticky_post ) );
 			// Increment the sticky offset. The next sticky will be placed at this offset.
-			$sticky_offset ++;
+			++$sticky_offset;
 			// Remove post from sticky posts array.
 			$offset = array_search( $sticky_post->ID, $sticky_posts, true );
 			unset( $sticky_posts[ $offset ] );
@@ -127,7 +127,7 @@ if ( is_array( $sticky_posts ) && ! empty( $sticky_posts ) && ! $query_args['ign
 
 		foreach ( $stickies as $sticky_post ) {
 			array_splice( $taxonomy_posts_query->posts, $sticky_offset, 0, array( $sticky_post ) );
-			$sticky_offset ++;
+			++$sticky_offset;
 		}
 	}
 }

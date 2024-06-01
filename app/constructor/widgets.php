@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 25.4.6
  */
 
 /**
@@ -16,7 +16,7 @@
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_view_hierarchy',
-	function( $hierarchy, $slug, $name, $vars ) {
+	function ( $hierarchy, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_wp_awesome_widgets_view_hierarchy', $hierarchy, $slug, $name, $vars );
 	},
 	10,
@@ -34,7 +34,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_view_args',
-	function( $args ) {
+	function ( $args ) {
 		return apply_filters( 'snow_monkey_wp_awesome_widgets_view_args', $args );
 	},
 	9
@@ -50,7 +50,7 @@ add_filter(
  */
 add_action(
 	'inc2734_wp_awesome_widgets_view_pre_render',
-	function( $args ) {
+	function ( $args ) {
 		$slug = $args['slug'];
 		$name = $args['name'];
 
@@ -60,7 +60,7 @@ add_action(
 		if ( $name && has_action( $action_with_name ) ) {
 			add_action(
 				'inc2734_wp_awesome_widgets_view_' . $slug . '-' . $name,
-				function( $vars ) use ( $action_with_name ) {
+				function ( $vars ) use ( $action_with_name ) {
 					do_action( $action_with_name, $vars );
 				}
 			);
@@ -70,7 +70,7 @@ add_action(
 		if ( has_action( $action ) ) {
 			add_action(
 				'inc2734_wp_awesome_widgets_view_' . $slug,
-				function( $name, $vars ) use ( $action ) {
+				function ( $name, $vars ) use ( $action ) {
 					do_action( $action, $name, $vars );
 				},
 				10,
@@ -92,7 +92,7 @@ add_action(
  */
 add_filter(
 	'inc2734_wp_awesome_widgets_view_render',
-	function( $html, $slug, $name, $vars ) {
+	function ( $html, $slug, $name, $vars ) {
 		return apply_filters( 'snow_monkey_wp_awesome_widgets_view_render', $html, $slug, $name, $vars );
 	},
 	9,

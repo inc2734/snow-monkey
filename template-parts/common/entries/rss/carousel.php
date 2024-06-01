@@ -60,7 +60,7 @@ if ( $args['_entries_gap'] ) {
 						?>
 					</div>
 				</div>
-				<?php $i ++; ?>
+				<?php ++$i; ?>
 			<?php endforeach; ?>
 		</div>
 
@@ -113,7 +113,7 @@ if ( $args['_entries_gap'] ) {
 			<?php endif; ?>
 
 			<?php if ( $args['_dots'] ) : ?>
-				<?php for ( $j = 0; $j < $i; $j ++ ) : ?>
+				<?php for ( $j = 0; $j < $i; $j++ ) : ?>
 					<button class="spider__dot" data-id="<?php echo esc_attr( $j ); ?>"><?php echo esc_html( $j ); ?></button>
 				<?php endfor; ?>
 			<?php endif; ?>

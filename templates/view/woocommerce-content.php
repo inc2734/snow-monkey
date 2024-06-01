@@ -43,4 +43,3 @@ Helper::get_template_part(
 	'woocommerce',
 	$args
 );
-

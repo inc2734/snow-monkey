@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -20,8 +20,8 @@ Framework::control(
 		'description'       => __( 'Paste only the value of data-ad-client of script tag.', 'snow-monkey' ) . __( 'Authentication can also be performed by setting this option.', 'snow-monkey' ),
 		'type'              => 'option',
 		'priority'          => 105,
-		'sanitize_callback' => function( $value ) {
-			return strip_tags( $value );
+		'sanitize_callback' => function ( $value ) {
+			return wp_strip_all_tags( $value );
 		},
 	)
 );

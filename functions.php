@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -11,21 +11,22 @@ use Framework\Helper;
 /**
  * Uses composer autoloader
  */
-require_once( get_template_directory() . '/vendor/autoload.php' );
+require_once get_template_directory() . '/vendor/autoload.php';
 
 /**
  * Adjusted due to different directory structure in development and release
  */
 spl_autoload_register(
-	function( $class ) {
-		if ( 0 !== strpos( $class, 'Framework\\' ) ) {
+	function ( $class_name ) {
+		if ( 0 !== strpos( $class_name, 'Framework\\' ) ) {
 			return;
 		}
 
-		$class = str_replace( '\\', '/', $class );
-		$file  = get_template_directory() . '/' . $class . '.php';
+		$class_name = str_replace( '\\', '/', $class_name );
+		$file       = get_template_directory() . '/' . $class_name . '.php';
+
 		if ( file_exists( $file ) ) {
-			require_once( $file );
+			require_once $file;
 		}
 	}
 );
@@ -48,23 +49,23 @@ if ( ! isset( $content_width ) ) {
 /**
  * Loads theme constructer files
  */
-include_once( __DIR__ . '/app/constructor/child-pages.php' );
-include_once( __DIR__ . '/app/constructor/compatibility.php' );
-include_once( __DIR__ . '/app/constructor/customizer.php' );
-include_once( __DIR__ . '/app/constructor/design-skin.php' );
-include_once( __DIR__ . '/app/constructor/detect-page-end.php' );
-include_once( __DIR__ . '/app/constructor/detect-page-start.php' );
-include_once( __DIR__ . '/app/constructor/manager.php' );
-include_once( __DIR__ . '/app/constructor/oembed.php' );
-include_once( __DIR__ . '/app/constructor/related-posts.php' );
-include_once( __DIR__ . '/app/constructor/trial.php' );
-include_once( __DIR__ . '/app/constructor/view-controller.php' );
-include_once( __DIR__ . '/app/constructor/widgets.php' );
-include_once( __DIR__ . '/app/constructor/deprecated/template-tags.php' );
+require_once __DIR__ . '/app/constructor/child-pages.php';
+require_once __DIR__ . '/app/constructor/compatibility.php';
+require_once __DIR__ . '/app/constructor/customizer.php';
+require_once __DIR__ . '/app/constructor/design-skin.php';
+require_once __DIR__ . '/app/constructor/detect-page-end.php';
+require_once __DIR__ . '/app/constructor/detect-page-start.php';
+require_once __DIR__ . '/app/constructor/manager.php';
+require_once __DIR__ . '/app/constructor/oembed.php';
+require_once __DIR__ . '/app/constructor/related-posts.php';
+require_once __DIR__ . '/app/constructor/trial.php';
+require_once __DIR__ . '/app/constructor/view-controller.php';
+require_once __DIR__ . '/app/constructor/widgets.php';
+require_once __DIR__ . '/app/constructor/deprecated/template-tags.php';
 
 $updater_filepath = __DIR__ . '/app/constructor/updater.php';
 if ( file_exists( $updater_filepath ) ) {
-	include_once( $updater_filepath );
+	include_once $updater_filepath;
 }
 
 /**
@@ -82,7 +83,7 @@ function snow_monkey_loading_method_callback( $type, $path, $directory_slug ) {
 		return $type;
 	}
 	return $setup_files_loading_method;
-};
+}
 add_filter( 'snow_monkey_loading_method', 'snow_monkey_loading_method_callback', 10, 3 );
 
 /**
@@ -93,7 +94,7 @@ add_filter( 'snow_monkey_loading_method', 'snow_monkey_loading_method_callback',
  */
 add_filter(
 	'inc2734_wp_view_controller_expand_get_template_part',
-	function() {
+	function () {
 		// Since the default value by WP Customizer Framework is not reflected here, it should be written in plain text.
 		return get_theme_mod( 'expand-get-template-part', true );
 	},
@@ -115,7 +116,7 @@ Helper::load_files( 'get_template_parts', __DIR__ . '/app/widget', true );
  */
 add_action(
 	'init',
-	function() {
+	function () {
 		do_action( 'snow_monkey_pre_load_customizer' );
 
 		Helper::load_files(

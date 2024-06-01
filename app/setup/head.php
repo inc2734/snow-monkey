@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.0.2
+ * @version 25.4.6
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 add_action(
 	'wp_head',
-	function() {
+	function () {
 		?>
 		<meta charset="<?php bloginfo( 'charset' ); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, viewport-fit=cover">
@@ -31,7 +31,7 @@ add_action(
  */
 add_action(
 	'wp_head',
-	function() {
+	function () {
 		?>
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<?php if ( is_singular() ) : ?>

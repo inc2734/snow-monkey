@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.4.6
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-layout.php
  * renamed: app/customizer/layout/sections/archive/controls/entries-layout.php
@@ -25,7 +25,7 @@ Framework::control(
 			'text2'       => __( 'Text 2', 'snow-monkey' ),
 			'panel'       => __( 'Panels', 'snow-monkey' ),
 			'carousel'    => sprintf(
-				// translators: %1$s: entries layout
+				// translators: %1$s: entries layout.
 				__( 'Carousel (%1$s)', 'snow-monkey' ),
 				__( 'Rich media', 'snow-monkey' )
 			),

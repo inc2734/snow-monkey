@@ -23,48 +23,80 @@
 	<!-- Show sniff codes in all reports. -->
 	<arg value="ps"/>
 
-	<file>.</file>
+	<arg name="colors"/>
 
-	<config name="text_domain" value="snow-monkey"/>
-
-	<rule ref="WordPress-Core"/>
-	<rule ref="WordPress.CodeAnalysis.EmptyStatement"/>
-
-	<!-- These rules are being set as warnings instead of errors, so we can error check the entire codebase. -->
-	<rule ref="WordPress.PHP.YodaConditions.NotYoda">
-		<type>warning</type>
-	</rule>
-	<rule ref="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase">
-		<type>warning</type>
-	</rule>
-	<rule ref="WordPress.DB.PreparedSQL.InterpolatedNotPrepared">
-		<type>warning</type>
-	</rule>
-	<rule ref="WordPress.DB.PreparedSQL.NotPrepared">
-		<type>warning</type>
-	</rule>
-	<rule ref="WordPress.Files.FileName.InvalidClassFileName">
-		<type>warning</type>
+	<!-- Rules: Check PHP version compatibility -->
+	<!-- https://github.com/PHPCompatibility/PHPCompatibility#sniffing-your-code-for-compatibility-with-specific-php-versions -->
+	<config name="testVersion" value="7.4-"/>
+	<rule ref="PHPCompatibilityWP">
+		<include-pattern>*\.php$</include-pattern>
 	</rule>
 
-	<!-- Directories and third party library exclusions. -->
-  <exclude-pattern>*/vendor/*</exclude-pattern>
-	<exclude-pattern>*/node_modules/*</exclude-pattern>
-	<exclude-pattern>/.translation/*</exclude-pattern>
-	<exclude-pattern>/.export/*</exclude-pattern>
-  <exclude-pattern>*/tests/*</exclude-pattern>
-  <exclude-pattern>*/languages/*</exclude-pattern>
-  <exclude-pattern>*/assets/*</exclude-pattern>
-  <exclude-pattern>*/cache/*</exclude-pattern>
-  <exclude-pattern>*/woocommerce/*</exclude-pattern>
+	<config name="minimum_wp_version" value="6.3"/>
 
-	<!-- Assignments in while conditions are a valid method of looping over iterables. -->
-	<rule ref="WordPress.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition">
+	<rule ref="WordPress">
+		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_tax_query"></exclude>
+		<exclude name="WordPress.Files.FileName"></exclude>
+		<exclude name="WordPress.NamingConventions.PrefixAllGlobals"></exclude>
+		<exclude name="WordPress.PHP.PregQuoteDelimiter.Missing"></exclude>
+		<exclude name="Squiz.Commenting.ClassComment"></exclude>
+		<exclude name="Squiz.Commenting.FileComment.Missing"></exclude>
+		<exclude name="Squiz.Commenting.FileComment.MissingPackageTag"></exclude>
+		<exclude name="Squiz.Commenting.FileComment.SpacingAfterComment"></exclude>
+		<exclude name="Squiz.Commenting.FunctionComment.SpacingAfterParamType"></exclude>
+		<exclude name="Generic.Commenting.DocComment.MissingShort"></exclude>
+		<exclude name="Generic.Commenting.DocComment.ShortNotCapital"></exclude>
+		<exclude name="PSR2.Methods.MethodDeclaration.Underscore"></exclude>
+		<exclude name="Universal.Files.SeparateFunctionsFromOO.Mixed"></exclude>
+	</rule>
+
+	<rule ref="WordPress.WhiteSpace.ControlStructureSpacing">
+		<properties>
+			<property name="blank_line_check" value="true"/>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="snow-monkey"/>
+			</property>
+		</properties>
+	</rule>
+
+
+	<rule ref="PSR2.Classes.PropertyDeclaration.Underscore">
 		<exclude-pattern>*</exclude-pattern>
 	</rule>
-
-	<!-- We're not going to rename files. -->
 	<rule ref="WordPress.Files.FileName">
 		<exclude-pattern>*</exclude-pattern>
 	</rule>
+	<rule ref="Universal.NamingConventions.NoReservedKeywordParameterNames.nullFound">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
+	<rule ref="Universal.NamingConventions.NoReservedKeywordParameterNames.defaultFound">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
+	<rule ref="WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents">
+		<exclude-pattern>*</exclude-pattern>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.Found">
+		<exclude-pattern>/Framework/Contract/Helper/Page_Header/Page_Header.php</exclude-pattern>
+		<exclude-pattern>/Framework/Contract/Model/Page_Header.php</exclude-pattern>
+	</rule>
+	<rule ref="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed">
+		<exclude-pattern>/Framework/Contract/Helper/Page_Header/Page_Header.php</exclude-pattern>
+	</rule>
+
+	<!-- What to scan -->
+	<file>.</file>
+	<exclude-pattern>/vendor/*</exclude-pattern>
+	<exclude-pattern>/node_modules/*</exclude-pattern>
+	<exclude-pattern>/.export/*</exclude-pattern>
+	<exclude-pattern>/.github/*</exclude-pattern>
+	<exclude-pattern>/bin/*</exclude-pattern>
+	<exclude-pattern>/dist/*</exclude-pattern>
+	<exclude-pattern>/assets/*</exclude-pattern>
+	<exclude-pattern>/languages/*</exclude-pattern>
+	<exclude-pattern>/tests/*</exclude-pattern>
 </ruleset>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -28,7 +28,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 				$custom_post_type_object->label
 			),
 			'priority'        => 140,
-			'active_callback' => function() use ( $custom_post_type ) {
+			'active_callback' => function () use ( $custom_post_type ) {
 				$view = Controller::get_view();
 				$view = explode( '/', $view['slug'] );
 				if ( ! $view ) {

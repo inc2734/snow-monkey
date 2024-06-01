@@ -3,12 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.4.0
+ * @version 25.4.6
  */
 
 add_filter(
 	'dynamic_sidebar_params',
-	function( $params ) {
+	function ( $params ) {
 		if ( 'footer-widget-area' !== $params[0]['id'] ) {
 			return $params;
 		}

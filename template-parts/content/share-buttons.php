@@ -44,7 +44,7 @@ if ( ! $args['_buttons'] ) {
 			}
 			?>
 			<li class="wp-share-buttons__item">
-				<?php echo $share_button; // xss ok. ?>
+				<?php echo $share_button; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 			</li>
 		<?php endforeach; ?>
 	</ul>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -19,7 +19,7 @@ Framework::control(
 			'_self'   => esc_html__( 'Open in the same window', 'snow-monkey' ),
 			'_target' => esc_html__( 'Open in new window', 'snow-monkey' ),
 		),
-		'active_callback' => function() {
+		'active_callback' => function () {
 			return ! empty( get_theme_mod( 'infobar-url' ) );
 		},
 	)

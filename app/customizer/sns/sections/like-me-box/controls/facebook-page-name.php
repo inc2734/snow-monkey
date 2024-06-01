@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.6
  *
  * renamed: app/customizer/seo-sns/sections/like-me-box/controls/facebook-page-name.php
  */
@@ -39,7 +39,7 @@ $control->partial(
 	array(
 		'selector'            => '.wp-like-me-box',
 		'container_inclusive' => true,
-		'render_callback'     => function() {
+		'render_callback'     => function () {
 			if ( get_option( 'mwt-facebook-page-name' ) ) {
 				Helper::get_template_part( 'template-parts/common/like-me-box' );
 			}

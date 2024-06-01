@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 13.1.2
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -21,7 +21,7 @@ if ( ! class_exists( 'CheckCopyContents' ) ) {
  */
 add_filter(
 	'inc2734_wp_view_controller_template_part_render',
-	function( $content, $slug ) {
+	function ( $content, $slug ) {
 		if ( 'templates/view/content' === $slug || 'templates/view/front-page' === $slug ) {
 			$content = str_replace(
 				'class="theContentWrap-ccc"',
@@ -44,7 +44,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_contents_outline_args',
-	function( $args ) {
+	function ( $args ) {
 		$args['selector'] = '.theContentWrap-ccc';
 		return $args;
 	}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.1
+ * @version 25.4.6
  */
 
 namespace Framework;
@@ -14,7 +14,9 @@ use Inc2734\WP_View_Controller;
 use Framework\Model\Setup_Loader;
 
 class Helper {
-	use WP_Helper\Contract\Helper { get_custom_post_types as _get_custom_post_types; } // phpcs:ignore WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis
+	use WP_Helper\Contract\Helper {
+		get_custom_post_types as _get_custom_post_types;
+	} // phpcs:ignore WordPress.WhiteSpace.ControlStructureSpacing.NoSpaceAfterOpenParenthesis
 	use Contract\Helper\Page_Header;
 	use Contract\Helper\Term_Thumbnail;
 	use Contract\Helper\Homepage_Thumbnail;
@@ -55,7 +57,7 @@ class Helper {
 			if ( $exclude_underscore ) {
 				$files = array_filter(
 					$files,
-					function( $file_slug ) {
+					function ( $file_slug ) {
 						return 0 !== strpos( $file_slug, '_' );
 					}
 				);
@@ -68,7 +70,7 @@ class Helper {
 			}
 
 			$files = array_map(
-				function( $filename ) {
+				function ( $filename ) {
 					return str_replace( '.php', '', $filename );
 				},
 				$files
@@ -168,12 +170,10 @@ class Helper {
 
 			$title = wp_trim_words( $title, $num_words );
 			echo esc_html( $title );
-		} else {
-			if ( is_null( $title ) ) {
+		} elseif ( is_null( $title ) ) {
 				the_title();
-			} else {
-				echo esc_html( $title );
-			}
+		} else {
+			echo esc_html( $title );
 		}
 	}
 
@@ -330,7 +330,7 @@ class Helper {
 
 		$taxonomies = $args['taxonomy'];
 
-		$cache_key = 'snow-monkey-all-' . crc32( json_encode( $taxonomies ) );
+		$cache_key = 'snow-monkey-all-' . crc32( wp_json_encode( $taxonomies ) );
 		$terms     = wp_cache_get( $cache_key );
 		if ( is_array( $terms ) ) {
 			return $terms;
@@ -446,11 +446,12 @@ class Helper {
 	 * @return boolean
 	 */
 	public static function is_ie() {
-		if ( ! isset( $_SERVER['HTTP_USER_AGENT'] ) ) {
+		$http_user_agent = wp_unslash( $_SERVER['HTTP_USER_AGENT'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+		if ( ! $http_user_agent ) {
 			return false;
 		}
 
-		$browser = strtolower( $_SERVER['HTTP_USER_AGENT'] );
+		$browser = strtolower( $http_user_agent );
 		return strstr( $browser, 'trident' ) || strstr( $browser, 'msie' );
 	}
 
@@ -685,7 +686,7 @@ class Helper {
 		}
 
 		ob_start();
-		include( $path );
+		include $path;
 		return preg_replace( '/(\t|\r\n|\r|\n)/ms', '', ob_get_clean() );
 	}
 }

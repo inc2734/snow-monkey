@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  *
  * renamed: app/customizer/layout/sections/header/controls/vertial-global-nav.php
  */
@@ -17,7 +17,7 @@ Framework::control(
 		'label'           => __( 'Make global navigation vertical', 'snow-monkey' ),
 		'priority'        => 105,
 		'default'         => false,
-		'active_callback' => function() {
+		'active_callback' => function () {
 			return '2row' !== get_theme_mod( 'header-layout' )
 					&& 'left' !== get_theme_mod( 'header-layout' );
 		},

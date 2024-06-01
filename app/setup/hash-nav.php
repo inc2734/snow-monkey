@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
 
 add_action(
 	'wp_footer',
-	function() {
+	function () {
 		Helper::get_template_part( 'template-parts/common/overlay-search-box' );
 
 		if ( Helper::is_active_sidebar( 'overlay-widget-area' ) ) {
@@ -21,7 +21,7 @@ add_action(
 
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-hash-nav',
 			get_theme_file_uri( '/assets/js/hash-nav.js' ),

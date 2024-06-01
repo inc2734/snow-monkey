@@ -12,10 +12,10 @@ $_post_type = get_post_type();
 if ( is_post_type_archive() ) {
 	$_post_type = $_post_type ? $_post_type : get_query_var( 'post_type' );
 } elseif ( is_tax() ) {
-	$term       = get_queried_object();
-	$term       = is_object( $term ) ? clone $term : $term;
-	$taxonomy   = get_taxonomy( $term->taxonomy );
-	$_post_type = $taxonomy->object_type[0];
+	$_term      = get_queried_object();
+	$_term      = is_object( $_term ) ? clone $_term : $_term;
+	$_taxonomy  = get_taxonomy( $_term->taxonomy );
+	$_post_type = $_taxonomy->object_type[0];
 }
 $_post_type = $_post_type ? $_post_type : 'post';
 

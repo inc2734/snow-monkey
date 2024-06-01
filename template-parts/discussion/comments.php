@@ -39,7 +39,7 @@ $args = wp_parse_args(
 			wp_list_comments(
 				array(
 					'type'     => 'comment',
-					'callback' => function( $comment, $callback_args, $depth ) {
+					'callback' => function ( $comment, $callback_args, $depth ) {
 						?>
 						<li <?php comment_class( array( 'p-comments__item' ) ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php

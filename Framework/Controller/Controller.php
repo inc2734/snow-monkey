@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 25.4.6
  */
 
 namespace Framework\Controller;
@@ -23,14 +23,14 @@ class Controller extends WP_View_Controller\Bootstrap {
 
 		add_filter(
 			'inc2734_wp_view_controller_layout',
-			function( $layout ) {
+			function ( $layout ) {
 				return apply_filters( 'snow_monkey_layout', $layout );
 			}
 		);
 
 		add_filter(
 			'inc2734_wp_view_controller_view',
-			function( $view ) {
+			function ( $view ) {
 				return apply_filters( 'snow_monkey_view', $view );
 			}
 		);

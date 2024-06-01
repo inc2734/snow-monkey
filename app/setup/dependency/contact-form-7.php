@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -19,7 +19,7 @@ if ( ! class_exists( 'WPCF7' ) ) {
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_enqueue_style(
 			Helper::get_main_style_handle() . '-wpcf7',
 			get_theme_file_uri( '/assets/css/dependency/contact-form-7/app.css' ),

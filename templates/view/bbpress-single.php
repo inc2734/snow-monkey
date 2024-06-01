@@ -37,4 +37,3 @@ Helper::get_template_part(
 	null,
 	$args
 );
-

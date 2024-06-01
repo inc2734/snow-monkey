@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 25.4.6
  */
 
 use Inc2734\WP_SEO\Bootstrap;
@@ -17,7 +17,7 @@ new Bootstrap();
  */
 add_filter(
 	'inc2734_wp_seo_google_tag_manager_id',
-	function() {
+	function () {
 		$for_loggedin = get_option( 'mwt-google-tag-manager-for-loggedin' );
 		if ( $for_loggedin ) {
 			$output = apply_filters( 'snow_monkey_output_google_tag_manager', ! current_user_can( 'manage_options' ) );
@@ -36,7 +36,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_google_analytics_tracking_id',
-	function() {
+	function () {
 		$for_loggedin = get_option( 'mwt-google-analytics-for-loggedin' );
 		if ( $for_loggedin ) {
 			$output = apply_filters( 'snow_monkey_output_google_analytics', ! current_user_can( 'manage_options' ) );
@@ -55,7 +55,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_google_site_verification',
-	function() {
+	function () {
 		return get_option( 'mwt-google-site-verification' );
 	}
 );
@@ -67,7 +67,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_defult_ogp_image_url',
-	function() {
+	function () {
 		$default_ogp_image = get_option( 'mwt-default-og-image' );
 		if ( $default_ogp_image ) {
 			$default_ogp_image = preg_match( '|^\d+$|', $default_ogp_image )
@@ -85,7 +85,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_ogp',
-	function() {
+	function () {
 		return get_option( 'mwt-ogp' );
 	}
 );
@@ -97,7 +97,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_ogp_app_id',
-	function() {
+	function () {
 		return get_option( 'mwt-fb-app-id' );
 	}
 );
@@ -109,7 +109,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_twitter_card',
-	function() {
+	function () {
 		return get_option( 'mwt-twitter-card' );
 	}
 );
@@ -121,7 +121,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_twitter_site',
-	function() {
+	function () {
 		return get_option( 'mwt-twitter-site' );
 	}
 );
@@ -133,7 +133,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_use_json_ld',
-	function() {
+	function () {
 		return get_option( 'mwt-json-ld' );
 	}
 );
@@ -146,7 +146,7 @@ add_filter(
  */
 add_filter(
 	'wp_robots',
-	function( $robots ) {
+	function ( $robots ) {
 		$robots_noindex = get_option( 'mwt-robots-noindex' );
 		if ( ! $robots_noindex ) {
 			return $robots;
@@ -155,12 +155,12 @@ add_filter(
 		$robots_noindex = explode( ',', $robots_noindex );
 		$flipped        = array_flip( $robots_noindex );
 
-		if ( is_category() && isset( $flipped['category'] )
-			|| is_tag() && isset( $flipped['post_tag'] )
-			|| is_author() && isset( $flipped['author'] )
-			|| is_year() && isset( $flipped['year'] )
-			|| is_month() && isset( $flipped['month'] )
-			|| is_day() && isset( $flipped['day'] )
+		if ( ( is_category() && isset( $flipped['category'] ) )
+			|| ( is_tag() && isset( $flipped['post_tag'] ) )
+			|| ( is_author() && isset( $flipped['author'] ) )
+			|| ( is_year() && isset( $flipped['year'] ) )
+			|| ( is_month() && isset( $flipped['month'] ) )
+			|| ( is_day() && isset( $flipped['day'] ) )
 		) {
 			$robots['noindex'] = true;
 		}
@@ -179,7 +179,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_description',
-	function( $description ) {
+	function ( $description ) {
 		if ( ! get_option( 'mwt-auto-description' ) ) {
 			return $description;
 		}
@@ -210,7 +210,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_seo_thumbnail',
-	function( $thumbnail ) {
+	function ( $thumbnail ) {
 		if ( ! $thumbnail && is_singular() ) {
 			$thumbnail = get_theme_mod( 'default-thumbnail' );
 			return $thumbnail && preg_match( '|^\d+$|', $thumbnail )
@@ -231,7 +231,7 @@ add_action( 'snow_monkey_prepend_body', 'inc2734_wp_seo_googletagmanager_noscrip
 
 add_action(
 	'snow_monkey_entry_meta_items',
-	function() {
+	function () {
 		if ( 'modified-date' === get_theme_mod( 'post-date' ) ) {
 			ob_start();
 			snow_monkey_entry_meta_items_modified();

@@ -34,7 +34,7 @@ $feed = $item->get_feed();
 			<?php
 			$image_url = $feed->get_image_url();
 
-			// note
+			// note.
 			if ( ! $image_url ) {
 				$item_tags_creator_image = $item->get_item_tags( 'https://note.com', 'creatorImage' );
 				if ( isset( $item_tags_creator_image[0]['data'] ) ) {

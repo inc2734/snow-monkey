@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 /**
@@ -14,7 +14,7 @@
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'title-tag' );
 	}
 );
@@ -29,7 +29,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'post-thumbnails' );
 	}
 );
@@ -42,7 +42,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'html5', array( 'caption', 'comment-form', 'comment-list', 'gallery', 'search-form' ) );
 	}
 );
@@ -54,7 +54,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'automatic-feed-links' );
 	}
 );
@@ -66,7 +66,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'customize-selective-refresh-widgets' );
 	}
 );

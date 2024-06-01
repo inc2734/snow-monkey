@@ -3,16 +3,16 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 add_action(
 	'wp_dashboard_setup',
-	function() {
+	function () {
 		wp_add_dashboard_widget(
 			'snow-monkey-update-info-widget',
 			__( 'Updates related to Snow Monkey', 'snow-monkey' ),
-			function() {
+			function () {
 				global $wp_version;
 
 				$transient = get_transient( 'snow-monkey-update-info' );

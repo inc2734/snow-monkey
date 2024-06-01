@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.0
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -107,7 +107,7 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_widget( 'Snow_Monkey_Taxonomy_Posts_Widget' );
 	}
 );

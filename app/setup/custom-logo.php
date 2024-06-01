@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
 
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support(
 			'custom-logo',
 			array(
@@ -29,7 +29,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		if ( ! Helper::use_auto_custom_logo_size() ) {
 			return;
 		}
@@ -99,7 +99,7 @@ add_action(
  */
 add_filter(
 	'snow_monkey_template_part_render_template-parts/header/site-branding',
-	function( $html ) {
+	function ( $html ) {
 		return str_replace( array( 'width="1"', 'height="1"' ), array(), $html );
 	}
 );
@@ -113,7 +113,7 @@ add_filter(
  */
 add_filter(
 	'get_custom_logo_image_attributes',
-	function( $custom_logo_attr, $custom_logo_id, $blog_id ) {
+	function ( $custom_logo_attr, $custom_logo_id, $blog_id ) {
 		$switched_blog = false;
 
 		if ( is_multisite() && ! empty( $blog_id ) && get_current_blog_id() !== (int) $blog_id ) {
@@ -141,7 +141,7 @@ add_filter(
  */
 add_filter(
 	'get_custom_logo',
-	function( $html ) {
+	function ( $html ) {
 		$sm_custom_logo = get_theme_mod( 'sm-custom-logo' );
 		if ( ! $sm_custom_logo ) {
 			return $html;
@@ -177,7 +177,7 @@ add_filter(
  */
 add_action(
 	'customize_register',
-	function( $wp_customize ) {
+	function ( $wp_customize ) {
 		$wp_customize->selective_refresh->remove_partial( 'custom-logo' );
 		$wp_customize->get_setting( 'custom_logo' )->transport = 'refresh';
 	},

@@ -3,19 +3,19 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.1.1
+ * @version 25.4.6
  */
 
 use Framework\Model\Filesystem;
 
 add_filter(
 	'walker_nav_menu_start_el',
-	function( $item_output, $item, $depth, $args ) {
+	function ( $item_output, $item, $depth, $args ) {
 		if ( ! in_array( $args->theme_location, array( 'social-nav', 'follow-box' ), true ) ) {
 			return $item_output;
 		}
 
-		$get_brand_icon = function( $path ) {
+		$get_brand_icon = function ( $path ) {
 			if ( file_exists( $path ) ) {
 				$icon = Filesystem::get_contents( $path );
 				return $icon

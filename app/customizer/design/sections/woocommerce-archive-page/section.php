@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 25.4.6
  *
  * renamed: app/customizer/layout/sections/woocommerce-archive-page/section.php
  */
@@ -19,7 +19,7 @@ Framework::section(
 	array(
 		'title'           => __( 'WooCommerce products page settings', 'snow-monkey' ),
 		'priority'        => 140,
-		'active_callback' => function() {
+		'active_callback' => function () {
 			if ( ! class_exists( '\woocommerce' ) ) {
 				return false;
 			}

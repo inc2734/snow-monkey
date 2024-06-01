@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <form class="woocommerce-ordering" method="get">
 	<span class="c-select">
-		<select name="orderby" class="c-select__control orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>">
-			<?php foreach ( $catalog_orderby_options as $id => $name ) : ?>
+		<select name="orderby" class="c-select__control orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch ?>">
+			<?php foreach ( $catalog_orderby_options as $id => $name ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
 				<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 			<?php endforeach; ?>
 		</select>

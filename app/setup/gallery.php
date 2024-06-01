@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Pure_CSS_Gallery\Bootstrap;
@@ -13,7 +13,7 @@ use Inc2734\WP_Pure_CSS_Gallery\Bootstrap;
  */
 add_action(
 	'wp_loaded',
-	function() {
+	function () {
 		$use_pure_css_gallery = get_theme_mod( 'pure-css-gallery' );
 		if ( ! $use_pure_css_gallery ) {
 			return;

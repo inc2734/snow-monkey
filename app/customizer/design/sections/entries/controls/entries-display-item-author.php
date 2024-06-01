@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.4.2
+ * @version 25.4.6
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-display-item-author.php
  */
@@ -24,7 +24,7 @@ Framework::control(
 		'label'             => __( 'Display the author for each item in the entries', 'snow-monkey' ),
 		'priority'          => 120,
 		'default'           => $default,
-		'active_callback'   => function() {
+		'active_callback'   => function () {
 			$is_display_item_author = ! in_array(
 				get_theme_mod( 'post-entries-layout' ),
 				array( 'text' ),
@@ -33,7 +33,7 @@ Framework::control(
 
 			return $is_display_item_author;
 		},
-		'sanitize_callback' => function( $value ) {
+		'sanitize_callback' => function ( $value ) {
 			$is_display_item_author = ! in_array(
 				get_theme_mod( 'post-entries-layout' ),
 				array( 'text' ),

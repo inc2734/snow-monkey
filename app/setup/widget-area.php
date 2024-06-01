@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -15,7 +15,7 @@ use Framework\Helper;
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Sidebar', 'snow-monkey' ),
@@ -37,7 +37,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Sticky sidebar', 'snow-monkey' ),
@@ -59,7 +59,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Top of the page title', 'snow-monkey' ),
@@ -81,7 +81,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Top of the archive page', 'snow-monkey' ),
@@ -103,7 +103,7 @@ add_action(
 */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Bottom of contents', 'snow-monkey' ),
@@ -125,7 +125,7 @@ add_action(
 */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Archive sidebar', 'snow-monkey' ),
@@ -147,7 +147,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Homepage (Top of page)', 'snow-monkey' ),
@@ -162,7 +162,7 @@ add_action(
 
 		add_filter(
 			'dynamic_sidebar_params',
-			function( $params ) {
+			function ( $params ) {
 				if ( 'front-page-top-widget-area' !== $params[0]['id'] ) {
 					return $params;
 				}
@@ -186,7 +186,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Homepage (Bottom of page)', 'snow-monkey' ),
@@ -201,7 +201,7 @@ add_action(
 
 		add_filter(
 			'dynamic_sidebar_params',
-			function( $params ) {
+			function ( $params ) {
 				if ( 'front-page-bottom-widget-area' !== $params[0]['id'] ) {
 					return $params;
 				}
@@ -225,7 +225,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Posts page (Top of page)', 'snow-monkey' ),
@@ -240,7 +240,7 @@ add_action(
 
 		add_filter(
 			'dynamic_sidebar_params',
-			function( $params ) {
+			function ( $params ) {
 				if ( 'posts-page-top-widget-area' !== $params[0]['id'] ) {
 					return $params;
 				}
@@ -264,7 +264,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Posts page (Bottom of page)', 'snow-monkey' ),
@@ -279,7 +279,7 @@ add_action(
 
 		add_filter(
 			'dynamic_sidebar_params',
-			function( $params ) {
+			function ( $params ) {
 				if ( 'posts-page-bottom-widget-area' !== $params[0]['id'] ) {
 					return $params;
 				}
@@ -303,7 +303,7 @@ add_action(
  */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Footer', 'snow-monkey' ),
@@ -325,7 +325,7 @@ add_action(
 */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Overlay', 'snow-monkey' ),
@@ -347,7 +347,7 @@ add_action(
 */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Top of the article', 'snow-monkey' ),
@@ -369,7 +369,7 @@ add_action(
 */
 add_action(
 	'widgets_init',
-	function() {
+	function () {
 		register_sidebar(
 			array(
 				'name'          => __( 'Bottom of the article', 'snow-monkey' ),
@@ -391,7 +391,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_enqueue_script(
 			Helper::get_main_script_handle() . '-widgets',
 			get_theme_file_uri( '/assets/js/widgets.js' ),

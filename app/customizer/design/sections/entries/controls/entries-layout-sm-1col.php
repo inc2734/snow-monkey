@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.3
+ * @version 25.4.6
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-layout-sm-1col.php
  */
@@ -17,11 +17,11 @@ Framework::control(
 		'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
 		'priority'          => 150,
 		'default'           => false,
-		'active_callback'   => function() {
+		'active_callback'   => function () {
 			$is_multi_cols_pattern = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'panel' ), true );
 			return $is_multi_cols_pattern;
 		},
-		'sanitize_callback' => function( $value ) {
+		'sanitize_callback' => function ( $value ) {
 			$is_multi_cols_pattern = in_array( get_theme_mod( 'post-entries-layout' ), array( 'rich-media', 'panel' ), true );
 			return $is_multi_cols_pattern && $value ? $value : '';
 		},

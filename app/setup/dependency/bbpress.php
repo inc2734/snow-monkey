@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ if ( ! class_exists( '\bbPress' ) ) {
 
 add_filter(
 	'bbp_template_include',
-	function( $template ) {
+	function ( $template ) {
 		if ( Helper::is_bbpress_mypage() ) {
 			$ext_template = get_theme_file_path( 'bbpress/mypage.php' );
 		} elseif ( Helper::is_bbpress_single() ) {

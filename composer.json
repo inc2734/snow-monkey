@@ -10,9 +10,10 @@
 		}
 	],
 	"require-dev": {
-		"wp-coding-standards/wpcs": "^2.3",
+		"wp-coding-standards/wpcs": "^3.1",
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-		"yoast/phpunit-polyfills": "^1.0"
+		"phpcompatibility/phpcompatibility-wp": "*",
+		"yoast/phpunit-polyfills": "^2.0"
 	},
 	"require": {
 		"php": ">=7.4",

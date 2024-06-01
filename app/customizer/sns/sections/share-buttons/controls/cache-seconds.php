@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php
  */
@@ -18,7 +18,7 @@ Framework::control(
 		'priority'        => 130,
 		'default'         => 300,
 		'type'            => 'option',
-		'active_callback' => function() {
+		'active_callback' => function () {
 			return 'official' !== get_option( 'mwt-share-buttons-type' );
 		},
 	)

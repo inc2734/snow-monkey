@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -15,7 +15,7 @@ use Inc2734\WP_Customizer_Framework\Color;
  */
 add_action(
 	'inc2734_wp_customizer_framework_load_styles',
-	function() {
+	function () {
 		$includes = array(
 			'/assets/css/app/foundation',
 			'/assets/css/app/object/component',

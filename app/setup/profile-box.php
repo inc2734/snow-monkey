@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Profile_Box\Bootstrap;
@@ -12,7 +12,7 @@ new Bootstrap();
 
 add_filter(
 	'inc2734_wp_profile_box_sns_accounts',
-	function( $accounts ) {
+	function ( $accounts ) {
 		foreach ( $accounts as $service => $label ) {
 			switch ( $service ) {
 				case 'url':

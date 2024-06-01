@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -37,7 +37,7 @@ $control->join( $section );
  */
 add_action(
 	'customize_save_set-browser-cache',
-	function( $customize_setting ) {
+	function ( $customize_setting ) {
 		if ( $customize_setting->post_value() === $customize_setting->value() ) {
 			return;
 		}

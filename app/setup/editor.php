@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -19,7 +19,7 @@ new WP_Custom_CSS_To_Editor\Bootstrap();
  */
 add_filter(
 	'tiny_mce_before_init',
-	function( $mce_init ) {
+	function ( $mce_init ) {
 		if ( ! empty( $mce_init['classic_block_editor'] ) ) {
 			return $mce_init;
 		}
@@ -43,7 +43,7 @@ add_filter(
 
 add_action(
 	'enqueue_block_editor_assets',
-	function() {
+	function () {
 		$dependencies = Helper::generate_style_dependencies(
 			array(
 				'wp-block-library',
@@ -56,6 +56,7 @@ add_action(
 		);
 		$dependencies = array( 'wp-block-library' );
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle(),
 			false,
@@ -122,6 +123,7 @@ add_action(
 
 		wp_enqueue_style( Helper::get_main_style_handle() );
 
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-block-library',
 			false,
@@ -158,7 +160,7 @@ add_action(
 			);
 		}
 
-		$asset = include( get_theme_file_path( '/assets/js/editor.asset.php' ) );
+		$asset = include get_theme_file_path( '/assets/js/editor.asset.php' );
 		wp_enqueue_script(
 			Helper::get_main_style_handle() . '-block-editor',
 			get_theme_file_uri( '/assets/js/editor.js' ),
@@ -177,7 +179,7 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_theme_support( 'align-wide' );
 	}
 );
@@ -187,7 +189,7 @@ add_action(
  */
 add_action(
 	'enqueue_block_editor_assets',
-	function() {
+	function () {
 		wp_deregister_style( 'wp-block-library-theme' );
 		wp_register_style( 'wp-block-library-theme', null, array(), 1 );
 	}
@@ -201,7 +203,7 @@ add_action(
  */
 add_filter(
 	'admin_body_class',
-	function( $classes ) {
+	function ( $classes ) {
 		$post_id = get_the_ID();
 		if ( ! $post_id ) {
 			return $classes;
@@ -233,7 +235,5 @@ add_filter(
 		$layout = $layout ? $layout : get_theme_mod( 'post-layout' );
 
 		return $classes . ' l-body--' . $layout;
-
-		return $classes;
 	}
 );

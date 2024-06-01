@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 8.0.0
+ * @version 25.4.6
  */
 
 /**
@@ -15,7 +15,7 @@
  */
 add_filter(
 	'inc2734_wp_oembed_blog_card_block_editor_template',
-	function( $template, $url ) {
+	function ( $template, $url ) {
 		return apply_filters( 'snow_monkey_oembed_blog_card_block_editor_template', $template, $url );
 	},
 	10,
@@ -31,7 +31,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_oembed_blog_card_loading_template',
-	function( $template, $url ) {
+	function ( $template, $url ) {
 		return apply_filters( 'snow_monkey_oembed_blog_card_loading_template', $template, $url );
 	},
 	10,
@@ -47,7 +47,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_oembed_blog_card_url_template',
-	function( $template, $url ) {
+	function ( $template, $url ) {
 		return apply_filters( 'snow_monkey_oembed_blog_card_url_template', $template, $url );
 	},
 	10,
@@ -63,7 +63,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_oembed_blog_card_blog_card_template',
-	function( $template, $cache ) {
+	function ( $template, $cache ) {
 		return apply_filters( 'snow_monkey_oembed_blog_card_template', $template, $cache );
 	},
 	10,

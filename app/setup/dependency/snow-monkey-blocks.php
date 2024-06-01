@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -19,7 +19,8 @@ add_filter( 'snow_monkey_blocks_pro', '__return_true' );
  */
 add_action(
 	'enqueue_block_assets',
-	function() {
+	function () {
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-snow-monkey-blocks',
 			false,
@@ -69,19 +70,19 @@ add_action(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'output-head-style' ) ) {
 			return;
 		}
 
 		add_filter(
 			'inc2734_wp_page_speed_optimization_output_head_styles',
-			function( $handles ) {
+			function ( $handles ) {
 				$styles = wp_styles();
 
 				$block_handles = array_filter(
 					$styles->queue,
-					function( $handle ) {
+					function ( $handle ) {
 						return 0 === strpos( $handle, 'snow-monkey-blocks/' ) || 0 === strpos( $handle, 'snow-monkey-blocks-' );
 					}
 				);
@@ -107,7 +108,7 @@ add_action(
  */
 add_action(
 	'init',
-	function() {
+	function () {
 		/**
 		 * I really wanted to run it only when snow-monkey-blocks-theme is enqueued,
 		 * but enqueue_block_editor_assets doesn't do it.

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.2.0
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -25,13 +25,13 @@ if ( ! $taxonomies ) {
 
 $panel = Framework::get_panel( 'design' );
 
-foreach ( $taxonomies as $taxonomy ) {
-	$taxonomy_object   = get_taxonomy( $taxonomy );
+foreach ( $taxonomies as $taxonomy_name ) {
+	$taxonomy_object   = get_taxonomy( $taxonomy_name );
 	$custom_post_types = ! empty( $taxonomy_object->object_type ) ? $taxonomy_object->object_type : array();
 
 	$terms = Helper::get_terms(
 		array(
-			'taxonomy'   => $taxonomy,
+			'taxonomy'   => $taxonomy_name,
 			'hide_empty' => false,
 		)
 	);
@@ -44,7 +44,7 @@ foreach ( $taxonomies as $taxonomy ) {
 				'label'           => __( 'Use the category label set for itself', 'snow-monkey' ),
 				'description'     => __( 'By default, category labels are displayed according to the current archive page', 'snow-monkey' ),
 				'priority'        => 110,
-				'active_callback' => function() use ( $_term ) {
+				'active_callback' => function () use ( $_term ) {
 					return is_taxonomy_hierarchical( $_term->taxonomy );
 				},
 			)

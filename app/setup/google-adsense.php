@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -17,7 +17,7 @@ if ( filter_input( INPUT_GET, 'legacy-widget-preview', FILTER_DEFAULT, FILTER_RE
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		if (
 			! get_option( 'mwt-google-adsense' )
 			&& ! get_option( 'mwt-google-infeed-ads' )
@@ -40,7 +40,7 @@ add_action(
 			'google-adsense',
 			'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
 			array(),
-			null,
+			null, // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 			false
 		);
 	},
@@ -52,7 +52,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		$google_adsense = apply_filters( 'snow_monkey_google_adsense', get_option( 'mwt-google-adsense' ), 'auto-ads' );
 		if ( ! $google_adsense ) {
 			return;
@@ -81,7 +81,7 @@ add_action(
  */
 add_filter(
 	'script_loader_tag',
-	function( $tag, $handle ) {
+	function ( $tag, $handle ) {
 		if ( 'google-adsense' !== $handle ) {
 			return $tag;
 		}
@@ -97,7 +97,7 @@ add_filter(
  */
 add_filter(
 	'script_loader_tag',
-	function( $tag, $handle ) {
+	function ( $tag, $handle ) {
 		if ( 'google-adsense' !== $handle ) {
 			return $tag;
 		}
@@ -144,7 +144,7 @@ add_filter(
  */
 add_filter(
 	'inc2734_wp_adsense_the_adsense_code',
-	function( $code ) {
+	function ( $code ) {
 		if ( is_404() ) {
 			return;
 		}

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -16,7 +16,7 @@ use Framework\Helper;
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		register_nav_menus(
 			array(
 				'global-nav'        => esc_html__( 'Global Navigation (For PC)', 'snow-monkey' ),
@@ -40,7 +40,7 @@ add_action(
  */
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		wp_register_script(
 			Helper::get_main_script_handle() . '-footer-sticky-nav',
 			get_theme_file_uri( '/assets/js/footer-sticky-nav.js' ),
@@ -89,7 +89,7 @@ add_action(
  */
 add_filter(
 	'nav_menu_item_title',
-	function( $title, $item, $args, $depth ) {
+	function ( $title, $item, $args, $depth ) {
 		$show_description = 0 === (int) $depth && 'global-nav' === $args->theme_location;
 		$show_description = apply_filters( 'snow_monkey_nav_menu_item_title_show_description', $show_description, $depth, $args->theme_location );
 
@@ -114,10 +114,10 @@ add_filter(
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		add_action(
 			'wp_nav_menu_item_custom_fields',
-			function( $item_id ) {
+			function ( $item_id ) {
 				$highlight = get_post_meta( $item_id, 'sm-nav-menu-item-highlight', true );
 				?>
 				<p class="field-sm-nav-menu-item-highlight description-wide">
@@ -139,7 +139,7 @@ add_action(
 
 		add_action(
 			'wp_update_nav_menu_item',
-			function( $menu_id, $menu_item_db_id ) {
+			function ( $menu_id, $menu_item_db_id ) {
 				$nonce = filter_input( INPUT_POST, 'sm-nav-menu-item-highlight-nonce' );
 				if ( ! $nonce ) {
 					return;
@@ -171,7 +171,7 @@ add_action(
 
 		add_filter(
 			'wp_nav_menu_objects',
-			function( $sorted_menu_items ) {
+			function ( $sorted_menu_items ) {
 				foreach ( $sorted_menu_items as $index => $item ) {
 					$highlight = get_post_meta( $item->ID, 'sm-nav-menu-item-highlight', true );
 					if ( ! $highlight ) {

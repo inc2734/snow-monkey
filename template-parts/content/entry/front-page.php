@@ -40,7 +40,7 @@ $content = ob_get_clean();
 	<?php
 	add_filter(
 		'wp_omit_loading_attr_threshold',
-		function() {
+		function () {
 			$content_media_count = wp_increase_content_media_count();
 			return $content_media_count + 1;
 		}

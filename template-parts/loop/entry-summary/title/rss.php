@@ -26,8 +26,8 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 	return;
 }
 
-$title = $args['_item']->get_title();
-if ( ! $title ) {
+$title_content = $args['_item']->get_title();
+if ( ! $title_content ) {
 	return;
 }
 
@@ -37,9 +37,9 @@ $title_tag = $args['_title_tag'];
 <<?php echo esc_html( $title_tag ); ?> class="c-entry-summary__title">
 	<?php
 	if ( ! in_array( $args['_entries_layout'], array( 'rich-media', 'carousel' ), true ) ) {
-		echo esc_html( $title );
+		echo esc_html( $title_content );
 	} else {
-		Helper::the_title_trimed( $title );
+		Helper::the_title_trimed( $title_content );
 	}
 	?>
 </<?php echo esc_html( $title_tag ); ?>>

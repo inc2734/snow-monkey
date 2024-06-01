@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.3.3
+ * @version 25.4.6
  */
 
 /**
@@ -49,6 +49,12 @@ function snow_monkey_get_remote_block_patten_categories() {
 	return $new_pattern_categories;
 }
 
+/**
+ * Get remote block patterns.
+ *
+ * @param string $url API URL.
+ * @return array
+ */
 function _snow_monkney_get_remote_block_patterns( $url ) {
 	global $wp_version;
 
@@ -148,8 +154,9 @@ function snow_monkey_get_premium_remote_block_pattens_xserver() {
  * This requires a valid license key.
  */
 function snow_monkey_register_remote_block_patterns() {
-	if ( ! empty( $_SERVER['REQUEST_URI'] ) ) {
-		if ( false !== strpos( $_SERVER['REQUEST_URI'], 'wp-json/snow-monkey-license-manager' ) ) {
+	$request_uri = wp_unslash( $_SERVER['REQUEST_URI'] ?? '' ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized
+	if ( $request_uri ) {
+		if ( false !== strpos( $request_uri, 'wp-json/snow-monkey-license-manager' ) ) {
 			return;
 		}
 	}
@@ -207,7 +214,7 @@ function snow_monkey_register_remote_block_patterns() {
 		$required_plugins = isset( $pattern['requiredPlugins'] ) ? $pattern['requiredPlugins'] : array();
 		foreach ( $required_plugins as $required_plugin ) {
 			// @todo Some plug-ins have different bootstrap file names.
-			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			include_once ABSPATH . 'wp-admin/includes/plugin.php';
 			if ( ! is_plugin_active( $required_plugin . '/' . $required_plugin . '.php' ) ) {
 				continue 2;
 			}

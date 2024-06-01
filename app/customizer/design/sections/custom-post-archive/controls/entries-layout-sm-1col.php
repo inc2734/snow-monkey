@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.3
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -19,7 +19,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 			'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
 			'priority'          => 145,
 			'default'           => false,
-			'active_callback'   => function() use ( $custom_post_type ) {
+			'active_callback'   => function () use ( $custom_post_type ) {
 				$is_multi_cols_pattern = in_array(
 					get_theme_mod( $custom_post_type . '-entries-layout' ),
 					array( 'rich-media', 'panel' ),
@@ -27,7 +27,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 				);
 				return $is_multi_cols_pattern;
 			},
-			'sanitize_callback' => function( $value ) use ( $custom_post_type ) {
+			'sanitize_callback' => function ( $value ) use ( $custom_post_type ) {
 				$is_multi_cols_pattern = in_array(
 					get_theme_mod( $custom_post_type . '-entries-layout' ),
 					array( 'rich-media', 'panel' ),

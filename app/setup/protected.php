@@ -3,12 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 16.2.0
+ * @version 25.4.6
  */
 
 add_filter(
 	'the_password_form',
-	function( $output ) {
+	function ( $output ) {
 		global $post;
 
 		if ( ! get_option( 'mwt-protected-more' ) ) {
@@ -39,7 +39,7 @@ add_filter(
 
 add_filter(
 	'protected_title_format',
-	function( $title ) {
+	function ( $title ) {
 		global $post;
 
 		if ( ! get_option( 'mwt-protected-more' ) ) {

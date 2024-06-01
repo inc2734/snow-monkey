@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.5
+ * @version 25.4.6
  */
 
 namespace Framework\Contract\Helper;
@@ -28,7 +28,7 @@ trait Term_Thumbnail {
 			$term = is_object( $term ) ? clone $term : $term;
 		}
 
-		$cache_key   = crc32( json_encode( $term ) );
+		$cache_key   = crc32( wp_json_encode( $term ) );
 		$cache_group = 'snow-monkey/term-thumbnail-id';
 		$cache       = wp_cache_get( $cache_key, $cache_group );
 		if ( false !== $cache ) {

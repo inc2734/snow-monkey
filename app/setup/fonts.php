@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.0.1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
 
 add_action(
 	'wp_head',
-	function() {
+	function () {
 		$base_font = get_theme_mod( 'base-font' );
 		if ( ! $base_font ) {
 			return;
@@ -40,7 +40,7 @@ add_action(
 foreach ( array( 'wp_enqueue_scripts', 'enqueue_block_editor_assets' ) as $hook ) {
 	add_action(
 		$hook,
-		function() {
+		function () {
 			$base_font = get_theme_mod( 'base-font' );
 			if ( ! $base_font ) {
 				return;

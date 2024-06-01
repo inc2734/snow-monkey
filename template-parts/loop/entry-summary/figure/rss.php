@@ -26,14 +26,14 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 
 $thumbnail = false;
 
-// note
+// note.
 $simplepie_thumbnail = $args['_item']->get_item_tags( SIMPLEPIE_NAMESPACE_MEDIARSS, 'thumbnail' );
 $thumbnail_src       = ! empty( $simplepie_thumbnail[0]['data'] ) ? $simplepie_thumbnail[0]['data'] : false;
 if ( $thumbnail_src ) {
 	$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
 }
 
-// はてなブログ
+// はてなブログ.
 if ( ! $thumbnail ) {
 	$thumbnail_src = $args['_item']->get_enclosure()->get_link();
 	if ( $thumbnail_src ) {
@@ -41,7 +41,7 @@ if ( ! $thumbnail ) {
 	}
 }
 
-// first img
+// first img.
 if ( ! $thumbnail ) {
 	$description = $args['_item']->get_description();
 	if ( preg_match( '|^(?:<a [^>]+?>)?(<img [^>]+?>)|ims', $description, $match ) ) {

@@ -3,17 +3,17 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  *
  * renamed: app/setup/suppot-forum-widget.php
  */
 add_action(
 	'wp_dashboard_setup',
-	function() {
+	function () {
 		wp_add_dashboard_widget(
 			'snow-monkey-support-forum-topics-widget',
 			__( 'Recent topics of Snow Monkey support forum', 'snow-monkey' ),
-			function() {
+			function () {
 				global $wp_version;
 
 				$transient = get_transient( 'snow-monkey-support-forum-topics' );
@@ -55,8 +55,8 @@ add_action(
 
 				<p>
 					<?php
-					echo sprintf(
-						// translators: %1$s: a start tag, %2$s: a end tag
+					printf(
+						// translators: %1$s: a start tag, %2$s: a end tag.
 						esc_html__(
 							'If you are using Snow Monkey and have any questions, try searching in %1$sthe support forum%2$s. If the search does not help, please start a new topic.',
 							'snow-monkey'
@@ -68,8 +68,8 @@ add_action(
 				</p>
 				<p>
 					<?php
-					echo sprintf(
-						// translators: %1$s: a start tag, %2$s: a end tag
+					printf(
+						// translators: %1$s: a start tag, %2$s: a end tag.
 						esc_html__(
 							'You must have a %1$sSnow Monkey subscription%2$s to start a topic.',
 							'snow-monkey'

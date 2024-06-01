@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.1.3
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Like_Me_Box\Bootstrap;
@@ -12,7 +12,7 @@ new Bootstrap();
 
 add_filter(
 	'inc2734_wp_like_me_box_thumbnail',
-	function( $thumbnail ) {
+	function ( $thumbnail ) {
 		if ( $thumbnail ) {
 			return $thumbnail;
 		}

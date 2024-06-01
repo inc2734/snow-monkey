@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 namespace Framework\Model;
@@ -43,7 +43,7 @@ class Cache {
 		}
 
 		if ( $vars ) {
-			$base = $base . '-' . json_encode( $vars );
+			$base = $base . '-' . wp_json_encode( $vars );
 		}
 
 		return sha1( $base ) . '.' . $ext;
@@ -65,7 +65,7 @@ class Cache {
 			return false;
 		}
 
-		include( $cache_filepath );
+		include $cache_filepath;
 
 		return true;
 	}
@@ -119,7 +119,7 @@ class Cache {
 			Filesystem::mkdir( $cache_directory );
 		}
 
-		return is_writable( $cache_directory )
+		return Filesystem::is_writable( $cache_directory )
 			? Filesystem::put_contents( $cache_filepath, $data )
 			: false;
 	}

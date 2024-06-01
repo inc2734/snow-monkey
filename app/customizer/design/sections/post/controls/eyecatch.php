@@ -3,13 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Framework;
 
-$post_type_object = get_post_type_object( 'post' );
+$wp_post_type = get_post_type_object( 'post' );
 
 Framework::control(
 	'select',
@@ -19,7 +19,7 @@ Framework::control(
 		'description' => sprintf(
 			/* translators: 1: Post type label */
 			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
-			$post_type_object->label
+			$wp_post_type->label
 		),
 		'priority'    => 110,
 		'default'     => 'page-header',

@@ -39,7 +39,7 @@ $args = wp_parse_args(
 			wp_list_comments(
 				array(
 					'type'     => 'pings',
-					'callback' => function() {
+					'callback' => function () {
 						?>
 						<li <?php comment_class( array( 'c-trackbacks__item' ) ); ?> id="li-comment-<?php comment_ID(); ?>">
 							<?php Helper::get_template_part( 'template-parts/discussion/trackback' ); ?>

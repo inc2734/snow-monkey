@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -21,7 +21,7 @@ Framework::control(
 			''         => __( 'None', 'snow-monkey' ),
 			'standard' => __( 'Standard', 'snow-monkey' ),
 		),
-		'active_callback' => function() {
+		'active_callback' => function () {
 			$handle = Helper::get_main_style_handle() . '-theme';
 			return wp_style_is( $handle ) && wp_styles()->registered[ $handle ]->src;
 		},

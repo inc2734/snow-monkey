@@ -9,6 +9,6 @@
 
 <div class="p-comments">
 	<div class="p-comments__form">
-		<?php wc_get_template( 'single-product-reviews.php', [], true ); ?>
+		<?php wc_get_template( 'single-product-reviews.php', array(), true ); ?>
 	</div>
 </div>

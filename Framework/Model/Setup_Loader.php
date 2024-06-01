@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 25.4.6
  */
 
 namespace Framework\Model;
@@ -91,13 +91,12 @@ class Setup_Loader {
 	/**
 	 * Convert file list to file paths.
 	 *
-	 * @param array  $files          Array of files path.
-	 * @param string $directory_slug The directory slug.
+	 * @param array  $files Array of files path.
 	 * @return array
 	 */
 	protected function _file_list_to_filepath( $files ) {
 		return array_map(
-			function( $slug ) {
+			function ( $slug ) {
 				return trailingslashit( $this->template_directory ) . $slug . '.php';
 			},
 			$files
@@ -107,8 +106,7 @@ class Setup_Loader {
 	/**
 	 * Convert file list to theme file paths.
 	 *
-	 * @param array  $files          Array of files path.
-	 * @param string $directory_slug The directory slug.
+	 * @param array  $files Array of files path.
 	 * @return array
 	 */
 	protected function _file_list_to_theme_file_path( $files ) {
@@ -117,7 +115,7 @@ class Setup_Loader {
 		}
 
 		return array_map(
-			function( $slug ) {
+			function ( $slug ) {
 				return $slug . '.php';
 			},
 			$files
@@ -199,6 +197,6 @@ class Setup_Loader {
 			return false;
 		}
 
-		return include( $bundle_file );
+		return include $bundle_file;
 	}
 }

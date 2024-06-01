@@ -80,20 +80,18 @@ if ( $args['_entries_gap'] ) {
 											break;
 										}
 									}
+								} elseif ( $is_hierarchical_taxonomy_query ) {
 									// If the term to be used for the category label is not specified.
-								} else {
 									// If the return value of `get_queried_object()` is `WP_Term`, use it.
-									if ( $is_hierarchical_taxonomy_query ) {
-										$_use_own_category_label = is_null( $args['_use_own_category_label'] )
-											? get_theme_mod( $queried_object->taxonomy . '-' . $queried_object->term_id . '-use-own-category-label' )
-											: $args['_use_own_category_label'];
+									$_use_own_category_label = is_null( $args['_use_own_category_label'] )
+										? get_theme_mod( $queried_object->taxonomy . '-' . $queried_object->term_id . '-use-own-category-label' )
+										: $args['_use_own_category_label'];
 
-										$_terms = ! $_use_own_category_label
-											? array( $queried_object )
-											: $public_terms;
-									} else {
-										$_terms = $public_terms;
-									}
+									$_terms = ! $_use_own_category_label
+										? array( $queried_object )
+										: $public_terms;
+								} else {
+									$_terms = $public_terms;
 								}
 								// Post type, etc. specified.
 							} else {
@@ -122,7 +120,7 @@ if ( $args['_entries_gap'] ) {
 						?>
 					</div>
 				</div>
-				<?php $i ++; ?>
+				<?php ++$i; ?>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
 		</div>
@@ -176,7 +174,7 @@ if ( $args['_entries_gap'] ) {
 			<?php endif; ?>
 
 			<?php if ( $args['_dots'] ) : ?>
-				<?php for ( $j = 0; $j < $i; $j ++ ) : ?>
+				<?php for ( $j = 0; $j < $i; $j++ ) : ?>
 					<button class="spider__dot" data-id="<?php echo esc_attr( $j ); ?>"><?php echo esc_html( $j ); ?></button>
 				<?php endfor; ?>
 			<?php endif; ?>

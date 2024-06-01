@@ -3,13 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 // phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-$self = isset( $this ) ? $this : false;
+$me = isset( $this ) ? $this : false;
 // phpcs:enable
-if ( ! $self ) {
+if ( ! $me ) {
 	return;
 }
 
@@ -27,11 +27,11 @@ if ( ! $instance ) {
 
 <div class="snow-monkey-taxonomy-posts-widget">
 	<p>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'snow-monkey' ); ?></label><br>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title', 'snow-monkey' ); ?></label><br>
 		<input
 			type="text"
-			name="<?php echo esc_attr( $self->get_field_name( 'title' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'title' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'title' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'title' ) ); ?>"
 			class="widefat"
 			value="<?php echo esc_attr( $instance['title'] ); ?>"
 		>
@@ -48,54 +48,54 @@ if ( ! $instance ) {
 		);
 
 		$all_terms = array();
-		foreach ( $taxonomies as $_taxonomy ) {
-			$all_terms[ $_taxonomy ] = get_terms(
-				$_taxonomy,
+		foreach ( $taxonomies as $taxonomy_name ) {
+			$all_terms[ $taxonomy_name ] = get_terms(
 				array(
-					'parent' => 0,
+					'taxonomy' => $taxonomy_name,
+					'parent'   => 0,
 				)
 			);
 		}
 		?>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Displayed term', 'snow-monkey' ); ?></label><br>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Displayed term', 'snow-monkey' ); ?></label><br>
 		<select
-			name="<?php echo esc_attr( $self->get_field_name( 'taxonomy' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'taxonomy' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'taxonomy' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'taxonomy' ) ); ?>"
 			class="widefat"
 		>
 			<option value=""></option>
-			<?php foreach ( $all_terms as $taxonomy_id => $terms ) : ?>
-				<optgroup label="<?php echo esc_attr( get_taxonomy( $taxonomy_id )->label ); ?>">
+			<?php foreach ( $all_terms as $taxonomy_name => $terms ) : ?>
+				<optgroup label="<?php echo esc_attr( get_taxonomy( $taxonomy_name )->label ); ?>">
 					<?php
 					if ( ! function_exists( 'snow_monkey_taxonomy_posts_display_children' ) ) {
 						/**
 						 * Display options of select elements of the taxonomy
 						 *
-						 * @param int     $taxonomy_id The taxonomy ID.
+						 * @param int     $taxonomy_name The taxonomy name.
 						 * @param int     $term_id The term ID.
 						 * @param boolean $saved_term Selected term.
 						 * @param int     $hierarchy Hierarchy level.
 						 * @return void
 						 */
-						function snow_monkey_taxonomy_posts_display_children( $taxonomy_id, $term_id, $saved_term, $hierarchy = 0 ) {
+						function snow_monkey_taxonomy_posts_display_children( $taxonomy_name, $term_id, $saved_term, $hierarchy = 0 ) {
 							$terms = get_terms(
-								$taxonomy_id,
 								array(
-									'parent' => $term_id,
+									'taxonomy' => $taxonomy_name,
+									'parent'   => $term_id,
 								)
 							);
 							?>
 							<?php foreach ( $terms as $term ) : ?>
-								<?php $value = $taxonomy_id . '@' . $term->term_id; ?>
+								<?php $value = $taxonomy_name . '@' . $term->term_id; ?>
 								<option value="<?php echo esc_attr( $value ); ?>" <?php selected( $saved_term, $value ); ?>>
 									<?php echo esc_html( str_repeat( '—', $hierarchy ) ); ?> <?php echo esc_html( $term->name ); ?>
 								</option>
-								<?php snow_monkey_taxonomy_posts_display_children( $taxonomy_id, $term->term_id, $saved_term, $hierarchy + 1 ); ?>
+								<?php snow_monkey_taxonomy_posts_display_children( $taxonomy_name, $term->term_id, $saved_term, $hierarchy + 1 ); ?>
 							<?php endforeach; ?>
 							<?php
 						}
 					}
-					snow_monkey_taxonomy_posts_display_children( $taxonomy_id, 0, $instance['taxonomy'] );
+					snow_monkey_taxonomy_posts_display_children( $taxonomy_name, 0, $instance['taxonomy'] );
 					?>
 				</optgroup>
 			<?php endforeach; ?>
@@ -103,11 +103,11 @@ if ( ! $instance ) {
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'posts-per-page' ) ); ?>"><?php esc_html_e( 'Number of posts', 'snow-monkey' ); ?></label><br>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'posts-per-page' ) ); ?>"><?php esc_html_e( 'Number of posts', 'snow-monkey' ); ?></label><br>
 		<input
 			type="number"
-			name="<?php echo esc_attr( $self->get_field_name( 'posts-per-page' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'posts-per-page' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'posts-per-page' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'posts-per-page' ) ); ?>"
 			value="<?php echo esc_attr( $instance['posts-per-page'] ); ?>"
 			step="1"
 			min="1"
@@ -115,10 +115,10 @@ if ( ! $instance ) {
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'layout' ) ); ?>"><?php esc_html_e( 'Layout', 'snow-monkey' ); ?></label><br>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'layout' ) ); ?>"><?php esc_html_e( 'Layout', 'snow-monkey' ); ?></label><br>
 		<select
-			name="<?php echo esc_attr( $self->get_field_name( 'layout' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'layout' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'layout' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'layout' ) ); ?>"
 			class="widefat"
 		>
 			<?php
@@ -129,7 +129,7 @@ if ( ! $instance ) {
 				'text2'       => __( 'Text 2', 'snow-monkey' ),
 				'panel'       => __( 'Panels', 'snow-monkey' ),
 				'carousel'    => sprintf(
-					// translators: %1$s: entries layout
+					// translators: %1$s: entries layout.
 					__( 'Carousel (%1$s)', 'snow-monkey' ),
 					__( 'Rich media', 'snow-monkey' )
 				),
@@ -143,36 +143,36 @@ if ( ! $instance ) {
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'link-url' ) ); ?>"><?php esc_html_e( 'Link URL', 'snow-monkey' ); ?></label><br>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'link-url' ) ); ?>"><?php esc_html_e( 'Link URL', 'snow-monkey' ); ?></label><br>
 		<input
 			type="text"
-			name="<?php echo esc_attr( $self->get_field_name( 'link-url' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'link-url' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'link-url' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'link-url' ) ); ?>"
 			class="widefat"
 			value="<?php echo esc_attr( $instance['link-url'] ); ?>"
 		>
 	</p>
 
 	<p>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'link-text' ) ); ?>"><?php esc_html_e( 'Link text', 'snow-monkey' ); ?></label><br>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'link-text' ) ); ?>"><?php esc_html_e( 'Link text', 'snow-monkey' ); ?></label><br>
 		<input
 			type="text"
-			name="<?php echo esc_attr( $self->get_field_name( 'link-text' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'link-text' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'link-text' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'link-text' ) ); ?>"
 			class="widefat"
 			value="<?php echo esc_attr( $instance['link-text'] ); ?>"
 		>
 	</p>
 
 	<p>
-		<input type="hidden" name="<?php echo esc_attr( $self->get_field_name( 'ignore-sticky-posts' ) ); ?>" value="0">
+		<input type="hidden" name="<?php echo esc_attr( $me->get_field_name( 'ignore-sticky-posts' ) ); ?>" value="0">
 		<input
 			type="checkbox"
-			name="<?php echo esc_attr( $self->get_field_name( 'ignore-sticky-posts' ) ); ?>"
-			id="<?php echo esc_attr( $self->get_field_id( 'ignore-sticky-posts' ) ); ?>"
+			name="<?php echo esc_attr( $me->get_field_name( 'ignore-sticky-posts' ) ); ?>"
+			id="<?php echo esc_attr( $me->get_field_id( 'ignore-sticky-posts' ) ); ?>"
 			value="1"
 			<?php checked( 1, $instance['ignore-sticky-posts'] ); ?>
 		>
-		<label for="<?php echo esc_attr( $self->get_field_id( 'ignore-sticky-posts' ) ); ?>"><?php esc_html_e( 'Ignore sticky posts', 'snow-monkey' ); ?></label>
+		<label for="<?php echo esc_attr( $me->get_field_id( 'ignore-sticky-posts' ) ); ?>"><?php esc_html_e( 'Ignore sticky posts', 'snow-monkey' ); ?></label>
 	</p>
 </div>

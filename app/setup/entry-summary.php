@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 6.0.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
@@ -14,7 +14,7 @@ use Framework\Helper;
 remove_filter( 'get_the_excerpt', 'wp_trim_excerpt' );
 add_filter(
 	'get_the_excerpt',
-	function( $excerpt ) {
+	function ( $excerpt ) {
 		if ( $excerpt ) {
 			return $excerpt;
 		}

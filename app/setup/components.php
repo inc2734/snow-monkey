@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Awesome_Components\Awesome_Components;
@@ -17,7 +17,7 @@ if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
 
 	add_action(
 		'wp_enqueue_scripts',
-		function() {
+		function () {
 			wp_enqueue_style(
 				Helper::get_main_style_handle() . '-wpac',
 				get_theme_file_uri( '/assets/css/wpac/app.css' ),
@@ -29,7 +29,7 @@ if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
 
 	add_action(
 		'after_setup_theme',
-		function() {
+		function () {
 			add_editor_style( array( '/assets/css/wpac/app.css' ) );
 		}
 	);
@@ -43,7 +43,7 @@ if ( apply_filters( 'snow_monkey_use_awesome_components', false ) ) {
  */
 add_filter(
 	'inc2734_wp_awesome_components_register_components',
-	function( $components ) {
+	function ( $components ) {
 		foreach ( $components as $key => $component ) {
 			if ( 'btn' === $key || 'btn--full' === $key ) {
 				$component          = str_replace( 'wpac-btn', 'wpac-btn c-btn', $component );

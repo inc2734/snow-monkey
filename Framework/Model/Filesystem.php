@@ -3,12 +3,12 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.0
+ * @version 25.4.6
  */
 
 namespace Framework\Model;
 
-require_once( ABSPATH . 'wp-admin/includes/file.php' );
+require_once ABSPATH . 'wp-admin/includes/file.php';
 
 class Filesystem {
 
@@ -61,6 +61,25 @@ class Filesystem {
 	}
 
 	/**
+	 * Checks if a file or directory is writable.
+	 *
+	 * @param string $filepath The file path.
+	 * @return boolean
+	 */
+	public static function is_writable( $filepath ) {
+		if ( ! file_exists( $filepath ) ) {
+			return false;
+		}
+
+		$filesystem = static::start();
+		if ( $filesystem ) {
+			$is_writable = $filesystem->is_writable( $filepath );
+		}
+		static::end();
+		return $is_writable;
+	}
+
+	/**
 	 * Read the contents of $filepath.
 	 *
 	 * @param string $filepath The file path.
@@ -97,7 +116,7 @@ class Filesystem {
 		static::end();
 
 		if ( ! $result ) {
-			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to write to %1$s.', $filepath ) );
+			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to write to %1$s.', esc_html( $filepath ) ) );
 		}
 
 		return $result;
@@ -124,7 +143,7 @@ class Filesystem {
 		static::end();
 
 		if ( ! $result ) {
-			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to remove to %1$s.', $filepath ) );
+			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to remove to %1$s.', esc_html( $filepath ) ) );
 		}
 
 		return $result;
@@ -138,7 +157,7 @@ class Filesystem {
 	 * @throws \RuntimeException If the creation of the directory fails.
 	 */
 	public static function mkdir( $target ) {
-		if ( is_writable( $target ) ) {
+		if ( static::is_writable( $target ) ) {
 			return true;
 		}
 
@@ -147,11 +166,11 @@ class Filesystem {
 		}
 
 		try {
-			if ( ! is_writable( dirname( $target ) ) ) {
+			if ( ! static::is_writable( dirname( $target ) ) ) {
 				throw new \RuntimeException( sprintf( '[Snow Monkey] %1$s is not writable.', dirname( $target ) ) );
 			}
 		} catch ( \Exception $e ) {
-			echo $e->getMessage();
+			echo esc_html( $e->getMessage() );
 			return false;
 		}
 
@@ -164,7 +183,7 @@ class Filesystem {
 				throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to mkdir to %1$s.', $target ) );
 			}
 		} catch ( \Exception $e ) {
-			echo $e->getMessage();
+			echo esc_html( $e->getMessage() );
 		}
 
 		return $result;

@@ -3,14 +3,14 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 25.4.6
  */
 
 use Framework\Helper;
 
 add_action(
 	'wp_enqueue_scripts',
-	function() {
+	function () {
 		if ( ! get_theme_mod( 'display-page-top' ) ) {
 			return;
 		}

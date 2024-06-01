@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  *
  * renamed: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php
  */
@@ -23,7 +23,7 @@ Framework::control(
 			'false' => __( 'Wide width', 'snow-monkey' ),
 			'true'  => __( 'Slim width', 'snow-monkey' ),
 		),
-		'active_callback' => function() {
+		'active_callback' => function () {
 			return Helper::is_active_sidebar( 'overlay-widget-area' );
 		},
 	)

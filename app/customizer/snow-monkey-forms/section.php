@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ Framework::section(
 	array(
 		'title'           => __( 'Snow Monkey Forms', 'snow-monkey' ),
 		'priority'        => 1080,
-		'active_callback' => function() {
+		'active_callback' => function () {
 			return defined( 'SNOW_MONKEY_FORMS_PATH' );
 		},
 	)

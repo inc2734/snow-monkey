@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  *
  * renamed: app/customizer/design/sections/base-design/controls/custom-logo-scale.php
  */
@@ -22,7 +22,7 @@ Framework::control(
 			'min' => 1,
 			'max' => 50,
 		),
-		'active_callback' => function() {
+		'active_callback' => function () {
 			if ( ! Helper::use_auto_custom_logo_size() ) {
 				return false;
 			}
