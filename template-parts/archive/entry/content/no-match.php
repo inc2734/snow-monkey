@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 25.4.6
  *
  * renamed: template-parts/archive/entry/content/content-no-match.php
  */
@@ -15,7 +15,8 @@ $args = wp_parse_args(
 	$args,
 	// phpcs:enable
 	array(
-		'_message' => __( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'snow-monkey' ),
+		'_display_search_form' => true,
+		'_message'             => __( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'snow-monkey' ),
 	)
 );
 ?>
@@ -31,7 +32,11 @@ $args = wp_parse_args(
 		</p>
 	<?php endif; ?>
 
-	<?php Helper::get_template_part( 'template-parts/common/search-form', 'no-match' ); ?>
+	<?php
+	if ( $args['_display_search_form'] ) {
+		Helper::get_template_part( 'template-parts/common/search-form', 'no-match' );
+	}
+	?>
 
 	<?php do_action( 'snow_monkey_append_archive_entry_content' ); ?>
 </div>
