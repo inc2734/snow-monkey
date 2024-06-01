@@ -2,3 +2,9 @@
 .is-layout-flow {
 	@extend %entry-content-theme;
 }
+
+.is-layout-grid {
+	> li {
+		margin-top: 0;
+	}
+}

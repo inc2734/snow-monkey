@@ -16,10 +16,10 @@
 		@extend %table;
 	}
 
-	> ul li + li,
-	> ol li + li,
-	> ul * > li:first-child,
-	> ol * > li:first-child {
+	> :where(ul) :where(li) + :where(li),
+	> :where(ol) :where(li) + :where(li),
+	> :where(ul) * > :where(li:first-child),
+	> :where(ol) * > :where(li:first-child) {
 		margin-top: var(--_margin-2);
 	}
 
