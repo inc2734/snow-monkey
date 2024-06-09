@@ -42,12 +42,23 @@ add_filter(
 add_filter(
 	'inc2734_github_theme_updater_request_url_inc2734/snow-monkey',
 	function ( $url, $user_name, $repository, $version ) {
-		return ! $version
-			? 'https://snow-monkey.2inc.org/github-api/response.json'
-			: sprintf(
-				'https://snow-monkey.2inc.org/github-api/packages/%1$s/response.json',
-				$version
+		$xserver_register_key = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
+
+		if ( $xserver_register_key ) {
+			return sprintf(
+				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/update-xserver/%1$s?repository=snow-monkey&version=%2$s',
+				esc_attr( $xserver_register_key ),
+				esc_attr( $version )
 			);
+		}
+
+		$license_key = \Framework\Controller\Manager::get_option( 'license-key' );
+
+		return sprintf(
+			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/update/%1$s?repository=snow-monkey&version=%2$s',
+			esc_attr( $license_key ),
+			esc_attr( $version )
+		);
 	},
 	10,
 	4
