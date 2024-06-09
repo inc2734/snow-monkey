@@ -136,12 +136,6 @@ html :where(.editor-styles-wrapper) {
 	}
 }
 
-.wp-block-embed {
-	.components-sandbox {
-		margin-bottom: -8px; // @todo
-	}
-}
-
 .block-editor__container img {
 	max-height: 100%;
 	max-width:100%;
