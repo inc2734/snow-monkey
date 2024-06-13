@@ -50,18 +50,19 @@
 			}
 		}
 
-		.comment-form-cookies-consent {
+		.comment-form-cookies-consent,
+		.comment-subscription-form {
+			display: flex;
+			gap: var(--_margin-2);
 			overflow: hidden;
 
-			[id="wp-comment-cookies-consent"] {
-				margin: .35em .5em 0 0;
-				float: left;
+			> * {
+				margin: 0;
 			}
+		}
 
-			[for="wp-comment-cookies-consent"] {
-				margin-bottom: 0;
-				overflow: hidden;
-			}
+		.comment-subscription-form + .comment-subscription-form {
+			margin-top: var(--_margin-2);
 		}
 
 		.#{ $_prefix }c-form-control {
