@@ -801,16 +801,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "5.1.4",
+            "version": "5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "f1870ecfafc7e56405300aa8245565fa7d10b6f2"
+                "reference": "8e30750df188999040d619710e739d595e5670b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/f1870ecfafc7e56405300aa8245565fa7d10b6f2",
-                "reference": "f1870ecfafc7e56405300aa8245565fa7d10b6f2",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/8e30750df188999040d619710e739d595e5670b1",
+                "reference": "8e30750df188999040d619710e739d595e5670b1",
                 "shasum": ""
             },
             "require": {
@@ -842,9 +842,9 @@
             "description": "A library for SEO of WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-seo/issues",
-                "source": "https://github.com/inc2734/wp-seo/tree/5.1.4"
+                "source": "https://github.com/inc2734/wp-seo/tree/5.1.5"
             },
-            "time": "2024-06-05T15:37:22+00:00"
+            "time": "2024-06-13T14:05:22+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
@@ -1091,16 +1091,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.11.1",
+            "version": "1.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "7284c22080590fb39f2ffa3e9057f10a4ddd0e0c"
+                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/7284c22080590fb39f2ffa3e9057f10a4ddd0e0c",
-                "reference": "7284c22080590fb39f2ffa3e9057f10a4ddd0e0c",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
+                "reference": "3a6b9a42cd8f8771bd4295d13e1423fa7f3d942c",
                 "shasum": ""
             },
             "require": {
@@ -1108,11 +1108,12 @@
             },
             "conflict": {
                 "doctrine/collections": "<1.6.8",
-                "doctrine/common": "<2.13.3 || >=3,<3.2.2"
+                "doctrine/common": "<2.13.3 || >=3 <3.2.2"
             },
             "require-dev": {
                 "doctrine/collections": "^1.6.8",
                 "doctrine/common": "^2.13.3 || ^3.2.2",
+                "phpspec/prophecy": "^1.10",
                 "phpunit/phpunit": "^7.5.20 || ^8.5.23 || ^9.5.13"
             },
             "type": "library",
@@ -1138,7 +1139,7 @@
             ],
             "support": {
                 "issues": "https://github.com/myclabs/DeepCopy/issues",
-                "source": "https://github.com/myclabs/DeepCopy/tree/1.11.1"
+                "source": "https://github.com/myclabs/DeepCopy/tree/1.12.0"
             },
             "funding": [
                 {
@@ -1146,7 +1147,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-03-08T13:26:56+00:00"
+            "time": "2024-06-12T14:39:25+00:00"
         },
         {
             "name": "nikic/php-parser",
