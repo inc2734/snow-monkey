@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "30e518a4254f3dc89a13483221000242",
+    "content-hash": "39046924635e7b86b843f7f2de2ad69d",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -801,16 +801,16 @@
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "5.1.5",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "8e30750df188999040d619710e739d595e5670b1"
+                "reference": "3ee30acd795b4757f91e1f9c3b0578c46c22491c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/8e30750df188999040d619710e739d595e5670b1",
-                "reference": "8e30750df188999040d619710e739d595e5670b1",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/3ee30acd795b4757f91e1f9c3b0578c46c22491c",
+                "reference": "3ee30acd795b4757f91e1f9c3b0578c46c22491c",
                 "shasum": ""
             },
             "require": {
@@ -842,9 +842,9 @@
             "description": "A library for SEO of WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-seo/issues",
-                "source": "https://github.com/inc2734/wp-seo/tree/5.1.5"
+                "source": "https://github.com/inc2734/wp-seo/tree/5.2.0"
             },
-            "time": "2024-06-13T14:05:22+00:00"
+            "time": "2024-06-24T00:18:22+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
