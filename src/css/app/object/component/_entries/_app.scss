@@ -59,6 +59,10 @@
 			padding-right: 0;
 			padding-left: 0;
 		}
+
+		.#{ $_prefix }c-entry-summary__meta .c-meta {
+			justify-content: start;
+		}
 	}
 
 	&--simple,
