@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 25.4.9
  */
 
 namespace Framework\Controller;
@@ -128,12 +128,12 @@ class Manager {
 				}
 
 				if ( isset( $option['license-key'] ) && static::get_option( 'license-key' ) !== $option['license-key'] ) {
-					delete_transient( 'snow-monkey-license-status' );
+					delete_transient( 'snow-monkey-license-status-' . static::get_option( 'license-key' ) );
 				}
 
 				// XSERVER register key is not validated if a license key is entered.
 				if ( isset( $option['xserver-register-key'] ) && static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
-					delete_transient( 'snow-monkey-xserver-register-status' );
+					delete_transient( 'snow-monkey-xserver-register-status-' . static::get_option( 'xserver-register-key' ) );
 
 					if ( ! empty( $option['license-key'] ) ) {
 						$option['xserver-register-key'] = '';
@@ -244,13 +244,14 @@ class Manager {
 	 * @return boolean
 	 */
 	public static function get_license_status( $license_key ) {
-		$transient = get_transient( 'snow-monkey-license-status' );
+		$transient_name = 'snow-monkey-license-status-' . $license_key;
+		$transient      = get_transient( $transient_name );
 		if ( false !== $transient ) {
 			return $transient;
 		}
 
 		$status = static::_request_license_validate( $license_key );
-		set_transient( 'snow-monkey-license-status', $status ? $status : 'false', DAY_IN_SECONDS );
+		set_transient( $transient_name, $status ? $status : 'false', DAY_IN_SECONDS );
 		return $status;
 	}
 
@@ -295,13 +296,14 @@ class Manager {
 	 * @return boolean
 	 */
 	public static function get_xserver_register_status( $xserver_register_key ) {
-		$transient = get_transient( 'snow-monkey-xserver-register-status' );
+		$transient_name = 'snow-monkey-xserver-register-status-' . $xserver_register_key;
+		$transient      = get_transient( $transient_name );
 		if ( false !== $transient ) {
 			return $transient;
 		}
 
 		$status = static::_request_license_validate_xserver( $xserver_register_key );
-		set_transient( 'snow-monkey-xserver-register-status', $status ? $status : 'false', DAY_IN_SECONDS );
+		set_transient( $transient_name, $status ? $status : 'false', DAY_IN_SECONDS );
 		return $status;
 	}
 

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 25.4.9
  */
 
 use Framework\Helper;
@@ -62,26 +62,22 @@ add_action(
 			return;
 		}
 
-		?>
-		<div class="notice notice-warning">
-			<p>
-				<?php
-				echo wp_kses_post(
-					sprintf(
-						// translators: %1$s: <a> for Snow Monkey website, %2$s: </a> for Snow Monkey website, %3$s: <a> for Snow Monkey product page, %4$s: </a> for Snow Monkey product page.
-						__(
-							'You are currently using the %1$sSnow Monkey%2$s theme (trial version). The trial version will not be updated (no features will be added, no bug fixes or security improvements will be made). With the full version, you will receive updates, using support forum, access to limited articles, and other services. You can sign up %3$shere%4$s.',
-							'snow-monkey'
-						),
-						'<a href="https://snow-monkey.2inc.org" target="_blank" rel="noreferrer">',
-						'</a>',
-						'<a href="https://snow-monkey.2inc.org/product/snow-monkey/" target="_blank" rel="noreferrer">',
-						'</a>'
-					)
-				);
-				?>
-			</p>
-		</div>
-		<?php
+		wp_admin_notice(
+			sprintf(
+				// translators: %1$s: <a> for Snow Monkey website, %2$s: </a> for Snow Monkey website, %3$s: <a> for Snow Monkey product page, %4$s: </a> for Snow Monkey product page.
+				__(
+					'You are currently using the %1$sSnow Monkey%2$s theme (trial version). The trial version will not be updated (no features will be added, no bug fixes or security improvements will be made). With the full version, you will receive updates, using support forum, access to limited articles, and other services. You can sign up %3$shere%4$s.',
+					'snow-monkey'
+				),
+				'<a href="https://snow-monkey.2inc.org" target="_blank" rel="noreferrer">',
+				'</a>',
+				'<a href="https://snow-monkey.2inc.org/product/snow-monkey/" target="_blank" rel="noreferrer">',
+				'</a>'
+			),
+			array(
+				'type'        => 'warning',
+				'dismissible' => false,
+			)
+		);
 	}
 );
