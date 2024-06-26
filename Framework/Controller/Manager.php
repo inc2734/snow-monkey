@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.9
+ * @version 25.4.10
  */
 
 namespace Framework\Controller;
@@ -33,6 +33,14 @@ class Manager {
 		'license-key'          => null,
 		'xserver-register-key' => null,
 	);
+
+	/**
+	 * If a value is stored in License key and Xserver register key,
+	 * use this value instead, since it is secret.
+	 *
+	 * @var string
+	 */
+	const SAVED_VALUE = 'THIS_IS_DUMMY_SAVED_VALUE_BECAUSE_THIS_VALUE_IS_SECRET';
 
 	/**
 	 * constructor
@@ -127,15 +135,23 @@ class Manager {
 					return array();
 				}
 
-				if ( isset( $option['license-key'] ) && static::get_option( 'license-key' ) !== $option['license-key'] ) {
+				$posted_license_key     = isset( $option['license-key'] ) ? $option['license-key'] : false;
+				$is_license_key_through = isset( $posted_license_key ) && static::SAVED_VALUE === $posted_license_key;
+				$option['license-key']  = $is_license_key_through ? static::get_option( 'license-key' ) : $posted_license_key;
+
+				if ( static::get_option( 'license-key' ) !== $option['license-key'] ) {
 					delete_transient( 'snow-monkey-license-status-' . static::get_option( 'license-key' ) );
 				}
 
+				$posted_xserver_register_key    = isset( $option['xserver-register-key'] ) ? $option['xserver-register-key'] : false;
+				$is_xserver_register_through    = isset( $posted_xserver_register_key ) && static::SAVED_VALUE === $posted_xserver_register_key;
+				$option['xserver-register-key'] = $is_xserver_register_through ? static::get_option( 'xserver-register-key' ) : $posted_xserver_register_key;
+
 				// XSERVER register key is not validated if a license key is entered.
-				if ( isset( $option['xserver-register-key'] ) && static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
+				if ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
 					delete_transient( 'snow-monkey-xserver-register-status-' . static::get_option( 'xserver-register-key' ) );
 
-					if ( ! empty( $option['license-key'] ) ) {
+					if ( $option['license-key'] ) {
 						$option['xserver-register-key'] = '';
 					}
 				}
@@ -173,11 +189,11 @@ class Manager {
 				<div style="display: flex; align-items: center; gap: .5rem">
 					<div style="flex: 1 1 auto">
 						<input
-							type="text"
+							type="password"
 							id="license-key"
 							class="widefat"
 							name="<?php echo esc_attr( self::SETTINGS_NAME ); ?>[license-key]"
-							value="<?php echo esc_attr( static::get_option( 'license-key' ) ); ?>"
+							value="<?php echo esc_attr( static::get_option( 'license-key' ) ? static::SAVED_VALUE : '' ); ?>"
 						>
 					</div>
 					<div style="flex: 0 0 auto">
@@ -215,11 +231,11 @@ class Manager {
 				<div style="display: flex; align-items: center; gap: .5rem">
 					<div style="flex: 1 1 auto">
 						<input
-							type="text"
+							type="password"
 							id="xserver-register-key"
 							class="widefat"
 							name="<?php echo esc_attr( self::SETTINGS_NAME ); ?>[xserver-register-key]"
-							value="<?php echo esc_attr( static::get_option( 'xserver-register-key' ) ); ?>"
+							value="<?php echo esc_attr( static::get_option( 'xserver-register-key' ) ? static::SAVED_VALUE : '' ); ?>"
 						>
 					</div>
 					<div style="flex: 0 0 auto">
@@ -241,9 +257,13 @@ class Manager {
 	 * Get license status.
 	 *
 	 * @param string $license_key The license key.
-	 * @return boolean
+	 * @return mixed false|'true'|'false'
 	 */
 	public static function get_license_status( $license_key ) {
+		if ( ! $license_key ) {
+			return false;
+		}
+
 		$transient_name = 'snow-monkey-license-status-' . $license_key;
 		$transient      = get_transient( $transient_name );
 		if ( false !== $transient ) {
@@ -259,10 +279,14 @@ class Manager {
 	 * Validate checker.
 	 *
 	 * @param string $license_key The license key.
-	 * @return boolean
+	 * @return mixed false|'true'
 	 */
 	protected static function _request_license_validate( $license_key ) {
 		global $wp_version;
+
+		if ( ! $license_key ) {
+			return false;
+		}
 
 		$response = wp_remote_get(
 			sprintf(
@@ -293,9 +317,13 @@ class Manager {
 	 * Get Xserver register status.
 	 *
 	 * @param string $xserver_register_key The license key.
-	 * @return boolean
+	 * @return mixed false|'true'|'false'
 	 */
 	public static function get_xserver_register_status( $xserver_register_key ) {
+		if ( ! $xserver_register_key ) {
+			return false;
+		}
+
 		$transient_name = 'snow-monkey-xserver-register-status-' . $xserver_register_key;
 		$transient      = get_transient( $transient_name );
 		if ( false !== $transient ) {
@@ -311,10 +339,14 @@ class Manager {
 	 * Validate checker.
 	 *
 	 * @param string $xserver_register_key The XSERVER register key.
-	 * @return boolean
+	 * @return mixed false|'true'
 	 */
 	protected static function _request_license_validate_xserver( $xserver_register_key ) {
 		global $wp_version;
+
+		if ( ! $xserver_register_key ) {
+			return false;
+		}
 
 		$response = wp_remote_get(
 			sprintf(
