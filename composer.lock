@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39046924635e7b86b843f7f2de2ad69d",
+    "content-hash": "01116b205403b36f816126227483ccbc",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "14.1.2",
+            "version": "15.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "bab9edde129a0c9d6a9132a24eb7c1cf5a7c0873"
+                "reference": "759503ce76bd86335fdb1211f0b64263a733b7ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/bab9edde129a0c9d6a9132a24eb7c1cf5a7c0873",
-                "reference": "bab9edde129a0c9d6a9132a24eb7c1cf5a7c0873",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/759503ce76bd86335fdb1211f0b64263a733b7ed",
+                "reference": "759503ce76bd86335fdb1211f0b64263a733b7ed",
                 "shasum": ""
             },
             "require": {
@@ -123,8 +123,9 @@
                 "php": ">=7.4"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
-                "wp-coding-standards/wpcs": "^2.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "wp-coding-standards/wpcs": "^3.1",
                 "yoast/phpunit-polyfills": "^1.0"
             },
             "type": "library",
@@ -146,9 +147,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/14.1.2"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/15.0.0"
             },
-            "time": "2023-08-04T15:38:22+00:00"
+            "time": "2024-07-02T06:10:34+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -1151,16 +1152,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.0.2",
+            "version": "v5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13"
+                "reference": "683130c2ff8c2739f4822ff7ac5c873ec529abd1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/139676794dc1e9231bf7bcd123cfc0c99182cb13",
-                "reference": "139676794dc1e9231bf7bcd123cfc0c99182cb13",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/683130c2ff8c2739f4822ff7ac5c873ec529abd1",
+                "reference": "683130c2ff8c2739f4822ff7ac5c873ec529abd1",
                 "shasum": ""
             },
             "require": {
@@ -1171,7 +1172,7 @@
             },
             "require-dev": {
                 "ircmaxell/php-yacc": "^0.0.7",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+                "phpunit/phpunit": "^9.0"
             },
             "bin": [
                 "bin/php-parse"
@@ -1203,9 +1204,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.2"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.1.0"
             },
-            "time": "2024-03-05T20:51:40+00:00"
+            "time": "2024-07-01T20:03:41+00:00"
         },
         {
             "name": "phar-io/manifest",
