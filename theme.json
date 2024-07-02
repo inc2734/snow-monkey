@@ -63,40 +63,41 @@
 			]
 		},
 		"spacing": {
+			"defaultSpacingSizes": false,
 			"units": [ "px", "em", "rem", "vh", "vw", "%" ],
 			"spacingSizes": [
 				{
-					"name": "-2",
+					"name": "XS",
 					"slug": "20",
 					"size": "var(--_s-2)"
 				},
 				{
-					"name": "-1",
+					"name": "S",
 					"slug": "30",
 					"size": "var(--_s-1)"
 				},
 				{
-					"name": "1",
+					"name": "M",
 					"slug": "40",
 					"size": "var(--_s1)"
 				},
 				{
-					"name": "2",
+					"name": "L",
 					"slug": "50",
 					"size": "var(--_s2)"
 				},
 				{
-					"name": "3",
+					"name": "XL",
 					"slug": "60",
 					"size": "var(--_s3)"
 				},
 				{
-					"name": "4",
+					"name": "2XL",
 					"slug": "70",
 					"size": "var(--_s4)"
 				},
 				{
-					"name": "5",
+					"name": "3XL",
 					"slug": "80",
 					"size": "var(--_s5)"
 				}
