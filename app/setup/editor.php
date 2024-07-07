@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 26.0.0
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -42,8 +42,12 @@ add_filter(
 );
 
 add_action(
-	'enqueue_block_editor_assets',
+	'enqueue_block_assets',
 	function () {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		$dependencies = Helper::generate_style_dependencies(
 			array(
 				'wp-block-library',
@@ -188,8 +192,12 @@ add_action(
  * Deregister wp-block-library-theme
  */
 add_action(
-	'enqueue_block_editor_assets',
+	'enqueue_block_assets',
 	function () {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		wp_deregister_style( 'wp-block-library-theme' );
 		wp_register_style( 'wp-block-library-theme', null, array(), 1 );
 	}

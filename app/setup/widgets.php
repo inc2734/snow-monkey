@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 26.0.0
  */
 
 use Framework\Helper;
@@ -55,8 +55,12 @@ add_action(
  * Enqueue assets in block editor.
  */
 add_action(
-	'enqueue_block_editor_assets',
+	'enqueue_block_assets',
 	function () {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
 		wp_register_style(
 			Helper::get_main_style_handle() . '-custom-widgets',

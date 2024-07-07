@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 26.0.0
  */
 
 namespace Framework\Model;
@@ -62,7 +62,7 @@ class Design_Skin {
 		add_action( 'wp_loaded', array( $this, '_load_bootstrap' ) );
 		add_action( 'wp_enqueue_scripts', array( $this, '_load_style' ), 100 );
 		add_filter( 'mce_css', array( $this, '_load_editor_style' ) );
-		add_action( 'enqueue_block_editor_assets', array( $this, '_load_gutenberg_style' ) );
+		add_action( 'enqueue_block_assets', array( $this, '_load_gutenberg_style' ) );
 		add_action( 'customize_controls_enqueue_scripts', array( $this, '_load_customize_script' ) );
 	}
 
@@ -155,6 +155,10 @@ class Design_Skin {
 	 * @return void
 	 */
 	public function _load_gutenberg_style() {
+		if ( ! is_admin() ) {
+			return;
+		}
+
 		if ( ! $this->_is_active() ) {
 			return;
 		}

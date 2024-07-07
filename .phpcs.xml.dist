@@ -32,7 +32,7 @@
 		<include-pattern>*\.php$</include-pattern>
 	</rule>
 
-	<config name="minimum_wp_version" value="6.5"/>
+	<config name="minimum_wp_version" value="6.6"/>
 
 	<rule ref="WordPress">
 		<exclude name="WordPress.DB.SlowDBQuery.slow_db_query_tax_query"></exclude>
