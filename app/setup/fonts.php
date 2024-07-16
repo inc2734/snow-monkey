@@ -37,38 +37,40 @@ add_action(
 	}
 );
 
-add_action(
-	'enqueue_block_assets',
-	function () {
-		$base_font = get_theme_mod( 'base-font' );
-		if ( ! $base_font ) {
-			return;
-		}
-
-		$font_weights = get_theme_mod( $base_font . '-font-weight' );
-		if ( ! $font_weights ) {
-			return;
-		}
-
-		$font_weights         = explode( ',', $font_weights );
-		$font_family_settings = Helper::get_font_family_settings();
-
-		$css_arr = array();
-		foreach ( $font_family_settings as $font_family => $font_family_setting ) {
-			if ( empty( $font_family_setting['variation'] ) ) {
-				continue;
+foreach ( array( 'snow_monkey_enqueued_main_style', 'enqueue_block_assets' ) as $hook ) {
+	add_action(
+		$hook,
+		function () {
+			$base_font = get_theme_mod( 'base-font' );
+			if ( ! $base_font ) {
+				return;
 			}
 
-			foreach ( $font_family_setting['variation'] as $weight => $variation ) {
-				if ( ! in_array( (string) $weight, $font_weights, true ) ) {
+			$font_weights = get_theme_mod( $base_font . '-font-weight' );
+			if ( ! $font_weights ) {
+				return;
+			}
+
+			$font_weights         = explode( ',', $font_weights );
+			$font_family_settings = Helper::get_font_family_settings();
+
+			$css_arr = array();
+			foreach ( $font_family_settings as $font_family => $font_family_setting ) {
+				if ( empty( $font_family_setting['variation'] ) ) {
 					continue;
 				}
 
-				$css_arr[] = '@font-face { font-family: "' . $font_family_setting['name'] . '"; font-style: normal; font-weight: ' . $weight . '; src: url("' . $variation['src'] . '") format("woff2"); }';
-			}
-		}
+				foreach ( $font_family_setting['variation'] as $weight => $variation ) {
+					if ( ! in_array( (string) $weight, $font_weights, true ) ) {
+						continue;
+					}
 
-		wp_add_inline_style( Helper::get_main_style_handle() . '-app', implode( '', $css_arr ) );
-	},
-	11
-);
+					$css_arr[] = '@font-face { font-family: "' . $font_family_setting['name'] . '"; font-style: normal; font-weight: ' . $weight . '; src: url("' . $variation['src'] . '") format("woff2"); }';
+				}
+			}
+
+			wp_add_inline_style( Helper::get_main_style_handle() . '-app', implode( '', $css_arr ) );
+		},
+		11
+	);
+}
