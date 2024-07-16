@@ -3,8 +3,10 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 26.0.0
  */
+
+use Framework\Controller\Manager;
 
 /**
  * Get remote block pattern categories.
@@ -123,7 +125,7 @@ function snow_monkey_get_free_remote_block_pattens() {
  * @return array
  */
 function snow_monkey_get_premium_remote_block_pattens() {
-	$license_key = \Framework\Controller\Manager::get_option( 'license-key' );
+	$license_key = Manager::get_option( 'license-key' );
 
 	$url = sprintf(
 		'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns/%1$s',
@@ -139,7 +141,7 @@ function snow_monkey_get_premium_remote_block_pattens() {
  * @return array
  */
 function snow_monkey_get_premium_remote_block_pattens_xserver() {
-	$xserver_register_key = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
+	$xserver_register_key = Manager::get_option( 'xserver-register-key' );
 
 	$url = sprintf(
 		'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns-xserver/%1$s',
@@ -181,17 +183,17 @@ function snow_monkey_register_remote_block_patterns() {
 	if ( false !== $transient ) {
 		$remote_block_patterns = $transient;
 	} else {
-		$license_key           = \Framework\Controller\Manager::get_option( 'license-key' );
-		$xserver_register_key  = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
+		$license_key           = Manager::get_option( 'license-key' );
+		$xserver_register_key  = Manager::get_option( 'xserver-register-key' );
 		$remote_block_patterns = array();
 
 		if ( $license_key ) {
-			$status = \Framework\Controller\Manager::get_license_status( $license_key );
+			$status = Manager::get_license_status( $license_key );
 			if ( 'true' === $status ) {
 				$remote_block_patterns = snow_monkey_get_premium_remote_block_pattens();
 			}
 		} elseif ( $xserver_register_key ) {
-			$status = \Framework\Controller\Manager::get_xserver_register_status( $xserver_register_key );
+			$status = Manager::get_xserver_register_status( $xserver_register_key );
 			if ( 'true' === $status ) {
 				$remote_block_patterns = snow_monkey_get_premium_remote_block_pattens_xserver();
 			}
