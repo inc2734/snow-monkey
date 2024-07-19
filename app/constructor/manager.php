@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.9
+ * @version 26.0.2
  */
 
 use Framework\Controller\Manager;
@@ -38,7 +38,7 @@ add_action(
 		if ( new DateTime( '2024-08-01' ) <= new DateTime( wp_date( 'Y-m-d', null, new DateTimeZone( 'Asia/Tokyo' ) ) ) ) {
 			$message = sprintf(
 				// translators: %1$s: a start tag, %2$s: a end tag, %3$s: a start tag, %4$s: a end tag.
-				__( 'You have not set a valid license key. Setting a license key will allow you to use patterns registered in %3$the pattern library%4$ and update the Snow Monkey theme. If you do not update your theme, you risk the site not displaying properly or leaving vulnerabilities open. A license key is issued when you subscribe to %1$sSnow Monkey subscription%2$s. The license key can be set %5$shere%6$s.', 'snow-monkey' ),
+				__( 'You have not set a valid license key. Setting a license key will allow you to use patterns registered in %3$sthe pattern library%4$s and update the Snow Monkey theme. A license key is issued when you subscribe to %1$sSnow Monkey subscription%2$s. The license key can be set %5$shere%6$s.', 'snow-monkey' ),
 				'<a href="https://snow-monkey.2inc.org/product/snow-monkey/" target="_blank" rel="noreferrer">',
 				'</a>',
 				'<a href="https://snow-monkey.2inc.org/snow-monkey-patterns/" target="_blank" rel="noreferrer">',
@@ -49,7 +49,7 @@ add_action(
 		} else {
 			$message = sprintf(
 				// translators: %1$s: a start tag, %2$s: a end tag, %3$s: a start tag, %4$s: a end tag.
-				__( 'You have not set a valid license key. Setting a license key will allow you to use patterns registered in %3$the pattern library%4$. A license key is issued when you subscribe to %1$sSnow Monkey subscription%2$s. The license key is set %5$shere%6$s.', 'snow-monkey' ),
+				__( 'You have not set a valid license key. Setting a license key will allow you to use patterns registered in %3$sthe pattern library%4$s. A license key is issued when you subscribe to %1$sSnow Monkey subscription%2$s. The license key is set %5$shere%6$s.', 'snow-monkey' ),
 				'<a href="https://snow-monkey.2inc.org/product/snow-monkey/" target="_blank" rel="noreferrer">',
 				'</a>',
 				'<a href="https://snow-monkey.2inc.org/snow-monkey-patterns/" target="_blank" rel="noreferrer">',

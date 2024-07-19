@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2024-06-25 11:03+0900\n"
-"PO-Revision-Date: 2024-06-25 11:04+0900\n"
+"POT-Creation-Date: 2024-07-19 09:55+0900\n"
+"PO-Revision-Date: 2024-07-19 09:56+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -117,58 +117,58 @@ msgstr "フッター5"
 msgid "Default"
 msgstr "デフォルト"
 
-#: Framework/Controller/Manager.php:55 Framework/Controller/Manager.php:62
+#: Framework/Controller/Manager.php:63 Framework/Controller/Manager.php:70
 msgid "Snow Monkey settings"
 msgstr "Snow Monkey 設定"
 
 #. Theme Name of the plugin/theme
-#: Framework/Controller/Manager.php:56 Framework/Helper.php:216
+#: Framework/Controller/Manager.php:64 Framework/Helper.php:216
 #: app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Snow Monkey"
 msgstr "Snow Monkey"
 
-#: Framework/Controller/Manager.php:76
+#: Framework/Controller/Manager.php:84
 msgid "Reset settings"
 msgstr "設定をリセット"
 
-#: Framework/Controller/Manager.php:89
+#: Framework/Controller/Manager.php:97
 msgid "Retrieve patterns from the pattern library"
 msgstr "パターンライブラリーからパターンを再取得する"
 
-#: Framework/Controller/Manager.php:149
+#: Framework/Controller/Manager.php:165
 msgid "Settings"
 msgstr "設定"
 
-#: Framework/Controller/Manager.php:157
+#: Framework/Controller/Manager.php:173
 msgid "License key"
 msgstr "ライセンスキー"
 
-#: Framework/Controller/Manager.php:163 Framework/Controller/Manager.php:205
+#: Framework/Controller/Manager.php:179 Framework/Controller/Manager.php:221
 msgid "Enable"
 msgstr "有効"
 
-#: Framework/Controller/Manager.php:168 Framework/Controller/Manager.php:210
+#: Framework/Controller/Manager.php:184 Framework/Controller/Manager.php:226
 msgid "Disable"
 msgstr "無効"
 
-#: Framework/Controller/Manager.php:188
+#: Framework/Controller/Manager.php:204
 msgid ""
 "If the license key entered is valid, premium block patterns are available."
 msgstr ""
 "入力されたライセンスキーが有効な場合、プレミアムブロックパターンが利用できま"
 "す。"
 
-#: Framework/Controller/Manager.php:189
+#: Framework/Controller/Manager.php:205
 msgid ""
 "If the license key is entered, the Xserver register key setting is not saved."
 msgstr "ライセンスキーを入力した場合、XSERVER 登録キーの設定は保存されません。"
 
-#: Framework/Controller/Manager.php:199
+#: Framework/Controller/Manager.php:215
 msgid "Xserver register key"
 msgstr "XSERVER 登録キー"
 
-#: Framework/Controller/Manager.php:230
+#: Framework/Controller/Manager.php:246
 msgid ""
 "If the Xserver register key entered is valid, premium block patterns are "
 "available."
@@ -176,7 +176,7 @@ msgstr ""
 "入力されたXSERVER 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
 "です。"
 
-#: Framework/Controller/Manager.php:231
+#: Framework/Controller/Manager.php:247
 msgid ""
 "If you are using Xserver integration, enter the Xserver register key in the "
 "Xserver register key entry field without entering anything in the license "
@@ -327,27 +327,26 @@ msgid "Child pages"
 msgstr "このページの子ページ"
 
 #. translators: %1$s: a start tag, %2$s: a end tag, %3$s: a start tag, %4$s: a end tag.
-#: app/constructor/manager.php:36
+#: app/constructor/manager.php:41
+#, php-format
 msgid ""
 "You have not set a valid license key. Setting a license key will allow you "
-"to use patterns registered in %3$the pattern library%4$ and update the Snow "
-"Monkey theme. If you do not update your theme, you risk the site not "
-"displaying properly or leaving vulnerabilities open. A license key is issued "
-"when you subscribe to %1$sSnow Monkey subscription%2$s. The license key can "
-"be set %5$shere%6$s."
+"to use patterns registered in %3$sthe pattern library%4$s and update the "
+"Snow Monkey theme. A license key is issued when you subscribe to %1$sSnow "
+"Monkey subscription%2$s. The license key can be set %5$shere%6$s."
 msgstr ""
-"有効なライセンスキーが設定されていません。ライセンスキーを設定すると%3$sパ"
-"ターンライブラリ%4$sに登録されているパターンを使用できるようになったり、Snow "
-"Monkey テーマのアップデートが可能になります。アップデートをおこなわない場合、"
-"サイトが正しく表示されなくなったり脆弱性が放置されることになる危険性がありま"
-"す。ライセンスキーは %1$sSnow Monkey サブスクリプション%2$sを契約すると発行さ"
-"れます。ライセンスキーの設定は%5$sこちら%6$s。"
+"有効なライセンスキーが設定されていません。ライセンスキーを設定すること"
+"で、%3$sパターンライブラリ%4$sに登録されているパターンを使用したり、Snow "
+"Monkeyのテーマを更新したりすることができるようになります。ライセンスキー"
+"は、%1$sSnow Monkeyサブスクリプション%2$sに加入すると発行されます。ライセンス"
+"キーは%5$sこちら%6$sで設定できます。"
 
 #. translators: %1$s: a start tag, %2$s: a end tag, %3$s: a start tag, %4$s: a end tag.
-#: app/constructor/manager.php:47
+#: app/constructor/manager.php:52
+#, php-format
 msgid ""
 "You have not set a valid license key. Setting a license key will allow you "
-"to use patterns registered in %3$the pattern library%4$. A license key is "
+"to use patterns registered in %3$sthe pattern library%4$s. A license key is "
 "issued when you subscribe to %1$sSnow Monkey subscription%2$s. The license "
 "key is set %5$shere%6$s."
 msgstr ""
@@ -2056,7 +2055,7 @@ msgstr "記事本文の下"
 msgid "These widgets are displayed bottom of the article on posts and pages."
 msgstr "これらのウィジェットは投稿と固定ページの記事本文の下に表示されます。"
 
-#: app/setup/widgets.php:104
+#: app/setup/widgets.php:108
 msgid "This widget is deprecated. It may slow down the page when used."
 msgstr ""
 "このウィジェットは非推奨です。使用するとページの表示が遅くなる可能性がありま"
@@ -2274,6 +2273,21 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#~ msgid ""
+#~ "You have not set a valid license key. Setting a license key will allow "
+#~ "you to use patterns registered in %3$the pattern library%4$ and update "
+#~ "the Snow Monkey theme. If you do not update your theme, you risk the site "
+#~ "not displaying properly or leaving vulnerabilities open. A license key is "
+#~ "issued when you subscribe to %1$sSnow Monkey subscription%2$s. The "
+#~ "license key can be set %5$shere%6$s."
+#~ msgstr ""
+#~ "有効なライセンスキーが設定されていません。ライセンスキーを設定すると%3$sパ"
+#~ "ターンライブラリ%4$sに登録されているパターンを使用できるようになったり、"
+#~ "Snow Monkey テーマのアップデートが可能になります。アップデートをおこなわな"
+#~ "い場合、サイトが正しく表示されなくなったり脆弱性が放置されることになる危険"
+#~ "性があります。ライセンスキーは %1$sSnow Monkey サブスクリプション%2$sを契"
+#~ "約すると発行されます。ライセンスキーの設定は%5$sこちら%6$s。"
 
 #~ msgid "Headers"
 #~ msgstr "ヘッダー"
