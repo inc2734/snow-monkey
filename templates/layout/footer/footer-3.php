@@ -105,7 +105,6 @@ $container_class  = $footer_alignfull ? 'c-fluid-container' : 'c-container';
 				</div>
 			</div>
 		<?php endif; ?>
-	</div>
 
 	<?php do_action( 'snow_monkey_append_footer' ); ?>
 </footer>
