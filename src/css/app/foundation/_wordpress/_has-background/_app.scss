@@ -1,4 +1,5 @@
-:where(.has-background) {
+:where(.has-background),
+:root :where(p.has-background) {
 	padding: var(--_padding1);
 }
 

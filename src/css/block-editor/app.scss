@@ -77,12 +77,6 @@ html :where(.editor-styles-wrapper) {
 	@include entry-content();
 }
 
-.block-editor-writing-flow.editor-styles-wrapper {
-	> * + * {
-		margin-top: var(--wp--style--block-gap);
-	}
-}
-
 .wp-block-widget-area__inner-blocks .block-editor-block-list__layout [data-type="core/heading"],
 [data-type="core/widget-group"] > .widget-title {
 	// @todo Because ::after is used in the block editor.
