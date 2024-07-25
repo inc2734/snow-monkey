@@ -1,10 +1,11 @@
 {
-  "core": "https://wordpress.org/latest.zip",
-  "themes": [ "." ],
-  "config": {
-    "WP_DEBUG": true
-  },
-  "mappings": {
-    ".export": "./.export"
-  }
+	"core": "https://wordpress.org/latest.zip",
+	"themes": [ "." ],
+	"config": {
+		"WP_DEBUG": true,
+		"WP_DEVELOPMENT_MODE": "theme"
+	},
+	"mappings": {
+		".export": "./.export"
+	}
 }
