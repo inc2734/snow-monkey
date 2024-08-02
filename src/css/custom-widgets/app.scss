@@ -12,7 +12,8 @@
 
 [data-has-sidebar="false"] {
 	[data-is-content-widget-area="true"] {
-		--wp--style--global--content-size: none;
+		--wp--custom--content-width: none;
+		--wp--custom--content-wide-width: none;
 
 		.alignfull > .c-container {
 			padding-right: 0;

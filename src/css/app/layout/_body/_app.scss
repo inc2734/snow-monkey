@@ -4,13 +4,13 @@
 
 // Blank / One column full
 [data-is-full-template="true"] {
-	--wp--style--global--content-size: none;
-	--wp--style--global--wide-size: none;
+	--wp--custom--content-width: none;
+	--wp--custom--content-wide-width: none;
 }
 
 // One column slim / Blank slim
 [data-has-sidebar="false"][data-is-slim-width="true"] {
 	.l-contents__inner {
-		--wp--style--global--content-size: var(--wp--custom--slim-width);
+		--wp--custom--content-width: var(--wp--custom--slim-width);
 	}
 }

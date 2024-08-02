@@ -2,16 +2,16 @@
 
 :where(.c-entry > *) {
 	margin-inline: auto;
-	max-width: var(--wp--style--global--content-size);
+	max-width: var(--wp--custom--content-width);
 }
 
 :where(.c-entry__body > *) {
 	margin-inline: auto;
-	max-width: var(--wp--style--global--content-size);
+	max-width: var(--wp--custom--content-width);
 }
 
 :where(.c-entry__content > :not(.alignleft):not(.alignright):not(.alignfull)) {
-	max-width: var(--wp--style--global--content-size);
+	max-width: var(--wp--custom--content-width);
 }
 
 .c-entry {

@@ -2,12 +2,12 @@
 
 :where(.l-contents__container > *) {
 	margin-inline: auto;
-	max-width: var(--wp--style--global--content-size);
+	max-width: var(--wp--custom--content-width);
 }
 
 :where(.l-contents__main > *) {
 	margin-inline: auto;
-	max-width: var(--wp--style--global--content-size);
+	max-width: var(--wp--custom--content-width);
 }
 
 .l-contents {

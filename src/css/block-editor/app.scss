@@ -173,7 +173,7 @@ html :where(.editor-styles-wrapper) {
 .l-body--one-column-slim,
 .l-body--blank-slim {
 	.editor-styles-wrapper {
-		--wp--custom--content-max-width: var(--wp--custom--slim-width);
+		--wp--custom--content-width: var(--wp--custom--slim-width);
 	}
 }
 
@@ -181,7 +181,7 @@ html :where(.editor-styles-wrapper) {
 .l-body--right-sidebar,
 .l-body--left-sidebar {
 	.editor-styles-wrapper {
-		--wp--custom--content-max-width: calc(var(--_global--container-max-width) - 336px);
+		--wp--custom--content-width: calc(var(--_global--container-max-width) - 336px);
 	}
 }
 
