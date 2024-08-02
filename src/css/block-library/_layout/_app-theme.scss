@@ -1,3 +1,5 @@
+@use '../../app/placeholder/entry-content';
+
 .is-layout-constrained,
 .is-layout-flow {
 	@extend %entry-content-theme;

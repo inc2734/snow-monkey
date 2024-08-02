@@ -1,4 +1,6 @@
-.#{ $_prefix }l-title-top-widget-area {
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.l-title-top-widget-area {
 	margin-bottom: var(--_margin2);
-	@include _set-content-level(1);
+	@include core.set-content-level(1);
 }

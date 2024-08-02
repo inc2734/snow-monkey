@@ -1,9 +1,11 @@
-.#{ $_prefix }c-entry-aside {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-entry-aside {
 	margin-top: var(--_margin2);
 
 	&__title {
 		margin-bottom: var(--_margin1);
-		@include _set-fluid-font-size-level(2);
+		@include core.set-fluid-font-size-level(2);
 		font-weight: bold;
 	}
 }

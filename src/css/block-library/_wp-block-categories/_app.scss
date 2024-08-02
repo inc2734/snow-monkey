@@ -1,3 +1,5 @@
+@use '../../app/placeholder/widget';
+
 .wp-block-categories {
 	@extend %widget-list-base;
 	margin-left: auto;

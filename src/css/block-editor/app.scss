@@ -1,4 +1,6 @@
-@import '../app/core/core';
+@use 'sass:meta';
+@use '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../app/core/mixin/entry-content' as *;
 
 :root {
 	--wp--style--block-gap: calc(var(--_space) * var(--_margin-scale));
@@ -40,28 +42,23 @@ html :where(.editor-styles-wrapper) {
 	/**
 	 * Foundation
 	 */
-	@import '../app/foundation/settings';
-	@import '../app/foundation/foundation';
-
-	/**
-	 * Layout
-	 */
-	// @import '../app/layout/layout';
+	@include meta.load-css('../app/foundation/settings');
+	@include meta.load-css('../app/foundation');
 
 	/**
 	 * Object - Component
 	 */
-	@import '../app/object/component/component';
+	@include meta.load-css('../app/object/component');
 
 	/**
 	 * Object - Project
 	 */
-	@import '../app/object/project/project';
+	@include meta.load-css('../app/object/project');
 
 	/**
 	 * Object - utility
 	 */
-	@import '../app/object/utility/utility';
+	@include meta.load-css('../app/object/utility');
 }
 
 .is-root-container {
@@ -84,12 +81,12 @@ html :where(.editor-styles-wrapper) {
 
 	margin-top: var(--_margin1);
 	margin-bottom: var(--_margin-1);
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 	font-weight: bold;
 }
 
 .wp-block[data-type="core/widget-area"] .wp-block-widget-area__inner-blocks > .block-editor-block-list__layout {
-	@include _set-content-level(1);
+	@include core.set-content-level(1);
 }
 
 .mce-preview-object.mce-object-iframe iframe[src*="rcm-fe.amazon-adsystem.com"] {
@@ -98,7 +95,7 @@ html :where(.editor-styles-wrapper) {
 
 .edit-post-visual-editor__post-title-wrapper .editor-post-title__input {
 	margin: 2em auto 28px;
-	@include _set-fluid-font-size-level(3);
+	@include core.set-fluid-font-size-level(3);
 	font-family: var(--_global--font-family);
 	font-weight: bold;
 }
@@ -110,7 +107,7 @@ html :where(.editor-styles-wrapper) {
 
 // サイドバーの横幅分 alignfull, alignwide から引く
 .edit-post-layout.is-mode-visual.is-sidebar-opened {
-	@include _media-min(782px) {
+	@include core.media-min(782px) {
 		--body-margin-left: 280px;
 	}
 }
@@ -126,7 +123,7 @@ html :where(.editor-styles-wrapper) {
 
 [data-type="core/html"] {
 	textarea {
-		@include _pre();
+		@include core.pre();
 	}
 }
 
@@ -194,10 +191,10 @@ html :where(.editor-styles-wrapper) {
 .l-body--right-sidebar,
 .l-body--left-sidebar {
 	.editor-styles-wrapper {
-		.#{ $_prefix }c-entries {
+		.c-entries {
 			&--rich-media,
 			&--panel {
-				@include _media-min(lg) {
+				@include core.media-min(lg) {
 					--entries--item-width: 50%;
 				}
 			}
@@ -213,7 +210,7 @@ html :where(.editor-styles-wrapper) {
 .u-hidden-lg-up,
 .u-hidden-xl,
 .u-hidden-xl-up {
-	@include _visible();
+	@include core.visible();
 	outline: 1px dashed rgba(#127db8, .8);
 
 	&::after {

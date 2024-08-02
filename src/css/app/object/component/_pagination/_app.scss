@@ -1,4 +1,4 @@
-.#{ $_prefix }c-pagination {
+.c-pagination {
 	text-align: center;
 	font-size: 0;
 
@@ -27,7 +27,7 @@
 	}
 }
 
-.#{ $_prefix }p-archive .#{ $_prefix }c-pagination,
-.#{ $_prefix }p-archive + .#{ $_prefix }c-pagination {
+.p-archive .c-pagination,
+.p-archive + .c-pagination {
 	margin-top: var(--_margin2);
 }

@@ -1,21 +1,22 @@
-@import '../../app/core/core';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/core/mixin/btn' as *;
 
 .wpcf7:not(:last-child) {
 	margin-bottom: var(--_margin2);
 }
 
 .wpcf7-form {
-	@include _set-content-level(1);
+	@include core.set-content-level(1);
 }
 
 .wpcf7-text,
 .wpcf7-textarea {
-	@include _form-control();
 	vertical-align: top;
+	@include core.form-control();
 }
 
 .wpcf7-submit {
-	@include btn();
+	@include sm-btn();
 }
 
 span.wpcf7-not-valid-tip {

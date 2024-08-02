@@ -1,3 +1,5 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .widget_inc2734_wp_awesome_widgets_showcase {
 	padding: 0;
 }
@@ -21,7 +23,7 @@
 	}
 
 	&__lead {
-		@include _set-between-content-level(1);
+		@include core.set-between-content-level(1);
 	}
 
 	&__action {
@@ -30,7 +32,7 @@
 
 	&--format-1,
 	&--format-2 {
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			.wpaw-showcase__inner {
 				display: flex;
 				flex-wrap: wrap;
@@ -57,7 +59,7 @@
 	}
 
 	&--format-1 {
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			.wpaw-showcase__inner {
 				flex-direction: row;
 				flex-wrap: nowrap;
@@ -82,7 +84,7 @@
 	}
 
 	&--format-2 {
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			.wpaw-showcase__inner {
 				flex-direction: row-reverse;
 				flex-wrap: nowrap;
@@ -110,7 +112,7 @@
 		.wpaw-showcase__figure {
 			margin-bottom: calc(-1 * var(--_padding2)); // equal .wpaw-showcase bottom padding
 
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				margin-top: var(--_margin1);
 			}
 		}
@@ -125,7 +127,7 @@
 
 [data-is-slim-widget-area="true"] {
 	.wpaw-showcase {
-		@include _media-min(lg) {
+		@include core.media-min(lg) {
 			.wpaw-showcase__inner {
 				display: block;
 			}
@@ -140,7 +142,7 @@
 			}
 
 			.wpaw-showcase_lead {
-				@include _set-between-content-level(-1);
+				@include core.set-between-content-level(-1);
 			}
 
 			.wpaw-showcase_action {
@@ -153,13 +155,13 @@
 [data-has-sidebar="false"] {
 	[data-is-content-widget-area="true"] {
 		.wpaw-showcase {
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				padding: var(--_padding3);
 			}
 
 			&--format-3 {
 				.wpaw-showcase__figure {
-					@include _media-min(lg) {
+					@include core.media-min(lg) {
 						margin-bottom: calc(-1 * var(--_padding3)); // equal .wpaw-showcase bottom padding
 					}
 				}

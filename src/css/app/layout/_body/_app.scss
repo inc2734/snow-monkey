@@ -1,4 +1,4 @@
-.#{ $_prefix }l-body {
+.l-body {
 	overflow-x: clip;
 }
 
@@ -10,7 +10,7 @@
 
 // One column slim / Blank slim
 [data-has-sidebar="false"][data-is-slim-width="true"] {
-	.#{ $_prefix }l-contents__inner {
+	.l-contents__inner {
 		--wp--style--global--content-size: var(--wp--custom--slim-width);
 	}
 }

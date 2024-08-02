@@ -1,4 +1,4 @@
-.#{ $_prefix }l-contents__container {
+.l-contents__container {
 	> .p-breadcrumbs-wrapper:first-child,
 	> .u-slim-width > .p-breadcrumbs-wrapper:first-child {
 		padding-top: var(--_padding-2);
@@ -6,7 +6,7 @@
 	}
 }
 
-.#{ $_prefix }l-contents__container {
+.l-contents__container {
 	> .p-breadcrumbs-wrapper:last-child,
 	> .u-slim-width > .p-breadcrumbs-wrapper:last-child {
 		padding-top: var(--_padding-2);

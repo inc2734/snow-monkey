@@ -1,3 +1,5 @@
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 @mixin custom-properties() {
 	--wp-oembed-blog-card--background-color: var(--wp--preset--color--white);
 	--wp-oembed-blog-card--border-radius: var(--_global--border-radius);
@@ -8,7 +10,7 @@
 	--wp-oembed-blog-card--box-shadow--hover: 0 7px 35px 0 rgba(0, 0, 0, .15);
 	--wp-oembed-blog-card--content--gap: var(--_margin-2);
 
-	@include _media-min(md) {
+	@include core.media-min(md) {
 		--wp-oembed-blog-card--gap: var(--_margin1);
 		--wp-oembed-blog-card--padding: var(--_padding1);
 		--wp-oembed-blog-card--content--gap: var(--_margin-1);
@@ -16,7 +18,7 @@
 }
 
 @mixin wrapper() {
-	@include _hover() {
+	@include core.hover() {
 		box-shadow: var(--wp-oembed-blog-card--box-shadow--hover);
 	}
 }
@@ -24,9 +26,9 @@
 @mixin wp-oembed-blog-card() {
 	&__description {
 		display: none;
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			display: block;
 		}
 	}

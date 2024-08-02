@@ -1,11 +1,14 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/placeholder/blockquote';
+
 .wp-block-pullquote {
-	@include _set-fluid-font-size-level(2);
+	@include core.set-fluid-font-size-level(2);
 
 	blockquote {
 		margin: 0;
 		border: none;
 		padding: 0;
-		@include _set-fluid-font-size-level(2);
+		@include core.set-fluid-font-size-level(2);
 	}
 
 	cite {

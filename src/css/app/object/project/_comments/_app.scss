@@ -1,11 +1,13 @@
-.#{ $_prefix }p-comments {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.p-comments {
 	&__list {
-		@include _list-unstyled();
+		@include core.list-unstyled();
 		margin-bottom: var(--_margin1);
 	}
 
 	.children {
-		@include _list-unstyled();
+		@include core.list-unstyled();
 		margin-top: var(--_margin1);
 		padding-left: var(--_padding1);
 	}
@@ -37,7 +39,7 @@
 		}
 
 		.comment-form {
-			@include _set-between-content-level(1);
+			@include core.set-between-content-level(1);
 
 			.logged-in-as {
 				display: none;
@@ -65,7 +67,7 @@
 			margin-top: var(--_margin-2);
 		}
 
-		.#{ $_prefix }c-form-control {
+		.c-form-control {
 			display: block;
 			width: 100%;
 			max-height: 100px;

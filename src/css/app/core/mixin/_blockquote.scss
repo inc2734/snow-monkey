@@ -1,3 +1,7 @@
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+$_img-path: '../../img' !default;
+
 @mixin blockquote {
 	&,
 	&.is-large,
@@ -12,7 +16,7 @@
 
 @mixin blockquote-theme {
 	position: relative;
-	background-image: url(#{ $img-path }/blockquote/top.svg), url(#{ $img-path }/blockquote/bottom.svg);
+	background-image: url(#{ $_img-path }/blockquote/top.svg), url(#{ $_img-path }/blockquote/bottom.svg);
 	background-repeat: no-repeat;
 	background-position: 0 0, 100% 100%;
 	background-size: 70px;
@@ -30,8 +34,8 @@
 		top: 1rem;
 		left: 1rem;
 		display: block;
-		@include _square(1.5rem);
-		background-image: url(#{ $img-path }/blockquote/icon.svg);
+		@include core.square(1.5rem);
+		background-image: url(#{ $_img-path }/blockquote/icon.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
@@ -40,6 +44,6 @@
 @mixin blockquote__cite {
 	margin-top: var(--_margin-1);
 	display: block;
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 	font-style: italic;
 }

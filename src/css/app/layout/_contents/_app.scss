@@ -1,14 +1,16 @@
-:where(.#{ $_prefix }l-contents__container > *) {
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+:where(.l-contents__container > *) {
 	margin-inline: auto;
 	max-width: var(--wp--style--global--content-size);
 }
 
-:where(.#{ $_prefix }l-contents__main > *) {
+:where(.l-contents__main > *) {
 	margin-inline: auto;
 	max-width: var(--wp--style--global--content-size);
 }
 
-.#{ $_prefix }l-contents {
+.l-contents {
 	--contents--gap: var(--_margin2);
 
 	overflow-x: clip;
@@ -18,7 +20,7 @@
 	}
 
 	&__sidebar {
-		@include _set-content-level(1);
+		@include core.set-content-level(1);
 	}
 }
 
@@ -26,7 +28,7 @@
  * Right/Left sidebar
  */
 [data-has-sidebar="true"] {
-	.#{ $_prefix }l-contents {
+	.l-contents {
 		--contents--main-basis: var(--wp--custom--has-sidebar-main-basis);
 		--contents--sidebar-basis: var(--wp--custom--has-sidebar-sidebar-basis);
 
@@ -36,7 +38,7 @@
 			gap: var(--contents--gap);
 
 			[data-is-content-widget-area="true"]:first-child {
-				@include _media-max(md) {
+				@include core.media-max(md) {
 					margin-top: calc(-1 * var(--contents--gap));
 				}
 			}
@@ -47,7 +49,7 @@
 			flex-basis: var(--contents--main-basis);
 			min-width: 0;
 
-			.#{ $_prefix }c-section > .#{ $_prefix }c-container {
+			.c-section > .c-container {
 				padding-right: 0;
 				padding-left: 0;
 			}
@@ -59,7 +61,7 @@
 			flex-basis: var(--contents--sidebar-basis);
 			min-width: 0;
 
-			@include _media-max(md) {
+			@include core.media-max(md) {
 				margin-top: var(--contents--gap);
 			}
 		}
@@ -69,8 +71,8 @@
 /**
  * Right sidebar
  */
-.#{ $_prefix }l-body--right-sidebar {
-	.#{ $_prefix }l-contents {
+.l-body--right-sidebar {
+	.l-contents {
 		&__inner {
 			flex-direction: row;
 		}
@@ -80,8 +82,8 @@
 /**
  * Left sidebar
  */
-.#{ $_prefix }l-body--left-sidebar {
-	.#{ $_prefix }l-contents {
+.l-body--left-sidebar {
+	.l-contents {
 		&__inner {
 			flex-direction: row-reverse;
 		}
@@ -91,7 +93,7 @@
 /**
  * margin/padding settings
  */
-.#{ $_prefix }l-contents {
+.l-contents {
 	&__inner {
 		margin-top: var(--contents--gap);
 		margin-bottom: var(--contents--gap);
@@ -113,7 +115,7 @@
  * One column full
  */
 [data-has-sidebar="false"][data-is-full-template="true"] {
-	.#{ $_prefix }l-contents {
+	.l-contents {
 		&__inner {
 			padding-top: 0;
 			padding-bottom: 0;
@@ -131,7 +133,7 @@
 
 // one-column
 [data-has-sidebar="false"][data-is-full-template="false"] {
-	.#{ $_prefix }l-contents {
+	.l-contents {
 		[data-is-content-widget-area="true"]:first-child {
 			margin-top: calc(-1 * var(--contents--gap));
 		}
@@ -150,7 +152,7 @@
 /**
  * Attachment
  */
-.single-attachment .#{ $_prefix }l-contents {
+.single-attachment .l-contents {
 	display: flex;
 	align-items: center;
 	justify-content: center;

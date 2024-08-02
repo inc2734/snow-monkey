@@ -1,3 +1,5 @@
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 @mixin calendar {
 	table {
 		border: none;
@@ -33,7 +35,7 @@
 		}
 
 		tfoot {
-			@include _set-font-size-level(-1);
+			@include core.set-font-size-level(-1);
 
 			#prev,
 			#next {

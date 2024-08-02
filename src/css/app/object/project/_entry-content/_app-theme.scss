@@ -1,3 +1,5 @@
-.#{ $_prefix }p-entry-content {
+@use '../../../placeholder/entry-content';
+
+.p-entry-content {
 	@extend %entry-content-theme;
 }

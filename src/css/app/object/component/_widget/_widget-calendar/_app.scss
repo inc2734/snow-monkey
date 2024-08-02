@@ -1,3 +1,5 @@
+@use '../../../../placeholder/calendar';
+
 .widget_calendar {
 	@extend %calendar;
 }

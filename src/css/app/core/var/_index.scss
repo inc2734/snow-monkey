@@ -1,3 +1,5 @@
+@use '../variable';
+
 // @deprecated
 @function var-body-margin-left() {
 	@warn 'var-body-margin-left() is deprecated.';
@@ -9,35 +11,35 @@
 @function var-color-accent() {
 	@warn 'var-color-accent() is deprecated.';
 
-	@return var(--accent-color, #{ $color-accent });
+	@return var(--accent-color, #{ variable.$color-accent });
 }
 
 // @deprecated
 @function var-color-accent-dark() {
 	@warn 'var-color-accent-dark() is deprecated.';
 
-	@return var(--dark-accent-color, #{ _dark($color-accent) });
+	@return var(--dark-accent-color, #{ _dark(variable.$color-accent) });
 }
 
 // @deprecated
 @function var-color-accent-light() {
 	@warn 'var-color-accent-light() is deprecated.';
 
-	@return var(--light-accent-color, #{ _light($color-accent) });
+	@return var(--light-accent-color, #{ _light(variable.$color-accent) });
 }
 
 // @deprecated
 @function var-color-accent-lighter() {
 	@warn 'var-color-accent-lighter() is deprecated.';
 
-	@return var(--lighter-accent-color, #{ _lighter($color-accent) });
+	@return var(--lighter-accent-color, #{ _lighter(variable.$color-accent) });
 }
 
 // @deprecated
 @function var-color-accent-lightest() {
 	@warn 'var-color-accent-lightest() is deprecated.';
 
-	@return var(--lightest-accent-color, #{ _lightest($color-accent) });
+	@return var(--lightest-accent-color, #{ _lightest(variable.$color-accent) });
 }
 
 // @deprecated

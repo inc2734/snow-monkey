@@ -1,4 +1,6 @@
-.#{ $_prefix }c-section {
+@use '../../../placeholder/widget';
+
+.c-section {
 	&__title {
 		@extend %widget-title-theme;
 	}

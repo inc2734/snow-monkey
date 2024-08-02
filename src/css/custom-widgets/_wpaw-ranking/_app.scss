@@ -1,3 +1,5 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .widget_inc2734_wp_awesome_widgets_ranking {
 }
 
@@ -17,7 +19,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			@include _square(20px);
+			@include core.square(20px);
 			color: var(--wp--preset--color--white);
 			line-height: 1;
 			background-color: var(--wp--preset--color--black);

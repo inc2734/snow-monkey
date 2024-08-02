@@ -1,13 +1,15 @@
-.#{ $_prefix }p-infobar {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.p-infobar {
 	&--center {
-		.#{ $_prefix }c-container {
+		.c-container {
 			display: flex;
 			justify-content: center;
 		}
 	}
 
 	&--right {
-		.#{ $_prefix }c-container {
+		.c-container {
 			display: flex;
 			justify-content: flex-end;
 		}
@@ -32,9 +34,9 @@
 	}
 }
 
-a.#{ $_prefix }p-infobar {
-	@include _transition(filter);
-	@include _hover() {
+a.p-infobar {
+	@include core.transition(filter);
+	@include core.hover() {
 		filter: brightness(90%);
 	}
 }

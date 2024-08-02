@@ -1,3 +1,8 @@
+@use 'sass:math';
+@use '../../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../../core/mixin/btn' as *;
+@use '../../../../core/mixin/section' as *;
+
 .snow-monkey-posts {
 	&__title {
 		@include section-title();
@@ -14,38 +19,38 @@
 	}
 
 	&__more {
-		@extend .#{ $_prefix }c-btn;
 		font-weight: bold;
 		width: auto;
+		@include sm-btn();
 	}
 }
 
 [data-is-slim-widget-area="true"] .snow-monkey-posts {
-	.#{ $_prefix }c-entries--rich-media,
-	.#{ $_prefix }c-entries--panel {
-		@include _media-min(lg) {
+	.c-entries--rich-media,
+	.c-entries--panel {
+		@include core.media-min(lg) {
 			--entries--item-width: 100%;
 		}
 	}
 
-	.#{ $_prefix }c-entries--simple {
-		.#{ $_prefix }c-entry-summary__term {
-			@include _media-min(lg) {
+	.c-entries--simple {
+		.c-entry-summary__term {
+			@include core.media-min(lg) {
 				display: none;
 			}
 		}
 
-		.#{ $_prefix }c-entry-summary__figure {
-			@include _media-min(lg) {
+		.c-entry-summary__figure {
+			@include core.media-min(lg) {
 				margin-right: var(--_margin-1);
 			}
 		}
 	}
 
-	.#{ $_prefix }c-entries--large-image {
-		.#{ $_prefix }c-entry-summary__figure {
+	.c-entries--large-image {
+		.c-entry-summary__figure {
 			&::before {
-				padding: 100% * 4 / 3 0 0;
+				padding: math.div(100% * 4, 3) 0 0;
 			}
 		}
 	}

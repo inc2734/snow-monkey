@@ -1,6 +1,8 @@
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 @mixin section() {
-	@include _section();
 	padding: var(--_padding3) 0;
+	@include core.section();
 }
 
 @mixin section-subtitle() {
@@ -10,7 +12,7 @@
 }
 
 @mixin section-title() {
-	@include _set-fluid-font-size-level(4);
+	@include core.set-fluid-font-size-level(4);
 }
 
 @mixin section-title-theme() {

@@ -1,3 +1,5 @@
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .post-password-form {
-	@include _set-between-content-level(1);
+	@include core.set-between-content-level(1);
 }

@@ -1,3 +1,5 @@
+@use '../../../core/mixin/align' as *;
+
 /*
  * @see src/css/block-editor/app.scss
  */
@@ -56,9 +58,13 @@
 	}
 }
 
-[data-has-sidebar="false"] .#{ $_prefix }c-entry__content {
+[data-has-sidebar="false"] .c-entry__content {
 	& > .alignfull {
 		margin-right: calc(-1 * var(--_container-margin-right));
 		margin-left: calc(-1 * var(--_container-margin-left));
 	}
+}
+
+.alignwide {
+	max-width: var(--wp--style--global--wide-size);
 }

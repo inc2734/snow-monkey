@@ -1,14 +1,17 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/placeholder/widget';
+
 .wp-block-rss {
 	@extend %widget-list-base;
 	margin-left: auto;
 
 	&__item-publish-date,
 	&__item-author {
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 
 	&__item-excerpt {
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
 	}
 }
 
@@ -22,7 +25,7 @@ ul.wp-block-rss.is-grid {
 		width: auto;
 	}
 
-	@include _media-min(600px) {
+	@include core.media-min(600px) {
 		gap: var(--_margin1);
 
 		@for $i from 2 through 6 {

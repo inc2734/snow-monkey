@@ -1,15 +1,12 @@
-@import '../../app/core/core';
-@import '../../app/foundation/_placeholder/placeholder';
-
-@import 'btn/app';
-@import 'child-pages/app';
-@import 'items/app';
-@import 'section-break-the-grid/app';
-@import 'section-side-heading/app';
-@import 'section-with-image/app';
-@import 'spider-slider/app';
-@import 'section/app';
-@import 'tabs/app';
+@use 'btn/app' as *;
+@use 'child-pages/app' as *;
+@use 'items/app' as *;
+@use 'section-break-the-grid/app' as *;
+@use 'section-side-heading/app' as *;
+@use 'section-with-image/app' as *;
+@use 'spider-slider/app' as *;
+@use 'section/app' as *;
+@use 'tabs/app' as *;
 
 // @todo WordPress 5.9 iframed content hack.
 // https://github.com/WordPress/gutenberg/blob/f2161e246b9fdd9a2a56e7552b0b28050f1a5302/packages/block-editor/src/components/iframe/index.js#L70-L74

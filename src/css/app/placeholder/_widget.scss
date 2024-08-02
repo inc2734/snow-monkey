@@ -1,3 +1,5 @@
+@use '../core/mixin/widget' as *;
+
 %widget-title {
 	@include widget-title();
 }

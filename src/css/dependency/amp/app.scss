@@ -1,5 +1,4 @@
-@import '../../app/core/core';
-@import '../../app/foundation/_placeholder/placeholder';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core.scss';
 
 * {
 	box-sizing: border-box;
@@ -15,5 +14,5 @@
 }
 
 .amp-wp-article-content {
-	@include _set-content-level(1);
+	@include core.set-content-level(1);
 }

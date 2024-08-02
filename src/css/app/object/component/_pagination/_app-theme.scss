@@ -1,4 +1,6 @@
-.#{ $_prefix }c-pagination {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-pagination {
 	&__item {
 		background-color: var(--wp--preset--color--sm-accent);
 		color: var(--wp--preset--color--white);
@@ -10,7 +12,7 @@
 	}
 
 	&__item-link {
-		@include _hover() {
+		@include core.hover() {
 			background-color: var(--wp--preset--color--sm-light-gray);
 			color: var(--wp--preset--color--white);
 		}

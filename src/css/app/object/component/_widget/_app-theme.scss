@@ -1,4 +1,11 @@
-.#{ $_prefix }c-widget {
+@use '../../../placeholder/widget';
+
+@use '_children-expander/app-theme' as *;
+@use '_snow-monkey-posts/app-theme' as *;
+@use '_widget-nav-menu/app-theme' as *;
+@use '_widget-text/app-theme' as *;
+
+.c-widget {
 	&__title,
 	> h2,
 	> h3,
@@ -24,8 +31,3 @@
 .widgettitle {
 	@extend %widget-title-theme;
 }
-
-@import '_children-expander/app-theme';
-@import '_snow-monkey-posts/app-theme';
-@import '_widget-nav-menu/app-theme';
-@import '_widget-text/app-theme';

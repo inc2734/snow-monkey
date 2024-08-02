@@ -1,0 +1,5 @@
+@use '../core/mixin/calendar' as *;
+
+%calendar {
+	@include calendar();
+}

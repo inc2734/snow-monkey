@@ -1,13 +1,16 @@
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../core/mixin/btn' as *;
+
 .wp-profile-box {
 	background-color: var(--wp--preset--color--sm-lightest-gray);
 
 	&__title {
 		border-bottom: 1px solid transparent;
 		border-bottom-color: var(--wp--preset--color--sm-lighter-gray);
-		@include _set-fluid-font-size-level(2);
+		@include core.set-fluid-font-size-level(2);
 		padding: var(--_padding-1);
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			padding: var(--_padding-1) var(--_padding1);
 		}
 	}
@@ -16,7 +19,7 @@
 		overflow: hidden;
 		padding: var(--_padding-1);
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			padding: var(--_padding-1) var(--_padding1);
 		}
 	}
@@ -24,7 +27,7 @@
 	&__figure {
 		margin: calc(var(--_half-leading) * 1rem) var(--_margin1) 0 0;
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			float: left;
 		}
 
@@ -33,7 +36,7 @@
 			height: auto;
 			width: 48px;
 
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				width: 96px;
 			}
 		}
@@ -45,31 +48,31 @@
 
 	&__name {
 		margin-bottom: var(--_margin-2);
-		@include _set-font-size-level(0);
+		@include core.set-font-size-level(0);
 	}
 
 	&__content {
-		@include _set-content-level(-1);
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
+		@include core.set-content-level(-1);
 	}
 
 	&__sns-accounts {
 		margin-top: var(--_margin-2);
-		@include _list-unstyled();
+		@include core.list-unstyled();
 		overflow: hidden;
 	}
 
 	&__sns-accounts-item {
 		margin-right: .5em;
 		display: inline-block;
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 		font-weight: bold;
 
 		a {
 			color: inherit;
 			text-decoration: none;
 
-			@include _hover() {
+			@include core.hover() {
 				text-decoration: underline;
 			}
 
@@ -86,7 +89,7 @@
 
 	&__detail-btn,
 	&__archives-btn {
-		@include btn();
+		@include sm-btn();
 	}
 
 	&__detail-btn {

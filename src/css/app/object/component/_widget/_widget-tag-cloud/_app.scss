@@ -1,3 +1,5 @@
+@use '../../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .tag-cloud-link {
 	--_border-radius: var(--_global--border-radius);
 
@@ -12,7 +14,7 @@
 	padding: calc(var(--_padding-2) * .5) var(--_padding-2);
 	vertical-align: top;
 
-	@include _hover() {
+	@include core.hover() {
 		background-color: var(--wp--preset--color--sm-lighter-gray);
 	}
 

@@ -1,3 +1,5 @@
+@use '../core/mixin/section' as *;
+
 %section {
 	@include section();
 }

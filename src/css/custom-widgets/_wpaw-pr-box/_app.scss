@@ -1,3 +1,6 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/core/mixin/section' as *;
+
 .widget_inc2734_wp_awesome_widgets_pr_box {
 	padding: 0;
 }
@@ -7,7 +10,7 @@
 	padding-bottom: var(--_padding1);
 
 	&--chameleon {
-		#{ $_prefix }c-container {
+		c-container {
 			padding-right: 0;
 			padding-left: 0;
 		}
@@ -18,9 +21,9 @@
 	}
 
 	&__lead {
-		@include _set-between-content-level(-1);
 		margin-top: var(--_margin1);
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
+		@include core.set-between-content-level(-1);
 	}
 
 	&__row {
@@ -32,10 +35,10 @@
 	}
 
 	&__item-summary {
-		@include _set-between-content-level(-1);
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
+		@include core.set-between-content-level(-1);
 
-		@include _media-min(lg) {
+		@include core.media-min(lg) {
 			margin-top: var(--_margin-2);
 		}
 	}

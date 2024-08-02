@@ -1,3 +1,5 @@
+@use '../../app/placeholder/calendar';
+
 .wp-block-calendar {
 	@extend %calendar;
 

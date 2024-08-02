@@ -1,4 +1,6 @@
-.#{ $_prefix }c-entries-carousel {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-entries-carousel {
 	--entries--carousel--gap: var(--_margin1);
 
 	&--gap-s {
@@ -28,11 +30,11 @@
 	.spider__slide {
 		align-items: flex-start;
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			max-width: calc(1 / 3 * 100% - var(--entries--carousel--gap) / 1.5);
 		}
 
-		.#{ $_prefix }c-entries-carousel__item {
+		.c-entries-carousel__item {
 			flex: 1 0 100%;
 		}
 	}

@@ -1,0 +1,5 @@
+@use '../core/mixin/table' as *;
+
+%table {
+	@include table();
+}

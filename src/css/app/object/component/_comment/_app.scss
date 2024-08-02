@@ -1,11 +1,14 @@
-.#{ $_prefix }c-comment {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../core/mixin/btn' as *;
+
+.c-comment {
 	--_border-radius: var(--_global--border-radius);
 
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 
-	@include _media-min(md) {
+	@include core.media-min(md) {
 		flex-direction: row;
 		flex-wrap: nowrap;
 	}
@@ -14,11 +17,11 @@
 		margin: 0 0 20px;
 		position: relative;
 		flex: 0 0 auto;
-		@include _circle(60px);
+		@include core.circle(60px);
 		max-width: 60px;
 		border: 2px solid var(--wp--preset--color--sm-lighter-gray);
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			margin: 0 20px 0 0;
 		}
 
@@ -41,7 +44,7 @@
 
 	&__meta {
 		margin: 0 0 var(--_margin-1);
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 
 		cite {
 			font-style: normal;
@@ -52,15 +55,15 @@
 			color: inherit;
 			text-decoration: none;
 
-			@include _hover() {
+			@include core.hover() {
 				text-decoration: underline;
 			}
 		}
 	}
 
 	&__content {
-		@include _set-font-size-level(0);
-		@include _set-content-level(-1);
+		@include core.set-font-size-level(0);
+		@include core.set-content-level(-1);
 	}
 
 	&__reply {
@@ -68,28 +71,28 @@
 	}
 
 	.comment-reply-link {
-		@include btn();
 		margin: var(--_margin-1) 0 0;
+		@include sm-btn();
 	}
 }
 
-.bypostauthor .#{ $_prefix }c-comment {
+.bypostauthor .c-comment {
 	align-items: flex-end;
 
-	@include _media-min(md) {
+	@include core.media-min(md) {
 		align-items: flex-start;
 		flex-direction: row-reverse;
 	}
 
 	&__figure {
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			margin: 0 0 0 20px;
 		}
 	}
 }
 
-.#{ $_prefix }c-comment__figure + .#{ $_prefix }c-comment__body {
-	@include _top-balloon((
+.c-comment__figure + .c-comment__body {
+	@include core.top-balloon((
 		background-color: var(--wp--preset--color--sm-lightest-gray),
 		border-color: null,
 		border-size: null,
@@ -102,9 +105,9 @@
 		left: 24px;
 	}
 
-	@include _media-min(md) {
-		@include _balloon-triangle(left, 10px, var(--wp--preset--color--sm-lightest-gray));
+	@include core.media-min(md) {
 		max-width: calc(100% - 80px);
+		@include core.balloon-triangle(left, 10px, var(--wp--preset--color--sm-lightest-gray));
 
 		&::before,
 		&::after {
@@ -113,15 +116,15 @@
 	}
 }
 
-.bypostauthor .#{ $_prefix }c-comment__figure + .#{ $_prefix }c-comment__body {
+.bypostauthor .c-comment__figure + .c-comment__body {
 	&::before,
 	&::after {
 		left: auto;
 		right: 24px;
 	}
 
-	@include _media-min(md) {
-		@include _balloon-triangle(right, 10px, var(--wp--preset--color--sm-lightest-gray));
+	@include core.media-min(md) {
+		@include core.balloon-triangle(right, 10px, var(--wp--preset--color--sm-lightest-gray));
 
 		&::before,
 		&::after {

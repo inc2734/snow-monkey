@@ -1,3 +1,5 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .widget_inc2734_wp_awesome_widgets_pickup_slider {
 	padding: 0;
 }
@@ -6,7 +8,7 @@
 	&__canvas {
 		overflow: hidden;
 
-		@include _hover() {
+		@include core.hover() {
 			.slick-arrow {
 				transform: translate(0, -50%);
 			}
@@ -71,13 +73,13 @@
 	&__item-title {
 		position: relative;
 		font-weight: bold;
-		@include _set-fluid-font-size-level(1);
+		@include core.set-fluid-font-size-level(1);
 		text-shadow: rgba(#333, .3) 1px 1px 3px;
 	}
 
 	&__item-meta {
 		margin-top: var(--_margin-1);
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 		text-shadow: rgba(#333, .3) 1px 1px 3px;
 
 		img {
@@ -90,16 +92,16 @@
 		padding: var(--_padding-1) var(--_padding1);
 		border: 1px solid var(--wp--preset--color--white);
 
-		&.#{ $_prefix }c-btn {
+		&.c-btn {
 			background-color: transparent;
 		}
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			margin-top: var(--_margin1);
 			padding: var(--_padding-1) var(--_padding2);
 		}
 
-		@include _hover() {
+		@include core.hover() {
 			background-color: var(--wp--preset--color--sm-accent);
 			border-color: var(--wp--preset--color--sm-accent);
 		}
@@ -116,6 +118,8 @@
 		&.slick-current,
 		&.pan {
 			.wpaw-pickup-slider__figure {
+				animation: main_visual_figure_move 6s linear;
+
 				@keyframes main_visual_figure_move {
 					from {
 						transform: translate3d(0, 0, 0);
@@ -124,8 +128,6 @@
 						transform: translate3d(2em, 0, 0);
 					}
 				}
-
-				animation: main_visual_figure_move 6s linear;
 
 				&::before {
 					opacity: 1;
@@ -139,14 +141,14 @@
 		z-index: 1;
 		background-color: var(--wp--preset--color--sm-accent);
 		border-radius: 0;
-		@include _square(40px);
-		@include _transition(all);
+		@include core.square(40px);
+		@include core.transition(all);
 
-		@include _media-min(md) {
-			@include _square(50px);
+		@include core.media-min(md) {
+			@include core.square(50px);
 		}
 
-		@include _hover() {
+		@include core.hover() {
 			filter: brightness(90%);
 		}
 
@@ -193,10 +195,10 @@
 
 [data-has-sidebar="true"] {
 	[data-is-content-widget-area="true"],
-	.#{ $_prefix }c-entry__content {
+	.c-entry__content {
 		.wpaw-pickup-slider {
 			&__item-title {
-				@include _set-fluid-font-size-level(4);
+				@include core.set-fluid-font-size-level(4);
 			}
 		}
 	}
@@ -204,20 +206,20 @@
 
 [data-has-sidebar="false"] {
 	[data-is-content-widget-area="true"],
-	.#{ $_prefix }c-entry__content {
+	.c-entry__content {
 		.wpaw-pickup-slider {
 			&__item-title {
-				@include _set-fluid-font-size-level(4);
+				@include core.set-fluid-font-size-level(4);
 			}
 
 			&__item-meta {
-				@include _media-min(lg) {
+				@include core.media-min(lg) {
 					margin-top: var(--_margin1);
 				}
 			}
 
 			&__item-more {
-				@include _media-min(lg) {
+				@include core.media-min(lg) {
 					margin-top: var(--_margin2);
 					padding: var(--_padding-1) var(--_padding2);
 				}

@@ -1,6 +1,6 @@
-@import '../../app/core/core';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core.scss';
 
 .elementor-text-editor,
 .elementor-tab-content {
-	@include _set-content-level(1);
+	@include core.set-content-level(1);
 }

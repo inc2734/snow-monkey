@@ -1,5 +1,8 @@
-@import '../app/core/core';
-@import '../app/foundation/_placeholder/placeholder';
+@use 'sass:color';
+@use 'sass:math';
+@use '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../app/core/mixin/align' as *;
+@use '../app/placeholder/section';
 
 /**
  * Alert
@@ -8,29 +11,29 @@
 	--_border-radius: var(--_global--border-radius);
 
 	$color: #fff9e6;
-	@include _alert();
-	@include _set-between-content-level(1);
+	@include core.alert();
 	background-color: $color;
-	border: 1px solid darken(desaturate($color, 10%), 10%);
+	border: 1px solid color.adjust(color.adjust($color, $saturation: -10%), $lightness: -10%);
 	border-radius: var(--_border-radius);
-	color: darken(desaturate($color, 60%), 60%);
+	color: color.adjust(color.adjust($color, $saturation: -60%), $lightness: -10%);
 	padding: var(--_padding-1);
+	@include core.set-between-content-level(1);
 
 	&--warning {
-		background-color: adjust-hue($color, -30deg);
-		border-color: adjust-hue(darken(desaturate($color, 10%), 10%), -30deg);
-		color: adjust-hue(darken(desaturate($color, 60%), 60%), -30deg);
+		background-color: color.adjust($color, $hue: -30deg);
+		border-color: color.adjust(color.adjust(color.adjust($color, $saturation: -10%), $lightness: -10%), $hue: -30deg);
+		color: color.adjust(color.adjust(color.adjust($color, $saturation: -60%), $lightness: -60%), $hue: -30deg);
 	}
 
 	&--success {
-		background-color: adjust-hue($color, 40deg);
-		border-color: adjust-hue(darken(desaturate($color, 15%), 15%), 40deg);
-		color: adjust-hue(darken(desaturate($color, 70%), 70%), 40deg);
+		background-color: color.adjust($color, $hue: 40deg);
+		border-color: color.adjust(color.adjust(color.adjust($color, $saturation: -15%), $lightness: -15%), $hue: 40deg);
+		color: color.adjust(color.adjust(color.adjust($color, $saturation: -70%), $lightness: -70%), $hue: 40deg);
 	}
 
 	> .mceEditable,
 	&__body {
-		@include _set-content-level(1);
+		@include core.set-content-level(1);
 	}
 }
 
@@ -42,7 +45,7 @@
 	flex-direction: column;
 	align-items: flex-start;
 
-	@include _media-min(md) {
+	@include core.media-min(md) {
 		flex-direction: row;
 		flex-wrap: nowrap;
 		align-items: center;
@@ -54,7 +57,7 @@
 		flex-direction: column;
 		align-items: center;
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			margin: 0 20px 0 0;
 		}
 	}
@@ -62,7 +65,7 @@
 	&__figure {
 		position: relative;
 		flex: 0 0 auto;
-		@include _circle(60px);
+		@include core.circle(60px);
 		max-width: 60px;
 		border: 2px solid transparent;
 		border-color: var(--wp--preset--color--sm-lighter-gray);
@@ -82,7 +85,10 @@
 	}
 
 	&__body {
-		@include _set-between-content-level(1);
+		@include core.set-between-content-level(1);
+	}
+
+	&__body {
 		flex: 1 1 auto;
 		border-radius: var(--_border-radius);
 		overflow-wrap: break-word;
@@ -90,7 +96,7 @@
 		max-width: 100%;
 		width: 100%;
 
-		@include _top-balloon((
+		@include core.top-balloon((
 			background-color: var(--wp--preset--color--sm-lightest-gray),
 			border-color: null,
 			border-size: null,
@@ -103,22 +109,22 @@
 			left: 24px;
 		}
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			max-width: calc(100% - 80px);
-			@include _balloon-triangle(left, 10px, var(--wp--preset--color--sm-lightest-gray));
+			@include core.balloon-triangle(left, 10px, var(--wp--preset--color--sm-lightest-gray));
 		}
 	}
 
 	&--reverse {
 		align-items: flex-end;
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			flex-direction: row-reverse;
 			align-items: center;
 		}
 
 		.wpac-balloon__person {
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				margin: 0 0 0 20px;
 			}
 		}
@@ -130,8 +136,8 @@
 				right: 24px;
 			}
 
-			@include _media-min(md) {
-				@include _balloon-triangle(right, 10px, var(--wp--preset--color--sm-lightest-gray));
+			@include core.media-min(md) {
+				@include core.balloon-triangle(right, 10px, var(--wp--preset--color--sm-lightest-gray));
 			}
 		}
 	}
@@ -158,14 +164,14 @@
 		padding-right: calc(var(--_margin1) * .5);
 		padding-left: calc(var(--_margin1) * .5);
 
-		@each $size, $screen-min in $_sizes {
-			@include _media-min($screen-min) {
-				$prefix: _size-prefix($size);
+		@each $size, $screen-min in core.$sizes {
+			@include core.media-min($screen-min) {
+				$prefix: core.size-prefix($size);
 
 				@for $max_columns from 1 through 5 {
 					@for $i from 1 through $max_columns {
 						&#{ $prefix }-#{ $i }-#{ $max_columns } {
-							--wpac-columns--item-width: #{ $i / $max_columns * 100% };
+							--wpac-columns--item-width: #{ math.div($i, $max_columns) * 100% };
 						}
 					}
 				}
@@ -209,7 +215,7 @@
 
 	&[data-header-layout="left"] {
 		.wpac-section {
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				margin-right: calc(50% - ((100vw - var(--body-margin-left) - var(--scrollbar-width)) / 2));
 				margin-left: calc(50% - ((100vw - var(--body-margin-left) - var(--scrollbar-width)) / 2));
 			}

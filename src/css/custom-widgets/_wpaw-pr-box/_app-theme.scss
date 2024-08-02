@@ -1,3 +1,5 @@
+@use '../../app/core/mixin/section' as *;
+
 .wpaw-pr-box {
 	&__title {
 		@include section-title-theme();

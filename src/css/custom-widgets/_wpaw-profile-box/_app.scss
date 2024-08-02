@@ -1,13 +1,15 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 [data-has-sidebar="true"] [data-is-slim-widget-area="true"] {
 	.wpaw-profile-box {
 		.wp-profile-box {
 			&__figure {
-				@include _media-min(lg) {
+				@include core.media-min(lg) {
 					float: none;
 				}
 
 				img {
-					@include _media-min(lg) {
+					@include core.media-min(lg) {
 						width: 48px;
 					}
 				}

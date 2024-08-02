@@ -1,7 +1,8 @@
-@import '../../app/core/core';
-@import '../../app/foundation/_placeholder/placeholder';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/placeholder/entry-content';
+@use '../../app/placeholder/widget';
 
-.#{ $_prefix }l-container .#{ $_prefix }l-contents {
+.l-container .l-contents {
 	.store-notice,
 	.demo_store {
 		background-color: var(--wp--preset--color--sm-accent);
@@ -56,7 +57,7 @@
 
 .woocommerce form .form-row input.input-text,
 .woocommerce form .form-row textarea {
-	@include _set-font-size-level(0);
+	@include core.set-font-size-level(0);
 }
 
 .woocommerce-input-wrapper,
@@ -66,15 +67,15 @@
 .woocommerce-form,
 .woocommerce-ResetPassword {
 	.input-text {
-		@include _form-control();
+		@include core.form-control();
 	}
 }
 
 .select2-selection.select2-selection--single {
-	@include _form-control();
 	line-height: normal;
 	margin-bottom: 0;
 	height: auto;
+	@include core.form-control();
 
 	.select2-selection__rendered {
 		line-height: normal;
@@ -116,13 +117,13 @@
 .woocommerce-MyAccount-content > section[class^="woocommerce-"],
 .woocommerce-order,
 .woocommerce-order > section[class^="woocommerce-"] {
-	@include _set-content-level(1);
+	@include core.set-content-level(1);
 
 	> h2,
 	> header > h2,
 	> form > h3 {
 		margin-bottom: var(--_margin-2);
-		@include _set-fluid-font-size-level(1);
+		@include core.set-fluid-font-size-level(1);
 	}
 
 	> header + .shop_table {
@@ -131,14 +132,14 @@
 }
 
 .woocommerce .woocommerce-MyAccount-content .my_account_orders {
-	@include _set-font-size-level(0);
+	@include core.set-font-size-level(0);
 }
 
 .woocommerce-MyAccount-navigation {
 	margin-bottom: var(--_margin1);
 
 	ul {
-		@include _list-unstyled();
+		@include core.list-unstyled();
 		border-top: 1px solid var(--wp--preset--color--sm-lighter-gray);
 	}
 
@@ -151,13 +152,13 @@
 		text-decoration: none;
 		padding: var(--_padding-2) 0;
 
-		@include _hover() {
+		@include core.hover() {
 			text-decoration: underline;
 		}
 	}
 }
 
-.#{ $_prefix }c-entry__content {
+.c-entry__content {
 	> .product {
 		margin-top: 0;
 	}
@@ -175,19 +176,19 @@
 }
 
 // Buttons
-.#{ $_prefix }l-container .#{ $_prefix }l-contents #respond #submit,
-.#{ $_prefix }l-container .#{ $_prefix }l-contents .button,
+.l-container .l-contents #respond #submit,
+.l-container .l-contents .button,
 .wc-block-grid .wp-block-button .wp-block-button__link {
 	--_border-radius: var(--_global--border-radius);
 
-	@include _transition(all);
+	@include core.transition(all);
 	border-radius: var(--_border-radius);
 }
 
 // Product title in single
 .woocommerce .product .product_title {
 	margin-bottom: var(--_margin-1);
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 	font-weight: bold;
 }
 
@@ -204,7 +205,7 @@
 		padding: 1em .5em 0;
 
 		img {
-			@include _transition(opacity);
+			@include core.transition(opacity);
 		}
 	}
 }
@@ -214,7 +215,7 @@
 	margin-bottom: var(--_margin-1);
 
 	.woocommerce-review-link {
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
 	}
 }
 
@@ -226,14 +227,14 @@
 		vertical-align: middle;
 		line-height: 1;
 
-		.#{ $_prefix }c-select > select,
-		.#{ $_prefix }c-select__label {
-			@include _set-font-size-level(-1);
+		.c-select > select,
+		.c-select__label {
+			@include core.set-font-size-level(-1);
 		}
 
 		.reset_variations {
 			margin-left: 5px;
-			@include _set-font-size-level(-2);
+			@include core.set-font-size-level(-2);
 		}
 	}
 }
@@ -269,7 +270,7 @@
 
 // Tab content in single
 .woocommerce .product .woocommerce-tabs {
-	@include _media-min(lg) {
+	@include core.media-min(lg) {
 		padding-top: var(--_padding1);
 	}
 
@@ -304,7 +305,7 @@
 
 // Product meta in single
 .product_meta {
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 
 	a {
 		color: inherit;
@@ -322,7 +323,7 @@
 	margin-bottom: var(--_margin-1);
 	display: block;
 	border-bottom: 1px solid var(--wp--preset--color--sm-lighter-gray);
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 	font-weight: bold;
 	padding-bottom: var(--_padding-1);
 }
@@ -346,18 +347,18 @@
 
 // Orderby in archive
 .woocommerce-ordering {
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 }
 
 // Result count in archive
 .woocommerce-result-count {
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 }
 
 // Product title in loop, Product title in the all product block
 .woocommerce-loop-product__title,
 .wc-block-grid .wc-block-grid__product-title {
-	@include _set-font-size-level(0);
+	@include core.set-font-size-level(0);
 	font-weight: normal;
 	padding: .5em 0;
 	margin: 0;
@@ -428,7 +429,7 @@
 // Cart total in cart page
 .woocommerce .cart_totals h2 {
 	margin-bottom: var(--_margin-2);
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 }
 
 // Headings in checkout page
@@ -437,7 +438,7 @@
 .woocommerce h3[id="order_review_heading"],
 .woocommerce h3[id="ship-to-different-address"] {
 	margin-bottom: var(--_margin-2);
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 }
 .woocommerce [id="customer_details"] {
 	margin-bottom: var(--_margin1);
@@ -456,7 +457,7 @@
 // My account > edit-address
 .woocommerce-Addresses .woocommerce-Address-title h3 {
 	margin-bottom: var(--_margin-2);
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 }
 
 // Product category widget
@@ -475,7 +476,7 @@
 			color: inherit;
 			text-decoration: none;
 
-			@include _hover() {
+			@include core.hover() {
 				text-decoration: underline;
 			}
 
@@ -493,7 +494,7 @@
 	.reviewer {
 		margin-top: var(--_margin-2);
 		display: block;
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 }
 
@@ -512,7 +513,7 @@
 
 // Product list widget
 .widget_product_search {
-	.#{ $_prefix }c-input-group__btn {
+	.c-input-group__btn {
 		position: relative;
 		z-index: 0;
 		left: -1px;
@@ -529,15 +530,15 @@
 
 	.product-title {
 		color: inherit;
-		@include _transition(opacity);
+		@include core.transition(opacity);
 
-		@include _hover() {
+		@include core.hover() {
 			opacity: .8;
 		}
 	}
 
 	.reviewer {
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 }
 

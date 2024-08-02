@@ -1,4 +1,20 @@
-.#{ $_prefix }c-widget {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../placeholder/widget';
+
+@use '_children-expander/app' as *;
+@use '_snow-monkey-posts/app' as *;
+@use '_widget-archive/app' as *;
+@use '_widget-calendar/app' as *;
+@use '_widget-categories/app' as *;
+@use '_widget-meta/app' as *;
+@use '_widget-nav-menu/app' as *;
+@use '_widget-pages/app' as *;
+@use '_widget-recent-comments/app' as *;
+@use '_widget-recent-entries/app' as *;
+@use '_widget-tag-cloud/app' as *;
+@use '_widget-text/app' as *;
+
+.c-widget {
 	word-break: break-word;
 
 	&__title,
@@ -27,8 +43,8 @@
 	}
 }
 
-[data-is-slim-widget-area="true"] .#{ $_prefix }c-widget {
-	@include _set-font-size-level(-1);
+[data-is-slim-widget-area="true"] .c-widget {
+	@include core.set-font-size-level(-1);
 
 	&__title,
 	> .widget-title,
@@ -37,7 +53,7 @@
 	> h4,
 	> h5,
 	> h6 {
-		@include _set-font-size-level(0);
+		@include core.set-font-size-level(0);
 	}
 
 	.wp-widget-group__inner-blocks,
@@ -48,7 +64,7 @@
 		> h4,
 		> h5,
 		> h6 {
-			@include _set-font-size-level(0);
+			@include core.set-font-size-level(0);
 		}
 	}
 }
@@ -56,16 +72,3 @@
 .widgettitle {
 	@extend %widget-title;
 }
-
-@import '_children-expander/app';
-@import '_snow-monkey-posts/app';
-@import '_widget-archive/app';
-@import '_widget-calendar/app';
-@import '_widget-categories/app';
-@import '_widget-meta/app';
-@import '_widget-nav-menu/app';
-@import '_widget-pages/app';
-@import '_widget-recent-comments/app';
-@import '_widget-recent-entries/app';
-@import '_widget-tag-cloud/app';
-@import '_widget-text/app';

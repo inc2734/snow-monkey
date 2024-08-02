@@ -1,3 +1,6 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/placeholder/widget';
+
 .wp-block-latest-comments {
 	@extend %widget-list-base;
 	margin-left: auto;
@@ -10,13 +13,13 @@
 	}
 
 	&__comment-date {
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 
 	&__comment-excerpt {
 		> p {
 			margin: 0;
-			@include _set-font-size-level(-1);
+			@include core.set-font-size-level(-1);
 		}
 	}
 }

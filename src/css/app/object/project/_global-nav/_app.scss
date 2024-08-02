@@ -1,13 +1,16 @@
-.#{ $_prefix }p-global-nav {
+
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.p-global-nav {
 	--global-nav-submenu-open-delay: .3s;
 
 	&[aria-hidden="true"] {
 		visibility: hidden;
 	}
 
-	.#{ $_prefix }c-navbar {
+	.c-navbar {
 		&[data-popup-mode="click"] {
-			.#{ $_prefix }c-navbar__item {
+			.c-navbar__item {
 				&[aria-haspopup="true"] {
 					&::before {
 						display: none;
@@ -15,7 +18,7 @@
 				}
 			}
 
-			.#{ $_prefix }c-navbar__subitem:first-child > a::before {
+			.c-navbar__subitem:first-child > a::before {
 				display: none;
 			}
 		}
@@ -25,10 +28,10 @@
 				position: relative;
 				flex-direction: column;
 				color: inherit;
-				@include _set-font-size-level(-1);
+				@include core.set-font-size-level(-1);
 				font-weight: bold;
 				padding: var(--_padding-1);
-				@include _transition(background-color, color);
+				@include core.transition(background-color, color);
 
 				> span {
 					display: flex;
@@ -38,7 +41,7 @@
 
 				> small {
 					display: block;
-					@include _set-font-size-level(-2);
+					@include core.set-font-size-level(-2);
 					font-weight: normal;
 				}
 			}
@@ -50,8 +53,8 @@
 					position: absolute;
 					visibility: hidden;
 					opacity: 0;
-					@include _transition(opacity);
-					@include _triangle-top(16px, 10px, var(--wp--preset--color--sm-accent));
+					@include core.transition(opacity);
+					@include core.triangle-top(16px, 10px, var(--wp--preset--color--sm-accent));
 					bottom: -0;
 					left: calc(50% - 8px);
 				}
@@ -72,14 +75,14 @@
 					display: none;
 				}
 
-				@include _hover() {
+				@include core.hover() {
 					> a {
 						background-color: rgba(#fff, .05);
 					}
 				}
 			}
 
-			> .#{ $_prefix }c-navbar__submenu {
+			> .c-navbar__submenu {
 				left: 50%;
 				transform: translateX(-50%);
 			}
@@ -95,7 +98,7 @@
 		}
 
 		&__subitem {
-			@include _set-font-size-level(-1);
+			@include core.set-font-size-level(-1);
 			color: var(--wp--preset--color--white);
 
 			&.sm-nav-menu-item-highlight {
@@ -106,16 +109,16 @@
 				position: relative;
 				color: inherit;
 				padding: var(--_padding-2) var(--_padding-1);
-				@include _transition(background-color, color);
+				@include core.transition(background-color, color);
 			}
 
-			@include _hover() {
+			@include core.hover() {
 				> a {
 					background-color: rgba(#fff, .05);
 				}
 			}
 
-			.#{ $_prefix }c-navbar__subitem:first-child > a::before {
+			.c-navbar__subitem:first-child > a::before {
 				content: '';
 				position: absolute;
 				top: -20px;
@@ -125,31 +128,31 @@
 			}
 		}
 
-		.#{ $_prefix }c-navbar__toggle {
+		.c-navbar__toggle {
 			z-index: 2; // vs .c-navbar__subitem > a::before
 		}
 
-		.#{ $_prefix }c-navbar__item {
-			.#{ $_prefix }c-navbar__toggle {
-				> .#{ $_prefix }c-ic-angle-right {
-					@include _transition(transform);
+		.c-navbar__item {
+			.c-navbar__toggle {
+				> .c-ic-angle-right {
+					@include core.transition(transform);
 					transform-origin: calc(50% + .1em) 50%;
 					transform: translateY(0) rotate(90deg);
 				}
 
 				&[aria-expanded="true"] {
-					> .#{ $_prefix }c-ic-angle-right {
+					> .c-ic-angle-right {
 						transform: translateY(0) rotate(-90deg);
 					}
 				}
 			}
 		}
 
-		.#{ $_prefix }c-navbar__subitem {
-			.#{ $_prefix }c-navbar__toggle {
+		.c-navbar__subitem {
+			.c-navbar__toggle {
 				color: var(--wp--preset--color--white);
 
-				> .#{ $_prefix }c-ic-angle-right {
+				> .c-ic-angle-right {
 					transform: rotate(0);
 
 					&::before {
@@ -158,7 +161,7 @@
 				}
 
 				&[aria-expanded="true"] {
-					> .#{ $_prefix }c-ic-angle-right {
+					> .c-ic-angle-right {
 						transform: rotate(180deg);
 					}
 				}
@@ -169,7 +172,7 @@
 	&--vertical {
 		display: flex;
 
-		.#{ $_prefix }c-navbar {
+		.c-navbar {
 			&__item {
 				> a {
 					flex-direction: row-reverse;
@@ -197,22 +200,22 @@
 		content: '';
 		height: 1px;
 		width: auto;
-		@include _transition(background-color);
+		@include core.transition(background-color);
 		transform: none;
 		background-color: var(--wp--preset--color--sm-accent);
 	}
 
 	&--hover-text-color {
-		.#{ $_prefix }c-navbar {
+		.c-navbar {
 			&__item {
-				@include _hover() {
+				@include core.hover() {
 					@include effect-text-color();
 				}
 			}
 		}
 
-		&.#{ $_prefix }p-global-nav--current-same-hover-effect {
-			.#{ $_prefix }c-navbar {
+		&.p-global-nav--current-same-hover-effect {
+			.c-navbar {
 				&__item[data-active-menu] {
 					@include effect-text-color();
 				}
@@ -221,13 +224,13 @@
 	}
 
 	&--hover-underline {
-		.#{ $_prefix }c-navbar {
+		.c-navbar {
 			&__item {
 				> a::after {
-					@include _transition(background-color);
+					@include core.transition(background-color);
 				}
 
-				@include _hover() {
+				@include core.hover() {
 					& > a::after {
 						@include effect-underline();
 					}
@@ -235,8 +238,8 @@
 			}
 		}
 
-		&.#{ $_prefix }p-global-nav--current-same-hover-effect {
-			.#{ $_prefix }c-navbar {
+		&.p-global-nav--current-same-hover-effect {
+			.c-navbar {
 				&__item[data-active-menu] > a::after {
 					@include effect-underline();
 				}
@@ -245,16 +248,16 @@
 	}
 
 	&--hover-extend-underline {
-		.#{ $_prefix }c-navbar {
+		.c-navbar {
 			&__item {
 				position: relative;
 
 				> a::after {
-					@include _extend-underline();
+					@include core.extend-underline();
 					background-color: var(--wp--preset--color--sm-accent);
 				}
 
-				@include _hover() {
+				@include core.hover() {
 					& > a::after {
 						width: 100%;
 					}
@@ -262,8 +265,8 @@
 			}
 		}
 
-		&.#{ $_prefix }p-global-nav--current-same-hover-effect {
-			.#{ $_prefix }c-navbar {
+		&.p-global-nav--current-same-hover-effect {
+			.c-navbar {
 				&__item[data-active-menu] > a::after {
 					width: 100%;
 				}
@@ -272,7 +275,7 @@
 	}
 
 	&--current-text-color {
-		.#{ $_prefix }c-navbar {
+		.c-navbar {
 			&__item[data-active-menu] {
 				@include effect-text-color();
 			}
@@ -280,7 +283,7 @@
 	}
 
 	&--current-underline {
-		.#{ $_prefix }c-navbar {
+		.c-navbar {
 			&__item[data-active-menu] > a::after {
 				@include effect-underline();
 			}

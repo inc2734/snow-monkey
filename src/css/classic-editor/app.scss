@@ -1,4 +1,4 @@
-@import '../app/app';
+@use '../app/app' as *;
 
 #tinymce {
 	margin: 10px;

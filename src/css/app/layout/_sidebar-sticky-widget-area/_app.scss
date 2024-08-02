@@ -1,6 +1,7 @@
-.#{ $_prefix }l-sidebar-sticky-widget-area:last-child {
-	@include _set-content-level(1);
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
 
+.l-sidebar-sticky-widget-area:last-child {
 	position: sticky;
 	top: 0;
+	@include core.set-content-level(1);
 }

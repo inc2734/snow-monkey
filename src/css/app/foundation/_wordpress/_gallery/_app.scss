@@ -1,8 +1,11 @@
+@use 'sass:math';
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .gallery {
-	@include _clearfix();
 	margin-right: calc(-1 * var(--_margin-1));
 	margin-left: calc(-1 * var(--_margin-1));
 	margin-bottom: calc(-1 * var(--_margin1));
+	@include core.clearfix();
 
 	&-item {
 		float: left;
@@ -19,7 +22,7 @@
 
 @for $i from 2 through 9 {
 	.gallery-columns-#{ $i } .gallery-item {
-		width: percentage(1 / $i);
+		width: math.percentage(math.div(1, $i));
 
 		&:nth-child(#{ $i }n + 1) {
 			clear: both;

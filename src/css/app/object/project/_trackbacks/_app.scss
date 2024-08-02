@@ -1,4 +1,4 @@
-.#{ $_prefix }p-trackbacks {
+.p-trackbacks {
 	&__trackback-url {
 		margin-top: var(--_margin1);
 
@@ -9,7 +9,7 @@
 				margin-bottom: 4px;
 			}
 
-			.#{ $_prefix }c-form-control {
+			.c-form-control {
 				width: 100%;
 			}
 		}

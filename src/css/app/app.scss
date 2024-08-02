@@ -1,35 +1,30 @@
-@import 'adminbar';
-
-/**
- * Core
- */
-@import 'core/core';
+@use 'adminbar' as *;
 
 /**
  * Foundation
  */
-@import 'foundation/settings';
-@import 'foundation/foundation';
+@use 'foundation/settings' as *;
+@use 'foundation' as *;
 
 /**
  * Layout
  */
-@import 'layout/layout';
+@use 'layout' as *;
 
 /**
  * Object - Component
  */
-@import 'object/component/component';
+@use 'object/component' as *;
 
 /**
  * Object - Project
  */
-@import 'object/project/project';
+@use 'object/project' as *;
 
 /**
  * Object - utility
  */
-@import 'object/utility/utility';
+@use 'object/utility' as *;
 
 #page-start {
 	margin-bottom: -1px;

@@ -1,4 +1,5 @@
-@import '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/foundation/settings';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/foundation/settings';
+@use '../core/variable' as *;
 
 :root {
 	--body-margin-left: 0px;
@@ -11,6 +12,9 @@
 	--overlay-header-text-color: var(--_color-white);
 	--drop-nav-text-color: var(--_color-text);
 	--scrollbar-width: 0px;
+
+	--_global--border-radius: 6px;
+	--_global--font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", Meiryo, sans-serif;
 
 	--wp--style--gallery-gap-default: var(--_margin-2);
 }

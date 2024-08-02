@@ -1,3 +1,6 @@
+@use '../../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../../placeholder/widget';
+
 .children-expander {
 	position: absolute;
 	top: -1px;
@@ -10,16 +13,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	@include _square(var(--_space));
+	@include core.square(var(--_space));
 	transform: rotate(90deg);
-	@include _transition(transform);
+	@include core.transition(transform);
 
 	&[data-is-expanded="true"] {
 		transform: rotate(-90deg);
 		right: .05rem;
 	}
 
-	> .#{ $_prefix }c-ic-angle-right {
+	> .c-ic-angle-right {
 		transform: none;
 	}
 }

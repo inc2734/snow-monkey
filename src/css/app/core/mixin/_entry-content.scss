@@ -1,5 +1,9 @@
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../placeholder/blockquote';
+@use '../../placeholder/table';
+
 @mixin entry-content($level: 1) {
-	@include _set-content-level($level);
+	@include core.set-content-level($level);
 
 	@at-root {
 		:where(#{ & } > *) {

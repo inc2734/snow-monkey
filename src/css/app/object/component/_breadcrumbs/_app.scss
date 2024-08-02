@@ -1,11 +1,13 @@
-.#{ $_prefix }c-breadcrumbs {
-	@include _set-font-size-level(-2);
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-breadcrumbs {
+	@include core.set-font-size-level(-2);
 
 	a {
 		color: inherit;
 		text-decoration: none;
 
-		@include _hover() {
+		@include core.hover() {
 			text-decoration: underline;
 		}
 	}

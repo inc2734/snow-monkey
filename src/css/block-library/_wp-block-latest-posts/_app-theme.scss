@@ -1,3 +1,5 @@
+@use '../../app/placeholder/entry-content';
+
 .wp-block-latest-posts {
 	&__post-full-content {
 		@extend %entry-content-theme;

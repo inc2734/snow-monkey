@@ -1,3 +1,5 @@
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 iframe {
 	max-width: 100%;
 }
@@ -8,7 +10,7 @@ fieldset {
 
 code,
 kbd {
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 	display: inline-block;
 	background-color: var(--wp--preset--color--sm-lighter-gray);
 	border-radius: var(--_global--border-radius);

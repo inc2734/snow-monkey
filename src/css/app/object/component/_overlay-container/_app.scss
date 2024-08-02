@@ -1,4 +1,6 @@
-.#{ $_prefix }c-overlay-container {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-overlay-container {
 	position: fixed;
 	top: 100%;
 	right: 0;
@@ -7,7 +9,7 @@
 	z-index: 0;
 	opacity: 0;
 	visibility: hidden;
-	@include _transition(opacity);
+	@include core.transition(opacity);
 	background-color: rgba(#000, .7);
 
 	&:target {
@@ -46,7 +48,7 @@
 		top: 0;
 		right: 0;
 		z-index: 2;
-		@include _square(60px);
+		@include core.square(60px);
 		display: flex;
 		align-items: center;
 		justify-content: center;

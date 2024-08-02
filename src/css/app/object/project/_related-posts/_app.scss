@@ -1,20 +1,21 @@
-.#{ $_prefix }p-related-posts {
-	.#{ $_prefix }c-entries--rich-media {
-		@include _media-min(lg) {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.p-related-posts {
+	.c-entries--rich-media {
+		@include core.media-min(lg) {
 			--entries--item-width: 25%;
 		}
 
-		.#{ $_prefix }c-entry-summary {
+		.c-entry-summary {
 			&__content {
 				display: none;
 			}
 		}
 	}
 
-	.#{ $_prefix }c-entry-summary {
+	.c-entry-summary {
 		&__title {
-			// margin-bottom: var(--_margin-2);
-			@include _set-font-size-level(0);
+			@include core.set-font-size-level(0);
 		}
 	}
 }

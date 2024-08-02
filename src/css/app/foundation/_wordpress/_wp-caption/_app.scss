@@ -1,9 +1,11 @@
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .wp-caption {
 	max-width: 100%;
 
 	&-text,
 	&-dd {
 		margin: var(--_margin-2) 0 0;
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
 	}
 }

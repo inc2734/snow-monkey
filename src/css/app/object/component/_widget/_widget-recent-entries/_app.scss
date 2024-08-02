@@ -1,3 +1,6 @@
+@use '../../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../../placeholder/widget';
+
 .widget_recent_entries {
 	ul {
 		@extend %widget-list-base;
@@ -5,6 +8,6 @@
 
 	.post-date {
 		display: block;
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 }

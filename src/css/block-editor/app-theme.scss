@@ -1,12 +1,5 @@
-/**
- * Core
- */
-@import '../app/core/core';
-
-/**
- * Foundation
- */
-@import '../app/foundation/_placeholder/placeholder';
+@use 'sass:meta';
+@use '../app/placeholder/entry-content';
 
 .is-root-container,
 .wp-block-freeform {
@@ -18,10 +11,10 @@ html :where(.editor-styles-wrapper) {
 	/**
 	 * Object - Component
 	 */
-	@import '../app/object/component/component-theme';
+	@include meta.load-css('../app/object/component/theme');
 
 	/**
 	 * Object - Project
 	 */
-	@import '../app/object/project/project-theme';
+	@include meta.load-css('../app/object/project/theme');
 }

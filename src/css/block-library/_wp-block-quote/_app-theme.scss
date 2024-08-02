@@ -1,3 +1,5 @@
+@use '../../app/placeholder/blockquote';
+
 .wp-block-quote:where(:not(.is-style-plain)) {
 	@extend %blockquote-theme;
 }

@@ -1,19 +1,9 @@
 /**
- * Core
- */
-@import 'core/core';
-
-/**
- * Foundation
- */
-@import 'foundation/_placeholder/placeholder';
-
-/**
  * Object - Component
  */
-@import 'object/component/component-theme';
+@use 'object/component/theme' as *;
 
 /**
  * Object - Project
  */
-@import 'object/project/project-theme';
+@use 'object/project/theme' as *;

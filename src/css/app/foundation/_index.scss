@@ -1,0 +1,10 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/foundation/base';
+@use '_body/app' as *;
+@use '_element/app' as *;
+@use '_packages/_slick/app' as *;
+@use '_wordpress/app' as *;
+
+:root {
+	// @see src/css/admin/app
+	--_global--background-color: #fff;
+}

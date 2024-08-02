@@ -1,16 +1,16 @@
-.#{ $_prefix }p-drop-nav {
+.p-drop-nav {
 	background-color: var(--_global--background-color);
 
 	@media print {
 		display: none;
 	}
 
-	.#{ $_prefix }p-global-nav {
+	.p-global-nav {
 		display: flex;
 		justify-content: center;
 	}
 
-	.#{ $_prefix }c-site-branding {
+	.c-site-branding {
 		margin-right: var(--_margin-1);
 		display: flex;
 		flex-direction: column;
@@ -23,7 +23,7 @@
 		}
 	}
 
-	.#{ $_prefix }p-global-nav .#{ $_prefix }c-navbar {
+	.p-global-nav .c-navbar {
 		justify-content: center;
 
 		&__item {
@@ -37,7 +37,7 @@
 	}
 
 	&--has-site-branding {
-		.#{ $_prefix }p-global-nav {
+		.p-global-nav {
 			justify-content: space-between;
 		}
 	}

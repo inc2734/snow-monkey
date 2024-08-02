@@ -1,5 +1,7 @@
-.#{ $_prefix }c-btn {
-	@include btn();
+@use '../../../core/mixin/btn' as *;
+
+.c-btn {
+	@include sm-btn();
 
 	&--full {
 		width: 100%;

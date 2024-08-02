@@ -1,8 +1,11 @@
-.#{ $_prefix }c-prev-next-nav {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../core/mixin/cover-img' as *;
+
+.c-prev-next-nav {
 	margin-top: var(--_margin1);
 	position: relative;
 
-	@include _media-min(md) {
+	@include core.media-min(md) {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
@@ -13,7 +16,7 @@
 		display: flex;
 		overflow: hidden;
 
-		@include _media-min(md) {
+		@include core.media-min(md) {
 			flex: 0 1 auto;
 			width: 50%;
 		}
@@ -21,19 +24,19 @@
 		&:not(:first-child) {
 			margin-top: var(--_margin-1);
 
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				margin-top: 0;
 			}
 		}
 
 		&--prev {
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				margin-left: var(--_margin-1);
 			}
 		}
 
 		&--next {
-			@include _media-min(md) {
+			@include core.media-min(md) {
 				margin-right: var(--_margin-1);
 			}
 		}
@@ -50,8 +53,8 @@
 			text-decoration: none;
 			padding: var(--_padding1);
 
-			@include _hover() {
-				.#{ $_prefix }c-prev-next-nav__item-figure {
+			@include core.hover() {
+				.c-prev-next-nav__item-figure {
 					opacity: .5;
 				}
 			}
@@ -59,25 +62,25 @@
 	}
 
 	&__item-figure {
-		@include cover-img();
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
 		background-color: var(--wp--preset--color--sm-lighter-gray);
 		backface-visibility: hidden;
-		@include _transition(opacity);
+		@include core.transition(opacity);
 		opacity: .6;
+		@include cover-img();
+
+		& {
+			position: absolute;
+			inset: 0;
+		}
 	}
 
 	&__item-label {
 		position: relative;
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 
 	&__item-title {
 		position: relative;
-		@include _set-fluid-font-size-level(1);
+		@include core.set-fluid-font-size-level(1);
 	}
 }

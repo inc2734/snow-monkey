@@ -1,3 +1,5 @@
+@use '../core/mixin/entry-content' as *;
+
 %entry-content {
 	@include entry-content();
 }

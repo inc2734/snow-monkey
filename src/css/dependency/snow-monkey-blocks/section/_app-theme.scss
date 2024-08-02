@@ -1,5 +1,4 @@
-@import '../../../app/core/core';
-@import '../../../app/foundation/_placeholder/placeholder';
+@use '../../../app/placeholder/section';
 
 .smb-section {
 	&__contents-wrapper {
@@ -41,7 +40,7 @@
 	// @deprecated
 	&--left {
 		> .smb-section__inner {
-			> .#{$_prefix}c-container {
+			> .c-container {
 				> .smb-section__title {
 					&::after {
 						margin-right: auto;
@@ -55,7 +54,7 @@
 	// @deprecated
 	&--center {
 		> .smb-section__inner {
-			> .#{$_prefix}c-container {
+			> .c-container {
 				> .smb-section__title {
 					&::after {
 						margin-right: auto;
@@ -69,7 +68,7 @@
 	// @deprecated
 	&--right {
 		> .smb-section__inner {
-			> .#{$_prefix}c-container {
+			> .c-container {
 				> .smb-section__title {
 					&::after {
 						margin-right: 0;

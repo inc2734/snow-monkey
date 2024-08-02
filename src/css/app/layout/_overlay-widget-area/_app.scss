@@ -1,13 +1,15 @@
-.#{ $_prefix }l-overlay-widget-area {
-	@include _set-content-level(1);
+@use 'sass:map';
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
 
+.l-overlay-widget-area {
 	position: relative;
 	margin: auto;
 	background-color: var(--wp--preset--color--sm-text-alt);
 	padding: var(--_padding1);
-	width: min(90vw, #{ _px2rem(map-get($_sizes, lg)) });
+	width: min(90vw, #{ map.get(core.$sizes, lg) });
+	@include core.set-content-level(1);
 
 	&[data-is-slim-widget-area="true"] {
-		max-width: _px2rem(map-get($_sizes, md));
+		max-width: map.get(core.$sizes, md);
 	}
 }

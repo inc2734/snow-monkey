@@ -1,3 +1,5 @@
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 // @deprecated
 body {
 	--wp--preset--font-size--x-large: 42px;
@@ -19,7 +21,7 @@ body {
 	--line-height-sm-xxlarge: calc(16 / 76 + var(--_half-leading) * 2);
 	--line-height-sm-xxxlarge: calc(16 / 140 + var(--_half-leading) * 2);
 
-	@include _media-only(sm) {
+	@include core.media-only(sm) {
 		--wp--preset--font-size--sm-xlarge: calc(36px - (16px - var(--_global--font-size-px)));
 		--wp--preset--font-size--sm-xxlarge: calc(44px - (16px - var(--_global--font-size-px)));
 		--wp--preset--font-size--sm-xxxlarge: calc(52px - (16px - var(--_global--font-size-px)));
@@ -30,7 +32,7 @@ body {
 		--line-height-sm-xxxlarge: calc(.3 + .7 / (1 + 3.25 * 3.25 / 2.5 - 3.25 / 2.5) + var(--_half-leading) * 2)
 	}
 
-	@include _media-only(md) {
+	@include core.media-only(md) {
 		--wp--preset--font-size--sm-xxxlarge: calc(96px - (16px - var(--_global--font-size-px)));
 
 		// @todo I really want to reflect the diff from base-font-size.
@@ -107,59 +109,59 @@ body {
 .has-sm-xs-font-size {
 	--wp--preset--font-size--sm-xs: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(-2);
+	@include core.set-fluid-font-size-level(-2);
 }
 
 .has-sm-s-font-size {
 	--wp--preset--font-size--sm-s: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(-1);
+	@include core.set-fluid-font-size-level(-1);
 }
 
 .has-sm-m-font-size {
 	--wp--preset--font-size--sm-m: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(0);
+	@include core.set-fluid-font-size-level(0);
 }
 
 .has-sm-l-font-size {
 	--wp--preset--font-size--sm-l: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(1);
+	@include core.set-fluid-font-size-level(1);
 }
 
 .has-sm-xl-font-size {
 	--wp--preset--font-size--sm-xl: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(2);
+	@include core.set-fluid-font-size-level(2);
 }
 
 .has-sm-2-xl-font-size {
 	--wp--preset--font-size--sm-2-xl: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(3);
+	@include core.set-fluid-font-size-level(3);
 }
 
 .has-sm-3-xl-font-size {
 	--wp--preset--font-size--sm-3-xl: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(4);
+	@include core.set-fluid-font-size-level(4);
 }
 
 .has-sm-4-xl-font-size {
 	--wp--preset--font-size--sm-4-xl: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(5);
+	@include core.set-fluid-font-size-level(5);
 }
 
 .has-sm-5-xl-font-size {
 	--wp--preset--font-size--sm-5-xl: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(6);
+	@include core.set-fluid-font-size-level(6);
 }
 
 .has-sm-6-xl-font-size {
 	--wp--preset--font-size--sm-6-xl: var(--_fluid-font-size);
 
-	@include _set-fluid-font-size-level(7);
+	@include core.set-fluid-font-size-level(7);
 }

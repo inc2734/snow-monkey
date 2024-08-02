@@ -1,3 +1,6 @@
+@use 'sass:map';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .widget_inc2734_wp_awesome_widgets_slider {
 	padding: 0;
 }
@@ -21,12 +24,12 @@
 		align-items: center;
 		flex-direction: column;
 
-		@include _media-min(md) {
-			max-width: _px2rem(map-get($_sizes, md));
+		@include core.media-min(md) {
+			max-width: map.get(core.$sizes, md);
 		}
 
-		@include _media-min(lg) {
-			max-width: _px2rem(map-get($_sizes, lg));
+		@include core.media-min(lg) {
+			max-width: map.get(core.$sizes, lg);
 		}
 
 		> * {
@@ -38,12 +41,12 @@
 	&__item-title {
 		margin-bottom: var(--_margin-1);
 		font-weight: bold;
-		@include _set-fluid-font-size-level(1);
+		@include core.set-fluid-font-size-level(1);
 	}
 
 	&__item-summary {
-		@include _set-between-content-level(-1);
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
+		@include core.set-between-content-level(-1);
 	}
 
 	&__item-more {
@@ -55,12 +58,12 @@
 			border-width: 1px;
 			border-style: solid;
 
-			@include _media-min(lg) {
+			@include core.media-min(lg) {
 				opacity: .8;
-				@include _transition(opacity);
+				@include core.transition(opacity);
 			}
 
-			@include _hover() {
+			@include core.hover() {
 				opacity: 1;
 			}
 		}
@@ -85,7 +88,7 @@
 	[data-is-content-widget-area="true"] {
 		.wpaw-slider {
 			&__item-title {
-				@include _set-fluid-font-size-level(4);
+				@include core.set-fluid-font-size-level(4);
 			}
 		}
 	}

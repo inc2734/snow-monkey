@@ -37,9 +37,9 @@
 	// @deprecated
 	&--left {
 		> .smb-section__inner {
-			> .#{ $_prefix }c-container {
-				> .#{ $_prefix }c-row {
-					> .#{ $_prefix }c-row__col {
+			> .c-container {
+				> .c-row {
+					> .c-row__col {
 						> .smb-section-break-the-grid__content {
 							> .smb-section__title {
 								&::after {
@@ -57,9 +57,9 @@
 	// @deprecated
 	&--center {
 		> .smb-section__inner {
-			> .#{ $_prefix }c-container {
-				> .#{ $_prefix }c-row {
-					> .#{ $_prefix }c-row__col {
+			> .c-container {
+				> .c-row {
+					> .c-row__col {
 						> .smb-section-break-the-grid__content {
 							> .smb-section__title {
 								&::after {
@@ -77,9 +77,9 @@
 	// @deprecated
 	&--right {
 		> .smb-section__inner {
-			> .#{ $_prefix }c-container {
-				> .#{ $_prefix }c-row {
-					> .#{ $_prefix }c-row__col {
+			> .c-container {
+				> .c-row {
+					> .c-row__col {
 						> .smb-section-break-the-grid__content {
 							> .smb-section__title {
 								&::after {
@@ -99,8 +99,8 @@
 	> .smb-section__inner {
 		> .c-container {
 			> .smb-section__contents-wrapper {
-				> .#{ $_prefix }c-row {
-					> .#{ $_prefix }c-row__col {
+				> .c-row {
+					> .c-row__col {
 						> .smb-section-break-the-grid__content {
 							> .smb-section-break-the-grid__header {
 								> .smb-section-break-the-grid__title {

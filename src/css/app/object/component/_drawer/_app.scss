@@ -1,14 +1,16 @@
-.#{ $_prefix }c-drawer {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-drawer {
 	z-index: 100000;
 	background-color: var(--wp--preset--color--sm-accent);
 	color: var(--wp--preset--color--white);
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 
 	a {
 		color: inherit;
 	}
 
-	.#{ $_prefix }c-ic-angle-right {
+	.c-ic-angle-right {
 		&::before {
 			border-color: var(--wp--preset--color--white);
 		}
@@ -20,14 +22,14 @@
 	}
 
 	&__toggle {
-		> .#{ $_prefix }c-ic-angle-right {
-			@include _transition(transform);
+		> .c-ic-angle-right {
+			@include core.transition(transform);
 			transform-origin: calc(50% + .1em) 50%;
 			transform: translateY(0) rotate(90deg);
 		}
 
 		&[aria-expanded="true"] {
-			> .#{ $_prefix }c-ic-angle-right {
+			> .c-ic-angle-right {
 				transform: translateY(0) rotate(-90deg);
 			}
 		}
@@ -62,18 +64,18 @@
 	}
 
 	&__sub-nav {
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 
-		* + .#{ $_prefix }c-drawer__sub-nav {
+		* + .c-drawer__sub-nav {
 			border-top: 1px solid rgba(#fff, .4);
 		}
 
-		.#{ $_prefix }c-drawer__item {
+		.c-drawer__item {
 			padding-top: calc(.5 * var(--_padding-2));
 			padding-bottom: calc(.5 * var(--_padding-2));
 		}
 
-		.#{ $_prefix }c-drawer__submenu {
+		.c-drawer__submenu {
 			margin-right: calc(-1 * var(--_padding-2));
 		}
 	}
@@ -89,13 +91,13 @@
 		}
 	}
 
-	.#{ $_prefix }c-hamburger-btn__bar {
+	.c-hamburger-btn__bar {
 		background-color: var(--wp--preset--color--sm-text-alt);
 	}
 }
 
-.#{ $_prefix }c-drawer--highlight-type-background-color {
-	.#{ $_prefix }c-drawer__item {
+.c-drawer--highlight-type-background-color {
+	.c-drawer__item {
 		&.sm-nav-menu-item-highlight {
 			background-color: var(--wp--preset--color--sm-sub-accent);
 			margin-right: calc(-1 * var(--_padding-1));
@@ -113,7 +115,7 @@
 		}
 	}
 
-	.#{ $_prefix }c-drawer__subitem {
+	.c-drawer__subitem {
 		&.sm-nav-menu-item-highlight {
 			background-color: var(--wp--preset--color--sm-sub-accent);
 			margin-right: calc(-1 * var(--_padding-2));
@@ -128,15 +130,15 @@
 	padding-bottom: env(safe-area-inset-bottom);
 }
 
-[id="drawer-nav"]:not(.#{ $_prefix }c-drawer--inverse) {
+[id="drawer-nav"]:not(.c-drawer--inverse) {
 	padding-left: env(safe-area-inset-left);
 }
 
-[id="drawer-nav"].#{ $_prefix }c-drawer--inverse {
+[id="drawer-nav"].c-drawer--inverse {
 	padding-right: env(safe-area-inset-right);
 }
 
-[id="drawer-nav"].#{ $_prefix }c-drawer--overall {
+[id="drawer-nav"].c-drawer--overall {
 	right: 0;
 	left: 0;
 	width: 100%;
@@ -158,20 +160,20 @@
 		flex: 1 1 100%;
 	}
 
-	.#{ $_prefix }c-drawer__inner {
+	.c-drawer__inner {
 		margin: auto;
 		height: auto;
 		overflow: hidden;
 	}
 
-	.#{ $_prefix }c-drawer__controls {
+	.c-drawer__controls {
 		position: absolute;
 		top: 0;
 		right: var(--_padding-1);
 		left: var(--_padding-1);
 	}
 
-	.#{ $_prefix }c-drawer__toggle {
+	.c-drawer__toggle {
 		justify-content: flex-end;
 		padding-right: 7px;
 	}

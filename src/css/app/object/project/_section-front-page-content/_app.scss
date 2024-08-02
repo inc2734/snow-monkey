@@ -1,4 +1,6 @@
-.#{ $_prefix }p-section-front-page-content {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.p-section-front-page-content {
 	max-width: 100%;
 
 	&--no-vpadding {
@@ -8,8 +10,8 @@
 }
 
 [data-has-sidebar="true"] {
-	.#{ $_prefix }p-section-front-page-content {
-		@include _media-min(lg) {
+	.p-section-front-page-content {
+		@include core.media-min(lg) {
 			padding-top: var(--_padding1);
 			padding-bottom: var(--_padding1);
 		}
@@ -17,8 +19,8 @@
 }
 
 // One column full
-[data-has-sidebar="false"][data-is-full-template="true"] .#{ $_prefix }l-contents__main {
-	.#{ $_prefix }p-section-front-page-content {
+[data-has-sidebar="false"][data-is-full-template="true"] .l-contents__main {
+	.p-section-front-page-content {
 		--wp--style--global--content-size: var(--wp--custom--content-width);
 		--wp--style--global--wide-size: var(--wp--custom--content-wide-width);
 	}

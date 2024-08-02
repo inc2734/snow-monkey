@@ -1,9 +1,11 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .wp-block-button {
 	&__link,
 	&.is-style-outline &__link {
-		@include _transition(all);
+		@include core.transition(all);
 
-		@include _hover() {
+		@include core.hover() {
 			filter: brightness(90%);
 		}
 	}

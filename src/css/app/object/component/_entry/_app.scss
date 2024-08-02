@@ -1,18 +1,20 @@
-:where(.#{ $_prefix }c-entry > *) {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+:where(.c-entry > *) {
 	margin-inline: auto;
 	max-width: var(--wp--style--global--content-size);
 }
 
-:where(.#{ $_prefix }c-entry__body > *) {
+:where(.c-entry__body > *) {
 	margin-inline: auto;
 	max-width: var(--wp--style--global--content-size);
 }
 
-:where(.#{ $_prefix }c-entry__content > :not(.alignleft):not(.alignright):not(.alignfull)) {
+:where(.c-entry__content > :not(.alignleft):not(.alignright):not(.alignfull)) {
 	max-width: var(--wp--style--global--content-size);
 }
 
-.#{ $_prefix }c-entry {
+.c-entry {
 	max-width: 100%;
 
 	&__header {
@@ -21,32 +23,30 @@
 
 	&__meta {
 		margin-top: var(--_margin-2);
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
 
 		a {
 			color: inherit;
 			text-decoration: none;
 
-			@include _hover() {
+			@include core.hover() {
 				text-decoration: underline;
 			}
 		}
 	}
 
 	&__body {
-		@include _set-content-level(1);
-
 		max-width: 100%;
+		@include core.set-content-level(1);
 	}
 
 	&__content {
-		@include _clearfix();
-
 		max-width: 100%;
+		@include core.clearfix();
 	}
 
 	&__footer {
 		margin-top: var(--_margin2);
-		@include _set-content-level(1);
+		@include core.set-content-level(1);
 	}
 }

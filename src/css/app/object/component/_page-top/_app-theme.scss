@@ -1,7 +1,9 @@
-.#{ $_prefix }c-page-top {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-page-top {
 	background-color: var(--wp--preset--color--sm-accent);
 
-	@include _hover() {
+	@include core.hover() {
 		filter: brightness(90%);
 	}
 

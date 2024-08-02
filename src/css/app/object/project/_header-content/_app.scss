@@ -1,9 +1,11 @@
-.#{ $_prefix }p-header-content {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.p-header-content {
 	&--sm {
 		padding-top: var(--_padding-1);
 		padding-bottom: var(--_padding-1);
 
-		@include _media-min(lg) {
+		@include core.media-min(lg) {
 			display: none;
 		}
 	}

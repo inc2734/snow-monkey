@@ -1,3 +1,5 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .wpaw-carousel {
 	.slick-dotted.slick-slider {
 		margin-bottom: 0;
@@ -21,7 +23,7 @@
 	&__item {
 		text-decoration: none;
 
-		@include _hover() {
+		@include core.hover() {
 			.wpaw-carousel__item-figure {
 				filter: brightness(80%);
 			}
@@ -33,11 +35,11 @@
 	}
 
 	&__item-figure {
-		@include _transition(filter);
+		@include core.transition(filter);
 	}
 
 	&__item-body {
-		@include _transition(opacity);
+		@include core.transition(opacity);
 	}
 
 	&__item-title {

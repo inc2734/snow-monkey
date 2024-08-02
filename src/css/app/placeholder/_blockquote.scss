@@ -1,3 +1,5 @@
+@use '../core/mixin/blockquote' as *;
+
 %blockquote {
 	@include blockquote();
 }

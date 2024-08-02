@@ -1,10 +1,14 @@
-.#{ $_prefix }p-follow-box-nav {
+@use 'sass:map';
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../../core/variable' as *;
+
+.p-follow-box-nav {
 	&__inner {
 		display: flex;
 		justify-content: center;
 	}
 
-	.#{ $_prefix }c-navbar {
+	.c-navbar {
 		flex-wrap: wrap;
 
 		&__item {
@@ -25,158 +29,158 @@
 		align-items: center;
 		justify-content: center;
 		color: var(--wp--preset--color--white);
-		@include _circle(2rem);
+		@include core.circle(2rem);
 	}
 
 	[data-icon="amazon"] {
-		background-color: map-get($social-icon-colors, 'amazon');
+		background-color: map.get($social-icon-colors, 'amazon');
 	}
 
 	[data-icon="bitbucket"] {
-		background-color: map-get($social-icon-colors, 'bitbucket');
+		background-color: map.get($social-icon-colors, 'bitbucket');
 	}
 
 	[data-icon="paypal"] {
-		background-color: map-get($social-icon-colors, 'paypal');
+		background-color: map.get($social-icon-colors, 'paypal');
 	}
 
 	[data-icon="stripe"] {
-		background-color: map-get($social-icon-colors, 'stripe');
+		background-color: map.get($social-icon-colors, 'stripe');
 	}
 
 	[data-icon="codepen"] {
-		background-color: map-get($social-icon-colors, 'codepen');
+		background-color: map.get($social-icon-colors, 'codepen');
 	}
 
 	[data-icon="dribbble"] {
-		background-color: map-get($social-icon-colors, 'dribbble');
+		background-color: map.get($social-icon-colors, 'dribbble');
 	}
 
 	[data-icon="dropbox"] {
-		background-color: map-get($social-icon-colors, 'dropbox');
+		background-color: map.get($social-icon-colors, 'dropbox');
 	}
 
 	[data-icon="facebook"] {
-		background-color: map-get($social-icon-colors, 'facebook');
+		background-color: map.get($social-icon-colors, 'facebook');
 	}
 
 	[data-icon="flickr"] {
-		background-color: map-get($social-icon-colors, 'flickr');
+		background-color: map.get($social-icon-colors, 'flickr');
 	}
 
 	[data-icon="github"] {
-		background-color: map-get($social-icon-colors, 'github');
+		background-color: map.get($social-icon-colors, 'github');
 	}
 
 	[data-icon="gitlab"] {
-		background-color: map-get($social-icon-colors, 'gitlab');
+		background-color: map.get($social-icon-colors, 'gitlab');
 	}
 
 	[data-icon="google"] {
-		background-color: map-get($social-icon-colors, 'google');
+		background-color: map.get($social-icon-colors, 'google');
 	}
 
 	[data-icon="instagram"] {
-		background-color: map-get($social-icon-colors, 'instagram');
+		background-color: map.get($social-icon-colors, 'instagram');
 	}
 
 	[data-icon="linkedin"] {
-		background-color: map-get($social-icon-colors, 'linkedin');
+		background-color: map.get($social-icon-colors, 'linkedin');
 	}
 
 	[data-icon="medium"] {
-		background-color: map-get($social-icon-colors, 'medium');
+		background-color: map.get($social-icon-colors, 'medium');
 	}
 
 	[data-icon="pinterest"] {
-		background-color: map-get($social-icon-colors, 'pinterest');
+		background-color: map.get($social-icon-colors, 'pinterest');
 	}
 
 	[data-icon="reddit"] {
-		background-color: map-get($social-icon-colors, 'reddit');
+		background-color: map.get($social-icon-colors, 'reddit');
 	}
 
 	[data-icon="skype"] {
-		background-color: map-get($social-icon-colors, 'skype');
+		background-color: map.get($social-icon-colors, 'skype');
 	}
 
 	[data-icon="slack"] {
-		background-color: map-get($social-icon-colors, 'slack');
+		background-color: map.get($social-icon-colors, 'slack');
 	}
 
 	[data-icon="slideshare"] {
-		background-color: map-get($social-icon-colors, 'slideshare');
+		background-color: map.get($social-icon-colors, 'slideshare');
 	}
 
 	[data-icon="snapchat"] {
-		background-color: map-get($social-icon-colors, 'snapchat');
+		background-color: map.get($social-icon-colors, 'snapchat');
 	}
 
 	[data-icon="stack-overflow"] {
-		background-color: map-get($social-icon-colors, 'stack-overflow');
+		background-color: map.get($social-icon-colors, 'stack-overflow');
 	}
 
 	[data-icon="tumblr"] {
-		background-color: map-get($social-icon-colors, 'tumblr');
+		background-color: map.get($social-icon-colors, 'tumblr');
 	}
 
 	[data-icon="vimeo"] {
-		background-color: map-get($social-icon-colors, 'vimeo');
+		background-color: map.get($social-icon-colors, 'vimeo');
 	}
 
 	[data-icon="twitter"] {
-		background-color: map-get($social-icon-colors, 'twitter');
+		background-color: map.get($social-icon-colors, 'twitter');
 	}
 
 	[data-icon="x"] {
-		background-color: map-get($social-icon-colors, 'x');
+		background-color: map.get($social-icon-colors, 'x');
 	}
 
 	[data-icon="wordpress"] {
-		background-color: map-get($social-icon-colors, 'wordpress');
+		background-color: map.get($social-icon-colors, 'wordpress');
 	}
 
 	[data-icon="youtube"] {
-		background-color: map-get($social-icon-colors, 'youtube');
+		background-color: map.get($social-icon-colors, 'youtube');
 	}
 
 	[data-icon="spotify"] {
-		background-color: map-get($social-icon-colors, 'spotify');
+		background-color: map.get($social-icon-colors, 'spotify');
 	}
 
 	[data-icon="foursquare"] {
-		background-color: map-get($social-icon-colors, 'foursquare');
+		background-color: map.get($social-icon-colors, 'foursquare');
 	}
 
 	[data-icon="line"] {
-		background-color: map-get($social-icon-colors, 'line');
+		background-color: map.get($social-icon-colors, 'line');
 	}
 
 	[data-icon="app-store"] {
-		background-color: map-get($social-icon-colors, 'app-store');
+		background-color: map.get($social-icon-colors, 'app-store');
 	}
 
 	[data-icon="google-play"] {
-		background-color: map-get($social-icon-colors, 'google-play');
+		background-color: map.get($social-icon-colors, 'google-play');
 	}
 
 	[data-icon="twitch"] {
-		background-color: map-get($social-icon-colors, 'twitch');
+		background-color: map.get($social-icon-colors, 'twitch');
 	}
 
 	[data-icon="discord"] {
-		background-color: map-get($social-icon-colors, 'discord');
+		background-color: map.get($social-icon-colors, 'discord');
 	}
 
 	[data-icon="apple"] {
-		background-color: map-get($social-icon-colors, 'apple');
+		background-color: map.get($social-icon-colors, 'apple');
 	}
 
 	[data-icon="tiktok"] {
-		background-color: map-get($social-icon-colors, 'tiktok');
+		background-color: map.get($social-icon-colors, 'tiktok');
 	}
 
 	[data-icon="note"] {
-		background-color: map-get($social-icon-colors, 'note');
+		background-color: map.get($social-icon-colors, 'note');
 	}
 }

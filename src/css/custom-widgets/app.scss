@@ -1,17 +1,14 @@
-@import '../app/core/core';
-@import '../app/foundation/_placeholder/_placeholder';
-
-@import '_wpaw-carousel/app';
-@import '_wpaw-local-nav/app';
-@import '_wpaw-pickup-slider/app';
-@import '_wpaw-posts-list/app';
-@import '_wpaw-pr-box/app';
-@import '_wpaw-profile-box/app';
-@import '_wpaw-ranking/app';
-@import '_wpaw-showcase/app';
-@import '_wpaw-site-branding/app';
-@import '_wpaw-slider/app';
-@import '_wpaw-term/app';
+@use '_wpaw-carousel/app' as *;
+@use '_wpaw-local-nav/app' as *;
+@use '_wpaw-pickup-slider/app' as *;
+@use '_wpaw-posts-list/app' as *;
+@use '_wpaw-pr-box/app' as *;
+@use '_wpaw-profile-box/app' as *;
+@use '_wpaw-ranking/app' as *;
+@use '_wpaw-showcase/app' as *;
+@use '_wpaw-site-branding/app' as *;
+@use '_wpaw-slider/app' as *;
+@use '_wpaw-term/app' as *;
 
 [data-has-sidebar="false"] {
 	[data-is-content-widget-area="true"] {

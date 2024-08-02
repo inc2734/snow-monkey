@@ -1,5 +1,5 @@
-@import '../../app/core/core';
-@import '../../app/foundation/_placeholder/placeholder';
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/placeholder/entry-content';
 
 .smf-complete-content,
 .smf-system-error-content,
@@ -12,9 +12,9 @@
 	background-image: none;
 	color: var(--wp--preset--color--white);
 	border: none;
-	@include _transition(filter);
+	@include core.transition(filter);
 
-	@include _hover() {
+	@include core.hover() {
 		filter: brightness(90%);
 	}
 }

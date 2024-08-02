@@ -7,7 +7,7 @@
 
 	// @deprecated
 	&--left:not([class*="smb-section--"]) {
-		> .#{ $_prefix }c-container {
+		> .c-container {
 			> .smb-section__title {
 				&::after {
 					margin-right: auto;
@@ -19,7 +19,7 @@
 
 	// @deprecated
 	&--center:not([class*="smb-section--"]) {
-		> .#{ $_prefix }c-container {
+		> .c-container {
 			> .smb-section__title {
 				&::after {
 					margin-right: auto;
@@ -31,7 +31,7 @@
 
 	// @deprecated
 	&--right:not([class*="smb-section--"]) {
-		> .#{ $_prefix }c-container {
+		> .c-container {
 			> .smb-section__title {
 				&::after {
 					margin-right: 0;

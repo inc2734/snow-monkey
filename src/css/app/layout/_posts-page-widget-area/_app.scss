@@ -1,4 +1,6 @@
-.#{ $_prefix }l-posts-page-widget-area {
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.l-posts-page-widget-area {
 	&--top {
 		margin-bottom: var(--_margin2);
 	}
@@ -8,8 +10,8 @@
 	}
 }
 
-[data-has-sidebar="true"] .#{ $_prefix }l-posts-page-widget-area {
-	@include _media-min(lg) {
-		@include _set-content-level(1);
+[data-has-sidebar="true"] .l-posts-page-widget-area {
+	@include core.media-min(lg) {
+		@include core.set-content-level(1);
 	}
 }

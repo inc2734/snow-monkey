@@ -1,9 +1,11 @@
-.#{ $_prefix }c-dummy-ad {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-dummy-ad {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	background-color: var(--wp--preset--color--sm-lightest-gray);
-	@include _set-font-size-level(-1);
+	@include core.set-font-size-level(-1);
 	padding: var(--_padding1);
 }

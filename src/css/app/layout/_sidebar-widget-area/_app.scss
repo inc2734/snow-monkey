@@ -1,3 +1,5 @@
-.#{ $_prefix }l-sidebar-widget-area {
-	@include _set-content-level(1);
+@use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.l-sidebar-widget-area {
+	@include core.set-content-level(1);
 }

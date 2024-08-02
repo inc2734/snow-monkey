@@ -1,3 +1,5 @@
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
 .wpco {
 	background-color: var(--wp--preset--color--sm-lightest-gray);
 	padding: var(--_padding-1) var(--_padding1);
@@ -6,12 +8,12 @@
 	&__title {
 		margin-top: 0;
 		margin-bottom: var(--_margin-2);
-		@include _set-font-size-level(0);
+		@include core.set-font-size-level(0);
 	}
 
 	.contents-outline {
 		ol {
-			@include _list-unstyled();
+			@include core.list-unstyled();
 			counter-reset: wpco;
 			border-top: 1px solid transparent;
 			border-top-color: var(--wp--preset--color--sm-lighter-gray);
@@ -34,14 +36,14 @@
 			padding-top: var(--_padding-2);
 			padding-bottom: var(--_padding-2);
 			text-decoration: none;
-			@include _transition(opacity);
+			@include core.transition(opacity);
 
-			@include _hover() {
+			@include core.hover() {
 				opacity: .8;
 			}
 
 			&::before {
-				@include _square(24px);
+				@include core.square(24px);
 				display: flex;
 				align-items: center;
 				justify-content: center;

@@ -1,3 +1,5 @@
+@use 'sass:meta';
+
 html :where(.editor-styles-wrapper) {
-	@import 'app-theme';
+	@include meta.load-css('app-theme');
 }

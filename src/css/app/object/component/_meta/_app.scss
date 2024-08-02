@@ -1,4 +1,6 @@
-.#{ $_prefix }c-meta {
+@use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+
+.c-meta {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -22,7 +24,7 @@
 			white-space: initial;
 
 			img {
-				@include _circle(24px);
+				@include core.circle(24px);
 			}
 		}
 	}

@@ -1,3 +1,6 @@
+@use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/placeholder/widget';
+
 .wpaw-posts-list {
 	@extend %widget-list-base;
 	margin-left: auto;
@@ -9,9 +12,9 @@
 
 		> a {
 			color: inherit;
-			@include _transition(opacity);
+			@include core.transition(opacity);
 
-			@include _hover() {
+			@include core.hover() {
 				opacity: .8;
 			}
 		}
@@ -19,7 +22,7 @@
 
 	&__title {
 		margin-bottom: var(--_margin-2);
-		@include _set-font-size-level(-1);
+		@include core.set-font-size-level(-1);
 	}
 
 	&__taxonomy {
@@ -28,6 +31,6 @@
 	}
 
 	&__date {
-		@include _set-font-size-level(-2);
+		@include core.set-font-size-level(-2);
 	}
 }
