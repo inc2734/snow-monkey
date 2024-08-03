@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "708b24e90f8d94a157ff06ef56dc8ab4",
+    "content-hash": "edac679a66669dedc01ef539c67183d9",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "15.0.0",
+            "version": "16.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "759503ce76bd86335fdb1211f0b64263a733b7ed"
+                "reference": "70955c1c62dd80f86f2c5c7d4876147c6c1ece6d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/759503ce76bd86335fdb1211f0b64263a733b7ed",
-                "reference": "759503ce76bd86335fdb1211f0b64263a733b7ed",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/70955c1c62dd80f86f2c5c7d4876147c6c1ece6d",
+                "reference": "70955c1c62dd80f86f2c5c7d4876147c6c1ece6d",
                 "shasum": ""
             },
             "require": {
@@ -147,9 +147,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/15.0.0"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/16.0.0"
             },
-            "time": "2024-07-02T06:10:34+00:00"
+            "time": "2024-08-03T13:44:49+00:00"
         },
         {
             "name": "inc2734/wp-basis",
@@ -476,16 +476,16 @@
         },
         {
             "name": "inc2734/wp-like-me-box",
-            "version": "4.0.1",
+            "version": "5.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-like-me-box.git",
-                "reference": "c8de4c874a5c8d5eae324f63ff866f7ecfa2ac7d"
+                "reference": "8cd737e88ceec615c1d7fea53350664795788792"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/c8de4c874a5c8d5eae324f63ff866f7ecfa2ac7d",
-                "reference": "c8de4c874a5c8d5eae324f63ff866f7ecfa2ac7d",
+                "url": "https://api.github.com/repos/inc2734/wp-like-me-box/zipball/8cd737e88ceec615c1d7fea53350664795788792",
+                "reference": "8cd737e88ceec615c1d7fea53350664795788792",
                 "shasum": ""
             },
             "require": {
@@ -516,9 +516,9 @@
             "description": "A library for WordPress that added Facebook like me box for article.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-like-me-box/issues",
-                "source": "https://github.com/inc2734/wp-like-me-box/tree/4.0.1"
+                "source": "https://github.com/inc2734/wp-like-me-box/tree/5.0.1"
             },
-            "time": "2024-07-07T12:10:44+00:00"
+            "time": "2024-08-03T13:58:57+00:00"
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
