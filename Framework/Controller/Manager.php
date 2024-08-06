@@ -266,7 +266,7 @@ class Manager {
 
 		$transient_name = 'snow-monkey-license-status-' . $license_key;
 		$transient      = get_transient( $transient_name );
-		if ( false !== $transient ) {
+		if ( false !== $transient && 'false' !== $transient ) {
 			return $transient;
 		}
 
