@@ -77,6 +77,7 @@
 	}
 
 	@mixin overlay-header-white-text() {
+		@include overlay-header();
 		color: var(--overlay-header-text-color);
 
 		.c-hamburger-btn__bar {
@@ -86,14 +87,12 @@
 
 	&--overlay-sm {
 		@include core.media-max(md) {
-			@include overlay-header();
 			@include overlay-header-white-text();
 		}
 	}
 
 	&--overlay-lg {
 		@include core.media-min(lg) {
-			@include overlay-header();
 			@include overlay-header-white-text();
 		}
 	}
@@ -103,8 +102,14 @@
 	 */
 	@mixin sticky-overlay-header() {
 		position: fixed;
-		@include overlay-header();
-		@include overlay-header-white-text();
+		right: 0;
+		left: 0;
+		background-color: transparent;
+		color: var(--overlay-header-text-color);
+
+		.c-hamburger-btn__bar {
+			background-color: var(--overlay-header-text-color);
+		}
 	}
 
 	&--sticky-overlay-sm {
