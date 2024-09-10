@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.0.3
  */
 
 use Framework\Helper;
@@ -34,14 +34,15 @@ add_action(
 			return;
 		}
 
-		$custom_logo = get_custom_logo();
-		if ( ! $custom_logo ) {
+		if ( ! has_custom_logo() ) {
 			return;
 		}
 
 		$sm_logo_scale = get_theme_mod( 'sm-logo-scale' );
+		$sm_logo_scale = preg_match( '|^\d+$|', $sm_logo_scale ) ? $sm_logo_scale : 100;
 		$sm_logo_scale = $sm_logo_scale / 100;
 		$lg_logo_scale = get_theme_mod( 'lg-logo-scale' );
+		$lg_logo_scale = preg_match( '|^\d+$|', $lg_logo_scale ) ? $lg_logo_scale : 100;
 		$lg_logo_scale = $lg_logo_scale / 100;
 
 		$styles_for_main           = array();
