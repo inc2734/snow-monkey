@@ -153,16 +153,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "13.0.0",
+            "version": "13.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "2acffbda7e26c929c18d6a5286cc875b0695c12a"
+                "reference": "b08c12471e90fee18b2939412933e46b6a8b22b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/2acffbda7e26c929c18d6a5286cc875b0695c12a",
-                "reference": "2acffbda7e26c929c18d6a5286cc875b0695c12a",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/b08c12471e90fee18b2939412933e46b6a8b22b1",
+                "reference": "b08c12471e90fee18b2939412933e46b6a8b22b1",
                 "shasum": ""
             },
             "require": {
@@ -193,9 +193,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/13.0.0"
+                "source": "https://github.com/inc2734/wp-basis/tree/13.0.1"
             },
-            "time": "2024-08-01T23:42:13+00:00"
+            "time": "2024-09-12T07:05:20+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
@@ -383,16 +383,16 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "3.1.7",
+            "version": "3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "e90c7e19f1924da2b4d658ffd844b7e68baa4008"
+                "reference": "40789e14e9ebb2b14b6d7df196ca6a89ca52784b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/e90c7e19f1924da2b4d658ffd844b7e68baa4008",
-                "reference": "e90c7e19f1924da2b4d658ffd844b7e68baa4008",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/40789e14e9ebb2b14b6d7df196ca6a89ca52784b",
+                "reference": "40789e14e9ebb2b14b6d7df196ca6a89ca52784b",
                 "shasum": ""
             },
             "require": {
@@ -423,9 +423,9 @@
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-github-theme-updater/issues",
-                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.7"
+                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.8"
             },
-            "time": "2024-07-16T06:19:25+00:00"
+            "time": "2024-09-12T07:24:55+00:00"
         },
         {
             "name": "inc2734/wp-helper",
@@ -3275,16 +3275,16 @@
         },
         {
             "name": "yoast/phpunit-polyfills",
-            "version": "2.0.1",
+            "version": "2.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/PHPUnit-Polyfills.git",
-                "reference": "4a088f125c970d6d6ea52c927f96fe39b330d0f1"
+                "reference": "562f449a2ec8ab92fe7b30d94da9622c7b1345fe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/4a088f125c970d6d6ea52c927f96fe39b330d0f1",
-                "reference": "4a088f125c970d6d6ea52c927f96fe39b330d0f1",
+                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/562f449a2ec8ab92fe7b30d94da9622c7b1345fe",
+                "reference": "562f449a2ec8ab92fe7b30d94da9622c7b1345fe",
                 "shasum": ""
             },
             "require": {
@@ -3299,7 +3299,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "2.x-dev"
+                    "dev-main": "3.x-dev"
                 }
             },
             "autoload": {
@@ -3334,7 +3334,7 @@
                 "security": "https://github.com/Yoast/PHPUnit-Polyfills/security/policy",
                 "source": "https://github.com/Yoast/PHPUnit-Polyfills"
             },
-            "time": "2024-04-05T16:36:44+00:00"
+            "time": "2024-09-06T22:38:28+00:00"
         }
     ],
     "aliases": [],
