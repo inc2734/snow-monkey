@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.3.0
+ * @version 27.1.0
  */
 
 use Framework\Helper;
@@ -67,6 +67,7 @@ $args = wp_parse_args(
 	array(
 		'_display_item_author'    => $args['_display_item_meta'],
 		'_display_item_published' => $args['_display_item_meta'],
+		'_display_item_modified'  => false,
 	)
 );
 
@@ -128,6 +129,7 @@ $more_classnames = array(
 			'_display_item_meta'       => $args['_display_item_meta'],
 			'_display_item_author'     => $args['_display_item_author'],
 			'_display_item_published'  => $args['_display_item_published'],
+			'_display_item_modified'   => $args['_display_item_modified'],
 			'_display_item_terms'      => $args['_display_item_terms'],
 			'_display_item_excerpt'    => $args['_display_item_excerpt'],
 			'_category_label_taxonomy' => $args['_category_label_taxonomy'],

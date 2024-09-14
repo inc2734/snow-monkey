@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.1.0
  */
 
 use Framework\Helper;
@@ -148,8 +148,12 @@ $display_item_author = isset( $instance['display-item-author'] )
 	: $instance['display-item-meta'] && ! in_array( $instance['layout'], array( 'text', 'text2' ), true );
 
 $display_item_published = isset( $instance['display-item-published'] )
-	? $instance['display-item-published']
+	? $instance['display-item-meta'] && $instance['display-item-published']
 	: $instance['display-item-meta'];
+
+$display_item_modified = isset( $instance['display-item-modified'] )
+	? $instance['display-item-meta'] && $instance['display-item-modified']
+	: false;
 
 $display_item_excerpt = isset( $instance['display-item-excerpt'] )
 	? $instance['display-item-excerpt']
@@ -172,6 +176,7 @@ Helper::get_template_part(
 		'_display_item_meta'       => $instance['display-item-meta'],
 		'_display_item_author'     => $display_item_author,
 		'_display_item_published'  => $display_item_published,
+		'_display_item_modified'   => $display_item_modified,
 		'_display_item_terms'      => $instance['display-item-terms'],
 		'_display_item_excerpt'    => $display_item_excerpt,
 		'_category_label_taxonomy' => $instance['category-label-taxonomy'],

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.1.1
+ * @version 27.1.0
  */
 
 use Framework\Helper;
@@ -31,6 +31,7 @@ $args = wp_parse_args(
 	array(
 		'_display_author'    => $args['_display_meta'],
 		'_display_published' => $args['_display_meta'],
+		'_display_modified'  => false,
 	)
 );
 ?>
@@ -93,6 +94,7 @@ $args = wp_parse_args(
 							'_entries_id'        => $args['_entries_id'],
 							'_display_author'    => $args['_display_author'],
 							'_display_published' => $args['_display_published'],
+							'_display_modified'  => $args['_display_modified'],
 							'_terms'             => $args['_terms'],
 						)
 					);

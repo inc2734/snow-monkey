@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.1.0
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -28,6 +28,7 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 		'display-item-meta'       => null,
 		'display-item-author'     => null,
 		'display-item-published'  => null,
+		'display-item-modified'   => false,
 		'display-item-terms'      => null,
 		'category-label-taxonomy' => null,
 		'use-own-category-label'  => null,
@@ -90,8 +91,12 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 			: $instance['display-item-meta'] && ! in_array( $instance['layout'], array( 'text', 'text2' ), true );
 
 		$display_item_published = isset( $instance['display-item-published'] )
-			? $instance['display-item-published']
+			? $instance['display-item-meta'] && $instance['display-item-published']
 			: $instance['display-item-meta'];
+
+		$display_item_modified = isset( $instance['display-item-modified'] )
+			? $instance['display-item-meta'] && $instance['display-item-modified']
+			: false;
 
 		$display_item_excerpt = isset( $instance['display-item-excerpt'] )
 			? $instance['display-item-excerpt']
@@ -99,6 +104,7 @@ class Snow_Monkey_Taxonomy_Posts_Widget extends Abstract_Widget {
 
 		$instance['display-item-author']    = $display_item_author;
 		$instance['display-item-published'] = $display_item_published;
+		$instance['display-item-modified']  = $display_item_modified;
 		$instance['display-item-excerpt']   = $display_item_excerpt;
 
 		parent::widget( $widget_args, $instance );

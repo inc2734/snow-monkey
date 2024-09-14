@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.0
+ * @version 27.1.0
  */
 
 use Framework\Helper;
@@ -16,9 +16,12 @@ $args = wp_parse_args(
 		'_entries_id'        => null,
 		'_display_author'    => false,
 		'_display_published' => false,
+		'_display_modified'  => false,
 		'_terms'             => array(),
 	)
 );
+
+$date_format = get_option( 'date_format' );
 ?>
 
 <div class="c-entry-summary__meta">
@@ -34,10 +37,13 @@ $args = wp_parse_args(
 
 		<?php if ( $args['_display_published'] ) : ?>
 			<li class="c-meta__item c-meta__item--published">
-				<?php
-				$date_format = get_option( 'date_format' );
-				the_time( $date_format );
-				?>
+				<?php the_time( $date_format ); ?>
+			</li>
+		<?php endif; ?>
+
+		<?php if ( $args['_display_modified'] ) : ?>
+			<li class="c-meta__item c-meta__item--modified">
+				<?php the_modified_time( $date_format ); ?>
 			</li>
 		<?php endif; ?>
 
