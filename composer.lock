@@ -153,16 +153,16 @@
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "13.0.1",
+            "version": "13.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "b08c12471e90fee18b2939412933e46b6a8b22b1"
+                "reference": "4480d98c9c8f58deadf8f941e5e0f820d6fadff0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/b08c12471e90fee18b2939412933e46b6a8b22b1",
-                "reference": "b08c12471e90fee18b2939412933e46b6a8b22b1",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/4480d98c9c8f58deadf8f941e5e0f820d6fadff0",
+                "reference": "4480d98c9c8f58deadf8f941e5e0f820d6fadff0",
                 "shasum": ""
             },
             "require": {
@@ -193,9 +193,9 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/13.0.1"
+                "source": "https://github.com/inc2734/wp-basis/tree/13.0.2"
             },
-            "time": "2024-09-12T07:05:20+00:00"
+            "time": "2024-09-14T12:46:47+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
