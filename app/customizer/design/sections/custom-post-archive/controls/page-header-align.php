@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'archive-' . $custom_post_type . '-page-header-align',
 		array(
 			'label'           => __( 'Page header alignment', 'snow-monkey' ),
-			'priority'        => 131,
+			'priority'        => 140,
 			'default'         => 'center',
 			'choices'         => Helper::page_header_align_choices(),
 			'active_callback' => function () use ( $custom_post_type ) {

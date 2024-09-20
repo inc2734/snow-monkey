@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 27.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -21,7 +21,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-entries-gap',
 		array(
 			'label'    => __( 'The gap between each item in the entries', 'snow-monkey' ),
-			'priority' => 141,
+			'priority' => 160,
 			'default'  => '',
 			'choices'  => array(
 				''  => __( 'Default', 'snow-monkey' ),

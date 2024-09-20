@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-entries-layout',
 		array(
 			'label'    => __( 'Entries layout', 'snow-monkey' ),
-			'priority' => 140,
+			'priority' => 150,
 			'default'  => 'rich-media',
 			'choices'  => array(
 				'rich-media'  => __( 'Rich media', 'snow-monkey' ),

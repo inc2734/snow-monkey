@@ -14,10 +14,10 @@ $custom_post_types = Helper::get_custom_post_types();
 foreach ( $custom_post_types as $custom_post_type ) {
 	Framework::control(
 		'checkbox',
-		$custom_post_type . '-entries-display-item-published',
+		$custom_post_type . '-entries-display-item-modified',
 		array(
-			'label'             => __( 'Display the published date for each item in the entries', 'snow-monkey' ),
-			'priority'          => 190,
+			'label'             => __( 'Display the modified date for each item in the entries', 'snow-monkey' ),
+			'priority'          => 200,
 			'default'           => false,
 			'active_callback'   => function () use ( $custom_post_type ) {
 				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
@@ -47,6 +47,6 @@ $panel = Framework::get_panel( 'design' );
 
 foreach ( $custom_post_types as $custom_post_type ) {
 	$section = Framework::get_section( 'design-' . $custom_post_type . '-archive' );
-	$control = Framework::get_control( $custom_post_type . '-entries-display-item-published' );
+	$control = Framework::get_control( $custom_post_type . '-entries-display-item-modified' );
 	$control->join( $section )->join( $panel );
 }

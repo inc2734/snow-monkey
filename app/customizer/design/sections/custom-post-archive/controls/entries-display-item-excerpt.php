@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -17,7 +17,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		$custom_post_type . '-entries-display-item-excerpt',
 		array(
 			'label'             => __( 'Display the excerpt for each item in the entries', 'snow-monkey' ),
-			'priority'          => 145,
+			'priority'          => 220,
 			'default'           => false,
 			'active_callback'   => function () use ( $custom_post_type ) {
 				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );

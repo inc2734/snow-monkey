@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.0
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-display-item-excerpt.php
  */
@@ -22,7 +22,7 @@ Framework::control(
 	'post-entries-display-item-excerpt',
 	array(
 		'label'             => __( 'Display the excerpt for each item in the entries', 'snow-monkey' ),
-		'priority'          => 140,
+		'priority'          => 160,
 		'default'           => $default,
 		'active_callback'   => function () {
 			$is_display_item_excerpt = in_array(

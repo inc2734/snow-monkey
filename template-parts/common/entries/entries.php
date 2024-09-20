@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.1.0
+ * @version 27.2.0
  *
  * renamed: template-parts/common/entries.php
  */
@@ -38,6 +38,7 @@ $archive_view           = get_theme_mod( $_post_type . '-archive-view' );
 $display_item_author    = 'post' === $archive_view ? true : get_theme_mod( $_post_type . '-entries-display-item-author' );
 $display_item_published = 'post' === $archive_view ? true : get_theme_mod( $_post_type . '-entries-display-item-published' );
 $display_item_modified  = get_theme_mod( $_post_type . '-entries-display-item-modified' );
+$display_item_date_icon = get_theme_mod( $_post_type . '-entries-display-item-date-icon' );
 $display_item_excerpt   = 'post' === $archive_view ? true : get_theme_mod( $_post_type . '-entries-display-item-excerpt' );
 
 $args = wp_parse_args(
@@ -47,6 +48,7 @@ $args = wp_parse_args(
 		'_display_item_published' => $args['_display_item_meta'] && $display_item_published,
 		'_display_item_modified'  => $args['_display_item_meta'] && $display_item_modified,
 		'_display_item_excerpt'   => $display_item_excerpt,
+		'_display_item_date_icon' => $display_item_date_icon,
 	)
 );
 

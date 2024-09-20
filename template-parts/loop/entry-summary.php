@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.1.0
+ * @version 27.2.0
  *
  * renamed: template-parts/entry-summary.php
  */
@@ -32,6 +32,7 @@ $args = wp_parse_args(
 		'_display_author'    => $args['_display_meta'],
 		'_display_published' => $args['_display_meta'],
 		'_display_modified'  => false,
+		'_display_date_icon' => false,
 	)
 );
 ?>
@@ -95,6 +96,7 @@ $args = wp_parse_args(
 							'_display_author'    => $args['_display_author'],
 							'_display_published' => $args['_display_published'],
 							'_display_modified'  => $args['_display_modified'],
+							'_display_date_icon' => $args['_display_date_icon'],
 							'_terms'             => $args['_terms'],
 						)
 					);

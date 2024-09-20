@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2024-07-19 09:55+0900\n"
-"PO-Revision-Date: 2024-07-19 09:56+0900\n"
+"POT-Creation-Date: 2024-09-20 16:49+0900\n"
+"PO-Revision-Date: 2024-09-20 16:49+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
@@ -797,6 +797,12 @@ msgstr "[ %1$s ] カテゴリーページ設定"
 msgid "Display the author for each item in the entries"
 msgstr "記事一覧の各項目の著者を表示する"
 
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-date-icon.php:19
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-modified.php:19
+#: app/customizer/design/sections/entries/controls/entries-display-item-modified.php:15
+msgid "Display the modified date for each item in the entries"
+msgstr "記事一覧の各項目の更新日を表示する"
+
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-excerpt.php:19
 #: app/customizer/design/sections/entries/controls/entries-display-item-excerpt.php:24
 msgid "Display the excerpt for each item in the entries"
@@ -992,6 +998,11 @@ msgstr "背景色"
 #: app/customizer/design/sections/drawer-nav/section.php:18
 msgid "Drawer navigation"
 msgstr "ドロワーナビゲーション"
+
+#: app/customizer/design/sections/entries/controls/entries-display-item-date-icon.php:15
+msgid ""
+"Display the icons for each item in the entries publish date / modified date"
+msgstr "記事一覧の各項目の公開日/更新日のアイコンを表示する"
 
 #: app/customizer/design/sections/entries/section.php:18
 msgid "Entries"
@@ -1877,10 +1888,12 @@ msgid "Search results"
 msgstr "検索結果"
 
 #: app/setup/entry-meta.php:18 app/setup/entry-meta.php:32
+#: template-parts/loop/entry-summary/meta/meta.php:45
 msgid "Published"
 msgstr "投稿日"
 
 #: app/setup/entry-meta.php:48
+#: template-parts/loop/entry-summary/meta/meta.php:56
 msgid "Modified"
 msgstr "更新日"
 
@@ -2100,11 +2113,11 @@ msgstr "リンクテキスト"
 msgid "Ignore sticky posts"
 msgstr "先頭固定表示を除外する"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:48
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:49
 msgid "Snow Monkey: Recent posts"
 msgstr "Snow Monkey: 最近の投稿"
 
-#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:54
+#: app/widget/snow-monkey-recent-posts/snow-monkey-recent-posts.php:55
 msgid "Recent posts"
 msgstr "最近の投稿"
 
@@ -2124,11 +2137,11 @@ msgstr "RSS"
 msgid "Displayed term"
 msgstr "表示するターム"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:50
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:51
 msgid "Snow Monkey: Taxonomy posts"
 msgstr "Snow Monkey: 任意のタクソノミーの投稿"
 
-#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:56
+#: app/widget/snow-monkey-taxonomy-posts/snow-monkey-taxonomy-posts.php:57
 msgid "Taxonomy posts"
 msgstr "任意のタクソノミーの投稿"
 
@@ -2152,12 +2165,12 @@ msgstr "投稿がありません。"
 msgid "An advertisement is displayed."
 msgstr "広告が表示されます。"
 
-#: template-parts/common/entries/entries/carousel.php:144
+#: template-parts/common/entries/entries/carousel.php:148
 #: template-parts/common/entries/rss/carousel.php:83
 msgid "Pause autoplay"
 msgstr "自動再生を一時停止"
 
-#: template-parts/common/entries/entries/carousel.php:166
+#: template-parts/common/entries/entries/carousel.php:170
 #: template-parts/common/entries/rss/carousel.php:105
 msgid "Start autoplay"
 msgstr "自動再生を開始"

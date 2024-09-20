@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.1.0
+ * @version 27.2.0
  */
 
 use Inc2734\WP_Awesome_Widgets\App\Contract\Widget as Abstract_Widget;
@@ -95,6 +95,10 @@ class Snow_Monkey_Recent_Posts_Widget extends Abstract_Widget {
 			? $instance['display-item-meta'] && $instance['display-item-modified']
 			: false;
 
+		$display_item_date_icon = isset( $instance['display-item-date-icon'] )
+			? ( $display_item_published || $display_item_modified ) && $instance['display-item-date-icon']
+			: false;
+
 		$display_item_excerpt = isset( $instance['display-item-excerpt'] )
 			? $instance['display-item-excerpt']
 			: in_array( $instance['layout'], array( 'rich-media', 'simple', 'caroucel' ), true );
@@ -102,6 +106,7 @@ class Snow_Monkey_Recent_Posts_Widget extends Abstract_Widget {
 		$instance['display-item-author']    = $display_item_author;
 		$instance['display-item-published'] = $display_item_published;
 		$instance['display-item-modified']  = $display_item_modified;
+		$instance['display-item-date-icon'] = $display_item_date_icon;
 		$instance['display-item-excerpt']   = $display_item_excerpt;
 
 		parent::widget( $widget_args, $instance );

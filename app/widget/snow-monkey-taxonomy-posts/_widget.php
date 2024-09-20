@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.1.0
+ * @version 27.2.0
  */
 
 use Framework\Helper;
@@ -155,6 +155,10 @@ $display_item_modified = isset( $instance['display-item-modified'] )
 	? $instance['display-item-meta'] && $instance['display-item-modified']
 	: false;
 
+$display_item_date_icon = isset( $instance['display-item-date-icon'] )
+	? ( $display_item_published || $display_item_modified ) && $instance['display-item-date-icon']
+	: false;
+
 $display_item_excerpt = isset( $instance['display-item-excerpt'] )
 	? $instance['display-item-excerpt']
 	: in_array( $instance['layout'], array( 'rich-media', 'simple', 'caroucel' ), true );
@@ -177,6 +181,7 @@ Helper::get_template_part(
 		'_display_item_author'     => $display_item_author,
 		'_display_item_published'  => $display_item_published,
 		'_display_item_modified'   => $display_item_modified,
+		'_display_item_date_icon'  => $display_item_date_icon,
 		'_display_item_terms'      => $instance['display-item-terms'],
 		'_display_item_excerpt'    => $display_item_excerpt,
 		'_category_label_taxonomy' => $instance['category-label-taxonomy'],
