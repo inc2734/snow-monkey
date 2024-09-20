@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.10
+ * @version 27.2.0
  */
 
 namespace Framework\Controller;
@@ -297,7 +297,9 @@ class Manager {
 				'user-agent' => 'WordPress/' . $wp_version,
 				'timeout'    => 30,
 				'headers'    => array(
-					'Accept-Encoding' => '',
+					'Accept-Encoding'       => '',
+					'X-Snow-Monkey-Version' => wp_get_theme()->get( 'Version' ),
+					'X-Snow-Monkey-URL'     => home_url(),
 				),
 			)
 		);
