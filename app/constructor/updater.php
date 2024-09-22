@@ -3,10 +3,11 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.1
  */
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
+use Framework\Controller\Manager;
 
 new Bootstrap(
 	get_template(),
@@ -42,9 +43,10 @@ add_filter(
 add_filter(
 	'inc2734_github_theme_updater_request_url_inc2734/snow-monkey',
 	function ( $url, $user_name, $repository, $version ) {
-		$xserver_register_key = \Framework\Controller\Manager::get_option( 'xserver-register-key' );
+		$xserver_register_key    = Manager::get_option( 'xserver-register-key' );
+		$xserver_register_status = Manager::get_xserver_register_status( $xserver_register_key );
 
-		if ( $xserver_register_key ) {
+		if ( 'true' === $xserver_register_key ) {
 			return sprintf(
 				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/update-xserver/%1$s?repository=snow-monkey&version=%2$s',
 				esc_attr( $xserver_register_key ),
@@ -52,13 +54,18 @@ add_filter(
 			);
 		}
 
-		$license_key = \Framework\Controller\Manager::get_option( 'license-key' );
+		$license_key    = Manager::get_option( 'license-key' );
+		$license_status = Manager::get_license_status( $license_key );
 
-		return sprintf(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/update/%1$s?repository=snow-monkey&version=%2$s',
-			esc_attr( $license_key ),
-			esc_attr( $version )
-		);
+		if ( 'true' === $license_status ) {
+			return sprintf(
+				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/update/%1$s?repository=snow-monkey&version=%2$s',
+				esc_attr( $license_key ),
+				esc_attr( $version )
+			);
+		}
+
+		return '';
 	},
 	10,
 	4
