@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 26.0.0
+ * @version 27.2.3
  */
 
 use Framework\Controller\Manager;
@@ -136,7 +136,7 @@ function snow_monkey_get_premium_remote_block_pattens() {
 }
 
 /**
- * Get premium remote block patterns for Xserver user.
+ * Get premium remote block patterns for XServer user.
  *
  * @return array
  */

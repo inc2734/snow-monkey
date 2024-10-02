@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2024-09-20 16:49+0900\n"
-"PO-Revision-Date: 2024-09-20 16:49+0900\n"
+"POT-Creation-Date: 2024-10-02 15:03+0900\n"
+"PO-Revision-Date: 2024-10-02 15:03+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -161,29 +161,29 @@ msgstr ""
 
 #: Framework/Controller/Manager.php:205
 msgid ""
-"If the license key is entered, the Xserver register key setting is not saved."
-msgstr "ライセンスキーを入力した場合、XSERVER 登録キーの設定は保存されません。"
+"If the license key is entered, the XServer register key setting is not saved."
+msgstr "ライセンスキーを入力した場合、XServer 登録キーの設定は保存されません。"
 
 #: Framework/Controller/Manager.php:215
-msgid "Xserver register key"
-msgstr "XSERVER 登録キー"
+msgid "XServer register key"
+msgstr "XServer 登録キー"
 
 #: Framework/Controller/Manager.php:246
 msgid ""
-"If the Xserver register key entered is valid, premium block patterns are "
+"If the XServer register key entered is valid, premium block patterns are "
 "available."
 msgstr ""
-"入力されたXSERVER 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
+"入力されたXServer 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
 "です。"
 
 #: Framework/Controller/Manager.php:247
 msgid ""
-"If you are using Xserver integration, enter the Xserver register key in the "
-"Xserver register key entry field without entering anything in the license "
+"If you are using XServer integration, enter the XServer register key in the "
+"XServer register key entry field without entering anything in the license "
 "key entry field."
 msgstr ""
-"XSERVERとの連携を利用している場合は、ライセンスキー入力欄には何も入力せず、"
-"XSERVER 登録キー入力欄にXSERVER登録キーを入力してください。"
+"XServerとの連携を利用している場合は、ライセンスキー入力欄には何も入力せず、"
+"XServer 登録キー入力欄にXServer登録キーを入力してください。"
 
 #: Framework/Helper.php:105
 msgid "Page header"

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.1
+ * @version 27.2.3
  */
 
 namespace Framework\Controller;
@@ -35,7 +35,7 @@ class Manager {
 	);
 
 	/**
-	 * If a value is stored in License key and Xserver register key,
+	 * If a value is stored in License key and XServer register key,
 	 * use this value instead, since it is secret.
 	 *
 	 * @var string
@@ -147,7 +147,7 @@ class Manager {
 				$is_xserver_register_through    = isset( $posted_xserver_register_key ) && static::SAVED_VALUE === $posted_xserver_register_key;
 				$option['xserver-register-key'] = $is_xserver_register_through ? static::get_option( 'xserver-register-key' ) : $posted_xserver_register_key;
 
-				// XSERVER register key is not validated if a license key is entered.
+				// XServer register key is not validated if a license key is entered.
 				if ( static::get_option( 'xserver-register-key' ) !== $option['xserver-register-key'] ) {
 					delete_transient( 'snow-monkey-xserver-register-status-' . static::get_option( 'xserver-register-key' ) );
 
@@ -202,7 +202,7 @@ class Manager {
 				</div>
 				<p class="description">
 					<?php esc_html_e( 'If the license key entered is valid, premium block patterns are available.', 'snow-monkey' ); ?><br>
-					<?php esc_html_e( 'If the license key is entered, the Xserver register key setting is not saved.', 'snow-monkey' ); ?>
+					<?php esc_html_e( 'If the license key is entered, the XServer register key setting is not saved.', 'snow-monkey' ); ?>
 				</p>
 				<?php
 			},
@@ -212,7 +212,7 @@ class Manager {
 
 		add_settings_field(
 			'xserver-register-key',
-			'<label for="xservser-regiser-key">' . esc_html__( 'Xserver register key', 'snow-monkey' ) . '</label>',
+			'<label for="xservser-regiser-key">' . esc_html__( 'XServer register key', 'snow-monkey' ) . '</label>',
 			function () {
 				$transient = static::get_xserver_register_status( static::get_option( 'xserver-register-key' ) );
 
@@ -243,8 +243,8 @@ class Manager {
 					</div>
 				</div>
 				<p class="description">
-					<?php esc_html_e( 'If the Xserver register key entered is valid, premium block patterns are available.', 'snow-monkey' ); ?><br>
-					<?php esc_html_e( 'If you are using Xserver integration, enter the Xserver register key in the Xserver register key entry field without entering anything in the license key entry field.', 'snow-monkey' ); ?>
+					<?php esc_html_e( 'If the XServer register key entered is valid, premium block patterns are available.', 'snow-monkey' ); ?><br>
+					<?php esc_html_e( 'If you are using XServer integration, enter the XServer register key in the XServer register key entry field without entering anything in the license key entry field.', 'snow-monkey' ); ?>
 				</p>
 				<?php
 			},
@@ -316,7 +316,7 @@ class Manager {
 	}
 
 	/**
-	 * Get Xserver register status.
+	 * Get XServer register status.
 	 *
 	 * @param string $xserver_register_key The license key.
 	 * @return mixed false|'true'|'false'
@@ -340,7 +340,7 @@ class Manager {
 	/**
 	 * Validate checker.
 	 *
-	 * @param string $xserver_register_key The XSERVER register key.
+	 * @param string $xserver_register_key The XServer register key.
 	 * @return mixed false|'true'
 	 */
 	protected static function _request_license_validate_xserver( $xserver_register_key ) {
