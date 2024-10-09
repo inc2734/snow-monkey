@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.4
  */
 
 /**
@@ -13,7 +13,11 @@ add_filter(
 	'render_block',
 	function ( $block_content, $block ) {
 		if ( 'core/html' === $block['blockName'] ) {
-			if ( preg_match( '|^<iframe src="https://www.google.com/maps/embed?.+</iframe>$|ms', $block_content ) ) {
+			if (
+				preg_match( '|^<iframe src="https://www.google.com/maps/embed?.+</iframe>$|ms', $block_content )
+				|| preg_match( '|^<iframe ?.*? src="https://www.youtube.com/embed?.+</iframe>$|ms', $block_content )
+				|| preg_match( '|^<blockquote ?.*? data-instgrm-permalink="https://www.instagram.com/p?.+</script>$|ms', $block_content )
+			) {
 				return '<div>' . $block_content . '</div>';
 			}
 		}
