@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.3
+ * @version 27.2.4
  */
 
 use Framework\Controller\Manager;
@@ -39,6 +39,9 @@ function snow_monkey_get_remote_block_patten_categories() {
 	}
 
 	$pattern_categories = json_decode( wp_remote_retrieve_body( $response ), true );
+	if ( ! is_array( $pattern_categories ) ) {
+		return array();
+	}
 
 	$new_pattern_categories = array();
 	foreach ( $pattern_categories as $pattern_category ) {
@@ -81,6 +84,9 @@ function _snow_monkney_get_remote_block_patterns( $url ) {
 	}
 
 	$patterns = json_decode( wp_remote_retrieve_body( $response ), true );
+	if ( ! is_array( $patterns ) ) {
+		return array();
+	}
 
 	foreach ( $patterns as $key => $pattern ) {
 		$patterns[ $key ]['content'] = str_replace(

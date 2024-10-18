@@ -383,16 +383,16 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "3.1.9",
+            "version": "3.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "d50372cba7be0f21938431dadbff92a5dfd88ddd"
+                "reference": "8a8914728b9c81c88e11ee6bf095fece894093fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/d50372cba7be0f21938431dadbff92a5dfd88ddd",
-                "reference": "d50372cba7be0f21938431dadbff92a5dfd88ddd",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/8a8914728b9c81c88e11ee6bf095fece894093fb",
+                "reference": "8a8914728b9c81c88e11ee6bf095fece894093fb",
                 "shasum": ""
             },
             "require": {
@@ -423,9 +423,9 @@
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-github-theme-updater/issues",
-                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.9"
+                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.10"
             },
-            "time": "2024-09-24T01:38:37+00:00"
+            "time": "2024-10-18T07:32:28+00:00"
         },
         {
             "name": "inc2734/wp-helper",
@@ -1148,16 +1148,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.2.0",
+            "version": "v5.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "23c79fbbfb725fb92af9bcf41065c8e9a0d49ddb"
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/23c79fbbfb725fb92af9bcf41065c8e9a0d49ddb",
-                "reference": "23c79fbbfb725fb92af9bcf41065c8e9a0d49ddb",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b",
                 "shasum": ""
             },
             "require": {
@@ -1200,9 +1200,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.2.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.1"
             },
-            "time": "2024-09-15T16:40:33+00:00"
+            "time": "2024-10-08T18:51:32+00:00"
         },
         {
             "name": "phar-io/manifest",

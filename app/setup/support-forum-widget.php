@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.2.4
  *
  * renamed: app/setup/suppot-forum-widget.php
  */
@@ -16,9 +16,12 @@ add_action(
 			function () {
 				global $wp_version;
 
-				$transient = get_transient( 'snow-monkey-support-forum-topics' );
+				$transient    = get_transient( 'snow-monkey-support-forum-topics' );
+				$wp_api_posts = array();
 
-				if ( ! $transient ) {
+				if ( $transient ) {
+					$wp_api_posts = $transient;
+				} else {
 					$wp_api_posts = wp_remote_get(
 						'https://snow-monkey.2inc.org/wp-json/wp/v2/topic?per_page=5',
 						array(
@@ -30,11 +33,12 @@ add_action(
 						$wp_api_posts = array();
 					} else {
 						$wp_api_posts = json_decode( $wp_api_posts['body'] );
+						if ( ! is_array( $wp_api_posts ) ) {
+							$wp_api_posts = array();
+						}
 					}
 
 					set_transient( 'snow-monkey-support-forum-topics', $wp_api_posts, 60 * 60 );
-				} else {
-					$wp_api_posts = $transient;
 				}
 
 				if ( ! $wp_api_posts ) {
