@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.5
+ * @version 27.2.6
  */
 
 use Framework\Controller\Manager;
@@ -174,8 +174,16 @@ function snow_monkey_register_remote_block_patterns() {
 		$remote_block_pattern_categories = $transient;
 	} else {
 		$remote_block_pattern_categories = snow_monkey_get_remote_block_patten_categories();
-		set_transient( 'snow-monkey-remote-pattern-categories', $remote_block_pattern_categories, DAY_IN_SECONDS );
+
+		if ( $remote_block_pattern_categories && is_array( $remote_block_pattern_categories ) ) {
+			set_transient( 'snow-monkey-remote-pattern-categories', $remote_block_pattern_categories, DAY_IN_SECONDS );
+		}
 	}
+
+	if ( ! is_array( $remote_block_pattern_categories ) ) {
+		$remote_block_pattern_categories = array();
+	}
+
 	foreach ( $remote_block_pattern_categories as $remote_block_pattern_category ) {
 		register_block_pattern_category(
 			$remote_block_pattern_category['name'],
@@ -209,7 +217,13 @@ function snow_monkey_register_remote_block_patterns() {
 			$remote_block_patterns = snow_monkey_get_free_remote_block_pattens();
 		}
 
-		set_transient( 'snow-monkey-remote-patterns', $remote_block_patterns, DAY_IN_SECONDS );
+		if ( $remote_block_patterns && is_array( $remote_block_patterns ) ) {
+			set_transient( 'snow-monkey-remote-patterns', $remote_block_patterns, DAY_IN_SECONDS );
+		}
+	}
+
+	if ( ! is_array( $remote_block_patterns ) ) {
+		$remote_block_patterns = array();
 	}
 
 	$registry = WP_Block_Patterns_Registry::get_instance();
