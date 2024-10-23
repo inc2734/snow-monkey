@@ -1,7 +1,7 @@
-@use '../../../../placeholder/widget';
+@use '../../../../core/mixin/widget' as *;
 
 .widget_nav_menu {
 	.sub-menu {
-		@extend %widget-children-theme;
+		@include widget-children-theme();
 	}
 }

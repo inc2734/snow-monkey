@@ -1,7 +1,7 @@
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin/entry-content' as *;
 
 .wp-block-media-text {
 	&__content {
-		@extend %entry-content-theme;
+		@include entry-content-theme();
 	}
 }

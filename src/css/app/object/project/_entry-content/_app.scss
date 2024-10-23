@@ -1,5 +1,5 @@
-@use '../../../placeholder/entry-content';
+@use '../../../core/mixin/entry-content' as *;
 
 .p-entry-content {
-	@extend %entry-content;
+	@include entry-content();
 }

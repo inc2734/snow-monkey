@@ -10,7 +10,7 @@ $_img-path: '../../img' !default;
 	}
 
 	cite {
-		@extend %blockquote__cite;
+		@include blockquote__cite();
 	}
 }
 

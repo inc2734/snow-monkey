@@ -1,7 +1,7 @@
-@use '../../../placeholder/table';
+@use '../../../core/mixin/table' as *;
 
 .c-responsive-table {
 	> table {
-		@extend %table;
+		@include table();
 	}
 }

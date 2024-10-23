@@ -1,13 +1,13 @@
-@use '../../../../placeholder/widget';
+@use '../../../../core/mixin/widget' as *;
 
 .children-expander {
 	display: none;
 }
 
 .cat-item {
-	@extend %widget-has-children-expander;
+	@include widget-has-children-expander();
 }
 
 .cat-item .children {
-	@extend %widget-children;
+	@include widget-children();
 }

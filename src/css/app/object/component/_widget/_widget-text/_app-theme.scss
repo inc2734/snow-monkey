@@ -1,5 +1,5 @@
-@use '../../../../placeholder/entry-content';
+@use '../../../../core/mixin/entry-content' as *;
 
 .textwidget {
-	@extend %entry-content-theme;
+	@include entry-content-theme();
 }

@@ -1,6 +1,6 @@
 @use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../app/placeholder/entry-content';
-@use '../../app/placeholder/widget';
+@use '../../app/core/mixin/entry-content' as *;
+@use '../../app/core/mixin/widget' as *;
 
 .l-container .l-contents {
 	.store-notice,
@@ -296,7 +296,7 @@
 .woocommerce-Tabs-panel,
 .related.products,
 .page-description {
-	@extend %entry-content;
+	@include entry-content();
 }
 
 .page-description {
@@ -463,13 +463,13 @@
 // Product category widget
 .widget_product_categories {
 	ul {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 }
 
 // Product search widget
 .woocommerce .product_list_widget {
-	@extend %widget-list-base;
+	@include widget-list-base();
 
 	> li {
 		> a {
@@ -525,7 +525,7 @@
 // Product list widget
 .widget_recently_viewed_products {
 	ul {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 
 	.product-title {

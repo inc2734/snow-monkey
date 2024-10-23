@@ -1,15 +1,15 @@
-@use '../../../../placeholder/widget';
+@use '../../../../core/mixin/widget' as *;
 
 .widget_nav_menu {
 	ul {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 
 	.menu-item {
-		@extend %widget-has-children-expander;
+		@include widget-has-children-expander();
 	}
 
 	.sub-menu {
-		@extend %widget-children;
+		@include widget-children();
 	}
 }

@@ -1,7 +1,7 @@
-@use '../../app/placeholder/widget';
+@use '../../app/core/mixin/widget' as *;
 
 .wp-block-legacy-widget {
 	&__edit-form-title {
-		@extend %widget-title-theme;
+		@include widget-title-theme();
 	}
 }

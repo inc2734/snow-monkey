@@ -1,4 +1,4 @@
-@use '../../../app/placeholder/section';
+@use '../../../app/core/mixin/section' as *;
 
 .smb-section {
 	&__contents-wrapper {
@@ -31,7 +31,7 @@
 	}
 
 	&__title {
-		@extend %section-title-theme;
+		@include section-title-theme();
 	}
 
 	&__body {

@@ -1,12 +1,12 @@
 @use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../../placeholder/widget';
-@use '../../../placeholder/section';
+@use '../../../core/mixin/widget' as *;
+@use '../../../core/mixin/section' as *;
 
 .c-section {
-	@extend %section;
+	@include section();
 
 	&__title {
-		@extend %widget-title;
+		@include widget-title();
 	}
 }
 

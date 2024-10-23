@@ -1,5 +1,5 @@
 @use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../app/placeholder/blockquote';
+@use '../../app/core/mixin/blockquote' as *;
 
 .wp-block-pullquote {
 	@include core.set-fluid-font-size-level(2);
@@ -12,6 +12,6 @@
 	}
 
 	cite {
-		@extend %blockquote__cite;
+		@include blockquote__cite();
 	}
 }

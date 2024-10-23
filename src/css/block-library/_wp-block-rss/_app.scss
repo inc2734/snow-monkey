@@ -1,9 +1,12 @@
 @use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../app/placeholder/widget';
+@use '../../app/core/mixin/widget' as *;
 
 .wp-block-rss {
-	@extend %widget-list-base;
-	margin-left: auto;
+	@include widget-list-base();
+
+	& {
+		margin-left: auto;
+	}
 
 	&__item-publish-date,
 	&__item-author {

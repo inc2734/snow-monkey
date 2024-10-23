@@ -1,7 +1,7 @@
-@use '../../../placeholder/widget';
+@use '../../../core/mixin/widget' as *;
 
 .c-section {
 	&__title {
-		@extend %widget-title-theme;
+		@include widget-title-theme();
 	}
 }

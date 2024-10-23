@@ -2,7 +2,7 @@
 @use 'sass:math';
 @use '../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
 @use '../app/core/mixin/align' as *;
-@use '../app/placeholder/section';
+@use '../app/core/mixin/section' as *;
 
 /**
  * Alert
@@ -188,14 +188,17 @@
  * Section
  */
 .wpac-section {
-	@extend %section;
+	@include section();
 
 	&__title {
-		@extend %section-title;
-		text-align: center;
+		@include section-title();
+
+		& {
+			text-align: center;
+		}
 
 		& + .wpac-section__body {
-			@extend %section-body;
+			@include section-body();
 		}
 	}
 

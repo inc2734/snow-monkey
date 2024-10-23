@@ -1,10 +1,10 @@
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin/entry-content' as *;
 
 .wp-block-media-text {
 	gap: var(--wp--style--block-gap);
 
 	&__content {
-		@extend %entry-content;
+		@include entry-content();
 	}
 
 	.wp-block-media-text__content {

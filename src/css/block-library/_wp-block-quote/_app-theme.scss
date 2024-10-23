@@ -1,5 +1,5 @@
-@use '../../app/placeholder/blockquote';
+@use '../../app/core/mixin' as *;
 
 .wp-block-quote:where(:not(.is-style-plain)) {
-	@extend %blockquote-theme;
+	@include blockquote-theme();
 }

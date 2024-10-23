@@ -1,5 +1,5 @@
 @use '../../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../../../placeholder/widget';
+@use '../../../../core/mixin/widget' as *;
 
 .children-expander {
 	position: absolute;
@@ -28,7 +28,7 @@
 }
 
 .cat-item .children {
-	@extend %widget-children-theme;
+	@include widget-children-theme();
 }
 
 .children .cat-item .children:last-child:not(:first-child) {

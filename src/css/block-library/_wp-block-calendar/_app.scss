@@ -1,7 +1,7 @@
-@use '../../app/placeholder/calendar';
+@use '../../app/core/mixin/calendar' as *;
 
 .wp-block-calendar {
-	@extend %calendar;
+	@include calendar();
 
 	.wp-calendar-table {
 		width: auto;

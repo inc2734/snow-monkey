@@ -1,7 +1,7 @@
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin/entry-content' as *;
 
 .woocommerce-Tabs-panel,
 .related.products,
 .page-description {
-	@extend %entry-content-theme;
+	@include entry-content-theme();
 }

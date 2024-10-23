@@ -1,6 +1,6 @@
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin' as *;
 
 .is-layout-constrained,
 .is-layout-flow {
-	@extend %entry-content;
+	@include entry-content();
 }

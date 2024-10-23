@@ -1,10 +1,10 @@
 @use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin/entry-content' as *;
 
 .smf-complete-content,
 .smf-system-error-content,
 .smf-item__controls {
-	@extend %entry-content;
+	@include entry-content();
 }
 
 .snow-monkey-form--button-has-accent-color .smf-button-control__control {

@@ -1,9 +1,9 @@
-@use '../../app/placeholder/blockquote';
+@use '../../app/core/mixin' as *;
 
 .wp-block-quote {
-	@extend %blockquote;
+	@include blockquote();
 
 	&__citation {
-		@extend %blockquote__cite;
+		@include blockquote__cite();
 	}
 }

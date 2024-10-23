@@ -1,9 +1,9 @@
 @use '../../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../../../placeholder/widget';
+@use '../../../../core/mixin/widget' as *;
 
 .widget_recent_entries {
 	ul {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 
 	.post-date {

@@ -1,11 +1,11 @@
-@use '../../../../placeholder/widget';
+@use '../../../../core/mixin/widget' as *;
 
 .widget_pages {
 	ul {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 
 	.page_item {
-		@extend %widget-has-children-expander;
+		@include widget-has-children-expander();
 	}
 }

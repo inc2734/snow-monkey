@@ -1,6 +1,6 @@
 @use '../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../placeholder/blockquote';
-@use '../../placeholder/table';
+@use '../../core/mixin/blockquote' as *;
+@use '../../core/mixin/table' as *;
 
 @mixin entry-content($level: 1) {
 	@include core.set-content-level($level);
@@ -17,7 +17,7 @@
 	}
 
 	> table {
-		@extend %table;
+		@include table();
 	}
 
 	> :where(ul) :where(li) + :where(li),
@@ -28,7 +28,7 @@
 	}
 
 	> blockquote:not([class~="wp-block-quote"]) {
-		@extend %blockquote;
+		@include blockquote();
 	}
 }
 
@@ -47,6 +47,6 @@
 	}
 
 	> blockquote:not([class~="wp-block-quote"]) {
-		@extend %blockquote-theme;
+		@include blockquote-theme();
 	}
 }

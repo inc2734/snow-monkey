@@ -1,10 +1,13 @@
 @use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../app/placeholder/entry-content';
-@use '../../app/placeholder/widget';
+@use '../../app/core/mixin/entry-content' as *;
+@use '../../app/core/mixin/widget' as *;
 
 .wp-block-latest-posts {
-	@extend %widget-list-base;
-	margin-left: auto;
+	@include widget-list-base();
+
+	& {
+		margin-left: auto;
+	}
 
 	&__post-date {
 		@include core.set-font-size-level(-2);
@@ -17,11 +20,11 @@
 
 	&__post-full-content {
 		margin-top: var(--_margin-2);
-		@extend %entry-content;
+		@include entry-content();
 
 		// For editor
 		> div:not([class]) {
-			@extend %entry-content;
+			@include entry-content();
 		}
 	}
 }

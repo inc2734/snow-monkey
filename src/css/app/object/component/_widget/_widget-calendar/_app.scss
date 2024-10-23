@@ -1,7 +1,7 @@
-@use '../../../../placeholder/calendar';
+@use '../../../../core/mixin/calendar' as *;
 
 .widget_calendar {
-	@extend %calendar;
+	@include calendar();
 }
 
 .wp-calendar-nav {

@@ -1,5 +1,5 @@
 @use '../../../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
-@use '../../../placeholder/widget';
+@use '../../../core/mixin/widget' as *;
 
 @use '_children-expander/app' as *;
 @use '_snow-monkey-posts/app' as *;
@@ -24,7 +24,7 @@
 	> h4,
 	> h5,
 	> h6 {
-		@extend %widget-title;
+		@include widget-title();
 	}
 
 	.wp-widget-group__inner-blocks,
@@ -35,7 +35,7 @@
 		> h4,
 		> h5,
 		> h6 {
-			@extend %widget-title;
+			@include widget-title();
 			border: none;
 			background-color: transparent;
 			padding: 0;
@@ -70,5 +70,5 @@
 }
 
 .widgettitle {
-	@extend %widget-title;
+	@include widget-title();
 }

@@ -1,4 +1,4 @@
-@use '../../../placeholder/widget';
+@use '../../../core/mixin/widget' as *;
 
 @use '_children-expander/app-theme' as *;
 @use '_snow-monkey-posts/app-theme' as *;
@@ -12,7 +12,7 @@
 	> h4,
 	> h5,
 	> h6 {
-		@extend %widget-title-theme;
+		@include widget-title-theme();
 	}
 
 	.wp-widget-group__inner-blocks,
@@ -23,11 +23,11 @@
 		> h4,
 		> h5,
 		> h6 {
-			@extend %widget-title-theme;
+			@include widget-title-theme();
 		}
 	}
 }
 
 .widgettitle {
-	@extend %widget-title-theme;
+	@include widget-title-theme();
 }

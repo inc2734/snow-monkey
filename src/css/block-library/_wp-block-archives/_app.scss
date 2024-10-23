@@ -1,5 +1,5 @@
-@use '../../app/placeholder/widget';
+@use '../../app/core/mixin/widget' as *;
 
 .wp-block-archives {
-	@extend %widget-list-base;
+	@include widget-list-base();
 }

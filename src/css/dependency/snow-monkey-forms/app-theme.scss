@@ -1,9 +1,9 @@
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin/entry-content' as *;
 
 .smf-complete-content,
 .smf-system-error-content,
 .smf-item__controls {
-	@extend %entry-content-theme;
+	@include entry-content-theme();
 }
 
 // @todo WordPress 5.9 iframed content hack.

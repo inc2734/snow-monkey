@@ -1,8 +1,8 @@
-@use '../../app/placeholder/entry-content';
+@use '../../app/core/mixin/entry-content' as *;
 
 .is-layout-constrained,
 .is-layout-flow {
-	@extend %entry-content-theme;
+	@include entry-content-theme();
 }
 
 .is-layout-grid {

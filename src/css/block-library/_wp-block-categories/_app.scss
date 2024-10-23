@@ -1,18 +1,21 @@
-@use '../../app/placeholder/widget';
+@use '../../app/core/mixin/widget' as *;
 
 .wp-block-categories {
-	@extend %widget-list-base;
-	margin-left: auto;
+	@include widget-list-base();
+
+	& {
+		margin-left: auto;
+	}
 
 	.children {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 }
 
 .wp-block-categories__list {
-	@extend %widget-list-base;
+	@include widget-list-base();
 
 	ul {
-		@extend %widget-list-base;
+		@include widget-list-base();
 	}
 }
