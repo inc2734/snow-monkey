@@ -6,6 +6,10 @@
 		@include widget-list-base();
 	}
 
+	:where(a) {
+		@include widget-link-base();
+	}
+
 	.post-date {
 		display: block;
 		@include core.set-font-size-level(-2);

@@ -5,6 +5,10 @@
 .wp-block-latest-posts {
 	@include widget-list-base();
 
+	:where(a) {
+		@include widget-link-base();
+	}
+
 	& {
 		margin-left: auto;
 	}

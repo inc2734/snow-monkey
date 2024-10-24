@@ -4,6 +4,10 @@
 .wp-block-rss {
 	@include widget-list-base();
 
+	:where(a) {
+		@include widget-link-base();
+	}
+
 	& {
 		margin-left: auto;
 	}

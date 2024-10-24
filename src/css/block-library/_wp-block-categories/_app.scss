@@ -7,6 +7,10 @@
 		margin-left: auto;
 	}
 
+	:where(a) {
+		@include widget-link-base();
+	}
+
 	.children {
 		@include widget-list-base();
 	}
@@ -17,5 +21,9 @@
 
 	ul {
 		@include widget-list-base();
+	}
+
+	:where(a) {
+		@include widget-link-base();
 	}
 }

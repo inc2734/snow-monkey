@@ -2,4 +2,8 @@
 
 .wp-block-archives {
 	@include widget-list-base();
+
+	:where(a) {
+		@include widget-link-base();
+	}
 }

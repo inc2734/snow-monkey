@@ -5,6 +5,10 @@
 		@include widget-list-base();
 	}
 
+	:where(a) {
+		@include widget-link-base();
+	}
+
 	.menu-item {
 		@include widget-has-children-expander();
 	}

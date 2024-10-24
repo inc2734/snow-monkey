@@ -464,12 +464,20 @@
 .widget_product_categories {
 	ul {
 		@include widget-list-base();
+
+		:where(a) {
+			@include widget-link-base();
+		}
 	}
 }
 
 // Product search widget
 .woocommerce .product_list_widget {
 	@include widget-list-base();
+
+	:where(a) {
+		@include widget-link-base();
+	}
 
 	> li {
 		> a {
@@ -526,6 +534,10 @@
 .widget_recently_viewed_products {
 	ul {
 		@include widget-list-base();
+
+		:where(a) {
+			@include widget-link-base();
+		}
 	}
 
 	.product-title {
