@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2024-10-02 15:03+0900\n"
-"PO-Revision-Date: 2024-10-02 15:03+0900\n"
+"POT-Creation-Date: 2024-10-29 15:24+0900\n"
+"PO-Revision-Date: 2024-10-29 15:24+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -110,6 +110,7 @@ msgstr "フッター5"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:27
 #: app/customizer/design/sections/custom-post-archive/controls/view.php:24
 #: app/customizer/design/sections/custom-post/controls/view.php:24
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-direction.php:19
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:19
 #: app/customizer/design/sections/entries/controls/entries-gap.php:19
 #: app/customizer/design/sections/post/controls/related-posts-gap.php:24
@@ -973,6 +974,18 @@ msgstr "[ %1$s ] タクソノミーページ設定"
 #: app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:18
 msgid "Display the search box in drawer navigation"
 msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-direction.php:15
+msgid "Drawer navigation direction"
+msgstr "ドロワーナビゲーションの方向"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-direction.php:20
+msgid "Display from right"
+msgstr "右から表示"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-direction.php:21
+msgid "Display from left"
+msgstr "左から表示"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
 msgid "Drawer navigation type"
@@ -1953,7 +1966,7 @@ msgstr "キャッシュを削除"
 msgid "Recent topics of Snow Monkey support forum"
 msgstr "Snow Monkey サポートフォーラムの最近のトピック"
 
-#: app/setup/support-forum-widget.php:61
+#: app/setup/support-forum-widget.php:65
 #, php-format
 msgid ""
 "If you are using Snow Monkey and have any questions, try searching in "
@@ -1964,7 +1977,7 @@ msgstr ""
 "ム%2$sで検索をしてみてください。検索しても解決しなかった場合は新しくトピック"
 "を立ててください。"
 
-#: app/setup/support-forum-widget.php:74
+#: app/setup/support-forum-widget.php:78
 #, php-format
 msgid "You must have a %1$sSnow Monkey subscription%2$s to start a topic."
 msgstr ""

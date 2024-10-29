@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 27.3.0
  *
  * renamed: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php
  */
@@ -16,7 +16,7 @@ Framework::control(
 	array(
 		'transport'       => 'postMessage',
 		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
-		'priority'        => 130,
+		'priority'        => 140,
 		'default'         => true,
 		'active_callback' => function () {
 			return has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );

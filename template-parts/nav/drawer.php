@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 27.3.0
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -11,8 +11,12 @@
 use Framework\Helper;
 
 
-$has_drawer_sub_nav = has_nav_menu( 'drawer-sub-nav' );
-$drawer_nav_type    = get_theme_mod( 'drawer-nav-type' );
+$has_drawer_sub_nav           = has_nav_menu( 'drawer-sub-nav' );
+$hamburger_btn_position       = get_theme_mod( 'hamburger-btn-position' );
+$drawer_nav_type              = get_theme_mod( 'drawer-nav-type' );
+$drawer_nav_direction         = get_theme_mod( 'drawer-nav-direction' );
+$inverse                      = ( 'left' === $hamburger_btn_position && 'left' !== $drawer_nav_direction ) || ( 'right' === $drawer_nav_direction );
+$display_drawer_hamburger_btn = ( 'overall' === $drawer_nav_type ) || ( $drawer_nav_direction === $hamburger_btn_position );
 
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
@@ -20,13 +24,22 @@ $args = wp_parse_args(
 	// phpcs:enable
 	array(
 		'_theme-location'                => 'drawer-nav',
-		'_inverse'                       => 'left' === get_theme_mod( 'hamburger-btn-position' ),
-		'_display-hamburger-btn'         => 'overall' === $drawer_nav_type,
+		'_inverse'                       => $inverse,
+		'_display-hamburger-btn'         => $display_drawer_hamburger_btn,
 		'_display-drawer-sub-nav'        => $has_drawer_sub_nav,
 		'_display-drawer-nav-search-box' => get_theme_mod( 'display-drawer-nav-search-box' ),
 		'_hamburger-btn-id'              => 'hamburger-btn',
 	)
 );
+
+if ( $args['_display-hamburger-btn'] ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'_hamburger-btn-position' => $hamburger_btn_position,
+		)
+	);
+}
 
 $has_drawer_nav = has_nav_menu( $args['_theme-location'] );
 
@@ -63,7 +76,7 @@ $classes                   = array_filter(
 			$classes = array_filter(
 				array(
 					'c-drawer__controls',
-					$args['_inverse'] ? 'c-drawer__controls--left' : '',
+					! empty( $args['_hamburger-btn-position'] ) ? 'c-drawer__controls--' . $args['_hamburger-btn-position'] : '',
 				),
 				'strlen'
 			);
