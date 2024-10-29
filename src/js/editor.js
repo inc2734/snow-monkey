@@ -13,6 +13,7 @@ function setDimensionsDefaultControls( settings ) {
 				...settings.supports.spacing,
 				__experimentalDefaultControls: {
 					...settings.supports.spacing.__experimentalDefaultControls,
+					margin: true,
 					padding: true,
 				},
 			},
