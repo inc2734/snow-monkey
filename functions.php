@@ -95,8 +95,13 @@ add_filter( 'snow_monkey_loading_method', 'snow_monkey_loading_method_callback',
 add_filter(
 	'inc2734_wp_view_controller_expand_get_template_part',
 	function () {
+		$expand_get_template_part = wp_cache_get( 'snow-monkey-expand-get-template-part' );
+		if ( false === $expand_get_template_part ) {
+			$expand_get_template_part = get_theme_mod( 'expand-get-template-part', true );
+			wp_cache_set( 'snow-monkey-expand-get-template-part', $expand_get_template_part );
+		}
 		// Since the default value by WP Customizer Framework is not reflected here, it should be written in plain text.
-		return get_theme_mod( 'expand-get-template-part', true );
+		return $expand_get_template_part;
 	},
 	9
 );
