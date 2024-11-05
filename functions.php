@@ -33,12 +33,10 @@ spl_autoload_register(
 
 /**
  * Make theme available for translation
- *
- * @return void
  */
 add_action(
 	'after_setup_theme',
-	function() {
+	function () {
 		load_theme_textdomain( 'snow-monkey', get_template_directory() . '/languages' );
 	}
 );
