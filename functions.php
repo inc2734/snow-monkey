@@ -36,7 +36,12 @@ spl_autoload_register(
  *
  * @return void
  */
-load_theme_textdomain( 'snow-monkey', get_template_directory() . '/languages' );
+add_action(
+	'after_setup_theme',
+	function() {
+		load_theme_textdomain( 'snow-monkey', get_template_directory() . '/languages' );
+	}
+);
 
 /**
  * Sets the content width in pixels, based on the theme's design and stylesheet.
