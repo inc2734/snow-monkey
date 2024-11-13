@@ -384,16 +384,16 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "3.1.12",
+            "version": "3.1.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "477a552d891cf6476c58874082569a3565925a06"
+                "reference": "3dbf29406cd05e34724836e3003c6f00169c1c97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/477a552d891cf6476c58874082569a3565925a06",
-                "reference": "477a552d891cf6476c58874082569a3565925a06",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/3dbf29406cd05e34724836e3003c6f00169c1c97",
+                "reference": "3dbf29406cd05e34724836e3003c6f00169c1c97",
                 "shasum": ""
             },
             "require": {
@@ -424,9 +424,9 @@
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-github-theme-updater/issues",
-                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.12"
+                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.14"
             },
-            "time": "2024-11-13T04:03:21+00:00"
+            "time": "2024-11-13T07:02:42+00:00"
         },
         {
             "name": "inc2734/wp-helper",
