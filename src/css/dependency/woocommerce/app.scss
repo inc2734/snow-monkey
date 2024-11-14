@@ -1,4 +1,5 @@
 @use '../../../../vendor/inc2734/wp-basis/src/assets/packages/sass-basis/src/css/core';
+@use '../../app/core/mixin/btn' as *;
 @use '../../app/core/mixin/entry-content' as *;
 @use '../../app/core/mixin/widget' as *;
 
@@ -6,39 +7,6 @@
 	.store-notice,
 	.demo_store {
 		background-color: var(--wp--preset--color--sm-accent);
-	}
-
-	.button.alt,
-	#respond #submit.alt {
-		background-color: var(--wp--preset--color--sm-accent);
-
-		&:hover,
-		&:active,
-		&:focus {
-			background-color: var(--wp--preset--color--sm-accent);
-			filter: brightness(90%);
-		}
-	}
-
-	.button.alt,
-	#respond #submit.alt {
-		&.disabled,
-		&:disabled {
-			&,
-			&:hover,
-			&:active,
-			&:focus {
-				background-color: var(--wp--preset--color--sm-accent);
-			}
-		}
-
-		&:disabled[disabled] {
-			&:hover,
-			&:active,
-			&:focus {
-				background-color: var(--wp--preset--color--sm-accent);
-			}
-		}
 	}
 
 	.widget_price_filter .ui-slider {
@@ -89,7 +57,6 @@
 
 .woocommerce-page .cart .actions .coupon .input-text {
 	width: 200px;
-	height: 36px;
 }
 
 .woocommerce-notices-wrapper:empty + * {
@@ -166,6 +133,11 @@
 	.woocommerce .shop_table {
 		border-collapse: collapse;
 
+		th,
+		td {
+			padding: var(--_padding-1);
+		}
+
 		thead {
 			th {
 				background-color: var(--wp--preset--color--sm-lightest-gray);
@@ -176,13 +148,32 @@
 }
 
 // Buttons
-.l-container .l-contents #respond #submit,
-.l-container .l-contents .button,
 .wc-block-grid .wp-block-button .wp-block-button__link {
 	--_border-radius: var(--_global--border-radius);
 
 	@include core.transition(all);
 	border-radius: var(--_border-radius);
+}
+.woocommerce #respond #submit:not(:root),
+.woocommerce .button:not(:root):not(:root),
+.woocommerce-button {
+	@include sm-btn();
+
+	// Woo が色を指定しているので再度上書き
+	&:hover {
+		background-color: var(--btn--background-color);
+		color: var(--btn--color);
+	}
+
+	// Woo が色を指定しているので再度上書き
+	&.disabled,
+	&:disabled,
+	&:disabled[disabled] {
+		&,
+		&:hover {
+			background-color: var(--wp--preset--color--sm-accent);
+		}
+	}
 }
 
 // Product title in single
@@ -230,6 +221,7 @@
 		.c-select > select,
 		.c-select__label {
 			@include core.set-font-size-level(-1);
+			background: none;
 		}
 
 		.reset_variations {
@@ -251,20 +243,22 @@
 }
 
 .woocommerce .quantity .qty {
-	max-height: 37px;
 	padding-right: var(--_padding-2);
 	padding-left: var(--_padding-2);
 }
 
+.woocommerce .product .cart,
 .woocommerce .woocommerce-variation-add-to-cart {
 	display: flex;
+	gap: var(--_margin-2);
 
 	> .quantity {
 		flex: 0 1 auto;
+		margin: 0;
 	}
 
 	> .button {
-		flex: 1 0 auto;
+		flex: 0 0 auto;
 	}
 }
 
@@ -343,6 +337,10 @@
 .woocommerce ul.products {
 	clear: both;
 	margin-top: var(--_margin2);
+
+	.wc-forward {
+		margin-left: var(--_margin-2);
+	}
 }
 
 // Orderby in archive
