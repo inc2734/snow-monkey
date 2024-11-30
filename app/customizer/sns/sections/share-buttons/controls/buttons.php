@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.0.0
+ * @version 27.4.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/buttons.php
  */
@@ -22,6 +22,7 @@ Framework::control(
 			'facebook'  => __( 'Facebook', 'snow-monkey' ),
 			'twitter'   => __( 'Twitter', 'snow-monkey' ),
 			'x'         => __( 'X', 'snow-monkey' ),
+			'threads'   => __( 'Threads', 'snow-monkey' ),
 			'hatena'    => __( 'Hatena Bookmark', 'snow-monkey' ),
 			'feedly'    => __( 'Feedly', 'snow-monkey' ),
 			'line'      => __( 'LINE', 'snow-monkey' ),
