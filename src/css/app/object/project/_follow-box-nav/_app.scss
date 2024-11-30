@@ -136,6 +136,10 @@
 		background-color: map.get($social-icon-colors, 'x');
 	}
 
+	[data-icon="threads"] {
+		background-color: map.get($social-icon-colors, 'threads');
+	}
+
 	[data-icon="wordpress"] {
 		background-color: map.get($social-icon-colors, 'wordpress');
 	}
