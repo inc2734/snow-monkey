@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edac679a66669dedc01ef539c67183d9",
+    "content-hash": "810b41cbd6699fec064e21362b2999ee",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -523,16 +523,16 @@
         },
         {
             "name": "inc2734/wp-oembed-blog-card",
-            "version": "13.0.10",
+            "version": "14.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-oembed-blog-card.git",
-                "reference": "294ee7cca2a33d3d20c2a7631195ea70b12d7533"
+                "reference": "076993131c56d186ee7ad6d1a9bd2c9723ff39e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/294ee7cca2a33d3d20c2a7631195ea70b12d7533",
-                "reference": "294ee7cca2a33d3d20c2a7631195ea70b12d7533",
+                "url": "https://api.github.com/repos/inc2734/wp-oembed-blog-card/zipball/076993131c56d186ee7ad6d1a9bd2c9723ff39e1",
+                "reference": "076993131c56d186ee7ad6d1a9bd2c9723ff39e1",
                 "shasum": ""
             },
             "require": {
@@ -563,9 +563,9 @@
             "description": "A library for WordPress oEmbed Blog Card.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-oembed-blog-card/issues",
-                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/13.0.10"
+                "source": "https://github.com/inc2734/wp-oembed-blog-card/tree/14.0.0"
             },
-            "time": "2024-09-02T23:41:32+00:00"
+            "time": "2024-11-29T23:54:41+00:00"
         },
         {
             "name": "inc2734/wp-ogp",
@@ -3082,16 +3082,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.11.0",
+            "version": "3.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "70c08f8d20c0eb4fe56f26644dd94dae76a7f450"
+                "reference": "19473c30efe4f7b3cd42522d0b2e6e7f243c6f87"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/70c08f8d20c0eb4fe56f26644dd94dae76a7f450",
-                "reference": "70c08f8d20c0eb4fe56f26644dd94dae76a7f450",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/19473c30efe4f7b3cd42522d0b2e6e7f243c6f87",
+                "reference": "19473c30efe4f7b3cd42522d0b2e6e7f243c6f87",
                 "shasum": ""
             },
             "require": {
@@ -3158,7 +3158,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2024-11-12T09:53:29+00:00"
+            "time": "2024-11-16T12:02:36+00:00"
         },
         {
             "name": "theseer/tokenizer",
