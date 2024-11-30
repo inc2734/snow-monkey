@@ -135,6 +135,10 @@
 		color: map.get($social-icon-colors, 'x');
 	}
 
+	.fa-threads {
+		color: map.get($social-icon-colors, 'threads');
+	}
+
 	.fa-wordpress {
 		color: map.get($social-icon-colors, 'wordpress');
 	}

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2024-10-29 15:24+0900\n"
-"PO-Revision-Date: 2024-10-29 15:24+0900\n"
+"POT-Creation-Date: 2024-11-30 15:28+0900\n"
+"PO-Revision-Date: 2024-11-30 15:28+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -1701,30 +1701,34 @@ msgid "X"
 msgstr "X"
 
 #: app/customizer/sns/sections/share-buttons/controls/buttons.php:25
+msgid "Threads"
+msgstr "Threads"
+
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:26
 msgid "Hatena Bookmark"
 msgstr "はてなブックマーク"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:26
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:27
 msgid "Feedly"
 msgstr "Feedly"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:27
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:28
 msgid "LINE"
 msgstr "LINE"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:28
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:29
 msgid "Pocket"
 msgstr "Pocket"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:29
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:30
 msgid "Pinterest"
 msgstr "Pinterest"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:30
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:31
 msgid "Feed"
 msgstr "フィード"
 
-#: app/customizer/sns/sections/share-buttons/controls/buttons.php:31
+#: app/customizer/sns/sections/share-buttons/controls/buttons.php:32
 msgid "Copy"
 msgstr "コピー"
 
