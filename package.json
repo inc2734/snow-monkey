@@ -18,7 +18,7 @@
 		"@inc2734/dispatch-custom-resize-event": "^0.4.0",
 		"@inc2734/for-each-html-nodes": "^0.4.0",
 		"@inc2734/smooth-scroll": "^1.0.10",
-		"@inc2734/spider": "0.0.50",
+		"@inc2734/spider": "0.0.51",
 		"@wordpress/browserslist-config": "^6.13.0",
 		"@wordpress/env": "^10.13.0",
 		"@wordpress/scripts": "^30.6.0",
@@ -33,7 +33,7 @@
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
 		"rimraf": "^6.0.1",
-		"sass": "^1.81.0"
+		"sass": "^1.82.0"
 	},
 	"scripts": {
 		"export:wp-content:plugins": "npm run cli cp -- -r ../../plugins .export/wp-content",
