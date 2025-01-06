@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2024-11-30 15:28+0900\n"
-"PO-Revision-Date: 2024-11-30 15:28+0900\n"
+"POT-Creation-Date: 2025-01-06 23:52+0900\n"
+"PO-Revision-Date: 2025-01-06 23:53+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -971,7 +971,7 @@ msgstr ""
 msgid "[ %1$s ] taxonomy pages settings"
 msgstr "[ %1$s ] タクソノミーページ設定"
 
-#: app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:18
+#: app/customizer/design/sections/drawer-nav/controls/display-drawer-nav-search-box.php:17
 msgid "Display the search box in drawer navigation"
 msgstr "ドロワーナビゲーション内に検索ボックスを表示する"
 
@@ -986,6 +986,18 @@ msgstr "右から表示"
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-direction.php:21
 msgid "Display from left"
 msgstr "左から表示"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-search-box-position.php:15
+msgid "Search box position"
+msgstr "検索ボックスの位置"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-search-box-position.php:19
+msgid "Top"
+msgstr "上"
+
+#: app/customizer/design/sections/drawer-nav/controls/drawer-nav-search-box-position.php:20
+msgid "Bottom"
+msgstr "下"
 
 #: app/customizer/design/sections/drawer-nav/controls/drawer-nav-type.php:15
 msgid "Drawer navigation type"

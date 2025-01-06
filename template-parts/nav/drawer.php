@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.3.0
+ * @version 27.5.0
  *
  * renamed: template-parts/drawer-nav.php
  */
@@ -37,6 +37,15 @@ if ( $args['_display-hamburger-btn'] ) {
 		$args,
 		array(
 			'_hamburger-btn-position' => $hamburger_btn_position,
+		)
+	);
+}
+
+if ( $args['_display-drawer-nav-search-box'] ) {
+	$args = wp_parse_args(
+		$args,
+		array(
+			'_search-box-position' => get_theme_mod( 'drawer-nav-search-box-position' ),
 		)
 	);
 }
@@ -97,6 +106,14 @@ $classes                   = array_filter(
 			</div>
 		<?php endif; ?>
 
+		<?php if ( $args['_display-drawer-nav-search-box'] && 'top' === $args['_search-box-position'] ) : ?>
+			<ul class="c-drawer__menu">
+				<li class="c-drawer__item">
+					<?php Helper::get_template_part( 'template-parts/common/search-form', 'drawer' ); ?>
+				</li>
+			</ul>
+		<?php endif; ?>
+
 		<?php
 		if ( $has_drawer_nav ) {
 			wp_nav_menu(
@@ -115,7 +132,7 @@ $classes                   = array_filter(
 		}
 		?>
 
-		<?php if ( $args['_display-drawer-nav-search-box'] ) : ?>
+		<?php if ( $args['_display-drawer-nav-search-box'] && 'bottom' === $args['_search-box-position'] ) : ?>
 			<ul class="c-drawer__menu">
 				<li class="c-drawer__item">
 					<?php Helper::get_template_part( 'template-parts/common/search-form', 'drawer' ); ?>
