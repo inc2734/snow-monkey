@@ -1,6 +1,5 @@
 @use '../../app/core/mixin' as *;
 
-.is-layout-constrained,
-.is-layout-flow {
+:where(.is-layout-constrained, .is-layout-flow) {
 	@include entry-content();
 }
