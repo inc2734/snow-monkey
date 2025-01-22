@@ -145,9 +145,9 @@ foreach ( array( 'wp_enqueue_scripts', 'admin_enqueue_scripts' ) as $action_hook
 			if ( ! get_theme_mod( 'use-lightweight-fontawesome' ) ) {
 				wp_enqueue_script(
 					'fontawesome6',
-					get_theme_file_uri( '/assets/packages/fontawesome-free/all.min.js' ),
+					get_theme_file_uri( '/assets/js/fontawesome-all.js' ),
 					array(),
-					filemtime( get_theme_file_path( '/assets/packages/fontawesome-free/all.min.js' ) ),
+					filemtime( get_theme_file_path( '/assets/js/fontawesome-all.js' ) ),
 					array(
 						'strategy'  => 'defer',
 						'in_footer' => false,
