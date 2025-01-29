@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.6
+ * @version 27.5.4
  */
 
 use Framework\Controller\Manager;
@@ -58,9 +58,10 @@ function snow_monkey_get_remote_block_patten_categories() {
  * Get remote block patterns.
  *
  * @param string $url API URL.
+ * @param array $args An array of request arguments.
  * @return array
  */
-function _snow_monkney_get_remote_block_patterns( $url ) {
+function _snow_monkney_get_remote_block_patterns( $url, array $args = array() ) {
 	global $wp_version;
 
 	$response = wp_remote_get(
@@ -68,8 +69,11 @@ function _snow_monkney_get_remote_block_patterns( $url ) {
 		array(
 			'user-agent' => 'WordPress/' . $wp_version,
 			'timeout'    => 30,
-			'headers'    => array(
-				'Accept-Encoding' => '',
+			'headers'    => array_merge(
+				$args,
+				array(
+					'Accept-Encoding' => '',
+				),
 			),
 		)
 	);
@@ -131,14 +135,14 @@ function snow_monkey_get_free_remote_block_pattens() {
  * @return array
  */
 function snow_monkey_get_premium_remote_block_pattens() {
-	$license_key = Manager::get_option( 'license-key' );
+	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns/';
 
-	$url = sprintf(
-		'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns/%1$s',
-		esc_attr( $license_key )
+	return _snow_monkney_get_remote_block_patterns(
+		$url,
+		array(
+			'X-Snow-Monkey-License-key' => Manager::get_option( 'license-key' ),
+		)
 	);
-
-	return _snow_monkney_get_remote_block_patterns( $url );
 }
 
 /**
@@ -147,14 +151,14 @@ function snow_monkey_get_premium_remote_block_pattens() {
  * @return array
  */
 function snow_monkey_get_premium_remote_block_pattens_xserver() {
-	$xserver_register_key = Manager::get_option( 'xserver-register-key' );
+	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns-xserver/';
 
-	$url = sprintf(
-		'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns-xserver/%1$s',
-		esc_attr( $xserver_register_key )
+	return _snow_monkney_get_remote_block_patterns(
+		$url,
+		array(
+			'X-Snow-Monkey-XServer-Register-key' => Manager::get_option( 'xserver-register-key' ),
+		)
 	);
-
-	return _snow_monkney_get_remote_block_patterns( $url );
 }
 
 /**
