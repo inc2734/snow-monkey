@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.5.4
+ * @version 27.6.0
  */
 
 namespace Framework\Controller;
@@ -94,7 +94,7 @@ class Manager {
 						<?php
 						settings_fields( self::MENU_SLUG );
 						submit_button(
-							esc_html__( 'Retrieve patterns from the pattern library', 'snow-monkey' ),
+							esc_html__( 'Retrieve data from the pattern / style library', 'snow-monkey' ),
 							'primary'
 						);
 						?>
@@ -126,6 +126,7 @@ class Manager {
 			function ( $option ) {
 				delete_transient( 'snow-monkey-remote-pattern-categories' );
 				delete_transient( 'snow-monkey-remote-patterns' );
+				delete_transient( 'snow-monkey-remote-styles' );
 
 				if ( isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'] ) {
 					return get_option( self::SETTINGS_NAME );

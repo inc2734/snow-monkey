@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2025-01-06 23:52+0900\n"
-"PO-Revision-Date: 2025-01-06 23:53+0900\n"
+"POT-Creation-Date: 2025-01-30 10:20+0900\n"
+"PO-Revision-Date: 2025-01-30 10:20+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -134,42 +134,42 @@ msgid "Reset settings"
 msgstr "設定をリセット"
 
 #: Framework/Controller/Manager.php:97
-msgid "Retrieve patterns from the pattern library"
-msgstr "パターンライブラリーからパターンを再取得する"
+msgid "Retrieve data from the pattern / style library"
+msgstr "パターン / スタイルライブラリーからデータを再取得する"
 
-#: Framework/Controller/Manager.php:165
+#: Framework/Controller/Manager.php:166
 msgid "Settings"
 msgstr "設定"
 
-#: Framework/Controller/Manager.php:173
+#: Framework/Controller/Manager.php:174
 msgid "License key"
 msgstr "ライセンスキー"
 
-#: Framework/Controller/Manager.php:179 Framework/Controller/Manager.php:221
+#: Framework/Controller/Manager.php:180 Framework/Controller/Manager.php:222
 msgid "Enable"
 msgstr "有効"
 
-#: Framework/Controller/Manager.php:184 Framework/Controller/Manager.php:226
+#: Framework/Controller/Manager.php:185 Framework/Controller/Manager.php:227
 msgid "Disable"
 msgstr "無効"
 
-#: Framework/Controller/Manager.php:204
+#: Framework/Controller/Manager.php:205
 msgid ""
 "If the license key entered is valid, premium block patterns are available."
 msgstr ""
 "入力されたライセンスキーが有効な場合、プレミアムブロックパターンが利用できま"
 "す。"
 
-#: Framework/Controller/Manager.php:205
+#: Framework/Controller/Manager.php:206
 msgid ""
 "If the license key is entered, the XServer register key setting is not saved."
 msgstr "ライセンスキーを入力した場合、XServer 登録キーの設定は保存されません。"
 
-#: Framework/Controller/Manager.php:215
+#: Framework/Controller/Manager.php:216
 msgid "XServer register key"
 msgstr "XServer 登録キー"
 
-#: Framework/Controller/Manager.php:246
+#: Framework/Controller/Manager.php:247
 msgid ""
 "If the XServer register key entered is valid, premium block patterns are "
 "available."
@@ -177,7 +177,7 @@ msgstr ""
 "入力されたXServer 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
 "です。"
 
-#: Framework/Controller/Manager.php:247
+#: Framework/Controller/Manager.php:248
 msgid ""
 "If you are using XServer integration, enter the XServer register key in the "
 "XServer register key entry field without entering anything in the license "
