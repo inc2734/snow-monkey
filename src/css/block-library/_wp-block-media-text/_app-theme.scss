@@ -1,7 +1,5 @@
 @use '../../app/core/mixin/entry-content' as *;
 
-.wp-block-media-text {
-	&__content {
-		@include entry-content-theme();
-	}
+:where(.wp-block-media-text__content) {
+	@include entry-content-theme();
 }

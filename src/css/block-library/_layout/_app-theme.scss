@@ -1,7 +1,9 @@
 @use '../../app/core/mixin/entry-content' as *;
 
-.is-layout-constrained,
-.is-layout-flow {
+:where(
+	.is-layout-constrained,
+	.is-layout-flow
+) {
 	@include entry-content-theme();
 }
 

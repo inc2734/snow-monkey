@@ -1,12 +1,10 @@
 @use '../../app/core/mixin/entry-content' as *;
 
-.wp-block-latest-posts {
-	&__post-full-content {
-		@include entry-content-theme();
+:where(.wp-block-latest-posts__post-full-content) {
+	@include entry-content-theme();
+}
 
-		// For editor
-		> div:not([class]) {
-			@include entry-content-theme();
-		}
-	}
+// For editor
+:where(.wp-block-latest-posts__post-full-content > div:not([class])) {
+	@include entry-content-theme();
 }

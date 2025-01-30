@@ -1,4 +1,5 @@
-.wp-block-heading.is-style-plain {
+.wp-block-heading:where(.is-style-plain),
+.wp-block-heading:where([class*="is-style-snow-monkey-"]) {
 	--entry-content-h2-background-color: transparent;
 	--entry-content-h2-border-left: none;
 	--wp--preset--color--sm-text: inherit;

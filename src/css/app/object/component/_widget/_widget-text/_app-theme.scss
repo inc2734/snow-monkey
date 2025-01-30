@@ -1,5 +1,5 @@
 @use '../../../../core/mixin/entry-content' as *;
 
-.textwidget {
+:where(.textwidget) {
 	@include entry-content-theme();
 }

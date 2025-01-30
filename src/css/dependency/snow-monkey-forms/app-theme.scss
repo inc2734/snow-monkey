@@ -1,8 +1,10 @@
 @use '../../app/core/mixin/entry-content' as *;
 
-.smf-complete-content,
-.smf-system-error-content,
-.smf-item__controls {
+:where(
+	.smf-complete-content,
+	.smf-system-error-content,
+	.smf-item__controls
+) {
 	@include entry-content-theme();
 }
 
