@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 28.0.0
+ * @version 28.0.2
  */
 
 namespace Framework;
@@ -427,6 +427,8 @@ class Helper {
 			if ( $should_drop_nav || $should_drop_nav_on_pc ) {
 				$should_drop_nav = true;
 			}
+		} else {
+			$should_drop_nav = $has_drop_nav;
 		}
 
 		// If you have global-nav, you don't need drop-nav.
