@@ -384,16 +384,16 @@
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "3.1.15",
+            "version": "3.1.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "74d5254131de12ead6546ab0198213f24b082364"
+                "reference": "392acaf921829f9b386b159e9df8b134150e434a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/74d5254131de12ead6546ab0198213f24b082364",
-                "reference": "74d5254131de12ead6546ab0198213f24b082364",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/392acaf921829f9b386b159e9df8b134150e434a",
+                "reference": "392acaf921829f9b386b159e9df8b134150e434a",
                 "shasum": ""
             },
             "require": {
@@ -403,7 +403,7 @@
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
                 "wp-coding-standards/wpcs": "^3.1",
-                "yoast/phpunit-polyfills": "^2.0"
+                "yoast/phpunit-polyfills": "^1.1"
             },
             "type": "library",
             "autoload": {
@@ -424,9 +424,9 @@
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-github-theme-updater/issues",
-                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.15"
+                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.16"
             },
-            "time": "2024-12-04T01:03:53+00:00"
+            "time": "2025-02-06T05:19:36+00:00"
         },
         {
             "name": "inc2734/wp-helper",
