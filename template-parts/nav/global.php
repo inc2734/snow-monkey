@@ -3,17 +3,13 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 28.0.0
  *
  * renamed: template-parts/global-nav.php
  */
 
 use Inc2734\WP_Basis\App\Walker\Navbar;
 use Framework\Helper;
-
-if ( ! has_nav_menu( 'global-nav' ) ) {
-	return;
-}
 
 $args = wp_parse_args(
 	// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
@@ -26,6 +22,10 @@ $args = wp_parse_args(
 		'_gnav-current-effect' => get_theme_mod( 'gnav-current-effect' ),
 	)
 );
+
+if ( ! has_nav_menu( 'global-nav' ) && 'snow-monkey/nav/drop' !== $args['_context'] ) {
+	return;
+}
 
 $classes   = array();
 $classes[] = 'p-global-nav';

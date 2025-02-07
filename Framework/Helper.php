@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 28.0.0
  */
 
 namespace Framework;
@@ -416,18 +416,27 @@ class Helper {
 	 * @return boolean
 	 */
 	public static function has_drop_nav() {
-		$return = false;
+		$has_global_nav  = has_nav_menu( 'global-nav' );
+		$has_drop_nav    = has_nav_menu( 'drop-nav' );
+		$should_drop_nav = false;
 
-		if ( has_nav_menu( 'global-nav' ) ) {
-			$has_drop_nav       = in_array( get_theme_mod( 'header-position' ), array( '', 'overlay' ), true );
-			$has_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), array( '', 'overlay' ), true );
+		if ( $has_global_nav ) {
+			$should_drop_nav       = in_array( get_theme_mod( 'header-position' ), array( '', 'overlay' ), true );
+			$should_drop_nav_on_pc = in_array( get_theme_mod( 'header-position-lg' ), array( '', 'overlay' ), true );
 
-			if ( $has_drop_nav || $has_drop_nav_on_pc ) {
-				$return = true;
+			if ( $should_drop_nav || $should_drop_nav_on_pc ) {
+				$should_drop_nav = true;
 			}
 		}
 
-		return apply_filters( 'snow_monkey_has_drop_nav', $return );
+		// If you have global-nav, you don't need drop-nav.
+		// If you don't have global-nav, drop-nav is required.
+		$should_drop_nav = apply_filters( 'snow_monkey_has_drop_nav', $should_drop_nav );
+		if ( $has_global_nav || $has_drop_nav ) {
+			return $should_drop_nav;
+		}
+
+		return false;
 	}
 
 	/**

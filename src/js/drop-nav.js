@@ -37,9 +37,8 @@ document.addEventListener(
 	() => {
 		const header = getHeader();
 		const dropNavWrapper = getDropNavWrapper();
-		const gnav = document.querySelector( '[data-has-global-nav="true"] .p-global-nav' );
 
-		if ( ! header || ! dropNavWrapper || ! gnav ) {
+		if ( ! header || ! dropNavWrapper ) {
 			return;
 		}
 
