@@ -166,7 +166,7 @@
 		"custom": {
 			"slim-width": "46rem",
 			"content-width": "var(--_global--container-max-width)",
-			"content-wide-width": "calc(var(--_global--container-max-width) + 240px)",
+			"content-wide-width": "var(--_global--container-max-width)",
 			"has-sidebar-main-basis": "var(--wp--custom--slim-width)",
 			"has-sidebar-sidebar-basis": "336px"
 		},

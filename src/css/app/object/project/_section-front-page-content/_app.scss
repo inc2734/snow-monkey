@@ -23,6 +23,6 @@
 	.p-section-front-page-content {
 		// When [data-is-full-template="true"], the width specification is disabled and should be re-specified here.
 		--wp--custom--content-width: var(--_global--container-max-width);
-		--wp--custom--content-wide-width: calc(var(--_global--container-max-width) + 240px);
+		--wp--custom--content-wide-width:var(--_global--container-max-width);
 	}
 }
