@@ -19,9 +19,9 @@
 		"@inc2734/for-each-html-nodes": "^0.4.0",
 		"@inc2734/smooth-scroll": "^1.0.10",
 		"@inc2734/spider": "0.0.51",
-		"@wordpress/browserslist-config": "^6.16.0",
-		"@wordpress/env": "^10.16.0",
-		"@wordpress/scripts": "^30.9.0",
+		"@wordpress/browserslist-config": "^6.17.0",
+		"@wordpress/env": "^10.17.0",
+		"@wordpress/scripts": "^30.10.0",
 		"autoprefixer": "^10.4.20",
 		"browser-sync": "^3.0.3",
 		"browserslist": "^4.24.4",
@@ -33,7 +33,7 @@
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
 		"rimraf": "^6.0.1",
-		"sass": "^1.83.4"
+		"sass": "^1.84.0"
 	},
 	"scripts": {
 		"export:wp-content:plugins": "npm run cli cp -- -r ../../plugins .export/wp-content",

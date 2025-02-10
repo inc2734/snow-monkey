@@ -82,8 +82,8 @@
 
 .woocommerce-MyAccount-content,
 .woocommerce-MyAccount-content > section[class^="woocommerce-"],
-.woocommerce-order,
-.woocommerce-order > section[class^="woocommerce-"] {
+.woocommerce > .woocommerce-order:not(:root),
+.woocommerce > .woocommerce-order > section[class^="woocommerce-"] {
 	@include core.set-content-level(1);
 
 	> h2,
@@ -553,4 +553,18 @@
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
 	background-color: var(--wp--preset--color--sm-lighter-gray);
 	color: var(--wp--preset--color--sm-text);
+}
+
+// Cart page block
+.wp-block-woocommerce-empty-cart-block {
+	@include core.set-content-level(1);
+}
+
+// Checkout page block
+.p-entry-content > .wp-block-woocommerce-checkout {
+	margin-right: auto;
+	margin-left: auto;
+}
+.wc-block-checkout__actions_row {
+	gap: var(--_s1);
 }
