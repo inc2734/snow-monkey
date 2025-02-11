@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 28.0.3
  */
 
 use Framework\Helper;
@@ -71,7 +71,7 @@ add_action(
 			wp_enqueue_script( Helper::get_main_script_handle() . '-footer-sticky-nav' );
 		}
 
-		if ( has_nav_menu( 'global-nav' ) ) {
+		if ( has_nav_menu( 'global-nav' ) || has_nav_menu( 'drop-nav' ) ) {
 			wp_enqueue_script( Helper::get_main_script_handle() . '-global-nav' );
 		}
 	},
