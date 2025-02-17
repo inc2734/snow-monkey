@@ -124,10 +124,10 @@ class Manager {
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
 			function ( $option ) {
-				$current_license_key    = static::get_option( 'license-key' );
-				$posted_license_key     = isset( $option['license-key'] ) ? $option['license-key'] : false;
-				$posted_license_key     = trim( $posted_license_key );
-				$option['license-key']  = static::SAVED_VALUE === $posted_license_key
+				$current_license_key   = static::get_option( 'license-key' );
+				$posted_license_key    = isset( $option['license-key'] ) ? $option['license-key'] : false;
+				$posted_license_key    = trim( $posted_license_key );
+				$option['license-key'] = static::SAVED_VALUE === $posted_license_key
 					? $current_license_key
 					: $posted_license_key;
 
