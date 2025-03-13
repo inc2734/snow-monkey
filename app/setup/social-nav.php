@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.4.0
+ * @version 28.0.5
  */
 
 use Framework\Model\Filesystem;
@@ -251,7 +251,8 @@ add_filter(
 			);
 			$new_item_output = str_replace( '<a ', '<a data-icon="vimeo" ', $new_item_output );
 		} elseif (
-			preg_match( '|^https?://([^\.]+?\.)*?twitter\.([^\./]+?)(\.[^\./]+?.)?|', $item->url )
+			preg_match( '|^https?://([^\.]+?\.)*?twitter\.([^\./]+?)(\.[^\./]+?.)?|', $item->url ) ||
+			preg_match( '|^https?://([^\.]+?\.)*?x\.([^\./]+?)(\.[^\./]+?.)?|', $item->url )
 		) {
 			$new_item_output = str_replace(
 				$args->link_before,
