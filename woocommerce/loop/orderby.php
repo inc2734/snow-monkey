@@ -12,18 +12,28 @@
  *
  * @see         https://woocommerce.com/document/template-structure/
  * @package     WooCommerce\Templates
- * @version     3.6.0
+ * @version     9.7.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$id_suffix = wp_unique_id();
+
 ?>
 <form class="woocommerce-ordering" method="get">
 	<span class="c-select">
-		<select name="orderby" class="c-select__control orderby" aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); // phpcs:ignore WordPress.WP.I18n.TextDomainMismatch ?>">
-			<?php foreach ( $catalog_orderby_options as $id => $name ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
+		<select
+			name="orderby"
+			class="c-select__control orderby"
+			<?php if ( $use_label ) : ?>
+				id="woocommerce-orderby-<?php echo esc_attr( $id_suffix ); ?>"
+			<?php else : ?>
+				aria-label="<?php esc_attr_e( 'Shop order', 'woocommerce' ); ?>"
+			<?php endif; ?>
+		>
+				<?php foreach ( $catalog_orderby_options as $id => $name ) : // phpcs:ignore WordPress.WP.GlobalVariablesOverride.Prohibited ?>
 				<option value="<?php echo esc_attr( $id ); ?>" <?php selected( $orderby, $id ); ?>><?php echo esc_html( $name ); ?></option>
 			<?php endforeach; ?>
 		</select>

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.6.0
+ * @version 9.7.0
  */
 ?>
 

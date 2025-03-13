@@ -60,6 +60,7 @@
 		<properties>
 			<property name="text_domain" type="array">
 				<element value="snow-monkey"/>
+				<element value="woocommerce"/>
 			</property>
 		</properties>
 	</rule>
