@@ -8,7 +8,7 @@
 
 add_action(
 	'wp_body_open',
-	function() {
+	function () {
 		?>
 		<a class="c-skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to main content', 'snow-monkey' ); ?></a>
 		<?php
