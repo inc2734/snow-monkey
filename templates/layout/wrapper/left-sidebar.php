@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.5
+ * @version 28.0.8
  */
 
 use Framework\Helper;
@@ -86,7 +86,7 @@ use Framework\Helper;
 					<?php do_action( 'snow_monkey_before_contents_inner' ); ?>
 
 					<div class="l-contents__inner">
-						<main class="l-contents__main" role="main">
+						<main class="l-contents__main" role="main" id="primary">
 							<?php do_action( 'snow_monkey_prepend_main' ); ?>
 
 							<?php

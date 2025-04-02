@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2025-01-30 10:20+0900\n"
-"PO-Revision-Date: 2025-01-30 10:20+0900\n"
+"POT-Creation-Date: 2025-04-02 10:02+0900\n"
+"PO-Revision-Date: 2025-04-02 10:03+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -10,14 +10,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ./.translation\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
@@ -137,39 +136,39 @@ msgstr "設定をリセット"
 msgid "Retrieve data from the pattern / style library"
 msgstr "パターン / スタイルライブラリーからデータを再取得する"
 
-#: Framework/Controller/Manager.php:166
+#: Framework/Controller/Manager.php:198
 msgid "Settings"
 msgstr "設定"
 
-#: Framework/Controller/Manager.php:174
+#: Framework/Controller/Manager.php:206
 msgid "License key"
 msgstr "ライセンスキー"
 
-#: Framework/Controller/Manager.php:180 Framework/Controller/Manager.php:222
+#: Framework/Controller/Manager.php:212 Framework/Controller/Manager.php:254
 msgid "Enable"
 msgstr "有効"
 
-#: Framework/Controller/Manager.php:185 Framework/Controller/Manager.php:227
+#: Framework/Controller/Manager.php:217 Framework/Controller/Manager.php:259
 msgid "Disable"
 msgstr "無効"
 
-#: Framework/Controller/Manager.php:205
+#: Framework/Controller/Manager.php:237
 msgid ""
 "If the license key entered is valid, premium block patterns are available."
 msgstr ""
 "入力されたライセンスキーが有効な場合、プレミアムブロックパターンが利用できま"
 "す。"
 
-#: Framework/Controller/Manager.php:206
+#: Framework/Controller/Manager.php:238
 msgid ""
 "If the license key is entered, the XServer register key setting is not saved."
 msgstr "ライセンスキーを入力した場合、XServer 登録キーの設定は保存されません。"
 
-#: Framework/Controller/Manager.php:216
+#: Framework/Controller/Manager.php:248
 msgid "XServer register key"
 msgstr "XServer 登録キー"
 
-#: Framework/Controller/Manager.php:247
+#: Framework/Controller/Manager.php:279
 msgid ""
 "If the XServer register key entered is valid, premium block patterns are "
 "available."
@@ -177,7 +176,7 @@ msgstr ""
 "入力されたXServer 登録キーが有効な場合、プレミアムブロックパターンが使用可能"
 "です。"
 
-#: Framework/Controller/Manager.php:248
+#: Framework/Controller/Manager.php:280
 msgid ""
 "If you are using XServer integration, enter the XServer register key in the "
 "XServer register key entry field without entering anything in the license "
@@ -245,7 +244,7 @@ msgstr "オーバレイ"
 msgid "Normal"
 msgstr "ノーマル"
 
-#: Framework/Helper.php:161 Framework/Helper.php:473
+#: Framework/Helper.php:161 Framework/Helper.php:484
 #: template-parts/content/prev-next-nav.php:72
 msgctxt "excerpt_length"
 msgid "55"
@@ -275,45 +274,45 @@ msgstr "%1$s テーマ by %2$s"
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:496
+#: Framework/Helper.php:507
 msgid "Sans serif"
 msgstr "サンセリフ（ゴシック体）"
 
-#: Framework/Helper.php:500
+#: Framework/Helper.php:511
 msgid "Serif"
 msgstr "セリフ（明朝体）"
 
-#: Framework/Helper.php:504
+#: Framework/Helper.php:515
 msgid "Noto Sans JP"
 msgstr "Noto Sans JP"
 
-#: Framework/Helper.php:507 Framework/Helper.php:523 Framework/Helper.php:539
-#: Framework/Helper.php:555 Framework/Helper.php:571 Framework/Helper.php:587
+#: Framework/Helper.php:518 Framework/Helper.php:534 Framework/Helper.php:550
+#: Framework/Helper.php:566 Framework/Helper.php:582 Framework/Helper.php:598
 msgid "Regular 400"
 msgstr "Regular 400"
 
-#: Framework/Helper.php:511 Framework/Helper.php:527 Framework/Helper.php:543
-#: Framework/Helper.php:559 Framework/Helper.php:575 Framework/Helper.php:591
+#: Framework/Helper.php:522 Framework/Helper.php:538 Framework/Helper.php:554
+#: Framework/Helper.php:570 Framework/Helper.php:586 Framework/Helper.php:602
 msgid "Bold 700"
 msgstr "Bold 700"
 
-#: Framework/Helper.php:520
+#: Framework/Helper.php:531
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
-#: Framework/Helper.php:536
+#: Framework/Helper.php:547
 msgid "M PLUS 1p"
 msgstr "M PLUS 1p"
 
-#: Framework/Helper.php:552
+#: Framework/Helper.php:563
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
-#: Framework/Helper.php:568
+#: Framework/Helper.php:579
 msgid "BIZ UDPGothic"
 msgstr "BIZ UDPGothic"
 
-#: Framework/Helper.php:584
+#: Framework/Helper.php:595
 msgid "BIZ UDPMincho"
 msgstr "BIZ UDPMincho"
 
@@ -336,11 +335,11 @@ msgid ""
 "Snow Monkey theme. A license key is issued when you subscribe to %1$sSnow "
 "Monkey subscription%2$s. The license key can be set %5$shere%6$s."
 msgstr ""
-"有効なライセンスキーが設定されていません。ライセンスキーを設定すること"
-"で、%3$sパターンライブラリ%4$sに登録されているパターンを使用したり、Snow "
-"Monkeyのテーマを更新したりすることができるようになります。ライセンスキー"
-"は、%1$sSnow Monkeyサブスクリプション%2$sに加入すると発行されます。ライセンス"
-"キーは%5$sこちら%6$sで設定できます。"
+"有効なライセンスキーが設定されていません。ライセンスキーを設定することで、"
+"%3$sパターンライブラリ%4$sに登録されているパターンを使用したり、Snow Monkeyの"
+"テーマを更新したりすることができるようになります。ライセンスキーは、%1$sSnow "
+"Monkeyサブスクリプション%2$sに加入すると発行されます。ライセンスキーは%5$sこ"
+"ちら%6$sで設定できます。"
 
 #. translators: %1$s: a start tag, %2$s: a end tag, %3$s: a start tag, %4$s: a end tag.
 #: app/constructor/manager.php:52
@@ -1608,12 +1607,6 @@ msgstr "サイトの Twitter アカウント名。%1$s の形式で入力して�
 msgid "Twitter Cards"
 msgstr "Twitter Cards"
 
-#. translators: 1: Card validator link
-#: app/customizer/seo/sections/twitter-cards/section.php:24
-#, php-format
-msgid "Application of URL is necessary for using Twitter Cards. %1$s"
-msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
-
 #. translators: 1: Monkey icon
 #: app/customizer/snow-monkey-community/section.php:20
 #, php-format
@@ -1783,16 +1776,6 @@ msgstr ""
 #, php-format
 msgid "%1$sAccessToken tools%2$s"
 msgstr "%1$sアクセストークンツール%2$s"
-
-#: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:21
-msgid "Twitter settings"
-msgstr "Twitter 設定"
-
-#. translators: 1: Link of OpenShareCount
-#: app/customizer/sns/sections/share-buttons/controls/twitter-settings.php:25
-#, php-format
-msgid "If you want to count of tweet then needs to register to %1$s."
-msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
 #: app/customizer/sns/sections/share-buttons/controls/type.php:18
 msgid "Type"
@@ -1977,6 +1960,10 @@ msgstr "このメニュー項目を強調する。"
 #: app/setup/page-speed-optimization.php:150
 msgid "Remove caches"
 msgstr "キャッシュを削除"
+
+#: app/setup/skip-link.php:13
+msgid "Skip to main content"
+msgstr "メインコンテンツへ移動"
 
 #: app/setup/support-forum-widget.php:15
 msgid "Recent topics of Snow Monkey support forum"
@@ -2300,7 +2287,7 @@ msgstr "トラックバック URL"
 msgid "MENU"
 msgstr "MENU"
 
-#: woocommerce/loop/orderby.php:25
+#: woocommerce/loop/orderby.php:33
 msgid "Shop order"
 msgstr "買い物"
 
@@ -2315,6 +2302,17 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
+
+#, php-format
+#~ msgid "Application of URL is necessary for using Twitter Cards. %1$s"
+#~ msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
+
+#~ msgid "Twitter settings"
+#~ msgstr "Twitter 設定"
+
+#, php-format
+#~ msgid "If you want to count of tweet then needs to register to %1$s."
+#~ msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
 
 #~ msgid ""
 #~ "You have not set a valid license key. Setting a license key will allow "

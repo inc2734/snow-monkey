@@ -5,7 +5,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.5
+ * @version 28.0.8
  */
 
 use Framework\Helper;
@@ -29,11 +29,13 @@ use Framework\Helper;
 			<div class="l-contents__body">
 				<div class="l-contents__full-container c-full-container">
 					<div class="l-contents__inner">
-						<?php
-						// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
-						$args['_view_controller']->view();
-						// phpcs:enable
-						?>
+						<main role="main" id="primary">
+							<?php
+							// phpcs:disable VariableAnalysis.CodeAnalysis.VariableAnalysis.UndefinedVariable
+							$args['_view_controller']->view();
+							// phpcs:enable
+							?>
+						</main>
 					</div>
 				</div>
 			</div>
