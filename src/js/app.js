@@ -26,14 +26,8 @@ document.addEventListener(
 			return;
 		}
 
-		let targetOffsetTop = getTargetOffsetTop();
-		if ( false !== targetOffsetTop ) {
-			targetOffsetTop = Math.floor( targetOffsetTop );
-			const headerOffsetBottom = Math.floor( header.getBoundingClientRect().top + header.offsetHeight );
-			if ( targetOffsetTop < headerOffsetBottom ) {
-				return;
-			}
-		}
+		const maxRetryCount = 20;
+		let retryCount = 0;
 
 		const showHeaderWithScroll = () => {
 			window.removeEventListener( 'scroll', showHeaderWithScroll, false );
@@ -41,7 +35,10 @@ document.addEventListener(
 		};
 
 		const hideHeaderWithLocationHash = () => {
-			const pageYOffset = Math.floor( window.pageYOffset );
+			const pageYOffset = Math.floor( window.pageYOffset ) + parseFloat( getStyle( getHtml(), 'margin-top' ) ) ?? 0;
+			if ( ! pageYOffset && ++retryCount < maxRetryCount ) {
+				requestAnimationFrame( hideHeaderWithLocationHash );
+			}
 
 			const dropNav = getDropNavWrapper();
 			const headerCssPosition = getStyle( header, 'position' );
@@ -55,13 +52,24 @@ document.addEventListener(
 
 			header.setAttribute( 'aria-hidden', 'true' );
 
+			let targetOffsetTop = getTargetOffsetTop();
+			if ( false !== targetOffsetTop ) {
+				targetOffsetTop = Math.floor( targetOffsetTop );
+				const headerOffsetBottom = Math.floor( header.getBoundingClientRect().top + header.offsetHeight );
+				if ( targetOffsetTop < headerOffsetBottom ) {
+					return;
+				}
+			}
+
 			if ( 25 > Math.abs( targetOffsetTop - pageYOffset ) ) {
 				return;
 			}
 
 			window.removeEventListener( 'scroll', hideHeaderWithLocationHash, false );
-			window.addEventListener( 'scroll', showHeaderWithScroll, false );
+
+			requestAnimationFrame( () => window.addEventListener( 'scroll', showHeaderWithScroll, false ) );
 		};
+
 		window.addEventListener( 'scroll', hideHeaderWithLocationHash, false );
 	},
 	false
