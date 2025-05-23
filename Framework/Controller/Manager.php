@@ -140,9 +140,9 @@ class Manager {
 
 				$status = 'false';
 				if ( $option['license-key'] ) {
-					$status = static::get_license_status( $option['license-key'] );
+					$status = static::get_license_status( $option['license-key'], true );
 				} elseif ( $option['xserver-register-key'] ) {
-					$status = static::get_xserver_register_status( $option['xserver-register-key'] );
+					$status = static::get_xserver_register_status( $option['xserver-register-key'], true );
 				}
 
 				// If server error, Do nothing.
@@ -290,20 +290,24 @@ class Manager {
 	 * Get license status.
 	 *
 	 * @param string $license_key The license key.
+	 * @param boolean $force Whether to request without going through cache.
 	 * @return string 'true'|'false'|'50x'
 	 */
-	public static function get_license_status( $license_key ) {
+	public static function get_license_status( $license_key, $force = false ) {
 		if ( ! $license_key ) {
 			return 'false';
 		}
 
 		$transient_name = 'snow-monkey-license-status-' . $license_key;
-		$transient      = get_transient( $transient_name );
-		if ( false !== $transient ) {
-			return $transient;
+
+		if ( ! $force ) {
+			$transient = get_transient( $transient_name );
+			if ( false !== $transient ) {
+				return $transient;
+			}
 		}
 
-		$status = static::_request_license_validate( $license_key );
+		$status = static::_request_license_validate( $license_key, $force );
 		if ( true === $status ) {
 			$status = 'true';
 		} elseif ( false === $status ) {
@@ -321,9 +325,10 @@ class Manager {
 	 * Validate checker.
 	 *
 	 * @param string $license_key The license key.
+	 * @param boolean $force Whether to request without going through cache.
 	 * @return mixed false|true|50x
 	 */
-	protected static function _request_license_validate( $license_key ) {
+	protected static function _request_license_validate( $license_key, $force = false ) {
 		global $wp_version;
 
 		if ( ! $license_key ) {
@@ -331,7 +336,7 @@ class Manager {
 		}
 
 		$response = wp_remote_get(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate/?repository=snow-monkey',
+			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate/?repository=snow-monkey&force=' . (int) $force,
 			array(
 				'user-agent' => 'WordPress/' . $wp_version,
 				'timeout'    => 30,
@@ -366,20 +371,24 @@ class Manager {
 	 * Get XServer register status.
 	 *
 	 * @param string $xserver_register_key The license key.
+	 * @param boolean $force Whether to request without going through cache.
 	 * @return string 'true'|'false'|'50x'
 	 */
-	public static function get_xserver_register_status( $xserver_register_key ) {
+	public static function get_xserver_register_status( $xserver_register_key, $force = false ) {
 		if ( ! $xserver_register_key ) {
 			return 'false';
 		}
 
 		$transient_name = 'snow-monkey-xserver-register-status-' . $xserver_register_key;
-		$transient      = get_transient( $transient_name );
-		if ( false !== $transient ) {
-			return $transient;
+
+		if ( ! $force ) {
+			$transient = get_transient( $transient_name );
+			if ( false !== $transient ) {
+				return $transient;
+			}
 		}
 
-		$status = static::_request_license_validate_xserver( $xserver_register_key );
+		$status = static::_request_license_validate_xserver( $xserver_register_key, $force );
 		if ( true === $status ) {
 			$status = 'true';
 		} elseif ( false === $status ) {
@@ -397,9 +406,10 @@ class Manager {
 	 * Validate checker.
 	 *
 	 * @param string $xserver_register_key The XServer register key.
+	 * @param boolean $force Whether to request without going through cache.
 	 * @return mixed false|true|50x
 	 */
-	protected static function _request_license_validate_xserver( $xserver_register_key ) {
+	protected static function _request_license_validate_xserver( $xserver_register_key, $force = false ) {
 		global $wp_version;
 
 		if ( ! $xserver_register_key ) {
@@ -407,7 +417,7 @@ class Manager {
 		}
 
 		$response = wp_remote_get(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate-xserver/?repository=snow-monkey',
+			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate-xserver/?repository=snow-monkey&force=' . (int) $force,
 			array(
 				'user-agent' => 'WordPress/' . $wp_version,
 				'timeout'    => 30,
