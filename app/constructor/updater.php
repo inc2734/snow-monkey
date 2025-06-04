@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.1
+ * @version 29.0.2
  */
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
@@ -46,7 +46,7 @@ add_filter(
 		$xserver_register_key    = Manager::get_option( 'xserver-register-key' );
 		$xserver_register_status = Manager::get_xserver_register_status( $xserver_register_key );
 
-		if ( 'true' === $xserver_register_key ) {
+		if ( 'true' === $xserver_register_status ) {
 			return sprintf(
 				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/update-xserver/%1$s?repository=snow-monkey&version=%2$s',
 				esc_attr( $xserver_register_key ),
