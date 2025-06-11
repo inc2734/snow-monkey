@@ -16,7 +16,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'checkbox',
 		$custom_post_type . '-entries-display-item-date-icon',
 		array(
-			'label'             => __( 'Display the modified date for each item in the entries', 'snow-monkey' ),
+			'label'             => __( 'Display the date icon for each item in the entries', 'snow-monkey' ),
 			'priority'          => 210,
 			'default'           => false,
 			'active_callback'   => function () use ( $custom_post_type ) {

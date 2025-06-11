@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 29.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -46,7 +46,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 
 				$view = $view[ count( $view ) - 1 ];
 
-				return in_array( $view, array( 'archive', 'none' ), true )
+				return in_array( $view, array( 'archive', 'none', 'search' ), true )
 						&& (
 							is_post_type_archive( $custom_post_type )
 							|| (

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 28.0.2
+ * @version 29.1.0
  */
 
 namespace Framework;
@@ -34,7 +34,7 @@ class Helper {
 	 * @return array
 	 */
 	public static function get_custom_post_types( $args = array() ) {
-		$cache_key         = 'snow-monkey-all-custom-post-types';
+		$cache_key         = 'snow-monkey-all-custom-post-types-' . crc32( wp_json_encode( $args ) );
 		$custom_post_types = wp_cache_get( $cache_key );
 		if ( is_array( $custom_post_types ) ) {
 			return $custom_post_types;
@@ -43,6 +43,51 @@ class Helper {
 		$custom_post_types = static::_get_custom_post_types( $args );
 		wp_cache_set( $cache_key, $custom_post_types );
 		return $custom_post_types;
+	}
+
+	/**
+	 * Return post type names for search.
+	 * This method only works correctly after the init hook.
+	 *
+	 * @return array
+	 */
+	public static function get_search_post_types() {
+		$cache_key         = 'snow-monkey-search-post-types';
+		$custom_post_types = wp_cache_get( $cache_key );
+		if ( is_array( $custom_post_types ) ) {
+			return $custom_post_types;
+		}
+
+		$custom_post_types = array( 'any' );
+		$custom_post_types = array_merge( $custom_post_types, self::get_custom_post_types() );
+		wp_cache_set( $cache_key, $custom_post_types );
+		return $custom_post_types;
+	}
+
+	/**
+	 * Whether this is a search results page.
+	 * Supported Snow Monkey Search plugin.
+	 *
+	 * @return boolean
+	 */
+	public static function is_search() {
+		return (
+			is_search() ||
+			filter_input( INPUT_GET, 'snow-monkey-search' ) ||
+			( is_home() && get_search_query() )
+		);
+	}
+
+	/**
+	 * Return current post type for search results page.
+	 *
+	 * @return string
+	 */
+	public static function get_post_type_for_search() {
+		$_post_type = get_query_var( 'post_type' ) && 'post' !== get_query_var( 'post_type' ) ? get_query_var( 'post_type' ) : 'any';
+		$_post_type = ! is_array( $_post_type ) ? $_post_type : 'any';
+
+		return $_post_type;
 	}
 
 	/**

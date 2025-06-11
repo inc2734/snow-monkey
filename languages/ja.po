@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Snow Monkey\n"
-"POT-Creation-Date: 2025-04-02 10:02+0900\n"
-"PO-Revision-Date: 2025-04-02 10:03+0900\n"
+"POT-Creation-Date: 2025-06-11 13:47+0900\n"
+"PO-Revision-Date: 2025-06-11 13:48+0900\n"
 "Last-Translator: inc2734 <inc@2inc.org>\n"
 "Language-Team: inc2734 <inc@2inc.org>\n"
 "Language: ja_JP\n"
@@ -66,7 +66,7 @@ msgstr "2行"
 msgid "Center logo"
 msgstr "中央ロゴ"
 
-#: .translation/bundle-template.php:13 Framework/Helper.php:119
+#: .translation/bundle-template.php:13 Framework/Helper.php:164
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:21
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:22
 #: app/customizer/infobar/controls/align.php:19
@@ -78,6 +78,7 @@ msgstr "左"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:24
 #: app/customizer/design/sections/entries/controls/entries-layout.php:23
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:26
+#: app/customizer/design/sections/search/controls/entries-layout.php:29
 #: app/widget/snow-monkey-recent-posts/_form.php:87
 #: app/widget/snow-monkey-rss/_form.php:73
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:127
@@ -114,6 +115,14 @@ msgstr "フッター5"
 #: app/customizer/design/sections/entries/controls/entries-gap.php:19
 #: app/customizer/design/sections/post/controls/related-posts-gap.php:24
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:24
+#: app/customizer/design/sections/search/controls/entries-display-item-author.php:27
+#: app/customizer/design/sections/search/controls/entries-display-item-date-icon.php:27
+#: app/customizer/design/sections/search/controls/entries-display-item-excerpt.php:27
+#: app/customizer/design/sections/search/controls/entries-display-item-modified.php:27
+#: app/customizer/design/sections/search/controls/entries-display-item-published.php:27
+#: app/customizer/design/sections/search/controls/entries-gap.php:27
+#: app/customizer/design/sections/search/controls/entries-layout-sm-1col.php:27
+#: app/customizer/design/sections/search/controls/entries-layout.php:27
 msgid "Default"
 msgstr "デフォルト"
 
@@ -122,7 +131,7 @@ msgid "Snow Monkey settings"
 msgstr "Snow Monkey 設定"
 
 #. Theme Name of the plugin/theme
-#: Framework/Controller/Manager.php:64 Framework/Helper.php:216
+#: Framework/Controller/Manager.php:64 Framework/Helper.php:261
 #: app/constructor/trial.php:23
 #: app/customizer/title-tagline/controls/copyright.php:14
 msgid "Snow Monkey"
@@ -185,21 +194,21 @@ msgstr ""
 "XServerとの連携を利用している場合は、ライセンスキー入力欄には何も入力せず、"
 "XServer 登録キー入力欄にXServer登録キーを入力してください。"
 
-#: Framework/Helper.php:105
+#: Framework/Helper.php:150
 msgid "Page header"
 msgstr "ページヘッダー"
 
-#: Framework/Helper.php:106
+#: Framework/Helper.php:151
 msgid "Title on page header"
 msgstr "ページヘッダーの上にタイトルを表示"
 
-#: Framework/Helper.php:107
+#: Framework/Helper.php:152
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:21
 #: app/customizer/sns/sections/share-buttons/controls/display-position.php:22
 msgid "Top of contents"
 msgstr "コンテンツの上"
 
-#: Framework/Helper.php:108
+#: Framework/Helper.php:153
 #: app/customizer/design-skin/controls/design-skin.php:21
 #: app/customizer/design/sections/base-design/controls/breadcrumbs-position.php:25
 #: app/customizer/design/sections/base-design/controls/h2-style.php:21
@@ -211,108 +220,108 @@ msgstr "コンテンツの上"
 msgid "None"
 msgstr "なし"
 
-#: Framework/Helper.php:120
+#: Framework/Helper.php:165
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:21
 #: app/customizer/infobar/controls/align.php:20
 msgid "Center"
 msgstr "中央"
 
-#: Framework/Helper.php:121
+#: Framework/Helper.php:166
 #: app/customizer/design/sections/drawer-nav/controls/hamburger-btn-position.php:22
 #: app/customizer/design/sections/header/controls/gnav-alignment.php:20
 #: app/customizer/infobar/controls/align.php:21
 msgid "Right"
 msgstr "右"
 
-#: Framework/Helper.php:132
+#: Framework/Helper.php:177
 msgid "Sticky"
 msgstr "上部固定"
 
-#: Framework/Helper.php:133
+#: Framework/Helper.php:178
 msgid "Overlay (Sticky)"
 msgstr "オーバレイ（上部固定）"
 
-#: Framework/Helper.php:134
+#: Framework/Helper.php:179
 msgid "Overlay (Sticky / When scrolling, whilte background)"
 msgstr "オーバーレイ（上部固定 / スクロール時背景白）"
 
-#: Framework/Helper.php:135 app/setup/widget-area.php:331
+#: Framework/Helper.php:180 app/setup/widget-area.php:331
 msgid "Overlay"
 msgstr "オーバレイ"
 
-#: Framework/Helper.php:136
+#: Framework/Helper.php:181
 msgid "Normal"
 msgstr "ノーマル"
 
-#: Framework/Helper.php:161 Framework/Helper.php:484
+#: Framework/Helper.php:206 Framework/Helper.php:529
 #: template-parts/content/prev-next-nav.php:72
 msgctxt "excerpt_length"
 msgid "55"
 msgstr "55"
 
-#: Framework/Helper.php:221 app/constructor/trial.php:28
+#: Framework/Helper.php:266 app/constructor/trial.php:28
 #: app/customizer/title-tagline/controls/copyright.php:19
 msgid "Monkey Wrench"
 msgstr "モンキーレンチ"
 
-#: Framework/Helper.php:226 app/constructor/trial.php:33
+#: Framework/Helper.php:271 app/constructor/trial.php:33
 #: app/customizer/title-tagline/controls/copyright.php:24
 msgid "WordPress"
 msgstr "WordPress"
 
 #. translators: %1$s: Theme link, %2$s: Developer link
-#: Framework/Helper.php:231
+#: Framework/Helper.php:276
 #: app/customizer/title-tagline/controls/copyright.php:29
 #, php-format
 msgid "%1$s theme by %2$s"
 msgstr "%1$s テーマ by %2$s"
 
 #. translators: %s: WordPress link
-#: Framework/Helper.php:238 app/constructor/trial.php:45
+#: Framework/Helper.php:283 app/constructor/trial.php:45
 #: app/customizer/title-tagline/controls/copyright.php:36
 #, php-format
 msgid "Powered by %s"
 msgstr "Powered by %s"
 
-#: Framework/Helper.php:507
+#: Framework/Helper.php:552
 msgid "Sans serif"
 msgstr "サンセリフ（ゴシック体）"
 
-#: Framework/Helper.php:511
+#: Framework/Helper.php:556
 msgid "Serif"
 msgstr "セリフ（明朝体）"
 
-#: Framework/Helper.php:515
+#: Framework/Helper.php:560
 msgid "Noto Sans JP"
 msgstr "Noto Sans JP"
 
-#: Framework/Helper.php:518 Framework/Helper.php:534 Framework/Helper.php:550
-#: Framework/Helper.php:566 Framework/Helper.php:582 Framework/Helper.php:598
+#: Framework/Helper.php:563 Framework/Helper.php:579 Framework/Helper.php:595
+#: Framework/Helper.php:611 Framework/Helper.php:627 Framework/Helper.php:643
 msgid "Regular 400"
 msgstr "Regular 400"
 
-#: Framework/Helper.php:522 Framework/Helper.php:538 Framework/Helper.php:554
-#: Framework/Helper.php:570 Framework/Helper.php:586 Framework/Helper.php:602
+#: Framework/Helper.php:567 Framework/Helper.php:583 Framework/Helper.php:599
+#: Framework/Helper.php:615 Framework/Helper.php:631 Framework/Helper.php:647
 msgid "Bold 700"
 msgstr "Bold 700"
 
-#: Framework/Helper.php:531
+#: Framework/Helper.php:576
 msgid "Noto Serif JP"
 msgstr "Noto Serif JP"
 
-#: Framework/Helper.php:547
+#: Framework/Helper.php:592
 msgid "M PLUS 1p"
 msgstr "M PLUS 1p"
 
-#: Framework/Helper.php:563
+#: Framework/Helper.php:608
 msgid "M PLUS Rounded 1c"
 msgstr "M PLUS Rounded 1c"
 
-#: Framework/Helper.php:579
+#: Framework/Helper.php:624
 msgid "BIZ UDPGothic"
 msgstr "BIZ UDPGothic"
 
-#: Framework/Helper.php:595
+#: Framework/Helper.php:640
 msgid "BIZ UDPMincho"
 msgstr "BIZ UDPMincho"
 
@@ -491,16 +500,19 @@ msgstr "アーカイブ"
 #: app/customizer/design/sections/custom-post/controls/layout.php:21
 #: app/customizer/design/sections/page/controls/layout.php:18
 #: app/customizer/design/sections/post/controls/layout.php:20
+#: app/customizer/design/sections/search/controls/layout.php:23
 msgid "Page layout"
 msgstr "ページレイアウト"
 
 #. translators: 1: archive
 #. translators: 1: Post type label
+#. translators: 1: archive
 #: app/customizer/design/sections/archive/controls/layout.php:21
 #: app/customizer/design/sections/custom-post-archive/controls/layout.php:24
 #: app/customizer/design/sections/custom-post/controls/layout.php:24
 #: app/customizer/design/sections/page/controls/layout.php:21
 #: app/customizer/design/sections/post/controls/layout.php:23
+#: app/customizer/design/sections/search/controls/layout.php:26
 #, php-format
 msgid "Select page layout for %1$s page."
 msgstr "%1$sページのページレイアウトを選択してください。"
@@ -794,55 +806,69 @@ msgstr "[ %1$s ] カテゴリーページ設定"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-author.php:19
 #: app/customizer/design/sections/entries/controls/entries-display-item-author.php:24
+#: app/customizer/design/sections/search/controls/entries-display-item-author.php:23
 msgid "Display the author for each item in the entries"
 msgstr "記事一覧の各項目の著者を表示する"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-date-icon.php:19
-#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-modified.php:19
-#: app/customizer/design/sections/entries/controls/entries-display-item-modified.php:15
-msgid "Display the modified date for each item in the entries"
-msgstr "記事一覧の各項目の更新日を表示する"
+#: app/customizer/design/sections/search/controls/entries-display-item-date-icon.php:23
+msgid "Display the date icon for each item in the entries"
+msgstr "記事一覧の各項目の日付のアイコンを表示する"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-excerpt.php:19
 #: app/customizer/design/sections/entries/controls/entries-display-item-excerpt.php:24
+#: app/customizer/design/sections/search/controls/entries-display-item-excerpt.php:23
 msgid "Display the excerpt for each item in the entries"
 msgstr "記事一覧の各項目の抜粋を表示する"
 
+#: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-modified.php:19
+#: app/customizer/design/sections/entries/controls/entries-display-item-modified.php:15
+#: app/customizer/design/sections/search/controls/entries-display-item-modified.php:23
+msgid "Display the modified date for each item in the entries"
+msgstr "記事一覧の各項目の更新日を表示する"
+
 #: app/customizer/design/sections/custom-post-archive/controls/entries-display-item-published.php:19
 #: app/customizer/design/sections/entries/controls/entries-display-item-published.php:17
+#: app/customizer/design/sections/search/controls/entries-display-item-published.php:23
 msgid "Display the published date for each item in the entries"
 msgstr "記事一覧の各項目の公開日を表示する"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:23
 #: app/customizer/design/sections/entries/controls/entries-gap.php:15
+#: app/customizer/design/sections/search/controls/entries-gap.php:23
 msgid "The gap between each item in the entries"
 msgstr "記事一覧の各項目間の間隔"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:28
 #: app/customizer/design/sections/entries/controls/entries-gap.php:20
 #: app/customizer/design/sections/post/controls/related-posts-gap.php:25
+#: app/customizer/design/sections/search/controls/entries-gap.php:28
 msgid "S"
 msgstr "S"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:29
 #: app/customizer/design/sections/entries/controls/entries-gap.php:21
 #: app/customizer/design/sections/post/controls/related-posts-gap.php:26
+#: app/customizer/design/sections/search/controls/entries-gap.php:29
 msgid "M"
 msgstr "M"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-gap.php:30
 #: app/customizer/design/sections/entries/controls/entries-gap.php:22
 #: app/customizer/design/sections/post/controls/related-posts-gap.php:27
+#: app/customizer/design/sections/search/controls/entries-gap.php:30
 msgid "L"
 msgstr "L"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout-sm-1col.php:19
 #: app/customizer/design/sections/entries/controls/entries-layout-sm-1col.php:17
+#: app/customizer/design/sections/search/controls/entries-layout-sm-1col.php:23
 msgid "Make the entries one column on mobile device"
 msgstr "モバイル端末時に記事一覧を1列にする"
 
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:19
 #: app/customizer/design/sections/entries/controls/entries-layout.php:18
+#: app/customizer/design/sections/search/controls/entries-layout.php:23
 msgid "Entries layout"
 msgstr "記事一覧レイアウト"
 
@@ -852,6 +878,8 @@ msgstr "記事一覧レイアウト"
 #: app/customizer/design/sections/entries/controls/entries-layout.php:30
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:33
+#: app/customizer/design/sections/search/controls/entries-layout.php:28
+#: app/customizer/design/sections/search/controls/entries-layout.php:36
 #: app/widget/snow-monkey-recent-posts/_form.php:86
 #: app/widget/snow-monkey-recent-posts/_form.php:94
 #: app/widget/snow-monkey-rss/_form.php:72
@@ -864,6 +892,7 @@ msgstr "リッチメディア"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:25
 #: app/customizer/design/sections/entries/controls/entries-layout.php:24
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:27
+#: app/customizer/design/sections/search/controls/entries-layout.php:30
 #: app/widget/snow-monkey-recent-posts/_form.php:88
 #: app/widget/snow-monkey-rss/_form.php:74
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:128
@@ -873,6 +902,7 @@ msgstr "テキスト"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:26
 #: app/customizer/design/sections/entries/controls/entries-layout.php:25
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:28
+#: app/customizer/design/sections/search/controls/entries-layout.php:31
 #: app/widget/snow-monkey-recent-posts/_form.php:89
 #: app/widget/snow-monkey-rss/_form.php:75
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:129
@@ -882,6 +912,7 @@ msgstr "テキスト2"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:27
 #: app/customizer/design/sections/entries/controls/entries-layout.php:26
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:29
+#: app/customizer/design/sections/search/controls/entries-layout.php:32
 #: app/widget/snow-monkey-recent-posts/_form.php:90
 #: app/widget/snow-monkey-rss/_form.php:76
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:130
@@ -892,6 +923,7 @@ msgstr "パネル"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:30
 #: app/customizer/design/sections/entries/controls/entries-layout.php:29
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:32
+#: app/customizer/design/sections/search/controls/entries-layout.php:35
 #: app/widget/snow-monkey-recent-posts/_form.php:93
 #: app/widget/snow-monkey-rss/_form.php:79
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:133
@@ -902,6 +934,7 @@ msgstr "カルーセル（%1$s）"
 #: app/customizer/design/sections/custom-post-archive/controls/entries-layout.php:33
 #: app/customizer/design/sections/entries/controls/entries-layout.php:32
 #: app/customizer/design/sections/post/controls/related-posts-layout.php:35
+#: app/customizer/design/sections/search/controls/entries-layout.php:38
 #: app/widget/snow-monkey-recent-posts/_form.php:96
 #: app/widget/snow-monkey-rss/_form.php:82
 #: app/widget/snow-monkey-taxonomy-posts/_form.php:136
@@ -1184,6 +1217,57 @@ msgstr "記事に関連記事を表示する"
 #: app/customizer/design/sections/post/section.php:18
 msgid "Posts settings"
 msgstr "投稿ページ設定"
+
+#: app/customizer/design/sections/search/controls/entries-display-item-author.php:28
+#: app/customizer/design/sections/search/controls/entries-display-item-date-icon.php:28
+#: app/customizer/design/sections/search/controls/entries-display-item-excerpt.php:28
+#: app/customizer/design/sections/search/controls/entries-display-item-modified.php:28
+#: app/customizer/design/sections/search/controls/entries-display-item-published.php:28
+msgid "Force display (if supported)"
+msgstr "強制的に表示する（対応していれば）"
+
+#: app/customizer/design/sections/search/controls/entries-display-item-author.php:29
+#: app/customizer/design/sections/search/controls/entries-display-item-date-icon.php:29
+#: app/customizer/design/sections/search/controls/entries-display-item-excerpt.php:29
+#: app/customizer/design/sections/search/controls/entries-display-item-modified.php:29
+#: app/customizer/design/sections/search/controls/entries-display-item-published.php:29
+msgid "Force to hide"
+msgstr "強制的に非表示にする"
+
+#: app/customizer/design/sections/search/controls/entries-layout-sm-1col.php:28
+msgid "Force one column"
+msgstr "1カラムを強制する"
+
+#: app/customizer/design/sections/search/controls/entries-layout-sm-1col.php:29
+msgid "Don't force one column"
+msgstr "1カラムを強制しない"
+
+#. translators: 1: Custom post type label
+#: app/customizer/design/sections/search/controls/layout.php:29
+#, php-format
+msgid "%1$s search resulsts"
+msgstr "%1$sの検索結果"
+
+#: app/customizer/design/sections/search/controls/layout.php:30
+#: app/customizer/design/sections/search/section.php:30
+msgid "Basic"
+msgstr "基本"
+
+#. translators: 1: Custom post type label
+#: app/customizer/design/sections/search/controls/layout.php:40
+#, php-format
+msgid "Same as the %1$s archive page layout"
+msgstr "%1$sのアーカイブページレイアウトと同じ"
+
+#: app/customizer/design/sections/search/controls/layout.php:41
+msgid "post"
+msgstr "投稿"
+
+#. translators: 1: Custom post type name
+#: app/customizer/design/sections/search/section.php:29
+#, php-format
+msgid "%1$s search results page settings"
+msgstr "%1$sの検索結果ページ設定"
 
 #: app/customizer/design/sections/woocommerce-archive-page/controls/eyecatch.php:23
 msgid "WooCommerce products"
@@ -1900,12 +1984,12 @@ msgid "Search results"
 msgstr "検索結果"
 
 #: app/setup/entry-meta.php:18 app/setup/entry-meta.php:32
-#: template-parts/loop/entry-summary/meta/meta.php:45
+#: template-parts/loop/entry-summary/meta/meta.php:54
 msgid "Published"
 msgstr "投稿日"
 
 #: app/setup/entry-meta.php:48
-#: template-parts/loop/entry-summary/meta/meta.php:56
+#: template-parts/loop/entry-summary/meta/meta.php:65
 msgid "Modified"
 msgstr "更新日"
 
@@ -2302,150 +2386,3 @@ msgstr "inc2734"
 #. Author URI of the plugin/theme
 msgid "https://2inc.org"
 msgstr "https://2inc.org"
-
-#, php-format
-#~ msgid "Application of URL is necessary for using Twitter Cards. %1$s"
-#~ msgstr "Twitterカードを使用するにはURLのアプリケーションが必要です。%1$s"
-
-#~ msgid "Twitter settings"
-#~ msgstr "Twitter 設定"
-
-#, php-format
-#~ msgid "If you want to count of tweet then needs to register to %1$s."
-#~ msgstr "ツイートをカウントする場合は%1$sに登録する必要があります。"
-
-#~ msgid ""
-#~ "You have not set a valid license key. Setting a license key will allow "
-#~ "you to use patterns registered in %3$the pattern library%4$ and update "
-#~ "the Snow Monkey theme. If you do not update your theme, you risk the site "
-#~ "not displaying properly or leaving vulnerabilities open. A license key is "
-#~ "issued when you subscribe to %1$sSnow Monkey subscription%2$s. The "
-#~ "license key can be set %5$shere%6$s."
-#~ msgstr ""
-#~ "有効なライセンスキーが設定されていません。ライセンスキーを設定すると%3$sパ"
-#~ "ターンライブラリ%4$sに登録されているパターンを使用できるようになったり、"
-#~ "Snow Monkey テーマのアップデートが可能になります。アップデートをおこなわな"
-#~ "い場合、サイトが正しく表示されなくなったり脆弱性が放置されることになる危険"
-#~ "性があります。ライセンスキーは %1$sSnow Monkey サブスクリプション%2$sを契"
-#~ "約すると発行されます。ライセンスキーの設定は%5$sこちら%6$s。"
-
-#~ msgid "Headers"
-#~ msgstr "ヘッダー"
-
-#~ msgid "Features"
-#~ msgstr "特徴"
-
-#~ msgid "Text with image"
-#~ msgstr "テキストと画像"
-
-#~ msgid "Gallery"
-#~ msgstr "ギャラリー"
-
-#~ msgid "Columns"
-#~ msgstr "カラム"
-
-#, php-format
-#~ msgid "Header %1$s"
-#~ msgstr "ヘッダー %1$s"
-
-#, php-format
-#~ msgid "Feature %1$s"
-#~ msgstr "特徴 %1$s"
-
-#, php-format
-#~ msgid "Text with image %1$s"
-#~ msgstr "テキストと画像 %1$s"
-
-#, php-format
-#~ msgid "Gallery %1$s"
-#~ msgstr "ギャラリー %1$s"
-
-#, php-format
-#~ msgid "Columns %1$s"
-#~ msgstr "カラム %1$s"
-
-#, php-format
-#~ msgid "Design skins can be downloaded from the %1$sdesign skin page%2$s."
-#~ msgstr ""
-#~ "デザインスキンは%1$sデザインスキンページ%2$sからダウンロードできます。"
-
-#~ msgid "Clear remote patterns caches"
-#~ msgstr "リモートパターンのキャッシュをクリア"
-
-#~ msgid "Sections"
-#~ msgstr "セクション"
-
-#~ msgid "Pricing"
-#~ msgstr "価格"
-
-#~ msgid "FAQ"
-#~ msgstr "FAQ"
-
-#~ msgid ""
-#~ "For all other options except \"Sans serif\" and \"Serif\", downloading of "
-#~ "the font file will occur when selecting the option. Please wait a while "
-#~ "as the download will take some time. The font files will be downloaded to "
-#~ "wp-content/uploads/inc2734-wp-google-fonts."
-#~ msgstr ""
-#~ "「Sans serif」「Serif」以外の設定の場合、設定を選択すると、フォントファイ"
-#~ "ルのダウンロードがおこなわれます。ダウンロードには時間がかかりますのでしば"
-#~ "らくお待ちください。フォントファイルは wp-content/uploads/inc2734-wp-"
-#~ "google-fonts にダウンロードされます。"
-
-#~ msgid "Thin 100"
-#~ msgstr "Thin 100"
-
-#~ msgid "Light 300"
-#~ msgstr "Light 300"
-
-#~ msgid "Medium 500"
-#~ msgstr "Medium 500"
-
-#~ msgid "Extra-Bold 800"
-#~ msgstr "Extra-Bold 800"
-
-#~ msgid "Black 900"
-#~ msgstr "Black 900"
-
-#~ msgid "Extra-Light 200"
-#~ msgstr "Extra-Light 200"
-
-#~ msgid "Semi-Bold 600"
-#~ msgstr "Semi-Bold 600"
-
-#~ msgid "Contents max width"
-#~ msgstr "コンテンツの最大幅"
-
-#, php-format
-#~ msgid "You can set max width of contents area (%1$s - %2$s)"
-#~ msgstr "コンテンツエリアの最大幅を設定することができます（%1$s〜%2$s）"
-
-#~ msgid "Contents left/right margins on PC"
-#~ msgstr "PC 時のコンテンツの左右余白"
-
-#~ msgid "Contents left/right margins on mobile device"
-#~ msgstr "モバイル端末時のコンテンツの左右余白"
-
-#~ msgid "Gray"
-#~ msgstr "灰色"
-
-#~ msgid "Light gray"
-#~ msgstr "ライトグレー"
-
-#~ msgid "Lightest gray"
-#~ msgstr "最も明るいグレー"
-
-#~ msgctxt "editor-font-sizes"
-#~ msgid "Small"
-#~ msgstr "小"
-
-#~ msgctxt "editor-font-sizes"
-#~ msgid "Normal"
-#~ msgstr "標準"
-
-#~ msgctxt "editor-font-sizes"
-#~ msgid "Large"
-#~ msgstr "大"
-
-#~ msgid "For all other options except \"Sans serif\" and \"Serif\","
-#~ msgstr "“Sans serif\" と \"Serif\" 以外の設定の場合、"

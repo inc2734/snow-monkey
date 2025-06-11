@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 29.1.0
  */
 
 use Framework\Helper;
@@ -21,6 +21,15 @@ $args = wp_parse_args(
 		'_terms'             => array(),
 	)
 );
+
+if (
+	! $args['_display_author'] &&
+	! $args['_display_published'] &&
+	! $args['_display_modified'] &&
+	! $args['_terms']
+) {
+	return;
+}
 
 $date_format = get_option( 'date_format' );
 ?>
