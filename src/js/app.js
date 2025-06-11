@@ -13,7 +13,7 @@ document.addEventListener(
 		scrollChecker( html );
 
 		const hash = window.location.hash;
-		if ( ! hash ) {
+		if ( ! hash || '#body' === hash ) {
 			return;
 		}
 
