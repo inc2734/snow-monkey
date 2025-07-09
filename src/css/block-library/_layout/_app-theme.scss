@@ -1,12 +1,3 @@
-@use '../../app/core/mixin/entry-content' as *;
-
-:where(
-	.is-layout-constrained,
-	.is-layout-flow
-) {
-	@include entry-content-theme();
-}
-
 .is-layout-grid {
 	> li {
 		margin-top: 0;

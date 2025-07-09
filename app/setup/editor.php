@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 26.0.0
+ * @version 29.1.1
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -175,6 +175,32 @@ add_action(
 				'in_footer' => false,
 			)
 		);
+	}
+);
+
+/**
+ * Override global styles.
+ */
+add_filter(
+	'block_editor_settings_all',
+	function ( $editor_settings ) {
+		if ( ! isset( $editor_settings['styles'] ) || ! is_array( $editor_settings['styles'] ) ) {
+			$editor_settings['styles'] = array();
+		}
+
+		$editor_settings['styles'][] = array(
+			'css'            => file_get_contents( get_theme_file_path( 'assets/css/global-styles/app.css' ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			'__unstableType' => 'theme',
+			'isGlobalStyles' => false,
+		);
+
+		$editor_settings['styles'][] = array(
+			'css'            => file_get_contents( get_theme_file_path( 'assets/css/global-styles/app-theme.css' ) ), // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
+			'__unstableType' => 'theme',
+			'isGlobalStyles' => false,
+		);
+
+		return $editor_settings;
 	}
 );
 

@@ -1,0 +1,5 @@
+@use '../app/core/mixin' as *;
+
+:root :where(.is-layout-constrained, .is-layout-flow) {
+	@include entry-content();
+}

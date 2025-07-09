@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 29.1.1
  */
 
 use Framework\Helper;
@@ -80,6 +80,32 @@ add_action(
 		);
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-block-library' );
+
+		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+		wp_register_style(
+			Helper::get_main_style_handle() . '-global-styles',
+			false,
+			array(
+				Helper::get_main_style_handle() . '-global-styles-app',
+				Helper::get_main_style_handle() . '-global-styles-theme',
+			)
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-global-styles-app',
+			get_theme_file_uri( '/assets/css/global-styles/app.css' ),
+			array( 'global-styles' ),
+			filemtime( get_theme_file_path( '/assets/css/global-styles/app.css' ) )
+		);
+
+		wp_register_style(
+			Helper::get_main_style_handle() . '-global-styles-theme',
+			get_theme_file_uri( '/assets/css/global-styles/app-theme.css' ),
+			array( Helper::get_main_style_handle() . '-global-styles-app' ),
+			filemtime( get_theme_file_path( '/assets/css/global-styles/app-theme.css' ) )
+		);
+
+		wp_enqueue_style( Helper::get_main_style_handle() . '-global-styles' );
 
 		do_action( 'snow_monkey_enqueued_main_style' );
 	}

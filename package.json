@@ -74,6 +74,7 @@
 		"css:block-editor": "sass --no-source-map src/css/block-editor:assets/css/block-editor && postcss assets/css/block-editor/*.css -r",
 		"css:classic-editor": "sass --no-source-map src/css/classic-editor:assets/css/classic-editor && postcss assets/css/classic-editor/*.css -r",
 		"css:block-library": "sass --no-source-map src/css/block-library:assets/css/block-library && postcss assets/css/block-library/*.css -r",
+		"css:global-styles": "sass --no-source-map src/css/global-styles:assets/css/global-styles && postcss assets/css/global-styles/*.css -r",
 		"css:admin": "sass --no-source-map src/css/admin:assets/css/admin && postcss assets/css/admin/*.css -r",
 		"css:wpac": "sass --no-source-map src/css/wpac:assets/css/wpac && postcss assets/css/wpac/*.css -r",
 		"css:custom-widgets": "sass --no-source-map src/css/custom-widgets:assets/css/custom-widgets && postcss assets/css/custom-widgets/*.css -r",
