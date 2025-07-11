@@ -34,14 +34,14 @@
 
 @mixin entry-content-theme() {
 	// @see app/setup/customizer-styles.php
-	> :where(h2):not([class*="is-style-"]) {
+	> :where(h2:not([class*="is-style-"]), h2.is-style-default) {
 		border-left: var(--entry-content-h2-border-left);
 		background-color: var(--entry-content-h2-background-color);
 		padding: var(--entry-content-h2-padding);
 	}
 
 	// @see app/setup/customizer-styles.php
-	> :where(h3):not([class*="is-style-"]) {
+	> :where(h3:not([class*="is-style-"]), h3.is-style-default) {
 		border-bottom: var(--entry-content-h3-border-bottom);
 		padding: var(--entry-content-h3-padding);
 	}
