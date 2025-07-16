@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 29.1.4
  */
 
 use Framework\Helper;
@@ -46,18 +46,17 @@ $args = wp_parse_args(
 	<?php
 	if ( $args['_display_related_posts'] ) {
 		$related_posts_query = Helper::get_related_posts_query( get_the_ID() );
-		if ( get_option( 'mwt-google-matched-content' ) || $related_posts_query->have_posts() ) {
-			$vars = array(
-				'_title'       => __( 'Related posts', 'snow-monkey' ),
-				'_posts_query' => $related_posts_query,
-				'_code'        => get_option( 'mwt-google-matched-content' ),
-			);
-			Helper::get_template_part(
-				'template-parts/content/related-posts',
-				$args['_name'],
-				$vars
-			);
-		}
+
+		$vars = array(
+			'_title'       => __( 'Related posts', 'snow-monkey' ),
+			'_posts_query' => $related_posts_query,
+			'_code'        => get_option( 'mwt-google-matched-content' ),
+		);
+		Helper::get_template_part(
+			'template-parts/content/related-posts',
+			$args['_name'],
+			$vars
+		);
 	}
 	?>
 </footer>
