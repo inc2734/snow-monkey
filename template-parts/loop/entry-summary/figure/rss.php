@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.5
+ * @version 29.1.7
  *
  * renamed: template-parts/loop/entry-summary/figure/figure-rss.php
  */
@@ -26,6 +26,8 @@ if ( ! $args['_item'] || ! is_a( $args['_item'], 'SimplePie_Item' ) ) {
 
 $thumbnail = false;
 
+$enclosure = $args['_item']->get_enclosure();
+
 // note.
 $simplepie_thumbnail = $args['_item']->get_item_tags( SIMPLEPIE_NAMESPACE_MEDIARSS, 'thumbnail' );
 $thumbnail_src       = ! empty( $simplepie_thumbnail[0]['data'] ) ? $simplepie_thumbnail[0]['data'] : false;
@@ -34,16 +36,16 @@ if ( $thumbnail_src ) {
 }
 
 // YouTube.
-if ( ! $thumbnail ) {
-	$thumbnail_src = $args['_item']->get_enclosure()->get_thumbnail();
+if ( ! $thumbnail && $enclosure ) {
+	$thumbnail_src = $enclosure->get_thumbnail();
 	if ( $thumbnail_src ) {
 		$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
 	}
 }
 
 // はてなブログ.
-if ( ! $thumbnail ) {
-	$thumbnail_src = $args['_item']->get_enclosure()->get_link();
+if ( ! $thumbnail && $enclosure ) {
+	$thumbnail_src = $enclosure->get_link();
 	if ( $thumbnail_src ) {
 		$thumbnail = sprintf( '<img src="%1$s" alt="">', esc_url( $thumbnail_src ) );
 	}
