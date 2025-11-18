@@ -108,6 +108,13 @@ add_action(
 		);
 		$css = str_replace(
 			array(
+				'html :where(.editor-styles-wrapper) :where(',
+			),
+			':where(',
+			$css
+		);
+		$css = str_replace(
+			array(
 				'url(../../fonts/',
 			),
 			'url(' . get_theme_file_uri( '/assets/fonts/' ),

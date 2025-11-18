@@ -20,10 +20,10 @@
 		@include table();
 	}
 
-	> :where(ul) :where(li) + :where(li),
-	> :where(ol) :where(li) + :where(li),
-	> :where(ul) * > :where(li:first-child),
-	> :where(ol) * > :where(li:first-child) {
+	> :where(.wp-block-list) :where(li) + :where(li),
+	> :where(.wp-block-list) :where(li) + :where(li),
+	> :where(.wp-block-list) * > :where(li:first-child),
+	> :where(.wp-block-list) * > :where(li:first-child) {
 		margin-top: var(--_margin-2);
 	}
 

@@ -274,6 +274,11 @@
 				"border": {
 					"color": "var(--wp--preset--color--sm-lighter-gray)"
 				}
+			},
+			"core/term-template": {
+				"spacing": {
+					"blockGap": "var(--_margin-2)"
+				}
 			}
 		},
 		"spacing": {

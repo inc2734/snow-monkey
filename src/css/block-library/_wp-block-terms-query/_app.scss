@@ -1,0 +1,13 @@
+:where(.wp-block-term) {
+	> .wp-block-group-is-layout-flex {
+		gap: var(--_s-2);
+	}
+
+	> .wp-block-group-is-layout-flex.is-vertical {
+		gap: 0;
+	}
+}
+
+:where(.wp-block-term-name) {
+	margin: 0;
+}
