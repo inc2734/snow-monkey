@@ -1,5 +1,5 @@
 @use '../../../core/mixin/entry-content' as *;
 
-.p-entry-content {
+:where(.p-entry-content) {
 	@include entry-content();
 }

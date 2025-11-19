@@ -11,7 +11,7 @@
 		}
 	}
 
-	& > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+	& > :is(:not(.alignleft):not(.alignright):not(.alignfull)) {
 		margin-left: auto;
 		margin-right: auto;
 	}
