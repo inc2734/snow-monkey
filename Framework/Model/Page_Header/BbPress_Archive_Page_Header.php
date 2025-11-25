@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 15.7.0
+ * @version 29.1.8
  */
 
 namespace Framework\Model\Page_Header;
@@ -22,6 +22,7 @@ class BbPress_Archive_Page_Header extends Base {
 	 */
 	protected static function _get_image( $size = 'large' ) {
 		$post_type         = get_post_type();
+		$post_type         = $post_type ? $post_type : get_query_var( 'post_type' );
 		$post_type_object  = get_post_type_object( $post_type );
 		$eyecatch_position = get_theme_mod( 'bbpress-archive-eyecatch' );
 
@@ -38,6 +39,7 @@ class BbPress_Archive_Page_Header extends Base {
 	 */
 	protected static function _get_image_url( $size = 'large' ) {
 		$post_type         = get_post_type();
+		$post_type         = $post_type ? $post_type : get_query_var( 'post_type' );
 		$post_type_object  = get_post_type_object( $post_type );
 		$eyecatch_position = get_theme_mod( 'bbpress-archive-eyecatch' );
 
@@ -53,6 +55,7 @@ class BbPress_Archive_Page_Header extends Base {
 	 */
 	protected static function _get_title() {
 		$post_type         = get_post_type();
+		$post_type         = $post_type ? $post_type : get_query_var( 'post_type' );
 		$post_type_object  = get_post_type_object( $post_type );
 		$eyecatch_position = get_theme_mod( 'bbpress-archive-eyecatch' );
 
@@ -68,6 +71,7 @@ class BbPress_Archive_Page_Header extends Base {
 	 */
 	protected static function _get_align() {
 		$post_type         = get_post_type();
+		$post_type         = $post_type ? $post_type : get_query_var( 'post_type' );
 		$post_type_object  = get_post_type_object( $post_type );
 		$eyecatch_position = get_theme_mod( 'bbpress-archive-eyecatch' );
 
@@ -83,6 +87,7 @@ class BbPress_Archive_Page_Header extends Base {
 	 */
 	protected static function _get_image_caption() {
 		$post_type         = get_post_type();
+		$post_type         = $post_type ? $post_type : get_query_var( 'post_type' );
 		$post_type_object  = get_post_type_object( $post_type );
 		$eyecatch_position = get_theme_mod( 'bbpress-archive-eyecatch' );
 
