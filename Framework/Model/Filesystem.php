@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 29.1.9
  */
 
 namespace Framework\Model;
@@ -127,23 +127,36 @@ class Filesystem {
 	 *
 	 * @param string $filepath Path of the directory to be deleted.
 	 * @return boolean
-	 * @throws \RuntimeException If the file deletion fails.
 	 */
 	public static function rmdir( $filepath ) {
 		if ( ! file_exists( $filepath ) ) {
 			return true;
 		}
 
-		$result = false;
-
+		$result     = false;
 		$filesystem = static::start();
-		if ( $filesystem ) {
-			$result = $filesystem->rmdir( $filepath, true );
-		}
-		static::end();
 
-		if ( ! $result ) {
-			throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to remove to %1$s.', esc_html( $filepath ) ) );
+		try {
+			if ( ! $filesystem ) {
+				throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to initialize WP_Filesystem when removing %1$s.', esc_html( $filepath ) ) );
+			}
+
+			$result = $filesystem->rmdir( $filepath, true );
+
+			if ( ! $result && file_exists( $filepath ) ) {
+				throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to remove to %1$s.', esc_html( $filepath ) ) );
+			}
+
+			$result = true;
+		} catch ( \Exception $e ) {
+			if ( ! file_exists( $filepath ) ) {
+				return true;
+			}
+
+			error_log( $e->getMessage() );
+			$result = false;
+		} finally {
+			static::end();
 		}
 
 		return $result;
@@ -170,7 +183,7 @@ class Filesystem {
 				throw new \RuntimeException( sprintf( '[Snow Monkey] %1$s is not writable.', dirname( $target ) ) );
 			}
 		} catch ( \Exception $e ) {
-			echo esc_html( $e->getMessage() );
+			error_log( $e->getMessage() );
 			return false;
 		}
 
@@ -183,7 +196,7 @@ class Filesystem {
 				throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to mkdir to %1$s.', $target ) );
 			}
 		} catch ( \Exception $e ) {
-			echo esc_html( $e->getMessage() );
+			error_log( $e->getMessage() );
 		}
 
 		return $result;
