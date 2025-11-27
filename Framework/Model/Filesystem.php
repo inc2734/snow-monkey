@@ -127,6 +127,7 @@ class Filesystem {
 	 *
 	 * @param string $filepath Path of the directory to be deleted.
 	 * @return boolean
+	 * @throws \RuntimeException If the remove of the directory fails.
 	 */
 	public static function rmdir( $filepath ) {
 		if ( ! file_exists( $filepath ) ) {
@@ -153,6 +154,7 @@ class Filesystem {
 				return true;
 			}
 
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 			error_log( $e->getMessage() );
 			$result = false;
 		} finally {
@@ -183,6 +185,7 @@ class Filesystem {
 				throw new \RuntimeException( sprintf( '[Snow Monkey] %1$s is not writable.', dirname( $target ) ) );
 			}
 		} catch ( \Exception $e ) {
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 			error_log( $e->getMessage() );
 			return false;
 		}
@@ -196,6 +199,7 @@ class Filesystem {
 				throw new \RuntimeException( sprintf( '[Snow Monkey] Failed to mkdir to %1$s.', $target ) );
 			}
 		} catch ( \Exception $e ) {
+			// phpcs:ignore WordPress.PHP.DevelopmentFunctions.error_log_error_log
 			error_log( $e->getMessage() );
 		}
 
