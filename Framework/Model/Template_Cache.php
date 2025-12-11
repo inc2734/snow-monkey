@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 29.1.10
  */
 
 namespace Framework\Model;
@@ -84,7 +84,9 @@ class Template_Cache {
 	 * @return string|null
 	 */
 	public function get( $sub_directory, $slug, $name, $vars ) {
-		return Cache::get( $sub_directory, $slug, $name, $vars );
+		$cache = Cache::get( $sub_directory, $slug, $name, $vars );
+		$cache = str_replace( 'aria-current="page"', '', $cache );
+		return $cache;
 	}
 
 	/**
