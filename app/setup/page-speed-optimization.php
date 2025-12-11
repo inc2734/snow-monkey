@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 29.1.10
  *
  * This procceses are beta.
  */
@@ -132,6 +132,12 @@ $setup_files_loading_method = false === $setup_files_loading_method ? 'get_templ
 $cache_setup_files          = 'concat' === $setup_files_loading_method;
 
 if ( $cache_header || $cache_footer || $cache_nav_menus || $cache_widget_areas || $cache_setup_files ) {
+	// If you cache and return HTML, it will not be parsed as a block.
+	// When should_load_block_assets_on_demand is true,
+	// assets are not loaded unless the block is parsed and its existence is confirmed,
+	// which causes a malfunction.
+	add_filter( 'should_load_block_assets_on_demand', '__return_false' );
+
 	$template_cache = new Template_Cache();
 	$remove_caches  = filter_input( INPUT_GET, 'sm-remove-caches' );
 
