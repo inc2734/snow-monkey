@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.1
+ * @version 29.1.11
  */
 
 use Inc2734\WP_Custom_CSS_To_Editor;
@@ -237,44 +237,223 @@ add_action(
 );
 
 /**
- * Add class by template
+ * Determine wrapper/body layout classes for a given post.
  *
- * @param string $classes
- * @return string
+ * This function resolves the layout class based on:
+ * - Assigned page template (`_wp_page_template`)
+ * - Whether the post is the front page
+ * - Theme layout settings per post type or fallback layout
+ *
+ * It is intentionally designed to return **only the classes to be added**,
+ * without handling or mutating any existing body class string.
+ *
+ * The returned value is shared by:
+ * - admin_body_class (non-iframe admin screens)
+ * - block editor iframe (editor-canvas)
+ *
+ * @param int $post_id Post ID.
+ * @return string[] List of wrapper/body classes to add. Empty array if none.
  */
-add_filter(
-	'admin_body_class',
-	function ( $classes ) {
-		$post_id = get_the_ID();
-		if ( ! $post_id ) {
-			return $classes;
+function snow_monkey_get_wrapper_layout_classes_for_post( $post_id ) {
+	$post_id = (int) $post_id;
+	if ( ! $post_id ) {
+		return array();
+	}
+
+	$wp_page_template = (string) get_post_meta( $post_id, '_wp_page_template', true );
+	$wp_page_template = pathinfo( basename( $wp_page_template ), PATHINFO_FILENAME );
+
+	$page_on_front = (int) get_option( 'page_on_front' );
+	$is_home_page  = $page_on_front === $post_id;
+
+	$class = '';
+
+	if ( $wp_page_template && 'default' !== $wp_page_template ) {
+		if ( $is_home_page && 'one-column-full' === $wp_page_template ) {
+			$class = 'l-body--one-column';
+		} else {
+			$class = 'l-body--' . $wp_page_template;
 		}
-
-		$wp_page_template = get_post_meta( $post_id, '_wp_page_template', true );
-		$wp_page_template = basename( $wp_page_template );
-		$wp_page_template = pathinfo( $wp_page_template, PATHINFO_FILENAME );
-		$page_on_front    = get_option( 'page_on_front' );
-		$is_home_page     = (int) $page_on_front === (int) $post_id;
-
-		if ( $wp_page_template && 'default' !== $wp_page_template ) {
-			if ( $is_home_page && 'one-column-full' === $wp_page_template ) {
-				return $classes . ' l-body--one-column';
-			}
-
-			return $classes . ' l-body--' . $wp_page_template;
-		}
-
-		if ( $is_home_page ) {
-			return get_theme_mod( 'home-page-container' )
-				? $classes . ' l-body--one-column'
-				: $classes . ' l-body--one-column-full';
-		}
-
+	} elseif ( $is_home_page ) {
+		$class = get_theme_mod( 'home-page-container' )
+			? 'l-body--one-column'
+			: 'l-body--one-column-full';
+	} else {
 		$_post_type = get_post_type( $post_id );
 
 		$layout = get_theme_mod( $_post_type . '-layout' );
 		$layout = $layout ? $layout : get_theme_mod( 'post-layout' );
 
-		return $classes . ' l-body--' . $layout;
+		$class = 'l-body--' . $layout;
+	}
+
+	$class = $class ? sanitize_html_class( $class ) : '';
+
+	return $class ? array( $class ) : array();
+}
+
+/**
+ * Append wrapper layout classes to the admin (non-iframe) <body> element.
+ *
+ * Uses the admin_body_class filter to **extend** existing admin body classes
+ * without overwriting core or plugin-provided classes.
+ *
+ * If the current screen does not have a valid post context,
+ * the original class list is returned unchanged.
+ *
+ * @param string $classes Existing admin body class string.
+ * @return string Modified body class string.
+ */
+add_filter(
+	'admin_body_class',
+	function ( $classes ) {
+		$post_id = isset( $GLOBALS['post']->ID ) ? (int) $GLOBALS['post']->ID : 0;
+		$to_add  = snow_monkey_get_wrapper_layout_classes_for_post( $post_id );
+
+		if ( ! $to_add ) {
+			return $classes;
+		}
+
+		return trim( $classes . ' ' . implode( ' ', $to_add ) );
 	}
 );
+
+/**
+ * Inject and persist wrapper layout classes inside the block editor iframe.
+ *
+ * The Gutenberg editor may recreate or replace the iframe <body> element
+ * during state updates, which can remove previously added classes.
+ *
+ * This function:
+ * - Targets the block editor only (editor-canvas iframe)
+ * - Injects a MutationObserver into the iframe document
+ * - Reapplies layout classes whenever the body element or its class list changes
+ *
+ * This ensures layout-dependent CSS (e.g. content width variables)
+ * remains consistent while editing.
+ *
+ * @return void
+ */
+function snow_monkey_add_wrapper_layout_class_for_iframe_editor() {
+	if ( ! is_admin() || ! function_exists( 'get_current_screen' ) ) {
+		return;
+	}
+
+	$screen = get_current_screen();
+	if ( ! $screen || empty( $screen->is_block_editor ) || ! $screen->is_block_editor() ) {
+		return;
+	}
+
+	$post_id = isset( $GLOBALS['post']->ID ) ? (int) $GLOBALS['post']->ID : 0;
+	$classes = snow_monkey_get_wrapper_layout_classes_for_post( $post_id );
+	if ( ! $classes ) {
+		return;
+	}
+
+	$version = wp_get_theme()->get( 'Version' );
+	wp_register_script( 'snow-monkey-iframe-editor-class', false, array(), $version, true );
+	wp_enqueue_script( 'snow-monkey-iframe-editor-class' );
+
+	wp_add_inline_script(
+		'snow-monkey-iframe-editor-class',
+		'(function() {
+			// Prevent multiple observers from being attached.
+			if (window.__smIframeBodyClassObserverAttached) return;
+			window.__smIframeBodyClassObserverAttached = true;
+
+			const classesToAdd = ' . wp_json_encode( array_values( $classes ) ) . ';
+
+			function addClasses(body) {
+				let changed = false;
+				for (const c of classesToAdd) {
+					if (!c) continue;
+					if (!body.classList.contains(c)) {
+						body.classList.add(c);
+						changed = true;
+					}
+				}
+				return changed;
+			}
+
+			function attachObservers(iframe) {
+				if (!iframe || !iframe.contentDocument) return;
+
+				const doc = iframe.contentDocument;
+
+				let rafScheduled = false;
+				const scheduleApply = () => {
+					if (rafScheduled) return;
+					rafScheduled = true;
+					requestAnimationFrame(() => {
+						rafScheduled = false;
+						if (doc.body) addClasses(doc.body);
+					});
+				};
+
+				// Apply once when possible.
+				if (doc.body) addClasses(doc.body);
+
+				// 1) Observe body class only (low frequency compared to subtree-wide).
+				let bodyObserver = null;
+				const observeBody = () => {
+					if (!doc.body) return;
+
+					if (bodyObserver) {
+						bodyObserver.disconnect();
+					}
+
+					bodyObserver = new MutationObserver(() => {
+						// If classes were removed/replaced, reapply (debounced).
+						scheduleApply();
+					});
+
+					bodyObserver.observe(doc.body, {
+						attributes: true,
+						attributeFilter: ["class"],
+					});
+				};
+
+				observeBody();
+
+				// 2) Detect body replacement (do NOT observe attributes on the whole subtree).
+				const structureObserver = new MutationObserver(() => {
+					// Body may have been replaced; rebind body observer and reapply.
+					observeBody();
+					scheduleApply();
+				});
+
+				structureObserver.observe(doc.documentElement, {
+					childList: true,
+					subtree: false, // only direct children of <html>
+				});
+
+				// 3) Handle iframe reloads.
+				iframe.addEventListener("load", () => {
+					// Re-attach after reload.
+					try {
+						attachObservers(iframe);
+					} catch (e) {}
+				}, { passive: true });
+			}
+
+			let rafCount = 0;
+			function waitForIframe() {
+				const iframe = document.querySelector(\'iframe[name="editor-canvas"]\');
+				if (iframe && iframe.contentDocument) {
+					attachObservers(iframe);
+					return;
+				}
+
+				// Fail-safe: stop after ~10 seconds.
+				rafCount++;
+				if (rafCount > 600) return;
+
+				requestAnimationFrame(waitForIframe);
+			}
+
+			waitForIframe();
+		})();',
+		'after'
+	);
+}
+add_action( 'enqueue_block_editor_assets', 'snow_monkey_add_wrapper_layout_class_for_iframe_editor' );
