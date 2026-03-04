@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 28.0.4
+ * @version 29.1.13
  */
 
 namespace Framework\Controller;
@@ -336,13 +336,19 @@ class Manager {
 		}
 
 		$response = wp_remote_get(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate/?repository=snow-monkey&force=' . (int) $force,
+			add_query_arg(
+				array(
+					'repository' => 'snow-monkey',
+					'force'      => (int) $force,
+				),
+				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate/'
+			),
 			array(
 				'user-agent' => 'WordPress/' . $wp_version,
 				'timeout'    => 30,
 				'headers'    => array(
 					'Accept-Encoding'           => '',
-					'X-Snow-Monkey-License-key' => $license_key,
+					'X-Snow-Monkey-License-Key' => $license_key,
 					'X-Snow-Monkey-Version'     => wp_get_theme()->get( 'Version' ),
 					'X-Snow-Monkey-URL'         => home_url(),
 				),
@@ -417,13 +423,19 @@ class Manager {
 		}
 
 		$response = wp_remote_get(
-			'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate-xserver/?repository=snow-monkey&force=' . (int) $force,
+			add_query_arg(
+				array(
+					'repository' => 'snow-monkey',
+					'force'      => (int) $force,
+				),
+				'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/validate-xserver/'
+			),
 			array(
 				'user-agent' => 'WordPress/' . $wp_version,
 				'timeout'    => 30,
 				'headers'    => array(
 					'Accept-Encoding'                    => '',
-					'X-Snow-Monkey-XServer-Register-key' => $xserver_register_key,
+					'X-Snow-Monkey-Xserver-Register-Key' => $xserver_register_key,
 					'X-Snow-Monkey-Version'              => wp_get_theme()->get( 'Version' ),
 					'X-Snow-Monkey-URL'                  => home_url(),
 				),

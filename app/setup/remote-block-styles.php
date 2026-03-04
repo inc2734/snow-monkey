@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 28.0.4
+ * @version 29.1.13
  */
 
 use Framework\Controller\Manager;
@@ -86,7 +86,7 @@ function snow_monkey_register_remote_block_styles() {
 			$new_block_styles = _snow_monkey_get_remote_block_styles(
 				$url,
 				array(
-					'X-Snow-Monkey-License-key' => Manager::get_option( 'license-key' ),
+					'X-Snow-Monkey-License-Key' => Manager::get_option( 'license-key' ),
 					'X-Snow-Monkey-Locale'      => get_locale(),
 				)
 			);

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 28.0.4
+ * @version 29.1.13
  */
 
 use Framework\Controller\Manager;
@@ -144,7 +144,7 @@ function snow_monkey_get_premium_remote_block_pattens() {
 	return _snow_monkney_get_remote_block_patterns(
 		$url,
 		array(
-			'X-Snow-Monkey-License-key' => Manager::get_option( 'license-key' ),
+			'X-Snow-Monkey-License-Key' => Manager::get_option( 'license-key' ),
 		)
 	);
 }
@@ -160,7 +160,7 @@ function snow_monkey_get_premium_remote_block_pattens_xserver() {
 	return _snow_monkney_get_remote_block_patterns(
 		$url,
 		array(
-			'X-Snow-Monkey-XServer-Register-key' => Manager::get_option( 'xserver-register-key' ),
+			'X-Snow-Monkey-Xserver-Register-Key' => Manager::get_option( 'xserver-register-key' ),
 		)
 	);
 }
