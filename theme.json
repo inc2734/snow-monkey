@@ -107,6 +107,132 @@
 			"defaultFontSizes": false,
 			"dropCap": false,
 			"lineHeight": false,
+			"fontFamilies": [
+				{
+					"name": "Sans serif",
+					"slug": "sans-serif",
+					"fontFamily": "\"Helvetica Neue\", Arial, \"Hiragino Kaku Gothic ProN\", \"Hiragino Sans\", \"BIZ UDPGothic\", Meiryo, sans-serif"
+				},
+				{
+					"name": "Serif",
+					"slug": "serif",
+					"fontFamily": "serif"
+				},
+				{
+					"name": "Noto Sans JP",
+					"slug": "noto-sans-jp",
+					"fontFamily": "\"Noto Sans JP\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"Noto Sans JP\"",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/NotoSansJP-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "\"Noto Sans JP\"",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/NotoSansJP-Bold.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "Noto Serif JP",
+					"slug": "noto-serif-jp",
+					"fontFamily": "\"Noto Serif JP\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"Noto Serif JP\"",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/NotoSerifJP-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "\"Noto Serif JP\"",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/NotoSerifJP-Bold.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "M PLUS 1p",
+					"slug": "m-plus-1p",
+					"fontFamily": "\"M PLUS 1p\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"M PLUS 1p\"",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/MPLUS1p-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "\"M PLUS 1p\"",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/MPLUS1p-Bold.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "M PLUS Rounded 1c",
+					"slug": "m-plus-rounded-1c",
+					"fontFamily": "\"M PLUS Rounded 1c\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"M PLUS Rounded 1c\"",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/MPLUSRounded1c-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "\"M PLUS Rounded 1c\"",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/MPLUSRounded1c-Bold.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "BIZ UDPGothic",
+					"slug": "biz-udpgothic",
+					"fontFamily": "\"BIZ UDPGothic\", sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"BIZ UDPGothic\"",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/BIZUDPGothic-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "\"BIZ UDPGothic\"",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/BIZUDPGothic-Bold.woff2" ]
+						}
+					]
+				},
+				{
+					"name": "BIZ UDPMincho",
+					"slug": "biz-udpmincho",
+					"fontFamily": "\"BIZ UDPMincho\", serif",
+					"fontFace": [
+						{
+							"fontFamily": "\"BIZ UDPMincho\"",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/BIZUDPMincho-Regular.woff2" ]
+						},
+						{
+							"fontFamily": "\"BIZ UDPMincho\"",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"src": [ "file:./assets/fonts/BIZUDPMincho-Bold.woff2" ]
+						}
+					]
+				}
+			],
 			"fontSizes": [
 				{
 					"slug": "sm-xs",
