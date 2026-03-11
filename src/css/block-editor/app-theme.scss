@@ -1,13 +1,6 @@
 @use 'sass:meta';
 @use '../app/core/mixin/entry-content' as *;
 
-:where(
-	.is-root-container,
-	.wp-block-freeform
-) {
-	@include entry-content-theme();
-}
-
 html :where(.editor-styles-wrapper) {
 
 	/**
