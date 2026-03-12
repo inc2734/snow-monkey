@@ -3,15 +3,64 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.1
+ * @version 30.0.0
  */
 
 use Framework\Helper;
 
 /**
- * Enqueue main style
+ * Enqueue styles for global styles.
  *
- * @return void
+ * Global styles should be printed in the HEAD for classic themes when loading assets on
+ * demand is disabled (which is no longer the default since WordPress 6.9).
+ */
+function snow_monkey_enqueue_styles_for_global_styles() {
+	$global_styles_dependencies = array();
+
+	if (
+		wp_style_is( 'global-styles', 'registered' ) ||
+		wp_style_is( 'global-styles', 'enqueued' )
+	) {
+		$global_styles_dependencies[] = 'global-styles';
+	}
+
+	$assets_on_demand = wp_should_load_block_assets_on_demand();
+	if (
+		! $global_styles_dependencies ||
+		doing_action( 'wp_footer' ) && ! $assets_on_demand
+	) {
+		return;
+	}
+
+	// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
+	wp_register_style(
+		Helper::get_main_style_handle() . '-global-styles',
+		false,
+		array(
+			Helper::get_main_style_handle() . '-global-styles-app',
+			Helper::get_main_style_handle() . '-global-styles-theme',
+		)
+	);
+
+	wp_register_style(
+		Helper::get_main_style_handle() . '-global-styles-app',
+		get_theme_file_uri( '/assets/css/global-styles/app.css' ),
+		$global_styles_dependencies,
+		filemtime( get_theme_file_path( '/assets/css/global-styles/app.css' ) )
+	);
+
+	wp_register_style(
+		Helper::get_main_style_handle() . '-global-styles-theme',
+		get_theme_file_uri( '/assets/css/global-styles/app-theme.css' ),
+		array( Helper::get_main_style_handle() . '-global-styles-app' ),
+		filemtime( get_theme_file_path( '/assets/css/global-styles/app-theme.css' ) )
+	);
+
+	wp_enqueue_style( Helper::get_main_style_handle() . '-global-styles' );
+}
+
+/**
+ * Enqueue main style
  */
 add_action(
 	'wp_enqueue_scripts',
@@ -81,33 +130,26 @@ add_action(
 
 		wp_enqueue_style( Helper::get_main_style_handle() . '-block-library' );
 
-		// phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
-		wp_register_style(
-			Helper::get_main_style_handle() . '-global-styles',
-			false,
-			array(
-				Helper::get_main_style_handle() . '-global-styles-app',
-				Helper::get_main_style_handle() . '-global-styles-theme',
-			)
-		);
+		snow_monkey_enqueue_styles_for_global_styles();
 
-		wp_register_style(
-			Helper::get_main_style_handle() . '-global-styles-app',
-			get_theme_file_uri( '/assets/css/global-styles/app.css' ),
-			array( 'global-styles' ),
-			filemtime( get_theme_file_path( '/assets/css/global-styles/app.css' ) )
-		);
+		// Runs after enqueuing all main and global styles.
+		if ( wp_style_is( Helper::get_main_style_handle() . '-global-styles' ) ) {
+			do_action( 'snow_monkey_enqueued_main_style' );
+		}
+	}
+);
 
-		wp_register_style(
-			Helper::get_main_style_handle() . '-global-styles-theme',
-			get_theme_file_uri( '/assets/css/global-styles/app-theme.css' ),
-			array( Helper::get_main_style_handle() . '-global-styles-app' ),
-			filemtime( get_theme_file_path( '/assets/css/global-styles/app-theme.css' ) )
-		);
+/**
+ * Enqueue styles for global styles.
+ */
+add_action(
+	'wp_footer',
+	function () {
+		snow_monkey_enqueue_styles_for_global_styles();
 
-		wp_enqueue_style( Helper::get_main_style_handle() . '-global-styles' );
-
-		do_action( 'snow_monkey_enqueued_main_style' );
+		if ( ! did_action( 'snow_monkey_enqueued_main_style' ) ) {
+			do_action( 'snow_monkey_enqueued_main_style' );
+		}
 	}
 );
 
