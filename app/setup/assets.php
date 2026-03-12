@@ -27,7 +27,7 @@ function snow_monkey_enqueue_styles_for_global_styles() {
 	$assets_on_demand = wp_should_load_block_assets_on_demand();
 	if (
 		! $global_styles_dependencies ||
-		doing_action( 'wp_footer' ) && ! $assets_on_demand
+		( doing_action( 'wp_footer' ) && ! $assets_on_demand )
 	) {
 		return;
 	}
