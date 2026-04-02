@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 29.1.14
  */
 
 use Framework\Helper;
@@ -114,14 +114,16 @@ if ( is_array( $sticky_posts ) && ! empty( $sticky_posts ) && ! $query_args['ign
 	}
 
 	// Fetch sticky posts that weren't in the query results.
-	if ( ! empty( $sticky_posts ) ) {
+	$missing_sticky_posts_limit = max( 0, $num_posts - $sticky_offset );
+	if ( ! empty( $sticky_posts ) && 0 < $missing_sticky_posts_limit ) {
 		$stickies = get_posts(
 			array(
-				'post__in'    => $sticky_posts,
-				'post_type'   => $post_types,
-				'post_status' => 'publish',
-				'nopaging'    => true,
-				'tax_query'   => $query_args['tax_query'],
+				'post__in'       => $sticky_posts,
+				'post_type'      => $post_types,
+				'post_status'    => 'publish',
+				'posts_per_page' => $missing_sticky_posts_limit,
+				'orderby'        => 'post__in',
+				'tax_query'      => $query_args['tax_query'],
 			)
 		);
 
