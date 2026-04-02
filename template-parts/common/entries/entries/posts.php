@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 29.1.14
  */
 
 use Framework\Helper;
@@ -50,6 +50,11 @@ $force_sm_1col   = $args['_force_sm_1col'] ? 'true' : 'false';
 $queried_object                 = $args['_posts_query']->get_queried_object();
 $is_term_query                  = is_a( $queried_object, '\WP_Term' ) && 1 === count( $args['_posts_query']->tax_query->queried_terms ) && 1 === count( array_values( $args['_posts_query']->tax_query->queried_terms )[0]['terms'] );
 $is_hierarchical_taxonomy_query = $is_term_query && is_taxonomy_hierarchical( $queried_object->taxonomy );
+$use_own_category_label         = $args['_use_own_category_label'];
+
+if ( is_null( $use_own_category_label ) && $is_hierarchical_taxonomy_query ) {
+	$use_own_category_label = get_theme_mod( $queried_object->taxonomy . '-' . $queried_object->term_id . '-use-own-category-label' );
+}
 
 $classes   = array();
 $classes[] = 'c-entries';
@@ -88,11 +93,7 @@ if ( $args['_entries_gap'] ) {
 					} elseif ( $is_hierarchical_taxonomy_query ) {
 						// If the term to be used for the category label is not specified.
 						// If the return value of `get_queried_object()` is `WP_Term`, use it.
-						$_use_own_category_label = is_null( $args['_use_own_category_label'] )
-							? get_theme_mod( $queried_object->taxonomy . '-' . $queried_object->term_id . '-use-own-category-label' )
-							: $args['_use_own_category_label'];
-
-						$_terms = ! $_use_own_category_label
+						$_terms = ! $use_own_category_label
 							? array( $queried_object )
 							: $public_terms;
 					} else {
