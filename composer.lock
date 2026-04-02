@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "763c48000627815b6a50d58518c0ad32",
+    "content-hash": "0ad9705a18a7bc42be3b36dfb9293288",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -895,16 +895,16 @@
         },
         {
             "name": "inc2734/wp-view-controller",
-            "version": "12.4.8",
+            "version": "12.4.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-view-controller.git",
-                "reference": "3ee66ed051c61f1625cfd7ecb71f4d11b9d97bf8"
+                "reference": "d7449ae08446d1aa57f1c6d7c4295d1809d94ae4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/3ee66ed051c61f1625cfd7ecb71f4d11b9d97bf8",
-                "reference": "3ee66ed051c61f1625cfd7ecb71f4d11b9d97bf8",
+                "url": "https://api.github.com/repos/inc2734/wp-view-controller/zipball/d7449ae08446d1aa57f1c6d7c4295d1809d94ae4",
+                "reference": "d7449ae08446d1aa57f1c6d7c4295d1809d94ae4",
                 "shasum": ""
             },
             "require": {
@@ -913,6 +913,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
                 "wp-coding-standards/wpcs": "^3.1",
                 "yoast/phpunit-polyfills": "^2.0"
             },
@@ -935,9 +936,9 @@
             "description": "A library for WordPress theme view controller.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-view-controller/issues",
-                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.8"
+                "source": "https://github.com/inc2734/wp-view-controller/tree/12.4.9"
             },
-            "time": "2024-11-05T23:40:38+00:00"
+            "time": "2026-04-02T04:48:14+00:00"
         }
     ],
     "packages-dev": [
@@ -3369,21 +3370,21 @@
         },
         {
             "name": "yoast/phpunit-polyfills",
-            "version": "1.1.5",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Yoast/PHPUnit-Polyfills.git",
-                "reference": "41aaac462fbd80feb8dd129e489f4bbc53fe26b0"
+                "reference": "1a6aecc9ebe4a9cea4e1047d0e6c496e52314c27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/41aaac462fbd80feb8dd129e489f4bbc53fe26b0",
-                "reference": "41aaac462fbd80feb8dd129e489f4bbc53fe26b0",
+                "url": "https://api.github.com/repos/Yoast/PHPUnit-Polyfills/zipball/1a6aecc9ebe4a9cea4e1047d0e6c496e52314c27",
+                "reference": "1a6aecc9ebe4a9cea4e1047d0e6c496e52314c27",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.4",
-                "phpunit/phpunit": "^4.8.36 || ^5.7.21 || ^6.0 || ^7.0 || ^8.0 || ^9.0"
+                "php": ">=5.6",
+                "phpunit/phpunit": "^5.7.21 || ^6.0 || ^7.0 || ^8.0 || ^9.0 || ^10.0"
             },
             "require-dev": {
                 "php-parallel-lint/php-console-highlighter": "^1.0.0",
@@ -3428,7 +3429,7 @@
                 "security": "https://github.com/Yoast/PHPUnit-Polyfills/security/policy",
                 "source": "https://github.com/Yoast/PHPUnit-Polyfills"
             },
-            "time": "2025-08-10T04:54:36+00:00"
+            "time": "2025-08-10T05:13:49+00:00"
         }
     ],
     "aliases": [],

@@ -13,7 +13,8 @@
 		"wp-coding-standards/wpcs": "^3.1",
 		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
 		"phpcompatibility/phpcompatibility-wp": "*",
-		"yoast/phpunit-polyfills": "^1.1"
+		"yoast/phpunit-polyfills": "^2.0",
+		"phpunit/phpunit": "^9.6"
 	},
 	"require": {
 		"php": ">=7.4",
