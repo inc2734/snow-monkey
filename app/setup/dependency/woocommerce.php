@@ -319,22 +319,6 @@ add_filter(
 	}
 );
 
-add_action(
-	'template_redirect',
-	function () {
-		if ( ! is_user_logged_in() ) {
-			return;
-		}
-
-		if ( ! is_wc_endpoint_url( 'lost-password' ) ) {
-			return;
-		}
-
-		wp_safe_redirect( wc_get_endpoint_url( 'edit-account' ) );
-		exit;
-	}
-);
-
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper' );
 remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
 
