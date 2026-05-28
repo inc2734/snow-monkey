@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 30.0.0
+ * @version 30.0.1
  */
 
 namespace Framework;
@@ -568,30 +568,58 @@ class Helper {
 			}
 		}
 
-		foreach ( $global_font_families as $global_font_family ) {
-			if ( empty( $global_font_family['slug'] ) || empty( $global_font_family['name'] ) || empty( $global_font_family['fontFamily'] ) ) {
+		$font_family_settings       = static::get_font_family_settings_from_font_families( $global_font_families );
+		$font_family_settings_cache = $font_family_settings;
+
+		return apply_filters(
+			'snow_monkey_font_family_settings',
+			$font_family_settings_cache
+		);
+	}
+
+	/**
+	 * Return font family settings from fontFamilies.
+	 *
+	 * @param array $font_families fontFamilies data.
+	 * @return array
+	 */
+	public static function get_font_family_settings_from_font_families( $font_families ) {
+		if ( ! is_array( $font_families ) ) {
+			return array();
+		}
+
+		$font_family_settings = array();
+
+		foreach ( $font_families as $font_family ) {
+			if ( empty( $font_family['slug'] ) || empty( $font_family['name'] ) || empty( $font_family['fontFamily'] ) ) {
 				continue;
 			}
 
-			$slug = (string) $global_font_family['slug'];
+			$slug = (string) $font_family['slug'];
 
-			$font_family_settings[ $slug ] = array(
-				'label'       => (string) $global_font_family['name'],
-				'font-family' => array( (string) $global_font_family['fontFamily'] ),
-			);
+			if ( ! isset( $font_family_settings[ $slug ] ) ) {
+				$font_family_settings[ $slug ] = array(
+					'label'       => (string) $font_family['name'],
+					'font-family' => array( (string) $font_family['fontFamily'] ),
+				);
+			}
 
-			if ( empty( $global_font_family['fontFace'] ) || ! is_array( $global_font_family['fontFace'] ) ) {
+			if ( empty( $font_family['fontFace'] ) || ! is_array( $font_family['fontFace'] ) ) {
 				continue;
 			}
 
 			$variations = array();
-			foreach ( $global_font_family['fontFace'] as $font_face ) {
+			foreach ( $font_family['fontFace'] as $font_face ) {
 				if ( empty( $font_face['fontWeight'] ) ) {
 					continue;
 				}
 
 				$weight = (string) $font_face['fontWeight'];
-				$src    = '';
+				if ( preg_match( '/^\d+/', $weight, $matches ) ) {
+					$weight = $matches[0];
+				}
+
+				$src = '';
 				if ( isset( $font_face['src'] ) ) {
 					if ( is_array( $font_face['src'] ) && ! empty( $font_face['src'][0] ) ) {
 						$src = (string) $font_face['src'][0];
@@ -615,17 +643,18 @@ class Helper {
 			}
 
 			ksort( $variations );
-			$font_family_settings[ $slug ]['variation'] = $variations;
-			$font_family_settings[ $slug ]['default']   = implode( ',', array_keys( $variations ) );
-			$font_family_settings[ $slug ]['name']      = (string) $global_font_family['name'];
+			$font_family_settings[ $slug ]['variation'] = isset( $font_family_settings[ $slug ]['variation'] )
+				? array_replace( $font_family_settings[ $slug ]['variation'], $variations )
+				: $variations;
+			ksort( $font_family_settings[ $slug ]['variation'] );
+
+			$font_family_settings[ $slug ]['default'] = implode( ',', array_keys( $font_family_settings[ $slug ]['variation'] ) );
+			$font_family_settings[ $slug ]['name']    = isset( $font_family_settings[ $slug ]['name'] )
+				? $font_family_settings[ $slug ]['name']
+				: (string) $font_family['name'];
 		}
 
-		$font_family_settings_cache = $font_family_settings;
-
-		return apply_filters(
-			'snow_monkey_font_family_settings',
-			$font_family_settings_cache
-		);
+		return $font_family_settings;
 	}
 
 	/**
