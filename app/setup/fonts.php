@@ -92,7 +92,7 @@ function _snow_monkey_merge_font_faces( $base_font_faces, $additional_font_faces
 			continue;
 		}
 
-		$base_font_faces[]     = $font_face;
+		$base_font_faces[]    = $font_face;
 		$defined_font_faces[] = $font_face_key;
 	}
 
