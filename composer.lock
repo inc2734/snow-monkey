@@ -243,16 +243,16 @@
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "5.3.5",
+            "version": "5.3.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "bedce639d51af79e5ced0c63c04fedc8b13185f2"
+                "reference": "4ceb3331f872c38cd03dfeb3ca6fca0486249f17"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/bedce639d51af79e5ced0c63c04fedc8b13185f2",
-                "reference": "bedce639d51af79e5ced0c63c04fedc8b13185f2",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/4ceb3331f872c38cd03dfeb3ca6fca0486249f17",
+                "reference": "4ceb3331f872c38cd03dfeb3ca6fca0486249f17",
                 "shasum": ""
             },
             "require": {
@@ -285,9 +285,9 @@
             "description": "A library for WordPress. This adds contents outline of the post.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-contents-outline/issues",
-                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.3.5"
+                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.3.6"
             },
-            "time": "2026-07-14T11:54:47+00:00"
+            "time": "2026-07-15T05:36:33+00:00"
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
