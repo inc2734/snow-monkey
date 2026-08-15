@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "17.0.0",
+            "version": "17.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "ce338fa0749fdc31e989fe55e9f38341c0dba57c"
+                "reference": "6e6ea5f550a6b0d12dbd0a3d7ba619906692bdf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/ce338fa0749fdc31e989fe55e9f38341c0dba57c",
-                "reference": "ce338fa0749fdc31e989fe55e9f38341c0dba57c",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/6e6ea5f550a6b0d12dbd0a3d7ba619906692bdf3",
+                "reference": "6e6ea5f550a6b0d12dbd0a3d7ba619906692bdf3",
                 "shasum": ""
             },
             "require": {
@@ -125,8 +125,9 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
                 "wp-coding-standards/wpcs": "^3.1",
-                "yoast/phpunit-polyfills": "^1.0"
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -147,9 +148,9 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/17.0.0"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/17.0.2"
             },
-            "time": "2025-04-07T10:45:56+00:00"
+            "time": "2026-08-15T05:13:11+00:00"
         },
         {
             "name": "inc2734/wp-basis",
