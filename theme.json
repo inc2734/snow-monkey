@@ -346,6 +346,11 @@
 					}
 				}
 			},
+			"core/gallery": {
+				"spacing": {
+					"blockGap": "var(--_margin-2)"
+				}
+			},
 			"core/search": {
 				"elements": {
 					"button": {
