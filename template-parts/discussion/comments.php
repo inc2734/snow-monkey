@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.0.2
  *
  * renamed: template-parts/comments.php
  */
@@ -27,7 +27,7 @@ $args = wp_parse_args(
 );
 ?>
 
-<aside class="p-comments c-entry-aside">
+<aside id="comments" class="p-comments c-entry-aside">
 	<?php if ( $args['_title'] ) : ?>
 		<h2 class="p-comments__title c-entry-aside__title"><?php echo wp_kses_post( $args['_title'] ); ?></h2>
 	<?php endif; ?>
