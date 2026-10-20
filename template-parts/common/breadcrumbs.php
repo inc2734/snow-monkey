@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.0.3
  *
  * renamed: template-parts/breadcrumbs.php
  */
@@ -30,7 +30,7 @@ unset( $allowed_html['a'] );
 ?>
 
 <div class="p-breadcrumbs-wrapper">
-	<ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+	<ol class="c-breadcrumbs" itemscope itemtype="https://schema.org/BreadcrumbList">
 		<?php foreach ( $args['_items'] as $key => $item ) : ?>
 			<?php
 			$is_last_item = (int) count( $args['_items'] ) - 1 === (int) $key;
@@ -46,11 +46,11 @@ unset( $allowed_html['a'] );
 				class="c-breadcrumbs__item"
 				itemprop="itemListElement"
 				itemscope
-				itemtype="http://schema.org/ListItem"
+				itemtype="https://schema.org/ListItem"
 			>
 				<a
 					itemscope
-					itemtype="http://schema.org/Thing"
+					itemtype="https://schema.org/Thing"
 					itemprop="item"
 					href="<?php echo esc_url( $item['link'] ); ?>"
 					itemid="<?php echo esc_url( $item['link'] ); ?>"
