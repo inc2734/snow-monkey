@@ -349,7 +349,7 @@ class Manager {
 				'headers'    => array(
 					'Accept-Encoding'           => '',
 					'X-Snow-Monkey-License-Key' => $license_key,
-					'X-Snow-Monkey-Version'     => wp_get_theme()->get( 'Version' ),
+					'X-Snow-Monkey-Version'     => wp_get_theme( get_template() )->get( 'Version' ),
 					'X-Snow-Monkey-URL'         => home_url(),
 				),
 			)
@@ -436,7 +436,7 @@ class Manager {
 				'headers'    => array(
 					'Accept-Encoding'                    => '',
 					'X-Snow-Monkey-Xserver-Register-Key' => $xserver_register_key,
-					'X-Snow-Monkey-Version'              => wp_get_theme()->get( 'Version' ),
+					'X-Snow-Monkey-Version'              => wp_get_theme( get_template() )->get( 'Version' ),
 					'X-Snow-Monkey-URL'                  => home_url(),
 				),
 			)
