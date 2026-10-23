@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.13
+ * @version 31.0.5
  */
 
 use Framework\Controller\Manager;
@@ -11,10 +11,13 @@ use Framework\Controller\Manager;
 /**
  * Get remote block pattern categories.
  *
+ * @param bool|null $success Receives whether the request returned valid library data.
  * @return array
  */
-function snow_monkey_get_remote_block_patten_categories() {
+function snow_monkey_get_remote_block_patten_categories( &$success = null ) {
 	global $wp_version;
+
+	$success = false;
 
 	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/pattern-categories/';
 
@@ -44,7 +47,18 @@ function snow_monkey_get_remote_block_patten_categories() {
 	}
 
 	$new_pattern_categories = array();
+	$success                = empty( $pattern_categories );
 	foreach ( $pattern_categories as $pattern_category ) {
+		if (
+			! is_array( $pattern_category )
+			|| ! is_string( $pattern_category['slug'] ?? null )
+			|| '' === $pattern_category['slug']
+			|| ! is_string( $pattern_category['name'] ?? null )
+		) {
+			continue;
+		}
+
+		$success = true;
 		if ( 'free' === $pattern_category['slug'] ) {
 			continue;
 		}
@@ -63,10 +77,13 @@ function snow_monkey_get_remote_block_patten_categories() {
  *
  * @param string $url API URL.
  * @param array $args An array of request arguments.
+ * @param bool|null $success Receives whether the request returned valid library data.
  * @return array
  */
-function _snow_monkney_get_remote_block_patterns( $url, array $args = array() ) {
+function _snow_monkney_get_remote_block_patterns( $url, array $args = array(), &$success = null ) {
 	global $wp_version;
+
+	$success = false;
 
 	$response = wp_remote_get(
 		$url,
@@ -96,7 +113,13 @@ function _snow_monkney_get_remote_block_patterns( $url, array $args = array() ) 
 		return array();
 	}
 
+	$has_patterns = ! empty( $patterns );
 	foreach ( $patterns as $key => $pattern ) {
+		if ( ! _snow_monkey_is_valid_remote_block_pattern( $pattern ) ) {
+			unset( $patterns[ $key ] );
+			continue;
+		}
+
 		$patterns[ $key ]['content'] = str_replace(
 			'https://snow-monkey.2inc.org/wp-content',
 			untrailingslashit( WP_CONTENT_URL ),
@@ -119,49 +142,82 @@ function _snow_monkney_get_remote_block_patterns( $url, array $args = array() ) 
 		$patterns[ $key ]['viewportWidth'] = 1440;
 	}
 
+	$success = ! $has_patterns || ! empty( $patterns );
+
 	return $patterns;
+}
+
+/**
+ * Validate both fresh responses and previously cached patterns.
+ *
+ * @param mixed $pattern Pattern data.
+ * @return bool
+ */
+function _snow_monkey_is_valid_remote_block_pattern( $pattern ) {
+	if ( ! is_array( $pattern ) ) {
+		return false;
+	}
+
+	foreach ( array( 'title', 'slug', 'content' ) as $key ) {
+		if ( empty( $pattern[ $key ] ) || ! is_string( $pattern[ $key ] ) ) {
+			return false;
+		}
+	}
+
+	foreach ( array( 'categories', 'keywords', 'blockTypes', 'postTypes', 'templateTypes', 'requiredPlugins' ) as $key ) {
+		if ( array_key_exists( $key, $pattern ) && ( ! is_array( $pattern[ $key ] ) || count( array_filter( $pattern[ $key ], 'is_string' ) ) !== count( $pattern[ $key ] ) ) ) {
+			return false;
+		}
+	}
+
+	return true;
 }
 
 /**
  * Get free remote block patterns.
  *
+ * @param bool|null $success Receives whether the request returned valid library data.
  * @return array
  */
-function snow_monkey_get_free_remote_block_pattens() {
+function snow_monkey_get_free_remote_block_pattens( &$success = null ) {
 	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/free-patterns/';
 
-	return _snow_monkney_get_remote_block_patterns( $url );
+	return _snow_monkney_get_remote_block_patterns( $url, array(), $success );
 }
 
 /**
  * Get premium remote block patterns.
  *
+ * @param bool|null $success Receives whether the request returned valid library data.
  * @return array
  */
-function snow_monkey_get_premium_remote_block_pattens() {
+function snow_monkey_get_premium_remote_block_pattens( &$success = null ) {
 	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns/';
 
 	return _snow_monkney_get_remote_block_patterns(
 		$url,
 		array(
 			'X-Snow-Monkey-License-Key' => Manager::get_option( 'license-key' ),
-		)
+		),
+		$success
 	);
 }
 
 /**
  * Get premium remote block patterns for XServer user.
  *
+ * @param bool|null $success Receives whether the request returned valid library data.
  * @return array
  */
-function snow_monkey_get_premium_remote_block_pattens_xserver() {
+function snow_monkey_get_premium_remote_block_pattens_xserver( &$success = null ) {
 	$url = 'https://snow-monkey.2inc.org/wp-json/snow-monkey-license-manager/v1/patterns-xserver/';
 
 	return _snow_monkney_get_remote_block_patterns(
 		$url,
 		array(
 			'X-Snow-Monkey-Xserver-Register-Key' => Manager::get_option( 'xserver-register-key' ),
-		)
+		),
+		$success
 	);
 }
 
@@ -191,11 +247,18 @@ function snow_monkey_register_remote_block_patterns() {
 	$block_pattern_categories_transient_name = 'snow-monkey-remote-pattern-categories';
 	$block_pattern_categories                = get_transient( $block_pattern_categories_transient_name );
 	if ( false === $block_pattern_categories || ! is_array( $block_pattern_categories ) ) {
-		$new_block_pattern_categories = snow_monkey_get_remote_block_patten_categories();
+		$new_block_pattern_categories = snow_monkey_get_remote_block_patten_categories( $success );
 		$block_pattern_categories     = is_array( $new_block_pattern_categories )
 			? $new_block_pattern_categories
 			: array();
-		set_transient( $block_pattern_categories_transient_name, $block_pattern_categories, WEEK_IN_SECONDS );
+
+		set_transient(
+			$block_pattern_categories_transient_name,
+			$block_pattern_categories,
+			$success
+				? WEEK_IN_SECONDS
+				: MINUTE_IN_SECONDS
+		);
 	}
 
 	// Get patterns.
@@ -209,18 +272,25 @@ function snow_monkey_register_remote_block_patterns() {
 	if ( 'true' === $status ) { // Get premium pattens.
 		if ( false === $premium_block_patterns || ! is_array( $premium_block_patterns ) ) {
 			$premium_block_patterns = array();
+			$success                = false;
 
 			if ( $license_key ) {
-				$premium_block_patterns = snow_monkey_get_premium_remote_block_pattens();
+				$premium_block_patterns = snow_monkey_get_premium_remote_block_pattens( $success );
 			} elseif ( $xserver_register_key ) {
-				$premium_block_patterns = snow_monkey_get_premium_remote_block_pattens_xserver();
+				$premium_block_patterns = snow_monkey_get_premium_remote_block_pattens_xserver( $success );
 			}
 
 			if ( ! is_array( $premium_block_patterns ) ) {
 				$premium_block_patterns = array();
 			}
 
-			set_transient( $premium_block_patterns_transient_name, $premium_block_patterns, WEEK_IN_SECONDS );
+			set_transient(
+				$premium_block_patterns_transient_name,
+				$premium_block_patterns,
+				$success
+					? WEEK_IN_SECONDS
+					: MINUTE_IN_SECONDS
+			);
 		}
 
 		$block_patterns = $premium_block_patterns;
@@ -228,13 +298,19 @@ function snow_monkey_register_remote_block_patterns() {
 		delete_transient( $premium_block_patterns_transient_name );
 
 		if ( false === $free_block_patterns || ! is_array( $free_block_patterns ) ) {
-			$free_block_patterns = snow_monkey_get_free_remote_block_pattens();
+			$free_block_patterns = snow_monkey_get_free_remote_block_pattens( $success );
 
 			if ( ! is_array( $free_block_patterns ) ) {
 				$free_block_patterns = array();
 			}
 
-			set_transient( $free_block_patterns_transient_name, $free_block_patterns, WEEK_IN_SECONDS );
+			set_transient(
+				$free_block_patterns_transient_name,
+				$free_block_patterns,
+				$success
+					? WEEK_IN_SECONDS
+					: MINUTE_IN_SECONDS
+			);
 		}
 
 		$block_patterns = $free_block_patterns;
@@ -246,6 +322,15 @@ function snow_monkey_register_remote_block_patterns() {
 
 	// Register pattern categories.
 	foreach ( $block_pattern_categories as $block_pattern_category ) {
+		if (
+			! is_array( $block_pattern_category )
+			|| ! is_string( $block_pattern_category['name'] ?? null )
+			|| '' === $block_pattern_category['name']
+			|| ! is_string( $block_pattern_category['label'] ?? null )
+		) {
+			continue;
+		}
+
 		register_block_pattern_category(
 			$block_pattern_category['name'],
 			array(
@@ -256,7 +341,7 @@ function snow_monkey_register_remote_block_patterns() {
 
 	// Register patterns.
 	foreach ( $block_patterns as $pattern ) {
-		if ( ! $pattern['title'] || ! $pattern['slug'] || ! $pattern['content'] ) {
+		if ( ! _snow_monkey_is_valid_remote_block_pattern( $pattern ) ) {
 			continue;
 		}
 

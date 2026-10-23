@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.13
+ * @version 31.0.5
  */
 
 use Inc2734\WP_GitHub_Theme_Updater\Bootstrap;
@@ -28,7 +28,7 @@ new Bootstrap(
 add_filter(
 	'inc2734_github_theme_updater_zip_url_inc2734/snow-monkey',
 	function ( $url ) {
-		if ( 0 !== strpos( $url, 'https://snow-monkey.2inc.org/' ) ) {
+		if ( ! is_string( $url ) || 0 !== strpos( $url, 'https://snow-monkey.2inc.org/' ) ) {
 			return false;
 		}
 		return $url;

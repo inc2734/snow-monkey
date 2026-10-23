@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.13
+ * @version 31.0.5
  */
 
 namespace Framework\Controller;
@@ -124,69 +124,89 @@ class Manager {
 			self::MENU_SLUG,
 			self::SETTINGS_NAME,
 			function ( $option ) {
-				$current_license_key   = static::get_option( 'license-key' );
-				$posted_license_key    = isset( $option['license-key'] ) ? $option['license-key'] : false;
-				$posted_license_key    = trim( $posted_license_key );
-				$option['license-key'] = static::SAVED_VALUE === $posted_license_key
-					? $current_license_key
-					: $posted_license_key;
+				if ( ! is_array( $option ) ) {
+					add_settings_error(
+						self::SETTINGS_NAME,
+						'invalid-license-key',
+						__( 'Invalid license key.', 'snow-monkey' )
+					);
 
-				$current_xserver_register_key   = static::get_option( 'xserver-register-key' );
-				$posted_xserver_register_key    = isset( $option['xserver-register-key'] ) ? $option['xserver-register-key'] : false;
-				$posted_xserver_register_key    = trim( $posted_xserver_register_key );
-				$option['xserver-register-key'] = static::SAVED_VALUE === $posted_xserver_register_key
-					? $current_xserver_register_key
-					: $posted_xserver_register_key;
+					return get_option( self::SETTINGS_NAME );
+				}
+
+				$current_license_key          = static::get_option( 'license-key' );
+				$current_xserver_register_key = static::get_option( 'xserver-register-key' );
+				$clear_cache                  = isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'];
+				$reset                        = isset( $option['reset'] ) && '1' === $option['reset'];
+
+				if ( ! $clear_cache && ! $reset ) {
+					foreach ( array( 'license-key', 'xserver-register-key' ) as $key ) {
+						if ( isset( $option[ $key ] ) && ! is_string( $option[ $key ] ) ) {
+							add_settings_error(
+								self::SETTINGS_NAME,
+								'invalid-license-key',
+								__( 'Invalid license key.', 'snow-monkey' )
+							);
+
+							return get_option( self::SETTINGS_NAME );
+						}
+
+						$posted_key     = trim( $option[ $key ] ?? '' );
+						$option[ $key ] = static::SAVED_VALUE === $posted_key ? static::get_option( $key ) : $posted_key;
+					}
+
+					// XServer register key is not validated if a license key is entered.
+					if ( ! empty( $option['license-key'] ) ) {
+						$option['xserver-register-key'] = '';
+					}
+				}
+
+				// Clear both keys before forcing validation, retaining the newly fetched status.
+				if ( ! $clear_cache ) {
+					foreach ( array( $current_license_key, $option['license-key'] ?? '' ) as $key ) {
+						if ( is_string( $key ) && '' !== $key ) {
+							delete_transient( 'snow-monkey-license-status-' . $key );
+						}
+					}
+
+					foreach ( array( $current_xserver_register_key, $option['xserver-register-key'] ?? '' ) as $key ) {
+						if ( is_string( $key ) && '' !== $key ) {
+							delete_transient( 'snow-monkey-xserver-register-status-' . $key );
+						}
+					}
+				}
 
 				$status = 'false';
-				if ( $option['license-key'] ) {
-					$status = static::get_license_status( $option['license-key'], true );
-				} elseif ( $option['xserver-register-key'] ) {
-					$status = static::get_xserver_register_status( $option['xserver-register-key'], true );
+				if ( ! $clear_cache && ! $reset ) {
+					if ( $option['license-key'] ) {
+						$status = static::get_license_status( $option['license-key'], true );
+					} elseif ( $option['xserver-register-key'] ) {
+						$status = static::get_xserver_register_status( $option['xserver-register-key'], true );
+					}
 				}
 
-				// If server error, Do nothing.
-				if ( ! in_array( $status, array( 'true', 'false' ), true ) ) {
+				if ( in_array( $status, array( 'true', 'false' ), true ) ) {
+					delete_transient( 'snow-monkey-remote-pattern-categories' );
+					delete_transient( 'snow-monkey-remote-patterns' ); // Backward compatibility.
+					delete_transient( 'snow-monkey-premium-remote-patterns' );
+					delete_transient( 'snow-monkey-free-remote-patterns' );
+					delete_transient( 'snow-monkey-remote-styles' );
+				} else {
+					// Save settings during outages, preserving usable library caches.
+					add_settings_error(
+						self::SETTINGS_NAME,
+						'license-verification-failed',
+						__( 'Could not verify the license. Please try again shortly.', 'snow-monkey' ),
+						'warning'
+					);
+				}
+
+				if ( $clear_cache ) {
 					return get_option( self::SETTINGS_NAME );
 				}
 
-				delete_transient( 'snow-monkey-remote-pattern-categories' );
-				delete_transient( 'snow-monkey-remote-patterns' ); // Backward compatibility.
-				delete_transient( 'snow-monkey-premium-remote-patterns' );
-				delete_transient( 'snow-monkey-free-remote-patterns' );
-				delete_transient( 'snow-monkey-remote-styles' );
-
-				if ( isset( $option['clear-remote-patterns-cache'] ) && '1' === $option['clear-remote-patterns-cache'] ) {
-					return get_option( self::SETTINGS_NAME );
-				}
-
-				if ( isset( $option['reset'] ) && '1' === $option['reset'] ) {
+				if ( $reset ) {
 					return array();
-				}
-
-				// Delete posted license status cache.
-				if ( ! empty( $option['license-key'] ) ) {
-					delete_transient( 'snow-monkey-license-status-' . $option['license-key'] );
-				}
-
-				// Delete old license status cache.
-				if ( ! empty( $current_license_key ) && $current_license_key !== $option['license-key'] ) {
-					delete_transient( 'snow-monkey-license-status-' . $current_license_key );
-				}
-
-				// Delete posted XServer register status cache.
-				if ( ! empty( $option['xserver-register-key'] ) ) {
-					delete_transient( 'snow-monkey-license-status-' . $option['xserver-register-key'] );
-				}
-
-				// Delete old XServer register status cache.
-				if ( ! empty( $current_xserver_register_key ) && $current_xserver_register_key !== $option['xserver-register-key'] ) {
-					delete_transient( 'snow-monkey-xserver-register-status-' . $current_xserver_register_key );
-				}
-
-				// XServer register key is not validated if a license key is entered.
-				if ( ! empty( $option['license-key'] ) ) {
-					$option['xserver-register-key'] = '';
 				}
 
 				return $option;
@@ -230,9 +250,14 @@ class Manager {
 						>
 					</div>
 					<div style="flex: 0 0 auto">
+						<?php if ( in_array( $transient, array( 'true', 'false' ), true ) ) : ?>
 						<span style="background-color: <?php echo esc_attr( $button['bgcolor'] ); ?>; color: <?php echo esc_attr( $button['color'] ); ?>; padding: .25em .5em; display: inline-block; font-size: 14px"><?php echo esc_html( $button['label'] ); ?></span>
+						<?php endif; ?>
 					</div>
 				</div>
+				<?php if ( ! in_array( $transient, array( 'true', 'false' ), true ) ) : ?>
+					<p class="description"><?php esc_html_e( 'Could not verify the license. Please try again shortly.', 'snow-monkey' ); ?></p>
+				<?php endif; ?>
 				<p class="description">
 					<?php esc_html_e( 'If the license key entered is valid, premium block patterns are available.', 'snow-monkey' ); ?><br>
 					<?php esc_html_e( 'If the license key is entered, the XServer register key setting is not saved.', 'snow-monkey' ); ?>
@@ -272,9 +297,14 @@ class Manager {
 						>
 					</div>
 					<div style="flex: 0 0 auto">
+						<?php if ( in_array( $transient, array( 'true', 'false' ), true ) ) : ?>
 						<span style="background-color: <?php echo esc_attr( $button['bgcolor'] ); ?>; color: <?php echo esc_attr( $button['color'] ); ?>; padding: .25em .5em; display: inline-block; font-size: 14px"><?php echo esc_html( $button['label'] ); ?></span>
+						<?php endif; ?>
 					</div>
 				</div>
+				<?php if ( ! in_array( $transient, array( 'true', 'false' ), true ) ) : ?>
+					<p class="description"><?php esc_html_e( 'Could not verify the license. Please try again shortly.', 'snow-monkey' ); ?></p>
+				<?php endif; ?>
 				<p class="description">
 					<?php esc_html_e( 'If the XServer register key entered is valid, premium block patterns are available.', 'snow-monkey' ); ?><br>
 					<?php esc_html_e( 'If you are using XServer integration, enter the XServer register key in the XServer register key entry field without entering anything in the license key entry field.', 'snow-monkey' ); ?>
@@ -291,10 +321,10 @@ class Manager {
 	 *
 	 * @param string $license_key The license key.
 	 * @param boolean $force Whether to request without going through cache.
-	 * @return string 'true'|'false'|'50x'
+	 * @return string License status, HTTP status code, or 'error'.
 	 */
 	public static function get_license_status( $license_key, $force = false ) {
-		if ( ! $license_key ) {
+		if ( empty( $license_key ) || ! is_string( $license_key ) ) {
 			return 'false';
 		}
 
@@ -302,7 +332,7 @@ class Manager {
 
 		if ( ! $force ) {
 			$transient = get_transient( $transient_name );
-			if ( false !== $transient ) {
+			if ( is_string( $transient ) ) {
 				return $transient;
 			}
 		}
@@ -316,7 +346,13 @@ class Manager {
 			$status = (string) $status;
 		}
 
-		set_transient( $transient_name, $status, DAY_IN_SECONDS );
+		set_transient(
+			$transient_name,
+			$status,
+			in_array( $status, array( 'true', 'false' ), true )
+				? DAY_IN_SECONDS
+				: MINUTE_IN_SECONDS
+		);
 
 		return $status;
 	}
@@ -326,12 +362,12 @@ class Manager {
 	 *
 	 * @param string $license_key The license key.
 	 * @param boolean $force Whether to request without going through cache.
-	 * @return mixed false|true|50x
+	 * @return bool|int|string
 	 */
 	protected static function _request_license_validate( $license_key, $force = false ) {
 		global $wp_version;
 
-		if ( ! $license_key ) {
+		if ( empty( $license_key ) || ! is_string( $license_key ) ) {
 			return false;
 		}
 
@@ -355,18 +391,17 @@ class Manager {
 			)
 		);
 
-		$status = false;
+		$status = 'error';
 		if ( $response && ! is_wp_error( $response ) ) {
 			$response_code = wp_remote_retrieve_response_code( $response );
+			$body          = json_decode( wp_remote_retrieve_body( $response ) );
 			if ( 200 === $response_code ) {
-				$status = wp_remote_retrieve_body( $response );
-				if ( 'true' === $status ) {
-					$status = true;
-				} elseif ( 'false' === $status ) {
-					$status = false;
-				}
-			} elseif ( 5 === (int) substr( $response_code, 0, 1 ) ) {
-				$status = $response_code;
+				$status = is_bool( $body ) ? $body : 'error';
+			} elseif ( 403 === $response_code && in_array( $body, array( 'Failed request.', 'Blocked.' ), true ) ) {
+				// These JSON strings are explicit license denials, unlike a proxy's 403 HTML.
+				$status = false;
+			} else {
+				$status = $response_code ? $response_code : 'error';
 			}
 		}
 
@@ -378,10 +413,10 @@ class Manager {
 	 *
 	 * @param string $xserver_register_key The license key.
 	 * @param boolean $force Whether to request without going through cache.
-	 * @return string 'true'|'false'|'50x'
+	 * @return string License status, HTTP status code, or 'error'.
 	 */
 	public static function get_xserver_register_status( $xserver_register_key, $force = false ) {
-		if ( ! $xserver_register_key ) {
+		if ( empty( $xserver_register_key ) || ! is_string( $xserver_register_key ) ) {
 			return 'false';
 		}
 
@@ -389,7 +424,7 @@ class Manager {
 
 		if ( ! $force ) {
 			$transient = get_transient( $transient_name );
-			if ( false !== $transient ) {
+			if ( is_string( $transient ) ) {
 				return $transient;
 			}
 		}
@@ -403,7 +438,13 @@ class Manager {
 			$status = (string) $status;
 		}
 
-		set_transient( $transient_name, $status, DAY_IN_SECONDS );
+		set_transient(
+			$transient_name,
+			$status,
+			in_array( $status, array( 'true', 'false' ), true )
+				? DAY_IN_SECONDS
+				: MINUTE_IN_SECONDS
+		);
 
 		return $status;
 	}
@@ -413,12 +454,12 @@ class Manager {
 	 *
 	 * @param string $xserver_register_key The XServer register key.
 	 * @param boolean $force Whether to request without going through cache.
-	 * @return mixed false|true|50x
+	 * @return bool|int|string
 	 */
 	protected static function _request_license_validate_xserver( $xserver_register_key, $force = false ) {
 		global $wp_version;
 
-		if ( ! $xserver_register_key ) {
+		if ( empty( $xserver_register_key ) || ! is_string( $xserver_register_key ) ) {
 			return false;
 		}
 
@@ -442,18 +483,17 @@ class Manager {
 			)
 		);
 
-		$status = false;
+		$status = 'error';
 		if ( $response && ! is_wp_error( $response ) ) {
 			$response_code = wp_remote_retrieve_response_code( $response );
+			$body          = json_decode( wp_remote_retrieve_body( $response ) );
 			if ( 200 === $response_code ) {
-				$status = wp_remote_retrieve_body( $response );
-				if ( 'true' === $status ) {
-					$status = true;
-				} elseif ( 'false' === $status ) {
-					$status = false;
-				}
-			} elseif ( 5 === (int) substr( $response_code, 0, 1 ) ) {
-				$status = $response_code;
+				$status = is_bool( $body ) ? $body : 'error';
+			} elseif ( 403 === $response_code && 'Failed request.' === $body ) {
+				// This JSON string is an explicit XServer denial, unlike a proxy's 403 HTML.
+				$status = false;
+			} else {
+				$status = $response_code ? $response_code : 'error';
 			}
 		}
 

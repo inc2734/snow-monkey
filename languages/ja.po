@@ -145,6 +145,15 @@ msgstr "設定をリセット"
 msgid "Retrieve data from the pattern / style library"
 msgstr "パターン / スタイルライブラリーからデータを再取得する"
 
+#: Framework/Controller/Manager.php:128 Framework/Controller/Manager.php:140
+msgid "Invalid license key."
+msgstr "ライセンスキーが正しくありません。"
+
+#: Framework/Controller/Manager.php:184 Framework/Controller/Manager.php:242
+#: Framework/Controller/Manager.php:289 app/constructor/manager.php:40
+msgid "Could not verify the license. Please try again shortly."
+msgstr "ライセンスを確認できませんでした。しばらくしてからもう一度お試しください。"
+
 #: Framework/Controller/Manager.php:198
 msgid "Settings"
 msgstr "設定"

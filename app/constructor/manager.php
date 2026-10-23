@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 26.0.2
+ * @version 31.0.5
  */
 
 use Framework\Controller\Manager;
@@ -32,6 +32,14 @@ add_action(
 
 		$xserver_register_status = Manager::get_xserver_register_status( Manager::get_option( 'xserver-register-key' ) );
 		if ( 'true' === $xserver_register_status ) {
+			return;
+		}
+
+		if ( 'false' !== $license_status || 'false' !== $xserver_register_status ) {
+			wp_admin_notice(
+				__( 'Could not verify the license. Please try again shortly.', 'snow-monkey' ),
+				array( 'type' => 'warning' )
+			);
 			return;
 		}
 
