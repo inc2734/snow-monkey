@@ -103,16 +103,16 @@
         },
         {
             "name": "inc2734/wp-awesome-widgets",
-            "version": "17.0.2",
+            "version": "17.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-awesome-widgets.git",
-                "reference": "6e6ea5f550a6b0d12dbd0a3d7ba619906692bdf3"
+                "reference": "e3c2706b29ebdb94f5a8e1e53853154c429352d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/6e6ea5f550a6b0d12dbd0a3d7ba619906692bdf3",
-                "reference": "6e6ea5f550a6b0d12dbd0a3d7ba619906692bdf3",
+                "url": "https://api.github.com/repos/inc2734/wp-awesome-widgets/zipball/e3c2706b29ebdb94f5a8e1e53853154c429352d6",
+                "reference": "e3c2706b29ebdb94f5a8e1e53853154c429352d6",
                 "shasum": ""
             },
             "require": {
@@ -148,22 +148,22 @@
             "description": "A library to add some awesome widgets for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-awesome-widgets/issues",
-                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/17.0.2"
+                "source": "https://github.com/inc2734/wp-awesome-widgets/tree/17.0.3"
             },
-            "time": "2026-08-15T05:13:11+00:00"
+            "time": "2026-10-25T03:23:21+00:00"
         },
         {
             "name": "inc2734/wp-basis",
-            "version": "14.0.0",
+            "version": "14.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-basis.git",
-                "reference": "8d34011aef48a6b2fcd3158a66f3e116d966680e"
+                "reference": "3338a88f9e370c4587894f2ac8a51e553059b2b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/8d34011aef48a6b2fcd3158a66f3e116d966680e",
-                "reference": "8d34011aef48a6b2fcd3158a66f3e116d966680e",
+                "url": "https://api.github.com/repos/inc2734/wp-basis/zipball/3338a88f9e370c4587894f2ac8a51e553059b2b3",
+                "reference": "3338a88f9e370c4587894f2ac8a51e553059b2b3",
                 "shasum": ""
             },
             "require": {
@@ -172,6 +172,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
                 "wp-coding-standards/wpcs": "^3.1",
                 "yoast/phpunit-polyfills": "^2.0"
             },
@@ -194,30 +195,34 @@
             "description": "This library customizes HTML to use sass-basis in WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-basis/issues",
-                "source": "https://github.com/inc2734/wp-basis/tree/14.0.0"
+                "source": "https://github.com/inc2734/wp-basis/tree/14.0.1"
             },
-            "time": "2025-01-29T13:45:09+00:00"
+            "time": "2026-10-26T06:36:34+00:00"
         },
         {
             "name": "inc2734/wp-breadcrumbs",
-            "version": "3.1.9",
+            "version": "3.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-breadcrumbs.git",
-                "reference": "f1f3ee6dbb2b27092ba57830d75d06026411ac42"
+                "reference": "08e1c933708894f6955f4dc65a0d16faee2bd948"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/f1f3ee6dbb2b27092ba57830d75d06026411ac42",
-                "reference": "f1f3ee6dbb2b27092ba57830d75d06026411ac42",
+                "url": "https://api.github.com/repos/inc2734/wp-breadcrumbs/zipball/08e1c933708894f6955f4dc65a0d16faee2bd948",
+                "reference": "08e1c933708894f6955f4dc65a0d16faee2bd948",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4"
             },
             "require-dev": {
-                "wp-coding-standards/wpcs": "^2.3",
-                "yoast/phpunit-polyfills": "^1.0"
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpcompatibility/phpcompatibility-wp": "^2.1.8",
+                "phpunit/phpunit": "^9.6",
+                "squizlabs/php_codesniffer": "^3.13.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -238,22 +243,22 @@
             "description": "A library for WordPress breadcrumbs.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-breadcrumbs/issues",
-                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.9"
+                "source": "https://github.com/inc2734/wp-breadcrumbs/tree/3.1.10"
             },
-            "time": "2023-08-31T23:29:52+00:00"
+            "time": "2026-10-25T10:00:03+00:00"
         },
         {
             "name": "inc2734/wp-contents-outline",
-            "version": "5.3.6",
+            "version": "5.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-contents-outline.git",
-                "reference": "4ceb3331f872c38cd03dfeb3ca6fca0486249f17"
+                "reference": "a7431178ac0f3b976f9992e17e09355b1cbd289d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/4ceb3331f872c38cd03dfeb3ca6fca0486249f17",
-                "reference": "4ceb3331f872c38cd03dfeb3ca6fca0486249f17",
+                "url": "https://api.github.com/repos/inc2734/wp-contents-outline/zipball/a7431178ac0f3b976f9992e17e09355b1cbd289d",
+                "reference": "a7431178ac0f3b976f9992e17e09355b1cbd289d",
                 "shasum": ""
             },
             "require": {
@@ -286,22 +291,22 @@
             "description": "A library for WordPress. This adds contents outline of the post.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-contents-outline/issues",
-                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.3.6"
+                "source": "https://github.com/inc2734/wp-contents-outline/tree/5.3.7"
             },
-            "time": "2026-07-15T05:36:33+00:00"
+            "time": "2026-10-25T02:42:23+00:00"
         },
         {
             "name": "inc2734/wp-custom-css-to-editor",
-            "version": "0.1.7",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-custom-css-to-editor.git",
-                "reference": "97b6faf5c0ae4e64d4999757d85c94b40dce9883"
+                "reference": "b0f6aa0629c8340efc603dcc0bd8151ff44958f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/97b6faf5c0ae4e64d4999757d85c94b40dce9883",
-                "reference": "97b6faf5c0ae4e64d4999757d85c94b40dce9883",
+                "url": "https://api.github.com/repos/inc2734/wp-custom-css-to-editor/zipball/b0f6aa0629c8340efc603dcc0bd8151ff44958f9",
+                "reference": "b0f6aa0629c8340efc603dcc0bd8151ff44958f9",
                 "shasum": ""
             },
             "require": {
@@ -335,22 +340,22 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-custom-css-to-editor/issues",
-                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.7"
+                "source": "https://github.com/inc2734/wp-custom-css-to-editor/tree/0.1.8"
             },
-            "time": "2026-08-15T15:43:57+00:00"
+            "time": "2026-10-25T03:00:38+00:00"
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "11.0.4",
+            "version": "11.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "5a9f810ef0a7752173343fc65590cbcd73f85983"
+                "reference": "3bceecf998dad550fd2689a843f2366e90f6e06d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/5a9f810ef0a7752173343fc65590cbcd73f85983",
-                "reference": "5a9f810ef0a7752173343fc65590cbcd73f85983",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/3bceecf998dad550fd2689a843f2366e90f6e06d",
+                "reference": "3bceecf998dad550fd2689a843f2366e90f6e06d",
                 "shasum": ""
             },
             "require": {
@@ -358,8 +363,10 @@
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "wp-coding-standards/wpcs": "^3.1",
+                "phpcompatibility/phpcompatibility-wp": "^2.1.8",
+                "phpunit/phpunit": "^9.6",
+                "squizlabs/php_codesniffer": "^3.13.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
                 "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
@@ -381,22 +388,22 @@
             "description": "A library for WordPress Customizer.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-customizer-framework/issues",
-                "source": "https://github.com/inc2734/wp-customizer-framework/tree/11.0.4"
+                "source": "https://github.com/inc2734/wp-customizer-framework/tree/11.0.5"
             },
-            "time": "2024-07-07T12:30:27+00:00"
+            "time": "2026-10-25T08:41:23+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
-            "version": "3.1.18",
+            "version": "3.1.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-github-theme-updater.git",
-                "reference": "2f0cb305ed0cf68d686438ff4338c853c9bb92cb"
+                "reference": "5bd508753b2ff95c6563895b62d6440e565ea5f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/2f0cb305ed0cf68d686438ff4338c853c9bb92cb",
-                "reference": "2f0cb305ed0cf68d686438ff4338c853c9bb92cb",
+                "url": "https://api.github.com/repos/inc2734/wp-github-theme-updater/zipball/5bd508753b2ff95c6563895b62d6440e565ea5f0",
+                "reference": "5bd508753b2ff95c6563895b62d6440e565ea5f0",
                 "shasum": ""
             },
             "require": {
@@ -405,8 +412,9 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
-                "wp-coding-standards/wpcs": "^3.1",
-                "yoast/phpunit-polyfills": "^1.1"
+                "phpunit/phpunit": "^9.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -427,34 +435,36 @@
             "description": "A library for WordPress that automatic theme updater with GitHub API.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-github-theme-updater/issues",
-                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.18"
+                "source": "https://github.com/inc2734/wp-github-theme-updater/tree/3.1.19"
             },
-            "time": "2026-08-03T03:02:01+00:00"
+            "time": "2026-10-26T01:43:09+00:00"
         },
         {
             "name": "inc2734/wp-helper",
-            "version": "1.0.4",
+            "version": "1.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-helper.git",
-                "reference": "70ec8ef0820f223fd60e4276196a46cad7da6fd7"
+                "reference": "f3b9bf1f75594f4b0605949228cfcb9f2bd4c9ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/70ec8ef0820f223fd60e4276196a46cad7da6fd7",
-                "reference": "70ec8ef0820f223fd60e4276196a46cad7da6fd7",
+                "url": "https://api.github.com/repos/inc2734/wp-helper/zipball/f3b9bf1f75594f4b0605949228cfcb9f2bd4c9ff",
+                "reference": "f3b9bf1f75594f4b0605949228cfcb9f2bd4c9ff",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/php-compatibility": "^9.3",
+                "phpunit/phpunit": "^9.6",
                 "sirbrillig/phpcs-variable-analysis": "^2.8",
-                "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.2",
-                "wp-phpunit/wp-phpunit": "^5.5"
+                "squizlabs/php_codesniffer": "^3.13.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
+                "wp-phpunit/wp-phpunit": "^5.5",
+                "yoast/phpunit-polyfills": "^1.1"
             },
             "type": "library",
             "autoload": {
@@ -474,9 +484,9 @@
             ],
             "support": {
                 "issues": "https://github.com/inc2734/wp-helper/issues",
-                "source": "https://github.com/inc2734/wp-helper/tree/1.0.4"
+                "source": "https://github.com/inc2734/wp-helper/tree/1.0.5"
             },
-            "time": "2021-04-14T01:20:05+00:00"
+            "time": "2026-10-25T04:21:01+00:00"
         },
         {
             "name": "inc2734/wp-like-me-box",
@@ -572,25 +582,28 @@
         },
         {
             "name": "inc2734/wp-ogp",
-            "version": "2.0.3",
+            "version": "2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-ogp.git",
-                "reference": "45eecd38662770f2ce4d53f097f23bbcc62a25f2"
+                "reference": "84e86e9c351dead7e0bad18034e2162d270f9697"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/45eecd38662770f2ce4d53f097f23bbcc62a25f2",
-                "reference": "45eecd38662770f2ce4d53f097f23bbcc62a25f2",
+                "url": "https://api.github.com/repos/inc2734/wp-ogp/zipball/84e86e9c351dead7e0bad18034e2162d270f9697",
+                "reference": "84e86e9c351dead7e0bad18034e2162d270f9697",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.6"
+                "php": ">=7.4"
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-                "wp-coding-standards/wpcs": "^2.3",
-                "yoast/phpunit-polyfills": "^1.0"
+                "phpcompatibility/phpcompatibility-wp": "^2.1.8",
+                "phpunit/phpunit": "^9.6",
+                "squizlabs/php_codesniffer": "^3.13.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -611,31 +624,33 @@
             "description": "A library for WordPress OGP.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-ogp/issues",
-                "source": "https://github.com/inc2734/wp-ogp/tree/2.0.3"
+                "source": "https://github.com/inc2734/wp-ogp/tree/2.0.4"
             },
-            "time": "2023-05-26T00:46:19+00:00"
+            "time": "2026-10-25T13:07:31+00:00"
         },
         {
             "name": "inc2734/wp-page-speed-optimization",
-            "version": "3.0.11",
+            "version": "3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-page-speed-optimization.git",
-                "reference": "aca223dae959744cc309a59196c489352f5ca233"
+                "reference": "511c65336c03e871239b306d8ac352a275f0efd0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/aca223dae959744cc309a59196c489352f5ca233",
-                "reference": "aca223dae959744cc309a59196c489352f5ca233",
+                "url": "https://api.github.com/repos/inc2734/wp-page-speed-optimization/zipball/511c65336c03e871239b306d8ac352a275f0efd0",
+                "reference": "511c65336c03e871239b306d8ac352a275f0efd0",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.4"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "wp-coding-standards/wpcs": "^2.3",
-                "yoast/phpunit-polyfills": "^1.0"
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
+                "wp-coding-standards/wpcs": "^3.1",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -656,9 +671,9 @@
             "description": "A library for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-page-speed-optimization/issues",
-                "source": "https://github.com/inc2734/wp-page-speed-optimization/tree/3.0.11"
+                "source": "https://github.com/inc2734/wp-page-speed-optimization/tree/3.0.12"
             },
-            "time": "2023-10-23T08:07:26+00:00"
+            "time": "2026-10-26T00:45:35+00:00"
         },
         {
             "name": "inc2734/wp-plugin-view-controller",
@@ -709,16 +724,16 @@
         },
         {
             "name": "inc2734/wp-profile-box",
-            "version": "2.6.0",
+            "version": "2.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-profile-box.git",
-                "reference": "4ca68eafbf673ea49fa26d00d204eee3c185f513"
+                "reference": "054021eabf14f7319ee7f2a22c123d6b2cd6b621"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/4ca68eafbf673ea49fa26d00d204eee3c185f513",
-                "reference": "4ca68eafbf673ea49fa26d00d204eee3c185f513",
+                "url": "https://api.github.com/repos/inc2734/wp-profile-box/zipball/054021eabf14f7319ee7f2a22c123d6b2cd6b621",
+                "reference": "054021eabf14f7319ee7f2a22c123d6b2cd6b621",
                 "shasum": ""
             },
             "require": {
@@ -726,8 +741,10 @@
             },
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
-                "phpcompatibility/phpcompatibility-wp": "*",
-                "wp-coding-standards/wpcs": "^3.1",
+                "phpcompatibility/phpcompatibility-wp": "^2.1.8",
+                "phpunit/phpunit": "^9.6",
+                "squizlabs/php_codesniffer": "^3.13.6",
+                "wp-coding-standards/wpcs": "^3.4.1",
                 "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
@@ -749,34 +766,34 @@
             "description": "A library to add profile box for WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-profile-box/issues",
-                "source": "https://github.com/inc2734/wp-profile-box/tree/2.6.0"
+                "source": "https://github.com/inc2734/wp-profile-box/tree/2.6.2"
             },
-            "time": "2024-11-30T06:44:18+00:00"
+            "time": "2026-10-25T07:10:13+00:00"
         },
         {
             "name": "inc2734/wp-pure-css-gallery",
-            "version": "3.0.1",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-pure-css-gallery.git",
-                "reference": "f9448109656229270f17c8e2e8715ac1ac07758f"
+                "reference": "b610f684896eee33662216e2449b97e9cc1a9b6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/f9448109656229270f17c8e2e8715ac1ac07758f",
-                "reference": "f9448109656229270f17c8e2e8715ac1ac07758f",
+                "url": "https://api.github.com/repos/inc2734/wp-pure-css-gallery/zipball/b610f684896eee33662216e2449b97e9cc1a9b6f",
+                "reference": "b610f684896eee33662216e2449b97e9cc1a9b6f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.6"
             },
             "require-dev": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^0.7",
-                "phpcompatibility/php-compatibility": "^9.3",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+                "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
                 "sirbrillig/phpcs-variable-analysis": "^2.10",
-                "squizlabs/php_codesniffer": "^3.5",
-                "wp-coding-standards/wpcs": "^2.3",
-                "wp-phpunit/wp-phpunit": "^5.6"
+                "wp-coding-standards/wpcs": "^3.1",
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -797,22 +814,22 @@
             "description": "A library to change WordPress gallery to pure css gallery.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-pure-css-gallery/issues",
-                "source": "https://github.com/inc2734/wp-pure-css-gallery/tree/3.0.1"
+                "source": "https://github.com/inc2734/wp-pure-css-gallery/tree/3.0.2"
             },
-            "time": "2021-10-04T01:46:29+00:00"
+            "time": "2026-10-25T16:52:39+00:00"
         },
         {
             "name": "inc2734/wp-seo",
-            "version": "5.2.4",
+            "version": "5.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-seo.git",
-                "reference": "1806da5414109277e869698814847f483d5f5d21"
+                "reference": "fd115bddcbfa5272f97e743240a2ce3ab4a4039e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/1806da5414109277e869698814847f483d5f5d21",
-                "reference": "1806da5414109277e869698814847f483d5f5d21",
+                "url": "https://api.github.com/repos/inc2734/wp-seo/zipball/fd115bddcbfa5272f97e743240a2ce3ab4a4039e",
+                "reference": "fd115bddcbfa5272f97e743240a2ce3ab4a4039e",
                 "shasum": ""
             },
             "require": {
@@ -822,6 +839,7 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
                 "wp-coding-standards/wpcs": "^3.1",
                 "yoast/phpunit-polyfills": "^2.0"
             },
@@ -844,22 +862,22 @@
             "description": "A library for SEO of WordPress.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-seo/issues",
-                "source": "https://github.com/inc2734/wp-seo/tree/5.2.4"
+                "source": "https://github.com/inc2734/wp-seo/tree/5.2.5"
             },
-            "time": "2024-11-30T01:25:57+00:00"
+            "time": "2026-10-25T14:42:57+00:00"
         },
         {
             "name": "inc2734/wp-share-buttons",
-            "version": "7.2.3",
+            "version": "7.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-share-buttons.git",
-                "reference": "b3a4593d10157142c90bc6a31e31442f3b636ac6"
+                "reference": "b637bd209a3a123b0ef1c9cf8676504f4edbf85b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/b3a4593d10157142c90bc6a31e31442f3b636ac6",
-                "reference": "b3a4593d10157142c90bc6a31e31442f3b636ac6",
+                "url": "https://api.github.com/repos/inc2734/wp-share-buttons/zipball/b637bd209a3a123b0ef1c9cf8676504f4edbf85b",
+                "reference": "b637bd209a3a123b0ef1c9cf8676504f4edbf85b",
                 "shasum": ""
             },
             "require": {
@@ -869,8 +887,9 @@
             "require-dev": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0",
                 "phpcompatibility/phpcompatibility-wp": "*",
+                "phpunit/phpunit": "^9.6",
                 "wp-coding-standards/wpcs": "^3.1",
-                "yoast/phpunit-polyfills": "^1.1"
+                "yoast/phpunit-polyfills": "^2.0"
             },
             "type": "library",
             "autoload": {
@@ -892,9 +911,9 @@
             "description": "A library for WordPress theme that adds social share buttons.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-share-buttons/issues",
-                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.2.3"
+                "source": "https://github.com/inc2734/wp-share-buttons/tree/7.2.4"
             },
-            "time": "2026-02-26T05:05:04+00:00"
+            "time": "2026-10-25T16:21:31+00:00"
         },
         {
             "name": "inc2734/wp-view-controller",
