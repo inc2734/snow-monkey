@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 30.0.1
+ * @version 31.1.0
  */
 
 namespace Framework;
@@ -373,17 +373,15 @@ class Helper {
 			return array();
 		}
 
-		$taxonomies = $args['taxonomy'];
-
-		$cache_key = 'snow-monkey-all-' . crc32( wp_json_encode( $taxonomies ) );
-		$terms     = wp_cache_get( $cache_key );
-		if ( is_array( $terms ) ) {
-			return $terms;
-		}
-
 		// @see https://developer.wordpress.org/reference/functions/get_terms/
 		if ( ! isset( $args['number'] ) ) {
 			$args['number'] = apply_filters( 'snow_monkey_get_terms_max_number', 100 );
+		}
+
+		$cache_key = 'snow-monkey-all-' . crc32( wp_json_encode( $args ) );
+		$terms     = wp_cache_get( $cache_key );
+		if ( is_array( $terms ) ) {
+			return $terms;
 		}
 
 		$terms = get_terms( $args );

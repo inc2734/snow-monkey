@@ -10,8 +10,9 @@ use Framework\Helper;
 
 $terms = Helper::get_terms(
 	array(
-		'taxonomy'   => 'category',
-		'hide_empty' => false,
+		'taxonomy'     => 'category',
+		'hide_empty'   => false,
+		'hierarchical' => false,
 	)
 );
 
