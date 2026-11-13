@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0ad9705a18a7bc42be3b36dfb9293288",
+    "content-hash": "3a1cfc238423e826f435a2b56bec4ef0",
     "packages": [
         {
             "name": "inc2734/wp-adsense",
@@ -346,16 +346,16 @@
         },
         {
             "name": "inc2734/wp-customizer-framework",
-            "version": "11.0.5",
+            "version": "11.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/inc2734/wp-customizer-framework.git",
-                "reference": "3bceecf998dad550fd2689a843f2366e90f6e06d"
+                "reference": "aee9060aebe81c5ffab29272a7d791ac83b335d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/3bceecf998dad550fd2689a843f2366e90f6e06d",
-                "reference": "3bceecf998dad550fd2689a843f2366e90f6e06d",
+                "url": "https://api.github.com/repos/inc2734/wp-customizer-framework/zipball/aee9060aebe81c5ffab29272a7d791ac83b335d9",
+                "reference": "aee9060aebe81c5ffab29272a7d791ac83b335d9",
                 "shasum": ""
             },
             "require": {
@@ -388,9 +388,9 @@
             "description": "A library for WordPress Customizer.",
             "support": {
                 "issues": "https://github.com/inc2734/wp-customizer-framework/issues",
-                "source": "https://github.com/inc2734/wp-customizer-framework/tree/11.0.5"
+                "source": "https://github.com/inc2734/wp-customizer-framework/tree/11.1.0"
             },
-            "time": "2026-10-25T08:41:23+00:00"
+            "time": "2026-11-13T05:31:11+00:00"
         },
         {
             "name": "inc2734/wp-github-theme-updater",
@@ -3446,5 +3446,5 @@
         "php": ">=7.4"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.6.0"
 }

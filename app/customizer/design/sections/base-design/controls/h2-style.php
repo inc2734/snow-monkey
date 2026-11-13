@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,17 +13,21 @@ Framework::control(
 	'select',
 	'h2-style',
 	array(
-		// translators: %1$s: heading element.
-		'label'           => sprintf( __( 'Design of the %1$s in articles', 'snow-monkey' ), 'h2' ),
-		'priority'        => 270,
-		'default'         => 'standard',
-		'choices'         => array(
-			''         => __( 'None', 'snow-monkey' ),
-			'standard' => __( 'Standard', 'snow-monkey' ),
-		),
-		'active_callback' => function () {
-			$handle = Helper::get_main_style_handle() . '-theme';
-			return wp_style_is( $handle ) && wp_styles()->registered[ $handle ]->src;
+		'default'          => 'standard',
+		'ui_args_callback' => function () {
+			return array(
+				// translators: %1$s: heading element.
+				'label'           => sprintf( __( 'Design of the %1$s in articles', 'snow-monkey' ), 'h2' ),
+				'priority'        => 270,
+				'choices'         => array(
+					''         => __( 'None', 'snow-monkey' ),
+					'standard' => __( 'Standard', 'snow-monkey' ),
+				),
+				'active_callback' => function () {
+					$handle = Helper::get_main_style_handle() . '-theme';
+					return wp_style_is( $handle ) && wp_styles()->registered[ $handle ]->src;
+				},
+			);
 		},
 	)
 );

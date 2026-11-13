@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,21 +12,25 @@ Framework::control(
 	'checkbox',
 	'home-page-display-page-header',
 	array(
-		'label'           => __( 'Display page header on homepage (You need to set the default page header or featured image)', 'snow-monkey' ),
-		'default'         => false,
-		'priority'        => 130,
-		'active_callback' => function () {
-			$page_on_front        = get_option( 'page_on_front' );
-			$use_static_frontpage = 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );
+		'default'          => false,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Display page header on homepage (You need to set the default page header or featured image)', 'snow-monkey' ),
+				'priority'        => 130,
+				'active_callback' => function () {
+					$page_on_front        = get_option( 'page_on_front' );
+					$use_static_frontpage = 'page' === get_option( 'show_on_front' ) && ! empty( $page_on_front );
 
-			$wp_page_template = get_post_meta( $page_on_front, '_wp_page_template', true );
-			$is_blank         = false !== strpos( $wp_page_template, 'blank.php' );
-			$is_blank_slim    = false !== strpos( $wp_page_template, 'blank-slim.php' );
-			$is_blank_content = false !== strpos( $wp_page_template, 'blank-content.php' );
+					$wp_page_template = get_post_meta( $page_on_front, '_wp_page_template', true );
+					$is_blank         = false !== strpos( $wp_page_template, 'blank.php' );
+					$is_blank_slim    = false !== strpos( $wp_page_template, 'blank-slim.php' );
+					$is_blank_content = false !== strpos( $wp_page_template, 'blank-content.php' );
 
-			$active = ! $is_blank && ! $is_blank_slim && ! $is_blank_content && $use_static_frontpage;
+					$active = ! $is_blank && ! $is_blank_slim && ! $is_blank_content && $use_static_frontpage;
 
-			return $active;
+					return $active;
+				},
+			);
 		},
 	)
 );

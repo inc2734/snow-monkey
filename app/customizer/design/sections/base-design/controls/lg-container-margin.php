@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,13 +13,17 @@ Framework::control(
 	'select',
 	'lg-container-margin',
 	array(
-		'label'    => __( 'Container left/right spaces on PC', 'snow-monkey' ),
-		'priority' => 151,
-		'default'  => '',
-		'choices'  => array(
-			''  => __( 'Standard', 'snow-monkey' ),
-			'l' => __( 'Wide', 'snow-monkey' ),
-		),
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Container left/right spaces on PC', 'snow-monkey' ),
+				'priority' => 151,
+				'choices'  => array(
+					''  => __( 'Standard', 'snow-monkey' ),
+					'l' => __( 'Wide', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

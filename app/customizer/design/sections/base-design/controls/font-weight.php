@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Framework\Helper;
@@ -15,25 +15,29 @@ foreach ( $font_family_settings as $font_family => $font_family_setting ) {
 		continue;
 	}
 
-	$choices = array();
-	foreach ( $font_family_setting['variation'] as $weight => $variation ) {
-		$choices[ $weight ] = $variation['label'];
-	}
-	ksort( $choices );
-
 	Framework::control(
 		'multiple-checkbox',
 		$font_family . '-font-weight',
 		array(
-			'label'             => __( 'Font weight', 'snow-monkey' ),
 			'default'           => $font_family_setting['default'],
-			'priority'          => 121,
-			'choices'           => $choices,
-			'active_callback'   => function () use ( $font_family ) {
-				return get_theme_mod( 'base-font' ) === $font_family;
-			},
 			'sanitize_callback' => function ( $value ) use ( $font_family_setting ) {
 				return $value ? $value : $font_family_setting['default'];
+			},
+			'ui_args_callback'  => function () use ( $font_family, $font_family_setting ) {
+				$choices = array();
+				foreach ( $font_family_setting['variation'] as $weight => $variation ) {
+					$choices[ $weight ] = $variation['label'];
+				}
+				ksort( $choices );
+
+				return array(
+					'label'           => __( 'Font weight', 'snow-monkey' ),
+					'priority'        => 121,
+					'choices'         => $choices,
+					'active_callback' => function () use ( $font_family ) {
+						return get_theme_mod( 'base-font' ) === $font_family;
+					},
+				);
 			},
 		)
 	);

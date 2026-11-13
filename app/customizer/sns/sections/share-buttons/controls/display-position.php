@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/display-position.php
  */
@@ -14,15 +14,19 @@ Framework::control(
 	'select',
 	'mwt-share-buttons-display-position',
 	array(
-		'type'     => 'option',
-		'label'    => __( 'Display position', 'snow-monkey' ),
-		'priority' => 120,
-		'default'  => 'top',
-		'choices'  => array(
-			'top'    => __( 'Top of contents', 'snow-monkey' ),
-			'bottom' => __( 'Bottom of contents', 'snow-monkey' ),
-			'both'   => __( 'Both', 'snow-monkey' ),
-		),
+		'type'             => 'option',
+		'default'          => 'top',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Display position', 'snow-monkey' ),
+				'priority' => 120,
+				'choices'  => array(
+					'top'    => __( 'Top of contents', 'snow-monkey' ),
+					'bottom' => __( 'Bottom of contents', 'snow-monkey' ),
+					'both'   => __( 'Both', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

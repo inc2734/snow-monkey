@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.2.1
+ * @version 31.1.0
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-display-item-published.php
  */
@@ -14,9 +14,13 @@ Framework::control(
 	'checkbox',
 	'post-entries-display-item-published',
 	array(
-		'label'    => __( 'Display the published date for each item in the entries', 'snow-monkey' ),
-		'priority' => 130,
-		'default'  => true,
+		'default'          => true,
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Display the published date for each item in the entries', 'snow-monkey' ),
+				'priority' => 130,
+			);
+		},
 	)
 );
 

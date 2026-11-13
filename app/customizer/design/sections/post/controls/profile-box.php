@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,11 +13,15 @@ Framework::control(
 	'checkbox',
 	'mwt-display-profile-box',
 	array(
-		'transport' => 'postMessage',
-		'label'     => __( 'Display profile box in posts', 'snow-monkey' ),
-		'priority'  => 120,
-		'type'      => 'option',
-		'default'   => true,
+		'transport'        => 'postMessage',
+		'type'             => 'option',
+		'default'          => true,
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Display profile box in posts', 'snow-monkey' ),
+				'priority' => 120,
+			);
+		},
 	)
 );
 

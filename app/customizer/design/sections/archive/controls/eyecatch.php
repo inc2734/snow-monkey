@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Framework\Helper;
@@ -13,15 +13,19 @@ Framework::control(
 	'select',
 	'archive-eyecatch',
 	array(
-		'label'       => __( 'Featured image position', 'snow-monkey' ),
-		'description' => sprintf(
-			/* translators: 1: archive */
-			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
-			__( 'archive', 'snow-monkey' )
-		),
-		'priority'    => 110,
-		'default'     => 'page-header',
-		'choices'     => Helper::eyecatch_position_choices(),
+		'default'          => 'page-header',
+		'ui_args_callback' => function () {
+			return array(
+				'label'       => __( 'Featured image position', 'snow-monkey' ),
+				'description' => sprintf(
+					/* translators: 1: archive */
+					__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
+					__( 'archive', 'snow-monkey' )
+				),
+				'priority'    => 110,
+				'choices'     => Helper::eyecatch_position_choices(),
+			);
+		},
 	)
 );
 

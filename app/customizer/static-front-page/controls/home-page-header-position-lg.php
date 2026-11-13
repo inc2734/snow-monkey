@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,17 +13,21 @@ Framework::control(
 	'select',
 	'home-page-header-position-lg',
 	array(
-		'label'           => __( 'Overwrite header position for PC', 'snow-monkey' ),
-		'priority'        => 141,
-		'default'         => 'inherit',
-		'choices'         => array_merge(
-			array(
-				'inherit' => __( 'Do not overwrite', 'snow-monkey' ),
-			),
-			Helper::header_position_choices()
-		),
-		'active_callback' => function () {
-			return 'left' !== get_theme_mod( 'header-layout' );
+		'default'          => 'inherit',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Overwrite header position for PC', 'snow-monkey' ),
+				'priority'        => 141,
+				'choices'         => array_merge(
+					array(
+						'inherit' => __( 'Do not overwrite', 'snow-monkey' ),
+					),
+					Helper::header_position_choices()
+				),
+				'active_callback' => function () {
+					return 'left' !== get_theme_mod( 'header-layout' );
+				},
+			);
 		},
 	)
 );

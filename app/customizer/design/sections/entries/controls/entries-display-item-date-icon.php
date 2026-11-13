@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,14 +12,18 @@ Framework::control(
 	'checkbox',
 	'post-entries-display-item-date-icon',
 	array(
-		'label'           => __( 'Display the icons for each item in the entries publish date / modified date', 'snow-monkey' ),
-		'priority'        => 150,
-		'default'         => false,
-		'active_callback' => function () {
-			$display_published_date = get_theme_mod( 'post-entries-display-item-published' );
-			$display_modified_date  = get_theme_mod( 'post-entries-display-item-modified' );
+		'default'          => false,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Display the icons for each item in the entries publish date / modified date', 'snow-monkey' ),
+				'priority'        => 150,
+				'active_callback' => function () {
+					$display_published_date = get_theme_mod( 'post-entries-display-item-published' );
+					$display_modified_date  = get_theme_mod( 'post-entries-display-item-modified' );
 
-			return $display_published_date || $display_modified_date;
+					return $display_published_date || $display_modified_date;
+				},
+			);
 		},
 	)
 );

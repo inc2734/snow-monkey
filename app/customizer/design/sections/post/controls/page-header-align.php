@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Framework\Helper;
@@ -13,12 +13,16 @@ Framework::control(
 	'select',
 	'post-page-header-align',
 	array(
-		'label'           => __( 'Page header alignment', 'snow-monkey' ),
-		'priority'        => 111,
-		'default'         => 'center',
-		'choices'         => Helper::page_header_align_choices(),
-		'active_callback' => function () {
-			return 'title-on-page-header' === get_theme_mod( 'post-eyecatch' );
+		'default'          => 'center',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Page header alignment', 'snow-monkey' ),
+				'priority'        => 111,
+				'choices'         => Helper::page_header_align_choices(),
+				'active_callback' => function () {
+					return 'title-on-page-header' === get_theme_mod( 'post-eyecatch' );
+				},
+			);
 		},
 	)
 );

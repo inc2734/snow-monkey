@@ -3,28 +3,32 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Framework\Helper;
 use Inc2734\WP_Customizer_Framework\Framework;
 
-$eyecatch_position_choices = Helper::eyecatch_position_choices();
-unset( $eyecatch_position_choices['content-top'] );
-
 Framework::control(
 	'select',
 	'woocommerce-single-eyecatch',
 	array(
-		'label'       => __( 'Featured image position', 'snow-monkey' ),
-		'description' => sprintf(
-			/* translators: 1: WooCommerce product */
-			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
-			__( 'WooCommerce product', 'snow-monkey' )
-		),
-		'priority'    => 110,
-		'default'     => 'none',
-		'choices'     => $eyecatch_position_choices,
+		'default'          => 'none',
+		'ui_args_callback' => function () {
+			$eyecatch_position_choices = Helper::eyecatch_position_choices();
+			unset( $eyecatch_position_choices['content-top'] );
+
+			return array(
+				'label'       => __( 'Featured image position', 'snow-monkey' ),
+				'description' => sprintf(
+					/* translators: 1: WooCommerce product */
+					__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
+					__( 'WooCommerce product', 'snow-monkey' )
+				),
+				'priority'    => 110,
+				'choices'     => $eyecatch_position_choices,
+			);
+		},
 	)
 );
 

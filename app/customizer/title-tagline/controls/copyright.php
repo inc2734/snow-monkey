@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -43,11 +43,15 @@ Framework::control(
 	'text',
 	'mwt-copyright',
 	array(
-		'transport'   => 'postMessage',
-		'label'       => __( 'Copyright', 'snow-monkey' ),
-		'description' => __( 'HTML usable', 'snow-monkey' ),
-		'default'     => $copyright,
-		'type'        => 'option',
+		'transport'        => 'postMessage',
+		'default'          => $copyright,
+		'type'             => 'option',
+		'ui_args_callback' => function () {
+			return array(
+				'label'       => __( 'Copyright', 'snow-monkey' ),
+				'description' => __( 'HTML usable', 'snow-monkey' ),
+			);
+		},
 	)
 );
 

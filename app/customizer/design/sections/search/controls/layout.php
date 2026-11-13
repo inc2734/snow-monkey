@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 29.1.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -20,30 +20,34 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'select',
 		'search-' . $custom_post_type . '-layout',
 		array(
-			'label'       => __( 'Page layout', 'snow-monkey' ),
-			'description' => sprintf(
-				/* translators: 1: archive */
-				__( 'Select page layout for %1$s page.', 'snow-monkey' ),
-				sprintf(
-					/* translators: 1: Custom post type label */
-					__( '%1$s search resulsts', 'snow-monkey' ),
-					$custom_post_type_object ? $custom_post_type_object->label : __( 'Basic', 'snow-monkey' )
-				)
-			),
-			'priority'    => 110,
-			'default'     => '',
-			'choices'     => is_customize_preview()
-				? array_merge(
-					array(
-						'' => sprintf(
+			'default'          => '',
+			'ui_args_callback' => function () use ( $custom_post_type_object ) {
+				return array(
+					'label'       => __( 'Page layout', 'snow-monkey' ),
+					'description' => sprintf(
+						/* translators: 1: archive */
+						__( 'Select page layout for %1$s page.', 'snow-monkey' ),
+						sprintf(
 							/* translators: 1: Custom post type label */
-							__( 'Same as the %1$s archive page layout', 'snow-monkey' ),
-							strtolower( $custom_post_type_object ? $custom_post_type_object->label : __( 'post', 'snow-monkey' ) )
-						),
+							__( '%1$s search resulsts', 'snow-monkey' ),
+							$custom_post_type_object ? $custom_post_type_object->label : __( 'Basic', 'snow-monkey' )
+						)
 					),
-					Helper::get_wrapper_templates()
-				)
-				: array(),
+					'priority'    => 110,
+					'choices'     => is_customize_preview()
+						? array_merge(
+							array(
+								'' => sprintf(
+									/* translators: 1: Custom post type label */
+									__( 'Same as the %1$s archive page layout', 'snow-monkey' ),
+									strtolower( $custom_post_type_object ? $custom_post_type_object->label : __( 'post', 'snow-monkey' ) )
+								),
+							),
+							Helper::get_wrapper_templates()
+						)
+						: array(),
+				);
+			},
 		)
 	);
 }

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -15,22 +15,26 @@ Framework::control(
 	'select',
 	'page-layout',
 	array(
-		'label'       => __( 'Page layout', 'snow-monkey' ),
-		'description' => sprintf(
-			/* translators: 1: Post type label */
-			__( 'Select page layout for %1$s page.', 'snow-monkey' ),
-			$wp_post_type->label
-		),
-		'priority'    => 100,
-		'default'     => '',
-		'choices'     => is_customize_preview()
-			? array_merge(
-				array(
-					'' => __( 'Same as the post page layout', 'snow-monkey' ),
+		'default'          => '',
+		'ui_args_callback' => function () use ( $wp_post_type ) {
+			return array(
+				'label'       => __( 'Page layout', 'snow-monkey' ),
+				'description' => sprintf(
+					/* translators: 1: Post type label */
+					__( 'Select page layout for %1$s page.', 'snow-monkey' ),
+					$wp_post_type->label
 				),
-				Helper::get_wrapper_templates()
-			)
-			: array(),
+				'priority'    => 100,
+				'choices'     => is_customize_preview()
+					? array_merge(
+						array(
+							'' => __( 'Same as the post page layout', 'snow-monkey' ),
+						),
+						Helper::get_wrapper_templates()
+					)
+					: array(),
+			);
+		},
 	)
 );
 

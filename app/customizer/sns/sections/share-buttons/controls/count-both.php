@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/count-both.php
  */
@@ -14,13 +14,17 @@ Framework::control(
 	'checkbox',
 	'mwt-share-buttons-count-both',
 	array(
-		'type'            => 'option',
-		'label'           => __( 'Count both http and https', 'snow-monkey' ),
-		'description'     => __( 'In the case of the http site, only http will be counted regardless of the setting.', 'snow-monkey' ),
-		'priority'        => 140,
-		'default'         => true,
-		'active_callback' => function () {
-			return 'official' !== get_option( 'mwt-share-buttons-type' );
+		'type'             => 'option',
+		'default'          => true,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Count both http and https', 'snow-monkey' ),
+				'description'     => __( 'In the case of the http site, only http will be counted regardless of the setting.', 'snow-monkey' ),
+				'priority'        => 140,
+				'active_callback' => function () {
+					return 'official' !== get_option( 'mwt-share-buttons-type' );
+				},
+			);
 		},
 	)
 );

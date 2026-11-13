@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 11.3.3
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-site.php
  */
@@ -14,15 +14,19 @@ Framework::control(
 	'text',
 	'mwt-twitter-site',
 	array(
-		'label'       => __( 'twitter:site', 'snow-monkey' ),
-		'priority'    => 110,
-		'description' => sprintf(
-			/* translators: 1: @username */
-			__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
-			'<code>@username</code>'
-		),
-		'default'     => '@',
-		'type'        => 'option',
+		'default'          => '@',
+		'type'             => 'option',
+		'ui_args_callback' => function () {
+			return array(
+				'label'       => __( 'twitter:site', 'snow-monkey' ),
+				'priority'    => 110,
+				'description' => sprintf(
+					/* translators: 1: @username */
+					__( 'The Twitter account name of the site. Please enter in the form %1$s.', 'snow-monkey' ),
+					'<code>@username</code>'
+				),
+			);
+		},
 	)
 );
 

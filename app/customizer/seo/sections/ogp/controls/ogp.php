@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/ogp/controls/ogp.php
  */
@@ -14,10 +14,14 @@ Framework::control(
 	'checkbox',
 	'mwt-ogp',
 	array(
-		'label'    => __( 'Output OGP meta tag', 'snow-monkey' ),
-		'type'     => 'option',
-		'priority' => 100,
-		'default'  => true,
+		'type'             => 'option',
+		'default'          => true,
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Output OGP meta tag', 'snow-monkey' ),
+				'priority' => 100,
+			);
+		},
 	)
 );
 

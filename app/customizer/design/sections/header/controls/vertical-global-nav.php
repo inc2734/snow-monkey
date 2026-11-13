@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  *
  * renamed: app/customizer/layout/sections/header/controls/vertial-global-nav.php
  */
@@ -14,12 +14,16 @@ Framework::control(
 	'checkbox',
 	'vertical-global-nav',
 	array(
-		'label'           => __( 'Make global navigation vertical', 'snow-monkey' ),
-		'priority'        => 105,
-		'default'         => false,
-		'active_callback' => function () {
-			return '2row' !== get_theme_mod( 'header-layout' )
-					&& 'left' !== get_theme_mod( 'header-layout' );
+		'default'          => false,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Make global navigation vertical', 'snow-monkey' ),
+				'priority'        => 105,
+				'active_callback' => function () {
+					return '2row' !== get_theme_mod( 'header-layout' )
+							&& 'left' !== get_theme_mod( 'header-layout' );
+				},
+			);
 		},
 	)
 );

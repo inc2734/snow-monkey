@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 9.0.0
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/twitter-cards/controls/twitter-cards.php
  */
@@ -14,16 +14,20 @@ Framework::control(
 	'select',
 	'mwt-twitter-card',
 	array(
-		'label'       => __( 'twitter:card', 'snow-monkey' ),
-		'description' => __( 'Twitter Cards format', 'snow-monkey' ),
-		'priority'    => 100,
-		'default'     => 'summary',
-		'type'        => 'option',
-		'choices'     => array(
-			''                    => __( 'Do not use', 'snow-monkey' ),
-			'summary'             => 'Summary Card',
-			'summary_large_image' => 'Summary Card with Large Image',
-		),
+		'default'          => 'summary',
+		'type'             => 'option',
+		'ui_args_callback' => function () {
+			return array(
+				'label'       => __( 'twitter:card', 'snow-monkey' ),
+				'description' => __( 'Twitter Cards format', 'snow-monkey' ),
+				'priority'    => 100,
+				'choices'     => array(
+					''                    => __( 'Do not use', 'snow-monkey' ),
+					'summary'             => 'Summary Card',
+					'summary_large_image' => 'Summary Card with Large Image',
+				),
+			);
+		},
 	)
 );
 

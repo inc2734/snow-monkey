@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  *
  * renamed: app/customizer/design/sections/base-design/controls/custom-logo-scale.php
  */
@@ -15,29 +15,33 @@ Framework::control(
 	'number',
 	'sm-logo-scale',
 	array(
-		'label'           => __( 'Custom logo scale (%) on mobile device', 'snow-monkey' ),
-		'priority'        => 130,
-		'default'         => 25,
-		'input_attrs'     => array(
-			'min' => 1,
-			'max' => 50,
-		),
-		'active_callback' => function () {
-			if ( ! Helper::use_auto_custom_logo_size() ) {
-				return false;
-			}
+		'default'          => 25,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Custom logo scale (%) on mobile device', 'snow-monkey' ),
+				'priority'        => 130,
+				'input_attrs'     => array(
+					'min' => 1,
+					'max' => 50,
+				),
+				'active_callback' => function () {
+					if ( ! Helper::use_auto_custom_logo_size() ) {
+						return false;
+					}
 
-			$custom_logo = get_custom_logo();
-			if ( ! $custom_logo ) {
-				return false;
-			}
+					$custom_logo = get_custom_logo();
+					if ( ! $custom_logo ) {
+						return false;
+					}
 
-			preg_match( '/height="(\d+(\.\d+)?)"/', $custom_logo, $reg );
-			if ( ! isset( $reg[1] ) ) {
-				return false;
-			}
+					preg_match( '/height="(\d+(\.\d+)?)"/', $custom_logo, $reg );
+					if ( ! isset( $reg[1] ) ) {
+						return false;
+					}
 
-			return true;
+					return true;
+				},
+			);
 		},
 	)
 );

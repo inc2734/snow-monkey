@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/type.php
  */
@@ -14,17 +14,21 @@ Framework::control(
 	'select',
 	'mwt-share-buttons-type',
 	array(
-		'type'     => 'option',
-		'label'    => __( 'Type', 'snow-monkey' ),
-		'priority' => 110,
-		'default'  => 'balloon',
-		'choices'  => array(
-			'balloon'    => __( 'Balloon', 'snow-monkey' ),
-			'horizontal' => __( 'Horizontal', 'snow-monkey' ),
-			'icon'       => __( 'Icon', 'snow-monkey' ),
-			'block'      => __( 'Block', 'snow-monkey' ),
-			'official'   => __( 'Official', 'snow-monkey' ),
-		),
+		'type'             => 'option',
+		'default'          => 'balloon',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Type', 'snow-monkey' ),
+				'priority' => 110,
+				'choices'  => array(
+					'balloon'    => __( 'Balloon', 'snow-monkey' ),
+					'horizontal' => __( 'Horizontal', 'snow-monkey' ),
+					'icon'       => __( 'Icon', 'snow-monkey' ),
+					'block'      => __( 'Block', 'snow-monkey' ),
+					'official'   => __( 'Official', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

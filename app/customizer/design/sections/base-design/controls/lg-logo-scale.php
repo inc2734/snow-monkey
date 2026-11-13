@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,29 +13,33 @@ Framework::control(
 	'number',
 	'lg-logo-scale',
 	array(
-		'label'           => __( 'Custom logo scale (%) on PC', 'snow-monkey' ),
-		'priority'        => 131,
-		'default'         => 50,
-		'input_attrs'     => array(
-			'min' => 1,
-			'max' => 100,
-		),
-		'active_callback' => function () {
-			if ( ! Helper::use_auto_custom_logo_size() ) {
-				return false;
-			}
+		'default'          => 50,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Custom logo scale (%) on PC', 'snow-monkey' ),
+				'priority'        => 131,
+				'input_attrs'     => array(
+					'min' => 1,
+					'max' => 100,
+				),
+				'active_callback' => function () {
+					if ( ! Helper::use_auto_custom_logo_size() ) {
+						return false;
+					}
 
-			$custom_logo = get_custom_logo();
-			if ( ! $custom_logo ) {
-				return false;
-			}
+					$custom_logo = get_custom_logo();
+					if ( ! $custom_logo ) {
+						return false;
+					}
 
-			preg_match( '/height="(\d+(\.\d+)?)"/', $custom_logo, $reg );
-			if ( ! isset( $reg[1] ) ) {
-				return false;
-			}
+					preg_match( '/height="(\d+(\.\d+)?)"/', $custom_logo, $reg );
+					if ( ! isset( $reg[1] ) ) {
+						return false;
+					}
 
-			return true;
+					return true;
+				},
+			);
 		},
 	)
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.1.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,13 +13,17 @@ Framework::control(
 	'select',
 	'sm-container-margin',
 	array(
-		'label'    => __( 'Container left/right spaces on mobile device', 'snow-monkey' ),
-		'priority' => 150,
-		'default'  => '',
-		'choices'  => array(
-			's' => __( 'Narrow', 'snow-monkey' ),
-			''  => __( 'Standard', 'snow-monkey' ),
-		),
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Container left/right spaces on mobile device', 'snow-monkey' ),
+				'priority' => 150,
+				'choices'  => array(
+					's' => __( 'Narrow', 'snow-monkey' ),
+					''  => __( 'Standard', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

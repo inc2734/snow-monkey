@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/share-buttons/controls/cache-seconds.php
  */
@@ -14,12 +14,16 @@ Framework::control(
 	'text',
 	'mwt-share-buttons-cache-seconds',
 	array(
-		'label'           => __( 'Share counts cache time (seconds)', 'snow-monkey' ),
-		'priority'        => 130,
-		'default'         => 300,
-		'type'            => 'option',
-		'active_callback' => function () {
-			return 'official' !== get_option( 'mwt-share-buttons-type' );
+		'default'          => 300,
+		'type'             => 'option',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Share counts cache time (seconds)', 'snow-monkey' ),
+				'priority'        => 130,
+				'active_callback' => function () {
+					return 'official' !== get_option( 'mwt-share-buttons-type' );
+				},
+			);
 		},
 	)
 );

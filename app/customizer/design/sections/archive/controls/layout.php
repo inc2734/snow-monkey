@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  *
  * renamed: app/customizer/layout/sections/archive-page/controls/layout.php
  */
@@ -15,15 +15,19 @@ Framework::control(
 	'select',
 	'archive-post-layout',
 	array(
-		'label'       => __( 'Page layout', 'snow-monkey' ),
-		'description' => sprintf(
-			/* translators: 1: archive */
-			__( 'Select page layout for %1$s page.', 'snow-monkey' ),
-			__( 'archive', 'snow-monkey' )
-		),
-		'default'     => 'one-column',
-		'choices'     => is_customize_preview() ? Helper::get_wrapper_templates() : array(),
-		'priority'    => 100,
+		'default'          => 'one-column',
+		'ui_args_callback' => function () {
+			return array(
+				'label'       => __( 'Page layout', 'snow-monkey' ),
+				'description' => sprintf(
+					/* translators: 1: archive */
+					__( 'Select page layout for %1$s page.', 'snow-monkey' ),
+					__( 'archive', 'snow-monkey' )
+				),
+				'choices'     => is_customize_preview() ? Helper::get_wrapper_templates() : array(),
+				'priority'    => 100,
+			);
+		},
 	)
 );
 

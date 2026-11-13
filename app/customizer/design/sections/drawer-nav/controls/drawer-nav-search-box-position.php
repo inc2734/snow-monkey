@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.5.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,15 +12,19 @@ Framework::control(
 	'select',
 	'drawer-nav-search-box-position',
 	array(
-		'label'           => __( 'Search box position', 'snow-monkey' ),
-		'priority'        => 150,
-		'default'         => 'bottom',
-		'choices'         => array(
-			'top'    => __( 'Top', 'snow-monkey' ),
-			'bottom' => __( 'Bottom', 'snow-monkey' ),
-		),
-		'active_callback' => function () {
-			return get_theme_mod( 'display-drawer-nav-search-box' );
+		'default'          => 'bottom',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Search box position', 'snow-monkey' ),
+				'priority'        => 150,
+				'choices'         => array(
+					'top'    => __( 'Top', 'snow-monkey' ),
+					'bottom' => __( 'Bottom', 'snow-monkey' ),
+				),
+				'active_callback' => function () {
+					return get_theme_mod( 'display-drawer-nav-search-box' );
+				},
+			);
 		},
 	)
 );

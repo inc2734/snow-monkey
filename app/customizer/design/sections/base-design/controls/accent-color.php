@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,9 +12,13 @@ Framework::control(
 	'color',
 	'accent-color',
 	array(
-		'label'    => __( 'Accent color', 'snow-monkey' ),
-		'default'  => '#cd162c',
-		'priority' => 100,
+		'default'          => '#cd162c',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Accent color', 'snow-monkey' ),
+				'priority' => 100,
+			);
+		},
 	)
 );
 

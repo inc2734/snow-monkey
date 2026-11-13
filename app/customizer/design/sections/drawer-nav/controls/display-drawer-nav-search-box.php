@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.5.0
+ * @version 31.1.0
  *
  * renamed: app/customizer/design/sections/base-design/controls/display-drawer-nav-search-box.php
  */
@@ -14,11 +14,15 @@ Framework::control(
 	'checkbox',
 	'display-drawer-nav-search-box',
 	array(
-		'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
-		'priority'        => 140,
-		'default'         => true,
-		'active_callback' => function () {
-			return has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
+		'default'          => true,
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Display the search box in drawer navigation', 'snow-monkey' ),
+				'priority'        => 140,
+				'active_callback' => function () {
+					return has_nav_menu( 'drawer-nav' ) || has_nav_menu( 'drawer-sub-nav' );
+				},
+			);
 		},
 	)
 );

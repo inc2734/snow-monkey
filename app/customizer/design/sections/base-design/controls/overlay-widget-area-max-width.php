@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  *
  * renamed: app/customizer/layout/sections/base-layout/controls/overlay-widget-area-max-width.php
  */
@@ -15,16 +15,20 @@ Framework::control(
 	'select',
 	'overlay-widget-area-max-width',
 	array(
-		'label'           => __( 'Overlay widget area max width', 'snow-monkey' ),
-		'description'     => __( 'You can set max width of overlay widget area', 'snow-monkey' ),
-		'priority'        => 190,
-		'default'         => 'false',
-		'choices'         => array(
-			'false' => __( 'Wide width', 'snow-monkey' ),
-			'true'  => __( 'Slim width', 'snow-monkey' ),
-		),
-		'active_callback' => function () {
-			return Helper::is_active_sidebar( 'overlay-widget-area' );
+		'default'          => 'false',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Overlay widget area max width', 'snow-monkey' ),
+				'description'     => __( 'You can set max width of overlay widget area', 'snow-monkey' ),
+				'priority'        => 190,
+				'choices'         => array(
+					'false' => __( 'Wide width', 'snow-monkey' ),
+					'true'  => __( 'Slim width', 'snow-monkey' ),
+				),
+				'active_callback' => function () {
+					return Helper::is_active_sidebar( 'overlay-widget-area' );
+				},
+			);
 		},
 	)
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,9 +12,13 @@ Framework::control(
 	'checkbox',
 	'display-page-top',
 	array(
-		'label'    => __( 'Display the page top button', 'snow-monkey' ),
-		'priority' => 260,
-		'default'  => true,
+		'default'          => true,
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Display the page top button', 'snow-monkey' ),
+				'priority' => 260,
+			);
+		},
 	)
 );
 

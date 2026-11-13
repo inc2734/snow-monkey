@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,13 +12,17 @@ Framework::control(
 	'select',
 	'drawer-nav-type',
 	array(
-		'label'    => __( 'Drawer navigation type', 'snow-monkey' ),
-		'priority' => 110,
-		'default'  => '',
-		'choices'  => array(
-			''        => __( 'Default', 'snow-monkey' ),
-			'overall' => __( 'Overall', 'snow-monkey' ),
-		),
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Drawer navigation type', 'snow-monkey' ),
+				'priority' => 110,
+				'choices'  => array(
+					''        => __( 'Default', 'snow-monkey' ),
+					'overall' => __( 'Overall', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

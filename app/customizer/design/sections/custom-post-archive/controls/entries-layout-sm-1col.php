@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,17 +16,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'checkbox',
 		$custom_post_type . '-entries-layout-sm-1col',
 		array(
-			'label'             => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
-			'priority'          => 170,
 			'default'           => false,
-			'active_callback'   => function () use ( $custom_post_type ) {
-				$is_multi_cols_pattern = in_array(
-					get_theme_mod( $custom_post_type . '-entries-layout' ),
-					array( 'rich-media', 'panel' ),
-					true
-				);
-				return $is_multi_cols_pattern;
-			},
 			'sanitize_callback' => function ( $value ) use ( $custom_post_type ) {
 				$is_multi_cols_pattern = in_array(
 					get_theme_mod( $custom_post_type . '-entries-layout' ),
@@ -34,6 +24,20 @@ foreach ( $custom_post_types as $custom_post_type ) {
 					true
 				);
 				return $is_multi_cols_pattern && $value ? $value : '';
+			},
+			'ui_args_callback'  => function () use ( $custom_post_type ) {
+				return array(
+					'label'           => __( 'Make the entries one column on mobile device', 'snow-monkey' ),
+					'priority'        => 170,
+					'active_callback' => function () use ( $custom_post_type ) {
+						$is_multi_cols_pattern = in_array(
+							get_theme_mod( $custom_post_type . '-entries-layout' ),
+							array( 'rich-media', 'panel' ),
+							true
+						);
+						return $is_multi_cols_pattern;
+					},
+				);
 			},
 		)
 	);

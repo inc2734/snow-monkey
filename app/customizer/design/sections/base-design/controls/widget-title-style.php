@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -14,16 +14,20 @@ Framework::control(
 	'select',
 	'widget-title-style',
 	array(
-		'label'           => __( 'Design of widget-titles', 'snow-monkey' ),
-		'priority'        => 280,
-		'default'         => 'standard',
-		'choices'         => array(
-			''         => __( 'None', 'snow-monkey' ),
-			'standard' => __( 'Standard', 'snow-monkey' ),
-		),
-		'active_callback' => function () {
-			$handle = Helper::get_main_style_handle() . '-theme';
-			return wp_style_is( $handle ) && wp_styles()->registered[ $handle ]->src;
+		'default'          => 'standard',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Design of widget-titles', 'snow-monkey' ),
+				'priority'        => 280,
+				'choices'         => array(
+					''         => __( 'None', 'snow-monkey' ),
+					'standard' => __( 'Standard', 'snow-monkey' ),
+				),
+				'active_callback' => function () {
+					$handle = Helper::get_main_style_handle() . '-theme';
+					return wp_style_is( $handle ) && wp_styles()->registered[ $handle ]->src;
+				},
+			);
 		},
 	)
 );

@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  *
  * renamed: app/customizer/seo-sns/sections/crawler/controls/robots-noindex.php
  */
@@ -14,18 +14,22 @@ Framework::control(
 	'multiple-checkbox',
 	'mwt-robots-noindex',
 	array(
-		'type'     => 'option',
-		'label'    => __( 'noindex settings', 'snow-monkey' ),
-		'priority' => 100,
-		'default'  => '',
-		'choices'  => array(
-			'category' => __( 'Set category pages to noindex', 'snow-monkey' ),
-			'post_tag' => __( 'Set tag pages to noindex', 'snow-monkey' ),
-			'author'   => __( 'Set author pages to noindex', 'snow-monkey' ),
-			'year'     => __( 'Set year pages to noindex', 'snow-monkey' ),
-			'month'    => __( 'Set month pages to noindex', 'snow-monkey' ),
-			'day'      => __( 'Set day pages to noindex', 'snow-monkey' ),
-		),
+		'type'             => 'option',
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'noindex settings', 'snow-monkey' ),
+				'priority' => 100,
+				'choices'  => array(
+					'category' => __( 'Set category pages to noindex', 'snow-monkey' ),
+					'post_tag' => __( 'Set tag pages to noindex', 'snow-monkey' ),
+					'author'   => __( 'Set author pages to noindex', 'snow-monkey' ),
+					'year'     => __( 'Set year pages to noindex', 'snow-monkey' ),
+					'month'    => __( 'Set month pages to noindex', 'snow-monkey' ),
+					'day'      => __( 'Set day pages to noindex', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

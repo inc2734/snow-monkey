@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,15 +13,19 @@ Framework::control(
 	'select',
 	'gnav-current-effect',
 	array(
-		'label'    => __( 'Global navigation current view effect', 'snow-monkey' ),
-		'priority' => 165,
-		'default'  => 'same-hover-effect',
-		'choices'  => array(
-			'same-hover-effect' => __( 'Same as hover effect', 'snow-monkey' ),
-			'text-color'        => __( 'Text color reversal', 'snow-monkey' ),
-			'underline'         => __( 'Underline', 'snow-monkey' ),
-			''                  => __( 'None', 'snow-monkey' ),
-		),
+		'default'          => 'same-hover-effect',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Global navigation current view effect', 'snow-monkey' ),
+				'priority' => 165,
+				'choices'  => array(
+					'same-hover-effect' => __( 'Same as hover effect', 'snow-monkey' ),
+					'text-color'        => __( 'Text color reversal', 'snow-monkey' ),
+					'underline'         => __( 'Underline', 'snow-monkey' ),
+					''                  => __( 'None', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

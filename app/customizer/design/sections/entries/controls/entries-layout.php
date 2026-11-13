@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  *
  * renamed: app/customizer/design/sections/base-design/controls/entries-layout.php
  * renamed: app/customizer/layout/sections/archive/controls/entries-layout.php
@@ -15,22 +15,26 @@ Framework::control(
 	'select',
 	'post-entries-layout',
 	array(
-		'label'    => __( 'Entries layout', 'snow-monkey' ),
-		'priority' => 100,
-		'default'  => 'rich-media',
-		'choices'  => array(
-			'rich-media'  => __( 'Rich media', 'snow-monkey' ),
-			'simple'      => __( 'Simple', 'snow-monkey' ),
-			'text'        => __( 'Text', 'snow-monkey' ),
-			'text2'       => __( 'Text 2', 'snow-monkey' ),
-			'panel'       => __( 'Panels', 'snow-monkey' ),
-			'carousel'    => sprintf(
-				// translators: %1$s: entries layout.
-				__( 'Carousel (%1$s)', 'snow-monkey' ),
-				__( 'Rich media', 'snow-monkey' )
-			),
-			'large-image' => __( 'Large image', 'snow-monkey' ),
-		),
+		'default'          => 'rich-media',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Entries layout', 'snow-monkey' ),
+				'priority' => 100,
+				'choices'  => array(
+					'rich-media'  => __( 'Rich media', 'snow-monkey' ),
+					'simple'      => __( 'Simple', 'snow-monkey' ),
+					'text'        => __( 'Text', 'snow-monkey' ),
+					'text2'       => __( 'Text 2', 'snow-monkey' ),
+					'panel'       => __( 'Panels', 'snow-monkey' ),
+					'carousel'    => sprintf(
+						// translators: %1$s: entries layout.
+						__( 'Carousel (%1$s)', 'snow-monkey' ),
+						__( 'Rich media', 'snow-monkey' )
+					),
+					'large-image' => __( 'Large image', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

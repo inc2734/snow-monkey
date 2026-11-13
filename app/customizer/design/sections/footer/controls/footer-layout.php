@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,10 +13,14 @@ Framework::control(
 	'select',
 	'footer-layout',
 	array(
-		'label'    => __( 'Footer layout', 'snow-monkey' ),
-		'priority' => 100,
-		'default'  => 'footer',
-		'choices'  => is_customize_preview() ? Helper::get_footer_templates() : array(),
+		'default'          => 'footer',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Footer layout', 'snow-monkey' ),
+				'priority' => 100,
+				'choices'  => is_customize_preview() ? Helper::get_footer_templates() : array(),
+			);
+		},
 	)
 );
 

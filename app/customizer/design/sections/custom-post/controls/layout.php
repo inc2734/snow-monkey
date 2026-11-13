@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -18,22 +18,26 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'select',
 		$custom_post_type . '-layout',
 		array(
-			'label'       => __( 'Page layout', 'snow-monkey' ),
-			'description' => sprintf(
-				/* translators: 1: Post type label */
-				__( 'Select page layout for %1$s page.', 'snow-monkey' ),
-				$custom_post_type_object->label
-			),
-			'priority'    => 110,
-			'default'     => '',
-			'choices'     => is_customize_preview()
-				? array_merge(
-					array(
-						'' => __( 'Same as the post page layout', 'snow-monkey' ),
+			'default'          => '',
+			'ui_args_callback' => function () use ( $custom_post_type_object ) {
+				return array(
+					'label'       => __( 'Page layout', 'snow-monkey' ),
+					'description' => sprintf(
+						/* translators: 1: Post type label */
+						__( 'Select page layout for %1$s page.', 'snow-monkey' ),
+						$custom_post_type_object->label
 					),
-					Helper::get_wrapper_templates()
-				)
-				: array(),
+					'priority'    => 110,
+					'choices'     => is_customize_preview()
+						? array_merge(
+							array(
+								'' => __( 'Same as the post page layout', 'snow-monkey' ),
+							),
+							Helper::get_wrapper_templates()
+						)
+						: array(),
+				);
+			},
 		)
 	);
 }

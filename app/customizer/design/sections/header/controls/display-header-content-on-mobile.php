@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  *
  * renamed: app/customizer/layout/sections/header/controls/display-header-content-on-mobile.php
  */
@@ -14,9 +14,13 @@ Framework::control(
 	'checkbox',
 	'display-header-content-on-mobile',
 	array(
-		'label'    => __( 'Display header content on mobile too.', 'snow-monkey' ),
-		'priority' => 140,
-		'default'  => false,
+		'default'          => false,
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Display header content on mobile too.', 'snow-monkey' ),
+				'priority' => 140,
+			);
+		},
 	)
 );
 

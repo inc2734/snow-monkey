@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,17 +13,21 @@ Framework::control(
 	'select',
 	'bbpress-archive-page-layout',
 	array(
-		'label'    => __( 'bbPress archive page layout', 'snow-monkey' ),
-		'priority' => 100,
-		'default'  => '',
-		'choices'  => is_customize_preview()
-			? array_merge(
-				array(
-					'' => __( 'Same as the page layout', 'snow-monkey' ),
-				),
-				Helper::get_wrapper_templates()
-			)
-			: array(),
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'bbPress archive page layout', 'snow-monkey' ),
+				'priority' => 100,
+				'choices'  => is_customize_preview()
+					? array_merge(
+						array(
+							'' => __( 'Same as the page layout', 'snow-monkey' ),
+						),
+						Helper::get_wrapper_templates()
+					)
+					: array(),
+			);
+		},
 	)
 );
 

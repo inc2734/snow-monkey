@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 20.1.1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,15 +12,19 @@ Framework::control(
 	'select',
 	'post-entries-gap',
 	array(
-		'label'    => __( 'The gap between each item in the entries', 'snow-monkey' ),
-		'priority' => 110,
-		'default'  => '',
-		'choices'  => array(
-			''  => __( 'Default', 'snow-monkey' ),
-			's' => __( 'S', 'snow-monkey' ),
-			'm' => __( 'M', 'snow-monkey' ),
-			'l' => __( 'L', 'snow-monkey' ),
-		),
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'The gap between each item in the entries', 'snow-monkey' ),
+				'priority' => 110,
+				'choices'  => array(
+					''  => __( 'Default', 'snow-monkey' ),
+					's' => __( 'S', 'snow-monkey' ),
+					'm' => __( 'M', 'snow-monkey' ),
+					'l' => __( 'L', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

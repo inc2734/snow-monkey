@@ -3,28 +3,32 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
 use Framework\Helper;
 
-$eyecatch_position_choices = Helper::eyecatch_position_choices();
-unset( $eyecatch_position_choices['content-top'] );
-
 Framework::control(
 	'select',
 	'bbpress-archive-eyecatch',
 	array(
-		'label'       => __( 'Featured image position', 'snow-monkey' ),
-		'description' => sprintf(
-			/* translators: 1: bbPress archive */
-			__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
-			__( 'bbPress archive', 'snow-monkey' )
-		),
-		'priority'    => 120,
-		'default'     => 'none',
-		'choices'     => $eyecatch_position_choices,
+		'default'          => 'none',
+		'ui_args_callback' => function () {
+			$eyecatch_position_choices = Helper::eyecatch_position_choices();
+			unset( $eyecatch_position_choices['content-top'] );
+
+			return array(
+				'label'       => __( 'Featured image position', 'snow-monkey' ),
+				'description' => sprintf(
+					/* translators: 1: bbPress archive */
+					__( 'Select how to display the featured image in %1$s page.', 'snow-monkey' ),
+					__( 'bbPress archive', 'snow-monkey' )
+				),
+				'priority'    => 120,
+				'choices'     => $eyecatch_position_choices,
+			);
+		},
 	)
 );
 

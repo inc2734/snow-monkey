@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,16 +13,20 @@ Framework::control(
 	'select',
 	'gnav-alignment',
 	array(
-		'label'           => __( 'Global navigation alignment', 'snow-monkey' ),
-		'priority'        => 101,
-		'default'         => 'right',
-		'choices'         => array(
-			'right'  => __( 'Right', 'snow-monkey' ),
-			'center' => __( 'Center', 'snow-monkey' ),
-			'left'   => __( 'Left', 'snow-monkey' ),
-		),
-		'active_callback' => function () {
-			return '1row' === get_theme_mod( 'header-layout' );
+		'default'          => 'right',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Global navigation alignment', 'snow-monkey' ),
+				'priority'        => 101,
+				'choices'         => array(
+					'right'  => __( 'Right', 'snow-monkey' ),
+					'center' => __( 'Center', 'snow-monkey' ),
+					'left'   => __( 'Left', 'snow-monkey' ),
+				),
+				'active_callback' => function () {
+					return '1row' === get_theme_mod( 'header-layout' );
+				},
+			);
 		},
 	)
 );

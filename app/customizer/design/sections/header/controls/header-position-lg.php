@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 25.4.6
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -13,12 +13,16 @@ Framework::control(
 	'select',
 	'header-position-lg',
 	array(
-		'label'           => __( 'Header position for PC', 'snow-monkey' ),
-		'priority'        => 111,
-		'default'         => '',
-		'choices'         => Helper::header_position_choices(),
-		'active_callback' => function () {
-			return 'left' !== get_theme_mod( 'header-layout' );
+		'default'          => '',
+		'ui_args_callback' => function () {
+			return array(
+				'label'           => __( 'Header position for PC', 'snow-monkey' ),
+				'priority'        => 111,
+				'choices'         => Helper::header_position_choices(),
+				'active_callback' => function () {
+					return 'left' !== get_theme_mod( 'header-layout' );
+				},
+			);
 		},
 	)
 );

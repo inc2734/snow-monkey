@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,23 +16,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'checkbox',
 		$custom_post_type . '-entries-display-item-author',
 		array(
-			'label'             => __( 'Display the author for each item in the entries', 'snow-monkey' ),
-			'priority'          => 180,
 			'default'           => false,
-			'active_callback'   => function () use ( $custom_post_type ) {
-				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
-				if ( 'post' === $archive_view ) {
-					return false;
-				}
-
-				$is_display_item_author = ! in_array(
-					get_theme_mod( $custom_post_type . '-entries-layout' ),
-					array( 'text', 'text2' ),
-					true
-				);
-
-				return $is_display_item_author;
-			},
 			'sanitize_callback' => function ( $value ) use ( $custom_post_type ) {
 				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
 				if ( 'post' === $archive_view ) {
@@ -46,6 +30,26 @@ foreach ( $custom_post_types as $custom_post_type ) {
 				);
 
 				return $is_display_item_author && $value ? $value : '';
+			},
+			'ui_args_callback'  => function () use ( $custom_post_type ) {
+				return array(
+					'label'           => __( 'Display the author for each item in the entries', 'snow-monkey' ),
+					'priority'        => 180,
+					'active_callback' => function () use ( $custom_post_type ) {
+						$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
+						if ( 'post' === $archive_view ) {
+							return false;
+						}
+
+						$is_display_item_author = ! in_array(
+							get_theme_mod( $custom_post_type . '-entries-layout' ),
+							array( 'text', 'text2' ),
+							true
+						);
+
+						return $is_display_item_author;
+					},
+				);
 			},
 		)
 	);

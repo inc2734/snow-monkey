@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,20 +16,7 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'checkbox',
 		$custom_post_type . '-entries-display-item-date-icon',
 		array(
-			'label'             => __( 'Display the date icon for each item in the entries', 'snow-monkey' ),
-			'priority'          => 210,
 			'default'           => false,
-			'active_callback'   => function () use ( $custom_post_type ) {
-				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
-				if ( 'post' === $archive_view ) {
-					return false;
-				}
-
-				$display_published_date = get_theme_mod( $custom_post_type . '-entries-display-item-published' );
-				$display_modified_date  = get_theme_mod( $custom_post_type . '-entries-display-item-modified' );
-
-				return $display_published_date || $display_modified_date;
-			},
 			'sanitize_callback' => function ( $value ) use ( $custom_post_type ) {
 				$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
 				if ( 'post' === $archive_view ) {
@@ -37,6 +24,23 @@ foreach ( $custom_post_types as $custom_post_type ) {
 				}
 
 				return $value;
+			},
+			'ui_args_callback'  => function () use ( $custom_post_type ) {
+				return array(
+					'label'           => __( 'Display the date icon for each item in the entries', 'snow-monkey' ),
+					'priority'        => 210,
+					'active_callback' => function () use ( $custom_post_type ) {
+						$archive_view = get_theme_mod( $custom_post_type . '-archive-view' );
+						if ( 'post' === $archive_view ) {
+							return false;
+						}
+
+						$display_published_date = get_theme_mod( $custom_post_type . '-entries-display-item-published' );
+						$display_modified_date  = get_theme_mod( $custom_post_type . '-entries-display-item-modified' );
+
+						return $display_published_date || $display_modified_date;
+					},
+				);
 			},
 		)
 	);

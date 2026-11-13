@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  *
  * renamed: app/customizer/layout/sections/base-layout/controls/breadcrumbs-position.php
  */
@@ -14,16 +14,20 @@ Framework::control(
 	'select',
 	'breadcrumbs-position',
 	array(
-		'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
-		'priority' => 170,
-		'default'  => 'default',
-		'choices'  => array(
-			'default'              => __( 'Top of contents', 'snow-monkey' ),
-			'content-width'        => __( 'Top of contents ( Fit to content width )', 'snow-monkey' ),
-			'bottom'               => __( 'Bottom of contents', 'snow-monkey' ),
-			'bottom-content-width' => __( 'Bottom of contents ( Fit to content width )', 'snow-monkey' ),
-			'none'                 => __( 'None', 'snow-monkey' ),
-		),
+		'default'          => 'default',
+		'ui_args_callback' => function () {
+			return array(
+				'label'    => __( 'Breadcrumbs display position', 'snow-monkey' ),
+				'priority' => 170,
+				'choices'  => array(
+					'default'              => __( 'Top of contents', 'snow-monkey' ),
+					'content-width'        => __( 'Top of contents ( Fit to content width )', 'snow-monkey' ),
+					'bottom'               => __( 'Bottom of contents', 'snow-monkey' ),
+					'bottom-content-width' => __( 'Bottom of contents ( Fit to content width )', 'snow-monkey' ),
+					'none'                 => __( 'None', 'snow-monkey' ),
+				),
+			);
+		},
 	)
 );
 

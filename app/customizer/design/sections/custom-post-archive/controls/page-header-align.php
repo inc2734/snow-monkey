@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 27.2.0
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -16,12 +16,16 @@ foreach ( $custom_post_types as $custom_post_type ) {
 		'select',
 		'archive-' . $custom_post_type . '-page-header-align',
 		array(
-			'label'           => __( 'Page header alignment', 'snow-monkey' ),
-			'priority'        => 140,
-			'default'         => 'center',
-			'choices'         => Helper::page_header_align_choices(),
-			'active_callback' => function () use ( $custom_post_type ) {
-				return 'title-on-page-header' === get_theme_mod( 'archive-' . $custom_post_type . '-eyecatch' );
+			'default'          => 'center',
+			'ui_args_callback' => function () use ( $custom_post_type ) {
+				return array(
+					'label'           => __( 'Page header alignment', 'snow-monkey' ),
+					'priority'        => 140,
+					'choices'         => Helper::page_header_align_choices(),
+					'active_callback' => function () use ( $custom_post_type ) {
+						return 'title-on-page-header' === get_theme_mod( 'archive-' . $custom_post_type . '-eyecatch' );
+					},
+				);
 			},
 		)
 	);

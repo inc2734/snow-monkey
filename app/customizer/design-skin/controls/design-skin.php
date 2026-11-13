@@ -3,7 +3,7 @@
  * @package snow-monkey
  * @author inc2734
  * @license GPL-2.0+
- * @version 19.0.0-beta1
+ * @version 31.1.0
  */
 
 use Inc2734\WP_Customizer_Framework\Framework;
@@ -12,15 +12,19 @@ Framework::control(
 	'select',
 	'design-skin',
 	array(
-		'label'       => __( 'Design skin', 'snow-monkey' ),
-		'description' => __( 'If set this, please save and reload.', 'snow-monkey' ),
-		'default'     => 'none',
-		'choices'     => apply_filters(
-			'snow_monkey_design_skin_choices',
-			array(
-				'none' => __( 'None', 'snow-monkey' ),
-			)
-		),
+		'default'          => 'none',
+		'ui_args_callback' => function () {
+			return array(
+				'label'       => __( 'Design skin', 'snow-monkey' ),
+				'description' => __( 'If set this, please save and reload.', 'snow-monkey' ),
+				'choices'     => apply_filters(
+					'snow_monkey_design_skin_choices',
+					array(
+						'none' => __( 'None', 'snow-monkey' ),
+					)
+				),
+			);
+		},
 	)
 );
 
